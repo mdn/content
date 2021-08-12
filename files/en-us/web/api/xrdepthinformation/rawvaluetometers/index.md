@@ -2,47 +2,47 @@
 title: XRDepthInformation.rawValueToMeters
 slug: Web/API/XRDepthInformation/rawValueToMeters
 tags:
-- API
-- AR
-- Augmented Reality
-- Experimental
-- Property
-- Reference
-- VR
-- WebXR
-- WebXR Device API
+  - API
+  - AR
+  - Augmented Reality
+  - Experimental
+  - Property
+  - Reference
+  - VR
+  - WebXR
+  - WebXR Device API
 browser-compat: api.XRDepthInformation.rawValueToMeters
 ---
-<div>{{APIRef("WebXR Device API")}}</div>
+{{APIRef("WebXR Device API")}}
 
-<p>The <em>read-only</em> <strong><code>rawValueToMeters</code></strong> property of the {{DOMxRef("XRDepthInformation")}} interface contains the scale factor by which the raw depth values must be multiplied in order to get the depths in meters.</p>
+The *read-only* **`rawValueToMeters`** property of the {{DOMxRef("XRDepthInformation")}} interface contains the scale factor by which the raw depth values must be multiplied in order to get the depths in meters.
 
-<p>For CPU depth information, see also the {{domxref("XRCPUDepthInformation.getDepthInMeters()")}} method.</p>
+For CPU depth information, see also the {{domxref("XRCPUDepthInformation.getDepthInMeters()")}} method.
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A number.</p>
+A number.
 
-<h2>Examples</h2>
+## Examples
 
-<p>Use {{domxref("XRFrame.getDepthInformation()")}} (CPU) or {{domxref("XRWebGLBinding.getDepthInformation()")}} (WebGL) to obtain depth information. The returned objects will contain the <code>rawValueToMeters</code> scale factor, which can be used for further calculations.</p>
+Use {{domxref("XRFrame.getDepthInformation()")}} (CPU) or {{domxref("XRWebGLBinding.getDepthInformation()")}} (WebGL) to obtain depth information. The returned objects will contain the `rawValueToMeters` scale factor, which can be used for further calculations.
 
-<p>For CPU depth information and a buffer that has "luminance-alpha" format:</p>
+For CPU depth information and a buffer that has "luminance-alpha" format:
 
-<pre class="brush: js">
+```js
 const uint16 = new Uint16Array(depthInfo.data);
 const index = column + row * depthInfo.width;
 const depthInMeters = uint16[index] * depthInfo.rawValueToMeters;
-</pre>
+```
 
-<p>(Use {{jsxref("Float32Array")}} for a "float32" data format.)</p>
+(Use {{jsxref("Float32Array")}} for a "float32" data format.)
 
-<p>Note that the depth in meters is in depth-buffer coordinates. Additional steps are needed to convert them to normalized view coordinates, or the {{domxref("XRCPUDepthInformation.getDepthInMeters()")}} method can be used.</p>
+Note that the depth in meters is in depth-buffer coordinates. Additional steps are needed to convert them to normalized view coordinates, or the {{domxref("XRCPUDepthInformation.getDepthInMeters()")}} method can be used.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

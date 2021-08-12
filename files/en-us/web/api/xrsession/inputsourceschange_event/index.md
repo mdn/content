@@ -22,43 +22,45 @@ tags:
   - inputsourceschange
 browser-compat: api.XRSession.inputsourceschange_event
 ---
-<p>{{APIRef("WebXR Device API")}}</p>
+{{APIRef("WebXR Device API")}}
 
-<p>The <strong><code>inputsourceschange</code></strong> event is sent to an {{domxref("XRSession")}} when the set of available WebXR input devices changes.</p>
+The **`inputsourceschange`** event is sent to an {{domxref("XRSession")}} when the set of available WebXR input devices changes.
 
-<p>The received event, of type {{domxref("XRInputSourcesChangeEvent")}}, contains a list of any newly {{domxref("XRInputSourcesChangeEvent.added", "added")}} and/or {{domxref("XRInputSourcesChangeEvent.removed", "removed")}} input devices.</p>
+The received event, of type {{domxref("XRInputSourcesChangeEvent")}}, contains a list of any newly {{domxref("XRInputSourcesChangeEvent.added", "added")}} and/or {{domxref("XRInputSourcesChangeEvent.removed", "removed")}} input devices.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th>Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th>Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th>Interface</th>
-   <td>{{domxref("XRInputSourcesChangeEvent")}}</td>
-  </tr>
-  <tr>
-   <th>Event handler property</th>
-   <td>{{domxref("XRSession.oninputsourceschange", "oninputsourceschange")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Interface</th>
+      <td>{{domxref("XRInputSourcesChangeEvent")}}</td>
+    </tr>
+    <tr>
+      <th>Event handler property</th>
+      <td>
+        {{domxref("XRSession.oninputsourceschange", "oninputsourceschange")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>The event object contains lists of the newly-added and/or removed input devices in its {{domxref("XRInputSourcesChangeEvent.added", "added")}} and {{domxref("XRInputSourcesChangeEvent.removed", "removed")}} properties.</p>
+The event object contains lists of the newly-added and/or removed input devices in its {{domxref("XRInputSourcesChangeEvent.added", "added")}} and {{domxref("XRInputSourcesChangeEvent.removed", "removed")}} properties.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>See <a href="/en-US/docs/Web/API/XRInputSourcesChangeEvent#examples"><code>XRInputSourcesChangeEvent</code></a> for example code.</p>
+See [`XRInputSourcesChangeEvent`](/en-US/docs/Web/API/XRInputSourcesChangeEvent#examples) for example code.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

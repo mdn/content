@@ -2,111 +2,108 @@
 title: XRSession.onsqueeze
 slug: Web/API/XRSession/onsqueeze
 tags:
-- API
-- AR
-- Event Handler
-- Mixed
-- Primary Squeeze Action
-- Reality
-- Reference
-- Squeeze Action
-- VR
-- Virtual
-- WebXR
-- XR
-- XRSession
-- actions
-- augmented
-- onsqueeze
-- squeeze
+  - API
+  - AR
+  - Event Handler
+  - Mixed
+  - Primary Squeeze Action
+  - Reality
+  - Reference
+  - Squeeze Action
+  - VR
+  - Virtual
+  - WebXR
+  - XR
+  - XRSession
+  - actions
+  - augmented
+  - onsqueeze
+  - squeeze
 browser-compat: api.XRSession.onsqueeze
 ---
-<p>{{APIRef("WebXR Device API")}}</p>
+{{APIRef("WebXR Device API")}}
 
-<p>The {{domxref("XRSession")}} interface's
-    <code><strong>onsqueeze</strong></code> event handler property can be set to a
-    function which is then invoked to handle the {{domxref("XRSession.squeeze_event",
-    "squeeze")}} event that's sent when the user successfully completes a <a
-      href="/en-US/docs/Web/API/WebXR_Device_API/Inputs#Primary_squeeze_actions">primary
-      squeeze action</a> on a WebXR input device. These actions represent the user
-  squeezing or gripping an object or controller.</p>
+The {{domxref("XRSession")}} interface's
+**`onsqueeze`** event handler property can be set to a
+function which is then invoked to handle the {{domxref("XRSession.squeeze_event",
+    "squeeze")}} event that's sent when the user successfully completes a [primary
+squeeze action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#Primary_squeeze_actions) on a WebXR input device. These actions represent the user
+squeezing or gripping an object or controller.
 
-<p>To learn more about how to use and handle WebXR controller inputs, see <a
-    href="/en-US/docs/Web/API/WebXR_Device_API/Inputs">Inputs and input sources</a>.</p>
+To learn more about how to use and handle WebXR controller inputs, see [Inputs and input sources](/en-US/docs/Web/API/WebXR_Device_API/Inputs).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>xrSession</em>.onsqueeze = <em>squeezeHandlerFunction</em>;</pre>
+```js
+xrSession.onsqueeze = squeezeHandlerFunction;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A function to be invoked whenever the {{domxref("XRSession")}} receives a
-  {{domxref("XRSession.squeeze_event", "squeeze")}} event.</p>
+A function to be invoked whenever the {{domxref("XRSession")}} receives a
+{{domxref("XRSession.squeeze_event", "squeeze")}} event.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Handling_squeeze_events_for_a_specific_hand">Handling squeeze events for a
-  specific hand</h3>
+### Handling squeeze events for a specific hand
 
-<p>This snippet of code adds a simple handler for the <code>squeeze</code> event, which
-  responds only to events on the user's off-hand (that is, the hand that isn't their
-  dominant hand). This is determined by comparing the input source's
-  {{domxref("XRInputSource.handedness", "handedness")}} against the value of a
-  <code>handedness</code> property on a <code>user</code> object we've established
-  previously.</p>
+This snippet of code adds a simple handler for the `squeeze` event, which
+responds only to events on the user's off-hand (that is, the hand that isn't their
+dominant hand). This is determined by comparing the input source's
+{{domxref("XRInputSource.handedness", "handedness")}} against the value of a
+`handedness` property on a `user` object we've established
+previously.
 
-<pre class="brush: js">xrSession.onsqueeze = event =&gt; {
+```js
+xrSession.onsqueeze = event => {
   if (event.inputSource.handedness != user.handedness) {
     handleOffhandSqueeze(event.inputSource, event.frame);
   }
 };
-</pre>
+```
 
-<h3 id="Finishing_an_ongoing_squeeze_action">Finishing an ongoing squeeze action</h3>
+### Finishing an ongoing squeeze action
 
-<p>This example exapnds somewhat on the previous example by demonstrating a way to
-  implement the ability for the user to drop an object that was previously picked up by
-  the user.. This is just a snippet of code, but should establish the general idea.</p>
+This example exapnds somewhat on the previous example by demonstrating a way to
+implement the ability for the user to drop an object that was previously picked up by
+the user.. This is just a snippet of code, but should establish the general idea.
 
-<p>After checking that the event occurred on the user's dominant hand, the pose's target
-  ray is obtained. Then we pass the currently held object and the target ray's transform
-  matrix into a function we call <code>dropObjectUsingRay()</code> to drop the object,
-  using the target ray to determine the surface upon which the object should be placed.
-  This also clears the value of <code>heldObject</code> so we know that there's no longer
-  an object in hand.</p>
+After checking that the event occurred on the user's dominant hand, the pose's target
+ray is obtained. Then we pass the currently held object and the target ray's transform
+matrix into a function we call `dropObjectUsingRay()` to drop the object,
+using the target ray to determine the surface upon which the object should be placed.
+This also clears the value of `heldObject` so we know that there's no longer
+an object in hand.
 
-<pre class="brush: js">xrSession.onsqueeze = event =&gt; {
+```js
+xrSession.onsqueeze = event => {
   if (event.inputSource.handedness == user.handedness) {
     let targetRayPose = event.frame.getPose(event.inputSource.targetRaySpace, myRefSpace);
 
-    if (user.heldObject &amp;&amp; targetRayPose) {
+    if (user.heldObject && targetRayPose) {
       dropObjectUsingRay(user.heldObject, targetRayPose.transform.matrix):
     }
   }
 };
-</pre>
+```
 
-<p>See the examples in the {{domxref("XRSession.onsqueezestart", "onsqueezestart")}} and
-  {{domxref("XRSession.onsqueezeend", "onsqueezeend")}} event handlers for the reset of
-  the event handling related to this approach.</p>
+See the examples in the {{domxref("XRSession.onsqueezestart", "onsqueezestart")}} and
+{{domxref("XRSession.onsqueezeend", "onsqueezeend")}} event handlers for the reset of
+the event handling related to this approach.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Inputs">Inputs and input sources</a>
-  </li>
-  <li>The other <code>onsqueeze*</code> handlers: {{DOMxRef("XRSession.onsqueezestart",
-    "onsqueezestart")}} and {{DOMxRef("XRSession.onsqueezeend", "onsqueezeend")}}</li>
-  <li>The {{domxref("XRSession.squeeze_event", "squeeze")}},
-    {{domxref("XRSession.squeezestart_event", "squeezestart")}}, and
-    {{domxref("XRSession.squeezeend_event", "squeezeend")}} events</li>
-</ul>
+- [Inputs and input sources](/en-US/docs/Web/API/WebXR_Device_API/Inputs)
+- The other `onsqueeze*` handlers: {{DOMxRef("XRSession.onsqueezestart",
+    "onsqueezestart")}} and {{DOMxRef("XRSession.onsqueezeend", "onsqueezeend")}}
+- The {{domxref("XRSession.squeeze_event", "squeeze")}},
+  {{domxref("XRSession.squeezestart_event", "squeezestart")}}, and
+  {{domxref("XRSession.squeezeend_event", "squeezeend")}} events

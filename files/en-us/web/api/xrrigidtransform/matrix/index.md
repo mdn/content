@@ -2,812 +2,435 @@
 title: XRRigidTransform.matrix
 slug: Web/API/XRRigidTransform/matrix
 tags:
-- API
-- AR
-- Property
-- Read-only
-- Reality
-- Reference
-- VR
-- Virtual
-- WebXR
-- WebXR API
-- WebXR Device API
-- XR
-- XRRigidTransform
-- augmented
-- matrix
-- transform
+  - API
+  - AR
+  - Property
+  - Read-only
+  - Reality
+  - Reference
+  - VR
+  - Virtual
+  - WebXR
+  - WebXR API
+  - WebXR Device API
+  - XR
+  - XRRigidTransform
+  - augmented
+  - matrix
+  - transform
 browser-compat: api.XRRigidTransform.matrix
 ---
-<p>{{APIRef("WebXR Device API")}}</p>
+{{APIRef("WebXR Device API")}}
 
-<p>The read-only {{domxref("XRRigidTransform")}} property
-  <code><strong>matrix</strong></code> returns the transform
-  matrix represented by the object. The returned matrix can then be premultiplied with a
-  column vector to rotate the
-  vector by the 3D rotation specified by the {{domxref("XRRigidTransform.orientation",
+The read-only {{domxref("XRRigidTransform")}} property
+**`matrix`** returns the transform
+matrix represented by the object. The returned matrix can then be premultiplied with a
+column vector to rotate the
+vector by the 3D rotation specified by the {{domxref("XRRigidTransform.orientation",
   "orientation")}}, then translate
-  it by the {{domxref("XRRigidTransform.position", "position")}}.</p>
+it by the {{domxref("XRRigidTransform.position", "position")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">let <em>matrix</em> = <em>xrRigidTransform</em>.matrix;</pre>
+```js
+let matrix = xrRigidTransform.matrix;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{jsxref("Float32Array")}} containing 16 entries which represents the 4x4 transform
-  matrix which is described by
-  the {{domxref("XRRigidTransform.position", "position")}} and
-  {{domxref("XRRigidTransform.orientation",
-  "orientation")}} properties.</p>
+A {{jsxref("Float32Array")}} containing 16 entries which represents the 4x4 transform
+matrix which is described by
+the {{domxref("XRRigidTransform.position", "position")}} and
+{{domxref("XRRigidTransform.orientation",
+  "orientation")}} properties.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<h3 id="Matrix_format">Matrix format</h3>
+### Matrix format
 
-<p>All 4x4 transform matrices used in WebGL are stored in 16-element
-  {{jsxref("Float32Array")}}s. The values are stored
-  into the array in column-major order; that is, each column is written into the array
-  top-down before moving to the
-  right one column and writing the next column into the array. Thus, for an array [a0, a1,
-  a2, ..., a13, a14, a15], the
-  matrix looks like this:</p>
+All 4x4 transform matrices used in WebGL are stored in 16-element
+{{jsxref("Float32Array")}}s. The values are stored
+into the array in column-major order; that is, each column is written into the array
+top-down before moving to the
+right one column and writing the next column into the array. Thus, for an array \[a0, a1,
+a2, ..., a13, a14, a15], the
+matrix looks like this:
 
-<p><math display="block">
-    <semantics>
-      <mrow>
-        <mo>[</mo>
-        <mtable rowspacing="0.5ex">
-          <mtr>
-            <mtd>
-              <mi>a0</mi>
-            </mtd>
-            <mtd>
-              <mi>a4</mi>
-            </mtd>
-            <mtd>
-              <mi>a8</mi>
-            </mtd>
-            <mtd>
-              <mi>a12</mi>
-            </mtd>
-          </mtr>
-          <mtr>
-            <mtd>
-              <mi>a1</mi>
-            </mtd>
-            <mtd>
-              <mi>a5</mi>
-            </mtd>
-            <mtd>
-              <mi>a9</mi>
-            </mtd>
-            <mtd>
-              <mi>a13</mi>
-            </mtd>
-          </mtr>
-          <mtr>
-            <mtd>
-              <mi>a2</mi>
-            </mtd>
-            <mtd>
-              <mi>a6</mi>
-            </mtd>
-            <mtd>
-              <mi>a10</mi>
-            </mtd>
-            <mtd>
-              <mi>a14</mi>
-            </mtd>
-          </mtr>
-          <mtr>
-            <mtd>
-              <mi>a3</mi>
-            </mtd>
-            <mtd>
-              <mi>a7</mi>
-            </mtd>
-            <mtd>
-              <mi>a11</mi>
-            </mtd>
-            <mtd>
-              <mi>a15</mi>
-            </mtd>
-          </mtr>
-        </mtable>
-        <mo>]</mo>
-      </mrow>
-      <annotation encoding="TeX">\begin{bmatrix} a[0] &amp; a[4] &amp; a[8] &amp; a[12]\\
-        a[1] &amp; a[5] &amp; a[9]
-        &amp; a[13]\\ a[2] &amp; a[6] &amp; a[10] &amp; a[14]\\ a[3] &amp; a[7] &amp;
-        a[11] &amp; a[15]\\ \end{bmatrix}
-      </annotation>
-    </semantics>
-  </math></p>
+<math display="block"><semantics><mrow><mo>[</mo>
+<mtable rowspacing="0.5ex"><mtr><mtd><mi>a0</mi>
+</mtd><mtd><mi>a4</mi>
+</mtd><mtd><mi>a8</mi>
+</mtd><mtd><mi>a12</mi>
+</mtd></mtr><mtr><mtd><mi>a1</mi>
+</mtd><mtd><mi>a5</mi>
+</mtd><mtd><mi>a9</mi>
+</mtd><mtd><mi>a13</mi>
+</mtd></mtr><mtr><mtd><mi>a2</mi>
+</mtd><mtd><mi>a6</mi>
+</mtd><mtd><mi>a10</mi>
+</mtd><mtd><mi>a14</mi>
+</mtd></mtr><mtr><mtd><mi>a3</mi>
+</mtd><mtd><mi>a7</mi>
+</mtd><mtd><mi>a11</mi>
+</mtd><mtd><mi>a15</mi>
+</mtd></mtr></mtable><mo>]</mo>
+</mrow><annotation encoding="TeX">\begin{bmatrix} a[0] &#x26; a[4] &#x26; a[8] &#x26; a[12]\\
+a[1] &#x26; a[5] &#x26; a[9]
+&#x26; a[13]\\ a[2] &#x26; a[6] &#x26; a[10] &#x26; a[14]\\ a[3] &#x26; a[7] &#x26;
+a[11] &#x26; a[15]\\ \end{bmatrix}</annotation></semantics></math>
 
-<p>On the first request, the <code>matrix</code> gets computed. After that, it should be cached for performance reasons.</p>
+On the first request, the `matrix` gets computed. After that, it should be cached for performance reasons.
 
-<h3 id="Creating_the_matrix">Creating the matrix</h3>
+### Creating the matrix
 
-<p>In this section, intended for more advanced readers, we cover how the API calculates
-  the matrix for the specified
-  transform. It begins by allocating a new matrix and writing a 4x4 identity matrix into
-  it:</p>
+In this section, intended for more advanced readers, we cover how the API calculates
+the matrix for the specified
+transform. It begins by allocating a new matrix and writing a 4x4 identity matrix into
+it:
 
-<p><math display="block">
-    <semantics>
-      <mrow>
-        <mo>[</mo>
-        <mtable rowspacing="0.5ex">
-          <mtr>
-            <mtd>
-              <mn>1</mn>
-            </mtd>
-            <mtd>
-              <mn>0</mn>
-            </mtd>
-            <mtd>
-              <mn>0</mn>
-            </mtd>
-            <mtd>
-              <mn>0</mn>
-            </mtd>
-          </mtr>
-          <mtr>
-            <mtd>
-              <mn>0</mn>
-            </mtd>
-            <mtd>
-              <mn>1</mn>
-            </mtd>
-            <mtd>
-              <mn>0</mn>
-            </mtd>
-            <mtd>
-              <mn>0</mn>
-            </mtd>
-          </mtr>
-          <mtr>
-            <mtd>
-              <mn>0</mn>
-            </mtd>
-            <mtd>
-              <mn>0</mn>
-            </mtd>
-            <mtd>
-              <mn>1</mn>
-            </mtd>
-            <mtd>
-              <mn>0</mn>
-            </mtd>
-          </mtr>
-          <mtr>
-            <mtd>
-              <mn>0</mn>
-            </mtd>
-            <mtd>
-              <mn>0</mn>
-            </mtd>
-            <mtd>
-              <mn>0</mn>
-            </mtd>
-            <mtd>
-              <mn>1</mn>
-            </mtd>
-          </mtr>
-        </mtable>
-        <mo>]</mo>
-      </mrow>
-      <annotation encoding="TeX">\begin{bmatrix} 1 &amp; 0 &amp; 0 &amp; 0\\ 0 &amp; 1
-        &amp; 0 &amp; 0\\ 0 &amp; 0 &amp;
-        1 &amp; 0\\ 0 &amp; 0 &amp; 0 &amp; 1 \end{bmatrix}</annotation>
-    </semantics>
-  </math></p>
+<math display="block"><semantics><mrow><mo>[</mo>
+<mtable rowspacing="0.5ex"><mtr><mtd><mn>1</mn>
+</mtd><mtd><mn>0</mn>
+</mtd><mtd><mn>0</mn>
+</mtd><mtd><mn>0</mn>
+</mtd></mtr><mtr><mtd><mn>0</mn>
+</mtd><mtd><mn>1</mn>
+</mtd><mtd><mn>0</mn>
+</mtd><mtd><mn>0</mn>
+</mtd></mtr><mtr><mtd><mn>0</mn>
+</mtd><mtd><mn>0</mn>
+</mtd><mtd><mn>1</mn>
+</mtd><mtd><mn>0</mn>
+</mtd></mtr><mtr><mtd><mn>0</mn>
+</mtd><mtd><mn>0</mn>
+</mtd><mtd><mn>0</mn>
+</mtd><mtd><mn>1</mn>
+</mtd></mtr></mtable><mo>]</mo>
+</mrow><annotation encoding="TeX">\begin{bmatrix} 1 &#x26; 0 &#x26; 0 &#x26; 0\\ 0 &#x26; 1
+&#x26; 0 &#x26; 0\\ 0 &#x26; 0 &#x26;
+1 &#x26; 0\\ 0 &#x26; 0 &#x26; 0 &#x26; 1 \end{bmatrix}</annotation></semantics></math>
 
-<p>This is a transform that will not change either the orientation or position of any
-  point, vector, or object to which
-  it's applied.</p>
+This is a transform that will not change either the orientation or position of any
+point, vector, or object to which
+it's applied.
 
-<p>Next, the <code>position</code> is placed into the right-hand column, like this,
-  resulting in a translation matrix
-  that will transform a coordinate system by the specified distance in each dimension,
-  with no rotational change. Here
-  <em>p<sub>x</sub></em>, <em>p<sub>y</sub></em>, and <em>p<sub>z</sub></em>
-  are the values of the
-  <code>x</code>, <code>y</code>, and <code>z</code> members of the
-  {{domxref("DOMPointReadOnly")}}
-  <code>position</code>.
-</p>
+Next, the `position` is placed into the right-hand column, like this,
+resulting in a translation matrix
+that will transform a coordinate system by the specified distance in each dimension,
+with no rotational change. Here
+_p<sub>x</sub>_, _p<sub>y</sub>_, and _p<sub>z</sub>_
+are the values of the
+`x`, `y`, and `z` members of the
+{{domxref("DOMPointReadOnly")}}
+`position`.
 
-<p><math display="block">
-    <semantics>
-      <mrow>
-        <mo>[</mo>
-        <mtable rowspacing="0.5ex">
-          <mtr>
-            <mtd>
-              <mn>1</mn>
-            </mtd>
-            <mtd>
-              <mn>0</mn>
-            </mtd>
-            <mtd>
-              <mn>0</mn>
-            </mtd>
-            <mtd>
-              <msub>
-                <mi>p</mi>
-                <mi>x</mi>
-              </msub>
+<math display="block"><semantics><mrow><mo>[</mo>
+<mtable rowspacing="0.5ex"><mtr><mtd><mn>1</mn>
+</mtd><mtd><mn>0</mn>
+</mtd><mtd><mn>0</mn>
+</mtd><mtd><msub><mi>p</mi>
+<mi>x</mi>
+</msub></mtd></mtr><mtr><mtd><mn>0</mn>
+</mtd><mtd><mn>1</mn>
+</mtd><mtd><mn>0</mn>
+</mtd><mtd><msub><mi>p</mi>
+<mi>y</mi>
+</msub></mtd></mtr><mtr><mtd><mn>0</mn>
+</mtd><mtd><mn>0</mn>
+</mtd><mtd><mn>1</mn>
+</mtd><mtd><msub><mi>p</mi>
+<mi>z</mi>
+</msub></mtd></mtr><mtr><mtd><mn>0</mn>
+</mtd><mtd><mn>0</mn>
+</mtd><mtd><mn>0</mn>
+</mtd><mtd><mn>1</mn>
+</mtd></mtr></mtable><mo>]</mo>
+</mrow><annotation encoding="TeX">\begin{bmatrix} 1 &#x26; 0 &#x26; 0 &#x26; x\\ 0 &#x26; 1
+&#x26; 0 &#x26; y\\ 0 &#x26; 0 &#x26;
+1 &#x26; z\\ 0 &#x26; 0 &#x26; 0 &#x26; 1 \end{bmatrix}</annotation></semantics></math>
 
-            </mtd>
-          </mtr>
-          <mtr>
-            <mtd>
-              <mn>0</mn>
-            </mtd>
-            <mtd>
-              <mn>1</mn>
-            </mtd>
-            <mtd>
-              <mn>0</mn>
-            </mtd>
-            <mtd>
-              <msub>
-                <mi>p</mi>
-                <mi>y</mi>
-              </msub>
-            </mtd>
-          </mtr>
-          <mtr>
-            <mtd>
-              <mn>0</mn>
-            </mtd>
-            <mtd>
-              <mn>0</mn>
-            </mtd>
-            <mtd>
-              <mn>1</mn>
-            </mtd>
-            <mtd>
-              <msub>
-                <mi>p</mi>
-                <mi>z</mi>
-              </msub>
-            </mtd>
-          </mtr>
-          <mtr>
-            <mtd>
-              <mn>0</mn>
-            </mtd>
-            <mtd>
-              <mn>0</mn>
-            </mtd>
-            <mtd>
-              <mn>0</mn>
-            </mtd>
-            <mtd>
-              <mn>1</mn>
-            </mtd>
-          </mtr>
-        </mtable>
-        <mo>]</mo>
-      </mrow>
-      <annotation encoding="TeX">\begin{bmatrix} 1 &amp; 0 &amp; 0 &amp; x\\ 0 &amp; 1
-        &amp; 0 &amp; y\\ 0 &amp; 0 &amp;
-        1 &amp; z\\ 0 &amp; 0 &amp; 0 &amp; 1 \end{bmatrix}</annotation>
-    </semantics>
-  </math></p>
+Then a rotation matrix is created by computing a column-vector rotation matrix from the
+unit quaternion specified by
+`orientation`:
 
-<p>Then a rotation matrix is created by computing a column-vector rotation matrix from the
-  unit quaternion specified by
-  <code>orientation</code>:
-</p>
+<math display="block"><semantics><mrow><mo>[</mo>
+<mtable rowspacing="0.5ex"><mtr><mtd><mn>1</mn>
+<mo>-</mo>
+<mn>2</mn>
+<mo stretchy="false">(</mo>
+<msubsup><mi>q</mi>
+<mi>y</mi>
+<mn>2</mn>
+</msubsup><mo>+</mo>
+<msubsup><mi>q</mi>
+<mi>z</mi>
+<mn>2</mn>
+</msubsup><mo stretchy="false">)</mo>
+</mtd><mtd><mn>2</mn>
+<mo stretchy="false">(</mo>
+<msub><mi>q</mi>
+<mi>x</mi>
+</msub><msub><mi>q</mi>
+<mi>y</mi>
+</msub><mo>-</mo>
+<msub><mi>q</mi>
+<mi>z</mi>
+</msub><msub><mi>q</mi>
+<mi>w</mi>
+</msub><mo stretchy="false">)</mo>
+</mtd><mtd><mn>2</mn>
+<mo stretchy="false">(</mo>
+<msub><mi>q</mi>
+<mi>x</mi>
+</msub><msub><mi>q</mi>
+<mi>z</mi>
+</msub><mo>+</mo>
+<msub><mi>q</mi>
+<mi>y</mi>
+</msub><msub><mi>q</mi>
+<mi>w</mi>
+</msub><mo stretchy="false">)</mo>
+</mtd><mtd><mn>0</mn>
+</mtd></mtr><mtr><mtd><mn>2</mn>
+<mo stretchy="false">(</mo>
+<msub><mi>q</mi>
+<mi>x</mi>
+</msub><msub><mi>q</mi>
+<mi>y</mi>
+</msub><mo>+</mo>
+<msub><mi>q</mi>
+<mi>z</mi>
+</msub><msub><mi>q</mi>
+<mi>w</mi>
+</msub><mo stretchy="false">)</mo>
+</mtd><mtd><mn>1</mn>
+<mo>-</mo>
+<mn>2</mn>
+<mo stretchy="false">(</mo>
+<msubsup><mi>q</mi>
+<mi>x</mi>
+<mn>2</mn>
+</msubsup><mo>+</mo>
+<msubsup><mi>q</mi>
+<mi>z</mi>
+<mn>2</mn>
+</msubsup><mo stretchy="false">)</mo>
+</mtd><mtd><mn>2</mn>
+<mo stretchy="false">(</mo>
+<msub><mi>q</mi>
+<mi>y</mi>
+</msub><msub><mi>q</mi>
+<mi>z</mi>
+</msub><mo>-</mo>
+<msub><mi>q</mi>
+<mi>x</mi>
+</msub><msub><mi>q</mi>
+<mi>w</mi>
+</msub><mo stretchy="false">)</mo>
+</mtd><mtd><mn>0</mn>
+</mtd></mtr><mtr><mtd><mn>2</mn>
+<mo stretchy="false">(</mo>
+<msub><mi>q</mi>
+<mi>x</mi>
+</msub><msub><mi>q</mi>
+<mi>z</mi>
+</msub><mo>-</mo>
+<msub><mi>q</mi>
+<mi>y</mi>
+</msub><msub><mi>q</mi>
+<mi>w</mi>
+</msub><mo stretchy="false">)</mo>
+</mtd><mtd><mn>2</mn>
+<mo stretchy="false">(</mo>
+<msub><mi>q</mi>
+<mi>y</mi>
+</msub><msub><mi>q</mi>
+<mi>z</mi>
+</msub><mo>+</mo>
+<msub><mi>q</mi>
+<mi>x</mi>
+</msub><msub><mi>q</mi>
+<mi>w</mi>
+</msub><mo stretchy="false">)</mo>
+</mtd><mtd><mn>1</mn>
+<mo>-</mo>
+<mn>2</mn>
+<mo stretchy="false">(</mo>
+<msubsup><mi>q</mi>
+<mi>x</mi>
+<mn>2</mn>
+</msubsup><mo>+</mo>
+<msubsup><mi>q</mi>
+<mi>y</mi>
+<mn>2</mn>
+</msubsup><mo stretchy="false">)</mo>
+</mtd><mtd><mn>0</mn>
+</mtd></mtr><mtr><mtd><mn>0</mn>
+</mtd><mtd><mn>0</mn>
+</mtd><mtd><mn>0</mn>
+</mtd><mtd><mn>1</mn>
+</mtd></mtr></mtable><mo>]</mo>
+</mrow><annotation encoding="TeX">\begin{bmatrix} 1 - 2(q_y^2 + q_z^2) &#x26; 2(q_xq_y -
+q_zq_w) &#x26; 2(q_xq_z + q_yq_w)
+&#x26; p_x\\ 2(q_xq_y + q_zq_w) &#x26; 1 - 2(q_x^2 + q_z^2) &#x26; 2(q_yq_z - q_xq_w)
+&#x26; p_y\\ 2(q_xq_z -
+q_yq_w) &#x26; 2(q_yq_z + q_xq_w) &#x26; 1 - 2(q_x^2 + q_y^2) &#x26; p_z\\ 0 &#x26; 0
+&#x26; 0 &#x26; 1 \end{bmatrix}</annotation></semantics></math>
 
-<p><math display="block">
-    <semantics>
-      <mrow>
-        <mo>[</mo>
-        <mtable rowspacing="0.5ex">
-          <mtr>
-            <mtd>
-              <mn>1</mn>
-              <mo>-</mo>
-              <mn>2</mn>
-              <mo stretchy="false">(</mo>
-              <msubsup>
-                <mi>q</mi>
-                <mi>y</mi>
-                <mn>2</mn>
-              </msubsup>
-              <mo>+</mo>
-              <msubsup>
-                <mi>q</mi>
-                <mi>z</mi>
-                <mn>2</mn>
-              </msubsup>
-              <mo stretchy="false">)</mo>
-            </mtd>
-            <mtd>
-              <mn>2</mn>
-              <mo stretchy="false">(</mo>
-              <msub>
-                <mi>q</mi>
-                <mi>x</mi>
-              </msub>
-              <msub>
-                <mi>q</mi>
-                <mi>y</mi>
-              </msub>
-              <mo>-</mo>
-              <msub>
-                <mi>q</mi>
-                <mi>z</mi>
-              </msub>
-              <msub>
-                <mi>q</mi>
-                <mi>w</mi>
-              </msub>
-              <mo stretchy="false">)</mo>
-            </mtd>
-            <mtd>
-              <mn>2</mn>
-              <mo stretchy="false">(</mo>
-              <msub>
-                <mi>q</mi>
-                <mi>x</mi>
-              </msub>
-              <msub>
-                <mi>q</mi>
-                <mi>z</mi>
-              </msub>
-              <mo>+</mo>
-              <msub>
-                <mi>q</mi>
-                <mi>y</mi>
-              </msub>
-              <msub>
-                <mi>q</mi>
-                <mi>w</mi>
-              </msub>
-              <mo stretchy="false">)</mo>
-            </mtd>
-            <mtd>
-              <mn>0</mn>
-            </mtd>
-          </mtr>
-          <mtr>
-            <mtd>
-              <mn>2</mn>
-              <mo stretchy="false">(</mo>
-              <msub>
-                <mi>q</mi>
-                <mi>x</mi>
-              </msub>
-              <msub>
-                <mi>q</mi>
-                <mi>y</mi>
-              </msub>
-              <mo>+</mo>
-              <msub>
-                <mi>q</mi>
-                <mi>z</mi>
-              </msub>
-              <msub>
-                <mi>q</mi>
-                <mi>w</mi>
-              </msub>
-              <mo stretchy="false">)</mo>
-            </mtd>
-            <mtd>
-              <mn>1</mn>
-              <mo>-</mo>
-              <mn>2</mn>
-              <mo stretchy="false">(</mo>
-              <msubsup>
-                <mi>q</mi>
-                <mi>x</mi>
-                <mn>2</mn>
-              </msubsup>
-              <mo>+</mo>
-              <msubsup>
-                <mi>q</mi>
-                <mi>z</mi>
-                <mn>2</mn>
-              </msubsup>
-              <mo stretchy="false">)</mo>
-            </mtd>
-            <mtd>
-              <mn>2</mn>
-              <mo stretchy="false">(</mo>
-              <msub>
-                <mi>q</mi>
-                <mi>y</mi>
-              </msub>
-              <msub>
-                <mi>q</mi>
-                <mi>z</mi>
-              </msub>
-              <mo>-</mo>
-              <msub>
-                <mi>q</mi>
-                <mi>x</mi>
-              </msub>
-              <msub>
-                <mi>q</mi>
-                <mi>w</mi>
-              </msub>
-              <mo stretchy="false">)</mo>
-            </mtd>
-            <mtd>
-              <mn>0</mn>
-            </mtd>
-          </mtr>
-          <mtr>
-            <mtd>
-              <mn>2</mn>
-              <mo stretchy="false">(</mo>
-              <msub>
-                <mi>q</mi>
-                <mi>x</mi>
-              </msub>
-              <msub>
-                <mi>q</mi>
-                <mi>z</mi>
-              </msub>
-              <mo>-</mo>
-              <msub>
-                <mi>q</mi>
-                <mi>y</mi>
-              </msub>
-              <msub>
-                <mi>q</mi>
-                <mi>w</mi>
-              </msub>
-              <mo stretchy="false">)</mo>
-            </mtd>
-            <mtd>
-              <mn>2</mn>
-              <mo stretchy="false">(</mo>
-              <msub>
-                <mi>q</mi>
-                <mi>y</mi>
-              </msub>
-              <msub>
-                <mi>q</mi>
-                <mi>z</mi>
-              </msub>
-              <mo>+</mo>
-              <msub>
-                <mi>q</mi>
-                <mi>x</mi>
-              </msub>
-              <msub>
-                <mi>q</mi>
-                <mi>w</mi>
-              </msub>
-              <mo stretchy="false">)</mo>
-            </mtd>
-            <mtd>
-              <mn>1</mn>
-              <mo>-</mo>
-              <mn>2</mn>
-              <mo stretchy="false">(</mo>
-              <msubsup>
-                <mi>q</mi>
-                <mi>x</mi>
-                <mn>2</mn>
-              </msubsup>
-              <mo>+</mo>
-              <msubsup>
-                <mi>q</mi>
-                <mi>y</mi>
-                <mn>2</mn>
-              </msubsup>
-              <mo stretchy="false">)</mo>
-            </mtd>
-            <mtd>
-              <mn>0</mn>
-            </mtd>
-          </mtr>
-          <mtr>
-            <mtd>
-              <mn>0</mn>
-            </mtd>
-            <mtd>
-              <mn>0</mn>
-            </mtd>
-            <mtd>
-              <mn>0</mn>
-            </mtd>
-            <mtd>
-              <mn>1</mn>
-            </mtd>
-          </mtr>
-        </mtable>
-        <mo>]</mo>
-      </mrow>
-      <annotation encoding="TeX">\begin{bmatrix} 1 - 2(q_y^2 + q_z^2) &amp; 2(q_xq_y -
-        q_zq_w) &amp; 2(q_xq_z + q_yq_w)
-        &amp; p_x\\ 2(q_xq_y + q_zq_w) &amp; 1 - 2(q_x^2 + q_z^2) &amp; 2(q_yq_z - q_xq_w)
-        &amp; p_y\\ 2(q_xq_z -
-        q_yq_w) &amp; 2(q_yq_z + q_xq_w) &amp; 1 - 2(q_x^2 + q_y^2) &amp; p_z\\ 0 &amp; 0
-        &amp; 0 &amp; 1 \end{bmatrix}
-      </annotation>
-    </semantics>
-  </math></p>
+The final transform `matrix` is calculated by multiplying the translation
+matrix by the rotation matrix,
+in the order `(translation * rotation)`. This yields the final transform
+matrix as returned by
+`matrix`:
 
-<p>The final transform <code>matrix</code> is calculated by multiplying the translation
-  matrix by the rotation matrix,
-  in the order <code>(translation * rotation)</code>. This yields the final transform
-  matrix as returned by
-  <code>matrix</code>:
-</p>
+<math display="block"><semantics><mrow><mo>[</mo>
+<mtable rowspacing="0.5ex"><mtr><mtd><mn>1</mn>
+<mo>-</mo>
+<mn>2</mn>
+<mo stretchy="false">(</mo>
+<msubsup><mi>q</mi>
+<mi>y</mi>
+<mn>2</mn>
+</msubsup><mo>+</mo>
+<msubsup><mi>q</mi>
+<mi>z</mi>
+<mn>2</mn>
+</msubsup><mo stretchy="false">)</mo>
+</mtd><mtd><mn>2</mn>
+<mo stretchy="false">(</mo>
+<msub><mi>q</mi>
+<mi>x</mi>
+</msub><msub><mi>q</mi>
+<mi>y</mi>
+</msub><mo>-</mo>
+<msub><mi>q</mi>
+<mi>z</mi>
+</msub><msub><mi>q</mi>
+<mi>w</mi>
+</msub><mo stretchy="false">)</mo>
+</mtd><mtd><mn>2</mn>
+<mo stretchy="false">(</mo>
+<msub><mi>q</mi>
+<mi>x</mi>
+</msub><msub><mi>q</mi>
+<mi>z</mi>
+</msub><mo>+</mo>
+<msub><mi>q</mi>
+<mi>y</mi>
+</msub><msub><mi>q</mi>
+<mi>w</mi>
+</msub><mo stretchy="false">)</mo>
+</mtd><mtd><msub><mi>p</mi>
+<mi>x</mi>
+</msub></mtd></mtr><mtr><mtd><mn>2</mn>
+<mo stretchy="false">(</mo>
+<msub><mi>q</mi>
+<mi>x</mi>
+</msub><msub><mi>q</mi>
+<mi>y</mi>
+</msub><mo>+</mo>
+<msub><mi>q</mi>
+<mi>z</mi>
+</msub><msub><mi>q</mi>
+<mi>w</mi>
+</msub><mo stretchy="false">)</mo>
+</mtd><mtd><mn>1</mn>
+<mo>-</mo>
+<mn>2</mn>
+<mo stretchy="false">(</mo>
+<msubsup><mi>q</mi>
+<mi>x</mi>
+<mn>2</mn>
+</msubsup><mo>+</mo>
+<msubsup><mi>q</mi>
+<mi>z</mi>
+<mn>2</mn>
+</msubsup><mo stretchy="false">)</mo>
+</mtd><mtd><mn>2</mn>
+<mo stretchy="false">(</mo>
+<msub><mi>q</mi>
+<mi>y</mi>
+</msub><msub><mi>q</mi>
+<mi>z</mi>
+</msub><mo>-</mo>
+<msub><mi>q</mi>
+<mi>x</mi>
+</msub><msub><mi>q</mi>
+<mi>w</mi>
+</msub><mo stretchy="false">)</mo>
+</mtd><mtd><msub><mi>p</mi>
+<mi>y</mi>
+</msub></mtd></mtr><mtr><mtd><mn>2</mn>
+<mo stretchy="false">(</mo>
+<msub><mi>q</mi>
+<mi>x</mi>
+</msub><msub><mi>q</mi>
+<mi>z</mi>
+</msub><mo>-</mo>
+<msub><mi>q</mi>
+<mi>y</mi>
+</msub><msub><mi>q</mi>
+<mi>w</mi>
+</msub><mo stretchy="false">)</mo>
+</mtd><mtd><mn>2</mn>
+<mo stretchy="false">(</mo>
+<msub><mi>q</mi>
+<mi>y</mi>
+</msub><msub><mi>q</mi>
+<mi>z</mi>
+</msub><mo>+</mo>
+<msub><mi>q</mi>
+<mi>x</mi>
+</msub><msub><mi>q</mi>
+<mi>w</mi>
+</msub><mo stretchy="false">)</mo>
+</mtd><mtd><mn>1</mn>
+<mo>-</mo>
+<mn>2</mn>
+<mo stretchy="false">(</mo>
+<msubsup><mi>q</mi>
+<mi>x</mi>
+<mn>2</mn>
+</msubsup><mo>+</mo>
+<msubsup><mi>q</mi>
+<mi>y</mi>
+<mn>2</mn>
+</msubsup><mo stretchy="false">)</mo>
+</mtd><mtd><msub><mi>p</mi>
+<mi>z</mi>
+</msub></mtd></mtr><mtr><mtd><mn>0</mn>
+</mtd><mtd><mn>0</mn>
+</mtd><mtd><mn>0</mn>
+</mtd><mtd><mn>1</mn>
+</mtd></mtr></mtable><mo>]</mo>
+</mrow><annotation encoding="TeX">\begin{bmatrix} 1 - 2(q_y^2 + q_z^2) &#x26; 2(q_xq_y -
+q_zq_w) &#x26; 2(q_xq_z + q_yq_w)
+&#x26; p_x\\ 2(q_xq_y + q_zq_w) &#x26; 1 - 2(q_x^2 + q_z^2) &#x26; 2(q_yq_z - q_xq_w)
+&#x26; p_y\\ 2(q_xq_z -
+q_yq_w) &#x26; 2(q_yq_z + q_xq_w) &#x26; 1 - 2(q_x^2 + q_y^2) &#x26; p_z\\ 0 &#x26; 0
+&#x26; 0 &#x26; 1 \end{bmatrix}</annotation></semantics></math>
 
-<p><math display="block">
-    <semantics>
-      <mrow>
-        <mo>[</mo>
-        <mtable rowspacing="0.5ex">
-          <mtr>
-            <mtd>
-              <mn>1</mn>
-              <mo>-</mo>
-              <mn>2</mn>
-              <mo stretchy="false">(</mo>
-              <msubsup>
-                <mi>q</mi>
-                <mi>y</mi>
-                <mn>2</mn>
-              </msubsup>
-              <mo>+</mo>
-              <msubsup>
-                <mi>q</mi>
-                <mi>z</mi>
-                <mn>2</mn>
-              </msubsup>
-              <mo stretchy="false">)</mo>
-            </mtd>
-            <mtd>
-              <mn>2</mn>
-              <mo stretchy="false">(</mo>
-              <msub>
-                <mi>q</mi>
-                <mi>x</mi>
-              </msub>
-              <msub>
-                <mi>q</mi>
-                <mi>y</mi>
-              </msub>
-              <mo>-</mo>
-              <msub>
-                <mi>q</mi>
-                <mi>z</mi>
-              </msub>
-              <msub>
-                <mi>q</mi>
-                <mi>w</mi>
-              </msub>
-              <mo stretchy="false">)</mo>
-            </mtd>
-            <mtd>
-              <mn>2</mn>
-              <mo stretchy="false">(</mo>
-              <msub>
-                <mi>q</mi>
-                <mi>x</mi>
-              </msub>
-              <msub>
-                <mi>q</mi>
-                <mi>z</mi>
-              </msub>
-              <mo>+</mo>
-              <msub>
-                <mi>q</mi>
-                <mi>y</mi>
-              </msub>
-              <msub>
-                <mi>q</mi>
-                <mi>w</mi>
-              </msub>
-              <mo stretchy="false">)</mo>
-            </mtd>
-            <mtd>
-              <msub>
-                <mi>p</mi>
-                <mi>x</mi>
-              </msub>
-            </mtd>
-          </mtr>
-          <mtr>
-            <mtd>
-              <mn>2</mn>
-              <mo stretchy="false">(</mo>
-              <msub>
-                <mi>q</mi>
-                <mi>x</mi>
-              </msub>
-              <msub>
-                <mi>q</mi>
-                <mi>y</mi>
-              </msub>
-              <mo>+</mo>
-              <msub>
-                <mi>q</mi>
-                <mi>z</mi>
-              </msub>
-              <msub>
-                <mi>q</mi>
-                <mi>w</mi>
-              </msub>
-              <mo stretchy="false">)</mo>
-            </mtd>
-            <mtd>
-              <mn>1</mn>
-              <mo>-</mo>
-              <mn>2</mn>
-              <mo stretchy="false">(</mo>
-              <msubsup>
-                <mi>q</mi>
-                <mi>x</mi>
-                <mn>2</mn>
-              </msubsup>
-              <mo>+</mo>
-              <msubsup>
-                <mi>q</mi>
-                <mi>z</mi>
-                <mn>2</mn>
-              </msubsup>
-              <mo stretchy="false">)</mo>
-            </mtd>
-            <mtd>
-              <mn>2</mn>
-              <mo stretchy="false">(</mo>
-              <msub>
-                <mi>q</mi>
-                <mi>y</mi>
-              </msub>
-              <msub>
-                <mi>q</mi>
-                <mi>z</mi>
-              </msub>
-              <mo>-</mo>
-              <msub>
-                <mi>q</mi>
-                <mi>x</mi>
-              </msub>
-              <msub>
-                <mi>q</mi>
-                <mi>w</mi>
-              </msub>
-              <mo stretchy="false">)</mo>
-            </mtd>
-            <mtd>
-              <msub>
-                <mi>p</mi>
-                <mi>y</mi>
-              </msub>
-            </mtd>
-          </mtr>
-          <mtr>
-            <mtd>
-              <mn>2</mn>
-              <mo stretchy="false">(</mo>
-              <msub>
-                <mi>q</mi>
-                <mi>x</mi>
-              </msub>
-              <msub>
-                <mi>q</mi>
-                <mi>z</mi>
-              </msub>
-              <mo>-</mo>
-              <msub>
-                <mi>q</mi>
-                <mi>y</mi>
-              </msub>
-              <msub>
-                <mi>q</mi>
-                <mi>w</mi>
-              </msub>
-              <mo stretchy="false">)</mo>
-            </mtd>
-            <mtd>
-              <mn>2</mn>
-              <mo stretchy="false">(</mo>
-              <msub>
-                <mi>q</mi>
-                <mi>y</mi>
-              </msub>
-              <msub>
-                <mi>q</mi>
-                <mi>z</mi>
-              </msub>
-              <mo>+</mo>
-              <msub>
-                <mi>q</mi>
-                <mi>x</mi>
-              </msub>
-              <msub>
-                <mi>q</mi>
-                <mi>w</mi>
-              </msub>
-              <mo stretchy="false">)</mo>
-            </mtd>
-            <mtd>
-              <mn>1</mn>
-              <mo>-</mo>
-              <mn>2</mn>
-              <mo stretchy="false">(</mo>
-              <msubsup>
-                <mi>q</mi>
-                <mi>x</mi>
-                <mn>2</mn>
-              </msubsup>
-              <mo>+</mo>
-              <msubsup>
-                <mi>q</mi>
-                <mi>y</mi>
-                <mn>2</mn>
-              </msubsup>
-              <mo stretchy="false">)</mo>
-            </mtd>
-            <mtd>
-              <msub>
-                <mi>p</mi>
-                <mi>z</mi>
-              </msub>
-            </mtd>
-          </mtr>
-          <mtr>
-            <mtd>
-              <mn>0</mn>
-            </mtd>
-            <mtd>
-              <mn>0</mn>
-            </mtd>
-            <mtd>
-              <mn>0</mn>
-            </mtd>
-            <mtd>
-              <mn>1</mn>
-            </mtd>
-          </mtr>
-        </mtable>
-        <mo>]</mo>
-      </mrow>
-      <annotation encoding="TeX">\begin{bmatrix} 1 - 2(q_y^2 + q_z^2) &amp; 2(q_xq_y -
-        q_zq_w) &amp; 2(q_xq_z + q_yq_w)
-        &amp; p_x\\ 2(q_xq_y + q_zq_w) &amp; 1 - 2(q_x^2 + q_z^2) &amp; 2(q_yq_z - q_xq_w)
-        &amp; p_y\\ 2(q_xq_z -
-        q_yq_w) &amp; 2(q_yq_z + q_xq_w) &amp; 1 - 2(q_x^2 + q_y^2) &amp; p_z\\ 0 &amp; 0
-        &amp; 0 &amp; 1 \end{bmatrix}
-      </annotation>
-    </semantics>
-  </math></p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+In this example, a transform is created to create a matrix which can be used as a
+transform during rendering of WebGL
+objects, in order to place objects to match a given offset and orientation. The
+`matrix` is then passed
+into a library function that uses WebGL to render an object matching a given name using
+the transform matrix specified
+to position and orient it.
 
-<p>In this example, a transform is created to create a matrix which can be used as a
-  transform during rendering of WebGL
-  objects, in order to place objects to match a given offset and orientation. The
-  <code>matrix</code> is then passed
-  into a library function that uses WebGL to render an object matching a given name using
-  the transform matrix specified
-  to position and orient it.</p>
-
-<pre class="brush: js">let transform = new XRRigidTransform(
+```js
+let transform = new XRRigidTransform(
                       {x: 0, y: 0.5, z: 0.5},
                       {x: 0, y: -0.5, z: -0.5, w: 1});
 drawGLObject("magic-lamp", transform.matrix);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

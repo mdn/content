@@ -22,74 +22,75 @@ tags:
   - XR
   - augmented
 ---
-<p>{{DefaultAPISidebar("WebXR Device API")}}{{SecureContext_header}}</p>
+{{DefaultAPISidebar("WebXR Device API")}}{{SecureContext_header}}
 
-<p>Assuming you're already familiar with 3D graphics in general and WebGL in particular, taking that next bold step into mixed reality—the idea of presenting artificial scenery or objects in addition to or in place of the real world—is not overly complicated. Before you can begin to render your augmented or virtual reality scenario, you need to create and set up the WebXR session, and you should know how to shut it down properly as well. You will learn how to do these things in this article.</p>
+Assuming you're already familiar with 3D graphics in general and WebGL in particular, taking that next bold step into mixed reality—the idea of presenting artificial scenery or objects in addition to or in place of the real world—is not overly complicated. Before you can begin to render your augmented or virtual reality scenario, you need to create and set up the WebXR session, and you should know how to shut it down properly as well. You will learn how to do these things in this article.
 
-<h2 id="Accessing_the_WebXR_API">Accessing the WebXR API</h2>
+## Accessing the WebXR API
 
-<p>Your app's access to the WebXR API begins with the {{domxref("XRSystem")}} object. This object represents the overall WebXR device suite available to you through the hardware and drivers available on the user's equipment. There is a global <code>XRSystem</code> object available for use by your document through the the {{domxref("Navigator")}} property {{domxref("Navigator.xr", "xr")}}, which returns the <code>XRSystem</code> object if suitable XR hardware is available for your use given the hardware available and your document's environment.</p>
+Your app's access to the WebXR API begins with the {{domxref("XRSystem")}} object. This object represents the overall WebXR device suite available to you through the hardware and drivers available on the user's equipment. There is a global `XRSystem` object available for use by your document through the the {{domxref("Navigator")}} property {{domxref("Navigator.xr", "xr")}}, which returns the `XRSystem` object if suitable XR hardware is available for your use given the hardware available and your document's environment.
 
-<p>Thus the simplest code that fetches the <code>XRSystem</code> object is:</p>
+Thus the simplest code that fetches the `XRSystem` object is:
 
-<pre class="brush: js">const xr = navigator.xr;</pre>
+```js
+const xr = navigator.xr;
+```
 
-<p>The value of <code>xr</code> will be <code>null</code> or <code>undefined</code> if WebXR isn't available.</p>
+The value of `xr` will be `null` or `undefined` if WebXR isn't available.
 
-<h3 id="WebXR_availability">WebXR availability</h3>
+### WebXR availability
 
-<p>As a new and still in development API, WebXR support is limited to specific devices and browsers; and even on those, it may not be enabled by default. There may be options available to allow you to experiment with WebXR even if you don't have a compatible system, however.</p>
+As a new and still in development API, WebXR support is limited to specific devices and browsers; and even on those, it may not be enabled by default. There may be options available to allow you to experiment with WebXR even if you don't have a compatible system, however.
 
-<h4 id="WebXR_polyfill">WebXR polyfill</h4>
+#### WebXR polyfill
 
-<p>The team designing the WebXR specification has published a <a href="https://github.com/immersive-web/webxr-polyfill">WebXR polyfill</a> which you can use to simulate WebXR on browsers which don't have support for the WebXR APIs. If the browser supports the older <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a>, that is used. Otherwise, the polyfill falls back to an implementation which uses Google's Cardboard VR API.</p>
+The team designing the WebXR specification has published a [WebXR polyfill](https://github.com/immersive-web/webxr-polyfill) which you can use to simulate WebXR on browsers which don't have support for the WebXR APIs. If the browser supports the older [WebVR API](/en-US/docs/Web/API/WebVR_API), that is used. Otherwise, the polyfill falls back to an implementation which uses Google's Cardboard VR API.
 
-<p>The polyfill is maintained alongside the specification, and is kept up to date with the specification. Additionally, it is updated to maintain compatibility with browsers as their support for WebXR and other technologies related to it and to the implementation of the polyfill change over time.</p>
+The polyfill is maintained alongside the specification, and is kept up to date with the specification. Additionally, it is updated to maintain compatibility with browsers as their support for WebXR and other technologies related to it and to the implementation of the polyfill change over time.
 
-<p>Be sure to read the readme carefully; the polyfill comes in several versions depending on what degree of compatibility with newer JavaScript features your target browsers include.</p>
+Be sure to read the readme carefully; the polyfill comes in several versions depending on what degree of compatibility with newer JavaScript features your target browsers include.
 
-<h4 id="WebXR_API_Emulator_extension">WebXR API Emulator extension</h4>
+#### WebXR API Emulator extension
 
-<p>The <a href="https://mixedreality.mozilla.org/">Mozilla WebXR team</a> has created a <a href="https://blog.mozvr.com/webxr-emulator-extension/">WebXR API Emulator</a> browser extension, compatible with both Firefox and Chrome, which emulates the WebXR API, simulating a variety of compatible devices such as the HTC Vive, the Oculus Go and Oculus Quest, Samsung Gear, and Google Cardboard. With the extension in place, you can open up a developer tools panel that lets you control the position and orientation of the headset and any hand controllers, as well as button presses on the controllers.</p>
+The [Mozilla WebXR team](https://mixedreality.mozilla.org/) has created a [WebXR API Emulator](https://blog.mozvr.com/webxr-emulator-extension/) browser extension, compatible with both Firefox and Chrome, which emulates the WebXR API, simulating a variety of compatible devices such as the HTC Vive, the Oculus Go and Oculus Quest, Samsung Gear, and Google Cardboard. With the extension in place, you can open up a developer tools panel that lets you control the position and orientation of the headset and any hand controllers, as well as button presses on the controllers.
 
-<h5 id="Emulator_usage">Emulator usage</h5>
+##### Emulator usage
 
-<p>While somewhat awkward compared to using an actual headset, this makes it possible to experiment with and developer WebXR code on a desktop computer, where WebXR isn't normally available. It also lets you perform some basic testing before taking your code to a real device. Be aware, however, that the emulator does not yet completely emulate all of the WebXR API, so you may run into problems you're not expecting. Again, carefully read the readme file and make sure you're aware of the limitations before you begin.</p>
+While somewhat awkward compared to using an actual headset, this makes it possible to experiment with and developer WebXR code on a desktop computer, where WebXR isn't normally available. It also lets you perform some basic testing before taking your code to a real device. Be aware, however, that the emulator does not yet completely emulate all of the WebXR API, so you may run into problems you're not expecting. Again, carefully read the readme file and make sure you're aware of the limitations before you begin.
 
-<p><strong>Important:</strong> You should <em>always</em> test your code on actual AR and/or VR hardware before releasing or shipping a product! Emulated, simulated, or polyfilled environments are <em>not</em> an adequate substitute for actual testing on physical devices.</p>
+**Important:** You should *always* test your code on actual AR and/or VR hardware before releasing or shipping a product! Emulated, simulated, or polyfilled environments are *not* an adequate substitute for actual testing on physical devices.
 
-<h5 id="Getting_the_extension">Getting the extension</h5>
+##### Getting the extension
 
-<p>Download the WebXR API Emulator for your supported browser below:</p>
+Download the WebXR API Emulator for your supported browser below:
 
-<ul>
- <li><a href="https://chrome.google.com/webstore/detail/webxr-api-emulator/mjddjgeghkdijejnciaefnkjmkafnnje">Google Chrome</a></li>
- <li><a href="https://addons.mozilla.org/en-US/firefox/addon/webxr-api-emulator/">Mozilla Firefox</a></li>
-</ul>
+- [Google Chrome](https://chrome.google.com/webstore/detail/webxr-api-emulator/mjddjgeghkdijejnciaefnkjmkafnnje)
+- [Mozilla Firefox](https://addons.mozilla.org/en-US/firefox/addon/webxr-api-emulator/)
 
-<p>The <a href="https://github.com/MozillaReality/WebXR-emulator-extension">source code for the extension</a> is also available on GitHub.</p>
+The [source code for the extension](https://github.com/MozillaReality/WebXR-emulator-extension) is also available on GitHub.
 
-<h5 id="Emulator_issues_and_notes">Emulator issues and notes</h5>
+##### Emulator issues and notes
 
-<p>While this isn't the place for a full article about the extension, there are some specific things worth mentioning.</p>
+While this isn't the place for a full article about the extension, there are some specific things worth mentioning.
 
-<p>Version 0.4.0 of the extension was announced on March 26, 2020. It introduced support for augmented reality (AR) through the <a href="https://www.w3.org/TR/webxr-ar-module-1/">WebXR AR Module</a>, which has is approaching a stable state. Documentation for AR is forthcoming shortly here on MDN.</p>
+Version 0.4.0 of the extension was announced on March 26, 2020. It introduced support for augmented reality (AR) through the [WebXR AR Module](https://www.w3.org/TR/webxr-ar-module-1/), which has is approaching a stable state. Documentation for AR is forthcoming shortly here on MDN.
 
-<p>Other improvements include updating the emulator to rename the <code>XR</code> interface to {{domxref("XRSystem")}}, introduce support for squeeze (grip) input sources, and add support for the {{domxref("XRInputSource")}} property {{domxref("XRInputSource.profiles", "profiles")}}.</p>
+Other improvements include updating the emulator to rename the `XR` interface to {{domxref("XRSystem")}}, introduce support for squeeze (grip) input sources, and add support for the {{domxref("XRInputSource")}} property {{domxref("XRInputSource.profiles", "profiles")}}.
 
-<h3 id="Context_requirements">Context requirements</h3>
+### Context requirements
 
-<p>A WebXR compatible environment starts with a securely-loaded document. Your document needs to either have been loaded from the local drive (such as by using an URL such as <code>http://localhost/...</code>), or using {{Glossary("HTTPS")}} when loading the page. The JavaScript code must, likewise, have been loaded securely.</p>
+A WebXR compatible environment starts with a securely-loaded document. Your document needs to either have been loaded from the local drive (such as by using an URL such as `http://localhost/...`), or using {{Glossary("HTTPS")}} when loading the page. The JavaScript code must, likewise, have been loaded securely.
 
-<p>If the document wasn't loaded securely, you won't get very far. The {{domxref("navigator.xr")}} property doesn't even exist if the document wasn't loaded securely. This may also be the case if there is no compatible XR hardware available. Either way, you need to be prepared for the lack of an <code>xr</code> property and either gracefully handle the error or provide some form of fallback.</p>
+If the document wasn't loaded securely, you won't get very far. The {{domxref("navigator.xr")}} property doesn't even exist if the document wasn't loaded securely. This may also be the case if there is no compatible XR hardware available. Either way, you need to be prepared for the lack of an `xr` property and either gracefully handle the error or provide some form of fallback.
 
-<h3 id="Falling_back_to_the_WebXR_polyfill">Falling back to the WebXR polyfill</h3>
+### Falling back to the WebXR polyfill
 
-<p>One fallback option is the <a href="https://github.com/immersive-web/webxr-polyfill/">WebXR polyfill</a>, provided by the <a href="https://www.w3.org/immersive-web/">Immersive Web Working Group</a> that's in charge of the WebXR standardization process. The {{Glossary("polyfill")}} brings support for WebXR to browsers that don't have native WebXR support, and smooths out the inconsistencies among implementations in the browsers that do have it, so it can sometimes also be useful even if WebXR is natively available.</p>
+One fallback option is the [WebXR polyfill](https://github.com/immersive-web/webxr-polyfill/), provided by the [Immersive Web Working Group](https://www.w3.org/immersive-web/) that's in charge of the WebXR standardization process. The {{Glossary("polyfill")}} brings support for WebXR to browsers that don't have native WebXR support, and smooths out the inconsistencies among implementations in the browsers that do have it, so it can sometimes also be useful even if WebXR is natively available.
 
-<p>Here we define a <code>getXR()</code> function, which returns the {{domxref("XRSystem")}} object after optionally installing the polyfill, assuming that the polyfill has been included or loaded using a prior {{HTMLElement("script")}} tag.</p>
+Here we define a `getXR()` function, which returns the {{domxref("XRSystem")}} object after optionally installing the polyfill, assuming that the polyfill has been included or loaded using a prior {{HTMLElement("script")}} tag.
 
-<pre class="brush: js">let webxrPolyfill = null;
+```js
+let webxrPolyfill = null;
 
 function getXR(usePolyfill) {
   let tempXR;
@@ -118,57 +119,58 @@ function getXR(usePolyfill) {
 const xr = getXR("no");  // Get the native XRSystem object
 const xr = getXR("yes"); // Always returns an XRSystem from the polyfill
 const xr = getXR("if-needed"); // Use the polyfill only if navigator.xr missing
-</pre>
+```
 
-<p>The returned <code>XRSystem</code> object can then be used according to the documentation provided here on MDN. The global variable <code>webxrPolyfill</code> is used only to retain a reference to the polyfill in order to ensure that it remains available until you no longer need it. Setting it to <code>null</code> signals that the polyfill can be garbage collected when no objects depending on it are using it anymore.</p>
+The returned `XRSystem` object can then be used according to the documentation provided here on MDN. The global variable `webxrPolyfill` is used only to retain a reference to the polyfill in order to ensure that it remains available until you no longer need it. Setting it to `null` signals that the polyfill can be garbage collected when no objects depending on it are using it anymore.
 
-<p>Of course, you can simplify this depending on your needs; since your app is probably not going to go back and forth much on whether or not to use the polyfill, you can simplify this to just the specific case you need.</p>
+Of course, you can simplify this depending on your needs; since your app is probably not going to go back and forth much on whether or not to use the polyfill, you can simplify this to just the specific case you need.
 
-<h3 id="Permissions_and_security">Permissions and security</h3>
+### Permissions and security
 
-<p>There are a number of security measures in place revolving around WebXR. First among these is that use of <code>immersive-vr</code> mode—which entirely replaces the user's view of the world—requires that the <code>xr-spatial-tracking</code>  <a href="/en-US/docs/Web/HTTP/Feature_Policy">feature policy</a> be in place. On top of that, the document needs to be secure and currently focused. Finally, you must call {{domxref("XRSystem.requestSession", "requestSession()")}} from a user event handler, such as the handler for the {{domxref("Element.click_event", "click")}} event.</p>
+There are a number of security measures in place revolving around WebXR. First among these is that use of `immersive-vr` mode—which entirely replaces the user's view of the world—requires that the `xr-spatial-tracking`  [feature policy](/en-US/docs/Web/HTTP/Feature_Policy) be in place. On top of that, the document needs to be secure and currently focused. Finally, you must call {{domxref("XRSystem.requestSession", "requestSession()")}} from a user event handler, such as the handler for the {{domxref("Element.click_event", "click")}} event.
 
-<p>For more specifics about securing WebXR actitvities and usage, see the article <a href="/en-US/docs/Web/API/WebXR_Device_API/Permissions_and_security">Permissions and security for WebXR</a>.</p>
+For more specifics about securing WebXR actitvities and usage, see the article [Permissions and security for WebXR](/en-US/docs/Web/API/WebXR_Device_API/Permissions_and_security).
 
-<h3 id="Confirming_the_session_type_you_need_is_available">Confirming the session type you need is available</h3>
+### Confirming the session type you need is available
 
-<p>Before trying to create a new WebXR session, it's often wise to first check to see if the user's hardware and software support the presentation mode you wish to use. This can also be used to determine whether to use an immersive or an inline presentation, for example.</p>
+Before trying to create a new WebXR session, it's often wise to first check to see if the user's hardware and software support the presentation mode you wish to use. This can also be used to determine whether to use an immersive or an inline presentation, for example.
 
-<p>To find out if a given mode is supported, call the {{domxref("XRSystem")}} method {{domxref("XRSystem.isSessionSupported", "isSessionSupported()")}}. This returns a promise which resolves to <code>true</code> if the given type of session is available for use or <code>false</code> otherwise.</p>
+To find out if a given mode is supported, call the {{domxref("XRSystem")}} method {{domxref("XRSystem.isSessionSupported", "isSessionSupported()")}}. This returns a promise which resolves to `true` if the given type of session is available for use or `false` otherwise.
 
-<pre class="brush: js">const immersiveOK = await navigator.xr.isSessionSupported("immersive-vr");
+```js
+const immersiveOK = await navigator.xr.isSessionSupported("immersive-vr");
 if (immersiveOK) {
   // Create and use an immersive VR session
 } else {
   // Create an inline session instead, or tell the user about the
   // incompatibility if inline is required
 }
-</pre>
+```
 
-<h2 id="Creating_and_starting_the_session">Creating and starting the session</h2>
+## Creating and starting the session
 
-<p>A WebXR session is represented by an {{domxref("XRSession")}} object. To obtain an <code>XRSession</code>, you call your {{domxref("XRSystem")}}'s {{domxref("XRSystem.requestSession", "requestSession()")}} method, which returns a promise that resolves with an <code>XRSession</code> if it's able to establish one successfully. Fundamentally, that looks like this:</p>
+A WebXR session is represented by an {{domxref("XRSession")}} object. To obtain an `XRSession`, you call your {{domxref("XRSystem")}}'s {{domxref("XRSystem.requestSession", "requestSession()")}} method, which returns a promise that resolves with an `XRSession` if it's able to establish one successfully. Fundamentally, that looks like this:
 
-<pre class="brush: js">xr.requestSession("immersive-vr").then((session) =&gt; {
+```js
+xr.requestSession("immersive-vr").then((session) => {
   xrSession = session;
   /* continue to set up the session */
 });
-</pre>
+```
 
-<p>Note the parameter passed into <code>requestSession()</code> in this code snippet: <code>immersive-vr</code>. This string specifies the type of WebXR session you want to establish—in this case, a fully-immersive virtual reality experience. There are three options:</p>
+Note the parameter passed into `requestSession()` in this code snippet: `immersive-vr`. This string specifies the type of WebXR session you want to establish—in this case, a fully-immersive virtual reality experience. There are three options:
 
-<dl>
- <dt><code>immersive-vr</code></dt>
- <dd>A fully-immersive virtual reality session using a headset or similar device that fully replaces the world around the user with the images you present.</dd>
- <dt><code>immersive-ar</code></dt>
- <dd>An augmented reality session in which images are added to the real world using a headset or similar apparatus. <em>This option is not yet widely supported, as the AR specification is in flux.</em></dd>
- <dt><code>inline</code></dt>
- <dd>An on-screen presentation of the XR imagery within the context of the document window.</dd>
-</dl>
+- `immersive-vr`
+  - : A fully-immersive virtual reality session using a headset or similar device that fully replaces the world around the user with the images you present.
+- `immersive-ar`
+  - : An augmented reality session in which images are added to the real world using a headset or similar apparatus. *This option is not yet widely supported, as the AR specification is in flux.*
+- `inline`
+  - : An on-screen presentation of the XR imagery within the context of the document window.
 
-<p>If the session couldn't be created for some reason—such as feature policy disallowing its use or the user declining to grant permission to use the headset—the promise gets rejected. So a more complete function that starts up and returns a WebXR session could look like this:</p>
+If the session couldn't be created for some reason—such as feature policy disallowing its use or the user declining to grant permission to use the headset—the promise gets rejected. So a more complete function that starts up and returns a WebXR session could look like this:
 
-<pre class="brush: js">async function createImmersiveSession(xr) {
+```js
+async function createImmersiveSession(xr) {
   try {
     session = await xr.requestSession("immersive-vr");
     return session;
@@ -176,17 +178,18 @@ if (immersiveOK) {
     throw error;
   }
 }
-</pre>
+```
 
-<p>This function returns the new {{domxref("XRSession")}} or throws an exception if an error occurs while creating the session.</p>
+This function returns the new {{domxref("XRSession")}} or throws an exception if an error occurs while creating the session.
 
-<h3 id="Customizing_the_session">Customizing the session</h3>
+### Customizing the session
 
-<p>In addition to the display mode, the {{domxref("XRSystem.requestSession", "requestSession()")}} method can take an optional object with initialization parameters to customize the session. Currently, the only configurable aspect of the session is which of the reference spaces should be used to represent the world's coordinate system. You can specify either required or optional reference spaces in order to obtain a session compatible with the reference spaces you need or prefer to use.</p>
+In addition to the display mode, the {{domxref("XRSystem.requestSession", "requestSession()")}} method can take an optional object with initialization parameters to customize the session. Currently, the only configurable aspect of the session is which of the reference spaces should be used to represent the world's coordinate system. You can specify either required or optional reference spaces in order to obtain a session compatible with the reference spaces you need or prefer to use.
 
-<p>For example, if you need an <code>unbounded</code> reference space, you can specify that as a required feature in order to ensure that the session you get can use unbounded spaces:</p>
+For example, if you need an `unbounded` reference space, you can specify that as a required feature in order to ensure that the session you get can use unbounded spaces:
 
-<pre class="brush: js">async function createImmersiveSession(xr) {
+```js
+async function createImmersiveSession(xr) {
   try {
     session = await xr.requestSession("immersive-vr", {
       requiredFeatures: [ "unbounded" ]
@@ -196,11 +199,12 @@ if (immersiveOK) {
     throw error;
   }
 }
-</pre>
+```
 
-<p>On the other hand, if you need an <em>inline</em> session and would prefer a <code>local</code> reference space, you can do this:</p>
+On the other hand, if you need an *inline* session and would prefer a `local` reference space, you can do this:
 
-<pre class="brush: js">async function createInlineSession(xr) {
+```js
+async function createInlineSession(xr) {
   try {
     session = await xr.requestSession("inline", {
       optionalFeatures: [ "local" ]
@@ -210,30 +214,29 @@ if (immersiveOK) {
     throw error;
   }
 }
-</pre>
+```
 
-<p>This <code>createInlineSession()</code> function will try to create an inline session that's compatible with the <code>local</code> reference space. When you're ready to create your reference space, you can try for a local space, and if that fails, fall back to a <code>viewer</code> reference space, which all devices are required to support.</p>
+This `createInlineSession()` function will try to create an inline session that's compatible with the `local` reference space. When you're ready to create your reference space, you can try for a local space, and if that fails, fall back to a `viewer` reference space, which all devices are required to support.
 
-<h3 id="Preparing_the_new_session_for_use">Preparing the new session for use</h3>
+### Preparing the new session for use
 
-<p>Once the {{domxref("XRSystem.requestSession", "requestSession()")}} method's returned promise successfully resolves, you know you have a usable WebXR session in hand. You can then proceed to prepare the session for use and begin your animations.</p>
+Once the {{domxref("XRSystem.requestSession", "requestSession()")}} method's returned promise successfully resolves, you know you have a usable WebXR session in hand. You can then proceed to prepare the session for use and begin your animations.
 
-<p>The key things you need (or may need) to do in order to finish the configuration of your session include:</p>
+The key things you need (or may need) to do in order to finish the configuration of your session include:
 
-<ul>
- <li>Add handlers for the events you need to watch. This most likely includes the {{domxref("XRSession.end_event", "end")}} at a minimum, so you can detect when the session is over.</li>
- <li>If you use XR input controllers, watch the {{domxref("XRSession.inputsourceschange_event", "inputsourceschange")}} event to detect the addition or removal of XR input controllers, and the various <a href="/en-US/docs/Web/API/WebXR_Device_API/Inputs#actions">select and squeeze action events</a>.</li>
- <li>You may want to watch for the {{domxref("XRSystem")}} event {{domxref("XRSystem.devicechange_event", "devicechange")}} so you can be advised when the set of available immersive devices changes.</li>
- <li>Obtain a WebGL context for the canvas into which you intend to render your frames by calling the {{domxref("HTMLCanvasElement")}} method {{domxref("HTMLCanvasElement.getContext", "getContext()")}} on the target context.</li>
- <li>Set up your WebGL data and models and prepare to render the scene.</li>
- <li>Set the WebGL context as the source for the XR system by creating an {{domxref("XRWebGLLayer")}} and passing set the value of the session's {{domxref("XRRenderState", "renderState")}} property {{domxref("XRRenderState.baseLayer", "baseLayer")}}.</li>
- <li>Perform calculations for the initial position and scale of your objects as needed.</li>
- <li>Begin the <a href="/en-US/docs/Web/API/WebXR_Device_API/Rendering">frame rendering cycle</a>.</li>
-</ul>
+- Add handlers for the events you need to watch. This most likely includes the {{domxref("XRSession.end_event", "end")}} at a minimum, so you can detect when the session is over.
+- If you use XR input controllers, watch the {{domxref("XRSession.inputsourceschange_event", "inputsourceschange")}} event to detect the addition or removal of XR input controllers, and the various [select and squeeze action events](/en-US/docs/Web/API/WebXR_Device_API/Inputs#actions).
+- You may want to watch for the {{domxref("XRSystem")}} event {{domxref("XRSystem.devicechange_event", "devicechange")}} so you can be advised when the set of available immersive devices changes.
+- Obtain a WebGL context for the canvas into which you intend to render your frames by calling the {{domxref("HTMLCanvasElement")}} method {{domxref("HTMLCanvasElement.getContext", "getContext()")}} on the target context.
+- Set up your WebGL data and models and prepare to render the scene.
+- Set the WebGL context as the source for the XR system by creating an {{domxref("XRWebGLLayer")}} and passing set the value of the session's {{domxref("XRRenderState", "renderState")}} property {{domxref("XRRenderState.baseLayer", "baseLayer")}}.
+- Perform calculations for the initial position and scale of your objects as needed.
+- Begin the [frame rendering cycle](/en-US/docs/Web/API/WebXR_Device_API/Rendering).
 
-<p>In basic form, code to do this final setup might look something like this:</p>
+In basic form, code to do this final setup might look something like this:
 
-<pre class="brush: js">async function runSession(session) {
+```js
+async function runSession(session) {
   let worldData;
 
   session.addEventListener("end", onSessionEnd);
@@ -263,43 +266,42 @@ if (immersiveOK) {
 
   return worldData;
 }
-</pre>
+```
 
-<p>For the purposes of this example, an object named <code>worldData</code> gets created to encapsulate data about the world and rendering environment. This includes the {{domxref("XRSession")}} itself, all of the data used to render the scene in WebGL, the world reference space, and the ID returned by {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}}.</p>
+For the purposes of this example, an object named `worldData` gets created to encapsulate data about the world and rendering environment. This includes the {{domxref("XRSession")}} itself, all of the data used to render the scene in WebGL, the world reference space, and the ID returned by {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}}.
 
-<p>First, a handler for the {{domxref("XRSession.end_event", "end")}} event is set up. Then the rendering canvas is obtained and a reference to its WebGL context is retrieved, specifying the <code>xrCompatible</code> option when calling {{domxref("HTMLCanvasElement.getContext", "getContext()")}}.</p>
+First, a handler for the {{domxref("XRSession.end_event", "end")}} event is set up. Then the rendering canvas is obtained and a reference to its WebGL context is retrieved, specifying the `xrCompatible` option when calling {{domxref("HTMLCanvasElement.getContext", "getContext()")}}.
 
-<p>Next, any data and setup needed for the WebGL renderer is performed before then configuring WebGL to use the framebuffer of the WebGL context as its own framebuffer. This is done using the {{domxref("XRSession")}} method {{domxref("XRSession.updateRenderState", "updateRenderState()")}} to set the render state's {{domxref("XRRenderState.baseLayer", "baseLayer")}} to a newly-created {{domxref("XRWebGLLayer")}} encapsulating the WebGL context.</p>
+Next, any data and setup needed for the WebGL renderer is performed before then configuring WebGL to use the framebuffer of the WebGL context as its own framebuffer. This is done using the {{domxref("XRSession")}} method {{domxref("XRSession.updateRenderState", "updateRenderState()")}} to set the render state's {{domxref("XRRenderState.baseLayer", "baseLayer")}} to a newly-created {{domxref("XRWebGLLayer")}} encapsulating the WebGL context.
 
-<h3 id="Preparing_to_render_the_scene">Preparing to render the scene</h3>
+### Preparing to render the scene
 
-<p>At this point, the <code>XRSession</code> itself has been fully configured, so we can begin rendering. First, we need a reference space within which coordinates for the world will be stated. We can get the initial reference space for the session by calling the <code>XRSession</code>'s {{domxref("XRSession.requestReferenceSpace", "requestReferenceSpace()")}} method. We specify when calling <code>requestReferenceSpace()</code> the name of the type of reference space we want; in this case, <code>unbounded</code>. You might just as easily specify <code>local</code> or <code>viewer</code>, depending on your needs.</p>
+At this point, the `XRSession` itself has been fully configured, so we can begin rendering. First, we need a reference space within which coordinates for the world will be stated. We can get the initial reference space for the session by calling the `XRSession`'s {{domxref("XRSession.requestReferenceSpace", "requestReferenceSpace()")}} method. We specify when calling `requestReferenceSpace()` the name of the type of reference space we want; in this case, `unbounded`. You might just as easily specify `local` or `viewer`, depending on your needs.
 
-<div class="notecard note">
-<p><strong>Note:</strong> To understand how to select the right reference space for your needs, see {{SectionOnPage("/en-US/docs/Web/API/WebXR_Device_API/Geometry", "Selecting the reference space type")}}.</p>
-</div>
+> **Note:** To understand how to select the right reference space for your needs, see {{SectionOnPage("/en-US/docs/Web/API/WebXR_Device_API/Geometry", "Selecting the reference space type")}}.
 
-<p>The reference space returned by <code>requestReferenceSpace()</code> places the origin (0, 0, 0) in the center of the space. This is great—if your player's viewpoint starts in the exact center of the world. But most likely, that's not the case at all. If that's so, you call {{domxref("XRReferenceSpace.getOffsetReferenceSpace", "getOffsetReferenceSpace()")}} on the initial reference space to create a <em>new</em> reference space <a href="/en-US/docs/Web/API/WebXR_Device_API/Geometry#establishing_the_reference_space">which offsets the coordinate system</a> so that (0, 0, 0) is located at the position of the viewer, with the orientation likewise shifted to face in the desired direction. The input value into <code>getOffsetReferenceSpace()</code> is an {{domxref("XRRigidTransform")}} encapsulating the player's position and orientation as specified in the default world coordinates.</p>
+The reference space returned by `requestReferenceSpace()` places the origin (0, 0, 0) in the center of the space. This is great—if your player's viewpoint starts in the exact center of the world. But most likely, that's not the case at all. If that's so, you call {{domxref("XRReferenceSpace.getOffsetReferenceSpace", "getOffsetReferenceSpace()")}} on the initial reference space to create a *new* reference space [which offsets the coordinate system](/en-US/docs/Web/API/WebXR_Device_API/Geometry#establishing_the_reference_space) so that (0, 0, 0) is located at the position of the viewer, with the orientation likewise shifted to face in the desired direction. The input value into `getOffsetReferenceSpace()` is an {{domxref("XRRigidTransform")}} encapsulating the player's position and orientation as specified in the default world coordinates.
 
-<p>With the new reference space in hand and stored into the <code>worldData</code> object for safe-keeping, we call the session's {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} method to schedule a callback to be executed when it's time to render the next frame of animation for the WebXR session. The returned value is an ID we can use later to cancel the request if need be, so we save that into <code>worldData</code> as well.</p>
+With the new reference space in hand and stored into the `worldData` object for safe-keeping, we call the session's {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} method to schedule a callback to be executed when it's time to render the next frame of animation for the WebXR session. The returned value is an ID we can use later to cancel the request if need be, so we save that into `worldData` as well.
 
-<p>In the end, the <code>worldData</code> object is returned to the caller to allow the main code to reference the data it needs later. At this point, the setup process is complete and we've entered the rendering stage of our application. To learn more about rendering, see the article <a href="/en-US/docs/Web/API/WebXR_Device_API/Rendering">Rendering and the WebXR frame animation callback</a>.</p>
+In the end, the `worldData` object is returned to the caller to allow the main code to reference the data it needs later. At this point, the setup process is complete and we've entered the rendering stage of our application. To learn more about rendering, see the article [Rendering and the WebXR frame animation callback](/en-US/docs/Web/API/WebXR_Device_API/Rendering).
 
-<h3 id="On_operational_details">On operational details</h3>
+### On operational details
 
-<p>Obviously, this was a just an example. You don't need a <code>worldData</code> object to store everything; you can store the information you need to maintain any way you want to. You may need different information or have different specific requirements that cause you to do things differently, or in a different order.</p>
+Obviously, this was a just an example. You don't need a `worldData` object to store everything; you can store the information you need to maintain any way you want to. You may need different information or have different specific requirements that cause you to do things differently, or in a different order.
 
-<p>Similarly, the specific methodology you use for loading models and other information and setting up your WebGL data—textures, vertex buffers, shaders, and so on—will vary a great deal depending on your needs, what if any frameworks you're using, and the like.</p>
+Similarly, the specific methodology you use for loading models and other information and setting up your WebGL data—textures, vertex buffers, shaders, and so on—will vary a great deal depending on your needs, what if any frameworks you're using, and the like.
 
-<h2 id="Important_session_maintenance_events">Important session maintenance events</h2>
+## Important session maintenance events
 
-<p>Over the course of your WebXR session, you may receive any of a number of events which indicate changes to the state of the session, or which let you know about things you need to do to keep the session operating properly.</p>
+Over the course of your WebXR session, you may receive any of a number of events which indicate changes to the state of the session, or which let you know about things you need to do to keep the session operating properly.
 
-<h3 id="Detecting_changes_to_sessions_visibility_state">Detecting changes to session's visibility state</h3>
+### Detecting changes to session's visibility state
 
-<p>When the state of the <code>XRSession</code>'s visibility changes—such as when the session is hidden or displayed, or when the user has focused another context—the session receives an {{domxref("XRSession.visibilitychange_event", "visibilitychange")}} event.</p>
+When the state of the `XRSession`'s visibility changes—such as when the session is hidden or displayed, or when the user has focused another context—the session receives an {{domxref("XRSession.visibilitychange_event", "visibilitychange")}} event.
 
-<pre class="brush: js">session.onvisibilitychange = (event) =&gt; {
+```js
+session.onvisibilitychange = (event) => {
   switch(event.session.visibilityState) {
     case "hidden":
       myFrameRate = 10;
@@ -312,70 +314,70 @@ if (immersiveOK) {
       myFrameRate = 60;
       break;
   }
-};</pre>
+};
+```
 
-<p>This example changes a variable <code>myFrameRate</code> depending on the visibility state as it changes. Presumably the renderer uses this value to compute how often to render new frames as the animation loop progresses, thus rendering less frequently the more "blurred" the scene becomes.</p>
+This example changes a variable `myFrameRate` depending on the visibility state as it changes. Presumably the renderer uses this value to compute how often to render new frames as the animation loop progresses, thus rendering less frequently the more "blurred" the scene becomes.
 
-<h3 id="Detecting_reference_space_resets">Detecting reference space resets</h3>
+### Detecting reference space resets
 
-<p>Occasionally, discontinuities or jumps in the <a href="/en-US/docs/Web/API/WebXR_Device_API/Geometry#on_the_origins_of_spaces">native origin</a> may occur while tracking the user's position in the world. The most common scenarios in which this happens are when the user requests a recalibration of their XR device or when a hiccup or glitch occurs in the flow of tracking data received from the XR hardware. These situations cause the native origin to jump abruptly by the distance and directional angle necessary to bring the native origin back into alignment with the user's position and facing direction.</p>
+Occasionally, discontinuities or jumps in the [native origin](/en-US/docs/Web/API/WebXR_Device_API/Geometry#on_the_origins_of_spaces) may occur while tracking the user's position in the world. The most common scenarios in which this happens are when the user requests a recalibration of their XR device or when a hiccup or glitch occurs in the flow of tracking data received from the XR hardware. These situations cause the native origin to jump abruptly by the distance and directional angle necessary to bring the native origin back into alignment with the user's position and facing direction.
 
-<p>When this happens, a {{domxref("XRReferenceSpace.reset_event", "reset")}} event is sent to the session's {{domxref("XRReferenceSpace")}}. The event's {{domxref("XRReferenceSpaceEvent.transform", "transform")}} property is an {{domxref("XRRigidTransform")}} detailing the transform needed to realign the native origin.</p>
+When this happens, a {{domxref("XRReferenceSpace.reset_event", "reset")}} event is sent to the session's {{domxref("XRReferenceSpace")}}. The event's {{domxref("XRReferenceSpaceEvent.transform", "transform")}} property is an {{domxref("XRRigidTransform")}} detailing the transform needed to realign the native origin.
 
-<div class="notecard note">
-<p><strong>Note:</strong> The <code>reset</code> event is fired at the {{domxref("XRReferenceSpace")}}, not the {{domxref("XRSession")}}!</p>
-</div>
+> **Note:** The `reset` event is fired at the {{domxref("XRReferenceSpace")}}, not the {{domxref("XRSession")}}!
 
-<p>Another common cause for <code>reset</code> events is when a bounded reference space (<code>bounded-floor</code>) has its geometry as specified by the {{domxref("XRBoundedReferenceSpace")}}'s property {{domxref("XRBoundedReferenceSpace.boundsGeometry", "boundsGeometry")}} change.</p>
+Another common cause for `reset` events is when a bounded reference space (`bounded-floor`) has its geometry as specified by the {{domxref("XRBoundedReferenceSpace")}}'s property {{domxref("XRBoundedReferenceSpace.boundsGeometry", "boundsGeometry")}} change.
 
-<p>For more common causes of reference space resets and more details and sample code, see the documentation for the {{domxref("XRReferenceSpace.reset_event", "reset")}} event.</p>
+For more common causes of reference space resets and more details and sample code, see the documentation for the {{domxref("XRReferenceSpace.reset_event", "reset")}} event.
 
-<h3 id="Detecting_when_the_available_set_of_WebXR_input_controls_changes">Detecting when the available set of WebXR input controls changes</h3>
+### Detecting when the available set of WebXR input controls changes
 
-<p>WebXR maintains a list of input controls which is specific to the WebXR system. These devices include things such as the handheld controllers, motion-sensing cameras, motion-sensitive gloves and other feedback devices. When the user connects or disconnects a WebXR controller device, the {{domxref("XRSession.inputsourceschange_event", "inputsourceschange")}} event is dispatched to the <code>XRSession</code>. This is an opportunity to notify the user of the device's availability, begin to monitor it for inputs, offer configuration options, or whatever you need to do with it.</p>
+WebXR maintains a list of input controls which is specific to the WebXR system. These devices include things such as the handheld controllers, motion-sensing cameras, motion-sensitive gloves and other feedback devices. When the user connects or disconnects a WebXR controller device, the {{domxref("XRSession.inputsourceschange_event", "inputsourceschange")}} event is dispatched to the `XRSession`. This is an opportunity to notify the user of the device's availability, begin to monitor it for inputs, offer configuration options, or whatever you need to do with it.
 
-<h2 id="Ending_the_WebXR_session">Ending the WebXR session</h2>
+## Ending the WebXR session
 
-<p>When the user's VR or AR session draws to a close, the session ends. The shutdown of an {{domxref("XRSession")}} can happen either due to the session itself deciding it's time to shut down (such as if the user turns off their XR device), because the user has clicked a button to end the session, or some other situation as appropriate for your application.</p>
+When the user's VR or AR session draws to a close, the session ends. The shutdown of an {{domxref("XRSession")}} can happen either due to the session itself deciding it's time to shut down (such as if the user turns off their XR device), because the user has clicked a button to end the session, or some other situation as appropriate for your application.
 
-<p>Here we discuss both how to request a shutdown of the WebXR session and how to detect when the session has ended, whether by your request or otherwise.</p>
+Here we discuss both how to request a shutdown of the WebXR session and how to detect when the session has ended, whether by your request or otherwise.
 
-<h3 id="Shutting_down_the_session">Shutting down the session</h3>
+### Shutting down the session
 
-<p>To cleanly shut down the WebXR session when you're done with it, you should call the session's {{domxref("XRSession.end", "end()")}} method. This returns a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promise</a> you can use to know when the shutdown is complete.</p>
+To cleanly shut down the WebXR session when you're done with it, you should call the session's {{domxref("XRSession.end", "end()")}} method. This returns a [promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) you can use to know when the shutdown is complete.
 
-<pre class="brush: js">async function shutdownXR(session) {
+```js
+async function shutdownXR(session) {
   if (session) {
     await session.end();
 
     /* At this point, WebXR is fully shut down */
   }
 }
-</pre>
+```
 
-<p>When <code>shutdownXR()</code> returns to its caller, the WebXR session is fully and safely shut down.</p>
+When `shutdownXR()` returns to its caller, the WebXR session is fully and safely shut down.
 
-<p>If you have work that must be done when the session ends, such as releasing resources and the like, you should do that work in your {{domxref("XRSession.end_event", "end")}} event handler rather than in your main code body. That way, you handle the cleanup regardless of whether the shutdown was automatically or manually triggered.</p>
+If you have work that must be done when the session ends, such as releasing resources and the like, you should do that work in your {{domxref("XRSession.end_event", "end")}} event handler rather than in your main code body. That way, you handle the cleanup regardless of whether the shutdown was automatically or manually triggered.
 
-<h3 id="Detecting_when_the_session_has_ended">Detecting when the session has ended</h3>
+### Detecting when the session has ended
 
-<p>As previously established, you can detect when the WebXR session has ended—whether because you've called its {{domxref("XRSession.end", "end()")}} method, the user turned off their headset, or some sort of irresolvable error occurred in the XR system—by watching for the {{domxref("XRSession.end_event", "end")}} event to be sent to the {{domxref("XRSession")}}.</p>
+As previously established, you can detect when the WebXR session has ended—whether because you've called its {{domxref("XRSession.end", "end()")}} method, the user turned off their headset, or some sort of irresolvable error occurred in the XR system—by watching for the {{domxref("XRSession.end_event", "end")}} event to be sent to the {{domxref("XRSession")}}.
 
-<pre class="brush: js">session.onend = (event) =&gt; {
+```js
+session.onend = (event) => {
   /* the session has shut down */
 
   freeResources();
-};</pre>
+};
+```
 
-<p>Here, when the session has ended and the <code>end</code> event is received, a <code>freeResources()</code> function is called to release the resources previously allocated and/or loaded to handle the XR presentation. By calling <code>freeResources()</code> in the <code>end</code> event handler, we call it both when the user clicks a button that triggers a shutdown such as by calling the <code>shutdownXR()</code> function shown above <em>and</em> when the session ends automatically, whether due to an error or some other reason.</p>
+Here, when the session has ended and the `end` event is received, a `freeResources()` function is called to release the resources previously allocated and/or loaded to handle the XR presentation. By calling `freeResources()` in the `end` event handler, we call it both when the user clicks a button that triggers a shutdown such as by calling the `shutdownXR()` function shown above *and* when the session ends automatically, whether due to an error or some other reason.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API </a></li>
- <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Fundamentals">Fundamentals of WebXR</a></li>
- <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Spatial_tracking">Spatial tracking in WebXR</a></li>
- <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Cameras">Viewpoints and viewers: Simulating cameras in WebXR</a></li>
- <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Bounded_reference_spaces">Using bounded reference spaces</a></li>
- <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Inputs">Inputs and input sources</a></li>
-</ul>
+- [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)
+- [Fundamentals of WebXR](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals)
+- [Spatial tracking in WebXR](/en-US/docs/Web/API/WebXR_Device_API/Spatial_tracking)
+- [Viewpoints and viewers: Simulating cameras in WebXR](/en-US/docs/Web/API/WebXR_Device_API/Cameras)
+- [Using bounded reference spaces](/en-US/docs/Web/API/WebXR_Device_API/Bounded_reference_spaces)
+- [Inputs and input sources](/en-US/docs/Web/API/WebXR_Device_API/Inputs)

@@ -2,39 +2,37 @@
 title: XRSession.depthUsage
 slug: Web/API/XRSession/depthUsage
 tags:
-- API
-- AR
-- Augmented Reality
-- Experimental
-- Property
-- Reference
-- VR
-- WebXR
-- WebXR Device API
-- XRSession
+  - API
+  - AR
+  - Augmented Reality
+  - Experimental
+  - Property
+  - Reference
+  - VR
+  - WebXR
+  - WebXR Device API
+  - XRSession
 browser-compat: api.XRSession.depthUsage
 ---
-<div>{{APIRef("WebXR Device API")}}</div>
+{{APIRef("WebXR Device API")}}
 
-<p>The <em>read-only</em> <strong><code>depthUsage</code></strong> property of an <code>immersive-ar</code>
-    {{DOMxRef("XRSession")}} describes which depth-sensing usage is used.</p>
+The *read-only* **`depthUsage`** property of an `immersive-ar`
+{{DOMxRef("XRSession")}} describes which depth-sensing usage is used.
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>This property can return the following values:</p>
+This property can return the following values:
 
-<dl>
-  <dt><code>cpu-optimized</code></dt>
-  <dd>The depth data is intended to be used on the CPU; see the {{domxref("XRCPUDepthInformation")}} interface.</dd>
-  <dt><code>gpu-optimized</code></dt>
-  <dd>The depth data is intended to be used on the GPU; see the {{domxref("XRWebGLDepthInformation")}} interface.</dd>
-</dl>
+- `cpu-optimized`
+  - : The depth data is intended to be used on the CPU; see the {{domxref("XRCPUDepthInformation")}} interface.
+- `gpu-optimized`
+  - : The depth data is intended to be used on the GPU; see the {{domxref("XRWebGLDepthInformation")}} interface.
 
-<h2>Examples</h2>
+## Examples
 
-<p>To request the desired usage method, you need to specify a <code>usagePreference</code> when requesting a session using {{domxref("XRSystem.requestSession()")}}. Here, the caller is able to handle both CPU- and GPU-optimized usage. The order indicates preference for CPU:</p>
+To request the desired usage method, you need to specify a `usagePreference` when requesting a session using {{domxref("XRSystem.requestSession()")}}. Here, the caller is able to handle both CPU- and GPU-optimized usage. The order indicates preference for CPU:
 
-<pre class="brush: js">
+```js
 navigator.xr.requestSession("immersive-ar", {
   requiredFeatures: ["depth-sensing"],
   depthSensing: {
@@ -42,18 +40,18 @@ navigator.xr.requestSession("immersive-ar", {
     formatPreference: ["luminance-alpha", "float32"]
   }
 });
-</pre>
+```
 
-<p>To check which usage was selected by the user agent, you can call the <code>depthUsage</code> property:</p>
+To check which usage was selected by the user agent, you can call the `depthUsage` property:
 
-<pre class="brush: js">
+```js
 console.log(session.depthUsage); // either "cpu-optimized" or "gpu-optimized"
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

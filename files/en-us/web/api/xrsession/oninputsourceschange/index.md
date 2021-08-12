@@ -16,34 +16,34 @@ tags:
   - oninputsourceschange
 browser-compat: api.XRSession.oninputsourceschange
 ---
-<div>{{APIRef("WebXR Device API")}}</div>
+{{APIRef("WebXR Device API")}}
 
-<p><span class="seoSummary">The <code><strong>oninputsourcechange</strong></code> attribute of the {{DOMxRef("XRSession")}} object is the event handler for the {{DOMxRef("XRSession.inputsourcechange_event", "inputsourcechange")}} event, which is dispatched when session's list of active XR input sources has changed. The list itself is accessible via {{DOMxRef("XRSession.inputSources")}}.</span></p>
+The **`oninputsourcechange`** attribute of the {{DOMxRef("XRSession")}} object is the event handler for the {{DOMxRef("XRSession.inputsourcechange_event", "inputsourcechange")}} event, which is dispatched when session's list of active XR input sources has changed. The list itself is accessible via {{DOMxRef("XRSession.inputSources")}}.
 
-<div class="notecard note">
-<p><strong>Note:</strong> The {{DOMxRef("XRInputSource")}} objects in {{DOMxRef("XRSession.inputSources")}} array are "live", so values within them are updated in-place. Therefore if you wish to compare input states between frames, you should make a copy of the content of the state in question.</p>
-</div>
+> **Note:** The {{DOMxRef("XRInputSource")}} objects in {{DOMxRef("XRSession.inputSources")}} array are "live", so values within them are updated in-place. Therefore if you wish to compare input states between frames, you should make a copy of the content of the state in question.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>XRSession</em>.oninputsourceschange = function(event) { ... }
-</pre>
+```js
+XRSession.oninputsourceschange = function(event) { ... }
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js"><em>XRSession</em>.oninputsourceschange = function(event) {
+```js
+XRSession.oninputsourceschange = function(event) {
   console.log("The list of active XR input sources has changed.")
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<p>{{DOMxRef("XRSession.inputSources")}}</p>
+{{DOMxRef("XRSession.inputSources")}}

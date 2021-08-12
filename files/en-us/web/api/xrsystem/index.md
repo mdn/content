@@ -16,46 +16,43 @@ tags:
   - XRSystem
 browser-compat: api.XRSystem
 ---
-<p>{{APIRef("WebXR Device API")}}{{SecureContext_Header}}</p>
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
-<p>The <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a> interface <code><strong>XRSystem</strong></code> provides methods which let you get access to an {{domxref("XRSession")}} object representing a WebXR session. With that <code>XRSession</code> in hand, you can use it to interact with the Augmented Reality (AR) or Virtual Reality (VR) device.</p>
+The [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) interface **`XRSystem`** provides methods which let you get access to an {{domxref("XRSession")}} object representing a WebXR session. With that `XRSession` in hand, you can use it to interact with the Augmented Reality (AR) or Virtual Reality (VR) device.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>While <code>XRSystem</code> directly offers no properties, it does inherit properties from its parent interface, {{domxref("EventTarget")}}.</em></p>
+_While `XRSystem` directly offers no properties, it does inherit properties from its parent interface, {{domxref("EventTarget")}}._
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>In addition to inheriting methods from its parent interface, {{domxref("EventTarget")}}, the <code>XRSystem</code> interface includes the following methods:</em></p>
+_In addition to inheriting methods from its parent interface, {{domxref("EventTarget")}}, the `XRSystem` interface includes the following methods:_
 
-<dl>
- <dt>{{DOMxRef("XRSystem.isSessionSupported", "isSessionSupported()")}} {{Experimental_Inline}}</dt>
- <dd>Returns a promise which resolves to <code>true</code> if the browser supports the given session mode.
-  Resolves to <code>false</code> if the specified mode isn't supported.</dd>
- <dt>{{DOMxRef("XRSystem.requestSession", "requestSession()")}} {{Experimental_Inline}}</dt>
- <dd>Returns a promise that resolves to a new {{DOMxRef("XRSession")}} with the specified session mode.</dd>
-</dl>
+- {{DOMxRef("XRSystem.isSessionSupported", "isSessionSupported()")}} {{Experimental_Inline}}
+  - : Returns a promise which resolves to `true` if the browser supports the given session mode.
+    Resolves to `false` if the specified mode isn't supported.
+- {{DOMxRef("XRSystem.requestSession", "requestSession()")}} {{Experimental_Inline}}
+  - : Returns a promise that resolves to a new {{DOMxRef("XRSession")}} with the specified session mode.
 
-<h2 id="Events">Events</h2>
+## Events
 
-<dl>
- <dt>{{domxref("XRSystem.devicechange_event", "devicechange")}} {{experimental_inline}}</dt>
- <dd>Sent when the set of available XR devices has changed.<br>
- Also available using the {{domxref("XRSystem.ondevicechange", "ondevicechange")}} event handler.</dd>
-</dl>
+- {{domxref("XRSystem.devicechange_event", "devicechange")}} {{experimental_inline}}
+  - : Sent when the set of available XR devices has changed.
+    Also available using the {{domxref("XRSystem.ondevicechange", "ondevicechange")}} event handler.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>This interface was previously known as <code>XR</code> in earlier versions of the specification; if you see references to <code>XR</code> in code or documentation, replace that with <code>XRSystem</code>.</p>
+This interface was previously known as `XR` in earlier versions of the specification; if you see references to `XR` in code or documentation, replace that with `XRSystem`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example shows how to use both {{domxref("XRSystem.isSessionSupported", "isSessionSupported()")}} and {{domxref("XRSystem.requestSession", "requestSession()")}}.</p>
+The following example shows how to use both {{domxref("XRSystem.isSessionSupported", "isSessionSupported()")}} and {{domxref("XRSystem.requestSession", "requestSession()")}}.
 
-<pre class="brush: js;">if (navigator.xr) {
+```js
+if (navigator.xr) {
   immersiveButton.addEventListener("click", onButtonClicked);
   navigator.xr.isSessionSupported('immersive-vr')
-  .then((isSupported) =&gt; {
+  .then((isSupported) => {
     if (isSupported) {
       immersiveButton.disabled = false;
     } else {
@@ -67,32 +64,33 @@ browser-compat: api.XRSystem
 function onButtonClicked() {
   if (!xrSession) {
     navigator.xr.requestSession('immersive-vr')
-    .then((session) =&gt; {
+    .then((session) => {
       // onSessionStarted() not shown for reasons of brevity and clarity.
       onSessionStarted(session);
     });
   } else {
     // Shut down the already running XRSession
     xrSession.end()
-    .then(() =&gt; {
+    .then(() => {
       // Since there are cases where the end event is not sent, call the handler here as well.
       onSessionEnded();
     });
   }
-}</pre>
+}
+```
 
-<p>This code starts by checking to see if WebXR is available by looking for the {{domxref("navigator.xr")}} property. If it's found, we know WebXR is present, so we proceed by establishing a handler for the button which the user can click to toggle immersive VR mode on and off.</p>
+This code starts by checking to see if WebXR is available by looking for the {{domxref("navigator.xr")}} property. If it's found, we know WebXR is present, so we proceed by establishing a handler for the button which the user can click to toggle immersive VR mode on and off.
 
-<p>However, we don't yet know if the desired immersive mode is available. To determine this, we call <code>isSessionSupported()</code>, passing it the desired session option before enabling the button, <code>immersiveButton</code>, which the user can then use to switch to immersive mode only if immersive VR mode is available. If immersive VR isn't available, the button is disabled to prevent its use.</p>
+However, we don't yet know if the desired immersive mode is available. To determine this, we call `isSessionSupported()`, passing it the desired session option before enabling the button, `immersiveButton`, which the user can then use to switch to immersive mode only if immersive VR mode is available. If immersive VR isn't available, the button is disabled to prevent its use.
 
-<p>The <code>onButtonClicked()</code> function checks to see if there's already a session running. If there isn't, we use <code>requestSession()</code> to start one and, once the returned promise resolves, we call a function <code>onSessionStarted()</code> to set up our session for rendering and so forth.</p>
+The `onButtonClicked()` function checks to see if there's already a session running. If there isn't, we use `requestSession()` to start one and, once the returned promise resolves, we call a function `onSessionStarted()` to set up our session for rendering and so forth.
 
-<p>If, on the other hand, there is already an ongoing XR session, we instead call {{domxref("XRSession.end", "end()")}} to end the current session. When the current session ends, the {{domxref("XRSession.end_event", "end")}} event is sent, so set <code>xrSession</code> to <code>null</code> in its handler to record the fact that we no longer have an ongoing session. That way, if the user clicks the button again, a new session will start.</p>
+If, on the other hand, there is already an ongoing XR session, we instead call {{domxref("XRSession.end", "end()")}} to end the current session. When the current session ends, the {{domxref("XRSession.end_event", "end")}} event is sent, so set `xrSession` to `null` in its handler to record the fact that we no longer have an ongoing session. That way, if the user clicks the button again, a new session will start.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

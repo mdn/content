@@ -2,55 +2,53 @@
 title: XRSession.onselectend
 slug: Web/API/XRSession/onselectend
 tags:
-- API
-- AR
-- Augmented Reality
-- Event Handler
-- Reference
-- VR
-- Virtual Reality
-- WebXR Device API
-- XRSession
-- onselectend
+  - API
+  - AR
+  - Augmented Reality
+  - Event Handler
+  - Reference
+  - VR
+  - Virtual Reality
+  - WebXR Device API
+  - XRSession
+  - onselectend
 browser-compat: api.XRSession.onselectend
 ---
-<div>{{APIRef("WebXR Device API")}}</div>
+{{APIRef("WebXR Device API")}}
 
-<p><span class="seoSummary">The <code><strong>onselectend</strong></code> attribute of the
-    {{DOMxRef("XRSession")}} object is the event handler for the
-    {{DOMxRef("XRSession.selectend_event", "selectend")}} event, which is dispatched when
-    user finishes making some sort of selection by releasing a trigger, touchpad, or
-    button, finishes speaking a command, or makes a hand gesture. For example, this might
-    include releasing a button or joystick.</span></p>
+The **`onselectend`** attribute of the
+{{DOMxRef("XRSession")}} object is the event handler for the
+{{DOMxRef("XRSession.selectend_event", "selectend")}} event, which is dispatched when
+user finishes making some sort of selection by releasing a trigger, touchpad, or
+button, finishes speaking a command, or makes a hand gesture. For example, this might
+include releasing a button or joystick.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Not to be confused with {{DOMxRef("XRSession.onselectstart")}}
-    and {{DOMxRef("XRSession.onselect")}}.</p>
-</div>
+> **Note:** Not to be confused with {{DOMxRef("XRSession.onselectstart")}}
+> and {{DOMxRef("XRSession.onselect")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>XRSession</em>.onselectend = function(event) { ... }
-</pre>
+```js
+XRSession.onselectend = function(event) { ... }
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js"><em>XRSession</em>.onselectend = function(event) {
+```js
+XRSession.onselectend = function(event) {
   console.log("The user has completed a primary action.")
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{DOMxRef("XRSession.onselectstart")}}</li>
-  <li>{{DOMxRef("XRSession.onselect")}}</li>
-</ul>
+- {{DOMxRef("XRSession.onselectstart")}}
+- {{DOMxRef("XRSession.onselect")}}

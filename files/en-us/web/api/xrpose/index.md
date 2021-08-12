@@ -24,47 +24,47 @@ tags:
   - transform
 browser-compat: api.XRPose
 ---
-<p>{{APIRef("WebXR Device API")}}{{securecontext_header}}</p>
+{{APIRef("WebXR Device API")}}{{securecontext_header}}
 
-<p><span class="seoSummary"><code>XRPose</code> is a <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR API</a> interface representing a position and orientation in the 3D space, relative to the {{domxref("XRSpace")}} within which it resides.</span> The <code>XRSpace</code>—which is either an {{domxref("XRReferenceSpace")}} or an {{domxref("XRBoundedReferenceSpace")}}—defines the coordinate system used for the pose and, in the case of an {{domxref("XRViewerPose")}}, its underlying views.</p>
+`XRPose` is a [WebXR API](/en-US/docs/Web/API/WebXR_Device_API) interface representing a position and orientation in the 3D space, relative to the {{domxref("XRSpace")}} within which it resides. The `XRSpace`—which is either an {{domxref("XRReferenceSpace")}} or an {{domxref("XRBoundedReferenceSpace")}}—defines the coordinate system used for the pose and, in the case of an {{domxref("XRViewerPose")}}, its underlying views.
 
-<p>To obtain the <code>XRPose</code> for the <code>XRSpace</code> used as the local coordinate system of an object, call {{domxref("XRFrame.getPose()")}}, specifying that local <code>XRSpace</code> and the space to which you wish to convert:</p>
+To obtain the `XRPose` for the `XRSpace` used as the local coordinate system of an object, call {{domxref("XRFrame.getPose()")}}, specifying that local `XRSpace` and the space to which you wish to convert:
 
-<pre class="brush: js">thePose = xrFrame.getPose(localSpace, baseSpace);</pre>
+```js
+thePose = xrFrame.getPose(localSpace, baseSpace);
+```
 
-<p>The pose for a viewer (or camera) is represented by the {{domxref("XRViewerPose")}} subclass of <code>XRPose</code>. This is obtained using {{domxref("XRFrame.getViewerPose()")}}  instead of <code>getPose()</code>, specifying a reference space which has been adjusted to position and orient the node to provide the desired viewing position and angle:</p>
+The pose for a viewer (or camera) is represented by the {{domxref("XRViewerPose")}} subclass of `XRPose`. This is obtained using {{domxref("XRFrame.getViewerPose()")}}  instead of `getPose()`, specifying a reference space which has been adjusted to position and orient the node to provide the desired viewing position and angle:
 
-<pre class="brush: js">viewerPose = xrFrame.getViewerPose(adjReferenceSpace);</pre>
+```js
+viewerPose = xrFrame.getViewerPose(adjReferenceSpace);
+```
 
-<p>Here, <code>adjReferenceSpace</code> is a reference space which has been updated using the base frame of reference for the frame and any adjustments needed to position the viewer based on movement or rotation which is being supplied from a source other than the XR device, such as keyboard or mouse inputs<strong>.</strong></p>
+Here, `adjReferenceSpace` is a reference space which has been updated using the base frame of reference for the frame and any adjustments needed to position the viewer based on movement or rotation which is being supplied from a source other than the XR device, such as keyboard or mouse inputs**.**
 
-<p>See the article <a href="/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion">Movement, orientation, and motion</a> for further details and an example with thorough explanations of what's going on.</p>
+See the article [Movement, orientation, and motion](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion) for further details and an example with thorough explanations of what's going on.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{DOMxRef("XRPose.angularVelocity")}} {{readonlyInline}}</dt>
- <dd>A {{DOMxRef("DOMPointReadOnly")}} describing the angular velocity in radians per second relative to the base {{DOMxRef("XRSpace")}}.</dd>
- <dt>{{DOMxRef("XRPose.emulatedPosition")}} {{readonlyInline}}</dt>
- <dd>A Boolean value which is <code>false</code> if the position and orientation given by {{DOMxRef("XRPose.transform", "transform")}} is obtained directly from a full six degree of freedom (6DoF) XR device (that is, a device which tracks not only the pitch, yaw, and roll of the head but also the forward, backward, and side-to-side motion of the viewer). If any component of the <code>transform</code> is computed or created artificially (such as by using mouse or keyboard controls to move through space), this value is instead <code>true</code>, indicating that the <code>transform</code> is in part emulated in software.</dd>
- <dt>{{DOMxRef("XRPose.linearVelocity")}} {{readonlyInline}}</dt>
- <dd>A {{DOMxRef("DOMPointReadOnly")}} describing the linear velocity in meters per second relative to the base {{DOMxRef("XRSpace")}}.</dd>
- <dt>{{DOMxRef("XRPose.transform")}} {{readonlyInline}}</dt>
- <dd>A {{DOMxRef("XRRigidTransform")}} which provides the position and orientation of the pose relative to the base {{DOMxRef("XRSpace")}}.</dd>
-</dl>
+- {{DOMxRef("XRPose.angularVelocity")}} {{readonlyInline}}
+  - : A {{DOMxRef("DOMPointReadOnly")}} describing the angular velocity in radians per second relative to the base {{DOMxRef("XRSpace")}}.
+- {{DOMxRef("XRPose.emulatedPosition")}} {{readonlyInline}}
+  - : A Boolean value which is `false` if the position and orientation given by {{DOMxRef("XRPose.transform", "transform")}} is obtained directly from a full six degree of freedom (6DoF) XR device (that is, a device which tracks not only the pitch, yaw, and roll of the head but also the forward, backward, and side-to-side motion of the viewer). If any component of the `transform` is computed or created artificially (such as by using mouse or keyboard controls to move through space), this value is instead `true`, indicating that the `transform` is in part emulated in software.
+- {{DOMxRef("XRPose.linearVelocity")}} {{readonlyInline}}
+  - : A {{DOMxRef("DOMPointReadOnly")}} describing the linear velocity in meters per second relative to the base {{DOMxRef("XRSpace")}}.
+- {{DOMxRef("XRPose.transform")}} {{readonlyInline}}
+  - : A {{DOMxRef("XRRigidTransform")}} which provides the position and orientation of the pose relative to the base {{DOMxRef("XRSpace")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a></li>
- <li>{{DOMxRef("XRFrame.getPose()")}}</li>
- <li>{{DOMxRef("XRViewerPose")}}</li>
-</ul>
+- [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)
+- {{DOMxRef("XRFrame.getPose()")}}
+- {{DOMxRef("XRViewerPose")}}

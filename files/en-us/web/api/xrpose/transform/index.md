@@ -2,55 +2,57 @@
 title: XRPose.transform
 slug: Web/API/XRPose/transform
 tags:
-- API
-- AR
-- Orientation
-- Position
-- Property
-- Read-only
-- Reference
-- VR
-- WebXR
-- WebXR API
-- WebXR Device API
-- XR
-- XRPose
-- transform
+  - API
+  - AR
+  - Orientation
+  - Position
+  - Property
+  - Read-only
+  - Reference
+  - VR
+  - WebXR
+  - WebXR API
+  - WebXR Device API
+  - XR
+  - XRPose
+  - transform
 browser-compat: api.XRPose.transform
 ---
-<div>{{APIRef("WebXR Device API")}}{{SecureContext_header}}</div>
+{{APIRef("WebXR Device API")}}{{SecureContext_header}}
 
-<p><span class="seoSummary">The <code>transform</code> read-only attribute of the
-    {{DOMxRef("XRPose")}} interface is a {{DOMxRef("XRRigidTransform")}} object providing
-    the position and orientation of the pose relative to the base {{DOMxRef("XRSpace")}}
-    as specified when the pose was obtained by calling
-    {{domxref("XRFrame.getPose()")}}.</span></p>
+The `transform` read-only attribute of the
+{{DOMxRef("XRPose")}} interface is a {{DOMxRef("XRRigidTransform")}} object providing
+the position and orientation of the pose relative to the base {{DOMxRef("XRSpace")}}
+as specified when the pose was obtained by calling
+{{domxref("XRFrame.getPose()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">let <em>poseTransform</em> = <em>xrPose</em>.transform;</pre>
+```js
+let poseTransform = xrPose.transform;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("XRRigidTransform")}} which provides the position and orientation of the
-  {{domxref("XRPose")}} relative to the {{domxref("XRFrame")}} to which this
-  <code>XRPose</code> is aligned. This is the same pose that's returned by the frame's
-  {{domxref("XRFrame.getPose", "getPose()")}} method.</p>
+An {{domxref("XRRigidTransform")}} which provides the position and orientation of the
+{{domxref("XRPose")}} relative to the {{domxref("XRFrame")}} to which this
+`XRPose` is aligned. This is the same pose that's returned by the frame's
+{{domxref("XRFrame.getPose", "getPose()")}} method.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This handler for the {{domxref("XRSession")}} event {{domxref("XRSession.select_event",
+This handler for the {{domxref("XRSession")}} event {{domxref("XRSession.select_event",
   "select")}} handles events for tracked pointers. It determines the targeted object by
-  passing the event frame's pose into a function called <code>findTargetUsingRay()</code>,
-  then dispatches the event differently depending on the user's handedness; this is done
-  by comparing the value of the {{domxref("XRInputSource")}} property
-  {{domxref("XRInputSource.handedness", "handedness")}} to a value in the variable
-  <code>user.handedness</code>. If the source is a controller in the user's primary hand,
-  a function is called on the targeted object called <code>primaryAction()</code>;
-  otherwise, it calls the targeted object's <code>offHandAction()</code> function.</p>
+passing the event frame's pose into a function called `findTargetUsingRay()`,
+then dispatches the event differently depending on the user's handedness; this is done
+by comparing the value of the {{domxref("XRInputSource")}} property
+{{domxref("XRInputSource.handedness", "handedness")}} to a value in the variable
+`user.handedness`. If the source is a controller in the user's primary hand,
+a function is called on the targeted object called `primaryAction()`;
+otherwise, it calls the targeted object's `offHandAction()` function.
 
-<pre class="brush: js">xrSession.addEventListener("select", event =&gt; {
+```js
+xrSession.addEventListener("select", event => {
   let source = event.inputSource;
   let frame = event.frame;
   let targetRayPose = frame.getPose(source.targetRaySpace, myRefSpace);
@@ -63,12 +65,13 @@ browser-compat: api.XRPose.transform
       targetObject.offHandAction();
     }
   }
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

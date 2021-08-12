@@ -2,55 +2,54 @@
 title: XRView.projectionMatrix
 slug: Web/API/XRView/projectionMatrix
 tags:
-- API
-- AR
-- Property
-- Read-only
-- Reality
-- Reference
-- VR
-- Virtual
-- WebXR
-- WebXR API
-- WebXR DeviceAPI
-- XR
-- XRView
-- augmented
-- perspective
-- projectionMatrix
+  - API
+  - AR
+  - Property
+  - Read-only
+  - Reality
+  - Reference
+  - VR
+  - Virtual
+  - WebXR
+  - WebXR API
+  - WebXR DeviceAPI
+  - XR
+  - XRView
+  - augmented
+  - perspective
+  - projectionMatrix
 browser-compat: api.XRView.projectionMatrix
 ---
-<p>{{APIRef("WebXR Device API")}}</p>
+{{APIRef("WebXR Device API")}}
 
-<p>The {{domxref("XRView")}} interface's read-only
-  <code><strong>projectionMatrix</strong></code> property specifies the projection matrix
-  to apply to the underlying view. This should be used to integrate perspective to
-  everything in the scene, in order to ensure the result is consistent with what the eye
-  expects to see.</p>
+The {{domxref("XRView")}} interface's read-only
+**`projectionMatrix`** property specifies the projection matrix
+to apply to the underlying view. This should be used to integrate perspective to
+everything in the scene, in order to ensure the result is consistent with what the eye
+expects to see.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Failure to apply proper perspective, or inconsistencies
-    in perspective, may result in possibly serious user discomfort or distress.</p>
-</div>
+> **Note:** Failure to apply proper perspective, or inconsistencies
+> in perspective, may result in possibly serious user discomfort or distress.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">let <em>projectionMatrix</em> = <em>xrView</em>.projectionMatrix;</pre>
+```js
+let projectionMatrix = xrView.projectionMatrix;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{jsxref("Float32Array")}} object representing the projection matrix for the view.
-  The projection matrix for each eye's view is used to ensure that the correct area of the
-  scene is presented to each eye in order to create a believable 3D scene without
-  introducing discomfort for the user.</p>
+A {{jsxref("Float32Array")}} object representing the projection matrix for the view.
+The projection matrix for each eye's view is used to ensure that the correct area of the
+scene is presented to each eye in order to create a believable 3D scene without
+introducing discomfort for the user.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

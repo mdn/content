@@ -2,85 +2,80 @@
 title: XRInputSourceArray.forEach()
 slug: Web/API/XRInputSourceArray/forEach
 tags:
-- API
-- AR
-- Input Sources
-- Inputs
-- Method
-- Mixed
-- Reality
-- Reference
-- VR
-- Virtual
-- WebXR
-- WebXR API
-- WebXR Device API
-- XR
-- XRInputSourceArray
-- augmented
-- forEach
+  - API
+  - AR
+  - Input Sources
+  - Inputs
+  - Method
+  - Mixed
+  - Reality
+  - Reference
+  - VR
+  - Virtual
+  - WebXR
+  - WebXR API
+  - WebXR Device API
+  - XR
+  - XRInputSourceArray
+  - augmented
+  - forEach
 browser-compat: api.XRInputSourceArray.forEach
 ---
-<p>{{APIRef("WebXR Device API")}}</p>
+{{APIRef("WebXR Device API")}}
 
-<p>The {{domxref("XRInputSourceArray")}}
-  method <code><strong>forEach()</strong></code> executes the specified callback once for
-  each input source in the array, starting at index 0 and progressing until the end of the
-  list.</p>
+The {{domxref("XRInputSourceArray")}}
+method **`forEach()`** executes the specified callback once for
+each input source in the array, starting at index 0 and progressing until the end of the
+list.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>xrInputSourceArray</em>.forEach(<em>callback</em>, <em>thisArg</em>);
-</pre>
+```js
+xrInputSourceArray.forEach(callback, thisArg);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>callback</code></dt>
-  <dd>
-    <p>A function to execute once for each entry in the
-      array <code>xrInputSourceArray</code>. The callback accepts up to three parameters:
-    </p>
+- `callback`
 
-    <dl>
-      <dt><code>currentValue</code></dt>
-      <dd>A {{domxref("XRInputSource")}} object which is the value of the item from within
-        the <code>xrInputSourceArray</code> which is currently being processed.</dd>
-      <dt><code>currentIndex</code> {{optional_inline}}</dt>
-      <dd>An integer value providing the index into the array at which the element given
-        by <code>currentValue</code> is located. If you don't need to know the index
-        number, you can omit this.</dd>
-      <dt><code>sourceList</code> {{optional_inline}}</dt>
-      <dd>The {{domxref("XRInputSourceArray")}} object which is being processed. If you
-        don't need this information, you may omit this.</dd>
-    </dl>
-  </dd>
-  <dt><code>thisArg</code> {{optional_inline}}</dt>
-  <dd>The value to be used for
-    <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code>
-    while executing the callback. Note that if you use <a
-      href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow function
-      notation</a> (<code>=&gt;</code>) to provide the callback, you can
-    omit <code>thisArg</code>, since all arrow functions lexically bind <code>this</code>.
-  </dd>
-</dl>
+  - : A function to execute once for each entry in the
+    array `xrInputSourceArray`. The callback accepts up to three parameters:
 
-<h3 id="Return_value">Return value</h3>
+    - `currentValue`
+      - : A {{domxref("XRInputSource")}} object which is the value of the item from within
+        the `xrInputSourceArray` which is currently being processed.
+    - `currentIndex` {{optional_inline}}
+      - : An integer value providing the index into the array at which the element given
+        by `currentValue` is located. If you don't need to know the index
+        number, you can omit this.
+    - `sourceList` {{optional_inline}}
+      - : The {{domxref("XRInputSourceArray")}} object which is being processed. If you
+        don't need this information, you may omit this.
 
-<p>Undefined.</p>
+- `thisArg` {{optional_inline}}
+  - : The value to be used for
+    [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this)
+    while executing the callback. Note that if you use [arrow function
+    notation](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) (`=>`) to provide the callback, you can
+    omit `thisArg`, since all arrow functions lexically bind `this`.
 
-<h2 id="Examples">Examples</h2>
+### Return value
 
-<p>This example snippet gets the list of inputs for a session and tries to handle each
-  type of input device it supports using.</p>
+Undefined.
 
-<pre class="brush: js">let inputSources = xrSession.inputSources;
+## Examples
 
-inputSources.forEach((input) =&gt; {
+This example snippet gets the list of inputs for a session and tries to handle each
+type of input device it supports using.
+
+```js
+let inputSources = xrSession.inputSources;
+
+inputSources.forEach((input) => {
   if (input.gamepad) {
     checkGamepad(input.gamepad);
   } else {
-    if (input.targetRayMode === "tracked-pointer" &amp;&amp;
+    if (input.targetRayMode === "tracked-pointer" &&
         input.handedness === player.handedness) {
       /* Handle main hand controller */
       handleMainHandInput(input);
@@ -89,30 +84,26 @@ inputSources.forEach((input) =&gt; {
     }
   }
 });
-</pre>
+```
 
-<p>For each input in the llist, the callback dispatches gamepad inputs to
-  a <code>checkGamepad()</code> with the input's {{domxref("Gamepad")}} object, taken from
-  its {{domxref("XRInputSource.gamepad", "gamepad")}} property, as an input</p>
+For each input in the llist, the callback dispatches gamepad inputs to
+a `checkGamepad()` with the input's {{domxref("Gamepad")}} object, taken from
+its {{domxref("XRInputSource.gamepad", "gamepad")}} property, as an input
 
-<p>For other devices, we look for <code>tracked-pointer</code> devices in the player's
-  main hand, dispatching those to a <code>handleMainHandInput()</code> method.</p>
+For other devices, we look for `tracked-pointer` devices in the player's
+main hand, dispatching those to a `handleMainHandInput()` method.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Inputs">Inputs and input sources</a>
-  </li>
-  <li>The
-    <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code> method <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach">forEach(</a>)</code>
-  </li>
-  <li>{{domxref("XRInputSource")}}</li>
-</ul>
+- [Inputs and input sources](/en-US/docs/Web/API/WebXR_Device_API/Inputs)
+- The
+  [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) method `forEach()`
+- {{domxref("XRInputSource")}}

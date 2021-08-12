@@ -2,46 +2,47 @@
 title: XRSession.renderState
 slug: Web/API/XRSession/renderState
 tags:
-- API
-- AR
-- Augmented Reality
-- Experimental
-- Property
-- Reference
-- VR
-- Virtual Reality
-- WebXR
-- WebXR Device API
-- XRSession
-- renderState
+  - API
+  - AR
+  - Augmented Reality
+  - Experimental
+  - Property
+  - Reference
+  - VR
+  - Virtual Reality
+  - WebXR
+  - WebXR Device API
+  - XRSession
+  - renderState
 browser-compat: api.XRSession.renderState
 ---
-<div>{{APIRef("WebXR Device API")}}</div>
+{{APIRef("WebXR Device API")}}
 
-<p>The
-    <em>read-only</em> <strong><code>renderState</code></strong> property of an
-    {{DOMxRef("XRSession")}} object indicates the returns a {{DOMxRef("XRRenderState")}}
-    object describing how the user's environment which should be rendered. The
-  information provided covers the minimum and maximum distance at which to render objects,
-  the vertical field of view to use when rendering the in the <code>inline</code> session
-  mode, and the {{domxref("XRWebGLLayer")}} to render into for inline composition.</p>
+The
+*read-only* **`renderState`** property of an
+{{DOMxRef("XRSession")}} object indicates the returns a {{DOMxRef("XRRenderState")}}
+object describing how the user's environment which should be rendered. The
+information provided covers the minimum and maximum distance at which to render objects,
+the vertical field of view to use when rendering the in the `inline` session
+mode, and the {{domxref("XRWebGLLayer")}} to render into for inline composition.
 
-<p>While this property is read only, you can call the {{domxref("XRSession")}} method
-  {{domxref("XRSession.updateRenderState", "updateRenderState()")}} to make changes.</p>
+While this property is read only, you can call the {{domxref("XRSession")}} method
+{{domxref("XRSession.updateRenderState", "updateRenderState()")}} to make changes.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>xrRenderState</em> = XRSession.renderState;</pre>
+```js
+var xrRenderState = XRSession.renderState;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{DOMxRef("XRRenderState")}} object describing how to render the scene.</p>
+An {{DOMxRef("XRRenderState")}} object describing how to render the scene.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

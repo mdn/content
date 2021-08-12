@@ -2,63 +2,60 @@
 title: XRSessionEvent()
 slug: Web/API/XRSessionEvent/XRSessionEvent
 tags:
-- API
-- Constructor
-- Mixed
-- Reality
-- Reference
-- Session
-- Virtual
-- WebXR
-- WebXR API
-- WebXR Device API
-- XR
-- XRSessionEvent
-- augmented
-- events
+  - API
+  - Constructor
+  - Mixed
+  - Reality
+  - Reference
+  - Session
+  - Virtual
+  - WebXR
+  - WebXR API
+  - WebXR Device API
+  - XR
+  - XRSessionEvent
+  - augmented
+  - events
 browser-compat: api.XRSessionEvent.XRSessionEvent
 ---
-<p>{{APIRef("WebXR Device API")}}</p>
+{{APIRef("WebXR Device API")}}
 
-<p>The WebXR Device API's
-    <code><strong>XRSessionEvent()</strong></code> constructor creates and returns a new
-    {{domxref("XRSessionEvent")}} object. These objects represent events announcing
-  state changes in an {{domxref("XRSession")}} representing an augmented or virtual
-  reality session.</p>
+The WebXR Device API's
+**`XRSessionEvent()`** constructor creates and returns a new
+{{domxref("XRSessionEvent")}} object. These objects represent events announcing
+state changes in an {{domxref("XRSession")}} representing an augmented or virtual
+reality session.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>newXRSessionEvent</em> = new XRSessionEvent(<em>type</em>, <em>eventInitDict</em>);</pre>
+```js
+newXRSessionEvent = new XRSessionEvent(type, eventInitDict);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>type</code></dt>
-  <dd>A {{domxref("DOMString")}} indicating which of the events represented by objects of
-    type <code>XRSessionEvent</code> this particular object represents. See <a href="/en-US/docs/Web/API/XRSessionEvent#session_event_types"><code>XRSessionEvent &gt; Session event types</code></a> for a list of the permitted values.</dd>
-  <dt><code>eventInitDict</code></dt>
-  <dd>
-    <p>An object with the following values:</p>
-    <ul>
-      <li><code>session</code>: The {{domxref("XRSession")}} to which the event is to be delivered.</li>
-    </ul>
-  </dd>
-</dl>
+- `type`
+  - : A {{domxref("DOMString")}} indicating which of the events represented by objects of
+    type `XRSessionEvent` this particular object represents. See [`XRSessionEvent > Session event types`](/en-US/docs/Web/API/XRSessionEvent#session_event_types) for a list of the permitted values.
+- `eventInitDict`
 
-<h3 id="Return_value">Return value</h3>
+  - : An object with the following values:
 
-<p>A newly-created {{domxref("XRSessionEvent")}} object representing an object of the
-  specfied type and configured as described by the <code>eventInitDict</code> parameter.</p>
+    - `session`: The {{domxref("XRSession")}} to which the event is to be delivered.
 
-<h2 id="Examples">Examples</h2>
+### Return value
 
-<p>See <a href="/en-US/docs/Web/API/XRSessionEvent#examples"><code>XRSessionEvent</code></a> for example code.</p>
+A newly-created {{domxref("XRSessionEvent")}} object representing an object of the
+specfied type and configured as described by the `eventInitDict` parameter.
 
-<h2 id="Specifications">Specifications</h2>
+## Examples
+
+See [`XRSessionEvent`](/en-US/docs/Web/API/XRSessionEvent#examples) for example code.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

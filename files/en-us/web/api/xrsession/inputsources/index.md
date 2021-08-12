@@ -2,66 +2,62 @@
 title: XRSession.inputSources
 slug: Web/API/XRSession/inputSources
 tags:
-- API
-- AR
-- Augmented Reality
-- Experimental
-- Property
-- Reference
-- VR
-- Virtual Reality
-- WebXR
-- WebXR Device API
-- XRSession
-- inputSources
+  - API
+  - AR
+  - Augmented Reality
+  - Experimental
+  - Property
+  - Reference
+  - VR
+  - Virtual Reality
+  - WebXR
+  - WebXR Device API
+  - XRSession
+  - inputSources
 browser-compat: api.XRSession.inputSources
 ---
-<p>{{APIRef("WebXR Device API")}}</p>
+{{APIRef("WebXR Device API")}}
 
-<p>The <em>read-only</em> <strong><code>inputSources</code></strong> property of the
-    {{DOMxRef("XRSession")}} interface returns an {{domxref("XRInputSourceArray")}} object
-    which lists all controllers and input devices which are expressly associated with the
-    XR device and are currently available. These controllers may include handheld
-  controllers, XR-equipped gloves, optically tracked hands, and gaze-based input methods.
-  Keyboards, gamepads, and mice are <em>not</em> considered WebXR input sources.</p>
+The *read-only* **`inputSources`** property of the
+{{DOMxRef("XRSession")}} interface returns an {{domxref("XRInputSourceArray")}} object
+which lists all controllers and input devices which are expressly associated with the
+XR device and are currently available. These controllers may include handheld
+controllers, XR-equipped gloves, optically tracked hands, and gaze-based input methods.
+Keyboards, gamepads, and mice are _not_ considered WebXR input sources.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Traditional gamepad controllers are supported using the <a
-      href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a>.</p>
-</div>
+> **Note:** Traditional gamepad controllers are supported using the [Gamepad API](/en-US/docs/Web/API/Gamepad_API).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>inputSources</em> = <em>xrSession</em>.inputSources;</pre>
+```js
+inputSources = xrSession.inputSources;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("XRInputSourceArray")}} object listing all of the currently-connected
-  input controllers which are linked specifically to the XR device currently in use. The
-  returned object is <strong>live</strong>; as devices are connected to and removed from
-  the user's system, the list's contents update to reflect the changes.</p>
+An {{domxref("XRInputSourceArray")}} object listing all of the currently-connected
+input controllers which are linked specifically to the XR device currently in use. The
+returned object is **live**; as devices are connected to and removed from
+the user's system, the list's contents update to reflect the changes.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>You can add a handler for the <code>XRSession</code> event
-  {{domxref("XRSession.inputsourceschange_event", "inputsourceschange")}} to be advised
-  when the contents of the session's connected devices list changes. You can then either
-  get the value of <code>inputSources</code> to examine the list, or you can refer to a
-  reference to the list that you've previously saved.</p>
+You can add a handler for the `XRSession` event
+{{domxref("XRSession.inputsourceschange_event", "inputsourceschange")}} to be advised
+when the contents of the session's connected devices list changes. You can then either
+get the value of `inputSources` to examine the list, or you can refer to a
+reference to the list that you've previously saved.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{DOMxRef("XRInputSource")}}</li>
-  <li>{{DOMxRef("XRSession.oninputsourceschange")}}</li>
-  <li><a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a></li>
-</ul>
+- {{DOMxRef("XRInputSource")}}
+- {{DOMxRef("XRSession.oninputsourceschange")}}
+- [Gamepad API](/en-US/docs/Web/API/Gamepad_API)

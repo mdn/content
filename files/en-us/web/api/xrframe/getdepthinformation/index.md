@@ -2,47 +2,44 @@
 title: XRFrame.getDepthInformation()
 slug: Web/API/XRFrame/getDepthInformation
 tags:
-- API
-- Method
-- Reference
-- AR
-- XR
-- WebXR
+  - API
+  - Method
+  - Reference
+  - AR
+  - XR
+  - WebXR
 browser-compat: api.XRFrame.getDepthInformation
 ---
-<div>{{APIRef("WebXR Device API")}}</div>
+{{APIRef("WebXR Device API")}}
 
-<p>The <code><strong>getDepthInformation()</strong></code> method of the {{domxref("XRFrame")}} interface returns an {{domxref("XRCPUDepthInformation")}} object containing CPU depth information for the active and animated frame.</p>
+The **`getDepthInformation()`** method of the {{domxref("XRFrame")}} interface returns an {{domxref("XRCPUDepthInformation")}} object containing CPU depth information for the active and animated frame.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">getDepthInformation(view)</pre>
+```js
+getDepthInformation(view)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>view</code></dt>
-  <dd>An {{domxref("XRView")}} object obtained from a viewer pose.</dd>
-</dl>
+- `view`
+  - : An {{domxref("XRView")}} object obtained from a viewer pose.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An {{domxref("XRCPUDepthInformation")}} object.</p>
+An {{domxref("XRCPUDepthInformation")}} object.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<ul>
-  <li>Throws a <code>NotSupportedError</code> if "depth-sensing" is not in the list of enabled features for this {{domxref("XRSession")}}.</li>
-  <li>Throws an <code>InvalidStateError</code> if the <code>XRFrame</code> is not active nor animated. Obtaining depth information is only valid within the {{domxref("XRSession.requestAnimationFrame()", "requestAnimationFrame()")}} callback.</li>
-  <li>Throws an <code>InvalidStateError</code> if the the session’s {{domxref("XRSession.depthUsage", "depthUsage")}} is not "cpu-optimized".</li>
+- Throws a `NotSupportedError` if "depth-sensing" is not in the list of enabled features for this {{domxref("XRSession")}}.
+- Throws an `InvalidStateError` if the `XRFrame` is not active nor animated. Obtaining depth information is only valid within the {{domxref("XRSession.requestAnimationFrame()", "requestAnimationFrame()")}} callback.
+- Throws an `InvalidStateError` if the the session’s {{domxref("XRSession.depthUsage", "depthUsage")}} is not "cpu-optimized".
 
-</ul>
+## Examples
 
-<h2>Examples</h2>
+### Obtaining CPU depth information
 
-<h3>Obtaining CPU depth information</h3>
-
-<pre class="brush: js">
+```js
 // Make sure  to request a session with depth-sensing enabled
 const session = navigator.xr.requestSession("immersive-ar", {
   requiredFeatures: ["depth-sensing"],
@@ -68,13 +65,12 @@ function rafCallback(time, frame) {
     }
   }
 }
+```
 
-</pre>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

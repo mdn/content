@@ -2,55 +2,57 @@
 title: XRViewport.x
 slug: Web/API/XRViewport/x
 tags:
-- API
-- AR
-- Coordinate
-- Position
-- Property
-- Read-only
-- Reality
-- Reference
-- VR
-- Virtual
-- WebXR
-- WebXR API
-- WebXR Device API
-- XR
-- XRViewport
-- augmented
-- left
-- origin
-- viewport
-- x
+  - API
+  - AR
+  - Coordinate
+  - Position
+  - Property
+  - Read-only
+  - Reality
+  - Reference
+  - VR
+  - Virtual
+  - WebXR
+  - WebXR API
+  - WebXR Device API
+  - XR
+  - XRViewport
+  - augmented
+  - left
+  - origin
+  - viewport
+  - x
 browser-compat: api.XRViewport.x
 ---
-<p>{{APIRef("WebXR Device API")}}</p>
+{{APIRef("WebXR Device API")}}
 
-<p>The read-only {{domxref("XRViewport")}} interface's
-    <code><strong>x</strong></code> property indicates the offset from the left edge of
-    the destination surface (typically a {{domxref("XRWebGLLayer")}} to the left edge of
-    the viewport within the surface into which WebXR content is to be rendered. The
-  viewport's {{domxref("XRViewport.y", "y")}} property identifies the <code>y</code>
-  component of the origin, and its is given by the {{domxref("XRViewPort.width",
-  "width")}} and {{domxref("XRViewport.height", "height")}} properties.</p>
+The read-only {{domxref("XRViewport")}} interface's
+**`x`** property indicates the offset from the left edge of
+the destination surface (typically a {{domxref("XRWebGLLayer")}} to the left edge of
+the viewport within the surface into which WebXR content is to be rendered. The
+viewport's {{domxref("XRViewport.y", "y")}} property identifies the `y`
+component of the origin, and its is given by the {{domxref("XRViewPort.width",
+  "width")}} and {{domxref("XRViewport.height", "height")}} properties.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>x</em> = <em>xrViewport</em>.x;</pre>
+```js
+x = xrViewport.x;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The offset from the left edge of the rendering surface to the left edge of the
-  viewport, in pixels.</p>
+The offset from the left edge of the rendering surface to the left edge of the
+viewport, in pixels.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>See the main {{domxref("XRViewport")}} page for examples.</p>
+See the main {{domxref("XRViewport")}} page for examples.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

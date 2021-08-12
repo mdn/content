@@ -2,69 +2,69 @@
 title: XRWebGLLayer.framebufferHeight
 slug: Web/API/XRWebGLLayer/framebufferHeight
 tags:
-- API
-- AR
-- Buffer
-- Frame
-- Property
-- Read-only
-- Reality
-- Reference
-- VR
-- Virtual
-- WebXR
-- WebXR API
-- WebXR Device API
-- XR
-- XRWebGLLayer
-- augmented
-- framebufferHeight
-- height
-- size
+  - API
+  - AR
+  - Buffer
+  - Frame
+  - Property
+  - Read-only
+  - Reality
+  - Reference
+  - VR
+  - Virtual
+  - WebXR
+  - WebXR API
+  - WebXR Device API
+  - XR
+  - XRWebGLLayer
+  - augmented
+  - framebufferHeight
+  - height
+  - size
 browser-compat: api.XRWebGLLayer.framebufferHeight
 ---
-<p>{{APIRef("WebXR Device API")}}</p>
+{{APIRef("WebXR Device API")}}
 
-<p>The read-only {{domxref("XRWebGLLayer")}} property
-    <strong><code>framebufferHeight</code></strong> indicates the height of the
-    framebuffer, in pixels.</p>
+The read-only {{domxref("XRWebGLLayer")}} property
+**`framebufferHeight`** indicates the height of the
+framebuffer, in pixels.
 
-<p>You can get the width of the framebuffer using the
-  {{domxref("XRWebGLLayer.framebufferWidth", "framebufferWidth")}} property.</p>
+You can get the width of the framebuffer using the
+{{domxref("XRWebGLLayer.framebufferWidth", "framebufferWidth")}} property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">let <em>bufferHeight</em> = <em>xrWebGLLayer</em>.framebufferHeight;</pre>
+```js
+let bufferHeight = xrWebGLLayer.framebufferHeight;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The height in pixels of the XR device's framebuffer. Each of the framebuffer's
-  attachments (pixel, depth, color, and/or stencil buffers, for example) are all this many
-  pixels tall.</p>
+The height in pixels of the XR device's framebuffer. Each of the framebuffer's
+attachments (pixel, depth, color, and/or stencil buffers, for example) are all this many
+pixels tall.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This snippet fetches the framebuffer's width and height for later use.</p>
+This snippet fetches the framebuffer's width and height for later use.
 
-<pre class="brush: js">let glLayer = xrSession.renderState.baseLayer;
+```js
+let glLayer = xrSession.renderState.baseLayer;
 gl.bindFramebuffer(gl.FRAMEBUFFER, glLayer.framebuffer);
 
 frameWidth = glLayer.framebufferHeight;
 frameHeight = glLayer.framebufferHeight;
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a></li>
-  <li>{{domxref("WebGLLayerInit")}}</li>
-</ul>
+- [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)
+- {{domxref("WebGLLayerInit")}}

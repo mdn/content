@@ -2,43 +2,45 @@
 title: XRSession.onend
 slug: Web/API/XRSession/onend
 tags:
-- API
-- AR
-- Augmented Reality
-- Event Handler
-- Experimental
-- Reference
-- VR
-- Virtual Reality
-- WebXR
-- WebXR Device API
-- XR
-- onend
+  - API
+  - AR
+  - Augmented Reality
+  - Event Handler
+  - Experimental
+  - Reference
+  - VR
+  - Virtual Reality
+  - WebXR
+  - WebXR Device API
+  - XR
+  - onend
 browser-compat: api.XRSession.onend
 ---
-<div>{{APIRef("WebXR Device API")}}</div>
+{{APIRef("WebXR Device API")}}
 
-<p><span class="seoSummary">The <code><strong>onend</strong></code> attribute of the
-    {{DOMxRef("XRSession")}} object is the event handler for the
-    {{DOMxRef("XRSession.end_event", "end")}} event, which is dispatched after the XR
-    session ends and all related hardware-specific routines are completed.</span></p>
+The **`onend`** attribute of the
+{{DOMxRef("XRSession")}} object is the event handler for the
+{{DOMxRef("XRSession.end_event", "end")}} event, which is dispatched after the XR
+session ends and all related hardware-specific routines are completed.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>XRSession</em>.onend = function(event) { ... };
-</pre>
+```js
+XRSession.onend = function(event) { ... };
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js"><em>XRSession</em>.onend = function(event) {
+```js
+XRSession.onend = function(event) {
   console.log("The XR session has ended")
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

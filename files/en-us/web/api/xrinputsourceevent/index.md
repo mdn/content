@@ -24,54 +24,49 @@ tags:
   - events
 browser-compat: api.XRInputSourceEvent
 ---
-<p>{{APIRef("WebXR Device API")}} {{SecureContext_Header}}</p>
+{{APIRef("WebXR Device API")}} {{SecureContext_Header}}
 
-<p>The <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a>'s <code><strong>XRInputSourceEvent</strong></code> interface describes an event which has occurred on a WebXR user input device such as a hand controller, gaze tracking system, or motion tracking system. More specifically, they represent a change in the state of an {{domxref("XRInputSource")}}.</p>
+The [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)'s **`XRInputSourceEvent`** interface describes an event which has occurred on a WebXR user input device such as a hand controller, gaze tracking system, or motion tracking system. More specifically, they represent a change in the state of an {{domxref("XRInputSource")}}.
 
-<p>To learn more about handling inputs in a WebXR project, see the article <a href="/en-US/docs/Web/API/WebXR_Device_API/Inputs">Inputs and input sources</a>.</p>
+To learn more about handling inputs in a WebXR project, see the article [Inputs and input sources](/en-US/docs/Web/API/WebXR_Device_API/Inputs).
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("XRInputSourceEvent.XRInputSourceEvent", "XRInputSourceEvent()")}}</dt>
- <dd>Creates and returns a new <code>XRInputSourceEvent</code> object whose properties match those provided in the <code>eventInitDict</code> dictionary provided.</dd>
-</dl>
+- {{domxref("XRInputSourceEvent.XRInputSourceEvent", "XRInputSourceEvent()")}}
+  - : Creates and returns a new `XRInputSourceEvent` object whose properties match those provided in the `eventInitDict` dictionary provided.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("XRInputSourceEvent.frame", "frame")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("XRFrame")}} object providing the needed information about the event frame during which the event occurred. This frame may have been rendered in the past rather than being a current frame. Because this is an <em>event</em> frame, not an <em>animation</em> frame, you cannot call the {{domxref("XRFrame")}} method {{domxref("XRFrame.getViewerPose", "getViewerPose()")}} on it; instead, use {{domxref("XRFrame.getPose", "getPose()")}}.</dd>
- <dt>{{domxref("XRInputSourceEvent.inputSource", "inputSource")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("XRInputSource")}} object indicating which input source generated the input event.</dd>
-</dl>
+- {{domxref("XRInputSourceEvent.frame", "frame")}} {{ReadOnlyInline}}
+  - : An {{domxref("XRFrame")}} object providing the needed information about the event frame during which the event occurred. This frame may have been rendered in the past rather than being a current frame. Because this is an _event_ frame, not an _animation_ frame, you cannot call the {{domxref("XRFrame")}} method {{domxref("XRFrame.getViewerPose", "getViewerPose()")}} on it; instead, use {{domxref("XRFrame.getPose", "getPose()")}}.
+- {{domxref("XRInputSourceEvent.inputSource", "inputSource")}} {{ReadOnlyInline}}
+  - : An {{domxref("XRInputSource")}} object indicating which input source generated the input event.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>The <code>XRInputSourceEvent</code> interface doesn't define any methods; however, several methods are inherited from the parent interface, {{domxref("Event")}}.</em></p>
+_The `XRInputSourceEvent` interface doesn't define any methods; however, several methods are inherited from the parent interface, {{domxref("Event")}}._
 
-<h2 id="Event_types">Event types</h2>
+## Event types
 
-<dl>
- <dt>{{domxref("XRSession.select_event", "select")}}</dt>
- <dd>Sent to an {{domxref("XRSession")}} when the sending input source has fully completed a <a href="/en-US/docs/Web/API/WebXR_Device_API/Inputs#Primary_actions">primary action</a>.</dd>
- <dt>{{domxref("XRSession.selectend_event", "selectend")}}</dt>
- <dd>Sent to an {{domxref("XRSession")}} when an ongoing <a href="/en-US/docs/Web/API/WebXR_Device_API/Inputs#Primary_actions">primary action</a> ends, or when an input source with an ongoing primary action has been disconnected from the system.</dd>
- <dt>{{domxref("XRSession.selectstart_event", "selectstart")}}</dt>
- <dd>Sent to an {{domxref("XRSession")}} when an input source begins its <a href="/en-US/docs/Web/API/WebXR_Device_API/Inputs#Primary_actions">primary action</a>, indicating that the user has begun a command-like input, such as pressing a trigger or button, issuing a spoken command, tapping on a touchpad, or the like.</dd>
- <dt>{{domxref("XRSession.squeeze_event", "squeeze")}}</dt>
- <dd>Sent to an {{domxref("XRSession")}} when the sending input source has fully completed a <a href="/en-US/docs/Web/API/WebXR_Device_API/Inputs#Primary_squeeze_actions">primary squeeze action</a>.</dd>
- <dt>{{domxref("XRSession.squeezeend_event", "squeezeend")}}</dt>
- <dd>Sent to an {{domxref("XRSession")}} when an ongoing <a href="/en-US/docs/Web/API/WebXR_Device_API/Inputs#Primary_squeeze_actions">primary squeeze action</a> ends or when an input source with an ongoing primary squeeze action is disconnected.</dd>
- <dt>{{domxref("XRSession.squeezestart_event", "squeezestart")}}</dt>
- <dd>Sent to an {{domxref("XRSession")}} when an input source begins its <a href="/en-US/docs/Web/API/WebXR_Device_API/Inputs#Primary_squeeze_actions">primary squeeze action</a>, indicating that the user has begun to grab, squeeze, or grip the controller.</dd>
-</dl>
+- {{domxref("XRSession.select_event", "select")}}
+  - : Sent to an {{domxref("XRSession")}} when the sending input source has fully completed a [primary action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#Primary_actions).
+- {{domxref("XRSession.selectend_event", "selectend")}}
+  - : Sent to an {{domxref("XRSession")}} when an ongoing [primary action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#Primary_actions) ends, or when an input source with an ongoing primary action has been disconnected from the system.
+- {{domxref("XRSession.selectstart_event", "selectstart")}}
+  - : Sent to an {{domxref("XRSession")}} when an input source begins its [primary action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#Primary_actions), indicating that the user has begun a command-like input, such as pressing a trigger or button, issuing a spoken command, tapping on a touchpad, or the like.
+- {{domxref("XRSession.squeeze_event", "squeeze")}}
+  - : Sent to an {{domxref("XRSession")}} when the sending input source has fully completed a [primary squeeze action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#Primary_squeeze_actions).
+- {{domxref("XRSession.squeezeend_event", "squeezeend")}}
+  - : Sent to an {{domxref("XRSession")}} when an ongoing [primary squeeze action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#Primary_squeeze_actions) ends or when an input source with an ongoing primary squeeze action is disconnected.
+- {{domxref("XRSession.squeezestart_event", "squeezestart")}}
+  - : Sent to an {{domxref("XRSession")}} when an input source begins its [primary squeeze action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#Primary_squeeze_actions), indicating that the user has begun to grab, squeeze, or grip the controller.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The code below sets up handlers for primary action events in order to determine when the user clicks on (shoots at/pokes at/whatever) objects in the scene.</p>
+The code below sets up handlers for primary action events in order to determine when the user clicks on (shoots at/pokes at/whatever) objects in the scene.
 
-<pre class="brush: js">xrSession.addEventListener("select", event =&gt; {
+```js
+xrSession.addEventListener("select", event => {
   let targetRayPose = event.frame.getPose(event.inputSource.targetRaySpace, myRefSpace);
 
   if (targetRayPose) {
@@ -81,12 +76,12 @@ browser-compat: api.XRInputSourceEvent
     }
   }
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

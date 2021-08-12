@@ -22,50 +22,47 @@ tags:
   - list
 browser-compat: api.XRInputSourceArray
 ---
-<p>{{APIRef("WebXR Device API")}}{{SecureContext_header}}</p>
+{{APIRef("WebXR Device API")}}{{SecureContext_header}}
 
-<p>The interface <code><strong>XRInputSourceArray</strong></code> represents a <em>live</em> list of WebXR input sources, and is used as the return value of the {{domxref("XRSession")}} property {{domxref("XRSession.inputSources", "inputSources")}}. Each entry is an {{domxref("XRInputSource")}} representing one input device connected to the WebXR system.</p>
+The interface **`XRInputSourceArray`** represents a *live* list of WebXR input sources, and is used as the return value of the {{domxref("XRSession")}} property {{domxref("XRSession.inputSources", "inputSources")}}. Each entry is an {{domxref("XRInputSource")}} representing one input device connected to the WebXR system.
 
-<p>In addition to being able to access the input sources in the list using standard array notation (that is, with index numbers insize square brackets), methods are available to allow the use of iterators and the {{domxref("XRInputSourceArray.forEach", "forEach()")}} method is also available.</p>
+In addition to being able to access the input sources in the list using standard array notation (that is, with index numbers insize square brackets), methods are available to allow the use of iterators and the {{domxref("XRInputSourceArray.forEach", "forEach()")}} method is also available.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>The following properties are available on <code>XRInputSourceArray</code> objects.</em></p>
+_The following properties are available on `XRInputSourceArray` objects._
 
-<dl>
- <dt>{{domxref("XRInputSourceArray.length", "length")}} {{ReadOnlyInline}}</dt>
- <dd>The number of {{domxref("XRInputSource")}} objects in the list.</dd>
-</dl>
+- {{domxref("XRInputSourceArray.length", "length")}} {{ReadOnlyInline}}
+  - : The number of {{domxref("XRInputSource")}} objects in the list.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>The following methods are available on <code>XRInputSourceArray</code> objects. You may also use the features of the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a></code> type.</em></p>
+_The following methods are available on `XRInputSourceArray` objects. You may also use the features of the [`Symbol`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) type._
 
-<dl>
- <dt>{{domxref("XRInputSourceArray.entries", "entries()")}}</dt>
- <dd>Returns an <code><a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">iterator</a></code> you can use to walk the list of key/value pairs in the list. Each item returned is an array whose first value is the index and whose second value is the {{domxref("XRInputSource")}} at that index.</dd>
- <dt>{{domxref("XRInputSourceArray.forEach", "forEach()")}}</dt>
- <dd>Iterates over each item in the list, in order from first to last.</dd>
- <dt>{{domxref("XRInputSourceArray.keys", "keys()")}}</dt>
- <dd>A list of the keys corresponding to the entries in the input source list.</dd>
- <dt>{{domxref("XRInputSourceArray.values", "values()")}}</dt>
- <dd>Returns an <code>iterator</code> you can use to go through all the values in the list. Each item is a single {{domxref("XRInputSource")}} object.</dd>
-</dl>
+- {{domxref("XRInputSourceArray.entries", "entries()")}}
+  - : Returns an [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) you can use to walk the list of key/value pairs in the list. Each item returned is an array whose first value is the index and whose second value is the {{domxref("XRInputSource")}} at that index.
+- {{domxref("XRInputSourceArray.forEach", "forEach()")}}
+  - : Iterates over each item in the list, in order from first to last.
+- {{domxref("XRInputSourceArray.keys", "keys()")}}
+  - : A list of the keys corresponding to the entries in the input source list.
+- {{domxref("XRInputSourceArray.values", "values()")}}
+  - : Returns an `iterator` you can use to go through all the values in the list. Each item is a single {{domxref("XRInputSource")}} object.
 
-<p>In addition to these methods, you may use array notation to access items in the list by index For example, the snippet of code below calls a function <code>handleInput()</code>, passing into it the first item in the input source list, if the list isn't empty.</p>
+In addition to these methods, you may use array notation to access items in the list by index For example, the snippet of code below calls a function `handleInput()`, passing into it the first item in the input source list, if the list isn't empty.
 
-<pre class="brush: js">let sources = xrSession.inputSources;
-if (sources.length &gt; 0) {
+```js
+let sources = xrSession.inputSources;
+if (sources.length > 0) {
   handleInput(sources[0]);
 }
-</pre>
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

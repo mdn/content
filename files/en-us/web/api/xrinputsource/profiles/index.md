@@ -2,81 +2,73 @@
 title: XRInputSource.profiles
 slug: Web/API/XRInputSource/profiles
 tags:
-- API
-- AR
-- Configuration
-- Input
-- Property
-- Read-only
-- Reference
-- VR
-- Virtual
-- WebXR
-- WebXR API
-- WebXR Device API
-- XR
-- XRInputSource
-- augmented
-- profile
+  - API
+  - AR
+  - Configuration
+  - Input
+  - Property
+  - Read-only
+  - Reference
+  - VR
+  - Virtual
+  - WebXR
+  - WebXR API
+  - WebXR Device API
+  - XR
+  - XRInputSource
+  - augmented
+  - profile
 browser-compat: api.XRInputSource.profiles
 ---
-<p>{{APIRef("WebXR Device API")}}</p>
+{{APIRef("WebXR Device API")}}
 
-<p>The read-only {{domxref("XRInputSource")}} property <code><strong>profiles</strong></code> returns an array of strings, each describing a configuration profile for the input source. The profile strings are listed in order of specificity, with the most specific profile listed first.</p>
+The read-only {{domxref("XRInputSource")}} property **`profiles`** returns an array of strings, each describing a configuration profile for the input source. The profile strings are listed in order of specificity, with the most specific profile listed first.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The <code>profiles</code> list is always empty when the WebXR
-    session is in inline mode.</p>
-</div>
+> **Note:** The `profiles` list is always empty when the WebXR
+> session is in inline mode.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">let <em>profileList</em> = <em>xrInputSource</em>.profiles;</pre>
+```js
+let profileList = xrInputSource.profiles;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An array of {{domxref("DOMString")}} objects, each describing one configuration profile
-  for the input device represented by the <code>XRInputSource</code> object. Each input
-  profile specifies the preferred visual representation and behavior of the input source.
-</p>
+An array of {{domxref("DOMString")}} objects, each describing one configuration profile
+for the input device represented by the `XRInputSource` object. Each input
+profile specifies the preferred visual representation and behavior of the input source.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<h3 id="Input_profile_names">Input profile names</h3>
+### Input profile names
 
-<p>An input profile name is a string describing a visual representation and behavior the
-  input source may be configured to use. Each string:</p>
+An input profile name is a string describing a visual representation and behavior the
+input source may be configured to use. Each string:
 
-<ul>
-  <li>Has no spaces; instead, words are separated by hyphen ("-") characters</li>
-  <li>If the platform makes it available, the USB vendor and product ID may be provided
-    but cannot be relied upon</li>
-  <li>Does not uniquely identify a specific device; rather, it identifies a configuration
-    that the product is capable of using</li>
-  <li>Does not provide information about handedness of the device, if applicable</li>
-</ul>
+- Has no spaces; instead, words are separated by hyphen ("-") characters
+- If the platform makes it available, the USB vendor and product ID may be provided
+  but cannot be relied upon
+- Does not uniquely identify a specific device; rather, it identifies a configuration
+  that the product is capable of using
+- Does not provide information about handedness of the device, if applicable
 
-<p>The <a
-    href="https://github.com/immersive-web/webxr-input-profiles/tree/master/packages/registry">WebXR
-    Input Profiles Registry</a> is used by device developers and browser developers to
-  attempt to ensure that a given device will report the same profile strings regardless of
-  which browser or other {{Glossary("user agent")}} you use.</p>
+The [WebXR
+Input Profiles Registry](https://github.com/immersive-web/webxr-input-profiles/tree/master/packages/registry) is used by device developers and browser developers to
+attempt to ensure that a given device will report the same profile strings regardless of
+which browser or other {{Glossary("user agent")}} you use.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a></li>
-  <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Inputs">Inputs and input sources</a>
-  </li>
-  <li><a href="/en-US/docs/Web/WebXR%20Device%20API/Gamepads">Using gamepads in WebXR
-      applications</a></li>
-</ul>
+- [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)
+- [Inputs and input sources](/en-US/docs/Web/API/WebXR_Device_API/Inputs)
+- [Using gamepads in WebXR
+  applications](/en-US/docs/Web/WebXR%20Device%20API/Gamepads)

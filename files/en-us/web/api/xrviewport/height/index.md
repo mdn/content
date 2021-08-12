@@ -2,51 +2,52 @@
 title: XRViewport.height
 slug: Web/API/XRViewport/height
 tags:
-- API
-- AR
-- Property
-- Read-only
-- Reality
-- Reference
-- VR
-- Virtual
-- WebXR
-- WebXR API
-- WebXR Device API
-- XR
-- XRViewport
-- augmented
-- height
-- size
-- viewport
+  - API
+  - AR
+  - Property
+  - Read-only
+  - Reality
+  - Reference
+  - VR
+  - Virtual
+  - WebXR
+  - WebXR API
+  - WebXR Device API
+  - XR
+  - XRViewport
+  - augmented
+  - height
+  - size
+  - viewport
 browser-compat: api.XRViewport.height
 ---
-<p>{{APIRef("WebXR Device API")}}</p>
+{{APIRef("WebXR Device API")}}
 
-<p>The read-only {{domxref("XRViewport")}} property
-    <code><strong>height</strong></code> specifies the height, in pixels, of the viewport
-    onto the drawing surface within which the WebXR view is to be rendered. Along
-  with {{domxref("XRViewport.width", "width")}} and the origin point given by
-  {{domxref("XRViewport.x", "x")}} and {{domxref("XRViewport.y", "y")}}, this defines the
-  area within which rendered content will be drawn.</p>
+The read-only {{domxref("XRViewport")}} property
+**`height`** specifies the height, in pixels, of the viewport
+onto the drawing surface within which the WebXR view is to be rendered. Along
+with {{domxref("XRViewport.width", "width")}} and the origin point given by
+{{domxref("XRViewport.x", "x")}} and {{domxref("XRViewport.y", "y")}}, this defines the
+area within which rendered content will be drawn.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>height</em> = <em>xrViewport</em>.height;</pre>
+```js
+height = xrViewport.height;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The viewport's height in pixels.</p>
+The viewport's height in pixels.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>See the main {{domxref("XRViewport")}} page for examples.</p>
+See the main {{domxref("XRViewport")}} page for examples.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

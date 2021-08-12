@@ -2,85 +2,83 @@
 title: XRInputSourceArray.values()
 slug: Web/API/XRInputSourceArray/values
 tags:
-- API
-- AR
-- Input Sources
-- Inputs
-- Iterator
-- Method
-- Mixed
-- Reality
-- Reference
-- Sources
-- VR
-- Virtual
-- WebXR
-- WebXR API
-- WebXR API Reference
-- XR
-- XRInputSourceArrray
-- augmented
-- values
+  - API
+  - AR
+  - Input Sources
+  - Inputs
+  - Iterator
+  - Method
+  - Mixed
+  - Reality
+  - Reference
+  - Sources
+  - VR
+  - Virtual
+  - WebXR
+  - WebXR API
+  - WebXR API Reference
+  - XR
+  - XRInputSourceArrray
+  - augmented
+  - values
 browser-compat: api.XRInputSourceArray.values
 ---
-<p>{{APIRef("WebXR Device API")}}</p>
+{{APIRef("WebXR Device API")}}
 
-<p>The {{domxref("XRInputSourceArray")}}
-  method  <code><strong>values()</strong></code> returns a {{Glossary("JavaScript")}}
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator">iterator</a></code>
-  that can walk over the list of {{domxref("XRInputSource")}} objects contained in the
-  array, from first to last.</p>
+The {{domxref("XRInputSourceArray")}}
+method  **`values()`** returns a {{Glossary("JavaScript")}}
+[`iterator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)
+that can walk over the list of {{domxref("XRInputSource")}} objects contained in the
+array, from first to last.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>xrInputSourceArray</em>.values();
-</pre>
+```js
+xrInputSourceArray.values();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A
-  JavaScript <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator">iterator</a></code> that
-  can be used to walk through the list of {{domxref("XRInputSource")}} objects in the
-  array, starting with the first entry (at index 0) and proceeding straight through the
-  list.</p>
+A
+JavaScript [`iterator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) that
+can be used to walk through the list of {{domxref("XRInputSource")}} objects in the
+array, starting with the first entry (at index 0) and proceeding straight through the
+list.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example snippet walks through each input and calls the
-  function <code>checkInput()</code>  with each returned value.</p>
+This example snippet walks through each input and calls the
+function `checkInput()`  with each returned value.
 
-<pre class="brush: js">for (const source of xrSession.inputSources.values()) {
+```js
+for (const source of xrSession.inputSources.values()) {
   checkInput(source);
 }
-</pre>
+```
 
-<p>Here,
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a></code>
-  is used to iterate over the array's contents. Each pass through the loop,
-  <code>source</code> is the next {{domxref("XRInputSource")}} in the list. The loop exits
-  once every input has been delivered to <code>checkInput()</code>.</p>
+Here,
+[`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
+is used to iterate over the array's contents. Each pass through the loop,
+`source` is the next {{domxref("XRInputSource")}} in the list. The loop exits
+once every input has been delivered to `checkInput()`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Inputs">Inputs and input sources</a>
-  </li>
-  <li>The {{domxref("XRInputSourceArray")}} method {{domxref("XRInputSourceArray.keys",
-    "keys()")}}</li>
-  <li>The
-    <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code> method <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/values">values(</a>)</code>
-  </li>
-  <li>{{domxref("XRInputSource")}}</li>
-</ul>
+- [Inputs and input sources](/en-US/docs/Web/API/WebXR_Device_API/Inputs)
+- The {{domxref("XRInputSourceArray")}} method {{domxref("XRInputSourceArray.keys",
+    "keys()")}}
+- The
+  [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) method `values()`
+- {{domxref("XRInputSource")}}

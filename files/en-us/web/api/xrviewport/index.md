@@ -21,37 +21,38 @@ tags:
   - viewport
 browser-compat: api.XRViewport
 ---
-<p>{{APIRef("WebXR Device API")}}{{SecureContext_Header}}</p>
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
-<p>The WebXR Device API's <code><strong>XRViewport</strong></code> interface provides properties used to describe the size and position of the current viewport within the {{domxref("XRWebGLLayer")}} being used to render the 3D scene.</p>
+The WebXR Device API's **`XRViewport`** interface provides properties used to describe the size and position of the current viewport within the {{domxref("XRWebGLLayer")}} being used to render the 3D scene.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("XRViewport.height", "height")}} {{ReadOnlyInline}}</dt>
- <dd>The height, in pixels, of the viewport.</dd>
- <dt>{{domxref("XRViewport.width", "width")}} {{ReadOnlyInline}}</dt>
- <dd>The width, in pixels, of the viewport.</dd>
- <dt>{{domxref("XRViewport.x", "x")}} {{ReadOnlyInline}}</dt>
- <dd>The offset from the origin of the destination graphics surface (typically a {{domxref("XRWebGLLayer")}}) to the left edge of the viewport, in pixels.</dd>
- <dt>{{domxref("XRViewport.y", "y")}} {{ReadOnlyInline}}</dt>
- <dd>The offset from the origin of the viewport to the bottom edge of the viewport; WebGL's coordinate system places (0, 0) at the bottom left corner of the surface.</dd>
-</dl>
+- {{domxref("XRViewport.height", "height")}} {{ReadOnlyInline}}
+  - : The height, in pixels, of the viewport.
+- {{domxref("XRViewport.width", "width")}} {{ReadOnlyInline}}
+  - : The width, in pixels, of the viewport.
+- {{domxref("XRViewport.x", "x")}} {{ReadOnlyInline}}
+  - : The offset from the origin of the destination graphics surface (typically a {{domxref("XRWebGLLayer")}}) to the left edge of the viewport, in pixels.
+- {{domxref("XRViewport.y", "y")}} {{ReadOnlyInline}}
+  - : The offset from the origin of the viewport to the bottom edge of the viewport; WebGL's coordinate system places (0, 0) at the bottom left corner of the surface.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>Currently, the only type of surface available is the {{domxref("XRWebGLLayer")}}. The precise orientation of the coordinate system may vary with other surface types, but in WebGL, the origin (0, 0) is located at the bottom-left corner of the surface. Thus the values specified in an <code>XRViewport</code> define a rectangle whose bottom-left corner is at (<code>x</code>, <code>y</code>) and which extends <code>width</code> pixels toward the left and <code>height</code> pixels upward.</p>
+Currently, the only type of surface available is the {{domxref("XRWebGLLayer")}}. The precise orientation of the coordinate system may vary with other surface types, but in WebGL, the origin (0, 0) is located at the bottom-left corner of the surface. Thus the values specified in an `XRViewport` define a rectangle whose bottom-left corner is at (`x`, `y`) and which extends `width` pixels toward the left and `height` pixels upward.
 
-<p>These values may be passed directly into the {{domxref("WebGLRenderingContext.viewport()")}} method:</p>
+These values may be passed directly into the {{domxref("WebGLRenderingContext.viewport()")}} method:
 
-<pre class="brush: js">let xrViewport = xrWebGLLayer.getViewport(xrView);
-gl.viewport(xrViewport.x, xrViewport.y, xrViewport.width, xrViewport.height);</pre>
+```js
+let xrViewport = xrWebGLLayer.getViewport(xrView);
+gl.viewport(xrViewport.x, xrViewport.y, xrViewport.width, xrViewport.height);
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example sets up an animation frame callback using {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}}. After initial setup, it iterates over each of the views within the viewer's pose, configuring the viewport as dictated by the {{domxref("XRWebGLLayer")}}.</p>
+This example sets up an animation frame callback using {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}}. After initial setup, it iterates over each of the views within the viewer's pose, configuring the viewport as dictated by the {{domxref("XRWebGLLayer")}}.
 
-<pre class="brush: js">xrSession.requestAnimationFrame((time, xrFrame) =&gt; {
+```js
+xrSession.requestAnimationFrame((time, xrFrame) => {
   let viewerPose = xrFrame.getViewerPose(xrReferenceSpace);
 
   gl.bindFramebuffer(xrWebGLLayer.framebuffer);
@@ -64,12 +65,12 @@ gl.viewport(xrViewport.x, xrViewport.y, xrViewport.width, xrViewport.height);</p
    // the viewer's needs
   }
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

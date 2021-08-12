@@ -2,43 +2,42 @@
 title: XRRenderState.inlineVerticalFieldOfView
 slug: Web/API/XRRenderState/inlineVerticalFieldOfView
 tags:
-- API
-- Field of View
-- Vertical Field of View
-- WebXR
-- WebXR Device API
-- Property
-- Experimental
+  - API
+  - Field of View
+  - Vertical Field of View
+  - WebXR
+  - WebXR Device API
+  - Property
+  - Experimental
 browser-compat: api.XRRenderState.inlineVerticalFieldOfView
 ---
-<p>{{APIRef("WebXR Device API")}}</p>
+{{APIRef("WebXR Device API")}}
 
-<p>The read-only <strong><code>inlineVerticalFieldOfView</code></strong>
-  property of the {{DOMxRef("XRRenderState")}} interface returns the default vertical
-  field of view for <code>"inline"</code> sessions and <code>null</code> for all immersive
-  sessions.</p>
+The read-only **`inlineVerticalFieldOfView`**
+property of the {{DOMxRef("XRRenderState")}} interface returns the default vertical
+field of view for `"inline"` sessions and `null` for all immersive
+sessions.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var inlineVerticalFieldOfView = <em>xrRenderState</em>.inlineVerticalFieldOfView;
-</pre>
+```js
+var inlineVerticalFieldOfView = xrRenderState.inlineVerticalFieldOfView;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{JSxRef("Number")}} for <code>"inline"</code> sessions, which represents the default
-  field of view, and <code>null</code> for immersive sessions.</p>
+A {{JSxRef("Number")}} for `"inline"` sessions, which represents the default
+field of view, and `null` for immersive sessions.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{DOMxRef("XRSystem.requestSession", "navigator.xr.requestSession()")}}</li>
-  <li>{{DOMxRef("XRSystem.isSessionSupported", "navigator.xr.isSessionSupported()")}}</li>
-</ul>
+- {{DOMxRef("XRSystem.requestSession", "navigator.xr.requestSession()")}}
+- {{DOMxRef("XRSystem.isSessionSupported", "navigator.xr.isSessionSupported()")}}

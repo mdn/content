@@ -2,53 +2,52 @@
 title: 'XRSystem: ondevicechange'
 slug: Web/API/XRSystem/ondevicechange
 tags:
-- AR
-- Augmented Reality
-- Event Handler
-- Experimental
-- VR
-- Virtual Reality
-- WebXR
-- WebXR Device API
-- XR
-- XRSystem
-- ondevicechange
+  - AR
+  - Augmented Reality
+  - Event Handler
+  - Experimental
+  - VR
+  - Virtual Reality
+  - WebXR
+  - WebXR Device API
+  - XR
+  - XRSystem
+  - ondevicechange
 browser-compat: api.XRSystem.ondevicechange
 ---
-<div>{{APIRef("WebXR Device API")}}</div>
+{{APIRef("WebXR Device API")}}
 
-<p>The <strong><code>ondevicechange</code></strong> property of the
-  {{domxref("XRSystem")}} interface is passed a {{Event("devicechange")}} event whenever
-  availability of an immersive device changes. The event that is fired is a "simple event"
-  that implements the <a href="/en-US/docs/Web/API/Event"
-    title="The Event interface represents an event which takes place in the DOM."><code>Event</code></a> interface. 
-</p>
+The **`ondevicechange`** property of the
+{{domxref("XRSystem")}} interface is passed a {{Event("devicechange")}} event whenever
+availability of an immersive device changes. The event that is fired is a "simple event"
+that implements the [`Event`](/en-US/docs/Web/API/Event "The Event interface represents an event which takes place in the DOM.") interface.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">navigator.xr.ondevicechange = function(event) { ... };
-</pre>
+```js
+navigator.xr.ondevicechange = function(event) { ... };
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>{{jsxref('undefined')}}</p>
+{{jsxref('undefined')}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">navigator.xr.ondevicechange = function(ev) {
+```js
+navigator.xr.ondevicechange = function(ev) {
   console.log("The availability of immersive XR devices has changed.")
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Event")}}</li>
-</ul>
+- {{domxref("Event")}}

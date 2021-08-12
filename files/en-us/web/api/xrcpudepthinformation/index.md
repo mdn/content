@@ -11,51 +11,44 @@ tags:
   - VR
 browser-compat: api.XRCPUDepthInformation
 ---
-<p>{{APIRef("WebXR Device API")}} {{secureContext_header}}</p>
+{{APIRef("WebXR Device API")}} {{secureContext_header}}
 
-<p>The <code><strong>XRCPUDepthInformation</strong></code> interface contains depth information from the CPU (returned by {{domxref("XRFrame.getDepthInformation()")}}).</p>
+The **`XRCPUDepthInformation`** interface contains depth information from the CPU (returned by {{domxref("XRFrame.getDepthInformation()")}}).
 
 {{InheritanceDiagram}}
 
-<p>This interface inherits properties from its parent, {{domxref("XRDepthInformation")}}.</p>
+This interface inherits properties from its parent, {{domxref("XRDepthInformation")}}.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("XRCPUDepthInformation.data")}} {{ReadOnlyInline}}</dt>
- <dd>An {{jsxref("ArrayBuffer")}} containing depth-buffer information in raw format.</dd>
- <dt>{{domxref("XRDepthInformation.height")}} {{ReadOnlyInline}}</dt>
- <dd>Contains the height of the depth buffer (number of rows).</dd>
- <dt>{{domxref("XRDepthInformation.normDepthBufferFromNormView")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("XRRigidTransform")}} that needs to be applied when indexing into the depth buffer. The transformation that the matrix represents changes the coordinate system from normalized view coordinates to normalized depth-buffer coordinates that can then be scaled by depth buffer’s <code>width</code> and <code>height</code> to obtain the absolute depth-buffer coordinates.</dd>
- <dt>{{domxref("XRDepthInformation.rawValueToMeters")}} {{ReadOnlyInline}}</dt>
- <dd>Contains the scale factor by which the raw depth values must be multiplied in order to get the depths in meters.</dd>
- <dt>{{domxref("XRDepthInformation.width")}} {{ReadOnlyInline}}</dt>
- <dd>Contains the width of the depth buffer (number of columns).</dd>
-</dl>
+- {{domxref("XRCPUDepthInformation.data")}} {{ReadOnlyInline}}
+  - : An {{jsxref("ArrayBuffer")}} containing depth-buffer information in raw format.
+- {{domxref("XRDepthInformation.height")}} {{ReadOnlyInline}}
+  - : Contains the height of the depth buffer (number of rows).
+- {{domxref("XRDepthInformation.normDepthBufferFromNormView")}} {{ReadOnlyInline}}
+  - : An {{domxref("XRRigidTransform")}} that needs to be applied when indexing into the depth buffer. The transformation that the matrix represents changes the coordinate system from normalized view coordinates to normalized depth-buffer coordinates that can then be scaled by depth buffer’s `width` and `height` to obtain the absolute depth-buffer coordinates.
+- {{domxref("XRDepthInformation.rawValueToMeters")}} {{ReadOnlyInline}}
+  - : Contains the scale factor by which the raw depth values must be multiplied in order to get the depths in meters.
+- {{domxref("XRDepthInformation.width")}} {{ReadOnlyInline}}
+  - : Contains the width of the depth buffer (number of columns).
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
-  <dt>{{domxref("XRCPUDepthInformation.getDepthInMeters()")}}</dt>
-  <dd>Returns the depth in meters at (x, y) in normalized view coordinates.</dd>
-</dl>
+- {{domxref("XRCPUDepthInformation.getDepthInMeters()")}}
+  - : Returns the depth in meters at (x, y) in normalized view coordinates.
 
-<h2>Examples</h2>
+## Examples
 
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("XRDepthInformation")}}</li>
-  <li>{{domxref("XRWebGLDepthInformation")}}</li>
-  <li>{{domxref("XRFrame.getDepthInformation()")}}</li>
-</ul>
+- {{domxref("XRDepthInformation")}}
+- {{domxref("XRWebGLDepthInformation")}}
+- {{domxref("XRFrame.getDepthInformation()")}}

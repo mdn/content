@@ -2,81 +2,78 @@
 title: XRWebGLLayer.getViewport()
 slug: Web/API/XRWebGLLayer/getViewport
 tags:
-- API
-- AR
-- Layer
-- Method
-- Reality
-- Reference
-- VR
-- Virtual
-- WebGL
-- WebXR
-- WebXR API
-- WebXR Device API
-- XR
-- XRWebGLLayer
-- augmented
-- getViewport
-- viewport
+  - API
+  - AR
+  - Layer
+  - Method
+  - Reality
+  - Reference
+  - VR
+  - Virtual
+  - WebGL
+  - WebXR
+  - WebXR API
+  - WebXR Device API
+  - XR
+  - XRWebGLLayer
+  - augmented
+  - getViewport
+  - viewport
 browser-compat: api.XRWebGLLayer.getViewport
 ---
-<p>{{APIRef("WebXR Device API")}}</p>
+{{APIRef("WebXR Device API")}}
 
-<p>The {{domxref("XRWebGLLayer")}} interface's
-    <code><strong>getViewport()</strong></code> method returns the
-    {{domxref("XRViewport")}} that should be used to render the specified
-    {{domxref("XRView")}} into the WebGL layer. For WebXR devices which use a
-  single framebuffer for both the left and right eyes, the returned viewport represents
-  the region of the framebuffer into which the scene should be rendered for the eye
-  represented by the view.</p>
+The {{domxref("XRWebGLLayer")}} interface's
+**`getViewport()`** method returns the
+{{domxref("XRViewport")}} that should be used to render the specified
+{{domxref("XRView")}} into the WebGL layer. For WebXR devices which use a
+single framebuffer for both the left and right eyes, the returned viewport represents
+the region of the framebuffer into which the scene should be rendered for the eye
+represented by the view.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">let <em>viewport</em> = <em>xrWebGLLayer</em>.getViewport(<em>view</em>);</pre>
+```js
+let viewport = xrWebGLLayer.getViewport(view);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>view</code></dt>
-  <dd>An {{domxref("XRView")}} object indicating the view for which the viewport is to be
-    returned.</dd>
-</dl>
+- `view`
+  - : An {{domxref("XRView")}} object indicating the view for which the viewport is to be
+    returned.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("XRViewport")}} object representing the viewport which will restrict
-  drawing to the portion of the layer corresponding to the specified <code>view</code>.
-</p>
+A {{domxref("XRViewport")}} object representing the viewport which will restrict
+drawing to the portion of the layer corresponding to the specified `view`.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><code>InvalidStateError</code></dt>
-  <dd>Either the specified <code>view</code> is not in an active {{domxref("XRFrame")}} or
-    that <code>XRFrame</code> and the {{domxref("XRWebGLLayer")}} are not part of the same
-    <a href="/en-US/docs/Web/API/XRSession">WebXR session</a>.</dd>
-</dl>
+- `InvalidStateError`
+  - : Either the specified `view` is not in an active {{domxref("XRFrame")}} or
+    that `XRFrame` and the {{domxref("XRWebGLLayer")}} are not part of the same
+    [WebXR session](/en-US/docs/Web/API/XRSession).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example demonstrates in part what the callback for the
-  {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} function might
-  look like, using <code>getViewport()</code> to get the viewport so that drawing can be
-  constrained to the area set aside for the eye whose viewpoint is currently being
-  rendered.</p>
+This example demonstrates in part what the callback for the
+{{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} function might
+look like, using `getViewport()` to get the viewport so that drawing can be
+constrained to the area set aside for the eye whose viewpoint is currently being
+rendered.
 
-<p>This works because the set of views returned by an {{domxref("XRViewerPose")}} each
-  represent one eye's perspective on the scene. Since the framebuffer is split in half,
-  one half for each eye, setting the WebGL viewport to match the WebXR layer's viewport
-  will ensure that when rendering the scene for the current eye's pose, it is rendered
-  into the correct half of the framebuffer.</p>
+This works because the set of views returned by an {{domxref("XRViewerPose")}} each
+represent one eye's perspective on the scene. Since the framebuffer is split in half,
+one half for each eye, setting the WebGL viewport to match the WebXR layer's viewport
+will ensure that when rendering the scene for the current eye's pose, it is rendered
+into the correct half of the framebuffer.
 
-<p><strong>&lt;&lt;&lt;--- add link to appropriate section in the Cameras and views
-    article ---&gt;&gt;&gt;</strong></p>
+**<<<--- add link to appropriate section in the Cameras and views
+article --->>>**
 
-<pre class="brush: js">function drawFrame(time, frame) {
+```js
+function drawFrame(time, frame) {
   let session = frame.session;
 
   let pose = frame.getViewerPose(mainReferenceSpace);
@@ -96,19 +93,17 @@ browser-compat: api.XRWebGLLayer.getViewport
       /* Render the scene now */
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a></li>
-  <li>{{domxref("WebGLLayerInit")}}</li>
-</ul>
+- [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)
+- {{domxref("WebGLLayerInit")}}

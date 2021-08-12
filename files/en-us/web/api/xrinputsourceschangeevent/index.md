@@ -22,44 +22,39 @@ tags:
   - inputsourceschange
 browser-compat: api.XRInputSourcesChangeEvent
 ---
-<p>{{APIRef("WebXR Device API")}} {{SecureContext_Header}}</p>
+{{APIRef("WebXR Device API")}} {{SecureContext_Header}}
 
-<p>The WebXR Device API interface <code><strong>XRInputSourcesChangeEvent</strong></code> is used to represent the {{domxref("XRSession.inputsourceschange_event", "inputsourceschange")}} event sent to an {{domxref("XRSession")}} when the set of available WebXR input controllers changes.</p>
+The WebXR Device API interface **`XRInputSourcesChangeEvent`** is used to represent the {{domxref("XRSession.inputsourceschange_event", "inputsourceschange")}} event sent to an {{domxref("XRSession")}} when the set of available WebXR input controllers changes.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("XRInputSourcesChangeEvent.XRInputSourcesChangeEvent", "XRInputSourcesChangeEvent()")}}</dt>
- <dd>Creates and returns a new <code>XRInputSourcesChangeEvent</code> object. The specified type must be <code>inputsourceschange</code>, which is the only event that uses this interface.</dd>
-</dl>
+- {{domxref("XRInputSourcesChangeEvent.XRInputSourcesChangeEvent", "XRInputSourcesChangeEvent()")}}
+  - : Creates and returns a new `XRInputSourcesChangeEvent` object. The specified type must be `inputsourceschange`, which is the only event that uses this interface.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("XRInputSourcesChangeEvent.added", "added")}} {{ReadOnlyInline}}</dt>
- <dd>An array of zero or more {{domxref("XRInputSource")}} objects, each representing an input device which has been newly connected or enabled for use.</dd>
- <dt>{{domxref("XRInputSourcesChangeEvent.removed", "removed")}} {{ReadOnlyInline}}</dt>
- <dd>An array of zero or more {{domxref("XRInputSource")}} objects representing the input devices newly connected or enabled for use.</dd>
- <dt>{{domxref("XRInputSourcesChangeEvent.session", "session")}} {{ReadOnlyInline}}</dt>
- <dd>The {{domxref("XRSession")}} to which this input source change event is being directed.</dd>
-</dl>
+- {{domxref("XRInputSourcesChangeEvent.added", "added")}} {{ReadOnlyInline}}
+  - : An array of zero or more {{domxref("XRInputSource")}} objects, each representing an input device which has been newly connected or enabled for use.
+- {{domxref("XRInputSourcesChangeEvent.removed", "removed")}} {{ReadOnlyInline}}
+  - : An array of zero or more {{domxref("XRInputSource")}} objects representing the input devices newly connected or enabled for use.
+- {{domxref("XRInputSourcesChangeEvent.session", "session")}} {{ReadOnlyInline}}
+  - : The {{domxref("XRSession")}} to which this input source change event is being directed.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>While <code>XRInputSourcesChangeEvent</code> defines no methods of its own, it inherits methods from its parent interface, {{domxref("Event")}}.</em></p>
+_While `XRInputSourcesChangeEvent` defines no methods of its own, it inherits methods from its parent interface, {{domxref("Event")}}._
 
-<h2 id="Event_types">Event types</h2>
+## Event types
 
-<dl>
- <dt>{{domxref("XRSession.inputsourceschange_event", "inputsourceschange")}}</dt>
- <dd>Delivered to the {{domxref("XRSession")}} when the set of input devices available to it changes.</dd>
-</dl>
+- {{domxref("XRSession.inputsourceschange_event", "inputsourceschange")}}
+  - : Delivered to the {{domxref("XRSession")}} when the set of input devices available to it changes.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example shows how to set up an event handler which uses <code>inputsourceschange</code> events to detect newly-available pointing devices and to load their models in preparation to display them in the next animation frame.</p>
+The following example shows how to set up an event handler which uses `inputsourceschange` events to detect newly-available pointing devices and to load their models in preparation to display them in the next animation frame.
 
-<pre class="brush: js">xrSession.addEventListener("inputsourceschange", onInputSourcesChange);
+```js
+xrSession.addEventListener("inputsourceschange", onInputSourcesChange);
 
 function onInputSourcesChange(event) {
   for (let input of event.added) {
@@ -68,16 +63,18 @@ function onInputSourcesChange(event) {
     }
   }
 }
-</pre>
+```
 
-<p>You can also add a handler for <code>inputsourceschange</code> events by setting the {{domxref("XRSession.oninputsourceschange", "oninputsourceschange")}} event handler:</p>
+You can also add a handler for `inputsourceschange` events by setting the {{domxref("XRSession.oninputsourceschange", "oninputsourceschange")}} event handler:
 
-<pre class="brush: js">xrSession.oninputsourceschange = onInputSourcesChange;</pre>
+```js
+xrSession.oninputsourceschange = onInputSourcesChange;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

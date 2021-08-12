@@ -2,41 +2,41 @@
 title: XRFrame.createAnchor()
 slug: Web/API/XRFrame/createAnchor
 tags:
-- API
-- Method
-- Reference
-- AR
-- VR
-- XR
-- WebXR
+  - API
+  - Method
+  - Reference
+  - AR
+  - VR
+  - XR
+  - WebXR
 browser-compat: api.XRFrame.createAnchor
 ---
-<div>{{APIRef("WebXR Device API")}}</div>
+{{APIRef("WebXR Device API")}}
 
-<p>The <code><strong>createAnchor()</strong></code> method of the {{domxref("XRFrame")}} interface creates a free-floating {{domxref("XRAnchor")}} which will be fixed relative to the real world.</p>
+The **`createAnchor()`** method of the {{domxref("XRFrame")}} interface creates a free-floating {{domxref("XRAnchor")}} which will be fixed relative to the real world.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">createAnchor(pose, space)</pre>
+```js
+createAnchor(pose, space)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>pose</code></dt>
-  <dd>An {{domxref("XRRigidTransform")}} object with the initial pose where the anchor should be created. The system will make sure that the relationship with the physical world made at this moment in time is maintained as the tracking system's understanding of the world evolves.</dd>
-  <dt><code>space</code></dt>
-  <dd>An {{domxref("XRSpace")}} object the pose is relative to.</dd>
-</dl>
+- `pose`
+  - : An {{domxref("XRRigidTransform")}} object with the initial pose where the anchor should be created. The system will make sure that the relationship with the physical world made at this moment in time is maintained as the tracking system's understanding of the world evolves.
+- `space`
+  - : An {{domxref("XRSpace")}} object the pose is relative to.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} resolving to an {{domxref("XRAnchor")}} object.</p>
+A {{jsxref("Promise")}} resolving to an {{domxref("XRAnchor")}} object.
 
-<h2>Examples</h2>
+## Examples
 
-<h3>Creating an anchor</h3>
+### Creating an anchor
 
-<pre class="brush: js">
+```js
 frame.createAnchor(anchorPose, referenceSpace).then((anchor) => {
 
   // Do stuff with the anchor (assign objects that will be relative to this anchor)
@@ -44,12 +44,12 @@ frame.createAnchor(anchorPose, referenceSpace).then((anchor) => {
 }, (error) => {
   console.error("Could not create anchor: "" + error);
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

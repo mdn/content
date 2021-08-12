@@ -2,38 +2,38 @@
 title: XRDepthInformation.normDepthBufferFromNormView
 slug: Web/API/XRDepthInformation/normDepthBufferFromNormView
 tags:
-- API
-- AR
-- Augmented Reality
-- Experimental
-- Property
-- Reference
-- VR
-- WebXR
-- WebXR Device API
+  - API
+  - AR
+  - Augmented Reality
+  - Experimental
+  - Property
+  - Reference
+  - VR
+  - WebXR
+  - WebXR Device API
 browser-compat: api.XRDepthInformation.normDepthBufferFromNormView
 ---
-<div>{{APIRef("WebXR Device API")}}</div>
+{{APIRef("WebXR Device API")}}
 
-<p>The <em>read-only</em> <strong><code>normDepthBufferFromNormView</code></strong> property of the {{DOMxRef("XRDepthInformation")}} interface contains the 3D geometric transform that needs to be applied when indexing into the depth buffer.</p>
+The *read-only* **`normDepthBufferFromNormView`** property of the {{DOMxRef("XRDepthInformation")}} interface contains the 3D geometric transform that needs to be applied when indexing into the depth buffer.
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("XRRigidTransform")}} that needs to be applied when indexing into the depth buffer. The transformation that the matrix represents changes the coordinate system from normalized view coordinates to normalized depth-buffer coordinates that can then be scaled by depth buffer’s <code>width</code> and <code>height</code> to obtain the absolute depth buffer coordinates.</p>
+An {{domxref("XRRigidTransform")}} that needs to be applied when indexing into the depth buffer. The transformation that the matrix represents changes the coordinate system from normalized view coordinates to normalized depth-buffer coordinates that can then be scaled by depth buffer’s `width` and `height` to obtain the absolute depth buffer coordinates.
 
-<h2>Examples</h2>
+## Examples
 
-<p>Use {{domxref("XRFrame.getDepthInformation()")}} (CPU) or {{domxref("XRWebGLBinding.getDepthInformation()")}} (WebGL) to obtain depth information. The returned objects will contain the <code>normDepthBufferFromNormView</code> of the depth buffer, which you can use for further calculations.</p>
+Use {{domxref("XRFrame.getDepthInformation()")}} (CPU) or {{domxref("XRWebGLBinding.getDepthInformation()")}} (WebGL) to obtain depth information. The returned objects will contain the `normDepthBufferFromNormView` of the depth buffer, which you can use for further calculations.
 
-<pre class="brush: js">
+```js
 const normDepthFromNormViewMatrix = depthData.normDepthBufferFromNormView.matrix;
 const normViewFromNormDepth = depthData.normDepthBufferFromNormView.inverse.matrix;
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

@@ -2,77 +2,74 @@
 title: XRFrame.getViewerPose()
 slug: Web/API/XRFrame/getViewerPose
 tags:
-- API
-- AR
-- Augmented Reality
-- Method
-- Reference
-- VR
-- Virtual Reality
-- WebXR
-- WebXR Device API
-- XR
-- XRFrame
-- getViewerPose
-- pose
+  - API
+  - AR
+  - Augmented Reality
+  - Method
+  - Reference
+  - VR
+  - Virtual Reality
+  - WebXR
+  - WebXR Device API
+  - XR
+  - XRFrame
+  - getViewerPose
+  - pose
 browser-compat: api.XRFrame.getViewerPose
 ---
-<div>{{APIRef("WebXR Device API")}}</div>
+{{APIRef("WebXR Device API")}}
 
-<p>The <code><strong>getViewerPose()</strong></code> method, a member of the {{domxref("XRFrame")}} interface, returns a {{domxref("XRViewerPose")}} object  which describes the viewer's pose (position and orientation) relative to the specified reference space.</p>
+The **`getViewerPose()`** method, a member of the {{domxref("XRFrame")}} interface, returns a {{domxref("XRViewerPose")}} object which describes the viewer's pose (position and orientation) relative to the specified reference space.
 
-<p>See the {{domxref("XRFrame.getPose", "getPose()")}} method for a way to calculate a pose that represents the difference between two spaces.</p>
+See the {{domxref("XRFrame.getPose", "getPose()")}} method for a way to calculate a pose that represents the difference between two spaces.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>xrViewerPose</var> = <em>xrFrame</em>.getViewerPose(<em>referenceSpace</em>);</pre>
+```js
+var xrViewerPose = xrFrame.getViewerPose(referenceSpace);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>referenceSpace</code></dt>
-  <dd>An {{domxref("XRReferenceSpace")}} object specifying the space to use as the
-    reference point or base for the computation of the viewer's current pose.</dd>
-</dl>
+- `referenceSpace`
+  - : An {{domxref("XRReferenceSpace")}} object specifying the space to use as the
+    reference point or base for the computation of the viewer's current pose.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("XRViewerPose")}} describing the viewer's position and orientation relative
-  to the specified reference space.</p>
+A {{domxref("XRViewerPose")}} describing the viewer's position and orientation relative
+to the specified reference space.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><code>InvalidStateError</code></dt>
-  <dd>A {{domxref('DOMException')}} indicating that <code>getViewerPose()</code> was not
+- `InvalidStateError`
+  - : A {{domxref('DOMException')}} indicating that `getViewerPose()` was not
     called within the context of a callback to a
     session's {{domxref("XRSession.requestAnimationFrame",
-    "XRSession.requestAnimationFrame()")}}.</dd>
-</dl>
+    "XRSession.requestAnimationFrame()")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this callback function for {{domxref("XRSession.requestAnimationFrame",
+In this callback function for {{domxref("XRSession.requestAnimationFrame",
   "requestAnimationFrame()")}}, the {{domxref("XRViewerPose")}} describing the viewer's
-  viewpoint on the world is obtained by calling <code>getViewerPose()</code> on the
-  {{domxref("XRFrame")}} passed into the callback.</p>
+viewpoint on the world is obtained by calling `getViewerPose()` on the
+{{domxref("XRFrame")}} passed into the callback.
 
-<pre class="brush: js">viewerPose = xrFrame.getViewerPose(xrReferenceSpace);
+```js
+viewerPose = xrFrame.getViewerPose(xrReferenceSpace);
 
 if (viewerPose) {
   /* render the pose's views */
 }
-</pre>
+```
 
-<p>To see a complete example, take a look at <a
-    href="/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion">Movement, orientation,
-    and motion</a>.</p>
+To see a complete example, take a look at [Movement, orientation,
+and motion](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,79 +2,77 @@
 title: XRInputSourcesChangeEvent()
 slug: Web/API/XRInputSourcesChangeEvent/XRInputSourcesChangeEvent
 tags:
-- API
-- AR
-- Change
-- Constructor
-- Input Sources
-- Inputs
-- Mixed
-- Reality
-- Reference
-- VR
-- Virtual
-- WebXR
-- WebXR API
-- WebXR Device API
-- XR
-- XRInputSourcesChangeEvent
-- augmented
+  - API
+  - AR
+  - Change
+  - Constructor
+  - Input Sources
+  - Inputs
+  - Mixed
+  - Reality
+  - Reference
+  - VR
+  - Virtual
+  - WebXR
+  - WebXR API
+  - WebXR Device API
+  - XR
+  - XRInputSourcesChangeEvent
+  - augmented
 browser-compat: api.XRInputSourcesChangeEvent.XRInputSourcesChangeEvent
 ---
-<p>{{APIRef("WebXR Device API")}}</p>
+{{APIRef("WebXR Device API")}}
 
-<p>The <code><strong>XRInputSourcesChangeEvent()</strong></code>
-    constructor creates and returns a new {{domxref("XRInputSourcesChangeEvent")}} object,
-    representing an update to the list of available <a
-      href="/en-US/docs/Web/API/WebXR_Device_API">WebXR</a> input devices. You
-  won't typically call this constructor yourself, as these events are created and sent to
-  you by the WebXR system.</p>
+The **`XRInputSourcesChangeEvent()`**
+constructor creates and returns a new {{domxref("XRInputSourcesChangeEvent")}} object,
+representing an update to the list of available [WebXR](/en-US/docs/Web/API/WebXR_Device_API) input devices. You
+won't typically call this constructor yourself, as these events are created and sent to
+you by the WebXR system.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>newInputSourcesChangeEvent</em> = new XRInputSourcesChangeEvent(<em>type</em>, <em>eventInitDict</em>);</pre>
+```js
+newInputSourcesChangeEvent = new XRInputSourcesChangeEvent(type, eventInitDict);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>type</code></dt>
-  <dd>A string indicating the type of event which has occurred. This
-    string must always be <code>inputsourceschange</code>.</dd>
-  <dt><code>eventInitDict</code></dt>
-  <dd>An object that provides options to configure the event. It may contain the following properties:
-    <ul>
-      <li><code>added</code>: An array of zero or more {{domxref("XRInputSource")}} objects, each representing one input device which is newly available to use.</li>
-      <li><code>removed</code>: An array of zero or more {{domxref("XRInputSource")}} objects representing the input devices which are no longer available.</li>
-      <li><code>session</code>: The {{domxref("XRSession")}} to which the event applies.</li>
-    </ul>
-  </dd>
-</dl>
+- `type`
+  - : A string indicating the type of event which has occurred. This
+    string must always be `inputsourceschange`.
+- `eventInitDict`
 
-<h3 id="Return_value">Return value</h3>
+  - : An object that provides options to configure the event. It may contain the following properties:
 
-<p>A newly-created {{domxref("XRInputSourcesChangeEvent")}} object configured based upon
-  the input parameters provided.</p>
+    - `added`: An array of zero or more {{domxref("XRInputSource")}} objects, each representing one input device which is newly available to use.
+    - `removed`: An array of zero or more {{domxref("XRInputSource")}} objects representing the input devices which are no longer available.
+    - `session`: The {{domxref("XRSession")}} to which the event applies.
 
-<h2 id="Event_types">Event types</h2>
+### Return value
 
-<p>{{page("/en-US/docs/Web/API/XRInputSourcesChangeEvent", "Event types")}}</p>
+A newly-created {{domxref("XRInputSourcesChangeEvent")}} object configured based upon
+the input parameters provided.
 
-<h2 id="Example">Example</h2>
+## Event types
 
-<p>The following snippet of code creates a new <code>XRInputSourcesChangeEvent</code>
-  object indicating that a single new input source, described by an
-  {{domxref("XRInputSource")}} object named <code>newInputSource</code>, has been added to
-  the system.</p>
+{{page("/en-US/docs/Web/API/XRInputSourcesChangeEvent", "Event types")}}
 
-<pre class="brush: js">let iscEvent = new XRInputSourcesChangeEvent("inputsourceschange", { session: xrSession,
+## Example
+
+The following snippet of code creates a new `XRInputSourcesChangeEvent`
+object indicating that a single new input source, described by an
+{{domxref("XRInputSource")}} object named `newInputSource`, has been added to
+the system.
+
+```js
+let iscEvent = new XRInputSourcesChangeEvent("inputsourceschange", { session: xrSession,
                            added: [newInputSource], removed: [] });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

@@ -9,71 +9,64 @@ tags:
   - XR
 browser-compat: api.XRWebGLBinding.XRWebGLBinding
 ---
-<p>{{APIRef("WebXR Device API")}}</p>
+{{APIRef("WebXR Device API")}}
 
-<p>The <code><strong>XRWebGLBinding()</strong></code> constructor creates and
-    returns a new {{domxref("XRWebGLBinding")}} object.</p>
+The **`XRWebGLBinding()`** constructor creates and
+returns a new {{domxref("XRWebGLBinding")}} object.
 
-<h2 id="Syntax">Syntax</h2>
-<pre class="brush: js">new XRWebGLBinding(session, <em>context</em>)</pre>
+## Syntax
 
-<h3 id="Parameters">Parameters</h3>
+```js
+new XRWebGLBinding(session, context)
+```
 
-<dl>
-  <dt><code>session</code></dt>
-  <dd>An {{domxref("XRSession")}} object specifying the WebXR session which will be
-    rendered using the WebGL context.</dd>
-  <dt><code>context</code></dt>
-  <dd>A {{domxref("WebGLRenderingContext")}} or {{domxref("WebGL2RenderingContext")}}
+### Parameters
+
+- `session`
+  - : An {{domxref("XRSession")}} object specifying the WebXR session which will be
+    rendered using the WebGL context.
+- `context`
+  - : A {{domxref("WebGLRenderingContext")}} or {{domxref("WebGL2RenderingContext")}}
     identifying the WebGL drawing context to use for rendering the scene for the specified
-    WebXR session.</dd>
-</dl>
+    WebXR session.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A newly-created {{domxref("XRWebGLBinding")}}.</p>
+A newly-created {{domxref("XRWebGLBinding")}}.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><code>InvalidStateError</code></dt>
-  <dd>
-    <p>The new <code>XRWebGLBinding</code> could not be created due to one of a number of
-      possible state errors:</p>
+- `InvalidStateError`
 
-    <ul>
-      <li>The {{domxref("XRSession")}} specified by <code>session</code> has already been
-        stopped.</li>
-      <li>The specified WebGL context, <code>context</code>, <a
-          href="/en-US/docs/Web/API/WebGLRenderingContext/isContextLost#usage_notes">has
-          been lost</a> for any reason, such as a GPU switch or reset.</li>
-      <li>The specified <code>session</code> is immersive but the <code>context</code> is
-        not WebXR compatible.</li>
-    </ul>
-  </dd>
-</dl>
+  - : The new `XRWebGLBinding` could not be created due to one of a number of
+    possible state errors:
 
-<h2 id="Example">Example</h2>
+    - The {{domxref("XRSession")}} specified by `session` has already been
+      stopped.
+    - The specified WebGL context, `context`, [has
+      been lost](/en-US/docs/Web/API/WebGLRenderingContext/isContextLost#usage_notes) for any reason, such as a GPU switch or reset.
+    - The specified `session` is immersive but the `context` is
+      not WebXR compatible.
 
-<pre class="brush: js">
+## Example
+
+```js
 const canvasElement = document.querySelector(".output-canvas");
 const gl = canvasElement.getContext("webgl");
 const xrSession = await navigator.xr.requestSession("immersive-vr");
 await gl.makeXRCompatible();
 
 const glBinding = new XRWebGLBinding(xrSession, gl);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.makeXRCompatible()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.makeXRCompatible()")}}

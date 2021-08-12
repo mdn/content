@@ -2,85 +2,85 @@
 title: XRInputSourceEvent.frame
 slug: Web/API/XRInputSourceEvent/frame
 tags:
-- API
-- AR
-- Input Sources
-- Inputs
-- Mixed
-- Property
-- Read-only
-- Reality
-- Reference
-- VR
-- Virtual
-- WebXR
-- WebXR API
-- WebXR Device API
-- XR
-- XRInputSourceEvent
-- augmented
-- events
+  - API
+  - AR
+  - Input Sources
+  - Inputs
+  - Mixed
+  - Property
+  - Read-only
+  - Reality
+  - Reference
+  - VR
+  - Virtual
+  - WebXR
+  - WebXR API
+  - WebXR Device API
+  - XR
+  - XRInputSourceEvent
+  - augmented
+  - events
 browser-compat: api.XRInputSourceEvent.frame
 ---
-<p>{{APIRef("WebXR Device API")}}</p>
+{{APIRef("WebXR Device API")}}
 
-<p>The read-only {{domxref("XRInputSourceEvent")}} property
-    <code><strong>frame</strong></code> specifies an {{domxref("XRFrame")}} object
-    representing the event frame during which a <a
-      href="/en-US/docs/Web/API/WebXR_Device_API">WebXR</a> user input occurred.
-  This may thus be an event which occurred in the past rather than a current or impending
-  event.</p>
+The read-only {{domxref("XRInputSourceEvent")}} property
+**`frame`** specifies an {{domxref("XRFrame")}} object
+representing the event frame during which a [WebXR](/en-US/docs/Web/API/WebXR_Device_API) user input occurred.
+This may thus be an event which occurred in the past rather than a current or impending
+event.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">let <em>inputFrame</em> = <em>xrInputSourceEvent</em>.frame;</pre>
+```js
+let inputFrame = xrInputSourceEvent.frame;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("XRFrame")}} indicating the event frame at which the user input event
-  described by the object took place.</p>
+An {{domxref("XRFrame")}} indicating the event frame at which the user input event
+described by the object took place.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>The event frame does not correspond to a visual frame as is delivered to the frame
-  rendering callback function (see <a
-    href="/en-US/docs/Web/API/WebXR_Device_API/Rendering">Rendering and the WebXR frame
-    rendering callback</a> for details on the callback). Instead, the <code>XRFrame</code>
-  specified by the <code>frame</code> property is a method to provide access to the
-  {{domxref("XRFrame.getPose", "getPose()")}} method, which you can use to get the
-  relative positions of the objects in the scene at the time the event occurred.</p>
+The event frame does not correspond to a visual frame as is delivered to the frame
+rendering callback function (see [Rendering and the WebXR frame
+rendering callback](/en-US/docs/Web/API/WebXR_Device_API/Rendering) for details on the callback). Instead, the `XRFrame`
+specified by the `frame` property is a method to provide access to the
+{{domxref("XRFrame.getPose", "getPose()")}} method, which you can use to get the
+relative positions of the objects in the scene at the time the event occurred.
 
-<p>However, since the event frame isn't an animation frame, there is no viewer pose
-  available to represent the viewer's current point of view; the results of calling
-  {{domxref("XRFrame.getViewerPose", "getViewerPose()")}} will be an 
-  {{domxref("XRViewerPose")}} with an empty {{domxref("XRViewerPose.views", "views")}}
-  list.</p>
+However, since the event frame isn't an animation frame, there is no viewer pose
+available to represent the viewer's current point of view; the results of calling
+{{domxref("XRFrame.getViewerPose", "getViewerPose()")}} will be an 
+{{domxref("XRViewerPose")}} with an empty {{domxref("XRViewerPose.views", "views")}}
+list.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This code shows a handler for the {{domxref("XRSession.selectstart_event",
+This code shows a handler for the {{domxref("XRSession.selectstart_event",
   "selectstart")}} event which gets the target ray's pose from the frame, mapping the pose
-  representing the ray (<code>event.inputSource.targetRaySpace</code>) to the overall
-  reference space <code>myRefSpace</code>.</p>
+representing the ray (`event.inputSource.targetRaySpace`) to the overall
+reference space `myRefSpace`.
 
-<p>Then, if the result isn't <code>null</code>, the target ray pose's transform is passed
-  into a function called <code>myCheckAndHandleHit()</code> to see if the ray was pointing
-  at anything when the select was triggered.</p>
+Then, if the result isn't `null`, the target ray pose's transform is passed
+into a function called `myCheckAndHandleHit()` to see if the ray was pointing
+at anything when the select was triggered.
 
-<pre class="brush: js">xrSession.onselectstart = event =&gt; {
+```js
+xrSession.onselectstart = event => {
   let targetRayPose = event.frame.getPose(event.inputSource.targetRaySpace,
                             myRefSpace);
   if (targetRayPose) {
     checkAndHandleHit(targetRayPose.transform);
   }
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

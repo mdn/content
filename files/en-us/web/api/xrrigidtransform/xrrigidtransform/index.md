@@ -2,104 +2,102 @@
 title: XRRigidTransform()
 slug: Web/API/XRRigidTransform/XRRigidTransform
 tags:
-- API
-- AR
-- Constructor
-- Mixed Reality
-- Orientation
-- Position
-- Reality
-- Reference
-- VR
-- Virtual
-- WebXR
-- XR
-- XRRigidTransform
-- augmented
-- transform
+  - API
+  - AR
+  - Constructor
+  - Mixed Reality
+  - Orientation
+  - Position
+  - Reality
+  - Reference
+  - VR
+  - Virtual
+  - WebXR
+  - XR
+  - XRRigidTransform
+  - augmented
+  - transform
 browser-compat: api.XRRigidTransform.XRRigidTransform
 ---
-<div>{{APIRef("WebXR Device API")}}</div>
+{{APIRef("WebXR Device API")}}
 
-<p>The
-    <strong><code>XRRigidTransform</code><code>()</code></strong> constructor creates and
-    returns a new {{domxref("XRRigidTransform")}} object, representing the position and
-    orientation of a point or object. Among other things,
-  <code>XRRigidTransform</code> is used when providing a transform to translate between
-  coordinate systems across spaces.</p>
+The
+**` XRRigidTransform``() `** constructor creates and
+returns a new {{domxref("XRRigidTransform")}} object, representing the position and
+orientation of a point or object. Among other things,
+`XRRigidTransform` is used when providing a transform to translate between
+coordinate systems across spaces.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">let <em>xrRigidTransform</em> = new XRRigidTransform(<em>position</em>, <em>orientation</em>);</pre>
+```js
+let xrRigidTransform = new XRRigidTransform(position, orientation);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>position</code> {{optional_inline}}</dt>
-  <dd>An object conforming to {{domxref("DOMPointInit")}} which specifies the coordinates
+- `position` {{optional_inline}}
+  - : An object conforming to {{domxref("DOMPointInit")}} which specifies the coordinates
     at which the point or object is located. These dimensions are specified in meters. If
-    this parameter is left out or is not compatible with <code>DOMPointInit</code>,  the
-    position used is assumed to be <code>{x: 0, y: 0, z: 0, w: 1}</code>. <code>w</code>
-    must <em>always</em> be 1.</dd>
-  <dt><code>orientation</code> {{optional_inline}}</dt>
-  <dd>An object conforming to {{domxref("DOMPointInit")}} which specifies the direction in
-    which the object is facing. The default value for <code>orientation</code> is
-    <code>{x: 0, y: 0, z: 0, w: 1}</code>. The specified orientation gets normalized if
-    it's not already.</dd>
-</dl>
+    this parameter is left out or is not compatible with `DOMPointInit`,  the
+    position used is assumed to be `{x: 0, y: 0, z: 0, w: 1}`. `w`
+    must _always_ be 1.
+- `orientation` {{optional_inline}}
+  - : An object conforming to {{domxref("DOMPointInit")}} which specifies the direction in
+    which the object is facing. The default value for `orientation` is
+    `{x: 0, y: 0, z: 0, w: 1}`. The specified orientation gets normalized if
+    it's not already.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new {{domxref("XRRigidTransform")}} object which has been initialized to represent a
-  transform matrix that would adjust the position and orientation of an object from the
-  origin to the specified <code>position</code> and facing in the direction indicated by
-  <code>orientation</code>.</p>
+A new {{domxref("XRRigidTransform")}} object which has been initialized to represent a
+transform matrix that would adjust the position and orientation of an object from the
+origin to the specified `position` and facing in the direction indicated by
+`orientation`.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><code>TypeError</code></dt>
-  <dd>The value of the <code>w</code> coordinate in the specified <code>position</code> is
-    not 1.0.</dd>
-</dl>
+- `TypeError`
+  - : The value of the `w` coordinate in the specified `position` is
+    not 1.0.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example, the beginning of the animation of a scene is shown, starting with a
-  request for a reference space of a given type, then shifting the coordinate system based
-  on a transform before requesting the first animation frame.</p>
+In this example, the beginning of the animation of a scene is shown, starting with a
+request for a reference space of a given type, then shifting the coordinate system based
+on a transform before requesting the first animation frame.
 
-<pre class="brush: js">let animationFrameRequestID = 0;
+```js
+let animationFrameRequestID = 0;
 
 xrSession.requestReferenceSpace("local-floor")
-.then((refSpace) =&gt; {
+.then((refSpace) => {
   xrReferenceSpace = refSpace.getOffsetReferenceSpace(
         new XRRigidTransform(viewerPosition, viewerOrientation));
   animationFrameRequestID = xrSession.requestAnimationFrame(drawFrame);
-});</pre>
+});
+```
 
-<p>After requesting a reference space of type <code>local-floor</code>, the returned
-  promise is eventually resolved, at which time we receive a new reference space object,
-  <code>refSpace</code>. After creating an <code>XRRigidTransform</code> from the viewer's
-  initial position and orientation, we pass the new transform into
-  {{domxref("XRReferenceSpace.getOffsetReferenceSpace", "getOffsetReferenceSpace()")}} to
-  create <em>another</em> reference space, now offset so that its origin is located at the
-  same place in space as the coordinates given by <code>viewerPosition</code>, with the
-  orientation also revised in the same fashion.</p>
+After requesting a reference space of type `local-floor`, the returned
+promise is eventually resolved, at which time we receive a new reference space object,
+`refSpace`. After creating an `XRRigidTransform` from the viewer's
+initial position and orientation, we pass the new transform into
+{{domxref("XRReferenceSpace.getOffsetReferenceSpace", "getOffsetReferenceSpace()")}} to
+create _another_ reference space, now offset so that its origin is located at the
+same place in space as the coordinates given by `viewerPosition`, with the
+orientation also revised in the same fashion.
 
-<p>Then {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} is
-  called to ask for a new animation frame to draw into. The <code>drawFrame()</code>
-  callback will be executed when the system is ready to draw the next frame.</p>
+Then {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} is
+called to ask for a new animation frame to draw into. The `drawFrame()`
+callback will be executed when the system is ready to draw the next frame.
 
-<p>You can find more examples in <a
-    href="/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion">Movement, orientation,
-    and motion</a>.</p>
+You can find more examples in [Movement, orientation,
+and motion](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

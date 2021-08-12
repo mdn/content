@@ -2,85 +2,82 @@
 title: XRPermissionDescriptor.mode
 slug: Web/API/XRPermissionDescriptor/mode
 tags:
-- API
-- AR
-- Mixed
-- Permissions
-- Property
-- Reality
-- Reference
-- Session
-- VR
-- Virtual
-- WebXR
-- WebXR API
-- WebXR Device API
-- XR
-- XRPermissionDescriptor
-- XRSessionMode
-- augmented
-- mode
+  - API
+  - AR
+  - Mixed
+  - Permissions
+  - Property
+  - Reality
+  - Reference
+  - Session
+  - VR
+  - Virtual
+  - WebXR
+  - WebXR API
+  - WebXR Device API
+  - XR
+  - XRPermissionDescriptor
+  - XRSessionMode
+  - augmented
+  - mode
 browser-compat: api.XRPermissionDescriptor.mode
 ---
-<p>{{APIRef("WebXR Device API")}}{{SecureContext_header}}</p>
+{{APIRef("WebXR Device API")}}{{SecureContext_header}}
 
-<p>The <code><strong>mode</strong></code> property of
-  the {{domxref("XRPermissionDescriptor")}} dictionary is a string, specifying which Web XR session mode
-  (<code>inline</code>, <code>immersive-vr</code>, or <code>immersive-ar</code>) the
-  described permissions will be used for.</p>
+The **`mode`** property of
+the {{domxref("XRPermissionDescriptor")}} dictionary is a string, specifying which Web XR session mode
+(`inline`, `immersive-vr`, or `immersive-ar`) the
+described permissions will be used for.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>xrPermissionDescriptor</em> = {
-  mode: <em>xrSessionMode</em>,
-  requiredFeatures: <em>reqFeatureList</em>,
-  optionalFeatures: <em>optFeatureList</em>
+```js
+xrPermissionDescriptor = {
+  mode: xrSessionMode,
+  requiredFeatures: reqFeatureList,
+  optionalFeatures: optFeatureList
 };
 
-<em>xrPermissionDescriptor</em>.mode = <em>xrSessionMode</em>;
-<em>xrMode</em> = <em>xrPermissionDescriptor</em>.mode;
-</pre>
+xrPermissionDescriptor.mode = xrSessionMode;
+xrMode = xrPermissionDescriptor.mode;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} whose value is one of the following strings</p>
+A {{domxref("DOMString")}} whose value is one of the following strings
 
-  <ul>
-    <li>{{experimental_inline}} <code>immersive-ar</code>: The session's output will be given exclusive access to the immersive device,
-     but the rendered content will be blended with the real-world environment.
-     The session's {{DOMxRef("XRSession.environmentBlendMode", "environmentBlendMode")}} indicates the method
-     to be used to blend the content together.
-    </li>
-    <li><code>immersive-vr</code>: Indicates that the rendered session will be displayed using an immersive XR device
-     in VR mode; it is not intended to be overlaid or integrated into the surrounding environment.
-     The {{DOMxRef("XRSession.environmentBlendMode", "environmentBlendMode")}} is expected to be
-     <code>opaque</code> if possible, but might be <code>additive</code> if the hardware requires it.
-    </li>
-    <li><code>inline</code>: The output is presented inline within the context of an element in a standard HTML document,
-     rather than occupying the full visual space. Inline sessions can be presented in either mono or stereo mode,
-     and may or may not have viewer tracking available. Inline sessions don't require special hardware and should be
-     available on any {{Glossary("user agent")}} offering WebXR API support.
-    </li>
-   </ul>
+- {{experimental_inline}} `immersive-ar`: The session's output will be given exclusive access to the immersive device,
+  but the rendered content will be blended with the real-world environment.
+  The session's {{DOMxRef("XRSession.environmentBlendMode", "environmentBlendMode")}} indicates the method
+  to be used to blend the content together.
+- `immersive-vr`: Indicates that the rendered session will be displayed using an immersive XR device
+  in VR mode; it is not intended to be overlaid or integrated into the surrounding environment.
+  The {{DOMxRef("XRSession.environmentBlendMode", "environmentBlendMode")}} is expected to be
+  `opaque` if possible, but might be `additive` if the hardware requires it.
+- `inline`: The output is presented inline within the context of an element in a standard HTML document,
+  rather than occupying the full visual space. Inline sessions can be presented in either mono or stereo mode,
+  and may or may not have viewer tracking available. Inline sessions don't require special hardware and should be
+  available on any {{Glossary("user agent")}} offering WebXR API support.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The example below checks to ensure that permission has been granted to allow the user
-  to use WebXR for an immersive virtual reality experience. No specific features are
-  specified during this query; see {{domxref("XRPermissionDescriptor.requiredFeatures",
+The example below checks to ensure that permission has been granted to allow the user
+to use WebXR for an immersive virtual reality experience. No specific features are
+specified during this query; see {{domxref("XRPermissionDescriptor.requiredFeatures",
   "requiredFeatures")}} and {{domxref("XRPermissionDescriptor.optionalFeatures",
   "optionalFeatures")}} for more information on specifying features during a WebXR
-  permission check.</p>
+permission check.
 
-<pre class="brush: js">let xrPermissionDesc = {
+```js
+let xrPermissionDesc = {
   name: "xr",
   mode: "immersive-vr"
 };
 
 if (navigator.permissions) {
-  navigator.permissions.query(xrPermissionDesc).then(({state}) =&gt; {
+  navigator.permissions.query(xrPermissionDesc).then(({state}) => {
     switch(state) {
       case "granted":
         setupXR();
@@ -98,23 +95,20 @@ if (navigator.permissions) {
 } else {
   setupXR();
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Permissions_and_security">Permissions
-      and security for WebXR</a></li>
-  <li>{{domxref("XRPermissionStatus")}}</li>
-  <li>{{domxref("navigator.permissions")}} and {{domxref("WorkerNavigator.permissions")}}
-  </li>
-  <li>{{domxref("Permissions")}}</li>
-</ul>
+- [Permissions
+  and security for WebXR](/en-US/docs/Web/API/WebXR_Device_API/Permissions_and_security)
+- {{domxref("XRPermissionStatus")}}
+- {{domxref("navigator.permissions")}} and {{domxref("WorkerNavigator.permissions")}}
+- {{domxref("Permissions")}}

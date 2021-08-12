@@ -22,50 +22,53 @@ tags:
   - terminate
 browser-compat: api.XRSession.end_event
 ---
-<div>{{APIRef("WebXR Device API")}}</div>
+{{APIRef("WebXR Device API")}}
 
-<p>An <code>end</code> event is fired at an {{DOMxRef("XRSession")}} object when the WebXR session has ended, either because the web application has chosen to stop the session, or because the {{Glossary("user agent")}} terminated the session.</p>
+An `end` event is fired at an {{DOMxRef("XRSession")}} object when the WebXR session has ended, either because the web application has chosen to stop the session, or because the {{Glossary("user agent")}} terminated the session.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th>Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th>Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th>Interface</th>
-   <td>{{DOMxRef("XRSessionEvent")}}</td>
-  </tr>
-  <tr>
-   <th>Event handler</th>
-   <td>{{DOMxRef("XRSession.onend")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Interface</th>
+      <td>{{DOMxRef("XRSessionEvent")}}</td>
+    </tr>
+    <tr>
+      <th>Event handler</th>
+      <td>{{DOMxRef("XRSession.onend")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>To be informed when a WebXR session comes to an end, you can add a handler to your {{domxref("XRSession")}} instance using {{domxref("EventTarget.addEventListener", "addEventListener()")}}, like this:</p>
+To be informed when a WebXR session comes to an end, you can add a handler to your {{domxref("XRSession")}} instance using {{domxref("EventTarget.addEventListener", "addEventListener()")}}, like this:
 
-<pre class="brush: js">XRSession.addEventListener("end", function(event) {
+```js
+XRSession.addEventListener("end", function(event) {
   /* the session has shut down */
-});</pre>
+});
+```
 
-<p>Alternatively, you can use the {{DOMxRef("XRSession.onend")}} event handler property to establish a handler for the <code>end</code> event:</p>
+Alternatively, you can use the {{DOMxRef("XRSession.onend")}} event handler property to establish a handler for the `end` event:
 
-<pre class="brush: js">XRSession.onend = function(event) {
+```js
+XRSession.onend = function(event) {
  /* the session has shut down */
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

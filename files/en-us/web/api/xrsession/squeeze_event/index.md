@@ -24,40 +24,41 @@ tags:
   - squeeze
 browser-compat: api.XRSession.squeeze_event
 ---
-<p>{{APIRef("WebXR Device API")}}</p>
+{{APIRef("WebXR Device API")}}
 
-<p>The WebXR event <code><strong>squeeze</strong></code> is sent to an {{domxref("XRSession")}} when one of the session's input sources has completed a <a href="/en-US/docs/Web/API/WebXR_Device_API/Inputs#Primary_squeeze_actions">primary squeeze action</a>. Examples of common kinds of primary action are users pressing triggers or buttons, tapping a touchpad, speaking a command, or performing a recognizable gesture when using a video tracking system or handheld controller with an accelerometer.</p>
+The WebXR event **`squeeze`** is sent to an {{domxref("XRSession")}} when one of the session's input sources has completed a [primary squeeze action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#Primary_squeeze_actions). Examples of common kinds of primary action are users pressing triggers or buttons, tapping a touchpad, speaking a command, or performing a recognizable gesture when using a video tracking system or handheld controller with an accelerometer.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th>Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th>Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th>Interface</th>
-   <td>{{domxref("XRInputSourceEvent")}}</td>
-  </tr>
-  <tr>
-   <th>Event handler property</th>
-   <td>{{domxref("XRSession.onsqueeze", "onsqueeze")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Interface</th>
+      <td>{{domxref("XRInputSourceEvent")}}</td>
+    </tr>
+    <tr>
+      <th>Event handler property</th>
+      <td>{{domxref("XRSession.onsqueeze", "onsqueeze")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>For details on how the {{domxref("XRSession.squeezestart_event", "squeezestart")}}, {{domxref("XRSession.squeeze_event", "squeeze")}}, and {{domxref("XRSession.squeezeend_event", "squeezeend")}} events work, and how you should react to them, see {{SectionOnPage("/en-US/docs/Web/API/WebXR_Device_API/Inputs", "Primary squeeze actions")}}.</p>
+For details on how the {{domxref("XRSession.squeezestart_event", "squeezestart")}}, {{domxref("XRSession.squeeze_event", "squeeze")}}, and {{domxref("XRSession.squeezeend_event", "squeezeend")}} events work, and how you should react to them, see {{SectionOnPage("/en-US/docs/Web/API/WebXR_Device_API/Inputs", "Primary squeeze actions")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example uses {{domxref("EventTarget.addEventListener", "addEventListener()")}} to set up a handler for the <code>squeeze</code> event. The handler fetches the pose representing the target ray for <code>tracked-pointer</code> inputs and sends the pose's transform to a function called <code>myHandleSqueezeWithRay()</code>.</p>
+The following example uses {{domxref("EventTarget.addEventListener", "addEventListener()")}} to set up a handler for the `squeeze` event. The handler fetches the pose representing the target ray for `tracked-pointer` inputs and sends the pose's transform to a function called `myHandleSqueezeWithRay()`.
 
-<p>This code treats the squeeze as an instantaneous action that doesn't involve tracking an ongoing activity. If you need to track a squeeze action that isn't instantaneous, listen for the {{domxref("XRSession.squeezestart_event", "squeezestart")}} and {{domxref("XRSession.squeezeend_event", "squeezeend")}} events to sense when the squeeze action begins and ends.</p>
+This code treats the squeeze as an instantaneous action that doesn't involve tracking an ongoing activity. If you need to track a squeeze action that isn't instantaneous, listen for the {{domxref("XRSession.squeezestart_event", "squeezestart")}} and {{domxref("XRSession.squeezeend_event", "squeezeend")}} events to sense when the squeeze action begins and ends.
 
-<pre class="brush: js">xrSession.addEventListener("squeeze", event =&gt; {
+```js
+xrSession.addEventListener("squeeze", event => {
   if (event.inputSource.targetRayMode == "tracked-pointer") {
     let targetRayPose = event.frame.getPose(event.inputSource.targetRaySpace,
                               myRefSpace);
@@ -66,11 +67,12 @@ browser-compat: api.XRSession.squeeze_event
     }
   }
 });
-</pre>
+```
 
-<p>You can of course also set up a handler for <code>squeeze</code> events by setting the {{domxref("XRSession")}} object's {{domxref("XRSession.onsqueeze", "onsqueeze")}} event handler property to a function that handles the event:</p>
+You can of course also set up a handler for `squeeze` events by setting the {{domxref("XRSession")}} object's {{domxref("XRSession.onsqueeze", "onsqueeze")}} event handler property to a function that handles the event:
 
-<pre class="brush: js">xrSession.onsqueeze = event =&gt; {
+```js
+xrSession.onsqueeze = event => {
   if (event.inputSource.targetRayMode == "tracked-pointer") {
     let targetRayPose = event.frame.getPose(event.inputSource.targetRaySpace,
                               myRefSpace);
@@ -78,12 +80,13 @@ browser-compat: api.XRSession.squeeze_event
       myHandleSqueezeWithRay(targetRayPose.transform);
     }
   }
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

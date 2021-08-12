@@ -20,73 +20,66 @@ tags:
   - updateRenderState()
 browser-compat: api.XRSession.updateRenderState
 ---
-<div>{{APIRef("WebXR Device API")}}</div>
+{{APIRef("WebXR Device API")}}
 
-<p><span class="seoSummary">The <code>updateRenderState()</code> method of the
-    {{DOMxRef("XRSession")}} interface of <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR
-      API</a> schedules changes to be applied to the active render state prior to
-    rendering of the next frame.</span></p>
+The `updateRenderState()` method of the
+{{DOMxRef("XRSession")}} interface of [WebXR
+API](/en-US/docs/Web/API/WebXR_Device_API) schedules changes to be applied to the active render state prior to
+rendering of the next frame.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>xrSession</em>.updateRenderState(<em>newState</em>)</pre>
+```js
+xrSession.updateRenderState(newState)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>newState</code></dt>
-  <dd>An object specifying the properties of the session's
-    {{domxref("XRSession.renderState", "renderState")}} to update before rendering the next frame.</dd>
-</dl>
+- `newState`
+  - : An object specifying the properties of the session's
+    {{domxref("XRSession.renderState", "renderState")}} to update before rendering the next frame.
 
-<p>The specified object may have any combination of the following properties:</p>
+The specified object may have any combination of the following properties:
 
-<dl>
-  <dt><code>baseLayer</code> {{optional_inline}}</dt>
-  <dd>An {{domxref("XRWebGLLayer")}} object from which the WebXR compositor will obtain imagery. This is <code>null</code> by default.</dd>
-  <dt><code>depthFar</code> {{optional_inline}}</dt>
-  <dd>A floating-point value specifying the distance in meters from the viewer to the <strong>far clip plane</strong>, which is a plane parallel to the display surface beyond which no further rendering will occur. All rendering will take place between the distances specified by <code>depthNear</code> and <code>depthFar</code>. This is 1000 meters (1 kilometer) by default.</dd>
-  <dt><code>depthNear</code> {{optional_inline}}</dt>
-  <dd>A floating-point value indicating the distance in meters from the viewer to a plane parallel to the display surface to be the <strong>near clip plane</strong>. No part of the scene on the viewer's side of this plane will be rendered. This is 0.1 meters (10 centimeters) by default.</dd>
-  <dt><code>inlineVerticalFieldOfView</code> {{optional_inline}}</dt>
-  <dd>A floating-point value indicating the default field of view, in radians, to be used when computing the projection matrix for an <code>inline</code> {{domxref("XRSession")}}. The projection matrix calculation also takes into account the output canvas's aspect ratio. This property <em>must not</em> be specified for immersive sessions, so the value is <code>null</code> by default for immersive sessions. The default value is otherwise π * 0.5 (half of the value of pi).</dd>
- </dl>
+- `baseLayer` {{optional_inline}}
+  - : An {{domxref("XRWebGLLayer")}} object from which the WebXR compositor will obtain imagery. This is `null` by default.
+- `depthFar` {{optional_inline}}
+  - : A floating-point value specifying the distance in meters from the viewer to the **far clip plane**, which is a plane parallel to the display surface beyond which no further rendering will occur. All rendering will take place between the distances specified by `depthNear` and `depthFar`. This is 1000 meters (1 kilometer) by default.
+- `depthNear` {{optional_inline}}
+  - : A floating-point value indicating the distance in meters from the viewer to a plane parallel to the display surface to be the **near clip plane**. No part of the scene on the viewer's side of this plane will be rendered. This is 0.1 meters (10 centimeters) by default.
+- `inlineVerticalFieldOfView` {{optional_inline}}
+  - : A floating-point value indicating the default field of view, in radians, to be used when computing the projection matrix for an `inline` {{domxref("XRSession")}}. The projection matrix calculation also takes into account the output canvas's aspect ratio. This property _must not_ be specified for immersive sessions, so the value is `null` by default for immersive sessions. The default value is otherwise π \* 0.5 (half of the value of pi).
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>This method may throw any of the following exceptions. These are true exceptions, since
-  this method does not return a promise.</p>
+This method may throw any of the following exceptions. These are true exceptions, since
+this method does not return a promise.
 
-<dl>
-  <dt><code>InvalidStateError</code></dt>
-  <dd>
-    <p>This may occur for one of the following reasons:</p>
+- `InvalidStateError`
 
-    <ul>
-      <li>The {{domxref("XRSession")}} has already ended, so you cannot change its render
-        state.</li>
-      <li>The <code>baseLayer</code> specified
-        in <code>newState</code> was created by an <code>XRSession</code> other than the
-        one on which <code>updateRenderState()</code> was called.</li>
-      <li>The <code>inlineVerticalFieldOfView</code> property was set, but the session is immersive and
-        therefore does not allow this property to be used.</li>
-    </ul>
-  </dd>
-</dl>
+  - : This may occur for one of the following reasons:
 
-<h2 id="Examples">Examples</h2>
+    - The {{domxref("XRSession")}} has already ended, so you cannot change its render
+      state.
+    - The `baseLayer` specified
+      in `newState` was created by an `XRSession` other than the
+      one on which `updateRenderState()` was called.
+    - The `inlineVerticalFieldOfView` property was set, but the session is immersive and
+      therefore does not allow this property to be used.
 
-<p>This example creates a WebGL context that is compatible with an immersive XR device and
-  then uses it to create an
-  {{DOMxRef("XRWebGLLayer")}}. <code>updateRenderState()</code> is then called to
-  associate the new <code>XRWebGLLayer</code>.</p>
+## Examples
 
-<pre class="brush: js">function onXRSessionStarted(xrSession) {
+This example creates a WebGL context that is compatible with an immersive XR device and
+then uses it to create an
+{{DOMxRef("XRWebGLLayer")}}. `updateRenderState()` is then called to
+associate the new `XRWebGLLayer`.
+
+```js
+function onXRSessionStarted(xrSession) {
   let glCanvas = document.createElement("canvas");
   let gl = glCanvas.getContext("webgl", { xrCompatible: true });
 
@@ -94,20 +87,18 @@ browser-compat: api.XRSession.updateRenderState
 
   xrSession.updateRenderState({ baseLayer: new XRWebGLLayer(xrSession, gl) });
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a></li>
-  <li>{{domxref("XRRenderState")}}</li>
-  <li>{{domxref("XRSession.renderState")}} </li>
-</ul>
+- [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)
+- {{domxref("XRRenderState")}}
+- {{domxref("XRSession.renderState")}}

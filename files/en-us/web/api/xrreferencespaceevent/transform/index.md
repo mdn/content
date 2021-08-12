@@ -2,79 +2,81 @@
 title: XRReferenceSpaceEvent.transform
 slug: Web/API/XRReferenceSpaceEvent/transform
 tags:
-- API
-- AR
-- Coordinate System
-- Coordinates
-- Event
-- Mixed
-- Orientation
-- Position
-- Property
-- Read-only
-- Reality
-- Reference
-- VR
-- Virtual
-- WebXR
-- WebXR API
-- WebXR Device API
-- XR
-- XRReferenceSpace
-- augmented
-- reset
-- transform
+  - API
+  - AR
+  - Coordinate System
+  - Coordinates
+  - Event
+  - Mixed
+  - Orientation
+  - Position
+  - Property
+  - Read-only
+  - Reality
+  - Reference
+  - VR
+  - Virtual
+  - WebXR
+  - WebXR API
+  - WebXR Device API
+  - XR
+  - XRReferenceSpace
+  - augmented
+  - reset
+  - transform
 browser-compat: api.XRReferenceSpaceEvent.transform
 ---
-<p>{{APIRef("WebXR Device API")}}</p>
+{{APIRef("WebXR Device API")}}
 
-<p>The read-only {{domxref("XRReferenceSpaceEvent")}} property
-    <code><strong>transform</strong></code> indicates the position and orientation of the
-    affected {{domxref("XRReferenceSpaceEvent.referenceSpace", "referenceSpace")}}'s
-    native origin after the changes the event represents are applied. The
-  <code>transform</code> is defined using the old coordinate system, which allows it to be
-  used to convert coordinates from the pre-event coordinate system to the post-event
-  coordiante system.</p>
+The read-only {{domxref("XRReferenceSpaceEvent")}} property
+**`transform`** indicates the position and orientation of the
+affected {{domxref("XRReferenceSpaceEvent.referenceSpace", "referenceSpace")}}'s
+native origin after the changes the event represents are applied. The
+`transform` is defined using the old coordinate system, which allows it to be
+used to convert coordinates from the pre-event coordinate system to the post-event
+coordiante system.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">let <em>refSpace</em> = <em>xrReferenceSpaceEvent</em>.transform;</pre>
+```js
+let refSpace = xrReferenceSpaceEvent.transform;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("XRRigidTransform")}} object providing a transform that can be used to
-  convert coordinates from the pre-event coordinate system to the post-event coordinate
-  system.</p>
+An {{domxref("XRRigidTransform")}} object providing a transform that can be used to
+convert coordinates from the pre-event coordinate system to the post-event coordinate
+system.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>Upon receiving a <code>reset</code> event, you can apply the <code>transform</code> to
-  cached position or orientation information to shift them into the updated coordinate
-  system. Alternatively, you can just discard any cached positional information and
-  recompute from scratch. The approach you take will depend on your needs.</p>
+Upon receiving a `reset` event, you can apply the `transform` to
+cached position or orientation information to shift them into the updated coordinate
+system. Alternatively, you can just discard any cached positional information and
+recompute from scratch. The approach you take will depend on your needs.
 
-<p>For details on what causes a <code>reset</code> event and how to respond, see the
-  {{domxref("XRReferenceSpaceEvent.reset_event", "reset")}} event's documentation.</p>
+For details on what causes a `reset` event and how to respond, see the
+{{domxref("XRReferenceSpaceEvent.reset_event", "reset")}} event's documentation.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example handles the <code>reset</code> event by walking through all the objects in
-  a scene, updating each object's position by multiplying it with the event's given
-  <code>transform</code>. The scene is represented by a <code>scene</code> object, with
-  all the objects in an array called <code>objects</code> within it.</p>
+This example handles the `reset` event by walking through all the objects in
+a scene, updating each object's position by multiplying it with the event's given
+`transform`. The scene is represented by a `scene` object, with
+all the objects in an array called `objects` within it.
 
-<pre class="brush: js">xrReferenceSpace.addEventListener("reset", event =&gt; {
+```js
+xrReferenceSpace.addEventListener("reset", event => {
   for (let obj of scene.objects) {
     mat4.multiply(obj.transform, obj.transform, event.transform);
   }
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

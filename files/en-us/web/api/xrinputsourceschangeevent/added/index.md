@@ -2,49 +2,51 @@
 title: XRInputSourcesChangeEvent.added
 slug: Web/API/XRInputSourcesChangeEvent/added
 tags:
-- API
-- AR
-- Input Sources
-- Inputs
-- Mixed
-- Property
-- Read-only
-- Reality
-- Reference
-- VR
-- Virtual
-- XR
-- XRInputSource
-- XRInputSourcesChangeEvent
-- augmented
+  - API
+  - AR
+  - Input Sources
+  - Inputs
+  - Mixed
+  - Property
+  - Read-only
+  - Reality
+  - Reference
+  - VR
+  - Virtual
+  - XR
+  - XRInputSource
+  - XRInputSourcesChangeEvent
+  - augmented
 browser-compat: api.XRInputSourcesChangeEvent.added
 ---
-<p>{{APIRef("WebXR Device API")}}</p>
+{{APIRef("WebXR Device API")}}
 
-<p><span class="seoSummary">The read-only {{domxref("XRInputSourcesChangeEvent")}}
-    property {{domxref("XRInputSourcesChangeEvent.added", "added")}} is a list of zero or
-    more input sources, each identified using an {{domxref("XRInputSource")}} object,
-    which have been newly made available for use.</span></p>
+The read-only {{domxref("XRInputSourcesChangeEvent")}}
+property {{domxref("XRInputSourcesChangeEvent.added", "added")}} is a list of zero or
+more input sources, each identified using an {{domxref("XRInputSource")}} object,
+which have been newly made available for use.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">let <em>addedInputs</em> = <em>xrInputSourcesChangeEvent</em>.added;</pre>
+```js
+let addedInputs = xrInputSourcesChangeEvent.added;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{jsxref("Array")}} of zero or more {{domxref("XRInputSource")}} objects, each
-  representing one input device added to the XR system.</p>
+An {{jsxref("Array")}} of zero or more {{domxref("XRInputSource")}} objects, each
+representing one input device added to the XR system.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The example below creates a handler for the
-  {{domxref("XRSession.inputsourceschange_event", "inputsourceschange")}} event that
-  processes the lists of added and removed from the WebXR system. It looks for new and
-  removed devices whose {{domxref("XRInputSource.targetRayMode", "targetRayMode")}} is
-  <code>tracked-pointer</code>.</p>
+The example below creates a handler for the
+{{domxref("XRSession.inputsourceschange_event", "inputsourceschange")}} event that
+processes the lists of added and removed from the WebXR system. It looks for new and
+removed devices whose {{domxref("XRInputSource.targetRayMode", "targetRayMode")}} is
+`tracked-pointer`.
 
-<pre class="brush: js">xrSession.oninputsourcescchange = event =&gt; {
+```js
+xrSession.oninputsourcescchange = event => {
   for (let input of event.added) {
     if (input.targetRayMode == "tracked-pointer") {
       addedPointerDevice(input);
@@ -55,12 +57,13 @@ browser-compat: api.XRInputSourcesChangeEvent.added
       removedPointerDevice(input);
     }
   }
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

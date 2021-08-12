@@ -11,23 +11,23 @@ tags:
   - VR
 browser-compat: api.XRAnchorSet
 ---
-<p>{{APIRef("WebXR Device API")}}</p>
+{{APIRef("WebXR Device API")}}
 
-<p>The <code><strong>XRAnchorSet</strong></code> interface exposes a collection of anchors. It is returned by {{domxref("XRFrame.trackedAnchors")}} and is a {{jsxref("Set")}}-like object.</p>
+The **`XRAnchorSet`** interface exposes a collection of anchors. It is returned by {{domxref("XRFrame.trackedAnchors")}} and is a {{jsxref("Set")}}-like object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p>See {{jsxref("Set")}} for details.</p>
+See {{jsxref("Set")}} for details.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>See {{jsxref("Set")}} for details.</p>
+See {{jsxref("Set")}} for details.
 
-<h2>Examples</h2>
+## Examples
 
-<h3>Handling anchor tracking loss</h3>
+### Handling anchor tracking loss
 
-<pre class="brush: js">
+```js
 const trackedAnchors = frame.trackedAnchors;
 
 for (const anchor of previousFrameAnchors) {
@@ -35,19 +35,17 @@ for (const anchor of previousFrameAnchors) {
     // Handle anchor tracking loss
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("XRAnchor")}}</li>
-  <li>{{domxref("XRFrame.trackedAnchors")}}</li>
-</ul>
+- {{domxref("XRAnchor")}}
+- {{domxref("XRFrame.trackedAnchors")}}

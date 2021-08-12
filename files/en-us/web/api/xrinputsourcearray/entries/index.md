@@ -2,66 +2,67 @@
 title: XRInputSourceArray.entries()
 slug: Web/API/XRInputSourceArray/entries
 tags:
-- API
-- AR
-- Entries
-- Input Sources
-- Inputs
-- Iterator
-- Method
-- Reference
-- VR
-- WebXR
-- WebXR API
-- WebXR Device API
-- XR
-- XRInputSourceArray
+  - API
+  - AR
+  - Entries
+  - Input Sources
+  - Inputs
+  - Iterator
+  - Method
+  - Reference
+  - VR
+  - WebXR
+  - WebXR API
+  - WebXR Device API
+  - XR
+  - XRInputSourceArray
 browser-compat: api.XRInputSourceArray.entries
 ---
-<p>{{APIRef("WebXR Device API")}}</p>
+{{APIRef("WebXR Device API")}}
 
-<p>The {{domxref("XRInputSourceArray")}} interface's
-    <code><strong>entries()</strong></code> method returns a JavaScript
-    <code><a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">iterator</a></code>
-    which can then be used to iterate over the key/value pairs in the input source
-    array. Each item in the array is an {{domxref("XRInputSource")}} object.</p>
+The {{domxref("XRInputSourceArray")}} interface's
+**`entries()`** method returns a JavaScript
+[`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
+which can then be used to iterate over the key/value pairs in the input source
+array. Each item in the array is an {{domxref("XRInputSource")}} object.
 
-<p>Most frequently, you will use this in tandem with statements such as
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a></code>.
-</p>
+Most frequently, you will use this in tandem with statements such as
+[`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let <em>inputSourceIterator</em> = <em>xrInputSourceArray</em>.entries();
+```js
+let inputSourceIterator = xrInputSourceArray.entries();
 
-for (let <em>entry</em> of <em>xrInputSourceArray</em>.entries()) {
+for (let entry of xrInputSourceArray.entries()) {
   /* ... */
 }
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">iterator</a></code>
-  which can be used to walk through the list of <code>XRInputSource</code> objects
-  included in the input source array.</p>
+An
+[`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
+which can be used to walk through the list of `XRInputSource` objects
+included in the input source array.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example snippet gets the list of inputs for a session and tries to handle each
-  type of input device it supports using.</p>
+This example snippet gets the list of inputs for a session and tries to handle each
+type of input device it supports using.
 
-<pre class="brush: js">let sources = xrSession.inputSources;
+```js
+let sources = xrSession.inputSources;
 
 for (let input of sources.entries()) {
   if (input.gamepad) {
     checkGamepad(input.gamepad);
   } else {
-    if (input.targetRayMode === "tracked-pointer" &amp;&amp;
+    if (input.targetRayMode === "tracked-pointer" &&
         input.handedness === player.handedness) {
       /* Handle main hand controller */
       handleMainHandInput(input);
@@ -70,19 +71,19 @@ for (let input of sources.entries()) {
     }
   }
 }
-</pre>
+```
 
-<p>For each input in the llist, gamepad inputs are dispatched to
-  a <code>checkGamepad()</code> with the input's {{domxref("Gamepad")}} object, taken from
-  its {{domxref("XRInputSource.gamepad", "gamepad")}} property, as an input</p>
+For each input in the llist, gamepad inputs are dispatched to
+a `checkGamepad()` with the input's {{domxref("Gamepad")}} object, taken from
+its {{domxref("XRInputSource.gamepad", "gamepad")}} property, as an input
 
-<p>For other devices, we look for <code>tracked-pointer</code> devices in the player's
-  main hand, dispatching those to a <code>handleMainHandInput()</code> method.</p>
+For other devices, we look for `tracked-pointer` devices in the player's
+main hand, dispatching those to a `handleMainHandInput()` method.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

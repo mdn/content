@@ -2,48 +2,49 @@
 title: XRSessionEvent.session
 slug: Web/API/XRSessionEvent/session
 tags:
-- API
-- AR
-- Mixed
-- Property
-- Reality
-- Reference
-- Session
-- VR
-- Virtual
-- WebXR
-- WebXR API
-- WebXR Device API
-- XR
-- XRSession
-- XRSessionEvent
-- augmented
-- events
-- sessions
+  - API
+  - AR
+  - Mixed
+  - Property
+  - Reality
+  - Reference
+  - Session
+  - VR
+  - Virtual
+  - WebXR
+  - WebXR API
+  - WebXR Device API
+  - XR
+  - XRSession
+  - XRSessionEvent
+  - augmented
+  - events
+  - sessions
 browser-compat: api.XRSessionEvent.session
 ---
-<p>{{APIRef("WebXR Device API")}}</p>
+{{APIRef("WebXR Device API")}}
 
-<p>The read-only {{domxref("XRSessionEvent")}} interface's
-    <code><strong>session</strong></code> property indicates which
-    {{domxref("XRSession")}} the event is about.</p>
+The read-only {{domxref("XRSessionEvent")}} interface's
+**`session`** property indicates which
+{{domxref("XRSession")}} the event is about.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>xrSession</em> = xrSessionEvent.<em>session</em>;
-</pre>
+```js
+xrSession = xrSessionEvent.session;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("XRSession")}} object indicating which WebXR session the event refers to.
-</p>
+An {{domxref("XRSession")}} object indicating which WebXR session the event refers to.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example, the <code>session</code> property is used to obtain the session object
-  to manage when an event is received.</p>
+In this example, the `session` property is used to obtain the session object
+to manage when an event is received.
 
-<pre class="brush: js">xrSession.addEventListener("visibilitychange", e =&gt; {
+```js
+xrSession.addEventListener("visibilitychange", e => {
   switch(e.session.visibilityState) {
     case "hidden":
       myEnableRendering(true);
@@ -54,14 +55,14 @@ browser-compat: api.XRSessionEvent.session
       break;
   }
 });
-</pre>
+```
 
-<p>This calls a function that reacts to the session's visibility state change.</p>
+This calls a function that reacts to the session's visibility state change.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

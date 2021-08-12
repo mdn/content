@@ -2,58 +2,58 @@
 title: XRSession.onsqueezestart
 slug: Web/API/XRSession/onsqueezestart
 tags:
-- API
-- AR
-- Event Handler
-- Mixed
-- Primary Squeeze Actions
-- Reality
-- Reference
-- Squeeze Actions
-- VR
-- Virtual
-- WebXR
-- WebXR API
-- WebXR Device API
-- XR
-- XRSession
-- actions
-- augmented
-- onsqueezestart
+  - API
+  - AR
+  - Event Handler
+  - Mixed
+  - Primary Squeeze Actions
+  - Reality
+  - Reference
+  - Squeeze Actions
+  - VR
+  - Virtual
+  - WebXR
+  - WebXR API
+  - WebXR Device API
+  - XR
+  - XRSession
+  - actions
+  - augmented
+  - onsqueezestart
 browser-compat: api.XRSession.onsqueezestart
 ---
-<p>{{APIRef("WebXR Device API")}}</p>
+{{APIRef("WebXR Device API")}}
 
-<p>The {{domxref("XRSession")}} interface's
-    <code><strong>onsqueezestart</strong></code> event handler property can be set to a
-    function which is then invoked to handle the {{domxref("XRSession.squeezestart_event",
-    "squeezestart")}} event that's sent when the user successfully begins a <a
-      href="/en-US/docs/Web/API/WebXR_Device_API/Inputs#Primary_squeeze_actions">primary
-      squeeze action</a> on a WebXR input device. These actions represent the user
-  squeezing or tightly gripping an object or controller.</p>
+The {{domxref("XRSession")}} interface's
+**`onsqueezestart`** event handler property can be set to a
+function which is then invoked to handle the {{domxref("XRSession.squeezestart_event",
+    "squeezestart")}} event that's sent when the user successfully begins a [primary
+squeeze action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#Primary_squeeze_actions) on a WebXR input device. These actions represent the user
+squeezing or tightly gripping an object or controller.
 
-<p>To learn more about how to use and handle WebXR controller inputs, see <a
-    href="/en-US/docs/Web/API/WebXR_Device_API/Inputs">Inputs and input sources</a>.</p>
+To learn more about how to use and handle WebXR controller inputs, see [Inputs and input sources](/en-US/docs/Web/API/WebXR_Device_API/Inputs).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>xrSession</em>.onsqueezestart = <em>squeezestartHandlerFunction</em>;</pre>
+```js
+xrSession.onsqueezestart = squeezestartHandlerFunction;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A function to be invoked whenever the {{domxref("XRSession")}} receives a
-  {{domxref("XRSession.squeezestart_event", "squeezestart")}} event.</p>
+A function to be invoked whenever the {{domxref("XRSession")}} receives a
+{{domxref("XRSession.squeezestart_event", "squeezestart")}} event.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This snippet of code adds a simple handler for the <code>squeezestart</code> event,
-  which responds only to events on the user's dominant hand by getting the target ray,
-  then calling a function <code>findObjectUsingRay()</code> to identify the object that
-  the user is pointing at. This object is then stored in a <code>heldObject</code>
-  variable in the <code>user</code> object we're using to represent user information.</p>
+This snippet of code adds a simple handler for the `squeezestart` event,
+which responds only to events on the user's dominant hand by getting the target ray,
+then calling a function `findObjectUsingRay()` to identify the object that
+the user is pointing at. This object is then stored in a `heldObject`
+variable in the `user` object we're using to represent user information.
 
-<pre class="brush: js">xrSession.onsqueezestart = event =&gt; {
+```js
+xrSession.onsqueezestart = event => {
   if (event.inputSource.handedness == user.handedness) {
     let targetRayPose = event.frame.getPose(event.inputSource.targetRaySpace, myRefSpace;
 
@@ -62,24 +62,21 @@ browser-compat: api.XRSession.onsqueezestart
     }
   }
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Inputs">Inputs and input sources</a>
-  </li>
-  <li>The other <code>onsqueeze*</code> handlers: {{DOMxRef("XRSession.onsqueeze",
-    "onsqueeze")}} and {{DOMxRef("XRSession.onsqueezeend", "onsqueezeend")}}</li>
-  <li>The {{domxref("XRSession.squeeze_event", "squeeze")}},
-    {{domxref("XRSession.squeezestart_event", "squeezestart")}}, and
-    {{domxref("XRSession.squeezeend_event", "squeezeend")}} events</li>
-</ul>
+- [Inputs and input sources](/en-US/docs/Web/API/WebXR_Device_API/Inputs)
+- The other `onsqueeze*` handlers: {{DOMxRef("XRSession.onsqueeze",
+    "onsqueeze")}} and {{DOMxRef("XRSession.onsqueezeend", "onsqueezeend")}}
+- The {{domxref("XRSession.squeeze_event", "squeeze")}},
+  {{domxref("XRSession.squeezestart_event", "squeezestart")}}, and
+  {{domxref("XRSession.squeezeend_event", "squeezeend")}} events

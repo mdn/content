@@ -2,67 +2,68 @@
 title: XRSession.onsqueezeend
 slug: Web/API/XRSession/onsqueezeend
 tags:
-- API
-- AR
-- Event Handler
-- Primary
-- Reality
-- Reference
-- VR
-- Virtual
-- WebXR
-- WebXR API
-- WebXR Device API
-- XR
-- XRSession
-- action
-- augmented
-- onsqueezeend
-- squeeze
+  - API
+  - AR
+  - Event Handler
+  - Primary
+  - Reality
+  - Reference
+  - VR
+  - Virtual
+  - WebXR
+  - WebXR API
+  - WebXR Device API
+  - XR
+  - XRSession
+  - action
+  - augmented
+  - onsqueezeend
+  - squeeze
 browser-compat: api.XRSession.onsqueezeend
 ---
-<p>{{APIRef("WebXR Device API")}}</p>
+{{APIRef("WebXR Device API")}}
 
-<p>The {{domxref("XRSession")}} interface's
-    <code><strong>onsqueezeend</strong></code> event handler property is a function to be
-    invokedn when the {{domxref("XRSession.squeezeend_event", "squeezeend")}} event sent
-    to an <code>XRSession</code> when a <a
-      href="/en-US/docs/Web/API/WebXR_Device_API/Inputs#Primary_squeeze_actions">primary
-      squeeze action</a> ends. This is sent immediately after the
-  {{domxref("XRSession.squeeze_event", "squeeze")}} event, which announces the
-  <em>successful</em> completion of the squeeze action. The <code>squeezeend</code> event
-  handler is where you handle closing out a squeeze action whether it was successfully
-  completed or not.</p>
+The {{domxref("XRSession")}} interface's
+**`onsqueezeend`** event handler property is a function to be
+invokedn when the {{domxref("XRSession.squeezeend_event", "squeezeend")}} event sent
+to an `XRSession` when a [primary
+squeeze action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#Primary_squeeze_actions) ends. This is sent immediately after the
+{{domxref("XRSession.squeeze_event", "squeeze")}} event, which announces the
+_successful_ completion of the squeeze action. The `squeezeend` event
+handler is where you handle closing out a squeeze action whether it was successfully
+completed or not.
 
-<p>To learn more about how the sequence of squeeze events works, see
-  {{SectionOnPage("/en-US/docs/Web/API/WebXR_Device_API/Inputs", "Primary squeeze
-  actions")}}.</p>
+To learn more about how the sequence of squeeze events works, see
+{{SectionOnPage("/en-US/docs/Web/API/WebXR_Device_API/Inputs", "Primary squeeze
+  actions")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>xrSession</em>.onsqueezeend = <em>squeezeendHandlerFunction</em>;</pre>
+```js
+xrSession.onsqueezeend = squeezeendHandlerFunction;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A function to be invoked whenever the {{domxref("XRSession")}} receives a
-  {{domxref("XRSession.squeezeend_event", "squeezestart")}} event, indicating the ending
-  of a primary squeeze action.</p>
+A function to be invoked whenever the {{domxref("XRSession")}} receives a
+{{domxref("XRSession.squeezeend_event", "squeezestart")}} event, indicating the ending
+of a primary squeeze action.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This snippet of code adds a simple handler for the <code>squeezeend</code> event, which
-  responds only to events on the user's dominant hand. In response to the end of the
-  squeeze operation, this code looks to see if there is an object currently being held by
-  the user by checking to see if the variable <code>user.heldObject</code> contains a
-  reference to an object representing the held item.</p>
+This snippet of code adds a simple handler for the `squeezeend` event, which
+responds only to events on the user's dominant hand. In response to the end of the
+squeeze operation, this code looks to see if there is an object currently being held by
+the user by checking to see if the variable `user.heldObject` contains a
+reference to an object representing the held item.
 
-<p>If <code>heldObject</code> has an object reference, that object is passed to a function
-  called <code>cancelObjectDrag()</code>, which would be written to return the object to
-  its original position. This takes care of the situation in which the drag is aborted or
-  canceled.</p>
+If `heldObject` has an object reference, that object is passed to a function
+called `cancelObjectDrag()`, which would be written to return the object to
+its original position. This takes care of the situation in which the drag is aborted or
+canceled.
 
-<pre class="brush: js">xrSession.onsqueezeend = event =&gt; {
+```js
+xrSession.onsqueezeend = event => {
   if (event.inputSource.handedness == user.handedness) {
     let targetRayPose = event.frame.getPose(event.inputSource.targetRaySpace, myRefSpace;
 
@@ -71,30 +72,27 @@ browser-compat: api.XRSession.onsqueezeend
     }
   }
 };
-</pre>
+```
 
-<p>This code presumes that if the user actually intentionally completed the drag,
-  <code>user.heldObject</code> will be <code>null</code> here. That's because (in this
-  example, at least) the handler for the {{domxref("XRSession.squeeze_event", "squeeze")}}
-  event has already dropped the object into its new location and then cleared the value of
-  <code>heldObject</code> to indicate that the user is no longer holding anything.</p>
+This code presumes that if the user actually intentionally completed the drag,
+`user.heldObject` will be `null` here. That's because (in this
+example, at least) the handler for the {{domxref("XRSession.squeeze_event", "squeeze")}}
+event has already dropped the object into its new location and then cleared the value of
+`heldObject` to indicate that the user is no longer holding anything.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Inputs">Inputs and input sources</a>
-  </li>
-  <li>The other <code>onsqueeze*</code> handlers: {{DOMxRef("XRSession.onsqueezestart",
-    "onsqueezestart")}} and {{DOMxRef("XRSession.onsqueeze", "onsqueeze")}}</li>
-  <li>The {{domxref("XRSession.squeeze_event", "squeeze")}},
-    {{domxref("XRSession.squeezestart_event", "squeezestart")}}, and
-    {{domxref("XRSession.squeezeend_event", "squeezeend")}} events</li>
-</ul>
+- [Inputs and input sources](/en-US/docs/Web/API/WebXR_Device_API/Inputs)
+- The other `onsqueeze*` handlers: {{DOMxRef("XRSession.onsqueezestart",
+    "onsqueezestart")}} and {{DOMxRef("XRSession.onsqueeze", "onsqueeze")}}
+- The {{domxref("XRSession.squeeze_event", "squeeze")}},
+  {{domxref("XRSession.squeezestart_event", "squeezestart")}}, and
+  {{domxref("XRSession.squeezeend_event", "squeezeend")}} events
