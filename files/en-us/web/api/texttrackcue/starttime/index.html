@@ -1,0 +1,46 @@
+---
+title: TextTrackCue.startTime
+slug: Web/API/TextTrackCue/startTime
+tags:
+  - API
+  - Property
+  - Reference
+  - startTime
+  - TextTrackCue
+browser-compat: api.TextTrackCue.startTime
+---
+<div>{{APIRef("WebVTT")}}</div>
+
+<p class="summary">The <strong><code>startTime</code></strong> property of the {{domxref("TextTrackCue")}} interface returns and sets the start time of the cue.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">let startTime = TextTrackCue.startTime;
+TextTrackCue.startTime = 1;
+</pre>
+
+<h3>Value</h3>
+<p>An integer representing the start time, in seconds.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In the following example a new {{domxref("VTTCue")}} (which inherits from <code>TextTrackCue</code>) is created starting at 0.1 second and ending at 0.9 seconds. The <code>startTime</code> property is then printed to the console.</p>
+
+<pre class="brush: js">let video = document.querySelector('video');
+let track = video.addTextTrack("captions", "Captions", "en");
+track.mode = "showing";
+
+let cue1 = new VTTCue(0.1, 0.9, 'Hildy!');
+console.log(cue1.startTime); // 0.1
+track.addCue(cue1);
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+
