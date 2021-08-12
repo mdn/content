@@ -111,7 +111,6 @@ which tells the client that the cached version of the response is still good to 
 
 - {{HTTPHeader("If-Match")}}
 - {{HTTPHeader("If-None-Match")}}
-- {{HTTPStatus("304")}}` Not Modified`
-- {{HTTPStatus("412")}}` Precondition Failed`
-- [W3C Note: Editing the Web – Detecting
-  the Lost Update Problem Using Unreserved Checkout](https://www.w3.org/1999/04/Editing/)
+- {{HTTPStatus("304", "304 Not Modified")}}
+- {{HTTPStatus("412", "Precondition Failed")}}
+- [W3C Note: Editing the Web – Detecting the Lost Update Problem Using Unreserved Checkout](https://www.w3.org/1999/04/Editing/)
