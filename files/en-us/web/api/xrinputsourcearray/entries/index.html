@@ -20,11 +20,11 @@ browser-compat: api.XRInputSourceArray.entries
 ---
 <p>{{APIRef("WebXR Device API")}}</p>
 
-<p><span class="seoSummary">The {{domxref("XRInputSourceArray")}} interface's
+<p>The {{domxref("XRInputSourceArray")}} interface's
     <code><strong>entries()</strong></code> method returns a JavaScript
     <code><a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">iterator</a></code>
     which can then be used to iterate over the key/value pairs in the input source
-    array.</span> Each item in the array is an {{domxref("XRInputSource")}} object.</p>
+    array. Each item in the array is an {{domxref("XRInputSource")}} object.</p>
 
 <p>Most frequently, you will use this in tandem with statements such as
   <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a></code>.
@@ -82,13 +82,6 @@ for (let input of sources.entries()) {
 <h2 id="Specifications">Specifications</h2>
 
 {{Specifications}}
-
-<p><a id="spec-iterables">[1]</a> See
-  {{SectionOnPage("/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file",
-  "Iterator-like methods")}} for information on how an <code>iterable</code> declaration
-  in an interface definition causes <code>entries()</code>, <code>forEach()</code>,
-  <code>keys()</code>, and <code>values()</code> methods to be exposed from objects that
-  implement the interface.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

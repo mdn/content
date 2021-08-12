@@ -18,11 +18,11 @@ browser-compat: api.XRSession.requestAnimationFrame
 ---
 <div>{{APIRef("WebXR Device API")}}</div>
 
-<p><span class="seoSummary">The {{domxref("XRSession")}}
+<p>The {{domxref("XRSession")}}
     method <code><strong>requestAnimationFrame()</strong></code>, much like the
     {{domxref("Window")}} method of the same name, schedules a callback to be executed the
     next time the browser is ready to paint the session's virtual environment to the XR
-    display.</span> The specified callback is executed once before the next repaint; if
+    display. The specified callback is executed once before the next repaint; if
   you wish for it to be executed for the following repaint, you must
   call <code>requestAnimationFrame()</code> again. This can be done from within the
   callback itself.</p>
@@ -34,8 +34,8 @@ browser-compat: api.XRSession.requestAnimationFrame
 <p>You can cancel a previously scheduled animation by calling
   {{DOMxRef("XRSession.cancelAnimationFrame", "cancelAnimationFrame()")}}.</p>
 
-<div class="notecard warning">
-  <p><strong>Note:</strong> Despite the obvious similarities between these methods and the
+<div class="notecard note">
+<p><strong>Note:</strong> Despite the obvious similarities between these methods and the
     global {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} function
     provided by the <code>Window</code> interface, you <em>must not</em> treat these as
     interchangeable. There is <em>no</em> guarantee that the latter will work at all while
