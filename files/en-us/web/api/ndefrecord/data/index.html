@@ -10,19 +10,36 @@ browser-compat: api.NDEFRecord.data
 <p>{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}</p>
 
 <p class="summary">The <strong><code>data</code></strong>
-    property of the {{DOMxRef("NDEFRecord")}} interface is {{jsxref("DataView")}}
-    providing access to the payload data of the record.</p>
-
-<p>It provides access to a raw content of the record and thus data consumer might need to
-  decode it.</p>
+    property of the {{DOMxRef("NDEFRecord")}} interface returns a
+    {{jsxref("DataView")}} containing the raw bytes of the record's payload.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><em>NDEFRecord</em>.data</pre>
+<pre class="brush: js">NDEFRecord.data</pre>
 
 <h3 id="Value">Value</h3>
 
 <p>A {{jsxref("DataView")}} that contains encoded payload data of the record.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>The following example loops over the records in an {{domxref("NDEFMessage")}}
+object, which is retrieved from {{domxref("NDEFReadingEvent.message")}}. After
+selecting a record based on its {{domxref("NDEFRecord.mediaType",
+"mediaType")}}, it then decodes what's stored in the <code>data</code> property.</p>
+
+<pre class="brush: js">const ndef = new NDEFReader();
+  await ndef.scan();
+  ndef.onreading = (event) => {
+    const decoder = new TextDecoder();
+    for (const record of event.message.records) {
+      if (record.mediaType === "application/json") {
+        const json = JSON.parse(decoder.decode(record.data));
+        const article =/^[aeio]/i.test(json.title) ? "an" : "a";
+        console.log(`${json.name} is ${article} ${json.title}`);
+      }
+    }
+  };</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

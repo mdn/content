@@ -8,11 +8,11 @@ tags:
 - Web NFC
 browser-compat: api.NDEFRecord.id
 ---
-<p>{{Draft}}{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}</p>
+<p>{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}</p>
 
-<p class="summary"><span class="seoSummary">The <strong><code>id</code></strong> property
-    ofthe {{DOMxRef("NDEFRecord")}} interface is {{DOMxRef("USVString")}} containing the
-    record identifier.</span></p>
+<p class="summary">The <strong><code>id</code></strong> property of the
+{{DOMxRef("NDEFRecord")}} interface returns the record identifier, which is an
+absolute or relative URL used to identify the record.</p>
 
 <p>This identifier is created by the generator of the record which is solely responsible
   for enforcing record identifier uniqueness. Web NFC does not sign the NFC content, thus
@@ -21,7 +21,7 @@ browser-compat: api.NDEFRecord.id
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><em>NDEFRecord</em>.id</pre>
+<pre class="brush: js">NDEFRecord.id</pre>
 
 <h3 id="Value">Value</h3>
 
