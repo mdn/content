@@ -302,9 +302,9 @@ Each input source should define a **primary action**. A primary action (which wi
 
 When the user points a device along a target ray in your 3D space and then triggers a select action, the following events are sent to the active {{domxref("XRSession")}}:
 
-1.  A {{domxref("XRSession.selectstart_event", "selectstart")}} event, indicating that the user has performed the activity that begins the primary action. This may be a gesture, depressing a button, or the like.
-2.  If the primary action ends successfully (for example, due to the user releasing the button or trigger), rather than because of an error, the {{domxref("XRSession.select_event", "select")}} event is sent.
-3.  After the `select` event is sent _or_ if the controller on which the action is being performed is disconnected or otherwise becomes unavailable, the {{domxref("XRSession.selectend_event", "selectend")}} event is sent.
+1. A {{domxref("XRSession.selectstart_event", "selectstart")}} event, indicating that the user has performed the activity that begins the primary action. This may be a gesture, depressing a button, or the like.
+2. If the primary action ends successfully (for example, due to the user releasing the button or trigger), rather than because of an error, the {{domxref("XRSession.select_event", "select")}} event is sent.
+3. After the `select` event is sent _or_ if the controller on which the action is being performed is disconnected or otherwise becomes unavailable, the {{domxref("XRSession.selectend_event", "selectend")}} event is sent.
 
 Generally speaking, the `selectstart` and `selectend` events tell you when you might want to display something to the user indicating that the primary action is going on. This might be drawing a controller with the activated button in a new color, or showing the targeted object being grabbed and moved around, starting when `selectstart` arrives and stopping when `selectend` is received.
 
@@ -333,9 +333,9 @@ A **primary squeeze action** is a platform-specific action which sends the {{dom
 
 The sequence of events is identical to those sent by the primary action, save for the name of each event:
 
-1.  An {{domxref("XRSession.squeezestart_event", "squeezestart")}} event is sent to the {{domxref("XRSession")}}, indicating that the user has begun a squeeze action.
-2.  If the primary squeeze action ends successfully, the session is sent a {{domxref("XRSession.squeeze_event", "squeeze")}} event.
-3.  Then, a {{domxref("XRSession.squeezeend_event", "squeezeend")}} event is sent to indicate that the squeeze action is no longer underway. This is sent whether the squeeze action succeeded or not.
+1. An {{domxref("XRSession.squeezestart_event", "squeezestart")}} event is sent to the {{domxref("XRSession")}}, indicating that the user has begun a squeeze action.
+2. If the primary squeeze action ends successfully, the session is sent a {{domxref("XRSession.squeeze_event", "squeeze")}} event.
+3. Then, a {{domxref("XRSession.squeezeend_event", "squeezeend")}} event is sent to indicate that the squeeze action is no longer underway. This is sent whether the squeeze action succeeded or not.
 
 Two common uses for the primary squeeze action are to grasp and/or pick up objects in the 3D world and to squeeze a trigger to fire a weapon in a game or simulation.
 
@@ -429,13 +429,13 @@ Here, the `returnObject()` function is assumed to be one which knows how to re
 
 If an XR device uses the mouse to simulate a controller when in the `inline` mode, the approximate sequence of things takes place:
 
-1.  The user presses the mouse button while inside the {{HTMLElement("canvas")}} presenting the WebXR scene.
-2.  The mouse event is captured by the XR device's driver.
-3.  The device creates a new `XRInputSource` to represent the simulated XR input source. The {{domxref("XRInputSource.targetRayMode", "targetRayMode")}} is set to `screen`, and the other information is filled out as appropriate. This new input source is temporarily added to the list that's returned by the {{domxref("XRSession")}} property {{domxref("XRSession.inputSources", "inputSources")}}.
-4.  The browser delivers {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} events corresponding to the action.
-5.  A primary action is generated and sent to the app in the form of a {{domxref("XRSession.selectstart_event", "selectstart")}} event, with its source set to the new `XRInputSource`. Or, if the mouse is being used as an off-hand or secondary controller, an auxiliary action is sent instead.
-6.  When the user releases the mouse button, the {{domxref("XRSession.select_event", "select")}} event is sent to the `XRSession`, then the DOM receives a {{domxref("Element.click_event", "click")}} event. The session then receives the {{domxref("XRSession.selectend_event", "selectend")}} event indicating the completion of the action.
-7.  When the action is completed, the browser deletes the transient input source, and any appropriate {{domxref("HTMLElement/pointerup_event", "pointerup")}} events are sent.
+1. The user presses the mouse button while inside the {{HTMLElement("canvas")}} presenting the WebXR scene.
+2. The mouse event is captured by the XR device's driver.
+3. The device creates a new `XRInputSource` to represent the simulated XR input source. The {{domxref("XRInputSource.targetRayMode", "targetRayMode")}} is set to `screen`, and the other information is filled out as appropriate. This new input source is temporarily added to the list that's returned by the {{domxref("XRSession")}} property {{domxref("XRSession.inputSources", "inputSources")}}.
+4. The browser delivers {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} events corresponding to the action.
+5. A primary action is generated and sent to the app in the form of a {{domxref("XRSession.selectstart_event", "selectstart")}} event, with its source set to the new `XRInputSource`. Or, if the mouse is being used as an off-hand or secondary controller, an auxiliary action is sent instead.
+6. When the user releases the mouse button, the {{domxref("XRSession.select_event", "select")}} event is sent to the `XRSession`, then the DOM receives a {{domxref("Element.click_event", "click")}} event. The session then receives the {{domxref("XRSession.selectend_event", "selectend")}} event indicating the completion of the action.
+7. When the action is completed, the browser deletes the transient input source, and any appropriate {{domxref("HTMLElement/pointerup_event", "pointerup")}} events are sent.
 
 Thus, the transient input source is indeed transient—it exists only for the duration of handling the input and will as such not be listed in the input source list.
 
