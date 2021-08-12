@@ -12,7 +12,7 @@ tags:
 <p class="summary"><strong>Web Workers</strong> makes it possible to run a script operation in a background thread separate from the main execution thread of a web application. The advantage of this is that laborious processing can be performed in a separate thread, allowing the main (usually the UI) thread to run without being blocked/slowed down.</p>
 
 <div class="notecard note">
-<p class="summary"><strong>Note:</strong> Web Workers can also use the Web Worker API (i.e. workers can spawn workers, provided they are hosted within the same <a href="/en-US/docs/Glossary/Origin">origin</a> as the parent page). </p>
+<p><strong>Note:</strong> Web Workers can also use the Web Worker API (i.e. workers can spawn workers, provided they are hosted within the same <a href="/en-US/docs/Glossary/Origin">origin</a> as the parent page).</p>
 </div>
 
 <h2 id="Web_Workers_concepts_and_usage">Web Workers concepts and usage</h2>
@@ -36,7 +36,7 @@ tags:
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: As per the <a href="https://html.spec.whatwg.org/multipage/workers.html#runtime-script-errors-2">Web workers Spec</a>, worker error events should not bubble (see {{bug(1188141)}}. This has been implemented in Firefox 42.</p>
+<p><strong>Note:</strong> As per the <a href="https://html.spec.whatwg.org/multipage/workers.html#runtime-script-errors-2">Web workers Spec</a>, worker error events should not bubble (see {{bug(1188141)}}. This has been implemented in Firefox 42.</p>
 </div>
 
 <h3 id="Worker_global_contexts_and_functions">Worker global contexts and functions</h3>
@@ -61,7 +61,7 @@ tags:
 <h3 id="Supported_Web_APIs">Supported Web APIs</h3>
 
 <div class="notecard note">
-<p>Note that if a listed API is supported by a platform in a particular version, then it can generally be assumed to be available in web workers. You can also test support for a particular object/function using the site: <a href="https://worker-playground.glitch.me/">https://worker-playground.glitch.me/</a></p>
+<p><strong>Note:</strong> If a listed API is supported by a platform in a particular version, then it can generally be assumed to be available in web workers. You can also test support for a particular object/function using the site: <a href="https://worker-playground.glitch.me/">https://worker-playground.glitch.me/</a></p>
 </div>
 
 <p>The following Web APIs are available to workers: {{domxref("Barcode_Detection_API","Barcode Detection API")}}, {{domxref("Broadcast_Channel_API","Broadcast Channel API")}}, {{domxref("Cache", "Cache API")}}, {{domxref("Channel_Messaging_API", "Channel Messaging API")}},{{domxref("Console API", "Console API")}}, <a href="/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API</a> ({{domxref("Crypto")}}), {{domxref("CustomEvent")}}, {{domxref("Data_Store_API", "Data Store")}} (Firefox only), {{domxref("DOMRequest")}} and {{domxref("DOMCursor")}}, {{domxref("Encoding_API", "Encoding API")}} ({{domxref("TextEncoder")}}, {{domxref("TextDecoder")}}, etc.), {{domxref("Fetch_API", "Fetch API")}}, {{domxref("FileReader")}}, {{domxref("FileReaderSync")}} (only works in workers!), {{domxref("FormData")}}, {{domxref("ImageData")}}, {{domxref("IndexedDB_API", "IndexedDB")}}, <a href="/en-US/docs/Web/API/Network_Information_API">Network Information API</a>, {{domxref("Notifications_API", "Notifications API")}}, {{domxref("Performance_API","Performance API")}} (including: {{domxref("Performance")}}, {{domxref("PerformanceEntry")}}, {{domxref("PerformanceMeasure")}}, {{domxref("PerformanceMark")}}, {{domxref("PerformanceObserver")}}, {{domxref("PerformanceResourceTiming")}}), {{jsxref("Promise")}}, <a href="/en-US/docs/Web/API/Server-sent_events">Server-sent events</a>, {{domxref("ServiceWorkerRegistration")}}, {{ domxref("URL_API","URL API") }} (e.g. {{ domxref("URL") }}), <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> with {{domxref("OffscreenCanvas")}} (enabled behind a feature preference setting <code>gfx.offscreencanvas.enabled</code>), {{domxref("WebSocket")}}, {{domxref("XMLHttpRequest")}}.</p>
@@ -100,17 +100,15 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
+<table>
  <tbody>
   <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
+   <th>Specification</th>
   </tr>
   <tr>
-   <td>{{SpecName("HTML WHATWG", "workers.html#workers", "Web Workers")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Initial definition.</td>
+   <td>
+     <a href="https://html.spec.whatwg.org/multipage/workers.html#workers">HTML Living Standard<br/>
+     # workers</a></td>
   </tr>
  </tbody>
 </table>
