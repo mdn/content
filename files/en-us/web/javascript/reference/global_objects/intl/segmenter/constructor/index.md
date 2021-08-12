@@ -48,7 +48,7 @@ A new {{jsxref('Intl/Segmenter','Intl.Segmenter')}} object.
 
 ```js
 // Create a Spanish-language sentence segmenter
-var spanish_segmenter = new Intl.Segmenter("es", {granularity: "sentence"});
+const spanishSegmenter = new Intl.Segmenter("es", {granularity: "sentence"});
 ```
 
 ## Specifications
