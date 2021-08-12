@@ -1,6 +1,6 @@
 ---
 title: ':nth-child()'
-slug: 'Web/CSS/:nth-child'
+slug: Web/CSS/:nth-child
 tags:
   - CSS
   - Layout
@@ -10,11 +10,12 @@ tags:
   - Web
 browser-compat: css.selectors.nth-child
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>:nth-child()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> matches elements based on their position in a group of siblings.</p>
+The **`:nth-child()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements based on their position in a group of siblings.
 
-<pre class="brush: css no-line-numbers">/* Selects the second &lt;li&gt; element in a list */
+```css
+/* Selects the second <li> element in a list */
 li:nth-child(2) {
   color: lime;
 }
@@ -24,124 +25,121 @@ li:nth-child(2) {
 :nth-child(4n) {
   color: lime;
 }
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p><code>:nth-child()</code> takes a single argument that describes a pattern for matching element indices in a list of siblings. Element indices are 1-based.</p>
+`:nth-child()` takes a single argument that describes a pattern for matching element indices in a list of siblings. Element indices are 1-based.
 
-<h3 id="Keyword_values">Keyword values</h3>
+### Keyword values
 
-<dl>
- <dt><code>odd</code></dt>
- <dd>Represents elements whose numeric position in a series of siblings is odd: 1, 3, 5, etc.</dd>
- <dt><code>even</code></dt>
- <dd>Represents elements whose numeric position in a series of siblings is even: 2, 4, 6, etc.</dd>
-</dl>
+- `odd`
+  - : Represents elements whose numeric position in a series of siblings is odd: 1, 3, 5, etc.
+- `even`
+  - : Represents elements whose numeric position in a series of siblings is even: 2, 4, 6, etc.
 
-<h3 id="Functional_notation">Functional notation</h3>
+### Functional notation
 
-<dl>
- <dt><code>&lt;An+B&gt;</code></dt>
- <dd>Represents elements in a list whose indices match those found in a custom pattern of numbers, defined by <code>An+B</code>, where:<br>
-  <ul>
-    <li><code>A</code> is an integer step size,</li>
-    <li><code>B</code> is an integer offset,</li>
-    <li><code>n</code> is all nonnegative integers, starting from 0.</li>
- </ul>
- It can be read as the <em>An+B</em>th element of a list.</dd>
-</dl>
+- `<An+B>`
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+  - : Represents elements in a list whose indices match those found in a custom pattern of numbers, defined by `An+B`, where:
+
+    - `A` is an integer step size,
+    - `B` is an integer offset,
+    - `n` is all nonnegative integers, starting from 0.
+
+    It can be read as the *An+B*th element of a list.
+
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Example_selectors">Example selectors</h3>
+### Example selectors
 
-<dl>
- <dt><code>tr:nth-child(odd)</code> or <code>tr:nth-child(2n+1)</code></dt>
- <dd>Represents the odd rows of an HTML table: 1, 3, 5, etc.</dd>
- <dt><code>tr:nth-child(even)</code> or <code>tr:nth-child(2n)</code></dt>
- <dd>Represents the even rows of an HTML table: 2, 4, 6, etc.</dd>
- <dt><code>:nth-child(7)</code></dt>
- <dd>Represents the seventh element.</dd>
- <dt><code>:nth-child(5n)</code></dt>
- <dd>Represents elements <strong>5</strong> [=5×1], <strong>10</strong> [=5×2], <strong>15</strong> [=5×3], <strong>etc.</strong> The first one to be returned as a result of the formula is <strong>0</strong> [=5x0], resulting in a no-match, since the elements are indexed from 1, whereas <code>n</code> starts from 0. This may seem weird at first, but it makes more sense when the <code>B</code> part of the formula is <code>&gt;0</code>, like in the next example.</dd>
- <dt><code>:nth-child(n+7)</code></dt>
- <dd>Represents the seventh and all following elements: <strong>7</strong> [=0+7], <strong>8</strong> [=1+7], <strong>9</strong> [=2+7], <strong>etc.</strong></dd>
- <dt><code>:nth-child(3n+4)</code></dt>
- <dd>Represents elements <strong>4</strong> [=(3×0)+4], <strong>7</strong> [=(3×1)+4], <strong>10</strong> [=(3×2)+4], <strong>13</strong> [=(3×3)+4], <strong>etc.</strong></dd>
- <dt><code>:nth-child(-n+3)</code></dt>
- <dd>Represents the first three elements. [=-0+3, -1+3, -2+3]</dd>
- <dt><code>p:nth-child(n)</code></dt>
- <dd>Represents every <code>&lt;p&gt;</code> element in a group of siblings. This selects the same elements as a simple <code>p</code> selector (although with a higher specificity).</dd>
- <dt><code>p:nth-child(1)</code> or <code>p:nth-child(0n+1)</code></dt>
- <dd>Represents every <code>&lt;p&gt;</code> that is the first element in a group of siblings. This is the same as the {{cssxref(":first-child")}} selector (and has the same specificity).</dd>
- <dt><code>p:nth-child(n+8):nth-child(-n+15)</code></dt>
- <dd>Represents the eighth through the fifteenth <code>&lt;p&gt;</code> elements of a group of siblings.</dd>
-</dl>
+- `tr:nth-child(odd)` or `tr:nth-child(2n+1)`
+  - : Represents the odd rows of an HTML table: 1, 3, 5, etc.
+- `tr:nth-child(even)` or `tr:nth-child(2n)`
+  - : Represents the even rows of an HTML table: 2, 4, 6, etc.
+- `:nth-child(7)`
+  - : Represents the seventh element.
+- `:nth-child(5n)`
+  - : Represents elements **5** \[=5×1], **10** \[=5×2], **15** \[=5×3], **etc.** The first one to be returned as a result of the formula is **0** \[=5x0], resulting in a no-match, since the elements are indexed from 1, whereas `n` starts from 0. This may seem weird at first, but it makes more sense when the `B` part of the formula is `>0`, like in the next example.
+- `:nth-child(n+7)`
+  - : Represents the seventh and all following elements: **7** \[=0+7], **8** \[=1+7], **9** \[=2+7], **etc.**
+- `:nth-child(3n+4)`
+  - : Represents elements **4** \[=(3×0)+4], **7** \[=(3×1)+4], **10** \[=(3×2)+4], **13** \[=(3×3)+4], **etc.**
+- `:nth-child(-n+3)`
+  - : Represents the first three elements. \[=-0+3, -1+3, -2+3]
+- `p:nth-child(n)`
+  - : Represents every `<p>` element in a group of siblings. This selects the same elements as a simple `p` selector (although with a higher specificity).
+- `p:nth-child(1)` or `p:nth-child(0n+1)`
+  - : Represents every `<p>` that is the first element in a group of siblings. This is the same as the {{cssxref(":first-child")}} selector (and has the same specificity).
+- `p:nth-child(n+8):nth-child(-n+15)`
+  - : Represents the eighth through the fifteenth `<p>` elements of a group of siblings.
 
-<h3 id="Detailed_example">Detailed example</h3>
+### Detailed example
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush:html">&lt;h3&gt;&lt;code&gt;span:nth-child(2n+1)&lt;/code&gt;, WITHOUT an
-   &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt; among the child elements.&lt;/h3&gt;
-&lt;p&gt;Children 1, 3, 5, and 7 are selected.&lt;/p&gt;
-&lt;div class="first"&gt;
-  &lt;span&gt;Span 1!&lt;/span&gt;
-  &lt;span&gt;Span 2&lt;/span&gt;
-  &lt;span&gt;Span 3!&lt;/span&gt;
-  &lt;span&gt;Span 4&lt;/span&gt;
-  &lt;span&gt;Span 5!&lt;/span&gt;
-  &lt;span&gt;Span 6&lt;/span&gt;
-  &lt;span&gt;Span 7!&lt;/span&gt;
-&lt;/div&gt;
+```html
+<h3><code>span:nth-child(2n+1)</code>, WITHOUT an
+   <code>&lt;em&gt;</code> among the child elements.</h3>
+<p>Children 1, 3, 5, and 7 are selected.</p>
+<div class="first">
+  <span>Span 1!</span>
+  <span>Span 2</span>
+  <span>Span 3!</span>
+  <span>Span 4</span>
+  <span>Span 5!</span>
+  <span>Span 6</span>
+  <span>Span 7!</span>
+</div>
 
-&lt;br&gt;
+<br>
 
-&lt;h3&gt;&lt;code&gt;span:nth-child(2n+1)&lt;/code&gt;, WITH an
-   &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt; among the child elements.&lt;/h3&gt;
-&lt;p&gt;Children 1, 5, and 7 are selected.&lt;br&gt;
+<h3><code>span:nth-child(2n+1)</code>, WITH an
+   <code>&lt;em&gt;</code> among the child elements.</h3>
+<p>Children 1, 5, and 7 are selected.<br>
    3 is used in the counting because it is a child, but it isn't
-   selected because it isn't a &lt;code&gt;&amp;lt;span&amp;gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;div class="second"&gt;
-  &lt;span&gt;Span!&lt;/span&gt;
-  &lt;span&gt;Span&lt;/span&gt;
-  &lt;em&gt;This is an `em`.&lt;/em&gt;
-  &lt;span&gt;Span&lt;/span&gt;
-  &lt;span&gt;Span!&lt;/span&gt;
-  &lt;span&gt;Span&lt;/span&gt;
-  &lt;span&gt;Span!&lt;/span&gt;
-  &lt;span&gt;Span&lt;/span&gt;
-&lt;/div&gt;
+   selected because it isn't a <code>&lt;span&gt;</code>.</p>
+<div class="second">
+  <span>Span!</span>
+  <span>Span</span>
+  <em>This is an `em`.</em>
+  <span>Span</span>
+  <span>Span!</span>
+  <span>Span</span>
+  <span>Span!</span>
+  <span>Span</span>
+</div>
 
-&lt;br&gt;
+<br>
 
-&lt;h3&gt;&lt;code&gt;span:nth-of-type(2n+1)&lt;/code&gt;, WITH an
-   &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt; among the child elements.&lt;/h3&gt;
-&lt;p&gt;Children 1, 4, 6, and 8 are selected.&lt;br&gt;
-   3 isn't used in the counting or selected because it is an &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt;,
-   not a &lt;code&gt;&amp;lt;span&amp;gt;&lt;/code&gt;, and &lt;code&gt;nth-of-type&lt;/code&gt; only selects
-   children of that type. The &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt; is completely skipped
-   over and ignored.&lt;/p&gt;
-&lt;div class="third"&gt;
-  &lt;span&gt;Span!&lt;/span&gt;
-  &lt;span&gt;Span&lt;/span&gt;
-  &lt;em&gt;This is an `em`.&lt;/em&gt;
-  &lt;span&gt;Span!&lt;/span&gt;
-  &lt;span&gt;Span&lt;/span&gt;
-  &lt;span&gt;Span!&lt;/span&gt;
-  &lt;span&gt;Span&lt;/span&gt;
-  &lt;span&gt;Span!&lt;/span&gt;
-&lt;/div&gt;
-</pre>
+<h3><code>span:nth-of-type(2n+1)</code>, WITH an
+   <code>&lt;em&gt;</code> among the child elements.</h3>
+<p>Children 1, 4, 6, and 8 are selected.<br>
+   3 isn't used in the counting or selected because it is an <code>&lt;em&gt;</code>,
+   not a <code>&lt;span&gt;</code>, and <code>nth-of-type</code> only selects
+   children of that type. The <code>&lt;em&gt;</code> is completely skipped
+   over and ignored.</p>
+<div class="third">
+  <span>Span!</span>
+  <span>Span</span>
+  <em>This is an `em`.</em>
+  <span>Span!</span>
+  <span>Span</span>
+  <span>Span!</span>
+  <span>Span</span>
+  <span>Span!</span>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">html {
+```css
+html {
   font-family: sans-serif;
 }
 
@@ -157,22 +155,21 @@ div em {
 .second span:nth-child(2n+1),
 .third span:nth-of-type(2n+1) {
   background-color: lime;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Detailed_example', 550, 550)}}</p>
+{{EmbedLiveSample('Detailed_example', 550, 550)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{ Cssxref(":nth-of-type") }}, {{ Cssxref(":nth-last-child") }}</li>
-</ul>
+- {{ Cssxref(":nth-of-type") }}, {{ Cssxref(":nth-last-child") }}

@@ -1,6 +1,6 @@
 ---
 title: ':playing'
-slug: 'Web/CSS/:playing'
+slug: Web/CSS/:playing
 tags:
   - CSS
   - Pseudo-class
@@ -8,39 +8,40 @@ tags:
   - playing
 browser-compat: css.selectors.playing
 ---
-<p>{{CSSRef}}{{SeeCompatTable}}</p>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>The <strong><code>:playing</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> selector is a resource state pseudo-class that will match an audio, video, or similar resource that is capable of being “played” or “paused”, when that element is “playing”. </p>
+The **`:playing`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selector is a resource state pseudo-class that will match an audio, video, or similar resource that is capable of being “played” or “paused”, when that element is “playing”.
 
-<p>A resource is playing even if in buffering state or paused for any reason other than a user interaction to cause it to be paused.</p>
+A resource is playing even if in buffering state or paused for any reason other than a user interaction to cause it to be paused.
 
-<pre class="brush: css">:playing {
+```css
+:playing {
 
-}</pre>
+}
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">:playing {
+```css
+:playing {
   border: 5px solid green;
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref(":paused")}}</li>
-</ul>
+- {{cssxref(":paused")}}

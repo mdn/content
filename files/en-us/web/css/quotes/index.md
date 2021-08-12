@@ -8,23 +8,24 @@ tags:
   - Layout
   - Reference
   - Web
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.quotes
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>quotes</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets how the browser should render quotation marks that are added using the <code>open-quotes</code> or <code>close-quotes</code> values of the CSS <code><a href="/en-US/docs/Web/CSS/content">content</a></code> property.</p>
+The **`quotes`** [CSS](/en-US/docs/Web/CSS) property sets how the browser should render quotation marks that are added using the `open-quotes` or `close-quotes` values of the CSS [`content`](/en-US/docs/Web/CSS/content) property.
 
-<div>{{EmbedInteractiveExample("pages/css/quotes.html")}}</div>
+{{EmbedInteractiveExample("pages/css/quotes.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Keyword value */
+```css
+/* Keyword value */
 quotes: none;
 quotes: auto;
 
-/* &lt;string&gt; values */
-quotes: "«" "»";           /* Set <em>open-quote</em> and <em>close-quote</em> to the French quotation marks */
+/* <string> values */
+quotes: "«" "»";           /* Set open-quote and close-quote to the French quotation marks */
 quotes: "«" "»" "‹" "›";   /* Set two levels of quotation marks */
 
 /* Global values */
@@ -32,39 +33,39 @@ quotes: inherit;
 quotes: initial;
 quotes: revert;
 quotes: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>none</code></dt>
- <dd>The <code>open-quote</code> and <code>close-quote</code> values of the {{cssxref("content")}} property produce no quotation marks.</dd>
- <dt><code>auto</code></dt>
- <dd>Appropriate quote marks will be used for whatever language value is set on the selected elements (i.e. via the {{htmlattrxref("lang")}} attribute).</dd>
- <dt><code>[&lt;string&gt; &lt;string&gt;]+</code></dt>
- <dd>One or more pairs of {{cssxref("&lt;string&gt;")}} values for <code>open-quote</code> and <code>close-quote</code>. The first pair represents the outer level of quotation, the second pair is for the first nested level, next pair for third level and so on.</dd>
-</dl>
+- `none`
+  - : The `open-quote` and `close-quote` values of the {{cssxref("content")}} property produce no quotation marks.
+- `auto`
+  - : Appropriate quote marks will be used for whatever language value is set on the selected elements (i.e. via the {{htmlattrxref("lang")}} attribute).
+- `[<string> <string>]+`
+  - : One or more pairs of {{cssxref("&lt;string&gt;")}} values for `open-quote` and `close-quote`. The first pair represents the outer level of quotation, the second pair is for the first nested level, next pair for third level and so on.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_quote_marks">Basic quote marks</h3>
+### Basic quote marks
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;q&gt;To be or not to be. That's the question!&lt;/q&gt;
-</pre>
+```html
+<q>To be or not to be. That's the question!</q>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">q {
+```css
+q {
   quotes: '"' '"' "'" "'";
 }
 q::before {
@@ -72,56 +73,57 @@ q::before {
 }
 q::after {
   content: close-quote;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Basic_quote_marks', "100%", 60)}}</p>
+{{EmbedLiveSample('Basic_quote_marks', "100%", 60)}}
 
-<h3 id="Auto_quotes">Auto quotes</h3>
+### Auto quotes
 
-<p>For most browsers, the default value of <code>quotes</code> is <code>auto</code> (Firefox 70+), or the browser otherwise had this default behavior (Chromiums, Safari, Edge), so this example works without it being explicitly being set.</p>
+For most browsers, the default value of `quotes` is `auto` (Firefox 70+), or the browser otherwise had this default behavior (Chromiums, Safari, Edge), so this example works without it being explicitly being set.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div lang="fr"&gt;
-  &lt;q&gt;<span class="tlid-translation translation" lang="fr">Ceci est une citation française.</span>&lt;/q&gt;
-&lt;div&gt;
-&lt;hr&gt;
-&lt;div lang="ru"&gt;
-  &lt;q&gt;<span class="tlid-translation translation" lang="ru">Это русская цитата</span>&lt;/q&gt;
-&lt;div&gt;
-&lt;hr&gt;
-&lt;div lang="de"&gt;
-  &lt;q&gt;<span class="tlid-translation translation" lang="de">Dies ist ein deutsches Zitat</span>&lt;/q&gt;
-&lt;div&gt;
-&lt;hr&gt;
-&lt;div lang="en"&gt;
-  &lt;q&gt;This is an English quote.&lt;/q&gt;
-&lt;div&gt;
-</pre>
+```html
+<div lang="fr">
+  <q>Ceci est une citation française.</q>
+<div>
+<hr>
+<div lang="ru">
+  <q>Это русская цитата</q>
+<div>
+<hr>
+<div lang="de">
+  <q>Dies ist ein deutsches Zitat</q>
+<div>
+<hr>
+<div lang="en">
+  <q>This is an English quote.</q>
+<div>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">/*q {
+```css
+/*q {
   quotes: auto;
 }*/
-</pre>
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Auto_quotes', "100%", 200)}}</p>
+{{EmbedLiveSample('Auto_quotes', "100%", 200)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{ Cssxref("content") }}</li>
-</ul>
+- {{ Cssxref("content") }}

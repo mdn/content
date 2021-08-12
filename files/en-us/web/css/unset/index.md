@@ -12,30 +12,32 @@ tags:
   - unset
 browser-compat: css.types.global_keywords.unset
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>unset</code></strong> CSS keyword resets a property to its inherited value if the property naturally inherits from its parent, and to its <a href="/en-US/docs/Web/CSS/initial_value">initial value</a> if not. In other words, it behaves like the {{cssxref("inherit")}} keyword in the first case, when the property is an <a href="/en-US/docs/Web/CSS/inheritance#Inherited_properties">inherited property</a>, and like the {{cssxref("initial")}} keyword in the second case, when the property is a <a href="/en-US/docs/Web/CSS/inheritance#Non-inherited_properties">non-inherited property</a>.</p>
+The **`unset`** CSS keyword resets a property to its inherited value if the property naturally inherits from its parent, and to its [initial value](/en-US/docs/Web/CSS/initial_value) if not. In other words, it behaves like the {{cssxref("inherit")}} keyword in the first case, when the property is an [inherited property](/en-US/docs/Web/CSS/inheritance#Inherited_properties), and like the {{cssxref("initial")}} keyword in the second case, when the property is a [non-inherited property](/en-US/docs/Web/CSS/inheritance#Non-inherited_properties).
 
-<p><strong><code>unset</code></strong> can be applied to any CSS property, including the CSS shorthand {{cssxref("all")}}.</p>
+**`unset`** can be applied to any CSS property, including the CSS shorthand {{cssxref("all")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Color">Color</h3>
+### Color
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;This text is red.&lt;/p&gt;
-&lt;div class="foo"&gt;
-  &lt;p&gt;This text is also red.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="bar"&gt;
-  &lt;p&gt;This text is green (default inherited value).&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<p>This text is red.</p>
+<div class="foo">
+  <p>This text is also red.</p>
+</div>
+<div class="bar">
+  <p>This text is green (default inherited value).</p>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.foo {
+```css
+.foo {
   color: blue;
 }
 .bar {
@@ -48,28 +50,30 @@ p {
 .bar p {
   color: unset;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Color') }}</p>
+{{ EmbedLiveSample('Color') }}
 
-<h3 id="Border">Border</h3>
+### Border
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;This text has a red border.&lt;/p&gt;
-&lt;div&gt;
-  &lt;p&gt;This text has a red border.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="bar"&gt;
-  &lt;p&gt;This text has a black border (initial default, not inherited).&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<p>This text has a red border.</p>
+<div>
+  <p>This text has a red border.</p>
+</div>
+<div class="bar">
+  <p>This text has a black border (initial default, not inherited).</p>
+</div>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   border: 1px solid green;
 }
 
@@ -80,25 +84,23 @@ p {
 .bar p {
   border-color: unset;
 }
-</pre>
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Border', 'auto', 200) }}</p>
+{{ EmbedLiveSample('Border', 'auto', 200) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Use {{cssxref("initial")}} to set a property to its initial value.</li>
- <li>Use {{cssxref("revert")}} to reset a property to the value established by the user-agent stylesheet (or by user styles, if any exist).</li>
- <li>Use {{cssxref("inherit")}} to make an element's property the same as its parent.</li>
- <li>The {{cssxref("all")}} property lets you reset all properties to their initial, inherited, reverted, or unset state at once.</li>
-</ul>
+- Use {{cssxref("initial")}} to set a property to its initial value.
+- Use {{cssxref("revert")}} to reset a property to the value established by the user-agent stylesheet (or by user styles, if any exist).
+- Use {{cssxref("inherit")}} to make an element's property the same as its parent.
+- The {{cssxref("all")}} property lets you reset all properties to their initial, inherited, reverted, or unset state at once.

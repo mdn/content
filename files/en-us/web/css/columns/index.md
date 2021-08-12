@@ -6,27 +6,26 @@ tags:
   - CSS Multi-column Layout
   - CSS Property
   - Reference
-  - 'recipe:css-shorthand-property'
+  - recipe:css-shorthand-property
 browser-compat: css.properties.columns
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>columns</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> shorthand property sets the number of columns to use when drawing an element's contents, as well as those columns' widths.</p>
+The **`columns`** [CSS](/en-US/docs/Web/CSS) shorthand property sets the number of columns to use when drawing an element's contents, as well as those columns' widths.
 
-<div>{{EmbedInteractiveExample("pages/css/columns.html")}}</div>
+{{EmbedInteractiveExample("pages/css/columns.html")}}
 
-<h2 id="Constituent_properties">Constituent properties</h2>
+## Constituent properties
 
-<p>This property is a shorthand for the following CSS properties:</p>
+This property is a shorthand for the following CSS properties:
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/column-count"><code>column-count</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/column-width"><code>column-width</code></a></li>
-</ul>
+- [`column-count`](/en-US/docs/Web/CSS/column-count)
+- [`column-width`](/en-US/docs/Web/CSS/column-width)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Column width */
+```css
+/* Column width */
 columns: 18em;
 
 /* Column count */
@@ -42,63 +41,63 @@ columns: auto auto;
 columns: inherit;
 columns: initial;
 columns: revert;
-columns: unset;</pre>
+columns: unset;
+```
 
-<p>The <code>columns</code> property may be specified as one or two of the values listed below, in any order.</p>
+The `columns` property may be specified as one or two of the values listed below, in any order.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;'column-width'&gt;</code></dt>
- <dd>The ideal column width, defined as a {{cssxref("&lt;length&gt;")}} or the keyword <code>auto</code>. The actual width may be wider or narrower to fit the available space. See {{cssxref("column-width")}}.</dd>
- <dt><code>&lt;'column-count'&gt;</code></dt>
- <dd>The ideal number of columns into which the element's content should be flowed, defined as an {{cssxref("&lt;integer&gt;")}} or the keyword <code>auto</code>. If neither this value nor the column's width are <code>auto</code>, it merely indicates the maximum allowable number of columns. See {{cssxref("column-count")}}.</dd>
-</dl>
+- `<'column-width'>`
+  - : The ideal column width, defined as a {{cssxref("&lt;length&gt;")}} or the keyword `auto`. The actual width may be wider or narrower to fit the available space. See {{cssxref("column-width")}}.
+- `<'column-count'>`
+  - : The ideal number of columns into which the element's content should be flowed, defined as an {{cssxref("&lt;integer&gt;")}} or the keyword `auto`. If neither this value nor the column's width are `auto`, it merely indicates the maximum allowable number of columns. See {{cssxref("column-count")}}.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_three_equal_columns">Setting three equal columns</h3>
+### Setting three equal columns
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p class="content-box"&gt;
+```html
+<p class="content-box">
   This is a bunch of text split into three columns
   using the CSS `columns` property. The text
   is equally distributed over the columns.
-&lt;/p&gt;
-</pre>
+</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css;">.content-box {
+```css
+.content-box {
   columns: 3 auto;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Setting_three_equal_columns', 'auto', 120)}}</p>
+{{EmbedLiveSample('Setting_three_equal_columns', 'auto', 120)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("widows")}}</li>
- <li>{{cssxref("orphans")}}</li>
- <li><a href="/en-US/docs/Web/CSS/Paged_Media">Paged media</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout">Multiple-column Layout</a> </li>
-</ul>
+- {{cssxref("widows")}}
+- {{cssxref("orphans")}}
+- [Paged media](/en-US/docs/Web/CSS/Paged_Media)
+- [Multiple-column Layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)

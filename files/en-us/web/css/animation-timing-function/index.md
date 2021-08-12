@@ -9,18 +9,18 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.animation-timing-function
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>animation-timing-function</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets how an animation progresses through the duration of each cycle.</p>
+The **`animation-timing-function`** [CSS](/en-US/docs/Web/CSS) property sets how an animation progresses through the duration of each cycle.
 
-<div>{{EmbedInteractiveExample("pages/css/animation-timing-function.html")}}</div>
+{{EmbedInteractiveExample("pages/css/animation-timing-function.html")}}
 
+It is often convenient to use the shorthand property {{cssxref("animation")}} to set all animation properties at once.
 
-<p>It is often convenient to use the shorthand property {{cssxref("animation")}} to set all animation properties at once.</p>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 animation-timing-function: ease;
 animation-timing-function: ease-in;
 animation-timing-function: ease-out;
@@ -49,83 +49,81 @@ animation-timing-function: inherit;
 animation-timing-function: initial;
 animation-timing-function: revert;
 animation-timing-function: unset;
-</pre>
+```
 
-<p>Timing functions may be specified on individual keyframes in a <a href="/en-US/docs/Web/CSS/@keyframes">@keyframes</a> rule. If no <code><strong>animation-timing-function</strong></code> is specified on a keyframe, the corresponding value of <code><strong>animation-timing-function</strong></code> from the element to which the animation is applied is used for that keyframe.</p>
+Timing functions may be specified on individual keyframes in a [@keyframes](/en-US/docs/Web/CSS/@keyframes) rule. If no **`animation-timing-function`** is specified on a keyframe, the corresponding value of **`animation-timing-function`** from the element to which the animation is applied is used for that keyframe.
 
-<p>A keyframe's timing function is applied on a property-by-property basis from the keyframe on which it is specified until the next keyframe specifying that property, or until the end of the animation if there is no subsequent keyframe specifying that property. As a result, an <code><strong>animation-timing-function</strong></code> specified on the <code><strong>100%</strong></code> or <code><strong>to</strong></code> keyframe will never be used.</p>
+A keyframe's timing function is applied on a property-by-property basis from the keyframe on which it is specified until the next keyframe specifying that property, or until the end of the animation if there is no subsequent keyframe specifying that property. As a result, an **`animation-timing-function`** specified on the **`100%`** or **`to`** keyframe will never be used.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{cssxref("&lt;easing-function&gt;")}}</dt>
- <dd>
- <p>The easing function that corresponds to a given animation, as determined by {{cssxref("animation-name")}}.</p>
+- {{cssxref("&lt;easing-function&gt;")}}
 
- <p>The non-step keyword values (ease, linear, ease-in-out, etc.) each represent cubic Bézier curve with fixed four point values, with the cubic-bezier() function value allowing for a non-predefined value. The step timing functions divides the input time into a specified number of intervals that are equal in length. It is defined by a number of steps and a step position.</p>
- </dd>
- <dt><code>ease</code></dt>
- <dd>Equal to <code>cubic-bezier(0.25, 0.1, 0.25, 1.0)</code>, the default value, increases in velocity towards the middle of the animation, slowing back down at the end.</dd>
- <dt><code>linear</code></dt>
- <dd>Equal to <code>cubic-bezier(0.0, 0.0, 1.0, 1.0)</code>, animates at an even speed.</dd>
- <dt><code>ease-in</code></dt>
- <dd>Equal to <code>cubic-bezier(0.42, 0, 1.0, 1.0)</code>, starts off slowly, with the speed of the transition of the animating property increasing until complete.</dd>
- <dt><code>ease-out</code></dt>
- <dd>Equal to <code>cubic-bezier(0, 0, 0.58, 1.0)</code>, starts quickly, slowing down the animation continues. •</dd>
- <dt><code>ease-in-out</code></dt>
- <dd>Equal to <code>cubic-bezier(0.42, 0, 0.58, 1.0)</code>, with the animating properties slowly transitioning, speeding up, and then slowing down again.</dd>
- <dt><code>cubic-bezier(p1, p2, p3, p4)</code></dt>
- <dd>An author defined cubic-bezier curve, where the p1 and p3 values must be in the range of 0 to 1.</dd>
- <dt><code>steps(n, &lt;jumpterm&gt;)</code></dt>
- <dd>Displays an animation iteration along <em>n</em> stops along the transition, displaying each stop for equal lengths of time. For example, if <em>n</em> is 5, there are 5 steps. Whether the animation holds temporarily at 0%, 20%, 40%, 60% and 80%, on the 20%, 40%, 60%, 80% and 100%, or makes 5 stops between the 0% and 100% along the animation, or makes 5 stops including the 0% and 100% marks (on the 0%, 25%, 50%, 75%, and 100%) depends on which of the following jump terms is used:
- <dl>
-  <dt><code>jump-start</code></dt>
-  <dd>Denotes a left-continuous function, so that the first jump happens when the animation begins;</dd>
-  <dt><code>jump-end</code></dt>
-  <dd>Denotes a right-continuous function, so that the last jump happens when the animation ends;</dd>
-  <dt><code>jump-none</code></dt>
-  <dd>There is no jump on either end. Instead, holding at both the 0% mark and the 100% mark, each for 1/n of the duration.</dd>
-  <dt><code>jump-both</code></dt>
-  <dd>Includes pauses at both the 0% and 100% marks, effectively adding a step during the animation iteration.</dd>
-  <dt><code>start</code></dt>
-  <dd>Same as <code>jump-start</code>.</dd>
-  <dt><code>end</code></dt>
-  <dd>Same as <code>jump-end</code>.</dd>
- </dl>
- </dd>
- <dt><code>step-start</code></dt>
- <dd>Equal to <code>steps(1, jump-start)</code></dd>
- <dt><code>step-end</code></dt>
- <dd>Equal to <code>steps(1, jump-end)</code></dd>
-</dl>
+  - : The easing function that corresponds to a given animation, as determined by {{cssxref("animation-name")}}.
 
-<div class="note">
-<p><strong>Note:</strong> When you specify multiple comma-separated values on an <code>animation-*</code> property, they will be assigned to the animations specified in the {{cssxref("animation-name")}} property in different ways depending on how many there are. For more information, see <a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values">Setting multiple animation property values</a>.</p>
-</div>
+    The non-step keyword values (ease, linear, ease-in-out, etc.) each represent cubic Bézier curve with fixed four point values, with the cubic-bezier() function value allowing for a non-predefined value. The step timing functions divides the input time into a specified number of intervals that are equal in length. It is defined by a number of steps and a step position.
 
-<h2 id="Formal_definition">Formal definition</h2>
+- `ease`
+  - : Equal to `cubic-bezier(0.25, 0.1, 0.25, 1.0)`, the default value, increases in velocity towards the middle of the animation, slowing back down at the end.
+- `linear`
+  - : Equal to `cubic-bezier(0.0, 0.0, 1.0, 1.0)`, animates at an even speed.
+- `ease-in`
+  - : Equal to `cubic-bezier(0.42, 0, 1.0, 1.0)`, starts off slowly, with the speed of the transition of the animating property increasing until complete.
+- `ease-out`
+  - : Equal to `cubic-bezier(0, 0, 0.58, 1.0)`, starts quickly, slowing down the animation continues. •
+- `ease-in-out`
+  - : Equal to `cubic-bezier(0.42, 0, 0.58, 1.0)`, with the animating properties slowly transitioning, speeding up, and then slowing down again.
+- `cubic-bezier(p1, p2, p3, p4)`
+  - : An author defined cubic-bezier curve, where the p1 and p3 values must be in the range of 0 to 1.
+- `steps(n, <jumpterm>)`
 
-<p>{{cssinfo}}</p>
+  - : Displays an animation iteration along _n_ stops along the transition, displaying each stop for equal lengths of time. For example, if _n_ is 5, there are 5 steps. Whether the animation holds temporarily at 0%, 20%, 40%, 60% and 80%, on the 20%, 40%, 60%, 80% and 100%, or makes 5 stops between the 0% and 100% along the animation, or makes 5 stops including the 0% and 100% marks (on the 0%, 25%, 50%, 75%, and 100%) depends on which of the following jump terms is used:
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+    - `jump-start`
+      - : Denotes a left-continuous function, so that the first jump happens when the animation begins;
+    - `jump-end`
+      - : Denotes a right-continuous function, so that the last jump happens when the animation ends;
+    - `jump-none`
+      - : There is no jump on either end. Instead, holding at both the 0% mark and the 100% mark, each for 1/n of the duration.
+    - `jump-both`
+      - : Includes pauses at both the 0% and 100% marks, effectively adding a step during the animation iteration.
+    - `start`
+      - : Same as `jump-start`.
+    - `end`
+      - : Same as `jump-end`.
+
+- `step-start`
+  - : Equal to `steps(1, jump-start)`
+- `step-end`
+  - : Equal to `steps(1, jump-end)`
+
+> **Note:** When you specify multiple comma-separated values on an `animation-*` property, they will be assigned to the animations specified in the {{cssxref("animation-name")}} property in different ways depending on how many there are. For more information, see [Setting multiple animation property values](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values).
+
+## Formal definition
+
+{{cssinfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<div>
-<h3 id="Cubic-Bezier_examples">Cubic-Bezier examples</h3>
+### Cubic-Bezier examples
 
-<pre class="brush:html hidden">&lt;div class="parent"&gt;
-  &lt;div class="ease"&gt;ease&lt;/div&gt;
-  &lt;div class="easein"&gt;ease-in&lt;/div&gt;
-  &lt;div class="easeout"&gt;ease-out&lt;/div&gt;
-  &lt;div class="easeinout"&gt;ease-in-out&lt;/div&gt;
-  &lt;div class="linear"&gt;linear&lt;/div&gt;
-  &lt;div class="cb"&gt;cubic-bezier(0.2,-2,0.8,2)&lt;/div&gt;
-&lt;/div&gt;</pre>
+```html hidden
+<div class="parent">
+  <div class="ease">ease</div>
+  <div class="easein">ease-in</div>
+  <div class="easeout">ease-out</div>
+  <div class="easeinout">ease-in-out</div>
+  <div class="linear">linear</div>
+  <div class="cb">cubic-bezier(0.2,-2,0.8,2)</div>
+</div>
+```
 
-<pre class="brush:css hidden">.parent &gt; div[class] {
+```css hidden
+.parent > div[class] {
     animation-name: changeme;
     animation-duration: 10s;
     animation-iteration-count: infinite;
@@ -147,9 +145,10 @@ animation-timing-function: unset;
       border: 1px solid orange;
    }
 }
-</pre>
+```
 
-<pre class="brush: css">.ease {
+```css
+.ease {
    animation-timing-function: ease;
 }
 .easein {
@@ -166,26 +165,28 @@ animation-timing-function: unset;
 }
 .cb {
    animation-timing-function: cubic-bezier(0.2,-2,0.8,2);
-}</pre>
+}
+```
 
-<div>{{EmbedLiveSample("Cubic-Bezier_examples", 600, 200)}}</div>
+{{EmbedLiveSample("Cubic-Bezier_examples", 600, 200)}}
+
+### Step examples
+
+```html hidden
+<div class="parent">
+  <div class="jump-start">jump-start</div>
+  <div class="jump-end">jump-end</div>
+  <div class="jump-both">jump-both</div>
+  <div class="jump-none">jump-none</div>
+  <div class="start">start</div>
+  <div class="end">end</div>
+  <div class="step-start">step-start</div>
+  <div class="step-end">step-end</div>
 </div>
+```
 
-<div>
-<h3 id="Step_examples">Step examples</h3>
-
-<pre class="brush:html hidden">&lt;div class="parent"&gt;
-  &lt;div class="jump-start"&gt;jump-start&lt;/div&gt;
-  &lt;div class="jump-end"&gt;jump-end&lt;/div&gt;
-  &lt;div class="jump-both"&gt;jump-both&lt;/div&gt;
-  &lt;div class="jump-none"&gt;jump-none&lt;/div&gt;
-  &lt;div class="start"&gt;start&lt;/div&gt;
-  &lt;div class="end"&gt;end&lt;/div&gt;
-  &lt;div class="step-start"&gt;step-start&lt;/div&gt;
-  &lt;div class="step-end"&gt;step-end&lt;/div&gt;
-&lt;/div&gt;</pre>
-
-<pre class="brush:css hidden">.parent &gt; div[class] {
+```css hidden
+.parent > div[class] {
     animation-name: changeme;
     animation-duration: 10s;
     animation-iteration-count: infinite;
@@ -207,9 +208,10 @@ animation-timing-function: unset;
       border: 1px solid orange;
    }
 }
-</pre>
+```
 
-<pre class="brush: css">.jump-start {
+```css
+.jump-start {
    animation-timing-function: steps(5, jump-start);
 }
 .jump-end {
@@ -232,24 +234,22 @@ animation-timing-function: unset;
 }
 .step-end {
    animation-timing-function: step-end;
-}</pre>
+}
+```
 
-<div>{{EmbedLiveSample("Step_examples", 600, 200)}}</div>
-</div>
+{{EmbedLiveSample("Step_examples", 600, 200)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations" title="CSS developer guide about CSS animations">Using CSS animations</a></li>
- <li>{{cssxref('easing-function')}}</li>
- <li>JavaScript {{domxref("AnimationEvent")}} API</li>
- <li><a href="https://cubic-bezier.com">cubic-bezier.com</a></li>
-</ul>
+- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations "CSS developer guide about CSS animations")
+- {{cssxref('easing-function')}}
+- JavaScript {{domxref("AnimationEvent")}} API
+- [cubic-bezier.com](https://cubic-bezier.com)

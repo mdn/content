@@ -7,14 +7,15 @@ tags:
   - CSS Property
   - Experimental
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.mask-clip
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>mask-clip</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property determines the area which is affected by a mask. The painted content of an element must be restricted to this area.</p>
+The **`mask-clip`** [CSS](/en-US/docs/Web/CSS) property determines the area which is affected by a mask. The painted content of an element must be restricted to this area.
 
-<pre class="brush:css no-line-numbers">/* &lt;geometry-box&gt; values */
+```css
+/* <geometry-box> values */
 mask-clip: content-box;
 mask-clip: padding-box;
 mask-clip: border-box;
@@ -41,67 +42,63 @@ mask-clip: inherit;
 mask-clip: initial;
 mask-clip: revert;
 mask-clip: unset;
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>One or more of the keyword values listed below, separated by commas.</p>
+One or more of the keyword values listed below, separated by commas.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-	<dt><code>content-box</code></dt>
-	<dd>The painted content is clipped to the content box.</dd>
-	<dt><code>padding-box</code></dt>
-	<dd>The painted content is clipped to the padding box.</dd>
-	<dt><code>border-box</code></dt>
-	<dd>The painted content is clipped to the border box.</dd>
-	<dt><code>margin-box</code></dt>
-	<dd>The painted content is clipped to the margin box.</dd>
-	<dt><code>fill-box</code></dt>
-	<dd>The painted content is clipped to the object bounding box.</dd>
-	<dt><code>stroke-box</code></dt>
-	<dd>The painted content is clipped to the stroke bounding box.</dd>
-	<dt><code>view-box</code></dt>
-	<dd>Uses the nearest SVG viewport as reference box. If a <code><a href="/en-US/docs/Web/SVG/Attribute/viewBox">viewBox</a></code> attribute is specified for the element creating the SVG viewport, the reference box is positioned at the origin of the coordinate system established by the <code>viewBox</code> attribute and the dimension of the reference box is set to the width and height values of the <code>viewBox</code> attribute.</dd>
-	<dt><code>no-clip</code></dt>
-	<dd>The painted content is not clipped.</dd>
-	<dt><code>border</code>{{non-standard_inline}}</dt>
-	<dd>This keyword behaves the same as <code>border-box</code>.</dd>
-	<dt><code>padding</code>{{non-standard_inline}}</dt>
-	<dd>This keyword behaves the same as <code>padding-box</code>.</dd>
-	<dt><code>content</code>{{non-standard_inline}}</dt>
-	<dd>This keyword behaves the same as <code>content-box</code>.</dd>
-	<dt><code>text</code>{{non-standard_inline}}</dt>
-	<dd>This keyword clips the mask image to the text of the element.</dd>
-</dl>
+- `content-box`
+  - : The painted content is clipped to the content box.
+- `padding-box`
+  - : The painted content is clipped to the padding box.
+- `border-box`
+  - : The painted content is clipped to the border box.
+- `margin-box`
+  - : The painted content is clipped to the margin box.
+- `fill-box`
+  - : The painted content is clipped to the object bounding box.
+- `stroke-box`
+  - : The painted content is clipped to the stroke bounding box.
+- `view-box`
+  - : Uses the nearest SVG viewport as reference box. If a [`viewBox`](/en-US/docs/Web/SVG/Attribute/viewBox) attribute is specified for the element creating the SVG viewport, the reference box is positioned at the origin of the coordinate system established by the `viewBox` attribute and the dimension of the reference box is set to the width and height values of the `viewBox` attribute.
+- `no-clip`
+  - : The painted content is not clipped.
+- `border`{{non-standard_inline}}
+  - : This keyword behaves the same as `border-box`.
+- `padding`{{non-standard_inline}}
+  - : This keyword behaves the same as `padding-box`.
+- `content`{{non-standard_inline}}
+  - : This keyword behaves the same as `content-box`.
+- `text`{{non-standard_inline}}
+  - : This keyword clips the mask image to the text of the element.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Clipping_a_mask_to_the_border_box">Clipping a mask to the border box</h3>
+### Clipping a mask to the border box
 
-<p>Change the <code>mask-clip</code> value to any of the allowed values detailed above. If viewing the example in a Chromium-based browser change the value of <code>-webkit-mask-clip</code>.</p>
+Change the `mask-clip` value to any of the allowed values detailed above. If viewing the example in a Chromium-based browser change the value of `-webkit-mask-clip`.
 
-<p>{{EmbedGHLiveSample("css-examples/masking/mask-clip.html", '100%', 800)}}</p>
+{{EmbedGHLiveSample("css-examples/masking/mask-clip.html", '100%', 800)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://css-tricks.com/clipping-masking-css/">Clipping and Masking in CSS</a></li>
-</ul>
+- [Clipping and Masking in CSS](https://css-tricks.com/clipping-masking-css/)

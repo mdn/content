@@ -10,52 +10,47 @@ tags:
   - media feature
 browser-compat: css.at-rules.media.prefers-reduced-motion
 ---
-<p>The <strong><code>prefers-reduced-motion</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features">media feature</a> is used to detect if the user has requested that the system minimize the amount of non-essential motion it uses.</p>
+The **`prefers-reduced-motion`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) is used to detect if the user has requested that the system minimize the amount of non-essential motion it uses.
 
-<div class="notecard warning">
- <p><strong>Warning:</strong> An embedded example at the bottom of this page has a scaling movement that may be problematic for some readers. Readers with vestibular motion disorders may wish to enable the reduce motion feature on their device before viewing the animation.</p>
-</div>
+> **Warning:** An embedded example at the bottom of this page has a scaling movement that may be problematic for some readers. Readers with vestibular motion disorders may wish to enable the reduce motion feature on their device before viewing the animation.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<dl>
-	<dt><code><dfn>no-preference</dfn></code></dt>
-	<dd>Indicates that the user has made no preference known to the system.</dd>
-	<dt><code><dfn>reduce</dfn></code></dt>
-	<dd>Indicates that user has notified the system that they prefer an interface that removes or replaces the types of motion-based animation that trigger discomfort for those with vestibular motion disorders.</dd>
-</dl>
+- `no-preference`
+  - : Indicates that the user has made no preference known to the system.
+- `reduce`
+  - : Indicates that user has notified the system that they prefer an interface that removes or replaces the types of motion-based animation that trigger discomfort for those with vestibular motion disorders.
 
-<h2 id="User_preferences">User preferences</h2>
+## User preferences
 
-<p>For Firefox, the <code><dfn>reduce</dfn></code> request is honoured if:</p>
+For Firefox, the `reduce` request is honoured if:
 
-<ul>
-	<li>In GTK/GNOME: GNOME Tweaks &gt; General tab (or Appearance, depending on version) &gt; Animations is turned off.
-	<ul>
-		<li>Alternatively, add <code>gtk-enable-animations = false</code> to the <code>[Settings]</code> block of <a href="https://wiki.archlinux.org/index.php/GTK#Configuration">the GTK 3 configuration file</a>.</li>
-	</ul>
-	</li>
-	<li>In Plasma/KDE: System Settings &gt; Workspace Behavior -&gt; General Behavior &gt; “Animation speed” is set all the way to right to “Instant”.</li>
-	<li>In Windows 10: Settings &gt; Ease of Access &gt; Display &gt; Show animations in Windows.</li>
-	<li>In Windows 7: Control Panel &gt; Ease of Access &gt; Make the computer easier to see &gt; Turn off all unnecessary animations (when possible).</li>
-	<li>In macOS: System Preferences &gt; Accessibility &gt; Display &gt; Reduce motion.</li>
-	<li>In iOS: Settings &gt; General &gt; Accessibility &gt; Reduce Motion.</li>
-	<li>In Android 9+: Settings &gt; Accessibility &gt; Remove animations.</li>
-	<li>In Firefox <code>about:config</code>: Add a number preference called <code>ui.prefersReducedMotion</code> and set its value to either <code>0</code> for full animation or to <code>1</code> to indicate a preference for reduced motion. Changes to this preference take effect immediately.</li>
-</ul>
+- In GTK/GNOME: GNOME Tweaks > General tab (or Appearance, depending on version) > Animations is turned off.
 
-<h2 id="Examples">Examples</h2>
+  - Alternatively, add `gtk-enable-animations = false` to the `[Settings]` block of [the GTK 3 configuration file](https://wiki.archlinux.org/index.php/GTK#Configuration).
 
-<p>This example has a scaling animation by default. If Reduce Motion is enabled in your accessibility preferences, the animation is toned down to a simple dissolve without vestibular motion triggers.</p>
+- In Plasma/KDE: System Settings > Workspace Behavior -> General Behavior > “Animation speed” is set all the way to right to “Instant”.
+- In Windows 10: Settings > Ease of Access > Display > Show animations in Windows.
+- In Windows 7: Control Panel > Ease of Access > Make the computer easier to see > Turn off all unnecessary animations (when possible).
+- In macOS: System Preferences > Accessibility > Display > Reduce motion.
+- In iOS: Settings > General > Accessibility > Reduce Motion.
+- In Android 9+: Settings > Accessibility > Remove animations.
+- In Firefox `about:config`: Add a number preference called `ui.prefersReducedMotion` and set its value to either `0` for full animation or to `1` to indicate a preference for reduced motion. Changes to this preference take effect immediately.
 
-<h3 id="HTML">HTML</h3>
+## Examples
 
-<pre class="brush: html">&lt;div class="animation"&gt;animated box&lt;/div&gt;
-</pre>
+This example has a scaling animation by default. If Reduce Motion is enabled in your accessibility preferences, the animation is toned down to a simple dissolve without vestibular motion triggers.
 
-<h3 id="CSS">CSS</h3>
+### HTML
 
-<pre class="brush: css">.animation {
+```html
+<div class="animation">animated box</div>
+```
+
+### CSS
+
+```css
+.animation {
   animation: pulse 1s linear infinite both;
 }
 
@@ -65,9 +60,10 @@ browser-compat: css.at-rules.media.prefers-reduced-motion
     animation-name: dissolve;
   }
 }
-</pre>
+```
 
-<pre class="brush: css hidden">.animation {
+```css hidden
+.animation {
   background-color: #306;
   color: #fff;
   font: 1.2em sans-serif;
@@ -90,25 +86,23 @@ browser-compat: css.at-rules.media.prefers-reduced-motion
   50% { opacity: 0.8; }
   100% { opacity: 1; }
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="https://css-tricks.com/introduction-reduced-motion-media-query/">An Introduction to the Reduced Motion Media Query (CSS Tricks)</a></li>
-	<li><a href="https://webkit.org/blog/7551/responsive-design-for-motion/">Responsive Design for Motion (WebKit Blog)</a> includes vestibular motion trigger examples.</li>
-</ul>
+- [An Introduction to the Reduced Motion Media Query (CSS Tricks)](https://css-tricks.com/introduction-reduced-motion-media-query/)
+- [Responsive Design for Motion (WebKit Blog)](https://webkit.org/blog/7551/responsive-design-for-motion/) includes vestibular motion trigger examples.
 
-<div>{{QuickLinksWithSubpages("/en-US/docs/Web/CSS/@media/")}}</div>
+{{QuickLinksWithSubpages("/en-US/docs/Web/CSS/@media/")}}

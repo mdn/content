@@ -1,6 +1,6 @@
 ---
 title: '::-webkit-slider-thumb'
-slug: 'Web/CSS/::-webkit-slider-thumb'
+slug: Web/CSS/::-webkit-slider-thumb
 tags:
   - CSS
   - NeedsBrowserCompatibility
@@ -13,33 +13,32 @@ tags:
   - Selector
 browser-compat: css.selectors.-webkit-slider-thumb
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>The <strong><code>::-webkit-slider-thumb</code></strong> CSS <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> represents the "thumb" that the user can move within the "groove" of an {{HTMLElement("input")}} of <code>type="range"</code> to alter its numerical value.</p>
+The **`::-webkit-slider-thumb`** CSS [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the "thumb" that the user can move within the "groove" of an {{HTMLElement("input")}} of `type="range"` to alter its numerical value.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">::-webkit-slider-thumb</pre>
+```css
+::-webkit-slider-thumb
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("::-webkit-slider-runnable-track")}}</li>
- <li>Similar pseudo-elements used by other browsers:
-  <ul>
-   <li>{{cssxref("::-moz-range-thumb")}}</li>
-   <li>{{cssxref("::-ms-thumb")}}</li>
-  </ul>
- </li>
- <li><a href="https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/">CSS-Tricks: Styling Cross-Browser Compatible Range Inputs with CSS</a></li>
- <li><a href="http://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html">QuirksMode: Styling and scripting sliders</a></li>
- <li><a href="https://brennaobrien.com/blog/2014/05/style-input-type-range-in-every-browser.html">Couple of Gotchas to Watch-out For</a></li>
-</ul>
+- {{cssxref("::-webkit-slider-runnable-track")}}
+- Similar pseudo-elements used by other browsers:
+
+  - {{cssxref("::-moz-range-thumb")}}
+  - {{cssxref("::-ms-thumb")}}
+
+- [CSS-Tricks: Styling Cross-Browser Compatible Range Inputs with CSS](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
+- [QuirksMode: Styling and scripting sliders](http://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)
+- [Couple of Gotchas to Watch-out For](https://brennaobrien.com/blog/2014/05/style-input-type-range-in-every-browser.html)

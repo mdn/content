@@ -9,37 +9,35 @@ tags:
   - Web
 browser-compat: css.types.integer
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>&lt;integer&gt;</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Types">data type</a> is a special type of {{cssxref("number")}} that represents a whole number, whether positive or negative. Integers can be used in numerous CSS properties, such as {{cssxref("column-count")}}, {{cssxref("counter-increment")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row")}}, and {{cssxref("z-index")}}.</p>
+The **`<integer>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) is a special type of {{cssxref("number")}} that represents a whole number, whether positive or negative. Integers can be used in numerous CSS properties, such as {{cssxref("column-count")}}, {{cssxref("counter-increment")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row")}}, and {{cssxref("z-index")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>&lt;integer&gt;</code> data type consists of one or several decimal digits, 0 through 9 inclusive, optionally preceded by a single <code>+</code> or <code>-</code> sign. There is no unit associated with integers.</p>
+The `<integer>` data type consists of one or several decimal digits, 0 through 9 inclusive, optionally preceded by a single `+` or `-` sign. There is no unit associated with integers.
 
-<div class="note">
-  <p><strong>Note:</strong> There is no official range of valid <code>&lt;integer&gt;</code> values. Opera 12.1 supports values up to 2^15 - 1, IE up to 2^20 - 1, and other browsers even higher. During the CSS3 Values cycle there was a lot of discussion about setting a minimum range to support: the latest decision, <a href="http://lists.w3.org/Archives/Public/www-style/2012Apr/0633.html">in April 2012 during the LC phase</a>, was [-2^27 - 1; 2^27 - 1], but other values like 2^24 - 1 and 2^30 - 1 <a href="http://lists.w3.org/Archives/Public/www-style/2012Apr/0530.html">were also proposed</a>. However, the latest spec doesn't specify a range anymore.</p>
-</div>
+> **Note:** There is no official range of valid `<integer>` values. Opera 12.1 supports values up to 2^15 - 1, IE up to 2^20 - 1, and other browsers even higher. During the CSS3 Values cycle there was a lot of discussion about setting a minimum range to support: the latest decision, [in April 2012 during the LC phase](http://lists.w3.org/Archives/Public/www-style/2012Apr/0633.html), was \[-2^27 - 1; 2^27 - 1], but other values like 2^24 - 1 and 2^30 - 1 [were also proposed](http://lists.w3.org/Archives/Public/www-style/2012Apr/0530.html). However, the latest spec doesn't specify a range anymore.
 
-<h2 id="Interpolation">Interpolation</h2>
+## Interpolation
 
-<p>When animated, values of the <code>&lt;integer&gt;</code> data type are interpolated using discrete, whole steps. The calculation is done as if they were real, floating-point numbers; the discrete value is obtained using the <a href="https://en.wikipedia.org/wiki/Floor_function">floor function</a>. The speed of the interpolation is determined by the <a href="/en-US/docs/Web/CSS/timing-function">timing function</a> associated with the animation.</p>
+When animated, values of the `<integer>` data type are interpolated using discrete, whole steps. The calculation is done as if they were real, floating-point numbers; the discrete value is obtained using the [floor function](https://en.wikipedia.org/wiki/Floor_function). The speed of the interpolation is determined by the [timing function](/en-US/docs/Web/CSS/timing-function) associated with the animation.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Valid_integers">Valid integers</h3>
+### Valid integers
 
-<pre>12          Positive integer (without a leading + sign)
-+123        Positive integer (with a leading + sign)
--456        Negative integer
-0           Zero
-+0          Zero, with a leading +
--0          Zero, with a leading -
-</pre>
+    12          Positive integer (without a leading + sign)
+    +123        Positive integer (with a leading + sign)
+    -456        Negative integer
+    0           Zero
+    +0          Zero, with a leading +
+    -0          Zero, with a leading -
 
-<h3 id="Invalid_integers">Invalid integers</h3>
+### Invalid integers
 
-<pre class="example-bad">12.0        This is a &lt;number&gt;, not an &lt;integer&gt;, though it represents an integer.
+```plain example-bad
+12.0        This is a <number>, not an <integer>, though it represents an integer.
 12.         Decimal points are not allowed.
 +---12      Only one leading +/- is allowed.
 ten         Letters are not allowed.
@@ -47,18 +45,16 @@ _5          Special characters are not allowed.
 \35         Escaped Unicode characters are not allowed, even if they are an integer (here: 5).
 \4E94       Non-arabic numerals are not allowed, even when escaped (here: the Japanese 5, 五).
 3e4         Scientific notation is not allowed.
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("&lt;number&gt;")}}</li>
-</ul>
+- {{cssxref("&lt;number&gt;")}}

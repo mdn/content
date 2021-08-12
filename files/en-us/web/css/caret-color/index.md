@@ -14,25 +14,26 @@ tags:
   - caret
   - caret-color
   - contenteditable
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.caret-color
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>caret-color</code></strong> CSS property sets the color of the <strong>insertion caret</strong>, the visible marker where the next character typed will be inserted. This is sometimes referred to as the <strong>text input cursor</strong>. The caret appears in elements such as {{HTMLElement("input")}} or those with the {{htmlattrxref("contenteditable")}} attribute. The caret is typically a thin vertical line that flashes to help make it more noticeable. By default, it is black, but its color can be altered with this property.</p>
+The **`caret-color`** CSS property sets the color of the **insertion caret**, the visible marker where the next character typed will be inserted. This is sometimes referred to as the **text input cursor**. The caret appears in elements such as {{HTMLElement("input")}} or those with the {{htmlattrxref("contenteditable")}} attribute. The caret is typically a thin vertical line that flashes to help make it more noticeable. By default, it is black, but its color can be altered with this property.
 
-<div>{{EmbedInteractiveExample("pages/css/caret-color.html")}}</div>
+{{EmbedInteractiveExample("pages/css/caret-color.html")}}
 
-<p>Note that the insertion caret is only one type of caret. For example, many browsers have a “navigation caret,” which acts similarly to an insertion caret but can be moved around in non-editable text. On the other hand, the mouse cursor image shown when hovering over text where the {{cssxref("cursor")}} property is <code>auto</code>, or when hovering over an element where the <code>cursor</code> property is <code>text</code> or <code>vertical-text</code>, though it sometimes looks like a caret, is not a caret (it’s a cursor).</p>
+Note that the insertion caret is only one type of caret. For example, many browsers have a “navigation caret,” which acts similarly to an insertion caret but can be moved around in non-editable text. On the other hand, the mouse cursor image shown when hovering over text where the {{cssxref("cursor")}} property is `auto`, or when hovering over an element where the `cursor` property is `text` or `vertical-text`, though it sometimes looks like a caret, is not a caret (it’s a cursor).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 caret-color: auto;
 caret-color: transparent;
 caret-color: currentcolor;
 
-/* &lt;color&gt; values */
+/* <color> values */
 caret-color: red;
 caret-color: #5729e9;
 caret-color: rgb(0, 200, 0);
@@ -42,43 +43,45 @@ caret-color: hsla(228, 4%, 24%, 0.8);
 caret-color: inherit;
 caret-color: initial;
 caret-color: revert;
-caret-color: unset;</pre>
+caret-color: unset;
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>The user agent selects an appropriate color for the caret. This is generally {{cssxref("&lt;color&gt;","currentcolor","#currentcolor_keyword")}}, but the user agent may choose a different color to ensure good visibility and contrast with the surrounding content, taking into account the value of <code>currentcolor</code>, the background, shadows, and other factors.
- <div class="note">
- <p><strong>Note:</strong> While user agents may use <code>currentcolor</code> (which is usually animatable) for the <code>auto</code> value, <code>auto</code> is not interpolated in transitions and animations.</p>
- </div>
- </dd>
- <dt>{{cssxref("&lt;color&gt;")}}</dt>
- <dd>The color of the caret.</dd>
-</dl>
+- `auto`
 
-<h2 id="Formal_definition">Formal definition</h2>
+  - : The user agent selects an appropriate color for the caret. This is generally {{cssxref("&lt;color&gt;","currentcolor","#currentcolor_keyword")}}, but the user agent may choose a different color to ensure good visibility and contrast with the surrounding content, taking into account the value of `currentcolor`, the background, shadows, and other factors.
 
-<p>{{cssinfo}}</p>
+    > **Note:** While user agents may use `currentcolor` (which is usually animatable) for the `auto` value, `auto` is not interpolated in transitions and animations.
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+- {{cssxref("&lt;color&gt;")}}
+  - : The color of the caret.
+
+## Formal definition
+
+{{cssinfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_a_custom_caret_color">Setting a custom caret color</h3>
+### Setting a custom caret color
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;input value="This field uses a default caret." size="64"/&gt;
-&lt;input class="custom" value="I have a custom caret color!" size="64"/&gt;
-&lt;p contenteditable class="custom"&gt;This paragraph can be
-   edited, and its caret has a custom color as well!&lt;/p&gt;</pre>
+```html
+<input value="This field uses a default caret." size="64"/>
+<input class="custom" value="I have a custom caret color!" size="64"/>
+<p contenteditable class="custom">This paragraph can be
+   edited, and its caret has a custom color as well!</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">input {
+```css
+input {
   caret-color: auto;
   display: block;
   margin-bottom: .5em;
@@ -90,27 +93,26 @@ input.custom {
 
 p.custom {
   caret-color: green;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Setting_a_custom_caret_color', 500, 200)}}</p>
+{{EmbedLiveSample('Setting_a_custom_caret_color', 500, 200)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The {{HTMLElement("input")}} element</li>
- <li>The HTML {{htmlattrxref("contenteditable")}} attribute, which can be used to make any element's text editable</li>
- <li><a href="/en-US/docs/Web/Guide/HTML/Editable_content">Making content editable</a></li>
- <li><a href="/en-US/docs/Web/HTML/Applying_color">Applying color to HTML elements using CSS</a></li>
- <li>The {{cssxref("&lt;color&gt;")}} data type</li>
- <li>Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}</li>
-</ul>
+- The {{HTMLElement("input")}} element
+- The HTML {{htmlattrxref("contenteditable")}} attribute, which can be used to make any element's text editable
+- [Making content editable](/en-US/docs/Web/Guide/HTML/Editable_content)
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color)
+- The {{cssxref("&lt;color&gt;")}} data type
+- Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}

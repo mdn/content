@@ -1,6 +1,6 @@
 ---
 title: ':host()'
-slug: 'Web/CSS/:host()'
+slug: Web/CSS/:host()
 tags:
   - ':host()'
   - CSS
@@ -11,40 +11,42 @@ tags:
   - Web
 browser-compat: css.selectors.hostfunction
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>:host()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> function selects the shadow host of the <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">shadow DOM</a> containing the CSS it is used inside (so you can select a custom element from inside its shadow DOM) — but only if the selector given as the function's parameter matches the shadow host.</p>
+The **`:host()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) function selects the shadow host of the [shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM) containing the CSS it is used inside (so you can select a custom element from inside its shadow DOM) — but only if the selector given as the function's parameter matches the shadow host.
 
-<p>The most obvious use of this is to put a class name only on certain custom element instances, and then include the relevant class selector as the function argument. You can't use this with a descendant selector expression to select only instances of the custom element that are inside a particular ancestor. That's the job of {{CSSxRef(":host-context()")}}.</p>
+The most obvious use of this is to put a class name only on certain custom element instances, and then include the relevant class selector as the function argument. You can't use this with a descendant selector expression to select only instances of the custom element that are inside a particular ancestor. That's the job of {{CSSxRef(":host-context()")}}.
 
-<div class="note">
-<p><strong>Note:</strong> This has no effect when used outside a shadow DOM.</p>
-</div>
+> **Note:** This has no effect when used outside a shadow DOM.
 
-<pre class="brush: css; no-line-numbers">/* Selects a shadow root host, only if it is
+```css
+/* Selects a shadow root host, only if it is
    matched by the selector argument */
 :host(.special-custom-element) {
   font-weight: bold;
 }
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{CSSSyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Selectively_styling_shadow_hosts">Selectively styling shadow hosts</h3>
+### Selectively styling shadow hosts
 
-<p>The following snippets are taken from our <a href="https://github.com/mdn/web-components-examples/tree/master/host-selectors">host-selectors example</a> (<a href="https://mdn.github.io/web-components-examples/host-selectors/">see it live also</a>).</p>
+The following snippets are taken from our [host-selectors example](https://github.com/mdn/web-components-examples/tree/master/host-selectors) ([see it live also](https://mdn.github.io/web-components-examples/host-selectors/)).
 
-<p>In this example we have a simple custom element — <code>&lt;context-span&gt;</code> — that you can wrap around text:</p>
+In this example we have a simple custom element — `<context-span>` — that you can wrap around text:
 
-<pre class="brush: html;">&lt;h1&gt;Host selectors &lt;a href="#"&gt;&lt;context-span&gt;example&lt;/context-span&gt;&lt;/a&gt;&lt;/h1&gt;</pre>
+```html
+<h1>Host selectors <a href="#"><context-span>example</context-span></a></h1>
+```
 
-<p>Inside the element's constructor, we create <code>style</code> and <code>span</code> elements, fill the <code>span</code> with the content of the custom element, and fill the <code>style</code> element with some CSS rules:</p>
+Inside the element's constructor, we create `style` and `span` elements, fill the `span` with the content of the custom element, and fill the `style` element with some CSS rules:
 
-<pre class="brush: js;">let style = document.createElement('style');
+```js
+let style = document.createElement('style');
 let span = document.createElement('span');
 span.textContent = this.textContent;
 
@@ -57,22 +59,21 @@ style.textContent = 'span:hover { text-decoration: underline; }' +
                     ':host-context(h1):after { content: " - no links in headers!" }' +
                     ':host-context(article, aside) { color: gray; }' +
                     ':host(.footer) { color : red; }' +
-                    ':host { background: rgba(0,0,0,0.1); padding: 2px 5px; }';</pre>
+                    ':host { background: rgba(0,0,0,0.1); padding: 2px 5px; }';
+```
 
-<p>The <code>:host(.footer) { color : red; }</code> rule styles all instances of the <code>&lt;context-span&gt;</code> element (the shadow host in this instance) in the document that have the <code>footer</code> class set on them — we've used it to give instances of the element inside the {{htmlelement("footer")}} a special color.</p>
+The `:host(.footer) { color : red; }` rule styles all instances of the `<context-span>` element (the shadow host in this instance) in the document that have the `footer` class set on them — we've used it to give instances of the element inside the {{htmlelement("footer")}} a special color.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/Web_Components">Web components</a></li>
- <li>{{CSSxRef(":host")}}</li>
- <li>{{CSSxRef(":host-context()")}}</li>
-</ul>
+- [Web components](/en-US/docs/Web/Web_Components)
+- {{CSSxRef(":host")}}
+- {{CSSxRef(":host-context()")}}

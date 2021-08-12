@@ -10,89 +10,81 @@ tags:
   - cookbook
   - recipes
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>If you would like to contribute an example for the Layout Cookbook, then this page explains the steps to take to have your example published.</p>
+If you would like to contribute an example for the Layout Cookbook, then this page explains the steps to take to have your example published.
 
-<h2 id="What_makes_a_good_recipe">What makes a good recipe?</h2>
+## What makes a good recipe?
 
-<p><strong>The simplest possible version of any useful web design pattern</strong>. Each line of CSS that you include should be there to help demonstrate the pattern, so leave out anything there purely to make the example look pretty. The idea is that someone can take the pattern and use it in a site with their own styles.</p>
+**The simplest possible version of any useful web design pattern**. Each line of CSS that you include should be there to help demonstrate the pattern, so leave out anything there purely to make the example look pretty. The idea is that someone can take the pattern and use it in a site with their own styles.
 
-<h2 id="Steps_to_publish_a_recipe">Steps to publish a recipe</h2>
+## Steps to publish a recipe
 
-<p>A recipe consists of:</p>
+A recipe consists of:
 
-<ol>
- <li>A live example, stored in the <a href="https://github.com/mdn/css-examples">CSS Examples GitHub repo</a>.</li>
- <li>A downloadable version of that example, also stored in the CSS Examples repo.</li>
- <li>A page in the <a href="/en-US/docs/Web/CSS/Layout_cookbook">CSS layout cookbook</a> section of the site that details:
-  <ol>
-   <li>Requirements</li>
-   <li>The recipe</li>
-   <li>The choices made</li>
-   <li>Any useful fallbacks or alternative methods</li>
-   <li>Any accessibility concerns</li>
-   <li>Browser compatibility</li>
-   <li>Additional resources</li>
-  </ol>
- </li>
-</ol>
+1.  A live example, stored in the [CSS Examples GitHub repo](https://github.com/mdn/css-examples).
+2.  A downloadable version of that example, also stored in the CSS Examples repo.
+3.  A page in the [CSS layout cookbook](/en-US/docs/Web/CSS/Layout_cookbook) section of the site that details:
 
-<h3 id="1._Build_your_pattern">1. Build your pattern</h3>
+    1.  Requirements
+    2.  The recipe
+    3.  The choices made
+    4.  Any useful fallbacks or alternative methods
+    5.  Any accessibility concerns
+    6.  Browser compatibility
+    7.  Additional resources
 
-<p>Before turning your example into a recipe, start by creating your pattern as a simple HTML page. Think about what you are trying to demonstrate and keep it as simple as possible. Avoid using specific CSS conventions (such as BEM) as not everyone will be familiar with these, and they can make things look more complex than they need to be.</p>
+### 1. Build your pattern
 
-<p>Ensure that the HTML and CSS is valid, and test in more than one browser. If you are using CSS properties that are not supported everywhere, that's fine! You can include browser support information when creating the page. In some cases it might be helpful to create a second version of your example, which includes fallback support.</p>
+Before turning your example into a recipe, start by creating your pattern as a simple HTML page. Think about what you are trying to demonstrate and keep it as simple as possible. Avoid using specific CSS conventions (such as BEM) as not everyone will be familiar with these, and they can make things look more complex than they need to be.
 
-<h3 id="2._Creating_a_live_example">2. Creating a live example</h3>
+Ensure that the HTML and CSS is valid, and test in more than one browser. If you are using CSS properties that are not supported everywhere, that's fine! You can include browser support information when creating the page. In some cases it might be helpful to create a second version of your example, which includes fallback support.
 
-<p>The live examples that you can see on cookbook pages and elsewhere on MDN allow visitors to play with the code and change relevant parts without being overwhelmed with all of the code needed. You recipe will be demonstrated by way of one or more examples.</p>
+### 2. Creating a live example
 
-<p>Fork the <a href="https://github.com/mdn/css-examples">CSS Examples repo</a> and then take a look in the <code>css-cookbook</code> folder. There is a <a href="https://github.com/mdn/css-examples/blob/master/css-cookbook/cookbook-template.html">cookbook-template.html</a> file you can copy as a starting point. Save this in the css-cookbook directory with a name that makes sense for your pattern. The template is commented to help you add the various parts to the right place.</p>
+The live examples that you can see on cookbook pages and elsewhere on MDN allow visitors to play with the code and change relevant parts without being overwhelmed with all of the code needed. You recipe will be demonstrated by way of one or more examples.
 
-<p>The important parts of this are as follows.</p>
+Fork the [CSS Examples repo](https://github.com/mdn/css-examples) and then take a look in the `css-cookbook` folder. There is a [cookbook-template.html](https://github.com/mdn/css-examples/blob/master/css-cookbook/cookbook-template.html) file you can copy as a starting point. Save this in the css-cookbook directory with a name that makes sense for your pattern. The template is commented to help you add the various parts to the right place.
 
-<p>There is a stylesheet for styles for the editor panels, and some basic body styling, and a JavaScript file included for the editor functionality. Leave these files as they are.</p>
+The important parts of this are as follows.
 
-<p>There are two style blocks in the head. The first are for things that a visitor to the page does not need to change to play with the example. The second is for any of the items they might want to play with in the live example. We typically add all of our CSS from like example in the first block, then choose which sets of rules we need to move down to the second block. The rules in the second block should be those that are fundamental to the pattern, perhaps those where a user could make a change to a CSS value and see the pattern update.</p>
+There is a stylesheet for styles for the editor panels, and some basic body styling, and a JavaScript file included for the editor functionality. Leave these files as they are.
 
-<p>You need to add the HTML for your component twice. First inside the section with a class of preview, then inside the textarea <code>playable-html</code>.</p>
+There are two style blocks in the head. The first are for things that a visitor to the page does not need to change to play with the example. The second is for any of the items they might want to play with in the live example. We typically add all of our CSS from like example in the first block, then choose which sets of rules we need to move down to the second block. The rules in the second block should be those that are fundamental to the pattern, perhaps those where a user could make a change to a CSS value and see the pattern update.
 
-<p>Your editable CSS, from the second block in the head, also needs to be copied into the <code>playable-css</code> section.</p>
+You need to add the HTML for your component twice. First inside the section with a class of preview, then inside the textarea `playable-html`.
 
-<p>A simple worked example is <a href="https://github.com/mdn/css-examples/blob/master/css-cookbook/center.html">center.html</a>, which is embedded on the page <a href="/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element">Center an element</a>. You can use this to see how to add the various bits correctly.</p>
+Your editable CSS, from the second block in the head, also needs to be copied into the `playable-css` section.
 
-<p>If you have forked the repo and therefore have our CSS and JavaScript files alongside your example, if you open up your live example in the browser you should see everything working exactly as it will when included in a page.</p>
+A simple worked example is [center.html](https://github.com/mdn/css-examples/blob/master/css-cookbook/center.html), which is embedded on the page [Center an element](/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element). You can use this to see how to add the various bits correctly.
 
-<h4 id="Useful_tips">Useful tips</h4>
+If you have forked the repo and therefore have our CSS and JavaScript files alongside your example, if you open up your live example in the browser you should see everything working exactly as it will when included in a page.
 
-<ol>
- <li>Do not indent the CSS and HTML inside the textareas; instead bump it up against the start of the lines. This will look better when it is rendered.</li>
- <li>If you have any required images, pop them into the directory with the examples. Or you are welcome to use any already there.</li>
- <li>You can adjust the height of the textareas by changing the height in the inline styles.</li>
-</ol>
+#### Useful tips
 
-<h3 id="3._Create_a_downloadable_version">3. Create a downloadable version</h3>
+1.  Do not indent the CSS and HTML inside the textareas; instead bump it up against the start of the lines. This will look better when it is rendered.
+2.  If you have any required images, pop them into the directory with the examples. Or you are welcome to use any already there.
+3.  You can adjust the height of the textareas by changing the height in the inline styles.
 
-<p>As the examples include all of our live example code, we want to offer visitors a simple example without all of that included. Make a copy of your live example with --download appended. For example, center.html, has a download version named <code>center--download.html</code>. This file will be similar to your initial example. It should be a basic version of your pattern as a single HTML page. It can be handy to include the body CSS rules that are in our included stylesheet, if you take a look at <a href="https://github.com/mdn/css-examples/blob/master/css-cookbook/cookbook-template--download.html">cookbook-template--download.html</a>, these are included as a starting point.</p>
+### 3. Create a downloadable version
 
-<h3 id="4._Make_a_Pull_Request_with_your_example">4. Make a Pull Request with your example</h3>
+As the examples include all of our live example code, we want to offer visitors a simple example without all of that included. Make a copy of your live example with --download appended. For example, center.html, has a download version named `center--download.html`. This file will be similar to your initial example. It should be a basic version of your pattern as a single HTML page. It can be handy to include the body CSS rules that are in our included stylesheet, if you take a look at [cookbook-template--download.html](https://github.com/mdn/css-examples/blob/master/css-cookbook/cookbook-template--download.html), these are included as a starting point.
 
-<p>Make a PR on the <a href="https://github.com/mdn/css-examples">CSS Examples repo</a>. This way we can help you with any changes to the example that may be needed before you create your page, plus the example will need to be live to be included some it makes sense to create it first. Include in your PR an explanation of the pattern and what you are demonstrating.</p>
+### 4. Make a Pull Request with your example
 
-<h3 id="5._Create_your_page">5. Create your page</h3>
+Make a PR on the [CSS Examples repo](https://github.com/mdn/css-examples). This way we can help you with any changes to the example that may be needed before you create your page, plus the example will need to be live to be included some it makes sense to create it first. Include in your PR an explanation of the pattern and what you are demonstrating.
 
-<p>Once your example is merged you can create your page. You will need an MDN account to do so with <a href="/en-US/docs/MDN/Contribute/Howto/Create_and_edit_pages#Getting_page_creation_permissions">page creation permissions</a>, and you can then create the page as a subpage of the CSS Cookbook page. <a href="/en-US/docs/Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template">There is a template for Cookbook pages here</a>.</p>
+### 5. Create your page
 
-<p>The template explains what should be part of each section, and you can refer to other cookbook examples for more help. If you click to edit any of those pages then you will be able to see things such as the macros used to embed compat data, and live examples.</p>
+Once your example is merged you can create your page. You will need an MDN account to do so with [page creation permissions](/en-US/docs/MDN/Contribute/Howto/Create_and_edit_pages#Getting_page_creation_permissions), and you can then create the page as a subpage of the CSS Cookbook page. [There is a template for Cookbook pages here](/en-US/docs/Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template).
 
-<p>If you need general guidance on using the MDN wiki, see the help pages available here.</p>
+The template explains what should be part of each section, and you can refer to other cookbook examples for more help. If you click to edit any of those pages then you will be able to see things such as the macros used to embed compat data, and live examples.
 
-<p>If you need to ask any questions, or want someone to take a look at your page then the <a href="https://discourse.mozilla.org/c/mdn">MDN Discourse forum</a> is a good place to do this, or <a href="/en-US/docs/MDN/Community/Conversations#Synchronous_chat">chat with us on Matrix</a>.</p>
+If you need general guidance on using the MDN wiki, see the help pages available here.
 
-<h2 id="See_also">See also</h2>
+If you need to ask any questions, or want someone to take a look at your page then the [MDN Discourse forum](https://discourse.mozilla.org/c/mdn) is a good place to do this, or [chat with us on Matrix](/en-US/docs/MDN/Community/Conversations#Synchronous_chat).
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template">Cookbook page template</a></li>
- <li><a href="https://github.com/mdn/css-examples">CSS Examples repo</a></li>
-</ul>
+## See also
+
+- [Cookbook page template](/en-US/docs/Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template)
+- [CSS Examples repo](https://github.com/mdn/css-examples)

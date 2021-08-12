@@ -11,56 +11,60 @@ tags:
   - Web
 browser-compat: css.types.image.paint
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>The <strong><code>paint()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> defines an {{cssxref("&lt;image&gt;")}} value generated with a PaintWorklet.</p>
+The **`paint()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines an {{cssxref("&lt;image&gt;")}} value generated with a PaintWorklet.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">paint(<var>workletName</var>, <var>parameters</var>)</pre>
+```css
+paint(workletName, parameters)
+```
 
-<p>where:</p>
+where:
 
-<dl>
- <dt><var>workletName</var></dt>
- <dd>The name of the registered worklet.</dd>
- <dt><var>parameters</var></dt>
- <dd>Optional additional parameters to pass to the paintWorklet</dd>
-</dl>
+- _workletName_
+  - : The name of the registered worklet.
+- _parameters_
+  - : Optional additional parameters to pass to the paintWorklet
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_usage_example">Basic usage example</h3>
+### Basic usage example
 
-<p>You can pass additional arguments via the CSS paint() function. In this example, we passed two arguments: whether the background-image on a group of list items is filled or just has a stroke outline, and the width of that outline:</p>
+You can pass additional arguments via the CSS paint() function. In this example, we passed two arguments: whether the background-image on a group of list items is filled or just has a stroke outline, and the width of that outline:
 
-<pre class="brush: html hidden">&lt;ul&gt;
-    &lt;li&gt;item 1&lt;/li&gt;
-    &lt;li&gt;item 2&lt;/li&gt;
-    &lt;li&gt;item 3&lt;/li&gt;
-    &lt;li&gt;item 4&lt;/li&gt;
-    &lt;li&gt;item 5&lt;/li&gt;
-    &lt;li&gt;item 6&lt;/li&gt;
-    &lt;li&gt;item 7&lt;/li&gt;
-    &lt;li&gt;item 8&lt;/li&gt;
-    &lt;li&gt;item 9&lt;/li&gt;
-    &lt;li&gt;item 10&lt;/li&gt;
-    &lt;li&gt;item 11&lt;/li&gt;
-    &lt;li&gt;item 12&lt;/li&gt;
-    &lt;li&gt;item 13&lt;/li&gt;
-    &lt;li&gt;item 14&lt;/li&gt;
-    &lt;li&gt;item 15&lt;/li&gt;
-    &lt;li&gt;item 16&lt;/li&gt;
-    &lt;li&gt;item 17&lt;/li&gt;
-    &lt;li&gt;item 18&lt;/li&gt;
-    &lt;li&gt;item 19&lt;/li&gt;
-    &lt;li&gt;item 20&lt;/li&gt;
-&lt;/ul&gt;</pre>
+```html hidden
+<ul>
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+    <li>item 4</li>
+    <li>item 5</li>
+    <li>item 6</li>
+    <li>item 7</li>
+    <li>item 8</li>
+    <li>item 9</li>
+    <li>item 10</li>
+    <li>item 11</li>
+    <li>item 12</li>
+    <li>item 13</li>
+    <li>item 14</li>
+    <li>item 15</li>
+    <li>item 16</li>
+    <li>item 17</li>
+    <li>item 18</li>
+    <li>item 19</li>
+    <li>item 20</li>
+</ul>
+```
 
-<pre class="brush: js hidden">  CSS.paintWorklet.addModule('https://mdn.github.io/houdini-examples/cssPaint/intro/worklets/hilite.js');
-</pre>
+```js hidden
+  CSS.paintWorklet.addModule('https://mdn.github.io/houdini-examples/cssPaint/intro/worklets/hilite.js');
+```
 
-<pre class="brush: css">li {
+```css
+li {
    --boxColor: hsla(55, 90%, 60%, 1.0);
    background-image: paint(hollowHighlights, stroke, 2px);
 }
@@ -73,26 +77,25 @@ li:nth-of-type(3n) {
 li:nth-of-type(3n+1) {
    --boxColor: hsla(255, 90%, 60%, 1.0);
    background-image: paint(hollowHighlights, stroke, 1px);
-}</pre>
+}
+```
 
-<p>We've included a custom property in the selector block defining a boxColor. Custom properties are accessible to the PaintWorklet.</p>
+We've included a custom property in the selector block defining a boxColor. Custom properties are accessible to the PaintWorklet.
 
-<p>{{EmbedLiveSample("Examples", 300, 300)}}</p>
+{{EmbedLiveSample("Examples", 300, 300)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref('PaintWorklet')}}</li>
- <li>{{domxref('CSS Painting API')}}</li>
- <li><a href="/en-US/docs/Web/API/CSS_Painting_API/Guide">Using the CSS Painting API</a></li>
- <li>{{cssxref("&lt;image&gt;")}}</li>
- <li>{{domxref("canvas")}}</li>
-</ul>
+- {{domxref('PaintWorklet')}}
+- {{domxref('CSS Painting API')}}
+- [Using the CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API/Guide)
+- {{cssxref("&lt;image&gt;")}}
+- {{domxref("canvas")}}

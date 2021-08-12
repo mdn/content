@@ -9,69 +9,67 @@ tags:
   - Reference
 browser-compat: css.types.filter-function.drop-shadow
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>drop-shadow()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> applies a drop shadow effect to the input image. Its result is a {{cssxref("&lt;filter-function&gt;")}}.</p>
+The **`drop-shadow()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) applies a drop shadow effect to the input image. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/function-drop-shadow.html")}}</div>
+{{EmbedInteractiveExample("pages/css/function-drop-shadow.html")}}
 
+A drop shadow is effectively a blurred, offset version of the input image's alpha mask, drawn in a specific color and composited below the image.
 
-<p>A drop shadow is effectively a blurred, offset version of the input image's alpha mask, drawn in a specific color and composited below the image.</p>
+> **Note:** This function is somewhat similar to the {{Cssxref("box-shadow")}} property. The `box-shadow` property creates a rectangular shadow behind an element's _entire box_, while the `drop-shadow()` filter function creates a shadow that conforms to the shape (alpha channel) of the _image itself_.
 
-<div class="note">
-<p><strong>Note:</strong> This function is somewhat similar to the {{Cssxref("box-shadow")}} property. The <code>box-shadow</code> property creates a rectangular shadow behind an element's <em>entire box</em>, while the <code>drop-shadow()</code> filter function creates a shadow that conforms to the shape (alpha channel) of the <em>image itself</em>.</p>
-</div>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```css
+drop-shadow(offset-x offset-y blur-radius color)
+```
 
-<pre class="brush: css">drop-shadow(<var>offset-x</var> <var>offset-y</var> <var>blur-radius</var> <var>color</var>)</pre>
+The `drop-shadow()` function accepts a parameter of type `<shadow>` (defined in the {{cssxref("box-shadow")}} property), with the exception that the `inset` keyword and `spread` parameters are not allowed.
 
-<p>The <code>drop-shadow()</code> function accepts a parameter of type <code>&lt;shadow&gt;</code> (defined in the {{cssxref("box-shadow")}} property), with the exception that the <code>inset</code> keyword and <code><var>spread</var></code> parameters are not allowed.</p>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `offset-x` `offset-y` (required)
+  - : Two {{cssxref("&lt;length&gt;")}} values that determine the shadow offset. `offset-x` specifies the horizontal distance, where negative values place the shadow to the left of the element. `offset-y` specifies the vertical distance, where negative values place the shadow above the element. If both values are `0`, the shadow is placed directly behind the element.
+- `blur-radius` (optional)
+  - : The shadow's blur radius, specified as a {{cssxref("&lt;length&gt;")}}. The larger the value, the larger and more blurred the shadow becomes. If unspecified, it defaults to `0`, resulting in a sharp, unblurred edge. Negative values are not allowed.
+- `color` (optional)
+  - : The color of the shadow, specified as a {{cssxref("&lt;color&gt;")}}. If unspecified, the value of the {{cssxref("color")}} property is used.
 
-<dl>
- <dt><code><var>offset-x</var></code> <code><var>offset-y</var></code> <small>(required)</small></dt>
- <dd>Two {{cssxref("&lt;length&gt;")}} values that determine the shadow offset. <code><var>offset-x</var></code> specifies the horizontal distance, where negative values place the shadow to the left of the element. <code><var>offset-y</var></code> specifies the vertical distance, where negative values place the shadow above the element. If both values are <code>0</code>, the shadow is placed directly behind the element.</dd>
- <dt><code><var>blur-radius</var></code> <small>(optional)</small></dt>
- <dd>The shadow's blur radius, specified as a {{cssxref("&lt;length&gt;")}}. The larger the value, the larger and more blurred the shadow becomes. If unspecified, it defaults to <code>0</code>, resulting in a sharp, unblurred edge. Negative values are not allowed.</dd>
- <dt><code><var>color</var></code> <small>(optional)</small></dt>
- <dd>The color of the shadow, specified as a {{cssxref("&lt;color&gt;")}}. If unspecified, the value of the {{cssxref("color")}} property is used.</dd>
-</dl>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Setting a drop shadow using pixel offsets and blur radius
 
-<h3 id="Setting_a_drop_shadow_using_pixel_offsets_and_blur_radius">Setting a drop shadow using pixel offsets and blur radius</h3>
-
-<pre class="brush: css">/* Black shadow with 10px blur */
+```css
+/* Black shadow with 10px blur */
 drop-shadow(16px 16px 10px black)
-</pre>
+```
 
-<h3 id="Setting_a_drop_shadow_using_rem_offsets_and_blur_radius">Setting a drop shadow using rem offsets and blur radius</h3>
+### Setting a drop shadow using rem offsets and blur radius
 
-<pre class="brush: css">/* Reddish shadow with 1rem blur */
-drop-shadow(.5rem .5rem 1rem #e23)</pre>
+```css
+/* Reddish shadow with 1rem blur */
+drop-shadow(.5rem .5rem 1rem #e23)
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("&lt;filter-function&gt;")}}</li>
- <li>CSS {{cssxref("box-shadow")}} property</li>
- <li>{{cssxref("filter-function/blur()", "blur()")}}</li>
- <li>{{cssxref("filter-function/brightness()", "brightness()")}}</li>
- <li>{{cssxref("filter-function/contrast()", "contrast()")}}</li>
- <li>{{cssxref("filter-function/grayscale()", "grayscale()")}}</li>
- <li>{{cssxref("filter-function/hue-rotate()", "hue-rotate()")}}</li>
- <li>{{cssxref("filter-function/invert()", "invert()")}}</li>
- <li>{{cssxref("filter-function/opacity()", "opacity()")}}</li>
- <li>{{cssxref("filter-function/saturate()", "saturate()")}}</li>
- <li>{{cssxref("filter-function/sepia()", "sepia()")}}</li>
-</ul>
+- {{cssxref("&lt;filter-function&gt;")}}
+- CSS {{cssxref("box-shadow")}} property
+- {{cssxref("filter-function/blur()", "blur()")}}
+- {{cssxref("filter-function/brightness()", "brightness()")}}
+- {{cssxref("filter-function/contrast()", "contrast()")}}
+- {{cssxref("filter-function/grayscale()", "grayscale()")}}
+- {{cssxref("filter-function/hue-rotate()", "hue-rotate()")}}
+- {{cssxref("filter-function/invert()", "invert()")}}
+- {{cssxref("filter-function/opacity()", "opacity()")}}
+- {{cssxref("filter-function/saturate()", "saturate()")}}
+- {{cssxref("filter-function/sepia()", "sepia()")}}

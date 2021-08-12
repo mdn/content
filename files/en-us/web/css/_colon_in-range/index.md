@@ -9,42 +9,45 @@ tags:
   - Web
 browser-compat: css.selectors.in-range
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>:in-range</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents an {{htmlelement("input")}} element whose current value is within the range limits specified by the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max","input")}} attributes.</p>
+The **`:in-range`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an {{htmlelement("input")}} element whose current value is within the range limits specified by the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max","input")}} attributes.
 
-<pre class="brush: css no-line-numbers">/* Selects any &lt;input&gt;, but only when it has a range
+```css
+/* Selects any <input>, but only when it has a range
    specified, and its value is inside that range */
 input:in-range {
   background-color: rgba(0, 255, 0, 0.25);
-}</pre>
+}
+```
 
-<p>This pseudo-class is useful for giving the user a visual indication that a field's current value is within the permitted limits.</p>
+This pseudo-class is useful for giving the user a visual indication that a field's current value is within the permitted limits.
 
-<div class="note">
-  <p><strong>Note:</strong> This pseudo-class only applies to elements that have (and can take) a range limitation. In the absence of such a limitation, the element can neither be "in-range" nor "out-of-range."</p>
-</div>
+> **Note:** This pseudo-class only applies to elements that have (and can take) a range limitation. In the absence of such a limitation, the element can neither be "in-range" nor "out-of-range."
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;form action="" id="form1"&gt;
-  &lt;ul&gt;Values between 1 and 10 are valid.
-    &lt;li&gt;
-      &lt;input id="value1" name="value1" type="number" placeholder="1 to 10" min="1" max="10" value="12" required&gt;
-      &lt;label for="value1"&gt;Your value is &lt;/label&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/form&gt;</pre>
+```html
+<form action="" id="form1">
+  <ul>Values between 1 and 10 are valid.
+    <li>
+      <input id="value1" name="value1" type="number" placeholder="1 to 10" min="1" max="10" value="12" required>
+      <label for="value1">Your value is </label>
+    </li>
+  </ul>
+</form>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css;">li {
+```css
+li {
   list-style: none;
   margin-bottom: 1em;
 }
@@ -68,27 +71,24 @@ input:in-range + label::after {
 
 input:out-of-range + label::after {
   content: 'out of range!';
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Examples', 600, 140)}}</p>
+{{EmbedLiveSample('Examples', 600, 140)}}
 
-<div class="notecard note">
-<p><strong>Note:</strong> An empty <code>&lt;input&gt;</code> does not count as out of range, and will not be selected using the <code>:out-of-range</code> pseudo-class selector. The <code><a href="/en-US/docs/Web/CSS/:blank">:blank</a></code> pseudo-class exists to select blank inputs, although at the time of writing this is experimental and not well-supported. You could also use the <code>required</code> attribute and the <code><a href="/en-US/docs/Web/CSS/:invalid">:invalid</a></code> pseudo-class to provide more general logic and styling for making inputs mandatory (<code>:invalid</code> will style blank <em>and</em> out-of-range inputs).</p>
-</div>
+> **Note:** An empty `<input>` does not count as out of range, and will not be selected using the `:out-of-range` pseudo-class selector. The [`:blank`](/en-US/docs/Web/CSS/:blank) pseudo-class exists to select blank inputs, although at the time of writing this is experimental and not well-supported. You could also use the `required` attribute and the [`:invalid`](/en-US/docs/Web/CSS/:invalid) pseudo-class to provide more general logic and styling for making inputs mandatory (`:invalid` will style blank _and_ out-of-range inputs).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref(":out-of-range")}}</li>
- <li><a href="/en-US/docs/Learn/Forms/Form_validation">Form data validation</a></li>
-</ul>
+- {{cssxref(":out-of-range")}}
+- [Form data validation](/en-US/docs/Learn/Forms/Form_validation)

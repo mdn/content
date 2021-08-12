@@ -8,42 +8,24 @@ tags:
   - Overview
   - Reference
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>CSS Charsets</strong> is a module of CSS that lets you specify the character set used in the style sheet.</p>
+**CSS Charsets** is a module of CSS that lets you specify the character set used in the style sheet.
 
-<h2 id="Reference">Reference</h2>
+## Reference
 
-<h3 id="At-rules">At-rules</h3>
+### At-rules
 
-<ul>
- <li>{{cssxref("@charset")}}</li>
-</ul>
+- {{cssxref("@charset")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'syndata.html#x57', '@charset')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                            | Status                   | Comment            |
+| ------------------------------------------------------------------------ | ------------------------ | ------------------ |
+| {{SpecName('CSS2.1', 'syndata.html#x57', '@charset')}} | {{Spec2('CSS2.1')}} | Initial definition |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<h3 id="charset_rule"><code>@charset</code> rule</h3>
+### `@charset` rule
 
-<div>
-
-<p>{{Compat("css.at-rules.charset")}}</p>
-</div>
+{{Compat("css.at-rules.charset")}}

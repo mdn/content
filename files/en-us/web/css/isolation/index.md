@@ -7,20 +7,21 @@ tags:
   - Compositing and Blending
   - NeedsContent
   - isolation
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.isolation
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>isolation</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property determines whether an element must create a new {{glossary("stacking context")}}.</p>
+The **`isolation`** [CSS](/en-US/docs/Web/CSS) property determines whether an element must create a new {{glossary("stacking context")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/isolation.html")}}</div>
+{{EmbedInteractiveExample("pages/css/isolation.html")}}
 
-<p>This property is especially helpful when used in conjunction with {{cssxref("mix-blend-mode")}} and {{cssxref("z-index")}}.</p>
+This property is especially helpful when used in conjunction with {{cssxref("mix-blend-mode")}} and {{cssxref("z-index")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 isolation: auto;
 isolation: isolate;
 
@@ -29,46 +30,46 @@ isolation: inherit;
 isolation: initial;
 isolation: revert;
 isolation: unset;
-</pre>
+```
 
-<p>The <code>isolation</code> property is specified as one of the keyword values listed below.</p>
+The `isolation` property is specified as one of the keyword values listed below.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>A new stacking context is created only if one of the properties applied to the element requires it.</dd>
- <dt><code>isolate</code></dt>
- <dd>A new stacking context must be created.</dd>
-</dl>
+- `auto`
+  - : A new stacking context is created only if one of the properties applied to the element requires it.
+- `isolate`
+  - : A new stacking context must be created.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Forcing_a_new_stacking_context_for_an_element">Forcing a new stacking context for an element</h3>
+### Forcing a new stacking context for an element
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div id="b" class="a"&gt;
-  &lt;div id="d"&gt;
-    &lt;div class="a c"&gt;auto&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div id="e"&gt;
-    &lt;div class="a c"&gt;isolate&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div id="b" class="a">
+  <div id="d">
+    <div class="a c">auto</div>
+  </div>
+  <div id="e">
+    <div class="a c">isolate</div>
+  </div>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.a {
+```css
+.a {
   background-color: rgb(0,255,0);
 }
 #b {
@@ -87,23 +88,22 @@ isolation: unset;
 }
 #e {
   isolation: isolate;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Forcing_a_new_stacking_context_for_an_element', 230, 230) }}</p>
+{{ EmbedLiveSample('Forcing_a_new_stacking_context_for_an_element', 230, 230) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("&lt;blend-mode&gt;")}}</li>
- <li>{{cssxref("mix-blend-mode")}}, {{cssxref("background-blend-mode")}}</li>
-</ul>
+- {{cssxref("&lt;blend-mode&gt;")}}
+- {{cssxref("mix-blend-mode")}}, {{cssxref("background-blend-mode")}}

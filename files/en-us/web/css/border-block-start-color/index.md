@@ -11,57 +11,59 @@ tags:
   - border-block-color
   - border-block-start
   - border-block-start-color
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.border-block-start-color
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>border-block-start-color</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property defines the color of the logical block-start border of an element, which maps to a physical border color depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, or {{cssxref("border-left-color")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.</p>
+The **`border-block-start-color`** [CSS](/en-US/docs/Web/CSS) property defines the color of the logical block-start border of an element, which maps to a physical border color depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, or {{cssxref("border-left-color")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/border-block-start-color.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-block-start-color.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">border-block-start-color: blue;
+```css
+border-block-start-color: blue;
 border-block-start-color: #4c5d21;
 
 /* Global values */
 border-block-start-color: inherit;
 border-block-start-color: initial;
 border-block-start-color: revert;
-border-block-start-color: unset;</pre>
+border-block-start-color: unset;
+```
 
-<p>Related properties are {{cssxref("border-block-end-color")}}, {{cssxref("border-inline-start-color")}}, and {{cssxref("border-inline-end-color")}}, which define the other border colors of the element.</p>
+Related properties are {{cssxref("border-block-end-color")}}, {{cssxref("border-inline-start-color")}}, and {{cssxref("border-inline-end-color")}}, which define the other border colors of the element.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;'color'&gt;</code></dt>
- <dd>See {{ cssxref("border-color") }}</dd>
-</dl>
+- `<'color'>`
+  - : See {{ cssxref("border-color") }}
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Border_color_with_vertical_text">Border color with vertical text</h3>
+### Border color with vertical text
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="exampleText"&gt;Example text&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <p class="exampleText">Example text</p>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   background-color: yellow;
   width: 120px;
   height: 120px;
@@ -71,23 +73,22 @@ border-block-start-color: unset;</pre>
   writing-mode: vertical-lr;
   border: 10px solid blue;
   border-block-start-color: red;
-}</pre>
+}
+```
 
-<h4 id="Results">Results</h4>
+#### Results
 
-<p>{{EmbedLiveSample("Border_color_with_vertical_text", 140, 140)}}</p>
+{{EmbedLiveSample("Border_color_with_vertical_text", 140, 140)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>This property maps to one of the physical border properties: {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, or {{cssxref("border-left-color")}}.</li>
- <li>{{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}</li>
-</ul>
+- This property maps to one of the physical border properties: {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, or {{cssxref("border-left-color")}}.
+- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

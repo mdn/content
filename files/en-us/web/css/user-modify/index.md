@@ -4,19 +4,20 @@ slug: Web/CSS/user-modify
 tags:
   - CSS
   - CSS Property
-  - 'CSS:Mozilla Extensions'
-  - 'CSS:WebKit Extensions'
+  - CSS:Mozilla Extensions
+  - CSS:WebKit Extensions
   - Deprecated
   - Non-standard
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.user-modify
 ---
-<div>{{CSSRef}}{{Non-standard_Header}}{{Deprecated_Header}}</div>
+{{CSSRef}}{{Non-standard_Header}}{{Deprecated_Header}}
 
-<p>The <strong><code>user-modify</code></strong> property has no effect in Firefox. It was originally planned to determine whether or not the content of an element can be edited by a user.</p>
+The **`user-modify`** property has no effect in Firefox. It was originally planned to determine whether or not the content of an element can be edited by a user.
 
-<pre class="brush:css">/* Keyword values */
+```css
+/* Keyword values */
 user-modify: read-only;
 user-modify: read-write;
 user-modify: write-only;
@@ -26,64 +27,60 @@ user-modify: inherit;
 user-modify: initial;
 user-modify: revert;
 user-modify: unset;
-</pre>
+```
 
-<div class="warning">
- <p><strong>Warning:</strong> This property has been replaced by the {{HTMLAttrxRef("contenteditable")}} attribute.</p>
-</div>
+> **Warning:** This property has been replaced by the {{HTMLAttrxRef("contenteditable")}} attribute.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>-moz-user-modify</code> property is specified as one of the keyword values from the list below.</p>
+The `-moz-user-modify` property is specified as one of the keyword values from the list below.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>read-only</code></dt>
- <dd>Default value. Contents are read-only.</dd>
- <dt><code>read-write</code></dt>
- <dd>The user is able to read and write contents.</dd>
- <dt><code>read-write-plaintext-only</code> {{Non-standard_Inline}}</dt>
- <dd>Same as <code>read-write</code>, but rich text formatting will be lost.</dd>
- <dt><code>write-only</code></dt>
- <dd>The user is able to edit the content, but not to read it.</dd>
-</dl>
+- `read-only`
+  - : Default value. Contents are read-only.
+- `read-write`
+  - : The user is able to read and write contents.
+- `read-write-plaintext-only` {{Non-standard_Inline}}
+  - : Same as `read-write`, but rich text formatting will be lost.
+- `write-only`
+  - : The user is able to edit the content, but not to read it.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{CSSSyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush:html">&lt;div class="readwrite"&gt;The user is able to change this text.&lt;/div&gt;
-</pre>
+```html
+<div class="readwrite">The user is able to change this text.</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush:css">.readwrite {
+```css
+.readwrite {
   -moz-user-modify: read-write;
   -webkit-user-modify: read-write;
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard. A similar property, <code>user-focus</code>, was proposed in <a href="https://www.w3.org/TR/2000/WD-css3-userint-20000216">early drafts of a predecessor of the CSS3 UI specification</a>, but was rejected by the working group.</p>
+Not part of any standard. A similar property, `user-focus`, was proposed in [early drafts of a predecessor of the CSS3 UI specification](https://www.w3.org/TR/2000/WD-css3-userint-20000216), but was rejected by the working group.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{CSSxRef("-moz-user-focus")}}</li>
- <li>{{CSSxRef("-moz-user-input")}}</li>
- <li>{{CSSxRef("-moz-user-select")}}</li>
-</ul>
+- {{CSSxRef("-moz-user-focus")}}
+- {{CSSxRef("-moz-user-input")}}
+- {{CSSxRef("-moz-user-select")}}

@@ -10,65 +10,61 @@ tags:
   - Web
 browser-compat: css.types.resolution
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>&lt;resolution&gt;</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Types">data type</a>, used for describing <a href="/en-US/docs/Web/CSS/@media/resolution">resolutions</a> in <a href="/en-US/docs/Web/CSS/Media_Queries">media queries</a>, denotes the pixel density of an output device, i.e., its resolution.</p>
+The **`<resolution>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types), used for describing [resolutions](/en-US/docs/Web/CSS/@media/resolution) in [media queries](/en-US/docs/Web/CSS/Media_Queries), denotes the pixel density of an output device, i.e., its resolution.
 
-<p>On screens, the units are related to <em>CSS</em> inches, centimeters, or pixels, not physical values.</p>
+On screens, the units are related to _CSS_ inches, centimeters, or pixels, not physical values.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>&lt;resolution&gt;</code> data type consists of a strictly positive {{cssxref("&lt;number&gt;")}} followed by one of the units listed below. As with all CSS dimensions, there is no space between the unit literal and the number.</p>
+The `<resolution>` data type consists of a strictly positive {{cssxref("&lt;number&gt;")}} followed by one of the units listed below. As with all CSS dimensions, there is no space between the unit literal and the number.
 
-<h3 id="Units">Units</h3>
+### Units
 
-<dl>
- <dt><code>dpi</code></dt>
- <dd>Represents the number of <a href="https://en.wikipedia.org/wiki/Dots_per_inch">dots per inch</a>. Screens typically contains 72 or 96 dots per inch, but the dpi for printed documents is usually much greater. As 1 inch is 2.54 cm, <code>1dpi ≈ 0.39dpcm</code>.</dd>
- <dt><code>dpcm</code></dt>
- <dd>Represents the number of <a href="https://en.wikipedia.org/wiki/Dots_per_inch">dots per centimeter</a>. As 1 inch is 2.54 cm, <code>1dpcm ≈ 2.54dpi</code>.</dd>
- <dt><code>dppx</code></dt>
- <dd>Represents the number of dots per <code><a href="/en-US/docs/Web/CSS/length#px">px</a></code> unit. Due to the 1:96 fixed ratio of CSS <code>in</code> to CSS <code>px</code>, <code>1dppx</code> is equivalent to <code>96dpi</code>, which corresponds to the default resolution of images displayed in CSS as defined by {{cssxref("image-resolution")}}.</dd>
- <dt><code>x</code></dt>
- <dd>Alias for <code>dppx</code>.</dd>
-</dl>
+- `dpi`
+  - : Represents the number of [dots per inch](https://en.wikipedia.org/wiki/Dots_per_inch). Screens typically contains 72 or 96 dots per inch, but the dpi for printed documents is usually much greater. As 1 inch is 2.54 cm, `1dpi ≈ 0.39dpcm`.
+- `dpcm`
+  - : Represents the number of [dots per centimeter](https://en.wikipedia.org/wiki/Dots_per_inch). As 1 inch is 2.54 cm, `1dpcm ≈ 2.54dpi`.
+- `dppx`
+  - : Represents the number of dots per [`px`](/en-US/docs/Web/CSS/length#px) unit. Due to the 1:96 fixed ratio of CSS `in` to CSS `px`, `1dppx` is equivalent to `96dpi`, which corresponds to the default resolution of images displayed in CSS as defined by {{cssxref("image-resolution")}}.
+- `x`
+  - : Alias for `dppx`.
 
-<div class="note">
-<p><strong>Note:</strong> Although the number <code>0</code> is always the same regardless of unit, the unit may not be omitted. In other words, <code>0</code> is invalid and does not represent <code>0dpi</code>, <code>0dpcm</code>, or <code>0dppx</code>.</p>
-</div>
+> **Note:** Although the number `0` is always the same regardless of unit, the unit may not be omitted. In other words, `0` is invalid and does not represent `0dpi`, `0dpcm`, or `0dppx`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Use_in_a_media_query">Use in a media query</h3>
+### Use in a media query
 
-<pre class="brush: css">@media print and (min-resolution: 300dpi) { ... }</pre>
+```css
+@media print and (min-resolution: 300dpi) { ... }
+```
 
-<h3 id="Valid_resolutions">Valid resolutions</h3>
+### Valid resolutions
 
-<pre>96dpi
-50.82dpcm
-3dppx
-</pre>
+    96dpi
+    50.82dpcm
+    3dppx
 
-<h3 id="Invalid_resolutions">Invalid resolutions</h3>
+### Invalid resolutions
 
-<pre class="example-bad">72 dpi     Spaces are not allowed between the number and the unit.
+```plain example-bad
+72 dpi     Spaces are not allowed between the number and the unit.
 ten dpi    The number must use digits only.
 0          The unit is required.
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/@media/resolution">resolution</a> media feature</li>
- <li>The {{cssxref("image-resolution")}} property</li>
- <li><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Using @media queries</a></li>
-</ul>
+- [resolution](/en-US/docs/Web/CSS/@media/resolution) media feature
+- The {{cssxref("image-resolution")}} property
+- [Using @media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)

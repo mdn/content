@@ -9,26 +9,26 @@ tags:
   - Vertical
   - dimensions
   - height
-  - 'recipe:css-property'
+  - recipe:css-property
   - size
 browser-compat: css.properties.height
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>height</code></strong> CSS property specifies the height of an element. By default, the property defines the height of the <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content_area">content area</a>. If {{cssxref("box-sizing")}} is set to <code>border-box</code>, however, it instead determines the height of the <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#border_area">border area</a>.</p>
+The **`height`** CSS property specifies the height of an element. By default, the property defines the height of the [content area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content_area). If {{cssxref("box-sizing")}} is set to `border-box`, however, it instead determines the height of the [border area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#border_area).
 
-<div>{{EmbedInteractiveExample("pages/css/height.html")}}</div>
+{{EmbedInteractiveExample("pages/css/height.html")}}
 
+The {{cssxref("min-height")}} and {{cssxref("max-height")}} properties override `height`.
 
-<p>The {{cssxref("min-height")}} and {{cssxref("max-height")}} properties override <code>height</code>.</p>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; values */
+```css
+/* <length> values */
 height: 120px;
 height: 10em;
 
-/* &lt;percentage&gt; value */
+/* <percentage> value */
 height: 75%;
 
 /* Keyword values */
@@ -42,60 +42,58 @@ height: inherit;
 height: initial;
 height: revert;
 height: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>Defines the height as an absolute value.</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>Defines the height as a percentage of the containing block's height.</dd>
- <dt><code>auto</code></dt>
- <dd>The browser will calculate and select a height for the specified element.</dd>
- <dt><code>max-content</code></dt>
- <dd>The intrinsic preferred height.</dd>
- <dt><code>min-content</code></dt>
- <dd>The intrinsic minimum height.</dd>
- <dt><code>fit-content({{cssxref("&lt;length-percentage&gt;")}})</code></dt>
- <dd>Uses the fit-content formula with the available space replaced by the specified argument, i.e. <code>min(max-content, max(min-content, &lt;length-percentage&gt;))</code>.</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : Defines the height as an absolute value.
+- {{cssxref("&lt;percentage&gt;")}}
+  - : Defines the height as a percentage of the containing block's height.
+- `auto`
+  - : The browser will calculate and select a height for the specified element.
+- `max-content`
+  - : The intrinsic preferred height.
+- `min-content`
+  - : The intrinsic minimum height.
+- `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
+  - : Uses the fit-content formula with the available space replaced by the specified argument, i.e. `min(max-content, max(min-content, <length-percentage>))`.
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+## Accessibility concerns
 
-<p>Ensure that elements set with a <code>height</code> aren't truncated and/or don't obscure other content when the page is zoomed to increase text size.</p>
+Ensure that elements set with a `height` aren't truncated and/or don't obscure other content when the page is zoomed to increase text size.
 
-<ul>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html">Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0</a></li>
-</ul>
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_height_using_pixels_and_percentages">Setting height using pixels and percentages</h3>
+### Setting height using pixels and percentages
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div id="taller"&gt;I'm 50 pixels tall.&lt;/div&gt;
-&lt;div id="shorter"&gt;I'm 25 pixels tall.&lt;/div&gt;
-&lt;div id="parent"&gt;
-  &lt;div id="child"&gt;
+```html
+<div id="taller">I'm 50 pixels tall.</div>
+<div id="shorter">I'm 25 pixels tall.</div>
+<div id="parent">
+  <div id="child">
     I'm half the height of my parent.
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+  </div>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   width: 250px;
   margin-bottom: 5px;
   border: 2px solid blue;
@@ -117,26 +115,24 @@ height: unset;
   height: 50%;
   width: 75%;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Setting_height_using_pixels_and_percentages', 'auto', 240)}}</p>
+{{EmbedLiveSample('Setting_height_using_pixels_and_percentages', 'auto', 240)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">The box model</a></li>
- <li>{{cssxref("width")}}</li>
- <li>{{cssxref("box-sizing")}}</li>
- <li>{{cssxref("min-height")}}, {{cssxref("max-height")}}</li>
- <li>The mapped logical properties: {{cssxref("block-size")}}, {{cssxref("inline-size")}}</li>
-</ul>
+- [The box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- {{cssxref("width")}}
+- {{cssxref("box-sizing")}}
+- {{cssxref("min-height")}}, {{cssxref("max-height")}}
+- The mapped logical properties: {{cssxref("block-size")}}, {{cssxref("inline-size")}}

@@ -10,28 +10,25 @@ tags:
   - media feature
 browser-compat: css.at-rules.media.-webkit-device-pixel-ratio
 ---
-<div>{{ CSSRef }} {{ Non-standard_header }}</div>
+{{ CSSRef }} {{ Non-standard_header }}
 
-<p>The <strong><code>-webkit-device-pixel-ratio</code></strong> is a non-standard Boolean <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features">media feature</a> which is an alternative to the standard <a href="/en-US/docs/Web/CSS/@media/resolution"><code>resolution</code></a> media feature.</p>
+The **`-webkit-device-pixel-ratio`** is a non-standard Boolean [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) which is an alternative to the standard [`resolution`](/en-US/docs/Web/CSS/@media/resolution) media feature.
 
-<div class="note">
-<p><strong>Note:</strong> This media feature is a WebKit feature. If possible, use the <a href="/en-US/docs/Web/CSS/@media/resolution"><code>resolution</code></a> media feature query instead.</p>
-</div>
+> **Note:** This media feature is a WebKit feature. If possible, use the [`resolution`](/en-US/docs/Web/CSS/@media/resolution) media feature query instead.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>-webkit-device-pixel-ratio</code> feature is specified as a {{cssxref("&lt;number&gt;")}} value. It is a range feature, meaning that you can also use the prefixed <strong><code>-webkit-min-device-pixel-ratio</code></strong> and <strong><code>-webkit-max-device-pixel-ratio</code></strong> variants to query minimum and maximum values, respectively.</p>
+The `-webkit-device-pixel-ratio` feature is specified as a {{cssxref("&lt;number&gt;")}} value. It is a range feature, meaning that you can also use the prefixed **`-webkit-min-device-pixel-ratio`** and **`-webkit-max-device-pixel-ratio`** variants to query minimum and maximum values, respectively.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{cssxref("&lt;number&gt;")}}</dt>
- <dd>The number of device pixels used to represent each CSS <a href="/en-US/docs/Web/CSS/length#absolute_length_units"><code>px</code></a>. Although the value is a <code>&lt;number&gt;</code>, and thus doesn't syntactically allow units, its implicit unit is <a href="/en-US/docs/Web/CSS/resolution#units"><code>dppx</code></a>.</dd>
-</dl>
+- {{cssxref("&lt;number&gt;")}}
+  - : The number of device pixels used to represent each CSS [`px`](/en-US/docs/Web/CSS/length#absolute_length_units). Although the value is a `<number>`, and thus doesn't syntactically allow units, its implicit unit is [`dppx`](/en-US/docs/Web/CSS/resolution#units).
 
-<h2 id="Implementation">Implementation</h2>
+## Implementation
 
-<pre class="brush: css">/* A unit of "dppx" is implied: */
+```css
+/* A unit of "dppx" is implied: */
 @media (-webkit-min-device-pixel-ratio: 2) { ... }
 /* ... is equivalent to: */
 @media (min-resolution: 2dppx) { ... }
@@ -40,18 +37,20 @@ browser-compat: css.at-rules.media.-webkit-device-pixel-ratio
 @media (-webkit-max-device-pixel-ratio: 2) { ... }
 /* ... is equivalent to: */
 @media (max-resolution: 2dppx) { ... }
-</pre>
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;This is a test of your device's pixel density.&lt;/p&gt;
-</pre>
+```html
+<p>This is a test of your device's pixel density.</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">/* Exact resolution */
+```css
+/* Exact resolution */
 @media (-webkit-device-pixel-ratio: 1) {
   p {
     color: red;
@@ -70,28 +69,27 @@ browser-compat: css.at-rules.media.-webkit-device-pixel-ratio
   p {
     background: yellow;
   }
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Using media queries</a></li>
- <li>{{cssxref("resolution")}}</li>
- <li><a href="/en-US/docs/Web/CSS/@media/-webkit-transform-2d"><code>-webkit-transform-2d</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/@media/-webkit-transform-3d"><code>-webkit-transform-3d</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/@media/-webkit-transition"><code>-webkit-transition</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/@media/-webkit-animation"><code>-webkit-animation</code></a></li>
- <li><a href="https://www.w3.org/blog/CSS/2012/06/14/unprefix-webkit-device-pixel-ratio/">W3C Suggested Method to UnPrefix</a></li>
-</ul>
+- [Using media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- {{cssxref("resolution")}}
+- [`-webkit-transform-2d`](/en-US/docs/Web/CSS/@media/-webkit-transform-2d)
+- [`-webkit-transform-3d`](/en-US/docs/Web/CSS/@media/-webkit-transform-3d)
+- [`-webkit-transition`](/en-US/docs/Web/CSS/@media/-webkit-transition)
+- [`-webkit-animation`](/en-US/docs/Web/CSS/@media/-webkit-animation)
+- [W3C Suggested Method to UnPrefix](https://www.w3.org/blog/CSS/2012/06/14/unprefix-webkit-device-pixel-ratio/)

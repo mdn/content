@@ -9,31 +9,32 @@ tags:
   - media feature
 browser-compat: css.at-rules.media.inverted-colors
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>inverted-colors</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features">media feature</a> can be used to test whether the {{glossary("user agent")}} or underlying OS is inverting colors.</p>
+The **`inverted-colors`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test whether the {{glossary("user agent")}} or underlying OS is inverting colors.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>inverted-colors</code> feature is specified as a keyword value chosen from the list below.</p>
+The `inverted-colors` feature is specified as a keyword value chosen from the list below.
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Colors are displayed normally.</dd>
- <dt><code>inverted</code></dt>
- <dd>All pixels within the displayed area have been inverted.</dd>
-</dl>
+- `none`
+  - : Colors are displayed normally.
+- `inverted`
+  - : All pixels within the displayed area have been inverted.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;If you're using inverted colors, this text should be blue on white (the inverse of yellow on black). If you're not, it should be red on light gray.&lt;/p&gt;
-&lt;p&gt;If the text is gray, your browser doesn't support the `inverted-colors` media feature.&lt;/p&gt;</pre>
+```html
+<p>If you're using inverted colors, this text should be blue on white (the inverse of yellow on black). If you're not, it should be red on light gray.</p>
+<p>If the text is gray, your browser doesn't support the `inverted-colors` media feature.</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   color: gray;
 }
 
@@ -49,23 +50,22 @@ browser-compat: css.at-rules.media.inverted-colors
     background: #eee;
     color: red;
   }
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Using Media Queries</a></li>
- <li><a href="/en-US/docs/Web/CSS/@media">@media</a></li>
-</ul>
+- [Using Media Queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [@media](/en-US/docs/Web/CSS/@media)

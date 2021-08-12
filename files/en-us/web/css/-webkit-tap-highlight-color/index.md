@@ -9,50 +9,47 @@ tags:
   - Non-standard
   - Reference
   - WebKit
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.-webkit-tap-highlight-color
 ---
-<div>{{ CSSRef() }}</div>
+{{ CSSRef() }}
 
-<p>{{ Non-standard_header() }}</p>
+{{ Non-standard_header() }}
 
-<p><strong><code>-webkit-tap-highlight-color</code></strong> is a non-standard CSS property that sets the color of the highlight that appears over a link while it's being tapped. The highlighting indicates to the user that their tap is being successfully recognized, and indicates which element they're tapping on.</p>
+**`-webkit-tap-highlight-color`** is a non-standard CSS property that sets the color of the highlight that appears over a link while it's being tapped. The highlighting indicates to the user that their tap is being successfully recognized, and indicates which element they're tapping on.
 
-<pre class="brush: css no-line-numbers">-webkit-tap-highlight-color: red;
+```css
+-webkit-tap-highlight-color: red;
 -webkit-tap-highlight-color: transparent; /* for removing the highlight */
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<p>A {{Cssxref("color value")}}.</p>
+A {{Cssxref("color value")}}.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard<em>.</em> Apple has <a href="https://developer.apple.com/library/mac/documentation/AppleApplications/Reference/SafariWebContent/AdjustingtheTextSize/AdjustingtheTextSize.html#//apple_ref/doc/uid/TP40006510-SW5">a description in the Safari Web Content Guide</a>.</p>
+Not part of any standard*.* Apple has [a description in the Safari Web Content Guide](https://developer.apple.com/library/mac/documentation/AppleApplications/Reference/SafariWebContent/AdjustingtheTextSize/AdjustingtheTextSize.html#//apple_ref/doc/uid/TP40006510-SW5).
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/WebKit_Extensions">WebKit CSS extensions</a></li>
- <li>Related CSS pseudo-classes:
-  <ul>
-   <li><code><a href="/en-US/docs/Web/CSS/:hover">:hover</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/:active">:active</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/:visited">:visited</a></code></li>
-  </ul>
- </li>
-</ul>
+- [WebKit CSS extensions](/en-US/docs/Web/CSS/WebKit_Extensions)
+- Related CSS pseudo-classes:
+
+  - [`:hover`](/en-US/docs/Web/CSS/:hover)
+  - [`:active`](/en-US/docs/Web/CSS/:active)
+  - [`:visited`](/en-US/docs/Web/CSS/:visited)

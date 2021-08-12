@@ -12,114 +12,107 @@ tags:
   - Web
 browser-compat: css.selectors.not
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>:not()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents elements that do not match a list of selectors. Since it prevents specific items from being selected, it is known as the <em>negation pseudo-class</em>.</p>
+The **`:not()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents elements that do not match a list of selectors. Since it prevents specific items from being selected, it is known as the _negation pseudo-class_.
 
-<pre class="brush: css no-line-numbers">/* Selects any element that is NOT a paragraph */
+```css
+/* Selects any element that is NOT a paragraph */
 :not(p) {
   color: blue;
-}</pre>
+}
+```
 
-<p>The <code>:not()</code> pseudo-class has a number of <a href="/en-US/docs/Web/CSS/:not#description">quirks, tricks, and unexpected results</a> that you should be aware of before using it.</p>
+The `:not()` pseudo-class has a number of [quirks, tricks, and unexpected results](/en-US/docs/Web/CSS/:not#description) that you should be aware of before using it.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>:not()</code> pseudo-class requires a comma-separated list of one or more selectors as its argument. The list must not contain another negation selector or a <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a>.</p>
+The `:not()` pseudo-class requires a comma-separated list of one or more selectors as its argument. The list must not contain another negation selector or a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements).
 
-<div class="warning">
- <p><strong>Warning:</strong> The ability to list more than one selector is experimental and not yet widely supported.</p>
-</div>
+> **Warning:** The ability to list more than one selector is experimental and not yet widely supported.
 
 {{csssyntax}}
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>There are several unusual effects and outcomes when using <code>:not()</code> that you should keep in mind when using it:</p>
+There are several unusual effects and outcomes when using `:not()` that you should keep in mind when using it:
 
-<ul>
- <li>The <code>:not</code> pseudo-class may not be nested, which means that <code>:not(:not(...))</code> is invalid.</li>
- <li>Useless selectors can be written using this pseudo-class. For example, <code>:not(*)</code> matches any element which is not an element, which is obviously nonsense, so the accompanying rule will never be applied.</li>
- <li>This pseudo-class can increase the <a href="/en-US/docs/Web/CSS/Specificity">specificity</a> of a rule. For example, <code>#foo:not(#bar)</code> will match the same element as the simpler <code>#foo</code>, but has a higher specificity.</li>
- <li><code>:not(.foo)</code> will match anything that isn't <code>.foo</code>, <em>including {{HTMLElement("html")}} and {{HTMLElement("body")}}.</em></li>
- <li>This selector only applies to one element; you cannot use it to exclude all ancestors. For instance, <code>body :not(table) a</code> will still apply to links inside of a table, since {{HTMLElement("tr")}} will match with the <code>:not()</code> part of the selector.</li>
- <li>Using two selectors at the same time is not yet supported in all browsers. Example: <code>:not(.foo, .bar)</code>. For wider support you could use, <code>:not(.foo):not(.bar)</code></li>
-</ul>
+- The `:not` pseudo-class may not be nested, which means that `:not(:not(...))` is invalid.
+- Useless selectors can be written using this pseudo-class. For example, `:not(*)` matches any element which is not an element, which is obviously nonsense, so the accompanying rule will never be applied.
+- This pseudo-class can increase the [specificity](/en-US/docs/Web/CSS/Specificity) of a rule. For example, `#foo:not(#bar)` will match the same element as the simpler `#foo`, but has a higher specificity.
+- `:not(.foo)` will match anything that isn't `.foo`, _including {{HTMLElement("html")}} and {{HTMLElement("body")}}._
+- This selector only applies to one element; you cannot use it to exclude all ancestors. For instance, `body :not(table) a` will still apply to links inside of a table, since {{HTMLElement("tr")}} will match with the `:not()` part of the selector.
+- Using two selectors at the same time is not yet supported in all browsers. Example: `:not(.foo, .bar)`. For wider support you could use, `:not(.foo):not(.bar)`
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_set_of_not_examples">Basic set of :not() examples</h3>
+### Basic set of :not() examples
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;I am a paragraph.&lt;/p&gt;
-&lt;p class="fancy"&gt;I am so very fancy!&lt;/p&gt;
-&lt;div&gt;I am NOT a paragraph.&lt;/div&gt;
-&lt;h2&gt;
-  &lt;span class="foo"&gt;foo inside h2&lt;/span&gt;
-  &lt;span class="bar"&gt;bar inside h2&lt;/span&gt;
-&lt;/h2&gt;
-</pre>
+```html
+<p>I am a paragraph.</p>
+<p class="fancy">I am so very fancy!</p>
+<div>I am NOT a paragraph.</div>
+<h2>
+  <span class="foo">foo inside h2</span>
+  <span class="bar">bar inside h2</span>
+</h2>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.fancy {
+```css
+.fancy {
   text-shadow: 2px 2px 3px gold;
 }
 
-/* &lt;p&gt; elements that are not in the class `.fancy` */
+/* <p> elements that are not in the class `.fancy` */
 p:not(.fancy) {
   color: green;
 }
 
-/* Elements that are not &lt;p&gt; elements */
+/* Elements that are not <p> elements */
 body :not(p) {
   text-decoration: underline;
 }
 
-/* Elements that are not &lt;div&gt; and not &lt;span&gt; elements */
+/* Elements that are not <div> and not <span> elements */
 body :not(div):not(span) {
   font-weight: bold;
 }
 
-/* Elements that are not &lt;div&gt;s or `.fancy` */
+/* Elements that are not <div>s or `.fancy` */
 /* Note that this syntax is not well supported yet. */
 body :not(div, .fancy) {
   text-decoration: overline underline;
 }
 
-/* Elements inside an &lt;h2&gt; that aren't a &lt;span&gt; with a class of foo. */
+/* Elements inside an <h2> that aren't a <span> with a class of foo. */
 /* Complex selectors such as an element with a class are not well supported yet. */
 h2 :not(span.foo) {
   color: red;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Basic_set_of_not_examples', '100%', 320)}}</p>
+{{EmbedLiveSample('Basic_set_of_not_examples', '100%', 320)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
+- [Pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes)
+- [Pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+- Related CSS pseudo-classes:
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Pseudo-classes">Pseudo-classes</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements">Pseudo-classes and pseudo-elements</a></li>
- <li>Related CSS pseudo-classes:
-  <ul>
-   <li>{{cssxref(":has", ":has()")}}</li>
-   <li>{{cssxref(":is", ":is()")}}</li>
-   <li>{{cssxref(":where", ":where()")}}</li>
-  </ul>
- </li>
-</ul>
-</div>
+  - {{cssxref(":has", ":has()")}}
+  - {{cssxref(":is", ":is()")}}
+  - {{cssxref(":where", ":where()")}}

@@ -13,17 +13,15 @@ tags:
   - Orientation
   - Reference
   - image-orientation
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.image-orientation
 ---
+The **`image-orientation`** [CSS](/en-US/docs/Web/CSS) property specifies a layout-independent correction to the orientation of an image.
 
-<p>The <strong><code>image-orientation</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property specifies a layout-independent correction to the orientation of an image.</p>
+> **Note:** Values other than `from-image` and `none` are described as deprecated in the specification.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Values other than <code>from-image</code> and <code>none</code> are described as deprecated in the specification.</p>
-</div>
-
-<pre class="brush:css no-line-numbers">/* keyword values */
+```css
+/* keyword values */
 image-orientation: none;
 image-orientation: from-image; /* Use EXIF data from the image */
 
@@ -37,79 +35,78 @@ image-orientation: unset;
 image-orientation: 90deg; /* Rotate 90deg */
 image-orientation: 90deg flip; /* Rotate 90deg, and flip it horizontally */
 image-orientation: flip; /* No rotation, only applies a horizontal flip */
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Does not apply any additional image rotation; the image is oriented as encoded or as other CSS property values dictate.</dd>
- <dt><code>from-image</code></dt>
- <dd>Default initial value. The {{interwiki("wikipedia", "EXIF")}} information contained in the image is used to rotate the image appropriately.</dd>
- <dt>{{cssxref("&lt;angle&gt;")}}{{deprecated_inline}}</dt>
- <dd>The {{cssxref("&lt;angle&gt;")}} of rotation to apply to the image. It is rounded to the nearest <code>90deg</code> (<code>0.25turn</code>). Positive values cause the image to be rotated to the right (clockwise), negative values to the left (anti-clockwise).</dd>
- <dt><code>flip</code>{{deprecated_inline}}</dt>
- <dd>The image is flipped horizontally (i.e., reflected) after the rotation given by the {{cssxref("&lt;angle&gt;")}} value is applied. If no {{cssxref("&lt;angle&gt;")}} is given, <code>0deg</code> is used.</dd>
-</dl>
+- `none`
+  - : Does not apply any additional image rotation; the image is oriented as encoded or as other CSS property values dictate.
+- `from-image`
+  - : Default initial value. The {{interwiki("wikipedia", "EXIF")}} information contained in the image is used to rotate the image appropriately.
+- {{cssxref("&lt;angle&gt;")}}{{deprecated_inline}}
+  - : The {{cssxref("&lt;angle&gt;")}} of rotation to apply to the image. It is rounded to the nearest `90deg` (`0.25turn`). Positive values cause the image to be rotated to the right (clockwise), negative values to the left (anti-clockwise).
+- `flip`{{deprecated_inline}}
+  - : The image is flipped horizontally (i.e., reflected) after the rotation given by the {{cssxref("&lt;angle&gt;")}} value is applied. If no {{cssxref("&lt;angle&gt;")}} is given, `0deg` is used.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>This property is intended <em>only</em> to be used for the purpose of correcting the orientation of images which were shot with the camera rotated. It should <em>not</em> be used for arbitrary rotations. For any purpose other than correcting an image's orientation due to how it was shot or scanned, use a {{cssxref("transform")}} property with the <code>rotate</code> keyword to specify rotation. This includes any user-directed changes to the orientation of the image, or changes required for printing in portrait versus landscape orientation.</p>
+This property is intended _only_ to be used for the purpose of correcting the orientation of images which were shot with the camera rotated. It should _not_ be used for arbitrary rotations. For any purpose other than correcting an image's orientation due to how it was shot or scanned, use a {{cssxref("transform")}} property with the `rotate` keyword to specify rotation. This includes any user-directed changes to the orientation of the image, or changes required for printing in portrait versus landscape orientation.
 
-<p>If used in conjunction with other CSS properties, such as a {{cssxref("&lt;transform-function&gt;")}}, any <code>image-orientation</code> rotation is applied before any other transformations.</p>
+If used in conjunction with other CSS properties, such as a {{cssxref("&lt;transform-function&gt;")}}, any `image-orientation` rotation is applied before any other transformations.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Orienting_image_from_image_data">Orienting image from image data</h3>
+### Orienting image from image data
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">#image {
+```css
+#image {
   image-orientation: from-image; /* Can be changed in the live sample */
 }
-</pre>
+```
 
-<pre class="brush: html hidden">&lt;img id="image" src="mdn.svg"
-    alt="Orientation taken from the image"&gt;
-&lt;select id="imageOrientation"&gt;
-  &lt;option value="from-image"&gt;from-image&lt;/option&gt;
-  &lt;option value="none"&gt;none&lt;/option&gt;
-&lt;/select&gt;
-</pre>
+```html hidden
+<img id="image" src="mdn.svg"
+    alt="Orientation taken from the image">
+<select id="imageOrientation">
+  <option value="from-image">from-image</option>
+  <option value="none">none</option>
+</select>
+```
 
-<pre class="brush: js hidden">var imageOrientation = document.getElementById("imageOrientation");
+```js hidden
+var imageOrientation = document.getElementById("imageOrientation");
 imageOrientation.addEventListener("change", function (evt) {
   document.getElementById("image").style.imageOrientation = evt.target.value;
 });
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Orienting_image_from_image_data", "100%", 240)}}</p>
+{{EmbedLiveSample("Orienting_image_from_image_data", "100%", 240)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Other image-related CSS properties: {{cssxref("object-fit")}}, {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}.</li>
- <li>{{cssxref("transform")}} and {{cssxref("rotate")}}</li>
-</ul>
+- Other image-related CSS properties: {{cssxref("object-fit")}}, {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}.
+- {{cssxref("transform")}} and {{cssxref("rotate")}}
 
-<div>{{CSSRef}}</div>
+{{CSSRef}}

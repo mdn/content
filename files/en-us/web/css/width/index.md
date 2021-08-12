@@ -7,27 +7,27 @@ tags:
   - Layout
   - Reference
   - dimensions
-  - 'recipe:css-property'
+  - recipe:css-property
   - size
   - width
 browser-compat: css.properties.width
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p>The <strong><code>width</code></strong> CSS property sets an element's width. By default, it sets the width of the <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content_area">content area</a>, but if {{cssxref("box-sizing")}} is set to <code>border-box</code>, it sets the width of the <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#border_area">border area</a>.</p>
+The **`width`** CSS property sets an element's width. By default, it sets the width of the [content area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content_area), but if {{cssxref("box-sizing")}} is set to `border-box`, it sets the width of the [border area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#border_area).
 
-<div>{{EmbedInteractiveExample("pages/css/width.html")}}</div>
+{{EmbedInteractiveExample("pages/css/width.html")}}
 
+The {{cssxref("min-width")}} and {{cssxref("max-width")}} properties override `width`.
 
-<p>The {{cssxref("min-width")}} and {{cssxref("max-width")}} properties override <code>width</code>.</p>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; values */
+```css
+/* <length> values */
 width: 300px;
 width: 25em;
 
-/* &lt;percentage&gt; value */
+/* <percentage> value */
 width: 75%;
 
 /* Keyword values */
@@ -41,57 +41,58 @@ width: inherit;
 width: initial;
 width: revert;
 width: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>Defines the width as an absolute value.</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>Defines the width as a percentage of the containing block's width.</dd>
- <dt><code>auto</code></dt>
- <dd>The browser will calculate and select a width for the specified element.</dd>
- <dt><code>max-content</code></dt>
- <dd>The intrinsic preferred width.</dd>
- <dt><code>min-content</code></dt>
- <dd>The intrinsic minimum width.</dd>
- <dt><code>fit-content({{cssxref("&lt;length-percentage&gt;")}})</code></dt>
- <dd>Uses the fit-content formula with the available space replaced by the specified argument, i.e. <code>min(max-content, max(min-content, &lt;length-percentage&gt;))</code>.</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : Defines the width as an absolute value.
+- {{cssxref("&lt;percentage&gt;")}}
+  - : Defines the width as a percentage of the containing block's width.
+- `auto`
+  - : The browser will calculate and select a width for the specified element.
+- `max-content`
+  - : The intrinsic preferred width.
+- `min-content`
+  - : The intrinsic minimum width.
+- `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
+  - : Uses the fit-content formula with the available space replaced by the specified argument, i.e. `min(max-content, max(min-content, <length-percentage>))`.
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+## Accessibility concerns
 
-<p>Ensure that elements set with a <code>width</code> aren't truncated and/or don't obscure other content when the page is zoomed to increase text size.</p>
+Ensure that elements set with a `width` aren't truncated and/or don't obscure other content when the page is zoomed to increase text size.
 
-<ul>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html">Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0</a></li>
-</ul>
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Default_width">Default width</h3>
+### Default width
 
-<pre class="brush:css">p.goldie {
+```css
+p.goldie {
   background: gold;
-}</pre>
+}
+```
 
-<pre class="brush:html">&lt;p class="goldie"&gt;The Mozilla community produces a lot of great software.&lt;/p&gt;</pre>
+```html
+<p class="goldie">The Mozilla community produces a lot of great software.</p>
+```
 
-<p>{{EmbedLiveSample('Default_width', '500px', '64px')}}</p>
+{{EmbedLiveSample('Default_width', '500px', '64px')}}
 
-<h3 id="Pixels_and_ems">Pixels and ems</h3>
+### Pixels and ems
 
-<pre class="brush: css">.px_length {
+```css
+.px_length {
   width: 200px;
   background-color: red;
   color: white;
@@ -104,66 +105,78 @@ width: unset;
   color: red;
   border: 1px solid black;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="px_length"&gt;Width measured in px&lt;/div&gt;
-&lt;div class="em_length"&gt;Width measured in em&lt;/div&gt;</pre>
+```html
+<div class="px_length">Width measured in px</div>
+<div class="em_length">Width measured in em</div>
+```
 
-<p>{{EmbedLiveSample('Pixels_and_ems', '500px', '64px')}}</p>
+{{EmbedLiveSample('Pixels_and_ems', '500px', '64px')}}
 
-<h3 id="Percentage">Percentage</h3>
+### Percentage
 
-<pre class="brush: css">.percent {
+```css
+.percent {
   width: 20%;
   background-color: silver;
   border: 1px solid red;
-}</pre>
+}
+```
 
-<pre class="brush: html">&lt;div class="percent"&gt;Width in percentage&lt;/div&gt;</pre>
+```html
+<div class="percent">Width in percentage</div>
+```
 
-<p>{{EmbedLiveSample('Percentage', '500px', '64px')}}</p>
+{{EmbedLiveSample('Percentage', '500px', '64px')}}
 
-<h3 id="max-content">max-content</h3>
+### max-content
 
-<pre class="brush:css;">p.maxgreen {
+```css
+p.maxgreen {
   background: lightgreen;
   width: intrinsic;           /* Safari/WebKit uses a non-standard name */
   width: -moz-max-content;    /* Firefox/Gecko */
   width: -webkit-max-content; /* Chrome */
   width: max-content;
-}</pre>
+}
+```
 
-<pre class="brush:html">&lt;p class="maxgreen"&gt;The Mozilla community produces a lot of great software.&lt;/p&gt;</pre>
+```html
+<p class="maxgreen">The Mozilla community produces a lot of great software.</p>
+```
 
-<p>{{EmbedLiveSample('max-content', '500px', '64px')}}</p>
+{{EmbedLiveSample('max-content', '500px', '64px')}}
 
-<h3 id="min-content">min-content</h3>
+### min-content
 
-<pre class="brush:css">p.minblue {
+```css
+p.minblue {
   background: lightblue;
   width: -moz-min-content;    /* Firefox */
   width: -webkit-min-content; /* Chrome */
   width: min-content;
-}</pre>
+}
+```
 
-<pre class="brush:html">&lt;p class="minblue"&gt;The Mozilla community produces a lot of great software.&lt;/p&gt;</pre>
+```html
+<p class="minblue">The Mozilla community produces a lot of great software.</p>
+```
 
-<p>{{EmbedLiveSample('min-content', '500px', '155px')}}</p>
+{{EmbedLiveSample('min-content', '500px', '155px')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">The box model</a></li>
- <li>{{cssxref("height")}}</li>
- <li>{{cssxref("box-sizing")}}</li>
- <li>{{cssxref("min-width")}}, {{cssxref("max-width")}}</li>
- <li>The mapped logical properties: {{cssxref("block-size")}}, {{cssxref("inline-size")}}</li>
-</ul>
+- [The box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- {{cssxref("height")}}
+- {{cssxref("box-sizing")}}
+- {{cssxref("min-width")}}, {{cssxref("max-width")}}
+- The mapped logical properties: {{cssxref("block-size")}}, {{cssxref("inline-size")}}

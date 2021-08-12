@@ -7,75 +7,71 @@ tags:
   - Guide
   - Understanding_CSS_z-index
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>« <a href="/en-US/docs/Web/CSS">CSS</a> « <a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index" title="Understanding CSS z-index">Understanding CSS z-index</a></p>
+« [CSS](/en-US/docs/Web/CSS) « [Understanding CSS z-index](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index "Understanding CSS z-index")
 
-<h2 id="Stacking_context_example_1">Stacking context example 1</h2>
+## Stacking context example 1
 
-<p>Let's start with a basic example. In the root stacking context we have two DIVs (DIV #1 and DIV #3), both relatively positioned, but without z-index properties. Inside DIV #1 there is an absolutely positioned DIV #2, while in DIV #3 there is an absolutely positioned DIV #4, both without z-index properties.</p>
+Let's start with a basic example. In the root stacking context we have two DIVs (DIV #1 and DIV #3), both relatively positioned, but without z-index properties. Inside DIV #1 there is an absolutely positioned DIV #2, while in DIV #3 there is an absolutely positioned DIV #4, both without z-index properties.
 
-<p>The only stacking context is the root context. Without z-indexes, elements are stacked in order of occurrence.</p>
+The only stacking context is the root context. Without z-indexes, elements are stacked in order of occurrence.
 
-<p><img alt="Stacking context example 1" class="internal" src="understanding_zindex_05a.png"></p>
+![Stacking context example 1](understanding_zindex_05a.png)
 
-<p>If DIV #2 is assigned a positive (non-zero and non-auto) z-index value, it is rendered above all the other DIVs.</p>
+If DIV #2 is assigned a positive (non-zero and non-auto) z-index value, it is rendered above all the other DIVs.
 
-<p><img alt="Stacking context example 1" class="internal" src="understanding_zindex_05b.png"></p>
+![Stacking context example 1](understanding_zindex_05b.png)
 
-<p>Then if DIV #4 is also assigned a positive z-index greater than DIV #2's z-index, it is rendered above all the other DIVs including DIV #2.</p>
+Then if DIV #4 is also assigned a positive z-index greater than DIV #2's z-index, it is rendered above all the other DIVs including DIV #2.
 
-<p><img alt="Stacking context example 1" class="internal" src="understanding_zindex_05c.png"></p>
+![Stacking context example 1](understanding_zindex_05c.png)
 
-<p>In this last example you can see that DIV #2 and DIV #4 are not siblings, because they belong to different parents in the HTML elements' hierarchy. Even so, stacking of DIV #4 with respect of DIV #2 can be controlled through z-index. It happens that, since DIV #1 and DIV #3 are not assigned any z-index value, they do not create a stacking context. This means that all their content, including DIV #2 and DIV #4, belongs to the same root stacking context.</p>
+In this last example you can see that DIV #2 and DIV #4 are not siblings, because they belong to different parents in the HTML elements' hierarchy. Even so, stacking of DIV #4 with respect of DIV #2 can be controlled through z-index. It happens that, since DIV #1 and DIV #3 are not assigned any z-index value, they do not create a stacking context. This means that all their content, including DIV #2 and DIV #4, belongs to the same root stacking context.
 
-<p>In terms of stacking contexts, DIV #1 and DIV #3 are assimilated into the root element, and the resulting hierarchy is the following:</p>
+In terms of stacking contexts, DIV #1 and DIV #3 are assimilated into the root element, and the resulting hierarchy is the following:
 
-<ul>
- <li>root stacking context
-  <ul>
-   <li>DIV #2 (z-index 1)</li>
-   <li>DIV #4 (z-index 2)</li>
-  </ul>
- </li>
-</ul>
+- root stacking context
 
-<div class="notecard note">
- <p><strong>Note:</strong> DIV #1 and DIV #3 are not translucent. It is important to remember that assigning an opacity less than 1 to a positioned element implicitly creates a stacking context, just like adding a z-index value. And this example shows what happens when a parent element does not create a stacking context.</p>
+  - DIV #2 (z-index 1)
+  - DIV #4 (z-index 2)
+
+> **Note:** DIV #1 and DIV #3 are not translucent. It is important to remember that assigning an opacity less than 1 to a positioned element implicitly creates a stacking context, just like adding a z-index value. And this example shows what happens when a parent element does not create a stacking context.
+
+## Example
+
+### HTML
+
+```html
+<div id="div1">
+<br /><span class="bold">DIV #1</span>
+<br />position: relative;
+   <div id="div2">
+   <br /><span class="bold">DIV #2</span>
+   <br />position: absolute;
+   <br />z-index: 1;
+   </div>
 </div>
 
-<h2 id="Example">Example</h2>
+<br />
 
-<h3 id="HTML">HTML</h3>
+<div id="div3">
+<br /><span class="bold">DIV #3</span>
+<br />position: relative;
+   <div id="div4">
+   <br /><span class="bold">DIV #4</span>
+   <br />position: absolute;
+   <br />z-index: 2;
+   </div>
+</div>
 
-<pre class="brush: html">&lt;div id="div1"&gt;
-&lt;br /&gt;&lt;span class="bold"&gt;DIV #1&lt;/span&gt;
-&lt;br /&gt;position: relative;
-   &lt;div id="div2"&gt;
-   &lt;br /&gt;&lt;span class="bold"&gt;DIV #2&lt;/span&gt;
-   &lt;br /&gt;position: absolute;
-   &lt;br /&gt;z-index: 1;
-   &lt;/div&gt;
-&lt;/div&gt;
+</body></html>
+```
 
-&lt;br /&gt;
+### CSS
 
-&lt;div id="div3"&gt;
-&lt;br /&gt;&lt;span class="bold"&gt;DIV #3&lt;/span&gt;
-&lt;br /&gt;position: relative;
-   &lt;div id="div4"&gt;
-   &lt;br /&gt;&lt;span class="bold"&gt;DIV #4&lt;/span&gt;
-   &lt;br /&gt;position: absolute;
-   &lt;br /&gt;z-index: 2;
-   &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/body&gt;&lt;/html&gt;
-</pre>
-
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css">.bold {
+```css
+.bold {
     font-weight: bold;
     font: 12px Arial;
 }
@@ -111,19 +107,18 @@ tags:
     background-color: #ddddff;
     text-align: left;
     padding-left: 10px;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{ EmbedLiveSample('Example', '', '', '', 'Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1') }}</p>
+{{ EmbedLiveSample('Example', '', '', '', 'Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1') }}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index">Stacking without the z-index property</a>: The stacking rules that apply when <code>z-index</code> is not used.</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float">Stacking with floated blocks</a>: How floating elements are handled with stacking.</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index">Using z-index</a>: How to use <code>z-index</code> to change default stacking.</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">The stacking context</a>: Notes on the stacking context.</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2">Stacking context example 2</a>: 2-level HTML hierarchy, <code>z-index</code> on all levels</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3">Stacking context example 3</a>: 3-level HTML hierarchy, <code>z-index</code> on the second level</li>
-</ul>
+- [Stacking without the z-index property](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index): The stacking rules that apply when `z-index` is not used.
+- [Stacking with floated blocks](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float): How floating elements are handled with stacking.
+- [Using z-index](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index): How to use `z-index` to change default stacking.
+- [The stacking context](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context): Notes on the stacking context.
+- [Stacking context example 2](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2): 2-level HTML hierarchy, `z-index` on all levels
+- [Stacking context example 3](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3): 3-level HTML hierarchy, `z-index` on the second level

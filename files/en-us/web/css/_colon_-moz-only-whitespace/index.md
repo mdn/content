@@ -1,6 +1,6 @@
 ---
 title: ':-moz-only-whitespace'
-slug: 'Web/CSS/:-moz-only-whitespace'
+slug: Web/CSS/:-moz-only-whitespace
 tags:
   - ':-moz-only-whitespace'
   - CSS
@@ -10,54 +10,53 @@ tags:
   - Selector
 browser-compat: css.selectors.-moz-only-whitespace
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>{{Non-standard_Header}}</p>
+{{Non-standard_Header}}
 
-<div class="notecard note">
-<p><strong>Note:</strong> In {{SpecName("CSS4 Selectors", "#the-empty-pseudo")}} the {{CSSxRef(":empty")}} selector was changed to act like <code>:-moz-only-whitespace</code>, but no browser currently supports this yet.</p>
-</div>
+> **Note:** In {{SpecName("CSS4 Selectors", "#the-empty-pseudo")}} the {{CSSxRef(":empty")}} selector was changed to act like `:-moz-only-whitespace`, but no browser currently supports this yet.
 
-<p>The <strong><code>:-moz-only-whitespace</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> matches elements that only contains text nodes that only contain {{Glossary("whitespace")}}. (This includes elements with empty text nodes and elements with no child nodes.)</p>
+The **`:-moz-only-whitespace`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements that only contains text nodes that only contain {{Glossary("whitespace")}}. (This includes elements with empty text nodes and elements with no child nodes.)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{CSSSyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Simple_-moz-only-whitespace_example">Simple :-moz-only-whitespace example</h3>
+### Simple :-moz-only-whitespace example
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt; &lt;/div&gt;
-</pre>
+```html
+<div> </div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   border: 4px solid red;
 }
 
 :-moz-only-whitespace {
   border-color: lime;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Simple_-moz-only-whitespace_example', '100%', 50)}}</p>
+{{EmbedLiveSample('Simple_-moz-only-whitespace_example', '100%', 50)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Briefly defined as <code>:blank</code> in {{SpecName("CSS4 Selectors", "#changes-2018-02")}}, but then the functionality was merged into {{CSSxRef(":empty")}} and {{CSSxRef(":blank")}} redefined to mean empty {{HTMLElement("input")}}.</p>
+Briefly defined as `:blank` in {{SpecName("CSS4 Selectors", "#changes-2018-02")}}, but then the functionality was merged into {{CSSxRef(":empty")}} and {{CSSxRef(":blank")}} redefined to mean empty {{HTMLElement("input")}}.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{CSSxRef(":blank")}} {{Experimental_Inline}}</li>
-	<li>{{CSSxRef(":empty")}}</li>
-</ul>
+- {{CSSxRef(":blank")}} {{Experimental_Inline}}
+- {{CSSxRef(":empty")}}

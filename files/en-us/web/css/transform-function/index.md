@@ -10,172 +10,161 @@ tags:
   - Reference
 browser-compat: css.types.transform-function
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>&lt;transform-function&gt;</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Types">data type</a> represents a transformation that affects an element's appearance. Transformation <a href="/en-US/docs/Web/CSS/CSS_Functions">functions</a> can rotate, resize, distort, or move an element in 2D or 3D space. It is used in the {{cssxref("transform")}} property.</p>
+The **`<transform-function>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a transformation that affects an element's appearance. Transformation [functions](/en-US/docs/Web/CSS/CSS_Functions) can rotate, resize, distort, or move an element in 2D or 3D space. It is used in the {{cssxref("transform")}} property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>&lt;transform-function&gt;</code> data type is specified using one of the transformation functions listed below. Each function applies a geometric operation in either 2D or 3D.</p>
+The `<transform-function>` data type is specified using one of the transformation functions listed below. Each function applies a geometric operation in either 2D or 3D.
 
-<h3 id="Matrix_transformation">Matrix transformation</h3>
+### Matrix transformation
 
-<dl>
- <dt><code><a href="/en-US/docs/Web/CSS/transform-function/matrix()">matrix()</a></code></dt>
- <dd>Describes a homogeneous 2D transformation matrix.</dd>
- <dt><code><a href="/en-US/docs/Web/CSS/transform-function/matrix3d()">matrix3d()</a></code></dt>
- <dd>Describes a 3D transformation as a 4×4 homogeneous matrix.</dd>
-</dl>
+- [`matrix()`](</en-US/docs/Web/CSS/transform-function/matrix()>)
+  - : Describes a homogeneous 2D transformation matrix.
+- [`matrix3d()`](</en-US/docs/Web/CSS/transform-function/matrix3d()>)
+  - : Describes a 3D transformation as a 4×4 homogeneous matrix.
 
-<h3 id="Perspective">Perspective</h3>
+### Perspective
 
-<dl>
- <dt><code><a href="/en-US/docs/Web/CSS/transform-function/perspective()">perspective()</a></code></dt>
- <dd>Sets the distance between the user and the z=0 plane.</dd>
-</dl>
+- [`perspective()`](</en-US/docs/Web/CSS/transform-function/perspective()>)
+  - : Sets the distance between the user and the z=0 plane.
 
-<h3 id="Rotation">Rotation</h3>
+### Rotation
 
-<dl>
- <dt><code><a href="/en-US/docs/Web/CSS/transform-function/rotate()">rotate()</a></code></dt>
- <dd>Rotates an element around a fixed point on the 2D plane.</dd>
- <dt><code><a href="/en-US/docs/Web/CSS/transform-function/rotate3d()">rotate3d()</a></code></dt>
- <dd>Rotates an element around a fixed axis in 3D space.</dd>
- <dt><code><a href="/en-US/docs/Web/CSS/transform-function/rotateX()">rotateX()</a></code></dt>
- <dd>Rotates an element around the horizontal axis.</dd>
- <dt><code><a href="/en-US/docs/Web/CSS/transform-function/rotateY()">rotateY()</a></code></dt>
- <dd>Rotates an element around the vertical axis.</dd>
- <dt><code><a href="/en-US/docs/Web/CSS/transform-function/rotateZ()">rotateZ()</a></code></dt>
- <dd>Rotates an element around the z-axis.</dd>
-</dl>
+- [`rotate()`](</en-US/docs/Web/CSS/transform-function/rotate()>)
+  - : Rotates an element around a fixed point on the 2D plane.
+- [`rotate3d()`](</en-US/docs/Web/CSS/transform-function/rotate3d()>)
+  - : Rotates an element around a fixed axis in 3D space.
+- [`rotateX()`](</en-US/docs/Web/CSS/transform-function/rotateX()>)
+  - : Rotates an element around the horizontal axis.
+- [`rotateY()`](</en-US/docs/Web/CSS/transform-function/rotateY()>)
+  - : Rotates an element around the vertical axis.
+- [`rotateZ()`](</en-US/docs/Web/CSS/transform-function/rotateZ()>)
+  - : Rotates an element around the z-axis.
 
-<h3 id="Scaling_resizing">Scaling (resizing)</h3>
+### Scaling (resizing)
 
-<dl>
- <dt><code><a href="/en-US/docs/Web/CSS/transform-function/scale()">scale()</a></code></dt>
- <dd>Scales an element up or down on the 2D plane.</dd>
- <dt><code><a href="/en-US/docs/Web/CSS/transform-function/scale3d()">scale3d()</a></code></dt>
- <dd>Scales an element up or down in 3D space.</dd>
- <dt><code><a href="/en-US/docs/Web/CSS/transform-function/scaleX()">scaleX()</a></code></dt>
- <dd>Scales an element up or down horizontally.</dd>
- <dt><code><a href="/en-US/docs/Web/CSS/transform-function/scaleY()">scaleY()</a></code></dt>
- <dd>Scales an element up or down vertically.</dd>
- <dt><code><a href="/en-US/docs/Web/CSS/transform-function/scaleZ()">scaleZ()</a></code></dt>
- <dd>Scales an element up or down along the z-axis.</dd>
-</dl>
+- [`scale()`](</en-US/docs/Web/CSS/transform-function/scale()>)
+  - : Scales an element up or down on the 2D plane.
+- [`scale3d()`](</en-US/docs/Web/CSS/transform-function/scale3d()>)
+  - : Scales an element up or down in 3D space.
+- [`scaleX()`](</en-US/docs/Web/CSS/transform-function/scaleX()>)
+  - : Scales an element up or down horizontally.
+- [`scaleY()`](</en-US/docs/Web/CSS/transform-function/scaleY()>)
+  - : Scales an element up or down vertically.
+- [`scaleZ()`](</en-US/docs/Web/CSS/transform-function/scaleZ()>)
+  - : Scales an element up or down along the z-axis.
 
-<h3 id="Skewing_distortion">Skewing (distortion)</h3>
+### Skewing (distortion)
 
-<dl>
- <dt><code><a href="/en-US/docs/Web/CSS/transform-function/skew()">skew()</a></code></dt>
- <dd>Skews an element on the 2D plane.</dd>
- <dt><code><a href="/en-US/docs/Web/CSS/transform-function/skewX()">skewX()</a></code></dt>
- <dd>Skews an element in the horizontal direction.</dd>
- <dt><code><a href="/en-US/docs/Web/CSS/transform-function/skewY()">skewY()</a></code></dt>
- <dd>Skews an element in the vertical direction.</dd>
-</dl>
+- [`skew()`](</en-US/docs/Web/CSS/transform-function/skew()>)
+  - : Skews an element on the 2D plane.
+- [`skewX()`](</en-US/docs/Web/CSS/transform-function/skewX()>)
+  - : Skews an element in the horizontal direction.
+- [`skewY()`](</en-US/docs/Web/CSS/transform-function/skewY()>)
+  - : Skews an element in the vertical direction.
 
-<h3 id="Translation_moving">Translation (moving)</h3>
+### Translation (moving)
 
-<dl>
- <dt><code><a href="/en-US/docs/Web/CSS/transform-function/translate()">translate()</a></code></dt>
- <dd>Translates an element on the 2D plane.</dd>
- <dt><code><a href="/en-US/docs/Web/CSS/transform-function/translate3d()">translate3d()</a></code></dt>
- <dd>Translates an element in 3D space.</dd>
- <dt><code><a href="/en-US/docs/Web/CSS/transform-function/translateX">translateX()</a></code></dt>
- <dd>Translates an element horizontally.</dd>
- <dt><code><a href="/en-US/docs/Web/CSS/transform-function/translateY()">translateY()</a></code></dt>
- <dd>Translates an element vertically.</dd>
- <dt><code><a href="/en-US/docs/Web/CSS/transform-function/translateZ()">translateZ()</a></code></dt>
- <dd>Translates an element along the z-axis.</dd>
-</dl>
+- [`translate()`](</en-US/docs/Web/CSS/transform-function/translate()>)
+  - : Translates an element on the 2D plane.
+- [`translate3d()`](</en-US/docs/Web/CSS/transform-function/translate3d()>)
+  - : Translates an element in 3D space.
+- [`translateX()`](/en-US/docs/Web/CSS/transform-function/translateX)
+  - : Translates an element horizontally.
+- [`translateY()`](</en-US/docs/Web/CSS/transform-function/translateY()>)
+  - : Translates an element vertically.
+- [`translateZ()`](</en-US/docs/Web/CSS/transform-function/translateZ()>)
+  - : Translates an element along the z-axis.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Various coordinate models can be used to describe an HTML element's size and shape, as well as any transformations applied to it. The most common is the <a href="https://en.wikipedia.org/wiki/Cartesian_coordinate_system">Cartesian coordinate system</a>, although <a href="https://en.wikipedia.org/wiki/Homogeneous_coordinates">homogeneous coordinates</a> are also sometimes used.</p>
+Various coordinate models can be used to describe an HTML element's size and shape, as well as any transformations applied to it. The most common is the [Cartesian coordinate system](https://en.wikipedia.org/wiki/Cartesian_coordinate_system), although [homogeneous coordinates](https://en.wikipedia.org/wiki/Homogeneous_coordinates) are also sometimes used.
 
-<h3 id="Cartesian_coordinates">Cartesian coordinates</h3>
+### Cartesian coordinates
 
-<p>In the Cartesian coordinate system, a two-dimensional point is described using two values: an x coordinate (abscissa) and a y coordinate (ordinate). This is represented by the vector notation <code>(x, y)</code>.</p>
+In the Cartesian coordinate system, a two-dimensional point is described using two values: an x coordinate (abscissa) and a y coordinate (ordinate). This is represented by the vector notation `(x, y)`.
 
-<p><img src="coord_in_r2.png"></p>
+![](coord_in_r2.png)
 
-<p>In CSS (and most computer graphics), the origin <code>(0, 0)</code> represents the <em>top-left</em> corner of any element. Positive coordinates are down and to the right of the origin, while negative ones are up and to the left. Thus, a point that's 2 units to the right and 5 units down would be <code>(2, 5)</code>, while a point 3 units to the left and 12 units up would be <code>(-3, -12)</code>.</p>
+In CSS (and most computer graphics), the origin `(0, 0)` represents the _top-left_ corner of any element. Positive coordinates are down and to the right of the origin, while negative ones are up and to the left. Thus, a point that's 2 units to the right and 5 units down would be `(2, 5)`, while a point 3 units to the left and 12 units up would be `(-3, -12)`.
 
-<h3 id="Transformation_functions">Transformation functions</h3>
+### Transformation functions
 
-<p>Transformation functions alter the appearance of an element by manipulating the values of its coordinates. A linear transformation function is described using a 2×2 matrix, like this:</p>
+Transformation functions alter the appearance of an element by manipulating the values of its coordinates. A linear transformation function is described using a 2×2 matrix, like this:
 
-<p><math> <mfenced> <mtable> <mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mtr> <mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd></mtr> </mtable> </mfenced> </math></p>
+<math><mfenced><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mtr> <mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable></mfenced></math>
 
-<p>The function is applied to an element by using matrix multiplication. Thus, each coordinate changes based on the values in the matrix:</p>
+The function is applied to an element by using matrix multiplication. Thus, each coordinate changes based on the values in the matrix:
 
-<p><math> <mfenced> <mtable> <mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mtr> <mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd></mtr> </mtable> </mfenced> <mfenced> <mtable> <mtr><mtd><mi>x</mi></mtd></mtr><mtr><mtd><mi>y</mi></mtd></mtr> </mtable> </mfenced> <mo>=</mo> <mfenced> <mtable> <mtr> <mtd><mi>a</mi><mi>x</mi><mo>+</mo><mi>c</mi><mi>y</mi></mtd> </mtr> <mtr> <mtd><mi>b</mi><mi>x</mi><mo>+</mo><mi>d</mi><mi>y</mi></mtd> </mtr> </mtable> </mfenced> </math></p>
+<math><mfenced><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mtr> <mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd></mtr> </mtable></mfenced><mfenced><mtable><mtr><mtd><mi>x</mi></mtd></mtr><mtr><mtd><mi>y</mi></mtd></mtr> </mtable></mfenced><mo>=</mo> <mfenced><mtable><mtr><mtd><mi>a</mi><mi>x</mi><mo>+</mo><mi>c</mi><mi>y</mi></mtd> </mtr><mtr><mtd><mi>b</mi><mi>x</mi><mo>+</mo><mi>d</mi><mi>y</mi></mtd></mtr></mtable></mfenced></math>
 
-<p>It is even possible to apply several transformations in a row:</p>
+It is even possible to apply several transformations in a row:
 
-<p><math> <mfenced> <mtable> <mtr> <mtd><msub><mi>a</mi><mn>1</mn></msub></mtd> <mtd><msub><mi>c</mi><mn>1</mn></msub></mtd> </mtr> <mtr> <mtd><msub><mi>b</mi><mn>1</mn></msub></mtd> <mtd><msub><mi>d</mi><mn>1</mn></msub></mtd> </mtr> </mtable> </mfenced> <mfenced> <mtable> <mtr> <mtd><msub><mi>a</mi><mn>2</mn></msub></mtd> <mtd><msub><mi>c</mi><mn>2</mn></msub></mtd> </mtr> <mtr> <mtd><msub><mi>b</mi><mn>2</mn></msub></mtd> <mtd><msub><mi>d</mi><mn>2</mn></msub></mtd> </mtr> </mtable> </mfenced> <mo>=</mo> <mfenced> <mtable> <mtr> <mtd> <msub><mi>a</mi><mn>1</mn></msub> <msub><mi>a</mi><mn>2</mn></msub> <mo>+</mo> <msub><mi>c</mi><mn>1</mn></msub> <msub><mi>b</mi><mn>2</mn></msub> </mtd> <mtd> <msub><mi>a</mi><mn>1</mn></msub> <msub><mi>c</mi><mn>2</mn></msub> <mo>+</mo> <msub><mi>c</mi><mn>1</mn></msub> <msub><mi>d</mi><mn>2</mn></msub> </mtd> </mtr> <mtr> <mtd> <msub><mi>b</mi><mn>1</mn></msub> <msub><mi>a</mi><mn>2</mn></msub> <mo>+</mo> <msub><mi>d</mi><mn>1</mn></msub> <msub><mi>b</mi><mn>2</mn></msub> </mtd> <mtd> <msub><mi>b</mi><mn>1</mn></msub> <msub><mi>c</mi><mn>2</mn></msub> <mo>+</mo> <msub><mi>d</mi><mn>1</mn></msub> <msub><mi>d</mi><mn>2</mn></msub> </mtd> </mtr> </mtable> </mfenced> </math></p>
+<math><mfenced><mtable><mtr><mtd><msub><mi>a</mi><mn>1</mn></msub></mtd> <mtd><msub><mi>c</mi><mn>1</mn></msub></mtd> </mtr><mtr><mtd><msub><mi>b</mi><mn>1</mn></msub></mtd> <mtd><msub><mi>d</mi><mn>1</mn></msub></mtd> </mtr></mtable></mfenced><mfenced><mtable><mtr><mtd><msub><mi>a</mi><mn>2</mn></msub></mtd> <mtd><msub><mi>c</mi><mn>2</mn></msub></mtd> </mtr><mtr><mtd><msub><mi>b</mi><mn>2</mn></msub></mtd> <mtd><msub><mi>d</mi><mn>2</mn></msub></mtd> </mtr></mtable></mfenced><mo>=</mo> <mfenced><mtable><mtr><mtd><msub><mi>a</mi><mn>1</mn></msub> <msub><mi>a</mi><mn>2</mn></msub> <mo>+</mo> <msub><mi>c</mi><mn>1</mn></msub> <msub><mi>b</mi><mn>2</mn></msub> </mtd><mtd><msub><mi>a</mi><mn>1</mn></msub> <msub><mi>c</mi><mn>2</mn></msub> <mo>+</mo> <msub><mi>c</mi><mn>1</mn></msub> <msub><mi>d</mi><mn>2</mn></msub> </mtd></mtr><mtr><mtd><msub><mi>b</mi><mn>1</mn></msub> <msub><mi>a</mi><mn>2</mn></msub> <mo>+</mo> <msub><mi>d</mi><mn>1</mn></msub> <msub><mi>b</mi><mn>2</mn></msub> </mtd><mtd><msub><mi>b</mi><mn>1</mn></msub> <msub><mi>c</mi><mn>2</mn></msub> <mo>+</mo> <msub><mi>d</mi><mn>1</mn></msub> <msub><mi>d</mi><mn>2</mn></msub></mtd></mtr></mtable></mfenced></math>
 
-<p>With this notation, it is possible to describe, and therefore compose, most common transformations: rotations, scaling, or skewing. (In fact, all transformations that are linear functions can be described.) Composite transformations are effectively applied in order from right to left.</p>
+With this notation, it is possible to describe, and therefore compose, most common transformations: rotations, scaling, or skewing. (In fact, all transformations that are linear functions can be described.) Composite transformations are effectively applied in order from right to left.
 
-<p>However, one major transformation is not linear, and therefore must be special-cased when using this notation: translation. The translation vector <code>(tx, ty)</code> must be expressed separately, as two additional parameters.</p>
+However, one major transformation is not linear, and therefore must be special-cased when using this notation: translation. The translation vector `(tx, ty)` must be expressed separately, as two additional parameters.
 
-<div class="note">
-<p><strong>Note:</strong> Though trickier than Cartesian coordinates, <a href="https://en.wikipedia.org/wiki/Homogeneous_coordinates">homogeneous coordinates</a> in <a href="https://en.wikipedia.org/wiki/Projective_geometry">projective geometry</a> lead to 3×3 transformation matrices, and can express translations as linear functions.</p>
-</div>
+> **Note:** Though trickier than Cartesian coordinates, [homogeneous coordinates](https://en.wikipedia.org/wiki/Homogeneous_coordinates) in [projective geometry](https://en.wikipedia.org/wiki/Projective_geometry) lead to 3×3 transformation matrices, and can express translations as linear functions.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Transform_function_comparison">Transform function comparison</h3>
+### Transform function comparison
 
-<p>The following example provides a 3D cube created from DOM elements and transforms, and a select menu allowing you to choose different transform functions to transform the cube with, so you can compare the effects of the different types.</p>
+The following example provides a 3D cube created from DOM elements and transforms, and a select menu allowing you to choose different transform functions to transform the cube with, so you can compare the effects of the different types.
 
-<p>Choose one, and the transform is applied to the cube; after 2 seconds, the cube reverts back to its starting state. The cube's starting state is slightly rotated using <code>transform3d()</code>, to allow you to see the effect of all the transforms.</p>
+Choose one, and the transform is applied to the cube; after 2 seconds, the cube reverts back to its starting state. The cube's starting state is slightly rotated using `transform3d()`, to allow you to see the effect of all the transforms.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;main&gt;
-  &lt;section id="example-element"&gt;
-      &lt;div class="face front"&gt;1&lt;/div&gt;
-      &lt;div class="face back"&gt;2&lt;/div&gt;
-      &lt;div class="face right"&gt;3&lt;/div&gt;
-      &lt;div class="face left"&gt;4&lt;/div&gt;
-      &lt;div class="face top"&gt;5&lt;/div&gt;
-      &lt;div class="face bottom"&gt;6&lt;/div&gt;
-  &lt;/section&gt;
+```html
+<main>
+  <section id="example-element">
+      <div class="face front">1</div>
+      <div class="face back">2</div>
+      <div class="face right">3</div>
+      <div class="face left">4</div>
+      <div class="face top">5</div>
+      <div class="face bottom">6</div>
+  </section>
 
-  &lt;div class="select-form"&gt;
-    &lt;label&gt;Select a transform function&lt;/label&gt;
-    &lt;select&gt;
-      &lt;option selected&gt;Choose a function&lt;/option&gt;
-      &lt;option&gt;rotate(360deg)&lt;/option&gt;
-      &lt;option&gt;rotateX(360deg)&lt;/option&gt;
-      &lt;option&gt;rotateY(360deg)&lt;/option&gt;
-      &lt;option&gt;rotateZ(360deg)&lt;/option&gt;
-      &lt;option&gt;rotate3d(1, 1, 1, 90deg)&lt;/option&gt;
-      &lt;option&gt;scale(1.5)&lt;/option&gt;
-      &lt;option&gt;scaleX(1.5)&lt;/option&gt;
-      &lt;option&gt;scaleY(1.5)&lt;/option&gt;
-      &lt;option&gt;scaleZ(1.5)&lt;/option&gt;
-      &lt;option&gt;scale3d(1, 1.5, 1.5)&lt;/option&gt;
-      &lt;option&gt;skew(17deg, 13deg)&lt;/option&gt;
-      &lt;option&gt;skewX(17deg)&lt;/option&gt;
-      &lt;option&gt;skewY(17deg)&lt;/option&gt;
-      &lt;option&gt;translate(100px, 100px)&lt;/option&gt;
-      &lt;option&gt;translateX(100px)&lt;/option&gt;
-      &lt;option&gt;translateY(100px)&lt;/option&gt;
-      &lt;option&gt;translateZ(100px)&lt;/option&gt;
-      &lt;option&gt;translate3d(50px, 50px, 50px)&lt;/option&gt;
-      &lt;option&gt;perspective(200px)&lt;/option&gt;
-      &lt;option&gt;matrix(1, 2, -1, 1, 80, 80)&lt;/option&gt;
-      &lt;option&gt;matrix3d(1,0,0,0,0,1,3,0,0,0,1,0,50,100,0,1.1)&lt;/option&gt;
-    &lt;/select&gt;
-  &lt;/div&gt;
-&lt;/main&gt;</pre>
+  <div class="select-form">
+    <label>Select a transform function</label>
+    <select>
+      <option selected>Choose a function</option>
+      <option>rotate(360deg)</option>
+      <option>rotateX(360deg)</option>
+      <option>rotateY(360deg)</option>
+      <option>rotateZ(360deg)</option>
+      <option>rotate3d(1, 1, 1, 90deg)</option>
+      <option>scale(1.5)</option>
+      <option>scaleX(1.5)</option>
+      <option>scaleY(1.5)</option>
+      <option>scaleZ(1.5)</option>
+      <option>scale3d(1, 1.5, 1.5)</option>
+      <option>skew(17deg, 13deg)</option>
+      <option>skewX(17deg)</option>
+      <option>skewY(17deg)</option>
+      <option>translate(100px, 100px)</option>
+      <option>translateX(100px)</option>
+      <option>translateY(100px)</option>
+      <option>translateZ(100px)</option>
+      <option>translate3d(50px, 50px, 50px)</option>
+      <option>perspective(200px)</option>
+      <option>matrix(1, 2, -1, 1, 80, 80)</option>
+      <option>matrix3d(1,0,0,0,0,1,3,0,0,0,1,0,50,100,0,1.1)</option>
+    </select>
+  </div>
+</main>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">main {
+```css
+main {
   width: 400px;
   height: 200px;
   padding: 50px;
@@ -234,14 +223,16 @@ browser-compat: css.types.transform-function
 
 .select-form {
   margin-top: 50px;
-}</pre>
+}
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const selectElem = document.querySelector('select');
+```js
+const selectElem = document.querySelector('select');
 const example = document.querySelector('#example-element');
 
-selectElem.addEventListener('change', () =&gt; {
+selectElem.addEventListener('change', () => {
   if(selectElem.value === 'Choose a function') {
     return;
   } else {
@@ -250,22 +241,21 @@ selectElem.addEventListener('change', () =&gt; {
       example.style.transform = 'rotate3d(1, 1, 1, 30deg)';
     }, 2000)
   }
-})</pre>
+})
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Transform_function_comparison', '100%', 300)}}</p>
+{{EmbedLiveSample('Transform_function_comparison', '100%', 300)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>CSS {{cssxref("transform")}} property</li>
-</ul>
+- CSS {{cssxref("transform")}} property

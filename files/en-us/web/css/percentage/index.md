@@ -10,64 +10,62 @@ tags:
   - Web
 browser-compat: css.types.percentage
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>&lt;percentage&gt;</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Types">data type</a> represents a percentage value. It is often used to define a size as relative to an element's parent object. Numerous properties can use percentages, such as {{CSSxRef("width")}}, {{CSSxRef("height")}}, {{CSSxRef("margin")}}, {{CSSxRef("padding")}}, and {{CSSxRef("font-size")}}.</p>
+The **`<percentage>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a percentage value. It is often used to define a size as relative to an element's parent object. Numerous properties can use percentages, such as {{CSSxRef("width")}}, {{CSSxRef("height")}}, {{CSSxRef("margin")}}, {{CSSxRef("padding")}}, and {{CSSxRef("font-size")}}.
 
-<div class="note">
-  <p><strong>Note:</strong> Only calculated values can be inherited. Thus, even if a percentage value is used on the parent property, a real value (such as a width in pixels for a {{CSSxRef("&lt;length&gt;")}} value) will be accessible on the inherited property, not the percentage value.</p>
-</div>
+> **Note:** Only calculated values can be inherited. Thus, even if a percentage value is used on the parent property, a real value (such as a width in pixels for a {{CSSxRef("&lt;length&gt;")}} value) will be accessible on the inherited property, not the percentage value.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>&lt;percentage&gt;</code> data type consists of a {{CSSxRef("&lt;number&gt;")}} followed by the percentage sign (<code>%</code>). Optionally, it may be preceded by a single <code>+</code> or <code>-</code> sign, although negative values are not valid for all properties. As with all CSS dimensions, there is no space between the symbol and the number.</p>
+The `<percentage>` data type consists of a {{CSSxRef("&lt;number&gt;")}} followed by the percentage sign (`%`). Optionally, it may be preceded by a single `+` or `-` sign, although negative values are not valid for all properties. As with all CSS dimensions, there is no space between the symbol and the number.
 
-<h2 id="Interpolation">Interpolation</h2>
+## Interpolation
 
-<p>When animated, values of the <code>&lt;percentage&gt;</code> data type are interpolated as real, floating-point numbers. The speed of the interpolation is determined by the <a href="/en-US/docs/Web/CSS/single-transition-timing-function">timing function</a> associated with the animation.</p>
+When animated, values of the `<percentage>` data type are interpolated as real, floating-point numbers. The speed of the interpolation is determined by the [timing function](/en-US/docs/Web/CSS/single-transition-timing-function) associated with the animation.
 
-<h2 id="Examples">Examples </h2>
+## Examples
 
-<h3 id="Width_and_margin-left">Width and margin-left</h3>
+### Width and margin-left
 
-<pre class="brush: html">&lt;div style="background-color:navy;"&gt;
-  &lt;div style="width:50%; margin-left:20%; background-color:chartreuse;"&gt;
+```html
+<div style="background-color:navy;">
+  <div style="width:50%; margin-left:20%; background-color:chartreuse;">
     Width: 50%, Left margin: 20%
-  &lt;/div&gt;
-  &lt;div style="width:30%; margin-left:60%; background-color:pink;"&gt;
+  </div>
+  <div style="width:30%; margin-left:60%; background-color:pink;">
     Width: 30%, Left margin: 60%
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+  </div>
+</div>
+```
 
-<p>The above HTML will output:</p>
+The above HTML will output:
 
-<p>{{EmbedLiveSample('Width_and_margin-left', '600', 140)}}</p>
+{{EmbedLiveSample('Width_and_margin-left', '600', 140)}}
 
-<h3 id="Font-size">Font-size</h3>
+### Font-size
 
-<pre class="brush: html">&lt;div style="font-size:18px;"&gt;
-  &lt;p&gt;Full-size text (18px)&lt;/p&gt;
-  &lt;p&gt;&lt;span style="font-size:50%;"&gt;50% (9px)&lt;/span&gt;&lt;/p&gt;
-  &lt;p&gt;&lt;span style="font-size:200%;"&gt;200% (36px)&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div style="font-size:18px;">
+  <p>Full-size text (18px)</p>
+  <p><span style="font-size:50%;">50% (9px)</span></p>
+  <p><span style="font-size:200%;">200% (36px)</span></p>
+</div>
+```
 
-<p>The above HTML will output:</p>
+The above HTML will output:
 
-<p>{{EmbedLiveSample('Font-size', 'auto', 160)}}</p>
+{{EmbedLiveSample('Font-size', 'auto', 160)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("&lt;length-percentage&gt;")}}</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Values_and_Units">CSS Values and Units</a></li>
-</ul>
+- {{cssxref("&lt;length-percentage&gt;")}}
+- [CSS Values and Units](/en-US/docs/Web/CSS/CSS_Values_and_Units)

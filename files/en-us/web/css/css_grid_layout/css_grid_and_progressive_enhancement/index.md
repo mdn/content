@@ -7,54 +7,53 @@ tags:
   - Design
   - Guide
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>In Spring of 2017, we saw for the first time a major specification like Grid being shipped into browsers almost simultaneously, and we now have CSS Grid Layout support in the public versions of Firefox, Chrome, Opera, Safari and Edge. However, while evergreen browsers mean that many of us are going to see the majority of users having Grid Layout support very quickly, there are also old or non-supporting browsers to contend with. In this guide we will walk through a variety of strategies for support.</p>
+In Spring of 2017, we saw for the first time a major specification like Grid being shipped into browsers almost simultaneously, and we now have CSS Grid Layout support in the public versions of Firefox, Chrome, Opera, Safari and Edge. However, while evergreen browsers mean that many of us are going to see the majority of users having Grid Layout support very quickly, there are also old or non-supporting browsers to contend with. In this guide we will walk through a variety of strategies for support.
 
-<h2 id="The_supporting_browsers">The supporting browsers</h2>
+## The supporting browsers
 
-<p>Other than in Internet Explorer, CSS Grid Layout is unprefixed in Safari, Chrome, Opera,  Firefox and Edge. Support for all the properties and values detailed in these guides is interoperable across browsers. This means that if you write some Grid Layout code in Firefox, it should work in the same way in Chrome. This is no longer an experimental specification, and you are safe to use it in production.</p>
+Other than in Internet Explorer, CSS Grid Layout is unprefixed in Safari, Chrome, Opera,  Firefox and Edge. Support for all the properties and values detailed in these guides is interoperable across browsers. This means that if you write some Grid Layout code in Firefox, it should work in the same way in Chrome. This is no longer an experimental specification, and you are safe to use it in production.
 
-<h2 id="The_Internet_Explorer_and_Edge_situation">The Internet Explorer and Edge situation</h2>
+## The Internet Explorer and Edge situation
 
-<p>It should be remembered that the original implementation of CSS Grid Layout happened in Internet Explorer 10. This early specification did not contain all of the properties and values that the up-to-date specification has. There are also substantial differences between what shipped in IE10 and the current specification, even where the properties and values appear the same. This early implementation is also the version of Grid Layout implemented in Edge up to version 15.</p>
+It should be remembered that the original implementation of CSS Grid Layout happened in Internet Explorer 10. This early specification did not contain all of the properties and values that the up-to-date specification has. There are also substantial differences between what shipped in IE10 and the current specification, even where the properties and values appear the same. This early implementation is also the version of Grid Layout implemented in Edge up to version 15.
 
-<p>The IE/Edge (≤15) version of the specification is prefixed with an <code>-ms</code> prefix and the properties implemented in IE/Edge (≤15) are as follows:</p>
+The IE/Edge (≤15) version of the specification is prefixed with an `-ms` prefix and the properties implemented in IE/Edge (≤15) are as follows:
 
-<ul>
- <li>{{cssxref("grid-template-columns")}} as <code>-ms-grid-columns</code></li>
- <li>{{cssxref("grid-template-rows")}} as <code>-ms-grid-rows</code></li>
- <li>{{cssxref("grid-row-start")}} as <code>-ms-grid-row</code></li>
- <li>{{cssxref("grid-column-start")}} as <code>-ms-grid-column</code></li>
- <li>{{cssxref("align-self")}} as <code>-ms-grid-row-align</code></li>
- <li>{{cssxref("justify-self")}} as <code>-ms-grid-column-align</code></li>
-</ul>
+- {{cssxref("grid-template-columns")}} as `-ms-grid-columns`
+- {{cssxref("grid-template-rows")}} as `-ms-grid-rows`
+- {{cssxref("grid-row-start")}} as `-ms-grid-row`
+- {{cssxref("grid-column-start")}} as `-ms-grid-column`
+- {{cssxref("align-self")}} as `-ms-grid-row-align`
+- {{cssxref("justify-self")}} as `-ms-grid-column-align`
 
-<p>The IE version has additional properties not required in the new specification of <code>-ms-grid-column-span</code> and <code>-ms-grid-row-span</code>. This version does not include auto-placement capability, or grid template areas. Some simple grid layouts could be implemented for IE10, through to Edge 15, using the <code>-ms</code> properties. As these properties are vendor prefixed, they will not effect any browser supporting the up to date and unprefixed specification.</p>
+The IE version has additional properties not required in the new specification of `-ms-grid-column-span` and `-ms-grid-row-span`. This version does not include auto-placement capability, or grid template areas. Some simple grid layouts could be implemented for IE10, through to Edge 15, using the `-ms` properties. As these properties are vendor prefixed, they will not effect any browser supporting the up to date and unprefixed specification.
 
-<h3 id="Autoprefixer_grid_layout_support">Autoprefixer grid layout support</h3>
+### Autoprefixer grid layout support
 
-<p>The popular tool <em><a href="https://github.com/postcss/autoprefixer">Autoprefixer</a></em> has been updated to support the <code>-ms-</code> grid version. By default, grid prefixes are disabled, but you can enable it with <code>grid: true</code> option.</p>
+The popular tool _[Autoprefixer](https://github.com/postcss/autoprefixer)_ has been updated to support the `-ms-` grid version. By default, grid prefixes are disabled, but you can enable it with `grid: true` option.
 
-<pre>autoprefixer({ grid: 'autoplace' })</pre>
+    autoprefixer({ grid: 'autoplace' })
 
-<p>Grid prefixes are disabled by default because some properties can’t be prefixed.</p>
+Grid prefixes are disabled by default because some properties can’t be prefixed.
 
-<h2 id="Is_it_safe_to_use_CSS_grids_for_my_layout">Is it safe to use CSS grids for my layout?</h2>
+## Is it safe to use CSS grids for my layout?
 
-<p>As with any front-end technology choice, the decision to use CSS Grid Layout will come down to the browsers your site visitors are typically using. If they tend to use up-to-date versions of Firefox, Chrome, Opera, and Safari, then it would make sense to start using CSS grids once those browsers update. If your site serves a market sector that is tied to older browsers, however, it may not make sense yet. However, my suggestion is not to make assumptions based on how new specifications have been rolled out in browsers in the past. CSS Grid Layout is very different, in terms of the amount of time it has been in development, and the work of the various browser vendors to ensure that what ships works in the same way for everyone.</p>
+As with any front-end technology choice, the decision to use CSS Grid Layout will come down to the browsers your site visitors are typically using. If they tend to use up-to-date versions of Firefox, Chrome, Opera, and Safari, then it would make sense to start using CSS grids once those browsers update. If your site serves a market sector that is tied to older browsers, however, it may not make sense yet. However, my suggestion is not to make assumptions based on how new specifications have been rolled out in browsers in the past. CSS Grid Layout is very different, in terms of the amount of time it has been in development, and the work of the various browser vendors to ensure that what ships works in the same way for everyone.
 
-<h2 id="Starting_to_use_Grid_in_production">Starting to use Grid in production</h2>
+## Starting to use Grid in production
 
-<p>It is worth noting that you do not have to use grid in an <em>all or nothing</em> way. You could start by enhancing elements in your design with grid, that could otherwise display using an older method. Overwriting of legacy methods with grid layout works surprisingly well, due to the way grid interacts with these other methods.</p>
+It is worth noting that you do not have to use grid in an _all or nothing_ way. You could start by enhancing elements in your design with grid, that could otherwise display using an older method. Overwriting of legacy methods with grid layout works surprisingly well, due to the way grid interacts with these other methods.
 
-<h3>Floats</h3>
+### Floats
 
-<p>We have typically used <a href="/en-US/docs/Learn/CSS/CSS_layout/Floats">floats</a> to create multiple column layouts. If you have floated an item, which is also a grid item in a supporting browser, the float will no longer apply to the item. The fact is that <em>a grid item takes precedence.</em> In the example below, I have a simple media object. In a non-supporting browser, I use {{cssxref("float")}}, however I have also defined the container as a grid container, in order to use the alignment properties that are implemented in CSS Grids.</p>
+We have typically used [floats](/en-US/docs/Learn/CSS/CSS_layout/Floats) to create multiple column layouts. If you have floated an item, which is also a grid item in a supporting browser, the float will no longer apply to the item. The fact is that _a grid item takes precedence._ In the example below, I have a simple media object. In a non-supporting browser, I use {{cssxref("float")}}, however I have also defined the container as a grid container, in order to use the alignment properties that are implemented in CSS Grids.
 
-<p>The {{cssxref("float")}} no longer applies, and I can use the CSS Box Alignment property {{cssxref("align-self")}} to align my content to the end of the container:</p>
+The {{cssxref("float")}} no longer applies, and I can use the CSS Box Alignment property {{cssxref("align-self")}} to align my content to the end of the container:
 
-<pre class="brush: css">* {box-sizing: border-box;}
+```css
+* {box-sizing: border-box;}
 img {
     max-width: 100%;
     display: block;
@@ -83,29 +82,31 @@ img {
     padding: 10px;
     align-self: end;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="media"&gt;
-    &lt;div class="image"&gt;&lt;img src="https://via.placeholder.com/150x150" alt="placeholder"&gt;&lt;/div&gt;
-    &lt;div class="text"&gt;This is a media object example. I am using floats for older browsers and grid for new ones.&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="media">
+    <div class="image"><img src="https://via.placeholder.com/150x150" alt="placeholder"></div>
+    <div class="text">This is a media object example. I am using floats for older browsers and grid for new ones.</div>
+</div>
+```
 
-<p>{{ EmbedLiveSample('Floats', '500', '200') }}</p>
+{{ EmbedLiveSample('Floats', '500', '200') }}
 
-<p>The image below shows the media object in a non-supporting browser on the left, and a supporting one on the right:</p>
+The image below shows the media object in a non-supporting browser on the left, and a supporting one on the right:
 
-<p><img alt="A simple example of overriding a floated layout using grid." src="10-float-simple-override.png"></p>
+![A simple example of overriding a floated layout using grid.](10-float-simple-override.png)
 
-<h3 id="Using_feature_queries">Using feature queries</h3>
+### Using feature queries
 
-<p>The above example is very simple, and we can get away without needing to write code that would be a problem to browsers that do not support grid, and legacy code is not an issue to our grid supporting browsers. However, things are not always so simple.</p>
+The above example is very simple, and we can get away without needing to write code that would be a problem to browsers that do not support grid, and legacy code is not an issue to our grid supporting browsers. However, things are not always so simple.
 
-<h4>A more complex example</h4>
+#### A more complex example
 
-<p>In this next example, I have a set of floated cards. I have given the cards a {{cssxref("width")}}, in order to {{cssxref("float")}} them. To create gaps between the cards, I use a {{cssxref("margin")}} on the items, and then a negative margin on the container:</p>
+In this next example, I have a set of floated cards. I have given the cards a {{cssxref("width")}}, in order to {{cssxref("float")}} them. To create gaps between the cards, I use a {{cssxref("margin")}} on the items, and then a negative margin on the container:
 
-<pre class="brush: css hidden">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -121,9 +122,10 @@ img {
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
 
-<pre class="brush: css">.wrapper ul {
+```css
+.wrapper ul {
     overflow: hidden;
     margin: 0 -10px;
     padding: 0;
@@ -134,62 +136,65 @@ img {
     width: calc(33.333333% - 20px);
     margin: 0 10px 20px 10px;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-    &lt;ul&gt;
-        &lt;li class="card"&gt;&lt;h2&gt;One&lt;/h2&gt;
-            &lt;p&gt;We can use CSS Grid to overwrite older methods.&lt;/p&gt;
-        &lt;/li&gt;
-        &lt;li class="card"&gt;&lt;h2&gt;Two&lt;/h2&gt;
-            &lt;p&gt;We can use CSS Grid to overwrite older methods.&lt;/p&gt;
-        &lt;/li&gt;
-        &lt;li class="card"&gt;&lt;h2&gt;Three&lt;/h2&gt;
-            &lt;p&gt;We can use CSS Grid to overwrite older methods.&lt;/p&gt;
-        &lt;/li&gt;
-        &lt;li class="card"&gt;&lt;h2&gt;Four&lt;/h2&gt;
-            &lt;p&gt;We can use CSS Grid to overwrite older methods.&lt;/p&gt;
-        &lt;/li&gt;
-        &lt;li class="card"&gt;&lt;h2&gt;Five&lt;/h2&gt;
-            &lt;p&gt;We can use CSS Grid to overwrite older methods.&lt;/p&gt;
-        &lt;/li&gt;
-        &lt;li class="card"&gt;&lt;h2&gt;Six&lt;/h2&gt;
-            &lt;p&gt;We can use CSS Grid to overwrite older methods.&lt;/p&gt;
-        &lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+    <ul>
+        <li class="card"><h2>One</h2>
+            <p>We can use CSS Grid to overwrite older methods.</p>
+        </li>
+        <li class="card"><h2>Two</h2>
+            <p>We can use CSS Grid to overwrite older methods.</p>
+        </li>
+        <li class="card"><h2>Three</h2>
+            <p>We can use CSS Grid to overwrite older methods.</p>
+        </li>
+        <li class="card"><h2>Four</h2>
+            <p>We can use CSS Grid to overwrite older methods.</p>
+        </li>
+        <li class="card"><h2>Five</h2>
+            <p>We can use CSS Grid to overwrite older methods.</p>
+        </li>
+        <li class="card"><h2>Six</h2>
+            <p>We can use CSS Grid to overwrite older methods.</p>
+        </li>
+    </ul>
+</div>
+```
 
-<p>{{ EmbedLiveSample('A_more_complex_example', '550', '450') }}</p>
+{{ EmbedLiveSample('A_more_complex_example', '550', '450') }}
 
-<p>The example demonstrates the typical problem that we have with floated layouts: if additional content is added to any one card, the layout breaks.</p>
+The example demonstrates the typical problem that we have with floated layouts: if additional content is added to any one card, the layout breaks.
 
-<p><img alt="A floated cards layout demonstrating the problem caused by uneven content height." src="10-floated-cards.png"></p>
+![A floated cards layout demonstrating the problem caused by uneven content height.](10-floated-cards.png)
 
-<p>As a concession for older browsers, I have set a {{cssxref("min-height")}} on the items, and hope that my content editors won’t add too much content and make a mess of the layout!</p>
+As a concession for older browsers, I have set a {{cssxref("min-height")}} on the items, and hope that my content editors won’t add too much content and make a mess of the layout!
 
-<p>I then enhance the layout using grid. I can turn my {{HTMLElement("ul")}} into a grid container with three column tracks. However, the width I have assigned to the list items themselves still applies, and it now makes those items a third of the width of the track:</p>
+I then enhance the layout using grid. I can turn my {{HTMLElement("ul")}} into a grid container with three column tracks. However, the width I have assigned to the list items themselves still applies, and it now makes those items a third of the width of the track:
 
-<p><img alt="After applying grid to our container, the width of the items is now incorrect as they display at one third of the item width." src="10-float-width-problem.png"></p>
+![After applying grid to our container, the width of the items is now incorrect as they display at one third of the item width.](10-float-width-problem.png)
 
-<p>If I reset the width to <code>auto</code>, then this will stop the float behavior happening for older browsers. I need to be able to define the width for older browsers, and remove the width for grid supporting browsers. Thanks to <a href="/en-US/docs/Web/CSS/@supports">CSS Feature Queries</a> I can do this, right in my CSS.</p>
+If I reset the width to `auto`, then this will stop the float behavior happening for older browsers. I need to be able to define the width for older browsers, and remove the width for grid supporting browsers. Thanks to [CSS Feature Queries](/en-US/docs/Web/CSS/@supports) I can do this, right in my CSS.
 
-<h4>A solution using feature queries</h4>
+#### A solution using feature queries
 
-<p><em>Feature queries</em> will look very familiar if you have ever used a <a href="/en-US/docs/Web/CSS/Media_Queries">media query</a> to create a responsive layout. Rather than checking a {{glossary("viewport")}} width, or some feature of the browser or device, we check for support of a CSS property and value pair using an {{cssxref("@supports")}} rule. Inside the feature query, we can then write any CSS we need to apply our modern layout, and remove anything required for the older layout.</p>
+_Feature queries_ will look very familiar if you have ever used a [media query](/en-US/docs/Web/CSS/Media_Queries) to create a responsive layout. Rather than checking a {{glossary("viewport")}} width, or some feature of the browser or device, we check for support of a CSS property and value pair using an {{cssxref("@supports")}} rule. Inside the feature query, we can then write any CSS we need to apply our modern layout, and remove anything required for the older layout.
 
-<pre class="brush: css">@supports (display: grid) {
+```css
+@supports (display: grid) {
     .wrapper {
         /* do anything for grid supporting browsers here. */
     }
 }
-</pre>
+```
 
-<p>Feature queries have excellent browser support, and all of the browsers that support the updated grid specification support feature queries too. You can use them to deal with the issue we have with our enhanced: floated layout.</p>
+Feature queries have excellent browser support, and all of the browsers that support the updated grid specification support feature queries too. You can use them to deal with the issue we have with our enhanced: floated layout.
 
-<p>I use an <code>@supports</code> rule to check for support of <code>display: grid</code>. I then do my grid code on the {{HTMLElement("ul")}}, set my width and {{cssxref("min-height")}} on the {{HTMLElement("li")}} to <code>auto</code>. I also remove the margins and negative margins, and replace the spacing with the {{cssxref("gap")}} property. This means I don’t get a final margin on the last row of boxes. The layout now works, even if there is more content in one of the cards, than the others:</p>
+I use an `@supports` rule to check for support of `display: grid`. I then do my grid code on the {{HTMLElement("ul")}}, set my width and {{cssxref("min-height")}} on the {{HTMLElement("li")}} to `auto`. I also remove the margins and negative margins, and replace the spacing with the {{cssxref("gap")}} property. This means I don’t get a final margin on the last row of boxes. The layout now works, even if there is more content in one of the cards, than the others:
 
-<pre class="brush: css hidden">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -205,9 +210,10 @@ img {
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
 
-<pre class="brush: css">.wrapper ul {
+```css
+.wrapper ul {
     overflow: hidden;
     margin: 0 -10px;
     padding: 0;
@@ -231,42 +237,44 @@ img {
         margin: 0;
     }
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-    &lt;ul&gt;
-        &lt;li class="card"&gt;&lt;h2&gt;One&lt;/h2&gt;
-            &lt;p&gt;We can use CSS Grid to overwrite older methods.&lt;/p&gt;
-        &lt;/li&gt;
-        &lt;li class="card"&gt;&lt;h2&gt;Two&lt;/h2&gt;
-            &lt;p&gt;We can use CSS Grid to overwrite older methods.&lt;/p&gt;
-            &lt;p&gt;We can use CSS Grid to overwrite older methods.&lt;/p&gt;
-        &lt;/li&gt;
-        &lt;li class="card"&gt;&lt;h2&gt;Three&lt;/h2&gt;
-            &lt;p&gt;We can use CSS Grid to overwrite older methods.&lt;/p&gt;
-        &lt;/li&gt;
-        &lt;li class="card"&gt;&lt;h2&gt;Four&lt;/h2&gt;
-            &lt;p&gt;We can use CSS Grid to overwrite older methods.&lt;/p&gt;
-        &lt;/li&gt;
-        &lt;li class="card"&gt;&lt;h2&gt;Five&lt;/h2&gt;
-            &lt;p&gt;We can use CSS Grid to overwrite older methods.&lt;/p&gt;
-        &lt;/li&gt;
-        &lt;li class="card"&gt;&lt;h2&gt;Six&lt;/h2&gt;
-            &lt;p&gt;We can use CSS Grid to overwrite older methods.&lt;/p&gt;
-        &lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+    <ul>
+        <li class="card"><h2>One</h2>
+            <p>We can use CSS Grid to overwrite older methods.</p>
+        </li>
+        <li class="card"><h2>Two</h2>
+            <p>We can use CSS Grid to overwrite older methods.</p>
+            <p>We can use CSS Grid to overwrite older methods.</p>
+        </li>
+        <li class="card"><h2>Three</h2>
+            <p>We can use CSS Grid to overwrite older methods.</p>
+        </li>
+        <li class="card"><h2>Four</h2>
+            <p>We can use CSS Grid to overwrite older methods.</p>
+        </li>
+        <li class="card"><h2>Five</h2>
+            <p>We can use CSS Grid to overwrite older methods.</p>
+        </li>
+        <li class="card"><h2>Six</h2>
+            <p>We can use CSS Grid to overwrite older methods.</p>
+        </li>
+    </ul>
+</div>
+```
 
-<p>{{ EmbedLiveSample('A_solution_using_feature_queries', '550', '480') }}</p>
+{{ EmbedLiveSample('A_solution_using_feature_queries', '550', '480') }}
 
-<h2>Overwriting other values of <code>display</code></h2>
+## Overwriting other values of `display`
 
-<p>Due to the problems of creating grids of items using floats, many of us would use a different method to the floated method shown above to layout a set of cards. Using <code>display: inline-block</code> is an alternate method.</p>
+Due to the problems of creating grids of items using floats, many of us would use a different method to the floated method shown above to layout a set of cards. Using `display: inline-block` is an alternate method.
 
-<p>Once again I can use feature queries to overwrite a layout that uses <code>display: inline-block</code>, and again I don’t need to overwrite everything. An item that is set to <code>inline-block</code> becomes a grid item, and so the behavior of <code>inline-block</code> no longer applies. I have used the {{cssxref("vertical-align")}} property on my item when in the <code>inline-block</code> display mode, but this property does not apply to grid items and, therefore, is ignored once the item becomes a grid item:</p>
+Once again I can use feature queries to overwrite a layout that uses `display: inline-block`, and again I don’t need to overwrite everything. An item that is set to `inline-block` becomes a grid item, and so the behavior of `inline-block` no longer applies. I have used the {{cssxref("vertical-align")}} property on my item when in the `inline-block` display mode, but this property does not apply to grid items and, therefore, is ignored once the item becomes a grid item:
 
-<pre class="brush: css hidden">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -283,9 +291,10 @@ img {
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
 
-<pre class="brush: css">.wrapper ul {
+```css
+.wrapper ul {
     margin: 0 -10px;
     padding: 0;
     list-style: none;
@@ -309,78 +318,75 @@ img {
         margin: 0;
     }
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-    &lt;ul&gt;
-        &lt;li class="card"&gt;
-            &lt;h2&gt;One&lt;/h2&gt;
-            &lt;p&gt;We can use CSS Grid to overwrite older methods.&lt;/p&gt;
-        &lt;/li&gt;
-        &lt;li class="card"&gt;
-            &lt;h2&gt;Two&lt;/h2&gt;
-            &lt;p&gt;We can use CSS Grid to overwrite older methods.&lt;/p&gt;
-            &lt;p&gt;We can use CSS Grid to overwrite older methods.&lt;/p&gt;
-        &lt;/li&gt;
-        &lt;li class="card"&gt;
-            &lt;h2&gt;Three&lt;/h2&gt;
-            &lt;p&gt;We can use CSS Grid to overwrite older methods.&lt;/p&gt;
-        &lt;/li&gt;
-        &lt;li class="card"&gt;
-            &lt;h2&gt;Four&lt;/h2&gt;
-            &lt;p&gt;We can use CSS Grid to overwrite older methods.&lt;/p&gt;
-        &lt;/li&gt;
-        &lt;li class="card"&gt;
-            &lt;h2&gt;Five&lt;/h2&gt;
-            &lt;p&gt;We can use CSS Grid to overwrite older methods.&lt;/p&gt;
-        &lt;/li&gt;
-        &lt;li class="card"&gt;
-            &lt;h2&gt;Six&lt;/h2&gt;
-            &lt;p&gt;We can use CSS Grid to overwrite older methods.&lt;/p&gt;
-        &lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+    <ul>
+        <li class="card">
+            <h2>One</h2>
+            <p>We can use CSS Grid to overwrite older methods.</p>
+        </li>
+        <li class="card">
+            <h2>Two</h2>
+            <p>We can use CSS Grid to overwrite older methods.</p>
+            <p>We can use CSS Grid to overwrite older methods.</p>
+        </li>
+        <li class="card">
+            <h2>Three</h2>
+            <p>We can use CSS Grid to overwrite older methods.</p>
+        </li>
+        <li class="card">
+            <h2>Four</h2>
+            <p>We can use CSS Grid to overwrite older methods.</p>
+        </li>
+        <li class="card">
+            <h2>Five</h2>
+            <p>We can use CSS Grid to overwrite older methods.</p>
+        </li>
+        <li class="card">
+            <h2>Six</h2>
+            <p>We can use CSS Grid to overwrite older methods.</p>
+        </li>
+    </ul>
+</div>
+```
 
-<p>{{ EmbedLiveSample('Overwriting_other_values_of_display', '500', '480') }}</p>
+{{ EmbedLiveSample('Overwriting_other_values_of_display', '500', '480') }}
 
-<p>Once again it is the width on the item we need to address, and then any other properties we want to enhance. In this example I have again used <code>gap</code>, rather than margins and negative margins to create my gutters.</p>
+Once again it is the width on the item we need to address, and then any other properties we want to enhance. In this example I have again used `gap`, rather than margins and negative margins to create my gutters.
 
-<h2 id="How_does_the_specification_define_these_overrides">How does the specification define these overrides?</h2>
+## How does the specification define these overrides?
 
-<p>The CSS Grid Layout specification details why we can overwrite the behavior of certain properties when something becomes a grid item. The key sections of the specification are:</p>
+The CSS Grid Layout specification details why we can overwrite the behavior of certain properties when something becomes a grid item. The key sections of the specification are:
 
-<ul>
- <li><a href="https://drafts.csswg.org/css-grid/#grid-containers">Establishing Grid Containers</a></li>
- <li><a href="https://drafts.csswg.org/css-grid/#grid-items">Grid Items</a></li>
- <li><a href="https://drafts.csswg.org/css-grid/#grid-item-display">Grid Item Display</a></li>
-</ul>
+- [Establishing Grid Containers](https://drafts.csswg.org/css-grid/#grid-containers)
+- [Grid Items](https://drafts.csswg.org/css-grid/#grid-items)
+- [Grid Item Display](https://drafts.csswg.org/css-grid/#grid-item-display)
 
-<p>As this behavior is detailed in the specification, you are safe to rely on using these overrides in your support for older browsers. Nothing that I am describing here should be seen as a "hack", we are taking advantage of the fact that the grid specification details the interaction between different layout methods.</p>
+As this behavior is detailed in the specification, you are safe to rely on using these overrides in your support for older browsers. Nothing that I am describing here should be seen as a "hack", we are taking advantage of the fact that the grid specification details the interaction between different layout methods.
 
-<h3 id="Other_values_of_display">Other values of display</h3>
+### Other values of display
 
-<p>When an element has a parent set to <code>display: grid</code> it is <em>blockified</em>, as defined in the <a href="https://drafts.csswg.org/css-display-3/#blockify">CSS display specification</a>. In the case of our item set to <code>inline-block</code>, this is why <code>display: inline-block</code> no longer applied.</p>
+When an element has a parent set to `display: grid` it is _blockified_, as defined in the [CSS display specification](https://drafts.csswg.org/css-display-3/#blockify). In the case of our item set to `inline-block`, this is why `display: inline-block` no longer applied.
 
-<p>If you are using <code>display: table</code> for your legacy layout, an item set to <code>display: table-cell</code> generates anonymous boxes. Therefore, if you use <code>display: table-cell</code> without any parent element set to <code>display-table</code>, an anonymous table wrapper is created around any adjacent cells, just as if you had wrapped them in a div or other element set to <code>display: table</code>. If you have an item set to <code>display: table-cell</code>, and then in a feature query change the parent to <code>display: grid</code>, this anonymous box creation will not happen. This means you can overwrite <code>display: table</code> based layouts, without having additional anonymous boxes.</p>
+If you are using `display: table` for your legacy layout, an item set to `display: table-cell` generates anonymous boxes. Therefore, if you use `display: table-cell` without any parent element set to `display-table`, an anonymous table wrapper is created around any adjacent cells, just as if you had wrapped them in a div or other element set to `display: table`. If you have an item set to `display: table-cell`, and then in a feature query change the parent to `display: grid`, this anonymous box creation will not happen. This means you can overwrite `display: table` based layouts, without having additional anonymous boxes.
 
-<h3 id="Floated_elements">Floated elements</h3>
+### Floated elements
 
-<p>As we have already seen, {{cssxref("float")}} and also {{cssxref("clear")}} have no effect on a grid item. Therefore you do not need to explicitly set items to <code>float: none</code>.</p>
+As we have already seen, {{cssxref("float")}} and also {{cssxref("clear")}} have no effect on a grid item. Therefore you do not need to explicitly set items to `float: none`.
 
-<h3 id="Vertical_alignment">Vertical alignment</h3>
+### Vertical alignment
 
-<p>The alignment property {{cssxref("vertical-align")}} has no effect on a grid item. In layouts using <code>display: inline-block</code> or <code>display: </code><code>table</code>, you might use the vertical-align property to perform basic alignment. In your grid layout you then have the far more powerful box alignment properties.</p>
+The alignment property {{cssxref("vertical-align")}} has no effect on a grid item. In layouts using `display: inline-block` or ` display: ``table`, you might use the vertical-align property to perform basic alignment. In your grid layout you then have the far more powerful box alignment properties.
 
-<h3 id="Multiple-column_layout">Multiple-column layout</h3>
+### Multiple-column layout
 
-<p>You can also use multiple column layout as your legacy browser plan, as the <code>column-*</code> properties do not apply when applied to a grid container.</p>
+You can also use multiple column layout as your legacy browser plan, as the `column-*` properties do not apply when applied to a grid container.
 
-<h2 id="Further_reading">Further reading</h2>
+## Further reading
 
-<ul>
- <li>For an excellent explanation of feature queries, and how to use them well, see <a href="https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/">Using Feature Queries in CSS</a>.</li>
- <li>A write-up of the differences between the IE/Edge (≤15) Grid implementation and the modern implementation, also covering <em>autoprefixer</em> support, take a look at: <em><a href="https://rachelandrew.co.uk/archives/2016/11/26/should-i-try-to-use-the-ie-implementation-of-css-grid-layout/">Should I try to use the IE implementation of CSS Grid Layout?</a></em></li>
- <li><a href="https://github.com/postcss/autoprefixer#grid-autoplacement-support-in-ie">Autoprefixer and Grid Autoplacement support in IE</a></li>
- <li><a href="https://css-tricks.com/css-grid-in-ie-css-grid-and-the-new-autoprefixer">CSS Grid and the New Autoprefixer</a></li>
-</ul>
+- For an excellent explanation of feature queries, and how to use them well, see [Using Feature Queries in CSS](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/).
+- A write-up of the differences between the IE/Edge (≤15) Grid implementation and the modern implementation, also covering _autoprefixer_ support, take a look at: _[Should I try to use the IE implementation of CSS Grid Layout?](https://rachelandrew.co.uk/archives/2016/11/26/should-i-try-to-use-the-ie-implementation-of-css-grid-layout/)_
+- [Autoprefixer and Grid Autoplacement support in IE](https://github.com/postcss/autoprefixer#grid-autoplacement-support-in-ie)
+- [CSS Grid and the New Autoprefixer](https://css-tricks.com/css-grid-in-ie-css-grid-and-the-new-autoprefixer)

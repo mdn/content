@@ -6,20 +6,19 @@ tags:
   - CSS Property
   - Page Breaks
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.page-break-before
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<div class="notecard warning">
- <p><strong>Warning:</strong> This property has been replaced by the {{cssxref("break-before")}} property.</p>
-</div>
+> **Warning:** This property has been replaced by the {{cssxref("break-before")}} property.
 
-<p>The <strong><code>page-break-before</code></strong> CSS property adjusts page breaks <em>before</em> the current element.</p>
+The **`page-break-before`** CSS property adjusts page breaks _before_ the current element.
 
-<p>This property applies to block elements that generate a box. It won't apply on an empty {{ HTMLElement("div") }} that won't generate a box.</p>
+This property applies to block elements that generate a box. It won't apply on an empty {{ HTMLElement("div") }} that won't generate a box.
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 page-break-before: auto;
 page-break-before: always;
 page-break-before: avoid;
@@ -33,96 +32,70 @@ page-break-before: inherit;
 page-break-before: initial;
 page-break-before: revert;
 page-break-before: unset;
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>Initial value. Automatic page breaks (neither forced nor forbidden).</dd>
- <dt><code>always</code></dt>
- <dd>Always force page breaks before the element.</dd>
- <dt><code>avoid</code></dt>
- <dd>Avoid page breaks before the element.</dd>
- <dt><code>left</code></dt>
- <dd>Force page breaks before the element so that the next page is formatted as a left page.</dd>
- <dt><code>right</code></dt>
- <dd>Force page breaks before the element so that the next page is formatted as a right page.</dd>
- <dt><code>recto</code> {{experimental_inline}}</dt>
- <dd>If pages progress left-to-right, then this acts like <code>right</code>. If pages progress right-to-left, then this acts like <code>left</code>.</dd>
- <dt><code>verso</code> {{experimental_inline}}</dt>
- <dd>If pages progress left-to-right, then this acts like <code>left</code>. If pages progress right-to-left, then this acts like <code>right</code>.</dd>
-</dl>
+- `auto`
+  - : Initial value. Automatic page breaks (neither forced nor forbidden).
+- `always`
+  - : Always force page breaks before the element.
+- `avoid`
+  - : Avoid page breaks before the element.
+- `left`
+  - : Force page breaks before the element so that the next page is formatted as a left page.
+- `right`
+  - : Force page breaks before the element so that the next page is formatted as a right page.
+- `recto` {{experimental_inline}}
+  - : If pages progress left-to-right, then this acts like `right`. If pages progress right-to-left, then this acts like `left`.
+- `verso` {{experimental_inline}}
+  - : If pages progress left-to-right, then this acts like `left`. If pages progress right-to-left, then this acts like `right`.
 
-<h2 id="Page_break_aliases">Page break aliases</h2>
+## Page break aliases
 
-<p>The <code>page-break-before</code> property is now a legacy property, replaced by {{cssxref("break-before")}}.</p>
+The `page-break-before` property is now a legacy property, replaced by {{cssxref("break-before")}}.
 
-<p>For compatibility reasons, <code>page-break-before</code> should be treated by browsers as an alias of <code>break-before</code>. This ensures that sites using <code>page-break-before</code> continue to work as designed. A subset of values should be aliased as follows:</p>
+For compatibility reasons, `page-break-before` should be treated by browsers as an alias of `break-before`. This ensures that sites using `page-break-before` continue to work as designed. A subset of values should be aliased as follows:
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">page-break-before</th>
-   <th scope="col">break-before</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>auto</code></td>
-   <td><code>auto</code></td>
-  </tr>
-  <tr>
-   <td><code>left</code></td>
-   <td><code>left</code></td>
-  </tr>
-  <tr>
-   <td><code>right</code></td>
-   <td><code>right</code></td>
-  </tr>
-  <tr>
-   <td><code>avoid</code></td>
-   <td><code>avoid</code></td>
-  </tr>
-  <tr>
-   <td><code>always</code></td>
-   <td><code>page</code></td>
-  </tr>
- </tbody>
-</table>
+| page-break-before | break-before |
+| ----------------- | ------------ |
+| `auto`            | `auto`       |
+| `left`            | `left`       |
+| `right`           | `right`      |
+| `avoid`           | `avoid`      |
+| `always`          | `page`       |
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Avoid_a_page_break_before_an_element">Avoid a page break before an element</h3>
+### Avoid a page break before an element
 
-<pre class="brush: css">/* avoid page break before div elements of class note */
+```css
+/* avoid page break before div elements of class note */
 div.note {
     page-break-before: avoid;
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("break-before")}}, {{cssxref("break-after")}}, {{cssxref("break-inside")}}</li>
- <li>{{cssxref("page-break-after")}}, {{cssxref("page-break-inside")}}</li>
- <li>{{cssxref("orphans")}}, {{cssxref("widows")}}</li>
-</ul>
+- {{cssxref("break-before")}}, {{cssxref("break-after")}}, {{cssxref("break-inside")}}
+- {{cssxref("page-break-after")}}, {{cssxref("page-break-inside")}}
+- {{cssxref("orphans")}}, {{cssxref("widows")}}

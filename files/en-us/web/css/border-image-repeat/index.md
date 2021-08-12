@@ -6,18 +6,19 @@ tags:
   - CSS Borders
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.border-image-repeat
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>border-image-repeat</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property defines how the <a href="/en-US/docs/Web/CSS/border-image-slice#edge-regions">edge regions</a> of a source image are adjusted to fit the dimensions of an element's <a href="/en-US/docs/Web/CSS/border-image">border image</a>.</p>
+The **`border-image-repeat`** [CSS](/en-US/docs/Web/CSS) property defines how the [edge regions](/en-US/docs/Web/CSS/border-image-slice#edge-regions) of a source image are adjusted to fit the dimensions of an element's [border image](/en-US/docs/Web/CSS/border-image).
 
-<div>{{EmbedInteractiveExample("pages/css/border-image-repeat.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-image-repeat.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Keyword value */
+```css
+/* Keyword value */
 border-image-repeat: stretch;
 border-image-repeat: repeat;
 border-image-repeat: round;
@@ -31,43 +32,40 @@ border-image-repeat: inherit;
 border-image-repeat: initial;
 border-image-repeat: revert;
 border-image-repeat: unset;
-</pre>
+```
 
-<p>The <code>border-image-repeat</code> property may be specified using one or two values chosen from the list of values below.</p>
+The `border-image-repeat` property may be specified using one or two values chosen from the list of values below.
 
-<ul>
- <li>When <strong>one</strong> value is specified, it applies the same behavior on <strong>all four sides</strong>.</li>
- <li>When <strong>two</strong> values are specified, the first applies to the <strong>top and bottom</strong>, the second to the <strong>left and right</strong>.</li>
-</ul>
+- When **one** value is specified, it applies the same behavior on **all four sides**.
+- When **two** values are specified, the first applies to the **top and bottom**, the second to the **left and right**.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>stretch</code></dt>
- <dd>The source image's edge regions are stretched to fill the gap between each border.</dd>
- <dt><code>repeat</code></dt>
- <dd>The source image's edge regions are tiled (repeated) to fill the gap between each border. Tiles may be clipped to achieve the proper fit.</dd>
- <dt><code>round</code></dt>
- <dd>The source image's edge regions are tiled (repeated) to fill the gap between each border. Tiles may be stretched to achieve the proper fit.</dd>
- <dt><code>space</code></dt>
- <dd>The source image's edge regions are tiled (repeated) to fill the gap between each border. Extra space will be distributed in between tiles to achieve the proper fit.</dd>
-</dl>
+- `stretch`
+  - : The source image's edge regions are stretched to fill the gap between each border.
+- `repeat`
+  - : The source image's edge regions are tiled (repeated) to fill the gap between each border. Tiles may be clipped to achieve the proper fit.
+- `round`
+  - : The source image's edge regions are tiled (repeated) to fill the gap between each border. Tiles may be stretched to achieve the proper fit.
+- `space`
+  - : The source image's edge regions are tiled (repeated) to fill the gap between each border. Extra space will be distributed in between tiles to achieve the proper fit.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Repeating_border_images">Repeating border images</h3>
+### Repeating border images
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css; highlight[7]">#bordered {
+```css
+#bordered {
   width: 12rem;
   margin-bottom: 1rem;
   padding: 1rem;
@@ -75,41 +73,41 @@ border-image-repeat: unset;
   border-image: url("border.png") 27;
   border-image-repeat: stretch;  /* Can be changed in the live sample */
 }
-</pre>
+```
 
-<pre class="brush: html hidden">&lt;div id="bordered"&gt;You can try out various border repetition rules on me!&lt;/div&gt;
+```html hidden
+<div id="bordered">You can try out various border repetition rules on me!</div>
 
-&lt;select id="repetition"&gt;
-  &lt;option value="stretch"&gt;stretch&lt;/option&gt;
-  &lt;option value="repeat"&gt;repeat&lt;/option&gt;
-  &lt;option value="round"&gt;round&lt;/option&gt;
-  &lt;option value="space"&gt;space&lt;/option&gt;
-  &lt;option value="stretch repeat"&gt;stretch repeat&lt;/option&gt;
-  &lt;option value="space round"&gt;space round&lt;/option&gt;
-&lt;/select&gt;
-</pre>
+<select id="repetition">
+  <option value="stretch">stretch</option>
+  <option value="repeat">repeat</option>
+  <option value="round">round</option>
+  <option value="space">space</option>
+  <option value="stretch repeat">stretch repeat</option>
+  <option value="space round">space round</option>
+</select>
+```
 
-<pre class="brush: js hidden">var repetition = document.getElementById("repetition");
+```js hidden
+var repetition = document.getElementById("repetition");
 repetition.addEventListener("change", function (evt) {
   document.getElementById("bordered").style.borderImageRepeat = evt.target.value;
 });
-</pre>
+```
 
-<h4 id="Results">Results</h4>
+#### Results
 
-<p>{{EmbedLiveSample("Repeating_border_images", "auto", 200)}}</p>
+{{EmbedLiveSample("Repeating_border_images", "auto", 200)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders">Backgrounds and borders</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">Learn CSS: Backgrounds and borders</a></li>
-</ul>
+- [Backgrounds and borders](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders)
+- [Learn CSS: Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)

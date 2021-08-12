@@ -4,35 +4,34 @@ slug: Web/CSS/scroll-padding
 tags:
   - CSS
   - CSS Property
-  - 'recipe:css-shorthand-property'
+  - recipe:css-shorthand-property
   - scroll-snap
 browser-compat: css.properties.scroll-padding
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>scroll-padding</code></strong> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a> sets scroll padding on all sides of an element at once, much like the {{cssxref("padding")}} property does for padding on an element.</p>
+The **`scroll-padding`** [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets scroll padding on all sides of an element at once, much like the {{cssxref("padding")}} property does for padding on an element.
 
-<div>{{EmbedInteractiveExample("pages/css/scroll-padding.html")}}</div>
+{{EmbedInteractiveExample("pages/css/scroll-padding.html")}}
 
-<p>The <code>scroll-padding-*</code> properties define offsets for the <dfn>optimal viewing region</dfn> of the scrollport: the region used as the target region for placing things in view of the user. This allows the author to exclude regions of the scrollport that are obscured by other content (such as fixed-positioned toolbars or sidebars), or to put more breathing room between a targeted element and the edges of the scrollport.</p>
+The `scroll-padding-*` properties define offsets for the _optimal viewing region_ of the scrollport: the region used as the target region for placing things in view of the user. This allows the author to exclude regions of the scrollport that are obscured by other content (such as fixed-positioned toolbars or sidebars), or to put more breathing room between a targeted element and the edges of the scrollport.
 
-<h2 id="Constituent_properties">Constituent properties</h2>
+## Constituent properties
 
-<p>This property is a shorthand for the following CSS properties:</p>
+This property is a shorthand for the following CSS properties:
 
-<ul>
- <li>{{CSSXref("scroll-padding-bottom")}}</li>
- <li>{{CSSXref("scroll-padding-left")}}</li>
- <li>{{CSSXref("scroll-padding-right")}}</li>
- <li>{{CSSXref("scroll-padding-top")}}</li>
-</ul>
+- {{CSSXref("scroll-padding-bottom")}}
+- {{CSSXref("scroll-padding-left")}}
+- {{CSSXref("scroll-padding-right")}}
+- {{CSSXref("scroll-padding-top")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">/* Keyword values */
+```css
+/* Keyword values */
 scroll-padding: auto;
 
-/* &lt;length&gt; values */
+/* <length> values */
 scroll-padding: 10px;
 scroll-padding: 1em .5em 1em 1em;
 scroll-padding: 10%;
@@ -42,36 +41,32 @@ scroll-padding: inherit;
 scroll-padding: initial;
 scroll-padding: revert;
 scroll-padding: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{cssxref("&lt;length-percentage&gt;")}}</dt>
- <dd>An inwards offset from the corresponding edge of the scrollport, as a valid {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}.</dd>
- <dt><code>auto</code></dt>
- <dd>The offset is determined by the user agent. This will generally be <code>0px</code>, but the user agent is free to detect and do something else if a non-zero value is more appropriate.</dd>
-</dl>
+- {{cssxref("&lt;length-percentage&gt;")}}
+  - : An inwards offset from the corresponding edge of the scrollport, as a valid {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}.
+- `auto`
+  - : The offset is determined by the user agent. This will generally be `0px`, but the user agent is free to detect and do something else if a non-zero value is more appropriate.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/CSS/CSS_Scroll_Snap">CSS Scroll Snap</a></li>
-  <li><a href="https://developers.google.com/web/updates/2018/07/css-scroll-snap">Well-Controlled Scrolling with CSS Scroll Snap</a></li>
-</ul>
+- [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap)
+- [Well-Controlled Scrolling with CSS Scroll Snap](https://developers.google.com/web/updates/2018/07/css-scroll-snap)

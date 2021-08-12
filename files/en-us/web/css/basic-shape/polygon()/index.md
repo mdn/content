@@ -11,42 +11,40 @@ tags:
   - Reference
 browser-compat: css.types.basic-shape.polygon
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>polygon()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> function is one of the {{cssxref("&lt;basic-shape&gt;")}} <a href="/en-US/docs/Web/CSS/CSS_Types">data types</a>.</p>
+The **`polygon()`** [CSS](/en-US/docs/Web/CSS) function is one of the {{cssxref("&lt;basic-shape&gt;")}} [data types](/en-US/docs/Web/CSS/CSS_Types).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">clip-path: polygon(50% 2.4%, 34.5% 33.8%, 0% 38.8%, 25% 63.1%, 19.1% 97.6%);</pre>
+```css
+clip-path: polygon(50% 2.4%, 34.5% 33.8%, 0% 38.8%, 25% 63.1%, 19.1% 97.6%);
+```
 
-<h3>Values</h3>
+### Values
 
-<dl>
-  <dt><code>&lt;fill-rule&gt;</code></dt>
-  <dd>An optional value of <code>nonzero</code> (the default when omitted) or <code>evenodd</code>, which specifies the <a href="/en-US/docs/Web/SVG/Attribute/fill-rule">filling rule</a>.</dd>
-  <dt><code><code>[&lt;length-percentage&gt;&lt;length-percentage&gt;]#</code></code></dt>
-  <dd>Three or more pairs of values (a polygon must at least draw a triangle). These values are co-ordinates drawn with reference to the reference box.</dd>
-</dl>
+- `<fill-rule>`
+  - : An optional value of `nonzero` (the default when omitted) or `evenodd`, which specifies the [filling rule](/en-US/docs/Web/SVG/Attribute/fill-rule).
+- `[<length-percentage><length-percentage>]#`
+  - : Three or more pairs of values (a polygon must at least draw a triangle). These values are co-ordinates drawn with reference to the reference box.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3>Basic polygon() example</h3>
+### Basic polygon() example
 
-<p>In this example a shape is created for text to follow using the <code>polygon()</code>, you can change any of the values to see how the shape is changed.</p>
+In this example a shape is created for text to follow using the `polygon()`, you can change any of the values to see how the shape is changed.
 
-<p>{{EmbedGHLiveSample("css-examples/shapes/basic-shape/polygon.html", '100%', 800)}}</p>
+{{EmbedGHLiveSample("css-examples/shapes/basic-shape/polygon.html", '100%', 800)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Properties that use this data type: {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Shapes/Basic_Shapes">Guide to Basic Shapes</a></li>
-</ul>
+- Properties that use this data type: {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}
+- [Guide to Basic Shapes](/en-US/docs/Web/CSS/CSS_Shapes/Basic_Shapes)

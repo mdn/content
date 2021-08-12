@@ -6,114 +6,104 @@ tags:
   - CSS Fonts
   - CSS Property
   - Reference
-  - 'recipe:css-shorthand-property'
+  - recipe:css-shorthand-property
 browser-compat: css.properties.font
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>font</code></strong> CSS <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a> sets all the different properties of an element's font. Alternatively, it sets an element's font to a system font.</p>
+The **`font`** CSS [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets all the different properties of an element's font. Alternatively, it sets an element's font to a system font.
 
-<div>{{EmbedInteractiveExample("pages/css/font.html")}}</div>
+{{EmbedInteractiveExample("pages/css/font.html")}}
 
+As with any shorthand property, any individual value that is not specified is set to its corresponding initial value (possibly overriding values previously set using non-shorthand properties). Though not directly settable by `font`, the longhands {{cssxref("font-size-adjust")}} and {{cssxref("font-kerning")}} are also reset to their initial values.
 
-<p>As with any shorthand property, any individual value that is not specified is set to its corresponding initial value (possibly overriding values previously set using non-shorthand properties). Though not directly settable by <code>font</code>, the longhands {{cssxref("font-size-adjust")}} and {{cssxref("font-kerning")}} are also reset to their initial values.</p>
+## Constituent properties
 
-<h2 id="Constituent_properties">Constituent properties</h2>
+This property is a shorthand for the following CSS properties:
 
-<p>This property is a shorthand for the following CSS properties:</p>
+- {{cssxref("font-family")}}
+- {{cssxref("font-size")}}
+- {{cssxref("font-stretch")}}
+- {{cssxref("font-style")}}
+- {{cssxref("font-variant")}}
+- {{cssxref("font-weight")}}
+- {{cssxref("line-height")}}
 
-<ul>
- <li>{{cssxref("font-family")}}</li>
- <li>{{cssxref("font-size")}}</li>
- <li>{{cssxref("font-stretch")}}</li>
- <li>{{cssxref("font-style")}}</li>
- <li>{{cssxref("font-variant")}}</li>
- <li>{{cssxref("font-weight")}}</li>
- <li>{{cssxref("line-height")}}</li>
-</ul>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+The `font` property may be specified as either a single keyword, which will select a system font, or as a shorthand for various font-related properties.
 
-<p>The <code>font</code> property may be specified as either a single keyword, which will select a system font, or as a shorthand for various font-related properties.</p>
+If `font` is specified as a system keyword, it must be one of: `caption`, `icon`, `menu`, `>message-box`, `small-caption`, `status-bar`.
 
-<p>If <code>font</code> is specified as a system keyword, it must be one of: <code>caption</code>, <code>icon</code>, <code>menu</code>, <code>>message-box</code>, <code>small-caption</code>, <code>status-bar</code>.</p>
+If `font` is specified as a shorthand for several font-related properties, then:
 
-<p>If <code>font</code> is specified as a shorthand for several font-related properties, then:</p>
+- it must include values for:
 
-<ul>
- <li>it must include values for:
-  <ul>
-   <li>{{cssxref("&lt;font-size&gt;")}}</li>
-   <li>{{cssxref("&lt;font-family&gt;")}}</li>
-  </ul>
- </li>
- <li>it may optionally include values for:
-  <ul>
-   <li>{{cssxref("&lt;font-style&gt;")}}</li>
-   <li>{{cssxref("&lt;font-variant&gt;")}}</li>
-   <li>{{cssxref("&lt;font-weight&gt;")}}</li>
-   <li>{{cssxref("&lt;font-stretch&gt;")}}</li>
-   <li>{{cssxref("&lt;line-height&gt;")}}</li>
-  </ul>
- </li>
- <li><code>font-style</code>, <code>font-variant</code> and <code>font-weight</code> must precede <code>font-size</code></li>
- <li><code>font-variant</code> may only specify the values defined in CSS 2.1, that is <code>normal</code> and <code>small-caps</code></li>
- <li><code>font-stretch</code> may only be a single keyword value.</li>
- <li><code>line-height</code> must immediately follow <code>font-size</code>, preceded by "/", like this: "<code>16px/3</code>"</li>
- <li><code>font-family</code> must be the last value specified.</li>
-</ul>
+  - {{cssxref("&lt;font-size&gt;")}}
+  - {{cssxref("&lt;font-family&gt;")}}
 
-<h3 id="Values">Values</h3>
+- it may optionally include values for:
 
-<dl>
- <dt><code>&lt;'font-style'&gt;</code></dt>
- <dd>See the {{cssxref("font-style")}} CSS property.</dd>
- <dt><code>&lt;'font-variant'&gt;</code></dt>
- <dd>See the {{cssxref("font-variant")}} CSS property.</dd>
- <dt><code>&lt;'font-weight'&gt;</code></dt>
- <dd>See the {{cssxref("font-weight")}} CSS property.</dd>
- <dt><code>&lt;'font-stretch'&gt;</code></dt>
- <dd>See the {{cssxref("font-stretch")}} CSS property.</dd>
- <dt><code>&lt;'font-size'&gt;</code></dt>
- <dd>See the {{cssxref("font-size")}} CSS property.</dd>
- <dt><code>&lt;'line-height'&gt;</code></dt>
- <dd>See the {{cssxref("line-height")}} CSS property.</dd>
- <dt><code>&lt;'font-family'&gt;</code></dt>
- <dd>See the {{cssxref("font-family")}} CSS property.</dd>
-</dl>
+  - {{cssxref("&lt;font-style&gt;")}}
+  - {{cssxref("&lt;font-variant&gt;")}}
+  - {{cssxref("&lt;font-weight&gt;")}}
+  - {{cssxref("&lt;font-stretch&gt;")}}
+  - {{cssxref("&lt;line-height&gt;")}}
 
-<h4 id="System_font_values">System font values</h4>
+- `font-style`, `font-variant` and `font-weight` must precede `font-size`
+- `font-variant` may only specify the values defined in CSS 2.1, that is `normal` and `small-caps`
+- `font-stretch` may only be a single keyword value.
+- `line-height` must immediately follow `font-size`, preceded by "/", like this: "`16px/3`"
+- `font-family` must be the last value specified.
 
-<dl>
- <dt><code>caption</code></dt>
- <dd>The system font used for captioned controls (e.g., buttons, drop-downs, etc.).</dd>
- <dt><code>icon</code></dt>
- <dd>The system font used to label icons.</dd>
- <dt><code>menu</code></dt>
- <dd>The system font used in menus (e.g., dropdown menus and menu lists).</dd>
- <dt><code>message-box</code></dt>
- <dd>The system font used in dialog boxes.</dd>
- <dt><code>small-caption</code></dt>
- <dd>The system font used for labeling small controls.</dd>
- <dt><code>status-bar</code></dt>
- <dd>The system font used in window status bars.</dd>
- <dt>Prefixed system font keywords</dt>
- <dd>Browsers often implement several more, prefixed, keywords: Gecko implements <code>-moz-window</code>, <code>-moz-document</code>, <code>-moz-desktop</code>, <code>-moz-info</code>, <code>-moz-dialog</code>, <code>-moz-button</code>, <code>-moz-pull-down-menu</code>, <code>-moz-list</code>, and <code>-moz-field</code>.</dd>
-</dl>
+### Values
 
-<h2 id="Formal_definition">Formal definition</h2>
+- `<'font-style'>`
+  - : See the {{cssxref("font-style")}} CSS property.
+- `<'font-variant'>`
+  - : See the {{cssxref("font-variant")}} CSS property.
+- `<'font-weight'>`
+  - : See the {{cssxref("font-weight")}} CSS property.
+- `<'font-stretch'>`
+  - : See the {{cssxref("font-stretch")}} CSS property.
+- `<'font-size'>`
+  - : See the {{cssxref("font-size")}} CSS property.
+- `<'line-height'>`
+  - : See the {{cssxref("line-height")}} CSS property.
+- `<'font-family'>`
+  - : See the {{cssxref("font-family")}} CSS property.
 
-<p>{{CSSInfo}}</p>
+#### System font values
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+- `caption`
+  - : The system font used for captioned controls (e.g., buttons, drop-downs, etc.).
+- `icon`
+  - : The system font used to label icons.
+- `menu`
+  - : The system font used in menus (e.g., dropdown menus and menu lists).
+- `message-box`
+  - : The system font used in dialog boxes.
+- `small-caption`
+  - : The system font used for labeling small controls.
+- `status-bar`
+  - : The system font used in window status bars.
+- Prefixed system font keywords
+  - : Browsers often implement several more, prefixed, keywords: Gecko implements `-moz-window`, `-moz-document`, `-moz-desktop`, `-moz-info`, `-moz-dialog`, `-moz-button`, `-moz-pull-down-menu`, `-moz-list`, and `-moz-field`.
+
+## Formal definition
+
+{{CSSInfo}}
+
+## Formal syntax
 
 {{CSSSyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_font_properties">Setting font properties</h3>
+### Setting font properties
 
-<pre class="brush: css">/* Set the font size to 12px and the line height to 14px.
+```css
+/* Set the font size to 12px and the line height to 14px.
    Set the font family to sans-serif */
 p { font: 12px/14px sans-serif }
 
@@ -130,105 +120,107 @@ p { font: bold italic large serif }
 
 /* Use the same font as the status bar of the window */
 p { font: status-bar }
-</pre>
+```
 
-<h3>Live sample</h3>
+### Live sample
 
-<pre class="brush: html hidden">&lt;p&gt;
+```html hidden
+<p>
     Change the radio buttons below to see the generated shorthand and its effect.
-&lt;/p&gt;
-&lt;form action="createShortHand()"&gt;
-    &lt;div class="cf"&gt;
-        &lt;div class="setPropCont"&gt;
-            font-style&lt;br/&gt;
-            &lt;input type="radio" id="font-style-none" name="font_style" checked="" value="" onchange="setCss()"&gt; &lt;label for="font-style-none"&gt;none&lt;/label&gt;&lt;br/&gt;
-            &lt;input type="radio" id="font-style-normal" name="font_style" value="normal" onchange="setCss()"&gt; &lt;label for="font-style-normal"&gt;normal&lt;/label&gt;&lt;br/&gt;
-            &lt;input type="radio" id="font-style-italic" name="font_style" value="italic" onchange="setCss()"&gt; &lt;label for="font-style-italic"&gt;italic&lt;/label&gt;&lt;br/&gt;
-            &lt;input type="radio" id="font-style-oblique" name="font_style" value="oblique" onchange="setCss()"&gt; &lt;label for="font-style-oblique"&gt;oblique&lt;/label&gt;
-        &lt;/div&gt;
+</p>
+<form action="createShortHand()">
+    <div class="cf">
+        <div class="setPropCont">
+            font-style<br/>
+            <input type="radio" id="font-style-none" name="font_style" checked="" value="" onchange="setCss()"> <label for="font-style-none">none</label><br/>
+            <input type="radio" id="font-style-normal" name="font_style" value="normal" onchange="setCss()"> <label for="font-style-normal">normal</label><br/>
+            <input type="radio" id="font-style-italic" name="font_style" value="italic" onchange="setCss()"> <label for="font-style-italic">italic</label><br/>
+            <input type="radio" id="font-style-oblique" name="font_style" value="oblique" onchange="setCss()"> <label for="font-style-oblique">oblique</label>
+        </div>
 
-        &lt;div class="setPropCont"&gt;
-            font-variant&lt;br&gt;
-            &lt;input type="radio" id="font-variant-none" name="font_variant" checked="" value=" " onchange="setCss()"&gt; &lt;label for="font-variant-none"&gt;none&lt;/label&gt;&lt;br/&gt;
-            &lt;input type="radio" id="font-variant-normal" name="font_variant" value="normal" onchange="setCss()"&gt; &lt;label for="font-variant-normal"&gt;normal&lt;/label&gt;&lt;br/&gt;
-            &lt;input type="radio" id="font-variant-small-caps" name="font_variant" value="small-caps" onchange="setCss()"&gt; &lt;label for="font-variant-small-caps"&gt;small-caps&lt;/label&gt;
-        &lt;/div&gt;
+        <div class="setPropCont">
+            font-variant<br>
+            <input type="radio" id="font-variant-none" name="font_variant" checked="" value=" " onchange="setCss()"> <label for="font-variant-none">none</label><br/>
+            <input type="radio" id="font-variant-normal" name="font_variant" value="normal" onchange="setCss()"> <label for="font-variant-normal">normal</label><br/>
+            <input type="radio" id="font-variant-small-caps" name="font_variant" value="small-caps" onchange="setCss()"> <label for="font-variant-small-caps">small-caps</label>
+        </div>
 
-        &lt;div class="setPropCont"&gt;
-            font-weight&lt;br/&gt;
-            &lt;input type="radio" id="font-weight-none" name="font_weight" value="" onchange="setCss()"&gt; &lt;label for="font-weight-none"&gt;none&lt;/label&gt;&lt;br/&gt;
-            &lt;input type="radio" id="font-weight-normal" checked="" name="font_weight" value="400" onchange="setCss()"&gt; &lt;label for="font-weight-normal"&gt;normal&lt;/label&gt;&lt;br/&gt;
-            &lt;input type="radio" id="font-weight-bold" name="font_weight" value="700" onchange="setCss()"&gt; &lt;label for="font-weight-bold"&gt;bold&lt;/label&gt;
-        &lt;/div&gt;
+        <div class="setPropCont">
+            font-weight<br/>
+            <input type="radio" id="font-weight-none" name="font_weight" value="" onchange="setCss()"> <label for="font-weight-none">none</label><br/>
+            <input type="radio" id="font-weight-normal" checked="" name="font_weight" value="400" onchange="setCss()"> <label for="font-weight-normal">normal</label><br/>
+            <input type="radio" id="font-weight-bold" name="font_weight" value="700" onchange="setCss()"> <label for="font-weight-bold">bold</label>
+        </div>
 
-        &lt;div class="setPropCont"&gt;
-            font-size&lt;br/&gt;
-            &lt;input type="radio" id="font-size-12px" name="font_size" value="12px" onchange="setCss()"&gt; &lt;label for="font-size-12px"&gt;12px&lt;/label&gt;&lt;br/&gt;
-            &lt;input type="radio" id="font-size-16px" name="font_size" value="16px" checked="" onchange="setCss()"&gt; &lt;label for="font-size-16px"&gt;16px&lt;/label&gt;&lt;br/&gt;
-            &lt;input type="radio" id="font-size-24px" name="font_size" value="24px" onchange="setCss()"&gt; &lt;label for="font-size-24px"&gt;24px&lt;/label&gt;
-        &lt;/div&gt;
+        <div class="setPropCont">
+            font-size<br/>
+            <input type="radio" id="font-size-12px" name="font_size" value="12px" onchange="setCss()"> <label for="font-size-12px">12px</label><br/>
+            <input type="radio" id="font-size-16px" name="font_size" value="16px" checked="" onchange="setCss()"> <label for="font-size-16px">16px</label><br/>
+            <input type="radio" id="font-size-24px" name="font_size" value="24px" onchange="setCss()"> <label for="font-size-24px">24px</label>
+        </div>
 
-        &lt;div class="setPropCont"&gt;
-            line-height&lt;br/&gt;
-            &lt;input type="radio" id="line-height-none" name="line_height" checked="" value="" onchange="setCss()"&gt; &lt;label for="line-height-none"&gt;none&lt;/label&gt;&lt;br/&gt;
-            &lt;input type="radio" id="line-height-1.2" name="line_height" value="/1.2" onchange="setCss()"&gt; &lt;label for="line-height-1.2"&gt;1.2&lt;/label&gt;&lt;br/&gt;
-            &lt;input type="radio" id="line-height-3" name="line_height" value="/3" onchange="setCss()"&gt; &lt;label for="line-height-3"&gt;3&lt;/label&gt;
-        &lt;/div&gt;&lt;br/&gt;
+        <div class="setPropCont">
+            line-height<br/>
+            <input type="radio" id="line-height-none" name="line_height" checked="" value="" onchange="setCss()"> <label for="line-height-none">none</label><br/>
+            <input type="radio" id="line-height-1.2" name="line_height" value="/1.2" onchange="setCss()"> <label for="line-height-1.2">1.2</label><br/>
+            <input type="radio" id="line-height-3" name="line_height" value="/3" onchange="setCss()"> <label for="line-height-3">3</label>
+        </div><br/>
 
-        &lt;div class="setPropCont fontfamily"&gt;
-            font-family&lt;br/&gt;
-            &lt;input type="radio" id="font-family-courier" name="font_family" checked="" value="courier" onchange="setCss(5,'courier')"&gt; &lt;label for="font-family-courier"&gt;courier&lt;/label&gt;&lt;br/&gt;            &lt;input type="radio" id="font-family-serif" name="font_family" value="serif" onchange="setCss()"&gt; &lt;label for="font-family-serif"&gt;serif&lt;/label&gt;&lt;br /&gt;
-            &lt;input type="radio" id="font-family-sans-serif" name="font_family" value="sans-serif" onchange="setCss()"&gt; &lt;label for="font-family-sans-serif"&gt;sans-serif&lt;/label&gt;&lt;br /&gt;            &lt;input type="radio" id="font-family-arial" name="font_family" value="arial" onchange="setCss()"&gt; &lt;label for="font-family-arial"&gt;Arial&lt;/label&gt;&lt;br /&gt;
-            &lt;input type="radio" id="font-family-monospace" name="font_family" value="monospace" onchange="setCss()"&gt; &lt;label for="font-family-monospace"&gt;monospace&lt;/label&gt;&lt;br /&gt;            &lt;input type="radio" id="font-family-cursive" name="font_family" value="cursive" onchange="setCss()"&gt; &lt;label for="font-family-cursive"&gt;cursive&lt;/label&gt;&lt;br /&gt;
-            &lt;input type="radio" id="font-family-fantasy" name="font_family" value="fantasy" onchange="setCss()"&gt; &lt;label for="font-family-fantasy"&gt;fantasy&lt;/label&gt;&lt;br /&gt;            &lt;input type="radio" id="font-family-system-ui" name="font_family" value="system-ui" onchange="setCss()"&gt; &lt;label for="font-family-system-ui"&gt;system-ui&lt;/label&gt;&lt;br /&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
+        <div class="setPropCont fontfamily">
+            font-family<br/>
+            <input type="radio" id="font-family-courier" name="font_family" checked="" value="courier" onchange="setCss(5,'courier')"> <label for="font-family-courier">courier</label><br/>            <input type="radio" id="font-family-serif" name="font_family" value="serif" onchange="setCss()"> <label for="font-family-serif">serif</label><br />
+            <input type="radio" id="font-family-sans-serif" name="font_family" value="sans-serif" onchange="setCss()"> <label for="font-family-sans-serif">sans-serif</label><br />            <input type="radio" id="font-family-arial" name="font_family" value="arial" onchange="setCss()"> <label for="font-family-arial">Arial</label><br />
+            <input type="radio" id="font-family-monospace" name="font_family" value="monospace" onchange="setCss()"> <label for="font-family-monospace">monospace</label><br />            <input type="radio" id="font-family-cursive" name="font_family" value="cursive" onchange="setCss()"> <label for="font-family-cursive">cursive</label><br />
+            <input type="radio" id="font-family-fantasy" name="font_family" value="fantasy" onchange="setCss()"> <label for="font-family-fantasy">fantasy</label><br />            <input type="radio" id="font-family-system-ui" name="font_family" value="system-ui" onchange="setCss()"> <label for="font-family-system-ui">system-ui</label><br />
+        </div>
+    </div>
 
-    &lt;div class="cf propInputs"&gt;
-        &lt;div class="propInputCont tar"&gt;
+    <div class="cf propInputs">
+        <div class="propInputCont tar">
             font :
-        &lt;/div&gt;
-        &lt;div class="propInputCont"&gt;
-            &lt;input type="text" class="curCss" id="input_font_style"&gt;&lt;br/&gt;
-            font-style &lt;br/&gt;
+        </div>
+        <div class="propInputCont">
+            <input type="text" class="curCss" id="input_font_style"><br/>
+            font-style <br/>
             optional
 
-        &lt;/div&gt;
-        &lt;div class="propInputCont"&gt;
-            &lt;input type="text" class="curCss" id="input_font_variant"&gt; &lt;br/&gt;
-            font-variant &lt;br/&gt;
+        </div>
+        <div class="propInputCont">
+            <input type="text" class="curCss" id="input_font_variant"> <br/>
+            font-variant <br/>
             optional
-        &lt;/div&gt;
-        &lt;div class="propInputCont"&gt;
-            &lt;input type="text" class="curCss" id="input_font_weight"&gt; &lt;br/&gt;
-            font-weight &lt;br/&gt;
+        </div>
+        <div class="propInputCont">
+            <input type="text" class="curCss" id="input_font_weight"> <br/>
+            font-weight <br/>
             optional
-        &lt;/div&gt;
-        &lt;div class="propInputCont"&gt;
-            &lt;input type="text" class="curCss mandatory" id="input_font_size"&gt; &lt;br/&gt;
-            font-size &lt;br/&gt;
+        </div>
+        <div class="propInputCont">
+            <input type="text" class="curCss mandatory" id="input_font_size"> <br/>
+            font-size <br/>
             mandatory
-        &lt;/div&gt;
-        &lt;div class="propInputCont"&gt;
-            &lt;input type="text" class="curCss" id="input_line_height"&gt; &lt;br/&gt;
-            line-height &lt;br/&gt;
+        </div>
+        <div class="propInputCont">
+            <input type="text" class="curCss" id="input_line_height"> <br/>
+            line-height <br/>
             optional
-        &lt;/div&gt;
-        &lt;div class="propInputCont"&gt;
-            &lt;input type="text" class="curCss mandatory" id="input_font_family"&gt; &lt;br/&gt;
-            font-family &lt;br/&gt;
+        </div>
+        <div class="propInputCont">
+            <input type="text" class="curCss mandatory" id="input_font_family"> <br/>
+            font-family <br/>
             mandatory
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/form&gt;
+        </div>
+    </div>
+</form>
 
-&lt;div class="fontShortHand"&gt;
+<div class="fontShortHand">
     This is some sample text.
-&lt;/div&gt;
-&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
-</pre>
+</div>
+<br/><br/><br/><br/><br/><br/>
+```
 
-<pre class="brush: css hidden">body, input {
+```css hidden
+body, input {
   font: 14px arial;
   overflow: hidden;
 }
@@ -277,9 +269,11 @@ p { font: status-bar }
 }
 .fontfamily {
   display: inline-block;
-}</pre>
+}
+```
 
-<pre class="brush: js hidden">var textAreas = document.getElementsByClassName("curCss"),
+```js hidden
+var textAreas = document.getElementsByClassName("curCss"),
     shortText = "",
     getCheckedValue,
     setCss,
@@ -300,7 +294,7 @@ getProperties = function () {
 
 getCheckedValue = function(radio_name) {
   oRadio = document.forms[0].elements[radio_name];
-  for (var i = 0; i &lt; oRadio.length; i++) {
+  for (var i = 0; i < oRadio.length; i++) {
     if(oRadio[i].checked) {
       var propInput = "input_" + radio_name,
           curElemName = "input_" + radio_name,
@@ -319,7 +313,7 @@ setCss = function () {
 
 injectCss = function(cssFragment) {
   old = document.body.getElementsByTagName("style");
-  if (old.length &gt; 1) {
+  if (old.length > 1) {
     old[1].parentElement.removeChild(old[1]);
   }
   css = document.createElement("style");
@@ -327,23 +321,21 @@ injectCss = function(cssFragment) {
   document.body.appendChild(css);
 }
 
-setCss();</pre>
-</div>
+setCss();
+```
 
-<p>{{ EmbedLiveSample('Live_sample','100%', '440px')}}</p>
+{{ EmbedLiveSample('Live_sample','100%', '440px')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("font-style")}}</li>
- <li>{{cssxref("font-weight")}}</li>
- <li><a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals">Fundamental text and font styling</a></li>
-</ul>
+- {{cssxref("font-style")}}
+- {{cssxref("font-weight")}}
+- [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)

@@ -1,6 +1,6 @@
 ---
 title: ':hover'
-slug: 'Web/CSS/:hover'
+slug: Web/CSS/:hover
 tags:
   - CSS
   - Layout
@@ -10,67 +10,67 @@ tags:
   - Web
 browser-compat: css.selectors.hover
 ---
-<div>{{ CSSRef }}</div>
+{{ CSSRef }}
 
-<p>The <strong><code>:hover</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> matches when the user interacts with an element with a pointing device, but does not necessarily activate it. It is generally triggered when the user hovers over an element with the cursor (mouse pointer).</p>
+The **`:hover`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches when the user interacts with an element with a pointing device, but does not necessarily activate it. It is generally triggered when the user hovers over an element with the cursor (mouse pointer).
 
-<pre class="brush: css no-line-numbers">/* Selects any &lt;a&gt; element when "hovered" */
+```css
+/* Selects any <a> element when "hovered" */
 a:hover {
   color: orange;
-}</pre>
+}
+```
 
-<p>Styles defined by the <code>:hover</code> pseudo-class will be overridden by any subsequent link-related pseudo-class ({{ cssxref(":link") }}, {{ cssxref(":visited") }}, or {{ cssxref(":active") }}) that has at least equal specificity. To style links appropriately, put the <code>:hover</code> rule after the <code>:link</code> and <code>:visited</code> rules but before the <code>:active</code> one, as defined by the <em>LVHA-order</em>: <code>:link</code> — <code>:visited</code> — <code>:hover</code> — <code>:active</code>.</p>
+Styles defined by the `:hover` pseudo-class will be overridden by any subsequent link-related pseudo-class ({{ cssxref(":link") }}, {{ cssxref(":visited") }}, or {{ cssxref(":active") }}) that has at least equal specificity. To style links appropriately, put the `:hover` rule after the `:link` and `:visited` rules but before the `:active` one, as defined by the _LVHA-order_: `:link` — `:visited` — `:hover` — `:active`.
 
-<div class="note">
-  <p><strong>Note:</strong> The <code>:hover</code> pseudo-class is problematic on touchscreens. Depending on the browser, the <code>:hover</code> pseudo-class might never match, match only for a moment after touching an element, or continue to match even after the user has stopped touching and until the user touches another element. Web developers should make sure that content is accessible on devices with limited or non-existent hovering capabilities.</p>
-</div>
+> **Note:** The `:hover` pseudo-class is problematic on touchscreens. Depending on the browser, the `:hover` pseudo-class might never match, match only for a moment after touching an element, or continue to match even after the user has stopped touching and until the user touches another element. Web developers should make sure that content is accessible on devices with limited or non-existent hovering capabilities.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_example">Basic example</h3>
+### Basic example
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;a href="#"&gt;Try hovering over this link.&lt;/a&gt;</pre>
+```html
+<a href="#">Try hovering over this link.</a>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">a {
+```css
+a {
   background-color: powderblue;
   transition: background-color .5s;
 }
 
 a:hover {
   background-color: gold;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Basic_example")}}</p>
+{{EmbedLiveSample("Basic_example")}}
 
-<h3 id="Image_gallery">Image gallery</h3>
+### Image gallery
 
-<p>You can use the <code>:hover</code> pseudo-class to build an image gallery with full-size images that show only when the mouse moves over a thumbnail. See <a href="/@api/deki/files/6247/=css-gallery.zip" title="css-gallery.zip">this demo</a> for a possible cue.</p>
+You can use the `:hover` pseudo-class to build an image gallery with full-size images that show only when the mouse moves over a thumbnail. See [this demo](/@api/deki/files/6247/=css-gallery.zip "css-gallery.zip") for a possible cue.
 
-<div class="note">
-  <p><strong>Note:</strong> For an analogous effect, but based on the <a href="/en-US/docs/Web/CSS/:checked"><code>:checked</code></a> pseudo-class (applied to hidden radioboxes), see <a href="/@api/deki/files/6268/=css-checked-gallery.zip" title="css-checked-gallery.zip">this demo</a>, taken from the <a href="/en-US/docs/Web/CSS/:checked">:checked</a> reference page.</p>
-</div>
+> **Note:** For an analogous effect, but based on the [`:checked`](/en-US/docs/Web/CSS/:checked) pseudo-class (applied to hidden radioboxes), see [this demo](/@api/deki/files/6268/=css-checked-gallery.zip "css-checked-gallery.zip"), taken from the [:checked](/en-US/docs/Web/CSS/:checked) reference page.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://code.google.com/p/chromium/issues/detail?id=370155">Chromium bug #370155: Don't make <code>:hover</code> sticky on tap on sites that set a mobile viewport</a></li>
- <li><a href="https://code.google.com/p/chromium/issues/detail?id=306581">Chromium bug #306581: Immediately show hover and active states on touch when page isn't scrollable.</a></li>
-</ul>
+- [Chromium bug #370155: Don't make `:hover` sticky on tap on sites that set a mobile viewport](https://code.google.com/p/chromium/issues/detail?id=370155)
+- [Chromium bug #306581: Immediately show hover and active states on touch when page isn't scrollable.](https://code.google.com/p/chromium/issues/detail?id=306581)

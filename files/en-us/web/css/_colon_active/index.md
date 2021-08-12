@@ -10,84 +10,90 @@ tags:
   - Web
 browser-compat: css.selectors.active
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>:active</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents an element (such as a button) that is being activated by the user. When using a mouse, "activation" typically starts when the user presses down the primary mouse button.</p>
+The **`:active`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element (such as a button) that is being activated by the user. When using a mouse, "activation" typically starts when the user presses down the primary mouse button.
 
-<pre class="brush: css no-line-numbers">/* Selects any &lt;a&gt; that is being activated */
+```css
+/* Selects any <a> that is being activated */
 a:active {
   color: red;
-}</pre>
+}
+```
 
-<p>The <code>:active</code> pseudo-class is commonly used on {{HTMLElement("a")}} and {{HTMLElement("button")}} elements. Other common targets of this pseudo-class include elements that <em>contain</em> an activated element, and form elements that are being activated through their associated {{HTMLElement("label")}}.</p>
+The `:active` pseudo-class is commonly used on {{HTMLElement("a")}} and {{HTMLElement("button")}} elements. Other common targets of this pseudo-class include elements that _contain_ an activated element, and form elements that are being activated through their associated {{HTMLElement("label")}}.
 
-<p>Styles defined by the <code>:active</code> pseudo-class will be overridden by any subsequent link-related pseudo-class ({{cssxref(":link")}}, {{cssxref(":hover")}}, or {{cssxref(":visited")}}) that has at least equal specificity. To style links appropriately, put the <code>:active</code> rule after all other link-related rules, as defined by the <em>LVHA-order</em>: <code>:link</code> — <code>:visited</code> — <code>:hover</code> — <code>:active</code>.</p>
+Styles defined by the `:active` pseudo-class will be overridden by any subsequent link-related pseudo-class ({{cssxref(":link")}}, {{cssxref(":hover")}}, or {{cssxref(":visited")}}) that has at least equal specificity. To style links appropriately, put the `:active` rule after all other link-related rules, as defined by the _LVHA-order_: `:link` — `:visited` — `:hover` — `:active`.
 
-<div class="note">
-  <p><strong>Note:</strong> On systems with multi-button mice, CSS3 specifies that the <code>:active</code> pseudo-class must only apply to the primary button; on right-handed mice, this is typically the leftmost button.</p>
-</div>
+> **Note:** On systems with multi-button mice, CSS3 specifies that the `:active` pseudo-class must only apply to the primary button; on right-handed mice, this is typically the leftmost button.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Active_links">Active links</h3>
+### Active links
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;This paragraph contains a link:
-  &lt;a href="#"&gt;This link will turn red while you click on it.&lt;/a&gt;
+```html
+<p>This paragraph contains a link:
+  <a href="#">This link will turn red while you click on it.</a>
   The paragraph will get a gray background while you click on it or the link.
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">a:link { color: blue; }          /* Unvisited links */
+```css
+a:link { color: blue; }          /* Unvisited links */
 a:visited { color: purple; }     /* Visited links */
 a:hover { background: yellow; }  /* Hovered links */
 a:active { color: red; }         /* Active links */
 
-p:active { background: #eee; }   /* Active paragraphs */</pre>
+p:active { background: #eee; }   /* Active paragraphs */
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Active_links')}}</p>
+{{EmbedLiveSample('Active_links')}}
 
-<h3 id="Active_form_elements">Active form elements</h3>
+### Active form elements
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;label for="my-button"&gt;My button: &lt;/label&gt;
-  &lt;button id="my-button" type="button"&gt;Try Clicking Me or My Label!&lt;/button&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+  <label for="my-button">My button: </label>
+  <button id="my-button" type="button">Try Clicking Me or My Label!</button>
+</form>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">form :active {
+```css
+form :active {
   color: red;
 }
 
 form button {
   background: white;
-}</pre>
+}
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Active_form_elements')}}</p>
+{{EmbedLiveSample('Active_form_elements')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Link-related pseudo-classes: {{cssxref(":link")}}, {{cssxref(":visited")}}, and {{cssxref(":hover")}}</li>
-</ul>
+- Link-related pseudo-classes: {{cssxref(":link")}}, {{cssxref(":visited")}}, and {{cssxref(":hover")}}

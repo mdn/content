@@ -1,60 +1,56 @@
 ---
 title: '::-moz-color-swatch'
-slug: 'Web/CSS/::-moz-color-swatch'
+slug: Web/CSS/::-moz-color-swatch
 tags:
   - CSS
-  - 'CSS:Mozilla Extensions'
+  - CSS:Mozilla Extensions
   - Non-standard
   - Pseudo-element
   - Reference
   - Selector
 browser-compat: css.selectors.-moz-color-swatch
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>The <strong><code>::-moz-color-swatch</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> is a <a href="/en-US/docs/Web/CSS/Mozilla_Extensions">Mozilla extension</a> that represents the color selected in an {{HTMLElement("input")}} of <code>type="color"</code>.</p>
+The **`::-moz-color-swatch`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that represents the color selected in an {{HTMLElement("input")}} of `type="color"`.
 
-<div class="note">
-<p><strong>Note:</strong> Using <code>::-moz-color-swatch</code> with anything but an <code>&lt;input type="color"&gt;</code> doesn't match anything and has no effect.</p>
-</div>
+> **Note:** Using `::-moz-color-swatch` with anything but an `<input type="color">` doesn't match anything and has no effect.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;input type="color" value="#de2020" /&gt;
-</pre>
+```html
+<input type="color" value="#de2020" />
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">input[type=color]::-moz-color-swatch {
+```css
+input[type=color]::-moz-color-swatch {
   border-radius: 10px;
   border-style: none;
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples", 300, 50)}}</p>
+{{EmbedLiveSample("Examples", 300, 50)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Similar pseudo-elements used by other browsers:
-  <ul>
-   <li>{{cssxref("::-webkit-color-swatch")}}, pseudo-element supported by WebKit and Blink (Safari, Chrome, and Opera)</li>
-  </ul>
- </li>
-</ul>
+- Similar pseudo-elements used by other browsers:
+
+  - {{cssxref("::-webkit-color-swatch")}}, pseudo-element supported by WebKit and Blink (Safari, Chrome, and Opera)

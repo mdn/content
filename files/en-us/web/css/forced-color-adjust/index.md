@@ -14,60 +14,61 @@ tags:
   - Styling text
   - Web
   - forced-color-adjust
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.forced-color-adjust
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>forced-color-adjust</code></strong> CSS property allows authors to opt certain elements out of forced colors mode. This then restores the control of those values to CSS.</p>
+The **`forced-color-adjust`** CSS property allows authors to opt certain elements out of forced colors mode. This then restores the control of those values to CSS.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">forced-color-adjust: auto;
+```css
+forced-color-adjust: auto;
 forced-color-adjust: none;
 
 /* Global values */
 forced-color-adjust: inherit;
 forced-color-adjust: initial;
 forced-color-adjust: revert;
-forced-color-adjust: unset;</pre>
+forced-color-adjust: unset;
+```
 
-<p>The <code>forced-color-adjust</code> property's value must be one of the following keywords.</p>
+The `forced-color-adjust` property's value must be one of the following keywords.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-	<dt><code>auto</code></dt>
-	<dd>The element's colors are adjusted by the {{Glossary("user agent")}} in forced colors mode. This is the default.</dd>
-	<dt><code><strong>none</strong></code></dt>
-	<dd>The element's colors are not automatically adjusted by the {{Glossary("user agent")}} in forced colors mode.</dd>
-</dl>
+- `auto`
+  - : The element's colors are adjusted by the {{Glossary("user agent")}} in forced colors mode. This is the default.
+- **`none`**
+  - : The element's colors are not automatically adjusted by the {{Glossary("user agent")}} in forced colors mode.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>This property should only be used to makes changes that will support a user's color and contrast requirements. For example, if you become aware that the color optimizations made by the {{Glossary("user agent")}} result in a poor experience when in a high contrast or dark mode. Using this property would enable tweaking of the result in that mode to provide a better experience. <strong>It should not be used to prevent user choices being respected</strong>.</p>
+This property should only be used to makes changes that will support a user's color and contrast requirements. For example, if you become aware that the color optimizations made by the {{Glossary("user agent")}} result in a poor experience when in a high contrast or dark mode. Using this property would enable tweaking of the result in that mode to provide a better experience. **It should not be used to prevent user choices being respected**.
 
-<p>The property is a standardized version of the <a href="https://docs.microsoft.com/en-us/previous-versions/hh771863%28v%3dvs.85%29">-ms-high-contrast-adjust</a> property. The prefixed property can be used to achieve similar functionality in Internet Explorer 10 and EdgeHTML versions of Microsoft Edge.</p>
+The property is a standardized version of the [-ms-high-contrast-adjust](https://docs.microsoft.com/en-us/previous-versions/hh771863%28v%3dvs.85%29) property. The prefixed property can be used to achieve similar functionality in Internet Explorer 10 and EdgeHTML versions of Microsoft Edge.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Preserving_colors">Preserving colors</h3>
+### Preserving colors
 
-<p>In the example below the first box will use the color scheme that the user has set. For example in Windows High Contrast mode black scheme it will have a black background and white text. The second box will preserve the site colors set on the <code>.box</code> class.</p>
+In the example below the first box will use the color scheme that the user has set. For example in Windows High Contrast mode black scheme it will have a black background and white text. The second box will preserve the site colors set on the `.box` class.
 
-<p>By using the <code><a href="/en-US/docs/Web/CSS/@media/forced-colors">forced-colors</a></code> media feature you could add any other optimizations for forced color mode alongside the <code>forced-color-adjust</code> property.</p>
+By using the [`forced-colors`](/en-US/docs/Web/CSS/@media/forced-colors) media feature you could add any other optimizations for forced color mode alongside the `forced-color-adjust` property.
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.box {
+```css
+.box {
   border: 5px solid grey;
   background-color: #ccc;
   width: 300px;
@@ -79,38 +80,39 @@ forced-color-adjust: unset;</pre>
   .forced {
     forced-color-adjust: none;
   }
-}</pre>
+}
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="box"&gt;
-  &lt;p&gt;This is a box which should use your color preferences.&lt;/p&gt;
-&lt;/div&gt;
+```html
+<div class="box">
+  <p>This is a box which should use your color preferences.</p>
+</div>
 
-&lt;div class="box forced"&gt;
-  &lt;p&gt;This is a box which should stay the colors set by the site.&lt;/p&gt;
-&lt;/div&gt;</pre>
+<div class="box forced">
+  <p>This is a box which should stay the colors set by the site.</p>
+</div>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Preserving_colors", 640, 300)}}</p>
+{{EmbedLiveSample("Preserving_colors", 640, 300)}}
 
-<p>The following screenshot shows the image above in Windows High Contrast Mode:</p>
+The following screenshot shows the image above in Windows High Contrast Mode:
 
-<img src="windows-high-contrast.jpg" alt="The example above in high contrast mode shows the first box with a black background the second with the grey background of the CSS.">
+![The example above in high contrast mode shows the first box with a black background the second with the grey background of the CSS.](windows-high-contrast.jpg)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-    <li><a href="/en-US/docs/Web/HTML/Applying_color">Applying color to HTML elements using CSS</a></li>
-    <li><a href="https://blogs.windows.com/msedgedev/2020/09/17/styling-for-windows-high-contrast-with-new-standards-for-forced-colors/">Styling for Windows high contrast with standards for forced colors.</a></li>
-	<li>{{cssxref("color-adjust")}}</li>
-</ul>
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color)
+- [Styling for Windows high contrast with standards for forced colors.](https://blogs.windows.com/msedgedev/2020/09/17/styling-for-windows-high-contrast-with-new-standards-for-forced-colors/)
+- {{cssxref("color-adjust")}}

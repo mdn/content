@@ -6,31 +6,29 @@ tags:
   - CSS Flexible Boxes
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.flex-basis
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>flex-basis</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the initial main size of a flex item. It sets the size of the content box unless otherwise set with {{Cssxref("box-sizing")}}.</p>
+The **`flex-basis`** [CSS](/en-US/docs/Web/CSS) property sets the initial main size of a flex item. It sets the size of the content box unless otherwise set with {{Cssxref("box-sizing")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/flex-basis.html")}}</div>
+{{EmbedInteractiveExample("pages/css/flex-basis.html")}}
 
-<p>In this example the {{cssxref("flex-grow")}} and {{cssxref("flex-shrink")}} properties are both set to <code>1</code> on all three items, indicating that the flex item can grow and shrink from the initial <code>flex-basis</code>.</p>
+In this example the {{cssxref("flex-grow")}} and {{cssxref("flex-shrink")}} properties are both set to `1` on all three items, indicating that the flex item can grow and shrink from the initial `flex-basis`.
 
-<p>The demo then changes the <code>flex-basis</code> on the first item. It will then grow and shrink from that flex-basis. This means that, for example, when the <code>flex-basis</code> of the first item is <code>200px</code>, it will start out at 200px but then shrink to fit the space available with the other items being at least <code>min-content</code> sized.</p>
+The demo then changes the `flex-basis` on the first item. It will then grow and shrink from that flex-basis. This means that, for example, when the `flex-basis` of the first item is `200px`, it will start out at 200px but then shrink to fit the space available with the other items being at least `min-content` sized.
 
-<p>The image below shows how the Firefox <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_Flexbox_layouts">Flexbox Inspector</a> helps you understand the size items become:</p>
+The image below shows how the Firefox [Flexbox Inspector](/en-US/docs/Tools/Page_Inspector/How_to/Examine_Flexbox_layouts) helps you understand the size items become:
 
-<img src="firefox-flex-basis.png" alt="The Firefox Flexbox Inspector showing the size of the item once it has shrunk.">
+![The Firefox Flexbox Inspector showing the size of the item once it has shrunk.](firefox-flex-basis.png)
 
+> **Note:** in case both `flex-basis` (other than `auto`) and `width` (or `height` in case of `flex-direction: column`) are set for an element, `flex-basis` has priority.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> in case both <code>flex-basis</code> (other than <code>auto</code>) and <code>width</code> (or <code>height</code> in case of <code>flex-direction: column</code>) are set for an element, <code>flex-basis</code> has priority.</p>
-</div>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush:css no-line-numbers">/* Specify &lt;'width'&gt; */
+```css
+/* Specify <'width'> */
 flex-basis: 10em;
 flex-basis: 3px;
 flex-basis: auto;
@@ -49,59 +47,56 @@ flex-basis: inherit;
 flex-basis: initial;
 flex-basis: revert;
 flex-basis: unset;
-</pre>
+```
 
-<p>The <code>flex-basis</code> property is specified as either the keyword <code>content</code> or a <code>&lt;'width'&gt;</code>.</p>
+The `flex-basis` property is specified as either the keyword `content` or a `<'width'>`.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;'width'&gt;</code></dt>
- <dd>An absolute {{cssxref("&lt;length&gt;")}}, a {{cssxref("&lt;percentage&gt;")}} of the parent flex container's main size property, or the keyword <code>auto</code>. Negative values are invalid. Defaults to <code>auto</code>.</dd>
- <dt><code>content</code></dt>
- <dd>
-  <p>Indicates automatic sizing, based on the flex item’s content.</p>
-  <div class="note">
-   <p><strong>Note:</strong> This value was not present in the initial release of Flexible Box Layout, and thus some older implementations will not support it. The equivalent effect can be had by using <code>auto</code> together with a main size (<a href="https://drafts.csswg.org/css2/visudet.html#propdef-width">width</a> or <a href="https://drafts.csswg.org/css2/visudet.html#propdef-height">height</a>) of <code>auto</code>.</p>
-   <ul>
-    <li>Originally, <code>flex-basis:auto</code> meant "look at my <code>width</code> or <code>height</code> property".</li>
-    <li>Then, <code>flex-basis:auto</code> was changed to mean automatic sizing, and "main-size" was introduced as the "look at my <code>width</code> or <code>height</code> property" keyword. It was implemented in {{bug("1032922")}}.</li>
-    <li>Then, that change was reverted in {{bug("1093316")}}, so <code>auto</code> once again means "look at my <code>width</code> or <code>height</code> property"; and a new <code>content</code> keyword is being introduced to trigger automatic sizing. ({{bug("1105111")}} covers adding that keyword).</li>
-   </ul>
-  </div>
- </dd>
-</dl>
+- `<'width'>`
+  - : An absolute {{cssxref("&lt;length&gt;")}}, a {{cssxref("&lt;percentage&gt;")}} of the parent flex container's main size property, or the keyword `auto`. Negative values are invalid. Defaults to `auto`.
+- `content`
 
-<h2 id="Formal_definition">Formal definition</h2>
+  - : Indicates automatic sizing, based on the flex item’s content.
 
-<p>{{cssinfo}}</p>
+    > **Note:** This value was not present in the initial release of Flexible Box Layout, and thus some older implementations will not support it. The equivalent effect can be had by using `auto` together with a main size ([width](https://drafts.csswg.org/css2/visudet.html#propdef-width) or [height](https://drafts.csswg.org/css2/visudet.html#propdef-height)) of `auto`.
+    >
+    > - Originally, `flex-basis:auto` meant "look at my `width` or `height` property".
+    > - Then, `flex-basis:auto` was changed to mean automatic sizing, and "main-size" was introduced as the "look at my `width` or `height` property" keyword. It was implemented in {{bug("1032922")}}.
+    > - Then, that change was reverted in {{bug("1093316")}}, so `auto` once again means "look at my `width` or `height` property"; and a new `content` keyword is being introduced to trigger automatic sizing. ({{bug("1105111")}} covers adding that keyword).
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal definition
+
+{{cssinfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_flex_item_initial_sizes">Setting flex item initial sizes</h3>
+### Setting flex item initial sizes
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;ul class="container"&gt;
-  &lt;li class="flex flex1"&gt;1: flex-basis test&lt;/li&gt;
-  &lt;li class="flex flex2"&gt;2: flex-basis test&lt;/li&gt;
-  &lt;li class="flex flex3"&gt;3: flex-basis test&lt;/li&gt;
-  &lt;li class="flex flex4"&gt;4: flex-basis test&lt;/li&gt;
-  &lt;li class="flex flex5"&gt;5: flex-basis test&lt;/li&gt;
-&lt;/ul&gt;
+```html
+<ul class="container">
+  <li class="flex flex1">1: flex-basis test</li>
+  <li class="flex flex2">2: flex-basis test</li>
+  <li class="flex flex3">3: flex-basis test</li>
+  <li class="flex flex4">4: flex-basis test</li>
+  <li class="flex flex5">5: flex-basis test</li>
+</ul>
 
-&lt;ul class="container"&gt;
-  &lt;li class="flex flex6"&gt;6: flex-basis test&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+<ul class="container">
+  <li class="flex flex6">6: flex-basis test</li>
+</ul>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.container {
+```css
+.container {
   font-family: arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -179,24 +174,22 @@ flex-basis: unset;
 .flex6:after {
   content: 'fill';
 }
-</pre>
+```
 
-<h4 id="Results">Results</h4>
+#### Results
 
-<p>{{EmbedLiveSample('Setting_flex_item_initial_sizes', '', '360')}}</p>
+{{EmbedLiveSample('Setting_flex_item_initial_sizes', '', '360')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Basic Concepts of Flexbox</a></em></li>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax">Controlling Ratios of flex items along the main axis</a></em></li>
- <li>{{cssxref("width")}}</li>
-</ul>
+- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- CSS Flexbox Guide: _[Controlling Ratios of flex items along the main axis](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_
+- {{cssxref("width")}}

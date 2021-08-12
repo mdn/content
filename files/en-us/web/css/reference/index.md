@@ -6,186 +6,165 @@ tags:
   - Guide
   - Overview
   - Reference
-  - 'l10n:priority'
+  - l10n:priority
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Use this <strong>CSS reference</strong> to browse an <a href="#index">alphabetical index</a> of all of the standard <a href="/en-US/docs/Web/CSS">CSS</a> properties, <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-classes</a>, <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elements</a>, <a href="/en-US/docs/Web/CSS/CSS_Types">data types</a>, <a href="/en-US/docs/Web/CSS/CSS_Functions">functional notations</a> and <a href="/en-US/docs/Web/CSS/At-rule">at-rules</a>. You can also browse <a href="#concepts">key CSS concepts</a> and a list of <a href="#selectors">selectors organized by type</a>. Also included is a brief <a href="#dom-css_cssom">DOM-CSS / CSSOM reference</a>.</p>
+Use this **CSS reference** to browse an [alphabetical index](#index) of all of the standard [CSS](/en-US/docs/Web/CSS) properties, [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes), [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements), [data types](/en-US/docs/Web/CSS/CSS_Types), [functional notations](/en-US/docs/Web/CSS/CSS_Functions) and [at-rules](/en-US/docs/Web/CSS/At-rule). You can also browse [key CSS concepts](#concepts) and a list of [selectors organized by type](#selectors). Also included is a brief [DOM-CSS / CSSOM reference](#dom-css_cssom).
 
-<h2 id="Basic_rule_syntax">Basic rule syntax</h2>
+## Basic rule syntax
 
-<h3 id="Style_rule_syntax">Style rule syntax</h3>
+### Style rule syntax
 
-<pre class="brush: css"><var>style-rule</var> <strong>::=</strong>
-    <var>selectors-list</var> <strong>{</strong>
-      <var>properties-list</var>
-    <strong>}</strong>
-</pre>
+```css
+style-rule ::=
+    selectors-list {
+      properties-list
+    }
+```
 
-<p>... where :</p>
+... where :
 
-<pre class="brush: css"><var>selectors-list</var> <strong>::=</strong>
-    <var>selector</var>[<strong>:</strong><var>pseudo-class</var>] [<strong>::</strong><var>pseudo-element</var>]
-    [<strong>,</strong> <var>selectors-list</var>]
+```css
+selectors-list ::=
+    selector[:pseudo-class] [::pseudo-element]
+    [, selectors-list]
 
-<var>properties-list</var> <strong>::=</strong>
-    [<var>property</var> <strong>:</strong> <var>value</var>] [<strong>;</strong> <var>properties-list</var>]
-</pre>
+properties-list ::=
+    [property : value] [; properties-list]
+```
 
-<p>See the index of <a href="#selectors"><em>selectors</em></a>, <a href="#pseudo"><em>pseudo-classes</em></a>, and <em><a href="#pseudo">pseudo-elements</a></em> below. The syntax for each specified <em>value</em> depends on the data type defined for each specified <em>property</em>.</p>
+See the index of [_selectors_](#selectors), [_pseudo-classes_](#pseudo), and _[pseudo-elements](#pseudo)_ below. The syntax for each specified _value_ depends on the data type defined for each specified _property_.
 
-<h4 id="Style_rule_examples">Style rule examples</h4>
+#### Style rule examples
 
-<pre class="brush: css">strong {
+```css
+strong {
   color: red;
 }
 
-div.menu-bar li:hover &gt; ul {
+div.menu-bar li:hover > ul {
   display: block;
 }
-</pre>
+```
 
-<p>For a beginner-level introduction to the syntax of selectors, see our <a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors">guide on CSS Selectors</a>. Be aware that any <a href="/en-US/docs/Web/CSS/syntax">syntax</a> error in a rule definition invalidates the entire rule. Invalid rules are ignored by the browser. Note that CSS rule definitions are entirely (ASCII) <a href="https://www.w3.org/TR/css-syntax-3/#intro">text-based</a>, whereas DOM-CSS / CSSOM (the rule management system) is <a href="https://www.w3.org/TR/cssom/#introduction">object-based</a>.</p>
+For a beginner-level introduction to the syntax of selectors, see our [guide on CSS Selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors). Be aware that any [syntax](/en-US/docs/Web/CSS/syntax) error in a rule definition invalidates the entire rule. Invalid rules are ignored by the browser. Note that CSS rule definitions are entirely (ASCII) [text-based](https://www.w3.org/TR/css-syntax-3/#intro), whereas DOM-CSS / CSSOM (the rule management system) is [object-based](https://www.w3.org/TR/cssom/#introduction).
 
-<h3 id="At-rule_syntax">At-rule syntax</h3>
+### At-rule syntax
 
-<p>As the structure of at-rules varies widely, please see <a href="/en-US/docs/Web/CSS/At-rule">At-rule</a> to find the syntax of the specific one you want.</p>
+As the structure of at-rules varies widely, please see [At-rule](/en-US/docs/Web/CSS/At-rule) to find the syntax of the specific one you want.
 
-<h2 id="Index">Index</h2>
+## Index
 
-<div class="notecard note">
-<p><strong>Note:</strong> The property names in this index do <strong>not</strong> include the <a href="/en-US/docs/Web/CSS/CSS_Properties_Reference">JavaScript names</a> where they differ from the CSS standard names.</p>
-</div>
+> **Note:** The property names in this index do **not** include the [JavaScript names](/en-US/docs/Web/CSS/CSS_Properties_Reference) where they differ from the CSS standard names.
 
-<div>{{CSS_Ref}}</div>
+{{CSS_Ref}}
 
-<h2 id="Selectors">Selectors</h2>
+## Selectors
 
-<p>The following are the various <a href="/en-US/docs/Web/CSS/CSS_Selectors">selectors</a>, which allow styles to be conditional based on various features of elements within the DOM.</p>
+The following are the various [selectors](/en-US/docs/Web/CSS/CSS_Selectors), which allow styles to be conditional based on various features of elements within the DOM.
 
-<h3 id="Basic_selectors">Basic selectors</h3>
+### Basic selectors
 
-<p><strong>Basic selectors</strong> are fundamental selectors; these are the most basic selectors that are frequently combined to create other, more complex selectors.</p>
+**Basic selectors** are fundamental selectors; these are the most basic selectors that are frequently combined to create other, more complex selectors.
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Universal_selectors">Universal selector</a> <code>*</code>, <code>ns|*</code>, <code>*|*</code>, <code>|*</code></li>
- <li><a href="/en-US/docs/Web/CSS/Type_selectors">Type selector</a> <code><var>elementname</var></code></li>
- <li><a href="/en-US/docs/Web/CSS/Class_selectors">Class selector</a> <code>.<var>classname</var></code></li>
- <li><a href="/en-US/docs/Web/CSS/ID_selectors">ID selector</a> <code>#<var>idname</var></code></li>
- <li><a href="/en-US/docs/Web/CSS/Attribute_selectors">Attribute selector</a> <code>[<var>attr</var>=<var>value</var>]</code></li>
-</ul>
+- [Universal selector](/en-US/docs/Web/CSS/Universal_selectors) `*`, `ns|*`, `*|*`, `|*`
+- [Type selector](/en-US/docs/Web/CSS/Type_selectors) `elementname`
+- [Class selector](/en-US/docs/Web/CSS/Class_selectors) `.classname`
+- [ID selector](/en-US/docs/Web/CSS/ID_selectors) `#idname`
+- [Attribute selector](/en-US/docs/Web/CSS/Attribute_selectors) `[attr=value]`
 
-<h3 id="Grouping_selectors">Grouping selectors</h3>
+### Grouping selectors
 
-<dl>
- <dt><a href="/en-US/docs/Web/CSS/Selector_list">Selector list</a> <code><var>A</var>, <var>B</var></code></dt>
- <dd>Specifies that both <code><var>A</var></code> and <code><var>B</var></code> elements are selected. This is a grouping method to select several matching elements.</dd>
-</dl>
+- [Selector list](/en-US/docs/Web/CSS/Selector_list) `A, B`
+  - : Specifies that both `A` and `B` elements are selected. This is a grouping method to select several matching elements.
 
-<h3 id="Combinators">Combinators</h3>
+### Combinators
 
-<p>Combinators are selectors that establish a relationship between two or more simple selectors, such as "<code><var>A</var></code> is a child of <code><var>B</var></code>" or "<code><var>A</var></code> is adjacent to <code><var>B</var></code>."</p>
+Combinators are selectors that establish a relationship between two or more simple selectors, such as "`A` is a child of `B`" or "`A` is adjacent to `B`."
 
-<dl>
- <dt><a href="/en-US/docs/Web/CSS/Adjacent_sibling_combinator">Adjacent sibling combinator</a> <code><var>A</var> + <var>B</var></code></dt>
- <dd>Specifies that the elements selected by both <code><var>A</var></code> and <code><var>B</var></code> have the same parent and that the element selected by <code><var>B</var></code> immediately follows the element selected by <code><var>A</var></code> horizontally.</dd>
- <dt><a href="/en-US/docs/Web/CSS/General_sibling_combinator">General sibling combinator</a> <code><var>A</var> ~ <var>B</var></code></dt>
- <dd>Specifies that the elements selected by both <code><var>A</var></code> and <code><var>B</var></code> share the same parent and that the element selected by <code><var>A</var></code> comes before—but not necessarily immediately before—the element selected by <code><var>B</var></code>.</dd>
- <dt><a href="/en-US/docs/Web/CSS/Child_combinator">Child combinator</a> <code><var>A</var> &gt; <var>B</var></code></dt>
- <dd>Specifies that the element selected by <code><var>B</var></code> is the direct child of the element selected by <code><var>A</var></code>.</dd>
- <dt><a href="/en-US/docs/Web/CSS/Descendant_combinator">Descendant combinator</a> <code><var>A</var> <var>B</var></code></dt>
- <dd>Specifies that the element selected by <code><var>B</var></code> is a descendant of the element selected by <code><var>A</var></code>, but is not necessarily a direct child.</dd>
- <dt><a href="/en-US/docs/Web/CSS/Column_combinator">Column combinator</a> <code><var>A</var> || <var>B</var></code> {{Experimental_Inline}}</dt>
- <dd>Specifies that the element selected by <code><var>B</var></code> is located within the table column specified by <code><var>A</var></code>. Elements which span multiple columns are considered to be a member of all of those columns.</dd>
-</dl>
+- [Adjacent sibling combinator](/en-US/docs/Web/CSS/Adjacent_sibling_combinator) `A + B`
+  - : Specifies that the elements selected by both `A` and `B` have the same parent and that the element selected by `B` immediately follows the element selected by `A` horizontally.
+- [General sibling combinator](/en-US/docs/Web/CSS/General_sibling_combinator) `A ~ B`
+  - : Specifies that the elements selected by both `A` and `B` share the same parent and that the element selected by `A` comes before—but not necessarily immediately before—the element selected by `B`.
+- [Child combinator](/en-US/docs/Web/CSS/Child_combinator) `A > B`
+  - : Specifies that the element selected by `B` is the direct child of the element selected by `A`.
+- [Descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator) `A B`
+  - : Specifies that the element selected by `B` is a descendant of the element selected by `A`, but is not necessarily a direct child.
+- [Column combinator](/en-US/docs/Web/CSS/Column_combinator) `A || B` {{Experimental_Inline}}
+  - : Specifies that the element selected by `B` is located within the table column specified by `A`. Elements which span multiple columns are considered to be a member of all of those columns.
 
-<h3 id="Pseudo">Pseudo</h3>
+### Pseudo
 
-<dl>
- <dt><a href="/en-US/docs/Web/CSS/Pseudo-classes">Pseudo classes</a> <code>:</code></dt>
- <dd>Specifies a special state of the selected element(s).</dd>
- <dt><a href="/en-US/docs/Web/CSS/Pseudo-elements">Pseudo elements</a> <code>::</code></dt>
- <dd>Represents entities that are not included in HTML.</dd>
-</dl>
+- [Pseudo classes](/en-US/docs/Web/CSS/Pseudo-classes) `:`
+  - : Specifies a special state of the selected element(s).
+- [Pseudo elements](/en-US/docs/Web/CSS/Pseudo-elements) `::`
+  - : Represents entities that are not included in HTML.
 
-<div class="callout">
-<p>See also <a href="https://www.w3.org/TR/selectors/#overview">Selectors in the Selectors Level 4 specification</a>.</p>
-</div>
+> **Callout:**
+>
+> See also [Selectors in the Selectors Level 4 specification](https://www.w3.org/TR/selectors/#overview).
 
-<h2 id="Concepts">Concepts</h2>
+## Concepts
 
-<h3 id="Syntax_and_semantics">Syntax and semantics</h3>
+### Syntax and semantics
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Syntax">CSS syntax</a></li>
- <li><a href="/en-US/docs/Web/CSS/At-rule">At-rules</a></li>
- <li><a href="/en-US/docs/Web/CSS/Cascade">Cascade</a></li>
- <li><a href="/en-US/docs/Web/CSS/Comments">Comments</a></li>
- <li><a href="/en-US/docs/Glossary/Descriptor_(CSS)">Descriptor</a></li>
- <li><a href="/en-US/docs/Web/CSS/inheritance">Inheritance</a></li>
- <li><a href="/en-US/docs/Web/CSS/Shorthand_properties">Shorthand properties</a></li>
- <li><a href="/en-US/docs/Web/CSS/Specificity">Specificity</a></li>
- <li><a href="/en-US/docs/Web/CSS/Value_definition_syntax">Value definition syntax</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Values_and_Units">CSS unit and value types</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Functions">CSS functional notations</a></li>
-</ul>
+- [CSS syntax](/en-US/docs/Web/CSS/Syntax)
+- [At-rules](/en-US/docs/Web/CSS/At-rule)
+- [Cascade](/en-US/docs/Web/CSS/Cascade)
+- [Comments](/en-US/docs/Web/CSS/Comments)
+- [Descriptor](</en-US/docs/Glossary/Descriptor_(CSS)>)
+- [Inheritance](/en-US/docs/Web/CSS/inheritance)
+- [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
+- [Specificity](/en-US/docs/Web/CSS/Specificity)
+- [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
+- [CSS unit and value types](/en-US/docs/Web/CSS/CSS_Values_and_Units)
+- [CSS functional notations](/en-US/docs/Web/CSS/CSS_Functions)
 
-<h3 id="Values">Values</h3>
+### Values
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/actual_value">Actual value</a></li>
- <li><a href="/en-US/docs/Web/CSS/computed_value">Computed value</a></li>
- <li><a href="/en-US/docs/Web/CSS/initial_value">Initial value</a></li>
- <li><a href="/en-US/docs/Web/CSS/resolved_value">Resolved value</a></li>
- <li><a href="/en-US/docs/Web/CSS/specified_value">Specified value</a></li>
- <li><a href="/en-US/docs/Web/CSS/used_value">Used value</a></li>
-</ul>
+- [Actual value](/en-US/docs/Web/CSS/actual_value)
+- [Computed value](/en-US/docs/Web/CSS/computed_value)
+- [Initial value](/en-US/docs/Web/CSS/initial_value)
+- [Resolved value](/en-US/docs/Web/CSS/resolved_value)
+- [Specified value](/en-US/docs/Web/CSS/specified_value)
+- [Used value](/en-US/docs/Web/CSS/used_value)
 
-<h3 id="Layout">Layout</h3>
+### Layout
 
-<ul>
- <li><a href="/en-US/docs/Web/Guide/CSS/Block_formatting_context">Block formatting context</a></li>
- <li><a href="/en-US/docs/Web/CSS/box_model">Box model</a></li>
- <li><a href="/en-US/docs/Web/CSS/All_About_The_Containing_Block">Containing block</a></li>
- <li><a href="/en-US/docs/Web/CSS/Layout_mode">Layout mode</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">Margin collapsing</a></li>
- <li><a href="/en-US/docs/Web/CSS/Replaced_element">Replaced elements</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">Stacking context</a></li>
- <li><a href="/en-US/docs/Web/Guide/CSS/Visual_formatting_model">Visual formatting model</a></li>
-</ul>
+- [Block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context)
+- [Box model](/en-US/docs/Web/CSS/box_model)
+- [Containing block](/en-US/docs/Web/CSS/All_About_The_Containing_Block)
+- [Layout mode](/en-US/docs/Web/CSS/Layout_mode)
+- [Margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+- [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
+- [Stacking context](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)
+- [Visual formatting model](/en-US/docs/Web/Guide/CSS/Visual_formatting_model)
 
-<h2 id="DOM-CSS_CSSOM">DOM-CSS / CSSOM</h2>
+## DOM-CSS / CSSOM
 
-<h3 id="Major_object_types">Major object types</h3>
+### Major object types
 
-<ul>
- <li>{{DOMxRef("Document.styleSheets")}}</li>
- <li><code>{{DOMxRef("StyleSheetList", "styleSheets", "", 1)}}[i].{{DOMxRef("CSSRuleList", "cssRules", "", 1)}}</code></li>
- <li><code>cssRules[i].{{DOMxRef("CSSRule.cssText", "cssText", "", 1)}}</code> (selector &amp; style)</li>
- <li><code>cssRules[i].{{DOMxRef("CSSStyleRule.selectorText", "selectorText", "", 1)}}</code></li>
- <li>{{DOMxRef("HTMLElement.style")}}</li>
- <li><code>HTMLElement.style.{{DOMxRef("CSSStyleDeclaration.cssText", "cssText", "", 1)}}</code> (just style)</li>
- <li>{{DOMxRef("Element.className")}}</li>
- <li>{{DOMxRef("Element.classList")}}</li>
-</ul>
+- {{DOMxRef("Document.styleSheets")}}
+- `{{DOMxRef("StyleSheetList", "styleSheets", "", 1)}}[i].{{DOMxRef("CSSRuleList", "cssRules", "", 1)}}`
+- `cssRules[i].{{DOMxRef("CSSRule.cssText", "cssText", "", 1)}}` (selector & style)
+- `cssRules[i].{{DOMxRef("CSSStyleRule.selectorText", "selectorText", "", 1)}}`
+- {{DOMxRef("HTMLElement.style")}}
+- `HTMLElement.style.{{DOMxRef("CSSStyleDeclaration.cssText", "cssText", "", 1)}}` (just style)
+- {{DOMxRef("Element.className")}}
+- {{DOMxRef("Element.classList")}}
 
-<h3 id="Important_methods">Important methods</h3>
+### Important methods
 
-<ul>
- <li>{{DOMxRef("CSSStyleSheet.insertRule()")}}</li>
- <li>{{DOMxRef("CSSStyleSheet.deleteRule()")}}</li>
-</ul>
+- {{DOMxRef("CSSStyleSheet.insertRule()")}}
+- {{DOMxRef("CSSStyleSheet.deleteRule()")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Mozilla_Extensions">Mozilla CSS extensions</a> (prefixed with <code>-moz-</code>)</li>
- <li><a href="/en-US/docs/Web/CSS/WebKit_Extensions">WebKit CSS extensions</a> (mostly prefixed with <code>-webkit-</code>)</li>
- <li><a href="/en-US/docs/Web/CSS/Microsoft_Extensions">Microsoft CSS extensions</a> (prefixed with <code>-ms-</code>)</li>
-</ul>
+- [Mozilla CSS extensions](/en-US/docs/Web/CSS/Mozilla_Extensions) (prefixed with `-moz-`)
+- [WebKit CSS extensions](/en-US/docs/Web/CSS/WebKit_Extensions) (mostly prefixed with `-webkit-`)
+- [Microsoft CSS extensions](/en-US/docs/Web/CSS/Microsoft_Extensions) (prefixed with `-ms-`)
 
-<h2 id="External_Links">External Links</h2>
+## External Links
 
-<ul>
- <li><a href="https://www.w3.org/TR/CSS/#indices">CSS Indices (w3.org)</a></li>
-</ul>
+- [CSS Indices (w3.org)](https://www.w3.org/TR/CSS/#indices)

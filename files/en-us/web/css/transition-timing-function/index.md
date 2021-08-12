@@ -6,24 +6,25 @@ tags:
   - CSS Property
   - CSS Transitions
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.transition-timing-function
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>transition-timing-function</code></strong> CSS property sets how intermediate values are calculated for CSS properties being affected by a <a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">transition effect</a>.</p>
+The **`transition-timing-function`** CSS property sets how intermediate values are calculated for CSS properties being affected by a [transition effect](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions).
 
-<div>{{EmbedInteractiveExample("pages/css/transition-timing-function.html")}}</div>
+{{EmbedInteractiveExample("pages/css/transition-timing-function.html")}}
 
-<p>This, in essence, lets you establish an acceleration curve so that the speed of the transition can vary over its duration.</p>
+This, in essence, lets you establish an acceleration curve so that the speed of the transition can vary over its duration.
 
-<p>This acceleration curve is defined using one {{cssxref("&lt;easing-function&gt;")}} for each property to be transitioned.</p>
+This acceleration curve is defined using one {{cssxref("&lt;easing-function&gt;")}} for each property to be transitioned.
 
-<p>You may specify multiple easing functions; each one will be applied to the corresponding property as specified by the {{ cssxref("transition-property") }} property, which acts as a <code>transition-property</code> list. If there are fewer easing functions specified than in the <code>transition-property</code> list, the user agent must calculate which value is used by repeating the list of values until there is one for each transition property. If there are more easing functions, the list is truncated to the right size. In both cases, the CSS declaration stays valid.</p>
+You may specify multiple easing functions; each one will be applied to the corresponding property as specified by the {{ cssxref("transition-property") }} property, which acts as a `transition-property` list. If there are fewer easing functions specified than in the `transition-property` list, the user agent must calculate which value is used by repeating the list of values until there is one for each transition property. If there are more easing functions, the list is truncated to the right size. In both cases, the CSS declaration stays valid.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">/* Keyword values */
+```css
+/* Keyword values */
 transition-timing-function: ease;
 transition-timing-function: ease-in;
 transition-timing-function: ease-out;
@@ -51,82 +52,83 @@ transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
 transition-timing-function: inherit;
 transition-timing-function: initial;
 transition-timing-function: revert;
-transition-timing-function: unset;</pre>
+transition-timing-function: unset;
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-	<dt><code>&lt;easing-function&gt;</code></dt>
-	<dd>Each {{cssxref("&lt;easing-function&gt;")}} represents the easing function to link to the corresponding property to transition, as defined in {{ cssxref("transition-property") }}.
-	<p>The non-step keyword values (ease, linear, ease-in-out, etc.) each represent cubic Bézier curve with fixed four point values, with the cubic-bezier() function value allowing for a non-predefined value. The step timing functions divides the input time into a specified number of intervals that are equal in length. It is defined by a number of steps and a step position.</p>
+- `<easing-function>`
 
-	<dl>
-		<dt><code>ease</code></dt>
-		<dd>Equal to <code>cubic-bezier(0.25, 0.1, 0.25, 1.0)</code>, the default value, increases in velocity towards the middle of the transition, slowing back down at the end.</dd>
-		<dt><code>linear</code></dt>
-		<dd>Equal to <code>cubic-bezier(0.0, 0.0, 1.0, 1.0)</code>, transitions at an even speed.</dd>
-		<dt><code>ease-in</code></dt>
-		<dd>Equal to <code>cubic-bezier(0.42, 0, 1.0, 1.0)</code>, starts off slowly, with the transition speed increasing until complete.</dd>
-		<dt><code>ease-out</code></dt>
-		<dd>Equal to <code>cubic-bezier(0, 0, 0.58, 1.0)</code>, starts transitioning quickly, slowing down the transition continues. •</dd>
-		<dt><code>ease-in-out</code></dt>
-		<dd>Equal to <code>cubic-bezier(0.42, 0, 0.58, 1.0)</code>, starts transitioning slowly, speeds up, and then slows down again.</dd>
-		<dt><code>cubic-bezier(p1, p2, p3, p4)</code></dt>
-		<dd>An author defined cubic-Bezier curve, where the p1 and p3 values must be in the range of 0 to 1.</dd>
-		<dt><code>steps( n, &lt;jumpterm&gt;)</code></dt>
-		<dd>Displays the transition along <em>n stops along the transition, displaying each stop for</em> equal lengths of time. For example, if <em>n</em> is 5,  there are 5 steps. Whether the transition holds temporarily at 0%, 20%, 40%, 60% and 80%, on the 20%, 40%, 60%, 80% and 100%, or makes 5 stops between the 0% and 100% along the transition, or makes 5 stops including the 0% and 100% marks (on the 0%, 25%, 50%, 75%, and 100%) depends on which of the following jump terms is used:
-		<dl>
-			<dt><code>jump-start</code></dt>
-			<dd>Denotes a left-continuous function, so that the first jump happens when the transition begins;</dd>
-			<dt><code>jump-end</code></dt>
-			<dd>Denotes a right-continuous function, so that the last jump happens when the animation ends;</dd>
-			<dt><code>jump-none</code></dt>
-			<dd>There is no jump on either end. Instead, holding at both the 0% mark and the 100% mark, each for 1/n of the duration</dd>
-			<dt><code>jump-both</code></dt>
-			<dd>Includes pauses at both the 0% and 100% marks, effectively adding a step during the transition time.</dd>
-			<dt><code>start</code></dt>
-			<dd>Same as <code>jump-start.</code></dd>
-			<dt><code>end</code></dt>
-			<dd>Same as <code>jump-end.</code></dd>
-		</dl>
-		</dd>
-		<dt><code>step-start</code></dt>
-		<dd>Equal to <code>steps(1, jump-start)</code></dd>
-		<dt><code>step-end</code></dt>
-		<dd>Equal to <code>steps(1, jump-end)</code></dd>
-	</dl>
-	</dd>
-</dl>
+  - : Each {{cssxref("&lt;easing-function&gt;")}} represents the easing function to link to the corresponding property to transition, as defined in {{ cssxref("transition-property") }}.
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+    The non-step keyword values (ease, linear, ease-in-out, etc.) each represent cubic Bézier curve with fixed four point values, with the cubic-bezier() function value allowing for a non-predefined value. The step timing functions divides the input time into a specified number of intervals that are equal in length. It is defined by a number of steps and a step position.
 
-<p>Some animations can be helpful such as to guide users to understand what actions are expected, to show relationships within the user interface, and to inform users as to what actions have occurred. Animations can help reduce cognitive load, prevent change blindness, and establish better recall in spatial relationships. However, some animations can be problematic for people with cognitive concerns such as Attention Deficit Hyperactivity Disorder (ADHD) and certain kinds of motion can be a trigger for Vestibular disorders, epilepsy, and migraine and Scotopic sensitivity.</p>
+    - `ease`
+      - : Equal to `cubic-bezier(0.25, 0.1, 0.25, 1.0)`, the default value, increases in velocity towards the middle of the transition, slowing back down at the end.
+    - `linear`
+      - : Equal to `cubic-bezier(0.0, 0.0, 1.0, 1.0)`, transitions at an even speed.
+    - `ease-in`
+      - : Equal to `cubic-bezier(0.42, 0, 1.0, 1.0)`, starts off slowly, with the transition speed increasing until complete.
+    - `ease-out`
+      - : Equal to `cubic-bezier(0, 0, 0.58, 1.0)`, starts transitioning quickly, slowing down the transition continues. •
+    - `ease-in-out`
+      - : Equal to `cubic-bezier(0.42, 0, 0.58, 1.0)`, starts transitioning slowly, speeds up, and then slows down again.
+    - `cubic-bezier(p1, p2, p3, p4)`
+      - : An author defined cubic-Bezier curve, where the p1 and p3 values must be in the range of 0 to 1.
+    - `steps( n, <jumpterm>)`
 
-<p>Consider providing a mechanism for pausing or disabling animation, as well as using the <a href="/en-US/docs/Web/CSS/@media/prefers-reduced-motion">Reduced Motion Media Query</a> to create a complimentary experience for users who have expressed a preference for no animated experiences.</p>
+      - : Displays the transition along _n stops along the transition, displaying each stop for_ equal lengths of time. For example, if _n_ is 5,  there are 5 steps. Whether the transition holds temporarily at 0%, 20%, 40%, 60% and 80%, on the 20%, 40%, 60%, 80% and 100%, or makes 5 stops between the 0% and 100% along the transition, or makes 5 stops including the 0% and 100% marks (on the 0%, 25%, 50%, 75%, and 100%) depends on which of the following jump terms is used:
 
-<h2 id="Formal_definition">Formal definition</h2>
+        - `jump-start`
+          - : Denotes a left-continuous function, so that the first jump happens when the transition begins;
+        - `jump-end`
+          - : Denotes a right-continuous function, so that the last jump happens when the animation ends;
+        - `jump-none`
+          - : There is no jump on either end. Instead, holding at both the 0% mark and the 100% mark, each for 1/n of the duration
+        - `jump-both`
+          - : Includes pauses at both the 0% and 100% marks, effectively adding a step during the transition time.
+        - `start`
+          - : Same as `jump-start.`
+        - `end`
+          - : Same as `jump-end.`
 
-<p>{{CSSInfo}}</p>
+    - `step-start`
+      - : Equal to `steps(1, jump-start)`
+    - `step-end`
+      - : Equal to `steps(1, jump-end)`
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Accessibility concerns
+
+Some animations can be helpful such as to guide users to understand what actions are expected, to show relationships within the user interface, and to inform users as to what actions have occurred. Animations can help reduce cognitive load, prevent change blindness, and establish better recall in spatial relationships. However, some animations can be problematic for people with cognitive concerns such as Attention Deficit Hyperactivity Disorder (ADHD) and certain kinds of motion can be a trigger for Vestibular disorders, epilepsy, and migraine and Scotopic sensitivity.
+
+Consider providing a mechanism for pausing or disabling animation, as well as using the [Reduced Motion Media Query](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) to create a complimentary experience for users who have expressed a preference for no animated experiences.
+
+## Formal definition
+
+{{CSSInfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Cubic-Bezier_examples">Cubic-Bezier examples</h3>
+### Cubic-Bezier examples
 
-<pre class="brush:html hidden">&lt;div class="parent"&gt;
-  &lt;div class="ease"&gt;ease&lt;/div&gt;
-  &lt;div class="easein"&gt;ease-in&lt;/div&gt;
-  &lt;div class="easeout"&gt;ease-out&lt;/div&gt;
-  &lt;div class="easeinout"&gt;ease-in-out&lt;/div&gt;
-  &lt;div class="linear"&gt;linear&lt;/div&gt;
-  &lt;div class="cb"&gt;cubic-bezier(0.2,-2,0.8,2)&lt;/div&gt;
-&lt;/div&gt;</pre>
+```html hidden
+<div class="parent">
+  <div class="ease">ease</div>
+  <div class="easein">ease-in</div>
+  <div class="easeout">ease-out</div>
+  <div class="easeinout">ease-in-out</div>
+  <div class="linear">linear</div>
+  <div class="cb">cubic-bezier(0.2,-2,0.8,2)</div>
+</div>
+```
 
-<pre class="brush:css hidden">.parent {}
-.parent &gt; div[class] {
+```css hidden
+.parent {}
+.parent > div[class] {
     width: 12em;
     min-width: 12em;
     margin-bottom: 4px;
@@ -136,7 +138,7 @@ transition-timing-function: unset;</pre>
     transition-property: all;
     transition-duration: 7s;
 }
-.parent &gt; div.box1{
+.parent > div.box1{
     width: 90vw;
     min-width: 24em;
     background-color: magenta;
@@ -145,19 +147,21 @@ transition-timing-function: unset;</pre>
     transition-property: all;
     transition-duration: 2s;
 }
-</pre>
+```
 
-<pre class="brush:js hidden">function updateTransition() {
-  var els = document.querySelectorAll(".parent &gt; div[class]");
-  for(var c = els.length, i = 0; i &lt; c; i++) {
+```js hidden
+function updateTransition() {
+  var els = document.querySelectorAll(".parent > div[class]");
+  for(var c = els.length, i = 0; i < c; i++) {
      els[i].classList.toggle("box1");
   }
 }
 
 var intervalID = window.setInterval(updateTransition, 10000);
-</pre>
+```
 
-<pre class="brush: css">.ease {
+```css
+.ease {
    transition-timing-function: ease;
 }
 .easein {
@@ -174,24 +178,27 @@ var intervalID = window.setInterval(updateTransition, 10000);
 }
 .cb {
    transition-timing-function: cubic-bezier(0.2,-2,0.8,2);
-}</pre>
+}
+```
 
-<div>{{EmbedLiveSample("Cubic-Bezier_examples")}}</div>
+{{EmbedLiveSample("Cubic-Bezier_examples")}}
 
-<h3 id="Step_examples">Step examples</h3>
+### Step examples
 
+```html hidden
+<div class="parent">
+  <div class="jump-start">jump-start</div>
+  <div class="jump-end">jump-end</div>
+  <div class="jump-both">jump-both</div>
+  <div class="jump-none">jump-none</div>
+  <div class="step-start">step-start</div>
+  <div class="step-end">step-end</div>
+</div>
+```
 
-<pre class="brush:html hidden">&lt;div class="parent"&gt;
-  &lt;div class="jump-start"&gt;jump-start&lt;/div&gt;
-  &lt;div class="jump-end"&gt;jump-end&lt;/div&gt;
-  &lt;div class="jump-both"&gt;jump-both&lt;/div&gt;
-  &lt;div class="jump-none"&gt;jump-none&lt;/div&gt;
-  &lt;div class="step-start"&gt;step-start&lt;/div&gt;
-  &lt;div class="step-end"&gt;step-end&lt;/div&gt;
-&lt;/div&gt;</pre>
-
-<pre class="brush:css hidden">.parent {}
-.parent &gt; div[class] {
+```css hidden
+.parent {}
+.parent > div[class] {
     width: 12em;
     min-width: 12em;
     margin-bottom: 4px;
@@ -201,7 +208,7 @@ var intervalID = window.setInterval(updateTransition, 10000);
     transition-property: all;
     transition-duration:7s;
 }
-.parent &gt; div.box1{
+.parent > div.box1{
     width: 90vw;
     min-width: 24em;
     background-color: magenta;
@@ -210,19 +217,21 @@ var intervalID = window.setInterval(updateTransition, 10000);
     transition-property: all;
     transition-duration:2s;
 }
-</pre>
+```
 
-<pre class="brush:js hidden">function updateTransition() {
-  var els = document.querySelectorAll(".parent &gt; div[class]");
-  for(var c = els.length, i = 0; i &lt; c; i++) {
+```js hidden
+function updateTransition() {
+  var els = document.querySelectorAll(".parent > div[class]");
+  for(var c = els.length, i = 0; i < c; i++) {
      els[i].classList.toggle("box1");
   }
 }
 
 var intervalID = window.setInterval(updateTransition, 10000);
-</pre>
+```
 
-<pre class="brush: css">.jump-start {
+```css
+.jump-start {
    transition-timing-function: steps(5, jump-start);
 }
 .jump-end {
@@ -239,25 +248,24 @@ var intervalID = window.setInterval(updateTransition, 10000);
 }
 .step-end {
    transition-timing-function: step-end;
-}</pre>
+}
+```
 
-<div>{{EmbedLiveSample("Step_examples")}}</div>
+{{EmbedLiveSample("Step_examples")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">Using CSS transitions</a></li>
-	<li>{{cssxref('transition')}}</li>
-	<li>{{cssxref('transition-property')}}</li>
-	<li>{{cssxref('transition-duration')}}</li>
-	<li>{{cssxref('transition-delay')}}</li>
-	<li>{{domxref("TransitionEvent")}}</li>
-</ul>
+- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- {{cssxref('transition')}}
+- {{cssxref('transition-property')}}
+- {{cssxref('transition-duration')}}
+- {{cssxref('transition-delay')}}
+- {{domxref("TransitionEvent")}}

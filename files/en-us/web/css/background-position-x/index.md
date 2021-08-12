@@ -7,29 +7,31 @@ tags:
   - CSS Property
   - Experimental
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.background-position-x
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>background-position-x</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the initial horizontal position for each background image. The position is relative to the position layer set by {{cssxref("background-origin")}}.</p>
+The **`background-position-x`** [CSS](/en-US/docs/Web/CSS) property sets the initial horizontal position for each background image. The position is relative to the position layer set by {{cssxref("background-origin")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/background-position-x.html")}}</div>
+{{EmbedInteractiveExample("pages/css/background-position-x.html")}}
+
 <!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
-<p>The value of this property is overridden by any declaration of the {{cssxref("background")}} or {{cssxref("background-position")}} shorthand properties applied to the element after it.</p>
+The value of this property is overridden by any declaration of the {{cssxref("background")}} or {{cssxref("background-position")}} shorthand properties applied to the element after it.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 background-position-x: left;
 background-position-x: center;
 background-position-x: right;
 
-/* &lt;percentage&gt; values */
+/* <percentage> values */
 background-position-x: 25%;
 
-/* &lt;length&gt; values */
+/* <length> values */
 background-position-x: 0px;
 background-position-x: 1cm;
 background-position-x: 8em;
@@ -46,46 +48,47 @@ background-position-x: inherit;
 background-position-x: initial;
 background-position-x: revert;
 background-position-x: unset;
-</pre>
+```
 
-<p>The <code>background-position-x</code> property is specified as one or more values, separated by commas.</p>
+The `background-position-x` property is specified as one or more values, separated by commas.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>left</code></dt>
- <dd>Aligns the left edge of the background image with the left edge of the background position layer.</dd>
- <dt><code>center</code></dt>
- <dd>Aligns the center of the background image with the center of the background position layer.</dd>
- <dt><code>right</code></dt>
- <dd>Aligns the right edge of the background image with the right edge of the background position layer.</dd>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>The offset of the given background image's left vertical edge from the background position layer's left vertical edge. (Some browsers allow assigning the right edge for offset).</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>The offset of the given background image's horizontal position relative to the container. A value of 0% means that the left edge of the background image is aligned with the left edge of the container, and a value of 100% means that the <em>right</em> edge of the background image is aligned with the <em>right</em> edge of the container, thus a value of 50% horizontally centers the background image.</dd>
-</dl>
+- `left`
+  - : Aligns the left edge of the background image with the left edge of the background position layer.
+- `center`
+  - : Aligns the center of the background image with the center of the background position layer.
+- `right`
+  - : Aligns the right edge of the background image with the right edge of the background position layer.
+- {{cssxref("&lt;length&gt;")}}
+  - : The offset of the given background image's left vertical edge from the background position layer's left vertical edge. (Some browsers allow assigning the right edge for offset).
+- {{cssxref("&lt;percentage&gt;")}}
+  - : The offset of the given background image's horizontal position relative to the container. A value of 0% means that the left edge of the background image is aligned with the left edge of the container, and a value of 100% means that the _right_ edge of the background image is aligned with the _right_ edge of the container, thus a value of 50% horizontally centers the background image.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_example">Basic example</h3>
+### Basic example
 
-<p>The following example shows a simple background image implementation, with background-position-x and background-position-y used to define the image's horizontal and vertical positions separately.</p>
+The following example shows a simple background image implementation, with background-position-x and background-position-y used to define the image's horizontal and vertical positions separately.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;&lt;/div&gt;</pre>
+```html
+<div></div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   width: 300px;
   height: 300px;
   background-color: skyblue;
@@ -93,26 +96,25 @@ background-position-x: unset;
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: bottom 10px;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Basic_example', '100%', 300)}}</p>
+{{EmbedLiveSample('Basic_example', '100%', 300)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("background-position")}}</li>
- <li>{{cssxref("background-position-y")}}</li>
- <li>{{cssxref("background-position-inline")}}</li>
- <li>{{cssxref("background-position-block")}}</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds">Using multiple backgrounds</a></li>
-</ul>
+- {{cssxref("background-position")}}
+- {{cssxref("background-position-y")}}
+- {{cssxref("background-position-inline")}}
+- {{cssxref("background-position-block")}}
+- [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)

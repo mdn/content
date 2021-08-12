@@ -6,24 +6,23 @@ tags:
   - CSS Property
   - Reference
   - Transforms
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.transform
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>transform</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property lets you rotate, scale, skew, or translate an element. It modifies the coordinate space of the CSS <a href="/en-US/docs/Web/CSS/Visual_formatting_model">visual formatting model</a>.</p>
+The **`transform`** [CSS](/en-US/docs/Web/CSS) property lets you rotate, scale, skew, or translate an element. It modifies the coordinate space of the CSS [visual formatting model](/en-US/docs/Web/CSS/Visual_formatting_model).
 
-<div>{{EmbedInteractiveExample("pages/css/transform.html")}}</div>
+{{EmbedInteractiveExample("pages/css/transform.html")}}
 
-<p>If the property has a value different than <code>none</code>, a <a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">stacking context</a> will be created. In that case, the element will act as a <a href="/en-US/docs/Web/CSS/Containing_block">containing block</a> for any <code>position: fixed;</code> or <code>position: absolute;</code> elements that it contains.</p>
+If the property has a value different than `none`, a [stacking context](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context) will be created. In that case, the element will act as a [containing block](/en-US/docs/Web/CSS/Containing_block) for any `position: fixed;` or `position: absolute;` elements that it contains.
 
-<div class="warning">
- <p><strong>Warning:</strong> Only transformable elements can be <code>transform</code>ed. That is, all elements whose layout is governed by the CSS box model except for: <a href="/en-US/docs/Web/CSS/Visual_formatting_model#Inline-level_elements_and_inline_boxes">non-replaced inline boxes</a>, <a href="/en-US/docs/Web/HTML/Element/col">table-column boxes</a>, and <a href="/en-US/docs/Web/HTML/Element/colgroup">table-column-group boxes</a>.</p>
-</div>
+> **Warning:** Only transformable elements can be `transform`ed. That is, all elements whose layout is governed by the CSS box model except for: [non-replaced inline boxes](/en-US/docs/Web/CSS/Visual_formatting_model#Inline-level_elements_and_inline_boxes), [table-column boxes](/en-US/docs/Web/HTML/Element/col), and [table-column-group boxes](/en-US/docs/Web/HTML/Element/colgroup).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">/* Keyword values */
+```css
+/* Keyword values */
 transform: none;
 
 /* Function values */
@@ -58,79 +57,77 @@ transform: inherit;
 transform: initial;
 transform: revert;
 transform: unset;
-</pre>
+```
 
-<p>The <code>transform</code> property may be specified as either the keyword value <code>none</code> or as one or more <code>&lt;transform-function&gt;</code> values.</p>
+The `transform` property may be specified as either the keyword value `none` or as one or more `<transform-function>` values.
 
-<p>If {{cssxref("transform-function/perspective", "perspective()")}} is one of multiple function values, it must be listed first.</p>
+If {{cssxref("transform-function/perspective", "perspective()")}} is one of multiple function values, it must be listed first.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{cssxref("&lt;transform-function&gt;")}}</dt>
- <dd>One or more of the <a href="/en-US/docs/Web/CSS/transform-function">CSS transform functions</a> to be applied. The transform functions are multiplied in order from left to right, meaning that composite transforms are effectively applied in order from right to left.</dd>
- <dt><code>none</code></dt>
- <dd>Specifies that no transform should be applied.</dd>
-</dl>
+- {{cssxref("&lt;transform-function&gt;")}}
+  - : One or more of the [CSS transform functions](/en-US/docs/Web/CSS/transform-function) to be applied. The transform functions are multiplied in order from left to right, meaning that composite transforms are effectively applied in order from right to left.
+- `none`
+  - : Specifies that no transform should be applied.
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+## Accessibility concerns
 
-<p>Scaling/zooming animations are problematic for accessibility, as they are a common trigger for certain types of migraine. If you need to include such animations on your website, you should provide a control to allow users to turn off animations, preferably site-wide.</p>
+Scaling/zooming animations are problematic for accessibility, as they are a common trigger for certain types of migraine. If you need to include such animations on your website, you should provide a control to allow users to turn off animations, preferably site-wide.
 
-<p>Also, consider making use of the {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} media feature — use it to write a <a href="/en-US/docs/Web/CSS/Media_Queries">media query</a> that will turn off animations if the user has reduced animation specified in their system preferences.</p>
+Also, consider making use of the {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} media feature — use it to write a [media query](/en-US/docs/Web/CSS/Media_Queries) that will turn off animations if the user has reduced animation specified in their system preferences.
 
-<p>Find out more:</p>
+Find out more:
 
-<ul>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.3_%E2%80%94_Seizures_and_Physical_Reactions_Do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions">MDN Understanding WCAG, Guideline 2.3 explanations</a></li>
- <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions">Understanding Success Criterion 2.3.3 | W3C Understanding WCAG 2.1</a></li>
-</ul>
+- [MDN Understanding WCAG, Guideline 2.3 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.3_%E2%80%94_Seizures_and_Physical_Reactions_Do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions)
+- [Understanding Success Criterion 2.3.3 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions)
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Translating_and_rotating_an_element">Translating and rotating an element</h3>
+### Translating and rotating an element
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;Transformed element&lt;/div&gt;</pre>
+```html
+<div>Transformed element</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   border: solid red;
   transform: translate(30px, 20px) rotate(20deg);
   width: 140px;
   height: 60px;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Translating_and_rotating_an_element", "400", "160")}}</p>
+{{EmbedLiveSample("Translating_and_rotating_an_element", "400", "160")}}
 
-<h3 id="More_examples">More examples</h3>
+### More examples
 
-<p>Please see <a href="/en-US/docs/Web/Guide/CSS/Using_CSS_transforms">Using CSS transforms</a> and {{cssxref("&lt;transform-function&gt;")}} for more examples.</p>
+Please see [Using CSS transforms](/en-US/docs/Web/Guide/CSS/Using_CSS_transforms) and {{cssxref("&lt;transform-function&gt;")}} for more examples.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/CSS/Using_CSS_transforms">Using CSS transforms</a></li>
- <li>{{cssxref("&lt;transform-function&gt;")}} data type with all the transform functions explained.</li>
- <li>Online tool to visualize CSS Transform functions: <a href="https://css-transform.moro.es/">CSS Transform Playground</a></li>
-</ul>
+- [Using CSS transforms](/en-US/docs/CSS/Using_CSS_transforms)
+- {{cssxref("&lt;transform-function&gt;")}} data type with all the transform functions explained.
+- Online tool to visualize CSS Transform functions: [CSS Transform Playground](https://css-transform.moro.es/)

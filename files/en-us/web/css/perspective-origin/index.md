@@ -12,20 +12,21 @@ tags:
   - Transforms
   - perspective
   - perspective-origin
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.perspective-origin
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>perspective-origin</code></strong> <a href="/en-US/docs/CSS">CSS</a> property determines the position at which the viewer is looking. It is used as the <em>vanishing point</em> by the {{cssxref("perspective")}} property.</p>
+The **`perspective-origin`** [CSS](/en-US/docs/CSS) property determines the position at which the viewer is looking. It is used as the _vanishing point_ by the {{cssxref("perspective")}} property.
 
-<div>{{EmbedInteractiveExample("pages/css/perspective-origin.html")}}</div>
+{{EmbedInteractiveExample("pages/css/perspective-origin.html")}}
 
-<p>The <strong><code>perspective-origin</code></strong> and {{cssxref('perspective')}} properties are attached to the parent of a child transformed in 3-dimensional space, unlike the <code><a href="/en-US/docs/Web/CSS/transform-function/perspective">perspective()</a></code> transform function which is placed on the element being transformed.</p>
+The **`perspective-origin`** and {{cssxref('perspective')}} properties are attached to the parent of a child transformed in 3-dimensional space, unlike the [`perspective()`](/en-US/docs/Web/CSS/transform-function/perspective) transform function which is placed on the element being transformed.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* One-value syntax */
+```css
+/* One-value syntax */
 perspective-origin: x-position;
 
 /* Two-value syntax */
@@ -40,223 +41,222 @@ perspective-origin: inherit;
 perspective-origin: initial;
 perspective-origin: revert;
 perspective-origin: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><em>x-position</em></dt>
- <dd>Indicates the position of the abscissa of the <em>vanishing point</em>. It can have one of the following values:
- <ul>
-  <li>{{cssxref("&lt;length-percentage&gt;")}} indicating the position as an absolute length value or relative to the width of the element. The value may be negative.</li>
-  <li><code>left</code>, a keyword being a shortcut for the <code>0</code> length value.</li>
-  <li><code>center</code>, a keyword being a shortcut for the <code>50%</code> percentage value.</li>
-  <li><code>right</code>, a keyword being a shortcut for the <code>100%</code> percentage value.</li>
- </ul>
- </dd>
- <dt><em>y-position</em></dt>
- <dd>Indicates the position of the ordinate of the <em>vanishing point</em>. It can have one of the following values:
- <ul>
-  <li>{{cssxref("&lt;length-percentage&gt;")}} indicating the position as an absolute length value or relative to the height of the element. The value may be negative.</li>
-  <li><code>top</code>, a keyword being a shortcut for the <code>0</code> length value.</li>
-  <li><code>center</code>, a keyword being a shortcut for the <code>50%</code> percentage value.</li>
-  <li><code>bottom</code>, a keyword being a shortcut for the <code>100%</code> percentage value.</li>
- </ul>
- </dd>
-</dl>
+- _x-position_
 
-<h2 id="Formal_definition">Formal definition</h2>
+  - : Indicates the position of the abscissa of the _vanishing point_. It can have one of the following values:
 
-<p>{{cssinfo}}</p>
+    - {{cssxref("&lt;length-percentage&gt;")}} indicating the position as an absolute length value or relative to the width of the element. The value may be negative.
+    - `left`, a keyword being a shortcut for the `0` length value.
+    - `center`, a keyword being a shortcut for the `50%` percentage value.
+    - `right`, a keyword being a shortcut for the `100%` percentage value.
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+- _y-position_
+
+  - : Indicates the position of the ordinate of the _vanishing point_. It can have one of the following values:
+
+    - {{cssxref("&lt;length-percentage&gt;")}} indicating the position as an absolute length value or relative to the height of the element. The value may be negative.
+    - `top`, a keyword being a shortcut for the `0` length value.
+    - `center`, a keyword being a shortcut for the `50%` percentage value.
+    - `bottom`, a keyword being a shortcut for the `100%` percentage value.
+
+## Formal definition
+
+{{cssinfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Changing_the_perspective_origin">Changing the perspective origin</h3>
+### Changing the perspective origin
 
-<p>This example shows cubes with popular <code>perspective-origin</code> values.</p>
+This example shows cubes with popular `perspective-origin` values.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;section&gt;
+```html
+<section>
 
-&lt;figure&gt;
-  &lt;figcaption&gt;&lt;code&gt;perspective-origin: top left;&lt;/code&gt;&lt;/figcaption&gt;
-    &lt;div class="container"&gt;
-     &lt;div class="cube potl"&gt;
-      &lt;div class="face front"&gt;1&lt;/div&gt;
-      &lt;div class="face back"&gt;2&lt;/div&gt;
-      &lt;div class="face right"&gt;3&lt;/div&gt;
-      &lt;div class="face left"&gt;4&lt;/div&gt;
-      &lt;div class="face top"&gt;5&lt;/div&gt;
-      &lt;div class="face bottom"&gt;6&lt;/div&gt;
-     &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/figure&gt;
+<figure>
+  <figcaption><code>perspective-origin: top left;</code></figcaption>
+    <div class="container">
+     <div class="cube potl">
+      <div class="face front">1</div>
+      <div class="face back">2</div>
+      <div class="face right">3</div>
+      <div class="face left">4</div>
+      <div class="face top">5</div>
+      <div class="face bottom">6</div>
+     </div>
+    </div>
+</figure>
 
-&lt;figure&gt;
-  &lt;figcaption&gt;&lt;code&gt;perspective-origin: top;&lt;/code&gt;&lt;/figcaption&gt;
-   &lt;div class="container"&gt;
-    &lt;div class="cube potm"&gt;
-      &lt;div class="face front"&gt;1&lt;/div&gt;
-      &lt;div class="face back"&gt;2&lt;/div&gt;
-      &lt;div class="face right"&gt;3&lt;/div&gt;
-      &lt;div class="face left"&gt;4&lt;/div&gt;
-      &lt;div class="face top"&gt;5&lt;/div&gt;
-      &lt;div class="face bottom"&gt;6&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/figure&gt;
+<figure>
+  <figcaption><code>perspective-origin: top;</code></figcaption>
+   <div class="container">
+    <div class="cube potm">
+      <div class="face front">1</div>
+      <div class="face back">2</div>
+      <div class="face right">3</div>
+      <div class="face left">4</div>
+      <div class="face top">5</div>
+      <div class="face bottom">6</div>
+    </div>
+  </div>
+</figure>
 
-&lt;figure&gt;
-  &lt;figcaption&gt;&lt;code&gt;perspective-origin: top right;&lt;/code&gt;&lt;/figcaption&gt;
-  &lt;div class="container"&gt;
-    &lt;div class="cube potr"&gt;
-      &lt;div class="face front"&gt;1&lt;/div&gt;
-      &lt;div class="face back"&gt;2&lt;/div&gt;
-      &lt;div class="face right"&gt;3&lt;/div&gt;
-      &lt;div class="face left"&gt;4&lt;/div&gt;
-      &lt;div class="face top"&gt;5&lt;/div&gt;
-      &lt;div class="face bottom"&gt;6&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/figure&gt;
+<figure>
+  <figcaption><code>perspective-origin: top right;</code></figcaption>
+  <div class="container">
+    <div class="cube potr">
+      <div class="face front">1</div>
+      <div class="face back">2</div>
+      <div class="face right">3</div>
+      <div class="face left">4</div>
+      <div class="face top">5</div>
+      <div class="face bottom">6</div>
+    </div>
+  </div>
+</figure>
 
-&lt;figure&gt;
-  &lt;figcaption&gt;&lt;code&gt;perspective-origin: left;&lt;/code&gt;&lt;/figcaption&gt;
-  &lt;div class="container"&gt;
-    &lt;div class="cube poml"&gt;
-      &lt;div class="face front"&gt;1&lt;/div&gt;
-      &lt;div class="face back"&gt;2&lt;/div&gt;
-      &lt;div class="face right"&gt;3&lt;/div&gt;
-      &lt;div class="face left"&gt;4&lt;/div&gt;
-      &lt;div class="face top"&gt;5&lt;/div&gt;
-      &lt;div class="face bottom"&gt;6&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/figure&gt;
+<figure>
+  <figcaption><code>perspective-origin: left;</code></figcaption>
+  <div class="container">
+    <div class="cube poml">
+      <div class="face front">1</div>
+      <div class="face back">2</div>
+      <div class="face right">3</div>
+      <div class="face left">4</div>
+      <div class="face top">5</div>
+      <div class="face bottom">6</div>
+    </div>
+  </div>
+</figure>
 
-&lt;figure&gt;
-  &lt;figcaption&gt;&lt;code&gt;perspective-origin: 50% 50%;&lt;/code&gt;&lt;/figcaption&gt;
-  &lt;div class="container"&gt;
-    &lt;div class="cube pomm"&gt;
-      &lt;div class="face front"&gt;1&lt;/div&gt;
-      &lt;div class="face back"&gt;2&lt;/div&gt;
-      &lt;div class="face right"&gt;3&lt;/div&gt;
-      &lt;div class="face left"&gt;4&lt;/div&gt;
-      &lt;div class="face top"&gt;5&lt;/div&gt;
-      &lt;div class="face bottom"&gt;6&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/figure&gt;
+<figure>
+  <figcaption><code>perspective-origin: 50% 50%;</code></figcaption>
+  <div class="container">
+    <div class="cube pomm">
+      <div class="face front">1</div>
+      <div class="face back">2</div>
+      <div class="face right">3</div>
+      <div class="face left">4</div>
+      <div class="face top">5</div>
+      <div class="face bottom">6</div>
+    </div>
+  </div>
+</figure>
 
-&lt;figure&gt;
-  &lt;figcaption&gt;&lt;code&gt;perspective-origin: right;&lt;/code&gt;&lt;/figcaption&gt;
-  &lt;div class="container"&gt;
-    &lt;div class="cube pomr"&gt;
-      &lt;div class="face front"&gt;1&lt;/div&gt;
-      &lt;div class="face back"&gt;2&lt;/div&gt;
-      &lt;div class="face right"&gt;3&lt;/div&gt;
-      &lt;div class="face left"&gt;4&lt;/div&gt;
-      &lt;div class="face top"&gt;5&lt;/div&gt;
-      &lt;div class="face bottom"&gt;6&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/figure&gt;
+<figure>
+  <figcaption><code>perspective-origin: right;</code></figcaption>
+  <div class="container">
+    <div class="cube pomr">
+      <div class="face front">1</div>
+      <div class="face back">2</div>
+      <div class="face right">3</div>
+      <div class="face left">4</div>
+      <div class="face top">5</div>
+      <div class="face bottom">6</div>
+    </div>
+  </div>
+</figure>
 
-&lt;figure&gt;
-  &lt;figcaption&gt;&lt;code&gt;perspective-origin: bottom left;&lt;/code&gt;&lt;/figcaption&gt;
-  &lt;div class="container"&gt;
-    &lt;div class="cube pobl"&gt;
-      &lt;div class="face front"&gt;1&lt;/div&gt;
-      &lt;div class="face back"&gt;2&lt;/div&gt;
-      &lt;div class="face right"&gt;3&lt;/div&gt;
-      &lt;div class="face left"&gt;4&lt;/div&gt;
-      &lt;div class="face top"&gt;5&lt;/div&gt;
-      &lt;div class="face bottom"&gt;6&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/figure&gt;
+<figure>
+  <figcaption><code>perspective-origin: bottom left;</code></figcaption>
+  <div class="container">
+    <div class="cube pobl">
+      <div class="face front">1</div>
+      <div class="face back">2</div>
+      <div class="face right">3</div>
+      <div class="face left">4</div>
+      <div class="face top">5</div>
+      <div class="face bottom">6</div>
+    </div>
+  </div>
+</figure>
 
-&lt;figure&gt;
-  &lt;figcaption&gt;&lt;code&gt;perspective-origin: bottom;&lt;/code&gt;&lt;/figcaption&gt;
-  &lt;div class="container"&gt;
-    &lt;div class="cube pobm"&gt;
-      &lt;div class="face front"&gt;1&lt;/div&gt;
-      &lt;div class="face back"&gt;2&lt;/div&gt;
-      &lt;div class="face right"&gt;3&lt;/div&gt;
-      &lt;div class="face left"&gt;4&lt;/div&gt;
-      &lt;div class="face top"&gt;5&lt;/div&gt;
-      &lt;div class="face bottom"&gt;6&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/figure&gt;
+<figure>
+  <figcaption><code>perspective-origin: bottom;</code></figcaption>
+  <div class="container">
+    <div class="cube pobm">
+      <div class="face front">1</div>
+      <div class="face back">2</div>
+      <div class="face right">3</div>
+      <div class="face left">4</div>
+      <div class="face top">5</div>
+      <div class="face bottom">6</div>
+    </div>
+  </div>
+</figure>
 
-&lt;figure&gt;
-  &lt;figcaption&gt;&lt;code&gt;perspective-origin: bottom right;&lt;/code&gt;&lt;/figcaption&gt;
-  &lt;div class="container"&gt;
-    &lt;div class="cube pobr"&gt;
-      &lt;div class="face front"&gt;1&lt;/div&gt;
-      &lt;div class="face back"&gt;2&lt;/div&gt;
-      &lt;div class="face right"&gt;3&lt;/div&gt;
-      &lt;div class="face left"&gt;4&lt;/div&gt;
-      &lt;div class="face top"&gt;5&lt;/div&gt;
-      &lt;div class="face bottom"&gt;6&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/figure&gt;
+<figure>
+  <figcaption><code>perspective-origin: bottom right;</code></figcaption>
+  <div class="container">
+    <div class="cube pobr">
+      <div class="face front">1</div>
+      <div class="face back">2</div>
+      <div class="face right">3</div>
+      <div class="face left">4</div>
+      <div class="face top">5</div>
+      <div class="face bottom">6</div>
+    </div>
+  </div>
+</figure>
 
-&lt;figure&gt;
-  &lt;figcaption&gt;&lt;code&gt;perspective-origin: -200% -200%;&lt;/code&gt;&lt;/figcaption&gt;
-  &lt;div class="container"&gt;
-    &lt;div class="cube po200200neg"&gt;
-      &lt;div class="face front"&gt;1&lt;/div&gt;
-      &lt;div class="face back"&gt;2&lt;/div&gt;
-      &lt;div class="face right"&gt;3&lt;/div&gt;
-      &lt;div class="face left"&gt;4&lt;/div&gt;
-      &lt;div class="face top"&gt;5&lt;/div&gt;
-      &lt;div class="face bottom"&gt;6&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/figure&gt;
+<figure>
+  <figcaption><code>perspective-origin: -200% -200%;</code></figcaption>
+  <div class="container">
+    <div class="cube po200200neg">
+      <div class="face front">1</div>
+      <div class="face back">2</div>
+      <div class="face right">3</div>
+      <div class="face left">4</div>
+      <div class="face top">5</div>
+      <div class="face bottom">6</div>
+    </div>
+  </div>
+</figure>
 
-&lt;figure&gt;
-  &lt;figcaption&gt;&lt;code&gt;perspective-origin: 200% 200%;&lt;/code&gt;&lt;/figcaption&gt;
-  &lt;div class="container"&gt;
-    &lt;div class="cube po200200pos"&gt;
-      &lt;div class="face front"&gt;1&lt;/div&gt;
-      &lt;div class="face back"&gt;2&lt;/div&gt;
-      &lt;div class="face right"&gt;3&lt;/div&gt;
-      &lt;div class="face left"&gt;4&lt;/div&gt;
-      &lt;div class="face top"&gt;5&lt;/div&gt;
-      &lt;div class="face bottom"&gt;6&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/figure&gt;
+<figure>
+  <figcaption><code>perspective-origin: 200% 200%;</code></figcaption>
+  <div class="container">
+    <div class="cube po200200pos">
+      <div class="face front">1</div>
+      <div class="face back">2</div>
+      <div class="face right">3</div>
+      <div class="face left">4</div>
+      <div class="face top">5</div>
+      <div class="face bottom">6</div>
+    </div>
+  </div>
+</figure>
 
-&lt;figure&gt;
-  &lt;figcaption&gt;&lt;code&gt;perspective-origin: 200% -200%;&lt;/code&gt;&lt;/figcaption&gt;
-  &lt;div class="container"&gt;
-    &lt;div class="cube po200200"&gt;
-      &lt;div class="face front"&gt;1&lt;/div&gt;
-      &lt;div class="face back"&gt;2&lt;/div&gt;
-      &lt;div class="face right"&gt;3&lt;/div&gt;
-      &lt;div class="face left"&gt;4&lt;/div&gt;
-      &lt;div class="face top"&gt;5&lt;/div&gt;
-      &lt;div class="face bottom"&gt;6&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/figure&gt;
+<figure>
+  <figcaption><code>perspective-origin: 200% -200%;</code></figcaption>
+  <div class="container">
+    <div class="cube po200200">
+      <div class="face front">1</div>
+      <div class="face back">2</div>
+      <div class="face right">3</div>
+      <div class="face left">4</div>
+      <div class="face top">5</div>
+      <div class="face bottom">6</div>
+    </div>
+  </div>
+</figure>
 
-&lt;/section&gt;
-</pre>
+</section>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">/* perspective-origin values (unique per example) */
+```css
+/* perspective-origin values (unique per example) */
 .potl {
   perspective-origin: top left;
 }
@@ -358,26 +358,25 @@ section {
   text-align: left;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Changing_the_perspective_origin', '100%', 700)}}</p>
+{{EmbedLiveSample('Changing_the_perspective_origin', '100%', 700)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms">Using CSS Transforms</a></li>
- <li>{{cssxref('transform-style')}}</li>
- <li>{{cssxref('transform-function')}}</li>
- <li>{{cssxref('perspective')}}</li>
- <li><code><a href="/en-US/docs/Web/CSS/transform-function/perspective">transform: perspective()</a></code> function</li>
-</ul>
+- [Using CSS Transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- {{cssxref('transform-style')}}
+- {{cssxref('transform-function')}}
+- {{cssxref('perspective')}}
+- [`transform: perspective()`](/en-US/docs/Web/CSS/transform-function/perspective) function

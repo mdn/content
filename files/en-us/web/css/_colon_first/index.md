@@ -11,36 +11,38 @@ tags:
   - Web
 browser-compat: css.selectors.first
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>:first</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a>, used with the  {{cssxref("@page")}} <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a>, represents the first page of a printed document. (See {{cssxref(":first-child")}} for general first element of a node.)</p>
+The **`:first`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes), used with the  {{cssxref("@page")}} [at-rule](/en-US/docs/Web/CSS/At-rule), represents the first page of a printed document. (See {{cssxref(":first-child")}} for general first element of a node.)
 
-<pre class="brush: css no-line-numbers">/* Selects the first page when printing */
+```css
+/* Selects the first page when printing */
 @page :first {
   margin-left: 50%;
   margin-top: 50%;
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note:</strong> You can't change all CSS properties with this pseudo-class. You can only change the margins, {{cssxref("orphans")}}, {{cssxref("widows")}}, and page breaks of the document. Furthermore, you may only use <a href="/en-US/docs/Web/CSS/length#absolute_length_units">absolute-length</a> units when defining the margins. All other properties will be ignored.</p>
-</div>
+> **Note:** You can't change all CSS properties with this pseudo-class. You can only change the margins, {{cssxref("orphans")}}, {{cssxref("widows")}}, and page breaks of the document. Furthermore, you may only use [absolute-length](/en-US/docs/Web/CSS/length#absolute_length_units) units when defining the margins. All other properties will be ignored.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;First Page.&lt;/p&gt;
-&lt;p&gt;Second Page.&lt;/p&gt;
-&lt;button&gt;Print!&lt;/button&gt;
-</pre>
+```html
+<p>First Page.</p>
+<p>Second Page.</p>
+<button>Print!</button>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">@page :first {
+```css
+@page :first {
   margin-left: 50%;
   margin-top: 50%;
 }
@@ -48,32 +50,31 @@ browser-compat: css.selectors.first
 p {
   page-break-after: always;
 }
-</pre>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">document.querySelector("button").addEventListener('click', () =&gt; {
+```js
+document.querySelector("button").addEventListener('click', () => {
   window.print();
 });
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>Press the "Print!" button to print the example. The words on the first page should be somewhere around the center, while other pages will have their contents at the default position.</p>
+Press the "Print!" button to print the example. The words on the first page should be somewhere around the center, while other pages will have their contents at the default position.
 
-<p>{{ EmbedLiveSample('Examples', '80%', '150px') }}</p>
+{{ EmbedLiveSample('Examples', '80%', '150px') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Cssxref("@page")}}</li>
- <li>Other page-related pseudo-classes: {{Cssxref(":left")}}, {{Cssxref(":right")}}</li>
-</ul>
+- {{Cssxref("@page")}}
+- Other page-related pseudo-classes: {{Cssxref(":left")}}, {{Cssxref(":right")}}

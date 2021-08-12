@@ -9,46 +9,42 @@ tags:
   - media feature
 browser-compat: css.at-rules.media.prefers-reduced-data
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}{{draft}}</div>
+{{CSSRef}}{{SeeCompatTable}}{{draft}}
 
-<div class="notecard note">
-<p><strong>Note:</strong> This feature is not supported by any user agent and its specifics are subject to change.</p>
-</div>
+> **Note:** This feature is not supported by any user agent and its specifics are subject to change.
 
-<p>The <strong><code>prefers-reduced-data</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features">media feature</a> is used to detect if the user has requested the web content that consumes less internet traffic.</p>
+The **`prefers-reduced-data`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) is used to detect if the user has requested the web content that consumes less internet traffic.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<dl>
- <dt><code><dfn>no-preference</dfn></code></dt>
- <dd>Indicates that the user has made no preference known to the system. This keyword value evaluates as false in the boolean context.</dd>
- <dt><code>reduce</code></dt>
- <dd>Indicates that user has expressed the preference for lightweight alternate content.</dd>
-</dl>
+- `no-preference`
+  - : Indicates that the user has made no preference known to the system. This keyword value evaluates as false in the boolean context.
+- `reduce`
+  - : Indicates that user has expressed the preference for lightweight alternate content.
 
-<h2 id="User_preferences">User preferences</h2>
+## User preferences
 
-<p>Currently no user agent implements this feature, although various operating systems do support such preferences and if this media query is ever implemented user agents will likely rely on the settings provided by the operating system.</p>
+Currently no user agent implements this feature, although various operating systems do support such preferences and if this media query is ever implemented user agents will likely rely on the settings provided by the operating system.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<div class="notecard note">
-<p><strong>Note:</strong> No browser currently implements this feature so the following example will not work.</p>
-</div>
+> **Note:** No browser currently implements this feature so the following example will not work.
 
-<p>In this example the <code>montserrat-regular.woff2</code> font file will neither be preloaded nor downloaded if the user prefers reduced data, in this case the "<a href="https://css-tricks.com/snippets/css/system-font-stack/">system font stack</a>" will serve as the fallback font:</p>
+In this example the `montserrat-regular.woff2` font file will neither be preloaded nor downloaded if the user prefers reduced data, in this case the "[system font stack](https://css-tricks.com/snippets/css/system-font-stack/)" will serve as the fallback font:
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;head&gt;
-  &lt;link rel="preload" href="fonts/montserrat-regular.woff2" as="font" media="(prefers-reduced-data: no-preference)" crossorigin&gt;
-  &lt;link rel="stylesheet" href="style.css"&gt;
-&lt;/head&gt;
-</pre>
+```html
+<head>
+  <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" media="(prefers-reduced-data: no-preference)" crossorigin>
+  <link rel="stylesheet" href="style.css">
+</head>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">@media (prefers-reduced-data: no-preference) {
+```css
+@media (prefers-reduced-data: no-preference) {
     @font-face {
         font-family: Montserrat;
         font-style: normal;
@@ -63,22 +59,20 @@ browser-compat: css.at-rules.media.prefers-reduced-data
 body {
   font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Microsoft YaHei", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPHeader("Save-Data")}} HTTP header</li>
-</ul>
+- {{HTTPHeader("Save-Data")}} HTTP header

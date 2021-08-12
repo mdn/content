@@ -9,73 +9,72 @@ tags:
   - flexbox
   - pagination
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p>This cookbook pattern demonstrates the navigation pattern used to display pagination, where the user can move between pages of content such as search results.</p>
+This cookbook pattern demonstrates the navigation pattern used to display pagination, where the user can move between pages of content such as search results.
 
-<p><img alt="Links to sets of pages in a paged listing" src="pagination.png"></p>
+![Links to sets of pages in a paged listing](pagination.png)
 
-<h2 id="Requirements">Requirements</h2>
+## Requirements
 
-<p>The pagination pattern typically displays items in a row. To ensure that the pagination is understandable by people using a screenreader, we mark the items up as a list inside a {{htmlelement("nav")}} element, and then use CSS to display the layout visually as a row.</p>
+The pagination pattern typically displays items in a row. To ensure that the pagination is understandable by people using a screenreader, we mark the items up as a list inside a {{htmlelement("nav")}} element, and then use CSS to display the layout visually as a row.
 
-<p>Typically, the pagination component will be centered horizontally underneath the content.</p>
+Typically, the pagination component will be centered horizontally underneath the content.
 
-<h2 id="Recipe">Recipe</h2>
+## Recipe
 
-<p>{{EmbedGHLiveSample("css-examples/css-cookbook/pagination.html", '100%', 720)}}</p>
+{{EmbedGHLiveSample("css-examples/css-cookbook/pagination.html", '100%', 720)}}
 
-<div class="callout">
-<p><a href="https://github.com/mdn/css-examples/blob/master/css-cookbook/pagination--download.html">Download this example</a></p>
-</div>
+> **Callout:**
+>
+> [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/pagination--download.html)
 
-<h2 id="Choices_made">Choices made</h2>
+## Choices made
 
-<p>This pattern is laid out using <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">flexbox</a> — one flex container nested inside another. The {{htmlelement("nav")}} element is designated a flex container in order that we can center the list inside using the {{cssxref("justify-content")}} property.</p>
+This pattern is laid out using [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout) — one flex container nested inside another. The {{htmlelement("nav")}} element is designated a flex container in order that we can center the list inside using the {{cssxref("justify-content")}} property.
 
-<p>The list itself also becomes a flex container to lay the items out as a row. To space the items out we will use a {{cssxref("margin")}} on the flex items.</p>
+The list itself also becomes a flex container to lay the items out as a row. To space the items out we will use a {{cssxref("margin")}} on the flex items.
 
-<h2 id="Alternative_methods">Alternative methods</h2>
+## Alternative methods
 
-<p>Once the {{cssxref("column-gap")}} property has implementation in browsers this could be used instead of margins to space out the items.</p>
+Once the {{cssxref("column-gap")}} property has implementation in browsers this could be used instead of margins to space out the items.
 
-<pre class="brush: css">.pagination {
+```css
+.pagination {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   column-gap: 2px;
 }
-</pre>
+```
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+## Accessibility concerns
 
-<p>We want to ensure that a person using a screenreader understands what this navigation does, and where they will go when clicking a link. To help with this we have added <code>aria-label="pagination"</code> on the <code>&lt;nav&gt;</code> element. </p>
+We want to ensure that a person using a screenreader understands what this navigation does, and where they will go when clicking a link. To help with this we have added `aria-label="pagination"` on the `<nav>` element.
 
-<p>We have also added some additional content that would be read by a screenreader but is hidden visually, and set the <code>aria-hidden</code> attribute on the paging arrows.</p>
+We have also added some additional content that would be read by a screenreader but is hidden visually, and set the `aria-hidden` attribute on the paging arrows.
 
-<p>The "See Also" section at the end of this document has links to related accessibility topics.</p>
+The "See Also" section at the end of this document has links to related accessibility topics.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>The various layout methods have different browser support. See the charts below for details on basic support for the properties used.</p>
+The various layout methods have different browser support. See the charts below for details on basic support for the properties used.
 
-<p><em>Include the compat data for key properties you used, as in the example below which includes align-items.</em></p>
+_Include the compat data for key properties you used, as in the example below which includes align-items._
 
-<h4 id="justify-content">justify-content</h4>
+#### justify-content
 
-<p>{{Compat("css.properties.justify-content")}}</p>
+{{Compat("css.properties.justify-content")}}
 
-<h4 id="column-gap_in_Flex_layout">column-gap in Flex layout</h4>
+#### column-gap in Flex layout
 
-<p>{{Compat("css.properties.column-gap.flex_context")}}</p>
+{{Compat("css.properties.column-gap.flex_context")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Cssxref("justify-content")}}, {{Cssxref("column-gap")}}</li>
- <li><a href="https://www.scottohara.me/blog/2018/05/05/hidden-vs-none.html">Know your ARIA: 'Hidden' vs 'None'</a></li>
- <li><a href="https://webaim.org/techniques/css/invisiblecontent/#techniques">Invisible content just for screen reader users</a></li>
- <li><a href="https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939">Writing CSS With Accessibility in mind</a></li>
- <li><a href="http://a11y-style-guide.com/style-guide/section-navigation.html#kssref-navigation-pagination">a11y Style Guide: Pagination</a></li>
-</ul>
+- {{Cssxref("justify-content")}}, {{Cssxref("column-gap")}}
+- [Know your ARIA: 'Hidden' vs 'None'](https://www.scottohara.me/blog/2018/05/05/hidden-vs-none.html)
+- [Invisible content just for screen reader users](https://webaim.org/techniques/css/invisiblecontent/#techniques)
+- [Writing CSS With Accessibility in mind](https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939)
+- [a11y Style Guide: Pagination](http://a11y-style-guide.com/style-guide/section-navigation.html#kssref-navigation-pagination)

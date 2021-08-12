@@ -9,17 +9,18 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.align-content
 ---
-<p>The <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>align-content</code></strong> property sets the distribution of space between and around content items along a <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">flexbox</a>'s cross-axis or a <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">grid</a>'s block axis.</p>
+The [CSS](/en-US/docs/Web/CSS) **`align-content`** property sets the distribution of space between and around content items along a [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout)'s cross-axis or a [grid](/en-US/docs/Web/CSS/CSS_Grid_Layout)'s block axis.
 
-<p>The interactive example below use Grid Layout to demonstrate some of the values of this property.</p>
+The interactive example below use Grid Layout to demonstrate some of the values of this property.
 
-<div>{{EmbedInteractiveExample("pages/css/align-content.html")}}</div>
+{{EmbedInteractiveExample("pages/css/align-content.html")}}
 
-<p>This property has no effect on single line flex containers (i.e. ones with <code>flex-wrap: nowrap</code>).</p>
+This property has no effect on single line flex containers (i.e. ones with `flex-wrap: nowrap`).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Basic positional alignment */
+```css
+/* Basic positional alignment */
 /* align-content does not take left and right values */
 align-content: center;     /* Pack items around the center */
 align-content: start;      /* Pack items from the start */
@@ -57,58 +58,59 @@ align-content: inherit;
 align-content: initial;
 align-content: revert;
 align-content: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>start</code></dt>
- <dd>The items are packed flush to each other against the start edge of the alignment container in the cross axis.</dd>
- <dt><code>end</code></dt>
- <dd>The items are packed flush to each other against the end edge of the alignment container in the cross axis.</dd>
- <dt><code>flex-start</code></dt>
- <dd>The items are packed flush to each other against the edge of the alignment container depending on the flex container's cross-start side.<br>
- This only applies to flex layout items. For items that are not children of a flex container, this value is treated like <code>start</code>.</dd>
- <dt><code>flex-end</code></dt>
- <dd>The items are packed flush to each other against the edge of the alignment container depending on the flex container's cross-end side.<br>
- This only applies to flex layout items. For items that are not children of a flex container, this value is treated like <code>end</code>.</dd>
- <dt><code>center</code></dt>
- <dd>The items are packed flush to each other in the center of the alignment container along the cross axis.</dd>
- <dt><code>normal</code></dt>
- <dd>The items are packed in their default position as if no <code>align-content</code> value was set.</dd>
- <dt><code>baseline</code>, <code>first baseline</code>, <code>last baseline</code></dt>
- <dd>
-   <p>Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box's first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.</p>
-   <img alt='the baseline is the line upon which most letters "sit" and below which descenders extend.' src="410px-typography_line_terms.svg.png">
-   <p>The fallback alignment for <code>first baseline</code> is <code>start</code>, the one for <code>last baseline</code> is <code>end</code>.</p>
- </dd>
- <dt><code>space-between</code></dt>
- <dd>The items are evenly distributed within the alignment container along the cross axis. The spacing between each pair of adjacent items is the same. The first item is flush with the start edge of the alignment container in the cross axis, and the last item is flush with the end edge of the alignment container in the cross axis.</dd>
- <dt><code>space-around</code></dt>
- <dd>The items are evenly distributed within the alignment container along the cross axis. The spacing between each pair of adjacent items is the same. The empty space before the first and after the last item equals half of the space between each pair of adjacent items.</dd>
- <dt><code>space-evenly</code></dt>
- <dd>The items are evenly distributed within the alignment container along the cross axis. The spacing between each pair of adjacent items, the start edge and the first item, and the end edge and the last item, are all exactly the same.</dd>
- <dt><code>stretch</code></dt>
- <dd>If the combined size of the items along the cross axis is less than the size of the alignment container, any <code>auto</code>-sized items have their size increased equally (not proportionally), while still respecting the constraints imposed by {{cssxref("max-height")}}/{{cssxref("max-width")}} (or equivalent functionality), so that the combined size exactly fills the alignment container along the cross axis.</dd>
- <dt><code>safe</code></dt>
- <dd>Used alongside an alignment keyword. If the chosen keyword means that the item overflows the alignment container causing data loss, the item is instead aligned as if the alignment mode were <code>start</code>.</dd>
- <dt><code>unsafe</code></dt>
- <dd>Used alongside an alignment keyword. Regardless of the relative sizes of the item and alignment container and whether overflow which causes data loss might happen, the given alignment value is honored.</dd>
-</dl>
+- `start`
+  - : The items are packed flush to each other against the start edge of the alignment container in the cross axis.
+- `end`
+  - : The items are packed flush to each other against the end edge of the alignment container in the cross axis.
+- `flex-start`
+  - : The items are packed flush to each other against the edge of the alignment container depending on the flex container's cross-start side.
+    This only applies to flex layout items. For items that are not children of a flex container, this value is treated like `start`.
+- `flex-end`
+  - : The items are packed flush to each other against the edge of the alignment container depending on the flex container's cross-end side.
+    This only applies to flex layout items. For items that are not children of a flex container, this value is treated like `end`.
+- `center`
+  - : The items are packed flush to each other in the center of the alignment container along the cross axis.
+- `normal`
+  - : The items are packed in their default position as if no `align-content` value was set.
+- `baseline`, `first baseline`, `last baseline`
 
-<h2 id="Formal_definition">Formal definition</h2>
+  - : Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box's first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.
 
-<p>{{CSSInfo}}</p>
+    ![the baseline is the line upon which most letters "sit" and below which descenders extend.](410px-typography_line_terms.svg.png)
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+    The fallback alignment for `first baseline` is `start`, the one for `last baseline` is `end`.
+
+- `space-between`
+  - : The items are evenly distributed within the alignment container along the cross axis. The spacing between each pair of adjacent items is the same. The first item is flush with the start edge of the alignment container in the cross axis, and the last item is flush with the end edge of the alignment container in the cross axis.
+- `space-around`
+  - : The items are evenly distributed within the alignment container along the cross axis. The spacing between each pair of adjacent items is the same. The empty space before the first and after the last item equals half of the space between each pair of adjacent items.
+- `space-evenly`
+  - : The items are evenly distributed within the alignment container along the cross axis. The spacing between each pair of adjacent items, the start edge and the first item, and the end edge and the last item, are all exactly the same.
+- `stretch`
+  - : If the combined size of the items along the cross axis is less than the size of the alignment container, any `auto`-sized items have their size increased equally (not proportionally), while still respecting the constraints imposed by {{cssxref("max-height")}}/{{cssxref("max-width")}} (or equivalent functionality), so that the combined size exactly fills the alignment container along the cross axis.
+- `safe`
+  - : Used alongside an alignment keyword. If the chosen keyword means that the item overflows the alignment container causing data loss, the item is instead aligned as if the alignment mode were `start`.
+- `unsafe`
+  - : Used alongside an alignment keyword. Regardless of the relative sizes of the item and alignment container and whether overflow which causes data loss might happen, the given alignment value is honored.
+
+## Formal definition
+
+{{CSSInfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css; highlight[4]">#container {
+```css
+#container {
   height:200px;
   width: 240px;
   align-content: center; /* Can be changed in the live sample */
@@ -125,7 +127,7 @@ align-content: unset;
   grid-template-columns: repeat(auto-fill, 50px);
 }
 
-div &gt; div {
+div > div {
   box-sizing: border-box;
   border: 2px solid #8c8c8c;
   width: 50px;
@@ -172,61 +174,63 @@ select {
 .row {
   margin-top: 10px;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="container" class="flex"&gt;
-  &lt;div id="item1"&gt;1&lt;/div&gt;
-  &lt;div id="item2"&gt;2&lt;/div&gt;
-  &lt;div id="item3"&gt;3&lt;/div&gt;
-  &lt;div id="item4"&gt;4&lt;/div&gt;
-  &lt;div id="item5"&gt;5&lt;/div&gt;
-  &lt;div id="item6"&gt;6&lt;/div&gt;
-&lt;/div&gt;
+```html
+<div id="container" class="flex">
+  <div id="item1">1</div>
+  <div id="item2">2</div>
+  <div id="item3">3</div>
+  <div id="item4">4</div>
+  <div id="item5">5</div>
+  <div id="item6">6</div>
+</div>
 
-&lt;div class="row"&gt;
-  &lt;label for="display"&gt;display: &lt;/label&gt;
-  &lt;select id="display"&gt;
-    &lt;option value="flex"&gt;flex&lt;/option&gt;
-    &lt;option value="grid"&gt;grid&lt;/option&gt;
-  &lt;/select&gt;
-&lt;/div&gt;
+<div class="row">
+  <label for="display">display: </label>
+  <select id="display">
+    <option value="flex">flex</option>
+    <option value="grid">grid</option>
+  </select>
+</div>
 
-&lt;div class="row"&gt;
-  &lt;label for="values"&gt;align-content: &lt;/label&gt;
-  &lt;select id="values"&gt;
-    &lt;option value="normal"&gt;normal&lt;/option&gt;
-    &lt;option value="stretch"&gt;stretch&lt;/option&gt;
-    &lt;option value="flex-start"&gt;flex-start&lt;/option&gt;
-    &lt;option value="flex-end"&gt;flex-end&lt;/option&gt;
-    &lt;option value="center" selected&gt;center&lt;/option&gt;
-    &lt;option value="space-between"&gt;space-between&lt;/option&gt;
-    &lt;option value="space-around"&gt;space-around&lt;/option&gt;
-    &lt;option value="space-evenly"&gt;space-evenly&lt;/option&gt;
+<div class="row">
+  <label for="values">align-content: </label>
+  <select id="values">
+    <option value="normal">normal</option>
+    <option value="stretch">stretch</option>
+    <option value="flex-start">flex-start</option>
+    <option value="flex-end">flex-end</option>
+    <option value="center" selected>center</option>
+    <option value="space-between">space-between</option>
+    <option value="space-around">space-around</option>
+    <option value="space-evenly">space-evenly</option>
 
-    &lt;option value="start"&gt;start&lt;/option&gt;
-    &lt;option value="end"&gt;end&lt;/option&gt;
-    &lt;option value="left"&gt;left&lt;/option&gt;
-    &lt;option value="right"&gt;right&lt;/option&gt;
+    <option value="start">start</option>
+    <option value="end">end</option>
+    <option value="left">left</option>
+    <option value="right">right</option>
 
-    &lt;option value="baseline"&gt;baseline&lt;/option&gt;
-    &lt;option value="first baseline"&gt;first baseline&lt;/option&gt;
-    &lt;option value="last baseline"&gt;last baseline&lt;/option&gt;
+    <option value="baseline">baseline</option>
+    <option value="first baseline">first baseline</option>
+    <option value="last baseline">last baseline</option>
 
-    &lt;option value="safe center"&gt;safe center&lt;/option&gt;
-    &lt;option value="unsafe center"&gt;unsafe center&lt;/option&gt;
-    &lt;option value="safe right"&gt;safe right&lt;/option&gt;
-    &lt;option value="unsafe right"&gt;unsafe right&lt;/option&gt;
-    &lt;option value="safe end"&gt;safe end&lt;/option&gt;
-    &lt;option value="unsafe end"&gt;unsafe end&lt;/option&gt;
-    &lt;option value="safe flex-end"&gt;safe flex-end&lt;/option&gt;
-    &lt;option value="unsafe flex-end"&gt;unsafe flex-end&lt;/option&gt;
-  &lt;/select&gt;
-&lt;/div&gt;
-</pre>
+    <option value="safe center">safe center</option>
+    <option value="unsafe center">unsafe center</option>
+    <option value="safe right">safe right</option>
+    <option value="unsafe right">unsafe right</option>
+    <option value="safe end">safe end</option>
+    <option value="unsafe end">unsafe end</option>
+    <option value="safe flex-end">safe flex-end</option>
+    <option value="unsafe flex-end">unsafe flex-end</option>
+  </select>
+</div>
+```
 
-<pre class="brush: js hidden">var values = document.getElementById('values');
+```js hidden
+var values = document.getElementById('values');
 var display = document.getElementById('display');
 var container = document.getElementById('container');
 
@@ -237,27 +241,25 @@ values.addEventListener('change', function (evt) {
 display.addEventListener('change', function (evt) {
   container.className = evt.target.value;
 });
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples", 260, 290)}}</p>
+{{EmbedLiveSample("Examples", 260, 290)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Basic Concepts of Flexbox</a></em></li>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container">Aligning items in a flex container</a></em></li>
- <li>CSS Grid Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box alignment in CSS Grid layouts</a></em></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Box_Alignment">CSS Box Alignment</a></li>
-</ul>
+- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- CSS Flexbox Guide: _[Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
+- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
+- [CSS Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment)
 
-<div>{{CSSRef}}</div>
+{{CSSRef}}

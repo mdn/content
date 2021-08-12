@@ -9,63 +9,62 @@ tags:
   - Selector
 browser-compat: css.selectors.-webkit-progress-bar
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>The <strong><code>::-webkit-progress-bar</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> represents the entire bar of a {{HTMLElement("progress")}} element. Normally it's only visible as the unfilled portion of the bar, since by default it's rendered below the {{ cssxref("::-webkit-progress-value") }} pseudo-element. It is a child of the {{cssxref("::-webkit-progress-inner-element")}} pseudo-element and the parent of the {{cssxref("::-webkit-progress-value")}} pseudo-element.</p>
+The **`::-webkit-progress-bar`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the entire bar of a {{HTMLElement("progress")}} element. Normally it's only visible as the unfilled portion of the bar, since by default it's rendered below the {{ cssxref("::-webkit-progress-value") }} pseudo-element. It is a child of the {{cssxref("::-webkit-progress-inner-element")}} pseudo-element and the parent of the {{cssxref("::-webkit-progress-value")}} pseudo-element.
 
-<div class="note">
-<p><strong>Note:</strong> For <code>::-webkit-progress-value</code> to take effect, {{cssxref("appearance")}} needs to be set to <code>none</code> on the <code>&lt;progress&gt;</code> element.</p>
-</div>
+> **Note:** For `::-webkit-progress-value` to take effect, {{cssxref("appearance")}} needs to be set to `none` on the `<progress>` element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">::-webkit-progress-bar</pre>
+```css
+::-webkit-progress-bar
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="CSS_content">CSS content</h3>
+### CSS content
 
-<pre class="brush: css">progress {
+```css
+progress {
   -webkit-appearance: none;
 }
 
 ::-webkit-progress-bar {
   background-color: orange;
 }
-</pre>
+```
 
-<h3 id="HTML_content">HTML content</h3>
+### HTML content
 
-<pre class="brush: html">&lt;progress value="10" max="50"&gt;
-</pre>
+```html
+<progress value="10" max="50">
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples", 200, 50)}}</p>
+{{EmbedLiveSample("Examples", 200, 50)}}
 
-<h3 id="Result_screenshot">Result screenshot</h3>
+### Result screenshot
 
-<p>If you're not using a WebKit or Blink browser, the code above results in a progress bar that looks like this:</p>
+If you're not using a WebKit or Blink browser, the code above results in a progress bar that looks like this:
 
-<p><img alt="" src="progress-bar.png"></p>
+![](progress-bar.png)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The pseudo-elements used by WebKit/Blink to style other parts of a {{HTMLElement("progress")}} element:
-  <ul>
-   <li>{{ cssxref("::-webkit-progress-value") }}</li>
-   <li>{{ cssxref("::-webkit-progress-inner-element") }}</li>
-  </ul>
- </li>
- <li>{{ cssxref("::-moz-progress-bar") }}</li>
- <li>{{ cssxref("::-ms-fill") }}</li>
-</ul>
+- The pseudo-elements used by WebKit/Blink to style other parts of a {{HTMLElement("progress")}} element:
+
+  - {{ cssxref("::-webkit-progress-value") }}
+  - {{ cssxref("::-webkit-progress-inner-element") }}
+
+- {{ cssxref("::-moz-progress-bar") }}
+- {{ cssxref("::-ms-fill") }}

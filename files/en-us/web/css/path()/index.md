@@ -7,59 +7,47 @@ tags:
   - Function
   - Reference
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <code><strong>path()</strong></code> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> accepts an SVG path string, and is used in CSS Shapes and CSS Motion Path to enable a shape to be drawn.</p>
+The **`path()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) accepts an SVG path string, and is used in CSS Shapes and CSS Motion Path to enable a shape to be drawn.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">path( [[&lt;'fill-rule'&gt;,]?&lt;string&gt;)</pre>
+```css
+path( [[<'fill-rule'>,]?<string>)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>&lt;'fill-rule'&gt;</code></dt>
- <dd>The filling rule for the interior of the path. Possible values are nonzero or evenodd. The default value is nonzero. See <a href="/en-US/docs/Web/SVG/Attribute/fill-rule">fill-rule</a> for more details.</dd>
- <dt>&lt;string&gt;</dt>
- <dd>The string is an <a href="/en-US/docs/Web/SVG/Element/path">SVG path data string</a>.</dd>
-</dl>
+- `<'fill-rule'>`
+  - : The filling rule for the interior of the path. Possible values are nonzero or evenodd. The default value is nonzero. See [fill-rule](/en-US/docs/Web/SVG/Attribute/fill-rule) for more details.
+- \<string>
+  - : The string is an [SVG path data string](/en-US/docs/Web/SVG/Element/path).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Examples_of_correct_values_for_path">Examples of correct values for path()</h3>
+### Examples of correct values for path()
 
-<pre class="brush: css">path("M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80");
+```css
+path("M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80");
 path(evenodd,"M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80");
-</pre>
+```
 
-<h3 id="Use_in_offset_path">Use as the value of offset-path</h3>
+### Use as the value of offset-path
 
-<p>The <code>path()</code> function is used to create a path for the item to travel round. Changing any of the values will cause the path to not neatly run round the circle.</p>
+The `path()` function is used to create a path for the item to travel round. Changing any of the values will cause the path to not neatly run round the circle.
 
-<p>{{EmbedGHLiveSample("css-examples/path/offset-path.html", '100%', 960)}}</p>
+{{EmbedGHLiveSample("css-examples/path/offset-path.html", '100%', 960)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Shapes', '#funcdef-path', 'path()')}}</td>
-   <td>{{Spec2('CSS Shapes')}}</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                            | Status                           |
+| ------------------------------------------------------------------------ | -------------------------------- |
+| {{SpecName('CSS Shapes', '#funcdef-path', 'path()')}} | {{Spec2('CSS Shapes')}} |
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("&lt;shape-outside&gt;")}}</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Shapes">CSS Shapes</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes">Overview of CSS Shapes</a></li>
- <li><a href="https://css-tricks.com/svg-path-syntax-illustrated-guide/">SVG Path Syntax Illustrated Guide</a></li>
-</ul>
+- {{cssxref("&lt;shape-outside&gt;")}}
+- [CSS Shapes](/en-US/docs/Web/CSS/CSS_Shapes)
+- [Overview of CSS Shapes](/en-US/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes)
+- [SVG Path Syntax Illustrated Guide](https://css-tricks.com/svg-path-syntax-illustrated-guide/)

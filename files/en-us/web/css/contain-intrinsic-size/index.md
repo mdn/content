@@ -3,17 +3,18 @@ title: contain-intrinsic-size
 slug: Web/CSS/contain-intrinsic-size
 browser-compat: css.properties.contain-intrinsic-size
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p>The <strong><code>contain-intrinsic-size</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property controls the natural size of an element specified by <a href="/en-US/docs/Web/CSS/content-visibility"><code>content-visibility</code></a>.</p>
+The **`contain-intrinsic-size`** [CSS](/en-US/docs/Web/CSS) property controls the natural size of an element specified by [`content-visibility`](/en-US/docs/Web/CSS/content-visibility).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; values */
+```css
+/* <length> values */
 contain-intrinsic-size: 1000px;
 contain-intrinsic-size: 10rem;
 
-/* &lt;percentage&gt; value */
+/* <percentage> value */
 contain-intrinsic-size: 10%;
 
 /* Global values */
@@ -21,18 +22,16 @@ contain-intrinsic-size: inherit;
 contain-intrinsic-size: initial;
 contain-intrinsic-size: revert;
 contain-intrinsic-size: unset;
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://web.dev/content-visibility/">content-visibility: the new CSS property that boosts your rendering performance</a> (web.dev)</li>
-</ul>
+- [content-visibility: the new CSS property that boosts your rendering performance](https://web.dev/content-visibility/) (web.dev)

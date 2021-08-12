@@ -9,17 +9,18 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.animation-direction
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>animation-direction</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets whether an animation should play forward, backward, or alternate back and forth between playing the sequence forward and backward.</p>
+The **`animation-direction`** [CSS](/en-US/docs/Web/CSS) property sets whether an animation should play forward, backward, or alternate back and forth between playing the sequence forward and backward.
 
-<div>{{EmbedInteractiveExample("pages/css/animation-direction.html")}}</div>
+{{EmbedInteractiveExample("pages/css/animation-direction.html")}}
 
-<p>It is often convenient to use the shorthand property {{cssxref("animation")}} to set all animation properties at once.</p>
+It is often convenient to use the shorthand property {{cssxref("animation")}} to set all animation properties at once.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">/* Single animation */
+```css
+/* Single animation */
 animation-direction: normal;
 animation-direction: reverse;
 animation-direction: alternate;
@@ -34,44 +35,43 @@ animation-direction: inherit;
 animation-direction: initial;
 animation-direction: revert;
 animation-direction: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-	<dt><code>normal</code></dt>
-	<dd>The animation plays <em>forwards</em> each cycle. In other words, each time the animation cycles, the animation will reset to the beginning state and start over again. This is the default value.</dd>
-	<dt><code>reverse</code></dt>
-	<dd>The animation plays <em>backwards</em> each cycle. In other words, each time the animation cycles, the animation will reset to the end state and start over again. Animation steps are performed backwards, and timing functions are also reversed. For example, an <code>ease-in</code> timing function becomes <code>ease-out</code>.</dd>
-	<dt><code>alternate</code></dt>
-	<dd>The animation reverses direction each cycle, with the first iteration being played <em>forwards</em>. The count to determine if a cycle is even or odd starts at one.</dd>
-	<dt><code>alternate-reverse</code></dt>
-	<dd>The animation reverses direction each cycle, with the first iteration being played <em>backwards</em>. The count to determine if a cycle is even or odd starts at one.</dd>
-</dl>
+- `normal`
+  - : The animation plays _forwards_ each cycle. In other words, each time the animation cycles, the animation will reset to the beginning state and start over again. This is the default value.
+- `reverse`
+  - : The animation plays _backwards_ each cycle. In other words, each time the animation cycles, the animation will reset to the end state and start over again. Animation steps are performed backwards, and timing functions are also reversed. For example, an `ease-in` timing function becomes `ease-out`.
+- `alternate`
+  - : The animation reverses direction each cycle, with the first iteration being played _forwards_. The count to determine if a cycle is even or odd starts at one.
+- `alternate-reverse`
+  - : The animation reverses direction each cycle, with the first iteration being played _backwards_. The count to determine if a cycle is even or odd starts at one.
 
-<div class="note">
-<p><strong>Note:</strong> When you specify multiple comma-separated values on an <code>animation-*</code> property, they will be assigned to the animations specified in the {{cssxref("animation-name")}} property in different ways depending on how many there are. For more information, see <a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values">Setting multiple animation property values</a>.</p>
-</div>
+> **Note:** When you specify multiple comma-separated values on an `animation-*` property, they will be assigned to the animations specified in the {{cssxref("animation-name")}} property in different ways depending on how many there are. For more information, see [Setting multiple animation property values](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values).
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="The_animation_is_playing_reversed">The animation is  playing reversed</h3>
+### The animation is  playing reversed
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="box"&gt;&lt;/div&gt;</pre>
+```html
+<div class="box"></div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.box {
+```css
+.box {
   background-color: rebeccapurple;
   border-radius: 10px;
   width: 100px;
@@ -88,23 +88,22 @@ animation-direction: unset;
   100% {
     transform: rotate(360deg);
   }
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Examples","100%","250")}}</p>
+{{EmbedLiveSample("Examples","100%","250")}}
 
-<p>See <a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">CSS animations</a> for examples.</p>
+See [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) for examples.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations" title="Tutorial about CSS animations">Using CSS animations</a></li>
-	<li>JavaScript {{domxref("AnimationEvent")}} API</li>
-</ul>
+- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations "Tutorial about CSS animations")
+- JavaScript {{domxref("AnimationEvent")}} API

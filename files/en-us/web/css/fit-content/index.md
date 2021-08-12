@@ -9,38 +9,39 @@ tags:
   - fit-content
 browser-compat: css.properties.width.fit-content
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>fit-content</code></strong> behaves as <code>fit-content(stretch)</code>. In practice this means that the box will use the available space, but never more than {{cssxref("max-content")}}.</p>
+The **`fit-content`** behaves as `fit-content(stretch)`. In practice this means that the box will use the available space, but never more than {{cssxref("max-content")}}.
 
-<p>When used as laid out box size for {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} and {{cssxref("max-height")}} the maximum and minimum sizes refer to the content size.</p>
+When used as laid out box size for {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} and {{cssxref("max-height")}} the maximum and minimum sizes refer to the content size.
 
-<div class="notecard note">
-<p><strong>Note:</strong> The CSS Sizing specification also defines the {{cssxref("fit-content()", "fit-content()")}} function. This page details the keyword.</p>
-</div>
+> **Note:** The CSS Sizing specification also defines the {{cssxref("fit-content()", "fit-content()")}} function. This page details the keyword.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">width: fit-content
+```css
+width: fit-content
 block-size: fit-content
-</pre>
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_fit-content_for_box_sizing">Using fit-content for box sizing</h3>
+### Using fit-content for box sizing
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="container"&gt;
-  &lt;div class="item"&gt;Item&lt;/div&gt;
-  &lt;div class="item"&gt;Item with more text in it.&lt;/div&gt;
-  &lt;div class="item"&gt;Item with more text in it, hopefully we have added enough text so the text will start to wrap.&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="container">
+  <div class="item">Item</div>
+  <div class="item">Item with more text in it.</div>
+  <div class="item">Item with more text in it, hopefully we have added enough text so the text will start to wrap.</div>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.container {
+```css
+.container {
   border: 2px solid #ccc;
   padding: 10px;
   width: 20em;
@@ -53,24 +54,22 @@ block-size: fit-content
   padding: 5px;
   margin-bottom: 1em;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Using_fit-content_for_box_sizing", "100%", 200)}}</p>
+{{EmbedLiveSample("Using_fit-content_for_box_sizing", "100%", 200)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<h3 id="Supported_for_width_and_other_sizing_properties">Supported for width (and other sizing properties)</h3>
+### Supported for width (and other sizing properties)
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related sizing keywords: {{cssxref("min-content")}}, {{cssxref("max-content")}} </li>
-</ul>
+- Related sizing keywords: {{cssxref("min-content")}}, {{cssxref("max-content")}}

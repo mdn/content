@@ -12,70 +12,54 @@ tags:
   - Reference
   - color
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>&lt;alpha-value&gt;</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Types">data type</a> represents a value that can be either a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}, specifying the <strong>{{Glossary("alpha", "alpha channel")}}</strong> or <strong>transparency</strong> of a color.</p>
+The **`<alpha-value>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a value that can be either a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}, specifying the **{{Glossary("alpha", "alpha channel")}}** or **transparency** of a color.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The value of an <code>&lt;alpha-value&gt;</code> is given as either a <code><a href="/en-US/docs/Web/CSS/number">&lt;number&gt;</a></code> or a <code><a href="/en-US/docs/Web/CSS/percentage">&lt;percentage&gt;</a></code>.</p>
+The value of an `<alpha-value>` is given as either a [`<number>`](/en-US/docs/Web/CSS/number) or a [`<percentage>`](/en-US/docs/Web/CSS/percentage).
 
-<p>If given as a number, the useful range is 0 (fully transparent) to 1.0 (fully opaque), with decimal values in between; that is, 0.5 indicates that half of the foreground color is used and half of the background color is used. Values outside the range of 0 to 1 are permitted, but are <a href="https://en.wikipedia.org/wiki/Clamping_(graphics)">clamped</a> to like within the range 0 to 1.</p>
+If given as a number, the useful range is 0 (fully transparent) to 1.0 (fully opaque), with decimal values in between; that is, 0.5 indicates that half of the foreground color is used and half of the background color is used. Values outside the range of 0 to 1 are permitted, but are [clamped](<https://en.wikipedia.org/wiki/Clamping_(graphics)>) to like within the range 0 to 1.
 
-<p>If the alpha value is given as a percentage, 0% corresponds to fully transparent while 100% indicates fully opaque.</p>
+If the alpha value is given as a percentage, 0% corresponds to fully transparent while 100% indicates fully opaque.
 
-<h2 id="Interpolation">Interpolation</h2>
+## Interpolation
 
-<p>When animated, values of the <code>&lt;alpha-value&gt;</code> CSS data type are interpolated as real, floating-point numbers. The speed of the interpolation is determined by the <a href="/en-US/docs/Web/CSS/single-transition-timing-function">timing function</a> associated with the animation.</p>
+When animated, values of the `<alpha-value>` CSS data type are interpolated as real, floating-point numbers. The speed of the interpolation is determined by the [timing function](/en-US/docs/Web/CSS/single-transition-timing-function) associated with the animation.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_text_color_opacity">Setting text color opacity</h3>
+### Setting text color opacity
 
-<p>Here an alpha value is used to set partially transparent text:</p>
+Here an alpha value is used to set partially transparent text:
 
-<pre class="brush: css no-line-numbers language-css">/* &lt;rgba()&gt; */
+```css
+/* <rgba()> */
 color: rgba(34, 12, 64, 0.6);
 color: rgba(34.0 12 64 / 60%);
-</pre>
+```
 
-<h3 id="Setting_shape_image_threshold">Setting shape image threshold</h3>
+### Setting shape image threshold
 
-<p>Here an alpha value is used to determine which parts of an image are considered part of a shape:</p>
+Here an alpha value is used to determine which parts of an image are considered part of a shape:
 
-<pre class="brush: css no-line-numbers language-css">/* shape-image-threshold */
+```css
+/* shape-image-threshold */
 shape-image-threshold: 70%;
-shape-image-threshold: 0.7;</pre>
+shape-image-threshold: 0.7;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Colors', '#type-def-alpha-value', '&lt;alpha-value&gt;')}}</td>
-   <td>{{Spec2('CSS4 Colors')}}</td>
-   <td>No significant change.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Colors', '#alphavaluedt', '&lt;alpha-value&gt;')}}</td>
-   <td>{{Spec2('CSS3 Colors')}}</td>
-   <td>Introduces <code>&lt;alpha-value&gt;</code> along with <code>rgba()</code> and <code>hsla()</code> functional notations.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                        | Status                           | Comment                                                                           |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------- |
+| {{SpecName('CSS4 Colors', '#type-def-alpha-value', '&lt;alpha-value&gt;')}} | {{Spec2('CSS4 Colors')}} | No significant change.                                                            |
+| {{SpecName('CSS3 Colors', '#alphavaluedt', '&lt;alpha-value&gt;')}}             | {{Spec2('CSS3 Colors')}} | Introduces `<alpha-value>` along with `rgba()` and `hsla()` functional notations. |
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals">Fundamental text and font styling</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Types">CSS data types</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Color">CSS Color</a></li>
- <li><code><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code></li>
-</ul>
+- [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
+- [CSS data types](/en-US/docs/Web/CSS/CSS_Types)
+- [CSS Color](/en-US/docs/Web/CSS/CSS_Color)
+- [`<color>`](/en-US/docs/Web/CSS/color_value)

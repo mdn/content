@@ -5,14 +5,15 @@ tags:
   - CSS
   - CSS Property
   - Deprecated
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.ime-mode
 ---
-<div>{{CSSRef}} {{deprecated_header}}</div>
+{{CSSRef}} {{deprecated_header}}
 
-<p>The <strong><code>ime-mode</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property controls the state of the input method editor (IME) for text fields. This property is obsolete.</p>
+The **`ime-mode`** [CSS](/en-US/docs/Web/CSS) property controls the state of the input method editor (IME) for text fields. This property is obsolete.
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 ime-mode: auto;
 ime-mode: normal;
 ime-mode: active;
@@ -24,67 +25,65 @@ ime-mode: inherit;
 ime-mode: initial;
 ime-mode: revert;
 ime-mode: unset;
-</pre>
+```
 
-<p>The <code>ime-mode</code> property is only partially and inconsistently implemented in browsers. It was introduced by Microsoft with Internet Explorer 5 as a proprietary extension: {{spec("https://msdn.microsoft.com/library/ms530767(VS.85).aspx","-ms-ime-mode Attribute | imeMode Property")}}.</p>
+The `ime-mode` property is only partially and inconsistently implemented in browsers. It was introduced by Microsoft with Internet Explorer 5 as a proprietary extension: {{spec("https://msdn.microsoft.com/library/ms530767(VS.85).aspx","-ms-ime-mode Attribute | imeMode Property")}}.
 
-<div class="note">
-<p><strong>Note:</strong> In general, it's not appropriate for a public web site to change the IME mode. This property should only be used for private web applications or to undo the property if it was previously set by legacy code.</p>
-</div>
+> **Note:** In general, it's not appropriate for a public web site to change the IME mode. This property should only be used for private web applications or to undo the property if it was previously set by legacy code.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>ime-mode</code> property is specified using one of the keyword values listed below.</p>
+The `ime-mode` property is specified using one of the keyword values listed below.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>No change is made to the current input method editor state. This is the default.</dd>
- <dt><code>normal</code></dt>
- <dd>The IME state should be normal; this value can be used in a user style sheet to override the page's setting. <em>This value is not supported by Internet Explorer.</em></dd>
- <dt><code>active</code></dt>
- <dd>The input method editor is initially active; text entry is performed through it unless the user specifically dismisses it. <em>Not supported on Linux.</em></dd>
- <dt><code>inactive</code></dt>
- <dd>The input method editor is initially inactive, but the user may activate it if they wish. <em>Not supported on Linux.</em></dd>
- <dt><code>disabled</code></dt>
- <dd>The input method editor is disabled and may not be activated by the user.</dd>
-</dl>
+- `auto`
+  - : No change is made to the current input method editor state. This is the default.
+- `normal`
+  - : The IME state should be normal; this value can be used in a user style sheet to override the page's setting. _This value is not supported by Internet Explorer._
+- `active`
+  - : The input method editor is initially active; text entry is performed through it unless the user specifically dismisses it. _Not supported on Linux._
+- `inactive`
+  - : The input method editor is initially inactive, but the user may activate it if they wish. _Not supported on Linux._
+- `disabled`
+  - : The input method editor is disabled and may not be activated by the user.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Unlike Internet Explorer, Firefox's implementation of <code>ime-mode</code> allows this property on <code>&lt;input type="password"&gt;</code>. However, this makes for a bad user experience, and password fields <em>should not</em> enable the IME. Users may correct the inappropriate behavior of sites that don't follow this recommendation by placing the following CSS into their user stylesheet:</p>
+Unlike Internet Explorer, Firefox's implementation of `ime-mode` allows this property on `<input type="password">`. However, this makes for a bad user experience, and password fields _should not_ enable the IME. Users may correct the inappropriate behavior of sites that don't follow this recommendation by placing the following CSS into their user stylesheet:
 
-<pre class="brush: css">input[type=password] {
+```css
+input[type=password] {
   ime-mode: auto !important;
-}</pre>
+}
+```
 
-<p>The Mac version of Gecko 1.9 (Firefox 3) can't recover the previous state of the IME when a field for which it is disabled loses focus, so Mac users may get grumpy when you use the <code>disabled</code> value.</p>
+The Mac version of Gecko 1.9 (Firefox 3) can't recover the previous state of the IME when a field for which it is disabled loses focus, so Mac users may get grumpy when you use the `disabled` value.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Disabling_input_method_support">Disabling input method support</h3>
+### Disabling input method support
 
-<p>This example disables input method support for a form field. In the past, this was commonly used on fields that entered data into databases which didn't support extended character sets.</p>
+This example disables input method support for a form field. In the past, this was commonly used on fields that entered data into databases which didn't support extended character sets.
 
-<pre class="brush: html">&lt;input type="text" name="name" value="initial value" style="ime-mode: disabled"&gt;</pre>
+```html
+<input type="text" name="name" value="initial value" style="ime-mode: disabled">
+```
 
-<div class="note">
-<p><strong>Note:</strong> You shouldn't rely on disabling IME to prevent extended characters from passing through your form. Even with IME disabled, users can still paste extended characters into your form's fields.</p>
-</div>
+> **Note:** You shouldn't rely on disabling IME to prevent extended characters from passing through your form. Even with IME disabled, users can still paste extended characters into your form's fields.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

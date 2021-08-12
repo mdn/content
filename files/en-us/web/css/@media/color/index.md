@@ -9,30 +9,30 @@ tags:
   - media feature
 browser-compat: css.at-rules.media.color
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>color</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features">media feature</a> can be used to test the number of bits per color component (red, green, blue) of the output device.</p>
+The **`color`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test the number of bits per color component (red, green, blue) of the output device.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>color</code> feature is specified as an {{cssxref("&lt;integer&gt;")}} value that represents the number of bits per color component (red, green, blue) of the output device. If the device is not a color device, the value is zero. It is a range feature, meaning that you can also use the prefixed <strong><code>min-color</code></strong> and <code><strong>max-color</strong></code> variants to query minimum and maximum values, respectively.</p>
+The `color` feature is specified as an {{cssxref("&lt;integer&gt;")}} value that represents the number of bits per color component (red, green, blue) of the output device. If the device is not a color device, the value is zero. It is a range feature, meaning that you can also use the prefixed **`min-color`** and **`max-color`** variants to query minimum and maximum values, respectively.
 
-<div class="note">
-<p><strong>Note:</strong> If the various color components are represented by different numbers of bits, the smallest number is used. For example, if a display uses 5 bits for blue and red and 6 bits for green, then the device is considered to use 5 bits per color component. If the device uses indexed colors, the minimum number of bits per color component in the color table is used.</p>
-</div>
+> **Note:** If the various color components are represented by different numbers of bits, the smallest number is used. For example, if a display uses 5 bits for blue and red and 6 bits for green, then the device is considered to use 5 bits per color component. If the device uses indexed colors, the minimum number of bits per color component in the color table is used.
 
-<p>See <a href="/en-US/docs/Web/HTML/Applying_color">Applying color to HTML elements using CSS</a> to learn more about using CSS to apply color to HTML.</p>
+See [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color) to learn more about using CSS to apply color to HTML.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;This text should be black on non-color devices, red on devices with a low number of colors, and greenish on devices with a high number of colors.&lt;/p&gt;
-</pre>
+```html
+<p>This text should be black on non-color devices, red on devices with a low number of colors, and greenish on devices with a high number of colors.</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   color: black;
 }
 
@@ -48,24 +48,23 @@ browser-compat: css.at-rules.media.color
   p {
     color: #24ba13;
   }
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/HTML/Applying_color">Applying color to HTML elements using CSS</a></li>
- <li>The CSS {{cssxref("color")}} property</li>
- <li>The CSS {{cssxref("&lt;color&gt;")}} data unit</li>
-</ul>
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color)
+- The CSS {{cssxref("color")}} property
+- The CSS {{cssxref("&lt;color&gt;")}} data unit

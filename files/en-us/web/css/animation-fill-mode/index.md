@@ -9,17 +9,18 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.animation-fill-mode
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>animation-fill-mode</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets how a CSS animation applies styles to its target before and after its execution.</p>
+The **`animation-fill-mode`** [CSS](/en-US/docs/Web/CSS) property sets how a CSS animation applies styles to its target before and after its execution.
 
-<div>{{EmbedInteractiveExample("pages/css/animation-fill-mode.html")}}</div>
+{{EmbedInteractiveExample("pages/css/animation-fill-mode.html")}}
 
-<p>It is often convenient to use the shorthand property {{cssxref("animation")}} to set all animation properties at once.</p>
+It is often convenient to use the shorthand property {{cssxref("animation")}} to set all animation properties at once.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">/* Single animation */
+```css
+/* Single animation */
 animation-fill-mode: none;
 animation-fill-mode: forwards;
 animation-fill-mode: backwards;
@@ -34,109 +35,65 @@ animation-fill-mode: inherit;
 animation-fill-mode: initial;
 animation-fill-mode: revert;
 animation-fill-mode: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>none</code></dt>
- <dd>The animation will not apply any styles to the target when it's not executing. The element will instead be displayed using any other CSS rules applied to it. This is the default value.</dd>
- <dt><code>forwards</code></dt>
- <dd>The target will retain the computed values set by the last <a href="/en-US/docs/Web/CSS/@keyframes">keyframe</a> encountered during execution. The last keyframe depends on the value of {{cssxref("animation-direction")}} and {{cssxref("animation-iteration-count")}}:
- <table class="standard-table">
-  <thead>
-   <tr>
-    <th scope="col"><code>animation-direction</code></th>
-    <th scope="col"><code>animation-iteration-count</code></th>
-    <th scope="col">last keyframe encountered</th>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td><code>normal</code></td>
-    <td>even or odd</td>
-    <td><code>100%</code> or <code>to</code></td>
-   </tr>
-   <tr>
-    <td><code>reverse</code></td>
-    <td>even or odd</td>
-    <td><code>0%</code> or <code>from</code></td>
-   </tr>
-   <tr>
-    <td><code>alternate</code></td>
-    <td>even</td>
-    <td><code>0%</code> or <code>from</code></td>
-   </tr>
-   <tr>
-    <td><code>alternate</code></td>
-    <td>odd</td>
-    <td><code>100%</code> or <code>to</code></td>
-   </tr>
-   <tr>
-    <td><code>alternate-reverse</code></td>
-    <td>even</td>
-    <td><code>100%</code> or <code>to</code></td>
-   </tr>
-   <tr>
-    <td><code>alternate-reverse</code></td>
-    <td>odd</td>
-    <td><code>0%</code> or <code>from</code></td>
-   </tr>
-  </tbody>
- </table>
- </dd>
- <dt><code>backwards</code></dt>
- <dd>The animation will apply the values defined in the first relevant <a href="/en-US/docs/Web/CSS/@keyframes">keyframe</a> as soon as it is applied to the target, and retain this during the {{cssxref("animation-delay")}} period. The first relevant keyframe depends on the value of {{cssxref("animation-direction")}}:
- <table class="standard-table">
-  <thead>
-   <tr>
-    <th scope="col"><code>animation-direction</code></th>
-    <th scope="col">first relevant keyframe</th>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td><code>normal</code> or <code>alternate</code></td>
-    <td><code>0%</code> or <code>from</code></td>
-   </tr>
-   <tr>
-    <td><code>reverse</code> or <code>alternate-reverse</code></td>
-    <td><code>100%</code> or <code>to</code></td>
-   </tr>
-  </tbody>
- </table>
- </dd>
- <dt><code>both</code></dt>
- <dd>The animation will follow the rules for both forwards and backwards, thus extending the animation properties in both directions.</dd>
-</dl>
+- `none`
+  - : The animation will not apply any styles to the target when it's not executing. The element will instead be displayed using any other CSS rules applied to it. This is the default value.
+- `forwards`
 
-<div class="note">
-<p><strong>Note:</strong> When you specify multiple comma-separated values on an <code>animation-*</code> property, they will be assigned to the animations specified in the {{cssxref("animation-name")}} property in different ways depending on how many there are. For more information, see <a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values">Setting multiple animation property values</a>.</p>
-</div>
+  - : The target will retain the computed values set by the last [keyframe](/en-US/docs/Web/CSS/@keyframes) encountered during execution. The last keyframe depends on the value of {{cssxref("animation-direction")}} and {{cssxref("animation-iteration-count")}}:
 
-<h2 id="Formal_definition">Formal definition</h2>
+    | `animation-direction` | `animation-iteration-count` | last keyframe encountered |
+    | --------------------- | --------------------------- | ------------------------- |
+    | `normal`              | even or odd                 | `100%` or `to`            |
+    | `reverse`             | even or odd                 | `0%` or `from`            |
+    | `alternate`           | even                        | `0%` or `from`            |
+    | `alternate`           | odd                         | `100%` or `to`            |
+    | `alternate-reverse`   | even                        | `100%` or `to`            |
+    | `alternate-reverse`   | odd                         | `0%` or `from`            |
 
-<p>{{cssinfo}}</p>
+- `backwards`
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+  - : The animation will apply the values defined in the first relevant [keyframe](/en-US/docs/Web/CSS/@keyframes) as soon as it is applied to the target, and retain this during the {{cssxref("animation-delay")}} period. The first relevant keyframe depends on the value of {{cssxref("animation-direction")}}:
+
+    | `animation-direction`            | first relevant keyframe |
+    | -------------------------------- | ----------------------- |
+    | `normal` or `alternate`          | `0%` or `from`          |
+    | `reverse` or `alternate-reverse` | `100%` or `to`          |
+
+- `both`
+  - : The animation will follow the rules for both forwards and backwards, thus extending the animation properties in both directions.
+
+> **Note:** When you specify multiple comma-separated values on an `animation-*` property, they will be assigned to the animations specified in the {{cssxref("animation-name")}} property in different ways depending on how many there are. For more information, see [Setting multiple animation property values](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values).
+
+## Formal definition
+
+{{cssinfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>You can see the effect of <code>animation-fill-mode</code> in the following example. It demonstrates how, for an animation that runs for an infinite time, you can cause it to remain in its final state rather than reverting to the original state (which is the default).</p>
+You can see the effect of `animation-fill-mode` in the following example. It demonstrates how, for an animation that runs for an infinite time, you can cause it to remain in its final state rather than reverting to the original state (which is the default).
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Move your mouse over the gray box!&lt;/p&gt;
-&lt;div class="demo"&gt;
- &lt;div class="growsandstays"&gt;This grows and stays big.&lt;/div&gt;
-  &lt;div class="grows"&gt;This just grows.&lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<p>Move your mouse over the gray box!</p>
+<div class="demo">
+ <div class="growsandstays">This grows and stays big.</div>
+  <div class="grows">This just grows.</div>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.demo {
+```css
+.demo {
   border-top: 100px solid #ccc;
   height: 300px;
 }
@@ -155,23 +112,22 @@ animation-fill-mode: unset;
   animation-name: grow;
   animation-duration: 3s;
   animation-fill-mode: forwards;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample('Examples',700,300)}}</p>
+{{EmbedLiveSample('Examples',700,300)}}
 
-<p>See <a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">CSS animations</a> for more examples.</p>
+See [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) for more examples.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations" title="Tutorial about CSS animations">Using CSS animations</a></li>
- <li>JavaScript {{domxref("AnimationEvent")}} API</li>
-</ul>
+- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations "Tutorial about CSS animations")
+- JavaScript {{domxref("AnimationEvent")}} API

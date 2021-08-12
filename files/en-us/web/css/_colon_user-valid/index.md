@@ -9,67 +9,65 @@ tags:
   - Selector
 browser-compat: css.selectors.user-valid
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>:user-valid</code></strong> CSS <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents any validated form element whose value validates correctly based on its <a href="/en-US/docs/Learn/Forms#constraint_validation">validation constraints</a>. However, unlike {{cssxref(":valid")}} it only matches once the user has interacted with it.</p>
+The **`:user-valid`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any validated form element whose value validates correctly based on its [validation constraints](/en-US/docs/Learn/Forms#constraint_validation). However, unlike {{cssxref(":valid")}} it only matches once the user has interacted with it.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The pseudo-class behaves in the same way as the non-standard <code>:-moz-ui-valid</code> pseudo-class.</p>
-</div>
+> **Note:** The pseudo-class behaves in the same way as the non-standard `:-moz-ui-valid` pseudo-class.
 
-<p>This pseudo-class is applied according to the following rules:</p>
+This pseudo-class is applied according to the following rules:
 
-<ul>
- <li>If the control does not have focus, and the value is valid, apply this pseudo-class.</li>
- <li>If the control has focus, and the value was valid (including empty) when it gained focus, apply this pseudo-class.</li>
- <li>If the control has focus, and the value was invalid when it gained focus, re-validate on every keystroke.</li>
- <li>If the element is required, the preceding rules apply only if the user has changed the value or attempted to submit the form.</li>
-</ul>
+- If the control does not have focus, and the value is valid, apply this pseudo-class.
+- If the control has focus, and the value was valid (including empty) when it gained focus, apply this pseudo-class.
+- If the control has focus, and the value was invalid when it gained focus, re-validate on every keystroke.
+- If the element is required, the preceding rules apply only if the user has changed the value or attempted to submit the form.
 
-<p>The result is that if the control was valid when the user started interacting with it, the validity styling is changed only when the user shifts focus to another control. However, if the user is trying to correct a previously-flagged value, the control shows immediately when the value becomes valid. Required items are flagged as invalid only if the user changes them or attempts to submit an unchanged invalid value.</p>
+The result is that if the control was valid when the user started interacting with it, the validity styling is changed only when the user shifts focus to another control. However, if the user is trying to correct a previously-flagged value, the control shows immediately when the value becomes valid. Required items are flagged as invalid only if the user changes them or attempts to submit an unchanged invalid value.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{CSSSyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3>Setting a color and symbol on :user-valid</h3>
+### Setting a color and symbol on :user-valid
 
-<p>In the following example, the green border and ✅ only display once the user has interacted with the field.
-Try changing the email address to another valid email to see it in action.</p>
+In the following example, the green border and ✅ only display once the user has interacted with the field.
+Try changing the email address to another valid email to see it in action.
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;label for="email"&gt;Email *: &lt;/label&gt;
-  &lt;input id="email" name="email" type="email" value="test@example.com" required&gt;
-  &lt;span&gt;&lt;/span&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+  <label for="email">Email *: </label>
+  <input id="email" name="email" type="email" value="test@example.com" required>
+  <span></span>
+</form>
+```
 
-<pre class="brush: css">input:user-valid {
+```css
+input:user-valid {
   border: 2px solid green;
 }
 
 input:user-valid + span::before {
   content: '✓';
   color: green;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Setting_a_color_and_symbol_on_user-valid", 140, 100)}}</p>
+{{EmbedLiveSample("Setting_a_color_and_symbol_on_user-valid", 140, 100)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{CSSxRef(":valid")}}</li>
- <li>{{CSSxRef(":invalid")}}</li>
- <li>{{CSSxRef(":required")}}</li>
- <li>{{CSSxRef(":optional")}}</li>
- <li>{{CSSxRef(":user-invalid")}}</li>
-</ul>
+- {{CSSxRef(":valid")}}
+- {{CSSxRef(":invalid")}}
+- {{CSSxRef(":required")}}
+- {{CSSxRef(":optional")}}
+- {{CSSxRef(":user-invalid")}}

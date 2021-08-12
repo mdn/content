@@ -6,28 +6,27 @@ tags:
   - CSS Property
   - CSS Transitions
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.transition-delay
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>transition-delay</code></strong> CSS property specifies the duration to wait before starting a property's <a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">transition effect</a> when its value changes.</p>
+The **`transition-delay`** CSS property specifies the duration to wait before starting a property's [transition effect](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) when its value changes.
 
-<div>{{EmbedInteractiveExample("pages/css/transition-delay.html")}}</div>
+{{EmbedInteractiveExample("pages/css/transition-delay.html")}}
 
-<p>The delay may be zero, positive, or negative:</p>
+The delay may be zero, positive, or negative:
 
-<ul>
-	<li>A value of <code>0s</code> (or <code>0ms</code>) will begin the transition effect immediately.</li>
-	<li>A positive value will delay the start of the transition effect for the given length of time.</li>
-	<li>A negative value will begin the transition effect immediately, and partway through the effect. In other words, the effect will be animated as if it had already been running for the given length of time.</li>
-</ul>
+- A value of `0s` (or `0ms`) will begin the transition effect immediately.
+- A positive value will delay the start of the transition effect for the given length of time.
+- A negative value will begin the transition effect immediately, and partway through the effect. In other words, the effect will be animated as if it had already been running for the given length of time.
 
-<p>You may specify multiple delays, which is useful when transitioning multiple properties. Each delay will be applied to the corresponding property as specified by the {{cssxref("transition-property")}} property, which acts as a master list. If there are fewer delays specified than in the master list, the list of delay values will be repeated until there are enough. If there are more delays, the list of delay values will be truncated to match the number of properties. In both cases, the CSS declaration remains valid.</p>
+You may specify multiple delays, which is useful when transitioning multiple properties. Each delay will be applied to the corresponding property as specified by the {{cssxref("transition-property")}} property, which acts as a master list. If there are fewer delays specified than in the master list, the list of delay values will be repeated until there are enough. If there are more delays, the list of delay values will be truncated to match the number of properties. In both cases, the CSS declaration remains valid.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">/* &lt;time&gt; values */
+```css
+/* <time> values */
 transition-delay: 3s;
 transition-delay: 2s, 4ms;
 
@@ -36,42 +35,40 @@ transition-delay: inherit;
 transition-delay: initial;
 transition-delay: revert;
 transition-delay: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-	<dt>{{cssxref("&lt;time&gt;")}}</dt>
-	<dd>Denotes the amount of time to wait between a property's value changing and the start of the transition effect.</dd>
-</dl>
+- {{cssxref("&lt;time&gt;")}}
+  - : Denotes the amount of time to wait between a property's value changing and the start of the transition effect.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3>Example showing different delays</h3>
+### Example showing different delays
 
-<h4>HTML</h4>
+#### HTML
 
-<pre class="brush:html">
-  &lt;div class="box delay-1"&gt;0.5 seconds&lt;/div&gt;
+```html
+  <div class="box delay-1">0.5 seconds</div>
 
-  &lt;div class="box delay-2"&gt;2 seconds&lt;/div&gt;
+  <div class="box delay-2">2 seconds</div>
 
-  &lt;div class="box delay-3"&gt;4 seconds&lt;/div&gt;
+  <div class="box delay-3">4 seconds</div>
 
-  &lt;button id="change"&gt;Change&lt;/button&gt;
-</pre>
+  <button id="change">Change</button>
+```
 
-<h4>CSS</h4>
+#### CSS
 
-<pre class="brush:css;">
+```css
 .box {
   margin: 20px;
   padding: 10px;
@@ -106,11 +103,12 @@ transition-delay: unset;
 .delay-3 {
   transition-delay: 4s;
 }
-</pre>
+```
 
-<h4>JavaScript</h4>
+#### JavaScript
 
-<pre class="brush:js">function change() {
+```js
+function change() {
   const elements = document.querySelectorAll("div.box");
   for (let element of elements) {
     element.classList.toggle("transformed-state");
@@ -119,24 +117,21 @@ transition-delay: unset;
 
 const changeButton = document.querySelector("#change");
 changeButton.addEventListener("click", change);
-</pre>
+```
 
-<h4>Result</h4>
+#### Result
 
-<div>{{EmbedLiveSample("Example_showing_different_delays",275,200)}}</div>
+{{EmbedLiveSample("Example_showing_different_delays",275,200)}}
 
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">Using CSS transitions</a></li>
-	<li>{{domxref("TransitionEvent")}} API</li>
-</ul>
+- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- {{domxref("TransitionEvent")}} API

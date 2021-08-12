@@ -6,18 +6,17 @@ tags:
   - CSS Property
   - Page Breaks
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.page-break-inside
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<div class="notecard warning">
- <p><strong>Warning:</strong> This property has been replaced by the {{cssxref("break-inside")}} property.</p>
-</div>
+> **Warning:** This property has been replaced by the {{cssxref("break-inside")}} property.
 
-<p>The <strong><code>page-break-inside</code></strong> CSS property adjusts page breaks <em>inside</em> the current element.</p>
+The **`page-break-inside`** CSS property adjusts page breaks _inside_ the current element.
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 page-break-inside: auto;
 page-break-inside: avoid;
 
@@ -26,79 +25,66 @@ page-break-inside: inherit;
 page-break-inside: initial;
 page-break-inside: revert;
 page-break-inside: unset;
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>Initial value. Automatic page breaks (neither forced nor forbidden).</dd>
- <dt><code>avoid</code></dt>
- <dd>Avoid page breaks inside the element.</dd>
-</dl>
+- `auto`
+  - : Initial value. Automatic page breaks (neither forced nor forbidden).
+- `avoid`
+  - : Avoid page breaks inside the element.
 
-<h2 id="Page_break_aliases">Page break aliases</h2>
+## Page break aliases
 
-<p>The <code>page-break-inside</code> property is now a legacy property, replaced by {{cssxref("break-inside")}}.</p>
+The `page-break-inside` property is now a legacy property, replaced by {{cssxref("break-inside")}}.
 
-<p>For compatibility reasons, <code>page-break-inside</code> should be treated by browsers as an alias of <code>break-inside</code>. This ensures that sites using <code>page-break-inside</code> continue to work as designed. A subset of values should be aliased as follows:</p>
+For compatibility reasons, `page-break-inside` should be treated by browsers as an alias of `break-inside`. This ensures that sites using `page-break-inside` continue to work as designed. A subset of values should be aliased as follows:
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">page-break-inside</th>
-   <th scope="col">break-inside</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>auto</code></td>
-   <td><code>auto</code></td>
-  </tr>
-  <tr>
-   <td><code>avoid</code></td>
-   <td><code>avoid</code></td>
-  </tr>
- </tbody>
-</table>
+| page-break-inside | break-inside |
+| ----------------- | ------------ |
+| `auto`            | `auto`       |
+| `avoid`           | `avoid`      |
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Avoiding_page_breaks_inside_elements">Avoiding page breaks inside elements</h3>
+### Avoiding page breaks inside elements
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="page"&gt;
-  &lt;p&gt;This is the first paragraph.&lt;/p&gt;
-  &lt;section class="list"&gt;
-    &lt;span&gt;A list&lt;/span&gt;
-    &lt;ol&gt;
-      &lt;li&gt;one&lt;/li&gt;
-&lt;!--       &lt;li&gt;two&lt;/li&gt; --&gt;
-    &lt;/ol&gt;
-  &lt;/section&gt;
-  &lt;ul&gt;
-    &lt;li&gt;one&lt;/li&gt;
-&lt;!--     &lt;li&gt;two&lt;/li&gt; --&gt;
-  &lt;/ul&gt;
-  &lt;p&gt;This is the second paragraph.&lt;/p&gt;
-  &lt;p&gt;This is the third paragraph, it contains more text.&lt;/p&gt;
-  &lt;p&gt;This is the fourth paragraph. It has a little bit more text than the third one.&lt;/p&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="page">
+  <p>This is the first paragraph.</p>
+  <section class="list">
+    <span>A list</span>
+    <ol>
+      <li>one</li>
+<!--       <li>two</li> -->
+    </ol>
+  </section>
+  <ul>
+    <li>one</li>
+<!--     <li>two</li> -->
+  </ul>
+  <p>This is the second paragraph.</p>
+  <p>This is the third paragraph, it contains more text.</p>
+  <p>This is the fourth paragraph. It has a little bit more text than the third one.</p>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.page {
+```css
+.page {
   background-color: #8cffa0;
   height: 90px;
   width: 200px;
@@ -122,24 +108,23 @@ ol, ul, .list {
 
 p:first-child {
   margin-top: 0;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Avoiding_page_breaks_inside_elements", 400, 160)}}</p>
+{{EmbedLiveSample("Avoiding_page_breaks_inside_elements", 400, 160)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("break-before")}}, {{cssxref("break-after")}}, {{cssxref("break-inside")}}</li>
- <li>{{cssxref("page-break-after")}}, {{cssxref("page-break-before")}}</li>
- <li>{{cssxref("orphans")}}, {{cssxref("widows")}}</li>
-</ul>
+- {{cssxref("break-before")}}, {{cssxref("break-after")}}, {{cssxref("break-inside")}}
+- {{cssxref("page-break-after")}}, {{cssxref("page-break-before")}}
+- {{cssxref("orphans")}}, {{cssxref("widows")}}

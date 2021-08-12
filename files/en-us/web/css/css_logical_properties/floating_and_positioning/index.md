@@ -8,130 +8,71 @@ tags:
   - Guide
   - Positioning
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <a href="https://drafts.csswg.org/css-logical/">Logical Properties and Values specification</a> contains logical mappings for the physical values of {{cssxref("float")}} and {{cssxref("clear")}}, and also for the positioning properties used with <a href="/en-US/docs/Web/CSS/CSS_Positioning">positioned layout</a>. This guide takes a look at how to use these.</p>
+The [Logical Properties and Values specification](https://drafts.csswg.org/css-logical/) contains logical mappings for the physical values of {{cssxref("float")}} and {{cssxref("clear")}}, and also for the positioning properties used with [positioned layout](/en-US/docs/Web/CSS/CSS_Positioning). This guide takes a look at how to use these.
 
-<h2 id="Mapped_properties_and_values">Mapped properties and values</h2>
+## Mapped properties and values
 
-<p>The table below details the properties and values discussed in this guide along with their physical mappings. They assume a horizontal {{cssxref("writing-mode")}}, with a left-to-right direction.</p>
+The table below details the properties and values discussed in this guide along with their physical mappings. They assume a horizontal {{cssxref("writing-mode")}}, with a left-to-right direction.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Logical property or value</th>
-   <th scope="col">Physical property or value</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{cssxref("float")}}: inline-start</td>
-   <td>{{cssxref("float")}}: left</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("float")}}: inline-end</td>
-   <td>{{cssxref("float")}}: right</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("clear")}}: inline-start</td>
-   <td>{{cssxref("clear")}}: left</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("clear")}}: inline-end</td>
-   <td>{{cssxref("clear")}}: right</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("inset-inline-start")}}</td>
-   <td>{{cssxref("left")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("inset-inline-end")}}</td>
-   <td>{{cssxref("right")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("inset-block-start")}}</td>
-   <td>{{cssxref("top")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("inset-block-end")}}</td>
-   <td>{{cssxref("bottom")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("text-align")}}: start</td>
-   <td>{{cssxref("text-align")}}: left</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("text-align")}}: end</td>
-   <td>{{cssxref("text-align")}}: right</td>
-  </tr>
- </tbody>
-</table>
+| Logical property or value                    | Physical property or value              |
+| -------------------------------------------- | --------------------------------------- |
+| {{cssxref("float")}}: inline-start   | {{cssxref("float")}}: left      |
+| {{cssxref("float")}}: inline-end     | {{cssxref("float")}}: right     |
+| {{cssxref("clear")}}: inline-start   | {{cssxref("clear")}}: left      |
+| {{cssxref("clear")}}: inline-end     | {{cssxref("clear")}}: right     |
+| {{cssxref("inset-inline-start")}} | {{cssxref("left")}}                |
+| {{cssxref("inset-inline-end")}}     | {{cssxref("right")}}            |
+| {{cssxref("inset-block-start")}} | {{cssxref("top")}}                |
+| {{cssxref("inset-block-end")}}     | {{cssxref("bottom")}}            |
+| {{cssxref("text-align")}}: start      | {{cssxref("text-align")}}: left  |
+| {{cssxref("text-align")}}: end        | {{cssxref("text-align")}}: right |
 
-<p>In addition to these mapped properties there are some additional shorthand properties made possible by being able to address block and inline dimensions. These have no mapping to physical properties, aside from the {{cssxref("inset")}} property.</p>
+In addition to these mapped properties there are some additional shorthand properties made possible by being able to address block and inline dimensions. These have no mapping to physical properties, aside from the {{cssxref("inset")}} property.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Logical property</th>
-   <th scope="col">Purpose</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{cssxref("inset-inline")}}</td>
-   <td>Sets both of the above inset values for the inline dimension simultaneously.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("inset-block")}}</td>
-   <td>Sets both of the above inset values for the block dimension simultaneously.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("inset")}}</td>
-   <td>Sets all four inset values simultaneously with physical mapping of multi-value.</td>
-  </tr>
- </tbody>
-</table>
+| Logical property                     | Purpose                                                                         |
+| ------------------------------------ | ------------------------------------------------------------------------------- |
+| {{cssxref("inset-inline")}} | Sets both of the above inset values for the inline dimension simultaneously.    |
+| {{cssxref("inset-block")}} | Sets both of the above inset values for the block dimension simultaneously.     |
+| {{cssxref("inset")}}         | Sets all four inset values simultaneously with physical mapping of multi-value. |
 
-<h2 id="Float_and_clear_example">Float and clear example</h2>
+## Float and clear example
 
-<p>The physical values used with the {{cssxref("float")}} and {{cssxref("clear")}} properties are <code>left</code>, <code>right</code> and <code>both</code>. The Logical Properties specification defines the values <code>inline-start</code> and <code>inline-end</code> as mappings for <code>left</code> and <code>right</code>.</p>
+The physical values used with the {{cssxref("float")}} and {{cssxref("clear")}} properties are `left`, `right` and `both`. The Logical Properties specification defines the values `inline-start` and `inline-end` as mappings for `left` and `right`.
 
-<p>In the example below I have two boxes — the first has the box floated with <code>float: left</code>, the second with <code>float: inline-start</code>. If you change the <code>writing-mode</code> to <code>vertical-rl</code> or the <code>direction</code> to <code>rtl</code> you will see that the left-floated box always sticks to the left, whereas the <code>inline-start</code>-floated item follows the <code>direction</code> and <code>writing-mode</code>.</p>
+In the example below I have two boxes — the first has the box floated with `float: left`, the second with `float: inline-start`. If you change the `writing-mode` to `vertical-rl` or the `direction` to `rtl` you will see that the left-floated box always sticks to the left, whereas the `inline-start`-floated item follows the `direction` and `writing-mode`.
 
-<p>{{EmbedGHLiveSample("css-examples/logical/float.html", '100%', 700)}}</p>
+{{EmbedGHLiveSample("css-examples/logical/float.html", '100%', 700)}}
 
-<h2 id="Example_Inset_properties_for_positioned_layout">Example: Inset properties for positioned layout</h2>
+## Example: Inset properties for positioned layout
 
-<p>Positioning generally allows us to position an element in a manner relative to its containing block — we essentially inset the item relative to where it would fall based on normal flow. To do this we have historically used the physical properties {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}} and {{cssxref("left")}}.</p>
+Positioning generally allows us to position an element in a manner relative to its containing block — we essentially inset the item relative to where it would fall based on normal flow. To do this we have historically used the physical properties {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}} and {{cssxref("left")}}.
 
-<p>These properties take a length or a percentage as a value, and relate to the user's screen dimensions.</p>
+These properties take a length or a percentage as a value, and relate to the user's screen dimensions.
 
-<p>New properties have been created in the Logical Properties specification for when you want the positioning to relate to the flow of text in your writing mode. These are as follows: {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}} and {{cssxref("inset-inline-end")}}.</p>
+New properties have been created in the Logical Properties specification for when you want the positioning to relate to the flow of text in your writing mode. These are as follows: {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}} and {{cssxref("inset-inline-end")}}.
 
-<p>In the below example I have used the <code>inset-block-start</code> and <code>inset-inline-end</code> properties to position the blue box using absolute positioning inside the area with the grey dotted border, which has <code>position: relative</code>. Change the <code>writing-mode</code> property to <code>vertical-rl</code>, or add <code>direction: rtl</code>, and see how the flow relative box stays with the text direction.</p>
+In the below example I have used the `inset-block-start` and `inset-inline-end` properties to position the blue box using absolute positioning inside the area with the grey dotted border, which has `position: relative`. Change the `writing-mode` property to `vertical-rl`, or add `direction: rtl`, and see how the flow relative box stays with the text direction.
 
-<p>{{EmbedGHLiveSample("css-examples/logical/positioning-inset.html", '100%', 700)}}</p>
+{{EmbedGHLiveSample("css-examples/logical/positioning-inset.html", '100%', 700)}}
 
-<h2 id="New_two-_and_four-value_shorthands">New two- and four-value shorthands</h2>
+## New two- and four-value shorthands
 
-<p>As with other properties in the specification we have some new shorthand properties, which give the ability to set two or four values at once.</p>
+As with other properties in the specification we have some new shorthand properties, which give the ability to set two or four values at once.
 
-<ul>
- <li>{{cssxref("inset")}} — sets all four sides together with physical mapping.</li>
- <li>{{cssxref("inset-inline")}} — sets both logical inline insets.</li>
- <li>{{cssxref("inset-block")}} — sets both logical block insets.</li>
-</ul>
+- {{cssxref("inset")}} — sets all four sides together with physical mapping.
+- {{cssxref("inset-inline")}} — sets both logical inline insets.
+- {{cssxref("inset-block")}} — sets both logical block insets.
 
-<div class="notecard note">
-<p><strong>Note:</strong> The browsers that have implemented the Logical Properties specification have so far implemented the direct mappings and not the new shorthands. Look to the browser compatibility data section on each property page reference for more details.</p>
-</div>
+> **Note:** The browsers that have implemented the Logical Properties specification have so far implemented the direct mappings and not the new shorthands. Look to the browser compatibility data section on each property page reference for more details.
 
-<h2 id="Example_Logical_values_for_text-align">Example: Logical values for text-align</h2>
+## Example: Logical values for text-align
 
-<p>The {{cssxref("text-align")}} property has logical values that relate to text direction — rather than using <code>left</code> and <code>right</code> we can use <code>start</code> and <code>end</code>. In the below example I have set <code>text-align: right</code> in the first block and <code>text-align: end</code> in the second.</p>
+The {{cssxref("text-align")}} property has logical values that relate to text direction — rather than using `left` and `right` we can use `start` and `end`. In the below example I have set `text-align: right` in the first block and `text-align: end` in the second.
 
-<p>If you change the value of <code>direction</code> to <code>rtl</code> you will see that the alignment stays to the right for the first block, but goes to the logical end on the left in the second.</p>
+If you change the value of `direction` to `rtl` you will see that the alignment stays to the right for the first block, but goes to the logical end on the left in the second.
 
-<p>{{EmbedGHLiveSample("css-examples/logical/text-align.html", '100%', 700)}}</p>
+{{EmbedGHLiveSample("css-examples/logical/text-align.html", '100%', 700)}}
 
-<p>This works more consistently when using box alignment that uses start and end rather than physical directions for alignment.</p>
+This works more consistently when using box alignment that uses start and end rather than physical directions for alignment.

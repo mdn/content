@@ -7,14 +7,15 @@ tags:
   - CSS Text
   - Experimental
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.hanging-punctuation
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>hanging-punctuation</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property specifies whether a punctuation mark should hang at the start or end of a line of text. Hanging punctuation may be placed outside the line box.</p>
+The **`hanging-punctuation`** [CSS](/en-US/docs/Web/CSS) property specifies whether a punctuation mark should hang at the start or end of a line of text. Hanging punctuation may be placed outside the line box.
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 hanging-punctuation: none;
 hanging-punctuation: first;
 hanging-punctuation: last;
@@ -37,78 +38,73 @@ hanging-punctuation: inherit;
 hanging-punctuation: initial;
 hanging-punctuation: revert;
 hanging-punctuation: unset;
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>hanging-punctuation</code> property may be specified with one, two, or three values.</p>
+The `hanging-punctuation` property may be specified with one, two, or three values.
 
-<ul>
- <li><strong>One-value</strong> syntax uses any one of the keyword values in the list below.</li>
- <li><strong>Two-value</strong> syntax uses one of the following:
-  <ul>
-   <li><code>first</code> together with any one of <code>last</code>, <code>allow-end</code>, or <code>force-end</code></li>
-   <li><code>last</code> together with any one of <code>first</code>, <code>allow-end</code>, or <code>force-end</code></li>
-  </ul>
- </li>
- <li><strong>Three-value</strong> syntax uses one of the following:
-  <ul>
-   <li><code>first</code>, <code>allow-end</code>, and <code>last</code></li>
-   <li><code>first</code>, <code>force-end</code>, and <code>last</code></li>
-  </ul>
- </li>
-</ul>
+- **One-value** syntax uses any one of the keyword values in the list below.
+- **Two-value** syntax uses one of the following:
 
-<h3 id="Values">Values</h3>
+  - `first` together with any one of `last`, `allow-end`, or `force-end`
+  - `last` together with any one of `first`, `allow-end`, or `force-end`
 
-<dl>
- <dt><code>none</code></dt>
- <dd>No character hangs.</dd>
- <dt><code>first</code></dt>
- <dd>An opening bracket or quote at the start of the first formatted line of an element hangs.</dd>
- <dt><code>last</code></dt>
- <dd>A closing bracket or quote at the end of the last formatted line of an element hangs.</dd>
- <dt><code>force-end</code></dt>
- <dd>A stop or comma at the end of a line hangs.</dd>
- <dt><code>allow-end</code></dt>
- <dd>A stop or comma at the end of a line hangs if it does not otherwise fit prior to justification.</dd>
-</dl>
+- **Three-value** syntax uses one of the following:
 
-<h2 id="Formal_definition">Formal definition</h2>
+  - `first`, `allow-end`, and `last`
+  - `first`, `force-end`, and `last`
 
-<p>{{cssinfo}}</p>
+### Values
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+- `none`
+  - : No character hangs.
+- `first`
+  - : An opening bracket or quote at the start of the first formatted line of an element hangs.
+- `last`
+  - : A closing bracket or quote at the end of the last formatted line of an element hangs.
+- `force-end`
+  - : A stop or comma at the end of a line hangs.
+- `allow-end`
+  - : A stop or comma at the end of a line hangs if it does not otherwise fit prior to justification.
+
+## Formal definition
+
+{{cssinfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_opening_and_closing_quotes_to_hang">Setting opening and closing quotes to hang</h3>
+### Setting opening and closing quotes to hang
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim nunc mauris, et sollicitudin est scelerisque sed. Praesent laoreet tortor massa, sit amet vulputate nulla pharetra ut.”&lt;/p&gt;</pre>
+```html
+<p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim nunc mauris, et sollicitudin est scelerisque sed. Praesent laoreet tortor massa, sit amet vulputate nulla pharetra ut.”</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   hanging-punctuation: first last;
   margin: .5rem;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Setting_opening_and_closing_quotes_to_hang")}}</p>
+{{EmbedLiveSample("Setting_opening_and_closing_quotes_to_hang")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<ul>
-  <li><a href="https://css-tricks.com/almanac/properties/h/hanging-punctuation/">CSS Tricks: Hanging punctuation</a></li>
- </ul>
+- [CSS Tricks: Hanging punctuation](https://css-tricks.com/almanac/properties/h/hanging-punctuation/)

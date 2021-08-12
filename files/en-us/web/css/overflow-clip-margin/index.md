@@ -6,16 +6,16 @@ tags:
   - CSS Overflow
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.overflow-clip-margin
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p>The <strong><code>overflow-clip-margin</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property determines how far outside its bounds an element with <code><a href="/en-US/docs/Web/CSS/overflow">overflow: clip</a></code> may be painted before being clipped.</p>
+The **`overflow-clip-margin`** [CSS](/en-US/docs/Web/CSS) property determines how far outside its bounds an element with [`overflow: clip`](/en-US/docs/Web/CSS/overflow) may be painted before being clipped.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">
+```css
 overflow-clip-margin: 20px;
 overflow-clip-margin: 1em;
 
@@ -24,55 +24,54 @@ overflow-clip-margin: inherit;
 overflow-clip-margin: initial;
 overflow-clip-margin: revert;
 overflow-clip-margin: unset;
-</pre>
+```
 
-<p>The <code>overflow-clip-margin</code> property is specified as a length, negative values are not allowed.</p>
+The `overflow-clip-margin` property is specified as a length, negative values are not allowed.
 
-<div class="note notecard">
-<p><strong>Note:</strong> If the element does not have <code>overflow: clip</code> then this property will be ignored.</p>
-</div>
+> **Note:** If the element does not have `overflow: clip` then this property will be ignored.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="box"&gt;
+```html
+<div class="box">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-&lt;/div&gt;</pre>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.box {
+```css
+.box {
   border: 3px solid black;
   width:  250px;
   height: 100px;
   overflow: clip;
   overflow-clip-margin: 20px;
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
 {{EmbedLiveSample("Examples", "100%", "280")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related CSS properties: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow")}}, {{Cssxref("overflow-inline")}}, {{Cssxref("overflow-x")}}, {{Cssxref("overflow-y")}}, {{Cssxref("clip")}}, {{Cssxref("display")}}</li>
-</ul>
+- Related CSS properties: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow")}}, {{Cssxref("overflow-inline")}}, {{Cssxref("overflow-x")}}, {{Cssxref("overflow-y")}}, {{Cssxref("clip")}}, {{Cssxref("display")}}

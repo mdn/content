@@ -6,23 +6,24 @@ tags:
   - CSS Borders
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.border-image-source
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>border-image-source</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the source image used to create an element's <a href="/en-US/docs/Web/CSS/border-image">border image</a>.</p>
+The **`border-image-source`** [CSS](/en-US/docs/Web/CSS) property sets the source image used to create an element's [border image](/en-US/docs/Web/CSS/border-image).
 
-<div>{{EmbedInteractiveExample("pages/css/border-image-source.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-image-source.html")}}
 
-<p>The {{cssxref("border-image-slice")}} property is used to divide the source image into regions, which are then dynamically applied to the final border image.</p>
+The {{cssxref("border-image-slice")}} property is used to divide the source image into regions, which are then dynamically applied to the final border image.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Keyword value */
+```css
+/* Keyword value */
 border-image-source: none;
 
-/* &lt;image&gt; values */
+/* <image> values */
 border-image-source: url(image.jpg);
 border-image-source: linear-gradient(to top, red, yellow);
 
@@ -31,48 +32,45 @@ border-image-source: inherit;
 border-image-source: initial;
 border-image-source: revert;
 border-image-source: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-	<dt><code>none</code></dt>
-	<dd>No border image is used. The appearance defined by {{cssxref("border-style")}} is displayed instead.</dd>
-	<dt>{{cssxref("&lt;image&gt;")}}</dt>
-	<dd>Image reference to use for the border.</dd>
-</dl>
+- `none`
+  - : No border image is used. The appearance defined by {{cssxref("border-style")}} is displayed instead.
+- {{cssxref("&lt;image&gt;")}}
+  - : Image reference to use for the border.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_example">Basic example</h3>
+### Basic example
 
-<pre class="brush: css">.box {
+```css
+.box {
   border-image-source: url('image.png');
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{cssxref("border")}}</li>
-	<li>{{cssxref("outline")}}</li>
-	<li>{{cssxref("box-shadow")}}</li>
-	<li>{{cssxref("background-image")}}</li>
-	<li>{{cssxref("url()", "url()")}} function</li>
-</ul>
+- {{cssxref("border")}}
+- {{cssxref("outline")}}
+- {{cssxref("box-shadow")}}
+- {{cssxref("background-image")}}
+- {{cssxref("url()", "url()")}} function

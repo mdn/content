@@ -7,107 +7,91 @@ tags:
   - box alignment
   - flexbox
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <a href="/en-US/docs/Web/CSS/CSS_Box_Alignment">Box Alignment</a> Specification details how alignment works in various layout methods; on this page, we explore how box alignment works in the context of Flexbox. As this page aims to detail things which are specific to Flexbox and box alignment, it should be read in conjunction with the main <a href="/en-US/docs/Web/CSS/CSS_Box_Alignment">Box Alignment</a> page which details the common features of box alignment across layout methods.</p>
+The [Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment) Specification details how alignment works in various layout methods; on this page, we explore how box alignment works in the context of Flexbox. As this page aims to detail things which are specific to Flexbox and box alignment, it should be read in conjunction with the main [Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment) page which details the common features of box alignment across layout methods.
 
-<h2 id="Basic_example">Basic example</h2>
+## Basic example
 
-<p>In this example, three flex items are aligned on the main axis using {{cssxref("justify-content")}} and on the cross axis using {{cssxref("align-items")}}. The first item overrides the <code>align-items</code> values set on the group by setting {{cssxref("align-self")}} to <code>center</code>.</p>
+In this example, three flex items are aligned on the main axis using {{cssxref("justify-content")}} and on the cross axis using {{cssxref("align-items")}}. The first item overrides the `align-items` values set on the group by setting {{cssxref("align-self")}} to `center`.
 
-<p>{{EmbedGHLiveSample("css-examples/box-alignment/overview/flex-align-items.html", '100%', 500)}}</p>
+{{EmbedGHLiveSample("css-examples/box-alignment/overview/flex-align-items.html", '100%', 500)}}
 
-<h2 id="The_axes_and_flex-direction">The axes and flex-direction</h2>
+## The axes and flex-direction
 
-<p>Flexbox respects the writing mode of the document, therefore if you are working in English and set {{cssxref("justify-content")}} to <code>flex-end</code> this will align the items to the end of the flex container. If you are working with {{cssxref("flex-direction")}} set to <code>row</code>, this alignment will be in the inline direction.</p>
+Flexbox respects the writing mode of the document, therefore if you are working in English and set {{cssxref("justify-content")}} to `flex-end` this will align the items to the end of the flex container. If you are working with {{cssxref("flex-direction")}} set to `row`, this alignment will be in the inline direction.
 
-<p>However, in Flexbox you can change the main axis by setting <code>flex-direction</code> to <code>column</code>. In this case, <code>justify-content</code> will align items in the block direction. Therefore it is easiest to think about the main and cross axis when working in Flexbox like so:</p>
+However, in Flexbox you can change the main axis by setting `flex-direction` to `column`. In this case, `justify-content` will align items in the block direction. Therefore it is easiest to think about the main and cross axis when working in Flexbox like so:
 
-<ul>
- <li>The main axis = direction set by <code>flex-direction</code> = alignment via <code>justify-content</code></li>
- <li>The cross axis = runs across the main axis = alignment via <code>align-content</code>, <code>align-self</code>/<code>align-items</code></li>
-</ul>
+- The main axis = direction set by `flex-direction` = alignment via `justify-content`
+- The cross axis = runs across the main axis = alignment via `align-content`, `align-self`/`align-items`
 
-<h3 id="Main_Axis_Alignment">Main Axis Alignment</h3>
+### Main Axis Alignment
 
-<ul>
- <li>{{cssxref("justify-content")}}</li>
-</ul>
+- {{cssxref("justify-content")}}
 
-<h3 id="Cross_Axis_Alignment">Cross Axis Alignment</h3>
+### Cross Axis Alignment
 
-<ul>
- <li>{{cssxref("align-self")}}</li>
- <li>{{cssxref("align-items")}}</li>
- <li>{{cssxref("align-content")}}</li>
-</ul>
+- {{cssxref("align-self")}}
+- {{cssxref("align-items")}}
+- {{cssxref("align-content")}}
 
-<h3 id="There_is_no_justify-self_in_Flexbox">There is no justify-self in Flexbox</h3>
+### There is no justify-self in Flexbox
 
-<p>On the main axis, Flexbox deals with our content as a group. The amount of space required to lay out the items is calculated, and the leftover space is then available for distribution. The <code>justify-content</code> property controls how that leftover space is used. Set <code>justify-content: flex-end</code> and the extra space is placed before the items, <code>justify-content: space-around</code> and it is placed either side of the item in that dimension, etc.</p>
+On the main axis, Flexbox deals with our content as a group. The amount of space required to lay out the items is calculated, and the leftover space is then available for distribution. The `justify-content` property controls how that leftover space is used. Set `justify-content: flex-end` and the extra space is placed before the items, `justify-content: space-around` and it is placed either side of the item in that dimension, etc.
 
-<p>This means that a <code>justify-self</code> property does not make sense in Flexbox as we are always dealing with moving the entire group of items around.</p>
+This means that a `justify-self` property does not make sense in Flexbox as we are always dealing with moving the entire group of items around.
 
-<p>On the cross axis <code>align-self</code> makes sense as we potentially have additional space in the flex container in that dimension, in which a single item can be moved to the start and end.</p>
+On the cross axis `align-self` makes sense as we potentially have additional space in the flex container in that dimension, in which a single item can be moved to the start and end.
 
-<h2 id="Alignment_and_auto_margins">Alignment and auto margins</h2>
+## Alignment and auto margins
 
-<p>There is a specific use case in Flexbox where we might think that a <code>justify-self</code> property is what we need, and this is when we want to split a set of flex items, perhaps to create a split navigation pattern. For this use case, we can use an <code>auto</code> margin. A margin set to <code>auto</code> will absorb all available space in its dimension. This is how centering a block with auto margins works. By setting the left and right margin to <code>auto</code>, both sides of our block try to take up all of the available space and so push the box into the center.</p>
+There is a specific use case in Flexbox where we might think that a `justify-self` property is what we need, and this is when we want to split a set of flex items, perhaps to create a split navigation pattern. For this use case, we can use an `auto` margin. A margin set to `auto` will absorb all available space in its dimension. This is how centering a block with auto margins works. By setting the left and right margin to `auto`, both sides of our block try to take up all of the available space and so push the box into the center.
 
-<p>By setting a {{cssxref("margin")}} of <code>auto</code> on one item in a set of flex items all aligned to start, we can create a split navigation. This works well with Flexbox and the alignment properties. As soon as there is no space available for the auto margin, the item behaves in the same way as all the other flex items and shrinks to try to fit into space.</p>
+By setting a {{cssxref("margin")}} of `auto` on one item in a set of flex items all aligned to start, we can create a split navigation. This works well with Flexbox and the alignment properties. As soon as there is no space available for the auto margin, the item behaves in the same way as all the other flex items and shrinks to try to fit into space.
 
-<p>{{EmbedGHLiveSample("css-examples/box-alignment/flexbox/auto-margins.html", '100%', 500)}}</p>
+{{EmbedGHLiveSample("css-examples/box-alignment/flexbox/auto-margins.html", '100%', 500)}}
 
-<h2 id="The_gap_properties">The <code>gap</code> properties</h2>
+## The `gap` properties
 
-<ul>
- <li>{{cssxref("row-gap")}}</li>
- <li>{{cssxref("column-gap")}}</li>
- <li>{{cssxref("gap")}}</li>
-</ul>
+- {{cssxref("row-gap")}}
+- {{cssxref("column-gap")}}
+- {{cssxref("gap")}}
 
-<h3 id="Creating_fixed_size_gaps_between_items">Creating fixed size gaps between items</h3>
+### Creating fixed size gaps between items
 
-<p>On the main axis, the <code>column-gap</code> property creates fixed size gaps between adjacent items.</p>
+On the main axis, the `column-gap` property creates fixed size gaps between adjacent items.
 
-<p>On the cross axis the <code>row-gap</code> property creates spacing between adjacent flex lines, therefore <code>flex-wrap</code> must also be set to <code>wrap</code> for this to have any effect.</p>
+On the cross axis the `row-gap` property creates spacing between adjacent flex lines, therefore `flex-wrap` must also be set to `wrap` for this to have any effect.
 
-<p>{{EmbedGHLiveSample("css-examples/box-alignment/flexbox/gap.html", '100%', 700)}}</p>
+{{EmbedGHLiveSample("css-examples/box-alignment/flexbox/gap.html", '100%', 700)}}
 
-<h2 id="Reference">Reference</h2>
+## Reference
 
-<h3 id="CSS_Properties">CSS Properties</h3>
+### CSS Properties
 
-<ul>
- <li>{{cssxref("justify-content")}}</li>
- <li>{{cssxref("align-content")}}</li>
- <li>{{cssxref("place-content")}}</li>
- <li>{{cssxref("justify-items")}}</li>
- <li>{{cssxref("align-items")}}</li>
- <li>{{cssxref("place-items")}}</li>
- <li>{{cssxref("align-self")}}</li>
- <li>{{cssxref("row-gap")}}</li>
- <li>{{cssxref("column-gap")}}</li>
- <li>{{cssxref("gap")}}</li>
-</ul>
+- {{cssxref("justify-content")}}
+- {{cssxref("align-content")}}
+- {{cssxref("place-content")}}
+- {{cssxref("justify-items")}}
+- {{cssxref("align-items")}}
+- {{cssxref("place-items")}}
+- {{cssxref("align-self")}}
+- {{cssxref("row-gap")}}
+- {{cssxref("column-gap")}}
+- {{cssxref("gap")}}
 
-<h3 id="Glossary_Entries">Glossary Entries</h3>
+### Glossary Entries
 
-<ul>
- <li>{{Glossary("Cross axis")}}</li>
- <li>{{Glossary("Main axis")}}</li>
-</ul>
+- {{Glossary("Cross axis")}}
+- {{Glossary("Main axis")}}
 
-<h2 id="Guides">Guides</h2>
+## Guides
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container">Alignment in flexbox</a></li>
-</ul>
+- [Alignment in flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)
 
-<h2 id="External_Resources">External Resources</h2>
+## External Resources
 
-<ul>
- <li><a href="https://rachelandrew.co.uk/css/cheatsheets/box-alignment">Box alignment cheatsheet</a></li>
- <li><a href="https://www.smashingmagazine.com/2016/11/css-grids-flexbox-box-alignment-new-layout-standard/">CSS Grid, Flexbox and Box Alignment</a></li>
- <li><a href="https://blogs.igalia.com/jfernandez/2017/05/03/can-i-use-css-box-alignment/">Thoughts on partial implementations of Box Alignment</a></li>
-</ul>
+- [Box alignment cheatsheet](https://rachelandrew.co.uk/css/cheatsheets/box-alignment)
+- [CSS Grid, Flexbox and Box Alignment](https://www.smashingmagazine.com/2016/11/css-grids-flexbox-box-alignment-new-layout-standard/)
+- [Thoughts on partial implementations of Box Alignment](https://blogs.igalia.com/jfernandez/2017/05/03/can-i-use-css-box-alignment/)

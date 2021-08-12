@@ -6,18 +6,17 @@ tags:
   - CSS Property
   - Page Breaks
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.page-break-after
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<div class="notecard warning">
- <p><strong>Warning:</strong> This property has been replaced by the {{cssxref("break-after")}} property.</p>
-</div>
+> **Warning:** This property has been replaced by the {{cssxref("break-after")}} property.
 
-<p>The <strong><code>page-break-after</code></strong> CSS property adjusts page breaks <em>after</em> the current element.</p>
+The **`page-break-after`** CSS property adjusts page breaks _after_ the current element.
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 page-break-after: auto;
 page-break-after: always;
 page-break-after: avoid;
@@ -31,98 +30,72 @@ page-break-after: inherit;
 page-break-after: initial;
 page-break-after: revert;
 page-break-after: unset;
-</pre>
+```
 
-<p>This property applies to block elements that generate a box. It won't apply on an empty {{HTMLElement("div")}} that won't generate a box.</p>
+This property applies to block elements that generate a box. It won't apply on an empty {{HTMLElement("div")}} that won't generate a box.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>Initial value. Automatic page breaks (neither forced nor forbidden).</dd>
- <dt><code>always</code></dt>
- <dd>Always force page breaks after the element.</dd>
- <dt><code>avoid</code></dt>
- <dd>Avoid page breaks after the element.</dd>
- <dt><code>left</code></dt>
- <dd>Force page breaks after the element so that the next page is formatted as a left page.</dd>
- <dt><code>right</code></dt>
- <dd>Force page breaks after the element so that the next page is formatted as a right page.</dd>
- <dt><code>recto</code> {{experimental_inline}}</dt>
- <dd>If pages progress left-to-right, then this acts like <code>right</code>. If pages progress right-to-left, then this acts like <code>left</code>.</dd>
- <dt><code>verso</code> {{experimental_inline}}</dt>
- <dd>If pages progress left-to-right, then this acts like <code>left</code>. If pages progress right-to-left, then this acts like <code>right</code>.</dd>
-</dl>
+- `auto`
+  - : Initial value. Automatic page breaks (neither forced nor forbidden).
+- `always`
+  - : Always force page breaks after the element.
+- `avoid`
+  - : Avoid page breaks after the element.
+- `left`
+  - : Force page breaks after the element so that the next page is formatted as a left page.
+- `right`
+  - : Force page breaks after the element so that the next page is formatted as a right page.
+- `recto` {{experimental_inline}}
+  - : If pages progress left-to-right, then this acts like `right`. If pages progress right-to-left, then this acts like `left`.
+- `verso` {{experimental_inline}}
+  - : If pages progress left-to-right, then this acts like `left`. If pages progress right-to-left, then this acts like `right`.
 
-<h2 id="Page_break_aliases">Page break aliases</h2>
+## Page break aliases
 
-<p>The <code>page-break-after</code> property is now a legacy property, replaced by {{cssxref("break-after")}}.</p>
+The `page-break-after` property is now a legacy property, replaced by {{cssxref("break-after")}}.
 
-<p>For compatibility reasons, <code>page-break-after</code> should be treated by browsers as an alias of <code>break-after</code>. This ensures that sites using <code>page-break-after</code> continue to work as designed. A subset of values should be aliased as follows:</p>
+For compatibility reasons, `page-break-after` should be treated by browsers as an alias of `break-after`. This ensures that sites using `page-break-after` continue to work as designed. A subset of values should be aliased as follows:
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">page-break-after</th>
-   <th scope="col">break-after</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>auto</code></td>
-   <td><code>auto</code></td>
-  </tr>
-  <tr>
-   <td><code>left</code></td>
-   <td><code>left</code></td>
-  </tr>
-  <tr>
-   <td><code>right</code></td>
-   <td><code>right</code></td>
-  </tr>
-  <tr>
-   <td><code>avoid</code></td>
-   <td><code>avoid</code></td>
-  </tr>
-  <tr>
-   <td><code>always</code></td>
-   <td><code>page</code></td>
-  </tr>
- </tbody>
-</table>
+| page-break-after | break-after |
+| ---------------- | ----------- |
+| `auto`           | `auto`      |
+| `left`           | `left`      |
+| `right`          | `right`     |
+| `avoid`          | `avoid`     |
+| `always`         | `page`      |
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_a_page_break_after_footnotes">Setting a page break after footnotes</h3>
+### Setting a page break after footnotes
 
-<pre class="brush: css">/* move to a new page after footnotes */
+```css
+/* move to a new page after footnotes */
 div.footnotes {
   page-break-after: always;
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("break-before")}}, {{cssxref("break-after")}}, {{cssxref("break-inside")}}</li>
- <li>{{cssxref("page-break-before")}}, {{cssxref("page-break-inside")}}</li>
- <li>{{cssxref("orphans")}}, {{cssxref("widows")}}</li>
-</ul>
+- {{cssxref("break-before")}}, {{cssxref("break-after")}}, {{cssxref("break-inside")}}
+- {{cssxref("page-break-before")}}, {{cssxref("page-break-inside")}}
+- {{cssxref("orphans")}}, {{cssxref("widows")}}

@@ -7,14 +7,15 @@ tags:
   - CSS Property
   - Non-standard
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.-webkit-mask-repeat-x
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>The <code>-webkit-mask-repeat-x</code> property specifies whether and how a mask image is repeated (tiled) horizontally.</p>
+The `-webkit-mask-repeat-x` property specifies whether and how a mask image is repeated (tiled) horizontally.
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 -webkit-mask-repeat-x: repeat;
 -webkit-mask-repeat-x: no-repeat;
 -webkit-mask-repeat-x: space;
@@ -27,38 +28,37 @@ browser-compat: css.properties.-webkit-mask-repeat-x
 -webkit-mask-repeat-x: inherit;
 -webkit-mask-repeat-x: initial;
 -webkit-mask-repeat-x: unset;
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>repeat</dt>
- <dd>The mask image is repeated both horizontally and vertically.</dd>
- <dt>no-repeat</dt>
- <dd>The mask image is not repeated; only one copy of the mask image is drawn. The remainder of the masked element's content is not displayed.</dd>
- <dt>repeat</dt>
- <dd>The mask image is repeated both horizontally and vertically.</dd>
- <dt>space</dt>
- <dd>The image is repeated as much as possible without clipping. The first and last images are pinned to either side of the element, and whitespace is distributed evenly between the images. The {{cssxref("mask-position")}} property is ignored unless only one image can be displayed without clipping. The only case where clipping happens using space is when there isn't enough room to display one image.</dd>
- <dt>round</dt>
- <dd>As the allowed space increases in size, the repeated images will stretch (leaving no gaps) until there is room for another one to be added. When the next image is added, all of the current ones compress to allow room. Example: An image with an original width of 260px, repeated three times, might stretch until each repetition is 300px wide, and then another image will be added. They will then compress to 225px.</dd>
-</dl>
+- repeat
+  - : The mask image is repeated both horizontally and vertically.
+- no-repeat
+  - : The mask image is not repeated; only one copy of the mask image is drawn. The remainder of the masked element's content is not displayed.
+- repeat
+  - : The mask image is repeated both horizontally and vertically.
+- space
+  - : The image is repeated as much as possible without clipping. The first and last images are pinned to either side of the element, and whitespace is distributed evenly between the images. The {{cssxref("mask-position")}} property is ignored unless only one image can be displayed without clipping. The only case where clipping happens using space is when there isn't enough room to display one image.
+- round
+  - : As the allowed space increases in size, the repeated images will stretch (leaving no gaps) until there is room for another one to be added. When the next image is added, all of the current ones compress to allow room. Example: An image with an original width of 260px, repeated three times, might stretch until each repetition is 300px wide, and then another image will be added. They will then compress to 225px.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_a_repeating_or_non-repeating_mask_image">Using a repeating or non-repeating mask image</h3>
+### Using a repeating or non-repeating mask image
 
-<pre class="brush: css">.exampleone {
+```css
+.exampleone {
   -webkit-mask-image: url('mask.png');
   -webkit-mask-repeat-x: repeat;
 }
@@ -67,28 +67,29 @@ browser-compat: css.properties.-webkit-mask-repeat-x
   -webkit-mask-image: url('mask.png');
   -webkit-mask-repeat-x: no-repeat;
 }
-</pre>
+```
 
-<h3 id="Using_multiple_mask_images">Using multiple mask images</h3>
+### Using multiple mask images
 
-<p>You can specify a different <code>&lt;repeat-style&gt;</code> for each mask image, separated by commas:</p>
+You can specify a different `<repeat-style>` for each mask image, separated by commas:
 
-<pre class="brush: css">.examplethree {
+```css
+.examplethree {
   -webkit-mask-image: url('mask1.png'), url('mask2.png');
   -webkit-mask-repeat-x: repeat, space;
 }
-</pre>
+```
 
-<p>Each image is matched with the corresponding repeat style, from first specified to last.</p>
+Each image is matched with the corresponding repeat style, from first specified to last.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<p>{{cssxref("-webkit-mask-repeat")}}, {{cssxref("-webkit-mask-repeat-y")}}</p>
+{{cssxref("-webkit-mask-repeat")}}, {{cssxref("-webkit-mask-repeat-y")}}

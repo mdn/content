@@ -1,45 +1,45 @@
 ---
 title: ':-moz-focusring'
-slug: 'Web/CSS/:-moz-focusring'
+slug: Web/CSS/:-moz-focusring
 tags:
   - CSS
-  - 'CSS:Mozilla Extensions'
+  - CSS:Mozilla Extensions
   - Non-standard
   - Pseudo-class
   - Reference
   - Selector
 browser-compat: css.selectors.-moz-focusring
 ---
-<div>{{Non-standard_header}}{{CSSRef}}</div>
+{{Non-standard_header}}{{CSSRef}}
 
-<p>The <strong><code>:-moz-focusring</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> is a <a href="/en-US/docs/Web/CSS/Mozilla_Extensions">Mozilla extension</a> that is similar to the {{cssxref(":focus")}} pseudo-class, but it only matches an element if it's currently focused <em>and</em> a focus ring or other indicator should be drawn around it.</p>
+The **`:-moz-focusring`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that is similar to the {{cssxref(":focus")}} pseudo-class, but it only matches an element if it's currently focused _and_ a focus ring or other indicator should be drawn around it.
 
-<div class="notecard note">
-<p><strong>Note:</strong> This selector has been renamed to {{cssxref(":focus-visible")}} for the CSS Selectors 4 specification.</p>
-</div>
+> **Note:** This selector has been renamed to {{cssxref(":focus-visible")}} for the CSS Selectors 4 specification.
 
-<p>If <code>:-moz-focusring</code> matches, then <code>:focus</code> also matches, but the converse is not always true: it depends on whether the <a href="/en-US/docs/Glossary/User_agent">user agent</a> has focus ring drawing enabled and how the element was focused. Whether the user agent has focus ring drawing enabled can depend on operating system settings and other factors, so the precise behavior of this pseudo-class will vary from platform to platform.</p>
+If `:-moz-focusring` matches, then `:focus` also matches, but the converse is not always true: it depends on whether the [user agent](/en-US/docs/Glossary/User_agent) has focus ring drawing enabled and how the element was focused. Whether the user agent has focus ring drawing enabled can depend on operating system settings and other factors, so the precise behavior of this pseudo-class will vary from platform to platform.
 
-<p>The working group previously <a href="https://lists.w3.org/Archives/Public/www-style/2015Oct/0012.html">intended to add this feature to CSS Selectors 4 or 5</a> as <code>:focus-ring</code>, and has since <a href="https://lists.w3.org/Archives/Public/www-style/2017Dec/0018.html">decided to rename it</a> to {{cssxref(":focus-visible")}} and added it to CSS Selectors 4.</p>
+The working group previously [intended to add this feature to CSS Selectors 4 or 5](https://lists.w3.org/Archives/Public/www-style/2015Oct/0012.html) as `:focus-ring`, and has since [decided to rename it](https://lists.w3.org/Archives/Public/www-style/2017Dec/0018.html) to {{cssxref(":focus-visible")}} and added it to CSS Selectors 4.
 
-<div class="note">
-<p><strong>Note:</strong> Developers tend to use <code>:-moz-focusring</code> to differentiate between the <code>focus</code> state when the user focuses an element via a <strong>mouse click</strong> versus <strong>keyboard tabbing</strong>. It is also potentially useful if you are creating a <a href="/en-US/docs/Web/Web_Components/Using_custom_elements">custom element</a> and you want to change its style based on its behavior.</p>
-</div>
+> **Note:** Developers tend to use `:-moz-focusring` to differentiate between the `focus` state when the user focuses an element via a **mouse click** versus **keyboard tabbing**. It is also potentially useful if you are creating a [custom element](/en-US/docs/Web/Web_Components/Using_custom_elements) and you want to change its style based on its behavior.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">:-moz-focusring</pre>
+```css
+:-moz-focusring
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;input /&gt;
-</pre>
+```html
+<input />
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">input {
+```css
+input {
   margin: 5px;
 }
 
@@ -47,23 +47,21 @@ browser-compat: css.selectors.-moz-focusring
   color: red;
   outline: 2px dotted green;
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Example')}}</p>
+{{EmbedLiveSample('Example')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref(":focus-visible")}}</li>
- <li>{{bug("418521")}}</li>
-</ul>
+- {{cssxref(":focus-visible")}}
+- {{bug("418521")}}

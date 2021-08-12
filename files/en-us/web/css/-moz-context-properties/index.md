@@ -5,23 +5,24 @@ tags:
   - '-moz-context-properties'
   - CSS
   - CSS Property
-  - 'CSS:Mozilla Extensions'
+  - CSS:Mozilla Extensions
   - Experimental
   - Needs Privileges
   - Non-standard
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.-moz-context-properties
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>The <code><strong>-moz-context-properties</strong></code> property can be used within privileged contexts in Firefox to share the values of specified properties of the element with a child SVG image.</span></p>
+The **`-moz-context-properties`** property can be used within privileged contexts in Firefox to share the values of specified properties of the element with a child SVG image.
 
-<p>If you reference an SVG image in a webpage (such as with the {{htmlelement("img")}} element or as a background image), the SVG image can coordinate with the embedding element (its context) to have the image adopt property values set on the embedding element. To do this the embedding element needs to list the properties that are to be made available to the image by listing them as values of the <code>-moz-context-properties</code> property, and the image needs to opt in to using those properties by using values such as the <code>context-fill</code> value.</p>
+If you reference an SVG image in a webpage (such as with the {{htmlelement("img")}} element or as a background image), the SVG image can coordinate with the embedding element (its context) to have the image adopt property values set on the embedding element. To do this the embedding element needs to list the properties that are to be made available to the image by listing them as values of the `-moz-context-properties` property, and the image needs to opt in to using those properties by using values such as the `context-fill` value.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css">/* Keyword values */
+```css
+/* Keyword values */
 -moz-context-properties: fill;
 -moz-context-properties: fill, stroke;
 
@@ -29,71 +30,69 @@ browser-compat: css.properties.-moz-context-properties
 -moz-context-properties: inherit;
 -moz-context-properties: initial;
 -moz-context-properties: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>fill</code></dt>
- <dd>Expose the <code>fill</code> value set on the image to the embedded SVG.</dd>
- <dt><code>stroke</code></dt>
- <dd>Expose the <code>stroke</code> value set on the image to the embedded SVG.</dd>
- <dt><code>fill-opacity</code></dt>
- <dd>Expose the <code>fill-opacity</code> value set on the image to the embedded SVG.</dd>
- <dt><code>stroke-opacity</code></dt>
- <dd>Expose the <code>stoke-opacity</code> value set on the image to the embedded SVG.</dd>
-</dl>
+- `fill`
+  - : Expose the `fill` value set on the image to the embedded SVG.
+- `stroke`
+  - : Expose the `stroke` value set on the image to the embedded SVG.
+- `fill-opacity`
+  - : Expose the `fill-opacity` value set on the image to the embedded SVG.
+- `stroke-opacity`
+  - : Expose the `stoke-opacity` value set on the image to the embedded SVG.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Exposing_fill_and_stroke_to_an_SVG_image">Exposing fill and stroke to an SVG image</h3>
+### Exposing fill and stroke to an SVG image
 
-<p>In this example we have a simple SVG embedded using an <code>&lt;img&gt;</code> element.</p>
+In this example we have a simple SVG embedded using an `<img>` element.
 
-<p>You first need to specify on the embedding element the properties whose values you wish to expose to the embedded SVG, using the <code>-moz-context-properties</code> property. For example:</p>
+You first need to specify on the embedding element the properties whose values you wish to expose to the embedded SVG, using the `-moz-context-properties` property. For example:
 
-<pre class="brush: css">.img1 {
+```css
+.img1 {
   width: 100px;
   height: 100px;
   -moz-context-properties: fill, stroke;
   fill: lime;
   stroke: purple;
-}</pre>
+}
+```
 
-<p>Now that you've done this, the SVG image can use the values of the {{SVGAttr("fill")}} and {{SVGAttr("stroke")}} properties, for example:</p>
+Now that you've done this, the SVG image can use the values of the {{SVGAttr("fill")}} and {{SVGAttr("stroke")}} properties, for example:
 
-<pre class="brush: html">&lt;img class="img1" src="data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg'&gt;
-                       &lt;rect width='100%' height='100%' stroke-width='30px'
-                       fill='context-fill red' stroke='context-stroke' fill-opacity='0.5'/&gt;&lt;/svg&gt;"&gt;</pre>
+```html
+<img class="img1" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'>
+                       <rect width='100%' height='100%' stroke-width='30px'
+                       fill='context-fill red' stroke='context-stroke' fill-opacity='0.5'/></svg>">
+```
 
-<p>Here we've set the image <code>src</code> to a data URI containing a simple SVG image; the <code>&lt;rect&gt;</code> inside has been made to take its <code>fill</code> and <code>stroke</code> values from the {{SVGAttr("fill")}} and {{SVGAttr("stroke")}} set on the <code>&lt;img&gt;</code> element by giving them the <code>context-fill</code>/<code>context-stroke</code> keywords in their values, along with a fallback color for the fill (red) which will be used in the case that the SVG is loaded standalone in a top-level window (where it will have no context element to provide context values). Note that if a color is set directly on the SVG, but then the context color is also specified, the context color overrides the direct color.</p>
+Here we've set the image `src` to a data URI containing a simple SVG image; the `<rect>` inside has been made to take its `fill` and `stroke` values from the {{SVGAttr("fill")}} and {{SVGAttr("stroke")}} set on the `<img>` element by giving them the `context-fill`/`context-stroke` keywords in their values, along with a fallback color for the fill (red) which will be used in the case that the SVG is loaded standalone in a top-level window (where it will have no context element to provide context values). Note that if a color is set directly on the SVG, but then the context color is also specified, the context color overrides the direct color.
 
-<div class="note">
-<p><strong>Note:</strong> You can find a <a href="https://mdn.github.io/css-examples/moz-context-properties/">working example on Github</a>.</p>
-</div>
+> **Note:** You can find a [working example on Github](https://mdn.github.io/css-examples/moz-context-properties/).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Mozilla_Extensions">Mozilla CSS extensions</a></li>
- <li><a href="/en-US/docs/Web/Media/images">Using images in HTML</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web">Adding vector graphics to the web</a></li>
- <li><a href="/en-US/docs/Web/SVG/SVG_as_an_Image">SVG as an image</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">Responsive images</a></li>
-</ul>
+- [Mozilla CSS extensions](/en-US/docs/Web/CSS/Mozilla_Extensions)
+- [Using images in HTML](/en-US/docs/Web/Media/images)
+- [Adding vector graphics to the web](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
+- [SVG as an image](/en-US/docs/Web/SVG/SVG_as_an_Image)
+- [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)

@@ -6,20 +6,21 @@ tags:
   - CSS Property
   - CSS Transforms
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.backface-visibility
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>backface-visibility</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets whether the back face of an element is visible when turned towards the user.</p>
+The **`backface-visibility`** [CSS](/en-US/docs/Web/CSS) property sets whether the back face of an element is visible when turned towards the user.
 
-<div>{{EmbedInteractiveExample("pages/css/backface-visibility.html")}}</div>
+{{EmbedInteractiveExample("pages/css/backface-visibility.html")}}
 
-<p>An element's back face is a mirror image of its front face. Though invisible in 2D, the back face can become visible when a transformation causes the element to be rotated in 3D space. (This property has no effect on 2D transforms, which have no perspective.)</p>
+An element's back face is a mirror image of its front face. Though invisible in 2D, the back face can become visible when a transformation causes the element to be rotated in 3D space. (This property has no effect on 2D transforms, which have no perspective.)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 backface-visibility: visible;
 backface-visibility: hidden;
 
@@ -27,80 +28,82 @@ backface-visibility: hidden;
 backface-visibility: inherit;
 backface-visibility: initial;
 backface-visibility: revert;
-backface-visibility: unset;</pre>
+backface-visibility: unset;
+```
 
-<p>The <code>backface-visibility</code> property is specified as one of the keywords listed below.</p>
+The `backface-visibility` property is specified as one of the keywords listed below.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>visible</code></dt>
- <dd>The back face is visible when turned towards the user.</dd>
- <dt><code>hidden</code></dt>
- <dd>The back face is hidden, effectively making the element invisible when turned away from the user.</dd>
-</dl>
+- `visible`
+  - : The back face is visible when turned towards the user.
+- `hidden`
+  - : The back face is hidden, effectively making the element invisible when turned away from the user.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Cube_with_transparent_and_opaque_faces">Cube with transparent and opaque faces</h3>
+### Cube with transparent and opaque faces
 
-<p>This example shows a cube with transparent faces, and one with opaque faces.</p>
+This example shows a cube with transparent faces, and one with opaque faces.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;table&gt;
-  &lt;tr&gt;
-    &lt;th&gt;&lt;code&gt;backface-visibility: visible;&lt;/code&gt;&lt;/th&gt;
-    &lt;th&gt;&lt;code&gt;backface-visibility: hidden;&lt;/code&gt;&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;
-      &lt;div class="container"&gt;
-        &lt;div class="cube showbf"&gt;
-          &lt;div class="face front"&gt;1&lt;/div&gt;
-          &lt;div class="face back"&gt;2&lt;/div&gt;
-          &lt;div class="face right"&gt;3&lt;/div&gt;
-          &lt;div class="face left"&gt;4&lt;/div&gt;
-          &lt;div class="face top"&gt;5&lt;/div&gt;
-          &lt;div class="face bottom"&gt;6&lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;p&gt;
+```html
+<table>
+  <tr>
+    <th><code>backface-visibility: visible;</code></th>
+    <th><code>backface-visibility: hidden;</code></th>
+  </tr>
+  <tr>
+    <td>
+      <div class="container">
+        <div class="cube showbf">
+          <div class="face front">1</div>
+          <div class="face back">2</div>
+          <div class="face right">3</div>
+          <div class="face left">4</div>
+          <div class="face top">5</div>
+          <div class="face bottom">6</div>
+        </div>
+      </div>
+      <p>
         Since all faces are partially transparent,
         the back faces (2, 4, 5) are visible
         through the front faces (1, 3, 6).
-      &lt;/p&gt;
-    &lt;/td&gt;
-    &lt;td&gt;
-      &lt;div class="container"&gt;
-        &lt;div class="cube hidebf"&gt;
-          &lt;div class="face front"&gt;1&lt;/div&gt;
-          &lt;div class="face back"&gt;2&lt;/div&gt;
-          &lt;div class="face right"&gt;3&lt;/div&gt;
-          &lt;div class="face left"&gt;4&lt;/div&gt;
-          &lt;div class="face top"&gt;5&lt;/div&gt;
-          &lt;div class="face bottom"&gt;6&lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;p&gt;
+      </p>
+    </td>
+    <td>
+      <div class="container">
+        <div class="cube hidebf">
+          <div class="face front">1</div>
+          <div class="face back">2</div>
+          <div class="face right">3</div>
+          <div class="face left">4</div>
+          <div class="face top">5</div>
+          <div class="face bottom">6</div>
+        </div>
+      </div>
+      <p>
         The three back faces (2, 4, 5) are
         hidden.
-      &lt;/p&gt;
-    &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;</pre>
+      </p>
+    </td>
+  </tr>
+</table>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">/* Classes that will show or hide the
+```css
+/* Classes that will show or hide the
    three back faces of the "cube" */
 .showbf div {
   backface-visibility: visible;
@@ -178,22 +181,21 @@ th, p, td {
   padding: 6px;
   font-family: sans-serif;
   text-align: left;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Cube_with_transparent_and_opaque_faces', '100%', 360)}}</p>
+{{EmbedLiveSample('Cube_with_transparent_and_opaque_faces', '100%', 360)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms">Using CSS transforms</a></li>
-</ul>
+- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)

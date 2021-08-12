@@ -6,24 +6,24 @@ tags:
   - CSS Property
   - Reference
   - Web
-  - 'recipe:css-property'
+  - recipe:css-property
   - scroll-padding-block
   - scroll-padding-block-end
 browser-compat: css.properties.scroll-padding-block-end
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <code>scroll-padding-block-end</code> property defines offsets for the end edge in the block dimension of the <dfn>optimal viewing region</dfn> of the scrollport: the region used as the target region for placing things in view of the user. This allows the author to exclude regions of the scrollport that are obscured by other content (such as fixed-positioned toolbars or sidebars) or to put more breathing room between a targeted element and the edges of the scrollport.</p>
+The `scroll-padding-block-end` property defines offsets for the end edge in the block dimension of the _optimal viewing region_ of the scrollport: the region used as the target region for placing things in view of the user. This allows the author to exclude regions of the scrollport that are obscured by other content (such as fixed-positioned toolbars or sidebars) or to put more breathing room between a targeted element and the edges of the scrollport.
 
-<div>{{EmbedInteractiveExample("pages/css/scroll-padding-block-end.html")}}</div>
+{{EmbedInteractiveExample("pages/css/scroll-padding-block-end.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: css">/* Keyword values */
+```css
+/* Keyword values */
 scroll-padding-block-end: auto;
 
-/* &lt;length&gt; values */
+/* <length> values */
 scroll-padding-block-end: 10px;
 scroll-padding-block-end: 1em;
 scroll-padding-block-end: 10%;
@@ -33,36 +33,32 @@ scroll-padding-block-end: inherit;
 scroll-padding-block-end: initial;
 scroll-padding-block-end: revert;
 scroll-padding-block-end: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code><var>&lt;length-percentage&gt;</var></code></dt>
- <dd>An inwards offset from the block end edge of the scrollport, as a valid length or a percentage.</dd>
- <dt><code>auto</code></dt>
- <dd>The offset is determined by the user agent. This will generally be 0px, but a user agent is able to detect and do something else if a non-zero value is more appropriate.</dd>
-</dl>
+- `<length-percentage>`
+  - : An inwards offset from the block end edge of the scrollport, as a valid length or a percentage.
+- `auto`
+  - : The offset is determined by the user agent. This will generally be 0px, but a user agent is able to detect and do something else if a non-zero value is more appropriate.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/CSS/CSS_Scroll_Snap">CSS Scroll Snap</a></li>
-  <li><a href="https://developers.google.com/web/updates/2018/07/css-scroll-snap">Well-Controlled Scrolling with CSS Scroll Snap</a></li>
-</ul>
+- [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap)
+- [Well-Controlled Scrolling with CSS Scroll Snap](https://developers.google.com/web/updates/2018/07/css-scroll-snap)

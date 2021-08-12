@@ -8,52 +8,31 @@ tags:
   - Overview
   - Reference
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>CSS Positioned Layout</strong> is a module of CSS that defines how to position elements on the page.</p>
+**CSS Positioned Layout** is a module of CSS that defines how to position elements on the page.
 
-<h2 id="Reference">Reference</h2>
+## Reference
 
-<h3 id="CSS_properties">CSS properties</h3>
+### CSS properties
 
-<ul>
- <li>{{cssxref("bottom")}}</li>
- <li>{{cssxref("clear")}}</li>
- <li>{{cssxref("float")}}</li>
- <li>{{cssxref("left")}}</li>
- <li>{{cssxref("position")}}</li>
- <li>{{cssxref("right")}}</li>
- <li>{{cssxref("top")}}</li>
- <li>{{cssxref("z-index")}}</li>
-</ul>
+- {{cssxref("bottom")}}
+- {{cssxref("clear")}}
+- {{cssxref("float")}}
+- {{cssxref("left")}}
+- {{cssxref("position")}}
+- {{cssxref("right")}}
+- {{cssxref("top")}}
+- {{cssxref("z-index")}}
 
-<h2 id="Guides">Guides</h2>
+## Guides
 
-<dl>
- <dt><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index">Understanding CSS z-index</a></dt>
- <dd>Presents the notion of stacking context and explains how z-ordering works, with several examples.</dd>
-</dl>
+- [Understanding CSS z-index](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index)
+  - : Presents the notion of stacking context and explains how z-ordering works, with several examples.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Positioning') }}</td>
-   <td>{{ Spec2('CSS3 Positioning') }}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS2.1', 'visuren.html') }}</td>
-   <td>{{ Spec2('CSS2.1') }}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                        | Status                                   | Comment |
+| ---------------------------------------------------- | ---------------------------------------- | ------- |
+| {{ SpecName('CSS3 Positioning') }}         | {{ Spec2('CSS3 Positioning') }} |         |
+| {{ SpecName('CSS2.1', 'visuren.html') }} | {{ Spec2('CSS2.1') }}             |         |

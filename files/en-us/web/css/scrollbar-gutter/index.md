@@ -8,22 +8,21 @@ tags:
   - scrollbar-gutter
 browser-compat: css.properties.scrollbar-gutter
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>scrollbar-gutter</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property allows authors to reserve space for the scrollbar, preventing unwanted layout changes as the content grows while also avoiding unnecessary visuals when scrolling isn't needed.</p>
+The **`scrollbar-gutter`** [CSS](/en-US/docs/Web/CSS) property allows authors to reserve space for the scrollbar, preventing unwanted layout changes as the content grows while also avoiding unnecessary visuals when scrolling isn't needed.
 
-<p>An element's <em>scrollbar gutter</em> is the space between the inner border edge and the outer padding edge, where the browser may display a scrollbar. If no scrollbar is present, the gutter will be painted as an extension of the padding.</p>
+An element's _scrollbar gutter_ is the space between the inner border edge and the outer padding edge, where the browser may display a scrollbar. If no scrollbar is present, the gutter will be painted as an extension of the padding.
 
-<p>The browser determines whether <em>classic</em> scrollbars or <em>overlay</em> scrollbars are used:</p>
+The browser determines whether _classic_ scrollbars or _overlay_ scrollbars are used:
 
-<ul>
- <li>Classic scrollbars are always placed in a gutter, consuming space when present.</li>
- <li>Overlay scrollbars are placed over the content, not in a gutter, and are usually partially transparent.</li>
-</ul>
+- Classic scrollbars are always placed in a gutter, consuming space when present.
+- Overlay scrollbars are placed over the content, not in a gutter, and are usually partially transparent.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Initial value */
+```css
+/* Initial value */
 scrollbar-gutter: auto;
 
 /* "stable" keyword, with optional modifier */
@@ -34,52 +33,54 @@ scrollbar-gutter: stable both-edges;
 scrollbar-gutter: inherit;
 scrollbar-gutter: initial;
 scrollbar-gutter: revert;
-scrollbar-gutter: unset;</pre>
+scrollbar-gutter: unset;
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>The initial value. Classic scrollbars create a gutter when <code>overflow</code> is <code>scroll</code>, or when <code>overflow</code> is <code>auto</code> and the box is overflowing. Overlay scrollbars do not consume space.</dd>
- <dt><code>stable</code></dt>
- <dd>When using classic scrollbars, the gutter will be present if <code>overflow</code> is <code>auto</code>, <code>scroll</code>, or <code>hidden</code> even if the box is not overflowing. When using overlay scrollbars, the gutter will not be present.</dd>
- <dt><code>both-edges</code></dt>
- <dd>If a gutter would be present on one of the inline start/end edges of the box, another will be present on the opposite edge as well.</dd>
-</dl>
+- `auto`
+  - : The initial value. Classic scrollbars create a gutter when `overflow` is `scroll`, or when `overflow` is `auto` and the box is overflowing. Overlay scrollbars do not consume space.
+- `stable`
+  - : When using classic scrollbars, the gutter will be present if `overflow` is `auto`, `scroll`, or `hidden` even if the box is not overflowing. When using overlay scrollbars, the gutter will not be present.
+- `both-edges`
+  - : If a gutter would be present on one of the inline start/end edges of the box, another will be present on the opposite edge as well.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Example_1">Example 1</h3>
+### Example 1
 
-<p>Prevent unneeded layout changes as the content growing or shrinking causes the scrollbar to appear/disappear:</p>
+Prevent unneeded layout changes as the content growing or shrinking causes the scrollbar to appear/disappear:
 
-<pre class="brush: css">.container {
+```css
+.container {
     scrollbar-gutter: stable;
 }
-</pre>
+```
 
-<h3 id="Example_3">Example 3</h3>
+### Example 3
 
-<p>Add symmetric spacing to both sides of the box so the content is centered:</p>
+Add symmetric spacing to both sides of the box so the content is centered:
 
-<pre class="brush: css">.container {
+```css
+.container {
     scrollbar-gutter: stable both-edges;
 }
-</pre>
+```
 
-<h3 id="Example_4">Example 4</h3>
+### Example 4
 
-<p>Align the contents of a non-scrolling element and a scrolling one adjacent to it:</p>
+Align the contents of a non-scrolling element and a scrolling one adjacent to it:
 
-<pre class="brush: css">.header {
+```css
+.header {
     overflow: hidden;
     scrollbar-gutter: stable;
 }
@@ -87,19 +88,17 @@ scrollbar-gutter: unset;</pre>
 .container {
     scrollbar-gutter: stable;
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{CSSxRef("scrollbar-width")}}</li>
- <li>{{CSSxRef("overflow")}}</li>
-</ul>
+- {{CSSxRef("scrollbar-width")}}
+- {{CSSxRef("overflow")}}

@@ -6,18 +6,19 @@ tags:
   - CSS Grid
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.grid-auto-flow
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>grid-auto-flow</code></strong> CSS property controls how the auto-placement algorithm works, specifying exactly how auto-placed items get flowed into the grid.</p>
+The **`grid-auto-flow`** CSS property controls how the auto-placement algorithm works, specifying exactly how auto-placed items get flowed into the grid.
 
-<div>{{EmbedInteractiveExample("pages/css/grid-auto-flow.html")}}</div>
+{{EmbedInteractiveExample("pages/css/grid-auto-flow.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 grid-auto-flow: row;
 grid-auto-flow: column;
 grid-auto-flow: dense;
@@ -29,61 +30,59 @@ grid-auto-flow: inherit;
 grid-auto-flow: initial;
 grid-auto-flow: revert;
 grid-auto-flow: unset;
-</pre>
+```
 
-<p>This property may take one of two forms:</p>
+This property may take one of two forms:
 
-<ul>
-	<li>a single keyword: one of <code>row</code>, <code>column</code>, or <code>dense</code>.</li>
-	<li>two keywords: <code>row dense</code> or <code>column dense</code>.</li>
-</ul>
+- a single keyword: one of `row`, `column`, or `dense`.
+- two keywords: `row dense` or `column dense`.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-	<dt><code>row</code></dt>
-	<dd>Items are placed by filling each row in turn, adding new rows as necessary. If neither <code>row</code> nor <code>column</code> is provided, <code>row</code> is assumed.</dd>
-	<dt><code>column</code></dt>
-	<dd>Items are placed by filling each column in turn, adding new columns as necessary.</dd>
-	<dt><code>dense</code></dt>
-	<dd>
-    <p>"dense" packing algorithm attempts to fill in holes earlier in the grid, if smaller items come up later. This may cause items to appear out-of-order, when doing so would fill in holes left by larger items.</p>
-    <p>If it is omitted, a "sparse" algorithm is used, where the placement algorithm only ever moves "forward" in the grid when placing items, never backtracking to fill holes. This ensures that all of the auto-placed items appear "in order", even if this leaves holes that could have been filled by later items.</p>
-  </dd>
-</dl>
+- `row`
+  - : Items are placed by filling each row in turn, adding new rows as necessary. If neither `row` nor `column` is provided, `row` is assumed.
+- `column`
+  - : Items are placed by filling each column in turn, adding new columns as necessary.
+- `dense`
 
-<h2 id="Formal_definition">Formal definition</h2>
+  - : "dense" packing algorithm attempts to fill in holes earlier in the grid, if smaller items come up later. This may cause items to appear out-of-order, when doing so would fill in holes left by larger items.
 
-<p>{{cssinfo}}</p>
+    If it is omitted, a "sparse" algorithm is used, where the placement algorithm only ever moves "forward" in the grid when placing items, never backtracking to fill holes. This ensures that all of the auto-placed items appear "in order", even if this leaves holes that could have been filled by later items.
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal definition
+
+{{cssinfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_grid_auto-placement">Setting grid auto-placement</h3>
+### Setting grid auto-placement
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div id="grid"&gt;
-  &lt;div id="item1"&gt;&lt;/div&gt;
-  &lt;div id="item2"&gt;&lt;/div&gt;
-  &lt;div id="item3"&gt;&lt;/div&gt;
-  &lt;div id="item4"&gt;&lt;/div&gt;
-  &lt;div id="item5"&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;select id="direction"&gt;
-  &lt;option value="column"&gt;column&lt;/option&gt;
-  &lt;option value="row"&gt;row&lt;/option&gt;
-&lt;/select&gt;
-&lt;input id="dense" type="checkbox"&gt;
-&lt;label for="dense"&gt;dense&lt;/label&gt;
-</pre>
+```html
+<div id="grid">
+  <div id="item1"></div>
+  <div id="item2"></div>
+  <div id="item3"></div>
+  <div id="item4"></div>
+  <div id="item5"></div>
+</div>
+<select id="direction">
+  <option value="column">column</option>
+  <option value="row">row</option>
+</select>
+<input id="dense" type="checkbox">
+<label for="dense">dense</label>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css; highlight[7]">#grid {
+```css
+#grid {
   height: 200px;
   width: 200px;
   display: grid;
@@ -112,9 +111,11 @@ grid-auto-flow: unset;
 
 #item5 {
   background-color: aqua;
-}</pre>
+}
+```
 
-<pre class="brush: js; hidden">function changeGridAutoFlow() {
+```js hidden
+function changeGridAutoFlow() {
   var grid = document.getElementById("grid");
   var direction = document.getElementById("direction");
   var dense = document.getElementById("dense");
@@ -131,24 +132,22 @@ const selectElem = document.querySelector('select');
 const inputElem = document.querySelector('input');
 selectElem.addEventListener('change', changeGridAutoFlow);
 inputElem.addEventListener('change', changeGridAutoFlow);
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Setting_grid_auto-placement", "200px", "230px")}}</p>
+{{EmbedLiveSample("Setting_grid_auto-placement", "200px", "230px")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>Related CSS properties: {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid")}}</li>
-	<li>Grid Layout Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">Auto-placement in grid layout</a></em></li>
-	<li>Video tutorial: <em><a href="http://gridbyexample.com/video/series-auto-placement-order/">Introducing Grid auto-placement and order</a></em></li>
-</ul>
+- Related CSS properties: {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid")}}
+- Grid Layout Guide: _[Auto-placement in grid layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)_
+- Video tutorial: _[Introducing Grid auto-placement and order](http://gridbyexample.com/video/series-auto-placement-order/)_

@@ -9,15 +9,16 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.caption-side
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>caption-side</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property puts the content of a table's {{HTMLElement("caption")}} on the specified side. The values are relative to the {{cssxref('writing-mode')}} of the table.</p>
+The **`caption-side`** [CSS](/en-US/docs/Web/CSS) property puts the content of a table's {{HTMLElement("caption")}} on the specified side. The values are relative to the {{cssxref('writing-mode')}} of the table.
 
-<div>{{EmbedInteractiveExample("pages/css/caption-side.html")}}</div>
+{{EmbedInteractiveExample("pages/css/caption-side.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Directional values */
+```css
+/* Directional values */
 caption-side: top;
 caption-side: bottom;
 
@@ -32,63 +33,63 @@ caption-side: inherit;
 caption-side: initial;
 caption-side: revert;
 caption-side: unset;
-</pre>
+```
 
-<p>The <code>caption-side</code> property is specified as one of the keyword values listed below.</p>
+The `caption-side` property is specified as one of the keyword values listed below.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>top</code></dt>
- <dd>The caption box should be positioned above the table.</dd>
- <dt><code>bottom</code></dt>
- <dd>The caption box should be positioned below the table.</dd>
- <dt><code>block-start</code></dt>
- <dd>The caption box should be positioned at the block start edge of the table.</dd>
- <dt><code>block-end</code></dt>
- <dd>The caption box should be positioned at the block end edge of the table.</dd>
- <dt><code>inline-start</code></dt>
- <dd>The caption box should be positioned at the inline start edge of the table.</dd>
- <dt><code>inline-end</code></dt>
- <dd>The caption box should be positioned at the inline end edge of the table.</dd>
-</dl>
+- `top`
+  - : The caption box should be positioned above the table.
+- `bottom`
+  - : The caption box should be positioned below the table.
+- `block-start`
+  - : The caption box should be positioned at the block start edge of the table.
+- `block-end`
+  - : The caption box should be positioned at the block end edge of the table.
+- `inline-start`
+  - : The caption box should be positioned at the inline start edge of the table.
+- `inline-end`
+  - : The caption box should be positioned at the inline end edge of the table.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_captions_above_and_below">Setting captions above and below</h3>
+### Setting captions above and below
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;table class="top"&gt;
-  &lt;caption&gt;Caption ABOVE the table&lt;/caption&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Some data&lt;/td&gt;
-    &lt;td&gt;Some more data&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
+```html
+<table class="top">
+  <caption>Caption ABOVE the table</caption>
+  <tr>
+    <td>Some data</td>
+    <td>Some more data</td>
+  </tr>
+</table>
 
-&lt;br&gt;
+<br>
 
-&lt;table class="bottom"&gt;
-  &lt;caption&gt;Caption BELOW the table&lt;/caption&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Some data&lt;/td&gt;
-    &lt;td&gt;Some more data&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
-</pre>
+<table class="bottom">
+  <caption>Caption BELOW the table</caption>
+  <tr>
+    <td>Some data</td>
+    <td>Some more data</td>
+  </tr>
+</table>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.top caption {
+```css
+.top caption {
   caption-side: top;
 }
 
@@ -103,16 +104,16 @@ table {
 td {
   border: 1px solid blue;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Setting_captions_above_and_below', 'auto', 160)}}</p>
+{{EmbedLiveSample('Setting_captions_above_and_below', 'auto', 160)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

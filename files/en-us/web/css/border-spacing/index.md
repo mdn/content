@@ -6,27 +6,26 @@ tags:
   - CSS Property
   - CSS Tables
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.border-spacing
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>border-spacing</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the distance between the borders of adjacent {{htmlelement("table")}} cells. This property applies only when {{cssxref("border-collapse")}} is <code>separate</code>.</p>
+The **`border-spacing`** [CSS](/en-US/docs/Web/CSS) property sets the distance between the borders of adjacent {{htmlelement("table")}} cells. This property applies only when {{cssxref("border-collapse")}} is `separate`.
 
-<div>{{EmbedInteractiveExample("pages/css/border-spacing.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-spacing.html")}}
 
-<p>The <code>border-spacing</code> value is also used along the outside edge of the table, where the distance between the table's border and the cells in the first/last column or row is the sum of the relevant (horizontal or vertical) <code>border-spacing</code> and the relevant (top, right, bottom, or left) {{cssxref("padding")}} on the table.</p>
+The `border-spacing` value is also used along the outside edge of the table, where the distance between the table's border and the cells in the first/last column or row is the sum of the relevant (horizontal or vertical) `border-spacing` and the relevant (top, right, bottom, or left) {{cssxref("padding")}} on the table.
 
-<div class="note">
-<p><strong>Note:</strong> The <code>border-spacing</code> property is equivalent to the deprecated <code>cellspacing</code> <code>&lt;table&gt;</code> attribute, except that it has an optional second value that can be used to set different horizontal and vertical spacing.</p>
-</div>
+> **Note:** The `border-spacing` property is equivalent to the deprecated `cellspacing` `<table>` attribute, except that it has an optional second value that can be used to set different horizontal and vertical spacing.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">/* &lt;length&gt; */
+```css
+/* <length> */
 border-spacing: 2px;
 
-/* horizontal &lt;length&gt; | vertical &lt;length&gt; */
+/* horizontal <length> | vertical <length> */
 border-spacing: 1cm 2em;
 
 /* Global values */
@@ -34,54 +33,52 @@ border-spacing: inherit;
 border-spacing: initial;
 border-spacing: revert;
 border-spacing: unset;
-</pre>
+```
 
-<p>The <code>border-spacing</code> property may be specified as either one or two values.</p>
+The `border-spacing` property may be specified as either one or two values.
 
-<ul>
- <li>When <strong>one</strong> <code>&lt;length&gt;</code> value is specified, it defines both the horizontal and vertical spacings between cells.</li>
- <li>When <strong>two</strong> <code>&lt;length&gt;</code> values are specified, the first value defines the horizontal spacing between cells (i.e., the space between cells in adjacent <em>columns</em>), and the second value defines the vertical spacing between cells (i.e., the space between cells in adjacent <em>rows</em>).</li>
-</ul>
+- When **one** `<length>` value is specified, it defines both the horizontal and vertical spacings between cells.
+- When **two** `<length>` values are specified, the first value defines the horizontal spacing between cells (i.e., the space between cells in adjacent _columns_), and the second value defines the vertical spacing between cells (i.e., the space between cells in adjacent _rows_).
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>The size of the spacing as a fixed value.</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : The size of the spacing as a fixed value.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Spacing_and_padding_table_cells">Spacing and padding table cells</h3>
+### Spacing and padding table cells
 
-<p>This example applies a spacing of <code>.5em</code> vertically and <code>1em</code> horizontally between a table's cells. Note how, along its outside edges, the table's <code>padding</code> values are added to its <code>border-spacing</code> values.</p>
+This example applies a spacing of `.5em` vertically and `1em` horizontally between a table's cells. Note how, along its outside edges, the table's `padding` values are added to its `border-spacing` values.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;table&gt;
-  &lt;tr&gt;
-    &lt;td&gt;1&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;4&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;6&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;7&lt;/td&gt;&lt;td&gt;8&lt;/td&gt;&lt;td&gt;9&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
-</pre>
+```html
+<table>
+  <tr>
+    <td>1</td><td>2</td><td>3</td>
+  </tr>
+  <tr>
+    <td>4</td><td>5</td><td>6</td>
+  </tr>
+  <tr>
+    <td>7</td><td>8</td><td>9</td>
+  </tr>
+</table>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">table {
+```css
+table {
   border-spacing: 1em .5em;
   padding: 0 2em 1em 0;
   border: 1px solid orange;
@@ -94,23 +91,21 @@ td {
   text-align: center;
   vertical-align: middle;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Spacing_and_padding_table_cells', 400, 200) }}</p>
+{{ EmbedLiveSample('Spacing_and_padding_table_cells', 400, 200) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("border-collapse")}}, {{cssxref("border-style")}}</li>
- <li>The <code>border-spacing</code> property alters the appearance of the {{htmlelement("table")}} HTML element.</li>
-</ul>
+- {{cssxref("border-collapse")}}, {{cssxref("border-style")}}
+- The `border-spacing` property alters the appearance of the {{htmlelement("table")}} HTML element.

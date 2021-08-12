@@ -9,28 +9,27 @@ tags:
   - Layout
   - Reference
   - overflow
-  - 'recipe:css-shorthand-property'
+  - recipe:css-shorthand-property
   - scrolling
 browser-compat: css.properties.overflow
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>overflow</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a> sets the desired behavior for an element's overflow — i.e. when an element's content is too big to fit in its <a href="/en-US/docs/Web/Guide/CSS/Block_formatting_context">block formatting context</a> — in both directions.</p>
+The **`overflow`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets the desired behavior for an element's overflow — i.e. when an element's content is too big to fit in its [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context) — in both directions.
 
-<div>{{EmbedInteractiveExample("pages/css/overflow.html")}}</div>
+{{EmbedInteractiveExample("pages/css/overflow.html")}}
 
-<h2 id="Constituent_properties">Constituent properties</h2>
+## Constituent properties
 
-<p>This property is a shorthand for the following CSS properties:</p>
+This property is a shorthand for the following CSS properties:
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/overflow-x"><code>overflow-x</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/overflow-y"><code>overflow-y</code></a></li>
-</ul>
+- [`overflow-x`](/en-US/docs/Web/CSS/overflow-x)
+- [`overflow-y`](/en-US/docs/Web/CSS/overflow-y)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 overflow: visible;
 overflow: hidden;
 overflow: clip;
@@ -43,101 +42,97 @@ overflow: inherit;
 overflow: initial;
 overflow: revert;
 overflow: unset;
-</pre>
+```
 
-<p>The <code>overflow</code> property is specified as one or two keywords chosen from the list of values below. If two keywords are specified, the first applies to <code>overflow-x</code> and the second to <code>overflow-y</code>. Otherwise, both <code>overflow-x</code> and <code>overflow-y</code> are set to the same value.</p>
+The `overflow` property is specified as one or two keywords chosen from the list of values below. If two keywords are specified, the first applies to `overflow-x` and the second to `overflow-y`. Otherwise, both `overflow-x` and `overflow-y` are set to the same value.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>visible</code></dt>
- <dd>Content is not clipped and may be rendered outside the padding box.</dd>
- <dt><code>hidden</code></dt>
- <dd>Content is clipped if necessary to fit the padding box. No scrollbars are provided, and no support for allowing the user to scroll (such as by dragging or using a scroll wheel) is allowed. The content <em>can</em> be scrolled programmatically (for example, by setting the value of a property such as {{domxref("HTMLElement.offsetLeft", "offsetLeft")}}), so the element is still a scroll container.</dd>
- <dt><code>clip</code></dt>
- <dd>Similar to <code>hidden</code>, the content is clipped to the element's padding box. The difference between <code>clip</code> and <code>hidden</code> is that the <code>clip</code> keyword also forbids all scrolling, including programmatic scrolling. The box is not a scroll container, and does not start a new formatting context. If you wish to start a new formatting context, you can use {{cssxref("display", "display: flow-root", "#flow-root")}} to do so.</dd>
- <dt><code>scroll</code></dt>
- <dd>Content is clipped if necessary to fit the padding box. Browsers always display scrollbars whether or not any content is actually clipped, preventing scrollbars from appearing or disappearing as content changes. Printers may still print overflowing content.</dd>
- <dt><code>auto</code></dt>
- <dd>Depends on the {{Glossary("user agent")}}. If content fits inside the padding box, it looks the same as <code>visible</code>, but still establishes a new block formatting context. Desktop browsers provide scrollbars if content overflows.</dd>
- <dt><code>overlay</code> {{deprecated_inline}}</dt>
- <dd>Behaves the same as <code>auto</code>, but with the scrollbars drawn on top of content instead of taking up space. Only supported in WebKit-based (e.g., Safari) and Blink-based (e.g., Chrome or Opera) browsers.</dd>
-</dl>
+- `visible`
+  - : Content is not clipped and may be rendered outside the padding box.
+- `hidden`
+  - : Content is clipped if necessary to fit the padding box. No scrollbars are provided, and no support for allowing the user to scroll (such as by dragging or using a scroll wheel) is allowed. The content _can_ be scrolled programmatically (for example, by setting the value of a property such as {{domxref("HTMLElement.offsetLeft", "offsetLeft")}}), so the element is still a scroll container.
+- `clip`
+  - : Similar to `hidden`, the content is clipped to the element's padding box. The difference between `clip` and `hidden` is that the `clip` keyword also forbids all scrolling, including programmatic scrolling. The box is not a scroll container, and does not start a new formatting context. If you wish to start a new formatting context, you can use {{cssxref("display", "display: flow-root", "#flow-root")}} to do so.
+- `scroll`
+  - : Content is clipped if necessary to fit the padding box. Browsers always display scrollbars whether or not any content is actually clipped, preventing scrollbars from appearing or disappearing as content changes. Printers may still print overflowing content.
+- `auto`
+  - : Depends on the {{Glossary("user agent")}}. If content fits inside the padding box, it looks the same as `visible`, but still establishes a new block formatting context. Desktop browsers provide scrollbars if content overflows.
+- `overlay` {{deprecated_inline}}
+  - : Behaves the same as `auto`, but with the scrollbars drawn on top of content instead of taking up space. Only supported in WebKit-based (e.g., Safari) and Blink-based (e.g., Chrome or Opera) browsers.
 
-<h4 id="Mozilla_extensions">Mozilla extensions</h4>
+#### Mozilla extensions
 
-<dl>
- <dt><code>-moz-scrollbars-none</code> {{deprecated_inline}}</dt>
- <dd>Use <code>overflow: hidden</code> instead.</dd>
- <dt><code>-moz-scrollbars-horizontal</code> {{deprecated_inline}}</dt>
- <dd>Use <code>{{Cssxref("overflow-x")}}: scroll</code> and <code>{{Cssxref("overflow-y")}}: hidden</code>, or <code>overflow: scroll hidden</code> instead.</dd>
- <dt><code>-moz-scrollbars-vertical</code> {{deprecated_inline}}</dt>
- <dd>Use <code>{{Cssxref("overflow-x")}}: hidden</code> and <code>{{Cssxref("overflow-y")}}: scroll</code>, or <code>overflow: hidden scroll</code> instead.</dd>
- <dt><code>-moz-hidden-unscrollable</code> {{deprecated_inline}}</dt>
- <dd>Use <code>overflow: clip</code> instead.</dd>
-</dl>
+- `-moz-scrollbars-none` {{deprecated_inline}}
+  - : Use `overflow: hidden` instead.
+- `-moz-scrollbars-horizontal` {{deprecated_inline}}
+  - : Use `{{Cssxref("overflow-x")}}: scroll` and `{{Cssxref("overflow-y")}}: hidden`, or `overflow: scroll hidden` instead.
+- `-moz-scrollbars-vertical` {{deprecated_inline}}
+  - : Use `{{Cssxref("overflow-x")}}: hidden` and `{{Cssxref("overflow-y")}}: scroll`, or `overflow: hidden scroll` instead.
+- `-moz-hidden-unscrollable` {{deprecated_inline}}
+  - : Use `overflow: clip` instead.
 
-<p>As of Firefox 63, <code>-moz-scrollbars-none</code>, <code>-moz-scrollbars-horizontal</code>, and <code>-moz-scrollbars-vertical</code> are behind a feature preference setting. In about:config, set <code>layout.css.overflow.moz-scrollbars.enabled</code> to <code>true</code>.</p>
+As of Firefox 63, `-moz-scrollbars-none`, `-moz-scrollbars-horizontal`, and `-moz-scrollbars-vertical` are behind a feature preference setting. In about:config, set `layout.css.overflow.moz-scrollbars.enabled` to `true`.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Overflow options include clipping, showing scrollbars, or displaying the content flowing out of its container into the surrounding area.</p>
+Overflow options include clipping, showing scrollbars, or displaying the content flowing out of its container into the surrounding area.
 
-<p>Specifying a value other than <code>visible</code> (the default) or <code>clip</code> creates a new <a href="/en-US/docs/Web/Guide/CSS/Block_formatting_context">block formatting context</a>. This is necessary for technical reasons — if a float intersected with the scrolling element it would forcibly rewrap the content after each scroll step, leading to a slow scrolling experience.</p>
+Specifying a value other than `visible` (the default) or `clip` creates a new [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context). This is necessary for technical reasons — if a float intersected with the scrolling element it would forcibly rewrap the content after each scroll step, leading to a slow scrolling experience.
 
-<p>In order for <code>overflow</code> to have an effect, the block-level container must have either a set height (<code>height</code> or <code>max-height</code>) or <code>white-space</code> set to <code>nowrap</code>.</p>
+In order for `overflow` to have an effect, the block-level container must have either a set height (`height` or `max-height`) or `white-space` set to `nowrap`.
 
-<p>Setting one axis to <code>visible</code> (the default) while setting the other to a <em>different</em> value results in <code>visible</code> behaving as <code>auto</code>.</p>
+Setting one axis to `visible` (the default) while setting the other to a _different_ value results in `visible` behaving as `auto`.
 
-<p>The JavaScript {{domxref("Element.scrollTop")}} property may be used to scroll an HTML element even when <code>overflow</code> is set to <code>hidden</code>.</p>
+The JavaScript {{domxref("Element.scrollTop")}} property may be used to scroll an HTML element even when `overflow` is set to `hidden`.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_different_overflow_values_for_text">Setting different overflow values for text</h3>
+### Setting different overflow values for text
 
-<h4>HTML</h4>
+#### HTML
 
-<pre class="brush: html">
-  &lt;div&gt;
-    &lt;code&gt;visible&lt;/code&gt;
-    &lt;p class="visible"&gt;
+```html
+  <div>
+    <code>visible</code>
+    <p class="visible">
      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
-    &lt;/p&gt;
-  &lt;/div&gt;
+    </p>
+  </div>
 
-  &lt;div&gt;
-    &lt;code&gt;hidden&lt;/code&gt;
-    &lt;p class="hidden"&gt;
+  <div>
+    <code>hidden</code>
+    <p class="hidden">
      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
-    &lt;/p&gt;
-  &lt;/div&gt;
+    </p>
+  </div>
 
-  &lt;div&gt;
-    &lt;code&gt;scroll&lt;/code&gt;
-    &lt;p class="scroll"&gt;
+  <div>
+    <code>scroll</code>
+    <p class="scroll">
      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
-    &lt;/p&gt;
-  &lt;/div&gt;
+    </p>
+  </div>
 
-  &lt;div&gt;
-    &lt;code&gt;auto&lt;/code&gt;
-    &lt;p class="auto"&gt;
+  <div>
+    <code>auto</code>
+    <p class="auto">
      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
-    &lt;/p&gt;
-  &lt;/div&gt;
-</pre>
+    </p>
+  </div>
+```
 
-<h4>CSS</h4>
+#### CSS
 
-<pre class="brush: css">
+```css
 body {
   display: flex;
   justify-content: space-around;
@@ -169,23 +164,21 @@ p.scroll {
 p.auto {
   overflow: auto;
 }
-</pre>
+```
 
-<h4>Result</h4>
+#### Result
 
 {{EmbedLiveSample("Setting_different_overflow_values_for_text", "600", "250")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related CSS properties: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow-x")}}, {{Cssxref("overflow-y")}}, {{Cssxref("overflow-inline")}}, {{Cssxref("overflow-block")}}, {{Cssxref("clip")}}, {{Cssxref("display")}}</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Overflow">CSS Overflow</a> and <a href="/en-US/docs/Tools/Page_Inspector/How_to/Debug_Scrollable_Overflow">Debug scrollable overflow</a></li>
-</ul>
+- Related CSS properties: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow-x")}}, {{Cssxref("overflow-y")}}, {{Cssxref("overflow-inline")}}, {{Cssxref("overflow-block")}}, {{Cssxref("clip")}}, {{Cssxref("display")}}
+- [CSS Overflow](/en-US/docs/Web/CSS/CSS_Overflow) and [Debug scrollable overflow](/en-US/docs/Tools/Page_Inspector/How_to/Debug_Scrollable_Overflow)

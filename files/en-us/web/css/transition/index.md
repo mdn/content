@@ -9,28 +9,27 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.transition
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>transition</code></strong> <a href="/en-US/docs/Web/CSS">CSS </a>property is a <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a> for {{ cssxref("transition-property") }}, {{ cssxref("transition-duration") }}, {{ cssxref("transition-timing-function") }}, and {{ cssxref("transition-delay") }}.</p>
+The **`transition`** [CSS ](/en-US/docs/Web/CSS)property is a [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) for {{ cssxref("transition-property") }}, {{ cssxref("transition-duration") }}, {{ cssxref("transition-timing-function") }}, and {{ cssxref("transition-delay") }}.
 
-<div>{{EmbedInteractiveExample("pages/css/transition.html")}}</div>
+{{EmbedInteractiveExample("pages/css/transition.html")}}
 
-<p>Transitions enable you to define the transition between two states of an element. Different states may be defined using <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-classes</a> like {{cssxref(":hover")}} or {{cssxref(":active")}} or dynamically set using JavaScript.</p>
+Transitions enable you to define the transition between two states of an element. Different states may be defined using [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) like {{cssxref(":hover")}} or {{cssxref(":active")}} or dynamically set using JavaScript.
 
-<h2 id="Constituent_properties">Constituent properties</h2>
+## Constituent properties
 
-<p>This property is a shorthand for the following CSS properties:</p>
+This property is a shorthand for the following CSS properties:
 
-<ul>
-	<li><a href="/en-US/docs/Web/CSS/transition-delay"><code>transition-delay</code></a></li>
-	<li><a href="/en-US/docs/Web/CSS/transition-duration"><code>transition-duration</code></a></li>
-	<li><a href="/en-US/docs/Web/CSS/transition-property"><code>transition-property</code></a></li>
-	<li><a href="/en-US/docs/Web/CSS/transition-timing-function"><code>transition-timing-function</code></a></li>
-</ul>
+- [`transition-delay`](/en-US/docs/Web/CSS/transition-delay)
+- [`transition-duration`](/en-US/docs/Web/CSS/transition-duration)
+- [`transition-property`](/en-US/docs/Web/CSS/transition-property)
+- [`transition-timing-function`](/en-US/docs/Web/CSS/transition-timing-function)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Apply to 1 property */
+```css
+/* Apply to 1 property */
 /* property name | duration */
 transition: margin-right 4s;
 
@@ -54,47 +53,47 @@ transition: inherit;
 transition: initial;
 transition: revert;
 transition: unset;
-</pre>
+```
 
-<p>The <code>transition</code> property is specified as one or more single-property transitions, separated by commas.</p>
+The `transition` property is specified as one or more single-property transitions, separated by commas.
 
-<p>Each single-property transition describes the transition that should be applied to a single property (or the special values <code>all</code> and <code>none</code>). It includes:</p>
+Each single-property transition describes the transition that should be applied to a single property (or the special values `all` and `none`). It includes:
 
-<ul>
-	<li>zero or one value representing the property to which the transition should apply. This may be any one of:
-	<ul>
-		<li>the keyword <code>none</code></li>
-		<li>the keyword <code>all</code></li>
-		<li>a {{cssxref("&lt;custom-ident&gt;")}} naming a CSS property.</li>
-	</ul>
-	</li>
-	<li>zero or one {{cssxref("&lt;easing-function&gt;")}} value representing the easing function to use</li>
-	<li>zero, one, or two {{cssxref("&lt;time&gt;")}} values. The first value that can be parsed as a time is assigned to the {{cssxref("transition-duration")}}, and the second value that can be parsed as a time is assigned to {{cssxref("transition-delay")}}.</li>
-</ul>
+- zero or one value representing the property to which the transition should apply. This may be any one of:
 
-<p>See <a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions#when_property_value_lists_are_of_different_lengths">how things are handled</a> when lists of property values aren't the same length. In short, extra transition descriptions beyond the number of properties actually being animated are ignored.</p>
+  - the keyword `none`
+  - the keyword `all`
+  - a {{cssxref("&lt;custom-ident&gt;")}} naming a CSS property.
 
-<h2 id="Formal_definition">Formal definition</h2>
+- zero or one {{cssxref("&lt;easing-function&gt;")}} value representing the easing function to use
+- zero, one, or two {{cssxref("&lt;time&gt;")}} values. The first value that can be parsed as a time is assigned to the {{cssxref("transition-duration")}}, and the second value that can be parsed as a time is assigned to {{cssxref("transition-delay")}}.
 
-<p>{{CSSInfo}}</p>
+See [how things are handled](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions#when_property_value_lists_are_of_different_lengths) when lists of property values aren't the same length. In short, extra transition descriptions beyond the number of properties actually being animated are ignored.
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal definition
+
+{{CSSInfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Simple_example">Simple example</h3>
+### Simple example
 
-<p>This example performs a four-second font size transition with a one-second delay when the user hovers over the element.</p>
+This example performs a four-second font size transition with a one-second delay when the user hovers over the element.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;a class="target"&gt;Hover over me&lt;/a&gt;</pre>
+```html
+<a class="target">Hover over me</a>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.target {
+```css
+.target {
   font-size: 14px;
   transition: font-size 4s 1s;
 }
@@ -102,23 +101,21 @@ transition: unset;
 .target:hover {
   font-size: 36px;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Simple_example', 600, 100)}}</p>
+{{EmbedLiveSample('Simple_example', 600, 100)}}
 
-<p>There are several more examples of CSS transitions included in the <a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">Using CSS transitions</a> article.</p>
+There are several more examples of CSS transitions included in the [Using CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) article.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">Using CSS transitions</a></li>
-	<li>{{ domxref("TransitionEvent") }}</li>
-</ul>
+- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- {{ domxref("TransitionEvent") }}

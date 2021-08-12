@@ -11,92 +11,88 @@ tags:
   - angle
 browser-compat: css.types.angle
 ---
-<div>{{ CSSRef() }}</div>
+{{ CSSRef() }}
 
-<p>The <strong><code>&lt;angle&gt;</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Types">data type</a> represents an angle value expressed in degrees, gradians, radians, or turns. It is used, for example, in {{cssxref("&lt;gradient&gt;")}}s and in some {{cssxref("transform")}} functions.</p>
+The **`<angle>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents an angle value expressed in degrees, gradians, radians, or turns. It is used, for example, in {{cssxref("&lt;gradient&gt;")}}s and in some {{cssxref("transform")}} functions.
 
-<div>{{EmbedInteractiveExample("pages/css/type-angle.html")}}</div>
+{{EmbedInteractiveExample("pages/css/type-angle.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>&lt;angle&gt;</code> data type consists of a {{cssxref("&lt;number&gt;")}} followed by one of the units listed below. As with all dimensions, there is no space between the unit literal and the number. The angle unit is optional after the number <code>0</code>.</p>
+The `<angle>` data type consists of a {{cssxref("&lt;number&gt;")}} followed by one of the units listed below. As with all dimensions, there is no space between the unit literal and the number. The angle unit is optional after the number `0`.
 
-<p>Optionally, it may be preceded by a single <code>+</code> or <code>-</code> sign. Positive numbers represent clockwise angles, while negative numbers represent counterclockwise angles. For static properties of a given unit, any angle can be represented by various equivalent values. For example, <code>90deg</code> equals <code>-270deg</code>, and <code>1turn</code> equals <code>4turn</code>. For dynamic properties, like when applying an {{cssxref("animation")}} or {{cssxref("transition")}}, the effect will nevertheless be different.</p>
+Optionally, it may be preceded by a single `+` or `-` sign. Positive numbers represent clockwise angles, while negative numbers represent counterclockwise angles. For static properties of a given unit, any angle can be represented by various equivalent values. For example, `90deg` equals `-270deg`, and `1turn` equals `4turn`. For dynamic properties, like when applying an {{cssxref("animation")}} or {{cssxref("transition")}}, the effect will nevertheless be different.
 
-<h3 id="Units">Units</h3>
+### Units
 
-<dl>
- <dt><code>deg</code></dt>
- <dd>Represents an angle in <a href="https://en.wikipedia.org/wiki/Degree_%28angle%29">degrees</a>. One full circle is <code>360deg</code>. Examples: <code>0deg</code>, <code>90deg</code>, <code>14.23deg</code>.</dd>
- <dt><code>grad</code></dt>
- <dd>Represents an angle in <a href="https://en.wikipedia.org/wiki/Gradian">gradians</a>. One full circle is <code>400grad</code>. Examples: <code>0grad</code>, <code>100grad</code>, <code>38.8grad</code>.</dd>
- <dt><code>rad</code></dt>
- <dd>Represents an angle in <a href="https://en.wikipedia.org/wiki/Radian">radians</a>. One full circle is 2π radians which approximates to <code>6.2832rad</code>. <code>1rad</code> is 180/π degrees. Examples: <code>0rad</code>, <code>1.0708rad</code>, <code>6.2832rad</code>.</dd>
- <dt><code>turn</code></dt>
- <dd>Represents an angle in a number of turns. One full circle is <code>1turn</code>. Examples: <code>0turn</code>, <code>0.25turn</code>, <code>1.2turn</code>.</dd>
-</dl>
+- `deg`
+  - : Represents an angle in [degrees](https://en.wikipedia.org/wiki/Degree_%28angle%29). One full circle is `360deg`. Examples: `0deg`, `90deg`, `14.23deg`.
+- `grad`
+  - : Represents an angle in [gradians](https://en.wikipedia.org/wiki/Gradian). One full circle is `400grad`. Examples: `0grad`, `100grad`, `38.8grad`.
+- `rad`
+  - : Represents an angle in [radians](https://en.wikipedia.org/wiki/Radian). One full circle is 2π radians which approximates to `6.2832rad`. `1rad` is 180/π degrees. Examples: `0rad`, `1.0708rad`, `6.2832rad`.
+- `turn`
+  - : Represents an angle in a number of turns. One full circle is `1turn`. Examples: `0turn`, `0.25turn`, `1.2turn`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_a_clockwise_right_angle">Setting a clockwise right angle</h3>
+### Setting a clockwise right angle
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <td><img class="default internal" src="angle90.png"></td>
-   <td><code>90deg = 100grad = 0.25turn ≈ 1.5708rad</code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td><img class="default internal" src="angle90.png" /></td>
+      <td><code>90deg = 100grad = 0.25turn ≈ 1.5708rad</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="Setting_a_flat_angle">Setting a flat angle</h3>
+### Setting a flat angle
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <td><img class="default internal" src="angle180.png"></td>
-   <td><code>180deg = 200grad = 0.5turn ≈ 3.1416rad</code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td><img class="default internal" src="angle180.png" /></td>
+      <td><code>180deg = 200grad = 0.5turn ≈ 3.1416rad</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="Setting_a_counterclockwise_right_angle">Setting a counterclockwise right angle</h3>
+### Setting a counterclockwise right angle
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <td><img class="default internal" src="angleminus90.png"></td>
-   <td><code>-90deg = -100grad = -0.25turn ≈ -1.5708rad</code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td><img class="default internal" src="angleminus90.png" /></td>
+      <td><code>-90deg = -100grad = -0.25turn ≈ -1.5708rad</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="Setting_a_null_angle">Setting a null angle</h3>
+### Setting a null angle
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <td><img class="default internal" src="angle0.png"></td>
-   <td><code>0 = 0deg = 0grad = 0turn = 0rad</code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td><img class="default internal" src="angle0.png" /></td>
+      <td><code>0 = 0deg = 0grad = 0turn = 0rad</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Types">CSS data types</a></li>
- <li>The <code><a href="/en-US/docs/Web/CSS/gradient">&lt;gradient&gt;</a></code> type</li>
- <li>CSS rotation transforms: <code><a href="/en-US/docs/Web/CSS/transform-function/rotate()">rotate()</a></code>, <code><a href="/en-US/docs/Web/CSS/transform-function/rotate3d()">rotate3d()</a></code>, <code><a href="/en-US/docs/Web/CSS/transform-function/rotateX()">rotateX()</a></code>, <code><a href="/en-US/docs/Web/CSS/transform-function/rotateY()">rotateY()</a></code>, and <code><a href="/en-US/docs/Web/CSS/transform-function/rotateZ()">rotateZ()</a></code></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Transforms">CSS transforms</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms">Using CSS transforms</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients">Using CSS gradients</a></li>
-</ul>
+- [CSS data types](/en-US/docs/Web/CSS/CSS_Types)
+- The [`<gradient>`](/en-US/docs/Web/CSS/gradient) type
+- CSS rotation transforms: [`rotate()`](</en-US/docs/Web/CSS/transform-function/rotate()>), [`rotate3d()`](</en-US/docs/Web/CSS/transform-function/rotate3d()>), [`rotateX()`](</en-US/docs/Web/CSS/transform-function/rotateX()>), [`rotateY()`](</en-US/docs/Web/CSS/transform-function/rotateY()>), and [`rotateZ()`](</en-US/docs/Web/CSS/transform-function/rotateZ()>)
+- [CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms)
+- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients)

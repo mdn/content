@@ -10,90 +10,90 @@ tags:
   - Reference
 browser-compat: css.at-rules.counter-style.symbols
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>symbols</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> descriptor is used to specify the symbols that the specified counter system will use to construct counter representations.</p>
+The **`symbols`** [CSS](/en-US/docs/Web/CSS) descriptor is used to specify the symbols that the specified counter system will use to construct counter representations.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>symbols</code> descriptor is specified as one or more <code>&lt;symbol&gt;</code>s.</p>
+The `symbols` descriptor is specified as one or more `<symbol>`s.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;symbol&gt;</code></dt>
- <dd>Represents a symbol used within the counter system. This must be one of the following data types:
- <ul>
-  <li>{{cssxref("&lt;string&gt;")}}</li>
-  <li>{{cssxref("&lt;image&gt;")}} (Note: This value is "at risk" and may be removed from the specification. It is not yet implemented.)</li>
-  <li>{{cssxref("&lt;custom-ident&gt;")}}</li>
- </ul>
- </dd>
-</dl>
+- `<symbol>`
 
-<h2 id="Description">Description</h2>
+  - : Represents a symbol used within the counter system. This must be one of the following data types:
 
-<p>A symbol can be a string, image, or identifier. It is used within the {{cssxref("@counter-style")}} <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a>.</p>
+    - {{cssxref("&lt;string&gt;")}}
+    - {{cssxref("&lt;image&gt;")}} (Note: This value is "at risk" and may be removed from the specification. It is not yet implemented.)
+    - {{cssxref("&lt;custom-ident&gt;")}}
 
-<pre class="brush: css no-line-numbers">symbols: A B C D E;
+## Description
+
+A symbol can be a string, image, or identifier. It is used within the {{cssxref("@counter-style")}} [at-rule](/en-US/docs/Web/CSS/At-rule).
+
+```css
+symbols: A B C D E;
 symbols: "\24B6" "\24B7" "\24B8" D E;
 symbols: "0" "1" "2" "4" "5" "6" "7" "8" "9";
 symbols: url('first.svg') url('second.svg') url('third.svg');
 symbols: indic-numbers;
-</pre>
+```
 
-<p>The <code>symbols</code> descriptor must be specified when the value of the {{cssxref('@counter-style/system')}} descriptor is <code>cyclic</code>, <code>numeric</code>, <code>alphabetic</code>, <code>symbolic</code>, or <code>fixed</code>. When the <code>additive</code> system is used, use the {{cssxref('@counter-style/additive-symbols')}} descriptor instead to specify the symbols.</p>
+The `symbols` descriptor must be specified when the value of the {{cssxref('@counter-style/system')}} descriptor is `cyclic`, `numeric`, `alphabetic`, `symbolic`, or `fixed`. When the `additive` system is used, use the {{cssxref('@counter-style/additive-symbols')}} descriptor instead to specify the symbols.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_counter_symbols">Setting counter symbols</h3>
+### Setting counter symbols
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;ul class="list"&gt;
-  &lt;li&gt;One&lt;/li&gt;
-  &lt;li&gt;Two&lt;/li&gt;
-  &lt;li&gt;Three&lt;/li&gt;
-  &lt;li&gt;Four&lt;/li&gt;
-  &lt;li&gt;Five&lt;/li&gt;
-&lt;/ul&gt;</pre>
+```html
+<ul class="list">
+  <li>One</li>
+  <li>Two</li>
+  <li>Three</li>
+  <li>Four</li>
+  <li>Five</li>
+</ul>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">@counter-style symbols-example {
+```css
+@counter-style symbols-example {
   system: fixed;
   symbols: A "1" "\24B7" D E;
 }
 
 .list {
   list-style: symbols-example;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Setting_counter_symbols')}}</p>
+{{EmbedLiveSample('Setting_counter_symbols')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The <code>symbols</code> descriptor is used within the {{cssxref("@counter-style")}} at-rule.</li>
- <li>{{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}</li>
- <li>{{cssxref("symbols()", "symbols()")}}, the functional notation creating anonymous counter styles</li>
- <li>{{cssxref("url()", "url()")}} function</li>
-</ul>
+- The `symbols` descriptor is used within the {{cssxref("@counter-style")}} at-rule.
+- {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
+- {{cssxref("symbols()", "symbols()")}}, the functional notation creating anonymous counter styles
+- {{cssxref("url()", "url()")}} function

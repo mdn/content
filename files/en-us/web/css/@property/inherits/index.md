@@ -1,5 +1,5 @@
 ---
-title: 'inherits'
+title: inherits
 slug: Web/CSS/@property/inherits
 tags:
   - CSS
@@ -9,77 +9,77 @@ tags:
   - Houdini
 browser-compat: css.at-rules.property.inherits
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>The <strong><code>inherits</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> descriptor is required when using the {{cssxref("@property")}} {{cssxref("at-rule")}} and controls whether the custom property registration specified by <code>@property</code> inherits by default.</p>
+The **`inherits`** [CSS](/en-US/docs/Web/CSS) descriptor is required when using the {{cssxref("@property")}} {{cssxref("at-rule")}} and controls whether the custom property registration specified by `@property` inherits by default.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">@property --property-name {
-  syntax: '&lt;color&gt;';
+```css
+@property --property-name {
+  syntax: '<color>';
   inherits: false;
   initial-value: #c0ffee;
 }
 
 @property --property-name {
-  syntax: '&lt;color&gt;';
+  syntax: '<color>';
   inherits: true;
   initial-value: #c0ffee;
-}</pre>
+}
+```
 
-<h2 id="Values">Values</h2>
+## Values
 
-<dl>
-  <dt><code>true</code></dt>
-  <dd>The property inherits by default.</dd>
-  <dt><code>false</code></dt>
-  <dd>The property does not inherit by default.</dd>
-</dl>
+- `true`
+  - : The property inherits by default.
+- `false`
+  - : The property does not inherit by default.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Add type checking to <code>--my-color</code> {{cssxref('--*', 'custom property')}}, as a color, a default value, and not allow it to inherit its value:</p>
+Add type checking to `--my-color` {{cssxref('--*', 'custom property')}}, as a color, a default value, and not allow it to inherit its value:
 
-<p>Using <a href="/en-US/docs/Web/CSS">CSS</a> {{cssxref('@property')}} <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a>:</p>
+Using [CSS](/en-US/docs/Web/CSS) {{cssxref('@property')}} [at-rule](/en-US/docs/Web/CSS/At-rule):
 
-<pre class="brush: css">@property --my-color {
-  syntax: '&lt;color&gt;';
+```css
+@property --my-color {
+  syntax: '<color>';
   inherits: false;
   initial-value: #c0ffee;
 }
-</pre>
+```
 
-<p>Using <a href="/en-US/docs/Web/JavaScript">JavaScript</a> {{domxref('CSS.registerProperty')}}:</p>
+Using [JavaScript](/en-US/docs/Web/JavaScript) {{domxref('CSS.registerProperty')}}:
 
-<pre class="brush: js">window.CSS.registerProperty({
+```js
+window.CSS.registerProperty({
   name: '--my-color',
-  syntax: '&lt;color&gt;',
+  syntax: '<color>',
   inherits: false,
   initialValue: '#c0ffee',
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/CSS_Properties_and_Values_API">CSS Properties and Values API</a></li>
- <li><a href="/en-US/docs/Web/API/CSS_Painting_API">CSS Painting API</a></li>
- <li><a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model</a></li>
- <li><a href="/en-US/docs/Web/Houdini">CSS Houdini</a></li>
-</ul>
+- [CSS Properties and Values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API)
+- [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API)
+- [CSS Typed Object Model](/en-US/docs/Web/API/CSS_Typed_OM_API)
+- [CSS Houdini](/en-US/docs/Web/Houdini)

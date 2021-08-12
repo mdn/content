@@ -13,17 +13,18 @@ tags:
   - text-decoration-skip-ink
 browser-compat: css.properties.text-decoration-skip-ink
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>text-decoration-skip-ink</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property specifies how overlines and underlines are drawn when they pass over glyph ascenders and descenders.</p>
+The **`text-decoration-skip-ink`** [CSS](/en-US/docs/Web/CSS) property specifies how overlines and underlines are drawn when they pass over glyph ascenders and descenders.
 
-<div>{{EmbedInteractiveExample("pages/css/text-decoration-skip-ink.html")}}</div>
+{{EmbedInteractiveExample("pages/css/text-decoration-skip-ink.html")}}
 
-<p><code>text-decoration-skip-ink</code> is not part of the {{cssxref("text-decoration")}} shorthand.</p>
+`text-decoration-skip-ink` is not part of the {{cssxref("text-decoration")}} shorthand.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Single keyword */
+```css
+/* Single keyword */
 text-decoration-skip-ink: none;
 text-decoration-skip-ink: auto;
 text-decoration-skip-ink: all;
@@ -33,43 +34,43 @@ text-decoration-skip: inherit;
 text-decoration-skip: initial;
 text-decoration-skip-ink: revert;
 text-decoration-skip: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Underlines and overlines are drawn across the full length of the text content, including parts that cross over glyph descenders and ascenders.</dd>
- <dt><code>auto</code></dt>
- <dd>The default — the browser <em>may</em> interrupt underlines and overlines so that they do not touch or closely approach a glyph. That is, they are interrupted where they would otherwise cross over a glyph.</dd>
- <dt><code>all</code></dt>
- <dd>
-   <p>The browser <em>must</em> interrupt underlines and overlines so that they do not touch or closely approach a glyph. This can be helpful with certain Chinese, Japanese, or Korean (CJK) fonts, where the <code>auto</code> behavior might not create interruptions.</p>
-   <img alt='An example of "text-decoration-skip-ink".' src="decoration-skip-ink.png">
- </dd>
-</dl>
+- `none`
+  - : Underlines and overlines are drawn across the full length of the text content, including parts that cross over glyph descenders and ascenders.
+- `auto`
+  - : The default — the browser _may_ interrupt underlines and overlines so that they do not touch or closely approach a glyph. That is, they are interrupted where they would otherwise cross over a glyph.
+- `all`
 
-<h2 id="Formal_definition">Formal definition</h2>
+  - : The browser _must_ interrupt underlines and overlines so that they do not touch or closely approach a glyph. This can be helpful with certain Chinese, Japanese, or Korean (CJK) fonts, where the `auto` behavior might not create interruptions.
 
-<p>{{CSSInfo}}</p>
+    ![An example of "text-decoration-skip-ink".](decoration-skip-ink.png)
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal definition
+
+{{CSSInfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;You should go on a quest for a cup of coffee.&lt;/p&gt;
-&lt;p class="no-skip-ink"&gt;Or maybe you'd prefer some tea?&lt;/p&gt;
-&lt;p&gt;この文は、 text-decoration-skip-ink: auto の使用例を示しています。&lt;/p&gt;
-&lt;p class="skip-ink-all"&gt;この文は、 text-decoration-skip-ink: all の使用例を示しています。&lt;/p&gt;
-</pre>
+```html
+<p>You should go on a quest for a cup of coffee.</p>
+<p class="no-skip-ink">Or maybe you'd prefer some tea?</p>
+<p>この文は、 text-decoration-skip-ink: auto の使用例を示しています。</p>
+<p class="skip-ink-all">この文は、 text-decoration-skip-ink: all の使用例を示しています。</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css; highlight[4]">p {
+```css
+p {
   font-size: 1.5em;
   text-decoration: underline blue;
   text-decoration-skip-ink: auto; /* this is the default anyway */
@@ -82,23 +83,21 @@ text-decoration-skip: unset;
 .skip-ink-all{
   text-decoration-skip-ink: all;
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples", "100%", 250)}}</p>
+{{EmbedLiveSample("Examples", "100%", 250)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref('text-decoration')}}</li>
- <li>{{cssxref('text-decoration-skip')}}</li>
-</ul>
+- {{cssxref('text-decoration')}}
+- {{cssxref('text-decoration-skip')}}

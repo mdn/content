@@ -7,92 +7,87 @@ tags:
   - Non-standard
   - Reference
   - Web
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.-webkit-mask-box-image
 ---
-<div>{{ CSSRef() }} {{ Non-standard_header() }}</div>
+{{ CSSRef() }} {{ Non-standard_header() }}
 
-<p><code>-webkit-mask-box-image</code> sets the mask image for an element's border box.</p>
+`-webkit-mask-box-image` sets the mask image for an element's border box.
 
-<ul>
- <li>{{ Xref_cssinitial() }}: none</li>
- <li>Applies to: all elements</li>
- <li>{{ Xref_cssinherited() }}: no</li>
- <li>Media: {{ Xref_cssvisual() }}</li>
- <li>{{ Xref_csscomputed() }}: as specified</li>
-</ul>
+- {{ Xref_cssinitial() }}: none
+- Applies to: all elements
+- {{ Xref_cssinherited() }}: no
+- Media: {{ Xref_cssvisual() }}
+- {{ Xref_csscomputed() }}: as specified
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="eval">-webkit-mask-box-image: &lt;mask-box-image&gt; [&lt;top&gt; &lt;right&gt; &lt;bottom&gt; &lt;left&gt; &lt;x-repeat&gt; &lt;y-repeat&gt;]
-</pre>
+    -webkit-mask-box-image: <mask-box-image> [<top> <right> <bottom> <left> <x-repeat> <y-repeat>]
 
-<p>Where:</p>
+Where:
 
-<dl>
- <dt>&lt;mask-box-image&gt;</dt>
- <dd><code>{{cssxref("&lt;uri&gt;")}} | &lt;gradient&gt; | none</code></dd>
- <dt>&lt;top&gt; &lt;right&gt; &lt;bottom&gt; &lt;left&gt;</dt>
- <dd><code>&lt;length&gt; | &lt;percentage&gt;</code></dd>
- <dt>&lt;x-repeat&gt; &lt;y-repeat&gt;</dt>
- <dd><code>repeat | stretch | round | space</code></dd>
-</dl>
+- \<mask-box-image>
+  - : `{{cssxref("&lt;uri&gt;")}} | <gradient> | none`
+- \<top> \<right> \<bottom> \<left>
+  - : `<length> | <percentage>`
+- \<x-repeat> \<y-repeat>
+  - : `repeat | stretch | round | space`
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>&lt;uri&gt;</dt>
- <dd>The location of the image resource to be used as a mask image.</dd>
- <dt>&lt;gradient&gt;</dt>
- <dd>A <code>-webkit-gradient</code> function to be used as a mask image.</dd>
- <dt>none</dt>
- <dd>Used to specify that a border box is to have no mask image.</dd>
- <dt>&lt;length&gt;</dt>
- <dd>The size of the mask image's offset. See {{cssxref("&lt;length&gt;")}} for possible units.</dd>
- <dt>&lt;percentage&gt;</dt>
- <dd>The mask image's offset has a percentage value relative to the border box's corresponding dimension (width or height).</dd>
- <dt>repeat</dt>
- <dd>The mask image is repeated as many times as is necessary to span the border box. May include a partial image if the mask image does not divide evenly into the border box.</dd>
- <dt>stretch</dt>
- <dd>The mask image is stretched to contain the border box exactly.</dd>
- <dt>round</dt>
- <dd>The mask image is stretched somewhat and repeated such that there is no partial mask image at the end of the border box.</dd>
- <dt>space</dt>
- <dd>The mask image is repeated as many times as possible without stretching. There is no partial mask image at the end of the border box.</dd>
-</dl>
+- \<uri>
+  - : The location of the image resource to be used as a mask image.
+- \<gradient>
+  - : A `-webkit-gradient` function to be used as a mask image.
+- none
+  - : Used to specify that a border box is to have no mask image.
+- \<length>
+  - : The size of the mask image's offset. See {{cssxref("&lt;length&gt;")}} for possible units.
+- \<percentage>
+  - : The mask image's offset has a percentage value relative to the border box's corresponding dimension (width or height).
+- repeat
+  - : The mask image is repeated as many times as is necessary to span the border box. May include a partial image if the mask image does not divide evenly into the border box.
+- stretch
+  - : The mask image is stretched to contain the border box exactly.
+- round
+  - : The mask image is stretched somewhat and repeated such that there is no partial mask image at the end of the border box.
+- space
+  - : The mask image is repeated as many times as possible without stretching. There is no partial mask image at the end of the border box.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{CSSSyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_an_image">Setting an image</h3>
+### Setting an image
 
-<pre class="brush: css">.exampleone {
+```css
+.exampleone {
   -webkit-mask-box-image: url('mask.png');
 }
-</pre>
+```
 
-<h3 id="Offsetting_and_filling_an_image">Offsetting and filling an image</h3>
+### Offsetting and filling an image
 
-<pre class="brush: css">.exampletwo {
+```css
+.exampletwo {
   -webkit-mask-box-image: url('logo.png') 100 100 0 0 round round;
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<p>{{ cssxref("-webkit-mask") }}, {{ cssxref("-webkit-mask-origin") }}, {{ cssxref("-webkit-mask-attachment") }},{{ cssxref("-webkit-mask-clip") }},{{ cssxref("-webkit-mask-image") }},{{ cssxref("-webkit-mask-composite") }},{{ cssxref("-webkit-mask-repeat") }}</p>
+{{ cssxref("-webkit-mask") }}, {{ cssxref("-webkit-mask-origin") }}, {{ cssxref("-webkit-mask-attachment") }},{{ cssxref("-webkit-mask-clip") }},{{ cssxref("-webkit-mask-image") }},{{ cssxref("-webkit-mask-composite") }},{{ cssxref("-webkit-mask-repeat") }}

@@ -7,45 +7,38 @@ tags:
   - Guide
   - Understanding_CSS_z-index
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>« <a href="/en-US/docs/Web/CSS">CSS</a> « <a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index" title="Understanding CSS z-index">Understanding CSS z-index</a></p>
+« [CSS](/en-US/docs/Web/CSS) « [Understanding CSS z-index](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index "Understanding CSS z-index")
 
-<h2 id="Stacking_context_example_2">Stacking context example 2</h2>
+## Stacking context example 2
 
-<p>This is a very simple example, but it is the key for understanding the concept of <em>stacking context</em>. There are the same four DIVs of the previous example, but now z-index properties are assigned on both levels of the hierarchy.</p>
+This is a very simple example, but it is the key for understanding the concept of _stacking context_. There are the same four DIVs of the previous example, but now z-index properties are assigned on both levels of the hierarchy.
 
-<p>{{ EmbedLiveSample('Example_source_code', '352', '270') }}</p>
+{{ EmbedLiveSample('Example_source_code', '352', '270') }}
 
-<p>You can see that DIV #2 (z-index: 2) is above DIV #3 (z-index: 1), because they both belong to the same stacking context (the root one), so z-index values rule how elements are stacked.</p>
+You can see that DIV #2 (z-index: 2) is above DIV #3 (z-index: 1), because they both belong to the same stacking context (the root one), so z-index values rule how elements are stacked.
 
-<p>What can be considered strange is that DIV #2 (z-index: 2) is above DIV #4 (z-index: 10), despite their z-index values. The reason is that they do not belong to the same stacking context. DIV #4 belongs to the stacking context created by DIV #3, and as explained previously DIV #3 (and all its content) is under DIV #2.</p>
+What can be considered strange is that DIV #2 (z-index: 2) is above DIV #4 (z-index: 10), despite their z-index values. The reason is that they do not belong to the same stacking context. DIV #4 belongs to the stacking context created by DIV #3, and as explained previously DIV #3 (and all its content) is under DIV #2.
 
-<p>To better understand the situation, this is the stacking context hierarchy:</p>
+To better understand the situation, this is the stacking context hierarchy:
 
-<ul>
- <li>root stacking context
-  <ul>
-   <li>DIV #2 (z-index 2)</li>
-   <li>DIV #3 (z-index 1)
-    <ul>
-     <li>DIV #4 (z-index 10)</li>
-    </ul>
-   </li>
-  </ul>
- </li>
-</ul>
+- root stacking context
 
-<div class="note">
-  <p><strong>Note:</strong> It is worth remembering that in general the HTML hierarchy is different from the stacking context hierarchy. In the stacking context hierarchy, elements that do not create a stacking context are collapsed on their parent.</p>
-</div>
+  - DIV #2 (z-index 2)
+  - DIV #3 (z-index 1)
 
-<h2 id="Example_source_code">Example source code</h2>
+    - DIV #4 (z-index 10)
 
-<pre class="brush: html">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
-&lt;html&gt;
-&lt;head&gt;&lt;style type="text/css"&gt;
+> **Note:** It is worth remembering that in general the HTML hierarchy is different from the stacking context hierarchy. In the stacking context hierarchy, elements that do not create a stacking context are collapsed on their parent.
+
+## Example source code
+
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head><style type="text/css">
 
 div { font: 12px Arial; }
 
@@ -88,46 +81,44 @@ span.bold { font-weight: bold; }
    padding-left: 10px;
 }
 
-&lt;/style&gt;&lt;/head&gt;
+</style></head>
 
-&lt;body&gt;
+<body>
 
-    &lt;br /&gt;
+    <br />
 
-    &lt;div id="div1"&gt;&lt;br /&gt;
-        &lt;span class="bold"&gt;DIV #1&lt;/span&gt;&lt;br /&gt;
+    <div id="div1"><br />
+        <span class="bold">DIV #1</span><br />
         position: relative;
-        &lt;div id="div2"&gt;&lt;br /&gt;
-            &lt;span class="bold"&gt;DIV #2&lt;/span&gt;&lt;br /&gt;
-            position: absolute;&lt;br /&gt;
+        <div id="div2"><br />
+            <span class="bold">DIV #2</span><br />
+            position: absolute;<br />
             z-index: 2;
-        &lt;/div&gt;
-    &lt;/div&gt;
+        </div>
+    </div>
 
-    &lt;br /&gt;
+    <br />
 
-    &lt;div id="div3"&gt;&lt;br /&gt;
-        &lt;span class="bold"&gt;DIV #3&lt;/span&gt;&lt;br /&gt;
-        position: relative;&lt;br /&gt;
+    <div id="div3"><br />
+        <span class="bold">DIV #3</span><br />
+        position: relative;<br />
         z-index: 1;
-        &lt;div id="div4"&gt;&lt;br /&gt;
-            &lt;span class="bold"&gt;DIV #4&lt;/span&gt;&lt;br /&gt;
-            position: absolute;&lt;br /&gt;
+        <div id="div4"><br />
+            <span class="bold">DIV #4</span><br />
+            position: absolute;<br />
             z-index: 10;
-        &lt;/div&gt;
-    &lt;/div&gt;
+        </div>
+    </div>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index">Stacking without the z-index property</a>: The stacking rules that apply when <code>z-index</code> is not used.</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float">Stacking with floated blocks</a>: How floating elements are handled with stacking.</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index">Using z-index</a>: How to use <code>z-index</code> to change default stacking.</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">The stacking context</a>: Notes on the stacking context.</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1">Stacking context example 1</a>: 2-level HTML hierarchy, <code>z-index</code> on the last level</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3">Stacking context example 3</a>: 3-level HTML hierarchy, <code>z-index</code> on the second level</li>
-</ul>
+- [Stacking without the z-index property](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index): The stacking rules that apply when `z-index` is not used.
+- [Stacking with floated blocks](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float): How floating elements are handled with stacking.
+- [Using z-index](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index): How to use `z-index` to change default stacking.
+- [The stacking context](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context): Notes on the stacking context.
+- [Stacking context example 1](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1): 2-level HTML hierarchy, `z-index` on the last level
+- [Stacking context example 3](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3): 3-level HTML hierarchy, `z-index` on the second level

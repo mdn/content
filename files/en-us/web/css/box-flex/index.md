@@ -7,18 +7,17 @@ tags:
   - Non-standard
   - Reference
   - box-flex
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.box-flex
 ---
-<p>{{CSSRef}}{{Non-standard_Header}}</p>
+{{CSSRef}}{{Non-standard_Header}}
 
-<div class="notecard warning">
-<p><strong>Warning:</strong> This is a property for controlling parts of the XUL box model. It does not match either the old CSS Flexible Box Layout Module drafts for '<code>box-flex</code>' (which were based on this property) or the behavior of '<code>-webkit-box-flex</code>' (which is based on those drafts). See <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes">flexbox</a> for information about the current standard.</p>
-</div>
+> **Warning:** This is a property for controlling parts of the XUL box model. It does not match either the old CSS Flexible Box Layout Module drafts for '`box-flex`' (which were based on this property) or the behavior of '`-webkit-box-flex`' (which is based on those drafts). See [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) for information about the current standard.
 
-<p>The <strong><code>-moz-box-flex</code></strong> and <strong><code>-webkit-box-flex</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> properties specify how a <code>-moz-box</code> or <code>-webkit-box</code> grows to fill the box that contains it, in the direction of the containing box's layout.</p>
+The **`-moz-box-flex`** and **`-webkit-box-flex`** [CSS](/en-US/docs/Web/CSS) properties specify how a `-moz-box` or `-webkit-box` grows to fill the box that contains it, in the direction of the containing box's layout.
 
-<pre class="brush:css no-line-numbers">/* &lt;number&gt; values */
+```css
+/* <number> values */
 -moz-box-flex: 0;
 -moz-box-flex: 2;
 -moz-box-flex: 3.5;
@@ -33,85 +32,84 @@ browser-compat: css.properties.box-flex
 -webkit-box-flex: inherit;
 -webkit-box-flex: initial;
 -webkit-box-flex: unset;
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>box-flex</code> property is specified as a {{CSSxRef("&lt;number&gt;")}}. If the value is 0, the box does not grow. If it is greater than 0, the box grows to fill a proportion of the available space.</p>
+The `box-flex` property is specified as a {{CSSxRef("&lt;number&gt;")}}. If the value is 0, the box does not grow. If it is greater than 0, the box grows to fill a proportion of the available space.
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>The containing box allocates the available extra space in proportion to the flex value of each of the content elements.</p>
+The containing box allocates the available extra space in proportion to the flex value of each of the content elements.
 
-<p>Content elements that have zero flex do not grow.</p>
+Content elements that have zero flex do not grow.
 
-<p>If only one content element has nonzero flex, then it grows to fill the available space.</p>
+If only one content element has nonzero flex, then it grows to fill the available space.
 
-<p>Content elements that have the same flex grow by the same absolute amounts.</p>
+Content elements that have the same flex grow by the same absolute amounts.
 
-<p>If the flex value is set using the element's <code>flex</code> attribute, then the style is ignored.</p>
+If the flex value is set using the element's `flex` attribute, then the style is ignored.
 
-<p>To make XUL elements in a containing box the same size, set the containing box's <code>equalsize</code> attribute to the value <code>always</code>. This attribute does not have a corresponding CSS property.</p>
+To make XUL elements in a containing box the same size, set the containing box's `equalsize` attribute to the value `always`. This attribute does not have a corresponding CSS property.
 
-<p>A trick to make all content elements in a containing box the same size, is to give them all a fixed size (e.g. <code>height: 0</code>), and the same <code>box-flex</code> value greater than zero (e.g. <code>-moz-box-flex: 1</code>).</p>
+A trick to make all content elements in a containing box the same size, is to give them all a fixed size (e.g. `height: 0`), and the same `box-flex` value greater than zero (e.g. `-moz-box-flex: 1`).
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_box-flex">Setting box-flex</h3>
+### Setting box-flex
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;-moz-box-flex example&lt;/title&gt;
-    &lt;style&gt;
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>-moz-box-flex example</title>
+    <style>
       div.example {
         display: -moz-box;
         display: -webkit-box;
         border: 1px solid black;
         width: 100%;
       }
-      div.example &gt; p:nth-child(1) {
+      div.example > p:nth-child(1) {
         -moz-box-flex: 1;       /* Mozilla */
         -webkit-box-flex: 1;    /* WebKit */
         border: 1px solid black;
       }
-      div.example &gt; p:nth-child(2) {
+      div.example > p:nth-child(2) {
         -moz-box-flex: 0;       /* Mozilla */
         -webkit-box-flex: 0;    /* WebKit */
         border: 1px solid black;
       }
-    &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;div class="example"&gt;
-      &lt;p&gt;I will expand to fill extra space&lt;/p&gt;
-      &lt;p&gt;I will not expand&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+    </style>
+  </head>
+  <body>
+    <div class="example">
+      <p>I will expand to fill extra space</p>
+      <p>I will not expand</p>
+    </div>
+  </body>
+</html>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{CSSxRef("box-orient")}}</li>
- <li>{{CSSxRef("box-pack")}}</li>
- <li>{{CSSxRef("box-direction")}}</li>
- <li>{{CSSxRef("flex")}}</li>
-</ul>
+- {{CSSxRef("box-orient")}}
+- {{CSSxRef("box-pack")}}
+- {{CSSxRef("box-direction")}}
+- {{CSSxRef("flex")}}

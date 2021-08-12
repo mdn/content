@@ -7,21 +7,22 @@ tags:
   - Non-standard
   - Reference
   - WebKit
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.-webkit-text-stroke-width
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>The <strong><code>-webkit-text-stroke-width</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property specifies the width of the stroke for text.</p>
+The **`-webkit-text-stroke-width`** [CSS](/en-US/docs/Web/CSS) property specifies the width of the stroke for text.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css">/* Keyword values */
+```css
+/* Keyword values */
 -webkit-text-stroke-width: thin;
 -webkit-text-stroke-width: medium;
 -webkit-text-stroke-width: thick;
 
-/* &lt;length&gt; values */
+/* <length> values */
 -webkit-text-stroke-width: 2px;
 -webkit-text-stroke-width: 0.1em;
 -webkit-text-stroke-width: 1mm;
@@ -31,30 +32,29 @@ browser-compat: css.properties.-webkit-text-stroke-width
 -webkit-text-stroke-width: inherit;
 -webkit-text-stroke-width: initial;
 -webkit-text-stroke-width: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;line-width&gt;</code></dt>
- <dd>The width of the stroke.</dd>
-</dl>
+- `<line-width>`
+  - : The width of the stroke.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Varying_stroke_widths">Varying stroke widths</h3>
+### Varying stroke widths
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   margin: 0;
   font-size: 4em;
   -webkit-text-stroke-color: red;
@@ -71,33 +71,32 @@ browser-compat: css.properties.-webkit-text-stroke-width
 #thick {
   -webkit-text-stroke-width: 1.5mm;
 }
-</pre>
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p id="thin"&gt;Thin stroke&lt;/p&gt;
-&lt;p id="medium"&gt;Medium stroke&lt;/p&gt;
-&lt;p id="thick"&gt;Thick stroke&lt;/p&gt;
-</pre>
+```html
+<p id="thin">Thin stroke</p>
+<p id="medium">Medium stroke</p>
+<p id="thick">Thick stroke</p>
+```
 
-<h4 id="Results">Results</h4>
+#### Results
 
-<p>{{EmbedLiveSample("Varying_stroke_widths", "450px", "230px")}}</p>
+{{EmbedLiveSample("Varying_stroke_widths", "450px", "230px")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://www.webkit.org/blog/85/introducing-text-stroke/">Surfin' Safari blog post announcing this feature</a></li>
- <li><a href="https://css-tricks.com/adding-stroke-to-web-text/">CSS-Tricks article explaining this feature</a></li>
- <li>{{cssxref("-webkit-text-stroke-color")}}</li>
- <li>{{cssxref("-webkit-text-stroke")}}</li>
- <li>{{cssxref("-webkit-text-fill-color")}}</li>
-</ul>
+- [Surfin' Safari blog post announcing this feature](https://www.webkit.org/blog/85/introducing-text-stroke/)
+- [CSS-Tricks article explaining this feature](https://css-tricks.com/adding-stroke-to-web-text/)
+- {{cssxref("-webkit-text-stroke-color")}}
+- {{cssxref("-webkit-text-stroke")}}
+- {{cssxref("-webkit-text-fill-color")}}

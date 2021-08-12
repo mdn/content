@@ -11,45 +11,42 @@ tags:
   - Reference
 browser-compat: css.types.basic-shape.inset
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>inset()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> function is one of the {{cssxref("&lt;basic-shape&gt;")}} <a href="/en-US/docs/Web/CSS/CSS_Types">data types</a>. It defines an inset rectangle.</p>
+The **`inset()`** [CSS](/en-US/docs/Web/CSS) function is one of the {{cssxref("&lt;basic-shape&gt;")}} [data types](/en-US/docs/Web/CSS/CSS_Types). It defines an inset rectangle.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">shape-outside: inset(20px 50px 10px 0 round 50px);</pre>
+```css
+shape-outside: inset(20px 50px 10px 0 round 50px);
+```
 
-<h3>Values</h3>
+### Values
 
-<dl>
-  <dt><code>&lt;length-percentage&gt;{1.4}</code></dt>
-  <dd><p>When all of the four arguments are supplied they represent the top, right, bottom and left offsets from the reference box inward that define the positions of the edges of the inset rectangle. These arguments follow the syntax of the margin shorthand, that let you set all four insets with one, two or four values.</p>
-  </dd>
-  <dt><code>&lt;border-radius&gt;</code></dt>
-  <dd>The optional <a href="/en-US/docs/Web/CSS/border-radius"><code>&lt;border-radius&gt;</code></a> argument(s) define rounded corners for the inset rectangle using the border-radius shorthand syntax.</dd>
-</dl>
+- `<length-percentage>{1.4}`
+  - : When all of the four arguments are supplied they represent the top, right, bottom and left offsets from the reference box inward that define the positions of the edges of the inset rectangle. These arguments follow the syntax of the margin shorthand, that let you set all four insets with one, two or four values.
+- `<border-radius>`
+  - : The optional [`<border-radius>`](/en-US/docs/Web/CSS/border-radius) argument(s) define rounded corners for the inset rectangle using the border-radius shorthand syntax.
 
-<p>When all of the first four arguments are supplied they represent the top, right, bottom and left offsets from the reference box inward that define the positions of the edges of the inset rectangle. These arguments follow the syntax of the margin shorthand, that let you set all four insets with one, two or four values.</p>
+When all of the first four arguments are supplied they represent the top, right, bottom and left offsets from the reference box inward that define the positions of the edges of the inset rectangle. These arguments follow the syntax of the margin shorthand, that let you set all four insets with one, two or four values.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3>Basic inset example</h3>
+### Basic inset example
 
-<p>In the example below we have an <code>inset()</code> shape used to pull content over the floated element. Change the offset values to see how the shape changes.</p>
+In the example below we have an `inset()` shape used to pull content over the floated element. Change the offset values to see how the shape changes.
 
-<p>{{EmbedGHLiveSample("css-examples/shapes/basic-shape/inset.html", '100%', 800)}}</p>
+{{EmbedGHLiveSample("css-examples/shapes/basic-shape/inset.html", '100%', 800)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Properties that use this data type: {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Shapes/Basic_Shapes">Guide to Basic Shapes</a></li>
-</ul>
+- Properties that use this data type: {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}
+- [Guide to Basic Shapes](/en-US/docs/Web/CSS/CSS_Shapes/Basic_Shapes)

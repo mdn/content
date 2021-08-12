@@ -10,77 +10,77 @@ tags:
   - Houdini
 browser-compat: css.at-rules.property
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>The <strong><code>@property</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> {{cssxref("at-rule")}} is part of the <a href="/en-US/docs/Web/Houdini">CSS Houdini</a> umbrella of APIs, it allows developers to explicitly define their {{cssxref('--*', 'CSS custom properties')}}, allowing for property type checking, setting default values, and define whether a property can inherit values or not.</p>
+The **`@property`** [CSS](/en-US/docs/Web/CSS) {{cssxref("at-rule")}} is part of the [CSS Houdini](/en-US/docs/Web/Houdini) umbrella of APIs, it allows developers to explicitly define their {{cssxref('--*', 'CSS custom properties')}}, allowing for property type checking, setting default values, and define whether a property can inherit values or not.
 
-<p>The <code>@property</code> rule represents a custom property registration directly in a stylesheet without having to run any JS. Valid <code>@property</code> rules result in a registered custom property, as if {{domxref('CSS.registerProperty')}} had been called with equivalent parameters.</p>
+The `@property` rule represents a custom property registration directly in a stylesheet without having to run any JS. Valid `@property` rules result in a registered custom property, as if {{domxref('CSS.registerProperty')}} had been called with equivalent parameters.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">@property --property-name {
-  syntax: '&lt;color&gt;';
-  inherits: false;
-  initial-value: #c0ffee;
-}</pre>
-
-<h3>Descriptors</h3>
-
-<dl>
-  <dt>{{cssxref("@property/syntax","syntax")}}</dt>
-  <dd>Describes the allowable syntax for the property.</dd>
-  <dt>{{cssxref("@property/inherits","inherits")}}</dt>
-  <dd>Controls whether the custom property registration specified by <code>@property</code> inherits by default.</dd>
-  <dt>{{cssxref("@property/initial-value","initial-value")}}</dt>
-  <dd>Sets the initial value for the property.</dd>
-</dl>
-
-<p>A valid <code>@property</code> rule represents a custom property registration, with the property name being the serialization of the in the rule’s prelude.</p>
-
-<p><code>@property</code> rules require a {{cssxref("@property/syntax","syntax")}} and {{cssxref("@property/inherits","inherits")}} descriptor; if either are missing, the entire rule is invalid and must be ignored. The {{cssxref("@property/initial-value","initial-value")}} descriptor is optional only if the syntax is the universal syntax definition, otherwise the descriptor is required; if it’s missing, the entire rule is invalid and must be ignored.</p>
-
-<p>Unknown descriptors are invalid and ignored, but do not invalidate the <code>@property</code> rule.</p>
-
-<h2 id="Examples">Examples</h2>
-
-<p>Add type checking to <code>--my-color</code> {{cssxref('--*', 'custom property')}}, as a color, a default value, and not allow it to inherit its value:</p>
-
-<p>Using <a href="/en-US/docs/Web/CSS">CSS</a> {{cssxref('@property')}} <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a>:</p>
-
-<pre class="brush: css">@property --my-color {
-  syntax: '&lt;color&gt;';
+```css
+@property --property-name {
+  syntax: '<color>';
   inherits: false;
   initial-value: #c0ffee;
 }
-</pre>
+```
 
-<p>Using <a href="/en-US/docs/Web/JavaScript">JavaScript</a> {{domxref('CSS.registerProperty')}}:</p>
+### Descriptors
 
-<pre class="brush: js">window.CSS.registerProperty({
+- {{cssxref("@property/syntax","syntax")}}
+  - : Describes the allowable syntax for the property.
+- {{cssxref("@property/inherits","inherits")}}
+  - : Controls whether the custom property registration specified by `@property` inherits by default.
+- {{cssxref("@property/initial-value","initial-value")}}
+  - : Sets the initial value for the property.
+
+A valid `@property` rule represents a custom property registration, with the property name being the serialization of the in the rule’s prelude.
+
+`@property` rules require a {{cssxref("@property/syntax","syntax")}} and {{cssxref("@property/inherits","inherits")}} descriptor; if either are missing, the entire rule is invalid and must be ignored. The {{cssxref("@property/initial-value","initial-value")}} descriptor is optional only if the syntax is the universal syntax definition, otherwise the descriptor is required; if it’s missing, the entire rule is invalid and must be ignored.
+
+Unknown descriptors are invalid and ignored, but do not invalidate the `@property` rule.
+
+## Examples
+
+Add type checking to `--my-color` {{cssxref('--*', 'custom property')}}, as a color, a default value, and not allow it to inherit its value:
+
+Using [CSS](/en-US/docs/Web/CSS) {{cssxref('@property')}} [at-rule](/en-US/docs/Web/CSS/At-rule):
+
+```css
+@property --my-color {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #c0ffee;
+}
+```
+
+Using [JavaScript](/en-US/docs/Web/JavaScript) {{domxref('CSS.registerProperty')}}:
+
+```js
+window.CSS.registerProperty({
   name: '--my-color',
-  syntax: '&lt;color&gt;',
+  syntax: '<color>',
   inherits: false,
   initialValue: '#c0ffee',
 });
-</pre>
+```
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/CSS_Properties_and_Values_API">CSS Properties and Values API</a></li>
- <li><a href="/en-US/docs/Web/API/CSS_Painting_API">CSS Painting API</a></li>
- <li><a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model</a></li>
- <li><a href="/en-US/docs/Web/Houdini">CSS Houdini</a></li>
-</ul>
+- [CSS Properties and Values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API)
+- [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API)
+- [CSS Typed Object Model](/en-US/docs/Web/API/CSS_Typed_OM_API)
+- [CSS Houdini](/en-US/docs/Web/Houdini)

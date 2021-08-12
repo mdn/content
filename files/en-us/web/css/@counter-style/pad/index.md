@@ -10,51 +10,53 @@ tags:
   - Reference
 browser-compat: css.at-rules.counter-style.pad
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>pad</code></strong> descriptor can be used with custom counter style definitions when you need the marker representations to have a minimum length.</p>
+The **`pad`** descriptor can be used with custom counter style definitions when you need the marker representations to have a minimum length.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">pad: 3 "0";
-</pre>
+```css
+pad: 3 "0";
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;integer&gt; &amp;&amp; &lt;symbol&gt;</code></dt>
- <dd>The <code>&lt;integer&gt;</code> specifies a minimum length that all counter representations must reach. The value must be non-negative. If the minimum length is not reached, the representation will be padded with the specified <code>&lt;symbol&gt;</code>.</dd>
-</dl>
+- `<integer> && <symbol>`
+  - : The `<integer>` specifies a minimum length that all counter representations must reach. The value must be non-negative. If the minimum length is not reached, the representation will be padded with the specified `<symbol>`.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>If a marker representation is smaller than the specified pad length, then the marker will be padded with the specified pad symbol. Marker representations longer than the pad length are constructed as normal. Pad descriptor takes the minimum marker length as an integer and a symbol to be used for padding as the second parameter. A common usage of the pad descriptor is when you need your list to start numbering from 01 and go through 02, 03 and so on, instead of just 1, 2, 3...</p>
+If a marker representation is smaller than the specified pad length, then the marker will be padded with the specified pad symbol. Marker representations longer than the pad length are constructed as normal. Pad descriptor takes the minimum marker length as an integer and a symbol to be used for padding as the second parameter. A common usage of the pad descriptor is when you need your list to start numbering from 01 and go through 02, 03 and so on, instead of just 1, 2, 3...
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Padding_a_counter">Padding a counter</h3>
+### Padding a counter
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;ul class="list"&gt;
-  &lt;li&gt;One&lt;/li&gt;
-  &lt;li&gt;Two&lt;/li&gt;
-  &lt;li&gt;Three&lt;/li&gt;
-  &lt;li&gt;Four&lt;/li&gt;
-  &lt;li&gt;Five&lt;/li&gt;
-&lt;/ul&gt;</pre>
+```html
+<ul class="list">
+  <li>One</li>
+  <li>Two</li>
+  <li>Three</li>
+  <li>Four</li>
+  <li>Five</li>
+</ul>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">@counter-style pad-example {
+```css
+@counter-style pad-example {
   system: numeric;
   symbols: "0" "1" "2" "3" "4" "5";
   pad: 2 "0";
@@ -62,23 +64,22 @@ browser-compat: css.at-rules.counter-style.pad
 
 .list {
   list-style: pad-example;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Padding_a_counter', '', '', '', 'Web/CSS/@counter-style/pad') }}</p>
+{{ EmbedLiveSample('Padding_a_counter', '', '', '', 'Web/CSS/@counter-style/pad') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}</li>
- <li>{{cssxref("symbols()", "symbols()")}}, the functional notation creating anonymous counter styles.</li>
-</ul>
+- {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
+- {{cssxref("symbols()", "symbols()")}}, the functional notation creating anonymous counter styles.

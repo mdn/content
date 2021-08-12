@@ -16,56 +16,57 @@ tags:
   - radio
 browser-compat: css.selectors.checked
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>:checked</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> selector represents any <strong>radio </strong>(<code><a href="/en-US/docs/Web/HTML/Element/input/radio">&lt;input type="radio"&gt;</a></code>), <strong>checkbox </strong>(<code><a href="/en-US/docs/Web/HTML/Element/input/checkbox">&lt;input type="checkbox"&gt;</a></code>), or <strong>option</strong> ({{HTMLElement("option")}} in a {{HTMLElement("select")}}) element that is checked or toggled to an <code>on</code> state.</p>
+The **`:checked`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selector represents any **radio** ([`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio)), **checkbox** ([`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox)), or **option** ({{HTMLElement("option")}} in a {{HTMLElement("select")}}) element that is checked or toggled to an `on` state.
 
-<pre class="brush: css no-line-numbers">/* Matches any checked/selected radio, checkbox, or option */
+```css
+/* Matches any checked/selected radio, checkbox, or option */
 :checked {
   margin-left: 25px;
   border: 1px solid blue;
 }
-</pre>
+```
 
-<p>The user can engage this state by checking/selecting an element, or disengage it by unchecking/deselecting the element.</p>
+The user can engage this state by checking/selecting an element, or disengage it by unchecking/deselecting the element.
 
-<div class="note">
-<p><strong>Note:</strong> Because browsers often treat <code>&lt;option&gt;</code>s as <a href="/en-US/docs/Web/CSS/Replaced_element">replaced elements</a>, the extent to which they can be styled with the <code>:checked</code> pseudo-class varies from browser to browser.</p>
-</div>
+> **Note:** Because browsers often treat `<option>`s as [replaced elements](/en-US/docs/Web/CSS/Replaced_element), the extent to which they can be styled with the `:checked` pseudo-class varies from browser to browser.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_example">Basic example</h3>
+### Basic example
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;input type="radio" name="my-input" id="yes"&gt;
-  &lt;label for="yes"&gt;Yes&lt;/label&gt;
+```html
+<div>
+  <input type="radio" name="my-input" id="yes">
+  <label for="yes">Yes</label>
 
-  &lt;input type="radio" name="my-input" id="no"&gt;
-  &lt;label for="no"&gt;No&lt;/label&gt;
-&lt;/div&gt;
+  <input type="radio" name="my-input" id="no">
+  <label for="no">No</label>
+</div>
 
-&lt;div&gt;
-  &lt;input type="checkbox" name="my-checkbox" id="opt-in"&gt;
-  &lt;label for="opt-in"&gt;Check me!&lt;/label&gt;
-&lt;/div&gt;
+<div>
+  <input type="checkbox" name="my-checkbox" id="opt-in">
+  <label for="opt-in">Check me!</label>
+</div>
 
-&lt;select name="my-select" id="fruit"&gt;
-  &lt;option value="opt1"&gt;Apples&lt;/option&gt;
-  &lt;option value="opt2"&gt;Grapes&lt;/option&gt;
-  &lt;option value="opt3"&gt;Pears&lt;/option&gt;
-&lt;/select&gt;
-</pre>
+<select name="my-select" id="fruit">
+  <option value="opt1">Apples</option>
+  <option value="opt2">Grapes</option>
+  <option value="opt3">Pears</option>
+</select>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div,
+```css
+div,
 select {
   margin: 8px;
 }
@@ -90,39 +91,41 @@ option:checked {
   box-shadow: 0 0 0 3px lime;
   color: red;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Basic_example")}}</p>
+{{EmbedLiveSample("Basic_example")}}
 
-<h3 id="Toggling_elements_with_a_hidden_checkbox">Toggling elements with a hidden checkbox</h3>
+### Toggling elements with a hidden checkbox
 
-<p>This example utilizes the <code>:checked</code> pseudo-class to let the user toggle content based on the state of a checkbox, all without using <a href="/en-US/docs/Web/JavaScript">JavaScript</a>.</p>
+This example utilizes the `:checked` pseudo-class to let the user toggle content based on the state of a checkbox, all without using [JavaScript](/en-US/docs/Web/JavaScript).
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;input type="checkbox" id="expand-toggle" /&gt;
+```html
+<input type="checkbox" id="expand-toggle" />
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;&lt;th&gt;Column #1&lt;/th&gt;&lt;th&gt;Column #2&lt;/th&gt;&lt;th&gt;Column #3&lt;/th&gt;&lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr class="expandable"&gt;&lt;td&gt;[more text]&lt;/td&gt;&lt;td&gt;[more text]&lt;/td&gt;&lt;td&gt;[more text]&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td&gt;[cell text]&lt;/td&gt;&lt;td&gt;[cell text]&lt;/td&gt;&lt;td&gt;[cell text]&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td&gt;[cell text]&lt;/td&gt;&lt;td&gt;[cell text]&lt;/td&gt;&lt;td&gt;[cell text]&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr class="expandable"&gt;&lt;td&gt;[more text]&lt;/td&gt;&lt;td&gt;[more text]&lt;/td&gt;&lt;td&gt;[more text]&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr class="expandable"&gt;&lt;td&gt;[more text]&lt;/td&gt;&lt;td&gt;[more text]&lt;/td&gt;&lt;td&gt;[more text]&lt;/td&gt;&lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+<table>
+  <thead>
+    <tr><th>Column #1</th><th>Column #2</th><th>Column #3</th></tr>
+  </thead>
+  <tbody>
+    <tr class="expandable"><td>[more text]</td><td>[more text]</td><td>[more text]</td></tr>
+    <tr><td>[cell text]</td><td>[cell text]</td><td>[cell text]</td></tr>
+    <tr><td>[cell text]</td><td>[cell text]</td><td>[cell text]</td></tr>
+    <tr class="expandable"><td>[more text]</td><td>[more text]</td><td>[more text]</td></tr>
+    <tr class="expandable"><td>[more text]</td><td>[more text]</td><td>[more text]</td></tr>
+  </tbody>
+</table>
 
-&lt;label for="expand-toggle" id="expand-btn"&gt;Toggle hidden rows&lt;/label&gt;
-</pre>
+<label for="expand-toggle" id="expand-btn">Toggle hidden rows</label>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">/* Hide the toggle checkbox */
+```css
+/* Hide the toggle checkbox */
 #expand-toggle {
   display: none;
 }
@@ -151,36 +154,30 @@ option:checked {
 /* Style the button when the checkbox is checked */
 #expand-toggle:checked ~ #expand-btn {
   background-color: #ccc;
-}</pre>
+}
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Toggling_elements_with_a_hidden_checkbox", "auto", 220)}}</p>
+{{EmbedLiveSample("Toggling_elements_with_a_hidden_checkbox", "auto", 220)}}
 
-<h3 id="Image_gallery">Image gallery</h3>
+### Image gallery
 
-<p>You can use the <code>:checked</code> pseudo-class to build an image gallery with full-size images that show only when the user clicks on a thumbnail. See <a href="/@api/deki/files/6268/=css-checked-gallery.zip" title="css-checked-gallery.zip">this demo</a> for a possible cue.</p>
+You can use the `:checked` pseudo-class to build an image gallery with full-size images that show only when the user clicks on a thumbnail. See [this demo](/@api/deki/files/6268/=css-checked-gallery.zip "css-checked-gallery.zip") for a possible cue.
 
-<div class="note">
-  <p><strong>Note:</strong> For an analogous effect, but based on the <a href="/en-US/docs/Web/CSS/:hover"><code>:hover</code></a> pseudo-class and without hidden radioboxes, see <a href="/@api/deki/files/6247/=css-gallery.zip" title="css-gallery.zip">this demo</a>, taken from the <a href="/en-US/docs/Web/CSS/:hover">:hover</a> reference page.</p>
-</div>
+> **Note:** For an analogous effect, but based on the [`:hover`](/en-US/docs/Web/CSS/:hover) pseudo-class and without hidden radioboxes, see [this demo](/@api/deki/files/6247/=css-gallery.zip "css-gallery.zip"), taken from the [:hover](/en-US/docs/Web/CSS/:hover) reference page.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Learn/Forms">Web forms — working with user data</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Styling_web_forms">Styling web forms</a></li>
- <li>Related HTML elements: <code><a href="/en-US/docs/Web/HTML/Element/input/checkbox">&lt;input type="checkbox"&gt;</a></code>, <code><a href="/en-US/docs/Web/HTML/Element/input/radio">&lt;input type="radio"&gt;</a></code>, {{HTMLElement("select")}}, and {{HTMLElement("option")}}</li>
- <li><a href="/en-US/docs/Web/CSS/Replaced_element">Replaced elements</a></li>
-</ul>
-</div>
+- [Web forms — working with user data](/en-US/docs/Learn/Forms)
+- [Styling web forms](/en-US/docs/Learn/Forms/Styling_web_forms)
+- Related HTML elements: [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox), [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio), {{HTMLElement("select")}}, and {{HTMLElement("option")}}
+- [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)

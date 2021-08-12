@@ -7,32 +7,31 @@ tags:
   - CSS Property
   - Experimental
   - Reference
-  - 'recipe:css-shorthand-property'
+  - recipe:css-shorthand-property
 browser-compat: css.properties.border-inline
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>border-inline</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property is a <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a> for setting the individual logical inline border property values in a single place in the style sheet.</p>
+The **`border-inline`** [CSS](/en-US/docs/Web/CSS) property is a [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) for setting the individual logical inline border property values in a single place in the style sheet.
 
-<div>{{EmbedInteractiveExample("pages/css/border-inline.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-inline.html")}}
 
-<p>The physical borders to which <code>border-inline</code> maps depends on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top")}} and {{cssxref("border-bottom")}} or {{cssxref("border-right")}}, and {{cssxref("border-left")}} properties, depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.</p>
+The physical borders to which `border-inline` maps depends on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top")}} and {{cssxref("border-bottom")}} or {{cssxref("border-right")}}, and {{cssxref("border-left")}} properties, depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
 
-<p>The borders in the other dimension can be set with {{cssxref("border-block")}}, which sets {{cssxref("border-block-start")}}, and {{cssxref("border-block-end")}}.</p>
+The borders in the other dimension can be set with {{cssxref("border-block")}}, which sets {{cssxref("border-block-start")}}, and {{cssxref("border-block-end")}}.
 
-<h2 id="Constituent_properties">Constituent properties</h2>
+## Constituent properties
 
-<p>This property is a shorthand for the following CSS properties:</p>
+This property is a shorthand for the following CSS properties:
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/border-inline-color"><code>border-inline-color</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/border-inline-style"><code>border-inline-style</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/border-inline-width"><code>border-inline-width</code></a></li>
-</ul>
+- [`border-inline-color`](/en-US/docs/Web/CSS/border-inline-color)
+- [`border-inline-style`](/en-US/docs/Web/CSS/border-inline-style)
+- [`border-inline-width`](/en-US/docs/Web/CSS/border-inline-width)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">border-inline: 1px;
+```css
+border-inline: 1px;
 border-inline: 2px dotted;
 border-inline: medium dashed blue;
 
@@ -40,43 +39,44 @@ border-inline: medium dashed blue;
 border-inline: inherit;
 border-inline: initial;
 border-inline: revert;
-border-inline: unset;</pre>
+border-inline: unset;
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<p>The <code>border-inline</code> is specified with one or more of the following, in any order:</p>
+The `border-inline` is specified with one or more of the following, in any order:
 
-<dl>
- <dt><code>&lt;'border-width'&gt;</code></dt>
- <dd>The width of the border. See {{cssxref("border-width")}}.</dd>
- <dt><code>&lt;'border-style'&gt;</code></dt>
- <dd>The line style of the border. See {{cssxref("border-style")}}.</dd>
- <dt><code>&lt;'color'&gt;</code></dt>
- <dd>The color of the border. See {{cssxref("color")}}.</dd>
-</dl>
+- `<'border-width'>`
+  - : The width of the border. See {{cssxref("border-width")}}.
+- `<'border-style'>`
+  - : The line style of the border. See {{cssxref("border-style")}}.
+- `<'color'>`
+  - : The color of the border. See {{cssxref("color")}}.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Border_with_vertical_text">Border with vertical text</h3>
+### Border with vertical text
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="exampleText"&gt;Example text&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <p class="exampleText">Example text</p>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   background-color: yellow;
   width: 120px;
   height: 120px;
@@ -85,23 +85,22 @@ border-inline: unset;</pre>
 .exampleText {
   writing-mode: vertical-rl;
   border-inline: 5px dashed blue;
-}</pre>
+}
+```
 
-<h4 id="Results">Results</h4>
+#### Results
 
-<p>{{EmbedLiveSample("Border_with_vertical_text", 140, 140)}}</p>
+{{EmbedLiveSample("Border_with_vertical_text", 140, 140)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>This property maps to one of the physical border properties: {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, or {{cssxref("border-left")}}.</li>
- <li>{{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}</li>
-</ul>
+- This property maps to one of the physical border properties: {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, or {{cssxref("border-left")}}.
+- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

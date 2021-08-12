@@ -9,27 +9,30 @@ tags:
   - media feature
 browser-compat: css.at-rules.media.grid
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>grid</code></strong> <a href="/en-US/docs/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features">media feature</a> can be used to test whether the output device uses a grid-based screen.</p>
+The **`grid`** [CSS](/en-US/docs/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) can be used to test whether the output device uses a grid-based screen.
 
-<p>Most modern computers and smartphones have bitmap-based screens. Examples of grid-based devices include text-only terminals and basic phones with only one fixed font.</p>
+Most modern computers and smartphones have bitmap-based screens. Examples of grid-based devices include text-only terminals and basic phones with only one fixed font.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>grid</code> feature is specified as a {{cssxref("&lt;mq-boolean&gt;")}} value (<code>0</code> or <code>1</code>) representing whether or not the output device is grid-based.</p>
+The `grid` feature is specified as a {{cssxref("&lt;mq-boolean&gt;")}} value (`0` or `1`) representing whether or not the output device is grid-based.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="unknown"&gt;I don't know if you're using a grid device. :-(&lt;/p&gt;
-&lt;p class="bitmap"&gt;You are using a bitmap device.&lt;/p&gt;
-&lt;p class="grid"&gt;You are using a grid device! Neato!&lt;/p&gt;</pre>
+```html
+<p class="unknown">I don't know if you're using a grid device. :-(</p>
+<p class="bitmap">You are using a bitmap device.</p>
+<p class="grid">You are using a grid device! Neato!</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">:not(.unknown) {
+```css
+:not(.unknown) {
   color: lightgray;
 }
 
@@ -53,23 +56,22 @@ browser-compat: css.at-rules.media.grid
     color: black;
     text-transform: uppercase;
   }
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Using Media Queries</a></li>
- <li><a href="/en-US/docs/Web/CSS/@media">@media</a></li>
-</ul>
+- [Using Media Queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [@media](/en-US/docs/Web/CSS/@media)

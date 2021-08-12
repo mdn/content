@@ -7,18 +7,17 @@ tags:
   - Non-standard
   - Reference
   - box-pack
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.box-pack
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<div class="notecard warning">
- <p><strong>Warning:</strong> This is a property of the original CSS Flexible Box Layout Module draft, and has been replaced by a newer standard. See <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes">flexbox</a> for information about the current standard.</p>
-</div>
+> **Warning:** This is a property of the original CSS Flexible Box Layout Module draft, and has been replaced by a newer standard. See [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) for information about the current standard.
 
-<p>The <strong><code>-moz-box-pack</code></strong> and <strong><code>-webkit-box-pack</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> properties specify how a <code>-moz-box</code> or <code>-webkit-box</code> packs its contents in the direction of its layout. The effect of this is only visible if there is extra space in the box.</p>
+The **`-moz-box-pack`** and **`-webkit-box-pack`** [CSS](/en-US/docs/Web/CSS) properties specify how a `-moz-box` or `-webkit-box` packs its contents in the direction of its layout. The effect of this is only visible if there is extra space in the box.
 
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 box-pack: start;
 box-pack: center;
 box-pack: end;
@@ -28,73 +27,70 @@ box-pack: justify;
 box-pack: inherit;
 box-pack: initial;
 box-pack: unset;
-</pre>
+```
 
-<p>The direction of layout depends on the element's orientation: horizontal or vertical.</p>
+The direction of layout depends on the element's orientation: horizontal or vertical.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>box-pack</code> property is specified as one of the keyword values listed below.</p>
+The `box-pack` property is specified as one of the keyword values listed below.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>start</code></dt>
- <dd>The box packs contents at the start, leaving any extra space at the end.</dd>
- <dt><code>center</code></dt>
- <dd>The box packs contents in the center, dividing any extra space equally between the start and the end.</dd>
- <dt><code>end</code></dt>
- <dd>The box packs contents at the end, leaving any extra space at the start.</dd>
- <dt><code>justify</code></dt>
- <dd>The space is divided evenly in-between each child, with none of the extra space placed before the first child or after the last child. If there is only one child, treat the value as if it were <code>start</code>.</dd>
-</dl>
+- `start`
+  - : The box packs contents at the start, leaving any extra space at the end.
+- `center`
+  - : The box packs contents in the center, dividing any extra space equally between the start and the end.
+- `end`
+  - : The box packs contents at the end, leaving any extra space at the start.
+- `justify`
+  - : The space is divided evenly in-between each child, with none of the extra space placed before the first child or after the last child. If there is only one child, treat the value as if it were `start`.
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>The edge of the box designated the <em>start</em> for packing purposes depends on the box's orientation and direction:</p>
+The edge of the box designated the _start_ for packing purposes depends on the box's orientation and direction:
 
-<ul>
-  <li>For horizontal elements, the <em>start</em> is the top edge.</li>
-  <li>For vertical elements, the <em>start</em> is the left edge.</li>
-</ul>
+- For horizontal elements, the _start_ is the top edge.
+- For vertical elements, the _start_ is the left edge.
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th></th>
-   <th><strong>Normal</strong></th>
-   <th><strong>Reverse</strong></th>
-  </tr>
-  <tr>
-   <th><strong>Horizontal</strong></th>
-   <td>left</td>
-   <td>right</td>
-  </tr>
-  <tr>
-   <th><strong>Vertical</strong></th>
-   <td>top</td>
-   <td>bottom</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th></th>
+      <th><strong>Normal</strong></th>
+      <th><strong>Reverse</strong></th>
+    </tr>
+    <tr>
+      <th><strong>Horizontal</strong></th>
+      <td>left</td>
+      <td>right</td>
+    </tr>
+    <tr>
+      <th><strong>Vertical</strong></th>
+      <td>top</td>
+      <td>bottom</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>The edge opposite to the start is designated the <em>end</em>.</p>
+The edge opposite to the start is designated the _end_.
 
-<p>If the packing is set using the element's <code>pack</code> attribute, then the style is ignored.</p>
+If the packing is set using the element's `pack` attribute, then the style is ignored.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{CSSSyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Examples_of_box-pack">Examples of box-pack</h3>
+### Examples of box-pack
 
-<pre class="brush: css">div.example {
+```css
+div.example {
   border-style: solid;
 
   display: -moz-box; /* Mozilla */
@@ -125,28 +121,27 @@ div.example p {
      so there is room for the box-align */
   width: 200px;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="example"&gt;
-  &lt;p&gt;I will be second from the bottom of div.example, centered horizontally.&lt;/p&gt;
-  &lt;p&gt;I will be on the bottom of div.example, centered horizontally.&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="example">
+  <p>I will be second from the bottom of div.example, centered horizontally.</p>
+  <p>I will be on the bottom of div.example, centered horizontally.</p>
+</div>
+```
 
-<div>{{EmbedLiveSample('Examples', 310, 310)}}</div>
+{{EmbedLiveSample('Examples', 310, 310)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{CSSxRef("box-orient")}}</li>
- <li>{{CSSxRef("box-direction")}}</li>
- <li>{{CSSxRef("box-align")}}</li>
-</ul>
+- {{CSSxRef("box-orient")}}
+- {{CSSxRef("box-direction")}}
+- {{CSSxRef("box-align")}}

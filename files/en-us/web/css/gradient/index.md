@@ -11,137 +11,152 @@ tags:
   - Reference
 browser-compat: css.types.image.gradient
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>&lt;gradient&gt;</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Types">data type</a> is a special type of {{cssxref("&lt;image&gt;")}} that consists of a progressive transition between two or more colors.</p>
+The **`<gradient>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) is a special type of {{cssxref("&lt;image&gt;")}} that consists of a progressive transition between two or more colors.
 
-<div>{{EmbedInteractiveExample("pages/css/type-gradient.html")}}</div>
+{{EmbedInteractiveExample("pages/css/type-gradient.html")}}
 
+A CSS gradient has [no intrinsic dimensions](/en-US/docs/Web/CSS/image#description); i.e., it has no natural or preferred size, nor a preferred ratio. Its concrete size will match the size of the element to which it applies.
 
-<p>A CSS gradient has <a href="/en-US/docs/Web/CSS/image#description">no intrinsic dimensions</a>; i.e., it has no natural or preferred size, nor a preferred ratio. Its concrete size will match the size of the element to which it applies.</p>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+The `<gradient>` data type is defined with one of the function types listed below.
 
-<p>The <code>&lt;gradient&gt;</code> data type is defined with one of the function types listed below.</p>
+#### Linear gradient
 
-<h4 id="Linear_gradient">Linear gradient</h4>
+Linear gradients transition colors progressively along an imaginary line. They are generated with the {{cssxref("gradient/linear-gradient()", "linear-gradient()")}} function.
 
-<p>Linear gradients transition colors progressively along an imaginary line. They are generated with the {{cssxref("gradient/linear-gradient()", "linear-gradient()")}} function.</p>
+#### Radial gradient
 
-<h4 id="Radial_gradient">Radial gradient</h4>
+Radial gradients transition colors progressively from a center point (origin). They are generated with the {{cssxref("gradient/radial-gradient()", "radial-gradient()")}} function.
 
-<p>Radial gradients transition colors progressively from a center point (origin). They are generated with the {{cssxref("gradient/radial-gradient()", "radial-gradient()")}} function.</p>
+#### Repeating gradient
 
-<h4 id="Repeating_gradient">Repeating gradient</h4>
+Repeating gradients duplicate a gradient as much as necessary to fill a given area. They are generated with the {{cssxref("gradient/repeating-linear-gradient()", "repeating-linear-gradient()")}} and {{cssxref("gradient/repeating-radial-gradient()", "repeating-radial-gradient()")}} functions.
 
-<p>Repeating gradients duplicate a gradient as much as necessary to fill a given area. They are generated with the {{cssxref("gradient/repeating-linear-gradient()", "repeating-linear-gradient()")}} and {{cssxref("gradient/repeating-radial-gradient()", "repeating-radial-gradient()")}} functions.</p>
+#### Conic gradient
 
-<h4 id="Conic_gradient">Conic gradient</h4>
+Conic gradients transition colors progressively around a circle. They are generated with the {{cssxref("gradient/conic-gradient()", "conic-gradient()")}} function.
 
-<p>Conic gradients transition colors progressively around a circle. They are generated with the {{cssxref("gradient/conic-gradient()", "conic-gradient()")}} function.</p>
+## Interpolation
 
-<h2 id="Interpolation">Interpolation</h2>
+As with any interpolation involving colors, gradients are calculated in the alpha-premultiplied color space. This prevents unexpected shades of gray from appearing when both the color and the opacity are changing. (Be aware that older browsers may not use this behavior when using the [transparent keyword](/en-US/docs/Web/CSS/color_value#transparent_keyword).)
 
-<p>As with any interpolation involving colors, gradients are calculated in the alpha-premultiplied color space. This prevents unexpected shades of gray from appearing when both the color and the opacity are changing. (Be aware that older browsers may not use this behavior when using the <a href="/en-US/docs/Web/CSS/color_value#transparent_keyword">transparent keyword</a>.)</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Linear gradient example
 
-<h3 id="Linear_gradient_example">Linear gradient example</h3>
+A simple linear gradient.
 
-<p>A simple linear gradient.</p>
+```html hidden
+<div class="linear-gradient">Linear gradient</div>
+```
 
-<pre class="brush: html hidden">&lt;div class="linear-gradient"&gt;Linear gradient&lt;/div&gt;
-</pre>
-
-<pre class="brush: css hidden">div {
+```css hidden
+div {
   width: 240px;
   height: 80px;
-}</pre>
+}
+```
 
-<pre class="brush: css">.linear-gradient {
+```css
+.linear-gradient {
   background: linear-gradient(to right,
       red, orange, yellow, green, blue, indigo, violet);
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample('Linear_gradient_example', 240, 120)}}</p>
+{{EmbedLiveSample('Linear_gradient_example', 240, 120)}}
 
-<h3 id="Radial_gradient_example">Radial gradient example</h3>
+### Radial gradient example
 
-<p>A simple radial gradient.</p>
+A simple radial gradient.
 
-<pre class="brush: html hidden">&lt;div class="radial-gradient"&gt;Radial gradient&lt;/div&gt;
-</pre>
+```html hidden
+<div class="radial-gradient">Radial gradient</div>
+```
 
-<pre class="brush: css hidden">div {
+```css hidden
+div {
   width: 240px;
   height: 80px;
-}</pre>
+}
+```
 
-<pre class="brush: css">.radial-gradient {
+```css
+.radial-gradient {
   background: radial-gradient(red, yellow, rgb(30, 144, 255));
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Radial_gradient_example', 240, 120)}}</p>
+{{EmbedLiveSample('Radial_gradient_example', 240, 120)}}
 
-<h3 id="Repeating_gradient_examples">Repeating gradient examples</h3>
+### Repeating gradient examples
 
-<p>Simple repeating linear and radial gradient examples.</p>
+Simple repeating linear and radial gradient examples.
 
-<pre class="brush: html hidden">&lt;div class="linear-repeat"&gt;Repeating linear gradient&lt;/div&gt;
-&lt;br&gt;
-&lt;div class="radial-repeat"&gt;Repeating radial gradient&lt;/div&gt;
-</pre>
+```html hidden
+<div class="linear-repeat">Repeating linear gradient</div>
+<br>
+<div class="radial-repeat">Repeating radial gradient</div>
+```
 
-<pre class="brush: css hidden">div {
+```css hidden
+div {
   width: 240px;
   height: 80px;
-}</pre>
+}
+```
 
-<pre class="brush: css">.linear-repeat {
+```css
+.linear-repeat {
   background: repeating-linear-gradient(to top left,
       lightpink, lightpink 5px, white 5px, white 10px);
 }
 
 .radial-repeat {
   background: repeating-radial-gradient(powderblue, powderblue 8px, white 8px, white 16px);
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample('Repeating_gradient_examples', 240, 220)}}</p>
+{{EmbedLiveSample('Repeating_gradient_examples', 240, 220)}}
 
-<h3 id="Conic_gradient_example">Conic gradient example</h3>
+### Conic gradient example
 
-<p>A simple conic gradient example. Note that this isn't supported widely across browser as of yet.</p>
+A simple conic gradient example. Note that this isn't supported widely across browser as of yet.
 
-<pre class="brush: html hidden">&lt;div class="conic-gradient"&gt;Conic gradient&lt;/div&gt;
-</pre>
+```html hidden
+<div class="conic-gradient">Conic gradient</div>
+```
 
-<pre class="brush: css hidden">div {
+```css hidden
+div {
   width: 200px;
   height: 200px;
-}</pre>
+}
+```
 
-<pre class="brush: css">.conic-gradient {
+```css
+.conic-gradient {
   background: conic-gradient(lightpink, white, powderblue);
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Conic_gradient_example', 240, 240)}}</p>
+{{EmbedLiveSample('Conic_gradient_example', 240, 240)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients">Using CSS gradients</a></li>
- <li>Gradient functions: {{cssxref("gradient/linear-gradient()", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient()", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient()", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient()", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient()", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient()", "repeating-conic-gradient()")}}</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Types">CSS Basic Data Types</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Values_and_Units">CSS Units and Values</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Values_and_units">Introduction to CSS: Values and Units</a></li>
-</ul>
+- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- Gradient functions: {{cssxref("gradient/linear-gradient()", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient()", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient()", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient()", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient()", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient()", "repeating-conic-gradient()")}}
+- [CSS Basic Data Types](/en-US/docs/Web/CSS/CSS_Types)
+- [CSS Units and Values](/en-US/docs/Web/CSS/CSS_Values_and_Units)
+- [Introduction to CSS: Values and Units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)

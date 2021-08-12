@@ -7,23 +7,24 @@ tags:
   - CSS Property
   - Non-standard
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.-webkit-mask-position-x
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>The <code>-webkit-mask-position-x</code> CSS property sets the initial horizontal position of a mask image.</p>
+The `-webkit-mask-position-x` CSS property sets the initial horizontal position of a mask image.
 
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 -webkit-mask-position-x: left;
 -webkit-mask-position-x: center;
 -webkit-mask-position-x: right;
 
-/* &lt;percentage&gt; values */
+/* <percentage> values */
 -webkit-mask-position-x: 100%;
 -webkit-mask-position-x: -50%;
 
-/* &lt;length&gt; values */
+/* <length> values */
 -webkit-mask-position-x: 50px;
 -webkit-mask-position-x: -1cm;
 
@@ -34,38 +35,37 @@ browser-compat: css.properties.-webkit-mask-position-x
 -webkit-mask-position-x: inherit;
 -webkit-mask-position-x: initial;
 -webkit-mask-position-x: unset;
-</pre>
+```
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;length-percentage&gt;</code></dt>
- <dd>A length indicating the position of the left edge of the image relative to the box's left padding edge. Percentages are calculated against the horizontal dimension of the box padding area. That means, a value of <code>0%</code> means the left edge of the image is aligned with the box's left padding edge and a value of <code>100%</code> means the right edge of the image is aligned with the box's right padding edge.</dd>
- <dt><code><strong>left</strong></code></dt>
- <dd>Equivalent to <code>0%</code>.</dd>
- <dt><code><strong>center</strong></code></dt>
- <dd>Equivalent to <code>50%</code>.</dd>
- <dt><code><strong>right</strong></code></dt>
- <dd>Equivalent to <code>100%</code>.</dd>
-</dl>
+- `<length-percentage>`
+  - : A length indicating the position of the left edge of the image relative to the box's left padding edge. Percentages are calculated against the horizontal dimension of the box padding area. That means, a value of `0%` means the left edge of the image is aligned with the box's left padding edge and a value of `100%` means the right edge of the image is aligned with the box's right padding edge.
+- **`left`**
+  - : Equivalent to `0%`.
+- **`center`**
+  - : Equivalent to `50%`.
+- **`right`**
+  - : Equivalent to `100%`.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Horizontally_positioning_a_mask_image">Horizontally positioning a mask image</h3>
+### Horizontally positioning a mask image
 
-<pre class="brush:css">.exampleOne {
+```css
+.exampleOne {
   -webkit-mask-image: url(mask.png);
   -webkit-mask-position-x: right;
 }
@@ -74,16 +74,16 @@ browser-compat: css.properties.-webkit-mask-position-x
   -webkit-mask-image: url(mask.png);
   -webkit-mask-position-x: 25%;
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<p>{{cssxref("-webkit-mask-position")}}, {{cssxref("-webkit-mask-position-y")}}, {{cssxref("-webkit-mask-origin")}}, {{cssxref("-webkit-mask-attachment")}}</p>
+{{cssxref("-webkit-mask-position")}}, {{cssxref("-webkit-mask-position-y")}}, {{cssxref("-webkit-mask-origin")}}, {{cssxref("-webkit-mask-attachment")}}

@@ -1,6 +1,6 @@
 ---
 title: ':nth-of-type()'
-slug: 'Web/CSS/:nth-of-type'
+slug: Web/CSS/:nth-of-type
 tags:
   - CSS
   - Layout
@@ -10,44 +10,49 @@ tags:
   - Web
 browser-compat: css.selectors.nth-of-type
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>:nth-of-type()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> matches elements of a given type (tag name), based on their position among a group of siblings.</p>
+The **`:nth-of-type()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements of a given type (tag name), based on their position among a group of siblings.
 
-<pre class="brush: css no-line-numbers  language-css">/* Selects every fourth &lt;p&gt; element
+```css
+/* Selects every fourth <p> element
    among any group of siblings */
 p:nth-of-type(4n) {
   color: lime;
-}</pre>
+}
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>nth-of-type</code> pseudo-class is specified with a single argument, which represents the pattern for matching elements.</p>
+The `nth-of-type` pseudo-class is specified with a single argument, which represents the pattern for matching elements.
 
-<p>See {{Cssxref(":nth-child")}} for a more detailed explanation of its syntax.</p>
+See {{Cssxref(":nth-child")}} for a more detailed explanation of its syntax.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_example">Basic example</h3>
+### Basic example
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;div&gt;This element isn't counted.&lt;/div&gt;
-  &lt;p&gt;1st paragraph.&lt;/p&gt;
-  &lt;p class="fancy"&gt;2nd paragraph.&lt;/p&gt;
-  &lt;div&gt;This element isn't counted.&lt;/div&gt;
-  &lt;p class="fancy"&gt;3rd paragraph.&lt;/p&gt;
-  &lt;p&gt;4th paragraph.&lt;/p&gt;
-&lt;/div&gt;</pre>
+```html
+<div>
+  <div>This element isn't counted.</div>
+  <p>1st paragraph.</p>
+  <p class="fancy">2nd paragraph.</p>
+  <div>This element isn't counted.</div>
+  <p class="fancy">3rd paragraph.</p>
+  <p>4th paragraph.</p>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">/* Odd paragraphs */
+```css
+/* Odd paragraphs */
 p:nth-of-type(2n+1) {
   color: red;
 }
@@ -67,26 +72,22 @@ The second paragraph has a class of fancy but is not matched as it is not :nth-o
 p.fancy:nth-of-type(2n+1) {
   text-decoration: underline;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Basic_example', 250, 250)}}</p>
+{{EmbedLiveSample('Basic_example', 250, 250)}}
 
-<div class="notecard note">
-  <p><strong>Note:</strong> There is no way to select the nth-of-class using this selector. The selector looks at the type only when creating the list of matches. You can however apply CSS to an element based on <code>:nth-of-type</code> location <strong>and</strong> a class, as shown in the example above.</p>
-</div>
+> **Note:** There is no way to select the nth-of-class using this selector. The selector looks at the type only when creating the list of matches. You can however apply CSS to an element based on `:nth-of-type` location **and** a class, as shown in the example above.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Cssxref(":nth-child")}}, {{Cssxref(":nth-last-of-type")}}</li>
-</ul>
+- {{Cssxref(":nth-child")}}, {{Cssxref(":nth-last-of-type")}}

@@ -7,85 +7,70 @@ tags:
   - Overview
   - css scrollbars
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p><strong>CSS Scrollbars</strong> standardizes the obsolete scrollbar color properties introduced in 2000 by Windows IE 5.5.</p>
+**CSS Scrollbars** standardizes the obsolete scrollbar color properties introduced in 2000 by Windows IE 5.5.
 
-<h2 id="Basic_Example">Basic Example</h2>
+## Basic Example
 
-<p>In this example we have chosen to use a thin scrollbar, with a green track and purple thumb.</p>
+In this example we have chosen to use a thin scrollbar, with a green track and purple thumb.
 
-<pre class="brush:css">.scroller {
+```css
+.scroller {
   width: 300px;
   height: 100px;
   overflow-y: scroll;
   scrollbar-color: rebeccapurple green;
   scrollbar-width: thin;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="scroller"&gt;
+```html
+<div class="scroller">
 Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi
 welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.
 Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
 tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
 Dandelion cucumber earthnut pea peanut soko zucchini.
-&lt;/div&gt;</pre>
+</div>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Basic_Example")}}</p>
+{{EmbedLiveSample("Basic_Example")}}
 
-<h2 id="Reference">Reference</h2>
+## Reference
 
-<h3 id="CSS_Properties">CSS Properties</h3>
+### CSS Properties
 
-<ul>
- <li>{{CSSxRef("scrollbar-width")}}</li>
- <li>{{CSSxRef("scrollbar-color")}}</li>
-</ul>
+- {{CSSxRef("scrollbar-width")}}
+- {{CSSxRef("scrollbar-color")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Scrollbars")}}</td>
-   <td>{{Spec2("CSS Scrollbars")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                            | Status                               | Comment             |
+| ---------------------------------------- | ------------------------------------ | ------------------- |
+| {{SpecName("CSS Scrollbars")}} | {{Spec2("CSS Scrollbars")}} | Initial definition. |
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+## Accessibility concerns
 
-<p>When you customize scrollbars, consider they have enough contrast and that their hit area is large enough for people who use touch input.</p>
+When you customize scrollbars, consider they have enough contrast and that their hit area is large enough for people who use touch input.
 
-<ul>
- <li><a href="http://adrianroselli.com/2019/01/baseline-rules-for-scrollbar-usability.html">Baseline Rules for Scrollbar Usability | Adrian Roselli</a></li>
-</ul>
+- [Baseline Rules for Scrollbar Usability | Adrian Roselli](http://adrianroselli.com/2019/01/baseline-rules-for-scrollbar-usability.html)
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<h3 id="scrollbar-width">scrollbar-width</h3>
+### scrollbar-width
 
-<div>{{Compat("css.properties.scrollbar-width")}}</div>
+{{Compat("css.properties.scrollbar-width")}}
 
-<h3 id="scrollbar-color">scrollbar-color</h3>
+### scrollbar-color
 
-<div>{{Compat("css.properties.scrollbar-color")}}</div>
+{{Compat("css.properties.scrollbar-color")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{CSSxRef("::-webkit-scrollbar")}}</li>
- <li>{{CSSxRef("-ms-overflow-style")}}</li>
-</ul>
+- {{CSSxRef("::-webkit-scrollbar")}}
+- {{CSSxRef("-ms-overflow-style")}}

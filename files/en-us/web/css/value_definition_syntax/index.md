@@ -7,433 +7,386 @@ tags:
   - Reference
   - Syntax
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>CSS value definition syntax</strong>, a formal grammar, is used for defining the set of valid values for a CSS property or function. In addition to this syntax, the set of valid values can be further restricted by semantic constraints (for example, for a number to be strictly positive).</p>
+**CSS value definition syntax**, a formal grammar, is used for defining the set of valid values for a CSS property or function. In addition to this syntax, the set of valid values can be further restricted by semantic constraints (for example, for a number to be strictly positive).
 
-<p>The definition syntax describes which values are allowed and the interactions between them. A component can be a <em>keyword</em>, some characters considered as a <em>literal</em>, or a value of a given CSS data type or of another CSS property.</p>
+The definition syntax describes which values are allowed and the interactions between them. A component can be a _keyword_, some characters considered as a _literal_, or a value of a given CSS data type or of another CSS property.
 
-<h2 id="Component_value_types">Component value types</h2>
+## Component value types
 
-<h3 id="Keywords">Keywords</h3>
+### Keywords
 
-<h4 id="Generic_keywords">Generic keywords</h4>
+#### Generic keywords
 
-<p>A keyword with a predefined meaning appears literally, without quotation marks. For example: <code>auto</code>, <code>smaller</code> or <code>ease-in</code>.</p>
+A keyword with a predefined meaning appears literally, without quotation marks. For example: `auto`, `smaller` or `ease-in`.
 
-<h4 id="The_specific_case_of_inherit_initial_and_unset">The specific case of <code>inherit</code>, <code>initial</code> and <code>unset</code></h4>
+#### The specific case of `inherit`, `initial` and `unset`
 
-<p>All CSS properties accept the keywords <code>inherit</code>, <code>initial</code> and <code>unset</code>, that are defined throughout CSS. They are not shown in the value definition, and are implicitly defined.</p>
+All CSS properties accept the keywords `inherit`, `initial` and `unset`, that are defined throughout CSS. They are not shown in the value definition, and are implicitly defined.
 
-<h3 id="Literals">Literals</h3>
+### Literals
 
-<p>In CSS, a few characters can appear on their own, like the slash ('<code>/</code>') or the comma ('<code>,</code>'), and are used in a property definition to separate its parts. The comma is often used to separate values in enumerations, or parameters in mathematical-like functions; the slash often separates parts of the value that are semantically different, but have a common syntax. Typically, the slash is used in shorthand properties; to separate component that are of the same type, but belong to different properties.</p>
+In CSS, a few characters can appear on their own, like the slash ('`/`') or the comma ('`,`'), and are used in a property definition to separate its parts. The comma is often used to separate values in enumerations, or parameters in mathematical-like functions; the slash often separates parts of the value that are semantically different, but have a common syntax. Typically, the slash is used in shorthand properties; to separate component that are of the same type, but belong to different properties.
 
-<p>Both symbols appear literally in a value definition.</p>
+Both symbols appear literally in a value definition.
 
-<h3 id="Data_types">Data types</h3>
+### Data types
 
-<h4 id="Basic_data_types">Basic data types</h4>
+#### Basic data types
 
-<p>Some kind of data are used throughout CSS, and are defined once for all values in the specification. Called <em>basic data types</em>, they are represented with their name surrounded by the symbol '<code>&lt;</code>' and '<code>&gt;</code>': {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;string&gt;")}}, …</p>
+Some kind of data are used throughout CSS, and are defined once for all values in the specification. Called _basic data types_, they are represented with their name surrounded by the symbol '`<`' and '`>`': {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;string&gt;")}}, …
 
-<h4 id="Non-terminal_data_types">Non-terminal data types</h4>
+#### Non-terminal data types
 
-<p>Less common data types, called <em>non-terminal data types</em>, are also surrounded  by '<code>&lt;</code>' and '<code>&gt;</code>'.</p>
+Less common data types, called _non-terminal data types_, are also surrounded  by '`<`' and '`>`'.
 
-<p>Non-terminal data types are of two kinds:</p>
+Non-terminal data types are of two kinds:
 
-<ul>
- <li>data types <em>sharing the same name of a property</em>, put between quotes. In this case, the data type shares the same set of values as the property. They are often used in the definition of shorthand properties.</li>
- <li>data type <em>not sharing the same name of a property</em>. These data types are very close to the basic data types. They only differ from the basic data types in the physical location of their definition. In this case, the definition is usually physically very close to the definition of the property using them.</li>
-</ul>
+- data types _sharing the same name of a property_, put between quotes. In this case, the data type shares the same set of values as the property. They are often used in the definition of shorthand properties.
+- data type _not sharing the same name of a property_. These data types are very close to the basic data types. They only differ from the basic data types in the physical location of their definition. In this case, the definition is usually physically very close to the definition of the property using them.
 
-<h2 id="Component_value_combinators">Component value combinators</h2>
+## Component value combinators
 
-<h3 id="Brackets">Brackets</h3>
+### Brackets
 
-<p><em>Brackets</em> enclose several entities, combinators, and multipliers, then transform them as a single component. They are used to <strong>group components to bypass the precedence rules</strong>.</p>
+_Brackets_ enclose several entities, combinators, and multipliers, then transform them as a single component. They are used to **group components to bypass the precedence rules**.
 
-<pre class="brush: css">bold [ thin &amp;&amp; &lt;length&gt; ]</pre>
+```css
+bold [ thin && <length> ]
+```
 
-<p>This example matches the following values:</p>
+This example matches the following values:
 
-<ul>
- <li><code>bold thin 2vh</code></li>
- <li><code>bold 0 thin</code></li>
- <li><code>bold thin 3.5em</code></li>
-</ul>
+- `bold thin 2vh`
+- `bold 0 thin`
+- `bold thin 3.5em`
 
-<p>But not:</p>
+But not:
 
-<ul>
- <li><code>thin bold 3em</code>, as <code>bold</code> is juxtaposed with the component defined by the brackets, it must appear before it.</li>
-</ul>
+- `thin bold 3em`, as `bold` is juxtaposed with the component defined by the brackets, it must appear before it.
 
-<h3 id="Juxtaposition">Juxtaposition</h3>
+### Juxtaposition
 
-<p>Placing several keywords, literals or data types, next to one another, only separated by one or several spaces, is called <em>juxtaposition</em>. All juxtaposed components are <strong>mandatory and should appear in the exact order</strong>.</p>
+Placing several keywords, literals or data types, next to one another, only separated by one or several spaces, is called _juxtaposition_. All juxtaposed components are **mandatory and should appear in the exact order**.
 
-<pre class="brush: css">bold &lt;length&gt; , thin
-</pre>
+```css
+bold <length> , thin
+```
 
-<p>This example matches the following values:</p>
+This example matches the following values:
 
-<ul>
- <li><code>bold 1em, thin</code></li>
- <li><code>bold 0, thin</code></li>
- <li><code>bold 2.5cm, thin</code></li>
- <li><code>bold 3vh, thin</code></li>
-</ul>
+- `bold 1em, thin`
+- `bold 0, thin`
+- `bold 2.5cm, thin`
+- `bold 3vh, thin`
 
-<p>But not:</p>
+But not:
 
-<ul>
- <li><code>thin 1em, bold</code>, as the entities must be in the expressed order</li>
- <li><code>bold 1em thin</code>, as the entities are mandatory; the comma, a literal, must be present</li>
- <li><code>bold 0.5ms, thin</code>, as the <code>ms</code> values are not {{CSSxRef("&lt;length&gt;")}}</li>
-</ul>
+- `thin 1em, bold`, as the entities must be in the expressed order
+- `bold 1em thin`, as the entities are mandatory; the comma, a literal, must be present
+- `bold 0.5ms, thin`, as the `ms` values are not {{CSSxRef("&lt;length&gt;")}}
 
-<h3 id="Double_ampersand">Double ampersand</h3>
+### Double ampersand
 
-<p>Separating two or more components, by a <em>double ampersand</em>, <code>&amp;&amp;</code>, means that all these entities are <strong>mandatory but may appear in any order</strong>.</p>
+Separating two or more components, by a _double ampersand_, `&&`, means that all these entities are **mandatory but may appear in any order**.
 
-<pre class="brush: css">bold &amp;&amp; &lt;length&gt;
-</pre>
+```css
+bold && <length>
+```
 
-<p>This example matches the following values:</p>
+This example matches the following values:
 
-<ul>
- <li><code>bold 1em</code></li>
- <li><code>bold 0</code></li>
- <li><code>2.5cm bold</code></li>
- <li><code>3vh bold</code></li>
-</ul>
+- `bold 1em`
+- `bold 0`
+- `2.5cm bold`
+- `3vh bold`
 
-<p>But not:</p>
+But not:
 
-<ul>
- <li><code>bold</code>, as both components must appear in the value.</li>
- <li><code>bold 1em bold</code>, as both components must appear only one time.</li>
-</ul>
+- `bold`, as both components must appear in the value.
+- `bold 1em bold`, as both components must appear only one time.
 
-<div class="notecard note">
-<p><strong>Note:</strong> juxtaposition has precedence over the double ampersand, meaning that <code>bold thin &amp;&amp; &lt;length&gt;</code> is equivalent to <code>[ bold thin ] &amp;&amp; &lt;length&gt;</code>. It describes <code>bold thin &lt;length&gt;</code> or <code>&lt;length&gt; bold thin</code> but not <code>bold &lt;length&gt; thin</code>.</p>
-</div>
+> **Note:** juxtaposition has precedence over the double ampersand, meaning that `bold thin && <length>` is equivalent to `[ bold thin ] && <length>`. It describes `bold thin <length>` or `<length> bold thin` but not `bold <length> thin`.
 
-<h3 id="Double_bar">Double bar</h3>
+### Double bar
 
-<p>Separating two or more components by a <em>double bar</em>, <code>||</code>, means that all entities are options: <strong>at least one of them must be present, and they may appear in any order</strong>. Typically this is used to define the different values of a <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a>.</p>
+Separating two or more components by a _double bar_, `||`, means that all entities are options: **at least one of them must be present, and they may appear in any order**. Typically this is used to define the different values of a [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties).
 
-<pre class="brush: css">&lt;'border-width'&gt; || &lt;'border-style'&gt; || &lt;'border-color'&gt;
-</pre>
+```css
+<'border-width'> || <'border-style'> || <'border-color'>
+```
 
-<p>This example matches the following values:</p>
+This example matches the following values:
 
-<ul>
- <li><code>1em solid blue</code></li>
- <li><code>blue 1em</code></li>
- <li><code>solid 1px yellow</code></li>
-</ul>
+- `1em solid blue`
+- `blue 1em`
+- `solid 1px yellow`
 
-<p>But not:</p>
+But not:
 
-<ul>
- <li><code>blue yellow</code>, as a component must appear at most one single time.</li>
- <li><code>bold</code>, as it isn't a keyword allowed as value of any of the entity.</li>
-</ul>
+- `blue yellow`, as a component must appear at most one single time.
+- `bold`, as it isn't a keyword allowed as value of any of the entity.
 
-<div class="notecard note">
-<p><strong>Note:</strong> the double ampersand has precedence over the double bar, meaning that <code>bold || thin &amp;&amp; &lt;length&gt;</code> is equivalent to <code>bold || [ thin &amp;&amp; &lt;length&gt; ]</code>. It describes <code>bold</code>, <code>thin &lt;length&gt;</code>, <code>bold thin &lt;length&gt;</code>, or <code>thin &lt;length&gt; bold</code> but not <code>&lt;length&gt; bold thin</code> as bold, if not omitted, must be placed before or after the whole <code>thin &amp;&amp; &lt;length&gt;</code> component.</p>
-</div>
+> **Note:** the double ampersand has precedence over the double bar, meaning that `bold || thin && <length>` is equivalent to `bold || [ thin && <length> ]`. It describes `bold`, `thin <length>`, `bold thin <length>`, or `thin <length> bold` but not `<length> bold thin` as bold, if not omitted, must be placed before or after the whole `thin && <length>` component.
 
-<h3 id="Single_bar">Single bar</h3>
+### Single bar
 
-<p>Separating two or more entities by a <em>single bar</em>, <code>|</code>, means that all entities are exclusive options: <strong>exactly one of these options must be present</strong>. This is typically used to separate a list of possible keywords.</p>
+Separating two or more entities by a _single bar_, `|`, means that all entities are exclusive options: **exactly one of these options must be present**. This is typically used to separate a list of possible keywords.
 
-<pre class="brush: css">&lt;percentage&gt; | &lt;length&gt; | left | center | right | top | bottom</pre>
+```css
+<percentage> | <length> | left | center | right | top | bottom
+```
 
-<p>This example matches the following values:</p>
+This example matches the following values:
 
-<ul>
- <li><code>3%</code></li>
- <li><code>0</code></li>
- <li><code>3.5em</code></li>
- <li><code>left</code></li>
- <li><code>center</code></li>
- <li><code>right</code></li>
- <li><code>top</code></li>
- <li><code>bottom</code></li>
-</ul>
+- `3%`
+- `0`
+- `3.5em`
+- `left`
+- `center`
+- `right`
+- `top`
+- `bottom`
 
-<p>But not:</p>
+But not:
 
-<ul>
- <li><code>center 3%</code>, as only one of the components must be present.</li>
- <li><code>3em 4.5em</code>, as a component must be present at most one time.</li>
-</ul>
+- `center 3%`, as only one of the components must be present.
+- `3em 4.5em`, as a component must be present at most one time.
 
-<div class="notecard note">
-<p><strong>Note:</strong> the double bar has precedence over the single bar, meaning that <code>bold | thin || &lt;length&gt;</code> is equivalent to <code>bold | [ thin || &lt;length&gt; ]</code>. It describes <code>bold</code>, <code>thin</code>, <code>&lt;length&gt;</code>, <code>&lt;length&gt; thin</code>, or <code>thin &lt;length&gt; </code>but not <code>bold &lt;length&gt;</code> as only one entity from each side of the <code>|</code> combinator can be present.</p>
-</div>
+> **Note:** the double bar has precedence over the single bar, meaning that `bold | thin || <length>` is equivalent to `bold | [ thin || <length> ]`. It describes `bold`, `thin`, `<length>`, `<length> thin`, or `thin <length> `but not `bold <length>` as only one entity from each side of the `|` combinator can be present.
 
-<h2 id="Component_value_multipliers">Component value multipliers</h2>
+## Component value multipliers
 
-<p>A multiplier is a sign that indicate how many times a preceding entity can be repeated. Without a multiplier, an entity must appear exactly one time.</p>
+A multiplier is a sign that indicate how many times a preceding entity can be repeated. Without a multiplier, an entity must appear exactly one time.
 
-<p>Note that multipliers cannot be added and have all precedence over combinators.</p>
+Note that multipliers cannot be added and have all precedence over combinators.
 
-<h3 id="Asterisk">Asterisk (<code>*</code>)</h3>
+### Asterisk (`*`)
 
-<p>The <em>asterisk multiplier</em> indicates that the entity may appear <strong>zero, one or several times</strong>.</p>
+The _asterisk multiplier_ indicates that the entity may appear **zero, one or several times**.
 
-<pre class="brush: css">bold smaller*</pre>
+```css
+bold smaller*
+```
 
-<p>This example matches the following values:</p>
+This example matches the following values:
 
-<ul>
- <li><code>bold</code></li>
- <li><code>bold smaller</code></li>
- <li><code>bold smaller smaller</code></li>
- <li><code>bold smaller smaller smaller</code>, and so on.</li>
-</ul>
+- `bold`
+- `bold smaller`
+- `bold smaller smaller`
+- `bold smaller smaller smaller`, and so on.
 
-<p>But not:</p>
+But not:
 
-<ul>
- <li><code>smaller</code>, as <code>bold</code> is juxtaposed, and must appear before any <code>smaller</code> keyword.</li>
-</ul>
+- `smaller`, as `bold` is juxtaposed, and must appear before any `smaller` keyword.
 
-<h3 id="Plus">Plus (<code>+</code>)</h3>
+### Plus (`+`)
 
-<p>The <em>plus multiplier</em> indicates that the entity may appear <strong>one or several times</strong>.</p>
+The _plus multiplier_ indicates that the entity may appear **one or several times**.
 
-<pre class="brush: css">bold smaller+</pre>
+```css
+bold smaller+
+```
 
-<p>This example matches the following values:</p>
+This example matches the following values:
 
-<ul>
- <li><code>bold smaller</code></li>
- <li><code>bold smaller smaller</code></li>
- <li><code>bold smaller smaller smaller</code>, and so on.</li>
-</ul>
+- `bold smaller`
+- `bold smaller smaller`
+- `bold smaller smaller smaller`, and so on.
 
-<p>But not:</p>
+But not:
 
-<ul>
- <li><code>bold</code>, as <code>smaller</code> must appear at least one time.</li>
- <li><code>smaller</code>, as <code>bold</code> is juxtaposed and must appear before any <code>smaller</code> keyword.</li>
-</ul>
+- `bold`, as `smaller` must appear at least one time.
+- `smaller`, as `bold` is juxtaposed and must appear before any `smaller` keyword.
 
-<h3 id="Question_mark">Question mark (<code>?</code>)</h3>
+### Question mark (`?`)
 
-<p>The <em>question mark multiplier</em> indicates that the entity is optional, and <strong>must appear zero or one time</strong>.</p>
+The _question mark multiplier_ indicates that the entity is optional, and **must appear zero or one time**.
 
-<pre class="brush: css">bold smaller?</pre>
+```css
+bold smaller?
+```
 
-<p>This example matches the following values:</p>
+This example matches the following values:
 
-<ul>
- <li><code>bold</code></li>
- <li><code>bold smaller</code></li>
-</ul>
+- `bold`
+- `bold smaller`
 
-<p>But not:</p>
+But not:
 
-<ul>
- <li><code>bold smaller smaller</code>, as <code>smaller</code> must appear at most one time.</li>
- <li><code>smaller</code>, as <code>bold</code> is juxtaposed and must appear before any <code>smaller</code> keyword.</li>
-</ul>
+- `bold smaller smaller`, as `smaller` must appear at most one time.
+- `smaller`, as `bold` is juxtaposed and must appear before any `smaller` keyword.
 
-<h3 id="Curly_braces">Curly braces (<code>{ }</code>)</h3>
+### Curly braces (`{ }`)
 
-<p>The <em>curly braces multiplier</em>, enclosing two integers separated by a comma, A and B, indicates that the entity <strong>must appear at least A times and at most B times</strong>.</p>
+The _curly braces multiplier_, enclosing two integers separated by a comma, A and B, indicates that the entity **must appear at least A times and at most B times**.
 
-<pre class="brush: css">bold smaller{1,3}</pre>
+```css
+bold smaller{1,3}
+```
 
-<p>This example matches the following values:</p>
+This example matches the following values:
 
-<ul>
- <li><code>bold smaller</code></li>
- <li><code>bold smaller smaller</code></li>
- <li><code>bold smaller smaller smaller</code></li>
-</ul>
+- `bold smaller`
+- `bold smaller smaller`
+- `bold smaller smaller smaller`
 
-<p>But not:</p>
+But not:
 
-<ul>
- <li><code>bold</code>, as <code>smaller</code> must appear at least one time.</li>
- <li><code>bold smaller smaller smaller smaller</code>, as <code>smaller</code> must appear at most three times.</li>
- <li><code>smaller</code>, as <code>bold</code> is juxtaposed and must appear before any <code>smaller</code> keyword</li>
-</ul>
+- `bold`, as `smaller` must appear at least one time.
+- `bold smaller smaller smaller smaller`, as `smaller` must appear at most three times.
+- `smaller`, as `bold` is juxtaposed and must appear before any `smaller` keyword
 
-<h3 id="Hash_mark">Hash mark (<code>#</code>)</h3>
+### Hash mark (`#`)
 
-<p>The <em>hash mark multiplier</em> indicates that the entity may be repeated one or more times (for example, the plus multiplier), but each occurrence is separated by a comma (',').</p>
+The _hash mark multiplier_ indicates that the entity may be repeated one or more times (for example, the plus multiplier), but each occurrence is separated by a comma (',').
 
-<pre class="brush: css">bold smaller#</pre>
+```css
+bold smaller#
+```
 
-<p>This example matches the following values:</p>
+This example matches the following values:
 
-<ul>
- <li><code>bold smaller</code></li>
- <li><code>bold smaller, smaller</code></li>
- <li><code>bold smaller, smaller, smaller</code>, and so on.</li>
-</ul>
+- `bold smaller`
+- `bold smaller, smaller`
+- `bold smaller, smaller, smaller`, and so on.
 
-<p>But not:</p>
+But not:
 
-<ul>
- <li><code>bold</code>, as <code>smaller</code> must appear at least one time.</li>
- <li><code>bold smaller smaller smaller</code>, as the different occurrence of <code>smaller</code> must be separated by commas.</li>
- <li><code>smaller</code>, as <code>bold</code> is juxtaposed and must appear before any <code>smaller</code> keyword.</li>
-</ul>
+- `bold`, as `smaller` must appear at least one time.
+- `bold smaller smaller smaller`, as the different occurrence of `smaller` must be separated by commas.
+- `smaller`, as `bold` is juxtaposed and must appear before any `smaller` keyword.
 
-<h3 id="Exclamation_point">Exclamation point (<code>!</code>)</h3>
+### Exclamation point (`!`)
 
-<p>The <em>exclamation point multiplier</em> after a group indicates that the group is required, and must produce at least one value; even if the grammar of the items within the group would otherwise allow the entire contents to be omitted, at least one component value must not be omitted.</p>
+The _exclamation point multiplier_ after a group indicates that the group is required, and must produce at least one value; even if the grammar of the items within the group would otherwise allow the entire contents to be omitted, at least one component value must not be omitted.
 
-<pre class="brush: css">[ bold? smaller? ]!
-</pre>
+```css
+[ bold? smaller? ]!
+```
 
-<p>This example matches the following values:</p>
+This example matches the following values:
 
-<ul>
- <li><code>bold</code></li>
- <li><code>smaller</code></li>
- <li><code>bold smaller</code></li>
-</ul>
+- `bold`
+- `smaller`
+- `bold smaller`
 
-<p>But not:</p>
+But not:
 
-<ul>
- <li>neither <code>bold</code> nor <code>smaller</code>, as one of them must appear.</li>
- <li><code>smaller bold</code>, as <code>bold</code> is juxtaposed and must appear before the <code>smaller</code> keyword.</li>
- <li><code>bold smaller bold</code>, as <code>bold</code> and <code>smaller</code> may only appear once.</li>
-</ul>
+- neither `bold` nor `smaller`, as one of them must appear.
+- `smaller bold`, as `bold` is juxtaposed and must appear before the `smaller` keyword.
+- `bold smaller bold`, as `bold` and `smaller` may only appear once.
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Sign</th>
-   <th scope="col">Name</th>
-   <th scope="col">Description</th>
-   <th scope="col">Example</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th colspan="4">Combinators</th>
-  </tr>
-  <tr>
-   <td></td>
-   <td>Juxtaposition</td>
-   <td>Components are mandatory and should appear in that order</td>
-   <td><code>solid &lt;length&gt;</code></td>
-  </tr>
-  <tr>
-   <td><code>&amp;&amp;</code></td>
-   <td>Double ampersand</td>
-   <td>Components are mandatory but may appear in any order</td>
-   <td><code>&lt;length&gt; &amp;&amp; &lt;string&gt;</code></td>
-  </tr>
-  <tr>
-   <td><code>||</code></td>
-   <td>Double bar</td>
-   <td>At least one of the components must be present, and they may appear in any order.</td>
-   <td><code>&lt;'border-image-outset'&gt; || &lt;'border-image-slice'&gt;</code></td>
-  </tr>
-  <tr>
-   <td><code>|</code></td>
-   <td>Single bar</td>
-   <td>Exactly one of the components must be present</td>
-   <td><code>smaller | small | normal | big | bigger</code></td>
-  </tr>
-  <tr>
-   <td><code>[ ]</code></td>
-   <td>Brackets</td>
-   <td>Group components to bypass precedence rules</td>
-   <td><code>bold [ thin &amp;&amp; &lt;length&gt; ]</code></td>
-  </tr>
-  <tr>
-   <th colspan="4">Multipliers</th>
-  </tr>
-  <tr>
-   <td></td>
-   <td>No multiplier</td>
-   <td>Exactly 1 times</td>
-   <td><code>solid</code></td>
-  </tr>
-  <tr>
-   <td><code>*</code></td>
-   <td>Asterisk</td>
-   <td>0 or more times</td>
-   <td><code>bold smaller*</code></td>
-  </tr>
-  <tr>
-   <td><code>+</code></td>
-   <td>Plus sign</td>
-   <td>1 or more times</td>
-   <td><code>bold smaller+</code></td>
-  </tr>
-  <tr>
-   <td><code>?</code></td>
-   <td>Question mark</td>
-   <td>0 or 1 time (that is <em>optional)</em></td>
-   <td><code>bold smaller?</code></td>
-  </tr>
-  <tr>
-   <td><code>{A,B}</code></td>
-   <td>Curly braces</td>
-   <td>At least <code>A</code> times, at most <code>B</code> times</td>
-   <td><code>bold smaller{1,3}</code></td>
-  </tr>
-  <tr>
-   <td><code>#</code></td>
-   <td>Hash mark</td>
-   <td>1 or more times, but each occurrence separated by a comma ('<code>,</code>')</td>
-   <td><code>bold smaller#</code></td>
-  </tr>
-  <tr>
-   <td><code>!</code></td>
-   <td>Exclamation point</td>
-   <td>Group must produce at least 1 value</td>
-   <td><code>[ bold? smaller? ]!</code></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Sign</th>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th colspan="4">Combinators</th>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Juxtaposition</td>
+      <td>Components are mandatory and should appear in that order</td>
+      <td><code>solid &#x3C;length></code></td>
+    </tr>
+    <tr>
+      <td><code>&#x26;&#x26;</code></td>
+      <td>Double ampersand</td>
+      <td>Components are mandatory but may appear in any order</td>
+      <td><code>&#x3C;length> &#x26;&#x26; &#x3C;string></code></td>
+    </tr>
+    <tr>
+      <td><code>||</code></td>
+      <td>Double bar</td>
+      <td>
+        At least one of the components must be present, and they may appear in
+        any order.
+      </td>
+      <td>
+        <code>&#x3C;'border-image-outset'> || &#x3C;'border-image-slice'></code>
+      </td>
+    </tr>
+    <tr>
+      <td><code>|</code></td>
+      <td>Single bar</td>
+      <td>Exactly one of the components must be present</td>
+      <td><code>smaller | small | normal | big | bigger</code></td>
+    </tr>
+    <tr>
+      <td><code>[ ]</code></td>
+      <td>Brackets</td>
+      <td>Group components to bypass precedence rules</td>
+      <td><code>bold [ thin &#x26;&#x26; &#x3C;length> ]</code></td>
+    </tr>
+    <tr>
+      <th colspan="4">Multipliers</th>
+    </tr>
+    <tr>
+      <td></td>
+      <td>No multiplier</td>
+      <td>Exactly 1 times</td>
+      <td><code>solid</code></td>
+    </tr>
+    <tr>
+      <td><code>*</code></td>
+      <td>Asterisk</td>
+      <td>0 or more times</td>
+      <td><code>bold smaller*</code></td>
+    </tr>
+    <tr>
+      <td><code>+</code></td>
+      <td>Plus sign</td>
+      <td>1 or more times</td>
+      <td><code>bold smaller+</code></td>
+    </tr>
+    <tr>
+      <td><code>?</code></td>
+      <td>Question mark</td>
+      <td>0 or 1 time (that is <em>optional)</em></td>
+      <td><code>bold smaller?</code></td>
+    </tr>
+    <tr>
+      <td><code>{A,B}</code></td>
+      <td>Curly braces</td>
+      <td>At least <code>A</code> times, at most <code>B</code> times</td>
+      <td><code>bold smaller{1,3}</code></td>
+    </tr>
+    <tr>
+      <td><code>#</code></td>
+      <td>Hash mark</td>
+      <td>
+        1 or more times, but each occurrence separated by a comma
+        ('<code>,</code>')
+      </td>
+      <td><code>bold smaller#</code></td>
+    </tr>
+    <tr>
+      <td><code>!</code></td>
+      <td>Exclamation point</td>
+      <td>Group must produce at least 1 value</td>
+      <td><code>[ bold? smaller? ]!</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Values", "#value-defs", "Value definition syntax")}}</td>
-   <td>{{Spec2("CSS3 Values")}}</td>
-   <td>Adds the hash mark multiplier.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS2.1", "about.html#value-defs", "Value definition syntax")}}</td>
-   <td>{{Spec2("CSS2.1")}}</td>
-   <td>Adds the double ampersand combinator.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS1", "#notation-for-property-values", "Value definition syntax")}}</td>
-   <td>{{Spec2("CSS1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                | Status                           | Comment                               |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------- |
+| {{SpecName("CSS3 Values", "#value-defs", "Value definition syntax")}}                 | {{Spec2("CSS3 Values")}} | Adds the hash mark multiplier.        |
+| {{SpecName("CSS2.1", "about.html#value-defs", "Value definition syntax")}}         | {{Spec2("CSS2.1")}}         | Adds the double ampersand combinator. |
+| {{SpecName("CSS1", "#notation-for-property-values", "Value definition syntax")}} | {{Spec2("CSS1")}}         | Initial definition                    |
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{CSS_key_concepts}}</li>
-</ul>
+- {{CSS_key_concepts}}

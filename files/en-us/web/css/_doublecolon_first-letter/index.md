@@ -9,64 +9,63 @@ tags:
   - Selector
 browser-compat: css.selectors.first-letter
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>::first-letter</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> applies styles to the first letter of the first line of a <a href="/en-US/docs/Web/CSS/Visual_formatting_model#block-level_elements_and_block_boxes">block-level element</a>, but only when not preceded by other content (such as images or inline tables).</p>
+The **`::first-letter`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) applies styles to the first letter of the first line of a [block-level element](/en-US/docs/Web/CSS/Visual_formatting_model#block-level_elements_and_block_boxes), but only when not preceded by other content (such as images or inline tables).
 
-<pre class="brush: css no-line-numbers">/* Selects the first letter of a &lt;p&gt; */
+```css
+/* Selects the first letter of a <p> */
 p::first-letter {
   font-size: 130%;
-}</pre>
+}
+```
 
-<p>The first letter of an element is not always trivial to identify:</p>
+The first letter of an element is not always trivial to identify:
 
-<ul>
- <li>Punctuation that precedes or immediately follows the first letter is included in the match. Punctuation includes any Unicode character defined in the <em>open</em> (Ps), <em>close</em> (Pe), <em>initial quote</em> (Pi), <em>final quote</em> (Pf), and <em>other punctuation</em> (Po) classes.</li>
- <li>Some languages have digraphs that are always capitalized together, like the <code>IJ</code> in Dutch. In these cases, both letters of the digraph should be matched by the <code>::first-letter</code> pseudo-element.</li>
- <li>A combination of the {{ cssxref("::before") }} pseudo-element and the {{ cssxref("content") }} property may inject some text at the beginning of the element. In that case, <code>::first-letter</code> will match the first letter of this generated content.</li>
-</ul>
+- Punctuation that precedes or immediately follows the first letter is included in the match. Punctuation includes any Unicode character defined in the _open_ (Ps), _close_ (Pe), _initial quote_ (Pi), _final quote_ (Pf), and _other punctuation_ (Po) classes.
+- Some languages have digraphs that are always capitalized together, like the `IJ` in Dutch. In these cases, both letters of the digraph should be matched by the `::first-letter` pseudo-element.
+- A combination of the {{ cssxref("::before") }} pseudo-element and the {{ cssxref("content") }} property may inject some text at the beginning of the element. In that case, `::first-letter` will match the first letter of this generated content.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> CSS3 introduced the <code>::first-letter</code> notation (with two colons) to distinguish <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-classes</a> from <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elements</a>. Browsers also accept <code>:first-letter</code>, introduced in CSS2.</p>
+> **Note:** CSS3 introduced the `::first-letter` notation (with two colons) to distinguish [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) from [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements). Browsers also accept `:first-letter`, introduced in CSS2.
+>
+> Browser support for digraphs such as `IJ` in Dutch is poor. Check the compatibility table below to see the current state of support.
 
-<p>Browser support for digraphs such as <code>IJ</code> in Dutch is poor. Check the compatibility table below to see the current state of support.</p>
-</div>
+## Allowable properties
 
-<h2 id="Allowable_properties">Allowable properties</h2>
+Only a small subset of CSS properties can be used with the `::first-letter` pseudo-element:
 
-<p>Only a small subset of CSS properties can be used with the <code>::first-letter</code> pseudo-element:</p>
+- All font properties : {{ Cssxref("font") }}, {{ Cssxref("font-style") }}, {{cssxref("font-feature-settings")}}, {{cssxref("font-kerning")}}, {{cssxref("font-language-override")}}, {{cssxref("font-stretch")}}, {{cssxref("font-synthesis")}}, {{ Cssxref("font-variant") }}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-position")}}, {{ Cssxref("font-weight") }}, {{ Cssxref("font-size") }}, {{cssxref("font-size-adjust")}}, {{ Cssxref("line-height") }} and {{ Cssxref("font-family") }}
+- All background properties : {{ Cssxref("background") }}, {{ Cssxref("background-color") }}, {{ Cssxref("background-image") }}, {{cssxref("background-clip")}}, {{cssxref("background-origin")}}, {{ Cssxref("background-position") }}, {{ Cssxref("background-repeat") }}, {{ cssxref("background-size") }}, {{ Cssxref("background-attachment") }}, and {{cssxref("background-blend-mode")}}
+- All margin properties: {{ Cssxref("margin") }}, {{ Cssxref("margin-top") }}, {{ Cssxref("margin-right") }}, {{ Cssxref("margin-bottom") }}, {{ Cssxref("margin-left") }}
+- All padding properties: {{ Cssxref("padding") }}, {{ Cssxref("padding-top") }}, {{ Cssxref("padding-right") }}, {{ Cssxref("padding-bottom") }}, {{ Cssxref("padding-left") }}
+- All border properties: the shorthands {{ Cssxref("border") }}, {{ Cssxref("border-style") }}, {{ Cssxref("border-color") }}, {{ cssxref("border-width") }}, {{ cssxref("border-radius") }}, {{cssxref("border-image")}}, and the longhands properties
+- The {{ cssxref("color") }} property
+- The {{ cssxref("text-decoration") }}, {{cssxref("text-shadow")}}, {{ cssxref("text-transform") }}, {{ cssxref("letter-spacing") }}, {{ cssxref("word-spacing") }} (when appropriate), {{ cssxref("line-height") }}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}}, {{cssxref("box-shadow")}}, {{ cssxref("float") }}, {{ cssxref("vertical-align") }} (only if `float` is `none`) CSS properties
 
-<ul>
- <li>All font properties : {{ Cssxref("font") }}, {{ Cssxref("font-style") }}, {{cssxref("font-feature-settings")}}, {{cssxref("font-kerning")}}, {{cssxref("font-language-override")}}, {{cssxref("font-stretch")}}, {{cssxref("font-synthesis")}}, {{ Cssxref("font-variant") }}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-position")}}, {{ Cssxref("font-weight") }}, {{ Cssxref("font-size") }}, {{cssxref("font-size-adjust")}}, {{ Cssxref("line-height") }} and {{ Cssxref("font-family") }}</li>
- <li>All background properties : {{ Cssxref("background") }}, {{ Cssxref("background-color") }}, {{ Cssxref("background-image") }}, {{cssxref("background-clip")}}, {{cssxref("background-origin")}}, {{ Cssxref("background-position") }}, {{ Cssxref("background-repeat") }}, {{ cssxref("background-size") }}, {{ Cssxref("background-attachment") }}, and {{cssxref("background-blend-mode")}}</li>
- <li>All margin properties: {{ Cssxref("margin") }}, {{ Cssxref("margin-top") }}, {{ Cssxref("margin-right") }}, {{ Cssxref("margin-bottom") }}, {{ Cssxref("margin-left") }}</li>
- <li>All padding properties: {{ Cssxref("padding") }}, {{ Cssxref("padding-top") }}, {{ Cssxref("padding-right") }}, {{ Cssxref("padding-bottom") }}, {{ Cssxref("padding-left") }}</li>
- <li>All border properties: the shorthands {{ Cssxref("border") }}, {{ Cssxref("border-style") }}, {{ Cssxref("border-color") }}, {{ cssxref("border-width") }}, {{ cssxref("border-radius") }}, {{cssxref("border-image")}}, and the longhands properties</li>
- <li>The {{ cssxref("color") }} property</li>
- <li>The {{ cssxref("text-decoration") }}, {{cssxref("text-shadow")}}, {{ cssxref("text-transform") }}, {{ cssxref("letter-spacing") }}, {{ cssxref("word-spacing") }} (when appropriate), {{ cssxref("line-height") }}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}}, {{cssxref("box-shadow")}}, {{ cssxref("float") }}, {{ cssxref("vertical-align") }} (only if <code>float</code> is <code>none</code>) CSS properties</li>
-</ul>
-
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Simple_drop_cap">Simple drop cap</h3>
+### Simple drop cap
 
-<p>In this example we will use the <code>::first-letter</code> pseudo-element to create a simple drop cap effect on the first letter of the paragraph coming right after the <code>&lt;h2&gt;</code>.</p>
+In this example we will use the `::first-letter` pseudo-element to create a simple drop cap effect on the first letter of the paragraph coming right after the `<h2>`.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;h2&gt;My heading&lt;/h2&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+```html
+<h2>My heading</h2>
+<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
   ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-  dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.&lt;/p&gt;
-&lt;p&gt;Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.&lt;/p&gt;</pre>
+  dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.</p>
+<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   width: 500px;
   line-height: 1.5;
 }
@@ -80,50 +79,53 @@ h2 + p::first-letter {
   padding: 6px 3px;
   margin-right: 6px;
   float: left;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Simple_drop_cap', '100%', 350) }}</p>
+{{ EmbedLiveSample('Simple_drop_cap', '100%', 350) }}
 
-<h3 id="Effect_on_special_punctuation_and_non-Latin_characters">Effect on special punctuation and non-Latin characters</h3>
+### Effect on special punctuation and non-Latin characters
 
-<p>This example illustrates the effect of <code>::first-letter</code> on special punctuation and non-Latin characters.</p>
+This example illustrates the effect of `::first-letter` on special punctuation and non-Latin characters.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.&lt;/p&gt;
-&lt;p&gt;-The beginning of a special punctuation mark.&lt;/p&gt;
-&lt;p&gt;_The beginning of a special punctuation mark.&lt;/p&gt;
-&lt;p&gt;"The beginning of a special punctuation mark.&lt;/p&gt;
-&lt;p&gt;'The beginning of a special punctuation mark.&lt;/p&gt;
-&lt;p&gt;*The beginning of a special punctuation mark.&lt;/p&gt;
-&lt;p&gt;#The beginning of a special punctuation mark.&lt;/p&gt;
-&lt;p&gt;「特殊的汉字标点符号开头。&lt;/p&gt;
-&lt;p&gt;《特殊的汉字标点符号开头。&lt;/p&gt;
-&lt;p&gt;“特殊的汉字标点符号开头。&lt;/p&gt;</pre>
+```html
+<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+<p>-The beginning of a special punctuation mark.</p>
+<p>_The beginning of a special punctuation mark.</p>
+<p>"The beginning of a special punctuation mark.</p>
+<p>'The beginning of a special punctuation mark.</p>
+<p>*The beginning of a special punctuation mark.</p>
+<p>#The beginning of a special punctuation mark.</p>
+<p>「特殊的汉字标点符号开头。</p>
+<p>《特殊的汉字标点符号开头。</p>
+<p>“特殊的汉字标点符号开头。</p>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p::first-letter {
+```css
+p::first-letter {
   color: red;
   font-size: 150%;
-}</pre>
+}
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Effect_on_special_punctuation_and_non-Latin_characters', '100%', 350) }}</p>
+{{ EmbedLiveSample('Effect_on_special_punctuation_and_non-Latin_characters', '100%', 350) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("::first-line")}}</li>
-</ul>
+- {{cssxref("::first-line")}}

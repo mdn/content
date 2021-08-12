@@ -7,22 +7,21 @@ tags:
   - CSS Lists
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.counter-increment
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>counter-increment</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property increases or decreases the value of a <a href="/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">CSS counter</a> by a given value.</p>
+The **`counter-increment`** [CSS](/en-US/docs/Web/CSS) property increases or decreases the value of a [CSS counter](/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters) by a given value.
 
-<div>{{EmbedInteractiveExample("pages/css/counter-increment.html")}}</div>
+{{EmbedInteractiveExample("pages/css/counter-increment.html")}}
 
-<div class="note">
-<p><strong>Note:</strong> The counter's value can be reset to an arbitrary number using the {{cssxref("counter-reset")}} CSS property.</p>
-</div>
+> **Note:** The counter's value can be reset to an arbitrary number using the {{cssxref("counter-reset")}} CSS property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Increment "my-counter" by 1 */
+```css
+/* Increment "my-counter" by 1 */
 counter-increment: my-counter;
 
 /* Decrement "my-counter" by 1 */
@@ -39,59 +38,54 @@ counter-increment: inherit;
 counter-increment: initial;
 counter-increment: revert;
 counter-increment: unset;
-</pre>
+```
 
-<p>The <code>counter-increment</code> property is specified as either one of the following:</p>
+The `counter-increment` property is specified as either one of the following:
 
-<ul>
- <li>A <code>&lt;custom-ident&gt;</code> naming the counter, followed optionally by an <code>&lt;integer&gt;</code>. You may specify as many counters to increment as you want, with each name or name-number pair separated by a space.</li>
- <li>The keyword value <code>none</code>.</li>
-</ul>
+- A `<custom-ident>` naming the counter, followed optionally by an `<integer>`. You may specify as many counters to increment as you want, with each name or name-number pair separated by a space.
+- The keyword value `none`.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{cssxref("&lt;custom-ident&gt;")}}</dt>
- <dd>The name of the counter to increment.</dd>
- <dt>{{cssxref("&lt;integer&gt;")}}</dt>
- <dd>The value to add to the counter. Defaults to <code>1</code> if not specified.</dd>
- <dt><code>none</code></dt>
- <dd>No counter must be incremented. This is used as the default value, or to cancel an increment in more specific rules.</dd>
-</dl>
+- {{cssxref("&lt;custom-ident&gt;")}}
+  - : The name of the counter to increment.
+- {{cssxref("&lt;integer&gt;")}}
+  - : The value to add to the counter. Defaults to `1` if not specified.
+- `none`
+  - : No counter must be incremented. This is used as the default value, or to cancel an increment in more specific rules.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Incrementing_named_counters">Incrementing named counters</h3>
+### Incrementing named counters
 
-<pre class="brush: css">h1 {
+```css
+h1 {
   counter-increment: chapter section 2 page;
   /* Increases the value of the chapter and page counters by 1,
      and the section counter by 2 */
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">Using CSS Counters</a></li>
- <li>{{cssxref("counter-reset")}}</li>
- <li>{{cssxref("counter-set")}}</li>
- <li>{{cssxref("@counter-style")}}</li>
- <li>The {{cssxref("counter")}} and {{cssxref("counters")}} functions</li>
-</ul>
+- [Using CSS Counters](/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)
+- {{cssxref("counter-reset")}}
+- {{cssxref("counter-set")}}
+- {{cssxref("@counter-style")}}
+- The {{cssxref("counter")}} and {{cssxref("counters")}} functions

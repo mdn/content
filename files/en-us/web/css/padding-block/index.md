@@ -4,30 +4,29 @@ slug: Web/CSS/padding-block
 tags:
   - CSS
   - padding-block
-  - 'recipe:css-shorthand-property'
+  - recipe:css-shorthand-property
 browser-compat: css.properties.padding-block
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>padding-block</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a> defines the logical block start and end padding of an element, which maps to physical padding properties depending on the element's writing mode, directionality, and text orientation.</p>
+The **`padding-block`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) defines the logical block start and end padding of an element, which maps to physical padding properties depending on the element's writing mode, directionality, and text orientation.
 
-<h2 id="Constituent_properties">Constituent properties</h2>
+## Constituent properties
 
-<p>This property is a shorthand for the following CSS properties:</p>
+This property is a shorthand for the following CSS properties:
 
-<ul>
- <li>{{cssxref("padding-block-end")}}</li>
- <li>{{cssxref("padding-block-start")}}</li>
-</ul>
+- {{cssxref("padding-block-end")}}
+- {{cssxref("padding-block-start")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; values */
+```css
+/* <length> values */
 padding-block: 10px 20px;  /* An absolute length */
 padding-block: 1em 2em;   /* relative to the text size */
 padding-block: 10px; /* sets both start and end values */
 
-/* &lt;percentage&gt; values */
+/* <percentage> values */
 padding-block: 5% 2%; /* relative to the nearest block container's width */
 
 /* Global values */
@@ -35,40 +34,42 @@ padding-block: inherit;
 padding-block: initial;
 padding-block: revert;
 padding-block: unset;
-</pre>
+```
 
-<p>The <code>padding-block</code> property may be specified with one or two values. If one value is given, it is used as the value for both {{cssxref("padding-block-start")}} and {{cssxref("padding-block-end")}}. If two values are given, the first is used for {{cssxref("padding-block-start")}} and the second for {{cssxref("padding-block-end")}}.</p>
+The `padding-block` property may be specified with one or two values. If one value is given, it is used as the value for both {{cssxref("padding-block-start")}} and {{cssxref("padding-block-end")}}. If two values are given, the first is used for {{cssxref("padding-block-start")}} and the second for {{cssxref("padding-block-end")}}.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<p>The <code>padding-block</code> property takes the same values as the {{cssxref("padding-left")}} property.</p>
+The `padding-block` property takes the same values as the {{cssxref("padding-left")}} property.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>These values corresponds to the {{cssxref("padding-top")}} and {{cssxref("padding-bottom")}}, or {{cssxref("padding-right")}}, and {{cssxref("padding-left")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.</p>
+These values corresponds to the {{cssxref("padding-top")}} and {{cssxref("padding-bottom")}}, or {{cssxref("padding-right")}}, and {{cssxref("padding-left")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_block_padding_for_vertical_text">Setting block padding for vertical text</h3>
+### Setting block padding for vertical text
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="exampleText"&gt;Example text&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <p class="exampleText">Example text</p>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   background-color: yellow;
   width: 120px;
   height: 120px;
@@ -78,23 +79,22 @@ padding-block: unset;
   writing-mode: vertical-rl;
   padding-block: 20px 40px;
   background-color: #c8c800;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Setting_block_padding_for_vertical_text", 140, 140)}}</p>
+{{EmbedLiveSample("Setting_block_padding_for_vertical_text", 140, 140)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The mapped physical properties: {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, and {{cssxref("padding-left")}}</li>
- <li>{{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}</li>
-</ul>
+- The mapped physical properties: {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, and {{cssxref("padding-left")}}
+- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

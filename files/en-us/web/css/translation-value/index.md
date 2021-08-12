@@ -9,50 +9,53 @@ tags:
   - Reference
 browser-compat: css.types.transform-function
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>&lt;translation-value&gt;</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Types">data type</a> is used in the arguments for certain {{cssxref("transform")}} functions, including <code><a href="/en-US/docs/Web/CSS/transform-function/translate">translate()</a></code>, <code><a href="/en-US/docs/Web/CSS/transform-function/translateX">translateX()</a></code>, <code><a href="/en-US/docs/Web/CSS/transform-function/translateY">translateY()</a></code>, and <code><a href="/en-US/docs/Web/CSS/transform-function/translate3d">translate3d()</a></code>.</p>
+The **`<translation-value>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) is used in the arguments for certain {{cssxref("transform")}} functions, including [`translate()`](/en-US/docs/Web/CSS/transform-function/translate), [`translateX()`](/en-US/docs/Web/CSS/transform-function/translateX), [`translateY()`](/en-US/docs/Web/CSS/transform-function/translateY), and [`translate3d()`](/en-US/docs/Web/CSS/transform-function/translate3d).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>&lt;translation-value&gt;</code> data type can be either a {{Cssxref("&lt;length&gt;")}} value or a {{Cssxref("&lt;percentage&gt;")}} value.</p>
+The `<translation-value>` data type can be either a {{Cssxref("&lt;length&gt;")}} value or a {{Cssxref("&lt;percentage&gt;")}} value.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Translation_function_comparison">Translation function comparison</h3>
+### Translation function comparison
 
-<p>The following example provides a 3D cube created from DOM elements and transforms, and a select menu allowing you to choose different translation-related transform functions to transform the cube with, so you can compare the effects of the different types.</p>
+The following example provides a 3D cube created from DOM elements and transforms, and a select menu allowing you to choose different translation-related transform functions to transform the cube with, so you can compare the effects of the different types.
 
-<p>Choose one, and the transform is applied to the cube; after 2 seconds, the cube reverts back to its starting state. The cube's starting state is slightly rotated using <code>transform3d()</code>, to allow you to see the effect of all the transforms.</p>
+Choose one, and the transform is applied to the cube; after 2 seconds, the cube reverts back to its starting state. The cube's starting state is slightly rotated using `transform3d()`, to allow you to see the effect of all the transforms.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;main&gt;
-  &lt;section id="example-element"&gt;
-      &lt;div class="face front"&gt;1&lt;/div&gt;
-      &lt;div class="face back"&gt;2&lt;/div&gt;
-      &lt;div class="face right"&gt;3&lt;/div&gt;
-      &lt;div class="face left"&gt;4&lt;/div&gt;
-      &lt;div class="face top"&gt;5&lt;/div&gt;
-      &lt;div class="face bottom"&gt;6&lt;/div&gt;
-  &lt;/section&gt;
+```html
+<main>
+  <section id="example-element">
+      <div class="face front">1</div>
+      <div class="face back">2</div>
+      <div class="face right">3</div>
+      <div class="face left">4</div>
+      <div class="face top">5</div>
+      <div class="face bottom">6</div>
+  </section>
 
-  &lt;div class="select-form"&gt;
-    &lt;label&gt;Select a transform function&lt;/label&gt;
-    &lt;select&gt;
-      &lt;option selected&gt;Choose a function&lt;/option&gt;
-      &lt;option&gt;translate(100px, 100px)&lt;/option&gt;
-      &lt;option&gt;translateX(100px)&lt;/option&gt;
-      &lt;option&gt;translateY(100px)&lt;/option&gt;
-      &lt;option&gt;translateZ(100px)&lt;/option&gt;
-      &lt;option&gt;translate3d(50px, 50px, 50px)&lt;/option&gt;
-    &lt;/select&gt;
-  &lt;/div&gt;
-&lt;/main&gt;</pre>
+  <div class="select-form">
+    <label>Select a transform function</label>
+    <select>
+      <option selected>Choose a function</option>
+      <option>translate(100px, 100px)</option>
+      <option>translateX(100px)</option>
+      <option>translateY(100px)</option>
+      <option>translateZ(100px)</option>
+      <option>translate3d(50px, 50px, 50px)</option>
+    </select>
+  </div>
+</main>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">main {
+```css
+main {
   width: 400px;
   height: 200px;
   padding: 50px;
@@ -111,14 +114,16 @@ browser-compat: css.types.transform-function
 
 .select-form {
   margin-top: 50px;
-}</pre>
+}
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const selectElem = document.querySelector('select');
+```js
+const selectElem = document.querySelector('select');
 const example = document.querySelector('#example-element');
 
-selectElem.addEventListener('change', () =&gt; {
+selectElem.addEventListener('change', () => {
   if(selectElem.value === 'Choose a function') {
     return;
   } else {
@@ -127,22 +132,21 @@ selectElem.addEventListener('change', () =&gt; {
       example.style.transform = 'rotate3d(1, 1, 1, 30deg)';
     }, 2000)
   }
-})</pre>
+})
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Translation_function_comparison', '100%', 300)}}</p>
+{{EmbedLiveSample('Translation_function_comparison', '100%', 300)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("transform")}}</li>
-</ul>
+- {{cssxref("transform")}}

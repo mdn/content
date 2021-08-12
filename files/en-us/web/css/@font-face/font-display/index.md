@@ -15,92 +15,90 @@ tags:
   - web fonts
 browser-compat: css.at-rules.font-face.font-display
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>font-display</code></strong> descriptor determines how a font face is displayed based on whether and when it is downloaded and ready to use.</p>
+The **`font-display`** descriptor determines how a font face is displayed based on whether and when it is downloaded and ready to use.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css;">/* Keyword values */
+```css
+/* Keyword values */
 font-display: auto;
 font-display: block;
 font-display: swap;
 font-display: fallback;
-font-display: optional;</pre>
+font-display: optional;
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>The font display strategy is defined by the user agent.</dd>
- <dt><code>block</code></dt>
- <dd>Gives the font face a short block period and an infinite swap period.</dd>
- <dt><code>swap</code></dt>
- <dd>Gives the font face an extremely small block period and an infinite swap period.</dd>
- <dt><code>fallback</code></dt>
- <dd>Gives the font face an extremely small block period and a short swap period.</dd>
- <dt><code>optional</code></dt>
- <dd>Gives the font face an extremely small block period and no swap period.</dd>
-</dl>
+- `auto`
+  - : The font display strategy is defined by the user agent.
+- `block`
+  - : Gives the font face a short block period and an infinite swap period.
+- `swap`
+  - : Gives the font face an extremely small block period and an infinite swap period.
+- `fallback`
+  - : Gives the font face an extremely small block period and a short swap period.
+- `optional`
+  - : Gives the font face an extremely small block period and no swap period.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> In Firefox, the preferences <code>gfx.downloadable_fonts.fallback_delay</code>
-and <code>gfx.downloadable_fonts.fallback_delay_short</code> provide the duration
-of the "short" and "extremely small" periods, respectively.</p>
-</div>
-<h2 id="Description">Description</h2>
+> **Note:** In Firefox, the preferences `gfx.downloadable_fonts.fallback_delay`
+> and `gfx.downloadable_fonts.fallback_delay_short` provide the duration
+> of the "short" and "extremely small" periods, respectively.
 
-<h3 id="The_font_display_timeline">The font display timeline</h3>
+## Description
 
-<p>The font display timeline is based on a timer that begins the moment the user agent attempts to use a given downloaded font face. The timeline is divided into the three periods below which dictate the rendering behavior of any elements using the font face.</p>
+### The font display timeline
 
-<dl>
- <dt>Font block period</dt>
- <dd>If the font face is not loaded, any element attempting to use it must render an <em>invisible</em> fallback font face. If the font face successfully loads during this period, it is used normally.</dd>
- <dt>Font swap period</dt>
- <dd>If the font face is not loaded, any element attempting to use it must render a fallback font face. If the font face successfully loads during this period, it is used normally.</dd>
- <dt>Font failure period</dt>
- <dd>If the font face is not loaded, the user agent treats it as a failed load causing normal font fallback.</dd>
-</dl>
+The font display timeline is based on a timer that begins the moment the user agent attempts to use a given downloaded font face. The timeline is divided into the three periods below which dictate the rendering behavior of any elements using the font face.
 
-<h2 id="Formal_definition">Formal definition</h2>
+- Font block period
+  - : If the font face is not loaded, any element attempting to use it must render an _invisible_ fallback font face. If the font face successfully loads during this period, it is used normally.
+- Font swap period
+  - : If the font face is not loaded, any element attempting to use it must render a fallback font face. If the font face successfully loads during this period, it is used normally.
+- Font failure period
+  - : If the font face is not loaded, the user agent treats it as a failed load causing normal font fallback.
 
-<p>{{cssinfo}}</p>
+## Formal definition
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+{{cssinfo}}
+
+## Formal syntax
 
 {{csssyntax}}
-<h2 id="Examples">Examples</h2>
 
-<h3 id="Specifying_fallback_font-display">Specifying fallback font-display</h3>
+## Examples
 
-<pre class="brush: css; highlight[7]">@font-face {
+### Specifying fallback font-display
+
+```css
+@font-face {
   font-family: ExampleFont;
   src: url(/path/to/fonts/examplefont.woff) format('woff'),
        url(/path/to/fonts/examplefont.eot) format('eot');
   font-weight: 400;
   font-style: normal;
   font-display: fallback;
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("@font-face/font-family", "font-family")}}</li>
- <li>{{cssxref("@font-face/font-stretch", "font-stretch")}}</li>
- <li>{{cssxref("@font-face/font-style", "font-style")}}</li>
- <li>{{cssxref("@font-face/font-weight", "font-weight")}}</li>
- <li>{{cssxref("@font-face/font-variant", "font-variant")}}</li>
- <li>{{cssxref("font-feature-settings", "font-feature-settings")}}</li>
- <li>{{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}</li>
- <li>{{cssxref("@font-face/src", "src")}}</li>
- <li>{{cssxref("@font-face/unicode-range", "unicode-range")}}</li>
-</ul>
+- {{cssxref("@font-face/font-family", "font-family")}}
+- {{cssxref("@font-face/font-stretch", "font-stretch")}}
+- {{cssxref("@font-face/font-style", "font-style")}}
+- {{cssxref("@font-face/font-weight", "font-weight")}}
+- {{cssxref("@font-face/font-variant", "font-variant")}}
+- {{cssxref("font-feature-settings", "font-feature-settings")}}
+- {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
+- {{cssxref("@font-face/src", "src")}}
+- {{cssxref("@font-face/unicode-range", "unicode-range")}}

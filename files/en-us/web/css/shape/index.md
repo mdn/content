@@ -12,61 +12,58 @@ tags:
   - Web
 browser-compat: css.types.shape
 ---
-<div>{{CSSRef}}{{deprecated_header}}</div>
+{{CSSRef}}{{deprecated_header}}
 
-<p>The <strong><code>&lt;shape&gt;</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Types">data type</a> defines the specific form (shape) of a region. The region represents the part of an element to which the {{cssxref("clip")}} property applies.</p>
+The **`<shape>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) defines the specific form (shape) of a region. The region represents the part of an element to which the {{cssxref("clip")}} property applies.
 
-<div class="note">
-<p><strong>Note:</strong> <code>&lt;shape&gt;</code> and <code>rect()</code> work in conjunction with {{cssxref("clip")}}, which has been deprecated in favor of {{cssxref("clip-path")}}. When possible, use <code>clip-path</code> and the {{cssxref("&lt;basic-shape&gt;")}} data type instead.</p>
-</div>
+> **Note:** `<shape>` and `rect()` work in conjunction with {{cssxref("clip")}}, which has been deprecated in favor of {{cssxref("clip-path")}}. When possible, use `clip-path` and the {{cssxref("&lt;basic-shape&gt;")}} data type instead.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>&lt;shape&gt;</code> data type is specified using the <code>rect()</code> function, which produces a region in the form of a rectangle.</p>
+The `<shape>` data type is specified using the `rect()` function, which produces a region in the form of a rectangle.
 
-<p><code>rect()</code></p>
+`rect()`
 
-<pre class="brush: css">rect(<em>top</em>, <em>right</em>, <em>bottom</em>, <em>left</em>)</pre>
+```css
+rect(top, right, bottom, left)
+```
 
-<h4 id="Values">Values</h4>
+#### Values
 
-<p><img src="rect.png"></p>
+![](rect.png)
 
-<dl>
-	<dt><em>top</em></dt>
-	<dd>Is a {{cssxref("length")}} representing the offset for the top of the rectangle relative to the top border of the element's box.</dd>
-	<dt><em>right</em></dt>
-	<dd>Is a {{cssxref("length")}} representing the offset for the right of the rectangle relative to the left border of the element's box.</dd>
-	<dt><em>bottom</em></dt>
-	<dd>Is a {{cssxref("length")}} representing the offset for the bottom of the rectangle relative to the top border of the element's box.</dd>
-	<dt><em>left</em></dt>
-	<dd>Is a {{cssxref("length")}} representing the offset for the left of the rectangle relative to the left border of the element's box.</dd>
-</dl>
+- _top_
+  - : Is a {{cssxref("length")}} representing the offset for the top of the rectangle relative to the top border of the element's box.
+- _right_
+  - : Is a {{cssxref("length")}} representing the offset for the right of the rectangle relative to the left border of the element's box.
+- _bottom_
+  - : Is a {{cssxref("length")}} representing the offset for the bottom of the rectangle relative to the top border of the element's box.
+- _left_
+  - : Is a {{cssxref("length")}} representing the offset for the left of the rectangle relative to the left border of the element's box.
 
-<h2 id="Interpolation">Interpolation</h2>
+## Interpolation
 
-<p>When animated, values of the <code>&lt;shape&gt;</code> data type are interpolated over their <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code> components, each treated as a real, floating-point number. The speed of the interpolation is determined by the <a href="/en-US/docs/Web/CSS/easing-function" title="timing-function">timing function</a> associated with the animation.</p>
+When animated, values of the `<shape>` data type are interpolated over their `top`, `right`, `bottom`, and `left` components, each treated as a real, floating-point number. The speed of the interpolation is determined by the [timing function](/en-US/docs/Web/CSS/easing-function "timing-function") associated with the animation.
 
-<h2 id="Examples">Example</h2>
+## Example
 
-<h3 id="Example_demonstrating_correct_use_of_the_rect_function">Example demonstrating correct use of the rect() function</h3>
+### Example demonstrating correct use of the rect() function
 
-<pre class="brush: css">img.clip04 {
+```css
+img.clip04 {
   clip: rect(10px, 20px, 20px, 10px);
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>Related CSS property: {{ cssxref("clip") }}</li>
-	<li>The <code><a href="/en-US/docs/Web/CSS/-moz-image-rect">-moz-image-rect()</a></code> function has similar coordinate values to <code>rect()</code>.</li>
-</ul>
+- Related CSS property: {{ cssxref("clip") }}
+- The [`-moz-image-rect()`](/en-US/docs/Web/CSS/-moz-image-rect) function has similar coordinate values to `rect()`.

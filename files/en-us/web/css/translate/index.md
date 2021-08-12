@@ -6,16 +6,17 @@ tags:
   - CSS Property
   - Reference
   - Transforms
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.translate
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>translate</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property allows you to specify translation transforms individually and independently of the {{CSSxRef("transform")}} property. This maps better to typical user interface usage, and saves having to remember the exact order of transform functions to specify in the <code>transform</code> value.</p>
+The **`translate`** [CSS](/en-US/docs/Web/CSS) property allows you to specify translation transforms individually and independently of the {{CSSxRef("transform")}} property. This maps better to typical user interface usage, and saves having to remember the exact order of transform functions to specify in the `transform` value.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 translate: none;
 
 /* Single values */
@@ -33,40 +34,42 @@ translate: 50% 105px 5rem;
 translate: inherit;
 translate: initial;
 translate: revert;
-translate: unset;</pre>
+translate: unset;
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>Single {{cssxref("&lt;length-percentage&gt;")}} value</dt>
- <dd>A {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} that specifies a 2D translation, with the same translation along both the X and Y axes. Equivalent to a <code>translate()</code> (2D translation) function with a single value specified.</dd>
- <dt>Two {{cssxref("&lt;length-percentage&gt;")}} values</dt>
- <dd>Two {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} that specify the X and Y axis translation values (respectively) of a 2D translation. Equivalent to a <code>translate()</code> (2D translation) function with two values specified.</dd>
- <dt>Three values</dt>
- <dd>Two {{cssxref("&lt;length-percentage&gt;")}} and single {{cssxref("&lt;length&gt;")}} values that specify the X, Y, and Z axis translation values (respectively) of a 3D translation. Equivalent to a <code>translate3d()</code> (3D translation) function.</dd>
- <dt><code>none</code></dt>
- <dd>Specifies that no translation should be applied.</dd>
-</dl>
+- Single {{cssxref("&lt;length-percentage&gt;")}} value
+  - : A {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} that specifies a 2D translation, with the same translation along both the X and Y axes. Equivalent to a `translate()` (2D translation) function with a single value specified.
+- Two {{cssxref("&lt;length-percentage&gt;")}} values
+  - : Two {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} that specify the X and Y axis translation values (respectively) of a 2D translation. Equivalent to a `translate()` (2D translation) function with two values specified.
+- Three values
+  - : Two {{cssxref("&lt;length-percentage&gt;")}} and single {{cssxref("&lt;length&gt;")}} values that specify the X, Y, and Z axis translation values (respectively) of a 3D translation. Equivalent to a `translate3d()` (3D translation) function.
+- `none`
+  - : Specifies that no translation should be applied.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{CSSSyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="translate"&gt;Translation&lt;/p&gt;
-&lt;/div&gt;</pre>
+```html
+<div>
+  <p class="translate">Translation</p>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">* {
+```css
+* {
   box-sizing: border-box;
 }
 
@@ -95,26 +98,24 @@ p {
 div:hover .translate {
   translate: 200px 50px;
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Examples')}}</p>
+{{EmbedLiveSample('Examples')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref('scale')}}</li>
- <li>{{cssxref('rotate')}}</li>
- <li>{{cssxref('transform')}}</li>
-</ul>
+- {{cssxref('scale')}}
+- {{cssxref('rotate')}}
+- {{cssxref('transform')}}
 
-<p>Note: skew is not an independent transform value</p>
+Note: skew is not an independent transform value

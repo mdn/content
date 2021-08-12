@@ -9,34 +9,31 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.grid
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>grid</code></strong> CSS property is a <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a> that sets all of the explicit and implicit grid properties in a single declaration.</p>
+The **`grid`** CSS property is a [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) that sets all of the explicit and implicit grid properties in a single declaration.
 
-<p>Using <code>grid</code> you specify one axis using {{cssxref("grid-template-rows")}} or {{cssxref("grid-template-columns")}}, you then specify how content should auto-repeat in the other axis using the implicit grid properties: {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, and {{cssxref("grid-auto-flow")}}.</p>
+Using `grid` you specify one axis using {{cssxref("grid-template-rows")}} or {{cssxref("grid-template-columns")}}, you then specify how content should auto-repeat in the other axis using the implicit grid properties: {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, and {{cssxref("grid-auto-flow")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/grid.html")}}</div>
+{{EmbedInteractiveExample("pages/css/grid.html")}}
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The sub-properties you don’t specify are set to their initial value, as normal for shorthands. Also, the gutter properties are NOT reset by this shorthand.</p>
-</div>
+> **Note:** The sub-properties you don’t specify are set to their initial value, as normal for shorthands. Also, the gutter properties are NOT reset by this shorthand.
 
-<h2 id="Constituent_properties">Constituent properties</h2>
+## Constituent properties
 
-<p>This property is a shorthand for the following CSS properties:</p>
+This property is a shorthand for the following CSS properties:
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/grid-auto-columns"><code>grid-auto-columns</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/grid-auto-flow"><code>grid-auto-flow</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/grid-auto-rows"><code>grid-auto-rows</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/grid-template-areas"><code>grid-template-areas</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/grid-template-columns"><code>grid-template-columns</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/grid-template-rows"><code>grid-template-rows</code></a></li>
-</ul>
+- [`grid-auto-columns`](/en-US/docs/Web/CSS/grid-auto-columns)
+- [`grid-auto-flow`](/en-US/docs/Web/CSS/grid-auto-flow)
+- [`grid-auto-rows`](/en-US/docs/Web/CSS/grid-auto-rows)
+- [`grid-template-areas`](/en-US/docs/Web/CSS/grid-template-areas)
+- [`grid-template-columns`](/en-US/docs/Web/CSS/grid-template-columns)
+- [`grid-template-rows`](/en-US/docs/Web/CSS/grid-template-rows)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">/* &lt;'grid-template'&gt; values */
+```css
+/* <'grid-template'> values */
 grid: none;
 grid: "a" 100px "b" 1fr;
 grid: [linename1] "a" 100px [linename2];
@@ -45,15 +42,15 @@ grid: "a" minmax(100px, max-content) "b" 20%;
 grid: 100px / 200px;
 grid: minmax(400px, min-content) / repeat(auto-fill, 50px);
 
-/* &lt;'grid-template-rows'&gt; /
-   [ auto-flow &amp;&amp; dense? ] &lt;'grid-auto-columns'&gt;? values */
+/* <'grid-template-rows'> /
+   [ auto-flow && dense? ] <'grid-auto-columns'>? values */
 grid: 200px / auto-flow;
 grid: 30% / auto-flow dense;
 grid: repeat(3, [line1 line2 line3] 200px) / auto-flow 300px;
 grid: [line1] minmax(20em, max-content) / auto-flow dense 40%;
 
-/* [ auto-flow &amp;&amp; dense? ] &lt;'grid-auto-rows'&gt;? /
-   &lt;'grid-template-columns'&gt; values */
+/* [ auto-flow && dense? ] <'grid-auto-rows'>? /
+   <'grid-template-columns'> values */
 grid: auto-flow / 200px;
 grid: auto-flow dense / 30%;
 grid: auto-flow 300px / repeat(3, [line1 line2 line3] 200px);
@@ -64,77 +61,80 @@ grid: inherit;
 grid: initial;
 grid: revert;
 grid: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;'grid-template'&gt;</code></dt>
- <dd>Defines the {{cssxref("grid-template")}} including {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-rows")}} and {{cssxref("grid-template-areas")}}.</dd>
- <dt><code>&lt;'grid-template-rows'&gt; / [ auto-flow &amp;&amp; dense? ] &lt;'grid-auto-columns'&gt;?</code></dt>
- <dd>Sets up an auto-flow by setting the row tracks explicitly via the {{cssxref("grid-template-rows")}} property (and the {{cssxref("grid-template-columns")}} property to <code>none</code>) and specifying how to auto-repeat the column tracks via {{cssxref("grid-auto-columns")}} (and setting {{cssxref("grid-auto-rows")}} to <code>auto</code>). {{cssxref("grid-auto-flow")}} is also set to <code>column</code> accordingly, with <code>dense</code> if it’s specified.
- <p>All other <code>grid</code> sub-properties are reset to their initial values.</p>
- </dd>
- <dt><code>[ auto-flow &amp;&amp; dense? ] &lt;'grid-auto-rows'&gt;? / &lt;'grid-template-columns'&gt;</code></dt>
- <dd>Sets up an auto-flow by setting the column tracks explicitly via the {{cssxref("grid-template-columns")}} property (and the {{cssxref("grid-template-rows")}} property to <code>none</code>) and specifying how to auto-repeat the row tracks via {{cssxref("grid-auto-rows")}} (and setting {{cssxref("grid-auto-columns")}} to <code>auto</code>). {{cssxref("grid-auto-flow")}} is also set to <code>row</code> accordingly, with <code>dense</code> if it’s specified.
- <p>All other <code>grid</code> sub-properties are reset to their initial values.</p>
- </dd>
-</dl>
+- `<'grid-template'>`
+  - : Defines the {{cssxref("grid-template")}} including {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-rows")}} and {{cssxref("grid-template-areas")}}.
+- `<'grid-template-rows'> / [ auto-flow && dense? ] <'grid-auto-columns'>?`
 
-<h2 id="Formal_definition">Formal definition</h2>
+  - : Sets up an auto-flow by setting the row tracks explicitly via the {{cssxref("grid-template-rows")}} property (and the {{cssxref("grid-template-columns")}} property to `none`) and specifying how to auto-repeat the column tracks via {{cssxref("grid-auto-columns")}} (and setting {{cssxref("grid-auto-rows")}} to `auto`). {{cssxref("grid-auto-flow")}} is also set to `column` accordingly, with `dense` if it’s specified.
 
-<p>{{cssinfo}}</p>
+    All other `grid` sub-properties are reset to their initial values.
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+- `[ auto-flow && dense? ] <'grid-auto-rows'>? / <'grid-template-columns'>`
+
+  - : Sets up an auto-flow by setting the column tracks explicitly via the {{cssxref("grid-template-columns")}} property (and the {{cssxref("grid-template-rows")}} property to `none`) and specifying how to auto-repeat the row tracks via {{cssxref("grid-auto-rows")}} (and setting {{cssxref("grid-auto-columns")}} to `auto`). {{cssxref("grid-auto-flow")}} is also set to `row` accordingly, with `dense` if it’s specified.
+
+    All other `grid` sub-properties are reset to their initial values.
+
+## Formal definition
+
+{{cssinfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Creating_a_grid_layout">Creating a grid layout</h3>
+### Creating a grid layout
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div id="container"&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<div id="container">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">#container {
+```css
+#container {
   display: grid;
   grid: repeat(2, 60px) / auto-flow 80px;
 }
 
-#container &gt; div {
+#container > div {
   background-color: #8ca0ff;
   width: 50px;
   height: 50px;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Creating_a_grid_layout", "100%", 150)}}</p>
+{{EmbedLiveSample("Creating_a_grid_layout", "100%", 150)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related CSS properties: {{cssxref("grid-template")}}, {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-flow")}}</li>
- <li>Grid Layout Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Line-based placement with CSS Grid</a></em></li>
- <li>Grid Layout Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas#grid_definition_shorthands">Grid template areas - Grid definition shorthands</a></em></li>
-</ul>
+- Related CSS properties: {{cssxref("grid-template")}}, {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-flow")}}
+- Grid Layout Guide: _[Line-based placement with CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)_
+- Grid Layout Guide: _[Grid template areas - Grid definition shorthands](/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas#grid_definition_shorthands)_

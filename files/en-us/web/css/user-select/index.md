@@ -7,15 +7,16 @@ tags:
   - Property
   - Reference
   - Selection
-  - 'recipe:css-property'
+  - recipe:css-property
   - user-select
 browser-compat: css.properties.user-select
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <code><strong>user-select</strong></code> <a href="/en-US/docs/Web/CSS">CSS</a> property controls whether the user can select text. This doesn't have any effect on content loaded as part of a browser's user interface (its {{Glossary("Chrome", "chrome")}}), except in textboxes.</p>
+The **`user-select`** [CSS](/en-US/docs/Web/CSS) property controls whether the user can select text. This doesn't have any effect on content loaded as part of a browser's user interface (its {{Glossary("Chrome", "chrome")}}), except in textboxes.
 
-<pre class="brush:css">/* Keyword values */
+```css
+/* Keyword values */
 user-select: none;
 user-select: auto;
 user-select: text;
@@ -38,69 +39,63 @@ user-select: unset;
 -webkit-user-select: text;
 -webkit-user-select: all; /* Doesn't work in Safari; use only
                              "none" or "text", or else it will
-                             allow typing in the &lt;html&gt; container */
+                             allow typing in the <html> container */
 
 /* Microsoft-specific values */
 -ms-user-select: none;
 -ms-user-select: text;
 -ms-user-select: element;
-</pre>
+```
 
-<div class="notecard note">
-<p><strong>Note:</strong> <code>user-select</code> is not an inherited property, though the initial <code>auto</code> value makes it behave like it is inherited most of the time. WebKit/Chromium-based browsers <em>do</em> implement the property as inherited, which violates the behavior described in the spec, and this will bring some issues. Until now, Chromium chooses to <a class="external external-icon" href="https://chromium.googlesource.com/chromium/src/+/b01af0b296ecb855aac95c4ed335d188e6eac2de" rel="noopener">fix the issues</a>, make the final behavior meets the specifications.</p>
-</div>
+> **Note:** `user-select` is not an inherited property, though the initial `auto` value makes it behave like it is inherited most of the time. WebKit/Chromium-based browsers _do_ implement the property as inherited, which violates the behavior described in the spec, and this will bring some issues. Until now, Chromium chooses to [fix the issues](https://chromium.googlesource.com/chromium/src/+/b01af0b296ecb855aac95c4ed335d188e6eac2de), make the final behavior meets the specifications.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<dl>
-	<dt><code>none</code></dt>
-	<dd>The text of the element and its sub-elements is not selectable. Note that the {{domxref("Selection")}} object can contain these elements.</dd>
-	<dt><code>auto</code></dt>
-	<dd>
-	<p>The used value of <code>auto</code> is determined as follows:</p>
+- `none`
+  - : The text of the element and its sub-elements is not selectable. Note that the {{domxref("Selection")}} object can contain these elements.
+- `auto`
 
-	<ul>
-		<li>On the <code>::before</code> and <code>::after</code> pseudo elements, the used value is <code>none</code></li>
-		<li>If the element is an editable element, the used value is <code>contain</code></li>
-		<li>Otherwise, if the used value of <code>user-select</code> on the parent of this element is <code>all</code>, the used value is <code>all</code></li>
-		<li>Otherwise, if the used value of <code>user-select</code> on the parent of this element is <code>none</code>, the used value is <code>none</code></li>
-		<li>Otherwise, the used value is <code>text</code></li>
-	</ul>
-	</dd>
-	<dt><code>text</code></dt>
-	<dd>The text can be selected by the user.</dd>
-	<dt><code>all</code></dt>
-	<dd>The content of the element shall be selected atomically: If a selection would contain part of the element, then the selection must contain the entire element including all its descendants.  If a double-click or context-click occurred in sub-elements, the highest ancestor with this value will be selected.</dd>
-	<dt><code>contain</code></dt>
-	<dd>Enables selection to start within the element; however, the selection will be contained by the bounds of that element.</dd>
-	<dt><code>element</code>{{non-standard_inline}} (IE-specific alias)</dt>
-	<dd>Same as <code>contain</code>. Supported only in Internet Explorer.</dd>
-</dl>
+  - : The used value of `auto` is determined as follows:
 
-<div class="note">
-<p><strong>Note:</strong> CSS UI 4 <a href="https://github.com/w3c/csswg-drafts/commit/3f1d9db96fad8d9fc787d3ed66e2d5ad8cfadd05">renames <code>user-select: element</code> to <code>contain</code></a>.</p>
-</div>
+    - On the `::before` and `::after` pseudo elements, the used value is `none`
+    - If the element is an editable element, the used value is `contain`
+    - Otherwise, if the used value of `user-select` on the parent of this element is `all`, the used value is `all`
+    - Otherwise, if the used value of `user-select` on the parent of this element is `none`, the used value is `none`
+    - Otherwise, the used value is `text`
 
-<h2 id="Formal_definition">Formal definition</h2>
+- `text`
+  - : The text can be selected by the user.
+- `all`
+  - : The content of the element shall be selected atomically: If a selection would contain part of the element, then the selection must contain the entire element including all its descendants.  If a double-click or context-click occurred in sub-elements, the highest ancestor with this value will be selected.
+- `contain`
+  - : Enables selection to start within the element; however, the selection will be contained by the bounds of that element.
+- `element`{{non-standard_inline}} (IE-specific alias)
+  - : Same as `contain`. Supported only in Internet Explorer.
 
-<p>{{CSSInfo}}</p>
+> **Note:** CSS UI 4 [renames `user-select: element` to `contain`](https://github.com/w3c/csswg-drafts/commit/3f1d9db96fad8d9fc787d3ed66e2d5ad8cfadd05).
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal definition
+
+{{CSSInfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;You should be able to select this text.&lt;/p&gt;
-&lt;p class="unselectable"&gt;Hey, you can't select this text!&lt;/p&gt;
-&lt;p class="all"&gt;Clicking once will select all of this text.&lt;/p&gt;
-</pre>
+```html
+<p>You should be able to select this text.</p>
+<p class="unselectable">Hey, you can't select this text!</p>
+<p class="all">Clicking once will select all of this text.</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.unselectable {
+```css
+.unselectable {
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
@@ -113,23 +108,21 @@ user-select: unset;
   -ms-user-select: all;
   user-select: all;
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{Cssxref("::selection")}} pseudo-element</li>
-	<li>The JavaScript {{domxref("Selection")}} object</li>
-</ul>
+- {{Cssxref("::selection")}} pseudo-element
+- The JavaScript {{domxref("Selection")}} object

@@ -6,305 +6,82 @@ tags:
   - Guide
   - Style
 ---
-<h2 id="Common_CSS_Properties_Reference">Common CSS Properties Reference</h2>
+## Common CSS Properties Reference
 
-<p>The following is a basic list of the most common CSS properties with the equivalent of the DOM notation which is usually accessed from JavaScript:</p>
+The following is a basic list of the most common CSS properties with the equivalent of the DOM notation which is usually accessed from JavaScript:
 
-<div class="note">
-  <p><strong>Note:</strong> This list is incomplete. For more CSS properties see The <a href="/en-US/docs/Web/CSS/Reference">main CSS reference</a> and <a href="/en-US/docs/Web/CSS/Mozilla_Extensions">Mozilla CSS Extensions</a>. The reference articles also include examples on how to use all the properties.</p>
-</div>
+> **Note:** This list is incomplete. For more CSS properties see The [main CSS reference](/en-US/docs/Web/CSS/Reference) and [Mozilla CSS Extensions](/en-US/docs/Web/CSS/Mozilla_Extensions). The reference articles also include examples on how to use all the properties.
 
-<table>
- <thead>
-  <tr>
-   <th scope="col"><strong>CSS</strong></th>
-   <th scope="col"><strong>JavaScript</strong></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/background">background</a></td>
-   <td>background</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/background-attachment">background-attachment</a></td>
-   <td>backgroundAttachment</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/background-color">background-color</a></td>
-   <td>backgroundColor</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/background-image">background-image</a></td>
-   <td>backgroundImage</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/background-position">background-position</a></td>
-   <td>backgroundPosition</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/background-repeat">background-repeat</a></td>
-   <td>backgroundRepeat</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/border">border</a></td>
-   <td>border</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/border-bottom">border-bottom</a></td>
-   <td>borderBottom</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/border-bottom-color">border-bottom-color</a></td>
-   <td>borderBottomColor</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/border-bottom-style">border-bottom-style</a></td>
-   <td>borderBottomStyle</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/border-bottom-width">border-bottom-width</a></td>
-   <td>borderBottomWidth</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/border-color">border-color</a></td>
-   <td>borderColor</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/border-left">border-left</a></td>
-   <td>borderLeft</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/border-left-color">border-left-color</a></td>
-   <td>borderLeftColor</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/border-left-style">border-left-style</a></td>
-   <td>borderLeftStyle</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/border-left-width">border-left-width</a></td>
-   <td>borderLeftWidth</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/border-right">border-right</a></td>
-   <td>borderRight</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/border-right-color">border-right-color</a></td>
-   <td>borderRightColor</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/border-right-style">border-right-style</a></td>
-   <td>borderRightStyle</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/border-right-width">border-right-width</a></td>
-   <td>borderRightWidth</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/border-style">border-style</a></td>
-   <td>borderStyle</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/border-top">border-top</a></td>
-   <td>borderTop</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/border-top-color">border-top-color</a></td>
-   <td>borderTopColor</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/border-top-style">border-top-style</a></td>
-   <td>borderTopStyle</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/border-top-width">border-top-width</a></td>
-   <td>borderTopWidth</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/border-width">border-width</a></td>
-   <td>borderWidth</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/clear">clear</a></td>
-   <td>clear</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/clip">clip</a></td>
-   <td>clip</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/color">color</a></td>
-   <td>color</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/cursor">cursor</a></td>
-   <td>cursor</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/display">display</a></td>
-   <td>display</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/filter">filter</a></td>
-   <td>filter</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/float">float</a></td>
-   <td>cssFloat</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/font">font</a></td>
-   <td>font</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/font-family">font-family</a></td>
-   <td>fontFamily</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/font-size">font-size</a></td>
-   <td>fontSize</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/font-variant">font-variant</a></td>
-   <td>fontVariant</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/font-weight">font-weight</a></td>
-   <td>fontWeight</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/height">height</a></td>
-   <td>height</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/left">left</a></td>
-   <td>left</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/letter-spacing">letter-spacing</a></td>
-   <td>letterSpacing</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/line-height">line-height</a></td>
-   <td>lineHeight</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/list-style">list-style</a></td>
-   <td>listStyle</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/list-style-image">list-style-image</a></td>
-   <td>listStyleImage</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/list-style-position">list-style-position</a></td>
-   <td>listStylePosition</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/list-style-type">list-style-type</a></td>
-   <td>listStyleType</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/margin">margin</a></td>
-   <td>margin</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/margin-bottom">margin-bottom</a></td>
-   <td>marginBottom</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/margin-left">margin-left</a></td>
-   <td>marginLeft</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/margin-right">margin-right</a></td>
-   <td>marginRight</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/margin-top">margin-top</a></td>
-   <td>marginTop</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/overflow">overflow</a></td>
-   <td>overflow</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/padding">padding</a></td>
-   <td>padding</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/padding-bottom">padding-bottom</a></td>
-   <td>paddingBottom</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/padding-left">padding-left</a></td>
-   <td>paddingLeft</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/padding-right">padding-right</a></td>
-   <td>paddingRight</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/padding-top">padding-top</a></td>
-   <td>paddingTop</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/page-break-after">page-break-after </a></td>
-   <td>pageBreakAfter</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/page-break-before">page-break-before</a></td>
-   <td>pageBreakBefore</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/position">position</a></td>
-   <td>position</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/SVG/Attribute/stroke-dasharray">stroke-dasharray</a></td>
-   <td>strokeDasharray</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/SVG/Attribute/stroke-dashoffset">stroke-dashoffset</a></td>
-   <td>strokeDashoffset</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/text-align">text-align</a></td>
-   <td>textAlign</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/text-decoration">text-decoration</a></td>
-   <td>textDecoration</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/text-indent">text-indent</a></td>
-   <td>textIndent</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/text-transform">text-transform</a></td>
-   <td>textTransform</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/top">top</a></td>
-   <td>top</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/vertical-align">vertical-align</a></td>
-   <td>verticalAlign</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/visibility">visibility</a></td>
-   <td>visibility</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/width">width</a></td>
-   <td>width</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/z-index">z-index</a></td>
-   <td>zIndex</td>
-  </tr>
- </tbody>
-</table>
+| **CSS**                                                              | **JavaScript**       |
+| -------------------------------------------------------------------- | -------------------- |
+| [background](/en-US/docs/Web/CSS/background)                         | background           |
+| [background-attachment](/en-US/docs/Web/CSS/background-attachment)   | backgroundAttachment |
+| [background-color](/en-US/docs/Web/CSS/background-color)             | backgroundColor      |
+| [background-image](/en-US/docs/Web/CSS/background-image)             | backgroundImage      |
+| [background-position](/en-US/docs/Web/CSS/background-position)       | backgroundPosition   |
+| [background-repeat](/en-US/docs/Web/CSS/background-repeat)           | backgroundRepeat     |
+| [border](/en-US/docs/Web/CSS/border)                                 | border               |
+| [border-bottom](/en-US/docs/Web/CSS/border-bottom)                   | borderBottom         |
+| [border-bottom-color](/en-US/docs/Web/CSS/border-bottom-color)       | borderBottomColor    |
+| [border-bottom-style](/en-US/docs/Web/CSS/border-bottom-style)       | borderBottomStyle    |
+| [border-bottom-width](/en-US/docs/Web/CSS/border-bottom-width)       | borderBottomWidth    |
+| [border-color](/en-US/docs/Web/CSS/border-color)                     | borderColor          |
+| [border-left](/en-US/docs/Web/CSS/border-left)                       | borderLeft           |
+| [border-left-color](/en-US/docs/Web/CSS/border-left-color)           | borderLeftColor      |
+| [border-left-style](/en-US/docs/Web/CSS/border-left-style)           | borderLeftStyle      |
+| [border-left-width](/en-US/docs/Web/CSS/border-left-width)           | borderLeftWidth      |
+| [border-right](/en-US/docs/Web/CSS/border-right)                     | borderRight          |
+| [border-right-color](/en-US/docs/Web/CSS/border-right-color)         | borderRightColor     |
+| [border-right-style](/en-US/docs/Web/CSS/border-right-style)         | borderRightStyle     |
+| [border-right-width](/en-US/docs/Web/CSS/border-right-width)         | borderRightWidth     |
+| [border-style](/en-US/docs/Web/CSS/border-style)                     | borderStyle          |
+| [border-top](/en-US/docs/Web/CSS/border-top)                         | borderTop            |
+| [border-top-color](/en-US/docs/Web/CSS/border-top-color)             | borderTopColor       |
+| [border-top-style](/en-US/docs/Web/CSS/border-top-style)             | borderTopStyle       |
+| [border-top-width](/en-US/docs/Web/CSS/border-top-width)             | borderTopWidth       |
+| [border-width](/en-US/docs/Web/CSS/border-width)                     | borderWidth          |
+| [clear](/en-US/docs/Web/CSS/clear)                                   | clear                |
+| [clip](/en-US/docs/Web/CSS/clip)                                     | clip                 |
+| [color](/en-US/docs/Web/CSS/color)                                   | color                |
+| [cursor](/en-US/docs/Web/CSS/cursor)                                 | cursor               |
+| [display](/en-US/docs/Web/CSS/display)                               | display              |
+| [filter](/en-US/docs/Web/CSS/filter)                                 | filter               |
+| [float](/en-US/docs/Web/CSS/float)                                   | cssFloat             |
+| [font](/en-US/docs/Web/CSS/font)                                     | font                 |
+| [font-family](/en-US/docs/Web/CSS/font-family)                       | fontFamily           |
+| [font-size](/en-US/docs/Web/CSS/font-size)                           | fontSize             |
+| [font-variant](/en-US/docs/Web/CSS/font-variant)                     | fontVariant          |
+| [font-weight](/en-US/docs/Web/CSS/font-weight)                       | fontWeight           |
+| [height](/en-US/docs/Web/CSS/height)                                 | height               |
+| [left](/en-US/docs/Web/CSS/left)                                     | left                 |
+| [letter-spacing](/en-US/docs/Web/CSS/letter-spacing)                 | letterSpacing        |
+| [line-height](/en-US/docs/Web/CSS/line-height)                       | lineHeight           |
+| [list-style](/en-US/docs/Web/CSS/list-style)                         | listStyle            |
+| [list-style-image](/en-US/docs/Web/CSS/list-style-image)             | listStyleImage       |
+| [list-style-position](/en-US/docs/Web/CSS/list-style-position)       | listStylePosition    |
+| [list-style-type](/en-US/docs/Web/CSS/list-style-type)               | listStyleType        |
+| [margin](/en-US/docs/Web/CSS/margin)                                 | margin               |
+| [margin-bottom](/en-US/docs/Web/CSS/margin-bottom)                   | marginBottom         |
+| [margin-left](/en-US/docs/Web/CSS/margin-left)                       | marginLeft           |
+| [margin-right](/en-US/docs/Web/CSS/margin-right)                     | marginRight          |
+| [margin-top](/en-US/docs/Web/CSS/margin-top)                         | marginTop            |
+| [overflow](/en-US/docs/Web/CSS/overflow)                             | overflow             |
+| [padding](/en-US/docs/Web/CSS/padding)                               | padding              |
+| [padding-bottom](/en-US/docs/Web/CSS/padding-bottom)                 | paddingBottom        |
+| [padding-left](/en-US/docs/Web/CSS/padding-left)                     | paddingLeft          |
+| [padding-right](/en-US/docs/Web/CSS/padding-right)                   | paddingRight         |
+| [padding-top](/en-US/docs/Web/CSS/padding-top)                       | paddingTop           |
+| [page-break-after](/en-US/docs/Web/CSS/page-break-after)             | pageBreakAfter       |
+| [page-break-before](/en-US/docs/Web/CSS/page-break-before)           | pageBreakBefore      |
+| [position](/en-US/docs/Web/CSS/position)                             | position             |
+| [stroke-dasharray](/en-US/docs/Web/SVG/Attribute/stroke-dasharray)   | strokeDasharray      |
+| [stroke-dashoffset](/en-US/docs/Web/SVG/Attribute/stroke-dashoffset) | strokeDashoffset     |
+| [text-align](/en-US/docs/Web/CSS/text-align)                         | textAlign            |
+| [text-decoration](/en-US/docs/Web/CSS/text-decoration)               | textDecoration       |
+| [text-indent](/en-US/docs/Web/CSS/text-indent)                       | textIndent           |
+| [text-transform](/en-US/docs/Web/CSS/text-transform)                 | textTransform        |
+| [top](/en-US/docs/Web/CSS/top)                                       | top                  |
+| [vertical-align](/en-US/docs/Web/CSS/vertical-align)                 | verticalAlign        |
+| [visibility](/en-US/docs/Web/CSS/visibility)                         | visibility           |
+| [width](/en-US/docs/Web/CSS/width)                                   | width                |
+| [z-index](/en-US/docs/Web/CSS/z-index)                               | zIndex               |

@@ -1,54 +1,55 @@
 ---
 title: '::-moz-list-number'
-slug: 'Web/CSS/:-moz-list-number'
+slug: Web/CSS/:-moz-list-number
 tags:
   - CSS
-  - 'CSS:Mozilla Extensions'
+  - CSS:Mozilla Extensions
   - NeedsCompatTable
   - Non-standard
   - Pseudo-element
   - Reference
   - Selector
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>The <strong><code>::-moz-list-number</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> is a <a href="/en-US/docs/Web/CSS/Mozilla_Extensions">Mozilla extension</a> that represents the marker (typically a number) of a list item ({{HTMLElement("li")}}) in an ordered list ({{HTMLElement("ol")}}).</p>
+The **`::-moz-list-number`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that represents the marker (typically a number) of a list item ({{HTMLElement("li")}}) in an ordered list ({{HTMLElement("ol")}}).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">li::-moz-list-number
-</pre>
+```css
+li::-moz-list-number
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush:html">&lt;ol&gt;
-  &lt;li&gt;First item&lt;/li&gt;
-  &lt;li&gt;Second item&lt;/li&gt;
-  &lt;li&gt;Third item&lt;/li&gt;
-&lt;/ol&gt;
-</pre>
+```html
+<ol>
+  <li>First item</li>
+  <li>Second item</li>
+  <li>Third item</li>
+</ol>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush:css">li::-moz-list-number {
+```css
+li::-moz-list-number {
   font-style: italic;
   font-weight: bold;
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples","auto","auto","/@api/deki/files/4668/=moz-list-number.png")}}</p>
+{{EmbedLiveSample("Examples","auto","auto","/@api/deki/files/4668/=moz-list-number.png")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref(":-moz-list-bullet")}}</li>
- <li>{{cssxref("::marker")}}</li>
-</ul>
+- {{cssxref(":-moz-list-bullet")}}
+- {{cssxref("::marker")}}

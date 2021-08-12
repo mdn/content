@@ -6,29 +6,27 @@ tags:
   - CSS Box Alignment
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.justify-items
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>justify-items</code></strong> property defines the default {{CSSxRef("justify-self")}} for all items of the box, giving them all a default way of justifying each box along the appropriate axis.</p>
+The [CSS](/en-US/docs/Web/CSS) **`justify-items`** property defines the default {{CSSxRef("justify-self")}} for all items of the box, giving them all a default way of justifying each box along the appropriate axis.
 
-<div>{{EmbedInteractiveExample("pages/css/justify-items.html")}}</div>
+{{EmbedInteractiveExample("pages/css/justify-items.html")}}
 
+The effect of this property is dependent of the layout mode we are in:
 
-<p>The effect of this property is dependent of the layout mode we are in:</p>
+- In block-level layouts, it aligns the items inside their containing block on the inline axis.
+- For absolutely-positioned elements, it aligns the items inside their containing block on the inline axis, accounting for the offset values of top, left, bottom, and right.
+- In table cell layouts, this property is _ignored_ ([more](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Block_Abspos_Tables) about alignment in block, absolute positioned and table layout)
+- In flexbox layouts, this property is _ignored_ ([more](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox) about alignment in Flexbox)
+- In grid layouts, it aligns the items inside their grid areas on the inline axis ([more](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout) about alignment in grid layouts)
 
-<ul>
- <li>In block-level layouts, it aligns the items inside their containing block on the inline axis.</li>
- <li>For absolutely-positioned elements, it aligns the items inside their containing block on the inline axis, accounting for the offset values of top, left, bottom, and right.</li>
- <li>In table cell layouts, this property is <em>ignored</em> (<a href="/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Block_Abspos_Tables">more</a> about alignment in block, absolute positioned and table layout)</li>
- <li>In flexbox layouts, this property is <em>ignored</em> (<a href="/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox">more</a> about alignment in Flexbox)</li>
- <li>In grid layouts, it aligns the items inside their grid areas on the inline axis (<a href="/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout">more</a> about alignment in grid layouts)</li>
-</ul>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush:css no-line-numbers">/* Basic keywords */
+```css
+/* Basic keywords */
 justify-items: auto;
 justify-items: normal;
 justify-items: stretch;
@@ -63,93 +61,91 @@ justify-items: inherit;
 justify-items: initial;
 justify-items: revert;
 justify-items: unset;
-</pre>
+```
 
-<p>This property can take one of four different forms:</p>
+This property can take one of four different forms:
 
-<ul>
- <li>Basic keywords: one of the keyword values <code>normal</code>, <code>auto</code>, or <code>stretch</code>.</li>
- <li>Baseline alignment: the <code>baseline</code> keyword, plus optionally one of <code>first</code> or <code>last</code>.</li>
- <li>Positional alignment: one of: <code>center</code>, <code>start</code>, <code>end</code>, <code>flex-start</code>, <code>flex-end</code>, <code>self-start</code>, <code>self-end</code>, <code>left</code>, or <code>right</code>. Plus optionally <code>safe</code> or <code>unsafe</code>.</li>
- <li>Legacy alignment: the <code>legacy</code> keyword, followed by one of <code>left</code> or <code>right</code>.</li>
-</ul>
+- Basic keywords: one of the keyword values `normal`, `auto`, or `stretch`.
+- Baseline alignment: the `baseline` keyword, plus optionally one of `first` or `last`.
+- Positional alignment: one of: `center`, `start`, `end`, `flex-start`, `flex-end`, `self-start`, `self-end`, `left`, or `right`. Plus optionally `safe` or `unsafe`.
+- Legacy alignment: the `legacy` keyword, followed by one of `left` or `right`.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>The value used is the value of the <code>justify-items</code> property of the parents box, unless the box has no parent, or is absolutely positioned, in these cases, <code>auto</code> represents <code>normal</code>.</dd>
- <dt><code>normal</code></dt>
- <dd>The effect of this keyword is dependent of the layout mode we are in:
- <ul>
-  <li>In block-level layouts, the keyword is a synonym of <code>start</code>.</li>
-  <li>In absolutely-positioned layouts, the keyword behaved like <code>start</code> on <em>replaced</em> absolutely-positioned boxes, and as <code>stretch</code> on <em>all other</em> absolutely-positioned boxes.</li>
-  <li>In table cell layouts, this keyword has no meaning as this property is <em>ignored</em>.</li>
-  <li>In flexbox layouts, this keyword has no meaning as this property is <em>ignored.</em></li>
-  <li>In grid layouts, this keyword leads to a behavior similar to the one of <code>stretch</code>, except for boxes with an aspect ratio or an intrinsic sizes where it behaves like <code>start</code>.</li>
- </ul>
- </dd>
- <dt><code>start</code></dt>
- <dd>The item is packed flush to each other toward the start edge of the alignment container in the appropriate axis.</dd>
- <dt><code>end</code></dt>
- <dd>The item is packed flush to each other toward the end edge of the alignment container in the appropriate axis.</dd>
- <dt><code>flex-start</code></dt>
- <dd>For items that are not children of a flex container, this value is treated like <code>start</code>.</dd>
- <dt><code>flex-end</code></dt>
- <dd>For items that are not children of a flex container, this value is treated like <code>end</code>.</dd>
- <dt><code>self-start</code></dt>
- <dd>The item is packed flush to the edge of the alignment container of the start side of the item, in the appropriate axis.</dd>
- <dt><code>self-end</code></dt>
- <dd>The item is packed flush to the edge of the alignment container of the end side of the item, in the appropriate axis.</dd>
- <dt><code>center</code></dt>
- <dd>The items are packed flush to each other toward the center of the of the alignment container.</dd>
- <dt><code>left</code></dt>
- <dd>The items are packed flush to each other toward the left edge of the alignment container. If the property's axis is not parallel with the inline axis, this value behaves like <code>start</code>.</dd>
- <dt><code>right</code></dt>
- <dd>The items are packed flush to each other toward the right edge of the alignment container in the appropriate axis. If the property's axis is not parallel with the inline axis, this value behaves like <code>start</code>.</dd>
- <dt><code>baseline<br>
- first baseline</code><br>
- <code>last baseline</code></dt>
- <dd>Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box's first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.<br>
- The fallback alignment for <code>first baseline</code> is <code>start</code>, the one for <code>last baseline</code> is <code>end</code>.</dd>
- <dt><code>stretch</code></dt>
- <dd>If the combined size of the items is less than the size of the alignment container, any <code>auto</code>-sized items have their size increased equally (not proportionally), while still respecting the constraints imposed by {{CSSxRef("max-height")}}/{{CSSxRef("max-width")}} (or equivalent functionality), so that the combined size exactly fills the alignment container.</dd>
- <dt><code>safe</code></dt>
- <dd>If the size of the item overflows the alignment container, the item is instead aligned as if the alignment mode were <code>start</code>.</dd>
- <dt><code>unsafe</code></dt>
- <dd>Regardless of the relative sizes of the item and alignment container, the given alignment value is honored.</dd>
- <dt><code>legacy</code></dt>
- <dd>Makes the value inherited by the box descendants. Note that if a descendant has a <code>justify-self: auto</code> value, the <code>legacy</code> keyword is not considered by the descend, only the <code>left</code>, <code>right</code>, or <code>center</code> value associated to it.</dd>
-</dl>
+- `auto`
+  - : The value used is the value of the `justify-items` property of the parents box, unless the box has no parent, or is absolutely positioned, in these cases, `auto` represents `normal`.
+- `normal`
 
-<h2 id="Formal_definition">Formal definition</h2>
+  - : The effect of this keyword is dependent of the layout mode we are in:
 
-<p>{{CSSInfo}}</p>
+    - In block-level layouts, the keyword is a synonym of `start`.
+    - In absolutely-positioned layouts, the keyword behaved like `start` on _replaced_ absolutely-positioned boxes, and as `stretch` on _all other_ absolutely-positioned boxes.
+    - In table cell layouts, this keyword has no meaning as this property is _ignored_.
+    - In flexbox layouts, this keyword has no meaning as this property is _ignored._
+    - In grid layouts, this keyword leads to a behavior similar to the one of `stretch`, except for boxes with an aspect ratio or an intrinsic sizes where it behaves like `start`.
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+- `start`
+  - : The item is packed flush to each other toward the start edge of the alignment container in the appropriate axis.
+- `end`
+  - : The item is packed flush to each other toward the end edge of the alignment container in the appropriate axis.
+- `flex-start`
+  - : For items that are not children of a flex container, this value is treated like `start`.
+- `flex-end`
+  - : For items that are not children of a flex container, this value is treated like `end`.
+- `self-start`
+  - : The item is packed flush to the edge of the alignment container of the start side of the item, in the appropriate axis.
+- `self-end`
+  - : The item is packed flush to the edge of the alignment container of the end side of the item, in the appropriate axis.
+- `center`
+  - : The items are packed flush to each other toward the center of the of the alignment container.
+- `left`
+  - : The items are packed flush to each other toward the left edge of the alignment container. If the property's axis is not parallel with the inline axis, this value behaves like `start`.
+- `right`
+  - : The items are packed flush to each other toward the right edge of the alignment container in the appropriate axis. If the property's axis is not parallel with the inline axis, this value behaves like `start`.
+- `baseline first baseline`
+  `last baseline`
+  - : Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box's first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.
+    The fallback alignment for `first baseline` is `start`, the one for `last baseline` is `end`.
+- `stretch`
+  - : If the combined size of the items is less than the size of the alignment container, any `auto`-sized items have their size increased equally (not proportionally), while still respecting the constraints imposed by {{CSSxRef("max-height")}}/{{CSSxRef("max-width")}} (or equivalent functionality), so that the combined size exactly fills the alignment container.
+- `safe`
+  - : If the size of the item overflows the alignment container, the item is instead aligned as if the alignment mode were `start`.
+- `unsafe`
+  - : Regardless of the relative sizes of the item and alignment container, the given alignment value is honored.
+- `legacy`
+  - : Makes the value inherited by the box descendants. Note that if a descendant has a `justify-self: auto` value, the `legacy` keyword is not considered by the descend, only the `left`, `right`, or `center` value associated to it.
+
+## Formal definition
+
+{{CSSInfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Simple_demonstration">Simple demonstration</h3>
+### Simple demonstration
 
-<p>In the following example we have a simple 2 x 2 grid layout. Initially the grid container is given a <code>justify-items</code> value of <code>stretch</code> (the default), which causes the grid items to stretch across the entire width of their cells.</p>
+In the following example we have a simple 2 x 2 grid layout. Initially the grid container is given a `justify-items` value of `stretch` (the default), which causes the grid items to stretch across the entire width of their cells.
 
-<p>If you hover or tab onto the grid container however, it is given a <code>justify-items</code> value of <code>center</code>, which causes the grid items to span only as wide as their content width, and align in the center of their cells.</p>
+If you hover or tab onto the grid container however, it is given a `justify-items` value of `center`, which causes the grid items to span only as wide as their content width, and align in the center of their cells.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;article class="container" tabindex="0"&gt;
-  &lt;span&gt;First child&lt;/span&gt;
-  &lt;span&gt;Second child&lt;/span&gt;
-  &lt;span&gt;Third child&lt;/span&gt;
-  &lt;span&gt;Fourth child&lt;/span&gt;
-&lt;/article&gt;</pre>
+```html
+<article class="container" tabindex="0">
+  <span>First child</span>
+  <span>Second child</span>
+  <span>Third child</span>
+  <span>Fourth child</span>
+</article>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">html {
+```css
+html {
   font-family: helvetica, arial, sans-serif;
   letter-spacing: 1px;
 }
@@ -182,26 +178,25 @@ article, span {
 
 article {
   margin: 20px;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Simple_demonstration', '100%', 200)}}</p>
+{{EmbedLiveSample('Simple_demonstration', '100%', 200)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>CSS Grid Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box alignment in CSS Grid layouts</a></em></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Box_Alignment">CSS Box Alignment</a></li>
- <li>The {{CSSxRef("place-items")}} shorthand property</li>
- <li>The {{CSSxRef("justify-self")}} property</li>
- <li>The {{CSSxRef("align-items")}} property</li>
-</ul>
+- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
+- [CSS Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment)
+- The {{CSSxRef("place-items")}} shorthand property
+- The {{CSSxRef("justify-self")}} property
+- The {{CSSxRef("align-items")}} property

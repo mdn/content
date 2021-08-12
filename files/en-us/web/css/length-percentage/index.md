@@ -11,27 +11,30 @@ tags:
   - values
 browser-compat: css.types.length-percentage
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>&lt;length-percentage&gt;</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Types">data type</a> represents a value that can be either a {{Cssxref("length")}} or a {{Cssxref("percentage")}}.</p>
+The **`<length-percentage>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a value that can be either a {{Cssxref("length")}} or a {{Cssxref("percentage")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>Refer to the documentation for {{Cssxref("length")}} and {{Cssxref("percentage")}} for details of the individual syntaxes allowed by this type.</p>
+Refer to the documentation for {{Cssxref("length")}} and {{Cssxref("percentage")}} for details of the individual syntaxes allowed by this type.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="length-percentage_examples">length-percentage examples</h3>
+### length-percentage examples
 
-<p>The following simple example demonstrates several properties that use <code>&lt;length-percentage&gt;</code> values.</p>
+The following simple example demonstrates several properties that use `<length-percentage>` values.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;You can use percentages and lengths in so many places.&lt;/p&gt;</pre>
+```html
+<p>You can use percentages and lengths in so many places.</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   /* length-percentage examples */
   width: 75%;
   height: 200px;
@@ -48,35 +51,35 @@ browser-compat: css.types.length-percentage
 
   /* percentage example */
   text-size-adjust: 20%;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('length-percentage_examples', '100%', 320)}}</p>
+{{EmbedLiveSample('length-percentage_examples', '100%', 320)}}
 
-<h3 id="Use_in_calc">Use in calc()</h3>
+### Use in calc()
 
-<p>Where a <code>&lt;length-percentage&gt;</code> is specified as an allowable type, this means that the percentage resolves to a length and therefore can be used in a {{cssxref("calc", "calc()")}} expression. Therefore, all of the following values are acceptable for {{cssxref("width")}}:</p>
+Where a `<length-percentage>` is specified as an allowable type, this means that the percentage resolves to a length and therefore can be used in a {{cssxref("calc", "calc()")}} expression. Therefore, all of the following values are acceptable for {{cssxref("width")}}:
 
-<pre class="brush: css example-good">width: 200px;
+```css example-good
+width: 200px;
 width: 20%;
 width: calc(100% - 200px);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<h2 id="See_also_2">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("&lt;percentage&gt;")}}</li>
- <li>{{cssxref("&lt;length&gt;")}}</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Values_and_Units">CSS Values and Units</a></li>
-</ul>
+- {{cssxref("&lt;percentage&gt;")}}
+- {{cssxref("&lt;length&gt;")}}
+- [CSS Values and Units](/en-US/docs/Web/CSS/CSS_Values_and_Units)

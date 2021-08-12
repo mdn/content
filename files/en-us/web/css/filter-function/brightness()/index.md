@@ -9,52 +9,51 @@ tags:
   - Reference
 browser-compat: css.types.filter-function.brightness
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>brightness()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> applies a linear multiplier to the input image, making it appear brighter or darker. Its result is a {{cssxref("&lt;filter-function&gt;")}}.</p>
+The **`brightness()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) applies a linear multiplier to the input image, making it appear brighter or darker. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/function-brightness.html")}}</div>
+{{EmbedInteractiveExample("pages/css/function-brightness.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```css
+brightness(amount)
+```
 
-<pre class="brush: css">brightness(<var>amount</var>)</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `amount`
+  - : The brightness of the result, specified as a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}. A value under `100%` darkens the image, while a value over `100%` brightens it. A value of `0%` will create an image that is completely black, while a value of `100%` leaves the input unchanged. The lacuna value for interpolation is `1`.
 
-<dl>
- <dt><code><var>amount</var></code></dt>
- <dd>The brightness of the result, specified as a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}. A value under <code>100%</code> darkens the image, while a value over <code>100%</code> brightens it. A value of <code>0%</code> will create an image that is completely black, while a value of <code>100%</code> leaves the input unchanged. The lacuna value for interpolation is <code>1</code>.</dd>
-</dl>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Setting brightness using numbers and percentages
 
-<h3 id="Setting_brightness_using_numbers_and_percentages">Setting brightness using numbers and percentages</h3>
-
-<pre class="brush: css">brightness(0%)   /* Completely black */
+```css
+brightness(0%)   /* Completely black */
 brightness(0.4)  /* 40% brightness */
 brightness(1)    /* No effect */
-brightness(200%) /* Double brightness */</pre>
+brightness(200%) /* Double brightness */
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("&lt;filter-function&gt;")}}</li>
- <li>{{cssxref("filter-function/blur()", "blur()")}}</li>
- <li>{{cssxref("filter-function/contrast()", "contrast()")}}</li>
- <li>{{cssxref("filter-function/drop-shadow()", "drop-shadow()")}}</li>
- <li>{{cssxref("filter-function/grayscale()", "grayscale()")}}</li>
- <li>{{cssxref("filter-function/hue-rotate()", "hue-rotate()")}}</li>
- <li>{{cssxref("filter-function/invert()", "invert()")}}</li>
- <li>{{cssxref("filter-function/opacity()", "opacity()")}}</li>
- <li>{{cssxref("filter-function/saturate()", "saturate()")}}</li>
- <li>{{cssxref("filter-function/sepia()", "sepia()")}}</li>
-</ul>
+- {{cssxref("&lt;filter-function&gt;")}}
+- {{cssxref("filter-function/blur()", "blur()")}}
+- {{cssxref("filter-function/contrast()", "contrast()")}}
+- {{cssxref("filter-function/drop-shadow()", "drop-shadow()")}}
+- {{cssxref("filter-function/grayscale()", "grayscale()")}}
+- {{cssxref("filter-function/hue-rotate()", "hue-rotate()")}}
+- {{cssxref("filter-function/invert()", "invert()")}}
+- {{cssxref("filter-function/opacity()", "opacity()")}}
+- {{cssxref("filter-function/saturate()", "saturate()")}}
+- {{cssxref("filter-function/sepia()", "sepia()")}}

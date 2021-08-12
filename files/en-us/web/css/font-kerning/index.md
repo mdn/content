@@ -9,21 +9,22 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.font-kerning
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>font-kerning</code></strong> CSS property sets the use of the kerning information stored in a font.</p>
+The **`font-kerning`** CSS property sets the use of the kerning information stored in a font.
 
-<div>{{EmbedInteractiveExample("pages/css/font-kerning.html")}}</div>
+{{EmbedInteractiveExample("pages/css/font-kerning.html")}}
 
-<p><dfn>Kerning</dfn> defines how letters are spaced. In <em>well-kerned</em> fonts, this feature makes character spacing more uniform and pleasant to read than it would otherwise be.</p>
+_Kerning_ defines how letters are spaced. In _well-kerned_ fonts, this feature makes character spacing more uniform and pleasant to read than it would otherwise be.
 
-<p>In the image below, for instance, the examples on the left do not use kerning, while the ones on the right do:</p>
+In the image below, for instance, the examples on the left do not use kerning, while the ones on the right do:
 
-<p><img alt="Example of font-kerning" src="font-kerning.png"></p>
+![Example of font-kerning](font-kerning.png)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">font-kerning: auto;
+```css
+font-kerning: auto;
 font-kerning: normal;
 font-kerning: none;
 
@@ -31,40 +32,42 @@ font-kerning: none;
 font-kerning: inherit;
 font-kerning: initial;
 font-kerning: revert;
-font-kerning: unset;</pre>
+font-kerning: unset;
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>The browser determines whether font kerning should be used or not. For example, some browsers will disable kerning on small fonts, since applying it could harm the readability of text.</dd>
- <dt><code>normal</code></dt>
- <dd>Font kerning information stored in the font must be applied.</dd>
- <dt><code>none</code></dt>
- <dd>Font kerning information stored in the font is disabled.</dd>
-</dl>
+- `auto`
+  - : The browser determines whether font kerning should be used or not. For example, some browsers will disable kerning on small fonts, since applying it could harm the readability of text.
+- `normal`
+  - : Font kerning information stored in the font must be applied.
+- `none`
+  - : Font kerning information stored in the font is disabled.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Enabling_and_disabling_kerning">Enabling and disabling kerning</h3>
+### Enabling and disabling kerning
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div id="kern"&gt;&lt;/div&gt;
-&lt;div id="nokern"&gt;&lt;/div&gt;
-&lt;textarea id="input"&gt;AV T. ij&lt;/textarea&gt;</pre>
+```html
+<div id="kern"></div>
+<div id="nokern"></div>
+<textarea id="input">AV T. ij</textarea>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   font-size: 2rem;
   font-family: serif;
 }
@@ -75,11 +78,13 @@ font-kerning: unset;</pre>
 
 #kern {
   font-kerning: normal;
-}</pre>
+}
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">let input  = document.getElementById('input');
+```js
+let input  = document.getElementById('input');
 let kern   = document.getElementById('kern');
 let nokern = document.getElementById('nokern');
 
@@ -90,20 +95,18 @@ input.addEventListener('keyup', function() {
 
 kern.textContent = input.value; /* Initialize content */
 nokern.textContent = input.value;
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Enabling_and_disabling_kerning') }}</p>
+{{ EmbedLiveSample('Enabling_and_disabling_kerning') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("font-variant")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-synthesis")}}, {{cssxref("letter-spacing")}}</li>
-</ul>
+- {{cssxref("font-variant")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-synthesis")}}, {{cssxref("letter-spacing")}}

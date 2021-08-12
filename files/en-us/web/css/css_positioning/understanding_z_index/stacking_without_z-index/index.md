@@ -9,43 +9,43 @@ tags:
   - Understanding_CSS_z-index
   - z-index
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>When the {{cssxref("z-index")}} property is not specified on any element, elements are stacked in the following order (from bottom to top):</p>
+When the {{cssxref("z-index")}} property is not specified on any element, elements are stacked in the following order (from bottom to top):
 
-<ol>
- <li>The background and borders of the root element</li>
- <li>Descendant non-positioned blocks, in order of appearance in the HTML</li>
- <li>Descendant positioned elements, in order of appearance in the HTML</li>
-</ol>
+1.  The background and borders of the root element
+2.  Descendant non-positioned blocks, in order of appearance in the HTML
+3.  Descendant positioned elements, in order of appearance in the HTML
 
-<p>See <a href="/en-US/docs/Web/CSS/position#types_of_positioning">types of positioning</a> for an explanation of positioned and non-positioned elements.</p>
+See [types of positioning](/en-US/docs/Web/CSS/position#types_of_positioning) for an explanation of positioned and non-positioned elements.
 
-<p>Keep in mind, when the {{cssxref("order")}} property alters rendering from the "order of appearance in the HTML" within {{cssxref("flex")}} containers, it similarly affects the order for stacking context.</p>
+Keep in mind, when the {{cssxref("order")}} property alters rendering from the "order of appearance in the HTML" within {{cssxref("flex")}} containers, it similarly affects the order for stacking context.
 
-<p>In the example below, elements #1 through #4 are positioned elements. Element #5 is static, and so is drawn below the other four elements, even though it comes later in the HTML markup.</p>
+In the example below, elements #1 through #4 are positioned elements. Element #5 is static, and so is drawn below the other four elements, even though it comes later in the HTML markup.
 
-<p>{{EmbedLiveSample("Source_code_for_the_example", 600, 400)}}</p>
+{{EmbedLiveSample("Source_code_for_the_example", 600, 400)}}
 
-<h2 id="Source_code_for_the_example">Source code for the example</h2>
+## Source code for the example
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="abs1" class="absolute"&gt;
-  &lt;b&gt;DIV #1&lt;/b&gt;&lt;br /&gt;position: absolute;&lt;/div&gt;
-&lt;div id="rel1" class="relative"&gt;
-  &lt;b&gt;DIV #2&lt;/b&gt;&lt;br /&gt;position: relative;&lt;/div&gt;
-&lt;div id="rel2" class="relative"&gt;
-  &lt;b&gt;DIV #3&lt;/b&gt;&lt;br /&gt;position: relative;&lt;/div&gt;
-&lt;div id="abs2" class="absolute"&gt;
-  &lt;b&gt;DIV #4&lt;/b&gt;&lt;br /&gt;position: absolute;&lt;/div&gt;
-&lt;div id="sta1" class="static"&gt;
-  &lt;b&gt;DIV #5&lt;/b&gt;&lt;br /&gt;position: static;&lt;/div&gt;
-</pre>
+```html
+<div id="abs1" class="absolute">
+  <b>DIV #1</b><br />position: absolute;</div>
+<div id="rel1" class="relative">
+  <b>DIV #2</b><br />position: relative;</div>
+<div id="rel2" class="relative">
+  <b>DIV #3</b><br />position: relative;</div>
+<div id="abs2" class="absolute">
+  <b>DIV #4</b><br />position: absolute;</div>
+<div id="sta1" class="static">
+  <b>DIV #5</b><br />position: static;</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">b {
+```css
+b {
   font-family: sans-serif;
 }
 
@@ -104,15 +104,13 @@ div {
   background-color: #ffc;
   margin: 0px 50px 0px 50px;
 }
-</pre>
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float">Stacking with floated blocks</a>: How floating elements are handled with stacking.</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index">Using z-index</a>: How to use <code>z-index</code> to change default stacking.</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">The stacking context</a>: Notes on the stacking context.</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1">Stacking context example 1</a>: 2-level HTML hierarchy, z-index on the last level</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2">Stacking context example 2</a>: 2-level HTML hierarchy, z-index on all levels</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3">Stacking context example 3</a>: 3-level HTML hierarchy, z-index on the second level</li>
-</ul>
+- [Stacking with floated blocks](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float): How floating elements are handled with stacking.
+- [Using z-index](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index): How to use `z-index` to change default stacking.
+- [The stacking context](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context): Notes on the stacking context.
+- [Stacking context example 1](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1): 2-level HTML hierarchy, z-index on the last level
+- [Stacking context example 2](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2): 2-level HTML hierarchy, z-index on all levels
+- [Stacking context example 3](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3): 3-level HTML hierarchy, z-index on the second level

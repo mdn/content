@@ -6,42 +6,25 @@ tags:
   - Guide
   - Reference
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong>actual value</strong> of a <a href="/en-US/docs/Web/CSS">CSS</a> property is the <a href="/en-US/docs/Web/CSS/used_value">used value</a> of that property after any necessary approximations have been applied. For example, a {{glossary("user agent")}} that can only render borders with a whole-number pixel width may round the thickness of the border to the nearest integer.</p>
+The **actual value** of a [CSS](/en-US/docs/Web/CSS) property is the [used value](/en-US/docs/Web/CSS/used_value) of that property after any necessary approximations have been applied. For example, a {{glossary("user agent")}} that can only render borders with a whole-number pixel width may round the thickness of the border to the nearest integer.
 
-<h2 id="Calculating_a_propertys_actual_value">Calculating a property's actual value</h2>
+## Calculating a property's actual value
 
-<p>The {{glossary("user agent")}} performs four steps to calculate a property's actual (final) value:</p>
+The {{glossary("user agent")}} performs four steps to calculate a property's actual (final) value:
 
-<ol>
- <li>First, the <a href="/en-US/docs/Web/CSS/specified_value">specified value</a> is determined based on the result of <a href="/en-US/docs/Web/CSS/Cascade">cascading</a>, <a href="/en-US/docs/Web/CSS/inheritance">inheritance</a>, or using the <a href="/en-US/docs/Web/CSS/initial_value">initial value</a>.</li>
- <li>Next, the <a href="/en-US/docs/Web/CSS/computed_value">computed value</a> is calculated according to the specification (for example, a <code>span</code> with <code>position: absolute</code> will have its computed <code>display</code> changed to <code>block</code>).</li>
- <li>Then, layout is calculated, resulting in the <a href="/en-US/docs/Web/CSS/used_value">used value</a>.</li>
- <li>Finally, the used value is transformed according to the limitations of the local environment, resulting in the actual value.</li>
-</ol>
+1.  First, the [specified value](/en-US/docs/Web/CSS/specified_value) is determined based on the result of [cascading](/en-US/docs/Web/CSS/Cascade), [inheritance](/en-US/docs/Web/CSS/inheritance), or using the [initial value](/en-US/docs/Web/CSS/initial_value).
+2.  Next, the [computed value](/en-US/docs/Web/CSS/computed_value) is calculated according to the specification (for example, a `span` with `position: absolute` will have its computed `display` changed to `block`).
+3.  Then, layout is calculated, resulting in the [used value](/en-US/docs/Web/CSS/used_value).
+4.  Finally, the used value is transformed according to the limitations of the local environment, resulting in the actual value.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'cascade.html#actual-value', 'actual value')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                            | Status                   | Comment             |
+| ---------------------------------------------------------------------------------------- | ------------------------ | ------------------- |
+| {{SpecName('CSS2.1', 'cascade.html#actual-value', 'actual value')}} | {{Spec2('CSS2.1')}} | Initial definition. |
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{CSS_key_concepts}}</li>
-</ul>
+- {{CSS_key_concepts}}

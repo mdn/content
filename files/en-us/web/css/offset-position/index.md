@@ -8,16 +8,17 @@ tags:
   - Experimental
   - Property
   - offset-position
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.offset-position
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>The <strong><code>offset-position</code></strong> CSS property defines the <a href="https://www.w3.org/TR/motion-1/#valdef-offsetpath-initial-position">initial position</a> of the {{cssxref("offset-path")}}.</p>
+The **`offset-position`** CSS property defines the [initial position](https://www.w3.org/TR/motion-1/#valdef-offsetpath-initial-position) of the {{cssxref("offset-path")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 offset-position: auto;
 offset-position: top;
 offset-position: bottom;
@@ -25,10 +26,10 @@ offset-position: left;
 offset-position: right;
 offset-position: center;
 
-/* &lt;percentage&gt; values */
+/* <percentage> values */
 offset-position: 25% 75%;
 
-/* &lt;length&gt; values */
+/* <length> values */
 offset-position: 0 0;
 offset-position: 1cm 2cm;
 offset-position: 10ch 8em;
@@ -44,33 +45,33 @@ offset-position: inherit;
 offset-position: initial;
 offset-position: revert;
 offset-position: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>The initial position is the position of the box specified by the {{cssxref("position")}} property.</dd>
- <dt><code>&lt;position&gt;</code></dt>
- <dd>A {{cssxref("&lt;position&gt;")}}. A position defines an x/y coordinate, to place an item relative to the edges of an element's box. It can be defined using one to four values. If two non-keyword values are used, the first value represents the horizontal position and the second represents the vertical position. If only one value is specified, the second value is assumed to be <code>center</code>. If three or four values are used, the length-percentage values are offsets for the preceding keyword value(s). For more explanation of these value types, see {{cssxref("background-position")}}.</dd>
-</dl>
+- `auto`
+  - : The initial position is the position of the box specified by the {{cssxref("position")}} property.
+- `<position>`
+  - : A {{cssxref("&lt;position&gt;")}}. A position defines an x/y coordinate, to place an item relative to the edges of an element's box. It can be defined using one to four values. If two non-keyword values are used, the first value represents the horizontal position and the second represents the vertical position. If only one value is specified, the second value is assumed to be `center`. If three or four values are used, the length-percentage values are offsets for the preceding keyword value(s). For more explanation of these value types, see {{cssxref("background-position")}}.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_initial_offset_position">Setting initial offset position</h3>
+### Setting initial offset position
 
-<pre class="brush: html">&lt;div id="motion-demo"&gt;&lt;/div&gt;
-</pre>
+```html
+<div id="motion-demo"></div>
+```
 
-<pre class="brush: css">#motion-demo {
+```css
+#motion-demo {
   offset-path: path('M20,20 C20,100 200,0 200,100');
   offset-position: left top;
   animation: move 3000ms infinite alternate ease-in-out;
@@ -86,22 +87,21 @@ offset-position: unset;
   100% {
     offset-distance: 100%;
   }
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("offset")}}</li>
- <li>{{cssxref("offset-anchor")}}</li>
- <li>{{cssxref("offset-distance")}}</li>
- <li>{{cssxref("offset-path")}}</li>
- <li>{{cssxref("offset-rotate")}}</li>
-</ul>
+- {{cssxref("offset")}}
+- {{cssxref("offset-anchor")}}
+- {{cssxref("offset-distance")}}
+- {{cssxref("offset-path")}}
+- {{cssxref("offset-rotate")}}

@@ -10,18 +10,19 @@ tags:
   - Reference
   - motion-offset
   - offset-distance
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.offset-distance
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>offset-distance</code></strong> CSS property specifies a position along an {{CSSxRef("offset-path")}} for an element to be placed.</p>
+The **`offset-distance`** CSS property specifies a position along an {{CSSxRef("offset-path")}} for an element to be placed.
 
-<div>{{EmbedInteractiveExample("pages/css/offset-distance.html")}}</div>
+{{EmbedInteractiveExample("pages/css/offset-distance.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">/* Default value */
+```css
+/* Default value */
 offset-distance: 0;
 
 /* the middle of the offset-path */
@@ -34,38 +35,39 @@ offset-distance: 40px;
 offset-distance: inherit;
 offset-distance: initial;
 offset-distance: revert;
-offset-distance: unset;</pre>
+offset-distance: unset;
+```
 
-<dl>
- <dt><code>{{cssxref('&lt;length-percentage&gt;')}}</code></dt>
- <dd>
-   <p>A length that specifies how far the element is along the path (defined with {{cssxref('offset-path')}}).</p>
-   <p>100% represents the total length of the path (when the <code>offset-path</code> is defined as a basic shape or <code>path()</code>).</p>
- </dd>
-</dl>
+- `{{cssxref('&lt;length-percentage&gt;')}}`
 
-<h2 id="Formal_definition">Formal definition</h2>
+  - : A length that specifies how far the element is along the path (defined with {{cssxref('offset-path')}}).
 
-<p>{{cssinfo}}</p>
+    100% represents the total length of the path (when the `offset-path` is defined as a basic shape or `path()`).
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal definition
+
+{{cssinfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_offset-distance_in_an_animation">Using offset-distance in an animation</h3>
+### Using offset-distance in an animation
 
-<p>The motion aspect in CSS Motion Path typically comes from animating the <code>offset-distance</code> property. If you want to animate an element along its full path, you would define its {{cssxref('offset-path')}} and then set up an animation that takes the <code>offset-distance</code> from <code>0%</code> to <code>100%</code>.</p>
+The motion aspect in CSS Motion Path typically comes from animating the `offset-distance` property. If you want to animate an element along its full path, you would define its {{cssxref('offset-path')}} and then set up an animation that takes the `offset-distance` from `0%` to `100%`.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div id="motion-demo"&gt;&lt;/div&gt;
-</pre>
+```html
+<div id="motion-demo"></div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">#motion-demo {
+```css
+#motion-demo {
   offset-path: path('M20,20 C20,100 200,0 200,100');
   animation: move 3000ms infinite alternate ease-in-out;
   width: 40px;
@@ -80,26 +82,25 @@ offset-distance: unset;</pre>
   100% {
     offset-distance: 100%;
   }
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Using_offset-distance_in_an_animation', '100%', 150)}}</p>
+{{EmbedLiveSample('Using_offset-distance_in_an_animation', '100%', 150)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("offset")}}</li>
- <li>{{cssxref("offset-anchor")}}</li>
- <li>{{cssxref("offset-path")}}</li>
- <li>{{cssxref("offset-position")}}</li>
- <li>{{cssxref("offset-rotate")}}</li>
-</ul>
+- {{cssxref("offset")}}
+- {{cssxref("offset-anchor")}}
+- {{cssxref("offset-path")}}
+- {{cssxref("offset-position")}}
+- {{cssxref("offset-rotate")}}

@@ -9,42 +9,39 @@ tags:
   - Reference
 browser-compat: css.types.transform-function.scale3d
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>scale3d()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a
-    href="/en-US/docs/Web/CSS/CSS_Functions">function</a> defines a transformation that resizes an element in 3D space.
-  Because the amount of scaling is defined by a vector, it can resize different dimensions at different scales. Its
-  result is a {{cssxref("&lt;transform-function&gt;")}} data type.</p>
+The **`scale3d()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a transformation that resizes an element in 3D space.
+Because the amount of scaling is defined by a vector, it can resize different dimensions at different scales. Its
+result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
-<div>{{EmbedInteractiveExample("pages/css/function-scale3d.html")}}</div>
+{{EmbedInteractiveExample("pages/css/function-scale3d.html")}}
 
-<p>This scaling transformation is characterized by a three-dimensional vector. Its coordinates define how much scaling
-  is done in each direction. If all three coordinates are equal, the scaling is uniform (<em>isotropic</em>) and the
-  aspect ratio of the element is preserved (this is a <a
-    href="https://en.wikipedia.org/wiki/Homothetic_transformation">homothetic transformation</a>).</p>
+This scaling transformation is characterized by a three-dimensional vector. Its coordinates define how much scaling
+is done in each direction. If all three coordinates are equal, the scaling is uniform (_isotropic_) and the
+aspect ratio of the element is preserved (this is a [homothetic transformation](https://en.wikipedia.org/wiki/Homothetic_transformation)).
 
-<p>When a coordinate value is outside the [-1, 1] range, the element grows along that dimension; when inside, it
-  shrinks. If it is negative, the result a <a href="https://en.wikipedia.org/wiki/Point_reflection">point reflection</a>
-  in that dimension. A value of 1 has no effect.</p>
+When a coordinate value is outside the \[-1, 1] range, the element grows along that dimension; when inside, it
+shrinks. If it is negative, the result a [point reflection](https://en.wikipedia.org/wiki/Point_reflection)
+in that dimension. A value of 1 has no effect.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>scale3d()</code> function is specified with three values, which represent the amount of scaling to be
-  applied in each direction.</p>
+The `scale3d()` function is specified with three values, which represent the amount of scaling to be
+applied in each direction.
 
-<pre class="brush: css">scale3d(<em>sx</em>, <em>sy</em>, <em>sz</em>)
-</pre>
+```css
+scale3d(sx, sy, sz)
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-  <dt><code>sx</code></dt>
-  <dd>Is a {{cssxref("&lt;number&gt;")}} representing the abscissa of the scaling vector.</dd>
-  <dt><code>sy</code></dt>
-  <dd>Is a {{cssxref("&lt;number&gt;")}} representing the ordinate of the scaling vector.</dd>
-  <dt><code>sz</code></dt>
-  <dd>Is a {{cssxref("&lt;number&gt;")}} representing the z-component of the scaling vector.</dd>
-</dl>
+- `sx`
+  - : Is a {{cssxref("&lt;number&gt;")}} representing the abscissa of the scaling vector.
+- `sy`
+  - : Is a {{cssxref("&lt;number&gt;")}} representing the ordinate of the scaling vector.
+- `sz`
+  - : Is a {{cssxref("&lt;number&gt;")}} representing the z-component of the scaling vector.
 
 <table class="standard-table">
   <thead>
@@ -57,125 +54,68 @@ browser-compat: css.types.transform-function.scale3d
   </thead>
   <tbody>
     <tr>
-      <td colspan="2">This transformation applies to the 3D space and can't be represented on the plane.
+      <td colspan="2">
+        This transformation applies to the 3D space and can't be represented on
+        the plane.
       </td>
-      <td><math>
-          <mfenced>
-            <mtable>
-              <mtr>
-                <mtd>
-                  <mi>sx</mi>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mi>sy</mi>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mi>sz</mi>
-                </mtd>
-              </mtr>
-            </mtable>
-          </mfenced>
-        </math></td>
-      <td><math>
-          <mfenced>
-            <mtable>
-              <mtr>
-                <mtd>
-                  <mi>sx</mi>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mi>sy</mi>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mi>sz</mi>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>1</mn>
-                </mtd>
-              </mtr>
-            </mtable>
-          </mfenced>
-        </math></td>
+      <td>
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr
+                ><mtd><mi>sx</mi> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mi>sy</mi> </mtd
+                ><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mi>sz</mi></mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td>
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr
+                ><mtd><mi>sx</mi> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mi>sy</mi> </mtd
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mi>sz</mi> </mtd><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Without_changing_the_origin">Without changing the origin</h3>
+### Without changing the origin
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;Normal&lt;/div&gt;
-&lt;div class="scaled"&gt;Scaled&lt;/div&gt;</pre>
+```html
+<div>Normal</div>
+<div class="scaled">Scaled</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   width: 80px;
   height: 80px;
   background-color: skyblue;
@@ -185,22 +125,25 @@ browser-compat: css.types.transform-function.scale3d
   transform: perspective(500px) scale3d(2, 0.7, 0.2) translateZ(100px);
   background-color: pink;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Without_changing_the_origin","200","200")}}</p>
+{{EmbedLiveSample("Without_changing_the_origin","200","200")}}
 
-<h3 id="Translating_the_origin_of_the_transformation">Translating the origin of the transformation</h3>
+### Translating the origin of the transformation
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;Normal&lt;/div&gt;
-&lt;div class="scaled"&gt;Scaled&lt;/div&gt;</pre>
+```html
+<div>Normal</div>
+<div class="scaled">Scaled</div>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   width: 80px;
   height: 80px;
   background-color: skyblue;
@@ -211,26 +154,24 @@ browser-compat: css.types.transform-function.scale3d
   transform-origin: left;
   background-color: pink;
 }
-</pre>
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Translating_the_origin_of_the_transformation","200","200")}}</p>
+{{EmbedLiveSample("Translating_the_origin_of_the_transformation","200","200")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{cssxref("transform")}}</li>
-  <li>{{cssxref("&lt;transform-function&gt;")}}</li>
-  <li><code><a href="/en-US/docs/Web/CSS/transform-function/scaleZ">scaleZ()</a></code></li>
-  <li><code><a href="/en-US/docs/Web/CSS/transform-function/translate3d">translate3d()</a></code></li>
-  <li><code><a href="/en-US/docs/Web/CSS/transform-function/rotate3d">rotate3d()</a></code></li>
-</ul>
+- {{cssxref("transform")}}
+- {{cssxref("&lt;transform-function&gt;")}}
+- [`scaleZ()`](/en-US/docs/Web/CSS/transform-function/scaleZ)
+- [`translate3d()`](/en-US/docs/Web/CSS/transform-function/translate3d)
+- [`rotate3d()`](/en-US/docs/Web/CSS/transform-function/rotate3d)

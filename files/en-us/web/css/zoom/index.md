@@ -6,22 +6,23 @@ tags:
   - CSS Property
   - Non-standard
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.zoom
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>The non-standard <strong><dfn><code>zoom</code></dfn></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property can be used to control the magnification level of an element. {{cssxref("transform-function/scale", "transform: scale()")}} should be used instead of this property, if possible. However, unlike CSS Transforms, <code>zoom</code> affects the layout size of the element.</p>
+The non-standard **_`zoom`_** [CSS](/en-US/docs/Web/CSS) property can be used to control the magnification level of an element. {{cssxref("transform-function/scale", "transform: scale()")}} should be used instead of this property, if possible. However, unlike CSS Transforms, `zoom` affects the layout size of the element.
 
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 zoom: normal;
 zoom: reset;
 
-/* &lt;percentage&gt; values */
+/* <percentage> values */
 zoom: 50%;
 zoom: 200%;
 
-/* &lt;number&gt; values */
+/* <number> values */
 zoom: 1.1;
 zoom: 0.7;
 
@@ -29,44 +30,63 @@ zoom: 0.7;
 zoom: inherit;
 zoom: initial;
 zoom: unset;
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-	<dt><code>normal</code></dt>
-	<dd>Render this element at its normal size.</dd>
-	<dt><code>reset</code> {{non-standard_inline}}</dt>
-	<dd>Do not (de)magnify this element if the user applies non-pinch-based zooming (e.g. by pressing <kbd>Ctrl</kbd>-<kbd>-</kbd> or <kbd>Ctrl</kbd>+<kbd>+</kbd> keyboard shortcuts) to the document. Only supported by WebKit (and possibly Blink).</dd>
-	<dt>{{cssxref("&lt;percentage&gt;")}}</dt>
-	<dd>Zoom factor. <code>100%</code> is equivalent to <code>normal</code>. Values larger than <code>100%</code> zoom in. Values smaller than <code>100%</code> zoom out.</dd>
-	<dt>{{cssxref("&lt;number&gt;")}}</dt>
-	<dd>Zoom factor. Equivalent to the corresponding percentage (<code>1.0</code> = <code>100%</code> = <code>normal</code>). Values larger than <code>1.0</code> zoom in. Values smaller than <code>1.0</code> zoom out.</dd>
-</dl>
+- `normal`
+  - : Render this element at its normal size.
+- `reset` {{non-standard_inline}}
 
-<h2 id="Formal_definition">Formal definition</h2>
+  - : Do not (de)magnify this element if the user applies non-pinch-based zooming (e.g. by pressing
 
-<p>{{cssinfo}}</p>
+    <kbd>Ctrl</kbd>
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+    \-
+
+    <kbd>-</kbd>
+
+    or
+
+    <kbd>Ctrl</kbd>
+
+    \+
+
+    <kbd>+</kbd>
+
+    keyboard shortcuts) to the document. Only supported by WebKit (and possibly Blink).
+
+- {{cssxref("&lt;percentage&gt;")}}
+  - : Zoom factor. `100%` is equivalent to `normal`. Values larger than `100%` zoom in. Values smaller than `100%` zoom out.
+- {{cssxref("&lt;number&gt;")}}
+  - : Zoom factor. Equivalent to the corresponding percentage (`1.0` = `100%` = `normal`). Values larger than `1.0` zoom in. Values smaller than `1.0` zoom out.
+
+## Formal definition
+
+{{cssinfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="First_example">First example</h3>
+### First example
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p class="small"&gt;Small&lt;/p&gt;
-&lt;p class="normal"&gt;Normal&lt;/p&gt;
-&lt;p class="big"&gt;Big&lt;/p&gt;</pre>
+```html
+<p class="small">Small</p>
+<p class="normal">Normal</p>
+<p class="big">Big</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p.small {
+```css
+p.small {
   zoom: 75%;
 }
 p.normal {
@@ -81,23 +101,26 @@ p {
 p:hover {
   zoom: reset;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('First_example')}}</p>
+{{EmbedLiveSample('First_example')}}
 
-<h3 id="Second_example">Second example</h3>
+### Second example
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div id="a" class="circle"&gt;&lt;/div&gt;
-&lt;div id="b" class="circle"&gt;&lt;/div&gt;
-&lt;div id="c" class="circle"&gt;&lt;/div&gt;</pre>
+```html
+<div id="a" class="circle"></div>
+<div id="b" class="circle"></div>
+<div id="c" class="circle"></div>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div.circle {
+```css
+div.circle {
   width: 25px;
   height: 25px;
   border-radius: 100%;
@@ -118,24 +141,22 @@ div#c {
   background-color: blue;
   zoom: 2.9;
 }
-</pre>
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Second_example')}}</p>
+{{EmbedLiveSample('Second_example')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard. This property originated in Internet Explorer. Apple has <a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-SW15">a description in the Safari CSS Reference</a>. Rossen Atanassov of Microsoft has <a href="http://cdn.rawgit.com/atanassov/css-zoom/master/Overview.html">an unofficial draft specification proposal on GitHub</a>.</p>
+Not part of any standard. This property originated in Internet Explorer. Apple has [a description in the Safari CSS Reference](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-SW15). Rossen Atanassov of Microsoft has [an unofficial draft specification proposal on GitHub](http://cdn.rawgit.com/atanassov/css-zoom/master/Overview.html).
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="https://css-tricks.com/almanac/properties/z/zoom/"><code>zoom</code> entry in CSS-Tricks' CSS Almanac</a></li>
-	<li>The <a href="/en-US/docs/Web/CSS/@viewport/zoom"><code>zoom</code> viewport descriptor</a>, for use with <a href="/en-US/docs/Web/CSS/@viewport"><code>@viewport</code></a></li>
-	<li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=390936">Bug 390936: Implement Internet Explorer <code>zoom</code> property for CSS </a>on the Firefox issue tracker Bugzilla</li>
-</ul>
+- [`zoom` entry in CSS-Tricks' CSS Almanac](https://css-tricks.com/almanac/properties/z/zoom/)
+- The [`zoom` viewport descriptor](/en-US/docs/Web/CSS/@viewport/zoom), for use with [`@viewport`](/en-US/docs/Web/CSS/@viewport)
+- [Bug 390936: Implement Internet Explorer `zoom` property for CSS ](https://bugzilla.mozilla.org/show_bug.cgi?id=390936)on the Firefox issue tracker Bugzilla

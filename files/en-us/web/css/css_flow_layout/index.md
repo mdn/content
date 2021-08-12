@@ -10,34 +10,30 @@ tags:
   - Reference
   - flow
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><em>Normal Flow</em>, or Flow Layout, is the way that Block and Inline elements are displayed on a page before any changes are made to their layout. The flow is essentially a set of things that are all working together and know about each other in your layout. Once something is taken <em>out of flow</em> it works independently.</p>
+_Normal Flow_, or Flow Layout, is the way that Block and Inline elements are displayed on a page before any changes are made to their layout. The flow is essentially a set of things that are all working together and know about each other in your layout. Once something is taken *out of flow* it works independently.
 
-<p>In normal flow, <strong>inline</strong> elements display in the inline direction, that is in the direction words are displayed in a sentence according to the <a href="/en-US/docs/Web/CSS/CSS_Writing_Modes">Writing Mode</a> of the document. <strong>Block</strong> elements display one after the other, as paragraphs do in the Writing Mode of that document. In English therefore, inline elements display one after the other, starting on the left, and block elements start at the top and move down the page.</p>
+In normal flow, **inline** elements display in the inline direction, that is in the direction words are displayed in a sentence according to the [Writing Mode](/en-US/docs/Web/CSS/CSS_Writing_Modes) of the document. **Block** elements display one after the other, as paragraphs do in the Writing Mode of that document. In English therefore, inline elements display one after the other, starting on the left, and block elements start at the top and move down the page.
 
-<h2 id="Basic_Example">Basic Example</h2>
+## Basic Example
 
-<p>The following example demonstrates Block and Inline Level boxes. The two paragraph elements with a green border are Block Level, displaying one under the other.</p>
+The following example demonstrates Block and Inline Level boxes. The two paragraph elements with a green border are Block Level, displaying one under the other.
 
-<p>The first sentence also includes a span element with a blue background. This is inline level and therefore displays in place in the sentence.</p>
+The first sentence also includes a span element with a blue background. This is inline level and therefore displays in place in the sentence.
 
-<p>{{EmbedGHLiveSample("css-examples/layout/normal-flow.html", '100%', 720)}}</p>
+{{EmbedGHLiveSample("css-examples/layout/normal-flow.html", '100%', 720)}}
 
-<h2 id="Guides">Guides</h2>
+## Guides
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow">Block and Inline Layout in Normal Flow</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow">In Flow and Out of Flow</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Flow_Layout/Formatting_Contexts_Explained">Formatting Contexts Explained</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes">Flow Layout and Writing Modes</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Overflow">Flow Layout and Overflow</a></li>
-</ul>
+- [Block and Inline Layout in Normal Flow](/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
+- [In Flow and Out of Flow](/en-US/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow)
+- [Formatting Contexts Explained](/en-US/docs/Web/CSS/CSS_Flow_Layout/Formatting_Contexts_Explained)
+- [Flow Layout and Writing Modes](/en-US/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes)
+- [Flow Layout and Overflow](/en-US/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Overflow)
 
-<h2 id="Reference">Reference</h2>
+## Reference
 
-<h3 id="Glossary_Entries">Glossary Entries</h3>
+### Glossary Entries
 
-<ul>
- <li>{{Glossary("Block/CSS", "Block (CSS)")}}</li>
-</ul>
+- {{Glossary("Block/CSS", "Block (CSS)")}}

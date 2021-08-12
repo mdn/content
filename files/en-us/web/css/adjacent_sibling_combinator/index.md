@@ -9,51 +9,55 @@ tags:
   - Selectors
 browser-compat: css.selectors.adjacent_sibling
 ---
-<div>{{CSSRef("Selectors")}}</div>
+{{CSSRef("Selectors")}}
 
-<p>The <strong>adjacent sibling combinator</strong> (<code>+</code>) separates two selectors and matches the second element only if it <em>immediately</em> follows the first element, and both are children of the same parent {{DOMxRef("element")}}.</p>
+The **adjacent sibling combinator** (`+`) separates two selectors and matches the second element only if it _immediately_ follows the first element, and both are children of the same parent {{DOMxRef("element")}}.
 
-<pre class="brush: css no-line-numbers">/* Paragraphs that come immediately after any image */
+```css
+/* Paragraphs that come immediately after any image */
 img + p {
   font-weight: bold;
-}</pre>
+}
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">former_element + target_element { <em>style properties</em> }
-</pre>
+```css
+former_element + target_element { style properties }
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">li:first-of-type + li {
+```css
+li:first-of-type + li {
   color: red;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;One&lt;/li&gt;
-  &lt;li&gt;Two!&lt;/li&gt;
-  &lt;li&gt;Three&lt;/li&gt;
-&lt;/ul&gt;</pre>
+```html
+<ul>
+  <li>One</li>
+  <li>Two!</li>
+  <li>Three</li>
+</ul>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples", "100%", 100)}}</p>
+{{EmbedLiveSample("Examples", "100%", 100)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/General_sibling_combinator">General sibling combinator</a></li>
-</ul>
+- [General sibling combinator](/en-US/docs/Web/CSS/General_sibling_combinator)

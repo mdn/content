@@ -9,25 +9,24 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.grid-template
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>grid-template</code></strong> CSS property is a <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a> for defining {{glossary("grid column", "grid columns")}}, {{glossary("grid rows", "rows")}}, and {{glossary("grid areas", "areas")}}.</p>
+The **`grid-template`** CSS property is a [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) for defining {{glossary("grid column", "grid columns")}}, {{glossary("grid rows", "rows")}}, and {{glossary("grid areas", "areas")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/grid-template.html")}}</div>
+{{EmbedInteractiveExample("pages/css/grid-template.html")}}
 
-<h2 id="Constituent_properties">Constituent properties</h2>
+## Constituent properties
 
-<p>This property is a shorthand for the following CSS properties:</p>
+This property is a shorthand for the following CSS properties:
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/grid-template-areas"><code>grid-template-areas</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/grid-template-columns"><code>grid-template-columns</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/grid-template-rows"><code>grid-template-rows</code></a></li>
-</ul>
+- [`grid-template-areas`](/en-US/docs/Web/CSS/grid-template-areas)
+- [`grid-template-columns`](/en-US/docs/Web/CSS/grid-template-columns)
+- [`grid-template-rows`](/en-US/docs/Web/CSS/grid-template-rows)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">/* Keyword value */
+```css
+/* Keyword value */
 grid-template: none;
 
 /* grid-template-rows / grid-template-columns values */
@@ -50,43 +49,38 @@ grid-template: inherit;
 grid-template: initial;
 grid-template: revert;
 grid-template: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Is a keyword that sets all three longhand properties to <code>none</code>, meaning there is no explicit grid. There are no named grid areas. Rows and columns will be implicitly generated; their size will be determined by the {{cssxref("grid-auto-rows")}} and {{cssxref("grid-auto-columns")}} properties.</dd>
- <dt><code>&lt;'grid-template-rows'&gt; / &lt;'grid-template-columns'&gt;</code></dt>
- <dd>Sets {{cssxref("grid-template-rows")}} and {{cssxref("grid-template-columns")}} to the specified values, and sets {{cssxref("grid-template-areas")}} to <code>none</code>.</dd>
- <dt><code>[ &lt;line-names&gt;? &lt;string&gt; &lt;track-size&gt;? &lt;line-names&gt;? ]+ [ / &lt;explicit-track-list&gt; ]?</code></dt>
- <dd>Sets {{cssxref("grid-template-areas")}} to the strings listed, {{cssxref("grid-template-rows")}} to the track sizes following each string (filling in <code>auto</code> for any missing sizes), and splicing in the named lines defined before/after each size, and {{cssxref("grid-template-columns")}} to the track listing specified after the slash (or <code>none</code>, if not specified).<br>
+- `none`
+  - : Is a keyword that sets all three longhand properties to `none`, meaning there is no explicit grid. There are no named grid areas. Rows and columns will be implicitly generated; their size will be determined by the {{cssxref("grid-auto-rows")}} and {{cssxref("grid-auto-columns")}} properties.
+- `<'grid-template-rows'> / <'grid-template-columns'>`
+  - : Sets {{cssxref("grid-template-rows")}} and {{cssxref("grid-template-columns")}} to the specified values, and sets {{cssxref("grid-template-areas")}} to `none`.
+- `[ <line-names>? <string> <track-size>? <line-names>? ]+ [ / <explicit-track-list> ]?`
 
- <div class="note">
-   <p><strong>Note:</strong> The {{cssxref("repeat()")}} function isn’t allowed in these track listings, as the tracks are intended to visually line up one-to-one with the rows/columns in the “ASCII art”.</p>
- </div>
- </dd>
-</dl>
+  - : Sets {{cssxref("grid-template-areas")}} to the strings listed, {{cssxref("grid-template-rows")}} to the track sizes following each string (filling in `auto` for any missing sizes), and splicing in the named lines defined before/after each size, and {{cssxref("grid-template-columns")}} to the track listing specified after the slash (or `none`, if not specified).
 
-<div class="note">
-  <p><strong>Note:</strong> The {{cssxref("grid")}} shorthand accepts the same syntax, but also resets the implicit grid properties to their initial values. Use <code>grid</code> (as opposed to <code>grid-template</code>) to prevent these values from cascading in separately.</p>
-</div>
+    > **Note:** The {{cssxref("repeat()")}} function isn’t allowed in these track listings, as the tracks are intended to visually line up one-to-one with the rows/columns in the “ASCII art”.
 
-<h2 id="Formal_definition">Formal definition</h2>
+> **Note:** The {{cssxref("grid")}} shorthand accepts the same syntax, but also resets the implicit grid properties to their initial values. Use `grid` (as opposed to `grid-template`) to prevent these values from cascading in separately.
 
-<p>{{cssinfo}}</p>
+## Formal definition
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+{{cssinfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Defining_a_grid_template">Defining a grid template</h3>
+### Defining a grid template
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush:css; highlight[5-8]">#page {
+```css
+#page {
   display: grid;
   width: 100%;
   height: 200px;
@@ -114,34 +108,35 @@ main {
 footer {
   background-color: red;
   grid-area: foot;
-}</pre>
+}
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush:html">&lt;section id="page"&gt;
-  &lt;header&gt;Header&lt;/header&gt;
-  &lt;nav&gt;Navigation&lt;/nav&gt;
-  &lt;main&gt;Main area&lt;/main&gt;
-  &lt;footer&gt;Footer&lt;/footer&gt;
-&lt;/section&gt;</pre>
+```html
+<section id="page">
+  <header>Header</header>
+  <nav>Navigation</nav>
+  <main>Main area</main>
+  <footer>Footer</footer>
+</section>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Defining_a_grid_template", "100%", "200px")}}</p>
+{{EmbedLiveSample("Defining_a_grid_template", "100%", "200px")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related CSS properties: {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}</li>
- <li>Grid Layout Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Line-based placement with CSS Grid</a></em></li>
- <li>Grid Layout Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas#grid_definition_shorthands">Grid template areas - Grid definition shorthands</a></em></li>
- <li>Video tutorial:<em> <a href="http://gridbyexample.com/video/grid-template-shorthand/">Grid Template shorthand</a></em></li>
-</ul>
+- Related CSS properties: {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}
+- Grid Layout Guide: _[Line-based placement with CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)_
+- Grid Layout Guide: _[Grid template areas - Grid definition shorthands](/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas#grid_definition_shorthands)_
+- Video tutorial:_ [Grid Template shorthand](http://gridbyexample.com/video/grid-template-shorthand/)_

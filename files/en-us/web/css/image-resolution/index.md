@@ -10,16 +10,16 @@ tags:
   - image-resolution
 browser-compat: css.properties.image-resolution
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>The <strong><code>image-resolution</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property specifies the intrinsic resolution of all raster images used in or on the element. It affects content images such as replaced elements and generated content, and decorative images such as <code>background-image</code> images.</p>
+The **`image-resolution`** [CSS](/en-US/docs/Web/CSS) property specifies the intrinsic resolution of all raster images used in or on the element. It affects content images such as replaced elements and generated content, and decorative images such as `background-image` images.
 
-<p>The image resolution is defined as the number of image pixels per unit length, e.g., pixels per inch. By default, CSS assumes a resolution of one image pixel per CSS px unit; however, the <code>image-resolution</code> property allows a different resolution to be specified.</p>
+The image resolution is defined as the number of image pixels per unit length, e.g., pixels per inch. By default, CSS assumes a resolution of one image pixel per CSS px unit; however, the `image-resolution` property allows a different resolution to be specified.
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: css no-line-numbers">image-resolution: from-image;
+```css
+image-resolution: from-image;
 image-resolution: 300dpi;
 image-resolution: from-image 300dpi;
 image-resolution: 300dpi snap;
@@ -28,65 +28,61 @@ image-resolution: 300dpi snap;
 image-resolution: inherit;
 image-resolution: initial;
 image-resolution: revert;
-image-resolution: unset;</pre>
+image-resolution: unset;
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>{{cssxref("&lt;resolution&gt;")}}</code></dt>
- <dd>Specifies the intrinsic resolution explicitly.</dd>
- <dt><code>from-image</code></dt>
- <dd>Uses the intrinsic resolution as specified by the image format. If the image does not specify its own resolution, the explicitly specified resolution is used (if given), else it defaults to <code>1dppx</code> (1 image pixel per CSS px unit).</dd>
- <dt><code>snap</code></dt>
- <dd>If the <code>snap</code> keyword is provided, the computed resolution is the specified resolution rounded to the nearest value that would map one image pixel to an integer number of device pixels. If the resolution is taken from the image, then the used intrinsic resolution is the image's native resolution similarly adjusted.</dd>
-</dl>
+- `{{cssxref("&lt;resolution&gt;")}}`
+  - : Specifies the intrinsic resolution explicitly.
+- `from-image`
+  - : Uses the intrinsic resolution as specified by the image format. If the image does not specify its own resolution, the explicitly specified resolution is used (if given), else it defaults to `1dppx` (1 image pixel per CSS px unit).
+- `snap`
+  - : If the `snap` keyword is provided, the computed resolution is the specified resolution rounded to the nearest value that would map one image pixel to an integer number of device pixels. If the resolution is taken from the image, then the used intrinsic resolution is the image's native resolution similarly adjusted.
 
-<div class="notecard note">
-<p><strong>Note:</strong> As vector formats such as SVG do not have an intrinsic resolution, this property has no effect on vector images.</p>
-</div>
+> **Note:** As vector formats such as SVG do not have an intrinsic resolution, this property has no effect on vector images.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_high_dpi">Setting a high dpi for print</h3>
+### Setting a high dpi for print
 
-<p>When printing the document, use a higher resolution.</p>
+When printing the document, use a higher resolution.
 
-<pre class="brush: css">@media print {
+```css
+@media print {
   .myimage {
     image-resolution: 300dpi;
   }
 }
-</pre>
+```
 
-<h3 id="Use_image_res">Use image resolution with fallback</h3>
+### Use image resolution with fallback
 
-<p>Uses the resolution from the image. If the image does not have a resolution, use 300dpi rather than the default 1dppx.</p>
+Uses the resolution from the image. If the image does not have a resolution, use 300dpi rather than the default 1dppx.
 
-<pre class="brush: css">.myimage {
+```css
+.myimage {
   image-resolution: from-image 300dpi;
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Other image-related CSS properties: {{cssxref("object-fit")}}, {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}.</li>
- <li><a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1086473">Chromium bug: 1086473</a>.</li>
-
-</ul>
+- Other image-related CSS properties: {{cssxref("object-fit")}}, {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}.
+- [Chromium bug: 1086473](https://bugs.chromium.org/p/chromium/issues/detail?id=1086473).

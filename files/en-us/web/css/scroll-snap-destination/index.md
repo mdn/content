@@ -7,82 +7,83 @@ tags:
   - CSS Scroll Snap
   - Deprecated
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.scroll-snap-destination
 ---
-<div>{{CSSRef}}{{deprecated_header}}</div>
+{{CSSRef}}{{deprecated_header}}
 
-<p>The <strong><code>scroll-snap-destination</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property defines the position in x and y coordinates within the scroll container's visual {{Glossary("viewport")}} which element snap points align with.</p>
+The **`scroll-snap-destination`** [CSS](/en-US/docs/Web/CSS) property defines the position in x and y coordinates within the scroll container's visual {{Glossary("viewport")}} which element snap points align with.
 
-<pre class="brush:css no-line-numbers">/* &lt;position&gt; value */
+```css
+/* <position> value */
 scroll-snap-destination: 400px 600px;
 
 /* Global values */
 scroll-snap-destination: inherit;
 scroll-snap-destination: initial;
 scroll-snap-destination: unset;
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;position&gt;</code></dt>
- <dd>Specifies the offset of the snap destination from the start edge of the scroll container’s visual viewport. The first value gives the x coordinate of the snap destination, the second value its y coordinate.</dd>
-</dl>
+- `<position>`
+  - : Specifies the offset of the snap destination from the start edge of the scroll container’s visual viewport. The first value gives the x coordinate of the snap destination, the second value its y coordinate.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_scroll_snap_destination">Setting scroll snap destination</h3>
+### Setting scroll snap destination
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div id="container"&gt;
-  &lt;div&gt;
-    &lt;p&gt;At coordinate (0, 0)&lt;/p&gt;
-    &lt;div class="scrollContainer destination0"&gt;
-      &lt;div&gt;1&lt;/div&gt;
-      &lt;div&gt;2&lt;/div&gt;
-      &lt;div&gt;3&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+```html
+<div id="container">
+  <div>
+    <p>At coordinate (0, 0)</p>
+    <div class="scrollContainer destination0">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+  </div>
 
-  &lt;div&gt;
-    &lt;p&gt;At coordinate (25, 0)&lt;/p&gt;
-    &lt;div class="scrollContainer destination25"&gt;
-      &lt;div&gt;1&lt;/div&gt;
-      &lt;div&gt;2&lt;/div&gt;
-      &lt;div&gt;3&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+  <div>
+    <p>At coordinate (25, 0)</p>
+    <div class="scrollContainer destination25">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+  </div>
 
-  &lt;div&gt;
-    &lt;p&gt;At coordinate (50, 0)&lt;/p&gt;
-    &lt;div class="scrollContainer destination50"&gt;
-      &lt;div&gt;1&lt;/div&gt;
-      &lt;div&gt;2&lt;/div&gt;
-      &lt;div&gt;3&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+  <div>
+    <p>At coordinate (50, 0)</p>
+    <div class="scrollContainer destination50">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+  </div>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">#container {
+```css
+#container {
   display: flex;
 }
 
-#container &gt; div:nth-child(-n+2) {
+#container > div:nth-child(-n+2) {
   margin-right: 20px;
 }
 
@@ -108,7 +109,7 @@ scroll-snap-destination: unset;
   scroll-snap-destination: 50px 0;
 }
 
-.scrollContainer &gt; div {
+.scrollContainer > div {
   width: 100px;
   height: 100px;
   display: inline-block;
@@ -117,29 +118,28 @@ scroll-snap-destination: unset;
   font-size: 50px;
 }
 
-.scrollContainer &gt; div:nth-child(even) {
+.scrollContainer > div:nth-child(even) {
   background-color: #87EA87;
 }
 
-.scrollContainer &gt; div:nth-child(odd) {
+.scrollContainer > div:nth-child(odd) {
   background-color: #87CCEA;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<div>{{EmbedLiveSample("Setting_scroll_snap_destination", "100%", "170")}}</div>
+{{EmbedLiveSample("Setting_scroll_snap_destination", "100%", "170")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/CSS/CSS_Scroll_Snap">CSS Scroll Snap</a></li>
-  <li><a href="https://developers.google.com/web/updates/2018/07/css-scroll-snap">Well-Controlled Scrolling with CSS Scroll Snap</a></li>
-</ul>
+- [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap)
+- [Well-Controlled Scrolling with CSS Scroll Snap](https://developers.google.com/web/updates/2018/07/css-scroll-snap)

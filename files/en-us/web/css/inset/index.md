@@ -8,22 +8,23 @@ tags:
   - Experimental
   - Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.inset
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>inset</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property is a shorthand that corresponds to the {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, and/or {{cssxref("left")}} properties. It has the same multi-value syntax of the {{cssxref("margin")}} shorthand.</p>
+The **`inset`** [CSS](/en-US/docs/Web/CSS) property is a shorthand that corresponds to the {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, and/or {{cssxref("left")}} properties. It has the same multi-value syntax of the {{cssxref("margin")}} shorthand.
 
-<p>While part of the <em>CSS Logical Properties</em> specification, it does not define <em>logical</em> offsets. It defines <em>physical</em> offsets, regardless of the element's writing mode, directionality, and text orientation.</p>
+While part of the _CSS Logical Properties_ specification, it does not define _logical_ offsets. It defines _physical_ offsets, regardless of the element's writing mode, directionality, and text orientation.
 
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; values */
+```css
+/* <length> values */
 inset: 10px; /* value applied to all edges */
 inset: 4px 8px; /* top/bottom left/right */
 inset: 5px 15px 10px; /* top left/right bottom */
 inset: 2.4em 3em 3em 3em; /* top right bottom left */
 
-/* &lt;percentage&gt;s of the width (left/right) or height (top/bottom) of the containing block */
+/* <percentage>s of the width (left/right) or height (top/bottom) of the containing block */
 inset: 10% 5% 5% 5%;
 
 /* Keyword value */
@@ -34,37 +35,38 @@ inset: inherit;
 inset: initial;
 inset: revert;
 inset: unset;
+```
 
-</pre>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+### Values
 
-<h3 id="Values">Values</h3>
+The `inset` property takes the same values as the {{cssxref("left")}} property.
 
-<p>The <code>inset</code> property takes the same values as the {{cssxref("left")}} property.</p>
+## Formal definition
 
-<h2 id="Formal_definition">Formal definition</h2>
+{{cssinfo}}
 
-<p>{{cssinfo}}</p>
-
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_offsets_for_an_element">Setting offsets for an element</h3>
+### Setting offsets for an element
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;span class="exampleText"&gt;Example text&lt;/span&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <span class="exampleText">Example text</span>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   background-color: yellow;
   width: 150px;
   height: 120px;
@@ -76,24 +78,23 @@ inset: unset;
   position: absolute;
   inset: 20px 40px 30px 10px;
   background-color: #c8c800;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Setting_offsets_for_an_element", 140, 140)}}</p>
+{{EmbedLiveSample("Setting_offsets_for_an_element", 140, 140)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The longhand box offset properties: {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, and {{cssxref("left")}}.</li>
- <li>The mapped logical shorthands: {{cssxref("inset-block")}} and {{cssxref("inset-inline")}}</li>
- <li>The {{cssxref("margin")}} shorthand multi-value syntax.</li>
-</ul>
+- The longhand box offset properties: {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, and {{cssxref("left")}}.
+- The mapped logical shorthands: {{cssxref("inset-block")}} and {{cssxref("inset-inline")}}
+- The {{cssxref("margin")}} shorthand multi-value syntax.

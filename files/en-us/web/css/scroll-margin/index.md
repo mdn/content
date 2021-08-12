@@ -6,32 +6,31 @@ tags:
   - Property
   - Reference
   - margin
-  - 'recipe:css-shorthand-property'
+  - recipe:css-shorthand-property
   - scroll-margin
   - scrollbar
   - scrolling
 browser-compat: css.properties.scroll-margin
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>scroll-margin</code></strong> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a> sets all of the scroll margins of an element at once, assigning values much like the <code><a href="/en-US/docs/Web/CSS/margin">margin</a></code> property does for margins of an element.</p>
+The **`scroll-margin`** [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets all of the scroll margins of an element at once, assigning values much like the [`margin`](/en-US/docs/Web/CSS/margin) property does for margins of an element.
 
-<div>{{EmbedInteractiveExample("pages/css/scroll-margin.html")}}</div>
+{{EmbedInteractiveExample("pages/css/scroll-margin.html")}}
 
-<h2 id="Constituent_properties">Constituent properties</h2>
+## Constituent properties
 
-<p>This property is a shorthand for the following CSS properties:</p>
+This property is a shorthand for the following CSS properties:
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/scroll-margin-bottom"><code>scroll-margin-bottom</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/scroll-margin-left"><code>scroll-margin-left</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/scroll-margin-right"><code>scroll-margin-right</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/scroll-margin-top"><code>scroll-margin-top</code></a></li>
-</ul>
+- [`scroll-margin-bottom`](/en-US/docs/Web/CSS/scroll-margin-bottom)
+- [`scroll-margin-left`](/en-US/docs/Web/CSS/scroll-margin-left)
+- [`scroll-margin-right`](/en-US/docs/Web/CSS/scroll-margin-right)
+- [`scroll-margin-top`](/en-US/docs/Web/CSS/scroll-margin-top)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">/* &lt;length&gt; values */
+```css
+/* <length> values */
 scroll-margin: 10px;
 scroll-margin: 1em .5em 1em 1em;
 
@@ -40,53 +39,54 @@ scroll-margin: inherit;
 scroll-margin: initial;
 scroll-margin: revert;
 scroll-margin: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>An outset from the corresponding edge of the scroll container.</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : An outset from the corresponding edge of the scroll container.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>You can see the effect of <code>scroll-margin</code> by scrolling to a point partway between two of the "pages" of the example's content. The value specified for <code>scroll-margin</code> determines how much of the page that's primarily outside the snapport should remain visible.</p>
+You can see the effect of `scroll-margin` by scrolling to a point partway between two of the "pages" of the example's content. The value specified for `scroll-margin` determines how much of the page that's primarily outside the snapport should remain visible.
 
-<p>Thus, the <code>scroll-margin</code> values represent outsets defining the scroll snap area that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container’s coordinate space), then adding the specified outsets.</p>
+Thus, the `scroll-margin` values represent outsets defining the scroll snap area that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container’s coordinate space), then adding the specified outsets.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Simple_demonstration">Simple demonstration</h3>
+### Simple demonstration
 
-<p>This example implements something very similar to the interactive example above, except that here we'll explain to you how it's implemented.</p>
+This example implements something very similar to the interactive example above, except that here we'll explain to you how it's implemented.
 
-<p>The aim here is to create four horizontally-scrolling blocks, the second and third of which snap into place, near but not quite at the left of each block.</p>
+The aim here is to create four horizontally-scrolling blocks, the second and third of which snap into place, near but not quite at the left of each block.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<p>The HTML that represents the blocks is very simple:</p>
+The HTML that represents the blocks is very simple:
 
-<pre class="brush: html">&lt;div class="scroller"&gt;
-  &lt;div&gt;1&lt;/div&gt;
-  &lt;div&gt;2&lt;/div&gt;
-  &lt;div&gt;3&lt;/div&gt;
-  &lt;div&gt;4&lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="scroller">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<p>Let's walk through the CSS. the outer container is styled like this:</p>
+Let's walk through the CSS. the outer container is styled like this:
 
-<pre class="brush: css">.scroller {
+```css
+.scroller {
   text-align: left;
   width: 250px;
   height: 250px;
@@ -95,13 +95,15 @@ scroll-margin: unset;
   box-sizing: border-box;
   border: 1px solid #000;
   scroll-snap-type: x mandatory;
-}</pre>
+}
+```
 
-<p>The main parts relevant to the scroll snapping are <code><a href="/en-US/docs/Web/CSS/overflow-x">overflow-x</a>: scroll</code>, which makes sure the contents will scroll and not be hidden, and <code><a href="/en-US/docs/Web/CSS/scroll-snap-type">scroll-snap-type</a>: x mandatory</code>, which dictates that scroll snapping must occur along the horizontal axis, and the scrolling will always come to rest on a snap point.</p>
+The main parts relevant to the scroll snapping are `overflow-x: scroll`, which makes sure the contents will scroll and not be hidden, and `scroll-snap-type: x mandatory`, which dictates that scroll snapping must occur along the horizontal axis, and the scrolling will always come to rest on a snap point.
 
-<p>The child elements are styled as follows:</p>
+The child elements are styled as follows:
 
-<pre class="brush: css">.scroller &gt; div {
+```css
+.scroller > div {
   flex: 0 0 250px;
   width: 250px;
   background-color: #663399;
@@ -113,46 +115,45 @@ scroll-margin: unset;
   scroll-snap-align: start;
 }
 
-.scroller &gt; div:nth-child(2n) {
+.scroller > div:nth-child(2n) {
   background-color: #fff;
   color: #663399;
-}</pre>
+}
+```
 
-<p>The most relevant part here is <code><a href="/en-US/docs/Web/CSS/scroll-snap-align">scroll-snap-align</a>: start</code>, which specifies that the left-hand edges (the "starts" along the x axis, in our case) are the designated snap points.</p>
+The most relevant part here is `scroll-snap-align: start`, which specifies that the left-hand edges (the "starts" along the x axis, in our case) are the designated snap points.
 
-<p>Last of all we specify the scroll margin-values, a different one for the second and third child elements:</p>
+Last of all we specify the scroll margin-values, a different one for the second and third child elements:
 
-<pre class="brush: css">.scroller &gt; div:nth-child(2) {
+```css
+.scroller > div:nth-child(2) {
   scroll-margin: 1rem;
 }
 
-.scroller &gt; div:nth-child(3) {
+.scroller > div:nth-child(3) {
   scroll-margin: 2rem;
-}</pre>
+}
+```
 
-<p>This means that when scrolling past the middle child elements, the scrolling will snap to <code>1rem</code> outside the left edge of the second <code>&lt;div&gt;</code>, and <code>2rems</code> outside the left edge of the third <code>&lt;div&gt;</code>.</p>
+This means that when scrolling past the middle child elements, the scrolling will snap to `1rem` outside the left edge of the second `<div>`, and `2rems` outside the left edge of the third `<div>`.
 
-<div class="notecard note">
-<p><strong>Note:</strong> Here we are setting <code>scroll-margin</code> on all sides at once, but only the start edge is really relevant. It would work just as well here to only set a scroll margin on that one edge, for example with <code>scroll-margin-inline-start: 1rem</code>, or <code>scroll-margin: 0 0 0 1rem</code>.</p>
-</div>
+> **Note:** Here we are setting `scroll-margin` on all sides at once, but only the start edge is really relevant. It would work just as well here to only set a scroll margin on that one edge, for example with `scroll-margin-inline-start: 1rem`, or `scroll-margin: 0 0 0 1rem`.
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>Try it for yourself:</p>
+Try it for yourself:
 
-<p>{{EmbedLiveSample('Simple_demonstration', '100%', 300)}}</p>
+{{EmbedLiveSample('Simple_demonstration', '100%', 300)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/CSS/CSS_Scroll_Snap">CSS Scroll Snap</a></li>
-  <li><a href="https://developers.google.com/web/updates/2018/07/css-scroll-snap">Well-Controlled Scrolling with CSS Scroll Snap</a></li>
-</ul>
+- [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap)
+- [Well-Controlled Scrolling with CSS Scroll Snap](https://developers.google.com/web/updates/2018/07/css-scroll-snap)

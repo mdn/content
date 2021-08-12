@@ -8,24 +8,27 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.text-overflow
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p>The <strong><code>text-overflow</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets how hidden overflow content is signaled to users. It can be clipped, display an ellipsis ('<code>…</code>'), or display a custom string.</p>
+The **`text-overflow`** [CSS](/en-US/docs/Web/CSS) property sets how hidden overflow content is signaled to users. It can be clipped, display an ellipsis ('`…`'), or display a custom string.
 
-<div>{{EmbedInteractiveExample("pages/css/text-overflow.html")}}</div>
+{{EmbedInteractiveExample("pages/css/text-overflow.html")}}
 
-<p>The <code>text-overflow</code> property doesn't force an overflow to occur. To make text overflow its container you have to set other CSS properties: {{cssxref("overflow")}} and {{cssxref("white-space")}}. For example:</p>
+The `text-overflow` property doesn't force an overflow to occur. To make text overflow its container you have to set other CSS properties: {{cssxref("overflow")}} and {{cssxref("white-space")}}. For example:
 
-<pre class="brush: css no-line-numbers">overflow: hidden;
-white-space: nowrap;</pre>
+```css
+overflow: hidden;
+white-space: nowrap;
+```
 
-<p>The <code>text-overflow</code> property only affects content that is overflowing a block container element in its <em>inline</em> progression direction (not text overflowing at the bottom of a box, for example).</p>
+The `text-overflow` property only affects content that is overflowing a block container element in its _inline_ progression direction (not text overflowing at the bottom of a box, for example).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>text-overflow</code> property may be specified using one or two values. If one value is given, it specifies overflow behavior for the end of the line (the right end for left-to-right text, the left end for right-to-left text). If two values are given, the first specifies overflow behavior for the left end of the line, and the second specifies it for the right end of the line.</p>
+The `text-overflow` property may be specified using one or two values. If one value is given, it specifies overflow behavior for the end of the line (the right end for left-to-right text, the left end for right-to-left text). If two values are given, the first specifies overflow behavior for the left end of the line, and the second specifies it for the right end of the line.
 
-<pre class="brush: css">text-overflow: clip;
+```css
+text-overflow: clip;
 text-overflow: ellipsis ellipsis;
 text-overflow: ellipsis " [..]";
 
@@ -33,74 +36,72 @@ text-overflow: ellipsis " [..]";
 text-overflow: inherit;
 text-overflow: initial;
 text-overflow: revert;
-text-overflow: unset;</pre>
+text-overflow: unset;
+```
 
-<ul>
- <li>one of the keyword values: <code>clip</code>, <code>ellipsis</code>, <code>fade</code></li>
- <li>the function <code>fade()</code>, which is passed a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} to control the fade distance</li>
- <li>a <code>&lt;string&gt;</code>.</li>
-</ul>
+- one of the keyword values: `clip`, `ellipsis`, `fade`
+- the function `fade()`, which is passed a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} to control the fade distance
+- a `<string>`.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>clip</code></dt>
- <dd>The default for this property. This keyword value will truncate the text at the limit of the <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">content area</a>, therefore the truncation can happen in the middle of a character. To clip at the transition between characters you can specify <code>text-overflow</code> as an empty string, if that is supported in your target browsers: <code>text-overflow: '';</code>.</dd>
- <dt><code>ellipsis</code></dt>
- <dd>This keyword value will display an ellipsis (<code>'…'</code>, <code>U+2026 HORIZONTAL ELLIPSIS</code>) to represent clipped text. The ellipsis is displayed inside the <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">content area</a>, decreasing the amount of text displayed. If there is not enough space to display the ellipsis, it is clipped.</dd>
- <dt><code>&lt;string&gt;</code> {{experimental_inline}}</dt>
- <dd>The {{cssxref("&lt;string&gt;")}} to be used to represent clipped text. The string is displayed inside the <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">content area</a>, shortening the size of the displayed text. If there is not enough space to display the string itself, it is clipped.</dd>
- <dt><code>fade</code> {{experimental_inline}}</dt>
- <dd>This keyword clips the overflowing inline content and applies a fade-out effect near the edge of the line box with complete transparency at the edge.</dd>
- <dt><code>fade( &lt;length&gt; | &lt;percentage&gt; )</code> {{experimental_inline}}</dt>
- <dd>
-   <p>This function clips the overflowing inline content and applies a fade-out effect near the edge of the line box with complete transparency at the edge.</p>
-   <p>The argument determines the distance over which the fade effect is applied. The {{cssxref("&lt;percentage&gt;")}} is resolved against the width of the line box. Values lower than <code>0</code> are clipped to <code>0</code>. Values greater than the width of the line box are clipped to the width of the line box.</p>
- </dd>
-</dl>
+- `clip`
+  - : The default for this property. This keyword value will truncate the text at the limit of the [content area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), therefore the truncation can happen in the middle of a character. To clip at the transition between characters you can specify `text-overflow` as an empty string, if that is supported in your target browsers: `text-overflow: '';`.
+- `ellipsis`
+  - : This keyword value will display an ellipsis (`'…'`, `U+2026 HORIZONTAL ELLIPSIS`) to represent clipped text. The ellipsis is displayed inside the [content area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), decreasing the amount of text displayed. If there is not enough space to display the ellipsis, it is clipped.
+- `<string>` {{experimental_inline}}
+  - : The {{cssxref("&lt;string&gt;")}} to be used to represent clipped text. The string is displayed inside the [content area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), shortening the size of the displayed text. If there is not enough space to display the string itself, it is clipped.
+- `fade` {{experimental_inline}}
+  - : This keyword clips the overflowing inline content and applies a fade-out effect near the edge of the line box with complete transparency at the edge.
+- `fade( <length> | <percentage> )` {{experimental_inline}}
 
-<h2 id="Formal_definition">Formal definition</h2>
+  - : This function clips the overflowing inline content and applies a fade-out effect near the edge of the line box with complete transparency at the edge.
 
-<p>{{CSSInfo}}</p>
+    The argument determines the distance over which the fade effect is applied. The {{cssxref("&lt;percentage&gt;")}} is resolved against the width of the line box. Values lower than `0` are clipped to `0`. Values greater than the width of the line box are clipped to the width of the line box.
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal definition
+
+{{CSSInfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3>One-value syntax</h3>
+### One-value syntax
 
-<p>This example shows different values for <code>text-overflow</code> applied to a paragraph, for left-to-right and right-to-left text.</p>
+This example shows different values for `text-overflow` applied to a paragraph, for left-to-right and right-to-left text.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">
+```html
 
-&lt;div class="ltr"&gt;
-  &lt;h2&gt;Left to right text&lt;/h2&gt;
-  &lt;pre&gt;clip&lt;/pre&gt;
-  &lt;p class="overflow-clip"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
-  &lt;pre&gt;ellipsis&lt;/pre&gt;
-  &lt;p class="overflow-ellipsis"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
-  &lt;pre&gt;" [..]"&lt;/pre&gt;
-  &lt;p class="overflow-string"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
-&lt;/div&gt;
+<div class="ltr">
+  <h2>Left to right text</h2>
+  <pre>clip</pre>
+  <p class="overflow-clip">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <pre>ellipsis</pre>
+  <p class="overflow-ellipsis">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <pre>" [..]"</pre>
+  <p class="overflow-string">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+</div>
 
-&lt;div class="rtl"&gt;
-  &lt;h2&gt;Right to left text&lt;/h2&gt;
-  &lt;pre&gt;clip&lt;/pre&gt;
-  &lt;p class="overflow-clip"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
-  &lt;pre&gt;ellipsis&lt;/pre&gt;
-  &lt;p class="overflow-ellipsis"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
-  &lt;pre&gt;" [..]"&lt;/pre&gt;
-  &lt;p class="overflow-string"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+<div class="rtl">
+  <h2>Right to left text</h2>
+  <pre>clip</pre>
+  <p class="overflow-clip">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <pre>ellipsis</pre>
+  <p class="overflow-ellipsis">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <pre>" [..]"</pre>
+  <p class="overflow-string">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   width: 200px;
   border: 1px solid;
   padding: 2px 5px;
@@ -134,33 +135,34 @@ body {
 .rtl > p {
   direction: rtl;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('One-value_syntax', 600, 320)}}</p>
+{{EmbedLiveSample('One-value_syntax', 600, 320)}}
 
-<h3>Two-value syntax</h3>
+### Two-value syntax
 
-<p>This example shows the two-value syntax for <code>text-overflow</code>, where you can define different overflow behavior for the start and end of the text.
-To show the effect we have to scroll the line so the start of the line is also hidden.</p>
+This example shows the two-value syntax for `text-overflow`, where you can define different overflow behavior for the start and end of the text.
+To show the effect we have to scroll the line so the start of the line is also hidden.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">
-&lt;pre&gt;clip clip&lt;/pre&gt;
-&lt;p class="overflow-clip-clip"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
-&lt;pre&gt;clip ellipsis&lt;/pre&gt;
-&lt;p class="overflow-clip-ellipsis"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
-&lt;pre&gt;ellipsis ellipsis&lt;/pre&gt;
-&lt;p class="overflow-ellipsis-ellipsis"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
-&lt;pre&gt;ellipsis " [..]"&lt;/pre&gt;
-&lt;p class="overflow-ellipsis-string"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
-</pre>
+```html
+<pre>clip clip</pre>
+<p class="overflow-clip-clip">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+<pre>clip ellipsis</pre>
+<p class="overflow-clip-ellipsis">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+<pre>ellipsis ellipsis</pre>
+<p class="overflow-ellipsis-ellipsis">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+<pre>ellipsis " [..]"</pre>
+<p class="overflow-ellipsis-string">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   width: 200px;
   border: 1px solid;
   padding: 2px 5px;
@@ -185,36 +187,34 @@ To show the effect we have to scroll the line so the start of the line is also h
 .overflow-ellipsis-string {
   text-overflow: ellipsis " [..]";
 }
-</pre>
+```
 
+#### JavaScript
 
-<h4 id="JavaScript">JavaScript</h4>
-
-<pre class="brush: js">// Scroll each paragraph so the start is also hidden
+```js
+// Scroll each paragraph so the start is also hidden
 const paras = document.querySelectorAll("p");
 
 for (let para of paras) {
   para.scroll(100, 0);
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Two-value_syntax', 600, 360)}}</p>
+{{EmbedLiveSample('Two-value_syntax', 600, 360)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<p>A previous version of this interface reached the <em>Candidate Recommendation</em> status. As some not-listed-at-risk features needed to be removed, the spec was demoted to the <em>Working Draft</em> level, explaining why browsers implemented this property unprefixed, though not at the CR state.</p>
+A previous version of this interface reached the _Candidate Recommendation_ status. As some not-listed-at-risk features needed to be removed, the spec was demoted to the _Working Draft_ level, explaining why browsers implemented this property unprefixed, though not at the CR state.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related CSS properties: {{cssxref("overflow")}}, {{cssxref("white-space")}}</li>
- <li>CSS properties that control line breaks in words: {{cssxref("overflow-wrap")}}, {{cssxref("word-break")}}</li>
-</ul>
+- Related CSS properties: {{cssxref("overflow")}}, {{cssxref("white-space")}}
+- CSS properties that control line breaks in words: {{cssxref("overflow-wrap")}}, {{cssxref("word-break")}}

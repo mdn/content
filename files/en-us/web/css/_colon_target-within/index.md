@@ -3,55 +3,58 @@ title: ':target-within'
 slug: Web/CSS/:target-within
 browser-compat: css.selectors.target-within
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>The <strong><code>:target-within</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents an element that is a target element or <em>contains</em> an element that is a target. A target element is a unique element with an <code><a href="/en-US/docs/Web/HTML/Global_attributes#attr-id">id</a></code> matching the URL's fragment. In other words, it represents an element that is itself matched by the {{CSSxRef(":target")}} pseudo-class or has a descendant that is matched by <code>:target</code>. (This includes descendants in <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">shadow trees</a>.)</p>
+The **`:target-within`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element that is a target element or _contains_ an element that is a target. A target element is a unique element with an [`id`](/en-US/docs/Web/HTML/Global_attributes#attr-id) matching the URL's fragment. In other words, it represents an element that is itself matched by the {{CSSxRef(":target")}} pseudo-class or has a descendant that is matched by `:target`. (This includes descendants in [shadow trees](/en-US/docs/Web/Web_Components/Using_shadow_DOM).)
 
-<pre class="brush: css no-line-numbers">/* Selects a &lt;div&gt; when one of its descendants is a target */
+```css
+/* Selects a <div> when one of its descendants is a target */
 div:target-within {
   background: cyan;
 }
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{CSSSyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Highlighting_an_article">Highlighting an article</h3>
+### Highlighting an article
 
-<p>The <code>:target-within</code> pseudo-class can be used to highlight the article if anything inside it has been directly linked to. The <code>:target</code> pseudo-class is also being used to show which item has been targeted. </p>
+The `:target-within` pseudo-class can be used to highlight the article if anything inside it has been directly linked to. The `:target` pseudo-class is also being used to show which item has been targeted.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;h3&gt;Table of Contents&lt;/h3&gt;
-&lt;ol&gt;
- &lt;li&gt;&lt;a href="#p1"&gt;Jump to the first paragraph!&lt;/a&gt;&lt;/li&gt;
- &lt;li&gt;&lt;a href="#p2"&gt;Jump to the second paragraph!&lt;/a&gt;&lt;/li&gt;
+```html
+<h3>Table of Contents</h3>
+<ol>
+ <li><a href="#p1">Jump to the first paragraph!</a></li>
+ <li><a href="#p2">Jump to the second paragraph!</a></li>
 
-&lt;/ol&gt;
+</ol>
 
-&lt;article&gt;
+<article>
 
-&lt;h3&gt;My Fun Article&lt;/h3&gt;
-&lt;p id="p1"&gt;You can target &lt;i&gt;this paragraph&lt;/i&gt; using a
-  URL fragment. Click on the link above to try out!&lt;/p&gt;
-&lt;p id="p2"&gt;This is &lt;i&gt;another paragraph&lt;/i&gt;, also accessible
-  from the links above. Isn't that delightful?&lt;/p&gt;
-&lt;/article&gt;
-</pre>
+<h3>My Fun Article</h3>
+<p id="p1">You can target <i>this paragraph</i> using a
+  URL fragment. Click on the link above to try out!</p>
+<p id="p2">This is <i>another paragraph</i>, also accessible
+  from the links above. Isn't that delightful?</p>
+</article>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">article:target-within {
+```css
+article:target-within {
   background-color: gold;
 }
 
 /* Add a pseudo-element inside the target element */
 p:target::before {
   font: 70% sans-serif;
-  content: &quot;►&quot;;
+  content: "►";
   color: limegreen;
   margin-right: .25em;
 }
@@ -59,22 +62,21 @@ p:target::before {
 /* Style italic elements within the target element */
 p:target i {
   color: red;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<div>{{EmbedLiveSample('Examples', 500, 300)}}</div>
+{{EmbedLiveSample('Examples', 500, 300)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{CSSxRef(":target")}}</li>
-</ul>
+- {{CSSxRef(":target")}}

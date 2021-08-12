@@ -8,59 +8,55 @@ tags:
   - CSS3 Transitions
   - Guide
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p><strong>CSS transitions</strong> provide a way to control animation speed when changing CSS properties. Instead of having property changes take effect immediately, you can cause the changes in a property to take place over a period of time. For example, if you change the color of an element from white to black, usually the change is instantaneous. With CSS transitions enabled, changes occur at time intervals that follow an acceleration curve, all of which can be customized.</p>
+**CSS transitions** provide a way to control animation speed when changing CSS properties. Instead of having property changes take effect immediately, you can cause the changes in a property to take place over a period of time. For example, if you change the color of an element from white to black, usually the change is instantaneous. With CSS transitions enabled, changes occur at time intervals that follow an acceleration curve, all of which can be customized.
 
-<p>Animations that involve transitioning between two states are often called <em>implicit transitions</em> as the states in between the start and final states are implicitly defined by the browser.</p>
+Animations that involve transitioning between two states are often called _implicit transitions_ as the states in between the start and final states are implicitly defined by the browser.
 
-<p><img alt="A CSS transition tells the browser to draw the intermediate states between the initial and final states, showing the user a smooth transitions." src="transitionsprinciple.png"></p>
+![A CSS transition tells the browser to draw the intermediate states between the initial and final states, showing the user a smooth transitions.](transitionsprinciple.png)
 
-<p>CSS transitions let you decide which properties to animate (by <em>listing them explicitly</em>), when the animation will start (by setting a <em>delay)</em>, how long the transition will last (by setting a <em>duration</em>), and how the transition will run (by defining a <em>timing function</em>, e.g. linearly or quick at the beginning, slow at the end).</p>
+CSS transitions let you decide which properties to animate (by _listing them explicitly_), when the animation will start (by setting a _delay)_, how long the transition will last (by setting a _duration_), and how the transition will run (by defining a _timing function_, e.g. linearly or quick at the beginning, slow at the end).
 
-<h2 id="Which_CSS_properties_can_be_transitioned">Which CSS properties can be transitioned?</h2>
+## Which CSS properties can be transitioned?
 
-<p>The Web author can define which property has to be animated and in which way. This allows the creation of complex transitions. As it doesn't make sense to animate some properties, the <a href="/en-US/docs/Web/CSS/CSS_animated_properties">list of animatable properties</a> is limited to a finite set.</p>
+The Web author can define which property has to be animated and in which way. This allows the creation of complex transitions. As it doesn't make sense to animate some properties, the [list of animatable properties](/en-US/docs/Web/CSS/CSS_animated_properties) is limited to a finite set.
 
-<div class="note">
-  <p><strong>Note:</strong> The set of properties that can be animated is changing as the specification develops.</p>
-</div>
+> **Note:** The set of properties that can be animated is changing as the specification develops.
 
-<div class="note">
-  <p><strong>Note:</strong> The <code>auto</code> value is often a very complex case. The specification recommends not animating from and to <code>auto</code>. Some user agents, like those based on Gecko, implement this requirement and others, like those based on WebKit, are less strict. Using animations with <code>auto</code> may lead to unpredictable results, depending on the browser and its version, and should be avoided.</p>
-</div>
+> **Note:** The `auto` value is often a very complex case. The specification recommends not animating from and to `auto`. Some user agents, like those based on Gecko, implement this requirement and others, like those based on WebKit, are less strict. Using animations with `auto` may lead to unpredictable results, depending on the browser and its version, and should be avoided.
 
-<h2 id="Defining_transitions">Defining transitions</h2>
+## Defining transitions
 
-<p>CSS Transitions are controlled using the shorthand {{cssxref("transition")}} property. This is the best way to configure transitions, as it makes it easier to avoid out of sync parameters, which can be very frustrating to have to spend lots of time debugging in CSS.</p>
+CSS Transitions are controlled using the shorthand {{cssxref("transition")}} property. This is the best way to configure transitions, as it makes it easier to avoid out of sync parameters, which can be very frustrating to have to spend lots of time debugging in CSS.
 
-<p>You can control the individual components of the transition with the following sub-properties:</p>
+You can control the individual components of the transition with the following sub-properties:
 
-<dl>
- <dt>{{cssxref("transition-property")}}</dt>
- <dd>Specifies the name or names of the CSS properties to which transitions should be applied. Only properties listed here are animated during transitions; changes to all other properties occur instantaneously as usual.</dd>
- <dt>{{cssxref("transition-duration")}}</dt>
- <dd>Specifies the duration over which transitions should occur. You can specify a single duration that applies to all properties during the transition, or multiple values to allow each property to transition over a different period of time.
- </dd>
- <dt>{{cssxref("transition-timing-function")}}</dt>
- <dd>Specifies a function to define how intermediate values for properties are computed. <em>Timing functions</em> determine how intermediate values of the transition are calculated. Most <a href="/en-US/docs/Web/CSS/easing-function">timing functions</a> can be specified by providing the graph of the corresponding function, as defined by four points defining a cubic bezier. You can also choose easing from <a href="http://easings.net/">Easing Functions Cheat Sheet</a>.</dd>
- <dt>{{cssxref("transition-delay")}}</dt>
- <dd>Defines how long to wait between the time a property is changed and the transition actually begins.</dd>
-</dl>
+- {{cssxref("transition-property")}}
+  - : Specifies the name or names of the CSS properties to which transitions should be applied. Only properties listed here are animated during transitions; changes to all other properties occur instantaneously as usual.
+- {{cssxref("transition-duration")}}
+  - : Specifies the duration over which transitions should occur. You can specify a single duration that applies to all properties during the transition, or multiple values to allow each property to transition over a different period of time.
+- {{cssxref("transition-timing-function")}}
+  - : Specifies a function to define how intermediate values for properties are computed. _Timing functions_ determine how intermediate values of the transition are calculated. Most [timing functions](/en-US/docs/Web/CSS/easing-function) can be specified by providing the graph of the corresponding function, as defined by four points defining a cubic bezier. You can also choose easing from [Easing Functions Cheat Sheet](http://easings.net/).
+- {{cssxref("transition-delay")}}
+  - : Defines how long to wait between the time a property is changed and the transition actually begins.
 
-<p>The shorthand CSS syntax is written as follows:</p>
+The shorthand CSS syntax is written as follows:
 
-<pre class="brush: css">div {
-    transition: &lt;property&gt; &lt;duration&gt; &lt;timing-function&gt; &lt;delay&gt;;
-}</pre>
+```css
+div {
+    transition: <property> <duration> <timing-function> <delay>;
+}
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Simple_example">Simple example</h3>
+### Simple example
 
-<p>This example performs a four-second font size transition with a two-second delay between the time the user mouses over the element and the beginning of the animation effect:</p>
+This example performs a four-second font size transition with a two-second delay between the time the user mouses over the element and the beginning of the animation effect:
 
-<pre class="brush: css">#delay {
+```css
+#delay {
   font-size: 14px;
   transition-property: font-size;
   transition-duration: 4s;
@@ -70,18 +66,21 @@ tags:
 #delay:hover {
   font-size: 36px;
 }
-</pre>
+```
 
-<h3 id="Multiple_animated_properties_example">Multiple animated properties example</h3>
+### Multiple animated properties example
 
-<pre class="brush: html hidden highlight:[3]">&lt;body&gt;
-    &lt;p&gt;The box below combines transitions for: width, height, background-color, transform. Hover over the box to see these properties animated.&lt;/p&gt;
-    &lt;div class="box"&gt;Sample&lt;/div&gt;
-&lt;/body&gt;</pre>
+```html hidden
+<body>
+    <p>The box below combines transitions for: width, height, background-color, transform. Hover over the box to see these properties animated.</p>
+    <div class="box">Sample</div>
+</body>
+```
 
-<h4 id="CSS_Content">CSS Content</h4>
+#### CSS Content
 
-<pre class="brush: css; highlight:[8,9]">.box {
+```css
+.box {
     border-style: solid;
     border-width: 1px;
     display: block;
@@ -97,59 +96,69 @@ tags:
     height: 200px;
     transform: rotate(180deg);
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Multiple_animated_properties_example', 600, 300)}}</p>
+{{EmbedLiveSample('Multiple_animated_properties_example', 600, 300)}}
 
-<h3 id="When_property_value_lists_are_of_different_lengths">When property value lists are of different lengths</h3>
+### When property value lists are of different lengths
 
-<p>If any property's list of values is shorter than the others, its values are repeated to make them match. For example:</p>
+If any property's list of values is shorter than the others, its values are repeated to make them match. For example:
 
-<pre class="brush: css">div {
+```css
+div {
   transition-property: opacity, left, top, height;
   transition-duration: 3s, 5s;
 }
-</pre>
+```
 
-<p>This is treated as if it were:</p>
+This is treated as if it were:
 
-<pre class="brush: css">div {
+```css
+div {
   transition-property: opacity, left, top, height;
   transition-duration: 3s, 5s, 3s, 5s;
-}</pre>
+}
+```
 
-<p>Similarly, if any property's value list is longer than that for {{cssxref("transition-property")}}, it's truncated, so if you have the following CSS:</p>
+Similarly, if any property's value list is longer than that for {{cssxref("transition-property")}}, it's truncated, so if you have the following CSS:
 
-<pre class="brush: css">div {
+```css
+div {
   transition-property: opacity, left;
   transition-duration: 3s, 5s, 2s, 1s;
-}</pre>
+}
+```
 
-<p>This gets interpreted as:</p>
+This gets interpreted as:
 
-<pre class="brush: css">div {
+```css
+div {
   transition-property: opacity, left;
   transition-duration: 3s, 5s;
-}</pre>
+}
+```
 
-<h3 id="Using_transitions_when_highlighting_menus">Using transitions when highlighting menus</h3>
+### Using transitions when highlighting menus
 
-<p>A common use of CSS is to highlight items in a menu as the user hovers the mouse cursor over them. It's easy to use transitions to make the effect even more attractive.</p>
+A common use of CSS is to highlight items in a menu as the user hovers the mouse cursor over them. It's easy to use transitions to make the effect even more attractive.
 
-<p>Before we look at code snippets, you might want to take a look at the <a href="https://codepen.io/anon/pen/WOEpva">live demo</a> (assuming your browser supports transitions).</p>
+Before we look at code snippets, you might want to take a look at the [live demo](https://codepen.io/anon/pen/WOEpva) (assuming your browser supports transitions).
 
-<p>First, we set up the menu using HTML:</p>
+First, we set up the menu using HTML:
 
-<pre class="brush: html">&lt;nav&gt;
-  &lt;a href="#"&gt;Home&lt;/a&gt;
-  &lt;a href="#"&gt;About&lt;/a&gt;
-  &lt;a href="#"&gt;Contact Us&lt;/a&gt;
-  &lt;a href="#"&gt;Links&lt;/a&gt;
-&lt;/nav&gt;</pre>
+```html
+<nav>
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Contact Us</a>
+  <a href="#">Links</a>
+</nav>
+```
 
-<p>Then we build the CSS to implement the look and feel of our menu. The relevant portions are shown here:</p>
+Then we build the CSS to implement the look and feel of our menu. The relevant portions are shown here:
 
-<pre class="brush: css">a {
+```css
+a {
   color: #fff;
   background-color: #333;
   transition: all 1s ease-out;
@@ -160,43 +169,42 @@ a:focus {
   color: #333;
   background-color: #fff;
 }
-</pre>
+```
 
-<p>This CSS establishes the look of the menu, with the background and text colors both changing when the element is in its {{cssxref(":hover")}} and {{cssxref(":focus")}} states.</p>
+This CSS establishes the look of the menu, with the background and text colors both changing when the element is in its {{cssxref(":hover")}} and {{cssxref(":focus")}} states.
 
-<h2 id="JavaScript_examples">JavaScript examples</h2>
+## JavaScript examples
 
-<div class="note">
-<p><strong>Note:</strong> Care should be taken when using a transition immediately after:</p>
+> **Note:** Care should be taken when using a transition immediately after:
+>
+> - adding the element to the DOM using `.appendChild()`
+> - removing an element's `display: none;` property.
+>
+> This is treated as if the initial state had never occurred and the element was always in its final state. The easy way to overcome this limitation is to apply a `window.setTimeout()` of a handful of milliseconds before changing the CSS property you intend to transition to.
 
-<ul>
- <li>adding the element to the DOM using <code>.appendChild()</code></li>
- <li>removing an element's <code>display: none;</code> property.</li>
-</ul>
+### Using transitions to make JavaScript functionality smooth
 
-<p>This is treated as if the initial state had never occurred and the element was always in its final state. The easy way to overcome this limitation is to apply a <code>window.setTimeout()</code> of a handful of milliseconds before changing the CSS property you intend to transition to.</p>
-</div>
+Transitions are a great tool to make things look much smoother without having to do anything to your JavaScript functionality. Take the following example.
 
-<h3 id="Using_transitions_to_make_JavaScript_functionality_smooth">Using transitions to make JavaScript functionality smooth</h3>
+```html
+<p>Click anywhere to move the ball</p>
+<div id="foo" class="ball"></div>
+```
 
-<p>Transitions are a great tool to make things look much smoother without having to do anything to your JavaScript functionality. Take the following example.</p>
+Using JavaScript you can make the effect of moving the ball to a certain position happen:
 
-<pre class="brush: html">&lt;p&gt;Click anywhere to move the ball&lt;/p&gt;
-&lt;div id="foo" class="ball"&gt;&lt;/div&gt;
-</pre>
-
-<p>Using JavaScript you can make the effect of moving the ball to a certain position happen:</p>
-
-<pre class="brush: js">var f = document.getElementById('foo');
+```js
+var f = document.getElementById('foo');
 document.addEventListener('click', function(ev){
     f.style.transform = 'translateY('+(ev.clientY-25)+'px)';
     f.style.transform += 'translateX('+(ev.clientX-25)+'px)';
 },false);
-</pre>
+```
 
-<p>With CSS you can make it smooth without any extra effort. Add a transition to the element and any change will happen smoothly:</p>
+With CSS you can make it smooth without any extra effort. Add a transition to the element and any change will happen smoothly:
 
-<pre class="brush: css">.ball {
+```css
+.ball {
   border-radius: 25px;
   width: 50px;
   height: 50px;
@@ -206,57 +214,41 @@ document.addEventListener('click', function(ev){
   left: 0;
   transition: transform 1s;
 }
-</pre>
+```
 
-<p>{{EmbedGHLiveSample("css-examples/transitions/js-transitions.html", '100%', 500)}}</p>
+{{EmbedGHLiveSample("css-examples/transitions/js-transitions.html", '100%', 500)}}
 
-<h3 id="Detecting_the_start_and_completion_of_a_transition">Detecting the start and completion of a transition</h3>
+### Detecting the start and completion of a transition
 
-<p>You can use the {{event("transitionend")}} event to detect that an animation has finished running. This is a {{domxref("TransitionEvent")}} object, which has two added properties beyond a typical {{domxref("Event")}} object:</p>
+You can use the {{event("transitionend")}} event to detect that an animation has finished running. This is a {{domxref("TransitionEvent")}} object, which has two added properties beyond a typical {{domxref("Event")}} object:
 
-<dl>
- <dt><code>propertyName</code></dt>
- <dd>A string indicating the name of the CSS property whose transition completed.</dd>
- <dt><code>elapsedTime</code></dt>
- <dd>A float indicating the number of seconds the transition had been running at the time the event fired. This value isn't affected by the value of {{cssxref("transition-delay")}}.</dd>
-</dl>
+- `propertyName`
+  - : A string indicating the name of the CSS property whose transition completed.
+- `elapsedTime`
+  - : A float indicating the number of seconds the transition had been running at the time the event fired. This value isn't affected by the value of {{cssxref("transition-delay")}}.
 
-<p>As usual, you can use the {{domxref("EventTarget.addEventListener", "addEventListener()")}} method to monitor for this event:</p>
+As usual, you can use the {{domxref("EventTarget.addEventListener", "addEventListener()")}} method to monitor for this event:
 
-<pre class="brush: js">el.addEventListener("transitionend", updateTransition, true);
-</pre>
+```js
+el.addEventListener("transitionend", updateTransition, true);
+```
 
-<p>You detect the beginning of a transition using {{event("transitionrun")}} (fires before any delay) and {{event("transitionstart")}} (fires after any delay), in the same kind of fashion:</p>
+You detect the beginning of a transition using {{event("transitionrun")}} (fires before any delay) and {{event("transitionstart")}} (fires after any delay), in the same kind of fashion:
 
-<pre class="brush: js">el.addEventListener("transitionrun", signalStart, true);
-el.addEventListener("transitionstart", signalStart, true);</pre>
+```js
+el.addEventListener("transitionrun", signalStart, true);
+el.addEventListener("transitionstart", signalStart, true);
+```
 
-<div class="note">
-  <p><strong>Note:</strong> The <code>transitionend</code> event doesn't fire if the transition is aborted before the transition is completed because either the element is made {{cssxref("display")}}<code>: none</code> or the animating property's value is changed.</p>
-</div>
+> **Note:** The `transitionend` event doesn't fire if the transition is aborted before the transition is completed because either the element is made {{cssxref("display")}}`: none` or the animating property's value is changed.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '', '')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                        | Status                                   | Comment            |
+| ---------------------------------------------------- | ---------------------------------------- | ------------------ |
+| {{SpecName('CSS3 Transitions', '', '')}} | {{Spec2('CSS3 Transitions')}} | Initial definition |
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The {{domxref("TransitionEvent")}} interface and the {{event("transitionend")}} event.</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">Using CSS animations</a></li>
-</ul>
+- The {{domxref("TransitionEvent")}} interface and the {{event("transitionend")}} event.
+- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)

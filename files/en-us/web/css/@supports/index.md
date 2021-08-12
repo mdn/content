@@ -10,140 +10,162 @@ tags:
   - supports
 browser-compat: css.at-rules.supports
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>@supports</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a> lets you specify declarations that depend on a browser's support for one or more specific CSS features. This is called a <em>feature query</em>. The rule may be placed at the top level of your code or nested inside any other <a href="/en-US/docs/Web/CSS/At-rule#conditional_group_rules">conditional group at-rule</a>.</p>
+The **`@supports`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) lets you specify declarations that depend on a browser's support for one or more specific CSS features. This is called a _feature query_. The rule may be placed at the top level of your code or nested inside any other [conditional group at-rule](/en-US/docs/Web/CSS/At-rule#conditional_group_rules).
 
-<pre class="brush: css; no-line-numbers">@supports (display: grid) {
+```css
+@supports (display: grid) {
   div {
     display: grid;
   }
-}</pre>
+}
+```
 
-<pre class="brush: css; no-line-numbers">@supports not (display: grid) {
+```css
+@supports not (display: grid) {
   div {
     float: right;
   }
-}</pre>
+}
+```
 
-<p>In JavaScript, <code>@supports</code> can be accessed via the CSS object model interface {{DOMxRef("CSSSupportsRule")}}.</p>
+In JavaScript, `@supports` can be accessed via the CSS object model interface {{DOMxRef("CSSSupportsRule")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>@supports</code> at-rule associates a block of statements with a <em>supports condition.</em> The supports condition consists of one or more name-value pairs combined by conjunctions (<code>and</code>), disjunctions (<code>or</code>), and/or negations (<code>not</code>). Precedence of operators can be defined with parentheses.</p>
+The `@supports` at-rule associates a block of statements with a _supports condition._ The supports condition consists of one or more name-value pairs combined by conjunctions (`and`), disjunctions (`or`), and/or negations (`not`). Precedence of operators can be defined with parentheses.
 
-<h3 id="Declaration_syntax">Declaration syntax</h3>
+### Declaration syntax
 
-<p>The most basic supports condition is a simple declaration (a property name followed by a value, separated by a colon). The declaration must be surrounded by parentheses. The following example returns true if the browser's {{CSSxRef("transform-origin")}} property considers <code>5% 5%</code> valid:</p>
+The most basic supports condition is a simple declaration (a property name followed by a value, separated by a colon). The declaration must be surrounded by parentheses. The following example returns true if the browser's {{CSSxRef("transform-origin")}} property considers `5% 5%` valid:
 
-<pre class="brush: css">@supports (transform-origin: 5% 5%) {}</pre>
+```css
+@supports (transform-origin: 5% 5%) {}
+```
 
-<h3 id="Function_syntax">Function syntax</h3>
+### Function syntax
 
-<p>The second basic supports condition is a supports function, the syntax for these is supported by all browsers, but the functions themselves are still being standardized.</p>
+The second basic supports condition is a supports function, the syntax for these is supported by all browsers, but the functions themselves are still being standardized.
 
-<h4 id="selector"><code>selector()</code> {{Experimental_Inline}}</h4>
+#### `selector()` {{Experimental_Inline}}
 
-<p>Tests if the browser supports the tested selector syntax. The following example returns true if the browser supports the <a href="/en-US/docs/Web/CSS/Child_combinator">child combinator</a>:</p>
+Tests if the browser supports the tested selector syntax. The following example returns true if the browser supports the [child combinator](/en-US/docs/Web/CSS/Child_combinator):
 
-<pre class="brush: css">@supports selector(A &gt; B) {}</pre>
+```css
+@supports selector(A > B) {}
+```
 
-<h3 id="The_not_operator">The not operator</h3>
+### The not operator
 
-<p>The <code>not</code> operator can precede any expression to create a new expression, resulting in the negation of the original one. The following example returns true if the browser's {{CSSxRef("transform-origin")}} property <strong>doesn't</strong> consider <code>10em 10em 10em</code> valid:</p>
+The `not` operator can precede any expression to create a new expression, resulting in the negation of the original one. The following example returns true if the browser's {{CSSxRef("transform-origin")}} property **doesn't** consider `10em 10em 10em` valid:
 
-<pre class="brush: css">@supports not (transform-origin: 10em 10em 10em) {}</pre>
+```css
+@supports not (transform-origin: 10em 10em 10em) {}
+```
 
-<p>As with any operator, the <code>not</code> operator can be applied to a declaration of any complexity. The following examples are both valid:</p>
+As with any operator, the `not` operator can be applied to a declaration of any complexity. The following examples are both valid:
 
-<pre class="brush: css">@supports not (not (transform-origin: 2px)) {}
-@supports (display: grid) and (not (display: inline-grid)) {}</pre>
+```css
+@supports not (not (transform-origin: 2px)) {}
+@supports (display: grid) and (not (display: inline-grid)) {}
+```
 
-<div class="blockIndicator note style-wrap">
-<p><strong>Note:</strong> There is no need to enclose the <code>not</code> operator between two parentheses at the top level. To combine it with other operators, like <code>and</code> and <code>or</code>, the parentheses are required.</p>
-</div>
+> **Note:** There is no need to enclose the `not` operator between two parentheses at the top level. To combine it with other operators, like `and` and `or`, the parentheses are required.
 
-<h3 id="The_and_operator">The and operator</h3>
+### The and operator
 
-<p>The <code>and</code> operator creates a new expression from the conjunction of two shorter expressions. It returns true only if <strong>both</strong> of the shorter expressions are also true. The following example returns true if and only if the two shorter expressions are simultaneously true:</p>
+The `and` operator creates a new expression from the conjunction of two shorter expressions. It returns true only if **both** of the shorter expressions are also true. The following example returns true if and only if the two shorter expressions are simultaneously true:
 
-<pre class="brush: css">@supports (display: table-cell) and (display: list-item) {}</pre>
+```css
+@supports (display: table-cell) and (display: list-item) {}
+```
 
-<p>Multiple conjunctions can be juxtaposed without the need of more parentheses. The following are both equivalent:</p>
+Multiple conjunctions can be juxtaposed without the need of more parentheses. The following are both equivalent:
 
-<pre class="brush: css">@supports (display: table-cell) and (display: list-item) and (display:contents) {}
-@supports (display: table-cell) and ((display: list-item) and (display:contents)) {}</pre>
+```css
+@supports (display: table-cell) and (display: list-item) and (display:contents) {}
+@supports (display: table-cell) and ((display: list-item) and (display:contents)) {}
+```
 
-<h3 id="The_or_operator">The or operator</h3>
+### The or operator
 
-<p>The <code>or</code> operator creates a new expression from the disjunction of two shorter expressions. It returns true if <strong>one or both</strong> of the shorter expressions is also true. The following example returns true if at least one of the two shorter expressions is true:</p>
+The `or` operator creates a new expression from the disjunction of two shorter expressions. It returns true if **one or both** of the shorter expressions is also true. The following example returns true if at least one of the two shorter expressions is true:
 
-<pre class="brush: css">@supports (transform-style: preserve) or (-moz-transform-style: preserve) {}</pre>
+```css
+@supports (transform-style: preserve) or (-moz-transform-style: preserve) {}
+```
 
-<p>Multiple disjunctions can be juxtaposed without the need of more parentheses. The following are both equivalent:</p>
+Multiple disjunctions can be juxtaposed without the need of more parentheses. The following are both equivalent:
 
-<pre class="brush: css">@supports (transform-style: preserve) or (-moz-transform-style: preserve) or
+```css
+@supports (transform-style: preserve) or (-moz-transform-style: preserve) or
           (-o-transform-style: preserve) or (-webkit-transform-style: preserve) {}
 
 @supports (transform-style: preserve-3d) or ((-moz-transform-style: preserve-3d) or
           ((-o-transform-style: preserve-3d) or (-webkit-transform-style: preserve-3d))) {}
-</pre>
+```
 
-<div class="notecard note">
-<p><strong>Note:</strong> When using both <code>and</code> and <code>or</code> operators, the parentheses must be used to define the order in which they apply. Otherwise, the condition is invalid and the whole rule is ignored.</p>
-</div>
+> **Note:** When using both `and` and `or` operators, the parentheses must be used to define the order in which they apply. Otherwise, the condition is invalid and the whole rule is ignored.
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{CSSSyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Testing_for_the_support_of_a_given_CSS_property">Testing for the support of a given CSS property</h3>
+### Testing for the support of a given CSS property
 
-<pre class="brush: css">@supports (animation-name: test) {
+```css
+@supports (animation-name: test) {
   … /* CSS applied when animations are supported without a prefix */
   @keyframes { /* Other at-rules can be nested inside */
     …
   }
 }
-</pre>
+```
 
-<h3 id="Testing_for_the_support_of_a_given_CSS_property_or_a_prefixed_version">Testing for the support of a given CSS property or a prefixed version</h3>
+### Testing for the support of a given CSS property or a prefixed version
 
-<pre class="brush: css">@supports ((perspective: 10px) or (-moz-perspective: 10px) or (-webkit-perspective: 10px) or
+```css
+@supports ((perspective: 10px) or (-moz-perspective: 10px) or (-webkit-perspective: 10px) or
          (-ms-perspective: 10px) or (-o-perspective: 10px)) {
   … /* CSS applied when 3D transforms, prefixed or not, are supported */
 }
-</pre>
+```
 
-<h3 id="Testing_for_the_non-support_of_a_specific_CSS_property">Testing for the non-support of a specific CSS property</h3>
+### Testing for the non-support of a specific CSS property
 
-<pre class="brush: css">@supports not ((text-align-last: justify) or (-moz-text-align-last: justify)) {
+```css
+@supports not ((text-align-last: justify) or (-moz-text-align-last: justify)) {
   … /* CSS to provide fallback alternative for text-align-last: justify */
-}</pre>
+}
+```
 
-<h3 id="Testing_for_the_support_of_custom_properties">Testing for the support of custom properties</h3>
+### Testing for the support of custom properties
 
-<pre class="brush: css">@supports (--foo: green) {
+```css
+@supports (--foo: green) {
   body {
     color: var(--varName);
   }
-}</pre>
+}
+```
 
-<h3 id="Testing_for_the_support_of_a_selector">Testing for the support of a selector</h3>
+### Testing for the support of a selector
 
-<p>The CSS Conditional Rules Level 4 specification adds the ability to test for support of a selector—for example {{cssxref(":is",":is()")}}.</p>
+The CSS Conditional Rules Level 4 specification adds the ability to test for support of a selector—for example {{cssxref(":is",":is()")}}.
 
-<pre class="brush: css">/* This rule won't be applied in browsers which don't support :is() */
-:is(ul, ol) &gt; li {
+```css
+/* This rule won't be applied in browsers which don't support :is() */
+:is(ul, ol) > li {
   … /* CSS applied when the :is(…) selector is supported */
 }
 
 @supports not selector(:is(a, b)) {
   /* Fallback for when :is() is unsupported */
-  ul &gt; li,
-  ol &gt; li {
+  ul > li,
+  ol > li {
     … /* The above expanded for browsers which don't support :is(…) */
   }
 }
@@ -155,25 +177,23 @@ browser-compat: css.at-rules.supports
      the `of` argument of :nth-child(…) is supported */
   :is(
       :nth-child(1n of ul, ol) a,
-      details &gt; summary
+      details > summary
   ) {
     … /* CSS applied when the :is(…) selector and
          the `of` argument of :nth-child(…) are both supported */
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Conditional_Rules/Using_Feature_Queries">Using feature queries</a></li>
- <li>The CSSOM class {{DOMxRef("CSSSupportsRule")}}, and the {{DOMxRef("CSS.supports()")}} method that allows the same check to be performed via JavaScript.</li>
-</ul>
+- [Using feature queries](/en-US/docs/Web/CSS/CSS_Conditional_Rules/Using_Feature_Queries)
+- The CSSOM class {{DOMxRef("CSSSupportsRule")}}, and the {{DOMxRef("CSS.supports()")}} method that allows the same check to be performed via JavaScript.

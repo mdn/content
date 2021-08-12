@@ -8,47 +8,47 @@ tags:
   - Reference
 browser-compat: css.properties.custom-property
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Property names that are prefixed with <code>--</code>, like <code>--example-name</code>, represent <em>custom properties</em> that contain a value that can be used in other declarations using the {{cssxref("var()")}} function.</span></p>
+Property names that are prefixed with `--`, like `--example-name`, represent _custom properties_ that contain a value that can be used in other declarations using the {{cssxref("var()")}} function.
 
-<p>Custom properties are scoped to the element(s) they are declared on, and participate in the cascade: the value of such a custom property is that from the declaration decided by the cascading algorithm.</p>
+Custom properties are scoped to the element(s) they are declared on, and participate in the cascade: the value of such a custom property is that from the declaration decided by the cascading algorithm.
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">--somekeyword: left;
+```css
+--somekeyword: left;
 --somecolor: #0000ff;
 --somecomplexvalue: 3px 6px rgb(20, 32, 54);
-</pre>
+```
 
-<dl>
- <dt><code>&lt;declaration-value&gt;</code></dt>
- <dd>This value matches any sequence of one or more tokens, so long as the sequence does not contain an unallowed token. It represents the entirety of what a valid declaration can have as its value.</dd>
-</dl>
+- `<declaration-value>`
+  - : This value matches any sequence of one or more tokens, so long as the sequence does not contain an unallowed token. It represents the entirety of what a valid declaration can have as its value.
 
-<div class="notecard note">
-<p><strong>Note:</strong> Custom property names are case sensitive — <code>--my-color</code> will be treated as a separate custom property to <code>--My-color</code>.</p>
-</div>
+> **Note:** Custom property names are case sensitive — `--my-color` will be treated as a separate custom property to `--My-color`.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{CSSSyntax}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p id="firstParagraph"&gt;This paragraph should have a blue background and yellow text.&lt;/p&gt;
-&lt;p id="secondParagraph"&gt;This paragraph should have a yellow background and blue text.&lt;/p&gt;
-&lt;div id="container"&gt;
-  &lt;p id="thirdParagraph"&gt;This paragraph should have a green background and yellow text.&lt;/p&gt;
-&lt;/div&gt;</pre>
+```html
+<p id="firstParagraph">This paragraph should have a blue background and yellow text.</p>
+<p id="secondParagraph">This paragraph should have a yellow background and blue text.</p>
+<div id="container">
+  <p id="thirdParagraph">This paragraph should have a green background and yellow text.</p>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">:root {
+```css
+:root {
   --first-color: #16f;
   --second-color: #ff7;
 }
@@ -70,23 +70,22 @@ browser-compat: css.properties.custom-property
 #thirdParagraph {
   background-color: var(--first-color);
   color: var(--second-color);
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Example', 500, 130)}}</p>
+{{EmbedLiveSample('Example', 500, 130)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Using_CSS_custom_properties">Using CSS variables</a></li>
- <li>The {{cssxref("var()")}} function</span></li>
-</ul>
+- [Using CSS variables](/en-US/docs/Web/CSS/Using_CSS_custom_properties)
+- The {{cssxref("var()")}} function

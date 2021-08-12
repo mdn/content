@@ -9,377 +9,297 @@ tags:
   - Reference
   - Selectors
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>A <a href="/en-US/docs/Web/CSS">CSS</a> <strong><dfn>pseudo-class</dfn></strong> is a keyword added to a selector that specifies a special state of the selected element(s).</span> For example, {{CSSxRef(":hover")}} can be used to change a button's color when the user's pointer hovers over it.</p>
+A [CSS](/en-US/docs/Web/CSS) **_pseudo-class_** is a keyword added to a selector that specifies a special state of the selected element(s). For example, {{CSSxRef(":hover")}} can be used to change a button's color when the user's pointer hovers over it.
 
-<pre class="brush: css no-line-numbers">/* Any button over which the user's pointer is hovering */
+```css
+/* Any button over which the user's pointer is hovering */
 button:hover {
   color: blue;
-}</pre>
+}
+```
 
-<p>Pseudo-classes let you apply a style to an element not only in relation to the content of the document tree, but also in relation to external factors like the history of the navigator ({{CSSxRef(":visited")}}, for example), the status of its content (like {{CSSxRef(":checked")}} on certain form elements), or the position of the mouse (like {{CSSxRef(":hover")}}, which lets you know if the mouse is over an element or not).</p>
+Pseudo-classes let you apply a style to an element not only in relation to the content of the document tree, but also in relation to external factors like the history of the navigator ({{CSSxRef(":visited")}}, for example), the status of its content (like {{CSSxRef(":checked")}} on certain form elements), or the position of the mouse (like {{CSSxRef(":hover")}}, which lets you know if the mouse is over an element or not).
 
-<div class="notecard note">
-<p><strong>Note:</strong> In contrast to pseudo-classes, <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elements</a> can be used to style a <em>specific part</em> of an element.</p>
-</div>
+> **Note:** In contrast to pseudo-classes, [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) can be used to style a _specific part_ of an element.
 
-<h2 id="Linguistic_pseudo-classes">Linguistic pseudo-classes</h2>
+## Linguistic pseudo-classes
 
-<p>These pseudo-classes reflect the document language, and enable the selection of elements based on language or script direction.</p>
+These pseudo-classes reflect the document language, and enable the selection of elements based on language or script direction.
 
-<dl>
- <dt>{{CSSxRef(":dir")}}</dt>
- <dd>The directionality pseudo-class selects an element based on its directionality as determined by the document language.</dd>
- <dt>{{CSSxRef(":lang")}}</dt>
- <dd>Select an element based on its content language.</dd>
-</dl>
+- {{CSSxRef(":dir")}}
+  - : The directionality pseudo-class selects an element based on its directionality as determined by the document language.
+- {{CSSxRef(":lang")}}
+  - : Select an element based on its content language.
 
-<h2 id="Location_pseudo-classes">Location pseudo-classes</h2>
+## Location pseudo-classes
 
-<p>These pseudo-classes relate to links, and to targeted elements within the current document.</p>
+These pseudo-classes relate to links, and to targeted elements within the current document.
 
-<dl>
- <dt>{{CSSxRef(":any-link")}}</dt>
- <dd>Matches an element if the element would match either {{CSSxRef(":link")}} or {{CSSxRef(":visited")}}.</dd>
- <dt>{{CSSxRef(":link")}}</dt>
- <dd>Matches links that have not yet been visited.</dd>
- <dt>{{CSSxRef(":visited")}}</dt>
- <dd>Matches links that have been visited.</dd>
- <dt>{{CSSxRef(":local-link")}}</dt>
- <dd>Matches links whose absolute URL is the same as the target URL, for example anchor links to the same page.</dd>
- <dt>{{CSSxRef(":target")}}</dt>
- <dd>Matches the element which is the target of the document URL.</dd>
- <dt>{{CSSxRef(":target-within")}}</dt>
- <dd>Matches elements which are the target of the document URL, but also elements which have a descendant which is the target of the document URL.</dd>
- <dt>{{CSSxRef(":scope")}}</dt>
- <dd>Represents elements that are a reference point for selectors to match against.</dd>
-</dl>
+- {{CSSxRef(":any-link")}}
+  - : Matches an element if the element would match either {{CSSxRef(":link")}} or {{CSSxRef(":visited")}}.
+- {{CSSxRef(":link")}}
+  - : Matches links that have not yet been visited.
+- {{CSSxRef(":visited")}}
+  - : Matches links that have been visited.
+- {{CSSxRef(":local-link")}}
+  - : Matches links whose absolute URL is the same as the target URL, for example anchor links to the same page.
+- {{CSSxRef(":target")}}
+  - : Matches the element which is the target of the document URL.
+- {{CSSxRef(":target-within")}}
+  - : Matches elements which are the target of the document URL, but also elements which have a descendant which is the target of the document URL.
+- {{CSSxRef(":scope")}}
+  - : Represents elements that are a reference point for selectors to match against.
 
-<h2 id="User_action_pseudo-classes">User action pseudo-classes</h2>
+## User action pseudo-classes
 
-<p>These pseudo-classes require some interaction by the user in order for them to apply, such as holding a mouse pointer over an element.</p>
+These pseudo-classes require some interaction by the user in order for them to apply, such as holding a mouse pointer over an element.
 
-<dl>
- <dt>{{CSSxRef(":hover")}}</dt>
- <dd>Matches when a user designates an item with a pointing device, for example holding the mouse pointer over it.</dd>
- <dt>{{CSSxRef(":active")}}</dt>
- <dd>Matches when an item is being activated by the user, for example clicked on.</dd>
- <dt>{{CSSxRef(":focus")}}</dt>
- <dd>Matches when an element has focus.</dd>
- <dt>{{CSSxRef(":focus-visible")}}</dt>
- <dd>Matches when an element has focus and the user agent identifies that the element should be visibly focused. </dd>
- <dt>{{CSSxRef(":focus-within")}}</dt>
- <dd>Matches an element to which {{CSSxRef(":focus")}} applies, plus any element that has a descendant to which {{CSSxRef(":focus")}} applies.</dd>
-</dl>
+- {{CSSxRef(":hover")}}
+  - : Matches when a user designates an item with a pointing device, for example holding the mouse pointer over it.
+- {{CSSxRef(":active")}}
+  - : Matches when an item is being activated by the user, for example clicked on.
+- {{CSSxRef(":focus")}}
+  - : Matches when an element has focus.
+- {{CSSxRef(":focus-visible")}}
+  - : Matches when an element has focus and the user agent identifies that the element should be visibly focused.
+- {{CSSxRef(":focus-within")}}
+  - : Matches an element to which {{CSSxRef(":focus")}} applies, plus any element that has a descendant to which {{CSSxRef(":focus")}} applies.
 
-<h2 id="Time-dimensional_pseudo-classes">Time-dimensional pseudo-classes</h2>
+## Time-dimensional pseudo-classes
 
-<p>These pseudo-classes apply when viewing something which has timing, such as a <a href="/en-US/docs/Web/API/WebVTT_API">WebVTT</a> caption track.</p>
+These pseudo-classes apply when viewing something which has timing, such as a [WebVTT](/en-US/docs/Web/API/WebVTT_API) caption track.
 
-<dl>
- <dt>{{CSSxRef(":current")}}</dt>
- <dd>Represents the element or ancestor of the element that is being displayed.</dd>
- <dt>{{CSSxRef(":past")}}</dt>
- <dd>Represents an element that occurs entirely before the {{CSSxRef(":current")}} element.</dd>
- <dt>{{CSSxRef(":future")}}</dt>
- <dd>Represents an element that occurs entirely after the {{CSSxRef(":current")}} element.</dd>
-</dl>
+- {{CSSxRef(":current")}}
+  - : Represents the element or ancestor of the element that is being displayed.
+- {{CSSxRef(":past")}}
+  - : Represents an element that occurs entirely before the {{CSSxRef(":current")}} element.
+- {{CSSxRef(":future")}}
+  - : Represents an element that occurs entirely after the {{CSSxRef(":current")}} element.
 
-<h2 id="Resource_state_pseudo-classes">Resource state pseudo-classes</h2>
+## Resource state pseudo-classes
 
-<p>These pseudo-classes apply to media that is capable of being in a state where it would be described as playing, such as a video.</p>
+These pseudo-classes apply to media that is capable of being in a state where it would be described as playing, such as a video.
 
-<dl>
- <dt>{{CSSxRef(":playing")}}</dt>
- <dd>Represents a media element that is capable of playing when that element is playing.</dd>
- <dt>{{CSSxRef(":paused")}}</dt>
- <dd>Represents a media element that is capable of playing when that element is paused.</dd>
-</dl>
+- {{CSSxRef(":playing")}}
+  - : Represents a media element that is capable of playing when that element is playing.
+- {{CSSxRef(":paused")}}
+  - : Represents a media element that is capable of playing when that element is paused.
 
-<h2 id="The_input_pseudo-classes">The input pseudo-classes</h2>
+## The input pseudo-classes
 
-<p>These pseudo-classes relate to form elements, and enable selecting elements based on HTML attributes and the state that the field is in before and after interaction.</p>
+These pseudo-classes relate to form elements, and enable selecting elements based on HTML attributes and the state that the field is in before and after interaction.
 
-<dl>
- <dt>{{CSSxRef(":autofill")}}</dt>
- <dd>Matches when an {{htmlelement("input")}} has been autofilled by the browser.</dd>
- <dt>{{CSSxRef(":enabled")}}</dt>
- <dd>Represents a user interface element that is in an enabled state.</dd>
- <dt>{{CSSxRef(":disabled")}}</dt>
- <dd>Represents a user interface element that is in a disabled state.</dd>
- <dt>{{CSSxRef(":read-only")}}</dt>
- <dd>Represents any element that cannot be changed by the user.</dd>
- <dt>{{CSSxRef(":read-write")}}</dt>
- <dd>Represents any element that is user-editable.</dd>
- <dt>{{CSSxRef(":placeholder-shown")}}</dt>
- <dd>Matches an input element that is displaying placeholder text, for example from the HTML5 <code>placeholder</code> attribute.</dd>
- <dt>{{CSSxRef(":default")}}</dt>
- <dd>Matches one or more UI elements that are the default among a set of elements.</dd>
- <dt>{{CSSxRef(":checked")}}</dt>
- <dd>Matches when elements such as checkboxes and radiobuttons are toggled on.</dd>
- <dt>{{CSSxRef(":indeterminate")}}</dt>
- <dd>Matches when UI elements are in an indeterminate state.</dd>
- <dt>{{CSSxRef(":blank")}}</dt>
- <dd>Matches a user-input element which is empty, containing an empty string or other null input.</dd>
- <dt>{{CSSxRef(":valid")}}</dt>
- <dd>Matches an element with valid contents. For example an input element with type 'email' which contains a validly formed email address.</dd>
- <dt>{{CSSxRef(":invalid")}}</dt>
- <dd>Matches an element with invalid contents. For example an input element with type 'email' with a name entered.</dd>
- <dt>{{CSSxRef(":in-range")}}</dt>
- <dd>Applies to elements with range limitations, for example a slider control, when the selected value is in the allowed range.</dd>
- <dt>{{CSSxRef(":out-of-range")}}</dt>
- <dd>Applies to elements with range limitations, for example a slider control, when the selected value is outside the allowed range.</dd>
- <dt>{{CSSxRef(":required")}}</dt>
- <dd>Matches when a form element is required.</dd>
- <dt>{{CSSxRef(":optional")}}</dt>
- <dd>Matches when a form element is optional.</dd>
- <dt>{{CSSxRef(":user-invalid")}}</dt>
- <dd>Represents an element with incorrect input, but only when the user has interacted with it.</dd>
-</dl>
+- {{CSSxRef(":autofill")}}
+  - : Matches when an {{htmlelement("input")}} has been autofilled by the browser.
+- {{CSSxRef(":enabled")}}
+  - : Represents a user interface element that is in an enabled state.
+- {{CSSxRef(":disabled")}}
+  - : Represents a user interface element that is in a disabled state.
+- {{CSSxRef(":read-only")}}
+  - : Represents any element that cannot be changed by the user.
+- {{CSSxRef(":read-write")}}
+  - : Represents any element that is user-editable.
+- {{CSSxRef(":placeholder-shown")}}
+  - : Matches an input element that is displaying placeholder text, for example from the HTML5 `placeholder` attribute.
+- {{CSSxRef(":default")}}
+  - : Matches one or more UI elements that are the default among a set of elements.
+- {{CSSxRef(":checked")}}
+  - : Matches when elements such as checkboxes and radiobuttons are toggled on.
+- {{CSSxRef(":indeterminate")}}
+  - : Matches when UI elements are in an indeterminate state.
+- {{CSSxRef(":blank")}}
+  - : Matches a user-input element which is empty, containing an empty string or other null input.
+- {{CSSxRef(":valid")}}
+  - : Matches an element with valid contents. For example an input element with type 'email' which contains a validly formed email address.
+- {{CSSxRef(":invalid")}}
+  - : Matches an element with invalid contents. For example an input element with type 'email' with a name entered.
+- {{CSSxRef(":in-range")}}
+  - : Applies to elements with range limitations, for example a slider control, when the selected value is in the allowed range.
+- {{CSSxRef(":out-of-range")}}
+  - : Applies to elements with range limitations, for example a slider control, when the selected value is outside the allowed range.
+- {{CSSxRef(":required")}}
+  - : Matches when a form element is required.
+- {{CSSxRef(":optional")}}
+  - : Matches when a form element is optional.
+- {{CSSxRef(":user-invalid")}}
+  - : Represents an element with incorrect input, but only when the user has interacted with it.
 
-<h2 id="Tree-structural_pseudo-classes">Tree-structural pseudo-classes</h2>
+## Tree-structural pseudo-classes
 
-<p>These pseudo-classes relate to the location of an element within the document tree.</p>
+These pseudo-classes relate to the location of an element within the document tree.
 
-<dl>
- <dt>{{CSSxRef(":root")}}</dt>
- <dd>Represents an element that is the root of the document. In HTML this is usually the <code>&lt;html&gt;</code> element.</dd>
- <dt>{{CSSxRef(":empty")}}</dt>
- <dd>Represents an element with no children other than white-space characters.</dd>
- <dt>{{CSSxRef(":nth-child")}}</dt>
- <dd>Uses A<em>n</em>+B notation to select elements from a list of sibling elements.</dd>
- <dt>{{CSSxRef(":nth-last-child")}}</dt>
- <dd>Uses A<em>n</em>+B notation to select elements from a list of sibling elements, counting backwards from the end of the list.</dd>
- <dt>{{CSSxRef(":first-child")}}</dt>
- <dd>Matches an element that is the first of its siblings.</dd>
- <dt>{{CSSxRef(":last-child")}}</dt>
- <dd>Matches an element that is the last of its siblings.</dd>
- <dt>{{CSSxRef(":only-child")}}</dt>
- <dd>Matches an element that has no siblings. For example a list item with no other list items in that list.</dd>
- <dt>{{CSSxRef(":nth-of-type")}}</dt>
- <dd>Uses A<em>n</em>+B notation to select elements from a list of sibling elements that match a certain type from a list of sibling elements.</dd>
- <dt>{{CSSxRef(":nth-last-of-type")}}</dt>
- <dd>Uses A<em>n</em>+B notation to select elements from a list of sibling elements that match a certain type from a list of sibling elements counting backwards from the end of the list.</dd>
- <dt>{{CSSxRef(":first-of-type")}}</dt>
- <dd>Matches an element that is the first of its siblings, and also matches a certain type selector.</dd>
- <dt>{{CSSxRef(":last-of-type")}}</dt>
- <dd>Matches an element that is the last of its siblings, and also matches a certain type selector.</dd>
- <dt>{{CSSxRef(":only-of-type")}}</dt>
- <dd>Matches an element that has no siblings of the chosen type selector.</dd>
-</dl>
+- {{CSSxRef(":root")}}
+  - : Represents an element that is the root of the document. In HTML this is usually the `<html>` element.
+- {{CSSxRef(":empty")}}
+  - : Represents an element with no children other than white-space characters.
+- {{CSSxRef(":nth-child")}}
+  - : Uses A*n*+B notation to select elements from a list of sibling elements.
+- {{CSSxRef(":nth-last-child")}}
+  - : Uses A*n*+B notation to select elements from a list of sibling elements, counting backwards from the end of the list.
+- {{CSSxRef(":first-child")}}
+  - : Matches an element that is the first of its siblings.
+- {{CSSxRef(":last-child")}}
+  - : Matches an element that is the last of its siblings.
+- {{CSSxRef(":only-child")}}
+  - : Matches an element that has no siblings. For example a list item with no other list items in that list.
+- {{CSSxRef(":nth-of-type")}}
+  - : Uses A*n*+B notation to select elements from a list of sibling elements that match a certain type from a list of sibling elements.
+- {{CSSxRef(":nth-last-of-type")}}
+  - : Uses A*n*+B notation to select elements from a list of sibling elements that match a certain type from a list of sibling elements counting backwards from the end of the list.
+- {{CSSxRef(":first-of-type")}}
+  - : Matches an element that is the first of its siblings, and also matches a certain type selector.
+- {{CSSxRef(":last-of-type")}}
+  - : Matches an element that is the last of its siblings, and also matches a certain type selector.
+- {{CSSxRef(":only-of-type")}}
+  - : Matches an element that has no siblings of the chosen type selector.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">selector:pseudo-class {
+```css
+selector:pseudo-class {
   property: value;
 }
-</pre>
+```
 
-<p>Like regular classes, you can chain together as many pseudo-classes as you want in a selector.</p>
+Like regular classes, you can chain together as many pseudo-classes as you want in a selector.
 
-<h2 id="Alphabetical_index">Alphabetical index</h2>
+## Alphabetical index
 
-<p>Pseudo-classes defined by a set of CSS specifications include the following:</p>
+Pseudo-classes defined by a set of CSS specifications include the following:
 
-<span>A</span>
+A
 
-<ul>
- <li>{{CSSxRef(":active")}}</li>
- <li>{{CSSxRef(":any-link")}}</li>
- <li>{{CSSxRef(":autofill")}}</li>
-</ul>
-<span>B</span>
+- {{CSSxRef(":active")}}
+- {{CSSxRef(":any-link")}}
+- {{CSSxRef(":autofill")}}
 
-<ul>
- <li>{{CSSxRef(":blank")}} {{Experimental_Inline}}</li>
-</ul>
-<span>C</span>
+B
 
-<ul>
- <li>{{CSSxRef(":checked")}}</li>
- <li>{{CSSxRef(":current")}} {{Experimental_Inline}}</li>
-</ul>
-<span>D</span>
+- {{CSSxRef(":blank")}} {{Experimental_Inline}}
 
-<ul>
- <li>{{CSSxRef(":default")}}</li>
- <li>{{CSSxRef(":defined")}}</li>
- <li>{{CSSxRef(":dir", ":dir()")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef(":disabled")}}</li>
-</ul>
-<span>E</span>
+C
 
-<ul>
- <li>{{CSSxRef(":empty")}}</li>
- <li>{{CSSxRef(":enabled")}}</li>
-</ul>
-<span>F</span>
+- {{CSSxRef(":checked")}}
+- {{CSSxRef(":current")}} {{Experimental_Inline}}
 
-<ul>
- <li>{{CSSxRef(":first")}}</li>
- <li>{{CSSxRef(":first-child")}}</li>
- <li>{{CSSxRef(":first-of-type")}}</li>
- <li>{{CSSxRef(":fullscreen")}}</li>
- <li>{{CSSxRef(":future")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef(":focus")}}</li>
- <li>{{CSSxRef(":focus-visible")}} </li>
- <li>{{CSSxRef(":focus-within")}}</li>
-</ul>
-<span>H</span>
+D
 
-<ul>
- <li>{{CSSxRef(":has", ":has()")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef(":host")}}</li>
- <li>{{CSSxRef(":host()")}}</li>
- <li>{{CSSxRef(":host-context()")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef(":hover")}}</li>
-</ul>
-<span>I</span>
+- {{CSSxRef(":default")}}
+- {{CSSxRef(":defined")}}
+- {{CSSxRef(":dir", ":dir()")}} {{Experimental_Inline}}
+- {{CSSxRef(":disabled")}}
 
-<ul>
- <li>{{CSSxRef(":indeterminate")}}</li>
- <li>{{CSSxRef(":in-range")}}</li>
- <li>{{CSSxRef(":invalid")}}</li>
- <li>{{CSSxRef(":is", ":is()")}}</li>
-</ul>
-<span>L</span>
+E
 
-<ul>
- <li>{{CSSxRef(":lang", ":lang()")}}</li>
- <li>{{CSSxRef(":last-child")}}</li>
- <li>{{CSSxRef(":last-of-type")}}</li>
- <li>{{CSSxRef(":left")}}</li>
- <li>{{CSSxRef(":link")}}</li>
- <li>{{CSSxRef(":local-link")}} {{Experimental_Inline}}</li>
-</ul>
-<span>N</span>
+- {{CSSxRef(":empty")}}
+- {{CSSxRef(":enabled")}}
 
-<ul>
- <li>{{CSSxRef(":not", ":not()")}}</li>
- <li>{{CSSxRef(":nth-child", ":nth-child()")}}</li>
- <li>{{CSSxRef(":nth-col", ":nth-col()")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef(":nth-last-child", ":nth-last-child()")}}</li>
- <li>{{CSSxRef(":nth-last-col", ":nth-last-col()")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef(":nth-last-of-type", ":nth-last-of-type()")}}</li>
- <li>{{CSSxRef(":nth-of-type", ":nth-of-type()")}}</li>
-</ul>
-<span>O</span>
+F
 
-<ul>
- <li>{{CSSxRef(":only-child")}}</li>
- <li>{{CSSxRef(":only-of-type")}}</li>
- <li>{{CSSxRef(":optional")}}</li>
- <li>{{CSSxRef(":out-of-range")}}</li>
-</ul>
-<span>P</span>
+- {{CSSxRef(":first")}}
+- {{CSSxRef(":first-child")}}
+- {{CSSxRef(":first-of-type")}}
+- {{CSSxRef(":fullscreen")}}
+- {{CSSxRef(":future")}} {{Experimental_Inline}}
+- {{CSSxRef(":focus")}}
+- {{CSSxRef(":focus-visible")}}
+- {{CSSxRef(":focus-within")}}
 
-<ul>
- <li>{{CSSxRef(":past")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef(":picture-in-picture")}}</li>
- <li>{{CSSxRef(":placeholder-shown")}}</li>
- <li>{{CSSxRef(":paused")}}</li>
- <li>{{CSSxRef(":playing")}}</li>
-</ul>
-<span>R</span>
+H
 
-<ul>
- <li>{{CSSxRef(":read-only")}}</li>
- <li>{{CSSxRef(":read-write")}}</li>
- <li>{{CSSxRef(":required")}}</li>
- <li>{{CSSxRef(":right")}}</li>
- <li>{{CSSxRef(":root")}}</li>
-</ul>
-<span>S</span>
+- {{CSSxRef(":has", ":has()")}} {{Experimental_Inline}}
+- {{CSSxRef(":host")}}
+- {{CSSxRef(":host()")}}
+- {{CSSxRef(":host-context()")}} {{Experimental_Inline}}
+- {{CSSxRef(":hover")}}
 
-<ul>
- <li>{{CSSxRef(":scope")}}</li>
- <li>{{CSSxRef(":state", ":state()")}} {{Experimental_Inline}}</li>
-</ul>
-<span>T</span>
+I
 
-<ul>
- <li>{{CSSxRef(":target")}}</li>
- <li>{{CSSxRef(":target-within")}} {{Experimental_Inline}}</li>
-</ul>
-<span>U</span>
+- {{CSSxRef(":indeterminate")}}
+- {{CSSxRef(":in-range")}}
+- {{CSSxRef(":invalid")}}
+- {{CSSxRef(":is", ":is()")}}
 
-<ul>
- <li>{{CSSxRef(":user-invalid")}} {{Experimental_Inline}}</li>
-</ul>
-<span>V</span>
+L
 
-<ul>
- <li>{{CSSxRef(":valid")}}</li>
- <li>{{CSSxRef(":visited")}}</li>
-</ul>
-<span>W</span>
+- {{CSSxRef(":lang", ":lang()")}}
+- {{CSSxRef(":last-child")}}
+- {{CSSxRef(":last-of-type")}}
+- {{CSSxRef(":left")}}
+- {{CSSxRef(":link")}}
+- {{CSSxRef(":local-link")}} {{Experimental_Inline}}
 
-<ul>
- <li>{{CSSxRef(":where", ":where()")}}</li>
-</ul>
+N
 
-<h2 id="Specifications">Specifications</h2>
+- {{CSSxRef(":not", ":not()")}}
+- {{CSSxRef(":nth-child", ":nth-child()")}}
+- {{CSSxRef(":nth-col", ":nth-col()")}} {{Experimental_Inline}}
+- {{CSSxRef(":nth-last-child", ":nth-last-child()")}}
+- {{CSSxRef(":nth-last-col", ":nth-last-col()")}} {{Experimental_Inline}}
+- {{CSSxRef(":nth-last-of-type", ":nth-last-of-type()")}}
+- {{CSSxRef(":nth-of-type", ":nth-of-type()")}}
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Fullscreen")}}</td>
-   <td>{{Spec2("Fullscreen")}}</td>
-   <td>Defined <code>:fullscreen</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "#pseudo-classes")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Defines when particular selectors match HTML elements.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS4 Selectors")}}</td>
-   <td>{{Spec2("CSS4 Selectors")}}</td>
-   <td>Defined <code>:any-link</code>, <code>:blank</code>, <code>:local-link</code>, <code>:scope</code>, <code>:drop</code>, <code>:current</code>, <code>:past</code>, <code>:future</code>, <code>:placeholder-shown</code>, <code>:user-invalid</code>, <code>:nth-col()</code>, <code>:nth-last-col()</code>, <code>:is()</code> and <code>:where()</code>.<br>
-    Changed <code>:empty</code> to behave like {{CSSxRef(":-moz-only-whitespace")}} {{Non-standard_Inline}}.<br>
-    No significant change for other pseudo-classes defined in {{SpecName("CSS3 Selectors")}} and {{SpecName("HTML5 W3C")}} (though semantic meaning not taken over).</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5 W3C")}}</td>
-   <td>{{Spec2("HTML5 W3C")}}</td>
-   <td>Copies the relevant section from the canonical (WHATWG) HTML spec.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Basic UI")}}</td>
-   <td>{{Spec2("CSS3 Basic UI")}}</td>
-   <td>Defined <code>:default</code>, <code>:valid</code>, <code>:invalid</code>, <code>:in-range</code>, <code>:out-of-range</code>, <code>:required</code>, <code>:optional</code>, <code>:read-only</code> and <code>:read-write</code>, but without the associated semantic meaning.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Selectors")}}</td>
-   <td>{{Spec2("CSS3 Selectors")}}</td>
-   <td>Defined <code>:target</code>, <code>:root</code>, <code>:nth-child()</code>, <code>:nth-last-of-child()</code>, <code>:nth-of-type()</code>, <code>:nth-last-of-type()</code>, <code>:last-child</code>, <code>:first-of-type</code>, <code>:last-of-type</code>, <code>:only-child</code>, <code>:only-of-type</code>, <code>:empty</code> and <code>:not()</code>.<br>
-    Defined the syntax of <code>:enabled</code>, <code>:disabled</code>, <code>:checked</code>, and <code>:indeterminate</code>, but without the associated semantic meaning.<br>
-    No significant change for pseudo-classes defined in {{SpecName('CSS2.1')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS2.1")}}</td>
-   <td>{{Spec2("CSS2.1")}}</td>
-   <td>Defined <code>:lang()</code>, <code>:first-child</code>, <code>:hover</code>, and <code>:focus</code>.<br>
-    No significant change for pseudo-classes defined in {{SpecName('CSS1')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS1")}}</td>
-   <td>{{Spec2("CSS1")}}</td>
-   <td>Defined <code>:link</code>, <code>:visited</code> and <code>:active</code>, but without the associated semantic meaning.</td>
-  </tr>
- </tbody>
-</table>
+O
 
-<h2 id="See_also">See also</h2>
+- {{CSSxRef(":only-child")}}
+- {{CSSxRef(":only-of-type")}}
+- {{CSSxRef(":optional")}}
+- {{CSSxRef(":out-of-range")}}
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Pseudo-elements">Pseudo-elements</a></li>
-</ul>
+P
+
+- {{CSSxRef(":past")}} {{Experimental_Inline}}
+- {{CSSxRef(":picture-in-picture")}}
+- {{CSSxRef(":placeholder-shown")}}
+- {{CSSxRef(":paused")}}
+- {{CSSxRef(":playing")}}
+
+R
+
+- {{CSSxRef(":read-only")}}
+- {{CSSxRef(":read-write")}}
+- {{CSSxRef(":required")}}
+- {{CSSxRef(":right")}}
+- {{CSSxRef(":root")}}
+
+S
+
+- {{CSSxRef(":scope")}}
+- {{CSSxRef(":state", ":state()")}} {{Experimental_Inline}}
+
+T
+
+- {{CSSxRef(":target")}}
+- {{CSSxRef(":target-within")}} {{Experimental_Inline}}
+
+U
+
+- {{CSSxRef(":user-invalid")}} {{Experimental_Inline}}
+
+V
+
+- {{CSSxRef(":valid")}}
+- {{CSSxRef(":visited")}}
+
+W
+
+- {{CSSxRef(":where", ":where()")}}
+
+## Specifications
+
+| Specification                                                | Status                               | Comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ------------------------------------------------------------ | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName("Fullscreen")}}                         | {{Spec2("Fullscreen")}}     | Defined `:fullscreen`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| {{SpecName("HTML WHATWG", "#pseudo-classes")}} | {{Spec2("HTML WHATWG")}}     | Defines when particular selectors match HTML elements.                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| {{SpecName("CSS4 Selectors")}}                     | {{Spec2("CSS4 Selectors")}} | Defined `:any-link`, `:blank`, `:local-link`, `:scope`, `:drop`, `:current`, `:past`, `:future`, `:placeholder-shown`, `:user-invalid`, `:nth-col()`, `:nth-last-col()`, `:is()` and `:where()`. Changed `:empty` to behave like {{CSSxRef(":-moz-only-whitespace")}} {{Non-standard_Inline}}. No significant change for other pseudo-classes defined in {{SpecName("CSS3 Selectors")}} and {{SpecName("HTML5 W3C")}} (though semantic meaning not taken over). |
+| {{SpecName("HTML5 W3C")}}                             | {{Spec2("HTML5 W3C")}}         | Copies the relevant section from the canonical (WHATWG) HTML spec.                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| {{SpecName("CSS3 Basic UI")}}                     | {{Spec2("CSS3 Basic UI")}} | Defined `:default`, `:valid`, `:invalid`, `:in-range`, `:out-of-range`, `:required`, `:optional`, `:read-only` and `:read-write`, but without the associated semantic meaning.                                                                                                                                                                                                                                                                                                                        |
+| {{SpecName("CSS3 Selectors")}}                     | {{Spec2("CSS3 Selectors")}} | Defined `:target`, `:root`, `:nth-child()`, `:nth-last-of-child()`, `:nth-of-type()`, `:nth-last-of-type()`, `:last-child`, `:first-of-type`, `:last-of-type`, `:only-child`, `:only-of-type`, `:empty` and `:not()`. Defined the syntax of `:enabled`, `:disabled`, `:checked`, and `:indeterminate`, but without the associated semantic meaning. No significant change for pseudo-classes defined in {{SpecName('CSS2.1')}}.                                                                 |
+| {{SpecName("CSS2.1")}}                                 | {{Spec2("CSS2.1")}}             | Defined `:lang()`, `:first-child`, `:hover`, and `:focus`. No significant change for pseudo-classes defined in {{SpecName('CSS1')}}.                                                                                                                                                                                                                                                                                                                                                          |
+| {{SpecName("CSS1")}}                                 | {{Spec2("CSS1")}}             | Defined `:link`, `:visited` and `:active`, but without the associated semantic meaning.                                                                                                                                                                                                                                                                                                                                                                                                               |
+
+## See also
+
+- [Pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements)

@@ -8,42 +8,24 @@ tags:
   - Overview
   - Reference
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>CSS Device Adaptation</strong> is a module of CSS that lets you define the size, zoom factor, and orientation of the viewport.</p>
+**CSS Device Adaptation** is a module of CSS that lets you define the size, zoom factor, and orientation of the viewport.
 
-<h2 id="Reference">Reference</h2>
+## Reference
 
-<h3 id="At-rules">At-rules</h3>
+### At-rules
 
-<ul>
- <li>{{cssxref("@viewport")}}</li>
-</ul>
+- {{cssxref("@viewport")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Device")}}</td>
-   <td>{{Spec2("CSS3 Device")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                        | Status                           | Comment            |
+| ------------------------------------ | -------------------------------- | ------------------ |
+| {{SpecName("CSS3 Device")}} | {{Spec2("CSS3 Device")}} | Initial definition |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<h3 id="viewport_rule"><code>@viewport</code> rule</h3>
+### `@viewport` rule
 
-<div>
-
-<p>{{Compat("css.at-rules.viewport")}}</p>
-</div>
+{{Compat("css.at-rules.viewport")}}

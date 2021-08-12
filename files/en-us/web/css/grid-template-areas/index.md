@@ -6,23 +6,24 @@ tags:
   - CSS Grid
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.grid-template-areas
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>grid-template-areas</code></strong> CSS property specifies named {{glossary("grid areas")}}, establishing the cells in the grid and assigning them names.</p>
+The **`grid-template-areas`** CSS property specifies named {{glossary("grid areas")}}, establishing the cells in the grid and assigning them names.
 
-<div>{{EmbedInteractiveExample("pages/css/grid-template-areas.html")}}</div>
+{{EmbedInteractiveExample("pages/css/grid-template-areas.html")}}
 
-<p>Those areas are not associated with any particular grid item, but can be referenced from the grid-placement properties {{cssxref("grid-row-start")}}, {{cssxref("grid-row-end")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}, and their shorthands {{cssxref("grid-row")}}, {{cssxref("grid-column")}}, and {{cssxref("grid-area")}}.</p>
+Those areas are not associated with any particular grid item, but can be referenced from the grid-placement properties {{cssxref("grid-row-start")}}, {{cssxref("grid-row-end")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}, and their shorthands {{cssxref("grid-row")}}, {{cssxref("grid-column")}}, and {{cssxref("grid-area")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">/* Keyword value */
+```css
+/* Keyword value */
 grid-template-areas: none;
 
-/* &lt;string&gt; values */
+/* <string> values */
 grid-template-areas: "a b";
 grid-template-areas: "a b b"
                      "a c d";
@@ -32,41 +33,42 @@ grid-template-areas: inherit;
 grid-template-areas: initial;
 grid-template-areas: revert;
 grid-template-areas: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>none</code></dt>
- <dd>The grid container doesn’t define any named grid areas.</dd>
- <dt><code>{{cssxref("&lt;string&gt;")}}+</code></dt>
- <dd>A row is created for every separate string listed, and a column is created for each cell in the string. Multiple named cell tokens within and between rows create a single named grid area that spans the corresponding grid cells. Unless those cells form a rectangle, the declaration is invalid.</dd>
-</dl>
+- `none`
+  - : The grid container doesn’t define any named grid areas.
+- `{{cssxref("&lt;string&gt;")}}+`
+  - : A row is created for every separate string listed, and a column is created for each cell in the string. Multiple named cell tokens within and between rows create a single named grid area that spans the corresponding grid cells. Unless those cells form a rectangle, the declaration is invalid.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Specifying_named_grid_areas">Specifying named grid areas</h3>
+### Specifying named grid areas
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;section id="page"&gt;
-  &lt;header&gt;Header&lt;/header&gt;
-  &lt;nav&gt;Navigation&lt;/nav&gt;
-  &lt;main&gt;Main area&lt;/main&gt;
-  &lt;footer&gt;Footer&lt;/footer&gt;
-&lt;/section&gt;</pre>
+```html
+<section id="page">
+  <header>Header</header>
+  <nav>Navigation</nav>
+  <main>Main area</main>
+  <footer>Footer</footer>
+</section>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush:css; highlight[5-7]">#page {
+```css
+#page {
   display: grid;
   width: 100%;
   height: 250px;
@@ -77,43 +79,41 @@ grid-template-areas: unset;
   grid-template-columns: 150px 1fr;
 }
 
-#page &gt; header {
+#page > header {
   grid-area: head;
   background-color: #8ca0ff;
 }
 
-#page &gt; nav {
+#page > nav {
   grid-area: nav;
   background-color: #ffa08c;
 }
 
-#page &gt; main {
+#page > main {
   grid-area: main;
   background-color: #ffff64;
 }
 
-#page &gt; footer {
+#page > footer {
   grid-area: foot;
   background-color: #8cffa0;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Specifying_named_grid_areas", "100%", "250px")}}</p>
+{{EmbedLiveSample("Specifying_named_grid_areas", "100%", "250px")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related CSS properties: {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template")}}</li>
- <li>Grid Layout Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">Grid template areas</a></em></li>
- <li>Video tutorial: <em><a href="http://gridbyexample.com/video/grid-template-areas/">Grid Template Areas</a></em></li>
-</ul>
+- Related CSS properties: {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template")}}
+- Grid Layout Guide: _[Grid template areas](/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)_
+- Video tutorial: _[Grid Template Areas](http://gridbyexample.com/video/grid-template-areas/)_

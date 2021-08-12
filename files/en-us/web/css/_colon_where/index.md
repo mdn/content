@@ -15,11 +15,12 @@ tags:
   - Web
 browser-compat: css.selectors.where
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>:where()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> function takes a selector list as its argument, and selects any element that can be selected by one of the selectors in that list.</p>
+The **`:where()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) function takes a selector list as its argument, and selects any element that can be selected by one of the selectors in that list.
 
-<pre class="brush: css">/* Selects any paragraph inside a header, main
+```css
+/* Selects any paragraph inside a header, main
    or footer element that is being hovered */
 :where(header, main, footer) p:hover {
   color: red;
@@ -32,71 +33,79 @@ main p:hover,
 footer p:hover {
   color: red;
   cursor: pointer;
-}</pre>
+}
+```
 
-<p>The difference between <code>:where()</code> and {{CSSxRef(":is", ":is()")}} is that <code>:where()</code> always has 0 <a href="/en-US/docs/Web/CSS/Specificity">specificity</a>, whereas <code>:is()</code> takes on the specificity of the most specific selector in its arguments.</p>
+The difference between `:where()` and {{CSSxRef(":is", ":is()")}} is that `:where()` always has 0 [specificity](/en-US/docs/Web/CSS/Specificity), whereas `:is()` takes on the specificity of the most specific selector in its arguments.
 
-<h3 id="Forgiving_Selector_Parsing">Forgiving Selector Parsing</h3>
+### Forgiving Selector Parsing
 
-<p>The specification defines <code>:is()</code> and <code>:where()</code> as accepting a <a href="https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list">forgiving selector list</a>.</p>
+The specification defines `:is()` and `:where()` as accepting a [forgiving selector list](https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list).
 
-<p>In CSS when using a selector list, if any of the selectors are invalid then the whole list is deemed invalid. When using <code>:is()</code> or <code>:where() </code>instead of the whole list of selectors being deemed invalid if one fails to parse, the incorrect or unsupported selector will be ignored and the others used.</p>
+In CSS when using a selector list, if any of the selectors are invalid then the whole list is deemed invalid. When using `:is()` or `:where() `instead of the whole list of selectors being deemed invalid if one fails to parse, the incorrect or unsupported selector will be ignored and the others used.
 
-<pre class="brush: css">:where(:valid, :unsupported) {
+```css
+:where(:valid, :unsupported) {
   ...
-}</pre>
+}
+```
 
-<p>Will still parse correctly and match <code>:valid</code> even in browsers which don't support <code>:unsupported</code>, whereas:</p>
+Will still parse correctly and match `:valid` even in browsers which don't support `:unsupported`, whereas:
 
-<pre class="brush: css">:valid, :unsupported {
+```css
+:valid, :unsupported {
   ...
-}</pre>
+}
+```
 
-<p>Will be ignored in browsers which don't support <code>:unsupported</code> even if they support <code>:valid</code>.</p>
+Will be ignored in browsers which don't support `:unsupported` even if they support `:valid`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Comparing_where_and_is">Comparing :where() and :is()</h3>
+### Comparing :where() and :is()
 
-<p>This example shows how <code>:where()</code> works, and also illustrates the difference between <code>:where()</code> and <code>:is()</code>.</p>
+This example shows how `:where()` works, and also illustrates the difference between `:where()` and `:is()`.
 
-<p>Take the following HTML:</p>
+Take the following HTML:
 
-<pre class="brush: html">&lt;article&gt;
-  &lt;h2&gt;:is()-styled links&lt;/h2&gt;
-  &lt;section class="is-styling"&gt;
-    &lt;p&gt;Here is my main content. This &lt;a href="https://mozilla.org"&gt;contains a link&lt;/a&gt;.
-  &lt;/section&gt;
+```html
+<article>
+  <h2>:is()-styled links</h2>
+  <section class="is-styling">
+    <p>Here is my main content. This <a href="https://mozilla.org">contains a link</a>.
+  </section>
 
-  &lt;aside class="is-styling"&gt;
-    &lt;p&gt;Here is my aside content. This &lt;a href="https://developer.mozilla.org"&gt;also contains a link&lt;/a&gt;.
-  &lt;/aside&gt;
+  <aside class="is-styling">
+    <p>Here is my aside content. This <a href="https://developer.mozilla.org">also contains a link</a>.
+  </aside>
 
-  &lt;footer class="is-styling"&gt;
-    &lt;p&gt;This is my footer, also containing &lt;a href="https://github.com/mdn"&gt;a link&lt;/a&gt;.
-  &lt;/footer&gt;
-&lt;/article&gt;
+  <footer class="is-styling">
+    <p>This is my footer, also containing <a href="https://github.com/mdn">a link</a>.
+  </footer>
+</article>
 
-&lt;article&gt;
-  &lt;h2&gt;:where()-styled links&lt;/h2&gt;
-  &lt;section class="where-styling"&gt;
-    &lt;p&gt;Here is my main content. This &lt;a href="https://mozilla.org"&gt;contains a link&lt;/a&gt;.
-  &lt;/section&gt;
+<article>
+  <h2>:where()-styled links</h2>
+  <section class="where-styling">
+    <p>Here is my main content. This <a href="https://mozilla.org">contains a link</a>.
+  </section>
 
-  &lt;aside class="where-styling"&gt;
-    &lt;p&gt;Here is my aside content. This &lt;a href="https://developer.mozilla.org"&gt;also contains a link&lt;/a&gt;.
-  &lt;/aside&gt;
+  <aside class="where-styling">
+    <p>Here is my aside content. This <a href="https://developer.mozilla.org">also contains a link</a>.
+  </aside>
 
-  &lt;footer class="where-styling"&gt;
-    &lt;p&gt;This is my footer, also containing &lt;a href="https://github.com/mdn"&gt;a link&lt;/a&gt;.
-  &lt;/footer&gt;
-&lt;/article&gt;</pre>
+  <footer class="where-styling">
+    <p>This is my footer, also containing <a href="https://github.com/mdn">a link</a>.
+  </footer>
+</article>
+```
 
-<p>In this somewhat-contrived example, we have two articles that each contain a section, an aside, and a footer. They differ by the classes used to mark the child elements.</p>
+In this somewhat-contrived example, we have two articles that each contain a section, an aside, and a footer. They differ by the classes used to mark the child elements.
 
-<p>To make selecting the links inside them simpler, but still distinct, we <em>could</em> use <code>:is()</code> or <code>:where()</code>, in the following manner:</p>
+To make selecting the links inside them simpler, but still distinct, we _could_ use `:is()` or `:where()`, in the following manner:
 
-<pre class="brush: css">html {
+```css
+html {
   font-family: sans-serif;
   font-size: 150%;
 }
@@ -107,38 +116,39 @@ footer p:hover {
 
 :where(section.where-styling, aside.where-styling, footer.where-styling) a {
   color: orange;
-}</pre>
+}
+```
 
-<p>However, what if we later want to override the color of links in the footers using a simple selector?</p>
+However, what if we later want to override the color of links in the footers using a simple selector?
 
-<pre class="brush: css">footer a {
+```css
+footer a {
   color: blue;
-}</pre>
+}
+```
 
-<p>This won't work for the red links, because the selectors inside <code>:is()</code> count towards the specificity of the overall selector, and class selectors have a higher specificity than element selectors.</p>
+This won't work for the red links, because the selectors inside `:is()` count towards the specificity of the overall selector, and class selectors have a higher specificity than element selectors.
 
-<p>However, selectors inside <code>:where()</code> have specificity 0, so the orange footer link will be overridden by our simple selector.</p>
+However, selectors inside `:where()` have specificity 0, so the orange footer link will be overridden by our simple selector.
 
-<p><strong>Note</strong>: You can also find this example on GitHub; see <a href="https://mdn.github.io/css-examples/is-where/">is-where</a>.</p>
+**Note**: You can also find this example on GitHub; see [is-where](https://mdn.github.io/css-examples/is-where/).
 
-<p>{{EmbedLiveSample('Examples', '100%', 600)}}</p>
+{{EmbedLiveSample('Examples', '100%', 600)}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{CSSSyntax}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{CSSxRef(":is", ":is()")}}</li>
- <li><a href="/en-US/docs/Web/CSS/Selector_list">Selector list</a></li>
- <li><a href="/en-US/docs/Web/Web_Components">Web components</a></li>
-</ul>
+- {{CSSxRef(":is", ":is()")}}
+- [Selector list](/en-US/docs/Web/CSS/Selector_list)
+- [Web components](/en-US/docs/Web/Web_Components)

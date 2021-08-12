@@ -9,15 +9,16 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.font-stretch
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p>The <strong><code>font-stretch</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property selects a normal, condensed, or expanded face from a font.</p>
+The **`font-stretch`** [CSS](/en-US/docs/Web/CSS) property selects a normal, condensed, or expanded face from a font.
 
-<div>{{EmbedInteractiveExample("pages/css/font-stretch.html")}}</div>
+{{EmbedInteractiveExample("pages/css/font-stretch.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 font-stretch: ultra-condensed;
 font-stretch: extra-condensed;
 font-stretch: condensed;
@@ -38,172 +39,130 @@ font-stretch: inherit;
 font-stretch: initial;
 font-stretch: revert;
 font-stretch: unset;
-</pre>
+```
 
-<p>This property may be specified as a single keyword value or a single {{cssxref("&lt;percentage&gt;")}} value.</p>
+This property may be specified as a single keyword value or a single {{cssxref("&lt;percentage&gt;")}} value.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>Specifies a normal font face.</dd>
- <dt><code>semi-condensed</code>, <code>condensed</code>, <code>extra-condensed</code>, <code>ultra-condensed</code></dt>
- <dd>Specifies a more condensed font face than normal, with <code>ultra-condensed</code> as the most condensed.</dd>
- <dt><code>semi-expanded</code>, <code>expanded</code>, <code>extra-expanded</code>, <code>ultra-expanded</code></dt>
- <dd>Specifies a more expanded font face than normal, with <code>ultra-expanded</code> as the most expanded.</dd>
- <dt><code><var>&lt;percentage&gt;</var></code></dt>
- <dd>
- <p>A {{cssxref("&lt;percentage&gt;")}} value between 50% and 200% (inclusive). Negative values are not allowed for this property.</p>
+- `normal`
+  - : Specifies a normal font face.
+- `semi-condensed`, `condensed`, `extra-condensed`, `ultra-condensed`
+  - : Specifies a more condensed font face than normal, with `ultra-condensed` as the most condensed.
+- `semi-expanded`, `expanded`, `extra-expanded`, `ultra-expanded`
+  - : Specifies a more expanded font face than normal, with `ultra-expanded` as the most expanded.
+- `<percentage>`
 
- <div class="note">
-<p><strong>Note:</strong> In earlier versions of the <code>font-stretch</code> specification, the property accepts only the nine keyword values.</p>
+  - : A {{cssxref("&lt;percentage&gt;")}} value between 50% and 200% (inclusive). Negative values are not allowed for this property.
 
- <p><strong>The {{ SpecName('CSS4 Fonts', '#propdef-font-stretch') }} spec</strong> extends the syntax to accept a <code><var>&lt;percentage&gt;</var></code> value as well. This enables variable fonts to offer something more like a <em>continuum</em> of character widths. For TrueType or OpenType variable fonts, the "<code>wdth</code>" variation is used to implement varying widths.</p>
+    > **Note:** In earlier versions of the `font-stretch` specification, the property accepts only the nine keyword values.
+    >
+    > **The {{ SpecName('CSS4 Fonts', '#propdef-font-stretch') }} spec** extends the syntax to accept a `<percentage>` value as well. This enables variable fonts to offer something more like a _continuum_ of character widths. For TrueType or OpenType variable fonts, the "`wdth`" variation is used to implement varying widths.
+    >
+    > However, note that the `<percentage>` syntax is not yet supported by all browsers: check the [Browser compatibility](#browser_compatibility) table for details.
 
- <p>However, note that the <code><var>&lt;percentage&gt;</var></code> syntax is not yet supported by all browsers: check the <a href="#browser_compatibility">Browser compatibility</a> table for details.</p>
- </div>
- </dd>
-</dl>
+### Keyword to numeric mapping
 
-<h3 id="Keyword_to_numeric_mapping">Keyword to numeric mapping</h3>
+The table below shows the mapping between keyword values and numeric percentages:
 
-<p>The table below shows the mapping between keyword values and numeric percentages:</p>
+| Keyword           | Percentage |
+| ----------------- | ---------- |
+| `ultra-condensed` | 50%        |
+| `extra-condensed` | 62.5%      |
+| `condensed`       | 75%        |
+| `semi-condensed`  | 87.5%      |
+| `normal`          | 100%       |
+| `semi-expanded`   | 112.5%     |
+| `expanded`        | 125%       |
+| `extra-expanded`  | 150%       |
+| `ultra-expanded`  | 200%       |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Keyword</th>
-   <th scope="col">Percentage</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>ultra-condensed</code></td>
-   <td>50%</td>
-  </tr>
-  <tr>
-   <td><code>extra-condensed</code></td>
-   <td>62.5%</td>
-  </tr>
-  <tr>
-   <td><code>condensed</code></td>
-   <td>75%</td>
-  </tr>
-  <tr>
-   <td><code>semi-condensed</code></td>
-   <td>87.5%</td>
-  </tr>
-  <tr>
-   <td><code>normal</code></td>
-   <td>100%</td>
-  </tr>
-  <tr>
-   <td><code>semi-expanded</code></td>
-   <td>112.5%</td>
-  </tr>
-  <tr>
-   <td><code>expanded</code></td>
-   <td>125%</td>
-  </tr>
-  <tr>
-   <td><code>extra-expanded</code></td>
-   <td>150%</td>
-  </tr>
-  <tr>
-   <td><code>ultra-expanded</code></td>
-   <td>200%</td>
-  </tr>
- </tbody>
-</table>
+## Description
 
-<h2 id="Description">Description</h2>
+Some font families offer additional faces in which the characters are narrower than the normal face (_condensed_ faces) or wider than the normal face (_expanded_ faces).
 
-<p>Some font families offer additional faces in which the characters are narrower than the normal face (<em>condensed</em> faces) or wider than the normal face (<em>expanded</em> faces).</p>
+You can use `font-stretch` to select a condensed or expanded face from such fonts. If the font you are using does not offer condensed or expanded faces, this property has no effect.
 
-<p>You can use <code>font-stretch</code> to select a condensed or expanded face from such fonts. If the font you are using does not offer condensed or expanded faces, this property has no effect.</p>
+### Font face selection
 
-<h3 id="Font_face_selection">Font face selection</h3>
+The face selected for a given value of `font-stretch` depends on the faces supported by the font in question. If the font does not provide a face that exactly matches the given value, then values less than 100% map to a narrower face, and values greater than or equal to 100% map to a wider face.
 
-<p>The face selected for a given value of <code>font-stretch</code> depends on the faces supported by the font in question. If the font does not provide a face that exactly matches the given value, then values less than 100% map to a narrower face, and values greater than or equal to 100% map to a wider face.</p>
-
-<p>The table below demonstrates the effect of supplying various different percentage values of <code>font-stretch</code> on two different fonts:</p>
+The table below demonstrates the effect of supplying various different percentage values of `font-stretch` on two different fonts:
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="row"></th>
-   <th scope="col">50%</th>
-   <th scope="col">62.5%</th>
-   <th scope="col">75%</th>
-   <th scope="col">87.5%</th>
-   <th scope="col">100%</th>
-   <th scope="col">112.5%</th>
-   <th scope="col">125%</th>
-   <th scope="col">150%</th>
-   <th scope="col">200%</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">Helvetica Neue</th>
-   <td><img alt="" src="screenshot_2018-06-06_example_page.png"></td>
-   <td><img alt="" src="screenshot_2018-06-06_example_page.png"></td>
-   <td><img alt="" src="screenshot_2018-06-06_example_page.png"></td>
-   <td><img alt="" src="screenshot_2018-06-06_example_page.png"></td>
-   <td><img alt="" src="screenshot_2018-06-06_example_page1.png"></td>
-   <td><img alt="" src="screenshot_2018-06-06_example_page1.png"></td>
-   <td><img alt="" src="screenshot_2018-06-06_example_page1.png"></td>
-   <td><img alt="" src="screenshot_2018-06-06_example_page1.png"></td>
-   <td><img alt="" src="screenshot_2018-06-06_example_page1.png"></td>
-  </tr>
-  <tr>
-   <th scope="row">League Mono Variable</th>
-   <td><img alt="" src="screenshot_2018-06-06_example_page.png"></td>
-   <td><img alt="" src="screenshot_2018-06-06_example_page1.png"></td>
-   <td><img alt="" src="screenshot_2018-06-06_example_page2.png"></td>
-   <td><img alt="" src="screenshot_2018-06-06_example_page3.png"></td>
-   <td><img alt="" src="l-100.png"></td>
-   <td><img alt="" src="l-112.5.png"></td>
-   <td><img alt="" src="l-125.png"></td>
-   <td><img alt="" src="l-150.png"></td>
-   <td><img alt="" src="l-200.png"></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="row"></th>
+      <th scope="col">50%</th>
+      <th scope="col">62.5%</th>
+      <th scope="col">75%</th>
+      <th scope="col">87.5%</th>
+      <th scope="col">100%</th>
+      <th scope="col">112.5%</th>
+      <th scope="col">125%</th>
+      <th scope="col">150%</th>
+      <th scope="col">200%</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Helvetica Neue</th>
+      <td><img alt="" src="screenshot_2018-06-06_example_page.png" /></td>
+      <td><img alt="" src="screenshot_2018-06-06_example_page.png" /></td>
+      <td><img alt="" src="screenshot_2018-06-06_example_page.png" /></td>
+      <td><img alt="" src="screenshot_2018-06-06_example_page.png" /></td>
+      <td><img alt="" src="screenshot_2018-06-06_example_page1.png" /></td>
+      <td><img alt="" src="screenshot_2018-06-06_example_page1.png" /></td>
+      <td><img alt="" src="screenshot_2018-06-06_example_page1.png" /></td>
+      <td><img alt="" src="screenshot_2018-06-06_example_page1.png" /></td>
+      <td><img alt="" src="screenshot_2018-06-06_example_page1.png" /></td>
+    </tr>
+    <tr>
+      <th scope="row">League Mono Variable</th>
+      <td><img alt="" src="screenshot_2018-06-06_example_page.png" /></td>
+      <td><img alt="" src="screenshot_2018-06-06_example_page1.png" /></td>
+      <td><img alt="" src="screenshot_2018-06-06_example_page2.png" /></td>
+      <td><img alt="" src="screenshot_2018-06-06_example_page3.png" /></td>
+      <td><img alt="" src="l-100.png" /></td>
+      <td><img alt="" src="l-112.5.png" /></td>
+      <td><img alt="" src="l-125.png" /></td>
+      <td><img alt="" src="l-150.png" /></td>
+      <td><img alt="" src="l-200.png" /></td>
+    </tr>
+  </tbody>
 </table>
 
-<ul>
- <li><strong>Helvetica Neue</strong>, which is installed by default on macOS, has a single condensed face in addition to the normal face. All values of <code>font-stretch</code> less than 100% select the condensed face, while all other values select the normal face.</li>
- <li><strong><a href="http://tylerfinck.com/leaguemonovariable/">League Mono Variable</a></strong> is a variable font that offers something like a continuous range of widths for different percentage values of <code>font-stretch</code>.</li>
-</ul>
+- **Helvetica Neue**, which is installed by default on macOS, has a single condensed face in addition to the normal face. All values of `font-stretch` less than 100% select the condensed face, while all other values select the normal face.
+- **[League Mono Variable](http://tylerfinck.com/leaguemonovariable/)** is a variable font that offers something like a continuous range of widths for different percentage values of `font-stretch`.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_font_stretch_percentages">Setting font stretch percentages</h3>
+### Setting font stretch percentages
 
-<div class="notecard note">
-<p><strong>Note:</strong> This example will only work in browsers that support <code><var>&lt;percentage&gt;</var></code> values.</p>
+> **Note:** This example will only work in browsers that support `<percentage>` values.
+
+#### HTML
+
+```html
+<div class="container">
+    <p class="condensed">an elephantine lizard</p>
+    <p class="normal">an elephantine lizard</p>
+    <p class="expanded">an elephantine lizard</p>
 </div>
+```
 
-<h4 id="HTML">HTML</h4>
+#### CSS
 
-<pre class="brush: html">&lt;div class="container"&gt;
-    &lt;p class="condensed"&gt;an elephantine lizard&lt;/p&gt;
-    &lt;p class="normal"&gt;an elephantine lizard&lt;/p&gt;
-    &lt;p class="expanded"&gt;an elephantine lizard&lt;/p&gt;
-&lt;/div&gt;
-</pre>
-
-<h4 id="CSS">CSS</h4>
-
-<pre class="brush: css">/*
+```css
+/*
 This example uses the League Mono Variable font, developed by
 Tyler Finck (https://www.tylerfinck.com/) and used here under
 the terms of the SIL Open Font License, Version 1.1:
@@ -234,29 +193,24 @@ http://scripts.sil.org/cms/scripts/page.php?item_id=OFL_web
 .expanded {
   font-stretch: 200%;
 }
+```
 
-</pre>
+#### Result
 
-<h4 id="Result">Result</h4>
+{{EmbedLiveSample("Setting_font_stretch_percentages", 1200, 250, "", "", "example-outcome-frame")}}
 
-<p>{{EmbedLiveSample("Setting_font_stretch_percentages", 1200, 250, "", "", "example-outcome-frame")}}</p>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<div class="note">
-<p><strong>Note:</strong> The <code>font-stretch</code> property was initially defined in CSS 2, but dropped in CSS 2.1 due to the lack of browser implementation. It was brought back in CSS 3.</p>
-</div>
+> **Note:** The `font-stretch` property was initially defined in CSS 2, but dropped in CSS 2.1 due to the lack of browser implementation. It was brought back in CSS 3.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("font-style")}}</li>
- <li>{{cssxref("font-weight")}}</li>
- <li><a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals">Fundamental text and font styling</a></li>
-</ul>
+- {{cssxref("font-style")}}
+- {{cssxref("font-weight")}}
+- [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)

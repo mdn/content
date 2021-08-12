@@ -10,87 +10,82 @@ tags:
   - Web
 browser-compat: css.types.image.image-set
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>image-set()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">functional</a> notation is a method of letting the browser pick the most appropriate CSS image from a given set, primarily for high pixel density screens.</p>
+The **`image-set()`** [CSS](/en-US/docs/Web/CSS) [functional](/en-US/docs/Web/CSS/CSS_Functions) notation is a method of letting the browser pick the most appropriate CSS image from a given set, primarily for high pixel density screens.
 
-<p>Resolution and bandwidth differ by device and network access. The <code>image-set()</code> function delivers the most appropriate image resolution for a user’s device, providing a set of image options — each with an associated resolution declaration — from which the browser picks the most appropriate for the device and settings. Resolution can be used as a proxy for filesize — a user agent on a slow mobile connection with a high-resolution screen may prefer to receive lower-resolution images rather than waiting for a higher resolution image to load.</p>
+Resolution and bandwidth differ by device and network access. The `image-set()` function delivers the most appropriate image resolution for a user’s device, providing a set of image options — each with an associated resolution declaration — from which the browser picks the most appropriate for the device and settings. Resolution can be used as a proxy for filesize — a user agent on a slow mobile connection with a high-resolution screen may prefer to receive lower-resolution images rather than waiting for a higher resolution image to load.
 
-<p><code>image-set()</code> allows the author to provide options rather than determining what each individual user needs.</p>
+`image-set()` allows the author to provide options rather than determining what each individual user needs.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">image-set() = image-set( &lt;image-set-option&gt;# )
-where &lt;image-set-option&gt; = [ &lt;image&gt; | &lt;string&gt; ] &lt;resolution&gt; and
-      &lt;string&gt; is an &lt;url&gt;
-</pre>
+```css
+image-set() = image-set( <image-set-option># )
+where <image-set-option> = [ <image> | <string> ] <resolution> and
+      <string> is an <url>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-  <dt><code>&lt;image&gt;</code></dt>
-  <dd>The <code><a href="/en-US/docs/Web/CSS/image">&lt;image&gt;</a></code> can be any image type except for an image set. The <code>image-set()</code> function may not be nested inside another <code>image-set()</code> function.</dd>
-  <dt><code>&lt;string&gt;</code></dt>
-  <dd>A <code>url()</code> to an image.</dd>
-  <dt><code>&lt;resolution&gt;</code>{{optional_inline}}</dt>
-  <dd><code><a href="/en-US/docs/Web/CSS/resolution">&lt;resolution&gt;</a></code> units include <code>x</code> or <code>dppx</code>, for dots per pixel unit, <code>dpi</code>, for dots per inch, and <code>dpcm</code> for dots per centimeter. Every image within an <code>image-set()</code> must have a unique resolution.</dd>
-  <dt><code>type(&lt;string&gt;)</code>{{optional_inline}}</dt>
-  <dd>A valid MIME type string, for example "image/jpeg".</dd>
-</dl>
+- `<image>`
+  - : The [`<image>`](/en-US/docs/Web/CSS/image) can be any image type except for an image set. The `image-set()` function may not be nested inside another `image-set()` function.
+- `<string>`
+  - : A `url()` to an image.
+- `<resolution>`{{optional_inline}}
+  - : [`<resolution>`](/en-US/docs/Web/CSS/resolution) units include `x` or `dppx`, for dots per pixel unit, `dpi`, for dots per inch, and `dpcm` for dots per centimeter. Every image within an `image-set()` must have a unique resolution.
+- `type(<string>)`{{optional_inline}}
+  - : A valid MIME type string, for example "image/jpeg".
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_image-set_to_provide_alternative_background-image_options">Using image-set() to provide alternative background-image options</h3>
+### Using image-set() to provide alternative background-image options
 
-<p>This example shows how to use <code><a class="css" href="https://drafts.csswg.org/css-images-4/#funcdef-image-set">image-set()</a></code> to provide two alternative {{cssxref("background-image")}} options, chosen depending on the resolution needed: a normal version and a high-resolution version.</p>
+This example shows how to use [`image-set()`](https://drafts.csswg.org/css-images-4/#funcdef-image-set) to provide two alternative {{cssxref("background-image")}} options, chosen depending on the resolution needed: a normal version and a high-resolution version.
 
-<p>{{EmbedGHLiveSample("css-examples/images/image-set.html", '100%', 600)}}</p>
+{{EmbedGHLiveSample("css-examples/images/image-set.html", '100%', 600)}}
 
-<div class="notecard note">
-  <p><strong>Note:</strong> In the above example, the <code>-webkit</code> prefixed version is also used to support Chrome and Safari. In Firefox 90, support was added for <code>-webkit-image-set()</code> as an alias to <code>image-set()</code> (in order to provide compat where developers had not added the standard property).</p>
-</div>
+> **Note:** In the above example, the `-webkit` prefixed version is also used to support Chrome and Safari. In Firefox 90, support was added for `-webkit-image-set()` as an alias to `image-set()` (in order to provide compat where developers had not added the standard property).
 
-<h3 id="Using_image-set_to_provide_alternative_formats">Using image-set() to provide alternative image formats</h3>
+### Using image-set() to provide alternative image formats
 
-<p>In the next example the <code>type()</code> function is used to serve the image in AVIF and JPEG formats. If the browser supports avif, it will choose that version. Otherwise it will use the jpeg version.</p>
+In the next example the `type()` function is used to serve the image in AVIF and JPEG formats. If the browser supports avif, it will choose that version. Otherwise it will use the jpeg version.
 
-<p>{{EmbedGHLiveSample("css-examples/images/image-set-type.html", '100%', 600)}}</p>
+{{EmbedGHLiveSample("css-examples/images/image-set-type.html", '100%', 600)}}
 
-<h4>Providing a fallback</h4>
-<p>There is no inbuilt fallback for <code>image-set()</code>; therefore to include a {{cssxref("background-image")}} for those browsers that do not support the function, a separate declaration is required before the line using <code>image-set()</code>.</p>
+#### Providing a fallback
 
-<pre class="brush: css">.box {
+There is no inbuilt fallback for `image-set()`; therefore to include a {{cssxref("background-image")}} for those browsers that do not support the function, a separate declaration is required before the line using `image-set()`.
+
+```css
+.box {
   background-image: url("large-balloons.jpg");
   background-image: image-set(
     url("large-balloons.avif") type("image/avif"),
     url("large-balloons.jpg") type("image/jpeg"));
-}</pre>
+}
+```
 
+## Accessibility concerns
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.
 
-<p>Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.</p>
+- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_%e2%80%94_providing_text_alternatives_for_non-text_content)
+- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
-<ul>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_%e2%80%94_providing_text_alternatives_for_non-text_content">MDN Understanding WCAG, Guideline 1.1 explanations</a></li>
- <li><a class="external external-icon" href="https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html" rel="noopener">Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0</a></li>
-</ul>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("image")}}</li>
- <li>{{cssxref("image/image()", "image()")}}</li>
- <li>{{cssxref("element()")}}</li>
- <li>{{cssxref("url()")}}</li>
- <li>{{cssxref("&lt;gradient&gt;")}}</li>
- <li>{{cssxref("cross-fade()")}}</li>
-</ul>
+- {{cssxref("image")}}
+- {{cssxref("image/image()", "image()")}}
+- {{cssxref("element()")}}
+- {{cssxref("url()")}}
+- {{cssxref("&lt;gradient&gt;")}}
+- {{cssxref("cross-fade()")}}

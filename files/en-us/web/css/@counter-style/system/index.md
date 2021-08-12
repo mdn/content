@@ -10,15 +10,16 @@ tags:
   - Reference
 browser-compat: css.at-rules.counter-style.system
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>system</code></strong> descriptor specifies the algorithm to be used for converting the integer value of a counter to a string representation. It is used in a {{cssxref("@counter-style")}} to define the behavior of the defined style.</p>
+The **`system`** descriptor specifies the algorithm to be used for converting the integer value of a counter to a string representation. It is used in a {{cssxref("@counter-style")}} to define the behavior of the defined style.
 
-<p>If the algorithm specified in the <code>system</code> descriptor is unable to construct the representation for a particular counter value, then that value's representation will be constructed using the fallback system provided.</p>
+If the algorithm specified in the `system` descriptor is unable to construct the representation for a particular counter value, then that value's representation will be constructed using the fallback system provided.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 system: cyclic;
 system: numeric;
 system: alphabetic;
@@ -29,68 +30,75 @@ system: fixed;
 /* Combined values */
 system: fixed 3;
 system: extends decimal;
-</pre>
+```
 
-<p>This may take one of three forms:</p>
+This may take one of three forms:
 
-<ul>
- <li>One of the keyword values <code>cyclic</code>, <code>numeric</code>, <code>alphabetic</code>, <code>symbolic</code>, <code>additive</code>, or <code>fixed</code>.</li>
- <li>The keyword value <code>fixed</code> along with an integer.</li>
- <li>The keyword value or <code>extends</code> along with a {{cssxref("@counter-style")}} name.</li>
-</ul>
+- One of the keyword values `cyclic`, `numeric`, `alphabetic`, `symbolic`, `additive`, or `fixed`.
+- The keyword value `fixed` along with an integer.
+- The keyword value or `extends` along with a {{cssxref("@counter-style")}} name.
 
-<dl>
- <dt><code>cyclic</code></dt>
- <dd>Cycles through the list of symbols provided. Once the end of the list of symbols is reached, it will loop back to the beginning and start over. This system is useful for simple bullet styles with just one symbol, or for styles having multiple symbols. At least one symbol must be specified in the <code>symbols</code> descriptor, or the counter style is not valid.</dd>
- <dt><code>fixed</code></dt>
- <dd>Defines a finite set of symbols are specified. Once the system has looped through all the specified symbols, it will fall back. This system is useful in cases where the counter values are finite. At least one symbol must be specified in the <code>symbols</code> descriptor or the counter style is not valid. Also an optional {{cssxref("&lt;integer&gt;")}} can be specified after the system, as the value of the first symbol. If this integer is omitted, value of the first integer is taken as <code>1</code>.</dd>
- <dt><code>symbolic</code></dt>
- <dd>Cycles through the provided list of symbols. On each successive pass through the cycle, the symbols used for the counter representation are doubled, tripled, and so on. For example, if the original symbols provided were "◽" and "◾", on each successive pass, they will become "◽◽" and "◾◾", "◽◽◽" and "◾◾◾" and so on. At least one symbol must be specified in the <code>symbols</code> descriptor or the counter style is not valid. This counter system works for positive counter values only.</dd>
- <dt><code>alphabetic</code></dt>
- <dd>Interprets the specified symbols as digits, to an alphabetic numbering system. If the characters <code>"a"</code> to <code>"z"</code> are specified as symbols in a counter style, with the <code>alphabetic</code> system, then the first 26 counter representations will be <code>"a"</code>, <code>"b"</code> upto <code>"z"</code>. Until this point, the behavior is the same as that of the <code>symbolic</code> system, described above. However, after <code>"z"</code>, it will continue as <code>"aa"</code>, <code>"ab"</code>, <code>"ac"</code>…<br>
- <br>
- The <code>symbols</code> descriptor must contain at least two symbols or the counter style is not valid. The first counter symbol provided in the <code>symbols</code> descriptor is interpreted as <code>1</code>, the next as <code>2</code>, and so on. This system is also defined strictly over positive counter values.</dd>
- <dt><code>numeric</code></dt>
- <dd>Interprets the counter symbols as digits in a <a href="https://en.wikipedia.org/wiki/Positional_notation">place-value numbering system</a>. The numeric system is similar to the <code>alphabetic</code> system, described above. The main difference is that in the <code>alphabetic</code> system, the first counter symbol given in the <code>symbols</code> descriptor is interpreted as <code>1</code>, the next as <code>2</code>, and so on. However, in the numeric system, the first counter symbol is interpreted as 0, the next as <code>1</code>, then <code>2</code>, and so on.<br>
- <br>
- At least two counter symbols must be specified in the <code>symbols</code> descriptor or the counter style is not valid.</dd>
- <dt><code>additive</code></dt>
- <dd>Used to represent "sign-value" numbering systems, such as Roman numerals, which rather than reuse digits in different positions to obtain different values, define additional digits for larger values. The value of a number in such a system can be found out by adding the digits in the number.<br>
- <br>
- An additional descriptor called <code>additive-symbols</code> must be specified with at least one <em>additive tuple</em>, or else the counter style rule will not be valid. An additive tuple is similar to a composite counter symbol, which is made up of two parts: a normal counter symbol and a non-negative integer weight. The additive tuples must be specified in the descending order of their weights or the system is invalid.</dd>
- <dt><code>extends</code></dt>
- <dd>Allows authors to use the algorithm of another counter style, but alter its other aspects. If a counter style rule is using the <code>extends</code> system, any unspecified descriptors, and their values will be taken from the extended counter style specified. If the specified counter style name in extends, is not a currently defined counter style name, it will instead extend from the decimal counter style.<br>
- <br>
- It must not contain a <code>symbols</code> or <code>additive-symbols</code> descriptor, or else the counter style rule is invalid. If one or more counter styles definitions form a cycle with their extends values, the browser will treat all the participating counter styles as extending from the decimal style.</dd>
-</dl>
+<!---->
 
-<h2 id="Formal_definition">Formal definition</h2>
+- `cyclic`
+  - : Cycles through the list of symbols provided. Once the end of the list of symbols is reached, it will loop back to the beginning and start over. This system is useful for simple bullet styles with just one symbol, or for styles having multiple symbols. At least one symbol must be specified in the `symbols` descriptor, or the counter style is not valid.
+- `fixed`
+  - : Defines a finite set of symbols are specified. Once the system has looped through all the specified symbols, it will fall back. This system is useful in cases where the counter values are finite. At least one symbol must be specified in the `symbols` descriptor or the counter style is not valid. Also an optional {{cssxref("&lt;integer&gt;")}} can be specified after the system, as the value of the first symbol. If this integer is omitted, value of the first integer is taken as `1`.
+- `symbolic`
+  - : Cycles through the provided list of symbols. On each successive pass through the cycle, the symbols used for the counter representation are doubled, tripled, and so on. For example, if the original symbols provided were "◽" and "◾", on each successive pass, they will become "◽◽" and "◾◾", "◽◽◽" and "◾◾◾" and so on. At least one symbol must be specified in the `symbols` descriptor or the counter style is not valid. This counter system works for positive counter values only.
+- `alphabetic`
 
-<p>{{cssinfo}}</p>
+  - : Interprets the specified symbols as digits, to an alphabetic numbering system. If the characters `"a"` to `"z"` are specified as symbols in a counter style, with the `alphabetic` system, then the first 26 counter representations will be `"a"`, `"b"` upto `"z"`. Until this point, the behavior is the same as that of the `symbolic` system, described above. However, after `"z"`, it will continue as `"aa"`, `"ab"`, `"ac"`…
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+    The `symbols` descriptor must contain at least two symbols or the counter style is not valid. The first counter symbol provided in the `symbols` descriptor is interpreted as `1`, the next as `2`, and so on. This system is also defined strictly over positive counter values.
+
+- `numeric`
+
+  - : Interprets the counter symbols as digits in a [place-value numbering system](https://en.wikipedia.org/wiki/Positional_notation). The numeric system is similar to the `alphabetic` system, described above. The main difference is that in the `alphabetic` system, the first counter symbol given in the `symbols` descriptor is interpreted as `1`, the next as `2`, and so on. However, in the numeric system, the first counter symbol is interpreted as 0, the next as `1`, then `2`, and so on.
+
+    At least two counter symbols must be specified in the `symbols` descriptor or the counter style is not valid.
+
+- `additive`
+
+  - : Used to represent "sign-value" numbering systems, such as Roman numerals, which rather than reuse digits in different positions to obtain different values, define additional digits for larger values. The value of a number in such a system can be found out by adding the digits in the number.
+
+    An additional descriptor called `additive-symbols` must be specified with at least one _additive tuple_, or else the counter style rule will not be valid. An additive tuple is similar to a composite counter symbol, which is made up of two parts: a normal counter symbol and a non-negative integer weight. The additive tuples must be specified in the descending order of their weights or the system is invalid.
+
+- `extends`
+
+  - : Allows authors to use the algorithm of another counter style, but alter its other aspects. If a counter style rule is using the `extends` system, any unspecified descriptors, and their values will be taken from the extended counter style specified. If the specified counter style name in extends, is not a currently defined counter style name, it will instead extend from the decimal counter style.
+
+    It must not contain a `symbols` or `additive-symbols` descriptor, or else the counter style rule is invalid. If one or more counter styles definitions form a cycle with their extends values, the browser will treat all the participating counter styles as extending from the decimal style.
+
+## Formal definition
+
+{{cssinfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Cyclic_counter">Cyclic counter</h3>
+### Cyclic counter
 
-<p>If your browser supports it, this example will render a list like this:<br>
- ◉ One<br>
- ◉ Two<br>
- ◉ Three</p>
+If your browser supports it, this example will render a list like this:
+◉ One
+◉ Two
+◉ Three
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: html hidden">&lt;ul&gt;
-  &lt;li&gt;One&lt;/li&gt;
-  &lt;li&gt;Two&lt;/li&gt;
-  &lt;li&gt;Three&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+```html hidden
+<ul>
+  <li>One</li>
+  <li>Two</li>
+  <li>Three</li>
+</ul>
+```
 
-<pre class="brush: css">@counter-style fisheye {
+```css
+@counter-style fisheye {
  system: cyclic;
  symbols: ◉;
  suffix: " ";
@@ -99,33 +107,35 @@ system: extends decimal;
 ul {
  list-style: fisheye;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Cyclic_counter') }}</p>
+{{ EmbedLiveSample('Cyclic_counter') }}
 
-<h3 id="Fixed_counter">Fixed counter</h3>
+### Fixed counter
 
-<p>If your browser supports it, this example will render a list like this:<br>
- ➀ One<br>
- ➁ Two<br>
- ➂ Three<br>
- 4 Four<br>
- 5 Five</p>
+If your browser supports it, this example will render a list like this:
+➀ One
+➁ Two
+➂ Three
+4 Four
+5 Five
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
+```html hidden
+<ul>
+ <li>One</li>
+ <li>Two</li>
+ <li>Three</li>
+ <li>Four</li>
+ <li>Five</li>
+</ul>
+```
 
-<pre class="brush: html hidden">&lt;ul&gt;
- &lt;li&gt;One&lt;/li&gt;
- &lt;li&gt;Two&lt;/li&gt;
- &lt;li&gt;Three&lt;/li&gt;
- &lt;li&gt;Four&lt;/li&gt;
- &lt;li&gt;Five&lt;/li&gt;
-&lt;/ul&gt;</pre>
-
-<pre class="brush: css">@counter-style circled-digits {
+```css
+@counter-style circled-digits {
  system: fixed;
  symbols: ➀ ➁ ➂;
  suffix: ' ';
@@ -134,39 +144,41 @@ ul {
 ul {
  list-style: circled-digits;
 }
-</pre>
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Fixed_counter') }}</p>
+{{ EmbedLiveSample('Fixed_counter') }}
 
-<h3 id="Symbolic_counter">Symbolic counter</h3>
+### Symbolic counter
 
-<p>If your browser supports it, this example will render a list like this:<br>
-    a. One<br>
-    b. Two<br>
-    c. Three<br>
-  aa. Four<br>
-  bb. Five<br>
-  cc. Six<br>
- aaa. Seven<br>
- bbb. Eight</p>
+If your browser supports it, this example will render a list like this:
+   a. One
+   b. Two
+   c. Three
+ aa. Four
+ bb. Five
+ cc. Six
+aaa. Seven
+bbb. Eight
 
-<h4 id="CSS_3">CSS</h4>
+#### CSS
 
+```html hidden
+<ul>
+ <li>One</li>
+ <li>Two</li>
+ <li>Three</li>
+ <li>Four</li>
+ <li>Five</li>
+ <li>Six</li>
+ <li>Seven</li>
+ <li>Eight</li>
+</ul>
+```
 
-<pre class="brush: html hidden">&lt;ul&gt;
- &lt;li&gt;One&lt;/li&gt;
- &lt;li&gt;Two&lt;/li&gt;
- &lt;li&gt;Three&lt;/li&gt;
- &lt;li&gt;Four&lt;/li&gt;
- &lt;li&gt;Five&lt;/li&gt;
- &lt;li&gt;Six&lt;/li&gt;
- &lt;li&gt;Seven&lt;/li&gt;
- &lt;li&gt;Eight&lt;/li&gt;
-&lt;/ul&gt;</pre>
-
-<pre class="brush: css">@counter-style abc {
+```css
+@counter-style abc {
  system: symbolic;
  symbols: a b c;
  suffix: ". ";
@@ -175,39 +187,41 @@ ul {
 ul {
  list-style: abc;
 }
-</pre>
+```
 
-<h4 id="Result_3">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Symbolic_counter') }}</p>
+{{ EmbedLiveSample('Symbolic_counter') }}
 
-<h3 id="Alphabetic_counter">Alphabetic counter</h3>
+### Alphabetic counter
 
-<p>If your browser supports it, this example will render a list like this:<br>
-   a. One<br>
-   b. Two<br>
-   c. Three<br>
- aa. Four<br>
- ab. Five<br>
- ac. Six<br>
- ba. Seven<br>
- bb. Seven</p>
+If your browser supports it, this example will render a list like this:
+  a. One
+  b. Two
+  c. Three
+aa. Four
+ab. Five
+ac. Six
+ba. Seven
+bb. Seven
 
-<h4 id="CSS_4">CSS</h4>
+#### CSS
 
-<pre class="brush: html hidden">&lt;ul&gt;
- &lt;li&gt;One&lt;/li&gt;
- &lt;li&gt;Two&lt;/li&gt;
- &lt;li&gt;Three&lt;/li&gt;
- &lt;li&gt;Four&lt;/li&gt;
- &lt;li&gt;Five&lt;/li&gt;
- &lt;li&gt;Six&lt;/li&gt;
- &lt;li&gt;Seven&lt;/li&gt;
- &lt;li&gt;Eight&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+```html hidden
+<ul>
+ <li>One</li>
+ <li>Two</li>
+ <li>Three</li>
+ <li>Four</li>
+ <li>Five</li>
+ <li>Six</li>
+ <li>Seven</li>
+ <li>Eight</li>
+</ul>
+```
 
-<pre class="brush: css">@counter-style abc {
+```css
+@counter-style abc {
  system: alphabetic;
  symbols: a b c;
  suffix: ". ";
@@ -216,43 +230,44 @@ ul {
 ul {
  list-style: abc;
 }
-</pre>
+```
 
-<h4 id="Result_4">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Alphabetic_counter') }}</p>
+{{ EmbedLiveSample('Alphabetic_counter') }}
 
-<h3 id="Numeric_counter">Numeric counter</h3>
+### Numeric counter
 
-<p>If your browser supports it, this example will render a list like this:</p>
+If your browser supports it, this example will render a list like this:
 
-<p>  b. One<br>
-   c. Two<br>
- ba. Three<br>
- bb. Four<br>
- bc. Five<br>
- ca. Six<br>
- cb. Seven<br>
- cc. Eight<br>
- <br>
- The first symbol provided in the <code>symbols</code> descriptor is interpreted as <code>0</code> here.</p>
+b. One
+  c. Two
+ba. Three
+bb. Four
+bc. Five
+ca. Six
+cb. Seven
+cc. Eight
 
-<h4 id="CSS_5">CSS<br>
-  </h4>
+The first symbol provided in the `symbols` descriptor is interpreted as `0` here.
 
+#### CSS<br> 
 
-<pre class="brush: html hidden">&lt;ul&gt;
- &lt;li&gt;One&lt;/li&gt;
- &lt;li&gt;Two&lt;/li&gt;
- &lt;li&gt;Three&lt;/li&gt;
- &lt;li&gt;Four&lt;/li&gt;
- &lt;li&gt;Five&lt;/li&gt;
- &lt;li&gt;Six&lt;/li&gt;
- &lt;li&gt;Seven&lt;/li&gt;
- &lt;li&gt;Eight&lt;/li&gt;
-&lt;/ul&gt;</pre>
+```html hidden
+<ul>
+ <li>One</li>
+ <li>Two</li>
+ <li>Three</li>
+ <li>Four</li>
+ <li>Five</li>
+ <li>Six</li>
+ <li>Seven</li>
+ <li>Eight</li>
+</ul>
+```
 
-<pre class="brush: css">@counter-style abc {
+```css
+@counter-style abc {
  system: numeric;
  symbols: a b c;
  suffix: ". ";
@@ -260,33 +275,36 @@ ul {
 
 ul {
  list-style: abc;
-}</pre>
+}
+```
 
-<h4 id="Result_5">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Numeric_counter') }}</p>
+{{ EmbedLiveSample('Numeric_counter') }}
 
-<h3 id="Numeric_counter_with_numeric_symbols">Numeric counter with numeric symbols</h3>
+### Numeric counter with numeric symbols
 
-<p>As shown in the following example, if digits from <code>0</code> to <code>9</code> are specified as symbols, this counter style will render symbols same as the decimal counter style.</p>
+As shown in the following example, if digits from `0` to `9` are specified as symbols, this counter style will render symbols same as the decimal counter style.
 
-<h4 id="CSS_6">CSS</h4>
+#### CSS
 
+```html hidden
+<ul class="list">
+ <li>One</li>
+ <li>Two</li>
+ <li>Three</li>
+ <li>Four</li>
+ <li>Five</li>
+ <li>Six</li>
+ <li>Seven</li>
+ <li>Eight</li>
+ <li>Nine</li>
+ <li>Ten</li>
+</ul>
+```
 
-<pre class="brush: html hidden">&lt;ul class="list"&gt;
- &lt;li&gt;One&lt;/li&gt;
- &lt;li&gt;Two&lt;/li&gt;
- &lt;li&gt;Three&lt;/li&gt;
- &lt;li&gt;Four&lt;/li&gt;
- &lt;li&gt;Five&lt;/li&gt;
- &lt;li&gt;Six&lt;/li&gt;
- &lt;li&gt;Seven&lt;/li&gt;
- &lt;li&gt;Eight&lt;/li&gt;
- &lt;li&gt;Nine&lt;/li&gt;
- &lt;li&gt;Ten&lt;/li&gt;
-&lt;/ul&gt;</pre>
-
-<pre class="brush: css">@counter-style numbers {
+```css
+@counter-style numbers {
  system: numeric;
  symbols: "0" "1" "2" "3" "4" "5" "6" "7" "8" "9";
  suffix: ".";
@@ -294,30 +312,33 @@ ul {
 
 ul {
  list-style: numbers;
-}</pre>
+}
+```
 
-<h4 id="Result_6">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Numeric_counter_with_numeric_symbols') }}</p>
+{{ EmbedLiveSample('Numeric_counter_with_numeric_symbols') }}
 
-<h3 id="Additive_counter">Additive counter</h3>
+### Additive counter
 
-<p>This example renders a list using Roman numerals. Notice that a <code>range</code> is specified. This is because the representation will produce correct Roman numerals only until the counter value of <code>3999</code>. Once outside of the range, the rest of the counter representations will be based on the <code>decimal</code> style, which is the fall back. If you need to represent counter values as Roman numerals, you could use either one of  the predefined counter styles, <code>upper-roman</code> or <code>lower-roman</code>, rather than recreating the rule yourself.</p>
+This example renders a list using Roman numerals. Notice that a `range` is specified. This is because the representation will produce correct Roman numerals only until the counter value of `3999`. Once outside of the range, the rest of the counter representations will be based on the `decimal` style, which is the fall back. If you need to represent counter values as Roman numerals, you could use either one of  the predefined counter styles, `upper-roman` or `lower-roman`, rather than recreating the rule yourself.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;ul class="list"&gt;
- &lt;li&gt;One&lt;/li&gt;
- &lt;li&gt;Two&lt;/li&gt;
- &lt;li&gt;Three&lt;/li&gt;
- &lt;li&gt;Four&lt;/li&gt;
- &lt;li&gt;Five&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+```html
+<ul class="list">
+ <li>One</li>
+ <li>Two</li>
+ <li>Three</li>
+ <li>Four</li>
+ <li>Five</li>
+</ul>
+```
 
-<h4 id="CSS_7">CSS</h4>
+#### CSS
 
-<pre class="brush: css">@counter-style upper-roman {
+```css
+@counter-style upper-roman {
  system: additive;
  range: 1 3999;
  additive-symbols: 1000 M, 900 CM, 500 D, 400 CD, 100 C, 90 XC, 50 L, 40 XL, 10 X, 9 IX, 5 V, 4 IV, 1 I;
@@ -325,30 +346,33 @@ ul {
 
 ul {
  list-style: upper-roman;
-}</pre>
+}
+```
 
-<h4 id="Result_7">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Additive_counter', '') }}</p>
+{{ EmbedLiveSample('Additive_counter', '') }}
 
-<h3 id="Extends_example">Extends example</h3>
+### Extends example
 
-<p>This example will use the algorithm, symbols, and other properties of the <code>lower-alpha</code> counter style, but will remove the period (<code>'.'</code>) after the counter representation, and enclose the characters in parenthesis; like <code>(a)</code>, <code>(b)</code>, etc.</p>
+This example will use the algorithm, symbols, and other properties of the `lower-alpha` counter style, but will remove the period (`'.'`) after the counter representation, and enclose the characters in parenthesis; like `(a)`, `(b)`, etc.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;ul class="list"&gt;
- &lt;li&gt;One&lt;/li&gt;
- &lt;li&gt;Two&lt;/li&gt;
- &lt;li&gt;Three&lt;/li&gt;
- &lt;li&gt;Four&lt;/li&gt;
- &lt;li&gt;Five&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+```html
+<ul class="list">
+ <li>One</li>
+ <li>Two</li>
+ <li>Three</li>
+ <li>Four</li>
+ <li>Five</li>
+</ul>
+```
 
-<h4 id="CSS_8">CSS</h4>
+#### CSS
 
-<pre class="brush: css">@counter-style alpha-modified {
+```css
+@counter-style alpha-modified {
  system: extends lower-alpha;
  prefix: "(";
  suffix: ") ";
@@ -357,23 +381,21 @@ ul {
 ul {
  list-style: alpha-modified;
 }
-</pre>
+```
 
-<h4 id="Result_8">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Extends_example') }}</p>
+{{ EmbedLiveSample('Extends_example') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}</li>
- <li>{{cssxref("symbols()", "symbols()")}}, the functional notation creating anonymous counter styles.</li>
-</ul>
+- {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
+- {{cssxref("symbols()", "symbols()")}}, the functional notation creating anonymous counter styles.

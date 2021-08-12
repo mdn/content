@@ -8,30 +8,34 @@ tags:
   - Guide
   - Reference
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>You can apply <strong>multiple backgrounds</strong> to elements. These are layered atop one another with the first background you provide on top and the last background listed in the back. Only the last background can include a background color.</p>
+You can apply **multiple backgrounds** to elements. These are layered atop one another with the first background you provide on top and the last background listed in the back. Only the last background can include a background color.
 
-<p>Specifying multiple backgrounds is easy:</p>
+Specifying multiple backgrounds is easy:
 
-<pre class="brush: css">.myclass {
+```css
+.myclass {
   background: background1, background2, ..., backgroundN;
 }
-</pre>
+```
 
-<p>You can do this with both the shorthand {{ cssxref("background") }} property and the individual properties thereof except for {{ cssxref("background-color") }}. That is, the following background properties can be specified as a list, one per background: {{ cssxref("background") }}, {{ cssxref("background-attachment") }}, {{ cssxref("background-clip") }}, {{ cssxref("background-image") }}, {{ cssxref("background-origin") }}, {{ cssxref("background-position") }}, {{ cssxref("background-repeat") }}, {{ cssxref("background-size") }}.</p>
+You can do this with both the shorthand {{ cssxref("background") }} property and the individual properties thereof except for {{ cssxref("background-color") }}. That is, the following background properties can be specified as a list, one per background: {{ cssxref("background") }}, {{ cssxref("background-attachment") }}, {{ cssxref("background-clip") }}, {{ cssxref("background-image") }}, {{ cssxref("background-origin") }}, {{ cssxref("background-position") }}, {{ cssxref("background-repeat") }}, {{ cssxref("background-size") }}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this example, three backgrounds are stacked: the Firefox logo, an image of bubbles, and a <a href="/en-US/docs/Web/CSS/linear-gradient">linear gradient</a>:</p>
+In this example, three backgrounds are stacked: the Firefox logo, an image of bubbles, and a [linear gradient](/en-US/docs/Web/CSS/linear-gradient):
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="multi-bg-example"&gt;&lt;/div&gt;</pre>
+```html
+<div class="multi-bg-example"></div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.multi-bg-example {
+```css
+.multi-bg-example {
   width: 100%;
   height: 400px;
   background-image: url(firefox.png),
@@ -43,18 +47,17 @@ tags:
   background-position: bottom right,
       left,
       right;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>(If image does not appear in CodePen, click the 'Tidy' button in the CSS section)</p>
+(If image does not appear in CodePen, click the 'Tidy' button in the CSS section)
 
-<p>{{EmbedLiveSample('Example','600','400')}}</p>
+{{EmbedLiveSample('Example','600','400')}}
 
-<p>As you can see here, the Firefox logo (listed first within {{ cssxref("background-image") }}) is on top, directly above the bubbles graphic, followed by the gradient (listed last) sitting underneath all previous 'images'. Each subsequent sub-property ({{ cssxref("background-repeat") }} and {{ cssxref("background-position") }}) applies to the corresponding backgrounds. So the first listed value for {{ cssxref("background-repeat") }} applies to the first (frontmost) background, and so forth.</p>
+As you can see here, the Firefox logo (listed first within {{ cssxref("background-image") }}) is on top, directly above the bubbles graphic, followed by the gradient (listed last) sitting underneath all previous 'images'. Each subsequent sub-property ({{ cssxref("background-repeat") }} and {{ cssxref("background-position") }}) applies to the corresponding backgrounds. So the first listed value for {{ cssxref("background-repeat") }} applies to the first (frontmost) background, and so forth.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/CSS/Using_CSS_gradients">Using CSS gradients</a></li>
-</ul>
+- [Using CSS gradients](/en-US/docs/CSS/Using_CSS_gradients)

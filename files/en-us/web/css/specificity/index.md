@@ -8,183 +8,190 @@ tags:
   - Reference
   - Web
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>Specificity</strong> is the means by which browsers decide which CSS property values are the most relevant to an element and, therefore, will be applied. Specificity is based on the matching rules which are composed of different sorts of <a href="/en-US/docs/Web/CSS/Reference#Selectors">CSS selectors</a>.</p>
+**Specificity** is the means by which browsers decide which CSS property values are the most relevant to an element and, therefore, will be applied. Specificity is based on the matching rules which are composed of different sorts of [CSS selectors](/en-US/docs/Web/CSS/Reference#Selectors).
 
-<h2 id="How_is_specificity_calculated">How is specificity calculated?</h2>
+## How is specificity calculated?
 
-<p>Specificity is a weight that is applied to a given CSS declaration, determined by the number of each <a href="#selector_types">selector type</a> in the matching selector. When multiple declarations have equal specificity, the last declaration found in the CSS is applied to the element. Specificity only applies when the same element is targeted by multiple declarations. As per CSS rules, <a href="#directly_targeted_elements_vs._inherited_styles">directly targeted elements</a> will always take precedence over rules which an element inherits from its ancestor.</p>
+Specificity is a weight that is applied to a given CSS declaration, determined by the number of each [selector type](#selector_types) in the matching selector. When multiple declarations have equal specificity, the last declaration found in the CSS is applied to the element. Specificity only applies when the same element is targeted by multiple declarations. As per CSS rules, [directly targeted elements](#directly_targeted_elements_vs._inherited_styles) will always take precedence over rules which an element inherits from its ancestor.
 
-<div class="notecard note">
-<p><strong>Note:</strong> <a href="#tree_proximity_ignorance">Proximity of elements</a> in the document tree has no effect on the specificity.</p>
-</div>
+> **Note:** [Proximity of elements](#tree_proximity_ignorance) in the document tree has no effect on the specificity.
 
-<h3 id="Selector_Types">Selector Types</h3>
+### Selector Types
 
-<p>The following list of selector types increases by specificity:</p>
+The following list of selector types increases by specificity:
 
-<ol>
- <li><a href="/en-US/docs/Web/CSS/Type_selectors">Type selectors</a> (e.g., <code>h1</code>) and pseudo-elements (e.g., <code>::before</code>).</li>
- <li><a href="/en-US/docs/Web/CSS/Class_selectors">Class selectors</a> (e.g., <code>.example</code>), attributes selectors (e.g., <code>[type="radio"]</code>) and pseudo-classes (e.g., <code>:hover</code>).</li>
- <li><a href="/en-US/docs/Web/CSS/ID_selectors">ID selectors</a> (e.g., <code>#example</code>).</li>
-</ol>
+1.  [Type selectors](/en-US/docs/Web/CSS/Type_selectors) (e.g., `h1`) and pseudo-elements (e.g., `::before`).
+2.  [Class selectors](/en-US/docs/Web/CSS/Class_selectors) (e.g., `.example`), attributes selectors (e.g., `[type="radio"]`) and pseudo-classes (e.g., `:hover`).
+3.  [ID selectors](/en-US/docs/Web/CSS/ID_selectors) (e.g., `#example`).
 
-<p>Universal selector ({{CSSxRef("Universal_selectors", "*")}}), combinators ({{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, <a href="/en-US/docs/Web/CSS/Descendant_combinator">'<code> </code>'</a>, {{CSSxRef("Column_combinator", "||")}}) and negation pseudo-class ({{CSSxRef(":not", ":not()")}}) have no effect on specificity. (The selectors declared <em>inside</em> <code>:not()</code> do, however.)</p>
+Universal selector ({{CSSxRef("Universal_selectors", "*")}}), combinators ({{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, ['` `'](/en-US/docs/Web/CSS/Descendant_combinator), {{CSSxRef("Column_combinator", "||")}}) and negation pseudo-class ({{CSSxRef(":not", ":not()")}}) have no effect on specificity. (The selectors declared _inside_ `:not()` do, however.)
 
-<p>For more information, visit: <a href="/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#Specificity_2">"Specificity" in "Cascade and inheritance"</a>, you can also visit: <a href="https://specifishity.com">https://specifishity.com</a></p>
+For more information, visit: ["Specificity" in "Cascade and inheritance"](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#Specificity_2), you can also visit: <https://specifishity.com>
 
-<p>Inline styles added to an element (e.g., <code>style="font-weight: bold;"</code>) always overwrite any styles in external stylesheets, and thus can be thought of as having the highest specificity.</p>
+Inline styles added to an element (e.g., `style="font-weight: bold;"`) always overwrite any styles in external stylesheets, and thus can be thought of as having the highest specificity.
 
-<h3 id="The_!important_exception">The !important exception</h3>
+### The !important exception
 
-<p>When an <code>important</code> rule is used on a style declaration, this declaration overrides any other declarations. Although technically <code>!important</code> has nothing to do with specificity, it interacts directly with it. Using <code>!important,</code> however, is <strong>bad practice</strong> and should be avoided because it makes debugging more difficult by breaking the natural <a href="/en-US/docs/Web/CSS/Cascade">cascading</a> in your stylesheets. When two conflicting declarations with the <code>!important</code> rule are applied to the same element, the declaration with a greater specificity will be applied.</p>
+When an `important` rule is used on a style declaration, this declaration overrides any other declarations. Although technically `!important` has nothing to do with specificity, it interacts directly with it. Using `!important,` however, is **bad practice** and should be avoided because it makes debugging more difficult by breaking the natural [cascading](/en-US/docs/Web/CSS/Cascade) in your stylesheets. When two conflicting declarations with the `!important` rule are applied to the same element, the declaration with a greater specificity will be applied.
 
-<p><strong>Some rules of thumb:</strong></p>
+**Some rules of thumb:**
 
-<ul>
- <li><strong>Always</strong> look for a way to use specificity before even considering <code>!important</code></li>
- <li><strong>Only</strong> use <code>!important</code> on page-specific CSS that overrides foreign CSS (from external libraries, like Bootstrap or normalize.css).</li>
- <li><strong>Never</strong> use <code>!important</code> when you're writing a plugin/mashup.</li>
- <li><strong>Never</strong> use <code>!important</code> on site-wide CSS.</li>
-</ul>
+- **Always** look for a way to use specificity before even considering `!important`
+- **Only** use `!important` on page-specific CSS that overrides foreign CSS (from external libraries, like Bootstrap or normalize.css).
+- **Never** use `!important` when you're writing a plugin/mashup.
+- **Never** use `!important` on site-wide CSS.
 
-<p><strong>Instead of using <code>!important</code>, consider:</strong></p>
+**Instead of using `!important`, consider:**
 
-<ol>
- <li>Make better use of the CSS cascade</li>
- <li>
-  <p>Use more specific rules. By indicating one or more elements before the element you're selecting, the rule becomes more specific and gets higher priority:</p>
+1.  Make better use of the CSS cascade
+2.  Use more specific rules. By indicating one or more elements before the element you're selecting, the rule becomes more specific and gets higher priority:
 
-  <pre class="brush: html">&lt;div id="test"&gt;
-  &lt;span&gt;Text&lt;/span&gt;
-&lt;/div&gt;
-</pre>
+    ```html
+    <div id="test">
+      <span>Text</span>
+    </div>
+    ```
 
-  <pre class="brush: css">div#test span { color: green; }
-div span { color: blue; }
-span { color: red; }</pre>
+    ```css
+    div#test span { color: green; }
+    div span { color: blue; }
+    span { color: red; }
+    ```
 
-  <p>No matter the order, text will be green because that rule is most specific. (Also, the rule for blue overwrites the rule for red, notwithstanding the order of the rules)</p>
- </li>
- <li>As a nonsense special case for (2), duplicate simple selectors to increase specificity when you have nothing more to specify.
-  <pre class="brush: css">#myId#myId span { color: yellow; }
-.myClass.myClass span { color: orange; }</pre>
- </li>
-</ol>
+    No matter the order, text will be green because that rule is most specific. (Also, the rule for blue overwrites the rule for red, notwithstanding the order of the rules)
 
-<h4 id="How_!important_can_be_used">How !important can be used:</h4>
+3.  As a nonsense special case for (2), duplicate simple selectors to increase specificity when you have nothing more to specify.
 
-<h5 id="A_Overriding_inline_styles">A) Overriding inline styles</h5>
+    ```css
+    #myId#myId span { color: yellow; }
+    .myClass.myClass span { color: orange; }
+    ```
 
-<p>Your global CSS file that sets visual aspects of your site globally may be overwritten by inline styles defined directly on individual elements. Both inline styles and !important are considered very bad practice, but sometimes you need the latter to override the former.</p>
+#### How !important can be used:
 
-<p>In this case, you could set certain styles in your global CSS file as !important, thus overriding inline styles set directly on elements.</p>
+##### A) Overriding inline styles
 
-<pre class="brush: html">&lt;div class="foo" style="color: red;"&gt;What color am I?&lt;/div&gt;
-</pre>
+Your global CSS file that sets visual aspects of your site globally may be overwritten by inline styles defined directly on individual elements. Both inline styles and !important are considered very bad practice, but sometimes you need the latter to override the former.
 
-<pre class="brush: css">.foo[style*="color: red"] {
+In this case, you could set certain styles in your global CSS file as !important, thus overriding inline styles set directly on elements.
+
+```html
+<div class="foo" style="color: red;">What color am I?</div>
+```
+
+```css
+.foo[style*="color: red"] {
   color: firebrick !important;
 }
-</pre>
+```
 
-<p>Many JavaScript frameworks and libraries add inline styles. Using <code>!important</code> with a very targeted selector is one way to override these inline styles.</p>
+Many JavaScript frameworks and libraries add inline styles. Using `!important` with a very targeted selector is one way to override these inline styles.
 
-<h5 id="B_Overriding_high_specificity">B) Overriding high specificity</h5>
+##### B) Overriding high specificity
 
-<pre class="brush: css">#someElement p {
+```css
+#someElement p {
   color: blue;
 }
 
 p.awesome {
   color: red;
-}</pre>
+}
+```
 
-<p>How do you make <code>awesome</code> paragraphs always turn red, even ones inside <code>#someElement</code>? Without <code>!important</code>, the first rule will have more specificity and will win over the second rule.</p>
+How do you make `awesome` paragraphs always turn red, even ones inside `#someElement`? Without `!important`, the first rule will have more specificity and will win over the second rule.
 
-<h4 id="How_to_override_!important">How to override <code>!important</code></h4>
+#### How to override `!important`
 
-<p>A) Add another CSS rule with <code>!important</code>, and either give the selector a higher specificity (adding a tag, id or class to the selector), or add a CSS rule with the same selector at a later point than the existing one. This works because in a specificity tie, the last rule defined wins.</p>
+A) Add another CSS rule with `!important`, and either give the selector a higher specificity (adding a tag, id or class to the selector), or add a CSS rule with the same selector at a later point than the existing one. This works because in a specificity tie, the last rule defined wins.
 
-<p>Some examples with a higher specificity:</p>
+Some examples with a higher specificity:
 
-<pre class="brush: css">table td    { height: 50px !important; }
+```css
+table td    { height: 50px !important; }
 .myTable td { height: 50px !important; }
 #myTable td { height: 50px !important; }
-</pre>
+```
 
-<p>B) Or add the same selector after the existing one:</p>
+B) Or add the same selector after the existing one:
 
-<pre class="brush: css">td { height: 50px !important; }</pre>
+```css
+td { height: 50px !important; }
+```
 
-<p>C) Or, preferably, rewrite the original rule to avoid the use of <code>!important</code> altogether.</p>
+C) Or, preferably, rewrite the original rule to avoid the use of `!important` altogether.
 
-<pre class="brush: css">[id="someElement"] p {
+```css
+[id="someElement"] p {
   color: blue;
 }
 
 p.awesome {
   color: red;
-}</pre>
+}
+```
 
-<p>Including an id as part of an attribute selector instead of as an id selector gives it the same specificity as a class. Both selectors above now have the same weight. In a specificity tie, the last rule defined wins.</p>
+Including an id as part of an attribute selector instead of as an id selector gives it the same specificity as a class. Both selectors above now have the same weight. In a specificity tie, the last rule defined wins.
 
-<h4 id="For_more_information_visit">For more information, visit:</h4>
+#### For more information, visit:
 
-<ul>
- <li><a href="https://stackoverflow.com/questions/3706819/what-are-the-implications-of-using-important-in-css">https://stackoverflow.com/questions/3706819/what-are-the-implications-of-using-important-in-css</a></li>
- <li><a href="https://stackoverflow.com/questions/9245353/what-does-important-in-css-mean">https://stackoverflow.com/questions/9245353/what-does-important-in-css-mean</a></li>
- <li><a href="https://stackoverflow.com/questions/5701149/when-to-use-important-property-in-css">https://stackoverflow.com/questions/5701149/when-to-use-important-property-in-css</a></li>
- <li><a href="https://stackoverflow.com/questions/11178673/how-to-override-important">https://stackoverflow.com/questions/11178673/how-to-override-important</a></li>
- <li><a href="https://stackoverflow.com/questions/2042497/when-to-use-important-to-save-the-day-when-working-with-css">https://stackoverflow.com/questions/2042497/when-to-use-important-to-save-the-day-when-working-with-css</a></li>
-</ul>
+- <https://stackoverflow.com/questions/3706819/what-are-the-implications-of-using-important-in-css>
+- <https://stackoverflow.com/questions/9245353/what-does-important-in-css-mean>
+- <https://stackoverflow.com/questions/5701149/when-to-use-important-property-in-css>
+- <https://stackoverflow.com/questions/11178673/how-to-override-important>
+- <https://stackoverflow.com/questions/2042497/when-to-use-important-to-save-the-day-when-working-with-css>
 
-<h3>The :is() and :not() exceptions</h3>
+### The :is() and :not() exceptions
 
-<p>The matches-any pseudo-class {{CSSxRef(":is", ":is()")}} {{Experimental_Inline}} and the negation pseudo-class {{CSSxRef(":not", ":not()")}} are <em>not</em> considered a pseudo-class in the specificity calculation. But selectors placed into the pseudo-class count as normal selectors when determining the count of <a href="#selector_types">selector types</a>.</p>
+The matches-any pseudo-class {{CSSxRef(":is", ":is()")}} {{Experimental_Inline}} and the negation pseudo-class {{CSSxRef(":not", ":not()")}} are _not_ considered a pseudo-class in the specificity calculation. But selectors placed into the pseudo-class count as normal selectors when determining the count of [selector types](#selector_types).
 
-<p>This chunk of CSS ...</p>
+This chunk of CSS ...
 
-<pre class="brush: css">div.outer p {
+```css
+div.outer p {
   color: orange;
 }
 
 div:not(.outer) p {
   color: blueviolet;
 }
-</pre>
+```
 
-<p>... when used with the following HTML ...</p>
+... when used with the following HTML ...
 
-<pre class="brush: html">&lt;div class="outer"&gt;
-  &lt;p&gt;This is in the outer div.&lt;/p&gt;
-  &lt;div class="inner"&gt;
-    &lt;p&gt;This text is in the inner div.&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="outer">
+  <p>This is in the outer div.</p>
+  <div class="inner">
+    <p>This text is in the inner div.</p>
+  </div>
+</div>
+```
 
-<p>... appears on the screen like this:</p>
+... appears on the screen like this:
 
-<p>{{EmbedLiveSample("The_is_and_not_exceptions")}}</p>
+{{EmbedLiveSample("The_is_and_not_exceptions")}}
 
-<h3>The :where() exception</h3>
+### The :where() exception
 
-<p>The specificity-adjustment pseudo-class {{CSSxRef(":where", ":where()")}} {{Experimental_Inline}} always has its specificity replaced with zero.</p>
+The specificity-adjustment pseudo-class {{CSSxRef(":where", ":where()")}} {{Experimental_Inline}} always has its specificity replaced with zero.
 
-<p>This chunk of CSS ...</p>
+This chunk of CSS ...
 
-<pre class="brush: css">div:where(.outer) p {
+```css
+div:where(.outer) p {
   color: orange;
 }
 
 div p {
   color: blueviolet;
 }
-</pre>
+```
 
-<pre class="brush: css hidden">#no-where-support {
+```css hidden
+#no-where-support {
   margin: 0.5em;
   border: 1px solid red;
 }
@@ -192,145 +199,128 @@ div p {
 #no-where-support:where(*) {
   display: none !important;
 }
-</pre>
+```
 
-<p>... when used with the following HTML ...</p>
+... when used with the following HTML ...
 
-<pre class="brush: html hidden">&lt;div id="no-where-support"&gt;
-⚠️ Your browser doesn't support the &lt;code&gt;&lt;a href="https://developer.mozilla.org/docs/Web/CSS/:where" target="_top"&gt;:where()&lt;/a&gt;&lt;/code&gt; pseudo-class.
-&lt;/div&gt;
-</pre>
+```html hidden
+<div id="no-where-support">
+⚠️ Your browser doesn't support the <code><a href="https://developer.mozilla.org/docs/Web/CSS/:where" target="_top">:where()</a></code> pseudo-class.
+</div>
+```
 
-<pre class="brush: html">&lt;div class="outer"&gt;
-  &lt;p&gt;This is in the outer div.&lt;/p&gt;
-  &lt;div class="inner"&gt;
-    &lt;p&gt;This text is in the inner div.&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="outer">
+  <p>This is in the outer div.</p>
+  <div class="inner">
+    <p>This text is in the inner div.</p>
+  </div>
+</div>
+```
 
-<p>... appears on the screen like this:</p>
+... appears on the screen like this:
 
-<p>{{EmbedLiveSample("The_where_exception")}}</p>
+{{EmbedLiveSample("The_where_exception")}}
 
-<h3>Form-based specificity</h3>
+### Form-based specificity
 
-<p>Specificity is based on the form of a selector. In the following case, the selector <code>*[id="foo"]</code> counts as an attribute selector for the purpose of determining the selector's specificity, even though it selects an ID.</p>
+Specificity is based on the form of a selector. In the following case, the selector `*[id="foo"]` counts as an attribute selector for the purpose of determining the selector's specificity, even though it selects an ID.
 
-<p>The following CSS styles ...</p>
+The following CSS styles ...
 
-<pre class="brush: css">*#foo {
+```css
+*#foo {
   color: green;
 }
 
 *[id="foo"] {
   color: purple;
 }
-</pre>
+```
 
-<p>... when used with this markup ...</p>
+... when used with this markup ...
 
-<pre class="brush: html">&lt;p id="foo"&gt;I am a sample text.&lt;/p&gt;
-</pre>
+```html
+<p id="foo">I am a sample text.</p>
+```
 
-<p>... end up looking like this:</p>
+... end up looking like this:
 
-<p>{{EmbedLiveSample("Form-based_specificity")}}</p>
+{{EmbedLiveSample("Form-based_specificity")}}
 
-<p>This is because it matches the same element but the ID selector has a higher specificity.</p>
+This is because it matches the same element but the ID selector has a higher specificity.
 
-<h3>Tree proximity ignorance</h3>
+### Tree proximity ignorance
 
-<p>The proximity of an element to other elements that are referenced in a given selector has no impact on specificity. The following style declaration ...</p>
+The proximity of an element to other elements that are referenced in a given selector has no impact on specificity. The following style declaration ...
 
-<pre class="brush: css">body h1 {
+```css
+body h1 {
   color: green;
 }
 
 html h1 {
   color: purple;
 }
-</pre>
+```
 
-<p>... with the following HTML ...</p>
+... with the following HTML ...
 
-<pre class="brush: html">&lt;html&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Here is a title!&lt;/h1&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+```html
+<html>
+  <body>
+    <h1>Here is a title!</h1>
+  </body>
+</html>
+```
 
-<p>... will render as:</p>
+... will render as:
 
-<p>{{EmbedLiveSample("Tree_proximity_ignorance")}}</p>
+{{EmbedLiveSample("Tree_proximity_ignorance")}}
 
-<p>This is because the two declarations have equal <a href="#selector_types">selector type</a> counts, but the <code>html h1</code> selector is declared last.</p>
+This is because the two declarations have equal [selector type](#selector_types) counts, but the `html h1` selector is declared last.
 
-<h3>Directly targeted elements vs. inherited styles</h3>
+### Directly targeted elements vs. inherited styles
 
-<p>Styles for a directly targeted element will always take precedence over inherited styles, regardless of the specificity of the inherited rule. This CSS ...</p>
+Styles for a directly targeted element will always take precedence over inherited styles, regardless of the specificity of the inherited rule. This CSS ...
 
-<pre class="brush: css">#parent {
+```css
+#parent {
   color: green;
 }
 
 h1 {
   color: purple;
-}</pre>
+}
+```
 
-<p>... with the following HTML ...</p>
+... with the following HTML ...
 
-<pre class="brush: html">&lt;html&gt;
-  &lt;body id="parent"&gt;
-    &lt;h1&gt;Here is a title!&lt;/h1&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
+```html
+<html>
+  <body id="parent">
+    <h1>Here is a title!</h1>
+  </body>
+</html>
+```
 
-<p>... will also render as:</p>
+... will also render as:
 
-<p>{{EmbedLiveSample("Directly_targeted_elements_vs._inherited_styles")}}</p>
+{{EmbedLiveSample("Directly_targeted_elements_vs._inherited_styles")}}
 
-<p>This is because the <code>h1</code> selector targets the element specifically, but the green selector is only inherited from its parent.</p>
+This is because the `h1` selector targets the element specifically, but the green selector is only inherited from its parent.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Selectors", "#specificity-rules", "Calculating a selector's specificity")}}</td>
-   <td>{{Spec2("CSS4 Selectors")}}</td>
-   <td>Add the specificity adjustment selector {{CSSxRef(":where", ":where()")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Selectors", "#specificity", "Calculating a selector's specificity")}}</td>
-   <td>{{Spec2("CSS3 Selectors")}}</td>
-   <td>Add <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elements</a>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS2.1", "cascade.html#specificity", "Calculating a selector's specificity")}}</td>
-   <td>{{Spec2("CSS2.1")}}</td>
-   <td>Add <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-classes</a>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS1", "#cascading-order", "Cascading order")}}</td>
-   <td>{{Spec2("CSS1")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                | Status                               | Comment                                                                               |
+| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------- |
+| {{SpecName("CSS4 Selectors", "#specificity-rules", "Calculating a selector's specificity")}} | {{Spec2("CSS4 Selectors")}} | Add the specificity adjustment selector {{CSSxRef(":where", ":where()")}}. |
+| {{SpecName("CSS3 Selectors", "#specificity", "Calculating a selector's specificity")}}         | {{Spec2("CSS3 Selectors")}} | Add [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements).                           |
+| {{SpecName("CSS2.1", "cascade.html#specificity", "Calculating a selector's specificity")}}     | {{Spec2("CSS2.1")}}             | Add [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes).                             |
+| {{SpecName("CSS1", "#cascading-order", "Cascading order")}}                                             | {{Spec2("CSS1")}}             | Initial definition.                                                                   |
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Specificity Calculator: An interactive website to test and understand your own CSS rules - <a href="https://specificity.keegan.st/">https://specificity.keegan.st/</a></li>
- <li>CSS3 Selectors Specificity - <a href="https://www.w3.org/TR/selectors/#specificity">http://www.w3.org/TR/selectors/#specificity</a></li>
- <li>{{CSS_Key_Concepts}}</li>
-</ul>
+- Specificity Calculator: An interactive website to test and understand your own CSS rules - <https://specificity.keegan.st/>
+- CSS3 Selectors Specificity - [http://www.w3.org/TR/selectors/#specificity](https://www.w3.org/TR/selectors/#specificity)
+- {{CSS_Key_Concepts}}

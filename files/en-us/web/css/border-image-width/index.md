@@ -9,26 +9,27 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.border-image-width
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>border-image-width</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the width of an element's <a href="/en-US/docs/Web/CSS/border-image">border image</a>.</p>
+The **`border-image-width`** [CSS](/en-US/docs/Web/CSS) property sets the width of an element's [border image](/en-US/docs/Web/CSS/border-image).
 
-<div>{{EmbedInteractiveExample("pages/css/border-image-width.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-image-width.html")}}
 
-<p>If this property's value is greater than the element's {{cssxref("border-width")}}, the border image will extend beyond the padding (and/or content) edge.</p>
+If this property's value is greater than the element's {{cssxref("border-width")}}, the border image will extend beyond the padding (and/or content) edge.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Keyword value */
+```css
+/* Keyword value */
 border-image-width: auto;
 
-/* &lt;length&gt; value */
+/* <length> value */
 border-image-width: 1rem;
 
-/* &lt;percentage&gt; value */
+/* <percentage> value */
 border-image-width: 25%;
 
-/* &lt;number&gt; value */
+/* <number> value */
 border-image-width: 3;
 
 /* vertical | horizontal */
@@ -45,78 +46,75 @@ border-image-width: inherit;
 border-image-width: initial;
 border-image-width: revert;
 border-image-width: unset;
-</pre>
+```
 
-<p>The <code>border-image-width</code> property may be specified using one, two, three, or four values chosen from the list of values below.</p>
+The `border-image-width` property may be specified using one, two, three, or four values chosen from the list of values below.
 
-<ul>
- <li>When <strong>one</strong> value is specified, it applies the same width to <strong>all four sides</strong>.</li>
- <li>When <strong>two</strong> values are specified, the first width applies to the <strong>top and bottom</strong>, the second to the <strong>left and right</strong>.</li>
- <li>When <strong>three</strong> values are specified, the first width applies to the <strong>top</strong>, the second to the <strong>left and right</strong>, the third to the <strong>bottom</strong>.</li>
- <li>When <strong>four</strong> values are specified, the widths apply to the <strong>top</strong>, <strong>right</strong>, <strong>bottom</strong>, and <strong>left</strong> in that order (clockwise).</li>
-</ul>
+- When **one** value is specified, it applies the same width to **all four sides**.
+- When **two** values are specified, the first width applies to the **top and bottom**, the second to the **left and right**.
+- When **three** values are specified, the first width applies to the **top**, the second to the **left and right**, the third to the **bottom**.
+- When **four** values are specified, the widths apply to the **top**, **right**, **bottom**, and **left** in that order (clockwise).
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;length-percentage&gt;</code></dt>
- <dd>The width of the border, specified as a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}. Percentages are relative to the <em>width</em> of the border image area for horizontal offsets and the <em>height</em> of the border image area for vertical offsets. Must not be negative.</dd>
- <dt><code>&lt;number&gt;</code></dt>
- <dd>The width of the border, specified as a multiple of the corresponding {{cssxref("border-width")}}. Must not be negative.</dd>
- <dt><code>auto</code></dt>
- <dd>The width of the border is made equal to the intrinsic width or height (whichever is applicable) of the corresponding {{cssxref("border-image-slice")}}. If the image does not have the required intrinsic dimension, the corresponding <code>border-width</code> is used instead.</dd>
-</dl>
+- `<length-percentage>`
+  - : The width of the border, specified as a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}. Percentages are relative to the _width_ of the border image area for horizontal offsets and the _height_ of the border image area for vertical offsets. Must not be negative.
+- `<number>`
+  - : The width of the border, specified as a multiple of the corresponding {{cssxref("border-width")}}. Must not be negative.
+- `auto`
+  - : The width of the border is made equal to the intrinsic width or height (whichever is applicable) of the corresponding {{cssxref("border-image-slice")}}. If the image does not have the required intrinsic dimension, the corresponding `border-width` is used instead.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Tiling_a_border_image">Tiling a border image</h3>
+### Tiling a border image
 
-<p>This example creates a border image using the following ".png" file, which is 90 by 90 pixels:</p>
+This example creates a border image using the following ".png" file, which is 90 by 90 pixels:
 
-<p><img alt="" src="border.png"></p>
+![](border.png)
 
-<p>Thus, each circle in the source image is 30 by 30 pixels.</p>
+Thus, each circle in the source image is 30 by 30 pixels.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+```html
+<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
    At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-   no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;
-</pre>
+   no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   border: 20px solid;
   border-image: url("border.png") 30 round;
   border-image-width: 16px;
   padding: 40px;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Tiling_a_border_image', 200, 240)}}</p>
+{{EmbedLiveSample('Tiling_a_border_image', 200, 240)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders">Backgrounds and borders</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">Learn CSS: Backgrounds and borders</a></li>
-</ul>
+- [Backgrounds and borders](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders)
+- [Learn CSS: Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)

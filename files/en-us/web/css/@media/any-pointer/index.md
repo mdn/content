@@ -9,43 +9,40 @@ tags:
   - media feature
 browser-compat: css.at-rules.media.any-pointer
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>any-pointer</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features">media feature</a> tests whether the user has <em>any</em> pointing device (such as a mouse), and if so, how accurate it is.</p>
+The **`any-pointer`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) tests whether the user has _any_ pointing device (such as a mouse), and if so, how accurate it is.
 
-<div class="note">
-<p><strong>Note:</strong> If you want to test the accuracy of the <em>primary</em> pointing device, use <code><a href="/en-US/docs/Web/CSS/@media/pointer">pointer</a></code> instead.</p>
-</div>
+> **Note:** If you want to test the accuracy of the _primary_ pointing device, use [`pointer`](/en-US/docs/Web/CSS/@media/pointer) instead.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>any-pointer</code> feature is specified as a keyword value chosen from the list below.</p>
+The `any-pointer` feature is specified as a keyword value chosen from the list below.
 
-<dl>
- <dt><code>none</code></dt>
- <dd>No pointing device is available.</dd>
- <dt><code>coarse</code></dt>
- <dd>At least one input mechanism includes a pointing device of limited accuracy.</dd>
- <dt><code>fine</code></dt>
- <dd>At least one input mechanism includes an accurate pointing device.</dd>
-</dl>
+- `none`
+  - : No pointing device is available.
+- `coarse`
+  - : At least one input mechanism includes a pointing device of limited accuracy.
+- `fine`
+  - : At least one input mechanism includes an accurate pointing device.
 
-<div class="note">
-<p><strong>Note:</strong> More than one value can match if the available devices have different characteristics, although <code>none</code> only matches when none of them are pointing devices.</p>
-</div>
+> **Note:** More than one value can match if the available devices have different characteristics, although `none` only matches when none of them are pointing devices.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example creates a small checkbox for users with at least one fine pointer and a large checkbox for users with at least one coarse pointer. The big checkbox takes precedence because it is declared after the small one.</p>
+This example creates a small checkbox for users with at least one fine pointer and a large checkbox for users with at least one coarse pointer. The big checkbox takes precedence because it is declared after the small one.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;input id="test" type="checkbox" /&gt;
-&lt;label for="test"&gt;Look at me!&lt;/label&gt;</pre>
+```html
+<input id="test" type="checkbox" />
+<label for="test">Look at me!</label>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">input[type="checkbox"]:checked {
+```css
+input[type="checkbox"]:checked {
   background: gray;
 }
 
@@ -70,22 +67,20 @@ browser-compat: css.at-rules.media.any-pointer
     border: 2px solid red;
   }
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/@media/pointer">The <code>pointer</code> media feature</a></li>
-</ul>
+- [The `pointer` media feature](/en-US/docs/Web/CSS/@media/pointer)

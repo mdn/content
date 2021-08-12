@@ -6,19 +6,19 @@ tags:
   - CSS Outline
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.outline-offset
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>outline-offset</code></strong> CSS property sets the amount of space between an <a href="/en-US/docs/Web/CSS/outline">outline</a> and the edge or border of an element.</p>
+The **`outline-offset`** CSS property sets the amount of space between an [outline](/en-US/docs/Web/CSS/outline) and the edge or border of an element.
 
-<div>{{EmbedInteractiveExample("pages/css/outline-offset.html")}}</div>
+{{EmbedInteractiveExample("pages/css/outline-offset.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; values */
+```css
+/* <length> values */
 outline-offset: 3px;
 outline-offset: 0.2em;
 
@@ -27,63 +27,62 @@ outline-offset: inherit;
 outline-offset: initial;
 outline-offset: revert;
 outline-offset: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>{{cssxref("&lt;length&gt;")}}</code></dt>
- <dd>The width of the space between the element and its outline. A negative value places the outline inside the element. A value of <code>0</code> places the outline so that there is no space between it and the element.</dd>
-</dl>
+- `{{cssxref("&lt;length&gt;")}}`
+  - : The width of the space between the element and its outline. A negative value places the outline inside the element. A value of `0` places the outline so that there is no space between it and the element.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>An outline is a line that is drawn around an element, outside the border edge. The space between an element and its outline is transparent. In other words, it is the same as the parent element's background.</p>
+An outline is a line that is drawn around an element, outside the border edge. The space between an element and its outline is transparent. In other words, it is the same as the parent element's background.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_outline_offset_in_pixels">Setting outline offset in pixels</h3>
+### Setting outline offset in pixels
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;Gallia est omnis divisa in partes tres.&lt;/p&gt;</pre>
+```html
+<p>Gallia est omnis divisa in partes tres.</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   outline: 1px dashed red;
   outline-offset: 10px;
   background: yellow;
   border: 1px solid blue;
   margin: 15px;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Setting_outline_offset_in_pixels')}}</p>
+{{EmbedLiveSample('Setting_outline_offset_in_pixels')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("outline")}}</li>
- <li>{{cssxref("outline-color")}}</li>
- <li>{{cssxref("outline-style")}}</li>
- <li>{{cssxref("outline-width")}}</li>
-</ul>
+- {{cssxref("outline")}}
+- {{cssxref("outline-color")}}
+- {{cssxref("outline-style")}}
+- {{cssxref("outline-width")}}

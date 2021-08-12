@@ -9,332 +9,343 @@ tags:
   - Reference
   - SVG
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Given the flexibility of SVG images, there's a lot to keep in mind when using them as background images with the {{ cssxref("background-image") }} property, and even more to keep in mind when also scaling them using the {{ cssxref("background-size") }} property. This article describes how scaling of SVG images is handled when using these properties.</p>
+Given the flexibility of SVG images, there's a lot to keep in mind when using them as background images with the {{ cssxref("background-image") }} property, and even more to keep in mind when also scaling them using the {{ cssxref("background-size") }} property. This article describes how scaling of SVG images is handled when using these properties.
 
-<h2 id="The_algorithm_in_summary">The algorithm, in summary</h2>
+## The algorithm, in summary
 
-<p>The algorithm can for the most part be summarized by these four rules. There are some edge cases that aren't covered by these rules, but this covers the majority of cases.</p>
+The algorithm can for the most part be summarized by these four rules. There are some edge cases that aren't covered by these rules, but this covers the majority of cases.
 
-<ol>
-	<li>If {{ cssxref("background-size") }} specifies a fixed dimension (that is, percentages and relative units are fixed by their context), that dimension wins.</li>
-	<li>If the image has an intrinsic ratio (that is, its width:height ratio is constant, such as 16:9, 4:3, 2.39:1, 1:1, and so forth), the rendered size preserves that ratio.</li>
-	<li>If the image specifies a size, and the size isn't modified by constrain or cover, that specified size wins.</li>
-	<li>If none of the above cases are met, the image is rendered at the same size as the background area.</li>
-</ol>
+1.  If {{ cssxref("background-size") }} specifies a fixed dimension (that is, percentages and relative units are fixed by their context), that dimension wins.
+2.  If the image has an intrinsic ratio (that is, its width:height ratio is constant, such as 16:9, 4:3, 2.39:1, 1:1, and so forth), the rendered size preserves that ratio.
+3.  If the image specifies a size, and the size isn't modified by constrain or cover, that specified size wins.
+4.  If none of the above cases are met, the image is rendered at the same size as the background area.
 
-<p>It's worth noting that the sizing algorithm only cares about the image's dimensions and proportions, or lack thereof. An SVG image with fixed dimensions will be treated just like a raster image of the same size.</p>
+It's worth noting that the sizing algorithm only cares about the image's dimensions and proportions, or lack thereof. An SVG image with fixed dimensions will be treated just like a raster image of the same size.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> If you are trying to stretch your SVG to a different aspect ratio with CSS&mdash;for example in order to stretch it over the page background&mdash;make sure your SVG includes <code>preserveAspectRatio="none"</code>. Find out more about {{svgattr("preserveAspectRatio")}}.</p>
-</div>
+> **Note:** If you are trying to stretch your SVG to a different aspect ratio with CSS—for example in order to stretch it over the page background—make sure your SVG includes `preserveAspectRatio="none"`. Find out more about {{svgattr("preserveAspectRatio")}}.
 
-<h2 id="Source_image_examples">Source image examples</h2>
+## Source image examples
 
-<p>Before diving in to look at the results of using different kinds of source images and seeing how they look when used with {{ cssxref("background-size") }}, it would be helpful to look at a few example source images that have different dimensions and sizing settings.</p>
+Before diving in to look at the results of using different kinds of source images and seeing how they look when used with {{ cssxref("background-size") }}, it would be helpful to look at a few example source images that have different dimensions and sizing settings.
 
-<p>In each case, we show what the source image looks like rendered in a 150x150 box, and provide a link to the SVG source.</p>
+In each case, we show what the source image looks like rendered in a 150x150 box, and provide a link to the SVG source.
 
-<h3 id="Dimensionless_and_proportionless">Dimensionless and proportionless</h3>
+### Dimensionless and proportionless
 
-<p>This image is both dimensionless and proportionless. It doesn't care what size it is, nor does it care about remaining at a particular aspect ratio. This would make a good gradient desktop background that would work regardless of your screen size and its aspect ratio.</p>
+This image is both dimensionless and proportionless. It doesn't care what size it is, nor does it care about remaining at a particular aspect ratio. This would make a good gradient desktop background that would work regardless of your screen size and its aspect ratio.
 
-<p><img alt="no-dimensions-or-ratio.png" src="no-dimensions-or-ratio.png"></p>
+![no-dimensions-or-ratio.png](no-dimensions-or-ratio.png)
 
-<p><a href="https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3469/6587a382ffb2c944462a6b110b079496/no-dimensions-or-ratio.svg" title="no-dimensions-or-ratio.svg">SVG source</a></p>
+[SVG source](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3469/6587a382ffb2c944462a6b110b079496/no-dimensions-or-ratio.svg "no-dimensions-or-ratio.svg")
 
-<h3 id="One_specified_dimension_and_proportionless">One specified dimension and proportionless</h3>
+### One specified dimension and proportionless
 
-<p>This image specifies a width of 100 pixels but no height or intrinsic ratio. This is, basically, a thin strip of wallpaper that could be stretched across the entire height of a block.</p>
+This image specifies a width of 100 pixels but no height or intrinsic ratio. This is, basically, a thin strip of wallpaper that could be stretched across the entire height of a block.
 
-<p><img alt="100px-wide-no-height-or-ratio.png" src="100px-wide-no-height-or-ratio.png"></p>
+![100px-wide-no-height-or-ratio.png](100px-wide-no-height-or-ratio.png)
 
-<p><a href="https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3468/af73bea307a10ffe2559df42fad199e3/100px-wide-no-height-or-ratio.svg" title="100px-wide-no-height-or-ratio.svg">SVG source</a></p>
+[SVG source](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3468/af73bea307a10ffe2559df42fad199e3/100px-wide-no-height-or-ratio.svg "100px-wide-no-height-or-ratio.svg")
 
-<h3 id="One_specified_dimension_with_intrinsic_ratio">One specified dimension with intrinsic ratio</h3>
+### One specified dimension with intrinsic ratio
 
-<p>This image specifies a 100 pixel height but no width. It also specifies an intrinsic aspect ratio of 3:4. This ensures that its width:height ratio is always 3:4, unless it's deliberately scaled to a disproportionate size (that is, by explicitly specifying both width and height that aren't of that ratio).</p>
+This image specifies a 100 pixel height but no width. It also specifies an intrinsic aspect ratio of 3:4. This ensures that its width:height ratio is always 3:4, unless it's deliberately scaled to a disproportionate size (that is, by explicitly specifying both width and height that aren't of that ratio).
 
-<p>This is very much like specifying a specific width and height, since once you have one dimension and a ratio, the other dimension is implied, but it's still a useful example.</p>
+This is very much like specifying a specific width and height, since once you have one dimension and a ratio, the other dimension is implied, but it's still a useful example.
 
-<p><img alt="100px-height-3x4-ratio.png" src="100px-height-3x4-ratio.png"></p>
+![100px-height-3x4-ratio.png](100px-height-3x4-ratio.png)
 
-<p><a href="https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3467/fd0c534c506be06d52f0a954a59863a6/100px-height-3x4-ratio.svg" title="100px-height-3x4-ratio.svg">SVG source</a></p>
+[SVG source](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3467/fd0c534c506be06d52f0a954a59863a6/100px-height-3x4-ratio.svg "100px-height-3x4-ratio.svg")
 
-<h3 id="No_width_or_height_with_intrinsic_ratio">No width or height with intrinsic ratio</h3>
+### No width or height with intrinsic ratio
 
-<p>This image doesn't specify either a width or a height; instead, it specifies an intrinsic ratio of 1:1. Think of this like a program icon. It's always square, and is usable at any size, such as 32x32, 128x128, or 512x512, for example.</p>
+This image doesn't specify either a width or a height; instead, it specifies an intrinsic ratio of 1:1. Think of this like a program icon. It's always square, and is usable at any size, such as 32x32, 128x128, or 512x512, for example.
 
-<p><img alt="no-dimensions-1x1-ratio.png" src="no-dimensions-1x1-ratio.png"></p>
+![no-dimensions-1x1-ratio.png](no-dimensions-1x1-ratio.png)
 
-<p><a href="https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3466/a3398e03c058d99fb2b7837167cdbc26/no-dimensions-1x1-ratio.svg" title="no-dimensions-1x1-ratio.svg">SVG source</a></p>
+[SVG source](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3466/a3398e03c058d99fb2b7837167cdbc26/no-dimensions-1x1-ratio.svg "no-dimensions-1x1-ratio.svg")
 
-<h2 id="Scaling_examples">Scaling examples</h2>
+## Scaling examples
 
-<p>Now let's see some examples of what happens as we apply different scaling to these images. In each of the examples below, the enclosing rectangles are 300 pixels wide and 200 pixels tall. In addition, the backgrounds have {{ cssxref("background-repeat") }} set to no-repeat for clarity.</p>
+Now let's see some examples of what happens as we apply different scaling to these images. In each of the examples below, the enclosing rectangles are 300 pixels wide and 200 pixels tall. In addition, the backgrounds have {{ cssxref("background-repeat") }} set to no-repeat for clarity.
 
-<div class="note">
-  <p><strong>Note:</strong> The screenshots below show the <strong>expected</strong> rendering. Not all browsers currently render these correctly.</p>
-</div>
+> **Note:** The screenshots below show the **expected** rendering. Not all browsers currently render these correctly.
 
-<h3 id="Specifying_fixed_lengths_for_both_dimensions">Specifying fixed lengths for both dimensions</h3>
+### Specifying fixed lengths for both dimensions
 
-<p>If you use {{ cssxref("background-size") }} to specify fixed lengths for both dimensions, those lengths are always used, per rule 1 above. In other words, the image will always get stretched to the dimensions you specify, regardless of whether or not the source image has specified its dimensions and/or aspect ratio.</p>
+If you use {{ cssxref("background-size") }} to specify fixed lengths for both dimensions, those lengths are always used, per rule 1 above. In other words, the image will always get stretched to the dimensions you specify, regardless of whether or not the source image has specified its dimensions and/or aspect ratio.
 
-<h4 id="Source_No_dimensions_or_intrinsic_ratio">Source: No dimensions or intrinsic ratio</h4>
+#### Source: No dimensions or intrinsic ratio
 
-<p>Given this CSS:</p>
+Given this CSS:
 
-<pre class="brush: css">background: url(no-dimensions-or-ratio.svg);
+```css
+background: url(no-dimensions-or-ratio.svg);
 background-size: 125px 175px;
-</pre>
+```
 
-<p>The rendered output would look like this:</p>
+The rendered output would look like this:
 
-<p><img alt="fixed-no-dimensions-or-ratio.png" src="fixed-no-dimensions-or-ratio.png"></p>
+![fixed-no-dimensions-or-ratio.png](fixed-no-dimensions-or-ratio.png)
 
-<h4 id="Source_One_specified_dimension_no_intrinsic_ratio">Source: One specified dimension, no intrinsic ratio</h4>
+#### Source: One specified dimension, no intrinsic ratio
 
-<p>Given this CSS:</p>
+Given this CSS:
 
-<pre class="brush: css">background: url(100px-wide-no-height-or-ratio.svg);
+```css
+background: url(100px-wide-no-height-or-ratio.svg);
 background-size: 250px 150px;
-</pre>
+```
 
-<p>The rendered output would look like this:</p>
+The rendered output would look like this:
 
-<p><img alt="fixed-100px-wide-no-height-or-ratio.png" src="fixed-100px-wide-no-height-or-ratio.png"></p>
+![fixed-100px-wide-no-height-or-ratio.png](fixed-100px-wide-no-height-or-ratio.png)
 
-<h4 id="Source_One_specified_dimension_with_intrinsic_ratio">Source: One specified dimension with intrinsic ratio</h4>
+#### Source: One specified dimension with intrinsic ratio
 
-<p>Given this CSS:</p>
+Given this CSS:
 
-<pre class="brush: css">background: url(100px-height-3x4-ratio.svg);
+```css
+background: url(100px-height-3x4-ratio.svg);
 background-size: 275px 125px;
-</pre>
+```
 
-<p>The rendered output would look like this:</p>
+The rendered output would look like this:
 
-<p><img alt="fixed-100px-height-3x4-ratio.png" src="fixed-100px-height-3x4-ratio.png"></p>
+![fixed-100px-height-3x4-ratio.png](fixed-100px-height-3x4-ratio.png)
 
-<h4 id="Source_No_specified_width_or_height_with_intrinsic_ratio">Source: No specified width or height with intrinsic ratio</h4>
+#### Source: No specified width or height with intrinsic ratio
 
-<p>Given this CSS:</p>
+Given this CSS:
 
-<pre class="brush: css">background: url(no-dimensions-1x1-ratio.svg);
+```css
+background: url(no-dimensions-1x1-ratio.svg);
 background-size: 250px 100px;
-</pre>
+```
 
-<p>The rendered output would look like this:</p>
+The rendered output would look like this:
 
-<p><img alt="fixed-no-dimensions-1x1-ratio.png" src="fixed-no-dimensions-1x1-ratio.png"></p>
+![fixed-no-dimensions-1x1-ratio.png](fixed-no-dimensions-1x1-ratio.png)
 
-<h3 id="Using_contain_or_cover">Using contain or cover</h3>
+### Using contain or cover
 
-<p>Specifying <code>cover</code> for {{ cssxref("background-size") }} makes the picture as small as possible while still covering the entire background area. <code>contain</code>, on the other hand, makes the image as large as possible while not being clipped by the background area.</p>
+Specifying `cover` for {{ cssxref("background-size") }} makes the picture as small as possible while still covering the entire background area. `contain`, on the other hand, makes the image as large as possible while not being clipped by the background area.
 
-<p>For an image with an intrinsic ratio, exactly one size matches the <code>cover</code>/fit criteria alone. But if there is no intrinsic ratio specified, <code>cover</code>/fit isn't sufficient, so the large/small constraints choose the resulting size.</p>
+For an image with an intrinsic ratio, exactly one size matches the `cover`/fit criteria alone. But if there is no intrinsic ratio specified, `cover`/fit isn't sufficient, so the large/small constraints choose the resulting size.
 
-<h4 id="Source_No_dimensions_or_intrinsic_ratio_2">Source: No dimensions or intrinsic ratio</h4>
+#### Source: No dimensions or intrinsic ratio
 
-<p>If an image doesn't specify either dimensions or an intrinsic ratio, neither rule 2 nor rule 3 apply, so rule 4 takes over: the background image is rendered covering the entire background area. This satisfies the largest-or-smallest constraint.</p>
+If an image doesn't specify either dimensions or an intrinsic ratio, neither rule 2 nor rule 3 apply, so rule 4 takes over: the background image is rendered covering the entire background area. This satisfies the largest-or-smallest constraint.
 
-<pre class="brush: css">background: url(no-dimensions-or-ratio.svg);
+```css
+background: url(no-dimensions-or-ratio.svg);
 background-size: contain;
-</pre>
+```
 
-<p>The rendered output looks like this:</p>
+The rendered output looks like this:
 
-<p><img alt="no-dimensions-or-ratio-contain.png" src="no-dimensions-or-ratio-contain.png"></p>
+![no-dimensions-or-ratio-contain.png](no-dimensions-or-ratio-contain.png)
 
-<h4 id="Source_One_specified_dimension_no_intrinsic_ratio_2">Source: One specified dimension, no intrinsic ratio</h4>
+#### Source: One specified dimension, no intrinsic ratio
 
-<p>Similarly, if the image has one dimension specified but no intrinsic ratio, rule 4 applies, and the image is scaled to cover the entire background area.</p>
+Similarly, if the image has one dimension specified but no intrinsic ratio, rule 4 applies, and the image is scaled to cover the entire background area.
 
-<pre class="brush: css">background: url(100px-wide-no-height-or-ratio.svg);
+```css
+background: url(100px-wide-no-height-or-ratio.svg);
 background-size: contain;
-</pre>
+```
 
-<p>The rendered output looks like this:</p>
+The rendered output looks like this:
 
-<p><img alt="100px-wide-no-height-or-ratio-contain.png" src="100px-wide-no-height-or-ratio-contain.png"></p>
+![100px-wide-no-height-or-ratio-contain.png](100px-wide-no-height-or-ratio-contain.png)
 
-<h4 id="Source_One_specified_dimension_with_intrinsic_ratio_2">Source: One specified dimension with intrinsic ratio</h4>
+#### Source: One specified dimension with intrinsic ratio
 
-<p>Things change when you specify an intrinsic ratio. In this case, rule 1 isn't relevant, so rule 2 is applied: we try to preserve any intrinsic ratio (while respecting <code>contain</code> or <code>cover</code>). For example, preserving a 3:4 intrinsic aspect ratio for a 300x200 box with <code>contain</code> means drawing a 150x200 background.</p>
+Things change when you specify an intrinsic ratio. In this case, rule 1 isn't relevant, so rule 2 is applied: we try to preserve any intrinsic ratio (while respecting `contain` or `cover`). For example, preserving a 3:4 intrinsic aspect ratio for a 300x200 box with `contain` means drawing a 150x200 background.
 
-<h5 id="contain_case">contain case</h5>
+##### contain case
 
-<pre class="brush: css">background: url(100px-height-3x4-ratio.svg);
+```css
+background: url(100px-height-3x4-ratio.svg);
 background-size: contain;
-</pre>
+```
 
-<p>The rendered output looks like this:</p>
+The rendered output looks like this:
 
-<p><img alt="100px-height-3x4-ratio-contain.png" src="100px-height-3x4-ratio-contain.png"></p>
+![100px-height-3x4-ratio-contain.png](100px-height-3x4-ratio-contain.png)
 
-<p>Notice how the entire image is rendered, fitting as best as possible into the box without clipping any of it away.</p>
+Notice how the entire image is rendered, fitting as best as possible into the box without clipping any of it away.
 
-<h5 id="cover_case">cover case</h5>
+##### cover case
 
-<pre class="brush: css">background: url(100px-height-3x4-ratio.svg);
+```css
+background: url(100px-height-3x4-ratio.svg);
 background-size: cover;
-</pre>
+```
 
-<p>The rendered output looks like this:</p>
+The rendered output looks like this:
 
-<p><img alt="100px-height-3x4-ratio-cover.png" src="100px-height-3x4-ratio-cover.png"></p>
+![100px-height-3x4-ratio-cover.png](100px-height-3x4-ratio-cover.png)
 
-<p>Here, the 3:4 ratio is preserved while still stretching the image to fill the entire box. That causes the bottom of the image to be clipped away.</p>
+Here, the 3:4 ratio is preserved while still stretching the image to fill the entire box. That causes the bottom of the image to be clipped away.
 
-<h4 id="Source_No_dimensions_with_intrinsic_ratio">Source: No dimensions with intrinsic ratio</h4>
+#### Source: No dimensions with intrinsic ratio
 
-<p>When using an image with no intrinsic dimensions but an intrinsic ratio, things work similarly.</p>
+When using an image with no intrinsic dimensions but an intrinsic ratio, things work similarly.
 
-<h5 id="contain_case_2">contain case</h5>
+##### contain case
 
-<pre class="brush: css">background: url(no-dimensions-1x1-ratio.svg);
+```css
+background: url(no-dimensions-1x1-ratio.svg);
 background-size: contain;
-</pre>
+```
 
-<p>The rendered output looks like this:</p>
+The rendered output looks like this:
 
-<p><img alt="no-dimensions-1x1-ratio-contain.png" src="no-dimensions-1x1-ratio-contain.png"></p>
+![no-dimensions-1x1-ratio-contain.png](no-dimensions-1x1-ratio-contain.png)
 
-<p>Notice that the image is sized to fit the smallest dimension while preserving the 1:1 aspect ratio.</p>
+Notice that the image is sized to fit the smallest dimension while preserving the 1:1 aspect ratio.
 
-<h5 id="cover_case_2">cover case</h5>
+##### cover case
 
-<pre class="brush: css">background: url(no-dimensions-1x1-ratio.svg);
+```css
+background: url(no-dimensions-1x1-ratio.svg);
 background-size: cover;
-</pre>
+```
 
-<p>The rendered output looks like this:</p>
+The rendered output looks like this:
 
-<p><img alt="no-dimensions-1x1-ratio-cover.png" src="no-dimensions-1x1-ratio-cover.png"></p>
+![no-dimensions-1x1-ratio-cover.png](no-dimensions-1x1-ratio-cover.png)
 
-<p>Here, the image is sized so that it fills the largest dimension. The 1:1 aspect ratio has been preserved, although with this source image, that can be difficult to see.</p>
+Here, the image is sized so that it fills the largest dimension. The 1:1 aspect ratio has been preserved, although with this source image, that can be difficult to see.
 
-<h3 id="Automatic_sizing_using_auto_for_both_dimensions">Automatic sizing using "auto" for both dimensions</h3>
+### Automatic sizing using "auto" for both dimensions
 
-<p>If {{ cssxref("background-size") }} is set to <code>auto</code> or <code>auto auto</code>, rule 2 says that rendering must preserve any intrinsic ratio that's provided.</p>
+If {{ cssxref("background-size") }} is set to `auto` or `auto auto`, rule 2 says that rendering must preserve any intrinsic ratio that's provided.
 
-<h4 id="Source_No_dimensions_or_intrinsic_ratio_3">Source: No dimensions or intrinsic ratio</h4>
+#### Source: No dimensions or intrinsic ratio
 
-<p>When no intrinsic ratio or dimensions are specified by the source image, rule 4 takes effect, and the image is rendered to fill the background area.</p>
+When no intrinsic ratio or dimensions are specified by the source image, rule 4 takes effect, and the image is rendered to fill the background area.
 
-<pre class="brush: css">background: url(no-dimensions-or-ratio.svg);
+```css
+background: url(no-dimensions-or-ratio.svg);
 background-size: auto auto;
-</pre>
+```
 
-<p>The rendered output looks like this:</p>
+The rendered output looks like this:
 
-<p><img alt="auto-no-dimensions-or-ratio.png" src="auto-no-dimensions-or-ratio.png"></p>
+![auto-no-dimensions-or-ratio.png](auto-no-dimensions-or-ratio.png)
 
-<h4 id="Source_One_dimension_and_no_intrinsic_ratio">Source: One dimension and no intrinsic ratio</h4>
+#### Source: One dimension and no intrinsic ratio
 
-<p>If no intrinsic ratio is specified, but at least one dimension is specified, rule 3 takes effect, and we render the image obeying those dimensions.</p>
+If no intrinsic ratio is specified, but at least one dimension is specified, rule 3 takes effect, and we render the image obeying those dimensions.
 
-<pre class="brush: css">background: url(100px-wide-no-height-or-ratio.svg);
+```css
+background: url(100px-wide-no-height-or-ratio.svg);
 background-size: auto auto;
-</pre>
+```
 
-<p>The rendered output looks like this:</p>
+The rendered output looks like this:
 
-<p><img alt="auto-100px-wide-no-height-or-ratio.png" src="auto-100px-wide-no-height-or-ratio.png"></p>
+![auto-100px-wide-no-height-or-ratio.png](auto-100px-wide-no-height-or-ratio.png)
 
-<p>Note here that the width, which is specified in the source SVG at 100 pixels, is obeyed, while the height fills the background area since it's not specified (either explicitly or by an intrinsic ratio).</p>
+Note here that the width, which is specified in the source SVG at 100 pixels, is obeyed, while the height fills the background area since it's not specified (either explicitly or by an intrinsic ratio).
 
-<h4 id="Source_One_dimension_and_an_intrinsic_ratio">Source: One dimension and an intrinsic ratio</h4>
+#### Source: One dimension and an intrinsic ratio
 
-<p>If we have an intrinsic ratio with a fixed dimension, that fixes both dimensions in place. Knowing one dimension and a ratio is, as has been mentioned already, the same as specifying both dimensions explicitly.</p>
+If we have an intrinsic ratio with a fixed dimension, that fixes both dimensions in place. Knowing one dimension and a ratio is, as has been mentioned already, the same as specifying both dimensions explicitly.
 
-<pre class="brush: css">background: url(100px-height-3x4-ratio.svg);
+```css
+background: url(100px-height-3x4-ratio.svg);
 background-size: auto auto;
-</pre>
+```
 
-<p>The rendered output looks like this:</p>
+The rendered output looks like this:
 
-<p><img alt="auto-100px-height-3x4-ratio.png" src="auto-100px-height-3x4-ratio.png"></p>
+![auto-100px-height-3x4-ratio.png](auto-100px-height-3x4-ratio.png)
 
-<p>Since this image has an explicit 100 pixel height, the 3:4 ratio explicitly sets its width at 75 pixels, so that's how it's rendered in the <code>auto</code> case.</p>
+Since this image has an explicit 100 pixel height, the 3:4 ratio explicitly sets its width at 75 pixels, so that's how it's rendered in the `auto` case.
 
-<h4 id="Source_No_fixed_dimensions_with_intrinsic_ratio">Source: No fixed dimensions with intrinsic ratio</h4>
+#### Source: No fixed dimensions with intrinsic ratio
 
-<p>When an intrinsic ratio is specified, but no dimensions, rule 4 is applied -- except that rule 2 also applies. The image is therefore rendered just like for the <code>contain</code> case.</p>
+When an intrinsic ratio is specified, but no dimensions, rule 4 is applied -- except that rule 2 also applies. The image is therefore rendered just like for the `contain` case.
 
-<pre class="brush: css">background: url(no-dimensions-1x1-ratio.svg);
+```css
+background: url(no-dimensions-1x1-ratio.svg);
 background-size: auto auto;
-</pre>
+```
 
-<p>The rendered output looks like this:</p>
+The rendered output looks like this:
 
-<p><img alt="auto-no-dimensions-1x1-ratio.png" src="auto-no-dimensions-1x1-ratio.png"></p>
+![auto-no-dimensions-1x1-ratio.png](auto-no-dimensions-1x1-ratio.png)
 
-<h3 id="Using_auto_and_one_specific_length">Using "auto" and one specific length</h3>
+### Using "auto" and one specific length
 
-<p>Given rule 1, specified dimensions are always used, so we need to use our rules only to determine the second dimension.</p>
+Given rule 1, specified dimensions are always used, so we need to use our rules only to determine the second dimension.
 
-<h4 id="Source_No_dimensions_or_intrinsic_ratio_4">Source: No dimensions or intrinsic ratio</h4>
+#### Source: No dimensions or intrinsic ratio
 
-<p>If the image has no dimensions or intrinsic ratio, rule 4 applies, and we use the background area's dimension to determine the value for the <code>auto</code> dimension.</p>
+If the image has no dimensions or intrinsic ratio, rule 4 applies, and we use the background area's dimension to determine the value for the `auto` dimension.
 
-<pre class="brush: css">background: url(no-dimensions-or-ratio.svg);
+```css
+background: url(no-dimensions-or-ratio.svg);
 background-size: auto 150px;
-</pre>
+```
 
-<p><img alt="1auto-no-dimensions-or-ratio.png" src="1auto-no-dimensions-or-ratio.png"></p>
+![1auto-no-dimensions-or-ratio.png](1auto-no-dimensions-or-ratio.png)
 
-<p>Here, the width is determined using the background area's width per rule 4, while the height is the 140px specified in the CSS.</p>
+Here, the width is determined using the background area's width per rule 4, while the height is the 140px specified in the CSS.
 
-<h4 id="Source_One_specified_dimension_with_no_intrinsic_ratio">Source: One specified dimension with no intrinsic ratio</h4>
+#### Source: One specified dimension with no intrinsic ratio
 
-<p>If the image has one specified dimension but no intrinsic ratio, that specified dimension is used per rule 3 if that dimension is set to <code>auto</code> in the CSS.</p>
+If the image has one specified dimension but no intrinsic ratio, that specified dimension is used per rule 3 if that dimension is set to `auto` in the CSS.
 
-<pre class="brush: css">background: url(100px-wide-no-height-or-ratio.svg);
+```css
+background: url(100px-wide-no-height-or-ratio.svg);
 background-size: 200px auto;
-</pre>
+```
 
-<p><img alt="100px-wide-no-height-or-ratio-length-auto.png" src="100px-wide-no-height-or-ratio-length-auto.png"></p>
+![100px-wide-no-height-or-ratio-length-auto.png](100px-wide-no-height-or-ratio-length-auto.png)
 
-<p>Here, the 200px specified in the CSS overrides the 100px width specified in the SVG, per rule 1. Since there's no intrinsic ratio or height provided, <code>auto</code> selects the height of the background area as the height for the rendered image.</p>
+Here, the 200px specified in the CSS overrides the 100px width specified in the SVG, per rule 1. Since there's no intrinsic ratio or height provided, `auto` selects the height of the background area as the height for the rendered image.
 
-<pre class="brush: css">background: url(100px-wide-no-height-or-ratio.svg);
+```css
+background: url(100px-wide-no-height-or-ratio.svg);
 background-size: auto 125px;
-</pre>
+```
 
-<p><img alt="100px-wide-no-height-or-ratio-auto-length.png" src="100px-wide-no-height-or-ratio-auto-length.png"></p>
+![100px-wide-no-height-or-ratio-auto-length.png](100px-wide-no-height-or-ratio-auto-length.png)
 
-<p>In this case, the width is specified as auto in the CSS, so the 100px width specified in the SVG is selected, per rule 3. The height is set at 125px in the CSS, so that is selected per rule 1.</p>
+In this case, the width is specified as auto in the CSS, so the 100px width specified in the SVG is selected, per rule 3. The height is set at 125px in the CSS, so that is selected per rule 1.
 
-<h4 id="Source_One_specified_dimension_with_intrinsic_ratio_3">Source: One specified dimension with intrinsic ratio</h4>
+#### Source: One specified dimension with intrinsic ratio
 
-<p>When a dimension is specified, rule 1 applies that dimension from the SVG to the rendered background unless specifically overridden by the CSS. When an intrinsic ratio is also specified, that's used to determine the other dimension.</p>
+When a dimension is specified, rule 1 applies that dimension from the SVG to the rendered background unless specifically overridden by the CSS. When an intrinsic ratio is also specified, that's used to determine the other dimension.
 
-<pre class="brush: css">background: url(100px-height-3x4-ratio.svg);
+```css
+background: url(100px-height-3x4-ratio.svg);
 background-size: 150px auto;
-</pre>
+```
 
-<p><img alt="1auto-100px-height-3x4-ratio.png" src="1auto-100px-height-3x4-ratio.png"></p>
+![1auto-100px-height-3x4-ratio.png](1auto-100px-height-3x4-ratio.png)
 
-<p>In this case, we use the width of the image specified in the CSS set at 150px, so rule 1 is applied. The intrinsic 3:4 aspect ratio then determines the height for the <code>auto</code> case.</p>
+In this case, we use the width of the image specified in the CSS set at 150px, so rule 1 is applied. The intrinsic 3:4 aspect ratio then determines the height for the `auto` case.
 
-<h4 id="Source_No_specified_dimensions_with_intrinsic_ratio">Source: No specified dimensions with intrinsic ratio</h4>
+#### Source: No specified dimensions with intrinsic ratio
 
-<p>If no dimensions are specified in the SVG, the specified dimension in the CSS is applied, then the intrinsic ratio is used to select the other dimension, per rule 2.</p>
+If no dimensions are specified in the SVG, the specified dimension in the CSS is applied, then the intrinsic ratio is used to select the other dimension, per rule 2.
 
-<pre class="brush: css">background: url(no-dimensions-1x1-ratio.svg);
+```css
+background: url(no-dimensions-1x1-ratio.svg);
 background-size: 150px auto;
-</pre>
+```
 
-<p><img alt="1auto-no-dimensions-1x1-ratio.png" src="1auto-no-dimensions-1x1-ratio.png"></p>
+![1auto-no-dimensions-1x1-ratio.png](1auto-no-dimensions-1x1-ratio.png)
 
-<p>The width is set by the CSS to 150px. The <code>auto</code> value for the height is computed using that width and the 1:1 aspect ratio to be 150px as well, resulting in the image above.</p>
+The width is set by the CSS to 150px. The `auto` value for the height is computed using that width and the 1:1 aspect ratio to be 150px as well, resulting in the image above.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{cssxref("background-size")}}</li>
-	<li>Blog post: <a href="http://whereswalden.com/2011/10/21/properly-resizing-vector-image-backgrounds/">Properly resizing vector image backgrounds</a></li>
-</ul>
+- {{cssxref("background-size")}}
+- Blog post: [Properly resizing vector image backgrounds](http://whereswalden.com/2011/10/21/properly-resizing-vector-image-backgrounds/)

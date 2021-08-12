@@ -7,58 +7,56 @@ tags:
   - Guide
   - Layout
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>In this guide we look at how to make elements span across columns inside the multicol container and how to control how the columns are filled.</p>
+In this guide we look at how to make elements span across columns inside the multicol container and how to control how the columns are filled.
 
-<div class="note">
-<p><strong>Note:</strong> The spanning and balancing functionality covered in this guide is not as well supported across browsers as the functionality covered in the previous two sections in this guide.</p>
-</div>
+> **Note:** The spanning and balancing functionality covered in this guide is not as well supported across browsers as the functionality covered in the previous two sections in this guide.
 
-<h2 id="Spanning_the_Columns">Spanning the Columns</h2>
+## Spanning the Columns
 
-<p>To cause an item to span across columns use the property {{cssxref("column-span")}} with a value of <code>all</code>. This will cause the element to span all of the columns.</p>
+To cause an item to span across columns use the property {{cssxref("column-span")}} with a value of `all`. This will cause the element to span all of the columns.
 
-<p>Any descendant element of the multicol container may become a <em>spanner</em> including both direct and indirect children. For example, a heading nested directly inside the container could become a spanner, as could a heading nested inside a section nested inside the multicol container.</p>
+Any descendant element of the multicol container may become a _spanner_ including both direct and indirect children. For example, a heading nested directly inside the container could become a spanner, as could a heading nested inside a section nested inside the multicol container.
 
-<p>In the example below, the h2 element is set to <code>column-span: all</code> and spans all of the columns.</p>
+In the example below, the h2 element is set to `column-span: all` and spans all of the columns.
 
-<p>{{EmbedGHLiveSample("css-examples/multicol/spanning/h2-span.html", '100%', 800)}}</p>
+{{EmbedGHLiveSample("css-examples/multicol/spanning/h2-span.html", '100%', 800)}}
 
-<p>In this second example, the heading is inside an {{HTMLElement("article")}} element, yet still spans the content as expected.</p>
+In this second example, the heading is inside an {{HTMLElement("article")}} element, yet still spans the content as expected.
 
-<p>{{EmbedGHLiveSample("css-examples/multicol/spanning/nested-h2-span.html", '100%', 800)}}</p>
+{{EmbedGHLiveSample("css-examples/multicol/spanning/nested-h2-span.html", '100%', 800)}}
 
-<p>When a spanner is introduced, it breaks the flow of columns and columns restart after the spanner, effectively creating a new set of column boxes. The content does not jump over a spanning element.</p>
+When a spanner is introduced, it breaks the flow of columns and columns restart after the spanner, effectively creating a new set of column boxes. The content does not jump over a spanning element.
 
-<h3 id="Limitations_of_column-span">Limitations of column-span</h3>
+### Limitations of column-span
 
-<p>In the current level 1 specification there are only two allowable values for <code>column-span</code>. The value <code>none</code> is the initial value and means the item does not span, remaining within a column. The value <code>all</code> means the item spans all of the columns. You cannot cause an item to span two out of three columns for example.</p>
+In the current level 1 specification there are only two allowable values for `column-span`. The value `none` is the initial value and means the item does not span, remaining within a column. The value `all` means the item spans all of the columns. You cannot cause an item to span two out of three columns for example.
 
-<h3 id="Things_to_watch_out_for">Things to watch out for</h3>
+### Things to watch out for
 
-<p>If the spanning element is inside another element which has margins, padding and a border or a background color, it is possible to end up with the top of the box appearing above the spanner and the rest displaying below, as shown in the next example. For this reason, some care should be taken when deciding to make an element a spanner and ensure this scenario is accounted for.</p>
+If the spanning element is inside another element which has margins, padding and a border or a background color, it is possible to end up with the top of the box appearing above the spanner and the rest displaying below, as shown in the next example. For this reason, some care should be taken when deciding to make an element a spanner and ensure this scenario is accounted for.
 
-<p>{{EmbedGHLiveSample("css-examples/multicol/spanning/mpb-span.html", '100%', 800)}}</p>
+{{EmbedGHLiveSample("css-examples/multicol/spanning/mpb-span.html", '100%', 800)}}
 
-<p>Additionally, if a spanning element appears later in the content it can cause unexpected or unwanted behavior when there is not enough content to create columns after the spanner. Use spanning carefully and test at various breakpoints to make sure you get the intended effect.</p>
+Additionally, if a spanning element appears later in the content it can cause unexpected or unwanted behavior when there is not enough content to create columns after the spanner. Use spanning carefully and test at various breakpoints to make sure you get the intended effect.
 
-<h2 id="Column_Filling_and_Balancing">Column Filling and Balancing</h2>
+## Column Filling and Balancing
 
-<p>A balanced set of columns is where all columns have approximately the same amount of content. Filling and balancing comes into play when the amount of content does not match the amount of space provided, such as when a height is declared on the container.</p>
+A balanced set of columns is where all columns have approximately the same amount of content. Filling and balancing comes into play when the amount of content does not match the amount of space provided, such as when a height is declared on the container.
 
-<p>The initial value of multicol for {{cssxref("column-fill")}} is <code>balance</code>. The value of balance means all columns are as balanced as is possible. In fragmented contexts such as <a href="/en-US/docs/Web/CSS/CSS_Pages">Paged Media</a>, only the last fragment is balanced. This means that on the last page the final set of column boxes will be balanced.</p>
+The initial value of multicol for {{cssxref("column-fill")}} is `balance`. The value of balance means all columns are as balanced as is possible. In fragmented contexts such as [Paged Media](/en-US/docs/Web/CSS/CSS_Pages), only the last fragment is balanced. This means that on the last page the final set of column boxes will be balanced.
 
-<p>There is a second value for balancing, <code>balance-all</code>, which attempts to balance all columns in fragmented contexts and not just the columns on the final fragment.</p>
+There is a second value for balancing, `balance-all`, which attempts to balance all columns in fragmented contexts and not just the columns on the final fragment.
 
-<p>In this example, we have columns containing an image and some text which are balanced. The image cannot break and so goes into the first column and the other columns fill with equal amounts of text.</p>
+In this example, we have columns containing an image and some text which are balanced. The image cannot break and so goes into the first column and the other columns fill with equal amounts of text.
 
-<p>{{EmbedGHLiveSample("css-examples/multicol/balancing/balance.html", '100%', 550)}}</p>
+{{EmbedGHLiveSample("css-examples/multicol/balancing/balance.html", '100%', 550)}}
 
-<p>The other value for <code>column-fill</code> is <code>auto</code>. In this case, rather than filling all the columns equally so their heights are balanced, the columns are filled sequentially. In the example below we have changed <code>column-fill</code> to <code>auto</code> and the columns are now filled, in order, to the height of the multicol container, leaving some columns empty at the end.</p>
+The other value for `column-fill` is `auto`. In this case, rather than filling all the columns equally so their heights are balanced, the columns are filled sequentially. In the example below we have changed `column-fill` to `auto` and the columns are now filled, in order, to the height of the multicol container, leaving some columns empty at the end.
 
-<p>{{EmbedGHLiveSample("css-examples/multicol/balancing/auto.html", '100%', 550)}}</p>
+{{EmbedGHLiveSample("css-examples/multicol/balancing/auto.html", '100%', 550)}}
 
-<p>Note that column balancing is not supported by all browsers. Check that you are getting the sort of effect that you expect in the browsers you support.</p>
+Note that column balancing is not supported by all browsers. Check that you are getting the sort of effect that you expect in the browsers you support.
 
-<p>In the next guide you will learn <a href="/en-US/docs/Web/CSS/CSS_Columns/Handling_Overflow_in_Multicol">how multicol handles overflow</a>, both within columns and where there are more columns than will fit the container.</p>
+In the next guide you will learn [how multicol handles overflow](/en-US/docs/Web/CSS/CSS_Columns/Handling_Overflow_in_Multicol), both within columns and where there are more columns than will fit the container.

@@ -12,40 +12,45 @@ tags:
   - Web
 browser-compat: css.selectors.focus-within
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>:focus-within</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> matches an element if the element or any of its descendants are focused. In other words, it represents an element that is itself matched by the {{CSSxRef(":focus")}} pseudo-class or has a descendant that is matched by <code>:focus</code>. (This includes descendants in <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">shadow trees</a>.)</p>
+The **`:focus-within`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches an element if the element or any of its descendants are focused. In other words, it represents an element that is itself matched by the {{CSSxRef(":focus")}} pseudo-class or has a descendant that is matched by `:focus`. (This includes descendants in [shadow trees](/en-US/docs/Web/Web_Components/Using_shadow_DOM).)
 
-<pre class="brush: css no-line-numbers">/* Selects a &lt;div&gt; when one of its descendants is focused */
+```css
+/* Selects a <div> when one of its descendants is focused */
 div:focus-within {
   background: cyan;
-}</pre>
+}
+```
 
-<p>This selector is useful, to take a common example, for highlighting an entire {{HTMLElement("form")}} container when the user focuses on one of its {{HTMLElement("input")}} fields.</p>
+This selector is useful, to take a common example, for highlighting an entire {{HTMLElement("form")}} container when the user focuses on one of its {{HTMLElement("input")}} fields.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{CSSSyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example, the form will receive special coloring styles when either text input receives focus.</p>
+In this example, the form will receive special coloring styles when either text input receives focus.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Try typing into this form.&lt;/p&gt;
+```html
+<p>Try typing into this form.</p>
 
-&lt;form&gt;
-  &lt;label for="given_name"&gt;Given Name:&lt;/label&gt;
-  &lt;input id="given_name" type="text"&gt;
-  &lt;br&gt;
-  &lt;label for="family_name"&gt;Family Name:&lt;/label&gt;
-  &lt;input id="family_name" type="text"&gt;
-&lt;/form&gt;</pre>
+<form>
+  <label for="given_name">Given Name:</label>
+  <input id="given_name" type="text">
+  <br>
+  <label for="family_name">Family Name:</label>
+  <input id="family_name" type="text">
+</form>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css highlight[7]">form {
+```css
+form {
   border: 1px solid;
   color: gray;
   padding: 4px;
@@ -59,24 +64,22 @@ form:focus-within {
 input {
   margin: 4px;
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples", 500, 150)}}</p>
+{{EmbedLiveSample("Examples", 500, 150)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{CSSxRef(":focus")}}</li>
-	<li>{{CSSxRef(":focus-visible")}} {{Experimental_Inline}}</li>
-	<li><a href="https://dev.to/vtrpldn/grab-your-user-s-attention-with-the-focus-within-css-selector-4d4">Grab your user's attention with the focus-within selector</a></li>
-</ul>
+- {{CSSxRef(":focus")}}
+- {{CSSxRef(":focus-visible")}} {{Experimental_Inline}}
+- [Grab your user's attention with the focus-within selector](https://dev.to/vtrpldn/grab-your-user-s-attention-with-the-focus-within-css-selector-4d4)

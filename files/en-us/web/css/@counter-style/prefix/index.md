@@ -10,50 +10,52 @@ tags:
   - Reference
 browser-compat: css.at-rules.counter-style.prefix
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <code><strong>prefix</strong></code> descriptor of the {{cssxref('@counter-style')}} rule specifies content that will be prepended to the marker representation. If not specified, the default value will be <code>""</code> (an empty string).</p>
+The **`prefix`** descriptor of the {{cssxref('@counter-style')}} rule specifies content that will be prepended to the marker representation. If not specified, the default value will be `""` (an empty string).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">/* &lt;symbol&gt; values */
+```css
+/* <symbol> values */
 prefix: "»";
 prefix: "Page ";
 prefix: url(bullet.png);
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;symbol&gt;</code></dt>
- <dd>Specifies a <code>&lt;symbol&gt;</code> that is prepended to the marker representation. It may be a {{cssxref("&lt;string&gt;")}}, {{cssxref("&lt;image&gt;")}}, or {{cssxref("&lt;custom-ident&gt;")}}.</dd>
-</dl>
+- `<symbol>`
+  - : Specifies a `<symbol>` that is prepended to the marker representation. It may be a {{cssxref("&lt;string&gt;")}}, {{cssxref("&lt;image&gt;")}}, or {{cssxref("&lt;custom-ident&gt;")}}.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
- <h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Adding_a_prefix_to_a_counter">Adding a prefix to a counter</h3>
+### Adding a prefix to a counter
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;ul class="index"&gt;
-  &lt;li&gt;The Boy Who Lived&lt;/li&gt;
-  &lt;li&gt;The Vanishing Glass&lt;/li&gt;
-  &lt;li&gt;The Letters from No One&lt;/li&gt;
-  &lt;li&gt;The Keeper of the Keys&lt;/li&gt;
-  &lt;li&gt;Diagon Alley&lt;/li&gt;
-&lt;/ul&gt;</pre>
+```html
+<ul class="index">
+  <li>The Boy Who Lived</li>
+  <li>The Vanishing Glass</li>
+  <li>The Letters from No One</li>
+  <li>The Keeper of the Keys</li>
+  <li>Diagon Alley</li>
+</ul>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">@counter-style chapters {
+```css
+@counter-style chapters {
   system: numeric;
   symbols: "0" "1" "2" "3" "4" "5" "6" "7" "8" "9";
   prefix: 'Chapter ';
@@ -62,23 +64,22 @@ prefix: url(bullet.png);
 .index {
   list-style: chapters;
   padding-left: 15ch;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Adding_a_prefix_to_a_counter') }}</p>
+{{ EmbedLiveSample('Adding_a_prefix_to_a_counter') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}</li>
- <li>{{cssxref("symbols()", "symbols()")}}, the functional notation creating anonymous counter styles</li>
-</ul>
+- {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
+- {{cssxref("symbols()", "symbols()")}}, the functional notation creating anonymous counter styles

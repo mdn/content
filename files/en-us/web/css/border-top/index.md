@@ -6,42 +6,43 @@ tags:
   - CSS Borders
   - CSS Property
   - Reference
-  - 'recipe:css-shorthand-property'
+  - recipe:css-shorthand-property
 browser-compat: css.properties.border-top
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>border-top</code></strong> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand</a> <a href="/en-US/docs/Web/CSS">CSS</a> property sets all the properties of an element's top <a href="/en-US/docs/Web/CSS/border">border</a>.</p>
+The **`border-top`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets all the properties of an element's top [border](/en-US/docs/Web/CSS/border).
 
-<div>{{EmbedInteractiveExample("pages/css/border-top.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-top.html")}}
 
-<p>As with all shorthand properties, <code>border-top</code> always sets the values of all of the properties that it can set, even if they are not specified. It sets those that are not specified to their default values. This means that ...</p>
+As with all shorthand properties, `border-top` always sets the values of all of the properties that it can set, even if they are not specified. It sets those that are not specified to their default values. This means that ...
 
-<pre class="brush: css">border-top-style: dotted;
+```css
+border-top-style: dotted;
 border-top: thick green;
-</pre>
+```
 
-<p>... is actually the same as ...</p>
+... is actually the same as ...
 
-<pre class="brush: css">border-top-style: dotted;
+```css
+border-top-style: dotted;
 border-top: none thick green;
-</pre>
+```
 
-<p>... and the value of {{cssxref("border-top-style")}} given before <code>border-top</code> is ignored. Since the default value of {{cssxref("border-top-style")}} is <code>none</code>, not specifying the <code>border-style</code> part results in no border.</p>
+... and the value of {{cssxref("border-top-style")}} given before `border-top` is ignored. Since the default value of {{cssxref("border-top-style")}} is `none`, not specifying the `border-style` part results in no border.
 
-<h2 id="Constituent_properties">Constituent properties</h2>
+## Constituent properties
 
-<p>This property is a shorthand for the following CSS properties:</p>
+This property is a shorthand for the following CSS properties:
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/border-top-color"><code>border-top-color</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/border-top-style"><code>border-top-style</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/border-top-width"><code>border-top-width</code></a></li>
-</ul>
+- [`border-top-color`](/en-US/docs/Web/CSS/border-top-color)
+- [`border-top-style`](/en-US/docs/Web/CSS/border-top-style)
+- [`border-top-width`](/en-US/docs/Web/CSS/border-top-width)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">border-top: 1px;
+```css
+border-top: 1px;
 border-top: 2px dotted;
 border-top: medium dashed green;
 
@@ -50,42 +51,43 @@ border-top: inherit;
 border-top: initial;
 border-top: revert;
 border-top: unset;
-</pre>
+```
 
-<p>The three values of the shorthand property can be specified in any order, and one or two of them may be omitted.</p>
+The three values of the shorthand property can be specified in any order, and one or two of them may be omitted.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;br-width&gt;</code></dt>
- <dd>See {{cssxref("border-top-width")}}.</dd>
- <dt><code>&lt;br-style&gt;</code></dt>
- <dd>See {{cssxref("border-top-style")}}.</dd>
- <dt>{{cssxref("&lt;color&gt;")}}</dt>
- <dd>See {{cssxref("border-top-color")}}.</dd>
-</dl>
+- `<br-width>`
+  - : See {{cssxref("border-top-width")}}.
+- `<br-style>`
+  - : See {{cssxref("border-top-style")}}.
+- {{cssxref("&lt;color&gt;")}}
+  - : See {{cssxref("border-top-color")}}.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Applying_a_top_border">Applying a top border</h3>
+### Applying a top border
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;
+```html
+<div>
   This box has a border on the top side.
-&lt;/div&gt;</pre>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   border-top: 4px dashed blue;
   background-color: gold;
   height: 100px;
@@ -93,24 +95,22 @@ border-top: unset;
   font-weight: bold;
   text-align: center;
 }
-</pre>
+```
 
-<h4 id="Results">Results</h4>
+#### Results
 
-<p>{{EmbedLiveSample('Applying_a_top_border')}}</p>
+{{EmbedLiveSample('Applying_a_top_border')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><code><a href="/en-US/docs/Web/CSS/border">border</a></code></li>
- <li><code><a href="/en-US/docs/Web/CSS/border-block">border-block</a></code></li>
- <li><code><a href="/en-US/docs/Web/CSS/outline">outline</a></code></li>
-</ul>
+- [`border`](/en-US/docs/Web/CSS/border)
+- [`border-block`](/en-US/docs/Web/CSS/border-block)
+- [`outline`](/en-US/docs/Web/CSS/outline)

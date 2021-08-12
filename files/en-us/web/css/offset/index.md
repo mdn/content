@@ -7,32 +7,29 @@ tags:
   - CSS Property
   - Experimental
   - Reference
-  - 'recipe:css-shorthand-property'
+  - recipe:css-shorthand-property
 browser-compat: css.properties.offset
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p>The <strong><code>offset</code></strong> CSS <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a> sets all the properties required for animating an element along a defined path.</p>
+The **`offset`** CSS [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets all the properties required for animating an element along a defined path.
 
-<div class="note">
-<p><strong>Note:</strong> Early versions of the spec called this property <code>motion</code>.</p>
-</div>
+> **Note:** Early versions of the spec called this property `motion`.
 
-<h2 id="Constituent_properties">Constituent properties</h2>
+## Constituent properties
 
-<p>This property is a shorthand for the following CSS properties:</p>
+This property is a shorthand for the following CSS properties:
 
-<ul>
- <li>{{cssxref("offset-anchor")}}</li>
- <li>{{cssxref("offset-distance")}}</li>
- <li>{{cssxref("offset-path")}}</li>
- <li>{{cssxref("offset-position")}}</li>
- <li>{{cssxref("offset-rotate")}}</li>
-</ul>
+- {{cssxref("offset-anchor")}}
+- {{cssxref("offset-distance")}}
+- {{cssxref("offset-path")}}
+- {{cssxref("offset-position")}}
+- {{cssxref("offset-rotate")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">/* Offset position */
+```css
+/* Offset position */
 offset: auto;
 offset: 10px 30px;
 offset: none;
@@ -57,28 +54,31 @@ offset: url(arc.svg) 30deg / 50px 100px;
 offset: inherit;
 offset: initial;
 offset: revert;
-offset: unset;</pre>
+offset: unset;
+```
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Animating_an_element_along_a_path">Animating an element along a path</h3>
+### Animating an element along a path
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div id="offsetElement"&gt;&lt;/div&gt;
-</pre>
+```html
+<div id="offsetElement"></div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">@keyframes move {
+```css
+@keyframes move {
   from {
     offset-distance: 0%;
   }
@@ -95,26 +95,24 @@ offset: unset;</pre>
   offset: path("M 100 100 L 300 100 L 200 300 z") auto;
   animation: move 3s linear infinite;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Animating_an_element_along_a_path", 350, 350)}}</p>
+{{EmbedLiveSample("Animating_an_element_along_a_path", 350, 350)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("offset-anchor")}}</li>
- <li>{{cssxref("offset-distance")}}</li>
- <li>{{cssxref("offset-path")}}</li>
- <li>{{cssxref("offset-position")}}</li>
- <li>{{cssxref("offset-rotate")}}</li>
-</ul>
+- {{cssxref("offset-anchor")}}
+- {{cssxref("offset-distance")}}
+- {{cssxref("offset-path")}}
+- {{cssxref("offset-position")}}
+- {{cssxref("offset-rotate")}}

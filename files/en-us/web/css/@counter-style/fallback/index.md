@@ -10,76 +10,77 @@ tags:
   - Reference
 browser-compat: css.at-rules.counter-style.fallback
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>fallback</code></strong> descriptor can be used to specify a counter style to fall back to if the current counter style cannot create a marker representation for a particular counter value.</p>
+The **`fallback`** descriptor can be used to specify a counter style to fall back to if the current counter style cannot create a marker representation for a particular counter value.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">/* Keyword values */
+```css
+/* Keyword values */
 fallback: lower-alpha;
 fallback: custom-gangnam-style;
-</pre>
+```
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>If the specified fallback style is also unable to construct a representation, then its fallback style will be used. If a valid fallback style is not specified, it defaults to <code>decimal</code>.</p>
+If the specified fallback style is also unable to construct a representation, then its fallback style will be used. If a valid fallback style is not specified, it defaults to `decimal`.
 
-<p>A couple of scenarios where a fallback style will be used are:</p>
+A couple of scenarios where a fallback style will be used are:
 
-<ul>
- <li>When the {{cssxref('range')}} descriptor is specified for a counter style, the fallback style will be used to represent values that fall outside the range.</li>
- <li>When the <code>fixed</code> {{cssxref('system')}} is used and there are not enough symbols to cover all the list items, the fallback style will be used for the rest of the list items.</li>
-</ul>
+- When the {{cssxref('range')}} descriptor is specified for a counter style, the fallback style will be used to represent values that fall outside the range.
+- When the `fixed` {{cssxref('system')}} is used and there are not enough symbols to cover all the list items, the fallback style will be used for the rest of the list items.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Specifying_a_fallback_counter_style">Specifying a fallback counter style</h3>
+### Specifying a fallback counter style
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;ul class="list"&gt;
-  &lt;li&gt;One&lt;/li&gt;
-  &lt;li&gt;Two&lt;/li&gt;
-  &lt;li&gt;Three&lt;/li&gt;
-  &lt;li&gt;Four&lt;/li&gt;
-  &lt;li&gt;Five&lt;/li&gt;
-&lt;/ul&gt;</pre>
+```html
+<ul class="list">
+  <li>One</li>
+  <li>Two</li>
+  <li>Three</li>
+  <li>Four</li>
+  <li>Five</li>
+</ul>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">@counter-style fallback-example {
+```css
+@counter-style fallback-example {
   system: fixed; symbols: "\24B6" "\24B7" "\24B8";
   fallback: upper-alpha;
 }
 
 .list {
   list-style: fallback-example;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Specifying_a_fallback_counter_style') }}</p>
+{{ EmbedLiveSample('Specifying_a_fallback_counter_style') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}</li>
- <li>{{cssxref("symbols", "symbols()")}}: the functional notation creating anonymous counter styles</li>
-</ul>
+- {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
+- {{cssxref("symbols", "symbols()")}}: the functional notation creating anonymous counter styles

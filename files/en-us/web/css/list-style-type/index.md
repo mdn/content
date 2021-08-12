@@ -6,22 +6,23 @@ tags:
   - CSS Lists
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.list-style-type
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>list-style-type</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the marker (such as a disc, character, or custom counter style) of a list item element.</p>
+The **`list-style-type`** [CSS](/en-US/docs/Web/CSS) property sets the marker (such as a disc, character, or custom counter style) of a list item element.
 
-<div>{{EmbedInteractiveExample("pages/css/list-style-type.html")}}</div>
+{{EmbedInteractiveExample("pages/css/list-style-type.html")}}
 
-<p>The <a href="/en-US/docs/CSS/color_value">color</a> of the marker will be the same as the computed color of the element it applies to.</p>
+The [color](/en-US/docs/CSS/color_value) of the marker will be the same as the computed color of the element it applies to.
 
-<p>Only a few elements ({{HTMLElement("li")}} and {{HTMLElement("summary")}}) have a default value of <code>display: list-item</code>. However, the <code>list-style-type</code> property may be applied to any element whose {{cssxref("display")}} value is set to <code>list-item</code>. Moreover, because this property is inherited, it can be set on a parent element (commonly {{HTMLElement("ol")}} or {{HTMLElement("ul")}}) to make it apply to all list items.</p>
+Only a few elements ({{HTMLElement("li")}} and {{HTMLElement("summary")}}) have a default value of `display: list-item`. However, the `list-style-type` property may be applied to any element whose {{cssxref("display")}} value is set to `list-item`. Moreover, because this property is inherited, it can be set on a parent element (commonly {{HTMLElement("ol")}} or {{HTMLElement("ul")}}) to make it apply to all list items.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Partial list of types */
+```css
+/* Partial list of types */
 list-style-type: disc;
 list-style-type: circle;
 list-style-type: square;
@@ -30,7 +31,7 @@ list-style-type: georgian;
 list-style-type: trad-chinese-informal;
 list-style-type: kannada;
 
-/* &lt;string&gt; value */
+/* <string> value */
 list-style-type: '-';
 
 /* Identifier matching an @counter-style rule */
@@ -44,207 +45,200 @@ list-style-type: inherit;
 list-style-type: initial;
 list-style-type: revert;
 list-style-type: unset;
-</pre>
+```
 
-<p>The list-style-type property may be defined as any one of:</p>
+The list-style-type property may be defined as any one of:
 
-<ul>
- <li>a <code>&lt;custom-ident&gt;</code> value</li>
- <li>a <code>symbols()</code> value</li>
- <li>a <code>>&lt;string&gt;</code> value</li>
- <li>the keyword <code>none</code>.</li>
-</ul>
+- a `<custom-ident>` value
+- a `symbols()` value
+- a `><string>` value
+- the keyword `none`.
 
-<p>Note that:</p>
+Note that:
 
-<ul>
- <li>Some types require a suitable font installed to display as expected.</li>
- <li>The <code>cjk-ideographic</code> is identical to <code>trad-chinese-informal</code>; it exists for legacy reasons.</li>
-</ul>
+- Some types require a suitable font installed to display as expected.
+- The `cjk-ideographic` is identical to `trad-chinese-informal`; it exists for legacy reasons.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{cssxref("custom-ident", "&lt;custom-ident&gt;")}}</dt>
- <dd>A identifier matching the value of a {{cssxref("@counter-style")}} or one of the predefined styles:</dd>
- <dt>{{cssxref("symbols()")}}</dt>
- <dd>Defines an anonymous style of the list.</dd>
- <dt>{{cssxref("&lt;string&gt;")}}</dt>
- <dd>The specified string will be used as the item's marker.</dd>
- <dt><code>none</code></dt>
- <dd>No item marker is shown.</dd>
- <dt><code>disc</code></dt>
- <dd>A filled circle (default value).</dd>
- <dt><code>circle</code></dt>
- <dd>A hollow circle.</dd>
- <dt><code>square</code></dt>
- <dd>A filled square.</dd>
- <dt><code>decimal</code></dt>
- <dd>Decimal numbers, beginning with 1.</dd>
- <dt><code>cjk-decimal</code> {{experimental_inline}}</dt>
- <dd>Han decimal numbers.</dd>
- <dt><code>decimal-leading-zero</code></dt>
- <dd>Decimal numbers, padded by initial zeros.</dd>
- <dt><code>lower-roman</code></dt>
- <dd>Lowercase roman numerals.</dd>
- <dt><code>upper-roman</code></dt>
- <dd>Uppercase roman numerals.</dd>
- <dt><code>lower-greek</code></dt>
- <dd>Lowercase classical Greek.</dd>
- <dt><code>lower-alpha</code>, <code>lower-latin</code></dt>
- <dd>Lowercase ASCII letters.</dd>
- <dt><code>upper-alpha</code>, <code>upper-latin</code></dt>
- <dd>Uppercase ASCII letters.</dd>
- <dt><code>arabic-indic</code>, <code>-moz-arabic-indic</code></dt>
- <dd>Arabic-Indic numbers.</dd>
- <dt><code>armenian</code></dt>
- <dd>Traditional Armenian numbering.</dd>
- <dt><code>bengali</code>, <code>-moz-bengali</code></dt>
- <dd>Bengali numbering.</dd>
- <dt><code>cambodian</code>/<code>khmer</code></dt>
- <dd>Cambodian/Khmer numbering.</dd>
- <dt><code>cjk-earthly-branch</code>, <code>-moz-cjk-earthly-branch</code></dt>
- <dd>Han "Earthly Branch" ordinals.</dd>
- <dt><code>cjk-heavenly-stem</code>, <code>-moz-cjk-heavenly-stem</code></dt>
- <dd>Han "Heavenly Stem" ordinals.</dd>
- <dt><code>cjk-ideographic</code>{{experimental_inline}}</dt>
- <dd>Identical to <code>trad-chinese-informal</code>.</dd>
- <dt><code>devanagari</code>, <code>-moz-devanagari</code></dt>
- <dd>Devanagari numbering.</dd>
- <dt><code>ethiopic-numeric</code> {{experimental_inline}}</dt>
- <dd>Ethiopic numbering.</dd>
- <dt><code>georgian</code></dt>
- <dd>Traditional Georgian numbering.</dd>
- <dt><code>gujarati</code>, <code>-moz-gujarati</code></dt>
- <dd>Gujarati numbering.</dd>
- <dt><code>gurmukhi</code>, <code>-moz-gurmukhi</code></dt>
- <dd>Gurmukhi numbering.</dd>
- <dt><code>hebrew</code> {{experimental_inline}}</dt>
- <dd>Traditional Hebrew numbering</dd>
- <dt><code>hiragana</code> {{experimental_inline}}</dt>
- <dd>Dictionary-order hiragana lettering.</dd>
- <dt><code>hiragana-iroha</code> {{experimental_inline}}</dt>
- <dd>{{interwiki('wikipedia', 'Iroha', 'Iroha-order')}} hiragana lettering</dd>
- <dt><code>japanese-formal</code> {{experimental_inline}}</dt>
- <dd>Japanese formal numbering to be used in legal or financial documents. The kanjis are designed so that they can't be modified to look like another correct one.</dd>
- <dt><code>japanese-informal</code> {{experimental_inline}}</dt>
- <dd>Japanese informal numbering.</dd>
- <dt><code>kannada</code>, <code>-moz-kannada</code></dt>
- <dd>Kannada numbering.</dd>
- <dt><code>katakana</code> {{experimental_inline}}</dt>
- <dd>Dictionary-order katakana lettering</dd>
- <dt><code>katakana-iroha</code> {{experimental_inline}}</dt>
- <dd>{{interwiki('wikipedia', 'Iroha', 'Iroha-order')}} katakana lettering</dd>
- <dt><code>korean-hangul-formal</code> {{experimental_inline}}</dt>
- <dd>Korean hangul numbering.</dd>
- <dt><code>korean-hanja-formal</code> {{experimental_inline}}</dt>
- <dd>Formal Korean Han numbering.</dd>
- <dt><code>korean-hanja-informal</code> {{experimental_inline}}</dt>
- <dd>Korean hanja numbering.</dd>
- <dt><code>lao</code>, <code>-moz-lao</code></dt>
- <dd>Laotian numbering.</dd>
- <dt><code>lower-armenian</code> {{experimental_inline}}*</dt>
- <dd>Lowercase Armenian numbering.</dd>
- <dt><code>malayalam</code>, <code>-moz-malayalam</code></dt>
- <dd>Malayalam numbering.</dd>
- <dt><code>mongolian</code> {{experimental_inline}}</dt>
- <dd>Mongolian numbering.</dd>
- <dt><code>myanmar</code>, <code>-moz-myanmar</code></dt>
- <dd>Myanmar (Burmese) numbering.</dd>
- <dt><code>oriya</code>, <code>-moz-oriya</code></dt>
- <dd>Oriya numbering.</dd>
- <dt><code>persian</code> {{experimental_inline}}, <code>-moz-persian</code></dt>
- <dd>Persian numbering</dd>
- <dt><code>simp-chinese-formal</code> {{experimental_inline}}</dt>
- <dd>Simplified Chinese formal numbering.</dd>
- <dt><code>simp-chinese-informal</code> {{experimental_inline}}</dt>
- <dd>Simplified Chinese informal numbering.</dd>
- <dt><code>tamil</code> {{experimental_inline}}, <code>-moz-tamil</code></dt>
- <dd>Tamil numbering.</dd>
- <dt><code>telugu</code>, <code>-moz-telugu</code></dt>
- <dd>Telugu numbering.</dd>
- <dt><code>thai</code>, <code>-moz-thai</code></dt>
- <dd>Thai numbering.</dd>
- <dt><code>tibetan</code> {{experimental_inline}}*</dt>
- <dd>Tibetan numbering.</dd>
- <dt><code>trad-chinese-formal</code> {{experimental_inline}}</dt>
- <dd>Traditional Chinese formal numbering.</dd>
- <dt><code>trad-chinese-informal</code> {{experimental_inline}}</dt>
- <dd>Traditional Chinese informal numbering.</dd>
- <dt><code>upper-armenian</code> {{experimental_inline}}*</dt>
- <dd>Traditional uppercase Armenian numbering.</dd>
- <dt><code>disclosure-open</code> {{experimental_inline}}</dt>
- <dd>Symbol indicating that a disclosure widget such as {{HTMLElement("details")}} is opened.</dd>
- <dt><code>disclosure-closed</code> {{experimental_inline}}</dt>
- <dd>Symbol indicating that a disclosure widget, like {{HTMLElement("details")}} is closed.</dd>
-</dl>
+- {{cssxref("custom-ident", "&lt;custom-ident&gt;")}}
+  - : A identifier matching the value of a {{cssxref("@counter-style")}} or one of the predefined styles:
+- {{cssxref("symbols()")}}
+  - : Defines an anonymous style of the list.
+- {{cssxref("&lt;string&gt;")}}
+  - : The specified string will be used as the item's marker.
+- `none`
+  - : No item marker is shown.
+- `disc`
+  - : A filled circle (default value).
+- `circle`
+  - : A hollow circle.
+- `square`
+  - : A filled square.
+- `decimal`
+  - : Decimal numbers, beginning with 1.
+- `cjk-decimal` {{experimental_inline}}
+  - : Han decimal numbers.
+- `decimal-leading-zero`
+  - : Decimal numbers, padded by initial zeros.
+- `lower-roman`
+  - : Lowercase roman numerals.
+- `upper-roman`
+  - : Uppercase roman numerals.
+- `lower-greek`
+  - : Lowercase classical Greek.
+- `lower-alpha`, `lower-latin`
+  - : Lowercase ASCII letters.
+- `upper-alpha`, `upper-latin`
+  - : Uppercase ASCII letters.
+- `arabic-indic`, `-moz-arabic-indic`
+  - : Arabic-Indic numbers.
+- `armenian`
+  - : Traditional Armenian numbering.
+- `bengali`, `-moz-bengali`
+  - : Bengali numbering.
+- `cambodian`/`khmer`
+  - : Cambodian/Khmer numbering.
+- `cjk-earthly-branch`, `-moz-cjk-earthly-branch`
+  - : Han "Earthly Branch" ordinals.
+- `cjk-heavenly-stem`, `-moz-cjk-heavenly-stem`
+  - : Han "Heavenly Stem" ordinals.
+- `cjk-ideographic`{{experimental_inline}}
+  - : Identical to `trad-chinese-informal`.
+- `devanagari`, `-moz-devanagari`
+  - : Devanagari numbering.
+- `ethiopic-numeric` {{experimental_inline}}
+  - : Ethiopic numbering.
+- `georgian`
+  - : Traditional Georgian numbering.
+- `gujarati`, `-moz-gujarati`
+  - : Gujarati numbering.
+- `gurmukhi`, `-moz-gurmukhi`
+  - : Gurmukhi numbering.
+- `hebrew` {{experimental_inline}}
+  - : Traditional Hebrew numbering
+- `hiragana` {{experimental_inline}}
+  - : Dictionary-order hiragana lettering.
+- `hiragana-iroha` {{experimental_inline}}
+  - : {{interwiki('wikipedia', 'Iroha', 'Iroha-order')}} hiragana lettering
+- `japanese-formal` {{experimental_inline}}
+  - : Japanese formal numbering to be used in legal or financial documents. The kanjis are designed so that they can't be modified to look like another correct one.
+- `japanese-informal` {{experimental_inline}}
+  - : Japanese informal numbering.
+- `kannada`, `-moz-kannada`
+  - : Kannada numbering.
+- `katakana` {{experimental_inline}}
+  - : Dictionary-order katakana lettering
+- `katakana-iroha` {{experimental_inline}}
+  - : {{interwiki('wikipedia', 'Iroha', 'Iroha-order')}} katakana lettering
+- `korean-hangul-formal` {{experimental_inline}}
+  - : Korean hangul numbering.
+- `korean-hanja-formal` {{experimental_inline}}
+  - : Formal Korean Han numbering.
+- `korean-hanja-informal` {{experimental_inline}}
+  - : Korean hanja numbering.
+- `lao`, `-moz-lao`
+  - : Laotian numbering.
+- `lower-armenian` {{experimental_inline}}\*
+  - : Lowercase Armenian numbering.
+- `malayalam`, `-moz-malayalam`
+  - : Malayalam numbering.
+- `mongolian` {{experimental_inline}}
+  - : Mongolian numbering.
+- `myanmar`, `-moz-myanmar`
+  - : Myanmar (Burmese) numbering.
+- `oriya`, `-moz-oriya`
+  - : Oriya numbering.
+- `persian` {{experimental_inline}}, `-moz-persian`
+  - : Persian numbering
+- `simp-chinese-formal` {{experimental_inline}}
+  - : Simplified Chinese formal numbering.
+- `simp-chinese-informal` {{experimental_inline}}
+  - : Simplified Chinese informal numbering.
+- `tamil` {{experimental_inline}}, `-moz-tamil`
+  - : Tamil numbering.
+- `telugu`, `-moz-telugu`
+  - : Telugu numbering.
+- `thai`, `-moz-thai`
+  - : Thai numbering.
+- `tibetan` {{experimental_inline}}\*
+  - : Tibetan numbering.
+- `trad-chinese-formal` {{experimental_inline}}
+  - : Traditional Chinese formal numbering.
+- `trad-chinese-informal` {{experimental_inline}}
+  - : Traditional Chinese informal numbering.
+- `upper-armenian` {{experimental_inline}}\*
+  - : Traditional uppercase Armenian numbering.
+- `disclosure-open` {{experimental_inline}}
+  - : Symbol indicating that a disclosure widget such as {{HTMLElement("details")}} is opened.
+- `disclosure-closed` {{experimental_inline}}
+  - : Symbol indicating that a disclosure widget, like {{HTMLElement("details")}} is closed.
 
-<h3 id="Non-standard_extensions">Non-standard extensions</h3>
+### Non-standard extensions
 
-<p>A few more predefined types are provided by Mozilla (Firefox), Blink (Chrome and Opera) and WebKit (Safari) to support list types in other languages. See the compatibility table to check which browsers supports which extension.</p>
+A few more predefined types are provided by Mozilla (Firefox), Blink (Chrome and Opera) and WebKit (Safari) to support list types in other languages. See the compatibility table to check which browsers supports which extension.
 
-<ul>
- <li><code>-moz-ethiopic-halehame</code></li>
- <li><code>-moz-ethiopic-halehame-am</code></li>
- <li><code>ethiopic-halehame-ti-er</code>, <code>-moz-ethiopic-halehame-ti-er</code></li>
- <li><code>ethiopic-halehame-ti-et</code>, <code>-moz-ethiopic-halehame-ti-et</code></li>
- <li><code>hangul</code>, <code>-moz-hangul</code></li>
- <li><code>hangul-consonant</code>, <code>-moz-hangul-consonant</code></li>
- <li><code>urdu</code>, <code>-moz-urdu</code></li>
-</ul>
+- `-moz-ethiopic-halehame`
+- `-moz-ethiopic-halehame-am`
+- `ethiopic-halehame-ti-er`, `-moz-ethiopic-halehame-ti-er`
+- `ethiopic-halehame-ti-et`, `-moz-ethiopic-halehame-ti-et`
+- `hangul`, `-moz-hangul`
+- `hangul-consonant`, `-moz-hangul-consonant`
+- `urdu`, `-moz-urdu`
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+## Accessibility concerns
 
-<p>The <a href="https://help.apple.com/voiceover/info/guide/">VoiceOver</a> screen reader has an issue where unordered lists with a <code>list-style-type</code> value of <code>none</code> applied to them will not be announced as a list. To address this, add a <a href="https://en.wikipedia.org/wiki/Zero-width_space">zero-width space</a> as <a href="/en-US/docs/Web/CSS/content">pseudo content</a> before each list item to ensure the list is announced properly. This ensures the design is unaffected by the bug fix and that list items are not improperly described.</p>
+The [VoiceOver](https://help.apple.com/voiceover/info/guide/) screen reader has an issue where unordered lists with a `list-style-type` value of `none` applied to them will not be announced as a list. To address this, add a [zero-width space](https://en.wikipedia.org/wiki/Zero-width_space) as [pseudo content](/en-US/docs/Web/CSS/content) before each list item to ensure the list is announced properly. This ensures the design is unaffected by the bug fix and that list items are not improperly described.
 
-<pre class="brush: css">ul {
+```css
+ul {
   list-style: none;
 }
 
 ul li::before {
   content: "\200B";
 }
+```
 
-</pre>
+- [VoiceOver and list-style-type: none – Unfettered Thoughts](https://unfetteredthoughts.net/2017/09/26/voiceover-and-list-style-type-none/)
+- [MDN Understanding WCAG, Guideline 1.3 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)
+- [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
 
-<ul>
- <li><a href="https://unfetteredthoughts.net/2017/09/26/voiceover-and-list-style-type-none/">VoiceOver and list-style-type: none – Unfettered Thoughts</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways">MDN Understanding WCAG, Guideline 1.3 explanations</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html" rel="noopener">Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0</a></li>
-</ul>
+## Formal definition
 
-<h2 id="Formal_definition">Formal definition</h2>
+{{cssinfo}}
 
-<p>{{cssinfo}}</p>
-
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3>Setting list item markers</h3>
+### Setting list item markers
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">List 1
-&lt;ol class="normal"&gt;
-  &lt;li&gt;Hello&lt;/li&gt;
-  &lt;li&gt;World&lt;/li&gt;
-  &lt;li&gt;What's up?&lt;/li&gt;
-&lt;/ol&gt;
+```html
+List 1
+<ol class="normal">
+  <li>Hello</li>
+  <li>World</li>
+  <li>What's up?</li>
+</ol>
 
 List 2
-&lt;ol class="shortcut"&gt;
-  &lt;li&gt;Looks&lt;/li&gt;
-  &lt;li&gt;Like&lt;/li&gt;
-  &lt;li&gt;The&lt;/li&gt;
-  &lt;li&gt;Same&lt;/li&gt;
-&lt;/ol&gt;</pre>
+<ol class="shortcut">
+  <li>Looks</li>
+  <li>Like</li>
+  <li>The</li>
+  <li>Same</li>
+</ol>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">ol.normal {
+```css
+ol.normal {
   list-style-type: upper-alpha;
 }
 
@@ -252,295 +246,295 @@ List 2
 ol.shortcut {
   list-style: upper-alpha;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Setting_list_item_markers","200","300")}}</p>
+{{EmbedLiveSample("Setting_list_item_markers","200","300")}}
 
-<h3>All list style types</h3>
+### All list style types
 
-<h4>HTML</h4>
+#### HTML
 
-<pre class="brush: html">
-&lt;ol&gt;
-  &lt;li&gt;Apollo&lt;/li&gt;
-  &lt;li&gt;Hubble&lt;/li&gt;
-  &lt;li&gt;Chandra&lt;/li&gt;
-  &lt;li&gt;Cassini-Huygens&lt;/li&gt;
-  &lt;li&gt;Spitzer&lt;/li&gt;
-&lt;/ol&gt;
+```html
+<ol>
+  <li>Apollo</li>
+  <li>Hubble</li>
+  <li>Chandra</li>
+  <li>Cassini-Huygens</li>
+  <li>Spitzer</li>
+</ol>
 
-&lt;h2&gt;Choose a list style type:&lt;/h2&gt;
+<h2>Choose a list style type:</h2>
 
-&lt;div class="container"&gt;
+<div class="container">
 
-  &lt;label for="disc"&gt;
-    &lt;input type="radio" id="disc" name="type" value="disc"&gt;disc
-  &lt;/label&gt;
+  <label for="disc">
+    <input type="radio" id="disc" name="type" value="disc">disc
+  </label>
 
-  &lt;label for="circle"&gt;
-    &lt;input type="radio" id="circle" name="type" value="circle"&gt;circle
-  &lt;/label&gt;
+  <label for="circle">
+    <input type="radio" id="circle" name="type" value="circle">circle
+  </label>
 
-  &lt;label for="square"&gt;
-    &lt;input type="radio" id="square" name="type" value="square"&gt;square
-  &lt;/label&gt;
+  <label for="square">
+    <input type="radio" id="square" name="type" value="square">square
+  </label>
 
-  &lt;label for="decimal"&gt;
-    &lt;input type="radio" id="decimal" name="type" value="decimal"&gt;decimal
-  &lt;/label&gt;
+  <label for="decimal">
+    <input type="radio" id="decimal" name="type" value="decimal">decimal
+  </label>
 
-  &lt;label for="cjk-decimal"&gt;
-    &lt;input type="radio" id="cjk-decimal" name="type" value="cjk-decimal"&gt;cjk-decimal
-  &lt;/label&gt;
+  <label for="cjk-decimal">
+    <input type="radio" id="cjk-decimal" name="type" value="cjk-decimal">cjk-decimal
+  </label>
 
-  &lt;label for="decimal-leading-zero"&gt;
-    &lt;input type="radio" id="decimal-leading-zero" name="type" value="decimal-leading-zero"&gt;decimal-leading-zero
-  &lt;/label&gt;
+  <label for="decimal-leading-zero">
+    <input type="radio" id="decimal-leading-zero" name="type" value="decimal-leading-zero">decimal-leading-zero
+  </label>
 
-  &lt;label for="lower-roman"&gt;
-    &lt;input type="radio" id="lower-roman" name="type" value="lower-roman"&gt;lower-roman
-  &lt;/label&gt;
+  <label for="lower-roman">
+    <input type="radio" id="lower-roman" name="type" value="lower-roman">lower-roman
+  </label>
 
-  &lt;label for="upper-roman"&gt;
-    &lt;input type="radio" id="upper-roman" name="type" value="upper-roman"&gt;upper-roman
-  &lt;/label&gt;
+  <label for="upper-roman">
+    <input type="radio" id="upper-roman" name="type" value="upper-roman">upper-roman
+  </label>
 
-  &lt;label for="lower-greek"&gt;
-    &lt;input type="radio" id="lower-greek" name="type" value="lower-greek"&gt;lower-greek
-  &lt;/label&gt;
+  <label for="lower-greek">
+    <input type="radio" id="lower-greek" name="type" value="lower-greek">lower-greek
+  </label>
 
-  &lt;label for="lower-alpha"&gt;
-    &lt;input type="radio" id="lower-alpha" name="type" value="lower-alpha"&gt;lower-alpha, lower-latin
-  &lt;/label&gt;
+  <label for="lower-alpha">
+    <input type="radio" id="lower-alpha" name="type" value="lower-alpha">lower-alpha, lower-latin
+  </label>
 
-  &lt;label for="upper-alpha"&gt;
-    &lt;input type="radio" id="upper-alpha" name="type" value="upper-alpha"&gt;upper-alpha, upper-latin
-  &lt;/label&gt;
+  <label for="upper-alpha">
+    <input type="radio" id="upper-alpha" name="type" value="upper-alpha">upper-alpha, upper-latin
+  </label>
 
-  &lt;label for="arabic-indic"&gt;
-    &lt;input type="radio" id="arabic-indic" name="type" value="arabic-indic"&gt;arabic-indic
-  &lt;/label&gt;
+  <label for="arabic-indic">
+    <input type="radio" id="arabic-indic" name="type" value="arabic-indic">arabic-indic
+  </label>
 
-  &lt;label for="armenian"&gt;
-    &lt;input type="radio" id="armenian" name="type" value="armenian"&gt;armenian
-  &lt;/label&gt;
+  <label for="armenian">
+    <input type="radio" id="armenian" name="type" value="armenian">armenian
+  </label>
 
-  &lt;label for="bengali"&gt;
-    &lt;input type="radio" id="bengali" name="type" value="bengali"&gt;bengali
-  &lt;/label&gt;
+  <label for="bengali">
+    <input type="radio" id="bengali" name="type" value="bengali">bengali
+  </label>
 
-  &lt;label for="cambodian"&gt;
-    &lt;input type="radio" id="cambodian" name="type" value="cambodian"&gt;cambodian
-  &lt;/label&gt;
+  <label for="cambodian">
+    <input type="radio" id="cambodian" name="type" value="cambodian">cambodian
+  </label>
 
-  &lt;label for="cjk-earthly-branch"&gt;
-    &lt;input type="radio" id="cjk-earthly-branch" name="type" value="cjk-earthly-branch"&gt;cjk-earthly-branch
-  &lt;/label&gt;
+  <label for="cjk-earthly-branch">
+    <input type="radio" id="cjk-earthly-branch" name="type" value="cjk-earthly-branch">cjk-earthly-branch
+  </label>
 
-  &lt;label for="cjk-heavenly-stem"&gt;
-    &lt;input type="radio" id="cjk-heavenly-stem" name="type" value="cjk-heavenly-stem"&gt;cjk-heavenly-stem
-  &lt;/label&gt;
+  <label for="cjk-heavenly-stem">
+    <input type="radio" id="cjk-heavenly-stem" name="type" value="cjk-heavenly-stem">cjk-heavenly-stem
+  </label>
 
-  &lt;label for="cjk-ideographic"&gt;
-    &lt;input type="radio" id="cjk-ideographic" name="type" value="cjk-ideographic"&gt;cjk-ideographic
-  &lt;/label&gt;
+  <label for="cjk-ideographic">
+    <input type="radio" id="cjk-ideographic" name="type" value="cjk-ideographic">cjk-ideographic
+  </label>
 
-  &lt;label for="devanagari"&gt;
-    &lt;input type="radio" id="devanagari" name="type" value="devanagari"&gt;devanagari
-  &lt;/label&gt;
+  <label for="devanagari">
+    <input type="radio" id="devanagari" name="type" value="devanagari">devanagari
+  </label>
 
-  &lt;label for="ethiopic-numeric"&gt;
-    &lt;input type="radio" id="ethiopic-numeric" name="type" value="ethiopic-numeric"&gt;ethiopic-numeric
-  &lt;/label&gt;
-
-  &lt;label for="georgian"&gt;
-    &lt;input type="radio" id="georgian" name="type" value="georgian"&gt;georgian
-  &lt;/label&gt;
-
-  &lt;label for="gujarati"&gt;
-    &lt;input type="radio" id="gujarati" name="type" value="gujarati"&gt;gujarati
-  &lt;/label&gt;
-
-  &lt;label for="gurmukhi"&gt;
-    &lt;input type="radio" id="gurmukhi" name="type" value="gurmukhi"&gt;gurmukhi
-  &lt;/label&gt;
-
-  &lt;label for="hebrew"&gt;
-    &lt;input type="radio" id="hebrew" name="type" value="hebrew"&gt;hebrew
-  &lt;/label&gt;
-
-  &lt;label for="hiragana"&gt;
-    &lt;input type="radio" id="hiragana" name="type" value="hiragana"&gt;hiragana
-  &lt;/label&gt;
-
-  &lt;label for="hiragana-iroha"&gt;
-    &lt;input type="radio" id="hiragana-iroha" name="type" value="hiragana-iroha"&gt;hiragana-iroha
-  &lt;/label&gt;
-
-  &lt;label for="japanese-formal"&gt;
-    &lt;input type="radio" id="japanese-formal" name="type" value="japanese-formal"&gt;japanese-formal
-  &lt;/label&gt;
-
-  &lt;label for="japanese-informal"&gt;
-    &lt;input type="radio" id="japanese-informal" name="type" value="japanese-informal"&gt;japanese-informal
-  &lt;/label&gt;
-
-  &lt;label for="kannada"&gt;
-    &lt;input type="radio" id="kannada" name="type" value="kannada"&gt;kannada
-  &lt;/label&gt;
-
-  &lt;label for="katakana"&gt;
-    &lt;input type="radio" id="katakana" name="type" value="katakana"&gt;katakana
-  &lt;/label&gt;
-
-  &lt;label for="katakana-iroha"&gt;
-    &lt;input type="radio" id="katakana-iroha" name="type" value="katakana-iroha"&gt;katakana-iroha
-  &lt;/label&gt;
-
-  &lt;label for="khmer"&gt;
-    &lt;input type="radio" id="khmer" name="type" value="khmer"&gt;khmer
-  &lt;/label&gt;
-
-  &lt;label for="korean-hangul-formal"&gt;
-    &lt;input type="radio" id="korean-hangul-formal" name="type" value="korean-hangul-formal"&gt;korean-hangul-formal
-  &lt;/label&gt;
-
-  &lt;label for="korean-hanja-formal"&gt;
-    &lt;input type="radio" id="korean-hanja-formal" name="type" value="korean-hanja-formal"&gt;korean-hanja-formal
-  &lt;/label&gt;
-
-  &lt;label for="korean-hanja-informal"&gt;
-    &lt;input type="radio" id="korean-hanja-informal" name="type" value="korean-hanja-informal"&gt;korean-hanja-informal
-  &lt;/label&gt;
-
-  &lt;label for="lao"&gt;
-    &lt;input type="radio" id="lao" name="type" value="lao"&gt;lao
-  &lt;/label&gt;
-
-  &lt;label for="lower-armenian"&gt;
-    &lt;input type="radio" id="lower-armenian" name="type" value="lower-armenian"&gt;lower-armenian
-  &lt;/label&gt;
-
-  &lt;label for="malayalam"&gt;
-    &lt;input type="radio" id="malayalam" name="type" value="malayalam"&gt;malayalam
-  &lt;/label&gt;
-
-  &lt;label for="mongolian"&gt;
-    &lt;input type="radio" id="mongolian" name="type" value="mongolian"&gt;mongolian
-  &lt;/label&gt;
-
-  &lt;label for="myanmar"&gt;
-    &lt;input type="radio" id="myanmar" name="type" value="myanmar"&gt;myanmar
-  &lt;/label&gt;
-
-  &lt;label for="oriya"&gt;
-    &lt;input type="radio" id="oriya" name="type" value="oriya"&gt;oriya
-  &lt;/label&gt;
+  <label for="ethiopic-numeric">
+    <input type="radio" id="ethiopic-numeric" name="type" value="ethiopic-numeric">ethiopic-numeric
+  </label>
+
+  <label for="georgian">
+    <input type="radio" id="georgian" name="type" value="georgian">georgian
+  </label>
+
+  <label for="gujarati">
+    <input type="radio" id="gujarati" name="type" value="gujarati">gujarati
+  </label>
+
+  <label for="gurmukhi">
+    <input type="radio" id="gurmukhi" name="type" value="gurmukhi">gurmukhi
+  </label>
+
+  <label for="hebrew">
+    <input type="radio" id="hebrew" name="type" value="hebrew">hebrew
+  </label>
+
+  <label for="hiragana">
+    <input type="radio" id="hiragana" name="type" value="hiragana">hiragana
+  </label>
+
+  <label for="hiragana-iroha">
+    <input type="radio" id="hiragana-iroha" name="type" value="hiragana-iroha">hiragana-iroha
+  </label>
+
+  <label for="japanese-formal">
+    <input type="radio" id="japanese-formal" name="type" value="japanese-formal">japanese-formal
+  </label>
+
+  <label for="japanese-informal">
+    <input type="radio" id="japanese-informal" name="type" value="japanese-informal">japanese-informal
+  </label>
+
+  <label for="kannada">
+    <input type="radio" id="kannada" name="type" value="kannada">kannada
+  </label>
+
+  <label for="katakana">
+    <input type="radio" id="katakana" name="type" value="katakana">katakana
+  </label>
+
+  <label for="katakana-iroha">
+    <input type="radio" id="katakana-iroha" name="type" value="katakana-iroha">katakana-iroha
+  </label>
+
+  <label for="khmer">
+    <input type="radio" id="khmer" name="type" value="khmer">khmer
+  </label>
+
+  <label for="korean-hangul-formal">
+    <input type="radio" id="korean-hangul-formal" name="type" value="korean-hangul-formal">korean-hangul-formal
+  </label>
+
+  <label for="korean-hanja-formal">
+    <input type="radio" id="korean-hanja-formal" name="type" value="korean-hanja-formal">korean-hanja-formal
+  </label>
+
+  <label for="korean-hanja-informal">
+    <input type="radio" id="korean-hanja-informal" name="type" value="korean-hanja-informal">korean-hanja-informal
+  </label>
+
+  <label for="lao">
+    <input type="radio" id="lao" name="type" value="lao">lao
+  </label>
+
+  <label for="lower-armenian">
+    <input type="radio" id="lower-armenian" name="type" value="lower-armenian">lower-armenian
+  </label>
+
+  <label for="malayalam">
+    <input type="radio" id="malayalam" name="type" value="malayalam">malayalam
+  </label>
+
+  <label for="mongolian">
+    <input type="radio" id="mongolian" name="type" value="mongolian">mongolian
+  </label>
+
+  <label for="myanmar">
+    <input type="radio" id="myanmar" name="type" value="myanmar">myanmar
+  </label>
+
+  <label for="oriya">
+    <input type="radio" id="oriya" name="type" value="oriya">oriya
+  </label>
 
-  &lt;label for="persian"&gt;
-    &lt;input type="radio" id="persian" name="type" value="persian"&gt;persian
-  &lt;/label&gt;
+  <label for="persian">
+    <input type="radio" id="persian" name="type" value="persian">persian
+  </label>
 
-  &lt;label for="simp-chinese-formal"&gt;
-    &lt;input type="radio" id="simp-chinese-formal" name="type" value="simp-chinese-formal"&gt;simp-chinese-formal
-  &lt;/label&gt;
+  <label for="simp-chinese-formal">
+    <input type="radio" id="simp-chinese-formal" name="type" value="simp-chinese-formal">simp-chinese-formal
+  </label>
 
-  &lt;label for="simp-chinese-informal"&gt;
-    &lt;input type="radio" id="simp-chinese-informal" name="type" value="simp-chinese-informal"&gt;simp-chinese-informal
-  &lt;/label&gt;
+  <label for="simp-chinese-informal">
+    <input type="radio" id="simp-chinese-informal" name="type" value="simp-chinese-informal">simp-chinese-informal
+  </label>
 
-  &lt;label for="tamil"&gt;
-    &lt;input type="radio" id="tamil" name="type" value="tamil"&gt;tamil
-  &lt;/label&gt;
+  <label for="tamil">
+    <input type="radio" id="tamil" name="type" value="tamil">tamil
+  </label>
 
-  &lt;label for="telegu"&gt;
-    &lt;input type="radio" id="telegu" name="type" value="telegu"&gt;telegu
-  &lt;/label&gt;
+  <label for="telegu">
+    <input type="radio" id="telegu" name="type" value="telegu">telegu
+  </label>
 
-  &lt;label for="thai"&gt;
-    &lt;input type="radio" id="thai" name="type" value="thai"&gt;thai
-  &lt;/label&gt;
+  <label for="thai">
+    <input type="radio" id="thai" name="type" value="thai">thai
+  </label>
 
-  &lt;label for="tibetan"&gt;
-    &lt;input type="radio" id="tibetan" name="type" value="tibetan"&gt;tibetan
-  &lt;/label&gt;
+  <label for="tibetan">
+    <input type="radio" id="tibetan" name="type" value="tibetan">tibetan
+  </label>
 
-  &lt;label for="trad-chinese-formal"&gt;
-    &lt;input type="radio" id="trad-chinese-formal" name="type" value="trad-chinese-formal"&gt;trad-chinese-formal
-  &lt;/label&gt;
+  <label for="trad-chinese-formal">
+    <input type="radio" id="trad-chinese-formal" name="type" value="trad-chinese-formal">trad-chinese-formal
+  </label>
 
-  &lt;label for="trad-chinese-informal"&gt;
-    &lt;input type="radio" id="trad-chinese-informal" name="type" value="trad-chinese-informal"&gt;trad-chinese-informal
-  &lt;/label&gt;
+  <label for="trad-chinese-informal">
+    <input type="radio" id="trad-chinese-informal" name="type" value="trad-chinese-informal">trad-chinese-informal
+  </label>
 
-  &lt;label for="upper-armenian"&gt;
-    &lt;input type="radio" id="upper-armenian" name="type" value="upper-armenian"&gt;upper-armenian
-  &lt;/label&gt;
+  <label for="upper-armenian">
+    <input type="radio" id="upper-armenian" name="type" value="upper-armenian">upper-armenian
+  </label>
 
-  &lt;label for="disclosure-open"&gt;
-    &lt;input type="radio" id="disclosure-open" name="type" value="disclosure-open"&gt;disclosure-open
-  &lt;/label&gt;
+  <label for="disclosure-open">
+    <input type="radio" id="disclosure-open" name="type" value="disclosure-open">disclosure-open
+  </label>
 
-  &lt;label for="disclosure-closed"&gt;
-    &lt;input type="radio" id="disclosure-closed" name="type" value="disclosure-closed"&gt;disclosure-closed
-  &lt;/label&gt;
+  <label for="disclosure-closed">
+    <input type="radio" id="disclosure-closed" name="type" value="disclosure-closed">disclosure-closed
+  </label>
 
-  &lt;label for="-moz-ethiopic-halehame"&gt;
-    &lt;input type="radio" id="-moz-ethiopic-halehame" name="type" value="-moz-ethiopic-halehame"&gt;-moz-ethiopic-halehame
-  &lt;/label&gt;
+  <label for="-moz-ethiopic-halehame">
+    <input type="radio" id="-moz-ethiopic-halehame" name="type" value="-moz-ethiopic-halehame">-moz-ethiopic-halehame
+  </label>
 
-  &lt;label for="-moz-ethiopic-halehame-am"&gt;
-    &lt;input type="radio" id="-moz-ethiopic-halehame-am" name="type" value="-moz-ethiopic-halehame-am"&gt;-moz-ethiopic-halehame-am
-  &lt;/label&gt;
+  <label for="-moz-ethiopic-halehame-am">
+    <input type="radio" id="-moz-ethiopic-halehame-am" name="type" value="-moz-ethiopic-halehame-am">-moz-ethiopic-halehame-am
+  </label>
 
-  &lt;label for="ethiopic-halehame-ti-er"&gt;
-    &lt;input type="radio" id="ethiopic-halehame-ti-er" name="type" value="ethiopic-halehame-ti-er"&gt;ethiopic-halehame-ti-er
-  &lt;/label&gt;
+  <label for="ethiopic-halehame-ti-er">
+    <input type="radio" id="ethiopic-halehame-ti-er" name="type" value="ethiopic-halehame-ti-er">ethiopic-halehame-ti-er
+  </label>
 
-  &lt;label for="ethiopic-halehame-ti-et"&gt;
-    &lt;input type="radio" id="ethiopic-halehame-ti-et" name="type" value="ethiopic-halehame-ti-et"&gt;ethiopic-halehame-ti-et
-  &lt;/label&gt;
+  <label for="ethiopic-halehame-ti-et">
+    <input type="radio" id="ethiopic-halehame-ti-et" name="type" value="ethiopic-halehame-ti-et">ethiopic-halehame-ti-et
+  </label>
 
-  &lt;label for="hangul"&gt;
-    &lt;input type="radio" id="hangul" name="type" value="hangul"&gt;hangul
-  &lt;/label&gt;
+  <label for="hangul">
+    <input type="radio" id="hangul" name="type" value="hangul">hangul
+  </label>
 
-  &lt;label for="hangul-consonant"&gt;
-    &lt;input type="radio" id="hangul-consonant" name="type" value="hangul-consonant"&gt;hangul-consonant
-  &lt;/label&gt;
+  <label for="hangul-consonant">
+    <input type="radio" id="hangul-consonant" name="type" value="hangul-consonant">hangul-consonant
+  </label>
 
-  &lt;label for="urdu"&gt;
-    &lt;input type="radio" id="urdu" name="type" value="urdu"&gt;urdu
-  &lt;/label&gt;
+  <label for="urdu">
+    <input type="radio" id="urdu" name="type" value="urdu">urdu
+  </label>
 
-  &lt;label for="-moz-ethiopic-halehame-ti-er"&gt;
-    &lt;input type="radio" id="-moz-ethiopic-halehame-ti-er" name="type" value="-moz-ethiopic-halehame-ti-er"&gt;-moz-ethiopic-halehame-ti-er
-  &lt;/label&gt;
+  <label for="-moz-ethiopic-halehame-ti-er">
+    <input type="radio" id="-moz-ethiopic-halehame-ti-er" name="type" value="-moz-ethiopic-halehame-ti-er">-moz-ethiopic-halehame-ti-er
+  </label>
 
-  &lt;label for="-moz-ethiopic-halehame-ti-et"&gt;
-    &lt;input type="radio" id="-moz-ethiopic-halehame-ti-et" name="type" value="-moz-ethiopic-halehame-ti-et"&gt;-moz-ethiopic-halehame-ti-et
-  &lt;/label&gt;
+  <label for="-moz-ethiopic-halehame-ti-et">
+    <input type="radio" id="-moz-ethiopic-halehame-ti-et" name="type" value="-moz-ethiopic-halehame-ti-et">-moz-ethiopic-halehame-ti-et
+  </label>
 
-  &lt;label for="-moz-hangul"&gt;
-    &lt;input type="radio" id="-moz-hangul" name="type" value="-moz-hangul"&gt;-moz-hangul
-  &lt;/label&gt;
+  <label for="-moz-hangul">
+    <input type="radio" id="-moz-hangul" name="type" value="-moz-hangul">-moz-hangul
+  </label>
 
-  &lt;label for="-moz-hangul-consonant"&gt;
-    &lt;input type="radio" id="-moz-hangul-consonant" name="type" value="-moz-hangul-consonant"&gt;-moz-hangul-consonant
-  &lt;/label&gt;
+  <label for="-moz-hangul-consonant">
+    <input type="radio" id="-moz-hangul-consonant" name="type" value="-moz-hangul-consonant">-moz-hangul-consonant
+  </label>
 
-  &lt;label for="-moz-urdu"&gt;
-    &lt;input type="radio" id="-moz-urdu" name="type" value="-moz-urdu"&gt;-moz-urdu
-  &lt;/label&gt;
+  <label for="-moz-urdu">
+    <input type="radio" id="-moz-urdu" name="type" value="-moz-urdu">-moz-urdu
+  </label>
 
-&lt;/div&gt;
-</pre>
+</div>
+```
 
-<h4>CSS</h4>
+#### CSS
 
-<pre class="brush: css">
+```css
 
 ol {
   font-size: 1.2rem;
@@ -557,33 +551,30 @@ label {
 input {
   margin: .4rem;
 }
-</pre>
+```
 
-<h4>JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">
+```js
 const container = document.querySelector(".container");
 container.addEventListener("change", event => {
   const list = document.querySelector("ol");
   list.setAttribute("style", `list-style-type: ${event.target.value}`);
 });
+```
 
-</pre>
-
-<h4>Result</h4>
+#### Result
 
 {{EmbedLiveSample("All_list_style_types", "600", "800")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}</li>
-</ul>
+- {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}

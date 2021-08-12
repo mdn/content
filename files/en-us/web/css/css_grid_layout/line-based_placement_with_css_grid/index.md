@@ -6,21 +6,22 @@ tags:
   - CSS Grids
   - Guide
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>In the <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">article covering the basic concepts of grid layout</a>, we started to look at how to position items on a grid using line numbers. In this article we will fully explore how this fundamental feature of the specification works.</p>
+In the [article covering the basic concepts of grid layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout), we started to look at how to position items on a grid using line numbers. In this article we will fully explore how this fundamental feature of the specification works.
 
-<p>Starting your exploration of grid with numbered lines is the most logical place to begin, as when you use grid layout you always have numbered lines. The lines are numbered for columns and rows, and are indexed from 1. Note that grid is indexed according to the writing mode of the document. In a left to right language such as English line 1 is on the left-hand side of the grid. If you are working in a right-to-left language then line 1 will be the far right of the grid. We will learn more about the interaction between writing modes and grids in a later guide.</p>
+Starting your exploration of grid with numbered lines is the most logical place to begin, as when you use grid layout you always have numbered lines. The lines are numbered for columns and rows, and are indexed from 1. Note that grid is indexed according to the writing mode of the document. In a left to right language such as English line 1 is on the left-hand side of the grid. If you are working in a right-to-left language then line 1 will be the far right of the grid. We will learn more about the interaction between writing modes and grids in a later guide.
 
-<h2 id="A_basic_example">A basic example</h2>
+## A basic example
 
-<p>As a very simple example we can take a grid with 3 column tracks and 3 row tracks. This gives us 4 lines in each dimension.</p>
+As a very simple example we can take a grid with 3 column tracks and 3 row tracks. This gives us 4 lines in each dimension.
 
-<p>Inside our grid container I have four child elements. If we do not place these on to the grid in any way they will lay out according to the auto-placement rules, one item in each of the first four cells. If you use the <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">Firefox Grid Highlighter</a> you can see how the grid has defined columns and rows.</p>
+Inside our grid container I have four child elements. If we do not place these on to the grid in any way they will lay out according to the auto-placement rules, one item in each of the first four cells. If you use the [Firefox Grid Highlighter](/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts) you can see how the grid has defined columns and rows.
 
-<p><img alt="Our Grid highlighted in DevTools" src="3_hilighted_grid.png"></p>
+![Our Grid highlighted in DevTools](3_hilighted_grid.png)
 
-<pre class="brush: css hidden">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -28,49 +29,53 @@ tags:
     background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
    grid-template-rows: repeat(3, 100px);
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-   &lt;div class="box1"&gt;One&lt;/div&gt;
-   &lt;div class="box2"&gt;Two&lt;/div&gt;
-   &lt;div class="box3"&gt;Three&lt;/div&gt;
-   &lt;div class="box4"&gt;Four&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+   <div class="box1">One</div>
+   <div class="box2">Two</div>
+   <div class="box3">Three</div>
+   <div class="box4">Four</div>
+</div>
+```
 
-<p>{{ EmbedLiveSample('A_basic_example', '300', '330') }}</p>
+{{ EmbedLiveSample('A_basic_example', '300', '330') }}
 
-<h2 id="Positioning_items_by_line_number">Positioning items by line number</h2>
+## Positioning items by line number
 
-<p>We can use line-based placement to control where these items sit on the grid. I would like the first item to start on the far left of the grid and span a single column track. It should also start on the first row line, at the top of the grid and span to the fourth row line.</p>
+We can use line-based placement to control where these items sit on the grid. I would like the first item to start on the far left of the grid and span a single column track. It should also start on the first row line, at the top of the grid and span to the fourth row line.
 
-<pre class="brush: css">.box1 {
+```css
+.box1 {
    grid-column-start: 1;
    grid-column-end: 2;
    grid-row-start: 1;
    grid-row-end: 4;
 }
-</pre>
+```
 
-<p>As you position some items, other items on the grid will continue to be laid out using the auto-placement rules. We will take a proper look at how these work in a later guide but you can see as you work that grid is laying out un-placed items into empty cells of the grid.</p>
+As you position some items, other items on the grid will continue to be laid out using the auto-placement rules. We will take a proper look at how these work in a later guide but you can see as you work that grid is laying out un-placed items into empty cells of the grid.
 
-<p>Addressing each item individually we can place all four items spanning row and column tracks. Note that we can leave cells empty if we wish. One of the very nice things about Grid Layout is this ability to have white space in our designs without having to push things around using margins to prevent floats from rising up into the space we have left.</p>
+Addressing each item individually we can place all four items spanning row and column tracks. Note that we can leave cells empty if we wish. One of the very nice things about Grid Layout is this ability to have white space in our designs without having to push things around using margins to prevent floats from rising up into the space we have left.
 
-<pre class="brush: css hidden">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -81,24 +86,26 @@ tags:
     grid-template-rows: repeat(3, 100px);
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-   &lt;div class="box1"&gt;One&lt;/div&gt;
-   &lt;div class="box2"&gt;Two&lt;/div&gt;
-   &lt;div class="box3"&gt;Three&lt;/div&gt;
-   &lt;div class="box4"&gt;Four&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+   <div class="box1">One</div>
+   <div class="box2">Two</div>
+   <div class="box3">Three</div>
+   <div class="box4">Four</div>
+</div>
+```
 
-<pre class="brush: css">.box1 {
+```css
+.box1 {
    grid-column-start: 1;
    grid-column-end: 2;
    grid-row-start: 1;
@@ -122,15 +129,16 @@ tags:
    grid-row-start: 3;
    grid-row-end: 4;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Positioning_items_by_line_number', '300', '330') }}</p>
+{{ EmbedLiveSample('Positioning_items_by_line_number', '300', '330') }}
 
-<h2 id="The_grid-column_and_grid-row_shorthands">The <code>grid-column</code> and <code>grid-row</code> shorthands</h2>
+## The `grid-column` and `grid-row` shorthands
 
-<p>We have quite a lot of code here to position each item. It should come as no surprise to know there is a {{glossary("shorthand properties", "shorthand")}}. The {{cssxref("grid-column-start")}} and {{cssxref("grid-column-end")}} properties can be combined into {{cssxref("grid-column")}}, {{cssxref("grid-row-start")}} and {{cssxref("grid-row-end")}} into {{cssxref("grid-row")}}.</p>
+We have quite a lot of code here to position each item. It should come as no surprise to know there is a {{glossary("shorthand properties", "shorthand")}}. The {{cssxref("grid-column-start")}} and {{cssxref("grid-column-end")}} properties can be combined into {{cssxref("grid-column")}}, {{cssxref("grid-row-start")}} and {{cssxref("grid-row-end")}} into {{cssxref("grid-row")}}.
 
-<pre class="brush: css hidden">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -141,24 +149,26 @@ tags:
     grid-template-rows: repeat(3, 100px);
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-   &lt;div class="box1"&gt;One&lt;/div&gt;
-   &lt;div class="box2"&gt;Two&lt;/div&gt;
-   &lt;div class="box3"&gt;Three&lt;/div&gt;
-   &lt;div class="box4"&gt;Four&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+   <div class="box1">One</div>
+   <div class="box2">Two</div>
+   <div class="box3">Three</div>
+   <div class="box4">Four</div>
+</div>
+```
 
-<pre class="brush: css">.box1 {
+```css
+.box1 {
    grid-column: 1 / 2;
    grid-row: 1 / 4;
 }
@@ -174,20 +184,20 @@ tags:
    grid-column: 2 / 4;
    grid-row: 3 / 4;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('The_grid-column_and_grid-row_shorthands', '300', '330') }}</p>
-</div>
+{{ EmbedLiveSample('The_grid-column_and_grid-row_shorthands', '300', '330') }}
 
-<h2 id="Default_spans">Default spans</h2>
+## Default spans
 
-<p>In the above examples I specified every end row and column line, in order to demonstrate the properties, however in practice if an item only spans one track you can omit the <code>grid-column-end</code> or <code>grid-row-end</code> value. Grid defaults to spanning one track.</p>
+In the above examples I specified every end row and column line, in order to demonstrate the properties, however in practice if an item only spans one track you can omit the `grid-column-end` or `grid-row-end` value. Grid defaults to spanning one track.
 
-<h3 id="Default_spans_with_longhand_placement">Default spans with longhand placement</h3>
+### Default spans with longhand placement
 
-<p>This means that our initial, long-hand, example would look like this:</p>
+This means that our initial, long-hand, example would look like this:
 
-<pre class="brush: css hidden">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -198,24 +208,26 @@ tags:
     grid-template-rows: repeat(3, 100px);
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-   &lt;div class="box1"&gt;One&lt;/div&gt;
-   &lt;div class="box2"&gt;Two&lt;/div&gt;
-   &lt;div class="box3"&gt;Three&lt;/div&gt;
-   &lt;div class="box4"&gt;Four&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+   <div class="box1">One</div>
+   <div class="box2">Two</div>
+   <div class="box3">Three</div>
+   <div class="box4">Four</div>
+</div>
+```
 
-<pre class="brush: css">.box1 {
+```css
+.box1 {
    grid-column-start: 1;
    grid-row-start: 1;
    grid-row-end: 4;
@@ -234,15 +246,16 @@ tags:
    grid-column-end: 4;
    grid-row-start: 3;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Default_spans_with_longhand_placement', '300', '330') }}</p>
+{{ EmbedLiveSample('Default_spans_with_longhand_placement', '300', '330') }}
 
-<h3 id="Default_spans_with_shorthand_placement">Default spans with shorthand placement</h3>
+### Default spans with shorthand placement
 
-<p>Our shorthand would look like the following code, with no forward slash and second value for the items spanning one track only.</p>
+Our shorthand would look like the following code, with no forward slash and second value for the items spanning one track only.
 
-<pre class="brush: css hidden">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -253,24 +266,26 @@ tags:
     grid-template-rows: repeat(3, 100px);
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-   &lt;div class="box1"&gt;One&lt;/div&gt;
-   &lt;div class="box2"&gt;Two&lt;/div&gt;
-   &lt;div class="box3"&gt;Three&lt;/div&gt;
-   &lt;div class="box4"&gt;Four&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+   <div class="box1">One</div>
+   <div class="box2">Two</div>
+   <div class="box3">Three</div>
+   <div class="box4">Four</div>
+</div>
+```
 
-<pre class="brush: css">.box1 {
+```css
+.box1 {
    grid-column: 1 ;
    grid-row: 1 / 4;
 }
@@ -286,22 +301,21 @@ tags:
    grid-column: 2 / 4;
    grid-row: 3 ;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Default_spans_with_shorthand_placement', '300', '330') }}</p>
+{{ EmbedLiveSample('Default_spans_with_shorthand_placement', '300', '330') }}
 
-<h2 id="The_grid-area_property">The <code>grid-area</code> property</h2>
+## The `grid-area` property
 
-<p>We can take things a step further and define each area with a single property – {{cssxref("grid-area")}}. The order of the values for grid-area are as follows.</p>
+We can take things a step further and define each area with a single property – {{cssxref("grid-area")}}. The order of the values for grid-area are as follows.
 
-<ul>
- <li>grid-row-start</li>
- <li>grid-column-start</li>
- <li>grid-row-end</li>
- <li>grid-column-end</li>
-</ul>
+- grid-row-start
+- grid-column-start
+- grid-row-end
+- grid-column-end
 
-<pre class="brush: css hidden">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -312,24 +326,26 @@ tags:
     grid-template-rows: repeat(3, 100px);
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-   &lt;div class="box1"&gt;One&lt;/div&gt;
-   &lt;div class="box2"&gt;Two&lt;/div&gt;
-   &lt;div class="box3"&gt;Three&lt;/div&gt;
-   &lt;div class="box4"&gt;Four&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+   <div class="box1">One</div>
+   <div class="box2">Two</div>
+   <div class="box3">Three</div>
+   <div class="box4">Four</div>
+</div>
+```
 
-<pre class="brush: css">.box1 {
+```css
+.box1 {
    grid-area: 1 / 1 / 4 / 2;
 }
 .box2 {
@@ -341,30 +357,29 @@ tags:
 .box4 {
    grid-area: 3 / 2 / 4 / 4;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('The_grid-area_property', '300', '330') }}</p>
+{{ EmbedLiveSample('The_grid-area_property', '300', '330') }}
 
-<p>This order of values for <code>grid-area</code> can seem a little strange, it is the opposite of the direction in which we specify margins and padding as a shorthand for example. It may help to realize that this is due to grid using the flow-relative directions defined in the CSS Writing Modes specification. We will explore how grids work with writing modes in a later article however we have the concept of four flow-relative directions:</p>
+This order of values for `grid-area` can seem a little strange, it is the opposite of the direction in which we specify margins and padding as a shorthand for example. It may help to realize that this is due to grid using the flow-relative directions defined in the CSS Writing Modes specification. We will explore how grids work with writing modes in a later article however we have the concept of four flow-relative directions:
 
-<ul>
- <li>block-start</li>
- <li>block-end</li>
- <li>inline-start</li>
- <li>inline-end</li>
-</ul>
+- block-start
+- block-end
+- inline-start
+- inline-end
 
-<p>We are working in English, a left-to-right language. Our block-start is the top row line of the grid container, block-end the final row line of the container. Our inline-start is the left-hand column line as inline-start is always the point from which text would be written in the current writing mode, inline-end is the final column line of our grid.</p>
+We are working in English, a left-to-right language. Our block-start is the top row line of the grid container, block-end the final row line of the container. Our inline-start is the left-hand column line as inline-start is always the point from which text would be written in the current writing mode, inline-end is the final column line of our grid.
 
-<p>When we specify our grid area using the <code>grid-area</code> property we first define both start lines <code>block-start</code> and <code>inline-start</code>, then both end lines <code>block-end</code> and <code>inline-end</code>. This seems unusual at first as we are used to the physical properties of top, right, bottom and left but makes more sense if you start to think of websites as being multi-directional in writing mode.</p>
+When we specify our grid area using the `grid-area` property we first define both start lines `block-start` and `inline-start`, then both end lines `block-end` and `inline-end`. This seems unusual at first as we are used to the physical properties of top, right, bottom and left but makes more sense if you start to think of websites as being multi-directional in writing mode.
 
-<h2 id="Counting_backwards">Counting backwards</h2>
+## Counting backwards
 
-<p>We can also count backwards from the block and inline end of the grid, for English that would be the right hand column line and final row line. These lines can be addressed as <code>-1</code>, and you can count back from there – so the penultimate line is <code>-2</code>. It is worth noting that the final line is the final line of the <em>explicit grid</em>, the grid defined by <code>grid-template-columns</code> and <code>grid-template-rows</code>, and does not take into account any rows or columns added in the <em>implicit grid</em> outside of that.</p>
+We can also count backwards from the block and inline end of the grid, for English that would be the right hand column line and final row line. These lines can be addressed as `-1`, and you can count back from there – so the penultimate line is `-2`. It is worth noting that the final line is the final line of the _explicit grid_, the grid defined by `grid-template-columns` and `grid-template-rows`, and does not take into account any rows or columns added in the _implicit grid_ outside of that.
 
-<p>In this next example I have flipped the layout we were working with by working from the right and bottom of our grid when placing the items.</p>
+In this next example I have flipped the layout we were working with by working from the right and bottom of our grid when placing the items.
 
-<pre class="brush: css hidden">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -375,24 +390,26 @@ tags:
     grid-template-rows: repeat(3, 100px);
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-   &lt;div class="box1"&gt;One&lt;/div&gt;
-   &lt;div class="box2"&gt;Two&lt;/div&gt;
-   &lt;div class="box3"&gt;Three&lt;/div&gt;
-   &lt;div class="box4"&gt;Four&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+   <div class="box1">One</div>
+   <div class="box2">Two</div>
+   <div class="box3">Three</div>
+   <div class="box4">Four</div>
+</div>
+```
 
-<pre class="brush: css">.box1 {
+```css
+.box1 {
    grid-column-start: -1;
    grid-column-end: -2;
    grid-row-start: -1;
@@ -416,32 +433,32 @@ tags:
    grid-row-start: -3;
    grid-row-end: -4;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Counting_backwards', '300', '330') }}</p>
+{{ EmbedLiveSample('Counting_backwards', '300', '330') }}
 
-<h3 id="Stretching_an_item_across_the_grid">Stretching an item across the grid</h3>
+### Stretching an item across the grid
 
-<p>Being able to address the start and end lines of the grid is useful as you can then stretch an item right across the grid with:</p>
+Being able to address the start and end lines of the grid is useful as you can then stretch an item right across the grid with:
 
-<pre class="brush: css">.item {
+```css
+.item {
     grid-column: 1 / -1;
 }
-</pre>
+```
 
-<h2 id="Gutters_or_Alleys">Gutters or Alleys</h2>
+## Gutters or Alleys
 
-<p>The CSS Grid Specification includes the ability to add gutters between column and row tracks with the {{cssxref("column-gap")}} and {{cssxref("row-gap")}} properties. These specify a gap that acts much like the {{cssxref("column-gap")}} property in multi-column layout.</p>
+The CSS Grid Specification includes the ability to add gutters between column and row tracks with the {{cssxref("column-gap")}} and {{cssxref("row-gap")}} properties. These specify a gap that acts much like the {{cssxref("column-gap")}} property in multi-column layout.
 
-<div class="note">
-<p><strong>Note:</strong> When grid first shipped in browsers the {{cssxref("column-gap")}}, {{cssxref("row-gap")}} and {{cssxref("gap")}} properties were prefixed with the <code>grid-</code> prefix as <code>grid-column-gap</code>, <code>grid-row-gap</code> and <code>grid-gap</code> respectively.<br>
- <br>
- Browsers are updating their rendering engines to remove this prefix, however the prefixed versions will be maintained as aliases, making them safe to use.</p>
-</div>
+> **Note:** When grid first shipped in browsers the {{cssxref("column-gap")}}, {{cssxref("row-gap")}} and {{cssxref("gap")}} properties were prefixed with the `grid-` prefix as `grid-column-gap`, `grid-row-gap` and `grid-gap` respectively.
+>
+> Browsers are updating their rendering engines to remove this prefix, however the prefixed versions will be maintained as aliases, making them safe to use.
 
-<p>Gaps only appear between tracks of the grid, they do not add space to the top and bottom, left or right of the container. We can add gaps to our earlier example by using these properties on the grid container.</p>
+Gaps only appear between tracks of the grid, they do not add space to the top and bottom, left or right of the container. We can add gaps to our earlier example by using these properties on the grid container.
 
-<pre class="brush: css hidden">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -452,24 +469,26 @@ tags:
     grid-template-rows: repeat(3, 100px);
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-   &lt;div class="box1"&gt;One&lt;/div&gt;
-   &lt;div class="box2"&gt;Two&lt;/div&gt;
-   &lt;div class="box3"&gt;Three&lt;/div&gt;
-   &lt;div class="box4"&gt;Four&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+   <div class="box1">One</div>
+   <div class="box2">Two</div>
+   <div class="box3">Three</div>
+   <div class="box4">Four</div>
+</div>
+```
 
-<pre class="brush: css">.box1 {
+```css
+.box1 {
     grid-column: 1 ;
     grid-row: 1 / 4;
 }
@@ -492,29 +511,31 @@ tags:
     column-gap: 20px;
     row-gap: 1em;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Gutters_or_Alleys', '300', '350') }}</p>
+{{ EmbedLiveSample('Gutters_or_Alleys', '300', '350') }}
 
-<h3 id="The_gap_shorthand">The gap shorthand</h3>
+### The gap shorthand
 
-<p>The two properties can also be expressed as a shorthand, {{cssxref("gap")}}. If you only give one value for <code>gap</code> it will apply to both column and row gaps. If you specify two values, the first is used for <code>row-gap</code> and the second for <code>column-gap</code>.</p>
+The two properties can also be expressed as a shorthand, {{cssxref("gap")}}. If you only give one value for `gap` it will apply to both column and row gaps. If you specify two values, the first is used for `row-gap` and the second for `column-gap`.
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 100px);
     gap: 1em 20px;
 }
-</pre>
+```
 
-<p>In terms of line-based positioning of items, the gap acts as if the line has gained extra width. Anything starting at that line starts after the gap and you cannot address the gap or place anything into it. If you want gutters that act more like regular tracks you can of course define a track for the purpose instead.</p>
+In terms of line-based positioning of items, the gap acts as if the line has gained extra width. Anything starting at that line starts after the gap and you cannot address the gap or place anything into it. If you want gutters that act more like regular tracks you can of course define a track for the purpose instead.
 
-<h2 id="Using_the_span_keyword">Using the <code>span</code> keyword</h2>
+## Using the `span` keyword
 
-<p>In addition to specifying the start and end lines by number, you can specify a start line and then the number of tracks you would like the area to span.</p>
+In addition to specifying the start and end lines by number, you can specify a start line and then the number of tracks you would like the area to span.
 
-<pre class="brush: css hidden">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -525,24 +546,26 @@ tags:
     grid-template-rows: repeat(3, 100px);
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-   &lt;div class="box1"&gt;One&lt;/div&gt;
-   &lt;div class="box2"&gt;Two&lt;/div&gt;
-   &lt;div class="box3"&gt;Three&lt;/div&gt;
-   &lt;div class="box4"&gt;Four&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+   <div class="box1">One</div>
+   <div class="box2">Two</div>
+   <div class="box3">Three</div>
+   <div class="box4">Four</div>
+</div>
+```
 
-<pre class="brush: css">.box1 {
+```css
+.box1 {
     grid-column: 1;
     grid-row: 1 / span 3;
 }
@@ -558,28 +581,30 @@ tags:
     grid-column: 2 / span 2;
     grid-row: 3;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Using_the_span_keyword', '300', '330') }}</p>
+{{ EmbedLiveSample('Using_the_span_keyword', '300', '330') }}
 
-<p>You can also use the <code>span</code> keyword in the value of <code>grid-row-start</code>/<code>grid-row-end</code> and <code>grid-column-start/grid-column-end</code>. The following two examples will create the same grid area. In the first we set the start row line, then the end line we explain that we want to span 3 lines. The area will start at line 1 and span 3 lines to line 4.</p>
+You can also use the `span` keyword in the value of `grid-row-start`/`grid-row-end` and `grid-column-start/grid-column-end`. The following two examples will create the same grid area. In the first we set the start row line, then the end line we explain that we want to span 3 lines. The area will start at line 1 and span 3 lines to line 4.
 
-<pre class="brush: css">.box1 {
+```css
+.box1 {
     grid-column-start: 1;
     grid-row-start: 1;
     grid-row-end: span 3;
 }
-</pre>
+```
 
-<p>In the second example, we specify the end row line we want the item to finish at and then set the start line as <code>span 3</code>. This means the item will need to span upwards from the specified row line. The area will start at line 4 and span 3 lines to line 1.</p>
+In the second example, we specify the end row line we want the item to finish at and then set the start line as `span 3`. This means the item will need to span upwards from the specified row line. The area will start at line 4 and span 3 lines to line 1.
 
-<pre class="brush: css">.box1 {
+```css
+.box1 {
     grid-column-start: 1;
     grid-row-start: span 3;
     grid-row-end: 4;
 }
-</pre>
+```
 
-<p>To become familiar with line based positioning in grid try to build a few common layouts by placing items onto grids with varying numbers of columns. Remember that if you do not place all of the items, any leftover items will be placed according to auto-placement rules. This may result in the layout you want, but if something is appearing somewhere unexpected, check that you have set a position for it.</p>
+To become familiar with line based positioning in grid try to build a few common layouts by placing items onto grids with varying numbers of columns. Remember that if you do not place all of the items, any leftover items will be placed according to auto-placement rules. This may result in the layout you want, but if something is appearing somewhere unexpected, check that you have set a position for it.
 
-<p>Also, remember that items on the grid can overlap each other when you place them explicitly like this. That can create some nice effects, however you can also end up with things overlapping incorrectly if you specify the wrong start or end line. The <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">Firefox Grid Highlighter</a> can be very useful as you learn, especially if your grid is quite complicated.</p>
+Also, remember that items on the grid can overlap each other when you place them explicitly like this. That can create some nice effects, however you can also end up with things overlapping incorrectly if you specify the wrong start or end line. The [Firefox Grid Highlighter](/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts) can be very useful as you learn, especially if your grid is quite complicated.

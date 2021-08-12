@@ -3,112 +3,100 @@ title: Microsoft CSS extensions
 slug: Web/CSS/Microsoft_Extensions
 tags:
   - CSS
-  - 'CSS:Microsoft Extensions'
+  - CSS:Microsoft Extensions
   - Guide
   - Non-standard
   - Overview
   - Reference
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Microsoft applications such as Edge and Internet Explorer support a number of special <strong>Microsoft extensions to <a href="/en-US/docs/Web/CSS">CSS</a></strong>. These extensions are prefixed with <code>-ms-</code>.</p>
+Microsoft applications such as Edge and Internet Explorer support a number of special **Microsoft extensions to [CSS](/en-US/docs/Web/CSS)**. These extensions are prefixed with `-ms-`.
 
-<h2 id="Microsoft-only_properties_avoid_using_on_websites">Microsoft-only properties (avoid using on websites)</h2>
+## Microsoft-only properties (avoid using on websites)
 
-<div class="note">
-<p><strong>Note:</strong> These properties will only work in Microsoft applications, and are not on a standards track.</p>
-</div>
+> **Note:** These properties will only work in Microsoft applications, and are not on a standards track.
 
-<ul>
- <li>{{CSSxRef("-ms-accelerator")}}</li>
- <li>{{CSSxRef("-ms-block-progression")}}</li>
- <li>{{CSSxRef("-ms-content-zoom-chaining")}}</li>
- <li>{{CSSxRef("-ms-content-zooming")}}</li>
- <li>{{CSSxRef("-ms-content-zoom-limit")}}</li>
- <li>{{CSSxRef("-ms-content-zoom-limit-max")}}</li>
- <li>{{CSSxRef("-ms-content-zoom-limit-min")}}</li>
- <li>{{CSSxRef("-ms-content-zoom-snap")}}</li>
- <li>{{CSSxRef("-ms-content-zoom-snap-points")}}</li>
- <li>{{CSSxRef("-ms-content-zoom-snap-type")}}</li>
- <li>{{CSSxRef("-ms-filter")}} {{deprecated_inline}}</li>
- <li>{{CSSxRef("-ms-flow-from")}}</li>
- <li>{{CSSxRef("-ms-flow-into")}}</li>
- <li>{{CSSxRef("-ms-high-contrast-adjust")}}</li>
- <li>{{CSSxRef("-ms-hyphenate-limit-chars")}}</li>
- <li>{{CSSxRef("-ms-hyphenate-limit-lines")}}</li>
- <li>{{CSSxRef("-ms-hyphenate-limit-zone")}}</li>
- <li>{{CSSxRef("-ms-ime-align")}}</li>
- <li>{{CSSxRef("-ms-overflow-style")}}</li>
- <li>{{CSSxRef("-ms-scrollbar-3dlight-color")}} {{deprecated_inline}}</li>
- <li>{{CSSxRef("-ms-scrollbar-arrow-color")}} {{deprecated_inline}}</li>
- <li>{{CSSxRef("-ms-scrollbar-base-color")}} {{deprecated_inline}}</li>
- <li>{{CSSxRef("-ms-scrollbar-darkshadow-color")}} {{deprecated_inline}}</li>
- <li>{{CSSxRef("-ms-scrollbar-face-color")}} {{deprecated_inline}}</li>
- <li>{{CSSxRef("-ms-scrollbar-highlight-color")}} {{deprecated_inline}}</li>
- <li>{{CSSxRef("-ms-scrollbar-shadow-color")}} {{deprecated_inline}}</li>
- <li>{{CSSxRef("-ms-scrollbar-track-color")}} {{deprecated_inline}}</li>
- <li>{{CSSxRef("-ms-scroll-chaining")}}</li>
- <li>{{CSSxRef("-ms-scroll-limit")}}</li>
- <li>{{CSSxRef("-ms-scroll-limit-x-max")}}</li>
- <li>{{CSSxRef("-ms-scroll-limit-x-min")}}</li>
- <li>{{CSSxRef("-ms-scroll-limit-y-max")}}</li>
- <li>{{CSSxRef("-ms-scroll-limit-y-min")}}</li>
- <li>{{CSSxRef("-ms-scroll-rails")}}</li>
- <li>{{CSSxRef("-ms-scroll-snap-points-x")}}</li>
- <li>{{CSSxRef("-ms-scroll-snap-points-y")}}</li>
- <li>{{CSSxRef("-ms-scroll-snap-x")}}</li>
- <li>{{CSSxRef("-ms-scroll-snap-y")}}</li>
- <li>{{CSSxRef("-ms-scroll-translation")}}</li>
- <li>{{CSSxRef("-ms-text-autospace")}}</li>
- <li>{{CSSxRef("-ms-touch-select")}}</li>
- <li>{{CSSxRef("-ms-wrap-flow")}}</li>
- <li>{{CSSxRef("-ms-wrap-margin")}}</li>
- <li>{{CSSxRef("-ms-wrap-through")}}</li>
- <li>{{CSSxRef("zoom")}}</li>
-</ul>
+- {{CSSxRef("-ms-accelerator")}}
+- {{CSSxRef("-ms-block-progression")}}
+- {{CSSxRef("-ms-content-zoom-chaining")}}
+- {{CSSxRef("-ms-content-zooming")}}
+- {{CSSxRef("-ms-content-zoom-limit")}}
+- {{CSSxRef("-ms-content-zoom-limit-max")}}
+- {{CSSxRef("-ms-content-zoom-limit-min")}}
+- {{CSSxRef("-ms-content-zoom-snap")}}
+- {{CSSxRef("-ms-content-zoom-snap-points")}}
+- {{CSSxRef("-ms-content-zoom-snap-type")}}
+- {{CSSxRef("-ms-filter")}} {{deprecated_inline}}
+- {{CSSxRef("-ms-flow-from")}}
+- {{CSSxRef("-ms-flow-into")}}
+- {{CSSxRef("-ms-high-contrast-adjust")}}
+- {{CSSxRef("-ms-hyphenate-limit-chars")}}
+- {{CSSxRef("-ms-hyphenate-limit-lines")}}
+- {{CSSxRef("-ms-hyphenate-limit-zone")}}
+- {{CSSxRef("-ms-ime-align")}}
+- {{CSSxRef("-ms-overflow-style")}}
+- {{CSSxRef("-ms-scrollbar-3dlight-color")}} {{deprecated_inline}}
+- {{CSSxRef("-ms-scrollbar-arrow-color")}} {{deprecated_inline}}
+- {{CSSxRef("-ms-scrollbar-base-color")}} {{deprecated_inline}}
+- {{CSSxRef("-ms-scrollbar-darkshadow-color")}} {{deprecated_inline}}
+- {{CSSxRef("-ms-scrollbar-face-color")}} {{deprecated_inline}}
+- {{CSSxRef("-ms-scrollbar-highlight-color")}} {{deprecated_inline}}
+- {{CSSxRef("-ms-scrollbar-shadow-color")}} {{deprecated_inline}}
+- {{CSSxRef("-ms-scrollbar-track-color")}} {{deprecated_inline}}
+- {{CSSxRef("-ms-scroll-chaining")}}
+- {{CSSxRef("-ms-scroll-limit")}}
+- {{CSSxRef("-ms-scroll-limit-x-max")}}
+- {{CSSxRef("-ms-scroll-limit-x-min")}}
+- {{CSSxRef("-ms-scroll-limit-y-max")}}
+- {{CSSxRef("-ms-scroll-limit-y-min")}}
+- {{CSSxRef("-ms-scroll-rails")}}
+- {{CSSxRef("-ms-scroll-snap-points-x")}}
+- {{CSSxRef("-ms-scroll-snap-points-y")}}
+- {{CSSxRef("-ms-scroll-snap-x")}}
+- {{CSSxRef("-ms-scroll-snap-y")}}
+- {{CSSxRef("-ms-scroll-translation")}}
+- {{CSSxRef("-ms-text-autospace")}}
+- {{CSSxRef("-ms-touch-select")}}
+- {{CSSxRef("-ms-wrap-flow")}}
+- {{CSSxRef("-ms-wrap-margin")}}
+- {{CSSxRef("-ms-wrap-through")}}
+- {{CSSxRef("zoom")}}
 
-<h2 id="Pseudo-elements">Pseudo-elements</h2>
+## Pseudo-elements
 
-<ul>
- <li>{{CSSxRef("::file-selector-button","::-ms-browse")}}*</li>
- <li>{{CSSxRef("::-ms-check")}}</li>
- <li>{{CSSxRef("::-ms-clear")}}</li>
- <li>{{CSSxRef("::-ms-expand")}}</li>
- <li>{{CSSxRef("::-ms-fill")}}</li>
- <li>{{CSSxRef("::-ms-fill-lower")}}</li>
- <li>{{CSSxRef("::-ms-fill-upper")}}</li>
- <li>{{CSSxRef("::-ms-reveal")}}</li>
- <li>{{CSSxRef("::-ms-thumb")}}</li>
- <li>{{CSSxRef("::-ms-ticks-after")}}</li>
- <li>{{CSSxRef("::-ms-ticks-before")}}</li>
- <li>{{CSSxRef("::-ms-tooltip")}}</li>
- <li>{{CSSxRef("::-ms-track")}}</li>
- <li>{{CSSxRef("::-ms-value")}}</li>
-</ul>
+- {{CSSxRef("::file-selector-button","::-ms-browse")}}\*
+- {{CSSxRef("::-ms-check")}}
+- {{CSSxRef("::-ms-clear")}}
+- {{CSSxRef("::-ms-expand")}}
+- {{CSSxRef("::-ms-fill")}}
+- {{CSSxRef("::-ms-fill-lower")}}
+- {{CSSxRef("::-ms-fill-upper")}}
+- {{CSSxRef("::-ms-reveal")}}
+- {{CSSxRef("::-ms-thumb")}}
+- {{CSSxRef("::-ms-ticks-after")}}
+- {{CSSxRef("::-ms-ticks-before")}}
+- {{CSSxRef("::-ms-tooltip")}}
+- {{CSSxRef("::-ms-track")}}
+- {{CSSxRef("::-ms-value")}}
 
-<p>* Now standard.</p>
+\* Now standard.
 
-<h2 id="Media_features">Media features</h2>
+## Media features
 
-<ul>
- <li>{{CSSxRef("@media/-ms-high-contrast","-ms-high-contrast")}}</li>
-</ul>
+- {{CSSxRef("@media/-ms-high-contrast","-ms-high-contrast")}}
 
-<h2 id="CSS-related_DOM_APIs">CSS-related DOM APIs</h2>
+## CSS-related DOM APIs
 
-<ul>
- <li>{{DOMxRef("msContentZoomFactor")}}</li>
- <li>{{DOMxRef("msGetPropertyEnabled")}}</li>
- <li>{{DOMxRef("msGetRegionContent")}}</li>
- <li>{{DOMxRef("MSRangeCollection")}}</li>
- <li>{{DOMxRef("msRegionOverflow")}}</li>
-</ul>
+- {{DOMxRef("msContentZoomFactor")}}
+- {{DOMxRef("msGetPropertyEnabled")}}
+- {{DOMxRef("msGetRegionContent")}}
+- {{DOMxRef("MSRangeCollection")}}
+- {{DOMxRef("msRegionOverflow")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Mozilla_Extensions">Mozilla CSS Extensions</a></li>
- <li><a href="/en-US/docs/Web/CSS/WebKit_Extensions">WebKit CSS Extensions</a></li>
- <li><a href="/en-US/docs/Web/API/Microsoft_API_extensions">Microsoft API Extensions</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Microsoft_JavaScript_extensions">Microsoft JavaScript Extensions</a></li>
-</ul>
+- [Mozilla CSS Extensions](/en-US/docs/Web/CSS/Mozilla_Extensions)
+- [WebKit CSS Extensions](/en-US/docs/Web/CSS/WebKit_Extensions)
+- [Microsoft API Extensions](/en-US/docs/Web/API/Microsoft_API_extensions)
+- [Microsoft JavaScript Extensions](/en-US/docs/Web/JavaScript/Microsoft_JavaScript_extensions)

@@ -1,5 +1,5 @@
 ---
-title: 'initial-value'
+title: initial-value
 slug: Web/CSS/@property/initial-value
 tags:
   - CSS
@@ -9,74 +9,76 @@ tags:
   - Houdini
 browser-compat: css.at-rules.property.initial-value
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>The <strong><code>initial-value</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> descriptor is required when using the {{cssxref("@property")}} {{cssxref("at-rule")}} unless the syntax accepts any valid token stream. It sets the initial-value for the property.</p>
+The **`initial-value`** [CSS](/en-US/docs/Web/CSS) descriptor is required when using the {{cssxref("@property")}} {{cssxref("at-rule")}} unless the syntax accepts any valid token stream. It sets the initial-value for the property.
 
-<p>The value chosen as the <code>initial-value</code> must parse correctly according to the syntax definition. Therefore, if syntax is <code>&lt;color&gt;</code> then the initial-value must be a valid {{cssxref("color")}} value.</p>
+The value chosen as the `initial-value` must parse correctly according to the syntax definition. Therefore, if syntax is `<color>` then the initial-value must be a valid {{cssxref("color")}} value.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">@property --property-name {
-  syntax: '&lt;color&gt;';
+```css
+@property --property-name {
+  syntax: '<color>';
   inherits: false;
   initial-value: #c0ffee;
 }
 
 @property --property-name {
-  syntax: '&lt;color&gt;';
+  syntax: '<color>';
   inherits: true;
   initial-value: #c0ffee;
-}</pre>
+}
+```
 
-<h2 id="Values">Values</h2>
+## Values
 
-<p>A string with a value which is a correct value for the chosen <code>syntax</code>.</p>
+A string with a value which is a correct value for the chosen `syntax`.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Add type checking to <code>--my-color</code> {{cssxref('--*', 'custom property')}}, as a color, the initial-value being a valid color:</p>
+Add type checking to `--my-color` {{cssxref('--*', 'custom property')}}, as a color, the initial-value being a valid color:
 
-<p>Using <a href="/en-US/docs/Web/CSS">CSS</a> {{cssxref('@property')}} <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a>:</p>
+Using [CSS](/en-US/docs/Web/CSS) {{cssxref('@property')}} [at-rule](/en-US/docs/Web/CSS/At-rule):
 
-<pre class="brush: css">@property --my-color {
-  syntax: '&lt;color&gt;';
+```css
+@property --my-color {
+  syntax: '<color>';
   inherits: false;
   initial-value: #c0ffee;
 }
-</pre>
+```
 
-<p>Using <a href="/en-US/docs/Web/JavaScript">JavaScript</a> {{domxref('CSS.registerProperty')}}:</p>
+Using [JavaScript](/en-US/docs/Web/JavaScript) {{domxref('CSS.registerProperty')}}:
 
-<pre class="brush: js">window.CSS.registerProperty({
+```js
+window.CSS.registerProperty({
   name: '--my-color',
-  syntax: '&lt;color&gt;',
+  syntax: '<color>',
   inherits: false,
   initialValue: '#c0ffee',
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/CSS_Properties_and_Values_API">CSS Properties and Values API</a></li>
- <li><a href="/en-US/docs/Web/API/CSS_Painting_API">CSS Painting API</a></li>
- <li><a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model</a></li>
- <li><a href="/en-US/docs/Web/Houdini">CSS Houdini</a></li>
-</ul>
+- [CSS Properties and Values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API)
+- [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API)
+- [CSS Typed Object Model](/en-US/docs/Web/API/CSS_Typed_OM_API)
+- [CSS Houdini](/en-US/docs/Web/Houdini)

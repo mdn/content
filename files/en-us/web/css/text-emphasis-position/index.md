@@ -9,11 +9,12 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.text-emphasis-position
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>text-emphasis-position</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets where emphasis marks are drawn. Like ruby text, if there isn't enough room for emphasis marks, the line height is increased.</p>
+The **`text-emphasis-position`** [CSS](/en-US/docs/Web/CSS) property sets where emphasis marks are drawn. Like ruby text, if there isn't enough room for emphasis marks, the line height is increased.
 
-<pre class="brush:css no-line-numbers">/* Initial value */
+```css
+/* Initial value */
 text-emphasis-position: over right;
 
 /* Keywords value */
@@ -30,108 +31,125 @@ text-emphasis-position: inherit;
 text-emphasis-position: initial;
 text-emphasis-postition: revert;
 text-emphasis-position: unset;
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-	<dt><code><dfn>over</dfn></code></dt>
-	<dd>Draws marks over the text in horizontal writing mode.</dd>
-	<dt><code><dfn>under</dfn></code></dt>
-	<dd>Draws marks under the text in horizontal writing mode.</dd>
-	<dt><code><dfn>right</dfn></code></dt>
-	<dd>Draws marks to the right of the text in vertical writing mode.</dd>
-	<dt><code><dfn>left</dfn></code></dt>
-	<dd>Draws marks to the left of the text in vertical writing mode.</dd>
-</dl>
+- `over`
+  - : Draws marks over the text in horizontal writing mode.
+- `under`
+  - : Draws marks under the text in horizontal writing mode.
+- `right`
+  - : Draws marks to the right of the text in vertical writing mode.
+- `left`
+  - : Draws marks to the left of the text in vertical writing mode.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The preferred position of emphasis marks depends on the language. In Japanese for example, the preferred position is <code>over right</code>. In Chinese, on the other hand, the preferred position is <code>under right</code>. The informative table below summarizes the preferred emphasis mark positions for Chinese, Mongolian and Japanese:</p>
+The preferred position of emphasis marks depends on the language. In Japanese for example, the preferred position is `over right`. In Chinese, on the other hand, the preferred position is `under right`. The informative table below summarizes the preferred emphasis mark positions for Chinese, Mongolian and Japanese:
 
 <table>
-	<caption>Preferred emphasis mark and ruby position</caption>
-	<thead>
-		<tr>
-			<th rowspan="2" scope="col">Language</th>
-			<th colspan="2" scope="col">Preferred position</th>
-			<th colspan="2" rowspan="2" scope="col">Illustration</th>
-		</tr>
-		<tr>
-			<th>Horizontal</th>
-			<th>Vertical</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Japanese</td>
-			<td rowspan="3">over</td>
-			<td rowspan="3">right</td>
-			<td rowspan="3"><img alt="Emphasis marks appear over each emphasized character in horizontal Japanese text." src="text-emphasis-ja.png" title="Emphasis (shown in blue for clarity) applied above a fragment of Japanese text"></td>
-			<td rowspan="4"><img alt="Emphasis marks appear on the right of each emphasized character in vertical Japanese text." src="text-emphasis-v.gif" title="Emphasis applied on the right of a fragment of Japanese text"></td>
-		</tr>
-		<tr>
-			<td>Korean</td>
-		</tr>
-		<tr>
-			<td>Mongolian</td>
-		</tr>
-		<tr>
-			<td>Chinese</td>
-			<td>under</td>
-			<td>right</td>
-			<td><img alt="Emphasis marks appear below each emphasized character in horizontal Simplified Chinese text." src="text-emphasis-zh.gif" title="Emphasis (shown in blue for clarity) applied below a fragment of Chinese text"></td>
-		</tr>
-	</tbody>
+  <caption>
+    Preferred emphasis mark and ruby position
+  </caption>
+  <thead>
+    <tr>
+      <th rowspan="2" scope="col">Language</th>
+      <th colspan="2" scope="col">Preferred position</th>
+      <th colspan="2" rowspan="2" scope="col">Illustration</th>
+    </tr>
+    <tr>
+      <th>Horizontal</th>
+      <th>Vertical</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Japanese</td>
+      <td rowspan="3">over</td>
+      <td rowspan="3">right</td>
+      <td rowspan="3">
+        <img
+          alt="Emphasis marks appear over each emphasized character in horizontal Japanese text."
+          src="text-emphasis-ja.png"
+          title="Emphasis (shown in blue for clarity) applied above a fragment of Japanese text"
+        />
+      </td>
+      <td rowspan="4">
+        <img
+          alt="Emphasis marks appear on the right of each emphasized character in vertical Japanese text."
+          src="text-emphasis-v.gif"
+          title="Emphasis applied on the right of a fragment of Japanese text"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td>Korean</td>
+    </tr>
+    <tr>
+      <td>Mongolian</td>
+    </tr>
+    <tr>
+      <td>Chinese</td>
+      <td>under</td>
+      <td>right</td>
+      <td>
+        <img
+          alt="Emphasis marks appear below each emphasized character in horizontal Simplified Chinese text."
+          src="text-emphasis-zh.gif"
+          title="Emphasis (shown in blue for clarity) applied below a fragment of Chinese text"
+        />
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="note">
-<p><strong>Note:</strong> The <code>text-emphasis-position</code> cannot be set, and therefore are not reset either, using the {{cssxref("text-emphasis")}} shorthand property.</p>
-</div>
+> **Note:** The `text-emphasis-position` cannot be set, and therefore are not reset either, using the {{cssxref("text-emphasis")}} shorthand property.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Preferring_ruby_over_emphasis_marks">Preferring ruby over emphasis marks</h3>
+### Preferring ruby over emphasis marks
 
-<p>Some editors prefer to hide emphasis marks when they conflict with ruby. In HTML, this can be done with the following style rule:</p>
+Some editors prefer to hide emphasis marks when they conflict with ruby. In HTML, this can be done with the following style rule:
 
-<pre class="brush: css">ruby {
+```css
+ruby {
   text-emphasis: none;
 }
-</pre>
+```
 
-<h3 id="Preferring_emphasis_marks_over_ruby">Preferring emphasis marks over ruby</h3>
+### Preferring emphasis marks over ruby
 
-<p>Some other editors prefer to hide ruby when they conflict with emphasis marks. In HTML, this can be done with the following pattern:</p>
+Some other editors prefer to hide ruby when they conflict with emphasis marks. In HTML, this can be done with the following pattern:
 
-<pre class="brush: css">em {
-  text-emphasis: dot; /* Set text-emphasis for &lt;em&gt; elements */
+```css
+em {
+  text-emphasis: dot; /* Set text-emphasis for <em> elements */
 }
 
 em rt {
-  display: none; /* Hide ruby inside &lt;em&gt; elements */
-}</pre>
+  display: none; /* Hide ruby inside <em> elements */
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>The longhand properties {{cssxref("text-emphasis-style")}}, {{cssxref("text-emphasis-color")}}, and the corresponding shorthand property {{cssxref("text-emphasis")}}.</li>
-</ul>
+- The longhand properties {{cssxref("text-emphasis-style")}}, {{cssxref("text-emphasis-color")}}, and the corresponding shorthand property {{cssxref("text-emphasis")}}.

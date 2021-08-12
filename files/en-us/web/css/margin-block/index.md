@@ -8,14 +8,15 @@ tags:
   - Experimental
   - Reference
   - margin-block
-  - 'recipe:css-shorthand-property'
+  - recipe:css-shorthand-property
 browser-compat: css.properties.margin-block
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>margin-block</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a> defines the logical block start and end margins of an element, which maps to physical margins depending on the element's writing mode, directionality, and text orientation.</p>
+The **`margin-block`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) defines the logical block start and end margins of an element, which maps to physical margins depending on the element's writing mode, directionality, and text orientation.
 
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; values */
+```css
+/* <length> values */
 margin-block: 10px 20px;  /* An absolute length */
 margin-block: 1em 2em;   /* relative to the text size */
 margin-block: 5% 2%;    /* relative to the nearest block container's width */
@@ -29,40 +30,39 @@ margin-block: inherit;
 margin-block: initial;
 margin-block: revert;
 margin-block: unset;
-</pre>
+```
 
-<p>This property corresponds to the {{CSSxRef("margin-top")}} and {{CSSxRef("margin-bottom")}}, or the {{CSSxRef("margin-right")}} and {{CSSxRef("margin-left")}} properties, depending on the values defined for {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, and {{CSSxRef("text-orientation")}}.</p>
+This property corresponds to the {{CSSxRef("margin-top")}} and {{CSSxRef("margin-bottom")}}, or the {{CSSxRef("margin-right")}} and {{CSSxRef("margin-left")}} properties, depending on the values defined for {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, and {{CSSxRef("text-orientation")}}.
 
-<h2 id="Constituent_properties">Constituent properties</h2>
+## Constituent properties
 
-<p>This property is a shorthand for the following CSS properties:</p>
+This property is a shorthand for the following CSS properties:
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/margin-block-end"><code>margin-block-end</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/margin-block-start"><code>margin-block-start</code></a></li>
-</ul>
+- [`margin-block-end`](/en-US/docs/Web/CSS/margin-block-end)
+- [`margin-block-start`](/en-US/docs/Web/CSS/margin-block-start)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<p>The <code>margin-block</code> property takes the same values as the {{CSSxRef("margin-left")}} property.</p>
+The `margin-block` property takes the same values as the {{CSSxRef("margin-left")}} property.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_block_start_and_end_margins">Setting block start and end margins</h3>
+### Setting block start and end margins
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   background-color: yellow;
   width: 120px;
   height: auto;
@@ -77,33 +77,33 @@ p {
 
 .verticalExample {
   writing-mode: vertical-rl;
-}</pre>
+}
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p&gt;Example text&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="verticalExample"&gt;
-  &lt;p&gt;Example text&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <p>Example text</p>
+</div>
+<div class="verticalExample">
+  <p>Example text</p>
+</div>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Setting_block_start_and_end_margins", 140, 200)}}</p>
+{{EmbedLiveSample("Setting_block_start_and_end_margins", 140, 200)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The mapped physical properties: {{CSSxRef("margin-top")}}, {{CSSxRef("margin-right")}}, {{CSSxRef("margin-bottom")}}, and {{CSSxRef("margin-left")}}</li>
- <li>{{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}}</li>
-</ul>
+- The mapped physical properties: {{CSSxRef("margin-top")}}, {{CSSxRef("margin-right")}}, {{CSSxRef("margin-bottom")}}, and {{CSSxRef("margin-left")}}
+- {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}}

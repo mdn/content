@@ -7,27 +7,25 @@ tags:
   - Overview
   - Reference
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>These pages contain CSS properties that are highly experimental or don't fit in any other categories.</p>
+These pages contain CSS properties that are highly experimental or don't fit in any other categories.
 
-<h2 id="Reference">Reference</h2>
+## Reference
 
-<h3 id="Properties">Properties</h3>
+### Properties
 
-<ul>
- <li>{{cssxref("all")}}</li>
- <li>{{cssxref("text-rendering")}}</li>
-</ul>
+- {{cssxref("all")}}
+- {{cssxref("text-rendering")}}
 
-<h2 id="Guides">Guides</h2>
+## Guides
 
-<p><em>None.</em></p>
+_None._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p><em>These properties are mostly unrelated to each other. Consult their individual pages for specifications.</em></p>
+_These properties are mostly unrelated to each other. Consult their individual pages for specifications._
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p><em>These properties are mostly unrelated to each other. Consult their individual pages for availability in browsers.</em></p>
+_These properties are mostly unrelated to each other. Consult their individual pages for availability in browsers._

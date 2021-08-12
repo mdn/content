@@ -8,74 +8,72 @@ tags:
   - scrollbars
   - scrolling
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p>The <strong>CSS Overflow</strong> module contains the features of CSS relating to scrollable overflow handling in visual media. In CSS overflow happens when the content of a box extends past one or more of the box's edges.</p>
+The **CSS Overflow** module contains the features of CSS relating to scrollable overflow handling in visual media. In CSS overflow happens when the content of a box extends past one or more of the box's edges.
 
-<h2 id="Ink_overflow_and_scrollable_overflow">Ink overflow and scrollable overflow</h2>
+## Ink overflow and scrollable overflow
 
-<p>There are two types of overflow that you might encounter in CSS. The first is described as <strong>ink overflow</strong>. This is the overflow of painting effects which do not affect layout or otherwise extend the scrollable overflow region, such as box shadows, border images, text decoration, overhanging glyphs, outlines, etc.</p>
+There are two types of overflow that you might encounter in CSS. The first is described as **ink overflow**. This is the overflow of painting effects which do not affect layout or otherwise extend the scrollable overflow region, such as box shadows, border images, text decoration, overhanging glyphs, outlines, etc.
 
-<p>The overflow that we sometimes need to manage in CSS is described as <strong>scrollable overflow</strong>. This is the content appearing outside of the box for which scrolling mechanisms need to be provided. The overflow properties are how we can control what happens when content overflows a box.</p>
+The overflow that we sometimes need to manage in CSS is described as **scrollable overflow**. This is the content appearing outside of the box for which scrolling mechanisms need to be provided. The overflow properties are how we can control what happens when content overflows a box.
 
-<h2 id="Basic_example">Basic example</h2>
+## Basic example
 
-<p>The following interactive example shows how changing the value of the <code>overflow</code> property, changes how the overflow of a fixed height box is dealt with.</p>
+The following interactive example shows how changing the value of the `overflow` property, changes how the overflow of a fixed height box is dealt with.
 
-<div>{{EmbedInteractiveExample("pages/css/overflow.html")}}</div>
+{{EmbedInteractiveExample("pages/css/overflow.html")}}
 
-<h2 id="Reference">Reference</h2>
+## Reference
 
-<h3 id="CSS_properties">CSS properties</h3>
+### CSS properties
 
-<ul>
- <li>{{CSSxRef("overflow")}}</li>
- <li>{{CSSxRef("overflow-block")}}</li>
- <li>{{CSSxRef("overflow-inline")}}</li>
- <li>{{CSSxRef("overflow-x")}}</li>
- <li>{{CSSxRef("overflow-y")}}</li>
- <li>{{CSSxRef("text-overflow")}}</li>
- <li>{{CSSxRef("block-overflow")}} {{experimental_inline}}</li>
- <li>{{CSSxRef("line-clamp")}} {{experimental_inline}}</li>
- <li>{{CSSxRef("max-lines")}} {{experimental_inline}}</li>
- <li>{{CSSxRef("continue")}} {{experimental_inline}}</li>
-</ul>
+- {{CSSxRef("overflow")}}
+- {{CSSxRef("overflow-block")}}
+- {{CSSxRef("overflow-inline")}}
+- {{CSSxRef("overflow-x")}}
+- {{CSSxRef("overflow-y")}}
+- {{CSSxRef("text-overflow")}}
+- {{CSSxRef("block-overflow")}} {{experimental_inline}}
+- {{CSSxRef("line-clamp")}} {{experimental_inline}}
+- {{CSSxRef("max-lines")}} {{experimental_inline}}
+- {{CSSxRef("continue")}} {{experimental_inline}}
 
-<h3 id="Non-standard_properties">Non-standard properties</h3>
+### Non-standard properties
 
-<ul>
- <li>{{CSSxRef("-webkit-line-clamp")}} {{non-standard_inline}}</li>
-</ul>
+- {{CSSxRef("-webkit-line-clamp")}} {{non-standard_inline}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Overflow', '#propdef-overflow', 'overflow')}}</td>
-   <td>{{Spec2('CSS3 Overflow')}}</td>
-   <td>
-    <p>Changed syntax to allow one or two keywords instead of only one</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'visufx.html#overflow', 'overflow')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName('CSS3 Overflow', '#propdef-overflow', 'overflow')}}
+      </td>
+      <td>{{Spec2('CSS3 Overflow')}}</td>
+      <td>
+        <p>Changed syntax to allow one or two keywords instead of only one</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName('CSS2.1', 'visufx.html#overflow', 'overflow')}}
+      </td>
+      <td>{{Spec2('CSS2.1')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Properties for controlling the look of scrollbars {{CSSxRef("scrollbar-width")}} and {{CSSxRef("scrollbar-color")}}</li>
- <li>How to <a href="/en-US/docs/Tools/Page_Inspector/How_to/Debug_Scrollable_Overflow">Debug scrollable overflow</a>.</li>
-</ul>
+- Properties for controlling the look of scrollbars {{CSSxRef("scrollbar-width")}} and {{CSSxRef("scrollbar-color")}}
+- How to [Debug scrollable overflow](/en-US/docs/Tools/Page_Inspector/How_to/Debug_Scrollable_Overflow).

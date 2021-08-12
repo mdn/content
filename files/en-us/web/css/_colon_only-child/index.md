@@ -1,6 +1,6 @@
 ---
 title: ':only-child'
-slug: 'Web/CSS/:only-child'
+slug: Web/CSS/:only-child
 tags:
   - CSS
   - Layout
@@ -10,44 +10,46 @@ tags:
   - Web
 browser-compat: css.selectors.only-child
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>:only-child</code></strong> CSS <a href="/en-US/docs/Web/CSS/Pseudo-classes" title="Pseudo classes">pseudo-class</a> represents an element without any siblings. This is the same as <code>:first-child:last-child</code> or <code>:nth-child(1):nth-last-child(1)</code>, but with a lower specificity.</p>
+The **`:only-child`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes "Pseudo classes") represents an element without any siblings. This is the same as `:first-child:last-child` or `:nth-child(1):nth-last-child(1)`, but with a lower specificity.
 
-<pre class="brush: css no-line-numbers">/* Selects each &lt;p&gt;, but only if it is the */
+```css
+/* Selects each <p>, but only if it is the */
 /* only child of its parent */
 p:only-child {
   background-color: lime;
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note:</strong> As originally defined, the selected element had to have a parent. Beginning with Selectors Level 4, this is no longer required.</p>
-</div>
+> **Note:** As originally defined, the selected element had to have a parent. Beginning with Selectors Level 4, this is no longer required.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_example">Basic example</h3>
+### Basic example
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;div&gt;I am an only child.&lt;/div&gt;
-&lt;/div&gt;
+```html
+<div>
+  <div>I am an only child.</div>
+</div>
 
-&lt;div&gt;
-  &lt;div&gt;I am the 1st sibling.&lt;/div&gt;
-  &lt;div&gt;I am the 2nd sibling.&lt;/div&gt;
-  &lt;div&gt;I am the 3rd sibling, &lt;div&gt;but this is an only child.&lt;/div&gt;&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+<div>
+  <div>I am the 1st sibling.</div>
+  <div>I am the 2nd sibling.</div>
+  <div>I am the 3rd sibling, <div>but this is an only child.</div></div>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div:only-child {
+```css
+div:only-child {
   color: red;
 }
 
@@ -56,60 +58,61 @@ div {
   margin: 6px;
   outline: 1px solid;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Basic_example','100%',180)}}</p>
+{{EmbedLiveSample('Basic_example','100%',180)}}
 
-<h3 id="A_list_example">A list example</h3>
+### A list example
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;ol&gt;
-  &lt;li&gt;First
-    &lt;ul&gt;
-      &lt;li&gt;This list has just one element.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Second
-    &lt;ul&gt;
-      &lt;li&gt;This list has three elements.&lt;/li&gt;
-      &lt;li&gt;This list has three elements.&lt;/li&gt;
-      &lt;li&gt;This list has three elements.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-</pre>
+```html
+<ol>
+  <li>First
+    <ul>
+      <li>This list has just one element.</li>
+    </ul>
+  </li>
+  <li>Second
+    <ul>
+      <li>This list has three elements.</li>
+      <li>This list has three elements.</li>
+      <li>This list has three elements.</li>
+    </ul>
+  </li>
+</ol>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">li li {
+```css
+li li {
   list-style-type: disc;
 }
 
 li:only-child {
   color: red;
   list-style-type: square;
-}</pre>
+}
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('A_list_example', '100%', 210)}}</p>
+{{EmbedLiveSample('A_list_example', '100%', 210)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Cssxref(":only-of-type")}}</li>
- <li>{{Cssxref(":first-child")}}</li>
- <li>{{Cssxref(":last-child")}}</li>
- <li>{{Cssxref(":nth-child")}}</li>
-</ul>
+- {{Cssxref(":only-of-type")}}
+- {{Cssxref(":first-child")}}
+- {{Cssxref(":last-child")}}
+- {{Cssxref(":nth-child")}}

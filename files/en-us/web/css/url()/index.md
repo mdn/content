@@ -11,17 +11,16 @@ tags:
   - url()
 browser-compat: css.types.url
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <code><strong>url()</strong></code> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> is used to include a file. The parameter is an absolute URL, a relative URL, or a data URI. The <code><strong>url()</strong></code> function can be passed as a parameter of another CSS functions, like the {{cssxref('attr()')}} function. Depending on the property for which it is a value, the resource sought can be an image, font, or a stylesheet. The <code>url()</code> functional notation is the value for the <code>&lt;url&gt;</code> data type.</p>
+The **`url()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is used to include a file. The parameter is an absolute URL, a relative URL, or a data URI. The **`url()`** function can be passed as a parameter of another CSS functions, like the {{cssxref('attr()')}} function. Depending on the property for which it is a value, the resource sought can be an image, font, or a stylesheet. The `url()` functional notation is the value for the `<url>` data type.
 
-<div class="notecard note">
-<p><strong>Note:</strong> There is a difference between a {{Glossary("URI")}} and a {{Glossary("URL")}}. A URI identifies a resource. A URL is a type of URI, and describes the <em>location</em> of a resource. A URI can be either a URL or a name ({{Glossary("URN")}}) of a resource.</p>
+> **Note:** There is a difference between a {{Glossary("URI")}} and a {{Glossary("URL")}}. A URI identifies a resource. A URL is a type of URI, and describes the _location_ of a resource. A URI can be either a URL or a name ({{Glossary("URN")}}) of a resource.
+>
+> In CSS Level 1, the `url()` functional notation described only true URLs. In CSS Level 2, the definition of `url()` was extended to describe any URI, whether a URL or a URN. Confusingly, this meant that `url()` could be used to create a `<uri>` CSS data type. This change was not only awkward but, debatably, unnecessary, since URNs are almost never used in actual CSS. To alleviate the confusion, CSS Level 3 returned to the narrower, initial definition. Now, `url()` denotes only true `<url>`s.
 
-<p>In CSS Level 1, the <code>url()</code> functional notation described only true URLs. In CSS Level 2, the definition of <code>url()</code> was extended to describe any URI, whether a URL or a URN. Confusingly, this meant that <code>url()</code> could be used to create a <code>&lt;uri&gt;</code> CSS data type. This change was not only awkward but, debatably, unnecessary, since URNs are almost never used in actual CSS. To alleviate the confusion, CSS Level 3 returned to the narrower, initial definition. Now, <code>url()</code> denotes only true <code>&lt;url&gt;</code>s.</p>
-</div>
-
-<pre class="brush: css no-line-numbers">/* Simple usage */
+```css
+/* Simple usage */
 url(https://example.com/images/myImg.jpg);
 url(data:image/png;base64,iRxVB0…);
 url(myFont.woff);
@@ -55,128 +54,138 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 @document url("https://www.example.com/") { ... } {{Experimental_Inline}}
 @import url("https://www.example.com/style.css");
 @namespace url(http://www.w3.org/1999/xhtml);
-</pre>
+```
 
-<p>Relative URLs, if used, are relative to the URL of the stylesheet (not to the URL of the web page).</p>
+Relative URLs, if used, are relative to the URL of the stylesheet (not to the URL of the web page).
 
-<p>The <code><strong>url()</strong></code> function can be included as a value for
-  {{cssxref('background')}}, {{cssxref('background-image')}}, {{cssxref('border')}}, {{cssxref('border-image')}}, {{cssxref('border-image-source')}}, {{cssxref('content')}}, {{cssxref('cursor')}}, {{cssxref('filter')}}, {{cssxref('list-style')}}, {{cssxref('list-style-image')}}, {{cssxref('mask')}}, {{cssxref('mask-image')}}, {{cssxref('offset-path')}},
-  <a href="/en-US/docs/Web/CSS/@font-face/src">src</a> as part of a <a href="/en-US/docs/Web/CSS/@font-face">@font-face</a> block, and <a href="/en-US/docs/Web/CSS/@counter-style/symbols">@counter-style/symbol</a></p>
+The **`url()`** function can be included as a value for
+{{cssxref('background')}}, {{cssxref('background-image')}}, {{cssxref('border')}}, {{cssxref('border-image')}}, {{cssxref('border-image-source')}}, {{cssxref('content')}}, {{cssxref('cursor')}}, {{cssxref('filter')}}, {{cssxref('list-style')}}, {{cssxref('list-style-image')}}, {{cssxref('mask')}}, {{cssxref('mask-image')}}, {{cssxref('offset-path')}},
+[src](/en-US/docs/Web/CSS/@font-face/src) as part of a [@font-face](/en-US/docs/Web/CSS/@font-face) block, and [@counter-style/symbol](/en-US/docs/Web/CSS/@counter-style/symbols)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-	<dt><code>&lt;string&gt;</code></dt>
-	<dd>
-  <p>A string which may specify a URL or the ID of an SVG shape.</p>
-	<dl>
-		<dt>&lt;url&gt;</dt>
-		<dd>A url, which is a relative or absolute address, or pointer, to the web resource to be included, or a data uri, optionally in single or double quotes. Quotes are required if the URL includes parentheses, whitespace, or quotes, unless these characters are escaped, or if the address includes control characters above 0x7e. Double quotes cannot occur inside double quotes and single quotes cannot occur inside single quotes unless escaped. The following are all valid and equivalent:
-		<pre class="brush: css">&lt;css_property&gt;: url("https://example.com/image.png")
-&lt;css_property&gt;: url('https://example.com/image.png')
-&lt;css_property&gt;: url(https://example.com/image.png)</pre>
+- `<string>`
 
-		<p>If you choose to write the URL without quotes, use a backslash (<code>\</code>) before any parentheses, whitespace characters, single quotes (<code>'</code>) and double quotes (<code>"</code>) that are part of the URL.</p>
-		</dd>
-		<dt>path</dt>
-		<dd>References the ID of an <a href="/en-US/docs/Web/SVG/Tutorial/Basic_Shapes">SVG shape</a> -- <code>circle</code>, <code>ellipse</code>, <code>line</code>, <code>path</code>, <code>polygon</code>, <code>polyline</code>, or <code>rect</code> -- using the shape's geometry as the path.</dd>
-	</dl>
-	</dd>
-	<dt><code>&lt;url-modifier&gt;</code> {{Experimental_Inline}}</dt>
-	<dd>In the future, the <code>url()</code> function may support specifying a modifier, an identifier or a functional notation, which alters the meaning of the URL string.This is not supported and not fully defined in the specification.</dd>
-</dl>
+  - : A string which may specify a URL or the ID of an SVG shape.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+    - \<url>
 
-<pre class="brush: css">url( <a href="/en-US/docs/Web/CSS/string">&lt;string&gt;</a> &lt;url-modifier&gt;* )</pre>
+      - : A url, which is a relative or absolute address, or pointer, to the web resource to be included, or a data uri, optionally in single or double quotes. Quotes are required if the URL includes parentheses, whitespace, or quotes, unless these characters are escaped, or if the address includes control characters above 0x7e. Double quotes cannot occur inside double quotes and single quotes cannot occur inside single quotes unless escaped. The following are all valid and equivalent:
 
-<h2 id="Examples">Examples</h2>
+        ```css
+        <css_property>: url("https://example.com/image.png")
+        <css_property>: url('https://example.com/image.png')
+        <css_property>: url(https://example.com/image.png)
+        ```
 
-<h3 id="A_url_used_in_the_background_property">A url used in the background property</h3>
+        If you choose to write the URL without quotes, use a backslash (`\`) before any parentheses, whitespace characters, single quotes (`'`) and double quotes (`"`) that are part of the URL.
 
-<pre>.topbanner {
-  background: url("topbanner.png") #00D no-repeat fixed;
-}
-</pre>
+    - path
+      - : References the ID of an [SVG shape](/en-US/docs/Web/SVG/Tutorial/Basic_Shapes) -- `circle`, `ellipse`, `line`, `path`, `polygon`, `polyline`, or `rect` -- using the shape's geometry as the path.
 
-<h3 id="A_url_loading_an_image_as_a_list_bullet">A url loading an image as a list bullet</h3>
+- `<url-modifier>` {{Experimental_Inline}}
+  - : In the future, the `url()` function may support specifying a modifier, an identifier or a functional notation, which alters the meaning of the URL string.This is not supported and not fully defined in the specification.
 
-<pre>ul {
-  list-style: square url(http://www.example.com/redball.png);
-}</pre>
+### Formal syntax
 
-<h3 id="Usage_in_the_content_property">Usage in the content property</h3>
+```css
+url( <string> <url-modifier>* )
+```
 
-<h4 id="HTML">HTML</h4>
+## Examples
 
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;Item 1&lt;/li&gt;
-  &lt;li&gt;Item 2&lt;/li&gt;
-  &lt;li&gt;Item 3&lt;/li&gt;
-&lt;/ul&gt;</pre>
+### A url used in the background property
 
-<h4 id="CSS">CSS</h4>
+    .topbanner {
+      background: url("topbanner.png") #00D no-repeat fixed;
+    }
 
-<pre class="brush: css highlight[2]">li::after {
+### A url loading an image as a list bullet
+
+    ul {
+      list-style: square url(http://www.example.com/redball.png);
+    }
+
+### Usage in the content property
+
+#### HTML
+
+```html
+<ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+```
+
+#### CSS
+
+```css
+li::after {
   content: ' - ' url(star.gif);
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Usage_in_the_content_property", "100%", 110)}}</p>
+{{EmbedLiveSample("Usage_in_the_content_property", "100%", 110)}}
 
-<h3 id="Using_a_data-uri">Using a data-uri</h3>
+### Using a data-uri
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="background"&gt;&lt;/div&gt;</pre>
+```html
+<div class="background"></div>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css hidden">.background {
+```css hidden
+.background {
   height: 100vh;
-}</pre>
+}
+```
 
-<pre class="brush: css highlight[6]">.background {
+```css
+.background {
   background: yellow;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='45'%3E%3Cpath d='M10 10h60' stroke='%2300F' stroke-width='5'/%3E%3Cpath d='M10 20h60' stroke='%230F0' stroke-width='5'/%3E%3Cpath d='M10 30h60' stroke='red' stroke-width='5'/%3E%3C/svg%3E");
-}</pre>
-
-<p>{{EmbedLiveSample("Using_a_data-uri", "100%", 50)}}</p>
-
-<h3 id="Usage_in_filters">Usage in filters</h3>
-
-<p>When a URL is used as a path for a filter, the URL must be one of the following:</p>
-
-<ol>
-	<li>The path to an SVG file with the ID of the filter appended.</li>
-	<li>the ID of the filter, if the SVG already exists on the page.</li>
-</ol>
-
-<pre>.blur {
-  filter: url(my-file.svg#svg-blur); /* the URL of an SVG file used as a filter */
 }
+```
 
-.inline-blur {
-  filter: url(#svg-blur); /* the ID of an SVG that is embedded in the HTML page */
-}</pre>
+{{EmbedLiveSample("Using_a_data-uri", "100%", 50)}}
 
-<h2 id="Specifications">Specifications</h2>
+### Usage in filters
+
+When a URL is used as a path for a filter, the URL must be one of the following:
+
+1.  The path to an SVG file with the ID of the filter appended.
+2.  the ID of the filter, if the SVG already exists on the page.
+
+<!---->
+
+    .blur {
+      filter: url(my-file.svg#svg-blur); /* the URL of an SVG file used as a filter */
+    }
+
+    .inline-blur {
+      filter: url(#svg-blur); /* the ID of an SVG that is embedded in the HTML page */
+    }
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{cssxref("&lt;gradient&gt;")}}</li>
-	<li>{{cssxref("element()")}}</li>
-	<li>{{cssxref("image()")}}</li>
-	<li>{{cssxref("image-set()")}}</li>
-	<li>{{cssxref("cross-fade()")}}</li>
-</ul>
+- {{cssxref("&lt;gradient&gt;")}}
+- {{cssxref("element()")}}
+- {{cssxref("image()")}}
+- {{cssxref("image-set()")}}
+- {{cssxref("cross-fade()")}}

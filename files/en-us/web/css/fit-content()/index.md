@@ -10,63 +10,64 @@ tags:
   - Reference
   - Web
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>fit-content()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> clamps a given size to an available size according to the formula <code>min(<var>maximum size</var>, max(<var>minimum size</var>, <var>argument</var>))</code>.</p>
+The **`fit-content()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) clamps a given size to an available size according to the formula `min(maximum size, max(minimum size, argument))`.
 
-<div>{{EmbedInteractiveExample("pages/css/function-fit-content.html")}}</div>
+{{EmbedInteractiveExample("pages/css/function-fit-content.html")}}
 
+The function can be used as a track size in [CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout) properties, where the maximum size is defined by `max-content` and the minimum size by `auto`, which is calculated similar to `auto` (i.e., [`minmax(auto, max-content)`](</en-US/docs/Web/CSS/minmax()>)), except that the track size is clamped at _argument_ if it is greater than the `auto` minimum.
 
-<p>The function can be used as a track size in <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid</a> properties, where the maximum size is defined by <code>max-content</code> and the minimum size by <code>auto</code>, which is calculated similar to <code>auto</code> (i.e., <code><a href="/en-US/docs/Web/CSS/minmax()">minmax(auto, max-content)</a></code>), except that the track size is clamped at <var>argument</var> if it is greater than the <code>auto</code> minimum.</p>
+See the {{cssxref("grid-template-columns")}} page for more information on the `max-content` and `auto` keywords.
 
-<p>See the {{cssxref("grid-template-columns")}} page for more information on the <code>max-content</code> and <code>auto</code> keywords.
+The `fit-content()` function can also be used as laid out box size for {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} and {{cssxref("max-height")}}, where the maximum and minimum sizes refer to the content size.
 
-<p>The <code>fit-content()</code> function can also be used as laid out box size for {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} and {{cssxref("max-height")}}, where the maximum and minimum sizes refer to the content size.</p>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+The `fit-content()` function accepts a `<length>` or a `<percentage>` as an argument.
 
-<p>The <code>fit-content()</code> function accepts a <code>&lt;length&gt;</code> or a <code>&lt;percentage&gt;</code> as an argument.</p>
-
-<pre class="brush: css no-line-numbers">/* &lt;length&gt; values */
+```css
+/* <length> values */
 fit-content(200px)
 fit-content(5cm)
 fit-content(30vw)
 fit-content(100ch)
 
-/* &lt;percentage&gt; value */
+/* <percentage> value */
 fit-content(40%)
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>An absolute length.</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>
-   <p>A percentage relative to the available space in the given axis.</p>
-   <p>In grid properties it is relative to the inline size of the grid container in column tracks and to the block size of the grid container for row tracks. Otherwise it is relative to the available inline size or block size of the laid out box depending on the writing mode.</p>
- </dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : An absolute length.
+- {{cssxref("&lt;percentage&gt;")}}
 
-<h2 id="Examples">Examples</h2>
+  - : A percentage relative to the available space in the given axis.
 
-<h3 id="Sizing_grid_columns_with_fit-content">Sizing grid columns with fit-content</h3>
+    In grid properties it is relative to the inline size of the grid container in column tracks and to the block size of the grid container for row tracks. Otherwise it is relative to the available inline size or block size of the laid out box depending on the writing mode.
 
-<h4 id="HTML">HTML</h4>
+## Examples
 
-<pre class="brush: html">&lt;div id="container"&gt;
-  &lt;div&gt;Item as wide as the content.&lt;/div&gt;
-  &lt;div&gt;
+### Sizing grid columns with fit-content
+
+#### HTML
+
+```html
+<div id="container">
+  <div>Item as wide as the content.</div>
+  <div>
     Item with more text in it. Because the contents of it are
     wider than the maximum width, it is clamped at 300 pixels.
-  &lt;/div&gt;
-  &lt;div&gt;Flexible item&lt;/div&gt;
-&lt;/div&gt;</pre>
+  </div>
+  <div>Flexible item</div>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css; highlight[3]">#container {
+```css
+#container {
   display: grid;
   grid-template-columns: fit-content(300px) fit-content(300px) 1fr;
   grid-gap: 5px;
@@ -77,55 +78,36 @@ fit-content(40%)
   padding: 10px;
 }
 
-#container &gt; div {
+#container > div {
   background-color: #8ca0ff;
   padding: 5px;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Sizing_grid_columns_with_fit-content", "100%", 200)}}</p>
+{{EmbedLiveSample("Sizing_grid_columns_with_fit-content", "100%", 200)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>Specification</th>
-   <th>Status</th>
-   <th>Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Sizing", "#valdef-width-fit-content-length-percentage", "fit-content()")}}</td>
-   <td>{{Spec2("CSS3 Sizing")}}</td>
-   <td>Defines the function as laid out box size for {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} and {{cssxref("max-height")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS Grid", "#valdef-grid-template-columns-fit-content", "fit-content()")}}</td>
-   <td>{{Spec2("CSS Grid")}}</td>
-   <td>Defines the function when used as a track size.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                            | Status                           | Comment                                                                                                                                                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName("CSS3 Sizing", "#valdef-width-fit-content-length-percentage", "fit-content()")}} | {{Spec2("CSS3 Sizing")}} | Defines the function as laid out box size for {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} and {{cssxref("max-height")}}. |
+| {{SpecName("CSS Grid", "#valdef-grid-template-columns-fit-content", "fit-content()")}}     | {{Spec2("CSS Grid")}}     | Defines the function when used as a track size.                                                                                                                                                                                                      |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<h3 id="Supported_for_width_and_other_sizing_properties">Supported for width (and other sizing properties)</h3>
+### Supported for width (and other sizing properties)
 
-<p>{{Compat("css.properties.width.fit-content_function")}}</p>
+{{Compat("css.properties.width.fit-content_function")}}
 
-<h3 id="Supported_in_grid_layout">Supported in grid layout</h3>
+### Supported in grid layout
 
-<p>{{Compat("css.properties.grid-template-columns.fit-content")}}</p>
+{{Compat("css.properties.grid-template-columns.fit-content")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related sizing keywords: {{cssxref("min-content")}}, {{cssxref("max-content")}} </li>
- <li>Related CSS Grid properties: {{cssxref("grid-template")}}, {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-flow")}}</li>
- <li>Grid Layout Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Line-based placement with CSS Grid</a></em></li>
- <li>Grid Layout Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas#grid_definition_shorthands">Grid template areas - Grid definition shorthands</a></em></li>
-</ul>
+- Related sizing keywords: {{cssxref("min-content")}}, {{cssxref("max-content")}}
+- Related CSS Grid properties: {{cssxref("grid-template")}}, {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-flow")}}
+- Grid Layout Guide: _[Line-based placement with CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)_
+- Grid Layout Guide: _[Grid template areas - Grid definition shorthands](/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas#grid_definition_shorthands)_

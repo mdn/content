@@ -10,46 +10,49 @@ tags:
   - Web
 browser-compat: css.selectors.required
 ---
-<div>{{ CSSRef }}</div>
+{{ CSSRef }}
 
-<p>The <strong><code>:required</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents any {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element that has the {{ htmlattrxref("required", "input") }} attribute set on it.</p>
+The **`:required`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element that has the {{ htmlattrxref("required", "input") }} attribute set on it.
 
-<pre class="brush: css no-line-numbers">/* Selects any required &lt;input&gt; */
+```css
+/* Selects any required <input> */
 input:required {
   border: 1px dashed red;
-}</pre>
+}
+```
 
-<p>This pseudo-class is useful for highlighting fields that must have valid data before a form can be submitted.</p>
+This pseudo-class is useful for highlighting fields that must have valid data before a form can be submitted.
 
-<div class="note">
-<p><strong>Note:</strong> The {{cssxref(":optional")}} pseudo-class selects <em>optional</em> form fields.</p>
-</div>
+> **Note:** The {{cssxref(":optional")}} pseudo-class selects _optional_ form fields.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="The_required_field_has_a_red_border">The required field has a red border</h3>
+### The required field has a red border
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;div class="field"&gt;
-    &lt;label for="url_input"&gt;Enter a URL:&lt;/label&gt;
-    &lt;input type="url" id="url_input"&gt;
-  &lt;/div&gt;
+```html
+<form>
+  <div class="field">
+    <label for="url_input">Enter a URL:</label>
+    <input type="url" id="url_input">
+  </div>
 
-  &lt;div class="field"&gt;
-    &lt;label for="email_input"&gt;Enter an email address:&lt;/label&gt;
-    &lt;input type="email" id="email_input" required&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
+  <div class="field">
+    <label for="email_input">Enter an email address:</label>
+    <input type="email" id="email_input" required>
+  </div>
+</form>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">label {
+```css
+label {
   display: block;
   margin: 1px;
   padding: 1px;
@@ -68,34 +71,30 @@ input:required {
 input:required:invalid {
   border-color: #c00000;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Examples', 600, 120)}}</p>
+{{EmbedLiveSample('Examples', 600, 120)}}
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+## Accessibility concerns
 
-<p>Mandatory {{htmlelement("input")}}s should have the {{ htmlattrxref("required", "input") }} attribute applied to them. This will ensure that people navigating with the aid of assistive technology such as a screen reader will be able to understand which inputs need valid content to ensure a successful submission.</p>
+Mandatory {{htmlelement("input")}}s should have the {{ htmlattrxref("required", "input") }} attribute applied to them. This will ensure that people navigating with the aid of assistive technology such as a screen reader will be able to understand which inputs need valid content to ensure a successful submission.
 
-<p>If the form also contains <a href="/en-US/docs/Web/CSS/:optional">optional</a> inputs, required inputs should be indicated visually using a treatment that does not rely solely on color to convey meaning. Typically, descriptive text and/or an icon are used.</p>
+If the form also contains [optional](/en-US/docs/Web/CSS/:optional) inputs, required inputs should be indicated visually using a treatment that does not rely solely on color to convey meaning. Typically, descriptive text and/or an icon are used.
 
-<ul>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.3_%e2%80%94_input_assistance_help_users_avoid_and_correct_mistakes">MDN Understanding WCAG, Guideline 3.3 explanations</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-cues.html" rel="noopener">Understanding Success Criterion 3.3.2 | W3C Understanding WCAG 2.0</a></li>
-</ul>
+- [MDN Understanding WCAG, Guideline 3.3 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.3_%e2%80%94_input_assistance_help_users_avoid_and_correct_mistakes)
+- [Understanding Success Criterion 3.3.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-cues.html)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Other validation-related pseudo-classes: {{ cssxref(":optional") }}, {{ cssxref(":invalid") }}, {{ cssxref(":valid") }}</li>
- <li><a href="/en-US/docs/Learn/Forms/Form_validation">Form data validation</a></li>
-</ul>
+- Other validation-related pseudo-classes: {{ cssxref(":optional") }}, {{ cssxref(":invalid") }}, {{ cssxref(":valid") }}
+- [Form data validation](/en-US/docs/Learn/Forms/Form_validation)

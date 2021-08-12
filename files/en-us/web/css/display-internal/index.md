@@ -9,63 +9,64 @@ tags:
   - Reference
   - display-internal
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Some layout models such as <code>table</code> and <code>ruby</code> have a complex internal structure, with several different roles that their children and descendants can fill. This page defines those "internal" display values, which only have meaning within that particular layout mode.</p>
+Some layout models such as `table` and `ruby` have a complex internal structure, with several different roles that their children and descendants can fill. This page defines those "internal" display values, which only have meaning within that particular layout mode.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>Valid <code>&lt;display-internal&gt;</code> values:</p>
+Valid `<display-internal>` values:
 
-<dl>
- <dt><code>table-row-group</code></dt>
- <dd>These elements behave like {{HTMLElement("tbody")}} HTML elements.</dd>
- <dt><code>table-header-group</code></dt>
- <dd>These elements behave like {{HTMLElement("thead")}} HTML elements.</dd>
- <dt><code>table-footer-group</code></dt>
- <dd>These elements behave like {{HTMLElement("tfoot")}} HTML elements.</dd>
- <dt><code>table-row</code></dt>
- <dd>These elements behave like {{HTMLElement("tr")}} HTML elements.</dd>
- <dt><code>table-cell</code></dt>
- <dd>These elements behave like {{HTMLElement("td")}} HTML elements.</dd>
- <dt><code>table-column-group</code></dt>
- <dd>These elements behave like {{HTMLElement("colgroup")}} HTML elements.</dd>
- <dt><code>table-column</code></dt>
- <dd>These elements behave like {{HTMLElement("col")}} HTML elements.</dd>
- <dt><code>table-caption</code></dt>
- <dd>These elements behave like {{HTMLElement("caption")}} HTML elements.</dd>
- <dt><code>ruby-base</code> {{Experimental_Inline}}</dt>
- <dd>These elements behave like {{HTMLElement("rb")}} HTML elements.</dd>
- <dt><code>ruby-text</code> {{Experimental_Inline}}</dt>
- <dd>These elements behave like {{HTMLElement("rt")}} HTML elements.</dd>
- <dt><code>ruby-base-container</code> {{Experimental_Inline}}</dt>
- <dd>These elements behave like {{HTMLElement("rbc")}} HTML elements generated as anonymous boxes.</dd>
- <dt><code>ruby-text-container</code> {{Experimental_Inline}}</dt>
- <dd>These elements behave like {{HTMLElement("rtc")}} HTML elements.</dd>
-</dl>
+- `table-row-group`
+  - : These elements behave like {{HTMLElement("tbody")}} HTML elements.
+- `table-header-group`
+  - : These elements behave like {{HTMLElement("thead")}} HTML elements.
+- `table-footer-group`
+  - : These elements behave like {{HTMLElement("tfoot")}} HTML elements.
+- `table-row`
+  - : These elements behave like {{HTMLElement("tr")}} HTML elements.
+- `table-cell`
+  - : These elements behave like {{HTMLElement("td")}} HTML elements.
+- `table-column-group`
+  - : These elements behave like {{HTMLElement("colgroup")}} HTML elements.
+- `table-column`
+  - : These elements behave like {{HTMLElement("col")}} HTML elements.
+- `table-caption`
+  - : These elements behave like {{HTMLElement("caption")}} HTML elements.
+- `ruby-base` {{Experimental_Inline}}
+  - : These elements behave like {{HTMLElement("rb")}} HTML elements.
+- `ruby-text` {{Experimental_Inline}}
+  - : These elements behave like {{HTMLElement("rt")}} HTML elements.
+- `ruby-base-container` {{Experimental_Inline}}
+  - : These elements behave like {{HTMLElement("rbc")}} HTML elements generated as anonymous boxes.
+- `ruby-text-container` {{Experimental_Inline}}
+  - : These elements behave like {{HTMLElement("rtc")}} HTML elements.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="CSS_tables_example">CSS tables example</h3>
+### CSS tables example
 
-<p>The following example demonstrates laying out a simple form using CSS table layout.</p>
+The following example demonstrates laying out a simple form using CSS table layout.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;main&gt;
-  &lt;div&gt;
-    &lt;label for="name"&gt;Name&lt;/label&gt;
-    &lt;input type="text" id="name" name="name"&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;label for="age"&gt;Age&lt;/label&gt;
-    &lt;input type="text" id="age" name="age"&gt;
-  &lt;/div&gt;
-&lt;/main&gt;</pre>
+```html
+<main>
+  <div>
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name">
+  </div>
+  <div>
+    <label for="age">Age</label>
+    <input type="text" id="age" name="age">
+  </div>
+</main>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">main {
+```css
+main {
   display: table;
 }
 
@@ -76,53 +77,39 @@ div {
 label, input {
   display: table-cell;
   margin: 5px;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('CSS_tables_example', '100%', 100)}}</p>
+{{EmbedLiveSample('CSS_tables_example', '100%', 100)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Display', '#typedef-display-internal', 'display-internal')}}</td>
-   <td>{{Spec2('CSS3 Display')}}</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                            | Status                           |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- |
+| {{SpecName('CSS3 Display', '#typedef-display-internal', 'display-internal')}} | {{Spec2('CSS3 Display')}} |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<h3 id="Support_of_table_values">Support of table values</h3>
+### Support of table values
 
-<p><code>table</code>, <code>table-cell</code>, <code>table-column</code>, <code>table-column-group</code>, <code>table-footer-group</code>, <code>table-header-group</code>, <code>table-row</code>, and <code>table-row-group</code></p>
+`table`, `table-cell`, `table-column`, `table-column-group`, `table-footer-group`, `table-header-group`, `table-row`, and `table-row-group`
 
-<p>{{Compat("css.properties.display.table_values", 10)}}</p>
+{{Compat("css.properties.display.table_values", 10)}}
 
-<h3 id="Support_of_ruby_values">Support of ruby values</h3>
+### Support of ruby values
 
-<p><code>ruby</code>, <code>ruby-base</code>, <code>ruby-base-container</code>, <code>ruby-text</code>, and <code>ruby-text-container</code></p>
+`ruby`, `ruby-base`, `ruby-base-container`, `ruby-text`, and `ruby-text-container`
 
-<p>{{Compat("css.properties.display.ruby_values", 10)}}</p>
+{{Compat("css.properties.display.ruby_values", 10)}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{CSSxRef("display")}}
-  <ul>
-   <li>{{CSSxRef("&lt;display-outside&gt;")}}</li>
-   <li>{{CSSxRef("&lt;display-inside&gt;")}}</li>
-   <li>{{CSSxRef("&lt;display-listitem&gt;")}}</li>
-   <li>{{CSSxRef("&lt;display-box&gt;")}}</li>
-   <li>{{CSSxRef("&lt;display-legacy&gt;")}}</li>
-  </ul>
- </li>
-</ul>
+- {{CSSxRef("display")}}
+
+  - {{CSSxRef("&lt;display-outside&gt;")}}
+  - {{CSSxRef("&lt;display-inside&gt;")}}
+  - {{CSSxRef("&lt;display-listitem&gt;")}}
+  - {{CSSxRef("&lt;display-box&gt;")}}
+  - {{CSSxRef("&lt;display-legacy&gt;")}}

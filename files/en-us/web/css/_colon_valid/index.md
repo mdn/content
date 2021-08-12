@@ -10,36 +10,41 @@ tags:
   - Web
 browser-compat: css.selectors.valid
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>:valid</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents any {{HTMLElement("input")}} or other {{HTMLElement("form")}} element whose contents <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">validate</a> successfully. This allows to easily make valid fields adopt an appearance that helps the user confirm that their data is formatted properly.</p>
+The **`:valid`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("input")}} or other {{HTMLElement("form")}} element whose contents [validate](/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation) successfully. This allows to easily make valid fields adopt an appearance that helps the user confirm that their data is formatted properly.
 
-<pre class="brush: css no-line-numbers">/* Selects any valid &lt;input&gt; */
+```css
+/* Selects any valid <input> */
 input:valid {
   background-color: powderblue;
-}</pre>
+}
+```
 
-<p>This pseudo-class is useful for highlighting correct fields for the user.</p>
+This pseudo-class is useful for highlighting correct fields for the user.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Indicating_valid_and_invalid_form_fields">Indicating valid and invalid form fields</h3>
+### Indicating valid and invalid form fields
 
-<p>In this example, we use structures like this, which include extra <code>&lt;span&gt;</code>s to generate content on; we'll use these to provide indicators of valid/invalid data:</p>
+In this example, we use structures like this, which include extra `<span>`s to generate content on; we'll use these to provide indicators of valid/invalid data:
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;label for="fname"&gt;First name *: &lt;/label&gt;
-  &lt;input id="fname" name="fname" type="text" required&gt;
-  &lt;span&gt;&lt;/span&gt;
-&lt;/div&gt;</pre>
+```html
+<div>
+  <label for="fname">First name *: </label>
+  <input id="fname" name="fname" type="text" required>
+  <span></span>
+</div>
+```
 
-<p>To provide these indicators, we use the following CSS:</p>
+To provide these indicators, we use the following CSS:
 
-<pre class="brush: css">input + span {
+```css
+input + span {
   position: relative;
 }
 
@@ -61,41 +66,36 @@ input:invalid + span::before {
 input:valid + span::before {
   content: '✓';
   color: green;
-}</pre>
+}
+```
 
-<p>We set the <code>&lt;span&gt;</code>s to <code>position: relative</code> so that we can position the generated content relative to them. We then absolutely position different generated content depending on whether the form's data is valid or invalid — a green check or a red cross, respectively. To add a bit of extra urgency to the invalid data, we've also given the inputs a thick red border when invalid.</p>
+We set the `<span>`s to `position: relative` so that we can position the generated content relative to them. We then absolutely position different generated content depending on whether the form's data is valid or invalid — a green check or a red cross, respectively. To add a bit of extra urgency to the invalid data, we've also given the inputs a thick red border when invalid.
 
-<div class="notecard note">
-<p><strong>Note:</strong> We've used <code>::before</code> to add these labels, as we were already using <code>::after</code> for the "required" labels.</p>
-</div>
+> **Note:** We've used `::before` to add these labels, as we were already using `::after` for the "required" labels.
 
-<p>You can try it below:</p>
+You can try it below:
 
-<p>{{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/valid-invalid.html", '100%', 430)}}</p>
+{{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/valid-invalid.html", '100%', 430)}}
 
-<p>Notice how the required text inputs are invalid when empty, but valid when they have something filled in. The email input on the other hand is valid when empty, as it is not required, but invalid when it contains something that is not a proper email address.</p>
+Notice how the required text inputs are invalid when empty, but valid when they have something filled in. The email input on the other hand is valid when empty, as it is not required, but invalid when it contains something that is not a proper email address.
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+## Accessibility concerns
 
-<p>The color green is commonly used to indicate valid input. People who have certain types of color blindness will be unable to determine the input's state unless it is accompanied by an additional indicator that does not rely on color to convey meaning. Typically, descriptive text and/or an icon are used.</p>
+The color green is commonly used to indicate valid input. People who have certain types of color blindness will be unable to determine the input's state unless it is accompanied by an additional indicator that does not rely on color to convey meaning. Typically, descriptive text and/or an icon are used.
 
-<ul>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html">Understanding Success Criterion 1.4.1 | W3C Understanding WCAG 2.0</a></li>
-</ul>
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Understanding Success Criterion 1.4.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Other validation-related pseudo-classes: {{ cssxref(":required") }}, {{ cssxref(":optional") }}, {{ cssxref(":invalid") }}</li>
- <li><a href="/en-US/docs/Learn/Forms/Form_validation">Form data validation</a></li>
- <li>Accessing the <a href="/en-US/docs/Web/API/ValidityState">validity state</a> from JavaScript</li>
-</ul>
+- Other validation-related pseudo-classes: {{ cssxref(":required") }}, {{ cssxref(":optional") }}, {{ cssxref(":invalid") }}
+- [Form data validation](/en-US/docs/Learn/Forms/Form_validation)
+- Accessing the [validity state](/en-US/docs/Web/API/ValidityState) from JavaScript

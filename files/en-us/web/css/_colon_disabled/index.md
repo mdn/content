@@ -1,6 +1,6 @@
 ---
 title: ':disabled'
-slug: 'Web/CSS/:disabled'
+slug: Web/CSS/:disabled
 tags:
   - CSS
   - Layout
@@ -10,55 +10,60 @@ tags:
   - Web
 browser-compat: css.selectors.disabled
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>:disabled</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents any disabled element. An element is disabled if it can't be activated (selected, clicked on, typed into, etc.) or accept focus. The element also has an enabled state, in which it can be activated or accept focus.</p>
+The **`:disabled`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any disabled element. An element is disabled if it can't be activated (selected, clicked on, typed into, etc.) or accept focus. The element also has an enabled state, in which it can be activated or accept focus.
 
-<pre class="brush: css no-line-numbers">/* Selects any disabled &lt;input&gt; */
+```css
+/* Selects any disabled <input> */
 input:disabled {
   background: #ccc;
-}</pre>
+}
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example shows a basic shipping form. It uses the <a href="/en-US/docs/Web/JavaScript">JavaScript</a> {{event("change")}} event to let the user enable/disable the billing fields.</p>
+This example shows a basic shipping form. It uses the [JavaScript](/en-US/docs/Web/JavaScript) {{event("change")}} event to let the user enable/disable the billing fields.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;form action="#"&gt;
-  &lt;fieldset id="shipping"&gt;
-    &lt;legend&gt;Shipping address&lt;/legend&gt;
-    &lt;input type="text" placeholder="Name"&gt;
-    &lt;input type="text" placeholder="Address"&gt;
-    &lt;input type="text" placeholder="Zip Code"&gt;
-  &lt;/fieldset&gt;
-  &lt;br&gt;
-  &lt;fieldset id="billing"&gt;
-    &lt;legend&gt;Billing address&lt;/legend&gt;
-    &lt;label for="billing-checkbox"&gt;Same as shipping address:&lt;/label&gt;
-    &lt;input type="checkbox" id="billing-checkbox" checked&gt;
-    &lt;br&gt;
-    &lt;input type="text" placeholder="Name" disabled&gt;
-    &lt;input type="text" placeholder="Address" disabled&gt;
-    &lt;input type="text" placeholder="Zip Code" disabled&gt;
-  &lt;/fieldset&gt;
-&lt;/form&gt;
-</pre>
+```html
+<form action="#">
+  <fieldset id="shipping">
+    <legend>Shipping address</legend>
+    <input type="text" placeholder="Name">
+    <input type="text" placeholder="Address">
+    <input type="text" placeholder="Zip Code">
+  </fieldset>
+  <br>
+  <fieldset id="billing">
+    <legend>Billing address</legend>
+    <label for="billing-checkbox">Same as shipping address:</label>
+    <input type="checkbox" id="billing-checkbox" checked>
+    <br>
+    <input type="text" placeholder="Name" disabled>
+    <input type="text" placeholder="Address" disabled>
+    <input type="text" placeholder="Zip Code" disabled>
+  </fieldset>
+</form>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">input[type="text"]:disabled {
+```css
+input[type="text"]:disabled {
   background: #ccc;
 }
-</pre>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">// Wait for the page to finish loading
+```js
+// Wait for the page to finish loading
 document.addEventListener('DOMContentLoaded', function () {
   // Attach `change` event listener to checkbox
   document.getElementById('billing-checkbox').onchange = toggleBilling;
@@ -69,28 +74,24 @@ function toggleBilling() {
   var billingItems = document.querySelectorAll('#billing input[type="text"]');
 
   // Toggle the billing text fields
-  for (var i = 0; i &lt; billingItems.length; i++) {
+  for (var i = 0; i < billingItems.length; i++) {
     billingItems[i].disabled = !billingItems[i].disabled;
   }
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Examples', 300, 250)}}</p>
+{{EmbedLiveSample('Examples', 300, 250)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>
-  <p>{{Cssxref(":enabled")}}</p>
- </li>
-</ul>
+- {{Cssxref(":enabled")}}

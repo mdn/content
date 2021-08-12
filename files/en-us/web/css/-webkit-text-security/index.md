@@ -7,60 +7,63 @@ tags:
   - NeedsCompatTable
   - Non-standard
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.-webkit-text-security
 ---
-<div>{{ CSSRef() }} {{ Non-standard_header() }}</div>
+{{ CSSRef() }} {{ Non-standard_header() }}
 
-<p><code><strong>-webkit-text-security</strong></code> is a non-standard CSS property that obfuscates characters in a {{HtmlElement("form")}} field (such as {{HtmlElement("input")}} or {{HtmlElement("textarea")}}) by replacing them with a shape. It only affects fields that are <em>not</em> of <code>type=password</code>.</p>
+**`-webkit-text-security`** is a non-standard CSS property that obfuscates characters in a {{HtmlElement("form")}} field (such as {{HtmlElement("input")}} or {{HtmlElement("textarea")}}) by replacing them with a shape. It only affects fields that are _not_ of `type=password`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">-webkit-text-security: circle;
+```css
+-webkit-text-security: circle;
 -webkit-text-security: disc;
 -webkit-text-security: square;
 -webkit-text-security: none;
-</pre>
+```
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{CSSSyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Obscuring_a_text_input">Obscuring a text input</h3>
+### Obscuring a text input
 
-<p>Try typing in the field below. If your browser supports this property, the characters should be visually replaced with squares.</p>
+Try typing in the field below. If your browser supports this property, the characters should be visually replaced with squares.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;label for="name"&gt;Name:&lt;/label&gt;
-&lt;input type="text" name="name" id="name" /&gt;</pre>
+```html
+<label for="name">Name:</label>
+<input type="text" name="name" id="name" />
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">input {
+```css
+input {
   -webkit-text-security: square;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Obscuring_a_text_input")}}</p>
+{{EmbedLiveSample("Obscuring_a_text_input")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/WebKit_Extensions">WebKit CSS extensions</a></li>
-</ul>
+- [WebKit CSS extensions](/en-US/docs/Web/CSS/WebKit_Extensions)

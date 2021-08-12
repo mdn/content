@@ -9,102 +9,101 @@ tags:
   - Houdini
 browser-compat: css.at-rules.property.syntax
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>The <strong><code>syntax</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> descriptor is required when using the {{cssxref("@property")}} {{cssxref("at-rule")}} and describes the allowable syntax for the property.</p>
+The **`syntax`** [CSS](/en-US/docs/Web/CSS) descriptor is required when using the {{cssxref("@property")}} {{cssxref("at-rule")}} and describes the allowable syntax for the property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The following are all valid syntax strings:</p>
+The following are all valid syntax strings:
 
-<pre class="brush: css no-line-numbers">syntax: '&lt;color&gt;'; /* accepts a color */
+```css
+syntax: '<color>'; /* accepts a color */
 
-syntax: '&lt;length&gt; | &lt;percentage&gt;'; /* accepts lengths or percentages but not calc expressions with a combination of the two */
+syntax: '<length> | <percentage>'; /* accepts lengths or percentages but not calc expressions with a combination of the two */
 
 syntax: 'small | medium | large'; /* accepts one of these values set as custom idents. */
 
 syntax: '*'; /* any valid token */
-</pre>
+```
 
-<h2 id="Values">Values</h2>
+## Values
 
-<p>A string with a supported syntax as defined by the specification. Supported syntaxes are a subset of <a href="/en-US/docs/Web/CSS/CSS_Types">CSS types</a>. These may be used along, or a number of types can be used in combination.</p>
+A string with a supported syntax as defined by the specification. Supported syntaxes are a subset of [CSS types](/en-US/docs/Web/CSS/CSS_Types). These may be used along, or a number of types can be used in combination.
 
-<dl>
-  <dt><code>"&lt;length&gt;"</code></dt>
-  <dd>Any valid {{cssxref("&lt;length&gt;")}} values.</dd>
-  <dt><code>"&lt;number&gt;"</code></dt>
-  <dd>Any valid {{cssxref("&lt;number&gt;")}} values.</dd>
-  <dt><code>"&lt;percentage&gt;"</code></dt>
-  <dd>Any valid {{cssxref("&lt;percentage&gt;")}} values.</dd>
-  <dt><code>"&lt;length-percentage&gt;"</code></dt>
-  <dd>Any valid {{cssxref("&lt;length-percentage&gt;")}} values.</dd>
-  <dt><code>"&lt;color&gt;"</code></dt>
-  <dd>Any valid {{cssxref("&lt;color&gt;")}} values.</dd>
-  <dt><code>"&lt;image&gt;"</code></dt>
-  <dd>Any valid {{cssxref("&lt;image&gt;")}} values.</dd>
-  <dt><code>"&lt;url&gt;"</code></dt>
-  <dd>Any valid {{cssxref("url()","url()")}} values.</dd>
-  <dt><code>"&lt;integer&gt;"</code></dt>
-  <dd>Any valid {{cssxref("&lt;integer&gt;")}} values.</dd>
-  <dt><code>"&lt;angle&gt;"</code></dt>
-  <dd>Any valid {{cssxref("&lt;angle&gt;")}} values.</dd>
-  <dt><code>"&lt;time&gt;"</code></dt>
-  <dd>Any valid {{cssxref("&lt;time&gt;")}} values.</dd>
-  <dt><code>"&lt;resolution&gt;"</code></dt>
-  <dd>Any valid {{cssxref("&lt;resolution&gt;")}} values.</dd>
-  <dt><code>"&lt;transform-function&gt;"</code></dt>
-  <dd>Any valid {{cssxref("&lt;transform-function&gt;")}} values.</dd>
-  <dt><code>"&lt;custom-ident&gt;"</code></dt>
-  <dd>Any valid {{cssxref("&lt;custom-ident&gt;")}} values.</dd>
-  <dt><code>"&lt;transform-list&gt;"</code></dt>
-  <dd>A list of valid {{cssxref("&lt;transform-function&gt;")}} values.</dd>
-</dl>
+- `"<length>"`
+  - : Any valid {{cssxref("&lt;length&gt;")}} values.
+- `"<number>"`
+  - : Any valid {{cssxref("&lt;number&gt;")}} values.
+- `"<percentage>"`
+  - : Any valid {{cssxref("&lt;percentage&gt;")}} values.
+- `"<length-percentage>"`
+  - : Any valid {{cssxref("&lt;length-percentage&gt;")}} values.
+- `"<color>"`
+  - : Any valid {{cssxref("&lt;color&gt;")}} values.
+- `"<image>"`
+  - : Any valid {{cssxref("&lt;image&gt;")}} values.
+- `"<url>"`
+  - : Any valid {{cssxref("url()","url()")}} values.
+- `"<integer>"`
+  - : Any valid {{cssxref("&lt;integer&gt;")}} values.
+- `"<angle>"`
+  - : Any valid {{cssxref("&lt;angle&gt;")}} values.
+- `"<time>"`
+  - : Any valid {{cssxref("&lt;time&gt;")}} values.
+- `"<resolution>"`
+  - : Any valid {{cssxref("&lt;resolution&gt;")}} values.
+- `"<transform-function>"`
+  - : Any valid {{cssxref("&lt;transform-function&gt;")}} values.
+- `"<custom-ident>"`
+  - : Any valid {{cssxref("&lt;custom-ident&gt;")}} values.
+- `"<transform-list>"`
+  - : A list of valid {{cssxref("&lt;transform-function&gt;")}} values.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Add type checking to <code>--my-color</code> {{cssxref('--*', 'custom property')}}, using the <code>&lt;color&gt;</code> syntax:</p>
+Add type checking to `--my-color` {{cssxref('--*', 'custom property')}}, using the `<color>` syntax:
 
-<p>Using <a href="/en-US/docs/Web/CSS">CSS</a> {{cssxref('@property')}} <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a>:</p>
+Using [CSS](/en-US/docs/Web/CSS) {{cssxref('@property')}} [at-rule](/en-US/docs/Web/CSS/At-rule):
 
-<pre class="brush: css">@property --my-color {
-  syntax: '&lt;color&gt;';
+```css
+@property --my-color {
+  syntax: '<color>';
   inherits: false;
   initial-value: #c0ffee;
 }
-</pre>
+```
 
-<p>Using <a href="/en-US/docs/Web/JavaScript">JavaScript</a> {{domxref('CSS.registerProperty')}}:</p>
+Using [JavaScript](/en-US/docs/Web/JavaScript) {{domxref('CSS.registerProperty')}}:
 
-<pre class="brush: js">window.CSS.registerProperty({
+```js
+window.CSS.registerProperty({
   name: '--my-color',
-  syntax: '&lt;color&gt;',
+  syntax: '<color>',
   inherits: false,
   initialValue: '#c0ffee',
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/CSS_Properties_and_Values_API">CSS Properties and Values API</a></li>
- <li><a href="/en-US/docs/Web/API/CSS_Painting_API">CSS Painting API</a></li>
- <li><a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model</a></li>
- <li><a href="/en-US/docs/Web/Houdini">CSS Houdini</a></li>
-</ul>
+- [CSS Properties and Values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API)
+- [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API)
+- [CSS Typed Object Model](/en-US/docs/Web/API/CSS_Typed_OM_API)
+- [CSS Houdini](/en-US/docs/Web/Houdini)

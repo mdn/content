@@ -7,14 +7,15 @@ tags:
   - CSS Multi-column Layout
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.widows
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>widows</code></strong> <a href="/en-US/docs/CSS">CSS</a> property sets the minimum number of lines in a block container that must be shown at the <em>top</em> of a <a href="/en-US/docs/Web/CSS/Paged_Media">page</a>, region, or <a href="/en-US/docs/Web/CSS/CSS_Columns">column</a>.</p>
+The **`widows`** [CSS](/en-US/docs/CSS) property sets the minimum number of lines in a block container that must be shown at the _top_ of a [page](/en-US/docs/Web/CSS/Paged_Media), region, or [column](/en-US/docs/Web/CSS/CSS_Columns).
 
-<pre class="brush:css no-line-numbers">/* &lt;integer&gt; values */
+```css
+/* <integer> values */
 widows: 2;
 widows: 3;
 
@@ -23,43 +24,43 @@ widows: inherit;
 widows: initial;
 widows: revert;
 widows: unset;
-</pre>
+```
 
-<p>In typography, a <em>widow</em> is the last line of a paragraph that appears alone at the top of a page. (The paragraph is continued from a prior page.)</p>
+In typography, a _widow_ is the last line of a paragraph that appears alone at the top of a page. (The paragraph is continued from a prior page.)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{cssxref("&lt;integer&gt;")}}</dt>
- <dd>The minimum number of lines that can stay by themselves at the top of a new fragment after a fragmentation break. The value must be positive.</dd>
-</dl>
+- {{cssxref("&lt;integer&gt;")}}
+  - : The minimum number of lines that can stay by themselves at the top of a new fragment after a fragmentation break. The value must be positive.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{CSSSyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Controlling_column_widows">Controlling column widows</h3>
+### Controlling column widows
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p&gt;This is the first paragraph containing some text.&lt;/p&gt;
-  &lt;p&gt;This is the second paragraph containing some more text than the first one. It is used to demonstrate how widows work.&lt;/p&gt;
-  &lt;p&gt;This is the third paragraph. It has a little bit more text than the first one.&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <p>This is the first paragraph containing some text.</p>
+  <p>This is the second paragraph containing some more text than the first one. It is used to demonstrate how widows work.</p>
+  <p>This is the third paragraph. It has a little bit more text than the first one.</p>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css; highlight[4]">div {
+```css
+div {
   background-color: #8cffa0;
   columns: 3;
   widows: 2;
@@ -72,23 +73,21 @@ p {
 p:first-child {
   margin-top: 0;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Controlling_column_widows", 400, 160)}}</p>
+{{EmbedLiveSample("Controlling_column_widows", 400, 160)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("orphans")}}</li>
- <li><a href="/en-US/docs/Web/CSS/Paged_Media">Paged media</a></li>
-</ul>
+- {{cssxref("orphans")}}
+- [Paged media](/en-US/docs/Web/CSS/Paged_Media)

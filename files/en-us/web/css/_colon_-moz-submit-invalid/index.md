@@ -11,29 +11,27 @@ tags:
   - Selector
 browser-compat: css.selectors.-moz-submit-invalid
 ---
-<div>{{CSSRef}}{{Non-standard_Header}}</div>
+{{CSSRef}}{{Non-standard_Header}}
 
-<p>The <strong><code>:-moz-submit-invalid</code></strong> CSS <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> is a <a href="/en-US/docs/Web/CSS/Mozilla_Extensions">Mozilla extension</a> that represents any submit {{HTMLElement("button")}} on forms whose contents aren't valid based on their <a href="/en-US/docs/Learn/Forms#constraint_validation">validation constraints</a>.</p>
+The **`:-moz-submit-invalid`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that represents any submit {{HTMLElement("button")}} on forms whose contents aren't valid based on their [validation constraints](/en-US/docs/Learn/Forms#constraint_validation).
 
-<p>By default, no style is applied. You can use this pseudo-class to customize the appearance of the submit button when there are invalid form fields.</p>
+By default, no style is applied. You can use this pseudo-class to customize the appearance of the submit button when there are invalid form fields.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{csssyntax}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{CSSxRef(":valid")}}</li>
- <li>{{CSSxRef(":invalid")}}</li>
- <li>{{CSSxRef(":required")}}</li>
- <li>{{CSSxRef(":optional")}}</li>
-</ul>
+- {{CSSxRef(":valid")}}
+- {{CSSxRef(":invalid")}}
+- {{CSSxRef(":required")}}
+- {{CSSxRef(":optional")}}
