@@ -143,7 +143,7 @@ This pattern of the {{HTTPHeader("Origin")}} and {{HTTPHeader("Access-Control-
 
 ### Preflighted requests
 
-Unlike [_simple requests_ ](#simple_requests), for "preflighted" requests the browser first sends an HTTP request using the {{HTTPMethod("OPTIONS")}} method to the resource on the other origin, in order to determine if the actual request is safe to send. Cross-site requests are preflighted like this since they may have implications to user data.
+Unlike [_simple requests_](#simple_requests), for "preflighted" requests the browser first sends an HTTP request using the {{HTTPMethod("OPTIONS")}} method to the resource on the other origin, in order to determine if the actual request is safe to send. Cross-site requests are preflighted like this since they may have implications to user data.
 
 The following is an example of a request that will be preflighted:
 

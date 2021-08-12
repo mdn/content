@@ -120,7 +120,7 @@ For example, if `Path=/docs` is set, these paths match:
 
 #### SameSite attribute
 
-The [`SameSite` ](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite)attribute lets servers specify whether/when cookies are sent with cross-site requests (where {{Glossary("Site")}} is defined by the registrable domain), which provides some protection against cross-site request forgery attacks ({{Glossary("CSRF")}}).
+The [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) attribute lets servers specify whether/when cookies are sent with cross-site requests (where {{Glossary("Site")}} is defined by the registrable domain), which provides some protection against cross-site request forgery attacks ({{Glossary("CSRF")}}).
 
 It takes three possible values: `Strict`, `Lax`, and `None`. With `Strict`, the cookie is sent only to the same site as the one that originated it; `Lax` is similar, except that cookies are sent when the user _navigates_ to the cookie's origin site, for example, by following a link from an external site; `None` specifies that cookies are sent on both originating and cross-site requests, but *only in secure contexts* (i.e. if `SameSite=None` then the `Secure` attribute must also be set). If no `SameSite` attribute is set then the cookie is treated as `Lax`.
 

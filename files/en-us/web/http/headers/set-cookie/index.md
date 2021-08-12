@@ -79,7 +79,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     > **Note:** Some `><cookie-name>` have a specific semantic:
     >
     > **`__Secure-` prefix**:
-    > Cookies names starting with` __Secure-`
+    > Cookies names starting with `__Secure-`
     > (dash is part of the prefix)
     > must be set with the `secure` flag from a secure page (HTTPS).
     >
@@ -98,7 +98,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
     When an `Expires` date is set, the deadline is relative to the _client_ the cookie is being set on, not the server.
 
-- `Max-Age=<number> `{{optional_inline}}
+- `Max-Age=<number>` {{optional_inline}}
   - : Number of seconds until the cookie expires. A zero or negative number will expire the cookie immediately. If both `Expires` and `Max-Age` are set, `Max-Age` has precedence.
 - `Domain=<domain-value>` {{optional_inline}}
 

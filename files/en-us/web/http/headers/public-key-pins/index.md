@@ -58,7 +58,7 @@ Public-Key-Pins: pin-sha256="<pin-value>";
 - `max-age=<expire-time>`
   - : The time, in seconds, that the browser should remember that this site is only to be
     accessed using one of the defined keys.
-- `includeSubDomains `{{optional_inline}}
+- `includeSubDomains` {{optional_inline}}
   - : If this optional parameter is specified, this rule applies to all of the site's
     subdomains as well.
 - `report-uri="<uri>"` {{optional_inline}}
