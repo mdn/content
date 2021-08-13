@@ -75,6 +75,9 @@ tags:
 <p>To set your <code>PATH</code> variable on a macOS system and on most Linux systems:</p>
 
 <ol>
+ <li>If you’re not already using the <code>bash</code> shell (for example, on macOS systems, the default is the <code>zsh</code> shell, not <code>bash</code>), switch to the <code>bash</code> shell:
+  <pre class="brush: bash">exec bash</pre>
+ </li>
  <li>Open your <code>.bash_profile</code> (or <code>.bashrc</code>) file (if you can't see hidden files, you'll need to display them, see <a href="https://ianlunn.co.uk/articles/quickly-showhide-hidden-files-mac-os-x-mavericks/">Show/Hide hidden files in Mac OS X</a> or <a href="https://askubuntu.com/questions/470837/how-to-show-hidden-folders-in-ubuntu-14-04">Show hidden folders in Ubuntu</a>).</li>
  <li>Paste the following into the bottom of your file (updating the path as it actually is on your machine):
   <pre class="brush: bash">#Add WebDriver browser drivers to PATH
