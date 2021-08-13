@@ -30,7 +30,7 @@ The `WWW-Authenticate` header is sent along with a {{HTTPStatus("401")}} `Unauth
 
 ## Syntax
 
-```html
+```
 WWW-Authenticate: <type> realm=<realm>[, charset="UTF-8"]
 ```
 
@@ -47,7 +47,9 @@ WWW-Authenticate: <type> realm=<realm>[, charset="UTF-8"]
 
 Typically, a server response contains a `WWW-Authenticate` header that looks like this:
 
-    WWW-Authenticate: Basic realm="Access to the staging site", charset="UTF-8"
+```
+WWW-Authenticate: Basic realm="Access to the staging site", charset="UTF-8"
+```
 
 See also [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) for examples on how to configure Apache or nginx servers to password protect your site with HTTP basic authentication.
 

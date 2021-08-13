@@ -42,7 +42,7 @@ The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`script-src`** direct
 
 One or more sources can be allowed for the `script-src` policy:
 
-```html
+```
 Content-Security-Policy: script-src <source>;
 Content-Security-Policy: script-src <source> <source>;
 ```
@@ -97,7 +97,9 @@ Content-Security-Policy: script-src <source> <source>;
 
 Given this CSP header:
 
-    Content-Security-Policy: script-src https://example.com/
+```
+Content-Security-Policy: script-src https://example.com/
+```
 
 the following script is blocked and won't be loaded or executed:
 
@@ -123,7 +125,9 @@ document.getElementById("btn").addEventListener('click', doSomething);
 
 To allow inline scripts and inline event handlers, `'unsafe-inline'`, a nonce-source or a hash-source that matches the inline block can be specified.
 
-    Content-Security-Policy: script-src 'unsafe-inline';
+```
+Content-Security-Policy: script-src 'unsafe-inline';
+```
 
 The above Content Security Policy will allow inline {{HTMLElement("script")}} elements
 
@@ -135,7 +139,9 @@ The above Content Security Policy will allow inline {{HTMLElement("script")}} el
 
 You can use a nonce-source to only allow specific inline script blocks:
 
-    Content-Security-Policy: script-src 'nonce-2726c7f26c'
+```
+Content-Security-Policy: script-src 'nonce-2726c7f26c'
+```
 
 You will have to set the same nonce on the {{HTMLElement("script")}} element:
 
@@ -147,7 +153,9 @@ You will have to set the same nonce on the {{HTMLElement("script")}} element:
 
 Alternatively, you can create hashes from your inline scripts. CSP supports sha256, sha384 and sha512.
 
-    Content-Security-Policy: script-src 'sha256-B2yPHKaXnvFWtRChIbabYmUBFZdVfKKXHbWtWidDVF8='
+```
+Content-Security-Policy: script-src 'sha256-B2yPHKaXnvFWtRChIbabYmUBFZdVfKKXHbWtWidDVF8='
+```
 
 When generating the hash, don't include the {{HTMLElement("script")}} tags and note that capitalization and whitespace matter, including leading or trailing whitespace.
 
@@ -173,16 +181,22 @@ The `'unsafe-eval'` source expression controls several script execution methods 
 
 The `'strict-dynamic'` source expression specifies that the trust explicitly given to a script present in the markup, by accompanying it with a nonce or a hash, shall be propagated to all the scripts loaded by that root script. At the same time, any whitelist or source expressions such as `'self'` or `'unsafe-inline'` will be ignored. For example, a policy such as `script-src 'strict-dynamic' 'nonce-R4nd0m' https://whitelisted.com/` would allow loading of a root script with `<script nonce="R4nd0m" src="https://example.com/loader.js">` and propagate that trust to any script loaded by `loader.js`, but disallow loading scripts from `https://whitelisted.com/` unless accompanied by a nonce or loaded from a trusted script.
 
-    Content-Security-Policy: script-src 'strict-dynamic' 'nonce-someNonce'
+```
+Content-Security-Policy: script-src 'strict-dynamic' 'nonce-someNonce'
+```
 
 Or:
 
-    Content-Security-Policy: script-src 'strict-dynamic' 'sha256-base64EncodedHash'
+```
+Content-Security-Policy: script-src 'strict-dynamic' 'sha256-base64EncodedHash'
+```
 
 It is possible to deploy `strict-dynamic` in a backwards compatible way, without requiring user-agent sniffing.
 The policy:
 
-    Content-Security-Policy: script-src 'unsafe-inline' https: 'nonce-abcdefg' 'strict-dynamic'
+```
+Content-Security-Policy: script-src 'unsafe-inline' https: 'nonce-abcdefg' 'strict-dynamic'
+```
 
 will act like `'unsafe-inline' https:` in browsers that support CSP1, `https: 'nonce-abcdefg'` in browsers that support CSP2, and `'nonce-abcdefg' 'strict-dynamic'` in browsers that support CSP3.
 

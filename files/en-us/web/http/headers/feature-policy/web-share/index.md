@@ -14,7 +14,9 @@ The HTTP {{HTTPHeader('Feature-Policy')}} header `web-share` directive controls 
 
 ## Syntax
 
-    Feature-Policy: web-share <allowlist>;
+```
+Feature-Policy: web-share <allowlist>;
+```
 
 - \<allowlist>
   - : A list of origins for which the feature is allowed. See [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax).

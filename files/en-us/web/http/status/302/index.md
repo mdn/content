@@ -30,7 +30,7 @@ confirmation message such as: 'you successfully uploaded XYZ'.
 
 ## Status
 
-```html
+```
 302 Found
 ```
 

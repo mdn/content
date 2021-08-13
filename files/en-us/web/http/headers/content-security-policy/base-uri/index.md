@@ -34,7 +34,7 @@ The HTTP {{HTTPHeader("Content-Security-Policy")}} **`base-uri`** directive rest
 
 One or more*sources* can be allowed for the base-uri policy:
 
-```html
+```
 Content-Security-Policy: base-uri <source>;
 Content-Security-Policy: base-uri <source> <source>;
 ```
@@ -55,7 +55,7 @@ While this directive uses the same arguments as other CSP directives, some of th
 
 ### Apache configuration
 
-```bash
+```html
 <IfModule mod_headers.c>
 Header set Content-Security-Policy "base-uri 'self'";
 </IfModule>
@@ -63,7 +63,7 @@ Header set Content-Security-Policy "base-uri 'self'";
 
 ### Nginx configuration
 
-```bash
+```
 add_header Content-Security-Policy "base-uri 'self';"
 ```
 

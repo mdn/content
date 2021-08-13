@@ -39,7 +39,9 @@ The hint allows a server to choose what information is sent based on the network
 
 ## Syntax
 
-    Downlink: <number>
+```
+Downlink: <number>
+```
 
 ## Directives
 
@@ -50,11 +52,15 @@ The hint allows a server to choose what information is sent based on the network
 
 A server first needs to opt in to receive the `Downlink` header by sending the {{HTTPHeader("Accept-CH")}} response header containing `Downlink`.
 
-    Accept-CH: Downlink
+```
+Accept-CH: Downlink
+```
 
 Then on subsequent requests the client might send a `Downlink` header back:
 
-    Downlink: 1.7
+```
+Downlink: 1.7
+```
 
 ## Specifications
 

@@ -47,7 +47,7 @@ scripts.
 
 One or more sources can be allowed for the `worker-src` policy:
 
-```html
+```
 Content-Security-Policy: worker-src <source>;
 Content-Security-Policy: worker-src <source> <source>;
 ```
@@ -62,7 +62,7 @@ Content-Security-Policy: worker-src <source> <source>;
 
 Given this CSP header:
 
-```bash
+```
 Content-Security-Policy: worker-src https://example.com/
 ```
 
@@ -88,6 +88,5 @@ blocked and won't load:
 ## See also
 
 - {{HTTPHeader("Content-Security-Policy")}}
-- [CSP
-  for Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers#content_security_policy)
+- [CSP for Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers#content_security_policy)
 - {{domxref("Worker")}}, {{domxref("SharedWorker")}}, {{domxref("ServiceWorker")}}

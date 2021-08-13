@@ -18,7 +18,7 @@ See the {{HTTPHeader("Expect")}} header for more details.
 
 ## Status
 
-```html
+```
 417 Expectation Failed
 ```
 

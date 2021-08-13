@@ -24,9 +24,11 @@ Most servers don't by default serve Ogg media with the correct MIME types, so y
 
 For Apache, you can add the following to your configuration:
 
-    AddType audio/ogg .oga
-    AddType video/ogg .ogv
-    AddType application/ogg .ogg
+```
+AddType audio/ogg .oga
+AddType video/ogg .ogv
+AddType application/ogg .ogg
+```
 
 You can find specific information about possible media file types and the codecs used within them in our comprehensive [guide to media types and formats on the web](/en-US/docs/Web/Media/Formats). In particular, the article on [media container formats](/en-US/docs/Web/Media/Formats/Containers) will be especially helpful when configuring servers to host media properly.
 
@@ -64,7 +66,9 @@ There are two ways Gecko can do this. The best way is to offer an `X-Content-Dur
 
 For example, if the video is 1 minute and 32.6 seconds long, this header would be:
 
-    X-Content-Duration: 92.6
+```
+X-Content-Duration: 92.6
+```
 
 If your server provides the `X-Content-Duration` header when serving Ogg media, Gecko doesn't have to do any extra HTTP requests to seek to the end of the file to calculate its duration. This makes the entire process much more efficient as well as more accurate.
 
@@ -82,24 +86,26 @@ Another probelm with allowing HTTP compression for media streaming: Apache serve
 
 You can use the `oggz-info` tool to get the media duration; this tool is included with the [`oggz-tools`](https://www.xiph.org/oggz/) package. The output from `oggz-info` looks like this:
 
-     $ oggz-info /g/media/bruce_vs_ironman.ogv
-     Content-Duration: 00:01:00.046
+```
+$ oggz-info /g/media/bruce_vs_ironman.ogv
+Content-Duration: 00:01:00.046
 
-     Skeleton: serialno 1976223438
-             4 packets in 3 pages, 1.3 packets/page, 27.508% Ogg overhead
-             Presentation-Time: 0.000
-             Basetime: 0.000
+Skeleton: serialno 1976223438
+        4 packets in 3 pages, 1.3 packets/page, 27.508% Ogg overhead
+        Presentation-Time: 0.000
+        Basetime: 0.000
 
-     Theora: serialno 0170995062
-             1790 packets in 1068 pages, 1.7 packets/page, 1.049% Ogg overhead
-             Video-Framerate: 29.983 fps
-             Video-Width: 640
-             Video-Height: 360
+Theora: serialno 0170995062
+        1790 packets in 1068 pages, 1.7 packets/page, 1.049% Ogg overhead
+        Video-Framerate: 29.983 fps
+        Video-Width: 640
+        Video-Height: 360
 
-     Vorbis: serialno 0708996688
-             4531 packets in 167 pages, 27.1 packets/page, 1.408% Ogg overhead
-             Audio-Samplerate: 44100 Hz
-             Audio-Channels: 2
+Vorbis: serialno 0708996688
+        4531 packets in 167 pages, 27.1 packets/page, 1.408% Ogg overhead
+        Audio-Samplerate: 44100 Hz
+        Audio-Channels: 2
+```
 
 Note that you can't serve up the reported Content-Duration line reported by `oggz-info`, because it's reported in HH:MM:SS format. You'll need to convert it to seconds only, then serve that as your `X-Content-Duration` value. Just parse out the HH, MM, and SS into numbers, then do (HH\*3600)+(MM\*60)+SS to get the value you should report.
 

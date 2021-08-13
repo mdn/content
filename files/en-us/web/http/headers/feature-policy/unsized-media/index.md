@@ -18,7 +18,9 @@ This restriction solves "layout instability" problem caused by providing default
 
 ## Syntax
 
-    Feature-Policy: unsized-media <allowlist>;
+```
+Feature-Policy: unsized-media <allowlist>;
+```
 
 - \<allowlist>
   - : A list of origins for which the feature is allowed. See [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax).

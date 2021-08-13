@@ -36,7 +36,7 @@ A standardized version of this header is the HTTP {{HTTPHeader("Forwarded")}} he
 
 ## Syntax
 
-```html
+```
 X-Forwarded-Proto: <protocol>
 ```
 
@@ -47,16 +47,20 @@ X-Forwarded-Proto: <protocol>
 
 ## Examples
 
-    X-Forwarded-Proto: https
+```
+X-Forwarded-Proto: https
+```
 
 Other non-standard forms:
 
-    # Microsoft
-    Front-End-Https: on
+```
+# Microsoft
+Front-End-Https: on
 
-    X-Forwarded-Protocol: https
-    X-Forwarded-Ssl: on
-    X-Url-Scheme: https
+X-Forwarded-Protocol: https
+X-Forwarded-Ssl: on
+X-Url-Scheme: https
+```
 
 ## Specifications
 

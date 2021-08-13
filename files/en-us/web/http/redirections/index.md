@@ -147,24 +147,30 @@ Redirects can be set either in the server config file or in the `.htaccess` of e
 
 The [`mod_alias`](https://httpd.apache.org/docs/current/mod/mod_alias.html) module has `Redirect` and `RedirectMatch` directives that set up {{HTTPStatus("302")}} redirects by default:
 
-    <VirtualHost *:443>
-    	ServerName example.com
-    	Redirect / https://www.example.com
-    </VirtualHost>
+```html
+<VirtualHost *:443>
+  ServerName example.com
+  Redirect / https://www.example.com
+</VirtualHost>
+```
 
 The URL `https://example.com/` will be redirected to `https://www.example.com/`, as will any files or directories under it (`https://example.com/some-page` will be redirected to `https://www.example.com/some-page`)
 
 `RedirectMatch` does the same, but takes a {{glossary("regular expression")}} to define a collection of affected URLs:
 
-    RedirectMatch ^/images/(.*)$ https://images.example.com/$1
+```
+RedirectMatch ^/images/(.*)$ https://images.example.com/$1
+```
 
 All documents in the `images/` directory will redirect to a different domain.
 
 If you don't want a temporary redirect, an extra parameter (either the HTTP status code to use or the `permanent` keyword) can be used to set up a different redirect:
 
-    Redirect permanent / https://www.example.com
-    # …acts the same as:
-    Redirect 301 / https://www.example.com
+```
+Redirect permanent / https://www.example.com
+# …acts the same as:
+Redirect 301 / https://www.example.com
+```
 
 The [`mod_rewrite`](https://httpd.apache.org/docs/current/mod/mod_rewrite.html) module can also create redirects. It is more flexible, but a bit more complex.
 
@@ -172,16 +178,20 @@ The [`mod_rewrite`](https://httpd.apache.org/docs/current/mod/mod_rewrite.html) 
 
 In Nginx, you create a specific server block for the content you want to redirect:
 
-    server {
-    	listen 80;
-    	server_name example.com;
-    	return 301 $scheme://www.example.com$request_uri;
-    }
+```
+server {
+  listen 80;
+  server_name example.com;
+  return 301 $scheme://www.example.com$request_uri;
+}
+```
 
 To apply a redirect to a directory or only certain pages, use the `rewrite` directive:
 
-    rewrite ^/images/(.*)$ https://images.example.com/$1 redirect;
-    rewrite ^/images/(.*)$ https://images.example.com/$1 permanent;
+```
+rewrite ^/images/(.*)$ https://images.example.com/$1 redirect;
+rewrite ^/images/(.*)$ https://images.example.com/$1 permanent;
+```
 
 ### IIS
 

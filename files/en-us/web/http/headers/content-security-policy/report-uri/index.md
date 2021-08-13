@@ -53,7 +53,7 @@ with other directives.
 
 ## Syntax
 
-```html
+```
 Content-Security-Policy: report-uri <uri>;
 Content-Security-Policy: report-uri <uri> <uri>;
 ```
@@ -66,12 +66,15 @@ Content-Security-Policy: report-uri <uri> <uri>;
 See {{HTTPHeader("Content-Security-Policy-Report-Only")}} for more information and
 examples.
 
-    Content-Security-Policy: default-src https:; report-uri /csp-violation-report-endpoint/
+```
+Content-Security-Policy: default-src https:; report-uri /csp-violation-report-endpoint/
+```
 
 `/csp-violation-report-endpoint/` could for example run a PHP something like
 the following that logs the JSON detailing the violation and, if the violation is the
 first one added to the log file, sends an email to an administrator:
 
+```php
     <?php
 
     // Start configure
@@ -107,6 +110,7 @@ first one added to the log file, sends an email to an administrator:
 
       file_put_contents($log_file, $json_data, FILE_APPEND | LOCK_EX);
     }
+```
 
 ## Specifications
 

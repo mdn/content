@@ -30,14 +30,16 @@ The **`Clear-Site-Data`** header clears browsing data (cookies, storage, cache) 
 
 The `Clear-Site-Data` header accepts one or more directives. If all types of data should be cleared, the wildcard directive (`"*"`) can be used.
 
-    // Single directive
-    Clear-Site-Data: "cache"
+```
+// Single directive
+Clear-Site-Data: "cache"
 
-    // Multiple directives (comma separated)
-    Clear-Site-Data: "cache", "cookies"
+// Multiple directives (comma separated)
+Clear-Site-Data: "cache", "cookies"
 
-    // Wild card
-    Clear-Site-Data: "*"
+// Wild card
+Clear-Site-Data: "*"
+```
 
 ## Directives
 
@@ -71,13 +73,17 @@ The `Clear-Site-Data` header accepts one or more directives. If all types of dat
 
 If a user signs out of your website or service, you might want to remove locally stored data. You can achieve that by adding the `Clear-Site-Data` header when sending the page confirming that logging out from the site has been accomplished successfully (https\://example.com/logout, for example):
 
-    Clear-Site-Data: "cache", "cookies", "storage", "executionContexts"
+```
+Clear-Site-Data: "cache", "cookies", "storage", "executionContexts"
+```
 
 ### Clearing cookies
 
 If this header is delivered with the response at https\://example.com/clear-cookies, all cookies on the same domain https\://example.com and any subdomains (like https\://stage.example.com, etc), will be cleared out.
 
-    Clear-Site-Data: "cookies"
+```
+Clear-Site-Data: "cookies"
+```
 
 ## Specifications
 

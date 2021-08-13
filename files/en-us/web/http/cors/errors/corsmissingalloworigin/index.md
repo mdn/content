@@ -18,7 +18,7 @@ tags:
 
 ## Reason
 
-```html
+```
 Reason: CORS header 'Access-Control-Allow-Origin' missing
 ```
 
@@ -35,7 +35,9 @@ header's value.
 For example, to allow a site at https\://amazing.site to access the resource using CORS,
 the header should be:
 
-    Access-Control-Allow-Origin: https://amazing.site
+```
+Access-Control-Allow-Origin: https://amazing.site
+```
 
 You can also configure a site to allow any site to access it by using the
 `*` wildcard. You should only use this for public APIs. Private APIs should
@@ -44,7 +46,9 @@ addition, the wildcard only works for requests made with the
 {{htmlattrxref("crossorigin")}} attribute set to `anonymous`, and it prevents
 sending credentials like cookies in requests.
 
-    Access-Control-Allow-Origin: *
+```
+Access-Control-Allow-Origin: *
+```
 
 > **Warning:** Using the wildcard to allow all sites to access a private
 > API is a bad idea.
@@ -63,11 +67,15 @@ configuration is typically found in a `.conf` file (`httpd.conf`
 and `apache.conf` are common names for these), or in an
 `.htaccess` file.
 
-    Header set Access-Control-Allow-Origin 'origin-list'
+```
+Header set Access-Control-Allow-Origin 'origin-list'
+```
 
 For Nginx, the command to set up this header is:
 
-    add_header 'Access-Control-Allow-Origin' 'origin-list';
+```
+add_header 'Access-Control-Allow-Origin' 'origin-list';
+```
 
 ## See also
 

@@ -25,7 +25,7 @@ The {{HTTPHeader("Upgrade")}} header field is used by clients to invite the serv
 
 Because `Upgrade` is a hop-by-hop header, it also needs to be listed in the {{HTTPHeader("Connection")}} header field. This means that a typical request that includes Upgrade would look something like:
 
-```html
+```
 GET /index.html HTTP/1.1
 Host: www.example.com
 Connection: upgrade
@@ -56,8 +56,10 @@ The {{domxref("WebSocket.WebSocket", "WebSocket()")}} constructor does all the w
 
 If you need to create a WebSocket connection from scratch, you'll have to handle the handshaking process yourself. After creating the initial HTTP/1.1 session, you need to request the upgrade by adding to a standard request the {{HTTPHeader("Upgrade")}} and {{HTTPHeader("Connection")}} headers, as follows:
 
-    Connection: Upgrade
-    Upgrade: websocket
+```
+Connection: Upgrade
+Upgrade: websocket
+```
 
 ### WebSocket-specific headers
 
@@ -67,7 +69,7 @@ The following headers are involved in the WebSocket upgrade process. Other than 
 
 Specifies one or more protocol-level WebSocket extensions to ask the server to use. Using more than one `Sec-WebSocket-Extension` header in a request is permitted; the result is the same as if you included all of the listed extensions in one such header.
 
-```html
+```
 Sec-WebSocket-Extensions: extensions
 ```
 
@@ -76,7 +78,9 @@ Sec-WebSocket-Extensions: extensions
 
 For example:
 
-    Sec-WebSocket-Extensions: superspeed, colormode; depth=16
+```
+Sec-WebSocket-Extensions: superspeed, colormode; depth=16
+```
 
 #### {{HTTPHeader("Sec-WebSocket-Key")}}
 
@@ -84,7 +88,7 @@ Provides information to the server which is needed in order to confirm that the 
 
 This header is automatically added by clients that choose to use it; it cannot be added using the {{domxref("XMLHttpRequest.setRequestHeader()")}} method.
 
-```html
+```
 Sec-WebSocket-Key: key
 ```
 
@@ -97,7 +101,7 @@ The server's response's {{HTTPHeader("Sec-WebSocket-Accept")}} header will have 
 
 The `Sec-WebSocket-Protocol` header specifies one or more WebSocket protocols that you wish to use, in order of preference. The first one that is supported by the server will be selected and returned by the server in a `Sec-WebSocket-Protocol` header included in the response. You can use this more than once in the header, as well; the result is the same as if you used a comma-delineated list of subprotocol identifiers in a single header.
 
-```html
+```
 Sec-WebSocket-Protocol: subprotocols
 ```
 
@@ -110,7 +114,7 @@ Sec-WebSocket-Protocol: subprotocols
 
 Specifies the WebSocket protocol version the client wishes to use, so the server can confirm whether or not that version is supported on its end.
 
-```html
+```
 Sec-WebSocket-Version: version
 ```
 
@@ -121,7 +125,7 @@ Sec-WebSocket-Version: version
 
 If the server can't communicate using the specified version of the WebSocket protocol, it will respond with an error (such as 426 Upgrade Required) that includes in its headers a `Sec-WebSocket-Version` header with a comma-separated list of the supported protocol versions. If the server does support the requested protocol version, no `Sec-WebSocket-Version` header is included in the response.
 
-```html
+```
 Sec-WebSocket-Version: supportedVersions
 ```
 
@@ -136,7 +140,7 @@ The response from the server may include these.
 
 Included in the response message from the server during the opening handshake process when the server is willing to initiate a WebSocket connection. It will appear no more than once in the response headers.
 
-```html
+```
 Sec-WebSocket-Accept: hash
 ```
 

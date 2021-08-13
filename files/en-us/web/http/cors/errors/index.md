@@ -29,15 +29,17 @@ To understand the underlying issue with the CORS configuration, you need to find
 
 The text of the error message will be something similar to the following:
 
-    Cross-Origin Request Blocked: The Same Origin Policy disallows
-    reading the remote resource at https://some-url-here. (Reason:
-    additional information here).
+```
+Cross-Origin Request Blocked: The Same Origin Policy disallows
+reading the remote resource at https://some-url-here. (Reason:
+additional information here).
+````
 
 > **Note:** For security reasons, specifics about what went wrong with a CORS request _are not available to JavaScript code_. All the code knows is that an error occurred. The only way to determine what specifically went wrong is to look at the browser's console for details.
 
 ## CORS error messages
 
-Firefox's console displays messages in its console when requests fail due to CORS. Part of the error text is a "reason" message that provides added insight into what went wrong.  The reason messages are listed below; click the message to open an article explaining the error in more detail and offering possible solutions.
+Firefox's console displays messages in its console when requests fail due to CORS. Part of the error text is a "reason" message that provides added insight into what went wrong. The reason messages are listed below; click the message to open an article explaining the error in more detail and offering possible solutions.
 
 - [Reason: CORS disabled](/en-US/docs/Web/HTTP/CORS/Errors/CORSDisabled)
 - [Reason: CORS request did not succeed](/en-US/docs/Web/HTTP/CORS/Errors/CORSDidNotSucceed)

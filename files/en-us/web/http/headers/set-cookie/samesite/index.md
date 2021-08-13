@@ -45,21 +45,21 @@ Cookies will be sent in all contexts, i.e. in responses to both first-party and 
 
 Warnings like the ones below might appear in your console:
 
-```html
-Cookie “myCookie” rejected because it has the “SameSite=None” attribute but is missing the “secure” attribute.
+```
+Cookie "myCookie" rejected because it has the "SameSite=None" attribute but is missing the "secure" attribute.
 
 This Set-Cookie was blocked because it had the "SameSite=None" attribute but did not have the "Secure" attribute, which is required in order to use "SameSite=None".
 ```
 
 The warning appears because any cookie that requests `SameSite=None` but is not marked `Secure` will be rejected.
 
-```plain example-bad
+```example-bad
 Set-Cookie: flavor=choco; SameSite=None
 ```
 
 To fix this, you will have to add the `Secure` attribute to your `SameSite=None` cookies.
 
-```plain example-good
+```example-good
 Set-Cookie: flavor=choco; SameSite=None; Secure
 ```
 
@@ -75,33 +75,35 @@ A [`Secure`](#secure) cookie is only sent to the server with an encrypted reques
 
 Recent versions of modern browsers provide a more secure default for `SameSite` to your cookies and so the following message might appear in your console:
 
-```html
-Cookie “myCookie” has “SameSite” policy set to “Lax” because it is missing a “SameSite” attribute, and “SameSite=Lax” is the default value for this attribute.
+```
+Cookie "myCookie" has "SameSite" policy set to "Lax" because it is missing a "SameSite" attribute, and "SameSite=Lax" is the default value for this attribute.
 ```
 
 The warning appears because the `SameSite` policy for a cookie was not explicitly specified:
 
-```plain example-bad
+```example-bad
 Set-Cookie: flavor=choco
 ```
 
 You should explicitly communicate the intended `SameSite` policy for your cookie (rather than relying on browsers to apply `SameSite=Lax` automatically). This will also improve the experience across browsers as not all of them default to `Lax` yet.
 
-```plain example-good
+```example-good
 Set-Cookie: flavor=choco; SameSite=Lax
 ```
 
 ## Example
 
-    RewriteEngine on
-    RewriteBase "/"
-    RewriteCond "%{HTTP_HOST}"       "^example\.org$" [NC]
-    RewriteRule "^(.*)"              "https://www.example.org/index.html" [R=301,L,QSA]
-    RewriteRule "^(.*)\.ht$"         "index.php?nav=$1 [NC,L,QSA,CO=RewriteRule;01;https://www.example.org;30/;SameSite=None;Secure]
-    RewriteRule "^(.*)\.htm$"        "index.php?nav=$1 [NC,L,QSA,CO=RewriteRule;02;https://www.example.org;30/;SameSite=None;Secure]
-    RewriteRule "^(.*)\.html$"       "index.php?nav=$1 [NC,L,QSA,CO=RewriteRule;03;https://www.example.org;30/;SameSite=None;Secure]
-    [...]
-    RewriteRule "^admin/(.*)\.html$" "admin/index.php?nav=$1 [NC,L,QSA,CO=RewriteRule;09;https://www.example.org:30/;SameSite=Strict;Secure]
+```
+RewriteEngine on
+RewriteBase "/"
+RewriteCond "%{HTTP_HOST}"       "^example\.org$" [NC]
+RewriteRule "^(.*)"              "https://www.example.org/index.html" [R=301,L,QSA]
+RewriteRule "^(.*)\.ht$"         "index.php?nav=$1 [NC,L,QSA,CO=RewriteRule;01;https://www.example.org;30/;SameSite=None;Secure]
+RewriteRule "^(.*)\.htm$"        "index.php?nav=$1 [NC,L,QSA,CO=RewriteRule;02;https://www.example.org;30/;SameSite=None;Secure]
+RewriteRule "^(.*)\.html$"       "index.php?nav=$1 [NC,L,QSA,CO=RewriteRule;03;https://www.example.org;30/;SameSite=None;Secure]
+[...]
+RewriteRule "^admin/(.*)\.html$" "admin/index.php?nav=$1 [NC,L,QSA,CO=RewriteRule;09;https://www.example.org:30/;SameSite=Strict;Secure]
+```
 
 ## Specifications
 

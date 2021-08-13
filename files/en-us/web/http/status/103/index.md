@@ -18,7 +18,7 @@ user agent to start preloading resources while the server is still preparing a r
 
 ## Syntax
 
-```html
+```
 103 Early Hints
 ```
 

@@ -16,15 +16,17 @@ A {{HTTPHeader("Retry-After")}} header might be included to this response indica
 
 ## Status
 
-```html
+```
 429 Too Many Requests
 ```
 
 ## Example
 
-    HTTP/1.1 429 Too Many Requests
-    Content-Type: text/html
-    Retry-After: 3600
+```
+HTTP/1.1 429 Too Many Requests
+Content-Type: text/html
+Retry-After: 3600
+```
 
 ## Specifications
 

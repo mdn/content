@@ -48,35 +48,41 @@ Caching directives have the following rules to be valid:
 
 Standard `Cache-Control` directives that can be used by the client in an HTTP request.
 
-    Cache-Control: max-age=<seconds>
-    Cache-Control: max-stale[=<seconds>]
-    Cache-Control: min-fresh=<seconds>
-    Cache-Control: no-cache
-    Cache-Control: no-store
-    Cache-Control: no-transform
-    Cache-Control: only-if-cached
+```
+Cache-Control: max-age=<seconds>
+Cache-Control: max-stale[=<seconds>]
+Cache-Control: min-fresh=<seconds>
+Cache-Control: no-cache
+Cache-Control: no-store
+Cache-Control: no-transform
+Cache-Control: only-if-cached
+```
 
 ### Cache response directives
 
 Standard `Cache-Control` directives that can be used by the server in an HTTP response.
 
-    Cache-Control: must-revalidate
-    Cache-Control: no-cache
-    Cache-Control: no-store
-    Cache-Control: no-transform
-    Cache-Control: public
-    Cache-Control: private
-    Cache-Control: proxy-revalidate
-    Cache-Control: max-age=<seconds>
-    Cache-Control: s-maxage=<seconds>
+```
+Cache-Control: must-revalidate
+Cache-Control: no-cache
+Cache-Control: no-store
+Cache-Control: no-transform
+Cache-Control: public
+Cache-Control: private
+Cache-Control: proxy-revalidate
+Cache-Control: max-age=<seconds>
+Cache-Control: s-maxage=<seconds>
+```
 
 ### Extension Cache-Control directives
 
 Extension `Cache-Control` directives are not part of the core HTTP caching standards document. Check the [compatibility table](#browser_compatibility) for their support; user-agents that don't recognize them should ignore them.
 
-    Cache-Control: immutable
-    Cache-Control: stale-while-revalidate=<seconds>
-    Cache-Control: stale-if-error=<seconds>
+```
+Cache-Control: immutable
+Cache-Control: stale-while-revalidate=<seconds>
+Cache-Control: stale-if-error=<seconds>
+```
 
 ## Directives
 
@@ -138,7 +144,7 @@ Cache-Control: no-store
 > but it will not prevent the cache from responding with a non-stale resource that was cached as the result of an earlier request.
 > Setting `max-age=0` as well forces the cache to revalidate (clears the cache).
 >
->     Cache-Control: no-store, max-age=0
+> `Cache-Control: no-store, max-age=0`
 
 On the opposite, this is a bad way to achieve this:
 
@@ -150,22 +156,26 @@ Cache-Control: private,no-cache,no-store,max-age=0,must-revalidate,pre-check=0,p
 
 For the files in the application that will not change, you can usually add aggressive caching by sending the response header below. This includes static files that are served by the application such as images, CSS files and JavaScript files, for example. In addition, see also the `Expires` header.
 
-    Cache-Control: public, max-age=604800, immutable
+```
+Cache-Control: public, max-age=604800, immutable
+```
 
 ### Requiring revalidation
 
-`no-cache` and `max-age=0, must-revalidate` indicates same meaning.
+`no-cache` and `max-age=0, must-revalidate` have the same meaning.
 Clients can cache a resource but must revalidate each time before using it. This means HTTP request occurs each time though, it can skip downloading HTTP body if the content is valid.
 
-    Cache-Control: no-cache
+```
+Cache-Control: no-cache
 
-<!---->
+Cache-Control: max-age=0, must-revalidate
+```
 
-    Cache-Control: max-age=0, must-revalidate
+**Note**: The following header may serve a stale resource, if server is down or loses connectivity.
 
-**Note**: Following may serve stale resource if server is down or lose connectivity.
-
-    Cache-Control: max-age=0
+```
+Cache-Control: max-age=0
+```
 
 ## Specifications
 

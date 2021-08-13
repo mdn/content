@@ -30,7 +30,7 @@ applied to the corresponding request.
 
 ## Syntax
 
-```html
+```
 Tk: !  (under construction)
 Tk: ?  (dynamic)
 Tk: G  (gateway or multiple parties)
@@ -76,7 +76,9 @@ Tk: U  (updated)
 
 A `Tk` header for a resource that claims not to be tracking would look like:
 
-    Tk: N
+```
+Tk: N
+```
 
 ## Specifications
 

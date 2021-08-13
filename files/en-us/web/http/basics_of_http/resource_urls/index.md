@@ -18,18 +18,22 @@ information is available to sites the browser connects to as well.
 Resource URLs are composed of two parts: a prefix (`resource:`), and a URL
 pointing to the resource you want to load:
 
-```html
+```
 resource://<url>
 ```
 
 An example:
 
-    resource://gre/res/svg.css
+```
+resource://gre/res/svg.css
+```
 
 When arrows are found in the resource URL's ('->'), it means that the first file
 loaded the next one:
 
-    resource://<File-loader> -> <File-loaded>
+```
+resource://<File-loader> -> <File-loaded>
+```
 
 Please refer to [Identifying
 resources on the web](/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web) for more general details.
@@ -51,7 +55,9 @@ running on the site (you can find the code in <https://browserleaks.com/firefox#
 The file firefox.js passes preference names and values to the pref() function. For
 example:
 
-    http://searchfox.org/mozilla-central/rev/48ea452803907f2575d81021e8678634e8067fc2/browser/app/profile/firefox.js#575
+```
+http://searchfox.org/mozilla-central/rev/48ea452803907f2575d81021e8678634e8067fc2/browser/app/profile/firefox.js#575
+```
 
 Web sites can easily collect Firefox default preferences by overriding this
 `pref()` function and using the script
@@ -67,15 +73,15 @@ In order to fix this problem, Mozilla changed the behavior of loading resource: 
 {{bug(863246)}}, which landed in [Firefox 57 (Quantum)](/en-US/docs/Mozilla/Firefox/Releases/57).
 
 In the past, web content was able to access whatever `resource:` URIs were
-desired — not only Firefox’s internal resources, but also extensions’ assets.  Now this
+desired — not only Firefox's internal resources, but also extensions’ assets. Now this
 behavior is prohibited by default.
 
 It is however still necessary for Firefox to load resources in web content under
-certain circumstances.  For example, if you open the view source page (View Page Source
+certain circumstances. For example, if you open the view source page (View Page Source
 or View Selection Source), you will find it requires `viewsource.css` through
-a `resource:` URI.  Resources that have to be exposed to web content have
+a `resource:` URI. Resources that have to be exposed to web content have
 been moved to a new location named `resource://content-accessible/`, which is
-isolated and only contains non-sensitive resources.  In this way we can keep essential
+isolated and only contains non-sensitive resources. In this way we can keep essential
 resources exposed and have most threats eliminated.
 
 > **Note:** It is recommended that web and extension developers don't try

@@ -16,7 +16,9 @@ The HTTP {{HTTPHeader('Feature-Policy')}} header `accelerometer` directive contr
 
 ## Syntax
 
-    Feature-Policy: accelerometer <allowlist>;
+```
+Feature-Policy: accelerometer <allowlist>;
+```
 
 - \<allowlist>
   - : A list of origins for which the feature is allowed. See [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax).

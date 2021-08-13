@@ -33,7 +33,7 @@ header included in the HTTP response.
 
 ## Syntax
 
-```html
+```
 Age: <delta-seconds>
 ```
 
@@ -45,7 +45,9 @@ Age: <delta-seconds>
 
 ## Examples
 
-    Age: 24
+```
+Age: 24
+```
 
 ## Specifications
 

@@ -15,7 +15,7 @@ The HyperText Transfer Protocol (HTTP) **`504 Gateway Timeout`** server error re
 
 ## Status
 
-```html
+```
 504 Gateway Timeout
 ```
 

@@ -51,7 +51,7 @@ Site security testers usually expect this header to be set.
 
 ## Syntax
 
-```html
+```
 X-Content-Type-Options: nosniff
 ```
 
@@ -78,12 +78,9 @@ X-Content-Type-Options: nosniff
 ## See also
 
 - {{HTTPHeader("Content-Type")}}
-- The [original
-  definition](https://blogs.msdn.microsoft.com/ie/2008/09/02/ie8-security-part-vi-beta-2-update/) of X-Content-Type-Options by Microsoft.
+- The [original definition](https://blogs.msdn.microsoft.com/ie/2008/09/02/ie8-security-part-vi-beta-2-update/) of X-Content-Type-Options by Microsoft.
 - The [Mozilla Observatory](https://observatory.mozilla.org/) tool testing
   the configuration (including this header) of Web sites for safety and security
-- [Mitigating
-  MIME Confusion Attacks in Firefox](https://blog.mozilla.org/security/2016/08/26/mitigating-mime-confusion-attacks-in-firefox/)
+- [Mitigating MIME Confusion Attacks in Firefox](https://blog.mozilla.org/security/2016/08/26/mitigating-mime-confusion-attacks-in-firefox/)
 - [Cross-Origin Read Blocking (CORB)](https://fetch.spec.whatwg.org/#corb)
-- [Google
-  Docs CORB explainer](https://chromium.googlesource.com/chromium/src/+/master/services/network/cross_origin_read_blocking_explainer.md)
+- [Google Docs CORB explainer](https://chromium.googlesource.com/chromium/src/+/master/services/network/cross_origin_read_blocking_explainer.md)

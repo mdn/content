@@ -19,7 +19,9 @@ The HTTP {{HTTPHeader("Feature-Policy")}} header **`screen-wake-lock`** directiv
 
 ## Syntax
 
-    Feature-Policy: screen-wake-lock <allowlist>;
+```
+Feature-Policy: screen-wake-lock <allowlist>;
+```
 
 - \<allowlist>
   - : A list of origins for which the feature is allowed. See [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax).

@@ -29,7 +29,7 @@ Only the {{Glossary("CORS-safelisted response header", "CORS-safelisted response
 
 ## Syntax
 
-```html
+```
 Access-Control-Expose-Headers: [<header-name>[, <header-name>]*]
 Access-Control-Expose-Headers: *
 ```
@@ -46,19 +46,27 @@ Access-Control-Expose-Headers: *
 
 The {{Glossary("CORS-safelisted response header", "CORS-safelisted response headers")}} are: {{HTTPHeader("Cache-Control")}}, {{HTTPHeader("Content-Language")}}, {{HTTPHeader("Content-Length")}}, {{HTTPHeader("Content-Type")}}, {{HTTPHeader("Expires")}}, {{HTTPHeader("Last-Modified")}}, {{HTTPHeader("Pragma")}}. To expose a non-CORS-safelisted response header, you can specify:
 
-    Access-Control-Expose-Headers: Content-Encoding
+```
+Access-Control-Expose-Headers: Content-Encoding
+```
 
 To additionally expose a custom header, like `X-Kuma-Revision`, you can specify multiple headers separated by a comma:
 
-    Access-Control-Expose-Headers: Content-Encoding, X-Kuma-Revision
+```
+Access-Control-Expose-Headers: Content-Encoding, X-Kuma-Revision
+```
 
 For requests without credentials, a server can also respond with a wildcard value:
 
-    Access-Control-Expose-Headers: *
+```
+Access-Control-Expose-Headers: *
+```
 
 However, this won't wildcard the {{HTTPHeader("Authorization")}} header, so if you need to expose that, you will need to list it explicitly:
 
-    Access-Control-Expose-Headers: *, Authorization
+```
+Access-Control-Expose-Headers: *, Authorization
+```
 
 ## Specifications
 

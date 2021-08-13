@@ -47,22 +47,28 @@ If the `Width` header appears more than once in a message the last occurrence is
 
 ## Syntax
 
-    Width: <number>
+```
+Width: <number>
+```
 
 ## Directives
 
-- `<number>`
+- \<number>
   - : The width of the resource in physical pixels, rounded up to the nearest integer.
 
 ## Examples
 
 The server first needs to opt in to receive the `Width` header by sending the response headers {{HTTPHeader("Accept-CH")}} containing `Width`.
 
-    Accept-CH: Width
+```
+Accept-CH: Width
+```
 
 Then on subsequent requests the client might send `Width` header back:
 
-    Width: 1920
+```
+Width: 1920
+```
 
 ## Browser compatibility
 

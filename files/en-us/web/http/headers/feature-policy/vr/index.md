@@ -21,7 +21,9 @@ The HTTP {{HTTPHeader("Feature-Policy")}} header `vr` directive controls whether
 
 ## Syntax
 
-    Feature-Policy: vr <allowlist>;
+```
+Feature-Policy: vr <allowlist>;
+```
 
 - \<allowlist>
   - : A list of origins for which the feature is allowed. See [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax).

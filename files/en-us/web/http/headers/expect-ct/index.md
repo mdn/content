@@ -38,9 +38,11 @@ CT requirements can be satisfied via any one of the following mechanisms:
 
 ## Syntax
 
-    Expect-CT: report-uri="<uri>",
-               enforce,
-               max-age=<age>
+```
+Expect-CT: report-uri="<uri>",
+           enforce,
+           max-age=<age>
+```
 
 ##  Directives
 
@@ -66,7 +68,9 @@ CT requirements can be satisfied via any one of the following mechanisms:
 
 The following example specifies enforcement of Certificate Transparency for 24 hours and reports violations to `foo.example`.
 
-    Expect-CT: max-age=86400, enforce, report-uri="https://foo.example/report"
+```
+Expect-CT: max-age=86400, enforce, report-uri="https://foo.example/report"
+```
 
 ## Notes
 

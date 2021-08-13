@@ -28,19 +28,21 @@ The **`SourceMap`** [HTTP](/en-US/docs/Web/HTTP) response header links generated
 
 ## Syntax
 
-```html
+```
 SourceMap: <url>
 X-SourceMap: <url> (deprecated)
 ```
 
 ### Directives
 
-- `<url>`
+- \<url>
   - : A relative (to the request URL) or absolute URL pointing to a source map file.
 
 ## Examples
 
-    SourceMap: /path/to/file.js.map
+```
+SourceMap: /path/to/file.js.map
+```
 
 ## Specifications
 

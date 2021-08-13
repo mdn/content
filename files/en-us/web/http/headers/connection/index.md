@@ -49,7 +49,7 @@ further. Standard hop-by-hop headers are also required to be listed.
 
 ## Syntax
 
-```html
+```
 Connection: keep-alive
 Connection: close
 ```

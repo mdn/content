@@ -35,7 +35,7 @@ The **`Access-Control-Allow-Origin`** response header indicates whether the resp
 
 ## Syntax
 
-```html
+```
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Origin: <origin>
 Access-Control-Allow-Origin: null
@@ -57,11 +57,15 @@ Access-Control-Allow-Origin: null
 
 A response that tells the browser to allow code from any origin to access a resource will include the following:
 
-    Access-Control-Allow-Origin: *
+```
+Access-Control-Allow-Origin: *
+```
 
 A response that tells the browser to allow requesting code from the origin `https://developer.mozilla.org` to access a resource will include the following:
 
-    Access-Control-Allow-Origin: https://developer.mozilla.org
+```
+Access-Control-Allow-Origin: https://developer.mozilla.org
+```
 
 Limiting the possible `Access-Control-Allow-Origin` values to a set of allowed origins requires code on the server side to check the value of the {{HTTPHeader("Origin")}} request header, compare that to a list of allowed origins, and then if the {{HTTPHeader("Origin")}} value is in the list, to set the `Access-Control-Allow-Origin` value to the same value as the {{HTTPHeader("Origin")}} value.
 
@@ -69,8 +73,10 @@ Limiting the possible `Access-Control-Allow-Origin` values to a set of allowed o
 
 If the server sends a response with an `Access-Control-Allow-Origin` value that is an explicit origin (rather than the "`*`" wildcard), then the response should also include a {{HTTPHeader("Vary")}} response header with the value `Origin` — to indicate to browsers that server responses can differ based on the value of the `Origin` request header.
 
-    Access-Control-Allow-Origin: https://developer.mozilla.org
-    Vary: Origin
+```
+Access-Control-Allow-Origin: https://developer.mozilla.org
+Vary: Origin
+```
 
 ## Specifications
 

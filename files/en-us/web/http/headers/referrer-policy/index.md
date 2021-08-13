@@ -31,7 +31,7 @@ The **`Referrer-Policy`** {{glossary("HTTP header")}} controls how much [referre
 
 ## Syntax
 
-```html
+```
 Referrer-Policy: no-referrer
 Referrer-Policy: no-referrer-when-downgrade
 Referrer-Policy: origin
@@ -130,7 +130,7 @@ CSS can fetch resources referenced from stylesheets. These resources follow a re
 | https://example.com/page | https://mozilla.org           | https://example.com/     |
 | https://example.com/page | **http**://example.com/page   | https://example.com/     |
 
-### >`same-origin`
+### `same-origin`
 
 | From document            | Navigation to                 | Referrer used            |
 | ------------------------ | ----------------------------- | ------------------------ |
@@ -163,7 +163,9 @@ CSS can fetch resources referenced from stylesheets. These resources follow a re
 
 If you want to specify a fallback policy in any case the desired policy hasn't got wide enough browser support, use a comma-separated list with the desired policy specified last:
 
-    Referrer-Policy: no-referrer, strict-origin-when-cross-origin
+```
+Referrer-Policy: no-referrer, strict-origin-when-cross-origin
+```
 
 In the above scenario, `no-referrer` will only be used if `strict-origin-when-cross-origin` is not supported by the browser.
 

@@ -44,7 +44,7 @@ The final recipient of the request should reflect the message received, excludin
 
 ## Syntax
 
-```html
+```
 TRACE /index.html
 ```
 

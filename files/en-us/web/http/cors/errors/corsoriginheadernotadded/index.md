@@ -18,8 +18,8 @@ tags:
 
 ## Reason
 
-```html
-Reason: CORS header ‘Origin’ cannot be added
+```
+Reason: CORS header 'Origin' cannot be added
 ```
 
 ## What went wrong?

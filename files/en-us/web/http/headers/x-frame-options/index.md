@@ -35,7 +35,7 @@ The added security is provided only if the user accessing the document is using 
 
 There are two possible directives for `X-Frame-Options`:
 
-```html
+```
 X-Frame-Options: DENY
 X-Frame-Options: SAMEORIGIN
 ```
@@ -59,33 +59,41 @@ If you specify `DENY`, not only will attempts to load the page in a frame fail w
 
 To configure Apache to send the `X-Frame-Options` header for all pages, add this to your site's configuration:
 
-    Header always set X-Frame-Options "SAMEORIGIN"
+```
+Header always set X-Frame-Options "SAMEORIGIN"
+``
 
 To configure Apache to set the `X-Frame-Options` DENY, add this to your site's configuration:
 
-    Header set X-Frame-Options "DENY"
+```
+Header set X-Frame-Options "DENY"
+```
 
 ### Configuring nginx
 
 To configure nginx to send the `X-Frame-Options` header, add this either to your http, server or location configuration:
 
-    add_header X-Frame-Options SAMEORIGIN always;
+```
+add_header X-Frame-Options SAMEORIGIN always;
+```
 
 ### Configuring IIS
 
 To configure IIS to send the `X-Frame-Options` header, add this to your site's `Web.config` file:
 
-    <system.webServer>
-      ...
+```html
+<system.webServer>
+  ...
 
-      <httpProtocol>
-        <customHeaders>
-          <add name="X-Frame-Options" value="SAMEORIGIN" />
-        </customHeaders>
-      </httpProtocol>
+  <httpProtocol>
+    <customHeaders>
+      <add name="X-Frame-Options" value="SAMEORIGIN" />
+    </customHeaders>
+  </httpProtocol>
 
-      ...
-    </system.webServer>
+  ...
+</system.webServer>
+```
 
 Or see this [Microsoft support article on setting this configuration using the IIS Manager](https://support.office.com/en-us/article/Mitigating-framesniffing-with-the-X-Frame-Options-header-1911411b-b51e-49fd-9441-e8301dcdcd79) user interface.
 
@@ -93,11 +101,15 @@ Or see this [Microsoft support article on setting this configuration using the I
 
 To configure HAProxy to send the `X-Frame-Options` header, add this to your front-end, listen, or backend configuration:
 
-    rspadd X-Frame-Options:\ SAMEORIGIN
+```
+rspadd X-Frame-Options:\ SAMEORIGIN
+```
 
 Alternatively, in newer versions:
 
-    http-response set-header X-Frame-Options SAMEORIGIN
+```
+http-response set-header X-Frame-Options SAMEORIGIN
+```
 
 ### Configuring Express
 

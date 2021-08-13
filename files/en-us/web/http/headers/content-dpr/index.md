@@ -48,7 +48,9 @@ If the `Content-DPR` header appears more than once in a message the last occurre
 
 ## Syntax
 
-    Content-DPR: <number>
+```
+Content-DPR: <number>
+```
 
 ## Directives
 

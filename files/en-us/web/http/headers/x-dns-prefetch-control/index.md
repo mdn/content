@@ -34,7 +34,7 @@ latency when the user clicks a link.
 
 ## Syntax
 
-```html
+```
 X-DNS-Prefetch-Control: on
 X-DNS-Prefetch-Control: off
 ```

@@ -49,7 +49,7 @@ chain. It is used for backwards compatibility with HTTP/1.0 caches where the
 
 ## Syntax
 
-```html
+```
 Pragma: no-cache
 ```
 
@@ -61,7 +61,9 @@ Pragma: no-cache
 
 ## Examples
 
-    Pragma: no-cache
+```
+Pragma: no-cache
+```
 
 ## Specifications
 

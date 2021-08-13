@@ -17,7 +17,9 @@ The HTTP {{HTTPHeader("Feature-Policy")}} header `xr-spatial-tracking` directive
 
 ## Syntax
 
-    Feature-Policy: xr-spatial-tracking <allowlist>;
+```
+Feature-Policy: xr-spatial-tracking <allowlist>;
+```
 
 - \<allowlist>
   - : A list of origins for which the feature is allowed. See [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax).

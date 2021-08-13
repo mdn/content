@@ -45,22 +45,28 @@ If the `Viewport-Width` header appears more than once in a message the last occu
 
 ## Syntax
 
-    Viewport-Width: <number>
+```
+Viewport-Width: <number>
+```
 
 ## Directives
 
-- `<number>`
+- \<number>
   - : The width of the user's viewport in {{Glossary("CSS pixel","CSS pixels")}}, rounded up to the nearest integer.
 
 ## Examples
 
 A server must first opt in to receive the `Viewport-Width` header by sending the response header {{HTTPHeader("Accept-CH")}} containing the directive `Viewport-Width`.
 
-    Accept-CH: Viewport-Width
+```
+Accept-CH: Viewport-Width
+```
 
 Then on subsequent requests the client might send `Viewport-Width` header back:
 
-    Viewport-Width: 320
+```
+Viewport-Width: 320
+```
 
 ## Browser compatibility
 

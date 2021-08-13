@@ -68,14 +68,14 @@ base64 a.txt>b.txt
 
 On Windows, [Convert.ToBase64String](https://docs.microsoft.com/en-us/dotnet/api/system.convert.tobase64string?view=net-5.0) from PowerShell can be used to perform the Base64 encoding:
 
-```html
+```bash
 [convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes("hello"))
 # outputs to console: aGVsbG8=
 ```
 
 Alternatively, a GNU/Linux shell (such as [WSL](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux)) provides the utility `base64`:
 
-```html
+```bash
 bash$ echo -n hello | base64
 # outputs to console: aGVsbG8=
 ```
@@ -84,11 +84,15 @@ bash$ echo -n hello | base64
 
 This section describes problems that commonly occur when creating and using `data` URLs.
 
-    data:text/html,lots of text...<p><a name%3D"bottom">bottom</a>?arg=val
+```
+data:text/html,lots of text...<p><a name%3D"bottom">bottom</a>?arg=val
+```
 
 This represents an HTML resource whose contents are:
 
-    lots of text...<p><a name="bottom">bottom</a>?arg=val
+```html
+lots of text...<p><a name="bottom">bottom</a>?arg=val
+```
 
 - Syntax
   - : The format for `data` URLs is very simple, but it's easy to forget to put a comma before the "data" segment, or to incorrectly encode the data into base64 format.
@@ -119,5 +123,5 @@ This represents an HTML resource whose contents are:
 - [Percent encoding](/en-US/docs/Glossary/percent-encoding)
 - {{domxref("WindowOrWorkerGlobalScope/atob","atob()")}}
 - {{domxref("WindowOrWorkerGlobalScope/btoa","btoa()")}}
-- [CSS `url()`](</en-US/docs/Web/CSS/url()>)
+- [CSS `url()`](/en-US/docs/Web/CSS/url())
 - [URI](/en-US/docs/Glossary/URI)

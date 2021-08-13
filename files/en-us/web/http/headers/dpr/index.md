@@ -47,7 +47,9 @@ If the `DPR` header appears more than once in a message the last occurrence is u
 
 ## Syntax
 
-    DPR: <number>
+```
+DPR: <number>
+```
 
 ## Directives
 
@@ -58,15 +60,21 @@ If the `DPR` header appears more than once in a message the last occurrence is u
 
 A server must first opt in to receive the `DPR` header by sending the response header {{HTTPHeader("Accept-CH")}} containing the directive `DPR`.
 
-    Accept-CH: DPR
+```
+Accept-CH: DPR
+```
 
 Then on subsequent requests the client might send `DPR` header to the server:
 
-    DPR: 2.0
+```
+DPR: 2.0
+```
 
 If a request with the `DPR` header (as shown above) is for an image resource, then the server response must include the {{HTTPHeader("Content-DPR")}} header:
 
-    Content-DPR: 2.0
+```
+Content-DPR: 2.0
+```
 
 ## Browser compatibility
 

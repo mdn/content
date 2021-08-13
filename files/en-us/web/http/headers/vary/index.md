@@ -35,7 +35,7 @@ The `Vary` header should be set on a {{HTTPStatus("304")}}
 
 ## Syntax
 
-```html
+```
 Vary: *
 Vary: <header-name>, <header-name>, ...
 ```
@@ -62,7 +62,9 @@ mistakenly serve a desktop version of your site to your mobile users. It can hel
 and other search engines to discover the mobile version of a page, and might also tell
 them that no [Cloaking](https://en.wikipedia.org/wiki/Cloaking) is intended.
 
-    Vary: User-Agent
+```
+Vary: User-Agent
+```
 
 ## Specifications
 
@@ -74,14 +76,10 @@ them that no [Cloaking](https://en.wikipedia.org/wiki/Cloaking) is intended.
 
 ## Compatibility notes
 
-- [Vary
-  with care – Vary header problems in IE6-9](https://blogs.msdn.microsoft.com/ieinternals/2009/06/17/vary-with-care/)
+- [Vary with care – Vary header problems in IE6-9](https://blogs.msdn.microsoft.com/ieinternals/2009/06/17/vary-with-care/)
 
 ## See also
 
-- [Understanding
-  The Vary Header - Smashing Magazine](https://www.smashingmagazine.com/2017/11/understanding-vary-header/)
-- [Best
-  Practices for Using the Vary Header – fastly.com](https://www.fastly.com/blog/best-practices-for-using-the-vary-header)
-- [Content
-  negotiation](/en-US/docs/Web/HTTP/Content_negotiation)
+- [Understanding The Vary Header - Smashing Magazine](https://www.smashingmagazine.com/2017/11/understanding-vary-header/)
+- [Best Practices for Using the Vary Header – fastly.com](https://www.fastly.com/blog/best-practices-for-using-the-vary-header)
+- [Content negotiation](/en-US/docs/Web/HTTP/Content_negotiation)

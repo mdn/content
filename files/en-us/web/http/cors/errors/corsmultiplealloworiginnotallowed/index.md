@@ -18,8 +18,8 @@ tags:
 
 ## Reason
 
-```html
-Reason: Multiple CORS header ‘Access-Control-Allow-Origin’ not allowed
+```
+Reason: Multiple CORS header 'Access-Control-Allow-Origin' not allowed
 ```
 
 ## What went wrong?

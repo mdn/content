@@ -18,7 +18,9 @@ If `display-capture` is disabled in a document, the document will not be able to
 
 ## Syntax
 
-    Feature-Policy: display-capture <allowlist>;
+```
+Feature-Policy: display-capture <allowlist>;
+```
 
 - \<allowlist>
   - : A list of origins for which the feature is allowed. See [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax).

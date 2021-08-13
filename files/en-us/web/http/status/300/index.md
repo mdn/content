@@ -19,7 +19,7 @@ header.
 
 ## Status
 
-```html
+```
 300 Multiple Choices
 ```
 

@@ -35,7 +35,7 @@ The **`Origin`** request header indicates where a request originates from. It do
 
 ## Syntax
 
-```html
+```
 Origin: null
 Origin: <scheme> "://" <hostname> [ ":" <port> ]
 ```
@@ -51,7 +51,9 @@ Origin: <scheme> "://" <hostname> [ ":" <port> ]
 
 ## Examples
 
-    Origin: https://developer.mozilla.org
+```
+Origin: https://developer.mozilla.org
+```
 
 ## Specifications
 

@@ -29,7 +29,7 @@ specifies the method or methods allowed when accessing the resource in response 
 
 ## Syntax
 
-```html
+```
 Access-Control-Allow-Methods: <method>, <method>, ...
 Access-Control-Allow-Methods: *
 ```
@@ -47,8 +47,10 @@ Access-Control-Allow-Methods: *
 
 ## Examples
 
-    Access-Control-Allow-Methods: POST, GET, OPTIONS
-    Access-Control-Allow-Methods: *
+```
+Access-Control-Allow-Methods: POST, GET, OPTIONS
+Access-Control-Allow-Methods: *
+```
 
 ## Specifications
 

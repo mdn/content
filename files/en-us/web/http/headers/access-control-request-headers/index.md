@@ -27,7 +27,7 @@ The **`Access-Control-Request-Headers`** request header is used by browsers when
 
 ## Syntax
 
-```html
+```
 Access-Control-Request-Headers: <header-name>, <header-name>, ...
 ```
 
@@ -38,7 +38,9 @@ Access-Control-Request-Headers: <header-name>, <header-name>, ...
 
 ## Examples
 
-    Access-Control-Request-Headers: X-PINGOTHER, Content-Type
+```
+Access-Control-Request-Headers: X-PINGOTHER, Content-Type
+```
 
 ## Specifications
 

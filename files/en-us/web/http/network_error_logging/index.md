@@ -17,8 +17,10 @@ Reports are sent to a reporting group defined within a {{HTTPHeader("Report-To")
 
 Web applications opt in to this behavior with the NEL header, which is a _[JSON-encoded](/en-US/docs/Glossary/Response_header)_ object:
 
-    NEL: { "report_to": "nel",
-           "max_age": 31556952 }
+```
+NEL: { "report_to": "nel",
+       "max_age": 31556952 }
+```
 
 An origin considered secure by the browser is required.
 
@@ -37,11 +39,14 @@ The following object keys can be specified in the NEL header:
 
 The reporting group referenced above is defined in the usual manner within the {{HTTPHeader("Report-To")}} header, for example:
 
-    Report-To: { "group": "nel",
-                 "max_age": 31556952,
-                 "endpoints": [
-                   { "url": "https://example.com/csp-reports" }
-                 ] }
+```
+Report-To: { "group": "nel",
+             "max_age": 31556952,
+             "endpoints": [
+              { "url": "https://example.com/csp-reports" }
+             ]
+           }
+```
 
 ## Error reports
 

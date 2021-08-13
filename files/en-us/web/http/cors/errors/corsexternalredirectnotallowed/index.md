@@ -18,7 +18,7 @@ tags:
 
 ## Reason
 
-```html
+```
 Reason: CORS request external redirect not allowed
 ```
 

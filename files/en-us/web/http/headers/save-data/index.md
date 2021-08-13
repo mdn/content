@@ -52,7 +52,7 @@ different markup and styling, disabled polling and automatic updates, and so on.
 
 ## Directives
 
-- `<sd-token>`
+- \<sd-token>
   - : A value indicating whether the client wants to opt in to reduced data
     usage mode. `on` indicates yes, while `off` (the default)
     indicates no.
@@ -67,37 +67,44 @@ from cellular to Wi-Fi]).
 ### With `Save-Data: on`
 
 Request:
-
-    GET /image.jpg HTTP/1.0
-    Host: example.com
-    Save-Data: on
+```
+GET /image.jpg HTTP/1.0
+Host: example.com
+Save-Data: on
+```
 
 Response:
 
-    HTTP/1.0 200 OK
-    Content-Length: 102832
-    Vary: Accept-Encoding, Save-Data
-    Cache-Control: public, max-age=31536000
-    Content-Type: image/jpeg
+```
+HTTP/1.0 200 OK
+Content-Length: 102832
+Vary: Accept-Encoding, Save-Data
+Cache-Control: public, max-age=31536000
+Content-Type: image/jpeg
 
-    [...]
+[...]
+```
 
 ### Without `Save-Data`
 
 Request:
 
-    GET /image.jpg HTTP/1.0
-    Host: example.com
+```
+GET /image.jpg HTTP/1.0
+Host: example.com
+```
 
 Response:
 
-    HTTP/1.0 200 OK
-    Content-Length: 481770
-    Vary: Accept-Encoding, Save-Data
-    Cache-Control: public, max-age=31536000
-    Content-Type: image/jpeg
+```
+HTTP/1.0 200 OK
+Content-Length: 481770
+Vary: Accept-Encoding, Save-Data
+Cache-Control: public, max-age=31536000
+Content-Type: image/jpeg
 
-    [...]
+[...]
+```
 
 ## Specifications
 

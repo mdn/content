@@ -24,7 +24,7 @@ If the server _does_ recognize the method, but intentionally does not support it
 
 ## Status
 
-```html
+```
 501 Not Implemented
 ```
 

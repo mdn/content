@@ -20,7 +20,9 @@ By default, top-level documents and their same-origin child frames can request a
 
 ## Syntax
 
-    Feature-Policy: fullscreen <allowlist>;
+```
+Feature-Policy: fullscreen <allowlist>;
+```
 
 - \<allowlist>
   - : A list of origins for which the feature is allowed. See [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax).
@@ -35,7 +37,7 @@ Default allow list for `fullscreen` is `'self'`.
 
 SecureCorp Inc. wants to disable the Fullscreen API within all browsing contexts except for its own origin and those whose origin is `https://example.com`. It can do so by delivering the following HTTP response header to define a feature policy:
 
-```bash
+```
 Feature-Policy: fullscreen 'self' https://example.com
 ```
 
@@ -43,7 +45,7 @@ Feature-Policy: fullscreen 'self' https://example.com
 
 FastCorp Inc. wants to disable `fullscreen` for all cross-origin child frames, except for a specific \<iframe>. It can do so by delivering the following HTTP response header to define a feature policy:
 
-```bash
+```
 Feature-Policy: fullscreen 'self'
 ```
 

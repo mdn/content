@@ -36,7 +36,9 @@ For more information, see the main [Feature Policy](/en-US/docs/Web/HTTP/Feature
 
 ## Syntax
 
-    Feature-Policy: <directive> <allowlist>
+```
+Feature-Policy: <directive> <allowlist>
+```
 
 - `<directive>`
   - : The Feature Policy directive to apply the `allowlist` to. See [Directives](#directives) below for a list of the permitted directive names.
@@ -131,7 +133,9 @@ For more information, see the main [Feature Policy](/en-US/docs/Web/HTTP/Feature
 
 SecureCorp Inc. wants to disable Microphone and Geolocation APIs in its application. It can do so by delivering the following HTTP response header to define a feature policy:
 
-    Feature-Policy: microphone 'none'; geolocation 'none'
+```
+Feature-Policy: microphone 'none'; geolocation 'none'
+```
 
 By specifying the `'none'` keyword for the origin list, the specified features will be disabled for all browsing contexts (this includes all iframes), regardless of their origin.
 

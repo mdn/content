@@ -36,7 +36,7 @@ The HTTP **`X-XSS-Protection`** response header is a feature of Internet Explore
 
 ## Syntax
 
-```html
+```
 X-XSS-Protection: 0
 X-XSS-Protection: 1
 X-XSS-Protection: 1; mode=block
@@ -56,17 +56,19 @@ X-XSS-Protection: 1; report=<reporting-uri>
 
 Block pages from loading when they detect reflected XSS attacks:
 
-```bash
+```
 X-XSS-Protection: 1; mode=block
 ```
 
 PHP
 
-    header("X-XSS-Protection: 1; mode=block");
+```php
+header("X-XSS-Protection: 1; mode=block");
+```
 
 Apache (.htaccess)
 
-```bash
+```html
 <IfModule mod_headers.c>
   Header set X-XSS-Protection "1; mode=block"
 </IfModule>
@@ -74,7 +76,7 @@ Apache (.htaccess)
 
 Nginx
 
-```bash
+```
 add_header "X-XSS-Protection" "1; mode=block";
 ```
 

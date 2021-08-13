@@ -18,8 +18,8 @@ The HTTP **`Link`** entity-header field provides a means for serialising one or 
 
 ## Syntax
 
-```html
-Link: < uri-reference >; param1=value1; param2="value2"
+```
+Link: <uri-reference>; param1=value1; param2="value2"
 ```
 
 - `<uri-reference>`
@@ -33,11 +33,11 @@ The link header contains parameters, which are separated with `;` and are equiva
 
 The URI (absolute or relative) must be enclosed between `<` and `>`:
 
-```plain example-good
+```example-good
 Link: <https://example.com>; rel="preconnect"
 ```
 
-```plain example-bad
+```example-bad
 Link: https://bad.example; rel="preconnect"
 ```
 
@@ -45,7 +45,9 @@ Link: https://bad.example; rel="preconnect"
 
 You can specify multiple links separated by commas, for example:
 
-    Link: <https://one.example.com>; rel="preconnect", <https://two.example.com>; rel="preconnect", <https://three.example.com>; rel="preconnect"
+```
+Link: <https://one.example.com>; rel="preconnect", <https://two.example.com>; rel="preconnect", <https://three.example.com>; rel="preconnect"
+```
 
 ## Specifications
 

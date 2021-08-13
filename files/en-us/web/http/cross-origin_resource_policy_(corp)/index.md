@@ -43,9 +43,9 @@ Web applications set a Cross-Origin Resource Policy via the {{HTTPHeader("Cross-
 - `cross-origin`
   - : Requests from any _{{Glossary("origin")}}_ (both same-site and cross-site) can read the resource.
 
-<!---->
-
-    Cross-Origin-Resource-Policy: same-site | same-origin | cross-origin
+```
+Cross-Origin-Resource-Policy: same-site | same-origin | cross-origin
+```
 
 During a cross-origin resource policy check, if the header is set, the browser will deny `no-cors` requests issued from a different origin/site.
 

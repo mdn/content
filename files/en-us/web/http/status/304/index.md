@@ -28,7 +28,7 @@ headers {{HTTPHeader("Cache-Control")}}, {{HTTPHeader("Content-Location")}},
 
 ## Status
 
-```html
+```
 304 Not Modified
 ```
 

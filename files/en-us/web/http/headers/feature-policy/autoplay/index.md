@@ -26,7 +26,9 @@ APIs](/en-US/docs/Web/Media/Autoplay_guide).
 
 ## Syntax
 
-    Feature-Policy: autoplay <allowlist>;
+```
+Feature-Policy: autoplay <allowlist>;
+```
 
 - \<allowlist>
   - : A list of origins for which the feature is allowed. See [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax).

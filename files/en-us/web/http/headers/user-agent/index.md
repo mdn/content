@@ -29,30 +29,32 @@ The **User-Agent** {{Glossary("request header")}} is a characteristic string tha
 
 ## Syntax
 
-```html
+```
 User-Agent: <product> / <product-version> <comment>
 ```
 
 Common format for web browsers:
 
-```html
+```
 User-Agent: Mozilla/5.0 (<system-information>) <platform> (<platform-details>) <extensions>
 ```
 
 ### Directives
 
-- `<product>`
+- \<product>
   - : A product identifier — its name or development codename.
-- `<product-version>`
+- \<product-version>
   - : Version number of the product.
-- `<comment>`
+- \<comment>
   - : Zero or more comments containing more details; sub-product information, for example.
 
 ## Firefox UA string
 
 For more on Firefox- and Gecko-based user agent strings, see the [Firefox user agent string reference](/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox). The UA string of Firefox is broken down into 4 components:
 
-    Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion
+```
+Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion
+```
 
 1. `Mozilla/5.0` is the general token that says the browser is Mozilla-compatible. For historical reasons, almost every browser today sends it.
 2. **_platform_** describes the native platform the browser is running on (Windows, Mac, Linux, Android, etc.), and if it's a mobile phone. {{Glossary("Firefox OS")}} phones say `Mobile` — the web is the platform. Note that **_platform_** can consist of multiple "`;`"-separated tokens. See below for further details and examples.
@@ -62,8 +64,10 @@ For more on Firefox- and Gecko-based user agent strings, see the [Firefox user a
 
 ### Examples
 
-    Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0
-    Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:42.0) Gecko/20100101 Firefox/42.0
+```
+Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0
+Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:42.0) Gecko/20100101 Firefox/42.0
+```
 
 ## Chrome UA string
 
@@ -71,7 +75,9 @@ The Chrome (or Chromium/Blink-based engines) user agent string is similar to Fir
 
 ### Examples
 
-    Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36
+```
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36
+```
 
 ## Opera UA string
 
@@ -79,12 +85,16 @@ The Opera browser is also based on the Blink engine, which is why it almost look
 
 ### Examples
 
-    Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.106 Safari/537.36 OPR/38.0.2220.41
+```
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.106 Safari/537.36 OPR/38.0.2220.41
+```
 
 Older, Presto-based Opera releases used:
 
-    Opera/9.80 (Macintosh; Intel Mac OS X; U; en) Presto/2.2.15 Version/10.00
-    Opera/9.60 (Windows NT 6.0; U; en) Presto/2.1.1
+```
+Opera/9.80 (Macintosh; Intel Mac OS X; U; en) Presto/2.2.15 Version/10.00
+Opera/9.60 (Windows NT 6.0; U; en) Presto/2.1.1
+```
 
 ## Microsoft Edge UA string
 
@@ -92,41 +102,51 @@ The Edge browser is also based on the Blink engine.
 
 ### Examples
 
-    Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 Edg/91.0.864.59
+```
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 Edg/91.0.864.59
+```
 
 ## Safari UA string
 
-In this example, the user agent string is mobile Safari’s version. It contains the word `"Mobile"`.
+In this example, the user agent string is mobile Safari's version. It contains the word `"Mobile"`.
 
 ### Examples
 
-    Mozilla/5.0 (iPhone; CPU iPhone OS 13_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/604.1
+```
+Mozilla/5.0 (iPhone; CPU iPhone OS 13_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/604.1
+```
 
 ## Internet Explorer UA string
 
 ### Examples
 
-    Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0)
+```
+Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0)
+```
 
 ## Crawler and bot UA strings
 
 ### Examples
 
-    Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)
+```
+Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)
+```
 
-<!---->
-
-    Mozilla/5.0 (compatible; YandexAccessibilityBot/3.0; +http://yandex.com/bots)
+```
+Mozilla/5.0 (compatible; YandexAccessibilityBot/3.0; +http://yandex.com/bots)
+```
 
 ## Library and net tool UA strings
 
 ### Examples
 
-    curl/7.64.1
+```
+curl/7.64.1
+```
 
-<!---->
-
-    PostmanRuntime/7.26.5
+```
+PostmanRuntime/7.26.5
+```
 
 ## Specifications
 

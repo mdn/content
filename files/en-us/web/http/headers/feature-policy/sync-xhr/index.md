@@ -17,7 +17,9 @@ The HTTP {{HTTPHeader("Feature-Policy")}} header `sync-xhr` directive controls 
 
 ## Syntax
 
-    Feature-Policy: sync-xhr <allowlist>;
+```
+Feature-Policy: sync-xhr <allowlist>;
+```
 
 - \<allowlist>
   - : A list of origins for which the feature is allowed. See [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax).

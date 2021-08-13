@@ -18,7 +18,7 @@ If you don't know whether this condition is temporary or permanent, a {{HTTPStat
 
 ## Status
 
-```html
+```
 410 Gone
 ```
 

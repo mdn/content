@@ -16,7 +16,9 @@ The HTTP {{HTTPHeader("Feature-Policy")}} header `oversized-images` directive co
 
 ## Syntax
 
-    Feature-Policy: oversized-images <allowlist>;
+```
+Feature-Policy: oversized-images <allowlist>;
+```
 
 - \<allowlist>
   - : A list of origins for which the feature is allowed. See [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax).

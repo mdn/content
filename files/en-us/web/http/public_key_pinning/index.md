@@ -25,7 +25,9 @@ HPKP is a _Trust on First Use_ ({{Glossary("TOFU")}}) technique. The first time 
 
 To enable this feature for your site, you need to return the {{HTTPHeader("Public-Key-Pins")}} HTTP header when your site is accessed over HTTPS:
 
-    Public-Key-Pins: pin-sha256="base64=="; max-age=expireTime [; includeSubDomains][; report-uri="reportURI"]
+```
+Public-Key-Pins: pin-sha256="base64=="; max-age=expireTime [; includeSubDomains][; report-uri="reportURI"]
+```
 
 - `pin-sha256`
   - : The quoted string is the Base64 encoded _Subject Public Key Information_ ({{Glossary("SPKI")}}) fingerprint. It is possible to specify multiple pins for different public keys. Some browsers might allow other hashing algorithms than SHA-256 in the future. See below on how to extract this information out of a certificate or key file.
@@ -46,31 +48,31 @@ First you need to extract the public key information from your certificate or ke
 
 The following commands will help you extract the Base64 encoded information from a key file, a certificate signing request, or a certificate.
 
-    openssl rsa -in my-rsa-key-file.key -outform der -pubout | openssl dgst -sha256 -binary | openssl enc -base64
+```
+openssl rsa -in my-rsa-key-file.key -outform der -pubout | openssl dgst -sha256 -binary | openssl enc -base64
 
-<!---->
+openssl ec -in my-ecc-key-file.key -outform der -pubout | openssl dgst -sha256 -binary | openssl enc -base64
 
-    openssl ec -in my-ecc-key-file.key -outform der -pubout | openssl dgst -sha256 -binary | openssl enc -base64
+openssl req -in my-signing-request.csr -pubkey -noout | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64
 
-<!---->
-
-    openssl req -in my-signing-request.csr -pubkey -noout | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64
-
-<!---->
-
-    openssl x509 -in my-certificate.crt -pubkey -noout | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64
+openssl x509 -in my-certificate.crt -pubkey -noout | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64
+```
 
 The following command will extract the Base64 encoded information for a website.
 
-    openssl s_client -servername www.example.com -connect www.example.com:443 | openssl x509 -pubkey -noout | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64
+```
+openssl s_client -servername www.example.com -connect www.example.com:443 | openssl x509 -pubkey -noout | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64
+```
 
 ### Example HPKP Header
 
-    Public-Key-Pins:
-      pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs=";
-      pin-sha256="M8HztCzM3elUxkcjR2S5P4hhyBNf6lHkmjAHKhpGPWE=";
-      max-age=5184000; includeSubDomains;
-      report-uri="https://www.example.org/hpkp-report"
+```
+Public-Key-Pins:
+  pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs=";
+  pin-sha256="M8HztCzM3elUxkcjR2S5P4hhyBNf6lHkmjAHKhpGPWE=";
+  max-age=5184000; includeSubDomains;
+  report-uri="https://www.example.org/hpkp-report"
+```
 
 In this example, **pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs="** pins the server's public key used in production. The second pin declaration **pin-sha256="M8HztCzM3elUxkcjR2S5P4hhyBNf6lHkmjAHKhpGPWE="** also pins the backup key. **max-age=5184000** tells the client to store this information for two months, which is a reasonable time limit according to the IETF RFC. This key pinning is also valid for all subdomains, which is told by the **includeSubDomains** declaration. Finally, **report-uri="https\://www\.example.net/hpkp-report"** explains where to report pin validation failures.
 
@@ -90,39 +92,49 @@ The concrete steps necessary to deliver the HPKP header depend on the web server
 
 Adding a line similar to the following to your webserver's config will enable HPKP on your Apache. This requires `mod_headers` enabled.
 
-    Header always set Public-Key-Pins "pin-sha256=\"base64+primary==\"; pin-sha256=\"base64+backup==\"; max-age=5184000; includeSubDomains"
+```
+Header always set Public-Key-Pins "pin-sha256=\"base64+primary==\"; pin-sha256=\"base64+backup==\"; max-age=5184000; includeSubDomains"
+```
 
 #### Nginx
 
 Adding the following line and inserting the appropriate `pin-sha256="..."` values will enable HPKP on your nginx. This requires the `ngx_http_headers_module.`
 
-    add_header Public-Key-Pins 'pin-sha256="base64+primary=="; pin-sha256="base64+backup=="; max-age=5184000; includeSubDomains' always;
+```
+add_header Public-Key-Pins 'pin-sha256="base64+primary=="; pin-sha256="base64+backup=="; max-age=5184000; includeSubDomains' always;
+```
 
 #### Lighttpd
 
 The following line with your relevant key information (pin-sha256="..." fields) will enable HPKP on lighttpd.
 
-    setenv.add-response-header  = ( "Public-Key-Pins" => "pin-sha256=\"base64+primary==\"; pin-sha256=\"base64+backup==\"; max-age=5184000; includeSubDomains")
+```
+setenv.add-response-header  = ( "Public-Key-Pins" => "pin-sha256=\"base64+primary==\"; pin-sha256=\"base64+backup==\"; max-age=5184000; includeSubDomains")
+```
 
 **Note:** This requires the `mod_setenv` server.module loaded which can be included by the following if not already loaded.
 
-    server.modules += ( "mod_setenv" )
+```
+server.modules += ( "mod_setenv" )
+```
 
 #### IIS
 
 Add the following line to the Web.config file to send the `Public-Key-Pins` header:
 
-    <system.webServer>
-      ...
+```
+<system.webServer>
+  ...
 
-      <httpProtocol>
-        <customHeaders>
-          <add name="Public-Key-Pins" value="pin-sha256=&quot;base64+primary==&quot;; pin-sha256=&quot;base64+backup==&quot;; max-age=5184000; includeSubDomains" />
-        </customHeaders>
-      </httpProtocol>
+  <httpProtocol>
+    <customHeaders>
+      <add name="Public-Key-Pins" value="pin-sha256=&quot;base64+primary==&quot;; pin-sha256=&quot;base64+backup==&quot;; max-age=5184000; includeSubDomains" />
+    </customHeaders>
+  </httpProtocol>
 
-      ...
-    </system.webServer>
+  ...
+</system.webServer>
+```
 
 ## Specifications
 

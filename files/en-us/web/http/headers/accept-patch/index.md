@@ -33,7 +33,7 @@ A server receiving a PATCH request with an unsupported media type could reply wi
 
 ## Syntax
 
-```html
+```
 Accept-Patch: application/example, text/example
 Accept-Patch: text/example;charset=utf-8
 Accept-Patch: application/merge-patch+json
@@ -45,7 +45,7 @@ None
 
 ## Examples
 
-```html
+```
 Accept-Patch: application/example, text/example
 
 Accept-Patch: text/example;charset=utf-8

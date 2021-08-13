@@ -45,7 +45,9 @@ It is possible to add a special HTML {{HTMLElement("link")}} element to a page t
 
 When adding such a tag, you serve the same content for both domains, telling search engines which URL is canonical. In the previous example, `http://www.example.org/whaddup` would serve the same content as `http://example.org/whaddup`, but with an additional {{htmlelement("link")}} element in the head:
 
-`<link href="http://example.org/whaddup" rel="canonical">`
+```html
+<link href="http://example.org/whaddup" rel="canonical">
+``
 
 Unlike the previous case, browser history will consider non-www and www URLs as independent entries.
 

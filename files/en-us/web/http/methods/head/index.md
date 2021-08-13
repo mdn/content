@@ -48,7 +48,7 @@ If the response to a `HEAD` request shows that a cached URL response is now outd
 
 ## Syntax
 
-```html
+```
 HEAD /index.html
 ```
 

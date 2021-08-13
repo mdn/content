@@ -21,7 +21,9 @@ a `NotAllowedError` {{domxref("DOMException")}}.
 
 ## Syntax
 
-    Feature-Policy: camera <allowlist>;
+```
+Feature-Policy: camera <allowlist>;
+```
 
 - \<allowlist>
   - : A list of origins for which the feature is allowed. See [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax).

@@ -53,7 +53,7 @@ To set allowed types for {{HTMLElement("object")}}, {{HTMLElement("embed")}}, an
 
 One or more sources can be allowed for the object-src policy:
 
-```html
+```
 Content-Security-Policy: object-src <source>;
 Content-Security-Policy: object-src <source> <source>;
 ```
@@ -68,7 +68,7 @@ Content-Security-Policy: object-src <source> <source>;
 
 Given this CSP header:
 
-```bash
+```
 Content-Security-Policy: object-src https://example.com/
 ```
 

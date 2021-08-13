@@ -30,7 +30,7 @@ The `Cookie` header is optional and may be omitted if, for example, the browser'
 
 ## Syntax
 
-```html
+```
 Cookie: <cookie-list>
 Cookie: name=value
 Cookie: name=value; name2=value2; name3=value3
@@ -41,7 +41,9 @@ Cookie: name=value; name2=value2; name3=value3
 
 ## Examples
 
-    Cookie: PHPSESSID=298zf09hf012fh2; csrftoken=u32t4o3tb3gg43; _gat=1
+```
+Cookie: PHPSESSID=298zf09hf012fh2; csrftoken=u32t4o3tb3gg43; _gat=1
+```
 
 ## Specifications
 

@@ -22,19 +22,23 @@ All [mixed content](/en-US/docs/Web/Security/Mixed_content) resource requests ar
 
 ## Syntax
 
-```html
+```
 Content-Security-Policy: block-all-mixed-content;
 ```
 
 ## Examples
 
-    Content-Security-Policy: block-all-mixed-content;
+```
+Content-Security-Policy: block-all-mixed-content;
 
-    <meta http-equiv="Content-Security-Policy" content="block-all-mixed-content">
+<meta http-equiv="Content-Security-Policy" content="block-all-mixed-content">
+```
 
 To disallow http assets on a more granular level, you can also set individual directives to `https:`. For example, to disallow nonsecure HTTP images:
 
-    Content-Security-Policy: img-src https:
+```
+Content-Security-Policy: img-src https:
+```
 
 ## Specifications
 

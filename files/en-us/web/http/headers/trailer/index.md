@@ -38,7 +38,7 @@ digital signature, or post-processing status.
 
 ## Syntax
 
-```html
+```
 Trailer: header-names
 ```
 
@@ -67,20 +67,22 @@ Trailer: header-names
 In this example, the {{HTTPHeader("Expires")}} header is used at the end of the chunked
 message and serves as a trailing header.
 
-    HTTP/1.1 200 OK
-    Content-Type: text/plain
-    Transfer-Encoding: chunked
-    Trailer: Expires
+```
+HTTP/1.1 200 OK
+Content-Type: text/plain
+Transfer-Encoding: chunked
+Trailer: Expires
 
-    7\r\n
-    Mozilla\r\n
-    9\r\n
-    Developer\r\n
-    7\r\n
-    Network\r\n
-    0\r\n
-    Expires: Wed, 21 Oct 2015 07:28:00 GMT\r\n
-    \r\n
+7\r\n
+Mozilla\r\n
+9\r\n
+Developer\r\n
+7\r\n
+Network\r\n
+0\r\n
+Expires: Wed, 21 Oct 2015 07:28:00 GMT\r\n
+\r\n
+```
 
 ## Specifications
 

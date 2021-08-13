@@ -33,7 +33,7 @@ server to client to inform that server is willing to initiate a websocket connec
 
 ## Syntax
 
-```html
+```
 Sec-WebSocket-Accept: <hashed key>
 ```
 
@@ -47,7 +47,9 @@ Sec-WebSocket-Accept: <hashed key>
 
 ## Examples
 
-    Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
+```
+Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
+```
 
 ## Specifications
 

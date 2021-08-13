@@ -27,7 +27,7 @@ incorrectly sometimes be changed to a {{HTTPMethod("GET")}} method.
 
 ## Status
 
-```html
+```
 308 Permanent Redirect
 ```
 

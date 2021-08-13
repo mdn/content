@@ -15,7 +15,7 @@ indicates that the HTTP version used in the request is not supported by the serv
 
 ## Status
 
-```html
+```
 505 HTTP Version Not Supported
 ```
 

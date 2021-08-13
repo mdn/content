@@ -18,7 +18,7 @@ tags:
 
 ## Reason
 
-```html
+```
 Reason: CORS request did not succeed
 ```
 

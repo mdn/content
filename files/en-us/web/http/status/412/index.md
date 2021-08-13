@@ -21,7 +21,7 @@ cannot be made and this error response is sent back.
 
 ## Status
 
-```html
+```
 412 Precondition Failed
 ```
 

@@ -41,7 +41,7 @@ The most common use case is to update a cached entity that has no associated
 
 ## Syntax
 
-```html
+```
 If-Modified-Since: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
 ```
 
@@ -67,7 +67,9 @@ If-Modified-Since: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
 
 ## Examples
 
-    If-Modified-Since: Wed, 21 Oct 2015 07:28:00 GMT
+```
+If-Modified-Since: Wed, 21 Oct 2015 07:28:00 GMT
+```
 
 ## Specifications
 

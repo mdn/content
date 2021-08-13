@@ -34,7 +34,7 @@ message that lacks a `Host` header field or that contains more than one.
 
 ## Syntax
 
-```html
+```
 Host: <host>:<port>
 ```
 
@@ -47,7 +47,9 @@ Host: <host>:<port>
 
 ## Examples
 
-    Host: developer.mozilla.org
+```
+Host: developer.mozilla.org
+```
 
 ## Specifications
 

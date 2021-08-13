@@ -20,7 +20,9 @@ returned by {{domxref("MediaDevices.getUserMedia()")}} will reject with a
 
 ## Syntax
 
-    Feature-Policy: microphone <allowlist>;
+```
+Feature-Policy: microphone <allowlist>;
+```
 
 - \<allowlist>
   - : A list of origins for which the feature is allowed. See [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax).

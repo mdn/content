@@ -16,7 +16,7 @@ that might be replayed, which creates the potential for a replay attack.
 
 ## Status
 
-```html
+```
 425 Too Early
 ```
 

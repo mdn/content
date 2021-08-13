@@ -45,7 +45,7 @@ Setting this directive to `'none'` is similar to {{HTTPHeader("X-Frame-Options")
 
 One or more sources can be set for the `frame-ancestors` policy:
 
-```html
+```
 Content-Security-Policy: frame-ancestors <source>;
 Content-Security-Policy: frame-ancestors <source> <source>;
 ```
@@ -83,7 +83,7 @@ Content-Security-Policy: frame-ancestors <source> <source>;
 
 ## Examples
 
-```bash
+```
 Content-Security-Policy: frame-ancestors 'none';
 
 Content-Security-Policy: frame-ancestors 'self' https://www.example.org;

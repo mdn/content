@@ -34,7 +34,7 @@ The `Referer` header may not contain URL fragments (i.e. "#section") or "usernam
 
 ## Syntax
 
-```html
+```
 Referer: <url>
 ```
 
@@ -45,9 +45,11 @@ Referer: <url>
 
 ## Examples
 
-    Referer: https://developer.mozilla.org/en-US/docs/Web/JavaScript
-    Referer: https://example.com/page?q=123
-    Referer: https://example.com/
+```
+Referer: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+Referer: https://example.com/page?q=123
+Referer: https://example.com/
+```
 
 ## Specifications
 

@@ -38,7 +38,7 @@ headers make use of this field.
 
 ## Syntax
 
-```html
+```
 Last-Modified: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
 ```
 
@@ -64,7 +64,9 @@ Last-Modified: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
 
 ## Examples
 
-    Last-Modified: Wed, 21 Oct 2015 07:28:00 GMT
+```
+Last-Modified: Wed, 21 Oct 2015 07:28:00 GMT
+```
 
 ## Specifications
 

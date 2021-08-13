@@ -28,7 +28,7 @@ The HTTP **`Cross-Origin-Embedder-Policy`** (COEP) response header prevents a do
 
 ## Syntax
 
-```html
+```
 Cross-Origin-Embedder-Policy: unsafe-none | require-corp
 ```
 
@@ -46,8 +46,10 @@ Cross-Origin-Embedder-Policy: unsafe-none | require-corp
 
 You can only access certain features like {{jsxref("SharedArrayBuffer")}} objects or {{domxref("Performance.now()")}} with unthrottled timers, if your document has a COEP header with the value `require-corp` value set.
 
-    Cross-Origin-Embedder-Policy: require-corp
-    Cross-Origin-Opener-Policy: same-origin
+```
+Cross-Origin-Embedder-Policy: require-corp
+Cross-Origin-Opener-Policy: same-origin
+```
 
 See also the {{HTTPHeader("Cross-Origin-Opener-Policy")}} header which you'll need to set as well.
 
@@ -55,9 +57,9 @@ To check if cross origin isolation has been successful, you can test against the
 
 ```js
 if (crossOriginIsolated) {
-  // Post SharedArrayBuffer
+  // Post SharedArrayBuffer
 } else {
-  // Do something else
+  // Do something else
 }
 ```
 

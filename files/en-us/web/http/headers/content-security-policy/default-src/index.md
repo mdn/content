@@ -51,7 +51,7 @@ The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`default-src`** direc
 
 One or more sources can be allowed for the `default-src` policy:
 
-```html
+```
 Content-Security-Policy: default-src <source>;
 Content-Security-Policy: default-src <source> <source>;
 ```
@@ -108,13 +108,13 @@ Content-Security-Policy: default-src <source> <source>;
 
 If there are other directives specified, `default-src` does not influence them. The following header:
 
-```bash
+```
 Content-Security-Policy: default-src 'self'; script-src https://example.com
 ```
 
 is the same as:
 
-```bash
+```
 Content-Security-Policy: connect-src 'self';
                          font-src 'self';
                          frame-src 'self';

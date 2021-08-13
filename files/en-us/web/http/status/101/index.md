@@ -21,7 +21,7 @@ mechanism](/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism).
 
 ## Status
 
-```html
+```
 101 Switching Protocols
 ```
 
@@ -29,9 +29,11 @@ mechanism](/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism).
 
 Switching protocols might be used with [WebSockets](/en-US/docs/Web/API/WebSockets_API).
 
-    HTTP/1.1 101 Switching Protocols
-    Upgrade: websocket
-    Connection: Upgrade
+```
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+```
 
 ## Specifications
 

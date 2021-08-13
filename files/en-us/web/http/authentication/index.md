@@ -54,7 +54,7 @@ The {{HTTPHeader("WWW-Authenticate")}} and {{HTTPHeader("Proxy-Authenticate")}} 
 
 The syntax for these headers is the following:
 
-```html
+```
 WWW-Authenticate: <type> realm=<realm>
 Proxy-Authenticate: <type> realm=<realm>
 ```
@@ -65,7 +65,7 @@ Here, `<type>` is the authentication scheme ("Basic" is the most common scheme a
 
 The {{HTTPHeader("Authorization")}} and {{HTTPHeader("Proxy-Authorization")}} request headers contain the credentials to authenticate a user agent with a (proxy) server. Here, the `<type>` is needed again followed by the credentials, which can be encoded or encrypted depending on which authentication scheme is used.
 
-```html
+```
 Authorization: <type> <credentials>
 Proxy-Authorization: <type> <credentials>
 ```
@@ -103,30 +103,36 @@ To password-protect a directory on an Apache server, you will need a `.htaccess`
 
 The `.htaccess` file typically looks like this:
 
-    AuthType Basic
-    AuthName "Access to the staging site"
-    AuthUserFile /path/to/.htpasswd
-    Require valid-user
+```
+AuthType Basic
+AuthName "Access to the staging site"
+AuthUserFile /path/to/.htpasswd
+Require valid-user
+```
 
 The `.htaccess` file references a `.htpasswd` file in which each line consists of a username and a password separated by a colon (`:`). You cannot see the actual passwords as they are [hashed](https://httpd.apache.org/docs/2.4/misc/password_encryptions.html) (using MD5-based hashing, in this case). Note that you can name your `.htpasswd` file differently if you like, but keep in mind this file shouldn't be accessible to anyone. (Apache is usually configured to prevent access to `.ht*` files).
 
-    aladdin:$apr1$ZjTqBB3f$IF9gdYAGlMrs2fuINjHsz.
-    user2:$apr1$O04r.y2H$/vEkesPhVInBByJUkXitA/
+```
+aladdin:$apr1$ZjTqBB3f$IF9gdYAGlMrs2fuINjHsz.
+user2:$apr1$O04r.y2H$/vEkesPhVInBByJUkXitA/
+```
 
 ### Restricting access with nginx and basic authentication
 
 For nginx, you will need to specify a location that you are going to protect and the `auth_basic` directive that provides the name to the password-protected area. The `auth_basic_user_file` directive then points to a `.htpasswd` file containing the encrypted user credentials, just like in the Apache example above.
 
-    location /status {
-        auth_basic           "Access to the staging site";
-        auth_basic_user_file /etc/apache2/.htpasswd;
-    }
+```
+location /status {
+    auth_basic           "Access to the staging site";
+    auth_basic_user_file /etc/apache2/.htpasswd;
+}
+```
 
 ### Access using credentials in the URL
 
 Many clients also let you avoid the login prompt by using an encoded URL containing the username and the password like this:
 
-```plain example-bad
+```example-bad
 https://username:password@www.example.com/
 ```
 

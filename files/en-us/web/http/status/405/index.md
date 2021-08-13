@@ -16,7 +16,7 @@ The server **must** generate an **`Allow`** header field in a 405 response conta
 
 ## Status
 
-```html
+```
 405 Method Not Allowed
 ```
 

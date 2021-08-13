@@ -41,7 +41,7 @@ There are two common use cases:
 
 ## Syntax
 
-```html
+```
 If-Unmodified-Since: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
 ```
 
@@ -67,7 +67,9 @@ If-Unmodified-Since: <day-name>, <day> <month> <year> <hour>:<minute>:<second> G
 
 ## Examples
 
-    If-Unmodified-Since: Wed, 21 Oct 2015 07:28:00 GMT
+```
+If-Unmodified-Since: Wed, 21 Oct 2015 07:28:00 GMT
+```
 
 ## Specifications
 

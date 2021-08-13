@@ -31,13 +31,13 @@ generated the response.
 
 ## Syntax
 
-```html
+```
 Server: <product>
 ```
 
 ## Directives
 
-- `<product>`
+- \<product>
   - : The name of the software or product that handled the request. Usually in a format
     similar to {{HTTPHeader('User-Agent')}}.
 
@@ -49,7 +49,9 @@ versions had with {{HTTPHeader('Content-Encoding')}} combined with
 
 ## Examples
 
-    Server: Apache/2.4.1 (Unix)
+```
+Server: Apache/2.4.1 (Unix)
+```
 
 ## Specifications
 

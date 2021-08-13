@@ -39,7 +39,7 @@ The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`form`\*\***`-action`
 
 One or more sources can be set for the `form-action` policy:
 
-```html
+```
 Content-Security-Policy: form-action <source>;
 Content-Security-Policy: form-action <source> <source>;
 ```
@@ -58,7 +58,7 @@ Content-Security-Policy: form-action <source> <source>;
 
 ### Apache configuration
 
-```bash
+```html
 <IfModule mod_headers.c>
 Header set Content-Security-Policy "form-action 'none';"
 </IfModule>
@@ -66,7 +66,7 @@ Header set Content-Security-Policy "form-action 'none';"
 
 ### Nginx configuration
 
-```bash
+```
 add_header Content-Security-Policy "form-action 'none';"
 ```
 

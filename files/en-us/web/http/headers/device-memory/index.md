@@ -39,7 +39,9 @@ The **`Device-Memory`** {{Glossary("Client hints","device client hint")}} reques
 
 ## Syntax
 
-    Device-Memory: <number>
+```
+Device-Memory: <number>
+```
 
 ## Directives
 
@@ -52,11 +54,15 @@ The amount of device RAM can be used as a fingerprinting variable, so values for
 
 The server first needs to opt in to receive `Device-Memory` header by sending the response headers {{HTTPHeader("Accept-CH")}} containing `Device-Memory`.
 
-    Accept-CH: Device-Memory
+```
+Accept-CH: Device-Memory
+```
 
 Then on subsequent requests the client might send `Device-Memory` header back:
 
-    Device-Memory: 1
+```
+Device-Memory: 1
+```
 
 ## Specifications
 

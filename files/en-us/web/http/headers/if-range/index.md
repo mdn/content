@@ -39,7 +39,7 @@ has not been modified since the last fragment has been received.
 
 ## Syntax
 
-```html
+```
 If-Range: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
 If-Range: <etag>
 ```
@@ -71,7 +71,9 @@ If-Range: <etag>
 
 ## Examples
 
-    If-Range: Wed, 21 Oct 2015 07:28:00 GMT
+```
+If-Range: Wed, 21 Oct 2015 07:28:00 GMT
+```
 
 ## Specifications
 

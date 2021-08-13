@@ -38,7 +38,7 @@ this header is used:
 
 ## Syntax
 
-```html
+```
 Retry-After: <http-date>
 Retry-After: <delay-seconds>
 ```
@@ -62,8 +62,10 @@ inconsistent. However, some crawlers and spiders, like the Googlebot, honor the
 {{HTTPStatus(503)}} (Service Unavailable) response, so that search engines will keep
 indexing your site when the downtime is over.
 
-    Retry-After: Wed, 21 Oct 2015 07:28:00 GMT
-    Retry-After: 120
+```
+Retry-After: Wed, 21 Oct 2015 07:28:00 GMT
+Retry-After: 120
+```
 
 ## Specifications
 
@@ -75,7 +77,6 @@ indexing your site when the downtime is over.
 
 ## See also
 
-- [Google
-  Webmaster blog: How to deal with planned site downtime](https://webmasters.googleblog.com/2011/01/how-to-deal-with-planned-site-downtime.html)
+- [Google Webmaster blog: How to deal with planned site downtime](https://webmasters.googleblog.com/2011/01/how-to-deal-with-planned-site-downtime.html)
 - {{HTTPStatus(503)}} (Service Unavailable)
 - {{HTTPStatus(301)}} (Moved Permanently)

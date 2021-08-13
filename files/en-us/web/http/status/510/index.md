@@ -19,7 +19,7 @@ responds with the 510 status code.
 
 ## Status
 
-```html
+```
 510 Not Extended
 ```
 

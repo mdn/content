@@ -39,8 +39,10 @@ The digest is calculated over the entire representation. The representation itse
 
 ## Syntax
 
-    Digest: <digest-algorithm>=<digest-value>
-    Digest: <digest-algorithm>=<digest-value>,<digest-algorithm>=<digest-value>
+```
+Digest: <digest-algorithm>=<digest-value>
+Digest: <digest-algorithm>=<digest-value>,<digest-algorithm>=<digest-value>
+```
 
 ## Directives
 
@@ -56,8 +58,10 @@ The digest is calculated over the entire representation. The representation itse
 
 ## Examples
 
-    Digest: sha-256=X48E9qOokqqrvdts8nOJRJN3OWDUoyWxBf7kbu9DBPE=
-    Digest: sha-256=X48E9qOokqqrvdts8nOJRJN3OWDUoyWxBf7kbu9DBPE=,unixsum=30637
+```
+Digest: sha-256=X48E9qOokqqrvdts8nOJRJN3OWDUoyWxBf7kbu9DBPE=
+Digest: sha-256=X48E9qOokqqrvdts8nOJRJN3OWDUoyWxBf7kbu9DBPE=,unixsum=30637
+```
 
 ## Specifications
 

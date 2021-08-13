@@ -19,7 +19,7 @@ required protocol(s).
 
 ## Status
 
-```html
+```
 426 Upgrade Required
 ```
 

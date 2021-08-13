@@ -44,13 +44,13 @@ cURL do so by default.
 
 No other expectations except "100-continue" are specified currently.
 
-```html
+```
 Expect: 100-continue
 ```
 
 ## Directives
 
-- 100-continue
+- `100-continue`
   - : Informs recipients that the client is about to send a (presumably large) message
     body in this request and wishes to receive a {{HTTPStatus("100")}} (Continue) interim
     response.
@@ -62,11 +62,13 @@ Expect: 100-continue
 A client sends a request with a Expect header and waits for the server to respond
 before sending the message body.
 
-    PUT /somewhere/fun HTTP/1.1
-    Host: origin.example.com
-    Content-Type: video/h264
-    Content-Length: 1234567890987
-    Expect: 100-continue
+```
+PUT /somewhere/fun HTTP/1.1
+Host: origin.example.com
+Content-Type: video/h264
+Content-Length: 1234567890987
+Expect: 100-continue
+```
 
 The server now checks the request headers and may respond with a {{HTTPStatus("100")}}
 (Continue) response to instruct the client to go ahead and send the message body, or it
