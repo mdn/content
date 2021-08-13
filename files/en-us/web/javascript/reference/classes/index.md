@@ -220,13 +220,6 @@ class Rectangle {
 }
 ```
 
-Static (class-side) data properties and prototype data properties must be defined outside of the ClassBody declaration:
-
-```js
-Rectangle.staticWidth = 20;
-Rectangle.prototype.prototypeWidth = 25;
-```
-
 ### Field declarations
 
 #### Public field declarations
