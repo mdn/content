@@ -61,13 +61,13 @@ Font-relative lengths define the `<length>` value in terms of the size of a part
 Viewport-percentage lengths define the `<length>` value relative to the size of the {{glossary("viewport")}}, i.e., the visible portion of the document. Viewport lengths are invalid in {{cssxref("@page")}} declaration blocks.
 
 - `vh`
-  - : Equal to 1% of the height of the viewport's initial [containing block](/en-US/docs/Web/CSS/All_About_The_Containing_Block).
+  - : Equal to 1% of the height of the viewport's initial [containing block](/en-US/docs/Web/CSS/Containing_block).
 - `vw`
-  - : Equal to 1% of the width of the viewport's initial [containing block](/en-US/docs/Web/CSS/All_About_The_Containing_Block).
+  - : Equal to 1% of the width of the viewport's initial [containing block](/en-US/docs/Web/CSS/Containing_block).
 - `vi` {{experimental_inline}}
-  - : Equal to 1% of the size of the initial [containing block](/en-US/docs/Web/CSS/All_About_The_Containing_Block), in the direction of the root element’s [inline axis](/en-US/docs/Web/CSS/CSS_Logical_Properties#block_vs._inline).
+  - : Equal to 1% of the size of the initial [containing block](/en-US/docs/Web/CSS/Containing_block), in the direction of the root element’s [inline axis](/en-US/docs/Web/CSS/CSS_Logical_Properties#block_vs._inline).
 - `vb` {{experimental_inline}}
-  - : Equal to 1% of the size of the initial [containing block](/en-US/docs/Web/CSS/All_About_The_Containing_Block), in the direction of the root element’s [block axis](/en-US/docs/Web/CSS/CSS_Logical_Properties#block_vs._inline).
+  - : Equal to 1% of the size of the initial [containing block](/en-US/docs/Web/CSS/Containing_block), in the direction of the root element’s [block axis](/en-US/docs/Web/CSS/CSS_Logical_Properties#block_vs._inline).
 - `vmin`
   - : Equal to the smaller of `vw` and `vh`.
 - `vmax`
@@ -100,7 +100,7 @@ For high-dpi devices, inches (`in`), centimeters (`cm`), and millimeters (`mm`) 
 
 ## Interpolation
 
-When animated, values of the `<length>` data type are interpolated as real, floating-point numbers. The interpolation happens on the calculated value. The speed of the interpolation is determined by the [timing function](/en-US/docs/Web/CSS/single-transition-timing-function) associated with the animation.
+When animated, values of the `<length>` data type are interpolated as real, floating-point numbers. The interpolation happens on the calculated value. The speed of the interpolation is determined by the [timing function](/en-US/docs/Web/CSS/easing-function) associated with the animation.
 
 ## Examples
 
@@ -217,6 +217,6 @@ inputElem.addEventListener('change', () => {
 
 ## See also
 
-- [CSS values & units tutorial](/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)
+- [CSS values & units tutorial](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
 - [CSS values & units reference](/en-US/docs/Web/CSS/CSS_Values_and_Units)
 - [Box Model](/en-US/docs/Web/CSS/CSS_Box_Model)
