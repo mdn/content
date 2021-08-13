@@ -17,7 +17,9 @@ The HTTP {{HTTPHeader("Feature-Policy")}} header `layout-animations` directive c
 
 ## Syntax
 
-    Feature-Policy: layout-animations <allowlist>;
+```
+Feature-Policy: layout-animations <allowlist>;
+```
 
 - \<allowlist>
   - : A list of origins for which the feature is allowed. See [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax).

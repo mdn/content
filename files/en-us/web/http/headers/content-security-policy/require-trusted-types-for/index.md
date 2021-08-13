@@ -16,7 +16,9 @@ When used, those functions only accept non-spoofable, typed values created by Tr
 
 ## Syntax
 
-    Content-Security-Policy: require-trusted-types-for 'script';
+```
+Content-Security-Policy: require-trusted-types-for 'script';
+````
 
 - `'script'`
   - : Disallows using strings with DOM XSS injection sink functions, and requires matching types created by Trusted Type policies.
@@ -30,14 +32,14 @@ const attackerInput = '<svg onload="alert(/cross-site-scripting/)" />';
 const el = document.createElement('div');
 
 if (typeof trustedTypes !== 'undefined') {
-  // Create a policy that can create TrustedHTML values
+  // Create a policy that can create TrustedHTML values
   // after sanitizing the input strings with DOMPurify library.
-  const sanitizer = trustedTypes.createPolicy('foo', {
-    createHTML: (input) => DOMPurify.sanitize(input)
-  });
+  const sanitizer = trustedTypes.createPolicy('foo', {
+    createHTML: (input) => DOMPurify.sanitize(input)
+  });
 
-  el.innerHTML = sanitizer.createHTML(attackerInput);  // Puts the sanitized value into the DOM.
-  el.innerHTML = attackerInput;                        // Rejects a string value; throws a TypeError.
+  el.innerHTML = sanitizer.createHTML(attackerInput);  // Puts the sanitized value into the DOM.
+  el.innerHTML = attackerInput;                        // Rejects a string value; throws a TypeError.
 }
 ```
 

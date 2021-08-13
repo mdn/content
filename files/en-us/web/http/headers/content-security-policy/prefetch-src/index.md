@@ -40,7 +40,7 @@ be prefetched or prerendered.
 
 One or more sources can be allowed for the `prefetch-src` policy:
 
-```html
+```
 Content-Security-Policy: prefetch-src <source>;
 Content-Security-Policy: prefetch-src <source> <source>;
 ```
@@ -56,13 +56,17 @@ Content-Security-Policy: prefetch-src <source> <source>;
 
 Given a page with the following Content Security Policy:
 
-    Content-Security-Policy: prefetch-src https://example.com/
+```
+Content-Security-Policy: prefetch-src https://example.com/
+```
 
 Fetches for the following code will return network errors, as the URLs provided do not
 match `prefetch-src`'s source list:
 
+```html
     <link rel="prefetch" src="https://example.org/"></link>
     <link rel="prerender" src="https://example.org/"></link>
+```
 
 ## Specifications
 

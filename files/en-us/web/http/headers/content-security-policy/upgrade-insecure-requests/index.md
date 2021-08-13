@@ -36,17 +36,23 @@ not subject to SSL stripping attacks.
 
 ## Syntax
 
-```html
+```
 Content-Security-Policy: upgrade-insecure-requests;
 ```
 
 ## Examples
 
-    // header
-    Content-Security-Policy: upgrade-insecure-requests;
+### Using the HTTP header
 
-    // meta tag
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+```
+Content-Security-Policy: upgrade-insecure-requests;
+```
+
+### Usting the HTML meta element
+
+```html
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+```
 
 With the above header set on a domain example.com that wants to migrate from HTTP to
 HTTPS, non-navigational insecure resource requests are automatically upgraded
@@ -80,8 +86,10 @@ With the help of the {{HTTPHeader("Content-Security-Policy-Report-Only")}} heade
 the {{CSP("report-uri")}} directive, you can set-up an enforced policy and a reported
 policy like this:
 
-    Content-Security-Policy: upgrade-insecure-requests; default-src https:
-    Content-Security-Policy-Report-Only: default-src https:; report-uri /endpoint
+```
+Content-Security-Policy: upgrade-insecure-requests; default-src https:
+Content-Security-Policy-Report-Only: default-src https:; report-uri /endpoint
+```
 
 That way, you still upgrade insecure requests on your secure site, but the only
 monitoring policy is violated and reports insecure resources to your endpoint.

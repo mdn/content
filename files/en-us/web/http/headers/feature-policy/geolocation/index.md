@@ -25,7 +25,9 @@ accessing geolocation. This includes same-origin frames.
 
 ## Syntax
 
-    Feature-Policy: geolocation <allowlist>;
+```
+Feature-Policy: geolocation <allowlist>;
+```
 
 - \<allowlist>
   - : A list of origins for which the feature is allowed. See [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax).
@@ -42,7 +44,7 @@ SecureCorp Inc. wants to disable the Geolocation API within all browsing context
 except for its own origin and those whose origin is `https://example.com`. It
 can do so by delivering the following HTTP response header to define a feature policy:
 
-```bash
+```
 Feature-Policy: geolocation 'self' https://example.com
 ```
 
@@ -52,16 +54,18 @@ FastCorp Inc. wants to disable `geolocation` for all cross-origin child
 frames, except for a specific \<iframe>. It can do so by delivering the following
 HTTP response header to define a feature policy:
 
-```bash
+```
 Feature-Policy: geolocation 'self'
 ```
 
 Then include an {{HTMLElement('iframe','allow','#Attributes')}} attribute on the
 `<iframe>` element:
 
-    <iframe src="https://other.com/map" allow="geolocation"></iframe>
+```html
+<iframe src="https://other.com/map" allow="geolocation"></iframe>
+```
 
-iframe attributes can selectively enable features in certain frames, and not in others,
+Interestingly, `allow` attributes can selectively enable features in certain frames, and not in others,
 even if those frames contain documents from the same origin.
 
 ## Specifications

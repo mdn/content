@@ -16,7 +16,9 @@ The HTTP {{HTTPHeader("Feature-Policy")}} header `magnetometer` directive contro
 
 ## Syntax
 
-    Feature-Policy: magnetometer <allowlist>;
+```
+Feature-Policy: magnetometer <allowlist>;
+```
 
 - \<allowlist>
   - : A list of origins for which the feature is allowed. See [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax).

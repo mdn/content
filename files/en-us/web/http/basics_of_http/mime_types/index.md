@@ -41,7 +41,7 @@ The simplest MIME type consists of a _type_ and a _subtype_; these
 are each strings which, when concatenated with a slash (`/`) between them,
 comprise a MIME type. No whitespace is allowed in a MIME type:
 
-```html
+```
 type/subtype
 ```
 
@@ -58,7 +58,7 @@ and a subtype, never just one or the other.
 
 An optional **parameter** can be added to provide additional details:
 
-```html
+```
 type/subtype;parameter=value
 ```
 
@@ -299,7 +299,7 @@ As a multipart document format, it consists of different parts, delimited by a b
 its own HTTP headers, {{HTTPHeader("Content-Disposition")}}, and
 {{HTTPHeader("Content-Type")}} for file uploading fields.
 
-```html
+```
 Content-Type: multipart/form-data; boundary=aBoundaryString
 (other headers associated with the multipart document as a whole)
 
@@ -330,31 +330,33 @@ The following `<form>`:
 
 will send this message:
 
-    POST / HTTP/1.1
-    Host: localhost:8000
-    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
-    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-    Accept-Language: en-US,en;q=0.5
-    Accept-Encoding: gzip, deflate
-    Connection: keep-alive
-    Upgrade-Insecure-Requests: 1
-    Content-Type: multipart/form-data; boundary=---------------------------8721656041911415653955004498
-    Content-Length: 465
+```
+POST / HTTP/1.1
+Host: localhost:8000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Content-Type: multipart/form-data; boundary=---------------------------8721656041911415653955004498
+Content-Length: 465
 
-    -----------------------------8721656041911415653955004498
-    Content-Disposition: form-data; name="myTextField"
+-----------------------------8721656041911415653955004498
+Content-Disposition: form-data; name="myTextField"
 
-    Test
-    -----------------------------8721656041911415653955004498
-    Content-Disposition: form-data; name="myCheckBox"
+Test
+-----------------------------8721656041911415653955004498
+Content-Disposition: form-data; name="myCheckBox"
 
-    on
-    -----------------------------8721656041911415653955004498
-    Content-Disposition: form-data; name="myFile"; filename="test.txt"
-    Content-Type: text/plain
+on
+-----------------------------8721656041911415653955004498
+Content-Disposition: form-data; name="myFile"; filename="test.txt"
+Content-Type: text/plain
 
-    Simple file.
-    -----------------------------8721656041911415653955004498--
+Simple file.
+-----------------------------8721656041911415653955004498--
+```
 
 ### multipart/byteranges
 
@@ -368,26 +370,28 @@ requested ranges. Like other multipart types, the {{HTTPHeader("Content-Type")}}
 {{HTTPHeader("Content-Type")}} header with its actual type and a
 {{HTTPHeader("Content-Range")}} of the range it represents.
 
-    HTTP/1.1 206 Partial Content
-    Accept-Ranges: bytes
-    Content-Type: multipart/byteranges; boundary=3d6b6a416f9b5
-    Content-Length: 385
+```
+HTTP/1.1 206 Partial Content
+Accept-Ranges: bytes
+Content-Type: multipart/byteranges; boundary=3d6b6a416f9b5
+Content-Length: 385
 
-    --3d6b6a416f9b5
-    Content-Type: text/html
-    Content-Range: bytes 100-200/1270
+--3d6b6a416f9b5
+Content-Type: text/html
+Content-Range: bytes 100-200/1270
 
-    eta http-equiv="Content-type" content="text/html; charset=utf-8" />
-        <meta name="vieport" content
-    --3d6b6a416f9b5
-    Content-Type: text/html
-    Content-Range: bytes 300-400/1270
+eta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="vieport" content
+--3d6b6a416f9b5
+Content-Type: text/html
+Content-Range: bytes 300-400/1270
 
-    -color: #f0f0f2;
-            margin: 0;
-            padding: 0;
-            font-family: "Open Sans", "Helvetica
-    --3d6b6a416f9b5--
+-color: #f0f0f2;
+        margin: 0;
+        padding: 0;
+        font-family: "Open Sans", "Helvetica
+--3d6b6a416f9b5--
+```
 
 ## Importance of setting the correct MIME type
 

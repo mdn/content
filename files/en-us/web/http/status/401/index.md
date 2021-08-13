@@ -22,15 +22,17 @@ possible.
 
 ## Status
 
-```html
+```
 401 Unauthorized
 ```
 
 ## Example response
 
-    HTTP/1.1 401 Unauthorized
-    Date: Wed, 21 Oct 2015 07:28:00 GMT
-    WWW-Authenticate: Basic realm="Access to staging site"
+```
+HTTP/1.1 401 Unauthorized
+Date: Wed, 21 Oct 2015 07:28:00 GMT
+WWW-Authenticate: Basic realm="Access to staging site"
+```
 
 ## Specifications
 

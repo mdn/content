@@ -14,22 +14,26 @@ HTTP range requests allow to send only a portion of an HTTP message from a serve
 
 If the {{HTTPHeader("Accept-Ranges")}} is present in HTTP responses (and its value isn't "`none`"), the server supports range requests. You can check this by issuing a {{HTTPMethod("HEAD")}} request with cURL, for example.
 
-    curl -I http://i.imgur.com/z4d4kWk.jpg
+```
+curl -I http://i.imgur.com/z4d4kWk.jpg
 
-    HTTP/1.1 200 OK
-    ...
-    Accept-Ranges: bytes
-    Content-Length: 146515
+HTTP/1.1 200 OK
+...
+Accept-Ranges: bytes
+Content-Length: 146515
+```
 
 In this response, `Accept-Ranges: bytes` indicates that bytes can be used as unit to define a range. Here the {{HTTPHeader("Content-Length")}} header is also useful as it indicates the full size of the image to retrieve.
 
 If sites omit the `Accept-Ranges` header, they likely don't support partial requests. Some sites also explicitly send "`none`" as a value, indicating no support. In some apps, download managers disable their pause buttons in that case.
 
-    curl -I https://www.youtube.com/watch?v=EwTZ2xpQwpA
+```
+curl -I https://www.youtube.com/watch?v=EwTZ2xpQwpA
 
-    HTTP/1.1 200 OK
-    ...
-    Accept-Ranges: none
+HTTP/1.1 200 OK
+...
+Accept-Ranges: none
+```
 
 ## Requesting a specific range from a server
 
@@ -39,21 +43,27 @@ If the server supports range requests, you can issue such a request by using the
 
 We can request a single range from a resource. Again, we can test a request by using cURL. The "`-H`" option will append a header line to the request, which in this case is the `Range` header requesting the first 1024 bytes.
 
-    curl http://i.imgur.com/z4d4kWk.jpg -i -H "Range: bytes=0-1023"
+```
+curl http://i.imgur.com/z4d4kWk.jpg -i -H "Range: bytes=0-1023"
+```
 
 The issued request looks like this:
 
-    GET /z4d4kWk.jpg HTTP/1.1
-    Host: i.imgur.com
-    Range: bytes=0-1023
+```
+GET /z4d4kWk.jpg HTTP/1.1
+Host: i.imgur.com
+Range: bytes=0-1023
+```
 
 The server responses with the {{HTTPStatus("206")}} `Partial Content` status:
 
-    HTTP/1.1 206 Partial Content
-    Content-Range: bytes 0-1023/146515
-    Content-Length: 1024
-    ...
-    (binary content)
+```
+HTTP/1.1 206 Partial Content
+Content-Range: bytes 0-1023/146515
+Content-Length: 1024
+...
+(binary content)
+```
 
 The {{HTTPHeader("Content-Length")}} header now indicates the size of the requested range (and not the full size of the image). The {{HTTPHeader("Content-Range")}} response header indicates where in the full resource this partial message belongs.
 
@@ -61,28 +71,32 @@ The {{HTTPHeader("Content-Length")}} header now indicates the size of the reques
 
 The {{HTTPHeader("Range")}} header also allows you to get multiple ranges at once in a multipart document. The ranges are separated by a comma.
 
-    curl http://www.example.com -i -H "Range: bytes=0-50, 100-150"
+```
+curl http://www.example.com -i -H "Range: bytes=0-50, 100-150"
+```
 
 The server responses with the {{HTTPStatus("206")}} `Partial Content` status and a {{HTTPHeader("Content-Type")}}`: multipart/byteranges; boundary=3d6b6a416f9b5` header, indicating that a multipart byterange follows. Each part contains its own `Content-Type` and `Content-Range` fields and the required boundary parameter specifies the boundary string used to separate each body-part.
 
-    HTTP/1.1 206 Partial Content
-    Content-Type: multipart/byteranges; boundary=3d6b6a416f9b5
-    Content-Length: 282
+```
+HTTP/1.1 206 Partial Content
+Content-Type: multipart/byteranges; boundary=3d6b6a416f9b5
+Content-Length: 282
 
-    --3d6b6a416f9b5
-    Content-Type: text/html
-    Content-Range: bytes 0-50/1270
+--3d6b6a416f9b5
+Content-Type: text/html
+Content-Range: bytes 0-50/1270
 
-    <!doctype html>
-    <html>
-    <head>
-        <title>Example Do
-    --3d6b6a416f9b5
-    Content-Type: text/html
-    Content-Range: bytes 100-150/1270
+<!doctype html>
+<html>
+<head>
+    <title>Example Do
+--3d6b6a416f9b5
+Content-Type: text/html
+Content-Range: bytes 100-150/1270
 
-    eta http-equiv="Content-type" content="text/html; c
-    --3d6b6a416f9b5--
+eta http-equiv="Content-type" content="text/html; c
+--3d6b6a416f9b5--
+```
 
 ### Conditional range requests
 
@@ -90,7 +104,9 @@ When resuming to request more parts of a resource, you need to guarantee that th
 
 The {{HTTPHeader("If-Range")}} HTTP request header makes a range request conditional: if the condition is fulfilled, the range request will be issued and the server sends back a {{HTTPStatus("206")}} `Partial Content` answer with the appropriate body. If the condition is not fulfilled, the full resource is sent back, with a {{HTTPStatus("200")}} `OK` status. This header can be used either with a {{HTTPHeader("Last-Modified")}} validator, or with an {{HTTPHeader("ETag")}}, but not with both.
 
-    If-Range: Wed, 21 Oct 2015 07:28:00 GMT
+```
+If-Range: Wed, 21 Oct 2015 07:28:00 GMT
+```
 
 ## Partial request responses
 

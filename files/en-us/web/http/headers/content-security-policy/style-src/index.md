@@ -42,7 +42,7 @@ The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`style-src`** directi
 
 One or more sources can be allowed for the `style-src` policy:
 
-```html
+```
 Content-Security-Policy: style-src <source>;
 Content-Security-Policy: style-src <source> <source>;
 ```
@@ -57,7 +57,7 @@ Content-Security-Policy: style-src <source> <source>;
 
 Given this CSP header:
 
-```bash
+```
 Content-Security-Policy: style-src https://example.com/
 ```
 
@@ -77,7 +77,7 @@ the following stylesheets are blocked and won't load:
 
 as well as styles loaded using the {{HTTPHeader("Link")}} header:
 
-```bash
+```
 Link: <https://not-example.com/styles/stylesheet.css>;rel=stylesheet
 ```
 
@@ -124,7 +124,7 @@ The above Content Security Policy will allow inline styles like the {{HTMLElemen
 
 You can use a nonce-source to only allow specific inline style blocks:
 
-```bash
+```
 Content-Security-Policy: style-src 'nonce-2726c7f26c'
 ```
 
@@ -144,7 +144,7 @@ echo -n "#inline-style { background: red; }" | openssl dgst -sha256 -binary | op
 
 You can use a hash-source to only allow specific inline style blocks:
 
-```bash
+```
 Content-Security-Policy: style-src 'sha256-ozBpjL6dxO8fsS4u6fwG1dFDACYvpNxYeBA6tzR+FY8='
 ```
 

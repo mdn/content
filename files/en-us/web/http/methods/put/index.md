@@ -46,7 +46,7 @@ The difference between `PUT` and {{HTTPMethod("POST")}} is that `PUT` is idempot
 
 ## Syntax
 
-```html
+```
 PUT /new.html HTTP/1.1
 ```
 
@@ -54,12 +54,14 @@ PUT /new.html HTTP/1.1
 
 ### Request
 
-    PUT /new.html HTTP/1.1
-    Host: example.com
-    Content-type: text/html
-    Content-length: 16
+```
+PUT /new.html HTTP/1.1
+Host: example.com
+Content-type: text/html
+Content-length: 16
 
-    <p>New File</p>
+<p>New File</p>
+```
 
 ### Responses
 

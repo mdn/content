@@ -16,14 +16,16 @@ This status is similar to {{HTTPStatus("401")}}, but in this case, re-authentica
 
 ## Status
 
-```html
+```
 403 Forbidden
 ```
 
 ## Example response
 
-    HTTP/1.1 403 Forbidden
-    Date: Wed, 21 Oct 2015 07:28:00 GMT
+```
+HTTP/1.1 403 Forbidden
+Date: Wed, 21 Oct 2015 07:28:00 GMT
+```
 
 ## Specifications
 

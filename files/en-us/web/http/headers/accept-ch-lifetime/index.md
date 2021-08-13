@@ -45,14 +45,16 @@ include in subsequent requests.
 
 ## Syntax
 
-```html
+```
 Accept-CH-Lifetime: <age>
 ```
 
 ## Examples
 
-    Accept-CH: Viewport-Width
-    Accept-CH-Lifetime: 86400
+```
+Accept-CH: Viewport-Width
+Accept-CH-Lifetime: 86400
+```
 
 ## Browser compatibility
 

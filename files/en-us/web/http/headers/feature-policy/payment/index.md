@@ -18,7 +18,9 @@ The HTTP {{HTTPHeader("Feature-Policy")}} header field's `payment` directive con
 
 ## Syntax
 
-    Feature-Policy: payment <allowlist>;
+```
+Feature-Policy: payment <allowlist>;
+```
 
 - \<allowlist>
   - : A list of origins for which the feature is allowed. See [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax).

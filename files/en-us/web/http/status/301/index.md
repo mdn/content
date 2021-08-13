@@ -16,7 +16,7 @@ Even if the specification requires the method (and the body) not to be altered w
 
 ## Status
 
-```html
+```
 301 Moved Permanently
 ```
 
@@ -24,13 +24,17 @@ Even if the specification requires the method (and the body) not to be altered w
 
 ### Client request
 
-    GET /index.php HTTP/1.1
-    Host: www.example.org
+```
+GET /index.php HTTP/1.1
+Host: www.example.org
+```
 
 ### Server response
 
-    HTTP/1.1 301 Moved Permanently
-    Location: http://www.example.org/index.asp
+```
+HTTP/1.1 301 Moved Permanently
+Location: http://www.example.org/index.asp
+```
 
 ## Specifications
 

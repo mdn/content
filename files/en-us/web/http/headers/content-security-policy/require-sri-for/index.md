@@ -20,7 +20,7 @@ Integrity](/en-US/docs/Web/Security/Subresource_Integrity) for scripts or styles
 
 ## Syntax
 
-```html
+```
 Content-Security-Policy: require-sri-for script;
 Content-Security-Policy: require-sri-for style;
 Content-Security-Policy: require-sri-for script style;
@@ -37,7 +37,9 @@ Content-Security-Policy: require-sri-for script style;
 
 If you set your site to require SRI for script and styles using this directive:
 
-    Content-Security-Policy: require-sri-for script style
+```
+Content-Security-Policy: require-sri-for script style
+```
 
 {{HTMLElement("script")}} elements like the following will be loaded as they use a
 valid integrity attribute.

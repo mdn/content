@@ -23,11 +23,15 @@ Starting in Gecko 1.9.1 (Firefox 3.5), HTTPS content can be prefetched.
 
 The browser looks for either an HTML {{ HTMLElement("link") }} or an [HTTP `Link:` header](/en-US/docs/Web/HTTP/Headers "HTTP headers") with a relation type of either `next` or `prefetch`. An example using the `link` tag follows:
 
-    <link rel="prefetch" href="/images/big.jpeg">
+```html
+<link rel="prefetch" href="/images/big.jpeg">
+```
 
 The same prefetching hint using an HTTP `Link:` header:
 
-    Link: </images/big.jpeg>; rel=prefetch
+```
+Link: </images/big.jpeg>; rel=prefetch
+```
 
 The format for the `Link:` header is described in [RFC 5988](https://datatracker.ietf.org/doc/html/rfc5988) section 5.
 
@@ -35,8 +39,10 @@ The browser observes all of these hints and queues up each unique request to be 
 
 Some more examples follow:
 
-    <link rel="prefetch alternate stylesheet" title="Designed for Mozilla" href="mozspecific.css">
-    <link rel="next" href="2.html">
+```html
+<link rel="prefetch alternate stylesheet" title="Designed for Mozilla" href="mozspecific.css">
+<link rel="next" href="2.html">
+```
 
 ### Are anchor (\<a>) tags prefetched?
 
@@ -78,7 +84,9 @@ This may impact referrer tracking that is commonly used on many sites. For this 
 
 Yes, we send the following header along with each prefetch request:
 
-    X-moz: prefetch
+```
+X-moz: prefetch
+```
 
 Of course, this request header is not at all standardized, and it may change in future Mozilla releases. Chrome uses "X-Purpose: prefetch" or "Purpose: prefetch" [header](https://bugs.webkit.org/show_bug.cgi?id=46529).
 
@@ -86,7 +94,9 @@ Of course, this request header is not at all standardized, and it may change in 
 
 Yes, there is a hidden preference that you can set to disable link prefetching. Add this line to your prefs.js file located in your profile directory (or make the appropriate change via `about:config`:
 
-    user_pref("network.prefetch-next", false);
+```js
+user_pref("network.prefetch-next", false);
+```
 
 However, the theory is that if link prefetching needs to be disabled then there must be something wrong with the implementation. We would rather improve the implementation if it does not work correctly, than expect users to locate and tweak some obscure preference.
 

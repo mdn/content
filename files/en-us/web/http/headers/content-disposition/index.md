@@ -40,7 +40,7 @@ The `Content-Disposition` header is defined in the larger context of MIME messag
 
 The first parameter in the HTTP context is either `inline` (default value, indicating it can be displayed inside the Web page, or as the Web page) or `attachment` (indicating it should be downloaded; most browsers presenting a 'Save as' dialog, prefilled with the value of the `filename` parameters if present).
 
-```html
+```
 Content-Disposition: inline
 Content-Disposition: attachment
 Content-Disposition: attachment; filename="filename.jpg"
@@ -52,7 +52,7 @@ Content-Disposition: attachment; filename="filename.jpg"
 
 A `multipart/form-data` body requires a `Content-Disposition` header to provide information for each subpart of the form (e.g. for every form field and any files that are part of field data). The first directive is always `form-data`, and the header _must_ also include a `name` parameter to identify the relevant field. Additional directives are case-insensitive and have arguments that use quoted-string syntax after the `'='` sign. Multiple parameters are separated by a semi-colon (`';'`).
 
-```html
+```
 Content-Disposition: form-data; name="fieldName"
 Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"
 ```
@@ -83,30 +83,34 @@ Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"
 
 A response triggering the "Save As" dialog:
 
-    200 OK
-    Content-Type: text/html; charset=utf-8
-    Content-Disposition: attachment; filename="cool.html"
-    Content-Length: 21
+```
+200 OK
+Content-Type: text/html; charset=utf-8
+Content-Disposition: attachment; filename="cool.html"
+Content-Length: 21
 
-    <HTML>Save me!</HTML>
+<HTML>Save me!</HTML>
+```
 
 This simple HTML file will be saved as a regular download rather than displayed in the browser. Most browsers will propose to save it under the `cool.html` filename (by default).
 
 An example of an HTML form posted using the `multipart/form-data` format that makes use of the `Content-Disposition` header:
 
-    POST /test.html HTTP/1.1
-    Host: example.org
-    Content-Type: multipart/form-data;boundary="boundary"
+```
+POST /test.html HTTP/1.1
+Host: example.org
+Content-Type: multipart/form-data;boundary="boundary"
 
-    --boundary
-    Content-Disposition: form-data; name="field1"
+--boundary
+Content-Disposition: form-data; name="field1"
 
-    value1
-    --boundary
-    Content-Disposition: form-data; name="field2"; filename="example.txt"
+value1
+--boundary
+Content-Disposition: form-data; name="field2"; filename="example.txt"
 
-    value2
-    --boundary--
+value2
+--boundary--
+```
 
 ## Specifications
 

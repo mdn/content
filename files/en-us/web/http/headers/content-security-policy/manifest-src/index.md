@@ -44,7 +44,7 @@ to the resource.
 
 One or more sources can be allowed for the `manifest-src` policy:
 
-```html
+```
 Content-Security-Policy: manifest-src <source>;
 Content-Security-Policy: manifest-src <source> <source>;
 ```
@@ -59,7 +59,7 @@ Content-Security-Policy: manifest-src <source> <source>;
 
 Given this CSP header:
 
-```bash
+```
 Content-Security-Policy: manifest-src https://example.com/
 ```
 

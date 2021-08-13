@@ -46,7 +46,7 @@ If no `Content-Language` is specified, the default is that the content is intend
 
 ## Syntax
 
-```html
+```
 Content-Language: de-DE
 Content-Language: en-US
 Content-Language: de-DE, en-CA
@@ -80,7 +80,9 @@ Do **not** use this meta element like this for stating a document language:
 
 The `Content-Language` header is used to specify the **intended audience of the page**, and can indicate that this is more than one language.
 
-    Content-Language: de, en
+```
+Content-Language: de, en
+```
 
 ## Specifications
 

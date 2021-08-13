@@ -43,7 +43,7 @@ media using the {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements.
 
 One or more sources can be allowed for the `media-src` policy:
 
-```html
+```
 Content-Security-Policy: media-src <source>;
 Content-Security-Policy: media-src <source> <source>;
 ```
@@ -58,7 +58,7 @@ Content-Security-Policy: media-src <source> <source>;
 
 Given this CSP header:
 
-```bash
+```
 Content-Security-Policy: media-src https://example.com/
 ```
 

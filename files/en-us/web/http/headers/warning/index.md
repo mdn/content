@@ -42,7 +42,7 @@ some warn-codes are specific to caches and can only be applied to response messa
 
 ## Syntax
 
-```html
+```
 Warning: <warn-code> <warn-agent> <warn-text> [<warn-date>]
 ```
 
@@ -71,8 +71,7 @@ Warning: <warn-code> <warn-agent> <warn-text> [<warn-date>]
 
 ## Warning codes
 
-The [HTTP Warn
-Codes registry at iana.org](https://www.iana.org/assignments/http-warn-codes/http-warn-codes.xhtml) defines the namespace for warn codes.
+The [HTTP Warn Codes registry at iana.org](https://www.iana.org/assignments/http-warn-codes/http-warn-codes.xhtml) defines the namespace for warn codes.
 
 | Code | Text                             | Description                                                                                                                           |
 | ---- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
@@ -86,10 +85,12 @@ Codes registry at iana.org](https://www.iana.org/assignments/http-warn-codes/htt
 
 ## Examples
 
-    Warning: 110 anderson/1.3.37 "Response is stale"
+```
+Warning: 110 anderson/1.3.37 "Response is stale"
 
-    Date: Wed, 21 Oct 2015 07:28:00 GMT
-    Warning: 112 - "cache down" "Wed, 21 Oct 2015 07:28:00 GMT"
+Date: Wed, 21 Oct 2015 07:28:00 GMT
+Warning: 112 - "cache down" "Wed, 21 Oct 2015 07:28:00 GMT"
+```
 
 ## Specifications
 

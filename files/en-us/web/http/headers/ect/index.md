@@ -39,7 +39,9 @@ The hint allows a server to choose what information is sent based on the broad c
 
 ## Syntax
 
-    ECT: <value>
+```
+ECT: <value>
+```
 
 ## Directives
 
@@ -50,11 +52,15 @@ The hint allows a server to choose what information is sent based on the broad c
 
 A server first needs to opt in to receive the `ECT` header by sending the {{HTTPHeader("Accept-CH")}} response header containing `ECT`.
 
-    Accept-CH: ECT
+```
+Accept-CH: ECT
+```
 
 Then on subsequent requests the client might send an `ECT` header back:
 
-    ECT: 2g
+```
+ECT: 2g
+```
 
 ## Specifications
 

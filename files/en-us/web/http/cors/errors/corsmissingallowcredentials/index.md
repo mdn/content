@@ -18,8 +18,8 @@ tags:
 
 ## Reason
 
-```html
-Reason: expected ‘true’ in CORS header ‘Access-Control-Allow-Credentials’
+```
+Reason: expected 'true' in CORS header 'Access-Control-Allow-Credentials'
 ```
 
 ## What went wrong?

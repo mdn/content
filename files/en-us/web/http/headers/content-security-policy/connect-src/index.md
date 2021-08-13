@@ -52,7 +52,7 @@ loaded using script interfaces. The APIs that are restricted are:
 
 One or more sources can be allowed for the connect-src policy:
 
-```html
+```
 Content-Security-Policy: connect-src <source>;
 Content-Security-Policy: connect-src <source> <source>;
 ```
@@ -68,7 +68,7 @@ Content-Security-Policy: connect-src <source> <source>;
 
 Given this CSP header:
 
-```bash
+```
 Content-Security-Policy: connect-src https://example.com/
 ```
 

@@ -18,8 +18,8 @@ tags:
 
 ## Reason
 
-```html
-Reason: invalid token ‘xyz’ in CORS header ‘Access-Control-Allow-Headers’
+```
+Reason: invalid token 'xyz' in CORS header 'Access-Control-Allow-Headers'
 ```
 
 ## What went wrong?

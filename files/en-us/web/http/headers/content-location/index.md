@@ -36,7 +36,7 @@ data returned. This distinction may seem abstract without [examples](#examples).
 
 ## Syntax
 
-```html
+```
 Content-Location: <url>
 ```
 
@@ -78,22 +78,26 @@ as {{HTTPHeader("Accept-Language")}}.
 
 Say you're creating a new blog post through a site's API:
 
-    PUT /new/post
-    Host: example.com
-    Content-Type: text/markdown
+```
+PUT /new/post
+Host: example.com
+Content-Type: text/markdown
 
-    # My first blog post!
+# My first blog post!
 
-    I made this through `example.com`'s API. I hope it worked.
+I made this through `example.com`'s API. I hope it worked.
+```
 
 The site returns a generic success message confirming the post was published. The
 server specifies _where_ the new post is with `Content-Location`:
 
-    HTTP/1.1 201 Created
-    Content-Type: text/plain; charset=utf-8
-    Content-Location: /my-first-blog-post
+```
+HTTP/1.1 201 Created
+Content-Type: text/plain; charset=utf-8
+Content-Location: /my-first-blog-post
 
-    ✅ Success!
+✅ Success!
+```
 
 ### Indicating the URL of a transaction's result
 
@@ -123,16 +127,18 @@ When the form is submitted, the site generates a receipt for the transaction. Th
 server could use `Content-Location` to indicate that receipt's URL for future
 access.
 
-    HTTP/1.1 200 OK
-    Content-Type: text/html; charset=utf-8
-    Content-Location: /my-receipts/38
+```
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=utf-8
+Content-Location: /my-receipts/38
 
-    <!doctype html>
-    (Lots of HTML…)
+<!doctype html>
+(Lots of HTML…)
 
-    <p>You sent $38.00 to ExampleUser.</p>
+<p>You sent $38.00 to ExampleUser.</p>
 
-    (Lots more HTML…)
+(Lots more HTML…)
+```
 
 ## Specifications
 

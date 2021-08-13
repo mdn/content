@@ -48,15 +48,17 @@ specifies valid sources for inline styles applied to individual DOM elements.
 
 One or more sources can be allowed for the `style-src-attr` policy:
 
-```html
+```
 Content-Security-Policy: style-src-attr <source>;
 Content-Security-Policy: style-src-attr <source> <source>;
 ```
 
 `style-src-attr` can be used in conjunction with {{CSP("style-src")}}:
 
-    Content-Security-Policy: style-src <source>;
-    Content-Security-Policy: style-src-attr <source>;
+```
+Content-Security-Policy: style-src <source>;
+Content-Security-Policy: style-src-attr <source>;
+```
 
 ### Sources
 

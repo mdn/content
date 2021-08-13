@@ -45,7 +45,7 @@ resource.
 
 ## Syntax
 
-```html
+```
 DELETE /file.html HTTP/1.1
 ```
 
@@ -53,8 +53,10 @@ DELETE /file.html HTTP/1.1
 
 ### Request
 
-    DELETE /file.html HTTP/1.1
-    Host: example.com
+```
+DELETE /file.html HTTP/1.1
+Host: example.com
+```
 
 ### Responses
 
@@ -68,16 +70,16 @@ status codes possible:
 - A {{HTTPStatus("200")}} (`OK`) status code if the action has been enacted
   and the response message includes a representation describing the status.
 
-<!---->
+```
+HTTP/1.1 200 OK
+Date: Wed, 21 Oct 2015 07:28:00 GMT
 
-    HTTP/1.1 200 OK
-    Date: Wed, 21 Oct 2015 07:28:00 GMT
-
-    <html>
-      <body>
-        <h1>File deleted.</h1>
-      </body>
-    </html>
+<html>
+  <body>
+    <h1>File deleted.</h1>
+  </body>
+</html>
+````
 
 ## Specifications
 

@@ -40,7 +40,7 @@ As long as the `identity` value, meaning no encoding, is not explicitly forbidde
 
 ## Syntax
 
-```html
+```
 Accept-Encoding: gzip
 Accept-Encoding: compress
 Accept-Encoding: deflate
@@ -71,11 +71,13 @@ Accept-Encoding: deflate, gzip;q=1.0, *;q=0.5
 
 ## Examples
 
-    Accept-Encoding: gzip
+```
+Accept-Encoding: gzip
 
-    Accept-Encoding: gzip, compress, br
+Accept-Encoding: gzip, compress, br
 
-    Accept-Encoding: br;q=1.0, gzip;q=0.8, *;q=0.1
+Accept-Encoding: br;q=1.0, gzip;q=0.8, *;q=0.1
+```
 
 ## Specifications
 

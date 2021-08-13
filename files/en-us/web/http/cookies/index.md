@@ -51,18 +51,21 @@ Set-Cookie: <cookie-name>=<cookie-value>
 
 This shows the server sending headers to tell the client to store a pair of cookies:
 
-    HTTP/2.0 200 OK
-    Content-Type: text/html
-    Set-Cookie: yummy_cookie=choco
-    Set-Cookie: tasty_cookie=strawberry
+```
+HTTP/2.0 200 OK
+Content-Type: text/html
+Set-Cookie: yummy_cookie=choco
+Set-Cookie: tasty_cookie=strawberry
 
-    [page content]
+[page content]
+```
 
 Then, with every subsequent request to the server, the browser sends back all previously stored cookies to the server using the {{HTTPHeader("Cookie")}} header.
 
-    GET /sample_page.html HTTP/2.0
-    Host: www.example.org
-    Cookie: yummy_cookie=choco; tasty_cookie=strawberry
+```GET /sample_page.html HTTP/2.0
+Host: www.example.org
+Cookie: yummy_cookie=choco; tasty_cookie=strawberry
+```
 
 > **Note:** Here's how to use the `Set-Cookie` header in various server-side applications:
 >
@@ -80,7 +83,9 @@ The lifetime of a cookie can be defined in two ways:
 
 For example:
 
-    Set-Cookie: id=a3fWa; Expires=Thu, 31 Oct 2021 07:28:00 GMT;
+```
+Set-Cookie: id=a3fWa; Expires=Thu, 31 Oct 2021 07:28:00 GMT;
+```
 
 > **Note:** When an `Expires` date is set, the time and date set is relative to the client the cookie is being set on, not the server.
 
@@ -96,7 +101,9 @@ A cookie with the `HttpOnly` attribute is inaccessible to the JavaScript {{domxr
 
 Here is an example:
 
-    Set-Cookie: id=a3fWa; Expires=Thu, 21 Oct 2021 07:28:00 GMT; Secure; HttpOnly
+```
+Set-Cookie: id=a3fWa; Expires=Thu, 21 Oct 2021 07:28:00 GMT; Secure; HttpOnly
+```
 
 ### Define where cookies are sent
 
@@ -126,7 +133,9 @@ It takes three possible values: `Strict`, `Lax`, and `None`. With `Strict`, the 
 
 Here is an example:
 
-    Set-Cookie: mykey=myvalue; SameSite=Strict
+```
+Set-Cookie: mykey=myvalue; SameSite=Strict
+```
 
 > **Note:** Standard related to `SameSite` recently changed (MDN documents the new behavior above). See the cookies [Browser compatibility](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite#browser_compatibility) table for information about how the attribute is handled in specific browser versions:
 >

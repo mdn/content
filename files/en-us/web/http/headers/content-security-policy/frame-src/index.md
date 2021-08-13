@@ -45,7 +45,7 @@ browsing contexts loading using elements such as {{HTMLElement("frame")}} and
 
 One or more sources can be allowed for the `frame-src` policy:
 
-```html
+```
 Content-Security-Policy: frame-src <source>;
 Content-Security-Policy: frame-src <source> <source>;
 ```
@@ -60,7 +60,7 @@ Content-Security-Policy: frame-src <source> <source>;
 
 Given this CSP header:
 
-```bash
+```
 Content-Security-Policy: frame-src https://example.com/
 ```
 

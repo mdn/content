@@ -21,7 +21,7 @@ response should be {{HTTPStatus(412)}} `Precondition Failed`.
 
 ## Status
 
-```html
+```
 428 Precondition Required
 ```
 

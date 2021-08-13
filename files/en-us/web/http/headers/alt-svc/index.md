@@ -14,7 +14,7 @@ The {{HTTPHeader("Alt-Svc")}} HTTP header allows a server to indicate that a par
 
 ## Syntax
 
-```html
+```
 Alt-Svc: clear
 Alt-Svc: <protocol-id>=<alt-authority>; ma=<max-age>
 Alt-Svc: <protocol-id>=<alt-authority>; ma=<max-age>; persist=1
@@ -45,10 +45,12 @@ as separator. In that case, early entries are considered more preferable.
 
 ## Example
 
-    Alt-Svc: h2=":443"; ma=2592000;
-    Alt-Svc: h2=":443"; ma=2592000; persist=1
-    Alt-Svc: h2="alt.example.com:443", h2=":443"
-    Alt-Svc: h3-25=":443"; ma=3600, h2=":443"; ma=3600
+```
+Alt-Svc: h2=":443"; ma=2592000;
+Alt-Svc: h2=":443"; ma=2592000; persist=1
+Alt-Svc: h2="alt.example.com:443", h2=":443"
+Alt-Svc: h3-25=":443"; ma=3600, h2=":443"; ma=3600
+```
 
 ## Specifications
 

@@ -52,7 +52,7 @@ in to including credentials.
 
 ## Syntax
 
-```html
+```
 Access-Control-Allow-Credentials: true
 ```
 
@@ -67,7 +67,9 @@ Access-Control-Allow-Credentials: true
 
 Allow credentials:
 
-    Access-Control-Allow-Credentials: true
+```
+Access-Control-Allow-Credentials: true
+```
 
 Using [XHR](/en-US/docs/Web/API/XMLHttpRequest) with credentials:
 

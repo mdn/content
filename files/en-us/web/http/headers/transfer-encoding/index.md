@@ -49,7 +49,7 @@ message.
 
 ## Syntax
 
-```html
+```
 Transfer-Encoding: chunked
 Transfer-Encoding: compress
 Transfer-Encoding: deflate
@@ -99,18 +99,20 @@ total size of the response may not be known until the request has been fully pro
 For example, when generating a large HTML table resulting from a database query or when
 transmitting large images. A chunked response looks like this:
 
-    HTTP/1.1 200 OK
-    Content-Type: text/plain
-    Transfer-Encoding: chunked
+```
+HTTP/1.1 200 OK
+Content-Type: text/plain
+Transfer-Encoding: chunked
 
-    7\r\n
-    Mozilla\r\n
-    9\r\n
-    Developer\r\n
-    7\r\n
-    Network\r\n
-    0\r\n
-    \r\n
+7\r\n
+Mozilla\r\n
+9\r\n
+Developer\r\n
+7\r\n
+Network\r\n
+0\r\n
+\r\n
+```
 
 ## Specifications
 
@@ -127,5 +129,4 @@ transmitting large images. A chunked response looks like this:
 - {{HTTPHeader("Content-Length")}}
 - Header fields that regulate the use of trailers: {{HTTPHeader("TE")}} (requests) and
   {{HTTPHeader("Trailer")}} (responses).
-- [Chunked transfer
-  encoding](https://en.wikipedia.org/wiki/Chunked_transfer_encoding)
+- [Chunked transfer encoding](https://en.wikipedia.org/wiki/Chunked_transfer_encoding)

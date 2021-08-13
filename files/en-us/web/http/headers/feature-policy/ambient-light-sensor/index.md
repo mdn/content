@@ -14,7 +14,9 @@ The HTTP {{HTTPHeader('Feature-Policy')}} header `ambient-light-sensor` directiv
 
 ## Syntax
 
-    Feature-Policy: ambient-light-sensor <allowlist>;
+```
+Feature-Policy: ambient-light-sensor <allowlist>;
+```
 
 - \<allowlist>
   - : A list of origins for which the feature is allowed. See [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax).

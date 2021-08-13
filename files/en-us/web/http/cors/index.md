@@ -58,7 +58,7 @@ We present three scenarios that demonstrate how Cross-Origin Resource Sharing wo
 
 ### Simple requests
 
-Some requests don't trigger a {{Glossary("Preflight_request","CORS preflight")}}. Those are called _simple requests_, though the {{SpecName('Fetch')}} spec (which defines CORS) doesn't use that term. A _simple request_ is one that **meets all the following conditions**:
+Some requests don't trigger a {{Glossary("Preflight_request","CORS preflight")}}. Those are called _simple requests_, though the {{SpecName("Fetch")}} spec (which defines CORS) doesn't use that term. A _simple request_ is one that **meets all the following conditions**:
 
 - One of the allowed methods:
 
@@ -107,31 +107,35 @@ This performs a simple exchange between the client and the server, using CORS he
 
 Let's look at what the browser will send to the server in this case, and let's see how the server responds:
 
-    GET /resources/public-data/ HTTP/1.1
-    Host: bar.other
-    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:71.0) Gecko/20100101 Firefox/71.0
-    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-    Accept-Language: en-us,en;q=0.5
-    Accept-Encoding: gzip,deflate
-    Connection: keep-alive
-    Origin: https://foo.example
+```
+GET /resources/public-data/ HTTP/1.1
+Host: bar.other
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:71.0) Gecko/20100101 Firefox/71.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-us,en;q=0.5
+Accept-Encoding: gzip,deflate
+Connection: keep-alive
+Origin: https://foo.example
+```
 
 The request header of note is {{HTTPHeader("Origin")}}, which shows that the invocation is coming from `https://foo.example`.
 
-    HTTP/1.1 200 OK
-    Date: Mon, 01 Dec 2008 00:23:53 GMT
-    Server: Apache/2
-    Access-Control-Allow-Origin: *
-    Keep-Alive: timeout=2, max=100
-    Connection: Keep-Alive
-    Transfer-Encoding: chunked
-    Content-Type: application/xml
+```
+HTTP/1.1 200 OK
+Date: Mon, 01 Dec 2008 00:23:53 GMT
+Server: Apache/2
+Access-Control-Allow-Origin: *
+Keep-Alive: timeout=2, max=100
+Connection: Keep-Alive
+Transfer-Encoding: chunked
+Content-Type: application/xml
 
-    […XML Data…]
+[…XML Data…]
+```
 
 In response, the server sends back an {{HTTPHeader("Access-Control-Allow-Origin")}} header with `Access-Control-Allow-Origin: *`, which means that the resource can be accessed by **any** origin.
 
-```html
+```
 Access-Control-Allow-Origin: *
 ```
 
@@ -164,41 +168,47 @@ The example above creates an XML body to send with the `POST` request. Also, a n
 
 Let's look at the full exchange between client and server. The first exchange is the _preflight request/response_:
 
-    OPTIONS /doc HTTP/1.1
-    Host: bar.other
-    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:71.0) Gecko/20100101 Firefox/71.0
-    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-    Accept-Language: en-us,en;q=0.5
-    Accept-Encoding: gzip,deflate
-    Connection: keep-alive
-    Origin: https://foo.example
-    Access-Control-Request-Method: POST
-    Access-Control-Request-Headers: X-PINGOTHER, Content-Type
+```plain
+OPTIONS /doc HTTP/1.1
+Host: bar.other
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:71.0) Gecko/20100101 Firefox/71.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-us,en;q=0.5
+Accept-Encoding: gzip,deflate
+Connection: keep-alive
+Origin: https://foo.example
+Access-Control-Request-Method: POST
+Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 
-    HTTP/1.1 204 No Content
-    Date: Mon, 01 Dec 2008 01:15:39 GMT
-    Server: Apache/2
-    Access-Control-Allow-Origin: https://foo.example
-    Access-Control-Allow-Methods: POST, GET, OPTIONS
-    Access-Control-Allow-Headers: X-PINGOTHER, Content-Type
-    Access-Control-Max-Age: 86400
-    Vary: Accept-Encoding, Origin
-    Keep-Alive: timeout=2, max=100
-    Connection: Keep-Alive
+HTTP/1.1 204 No Content
+Date: Mon, 01 Dec 2008 01:15:39 GMT
+Server: Apache/2
+Access-Control-Allow-Origin: https://foo.example
+Access-Control-Allow-Methods: POST, GET, OPTIONS
+Access-Control-Allow-Headers: X-PINGOTHER, Content-Type
+Access-Control-Max-Age: 86400
+Vary: Accept-Encoding, Origin
+Keep-Alive: timeout=2, max=100
+Connection: Keep-Alive
+```
 
 Lines 1 - 10 above represent the preflight request with the {{HTTPMethod("OPTIONS")}} method. The browser determines that it needs to send this based on the request parameters that the JavaScript code snippet above was using, so that the server can respond whether it is acceptable to send the request with the actual request parameters. OPTIONS is an HTTP/1.1 method that is used to determine further information from servers, and is a {{Glossary("Safe/HTTP", "safe")}} method, meaning that it can't be used to change the resource. Note that along with the OPTIONS request, two other request headers are sent (lines 9 and 10 respectively):
 
-    Access-Control-Request-Method: POST
-    Access-Control-Request-Headers: X-PINGOTHER, Content-Type
+```
+Access-Control-Request-Method: POST
+Access-Control-Request-Headers: X-PINGOTHER, Content-Type
+```
 
 The {{HTTPHeader("Access-Control-Request-Method")}} header notifies the server as part of a preflight request that when the actual request is sent, it will be sent with a `POST` request method. The {{HTTPHeader("Access-Control-Request-Headers")}} header notifies the server that when the actual request is sent, it will be sent with a `X-PINGOTHER` and `Content-Type` custom headers. The server now has an opportunity to determine whether it wishes to accept a request under these circumstances.
 
 Lines 13 - 22 above are the response that the server sends back, which indicate that the request method (`POST`) and request headers (`X-PINGOTHER`) are acceptable. In particular, let's look at lines 16-19:
 
-    Access-Control-Allow-Origin: https://foo.example
-    Access-Control-Allow-Methods: POST, GET, OPTIONS
-    Access-Control-Allow-Headers: X-PINGOTHER, Content-Type
-    Access-Control-Max-Age: 86400
+```
+Access-Control-Allow-Origin: https://foo.example
+Access-Control-Allow-Methods: POST, GET, OPTIONS
+Access-Control-Allow-Headers: X-PINGOTHER, Content-Type
+Access-Control-Max-Age: 86400
+```
 
 The server responds with `Access-Control-Allow-Origin: https://foo.example`, restricting access to just the requesting origin domain. It also responds with `Access-Control-Allow-Methods`, which says that `POST` and `GET` are viable methods to query the resource in question (this header is similar to the {{HTTPHeader("Allow")}} response header, but used strictly within the context of access control).
 
@@ -208,43 +218,44 @@ Finally, {{HTTPHeader("Access-Control-Max-Age")}} gives the value in seconds for
 
 Once the preflight request is complete, the real request is sent:
 
-    POST /doc HTTP/1.1
-    Host: bar.other
-    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:71.0) Gecko/20100101 Firefox/71.0
-    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-    Accept-Language: en-us,en;q=0.5
-    Accept-Encoding: gzip,deflate
-    Connection: keep-alive
-    X-PINGOTHER: pingpong
-    Content-Type: text/xml; charset=UTF-8
-    Referer: https://foo.example/examples/preflightInvocation.html
-    Content-Length: 55
-    Origin: https://foo.example
-    Pragma: no-cache
-    Cache-Control: no-cache
+```plain
+POST /doc HTTP/1.1
+Host: bar.other
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:71.0) Gecko/20100101 Firefox/71.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-us,en;q=0.5
+Accept-Encoding: gzip,deflate
+Connection: keep-alive
+X-PINGOTHER: pingpong
+Content-Type: text/xml; charset=UTF-8
+Referer: https://foo.example/examples/preflightInvocation.html
+Content-Length: 55
+Origin: https://foo.example
+Pragma: no-cache
+Cache-Control: no-cache
 
-    <person><name>Arun</name></person>
+<person><name>Arun</name></person>
 
-    HTTP/1.1 200 OK
-    Date: Mon, 01 Dec 2008 01:15:40 GMT
-    Server: Apache/2
-    Access-Control-Allow-Origin: https://foo.example
-    Vary: Accept-Encoding, Origin
-    Content-Encoding: gzip
-    Content-Length: 235
-    Keep-Alive: timeout=2, max=99
-    Connection: Keep-Alive
-    Content-Type: text/plain
+HTTP/1.1 200 OK
+Date: Mon, 01 Dec 2008 01:15:40 GMT
+Server: Apache/2
+Access-Control-Allow-Origin: https://foo.example
+Vary: Accept-Encoding, Origin
+Content-Encoding: gzip
+Content-Length: 235
+Keep-Alive: timeout=2, max=99
+Connection: Keep-Alive
+Content-Type: text/plain
 
-    [Some XML payload]
+[Some XML payload]
+```
 
 #### Preflighted requests and redirects
 
 Not all browsers currently support following redirects after a preflighted request. If a redirect occurs after a preflighted request, some browsers currently will report an error message such as the following.
 
-> The request was redirected to 'https\://example.com/foo', which is disallowed for cross-origin requests that require preflight
-
-> Request requires preflight, which is disallowed to follow cross-origin redirect
+> The request was redirected to 'https\://example.com/foo', which is disallowed for cross-origin requests that require preflight.
+> Request requires preflight, which is disallowed to follow cross-origin redirect.
 
 The CORS protocol originally required that behavior but [was subsequently changed to no longer require it](https://github.com/whatwg/fetch/commit/0d9a4db8bc02251cc9e391543bb3c1322fb882f2). However, not all browsers have implemented the change, and so still exhibit the behavior that was originally required.
 
@@ -288,33 +299,35 @@ Line 7 shows the flag on {{domxref("XMLHttpRequest")}} that has to be set in ord
 
 Here is a sample exchange between client and server:
 
-    GET /resources/credentialed-content/ HTTP/1.1
-    Host: bar.other
-    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:71.0) Gecko/20100101 Firefox/71.0
-    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-    Accept-Language: en-us,en;q=0.5
-    Accept-Encoding: gzip,deflate
-    Connection: keep-alive
-    Referer: https://foo.example/examples/credential.html
-    Origin: https://foo.example
-    Cookie: pageAccess=2
+```plain
+GET /resources/credentialed-content/ HTTP/1.1
+Host: bar.other
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:71.0) Gecko/20100101 Firefox/71.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-us,en;q=0.5
+Accept-Encoding: gzip,deflate
+Connection: keep-alive
+Referer: https://foo.example/examples/credential.html
+Origin: https://foo.example
+Cookie: pageAccess=2
 
-    HTTP/1.1 200 OK
-    Date: Mon, 01 Dec 2008 01:34:52 GMT
-    Server: Apache/2
-    Access-Control-Allow-Origin: https://foo.example
-    Access-Control-Allow-Credentials: true
-    Cache-Control: no-cache
-    Pragma: no-cache
-    Set-Cookie: pageAccess=3; expires=Wed, 31-Dec-2008 01:34:53 GMT
-    Vary: Accept-Encoding, Origin
-    Content-Encoding: gzip
-    Content-Length: 106
-    Keep-Alive: timeout=2, max=100
-    Connection: Keep-Alive
-    Content-Type: text/plain
+HTTP/1.1 200 OK
+Date: Mon, 01 Dec 2008 01:34:52 GMT
+Server: Apache/2
+Access-Control-Allow-Origin: https://foo.example
+Access-Control-Allow-Credentials: true
+Cache-Control: no-cache
+Pragma: no-cache
+Set-Cookie: pageAccess=3; expires=Wed, 31-Dec-2008 01:34:53 GMT
+Vary: Accept-Encoding, Origin
+Content-Encoding: gzip
+Content-Length: 106
+Keep-Alive: timeout=2, max=100
+Connection: Keep-Alive
+Content-Type: text/plain
 
-    [text/plain payload]
+[text/plain payload]
+```
 
 Although line 10 contains the Cookie destined for the content on `https://bar.other`, if bar.other did not respond with an {{HTTPHeader("Access-Control-Allow-Credentials")}}`: true` (line 17) the response would be ignored and not made available to web content.
 
@@ -350,14 +363,18 @@ This section lists the HTTP response headers that servers send back for access c
 
 A returned resource may have one {{HTTPHeader("Access-Control-Allow-Origin")}} header, with the following syntax:
 
-    Access-Control-Allow-Origin: <origin> | *
+```
+Access-Control-Allow-Origin: <origin> | *
+```
 
 `Access-Control-Allow-Origin` specifies either a single origin, which tells browsers to allow that origin to access the resource; or else — for requests **without** credentials — the "`*`" wildcard, to tell browsers to allow any origin to access the resource.
 
 For example, to allow code from the origin `https://mozilla.org` to access the resource, you can specify:
 
-    Access-Control-Allow-Origin: https://mozilla.org
-    Vary: Origin
+```
+Access-Control-Allow-Origin: https://mozilla.org
+Vary: Origin
+```
 
 If the server specifies a single origin (that may dynamically change based on the requesting origin as part of a allowlist) rather than the "`*`" wildcard, then the server should also include `Origin` in the {{HTTPHeader("Vary")}} response header — to indicate to clients that server responses will differ based on the value of the {{HTTPHeader("Origin")}} request header.
 
@@ -365,19 +382,24 @@ If the server specifies a single origin (that may dynamically change based on th
 
 The {{HTTPHeader("Access-Control-Expose-Headers")}} header adds the specified headers to the allowlist that JavaScript (such as {{domxref("XMLHttpRequest.getResponseHeader()","getResponseHeader()")}}) in browsers is allowed to access.
 
-    Access-Control-Expose-Headers: <header-name>[, <header-name>]*
+```
+Access-Control-Expose-Headers: <header-name>[, <header-name>]*
+```
 
 For example, the following:
 
-    Access-Control-Expose-Headers: X-My-Custom-Header, X-Another-Custom-Header
+```
+Access-Control-Expose-Headers: X-My-Custom-Header, X-Another-Custom-Header
+```
 
 …would allow the `X-My-Custom-Header` and `X-Another-Custom-Header` headers to be exposed to the browser.
 
 ### Access-Control-Max-Age
 
 The {{HTTPHeader("Access-Control-Max-Age")}} header indicates how long the results of a preflight request can be cached. For an example of a preflight request, see the above examples.
-
-    Access-Control-Max-Age: <delta-seconds>
+```
+Access-Control-Max-Age: <delta-seconds>
+```
 
 The `delta-seconds` parameter indicates the number of seconds the results can be cached.
 
@@ -385,7 +407,9 @@ The `delta-seconds` parameter indicates the number of seconds the results can be
 
 The {{HTTPHeader("Access-Control-Allow-Credentials")}} header indicates whether or not the response to the request can be exposed when the `credentials` flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials. Note that simple `GET` requests are not preflighted, and so if a request is made for a resource with credentials, if this header is not returned with the resource, the response is ignored by the browser and not returned to web content.
 
-    Access-Control-Allow-Credentials: true
+```
+Access-Control-Allow-Credentials: true
+```
 
 [Credentialed requests](#requests_with_credentials) are discussed above.
 
@@ -393,7 +417,9 @@ The {{HTTPHeader("Access-Control-Allow-Credentials")}} header indicates whether 
 
 The {{HTTPHeader("Access-Control-Allow-Methods")}} header specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request. The conditions under which a request is preflighted are discussed above.
 
-    Access-Control-Allow-Methods: <method>[, <method>]*
+```
+Access-Control-Allow-Methods: <method>[, <method>]*
+```
 
 An example of a {{Glossary("preflight request")}} is given above, including an example which sends this header to the browser.
 
@@ -401,7 +427,9 @@ An example of a {{Glossary("preflight request")}} is given above, including an e
 
 The {{HTTPHeader("Access-Control-Allow-Headers")}} header is used in response to a {{Glossary("preflight request")}} to indicate which HTTP headers can be used when making the actual request. This header is the server side response to the browser's {{HTTPHeader("Access-Control-Request-Headers")}} header.
 
-    Access-Control-Allow-Headers: <header-name>[, <header-name>]*
+```
+Access-Control-Allow-Headers: <header-name>[, <header-name>]*
+```
 
 ## The HTTP request headers
 
@@ -411,7 +439,9 @@ This section lists headers that clients may use when issuing HTTP requests in or
 
 The {{HTTPHeader("Origin")}} header indicates the origin of the cross-site access request or preflight request.
 
-    Origin: <origin>
+```
+Origin: <origin>
+```
 
 The origin is a URL indicating the server from which the request initiated. It does not include any path information, but only the server name.
 
@@ -423,7 +453,9 @@ Note that in any access control request, the {{HTTPHeader("Origin")}} header is 
 
 The {{HTTPHeader("Access-Control-Request-Method")}} is used when issuing a preflight request to let the server know what HTTP method will be used when the actual request is made.
 
-    Access-Control-Request-Method: <method>
+```
+Access-Control-Request-Method: <method>
+```
 
 Examples of this usage can be [found above.](#preflighted_requests)
 
@@ -431,7 +463,9 @@ Examples of this usage can be [found above.](#preflighted_requests)
 
 The {{HTTPHeader("Access-Control-Request-Headers")}} header is used when issuing a preflight request to let the server know what HTTP headers will be used when the actual request is made (such as with {{domxref("XMLHttpRequest.setRequestHeader()","setRequestHeader()")}}). This browser side header will be answered by the complementary server side header of {{HTTPHeader("Access-Control-Allow-Headers")}}.
 
-    Access-Control-Request-Headers: <field-name>[, <field-name>]*
+```
+Access-Control-Request-Headers: <field-name>[, <field-name>]*
+```
 
 Examples of this usage can be [found above](#preflighted_requests).
 

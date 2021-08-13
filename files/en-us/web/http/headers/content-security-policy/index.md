@@ -35,7 +35,7 @@ For more information, see the introductory article on [Content Security Policy (
 
 ## Syntax
 
-```html
+```
 Content-Security-Policy: <policy-directive>; <policy-directive>
 ```
 
@@ -256,31 +256,43 @@ restrict_ the capabilities of the protected resource, which means that there wil
 be no connection allowed and, as the strictest policy, `connect-src 'none'`
 is enforced.
 
-    Content-Security-Policy: default-src 'self' http://example.com;
-                             connect-src 'none';
-    Content-Security-Policy: connect-src http://example.com/;
-                             script-src http://example.com/
+```
+Content-Security-Policy: default-src 'self' http://example.com;
+                          connect-src 'none';
+Content-Security-Policy: connect-src http://example.com/;
+                          script-src http://example.com/
+```
 
 ## Examples
 
 Example: Disable unsafe inline/eval, only allow loading of resources (images, fonts,
 scripts, etc.) over https:
 
-    // header
-    Content-Security-Policy: default-src https:
+### Using the HTTP header
 
-    // meta tag
-    <meta http-equiv="Content-Security-Policy" content="default-src https:">
+```
+Content-Security-Policy: default-src https:
+```
+
+### Using the HTML meta element
+
+```
+<meta http-equiv="Content-Security-Policy" content="default-src https:">
+```
 
 Example: Pre-existing site that uses too much inline code to fix but wants to ensure
 resources are loaded only over HTTPS and to disable plugins:
 
-    Content-Security-Policy: default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'
+```
+Content-Security-Policy: default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'
+```
 
 Example: Do not implement the above policy yet; instead just report violations that
 would have occurred:
 
-    Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-endpoint/
+```
+Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-endpoint/
+```
 
 See [Mozilla
 Web Security Guidelines](https://infosec.mozilla.org/guidelines/web_security#Examples_5) for more examples.
@@ -297,9 +309,7 @@ Web Security Guidelines](https://infosec.mozilla.org/guidelines/web_security#Exa
 
 - {{HTTPHeader("Content-Security-Policy-Report-Only")}}
 - [Learn about: Content Security Policy](/en-US/docs/Web/HTTP/CSP)
-- [Content
-  Security in WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
-- [Adopting a strict
-  policy](https://csp.withgoogle.com/docs/strict-csp.html)
+- [Content Security in WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
+- [Adopting a strict policy](https://csp.withgoogle.com/docs/strict-csp.html)
 - [CSP Evaluator](https://github.com/google/csp-evaluator) - Evaluate your
   Content Security Policy

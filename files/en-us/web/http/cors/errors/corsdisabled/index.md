@@ -24,7 +24,7 @@ tags:
 
 ## Reason
 
-```html
+```
 Reason: CORS disabled
 ```
 

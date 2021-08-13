@@ -16,13 +16,13 @@ Sometimes, this code indicates that the request can not be processed until the c
 
 ## Status
 
-```html
+```
 402 Payment Required
 ```
 
 ## Example response
 
-```bash
+```
 HTTP/1.1 402 Payment Required
 Date: Wed, 21 Oct 2015 07:28:00 GMT
 ```

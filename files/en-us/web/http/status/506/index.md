@@ -14,7 +14,7 @@ The **`Variant Also Negotiates`** status code indicates an internal server confi
 
 ## Status
 
-```html
+```
 506 Variant Also Negotiates
 ```
 

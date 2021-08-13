@@ -16,7 +16,7 @@ A 404 status code does not indicate whether the resource is temporarily or perma
 
 ## Status
 
-```html
+```
 404 Not Found
 ```
 
@@ -24,7 +24,7 @@ A 404 status code does not indicate whether the resource is temporarily or perma
 
 Many web sites customize the look of a 404 page to be more helpful to the user and provide guidance on what to do next. Apache servers can be configured using an `.htaccess` file and a code snippet like the following example.
 
-```bash
+```
 ErrorDocument 404 /notfound.html
 ```
 

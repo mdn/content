@@ -41,7 +41,7 @@ Public Key Pinning](/en-US/docs/Web/HTTP/Public_Key_Pinning) article.
 
 ## Syntax
 
-```html
+```
 Public-Key-Pins: pin-sha256="<pin-value>";
                  max-age=<expire-time>;
                  includeSubDomains;
@@ -71,11 +71,13 @@ Public-Key-Pins: pin-sha256="<pin-value>";
 > if used incorrectly!
 > The use of backup certificates and/or pinning the CA certificate is recommended.
 
-    Public-Key-Pins:
-      pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs=";
-      pin-sha256="M8HztCzM3elUxkcjR2S5P4hhyBNf6lHkmjAHKhpGPWE=";
-      max-age=5184000; includeSubDomains;
-      report-uri="https://www.example.org/hpkp-report"
+```
+Public-Key-Pins:
+  pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs=";
+  pin-sha256="M8HztCzM3elUxkcjR2S5P4hhyBNf6lHkmjAHKhpGPWE=";
+  max-age=5184000; includeSubDomains;
+  report-uri="https://www.example.org/hpkp-report"
+```
 
 In this example,
 **pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs="** pins the

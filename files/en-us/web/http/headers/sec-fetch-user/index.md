@@ -37,7 +37,9 @@ A server can use this header to identify whether a navigation request from a doc
 
 ## Syntax
 
-    Sec-Fetch-User: ?1
+```
+Sec-Fetch-User: ?1
+```
 
 ## Directives
 
@@ -47,10 +49,12 @@ The value will always be `?1`. When a request is triggered by something other th
 
 If a user clicks on a page link to another page on the same origin, the resulting request would have the following headers:
 
-    Sec-Fetch-Dest: document
-    Sec-Fetch-Mode: navigate
-    Sec-Fetch-Site: same-origin
-    Sec-Fetch-User: ?1
+```
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+```
 
 ## Specifications
 

@@ -30,7 +30,7 @@ specification. Use {{HTTPHeader("Set-Cookie")}} instead.
 
 ## Syntax
 
-```html
+```
 Set-Cookie2: <cookie-name>=<cookie-value>
 Set-Cookie2: <cookie-name>=<cookie-value>; Comment=<value>
 Set-Cookie2: <cookie-name>=<cookie-value>; CommentURL=<http-url>

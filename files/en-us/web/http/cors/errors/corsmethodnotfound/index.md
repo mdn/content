@@ -18,8 +18,8 @@ tags:
 
 ## Reason
 
-```html
-Reason: Did not find method in CORS header ‘Access-Control-Allow-Methods’
+```
+Reason: Did not find method in CORS header 'Access-Control-Allow-Methods'
 ```
 
 ## What went wrong?

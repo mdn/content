@@ -39,7 +39,9 @@ The hint allows a server to choose what information is sent based on the network
 
 ## Syntax
 
-    RTT: <number>
+```
+RTT: <number>
+```
 
 ## Directives
 
@@ -50,11 +52,15 @@ The hint allows a server to choose what information is sent based on the network
 
 A server first needs to opt in to receive the `RTT` header by sending the {{HTTPHeader("Accept-CH")}} response header containing `RTT`.
 
-    Accept-CH: RTT
+```
+Accept-CH: RTT
+```
 
 Then on subsequent requests the client might send an `RTT` header back:
 
-    RTT: 125
+```
+RTT: 125
+```
 
 ## Specifications
 

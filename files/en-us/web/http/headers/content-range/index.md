@@ -40,7 +40,7 @@ a full body message a partial message belongs.
 
 ## Syntax
 
-```html
+```
 Content-Range: <unit> <range-start>-<range-end>/<size>
 Content-Range: <unit> <range-start>-<range-end>/*
 Content-Range: <unit> */<size>
@@ -59,7 +59,9 @@ Content-Range: <unit> */<size>
 
 ## Examples
 
-    Content-Range: bytes 200-1000/67589
+```
+Content-Range: bytes 200-1000/67589
+```
 
 ## Specifications
 

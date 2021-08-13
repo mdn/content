@@ -17,7 +17,9 @@ The HTTP {{HTTPHeader("Feature-Policy")}} header `unoptimized-images` directive 
 
 ## Syntax
 
-    Feature-Policy: unoptimized-images <allowlist>;
+```
+Feature-Policy: unoptimized-images <allowlist>;
+```
 
 - \<allowlist>
   - : A list of origins for which the feature is allowed. See [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax).

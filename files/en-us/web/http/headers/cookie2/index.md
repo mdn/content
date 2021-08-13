@@ -28,7 +28,9 @@ The obsolete **`Cookie2`** HTTP request header used to advise the server that t
 
 ## Examples
 
-    Cookie2: $Version="1"
+```
+Cookie2: $Version="1"
+```
 
 ## Specifications
 

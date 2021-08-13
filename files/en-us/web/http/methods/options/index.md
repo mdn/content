@@ -42,7 +42,7 @@ The **HTTP `OPTIONS` method** requests permitted communication options for a giv
 
 ## Syntax
 
-```html
+```
 OPTIONS /index.html HTTP/1.1
 OPTIONS * HTTP/1.1
 ```
@@ -59,11 +59,13 @@ curl -X OPTIONS https://example.org -i
 
 The response then contains an {{HTTPHeader("Allow")}} header that holds the allowed methods:
 
-    HTTP/1.1 204 No Content
-    Allow: OPTIONS, GET, HEAD, POST
-    Cache-Control: max-age=604800
-    Date: Thu, 13 Oct 2016 11:45:00 GMT
-    Server: EOS (lax004/2813)
+```
+HTTP/1.1 204 No Content
+Allow: OPTIONS, GET, HEAD, POST
+Cache-Control: max-age=604800
+Date: Thu, 13 Oct 2016 11:45:00 GMT
+Server: EOS (lax004/2813)
+```
 
 ### Preflighted requests in CORS
 
@@ -72,17 +74,17 @@ In [CORS](/en-US/docs/Web/HTTP/CORS), a [preflight request](/en-US/docs/Glossary
 - The {{HTTPHeader("Access-Control-Request-Method")}} header sent in the preflight request tells the server that when the actual request is sent, it will have a {{HTTPMethod("POST")}} request method.
 - The {{HTTPHeader("Access-Control-Request-Headers")}} header tells the server that when the actual request is sent, it will have the `X-PINGOTHER` and `Content-Type` headers.
 
-<!---->
-
-    OPTIONS /resources/post-here/ HTTP/1.1
-    Host: bar.example
-    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-    Accept-Language: en-us,en;q=0.5
-    Accept-Encoding: gzip,deflate
-    Connection: keep-alive
-    Origin: https://foo.example
-    Access-Control-Request-Method: POST
-    Access-Control-Request-Headers: X-PINGOTHER, Content-Type
+```
+OPTIONS /resources/post-here/ HTTP/1.1
+Host: bar.example
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-us,en;q=0.5
+Accept-Encoding: gzip,deflate
+Connection: keep-alive
+Origin: https://foo.example
+Access-Control-Request-Method: POST
+Access-Control-Request-Headers: X-PINGOTHER, Content-Type
+```
 
 The server now can respond if it will accept a request under these circumstances. In this example, the server response says that:
 
@@ -95,18 +97,18 @@ The server now can respond if it will accept a request under these circumstances
 - {{HTTPHeader("Access-Control-Max-Age")}}
   - : The above permissions may be cached for 86,400 seconds (1 day).
 
-<!---->
-
-    HTTP/1.1 204 No Content
-    Date: Mon, 01 Dec 2008 01:15:39 GMT
-    Server: Apache/2.0.61 (Unix)
-    Access-Control-Allow-Origin: https://foo.example
-    Access-Control-Allow-Methods: POST, GET, OPTIONS
-    Access-Control-Allow-Headers: X-PINGOTHER, Content-Type
-    Access-Control-Max-Age: 86400
-    Vary: Accept-Encoding, Origin
-    Keep-Alive: timeout=2, max=100
-    Connection: Keep-Alive
+```
+HTTP/1.1 204 No Content
+Date: Mon, 01 Dec 2008 01:15:39 GMT
+Server: Apache/2.0.61 (Unix)
+Access-Control-Allow-Origin: https://foo.example
+Access-Control-Allow-Methods: POST, GET, OPTIONS
+Access-Control-Allow-Headers: X-PINGOTHER, Content-Type
+Access-Control-Max-Age: 86400
+Vary: Accept-Encoding, Origin
+Keep-Alive: timeout=2, max=100
+Connection: Keep-Alive
+```
 
 ## Specifications
 

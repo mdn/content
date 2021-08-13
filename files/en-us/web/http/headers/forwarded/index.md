@@ -32,7 +32,7 @@ This header is used for debugging, statistics, and generating location-dependent
 
 ## Syntax
 
-```html
+```
 Forwarded: by=<identifier>;for=<identifier>;host=<host>;proto=<http|https>
 ```
 
@@ -59,26 +59,30 @@ Forwarded: by=<identifier>;for=<identifier>;host=<host>;proto=<http|https>
 
 ### Using the `Forwarded` header
 
-    Forwarded: for="_mdn"
+```
+Forwarded: for="_mdn"
 
-    # case insensitive
-    Forwarded: For="[2001:db8:cafe::17]:4711"
+# case insensitive
+Forwarded: For="[2001:db8:cafe::17]:4711"
 
-    # separated by semicolon
-    Forwarded: for=192.0.2.60;proto=http;by=203.0.113.43
+# separated by semicolon
+Forwarded: for=192.0.2.60;proto=http;by=203.0.113.43
 
-    # multiple values can be appended using a comma
-    Forwarded: for=192.0.2.43, for=198.51.100.17
+# multiple values can be appended using a comma
+Forwarded: for=192.0.2.43, for=198.51.100.17
+```
 
 ### Transitioning from `X-Forwarded-For` to `Forwarded`
 
 If your application, server, or proxy supports the standardized `Forwarded` header, the {{HTTPHeader("X-Forwarded-For")}} header can be replaced. Note that IPv6 address are quoted and enclosed in square brackets in `Forwarded`.
 
-    X-Forwarded-For: 123.34.567.89
-    Forwarded: for=123.34.567.89
+```
+X-Forwarded-For: 123.34.567.89
+Forwarded: for=123.34.567.89
 
-    X-Forwarded-For: 192.0.2.43, "[2001:db8:cafe::17]"
-    Forwarded: for=192.0.2.43, for="[2001:db8:cafe::17]"
+X-Forwarded-For: 192.0.2.43, "[2001:db8:cafe::17]"
+Forwarded: for=192.0.2.43, for="[2001:db8:cafe::17]"
+```
 
 ## Specifications
 

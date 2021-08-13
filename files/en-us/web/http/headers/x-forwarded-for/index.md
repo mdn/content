@@ -44,7 +44,7 @@ was forwarded from another account.
 
 ## Syntax
 
-```html
+```
 X-Forwarded-For: <client>, <proxy1>, <proxy2>
 ```
 
@@ -59,16 +59,20 @@ X-Forwarded-For: <client>, <proxy1>, <proxy2>
 
 ## Examples
 
-    X-Forwarded-For: 2001:db8:85a3:8d3:1319:8a2e:370:7348
+```
+X-Forwarded-For: 2001:db8:85a3:8d3:1319:8a2e:370:7348
 
-    X-Forwarded-For: 203.0.113.195
+X-Forwarded-For: 203.0.113.195
 
-    X-Forwarded-For: 203.0.113.195, 70.41.3.18, 150.172.238.178
+X-Forwarded-For: 203.0.113.195, 70.41.3.18, 150.172.238.178
+```
 
 Other non-standard forms:
 
-    # Used for some Google services
-    X-ProxyUser-Ip: 203.0.113.19
+```
+# Used for some Google services
+X-ProxyUser-Ip: 203.0.113.19
+```
 
 ## Specifications
 

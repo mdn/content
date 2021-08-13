@@ -27,7 +27,7 @@ The HTTP **`Upgrade-Insecure-Requests`** request header sends a signal to the se
 
 ## Syntax
 
-```html
+```
 Upgrade-Insecure-Requests: 1
 ```
 
@@ -35,14 +35,18 @@ Upgrade-Insecure-Requests: 1
 
 A client's request signals to the server that it supports the upgrade mechanisms of {{CSP("upgrade-insecure-requests")}}:
 
-    GET / HTTP/1.1
-    Host: example.com
-    Upgrade-Insecure-Requests: 1
+```
+GET / HTTP/1.1
+Host: example.com
+Upgrade-Insecure-Requests: 1
+```
 
-The server can now redirect to a secure version of the site. A {{HTTPHeader("Vary")}} header can be used so that the site isn't served by caches to clients that don’t support the upgrade mechanism.
+The server can now redirect to a secure version of the site. A {{HTTPHeader("Vary")}} header can be used so that the site isn't served by caches to clients that don't support the upgrade mechanism.
 
-    Location: https://example.com/
-    Vary: Upgrade-Insecure-Requests
+```
+Location: https://example.com/
+Vary: Upgrade-Insecure-Requests
+```
 
 ## Specifications
 

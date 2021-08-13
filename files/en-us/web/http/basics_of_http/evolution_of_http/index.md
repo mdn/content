@@ -28,13 +28,17 @@ The HTTP protocol used in those early phases was very simple, later dubbed HTTP/
 
 The initial version of HTTP had no version number; it has been later called 0.9 to differentiate it from the later versions. HTTP/0.9 is extremely simple: requests consist of a single line and start with the only possible method {{HTTPMethod("GET")}} followed by the path to the resource (not the URL as both the protocol, server, and port are unnecessary once connected to the server).
 
-    GET /mypage.html
+```
+GET /mypage.html
+```
 
 The response is extremely simple too: it only consisted of the file itself.
 
-    <HTML>
-    A very simple HTML page
-    </HTML>
+```html
+<html>
+A very simple HTML page
+</html>
+```
 
 Unlike subsequent evolutions, there were no HTTP headers, meaning that only HTML files could be transmitted, but no other type of documents. There were no status or error codes: in case of a problem, a specific HTML file was sent back with the description of the problem contained in it, for human consumption.
 
@@ -49,28 +53,32 @@ HTTP/0.9 was very limited and both browsers and servers quickly extended it to b
 
 At this point, a typical request and response looked like this:
 
-    GET /mypage.html HTTP/1.0
-    User-Agent: NCSA_Mosaic/2.0 (Windows 3.1)
+```
+GET /mypage.html HTTP/1.0
+User-Agent: NCSA_Mosaic/2.0 (Windows 3.1)
 
-    200 OK
-    Date: Tue, 15 Nov 1994 08:12:31 GMT
-    Server: CERN/3.0 libwww/2.17
-    Content-Type: text/html
-    <HTML>
-    A page with an image
-      <IMG SRC="/myimage.gif">
-    </HTML>
+200 OK
+Date: Tue, 15 Nov 1994 08:12:31 GMT
+Server: CERN/3.0 libwww/2.17
+Content-Type: text/html
+<HTML>
+A page with an image
+  <IMG SRC="/myimage.gif">
+</HTML>
+```
 
 Followed by a second connection and request to fetch the image (followed by a response to that request):
 
-    GET /myimage.gif HTTP/1.0
-    User-Agent: NCSA_Mosaic/2.0 (Windows 3.1)
+```
+  GET /myimage.gif HTTP/1.0
+  User-Agent: NCSA_Mosaic/2.0 (Windows 3.1)
 
-    200 OK
-    Date: Tue, 15 Nov 1994 08:12:32 GMT
-    Server: CERN/3.0 libwww/2.17
-    Content-Type: text/gif
-    (image content)
+  200 OK
+  Date: Tue, 15 Nov 1994 08:12:32 GMT
+  Server: CERN/3.0 libwww/2.17
+  Content-Type: text/gif
+  (image content)
+```
 
 These novelties have not been introduced as concerted effort, but as a try-and-see approach over the 1991-1995 period: a server and a browser added one feature and it saw if it got traction. A lot of interoperability problems were common. In November 1996, in order to solve these annoyances, an informational document describing the common practices has been published, {{RFC(1945)}}. This is the definition of HTTP/1.0 and it is notable that, in the narrow sense of the term, it isn't an official standard.
 
@@ -89,47 +97,49 @@ HTTP/1.1 clarified ambiguities and introduced numerous improvements:
 
 A typical flow of requests, all through one single connection is now looking like this:
 
-    GET /en-US/docs/Glossary/Simple_header HTTP/1.1
-    Host: developer.mozilla.org
-    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
-    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-    Accept-Language: en-US,en;q=0.5
-    Accept-Encoding: gzip, deflate, br
-    Referer: https://developer.mozilla.org/en-US/docs/Glossary/Simple_header
+```
+GET /en-US/docs/Glossary/Simple_header HTTP/1.1
+Host: developer.mozilla.org
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Referer: https://developer.mozilla.org/en-US/docs/Glossary/Simple_header
 
-    200 OK
-    Connection: Keep-Alive
-    Content-Encoding: gzip
-    Content-Type: text/html; charset=utf-8
-    Date: Wed, 20 Jul 2016 10:55:30 GMT
-    Etag: "547fa7e369ef56031dd3bff2ace9fc0832eb251a"
-    Keep-Alive: timeout=5, max=1000
-    Last-Modified: Tue, 19 Jul 2016 00:59:33 GMT
-    Server: Apache
-    Transfer-Encoding: chunked
-    Vary: Cookie, Accept-Encoding
+200 OK
+Connection: Keep-Alive
+Content-Encoding: gzip
+Content-Type: text/html; charset=utf-8
+Date: Wed, 20 Jul 2016 10:55:30 GMT
+Etag: "547fa7e369ef56031dd3bff2ace9fc0832eb251a"
+Keep-Alive: timeout=5, max=1000
+Last-Modified: Tue, 19 Jul 2016 00:59:33 GMT
+Server: Apache
+Transfer-Encoding: chunked
+Vary: Cookie, Accept-Encoding
 
-    (content)
+(content)
 
-    GET /static/img/header-background.png HTTP/1.1
-    Host: developer.mozilla.org
-    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
-    Accept: */*
-    Accept-Language: en-US,en;q=0.5
-    Accept-Encoding: gzip, deflate, br
-    Referer: https://developer.mozilla.org/en-US/docs/Glossary/Simple_header
+GET /static/img/header-background.png HTTP/1.1
+Host: developer.mozilla.org
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Referer: https://developer.mozilla.org/en-US/docs/Glossary/Simple_header
 
-    200 OK
-    Age: 9578461
-    Cache-Control: public, max-age=315360000
-    Connection: keep-alive
-    Content-Length: 3077
-    Content-Type: image/png
-    Date: Thu, 31 Mar 2016 13:34:46 GMT
-    Last-Modified: Wed, 21 Oct 2015 18:27:50 GMT
-    Server: Apache
+200 OK
+Age: 9578461
+Cache-Control: public, max-age=315360000
+Connection: keep-alive
+Content-Length: 3077
+Content-Type: image/png
+Date: Thu, 31 Mar 2016 13:34:46 GMT
+Last-Modified: Wed, 21 Oct 2015 18:27:50 GMT
+Server: Apache
 
-    (image content of 3077 bytes)
+(image content of 3077 bytes)
+```
 
 HTTP/1.1 was first published as {{rfc(2068)}} in January 1997.
 

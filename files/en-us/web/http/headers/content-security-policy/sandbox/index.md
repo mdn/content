@@ -41,7 +41,7 @@ preventing the execution of plugins and scripts, and enforcing a same-origin pol
 
 ## Syntax
 
-```html
+```
 Content-Security-Policy: sandbox;
 Content-Security-Policy: sandbox <value>;
 ```
@@ -90,7 +90,7 @@ where `<value>` can optionally be one of the following values:
 
 ## Examples
 
-```bash
+```
 Content-Security-Policy: sandbox allow-scripts;
 ```
 

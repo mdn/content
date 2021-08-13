@@ -42,7 +42,7 @@ article.
 
 ## Syntax
 
-```html
+```
 Public-Key-Pins-Report-Only: pin-sha256="<pin-value>";
                              max-age=<expire-time>;
                              includeSubDomains;
@@ -68,11 +68,13 @@ Public-Key-Pins-Report-Only: pin-sha256="<pin-value>";
 
 ## Example
 
-    Public-Key-Pins-Report-Only:
-      pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs=";
-      pin-sha256="M8HztCzM3elUxkcjR2S5P4hhyBNf6lHkmjAHKhpGPWE=";
-      includeSubDomains;
-      report-uri="https://www.example.org/hpkp-report"
+```
+Public-Key-Pins-Report-Only:
+  pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs=";
+  pin-sha256="M8HztCzM3elUxkcjR2S5P4hhyBNf6lHkmjAHKhpGPWE=";
+  includeSubDomains;
+  report-uri="https://www.example.org/hpkp-report"
+```
 
 In this example,
 **pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs="** pins the

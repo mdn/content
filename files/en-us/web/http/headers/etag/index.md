@@ -37,7 +37,7 @@ tracking server.
 
 ## Syntax
 
-```html
+```
 ETag: W/"<etag_value>"
 ETag: "<etag_value>"
 ```
@@ -61,8 +61,10 @@ ETag: "<etag_value>"
 
 ## Examples
 
-    ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
-    ETag: W/"0815"
+```
+ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
+ETag: W/"0815"
+```
 
 ### Avoiding mid-air collisions
 
@@ -72,13 +74,17 @@ can detect mid-air edit collisions.
 For example, when editing a wiki, the current wiki content may be hashed
 and put into an `Etag` header in the response:
 
-    ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
+```
+ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
+```
 
 When saving changes to a wiki page (posting data), the {{HTTPMethod("POST")}} request
 will contain the {{HTTPHeader("If-Match")}} header containing the `ETag`
 values to check freshness against.
 
-    If-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
+```
+If-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
+```
 
 If the hashes don't match, it means that the document has been edited in-between and a
 {{HTTPStatus("412")}} `Precondition Failed` error is thrown.
@@ -90,7 +96,9 @@ unchanged. If a user visits a given URL again (that has an `ETag` set), and
 it is _stale_ (too old to be considered usable), the client will send the value
 of its `ETag` along in an {{HTTPHeader("If-None-Match")}} header field:
 
-    If-None-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
+```
+If-None-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
+```
 
 The server compares the client's `ETag` (sent with
 `If-None-Match`) with the `ETag` for its current version of the

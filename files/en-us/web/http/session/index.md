@@ -38,20 +38,24 @@ Once the connection is established, the user-agent can send the request (a user-
 
 Fetching the root page of developer.mozilla.org, (`https://developer.mozilla.org/`), and telling the server that the user-agent would prefer the page in French, if possible:
 
-    GET / HTTP/1.1
-    Host: developer.mozilla.org
-    Accept-Language: fr
+```
+GET / HTTP/1.1
+Host: developer.mozilla.org
+Accept-Language: fr
+```
 
 Observe that final empty line, this separates the data block from the header block. As there is no `Content-Length` provided in an HTTP header, this data block is presented empty, marking the end of the headers, allowing the server to process the request the moment it receives this empty line.
 
 For example, sending the result of a form:
 
-    POST /contact_form.php HTTP/1.1
-    Host: developer.mozilla.org
-    Content-Length: 64
-    Content-Type: application/x-www-form-urlencoded
+```
+POST /contact_form.php HTTP/1.1
+Host: developer.mozilla.org
+Content-Length: 64
+Content-Type: application/x-www-form-urlencoded
 
-    name=Joe%20User&request=Send%20me%20one%20of%20your%20catalogue
+name=Joe%20User&request=Send%20me%20one%20of%20your%20catalogue
+```
 
 ### Request methods
 
@@ -72,68 +76,74 @@ After the connected agent has sent its request, the web server processes it, and
 
 Successful web page response:
 
-    HTTP/1.1 200 OK
-    Content-Type: text/html; charset=utf-8
-    Content-Length: 55743
-    Connection: keep-alive
-    Cache-Control: s-maxage=300, public, max-age=0
-    Content-Language: en-US
-    Date: Thu, 06 Dec 2018 17:37:18 GMT
-    ETag: "2e77ad1dc6ab0b53a2996dfd4653c1c3"
-    Server: meinheld/0.6.1
-    Strict-Transport-Security: max-age=63072000
-    X-Content-Type-Options: nosniff
-    X-Frame-Options: DENY
-    X-XSS-Protection: 1; mode=block
-    Vary: Accept-Encoding,Cookie
-    Age: 7
+```
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=utf-8
+Content-Length: 55743
+Connection: keep-alive
+Cache-Control: s-maxage=300, public, max-age=0
+Content-Language: en-US
+Date: Thu, 06 Dec 2018 17:37:18 GMT
+ETag: "2e77ad1dc6ab0b53a2996dfd4653c1c3"
+Server: meinheld/0.6.1
+Strict-Transport-Security: max-age=63072000
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1; mode=block
+Vary: Accept-Encoding,Cookie
+Age: 7
 
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-      <meta charset="utf-8">
-      <title>A simple webpage</title>
-    </head>
-    <body>
-      <h1>Simple HTML5 webpage</h1>
-      <p>Hello, world!</p>
-    </body>
-    </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>A simple webpage</title>
+</head>
+<body>
+  <h1>Simple HTML5 webpage</h1>
+  <p>Hello, world!</p>
+</body>
+</html>
+```
 
 Notification that the requested resource has permanently moved:
 
-    HTTP/1.1 301 Moved Permanently
-    Server: Apache/2.4.37 (Red Hat)
-    Content-Type: text/html; charset=utf-8
-    Date: Thu, 06 Dec 2018 17:33:08 GMT
-    Location: https://developer.mozilla.org/ (this is the new link to the resource; it is expected that the user-agent will fetch it)
-    Keep-Alive: timeout=15, max=98
-    Accept-Ranges: bytes
-    Via: Moz-Cache-zlb05
-    Connection: Keep-Alive
-    Content-Length: 325 (the content contains a default page to display if the user-agent is not able to follow the link)
+```
+HTTP/1.1 301 Moved Permanently
+Server: Apache/2.4.37 (Red Hat)
+Content-Type: text/html; charset=utf-8
+Date: Thu, 06 Dec 2018 17:33:08 GMT
+Location: https://developer.mozilla.org/ (this is the new link to the resource; it is expected that the user-agent will fetch it)
+Keep-Alive: timeout=15, max=98
+Accept-Ranges: bytes
+Via: Moz-Cache-zlb05
+Connection: Keep-Alive
+Content-Length: 325 (the content contains a default page to display if the user-agent is not able to follow the link)
 
-    <!DOCTYPE html... (contains a site-customized page helping the user to find the missing resource)
+<!DOCTYPE html... (contains a site-customized page helping the user to find the missing resource)
+```
 
 Notification that the requested resource doesn't exist:
 
-    HTTP/1.1 404 Not Found
-    Content-Type: text/html; charset=utf-8
-    Content-Length: 38217
-    Connection: keep-alive
-    Cache-Control: no-cache, no-store, must-revalidate, max-age=0
-    Content-Language: en-US
-    Date: Thu, 06 Dec 2018 17:35:13 GMT
-    Expires: Thu, 06 Dec 2018 17:35:13 GMT
-    Server: meinheld/0.6.1
-    Strict-Transport-Security: max-age=63072000
-    X-Content-Type-Options: nosniff
-    X-Frame-Options: DENY
-    X-XSS-Protection: 1; mode=block
-    Vary: Accept-Encoding,Cookie
-    X-Cache: Error from cloudfront
+```
+HTTP/1.1 404 Not Found
+Content-Type: text/html; charset=utf-8
+Content-Length: 38217
+Connection: keep-alive
+Cache-Control: no-cache, no-store, must-revalidate, max-age=0
+Content-Language: en-US
+Date: Thu, 06 Dec 2018 17:35:13 GMT
+Expires: Thu, 06 Dec 2018 17:35:13 GMT
+Server: meinheld/0.6.1
+Strict-Transport-Security: max-age=63072000
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1; mode=block
+Vary: Accept-Encoding,Cookie
+X-Cache: Error from cloudfront
 
-    <!DOCTYPE html... (contains a site-customized page helping the user to find the missing resource)
+<!DOCTYPE html... (contains a site-customized page helping the user to find the missing resource)
+```
 
 ### Response status codes
 

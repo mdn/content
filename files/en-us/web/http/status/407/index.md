@@ -20,15 +20,17 @@ information on how to authorize correctly.
 
 ## Status
 
-```html
-407 Proxy Authentication Required 
+```
+407 Proxy Authentication Required
 ```
 
 ## Example response
 
-    HTTP/1.1 407 Proxy Authentication Required
-    Date: Wed, 21 Oct 2015 07:28:00 GMT
-    Proxy-Authenticate: Basic realm="Access to internal site"
+```
+HTTP/1.1 407 Proxy Authentication Required
+Date: Wed, 21 Oct 2015 07:28:00 GMT
+Proxy-Authenticate: Basic realm="Access to internal site"
+```
 
 ## Specifications
 

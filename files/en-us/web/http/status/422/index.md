@@ -20,7 +20,7 @@ the request entity is correct, but it was unable to process the contained instru
 
 ## Status
 
-```html
+```
 422 Unprocessable Entity
 ```
 

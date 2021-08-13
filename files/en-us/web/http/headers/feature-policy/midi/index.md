@@ -17,7 +17,9 @@ The HTTP {{HTTPHeader("Feature-Policy")}} header `midi` directive controls wheth
 
 ## Syntax
 
-    Feature-Policy: midi <allowlist>;
+```
+Feature-Policy: midi <allowlist>;
+```
 
 - \<allowlist>
   - : A list of origins for which the feature is allowed. See [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax).

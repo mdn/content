@@ -23,7 +23,7 @@ status code.
 
 ## Status
 
-```html
+```
 203 Non-Authoritative Information
 ```
 

@@ -50,7 +50,7 @@ There are two common use cases:
 
 ## Syntax
 
-```html
+```
 If-Match: <etag_value>
 If-Match: <etag_value>, <etag_value>, …
 ```
@@ -68,11 +68,13 @@ If-Match: <etag_value>, <etag_value>, …
 
 ## Examples
 
+```
     If-Match: "bfc13a64729c4290ef5b2c2730249c88ca92d82d"
 
     If-Match: "67ab43", "54ed21", "7892dd"
 
     If-Match: *
+```
 
 ## Specifications
 

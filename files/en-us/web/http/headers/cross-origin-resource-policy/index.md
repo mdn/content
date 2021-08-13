@@ -39,7 +39,7 @@ given resource.
 
 ## Syntax
 
-```html
+```
 Cross-Origin-Resource-Policy: same-site | same-origin | cross-origin
 ```
 
@@ -48,7 +48,9 @@ Cross-Origin-Resource-Policy: same-site | same-origin | cross-origin
 The response header below will cause compatible user agents to disallow cross-origin
 no-cors requests:
 
-    Cross-Origin-Resource-Policy: same-origin
+```
+Cross-Origin-Resource-Policy: same-origin
+```
 
 For more examples, see <https://resourcepolicy.fyi/>.
 
@@ -62,8 +64,6 @@ For more examples, see <https://resourcepolicy.fyi/>.
 
 ## See also
 
-- [Cross-Origin
-  Resource Policy (CORP) explainer](</en-US/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)>)
-- [Consider deploying Cross-Origin Resource
-  Policy](https://resourcepolicy.fyi/)
+- [Cross-Origin Resource Policy (CORP) explainer](</en-US/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)>)
+- [Consider deploying Cross-Origin Resource Policy](https://resourcepolicy.fyi/)
 - {{httpheader("Access-Control-Allow-Origin")}}

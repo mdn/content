@@ -44,7 +44,7 @@ at which the message was originated.
 
 ## Syntax
 
-```html
+```
 Date: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
 ```
 
@@ -71,7 +71,9 @@ Date: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
 
 ## Examples
 
-    Date: Wed, 21 Oct 2015 07:28:00 GMT
+```
+Date: Wed, 21 Oct 2015 07:28:00 GMT
+```
 
 ```js
 new Date().toUTCString()

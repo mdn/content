@@ -30,7 +30,7 @@ identical.
 
 ## Status
 
-```html
+```
 307 Temporary Redirect
 ```
 

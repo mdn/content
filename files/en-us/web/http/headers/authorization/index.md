@@ -30,7 +30,7 @@ necessarily, after the server has responded with a {{HTTPStatus("401")}}
 
 ## Syntax
 
-```html
+```
 Authorization: <type> <credentials>
 ```
 
@@ -60,7 +60,9 @@ Authorization: <type> <credentials>
 
 ## Examples
 
-    Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
+```
+Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
+```
 
 See also [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) for
 examples on how to configure Apache or nginx servers to password protect your site with

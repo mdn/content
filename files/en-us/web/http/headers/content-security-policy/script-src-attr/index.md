@@ -47,14 +47,14 @@ elements.
 
 One or more sources can be allowed for the `script-src-attr` policy:
 
-```html
+```
 Content-Security-Policy: script-src-attr <source>;
 Content-Security-Policy: script-src-attr <source> <source>;
 ```
 
 `script-src-attr` can be used in conjunction with {{CSP("script-src")}}:
 
-```html
+```
 Content-Security-Policy: script-src <source>;
 Content-Security-Policy: script-src-attr <source>;
 ```

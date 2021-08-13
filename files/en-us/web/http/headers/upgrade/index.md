@@ -37,22 +37,26 @@ The `Upgrade` header field may be used by clients to invite a server to switch t
 
 For example, the client might send a `GET` request as shown, listing the preferred protocols to switch to (in this case "example/1" and "foo/2"):
 
-    GET /index.html HTTP/1.1
-    Host: www.example.com
-    Connection: upgrade
-    Upgrade: example/1, foo/2
+```
+GET /index.html HTTP/1.1
+Host: www.example.com
+Connection: upgrade
+Upgrade: example/1, foo/2
+```
 
 > **Note:** `Connection: upgrade` must be set whenever `Upgrade` is sent.
 
-The server can choose to ignore the request, for any reason, in which case it should just respond as though the `Upgrade` header had not been sent (for example, with a  {{HTTPStatus(200, "200 OK")}}).
+The server can choose to ignore the request, for any reason, in which case it should just respond as though the `Upgrade` header had not been sent (for example, with a {{HTTPStatus(200, "200 OK")}}).
 
 If the server decides to upgrade the connection, it must:
 
 1. Send back a {{HTTPStatus(101, "101 Switching Protocols")}} response status with an `Upgrade` header that specifies the protocol(s) being switched to. For example:
 
-        HTTP/1.1 101 Switching Protocols
-        Upgrade: foo/2
-        Connection: Upgrade
+```
+HTTP/1.1 101 Switching Protocols
+Upgrade: foo/2
+Connection: Upgrade
+```
 
 2. Send a response to the original request *using the new protocol* (the server may only switch to a protocol with which it can complete the original request).
 
@@ -62,16 +66,20 @@ More detail and examples are provided in the topic [Protocol upgrade mechanism](
 
 ## Syntax
 
-    Connection: upgrade
-    Upgrade: protocol_name[/protocol_version]
+```
+Connection: upgrade
+Upgrade: protocol_name[/protocol_version]
+```
 
 Notes:
 
 - The {{HTTPHeader("Connection")}} header with type `upgrade` must _always_ be sent with the `Upgrade` header (as shown above).
 - Protocols are listed, comma-separated, in order of descending preference. Protocol version is optional. For example:
 
-        Connection: upgrade
-        Upgrade: a_protocol/1, example ,another_protocol/2.2
+```
+Connection: upgrade
+Upgrade: a_protocol/1, example ,another_protocol/2.2
+```
 
 ## Directives
 
@@ -80,13 +88,15 @@ Notes:
 
 ## Examples
 
-    Connection: upgrade
-    Upgrade: HTTP/2.0, SHTTP/1.3, IRC/6.9, RTA/x11
+```
+Connection: upgrade
+Upgrade: HTTP/2.0, SHTTP/1.3, IRC/6.9, RTA/x11
+```
 
-<!---->
-
-    Connection: Upgrade
-    Upgrade: websocket
+```
+Connection: Upgrade
+Upgrade: websocket
+```
 
 ## Specifications
 

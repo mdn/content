@@ -29,7 +29,7 @@ Servers will often produce this status if:
 
 ## Status
 
-```html
+```
 431 Request Header Fields Too Large
 ```
 

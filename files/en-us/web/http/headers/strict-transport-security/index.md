@@ -30,7 +30,7 @@ be accessed using HTTPS, instead of using HTTP.
 
 ## Syntax
 
-```html
+```
 Strict-Transport-Security: max-age=<expire-time>
 Strict-Transport-Security: max-age=<expire-time>; includeSubDomains
 Strict-Transport-Security: max-age=<expire-time>; preload
@@ -114,7 +114,9 @@ treated as official.
 All present and future subdomains will be HTTPS for a max-age of 1 year. This blocks
 access to pages or sub domains that can only be served over HTTP.
 
-    Strict-Transport-Security: max-age=31536000; includeSubDomains
+```
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+```
 
 In the following example, `max-age` is set to 2 years, raised from what was
 a former limit `max-age` of 1 year. Note that 1 year is acceptable for a
@@ -123,7 +125,9 @@ recommended goal as a website's final HSTS configuration as explained on <https:
 `preload` which is necessary for inclusion in most major web browsers' HSTS
 preload lists, e.g. Chromium, Edge, & Firefox.
 
-    Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+```
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+```
 
 ## Specifications
 

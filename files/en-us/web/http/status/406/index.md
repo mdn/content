@@ -31,7 +31,7 @@ among them.
 
 ## Status
 
-```html
+```
 406 Not Acceptable
 ```
 

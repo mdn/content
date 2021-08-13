@@ -49,7 +49,7 @@ specifies valid sources for stylesheets {{HTMLElement("style")}} elements and
 
 One or more sources can be allowed for the `style-src-elem` policy:
 
-```html
+```
 Content-Security-Policy: style-src-elem <source>;
 Content-Security-Policy: style-src-elem <source> <source>;
 ```

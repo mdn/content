@@ -11,19 +11,17 @@ tags:
 ---
 {{HTTPSidebar}}
 
-**Content Security Policy** ({{Glossary("CSP")}}) is an
-added layer of security that helps to detect and mitigate certain types of attacks,
-including Cross Site Scripting ({{Glossary("Cross-site_scripting", "XSS")}}) and data injection attacks. These
-attacks are used for everything from data theft to site defacement to distribution of
-malware.
+**Content Security Policy** ({{Glossary("CSP")}}) is an added layer of security
+that helps to detect and mitigate certain types of attacks,
+including Cross Site Scripting ({{Glossary("Cross-site_scripting", "XSS")}}) and data injection attacks.
+These attacks are used for everything from data theft to site defacement to distribution of malware.
 
 CSP is designed to be fully backward compatible (except CSP version 2 where there are
 some explicitly-mentioned inconsistencies in backward compatibility; more details [here](https://www.w3.org/TR/CSP2) section 1.1). Browsers that don't support
 it still work with servers that implement it, and vice-versa: browsers that don't
 support CSP ignore it, functioning as usual, defaulting to the standard same-origin
 policy for web content. If the site doesn't offer the CSP header, browsers likewise use
-the standard [same-origin
-policy](/en-US/docs/Web/Security/Same-origin_policy).
+the standard [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy).
 
 To enable CSP, you need to configure your web server to return the
 {{HTTPHeader("Content-Security-Policy")}} HTTP header. (Sometimes you may see mentions
@@ -32,7 +30,11 @@ you don't need to specify it anymore.)
 
 Alternatively, the {{HTMLElement("meta")}} element can be used to configure a policy,
 for example:
-`<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src https://*; child-src 'none';">`
+
+```html
+<meta http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src https://*; child-src 'none';">
+```
 
 ## Threats
 
@@ -79,7 +81,7 @@ construct such headers properly, and provides examples.
 You can use the {{HTTPHeader("Content-Security-Policy")}} HTTP header to specify your
 policy, like this:
 
-```html
+```
 Content-Security-Policy: policy
 ```
 
@@ -110,7 +112,7 @@ This section provides examples of some common security policy scenarios.
 A web site administrator wants all content to come from the site's own origin (this
 excludes subdomains.)
 
-```html
+```
 Content-Security-Policy: default-src 'self'
 ```
 
@@ -119,7 +121,7 @@ Content-Security-Policy: default-src 'self'
 A web site administrator wants to allow content from a trusted domain and all its
 subdomains (it doesn't have to be the same domain that the CSP is set on.)
 
-```html
+```
 Content-Security-Policy: default-src 'self' trusted.com *.trusted.com
 ```
 
@@ -129,7 +131,7 @@ A web site administrator wants to allow users of a web application to include im
 from any origin in their own content, but to restrict audio or video media to trusted
 providers, and all scripts only to a specific server that hosts trusted code.
 
-```html
+```
 Content-Security-Policy: default-src 'self'; img-src *; media-src media1.com media2.com; script-src userscripts.example.com
 ```
 
@@ -147,7 +149,7 @@ A web site administrator for an online banking site wants to ensure that all its
 content is loaded using TLS, in order to prevent attackers from eavesdropping on
 requests.
 
-```html
+```
 Content-Security-Policy: default-src https://onlinebanking.jumbobank.com
 ```
 
@@ -159,7 +161,7 @@ through the single origin onlinebanking.jumbobank.com.
 A web site administrator of a web mail site wants to allow HTML in email, as well as
 images loaded from anywhere, but not JavaScript or other potentially dangerous content.
 
-```html
+```
 Content-Security-Policy: default-src 'self' *.mailsite.com; img-src *
 ```
 
@@ -176,8 +178,8 @@ header can be used to test a future revision to a policy without actually deploy
 You can use the {{HTTPHeader("Content-Security-Policy-Report-Only")}} HTTP header to
 specify your policy, like this:
 
-```html
-Content-Security-Policy-Report-Only: policy 
+```
+Content-Security-Policy-Report-Only: policy
 ```
 
 If both a {{HTTPHeader("Content-Security-Policy-Report-Only")}} header and a
@@ -192,7 +194,7 @@ By default, violation reports aren't sent. To enable violation reporting, you ne
 specify the {{CSP("report-uri")}} policy directive, providing at least one URI to which
 to deliver the reports:
 
-```html
+```
 Content-Security-Policy: default-src 'self'; report-uri http://reportcollector.example.com/collector.cgi
 ```
 
@@ -235,7 +237,7 @@ Let's consider a page located at `http://example.com/signup.html`. It uses
 the following policy, disallowing everything but stylesheets from
 `cdn.example.com`.
 
-```html
+```
 Content-Security-Policy: default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports
 ```
 
@@ -260,15 +262,17 @@ Can you spot the mistake? Stylesheets are allowed to be loaded only from
 following violation report as a POST request to
 `http://example.com/_/csp-reports`, when the document is visited:
 
-    {
-      "csp-report": {
-        "document-uri": "http://example.com/signup.html",
-        "referrer": "",
-        "blocked-uri": "http://example.com/css/style.css",
-        "violated-directive": "style-src cdn.example.com",
-        "original-policy": "default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports"
-      }
-    }
+```js
+{
+  "csp-report": {
+    "document-uri": "http://example.com/signup.html",
+    "referrer": "",
+    "blocked-uri": "http://example.com/css/style.css",
+    "violated-directive": "style-src cdn.example.com",
+    "original-policy": "default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports"
+  }
+}
+```
 
 As you can see, the report includes the full path to the violating resource in
 `blocked-uri`. This is not always the case. For example, if the

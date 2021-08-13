@@ -43,7 +43,7 @@ favicons.
 
 One or more sources can be allowed for the `img-src` policy:
 
-```html
+```
 Content-Security-Policy: img-src <source>;
 Content-Security-Policy: img-src <source> <source>;
 ```
@@ -58,7 +58,7 @@ Content-Security-Policy: img-src <source> <source>;
 
 Given this CSP header:
 
-```bash
+```
 Content-Security-Policy: img-src https://example.com/
 ```
 

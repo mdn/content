@@ -20,8 +20,8 @@ tags:
 
 ## Reason
 
-```html
-Reason: Credential is not supported if the CORS header ‘Access-Control-Allow-Origin’ is ‘*’
+```
+Reason: Credential is not supported if the CORS header 'Access-Control-Allow-Origin' is '*'
 ```
 
 ## What went wrong?

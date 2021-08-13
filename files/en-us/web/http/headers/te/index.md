@@ -38,7 +38,7 @@ trailer fields in a chunked transfer coding using the "trailers" value.
 
 ## Syntax
 
-```html
+```
 TE: compress
 TE: deflate
 TE: gzip
@@ -79,5 +79,4 @@ TE: trailers, deflate;q=0.5
 
 - {{HTTPHeader("Transfer-Encoding")}}
 - {{HTTPHeader("Trailer")}}
-- [Chunked transfer
-  encoding](https://en.wikipedia.org/wiki/Chunked_transfer_encoding)
+- [Chunked transfer encoding](https://en.wikipedia.org/wiki/Chunked_transfer_encoding)

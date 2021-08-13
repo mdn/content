@@ -41,7 +41,7 @@ resource is already expired.
 
 ## Syntax
 
-```html
+```
 Expires: <http-date>
 ```
 
@@ -52,7 +52,9 @@ Expires: <http-date>
 
 ## Examples
 
-    Expires: Wed, 21 Oct 2015 07:28:00 GMT
+```
+Expires: Wed, 21 Oct 2015 07:28:00 GMT
+```
 
 ## Specifications
 

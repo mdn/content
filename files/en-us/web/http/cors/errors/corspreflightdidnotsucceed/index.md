@@ -18,13 +18,13 @@ tags:
 
 ## Reason
 
-```html
+```
 Reason: CORS preflight channel did not succeed
 ```
 
 ## What went wrong?
 
-The {{Glossary("CORS")}} request requires  preflight, preflighting could not be
+The {{Glossary("CORS")}} request requires preflight, preflighting could not be
 performed. There are a couple of reasons why preflighting might fail:
 
 - A cross-site request has previously been performed that already did a preflight, and

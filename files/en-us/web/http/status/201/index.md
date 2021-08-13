@@ -21,7 +21,7 @@ request.
 
 ## Status
 
-```html
+```
 201 Created
 ```
 

@@ -45,7 +45,7 @@ network errors by the user agent.
 
 One or more sources can be allowed for the child-src policy:
 
-```html
+```
 Content-Security-Policy: child-src <source>;
 Content-Security-Policy: child-src <source> <source>;
 ```
@@ -60,7 +60,7 @@ Content-Security-Policy: child-src <source> <source>;
 
 Given this CSP header:
 
-```bash
+```
 Content-Security-Policy: child-src https://example.com/
 ```
 

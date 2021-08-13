@@ -30,7 +30,7 @@ and the {{HTTPHeader("Proxy-Authenticate")}} header.
 
 ## Syntax
 
-```html
+```
 Proxy-Authorization: <type> <credentials>
 ```
 
@@ -57,7 +57,9 @@ Proxy-Authorization: <type> <credentials>
 
 ## Examples
 
-    Proxy-Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
+```
+Proxy-Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
+```
 
 ## Specifications
 

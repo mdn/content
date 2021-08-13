@@ -31,22 +31,24 @@ The syntax of the `Server-Timing` header allows you to communicate metrics in di
 
 The specification advices that names and descriptions should be kept as short as possible (use abbreviations and omit optional values where possible) to minimize the HTTP overhead.
 
-    // Single metric without value
-    Server-Timing: missedCache
+```
+// Single metric without value
+Server-Timing: missedCache
 
-    // Single metric with value
-    Server-Timing: cpu;dur=2.4
+// Single metric with value
+Server-Timing: cpu;dur=2.4
 
-    // Single metric with description and value
-    Server-Timing: cache;desc="Cache Read";dur=23.2
+// Single metric with description and value
+Server-Timing: cache;desc="Cache Read";dur=23.2
 
-    // Two metrics with value
-    Server-Timing: db;dur=53, app;dur=47.2
+// Two metrics with value
+Server-Timing: db;dur=53, app;dur=47.2
 
-    // Server-Timing as trailer
-    Trailer: Server-Timing
-    --- response body ---
-    Server-Timing: total;dur=123.4
+// Server-Timing as trailer
+Trailer: Server-Timing
+--- response body ---
+Server-Timing: total;dur=123.4
+```
 
 ## Privacy and security
 

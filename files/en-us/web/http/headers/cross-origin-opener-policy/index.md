@@ -32,8 +32,10 @@ If a cross-origin document with COOP is opened in a new window, the opening docu
 
 ## Syntax
 
-```html
-Cross-Origin-Opener-Policy: unsafe-none | same-origin-allow-popups | same-origin
+```
+Cross-Origin-Opener-Policy: unsafe-none
+Cross-Origin-Opener-Policy: same-origin-allow-popups
+Cross-Origin-Opener-Policy: same-origin
 ```
 
 ### Directives
@@ -51,8 +53,10 @@ Cross-Origin-Opener-Policy: unsafe-none | same-origin-allow-popups | same-origin
 
 Certain features like {{jsxref("SharedArrayBuffer")}} objects or {{domxref("Performance.now()")}} with unthrottled timers are only available if your document has a COOP header with the value `same-origin` value set.
 
-    Cross-Origin-Opener-Policy: same-origin
-    Cross-Origin-Embedder-Policy: require-corp
+```
+Cross-Origin-Opener-Policy: same-origin
+Cross-Origin-Embedder-Policy: require-corp
+```
 
 See also the {{HTTPHeader("Cross-Origin-Embedder-Policy")}} header which you'll need to set as well.
 
@@ -60,9 +64,9 @@ To check if cross-origin isolation has been successful, you can test against the
 
 ```js
 if (crossOriginIsolated) {
-  // Post SharedArrayBuffer
+  // Post SharedArrayBuffer
 } else {
-  // Do something else
+  // Do something else
 }
 ```
 

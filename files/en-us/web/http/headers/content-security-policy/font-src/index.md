@@ -42,7 +42,7 @@ valid sources for fonts loaded using {{cssxref("@font-face")}}.
 
 One or more sources can be allowed for the `font-src` policy:
 
-```html
+```
 Content-Security-Policy: font-src <source>;
 Content-Security-Policy: font-src <source> <source>;
 ```
@@ -57,7 +57,7 @@ Content-Security-Policy: font-src <source> <source>;
 
 Given this CSP header:
 
-```bash
+```
 Content-Security-Policy: font-src https://example.com/
 ```
 

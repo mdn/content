@@ -46,8 +46,10 @@ For other products based on Gecko, the string can take one of two forms, where t
 
 The `platform` part of the UA string indicates if Firefox is running on a phone-sized or tablet device. When Firefox runs on a device that has the phone form factor, there is a `Mobile;` token in the `platform` part of the UA string. When Firefox runs on a tablet device, there is a `Tablet;` token in the `platform` part of the UA string instead. For example:
 
-    Mozilla/5.0 (Android 4.4; Mobile; rv:41.0) Gecko/41.0 Firefox/41.0
-    Mozilla/5.0 (Android 4.4; Tablet; rv:41.0) Gecko/41.0 Firefox/41.0
+```
+Mozilla/5.0 (Android 4.4; Mobile; rv:41.0) Gecko/41.0 Firefox/41.0
+Mozilla/5.0 (Android 4.4; Tablet; rv:41.0) Gecko/41.0 Firefox/41.0
+```
 
 > **Note:** The version numbers are not relevant. Avoid inferring materials based on these.
 
@@ -105,7 +107,9 @@ Beginning in version 41, Firefox for Android will contain the Android version as
 
 From version 1, Focus is powered by Android WebView and uses the following user agent string format:
 
-    Mozilla/5.0 (Linux; <Android Version> <Build Tag etc.>) AppleWebKit/<WebKit Rev> (KHTML, like Gecko) Version/4.0 Focus/<focusversion> Chrome/<Chrome Rev> Mobile Safari/<WebKit Rev>
+```
+Mozilla/5.0 (Linux; <Android Version> <Build Tag etc.>) AppleWebKit/<WebKit Rev> (KHTML, like Gecko) Version/4.0 Focus/<focusversion> Chrome/<Chrome Rev> Mobile Safari/<WebKit Rev>
+```
 
 Tablet versions on WebView mirror mobile, but do not contain a `Mobile` token.
 
@@ -131,7 +135,9 @@ Since version 4.1, Klar for Android uses the same UA string as [Focus for Androi
 
 Version 7 of Focus for iOS uses a user agent string with the following format:
 
-    Mozilla/5.0 (iPhone; CPU iPhone OS 12_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) FxiOS/7.0.4 Mobile/16B91 Safari/605.1.15
+```
+Mozilla/5.0 (iPhone; CPU iPhone OS 12_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) FxiOS/7.0.4 Mobile/16B91 Safari/605.1.15
+```
 
 Note: this user agent was retrieved from an iPhone XR simulator and may be different on device.
 
@@ -139,7 +145,9 @@ Note: this user agent was retrieved from an iPhone XR simulator and may be diffe
 
 Version 3 (and probably earlier) of Firefox for Fire TV use a user agent string with the following format:
 
-    Mozilla/5.0 (Linux; <Android version>) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Focus/<firefoxversion> Chrome/<Chrome Rev> Safari/<WebKit Rev>
+```
+Mozilla/5.0 (Linux; <Android version>) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Focus/<firefoxversion> Chrome/<Chrome Rev> Safari/<WebKit Rev>
+```
 
 | Firefox TV version | User Agent string                                                                                                                  |
 | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------- |
@@ -149,7 +157,9 @@ Version 3 (and probably earlier) of Firefox for Fire TV use a user agent string 
 
 From version 1.1, Firefox for Echo Show uses a user agent string with the following format:
 
-    Mozilla/5.0 (Linux; <Android version>) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Focus/<firefoxversion> Chrome/<Chrome Rev> Safari/<WebKit Rev>
+```
+Mozilla/5.0 (Linux; <Android version>) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Focus/<firefoxversion> Chrome/<Chrome Rev> Safari/<WebKit Rev>
+```
 
 | Firefox for Echo Show version | User agent string                                                                                                                  |
 | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
@@ -170,7 +180,9 @@ Although it is **strongly discouraged** by Mozilla, some handset manufacturers u
 
 Here is a JavaScript regular expression that will detect all mobile devices, including devices with a device id in their UA string:
 
-    /mobi/i
+```
+/mobi/i
+!!
 
 The `i` makes it case-insensitive, and `mobi` matches all mobile browsers.
 

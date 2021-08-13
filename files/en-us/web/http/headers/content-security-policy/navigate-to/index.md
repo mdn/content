@@ -46,7 +46,7 @@ on what this document is allowed to navigate to.
 
 One or more sources can be set for the `navigate-to` policy:
 
-```html
+```
 Content-Security-Policy: navigate-to <source>;
 Content-Security-Policy: navigate-to <source> <source>;
 ```

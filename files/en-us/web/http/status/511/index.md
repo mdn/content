@@ -23,7 +23,7 @@ Control ({{Glossary("MAC")}}) addresses.
 
 ## Status
 
-```html
+```
 511 Network Authentication Required
 ```
 

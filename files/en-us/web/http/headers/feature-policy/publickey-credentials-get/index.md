@@ -18,7 +18,9 @@ When this policy is enabled, any attempt to query public key credentials will re
 
 ## Syntax
 
-    Feature-Policy: publickey-credentials-get <allowlist>;
+```
+Feature-Policy: publickey-credentials-get <allowlist>;
+```
 
 - \<allowlist>
   - : A list of origins for which the feature is allowed. See [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax).
