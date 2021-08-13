@@ -22,7 +22,7 @@ browser-compat: api.NDEFRecord
 
 <dl>
  <dt>{{DOMxRef("NDEFRecord.recordType")}} {{Experimental_Inline}} {{ReadOnlyInline}}</dt>
- <dd>Returns the record type of the record. Records must have either a standardized well known type name such as <code>"empty"</code>, <code>"text"</code>, <code>"url"</code>, <code>"smart-poster"</code>, <code>"absolute-url"</code>, <code>"mime"</code>, or <code>"unknown"</code> or an external type name which consists of a domain name and custom type name separated by a colon (":").</dd>
+ <dd>Returns the record type of the record. Records must have either a standardized well-known type name such as <code>"empty"</code>, <code>"text"</code>, <code>"url"</code>, <code>"smart-poster"</code>, <code>"absolute-url"</code>, <code>"mime"</code>, or <code>"unknown"</code> or else an external type name, which consists of a domain name and custom type name separated by a colon (":").</dd>
 
  <dt>{{DOMxRef("NDEFRecord.mediaType")}} {{Experimental_Inline}} {{ReadOnlyInline}}</dt>
  <dd>Returns the {{Glossary("MIME type")}} of the record. This value will be <code>null</code> if <code>recordType</code> is not equal to <code>"mime"</code>.</dd>
