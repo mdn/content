@@ -1,0 +1,39 @@
+---
+title: XRDepthInformation.normDepthBufferFromNormView
+slug: Web/API/XRDepthInformation/normDepthBufferFromNormView
+tags:
+- API
+- AR
+- Augmented Reality
+- Experimental
+- Property
+- Reference
+- VR
+- WebXR
+- WebXR Device API
+browser-compat: api.XRDepthInformation.normDepthBufferFromNormView
+---
+<div>{{APIRef("WebXR Device API")}}</div>
+
+<p>The <em>read-only</em> <strong><code>normDepthBufferFromNormView</code></strong> property of the {{DOMxRef("XRDepthInformation")}} interface contains the 3D geometric transform that needs to be applied when indexing into the depth buffer.</p>
+
+<h3 id="Value">Value</h3>
+
+<p>An {{domxref("XRRigidTransform")}} that needs to be applied when indexing into the depth buffer. The transformation that the matrix represents changes the coordinate system from normalized view coordinates to normalized depth-buffer coordinates that can then be scaled by depth buffer’s <code>width</code> and <code>height</code> to obtain the absolute depth buffer coordinates.</p>
+
+<h2>Examples</h2>
+
+<p>Use {{domxref("XRFrame.getDepthInformation()")}} (CPU) or {{domxref("XRWebGLBinding.getDepthInformation()")}} (WebGL) to obtain depth information. The returned objects will contain the <code>normDepthBufferFromNormView</code> of the depth buffer, which you can use for further calculations.</p>
+
+<pre class="brush: js">
+const normDepthFromNormViewMatrix = depthData.normDepthBufferFromNormView.matrix;
+const normViewFromNormDepth = depthData.normDepthBufferFromNormView.inverse.matrix;
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+{{Specifications}}
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div>{{Compat}}</div>
