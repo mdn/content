@@ -9,7 +9,26 @@ browser-compat: api.NDEFReader.onreading
 ---
 <p>{{Draft}}{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}</p>
 
-<p class="summary"><span class="seoSummary">The <code>onreading</code> property of {{DOMxRef("NDEFReader")}} interface of the <a href="/en-US/docs/Web/API/WebNFC_API">Web NFC API</a> is called whenever a new reading is available from compatible NFC devices, e.g. NFC tags supporting NDEF, when these devices are within the reader's magnetic induction field.</span></p>
+<p class="summary">The <code>onreading</code> property of the {{DOMxRef("NDEFReader")}} interface is called whenever a new reading is available from compatible NFC devices, e.g. NFC tags supporting NDEF, when these devices are within the reader's magnetic induction field.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>The following example shows how to process events using both the <code>onreading</code> and <code>onreadingerror</code> event handlerss.</p>
+
+<pre class="brush: js">const ndef = new NDEFReader();
+  ndef.scan().then(() => {
+    console.log("Scan started successfully.");
+    ndef.onreadingerror = (event) => {
+      console.log("Error! Cannot read data from the NFC tag. Try a different one?");
+    };
+    ndef.onreading = (event) => {
+      console.log("NDEF message read.");
+    };
+  }).catch(error => {
+    console.log(`Error! Scan failed to start: ${error}.`);
+  });
+  </pre>
+
 
 <h2 id="Specifications">Specifications</h2>
 

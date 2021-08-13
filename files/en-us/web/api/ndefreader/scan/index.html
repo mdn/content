@@ -9,13 +9,12 @@ browser-compat: api.NDEFReader.scan
 ---
 <p>{{Draft}}{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}</p>
 
-<p><span class="seoSummary">The <code>scan()</code> method of {{DOMxRef("NDEFReader")}}
-    interface reads NDEF records from compatible NFC devices, e.g., NDEF NFC tags.</span>
+<p><span class="seoSummary">The <code>scan()</code> method of the {{DOMxRef("NDEFReader")}} interface activates a reading device and returns a {{jsxref("Promise")}} that either resolves when an NFC tag is read or rejects if a hardware or permission error is encountered. This method triggers a permission prompt if the "nfc" permission has not been previously granted.</span>
 </p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">var <em>readerPromise = NDEFReader</em>.scan(<em>options</em>);
+<pre class="brush: js">var readerPromise = NDEFReader.scan(options);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -24,7 +23,7 @@ browser-compat: api.NDEFReader.scan
   <dt><code>options</code> {{optional_inline}}</dt>
   <dd>
     <ul>
-      <li><code>signal</code> -- optional {{DOMxRef("AbortSignal")}} that allows to cancel
+      <li><code>signal</code> -- An {{DOMxRef("AbortSignal")}} that allows cancelling
         this <code>scan()</code> operation.</li>
     </ul>
   </dd>
@@ -32,27 +31,45 @@ browser-compat: api.NDEFReader.scan
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{JSxRef("Promise")}} that resolves with <code>undefined</code> immediately after
+<p>A {{JSxRef("Promise")}} that resolves immediately after
   scheduling read operations for the NFC adapter.</p>
 
 <h2 id="Exceptions">Exceptions</h2>
 
-<p>This method doesn't throw true exceptions; instead, it rejects the returned promise,
-  passing into it a {{domxref("DOMException")}} whose <code>name</code> is one of the
+<p>This method doesn't throw exceptions; instead, it rejects the returned promise,
+  passing a {{domxref("DOMException")}} whose <code>name</code> is one of the
   following:</p>
 
 <dl>
-  <dt><code>AbortError</code></dt>
-  <dd>The scan operation was aborted with {{DOMxRef("AbortSignal")}} passed in options.
-  </dd>
-  <dt><code>InvalidStateError</code></dt>
+  <dt><code>"AbortError"</code></dt>
+  <dd>The scan operation was aborted with the {{DOMxRef("AbortSignal")}} passed in the <code>options</code> argument.</dd>
+  <dt><code>"InvalidStateError"</code></dt>
   <dd>There's already an ongoing scan.</dd>
-  <dt><code>NotAllowedError</code></dt>
+  <dt><code>"NotAllowedError"</code></dt>
   <dd>The permission for this operation was rejected.</dd>
-  <dt><code>NotSupportedError</code></dt>
+  <dt><code>"NotSupportedError"</code></dt>
   <dd>There is no NFC adapter compatible with Web NFC, or a connection can not be
     established.</dd>
 </dl>
+
+<h2 id="Examples">Examples</h2>
+
+<h3>Handle scanning errors</h3>
+
+<p>This example shows what happens when a scan promise rejects and <code>readingerror</code> is thrown.</p>
+
+<pre class="brush: js">const ndef = new NDEFReader();
+ndef.scan().then(() => {
+  console.log("Scan started successfully.");
+  ndef.onreadingerror = (event) => {
+    console.log("Error! Cannot read data from the NFC tag. Try a different one?");
+  };
+  ndef.onreading = (event) => {
+    console.log("NDEF message read.");
+  };
+}).catch(error => {
+  console.log(`Error! Scan failed to start: ${error}.`);
+});</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
