@@ -1,5 +1,5 @@
 ---
-title: Intl.Segmenter.Segments
+title: Intl.Segmenter Segments instance
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/Segments
 tags:
   - JavaScript
@@ -7,21 +7,14 @@ tags:
 browser-compat: javascript.builtins.Intl.Segmenter
 ---
 
-_summary_
+A `Segments` instance is an Interable collection of the segments of a text string, which are constructed according to the locale and options of its constructing {{jsxref('Intl.Segmenter')}} instance.  Each segment in the `Segments` collection is a {{jsxref('Intl.Segmenter/SegmentData','SegmentData object','','nomono')}}.
 
-## Syntax
 
-```js
-```
+## Instance Methods
 
-### Parameters
+- {{jsxref("Intl.Segmenter/Segments/containing", "Segments.prototype.containing()")}}
+  - : Returns a {{jsxref('Intl.Segmenter/SegmentData','SegmentData object','','nomono')}} describing the segment in the original string that includes the code unit at a specified index.
 
-### Return Value
-
-## Examples
-
-```js
-```
 
 ## Specifications
 

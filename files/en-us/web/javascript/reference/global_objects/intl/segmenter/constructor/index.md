@@ -4,7 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/constructor
 tags:
   - JavaScript
   - Intl
-browser-compat: javascript.builtins.Intl.Segmenter
+browser-compat: javascript.builtins.Intl.Segmenter.constructor
 ---
 
 The constructor for a new locale-dependent {{jsxref('Intl/Segmenter','Intl.Segmenter')}} object.
@@ -33,7 +33,7 @@ new Intl.segmenter(locale, options);
         - `sentence`
           - : Split the input into segments at sentence boundaries, as determined by the locale.
     - `localeMatcher` {{ optional_inline }}
-      - : A string.  Possible values are:
+      - : A string which sets the method used to determine the value of the `locale` property.  Possible values are:
         - `best fit` (default)
           - : Locales are matched using an implementation-dependent algorithm.
         - `lookup`
@@ -42,7 +42,7 @@ new Intl.segmenter(locale, options);
 
 ### Return value
 
-A new {{jsxref('Intl/Segmenter','Intl.Segmenter')}} object.
+A new `Intl.Segmenter` {{jsxref('Intl/Segmenter/segments','Segments instance','','nomono')}}.
 
 ## Examples
 

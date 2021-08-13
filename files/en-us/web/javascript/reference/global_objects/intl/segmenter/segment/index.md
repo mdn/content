@@ -4,7 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment
 tags:
   - JavaScript
   - Intl
-browser-compat: javascript.builtins.Intl.Segmenter
+browser-compat: javascript.builtins.Intl.Segmenter.segment
 ---
 {{JSRef}}
 
@@ -24,7 +24,7 @@ segmenter.segment(input)
 
 ### Return value
 
-A new Iterable `%Segments%` instance for the input string using the Segmenter's locale and granularity.
+A new Iterable {{jsxref('Intl.Segmenter/Segments','Segments instance','','nomono')}} containing the segments of the input string, using the Segmenter's locale and granularity.
 
 ## Examples
 
@@ -38,22 +38,22 @@ let segments = segmenter.segment(input);
 
 // Use that for segmentation!
 for (let {segment, index, isWordLike} of segments) {
-  console.log("segment at code units [%d, %d): «%s»%s",
+  console.log("segment at code units [%d, %d]: «%s»%s",
     index, index + segment.length,
     segment,
     isWordLike ? " (word-like)" : ""
   );
 }
 // console.log output:
-// segment at code units [0, 3): «Moi» (word-like)
-// segment at code units [3, 4): «?»
-// segment at code units [4, 6): «  »
-// segment at code units [6, 11): «N'est» (word-like)
-// segment at code units [11, 12): «-»
-// segment at code units [12, 14): «ce» (word-like)
-// segment at code units [14, 15): « »
-// segment at code units [15, 18): «pas» (word-like)
-// segment at code units [18, 19): «.»
+// segment at code units [0, 3]: «Moi» (word-like)
+// segment at code units [3, 4]: «?»
+// segment at code units [4, 6]: «  »
+// segment at code units [6, 11]: «N'est» (word-like)
+// segment at code units [11, 12]: «-»
+// segment at code units [12, 14]: «ce» (word-like)
+// segment at code units [14, 15]: « »
+// segment at code units [15, 18]: «pas» (word-like)
+// segment at code units [18, 19]: «.»
 ```
 
 ## Specifications

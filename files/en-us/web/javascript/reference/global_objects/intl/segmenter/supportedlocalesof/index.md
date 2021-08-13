@@ -4,7 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/supportedLocalesOf
 tags:
   - JavaScript
   - Intl
-browser-compat: javascript.builtins.Intl.Segmenter
+browser-compat: javascript.builtins.Intl.Segmenter.supportedLocalesOf
 ---
 {{JSRef}}
 
