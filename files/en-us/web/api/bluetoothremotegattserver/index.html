@@ -24,18 +24,6 @@ browser-compat: api.BluetoothRemoteGATTServer
       (Firefox OS)</a>.</p>
 </div>
 
-<h2 id="Interface">Interface</h2>
-
-<pre class="brush: js">interface BluetoothRemoteGATTServer {
-  readonly attribute BluetoothDevice device;
-  readonly attribute boolean connected;
-
-  Promise&lt;BluetoothRemoteGATTServer&gt; connect();
-  void disconnect();
-  Promise&lt;BluetoothRemoteGATTService&gt; getPrimaryService(BluetoothServiceUUID service);
-  Promise&lt;sequence&lt;BluetoothRemoteGATTService&gt;&gt; getPrimaryServices(optional BluetoothServiceUUID service);
-};</pre>
-
 <h2 id="Properties">Properties</h2>
 
 <dl>
