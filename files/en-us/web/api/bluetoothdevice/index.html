@@ -19,24 +19,6 @@ browser-compat: api.BluetoothDevice
 
 <p>{{InheritanceDiagram}}</p>
 
-<h2 id="Interface">Interface</h2>
-
-<pre class="brush: js">interface BluetoothDevice {
-  readonly attribute DOMString id;
-  readonly attribute DOMString? name;
-  readonly attribute BluetoothRemoteGATTServer? gatt;
-  readonly attribute FrozenArray uuids;
-
-  Promise watchAdvertisements();
-  void unwatchAdvertisements();
-  readonly attribute boolean watchingAdvertisements;
-};
-BluetoothDevice implements EventTarget;
-BluetoothDevice implements BluetoothDeviceEventHandlers;
-BluetoothDevice implements CharacteristicEventHandlers;
-BluetoothDevice implements ServiceEventHandlers;
-</pre>
-
 <h2 id="Properties">Properties</h2>
 
 <dl>
