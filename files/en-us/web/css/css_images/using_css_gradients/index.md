@@ -238,21 +238,21 @@ div {
 ```css
 .multiposition-stops {
    background: linear-gradient(to left,
-       lime 20%, red 30%, red 45%, cyan 55%, cyan 70%, yellow 80% );
+       lime 20%,  cyan 30%, cyan 45%, red 55%, red 70%, yellow 80% );
    background: linear-gradient(to left,
-       lime 20%, red 30% 45%, cyan 55% 70%, yellow 80% );
+       lime 20%, cyan 30% 45%, red 55% 70%, yellow 80% );
 }
 .multiposition-stop2 {
    background: linear-gradient(to left,
-      lime 25%, red 25%, red 50%, cyan 50%, cyan 75%, yellow 75% );
+      lime 25%, cyan 25%, cyan 50%, red 50%, red 75%, yellow 75% );
    background: linear-gradient(to left,
-      lime 25%, red 25% 50%, cyan 50% 75%, yellow 75% );
+      lime 25%, cyan 25% 50%, red 50% 75%, yellow 75% );
 }
 ```
 
 {{ EmbedLiveSample('Creating_color_bands_stripes', 120, 120) }}
 
-In the first example above, the lime goes from the 0% mark, which is implied, to the 20% mark, transitions from lime to red over the next 10% of the width of the gradient, reach solid red at the 30% mark, and staying solid red up until 45% through the gradient, where it fades to cyan, being fully cyan for 15% of the gradient, and so on.
+In the first example above, the lime goes from the 0% mark, which is implied, to the 20% mark, transitions from lime to cyan over the next 10% of the width of the gradient, reach solid cyan at the 30% mark, and staying solid cyan up until 45% through the gradient, where it fades to red, being fully red for 15% of the gradient, and so on.
 
 In the second example, the second color stop for each color is at the same location as the first color stop for the adjacent color, creating a striped effect.
 
