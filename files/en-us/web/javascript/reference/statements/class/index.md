@@ -42,26 +42,25 @@ declarations](/en-US/docs/Web/JavaScript/Reference/Statements/function)).
 
 ### A simple class declaration
 
-In the following example, we first define a class named `Polygon`, then
-extend it to create a class named `Square`.
+In the following example, we first define a class named `Vehicle`, then
+extend it to create a class named `Car`.
 
 Note that `super()`, used in the `constructor`, can only be used
 in constructors, and _must_ be called _before_ the `this`
 keyword can be used.
 
 ```js
-class Polygon {
-  constructor(height, width) {
-    this.name = 'Polygon';
-    this.height = height;
-    this.width = width;
+class Vehicle {
+  constructor(color, brand) {
+      this.color = color;
+      this.brand = brand;
   }
 }
 
-class Square extends Polygon {
-  constructor(length) {
-    super(length, length);
-    this.name = 'Square';
+class Car extends Vehicle {
+  constructor(color, brand) {
+    super(color, brand);
+    this.type = '4-wheeler';
   }
 }
 ```
