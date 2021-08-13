@@ -140,11 +140,11 @@ let targetRayVector = targetRayPose.transform.orientation;
 
 <p>Each input source has a {{domxref("XRInputSource.gamepad", "gamepad")}} property which, if not <code>NULL</code>, is a {{domxref("Gamepad")}} object describing the various controls and widgets available on the controller. If the input device only has the primary movement sensors, a squeeze control, and a button, it may not have a <code>Gamepad</code> record. If, however, the <code>gamepad</code> is present, you can use it to identify and poll the buttons and axes available on the controller.</p>
 
-<p>While the <code>Gamepad</code> record is defined by the <a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a> specification, it's not actually managed by the Gamepad API, and doesn't function exactly the same way. See <a href="/en-US/docs/Web/WebXR_Device_API/Gamepads" rel="nofollow">Supporting advanced controllers and gamepads in WebXR applications</a> for more detailed information.</p>
+<p>While the <code>Gamepad</code> record is defined by the <a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a> specification, it's not actually managed by the Gamepad API, and doesn't function exactly the same way. See {{Anch("Advanced controllers using the gamepad object")}} for more detailed information.</p>
 
 <h4 id="Profile_strings">Profile strings</h4>
 
-<p>Each input source can have zero or more <strong>input profile name</strong> strings, found in the array {{domxref("XRInputSource.profiles", "profiles")}}, each of which describes a preferred visual representation of the input source within the 3D world as well as how the input source functions. The use of these profiles is briefly described under {{Anch("Input profiles")}} below, and a more complete guide may be found in our article <a href="/en-US/docs/Web/API/WebXR_Device_API/Input_profiles">Using WebXR input profiles</a>.</p>
+<p>Each input source can have zero or more <strong>input profile name</strong> strings, found in the array {{domxref("XRInputSource.profiles", "profiles")}}, each of which describes a preferred visual representation of the input source within the 3D world as well as how the input source functions. The use of these profiles is briefly described under {{Anch("Input profiles")}} below.</p>
 
 <h3 id="Transient_input_sources">Transient input sources</h3>
 
@@ -531,9 +531,7 @@ mat4.getRotation(targetRayDirection, viewerRefSpace);</pre>
 
 <p>This <code>gamepad</code> object is not only used to obtain access to specialty buttons, trackpads, and so forth, but also provides a way to more directly access and monitor the controls that serve as the primary select and squeeze inputs, since these are included in its {{domxref("Gamepad.buttons", "buttons")}} list.</p>
 
-<p>Because this use of the <code>Gamepad</code> interface is a convenience rather than a true application of the Gamepad API, there are several differences between how it's used with WebXR and how it's used in Gamepad API applications. The most notable—but not the only—difference is that WebXR adds the <code>xr-standard</code> gamepad mapping, see the {{domxref("XRInputSource.gamepad")}} property for additional differences. This gamepad mapping defines how the controls on a typical one-hand handheld VR controller are mapped to gamepad controls. </p>
-
-<p>For details on the gamepad mapping as well as the other differences how the use of the {{domxref("Gamepad")}} object and its children differs from its use in the Gamepad API, see the article <a href="/en-US/docs/Web/WebXR_Device_API/Gamepads">Supporting advanced controllers and gamepads in WebXR applications</a>.</p>
+<p>Because this use of the <code>Gamepad</code> interface is a convenience rather than a true application of the Gamepad API, there are several differences between how it's used with WebXR and how it's used in Gamepad API applications. The most notable—but not the only—difference is that WebXR adds the <code>xr-standard</code> gamepad mapping, see the {{domxref("XRInputSource.gamepad")}} property for additional differences. This gamepad mapping defines how the controls on a typical one-hand handheld VR controller are mapped to gamepad controls.</p>
 
 <h2 id="Incorporating_input_from_non-WebXR_sources">Incorporating input from non-WebXR sources</h2>
 
@@ -623,8 +621,6 @@ mat4.getRotation(targetRayDirection, viewerRefSpace);</pre>
 
 <ul>
  <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Targeting">Targeting and hit detection </a></li>
- <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Input_profiles">Using WebXR input profiles </a></li>
- <li><a href="/en-US/docs/Web/WebXR_Device_API/Gamepads">Supporting advanced controllers and gamepads in WebXR applications </a></li>
  <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Geometry">Geometry and reference spaces in WebXR </a></li>
  <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Spatial_tracking">Spatial tracking in WebXR</a></li>
  <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Rendering">Rendering and the WebXR frame animation callback</a></li>
