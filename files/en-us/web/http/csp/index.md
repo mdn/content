@@ -14,7 +14,7 @@ tags:
 **Content Security Policy** ({{Glossary("CSP")}}) is an added layer of security
 that helps to detect and mitigate certain types of attacks,
 including Cross-Site Scripting ({{Glossary("Cross-site_scripting", "XSS")}}) and data injection attacks.
-These attacks are used for everything from data theft to site defacement to distribute of malware.
+These attacks are used for everything from data theft to site defacement to distribute malware.
 
 CSP is designed to be fully backward compatible (except CSP version 2 where there are
 some explicitly-mentioned inconsistencies in backward compatibility; more details [here](https://www.w3.org/TR/CSP2) section 1.1). Browsers that don't support
