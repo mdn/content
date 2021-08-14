@@ -150,9 +150,9 @@ In computer science, an object is a value in memory which is possibly referenced
 
 ### Properties
 
-In JavaScript, objects can be seen as a collection of properties. With the [object literal syntax](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#object_literals), a limited set of properties are initialized; then properties can be added and removed. Property values can be values of any type, including other objects, which enables building complex data structures. Properties are identified using _key_ values. A _key_ value is either a String or a Symbol value.
+In JavaScript, objects can be seen as a collection of properties. With the [object literal syntax](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#object_literals), a limited set of properties are initialized; then properties can be added and removed. Property values can be values of any type, including other objects, which enables building complex data structures. Properties are identified using _key_ values. A _key_ value is either a {{Glossary("String", "String value")}} or a {{Glossary("Symbol", "Symbol value")}}.
 
-There are two types of object properties which have certain attributes: The _data_ property and the _accessor_ property.
+There are two types of object properties: The [_data_ property](#data_property) and the [_accessor_ property](#accessor_property).
 
 > **Note:** Each property has corresponding *attributes.* Attributes are used internally by the JavaScript engine, so you cannot directly access them. That's why attributes are listed in double square brackets, rather than single.
 >
@@ -228,7 +228,11 @@ Associates a key with a value, and has the following attributes:
 
 #### Accessor property
 
-Associates a key with one of two accessor functions (`get` and `set`) to retrieve or store a value, and has the following attributes:
+Associates a key with one of two accessor functions (`get` and `set`) to retrieve or store a value.
+
+> **Note:** It’s important to recognize it’s accessor _property_ — not accessor _method_. We can give a JavaScipt object class-like accessors by using a function as a value — but that doesn't make the object a class.
+
+An accessor property has the following attributes:
 
 | Attribute        | Type                           | Description                                                                                                                                                                                                              | Default value |
 | ---------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------- |
