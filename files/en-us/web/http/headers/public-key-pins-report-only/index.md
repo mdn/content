@@ -64,7 +64,7 @@ Public-Key-Pins-Report-Only: pin-sha256="<pin-value>";
     subdomains as well.
 - `report-uri="<uri>"`
   - : Pin validation failures are reported to the given URL. This directive should be used
-    with this header, otherwise, this header will be a no-op.
+    with this header; otherwise, this header will be a no-op.
 
 ## Example
 
