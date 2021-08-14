@@ -18,10 +18,10 @@ In practice, web developers don't need to implement compression mechanisms, both
 
 ## File format compression
 
-Each data type has some redundancy, that is _wasted space_, in it. If text can typically have as much as 60% redundancy, this rate can be much higher for some other media like audio and video. Unlike text, these other media types use lot of space to store their data and the need to optimize storage and regain space was apparent very early. Engineers designed the optimized compression algorithm used by file formats designed for this specific purpose. Compression algorithms used for files can be grouped into two broad categories:
+Each data type has some redundancy, that is _wasted space_, in it. If text can typically have as much as 60% redundancy, this rate can be much higher for some other media like audio and video. Unlike text, these other media types use a lot of space to store their data and the need to optimize storage and regain space was apparent very early. Engineers designed the optimized compression algorithm used by file formats designed for this specific purpose. Compression algorithms used for files can be grouped into two broad categories:
 
 - _Loss-less compression_, where the compression-uncompression cycle doesn't alter the data that is recovered. It matches (byte to byte) with the original.
-  For images, `gif` or `png` are using loss-less compression.
+  For images, `gif` or `png` are using lossless compression.
 - _Lossy compression_, where the cycle alters the original data in a (hopefully) imperceptible way for the user.
   Video formats on the Web are lossy; the `jpeg` image format is also lossy.
 
@@ -29,7 +29,7 @@ Some formats can be used for both loss-less or lossy compression, like `webp`, a
 
 Lossy compression algorithms are usually more efficient than loss-less ones.
 
-> **Note:** As compression works better on a specific kind of files, it usually provides nothing to compress them a second time. In fact, this is often counter productive as the cost of the overhead (algorithms usually need a dictionary that add to the initial size) can be higher than the extra gain in compression resulting in a larger file. Do not use the two following techniques for files in a compressed format.
+> **Note:** As compression works better on a specific kind of files, it usually provides nothing to compress them a second time. In fact, this is often counterproductive as the cost of the overhead (algorithms usually need a dictionary that adds to the initial size) can be higher than the extra gain in compression resulting in a larger file. Do not use the two following techniques for files in a compressed format.
 
 ## End-to-end compression
 
@@ -37,7 +37,7 @@ For compression, end-to-end compression is where the largest performance improve
 
 ![](httpenco1.png)
 
-All modern browsers and servers do support it and the only thing to negotiate is the compression algorithm to use. These algorithm are optimized for text. In the 1990s, compression technology was advancing at a rapid pace and numerous successive algorithms have been added to the set of possible choices. Nowadays, only two are relevant: `gzip`, the most common one, and `br` the new challenger.
+All modern browsers and servers do support it and the only thing to negotiate is the compression algorithm to use. These algorithms are optimized for text. In the 1990s, compression technology was advancing at a rapid pace and numerous successive algorithms have been added to the set of possible choices. Nowadays, only two are relevant: `gzip`, the most common one, and `br` the new challenger.
 
 To select the algorithm to use, browsers and servers use [proactive content negotiation](/en-US/docs/Web/HTTP/Content_negotiation). The browser sends an {{HTTPHeader("Accept-Encoding")}} header with the algorithm it supports and its order of precedence, the server picks one, uses it to compress the body of the response and uses the {{HTTPHeader("Content-Encoding")}} header to tell the browser the algorithm it has chosen. As content negotiation has been used to choose a representation based on its encoding, the server must send a {{HTTPHeader("Vary")}} header containing at least {{HTTPHeader("Accept-Encoding")}} alongside this header in the response; that way, caches will be able to cache the different representations of the resource.
 

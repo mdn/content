@@ -31,7 +31,7 @@ There are several types of redirects, sorted into three categories:
 
 ### Permanent redirections
 
-These redirections are meant to last forever. They imply that the original URL should no longer be used, and replaced with the new one.Search engine robots, RSS readers, and other crawlers will update the original URL for the resource.
+These redirections are meant to last forever. They imply that the original URL should no longer be used, and replaced with the new one. Search engine robots, RSS readers, and other crawlers will update the original URL for the resource.
 
 | Code  | Text                 | Method handling                                                                                                       | Typical use case                                             |
 | ----- | -------------------- | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
@@ -205,12 +205,12 @@ Most of the time this is a server problem, and if the server can detect it, it w
 
 Sometimes, the server won't detect it: a redirection loop can spread over several servers which each don't have the full picture. In this case, browsers will detect it and display an error message. Firefox displays:
 
-> Firefox has detected that the server is redirecting the request for this address in a way that will never complete.
+> Firefox has detected that the server is redirecting the request for this address in a way that will never terminate.
 
 …while Chrome displays:
 
 > This Webpage has a redirect loop
 
-In both cases, the user can't do much (unless a corruption is happening on their side, like a mismatch of cache or cookies).
+In both cases, the user can't do much (unless corruption is happening on their side, like a mismatch of cache or cookies).
 
 It is important to avoid redirection loops, as they completely break the user experience.

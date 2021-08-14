@@ -52,7 +52,7 @@ Public-Key-Pins: pin-sha256="<pin-value>";
 
 - `pin-sha256="<pin-value>"`
   - : The quoted string is the Base64 encoded Subject Public Key Information
-    ({{Glossary("SPKI")}}) fingerprint. It is possible to specify multiple pins for
+    (SPKI) fingerprint. It is possible to specify multiple pins for
     different public keys. Some browsers might allow other hashing algorithms than SHA-256
     in the future.
 - `max-age=<expire-time>`
