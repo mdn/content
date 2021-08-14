@@ -25,6 +25,24 @@ browser-compat: api.Location.reload
 <pre class="brush: js">location.reload();
 </pre>
 
+<h2 id="location.reload_has_no_parameter">location.reload() has no parameter</h2>
+
+<p>Any parameter you specify in a <code>location.reload()</code> call will be ignored and have no effect of any kind.</p>
+
+<p>You may come across instances of <code>location.reload(true)</code> in existing code that was written with the assumption that calling it with that boolean true parameter tells browsers to bypass the browser cache and force-reload the current document. However, no current browsers actually do anything different when given such a true/false “force-reload” parameter in a <code>location.reload()</code> call.</p>
+
+<p>Despite the fact that calling <code>location.reload(true)</code> has exactly the same effect in browsers that calling <code>location.reload()</code> does, there has for years been extensive confusion about it, and there has for years been extensive cargo-cult usage of it.</p>
+
+<p>Although the confusion seems to cleared up in recent years, a GitHub "<code>location.reload(true)</code>" search still returns <a href="https://github.com/search?q=%22location.reload%28true%29%22&type=code">several hundred thousand results</a>. So there’s a lot of existing code which still has it.</p>
+
+<p>How the confusion was ever able reach that point is unclear. But the history behind it all just goes back to the fact that once, long ago, some versions of Netscape Navigator did once do something different with <code>location.reload(true)</code>. And so it made its way into code that later got copied or parroted into other code, and that kept going on long after Netscape Navigator was gone, and so then it ultimately ended up in code all over the place, without anybody apparently ever testing the code to see if it actually had any effect.</p>
+
+<p>It’s worth noting, anyway, that even in those old Netscape Navigator versions, the parameter wasn’t strictly a “force-reload” parameter; instead it was more of a “force-GET” parameter. That’s because its actual purpose was with responses to POST requests initiated from forms: Calling <code>location.reload(true)</code> would cause the request to be re-sent — <em>but as a GET request</em>. So the actual purpose of the parameter was to avoid causing the browser to re-POST the form data it had already posted to the server.</p>
+
+<p>Then, at one point after Netscape Navigator has already fallen out of use, the W3C Web APIs Working Group <a href="https://www.w3.org/2005/06/tracker/webapi/issues/69">took up an issue</a> to consider adding a true/false parameter to the specification for <code>location.reload()</code>. However, it was never actually added.</p>
+
+<p>So a boolean parameter is not part of the current specification for <code>location.reload()</code> — and in fact has <em>never</em> been part of any specification for <code>location.reload()</code> ever published.</p>
+
 <h2 id="Specifications">Specifications</h2>
 
 {{Specifications}}
