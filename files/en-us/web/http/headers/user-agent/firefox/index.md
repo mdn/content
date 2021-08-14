@@ -182,7 +182,7 @@ Here is a JavaScript regular expression that will detect all mobile devices, inc
 
 ```
 /mobi/i
-!!
+```
 
 The `i` makes it case-insensitive, and `mobi` matches all mobile browsers.
 
