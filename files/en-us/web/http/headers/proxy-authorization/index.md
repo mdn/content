@@ -63,7 +63,9 @@ Proxy-Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 
 ## Specifications
 
-{{Specifications}}
+| Specification                                                                                                 |
+| ------------------------------------------------------------------------------------------------------------- |
+| [RFC 7235<br/># header.proxy-authorization](https://httpwg.org/specs/rfc7235.html#header.proxy-authorization) |
 
 ## See also
 

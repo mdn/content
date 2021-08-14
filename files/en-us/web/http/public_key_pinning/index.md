@@ -15,7 +15,7 @@ tags:
 
 **HTTP Public Key Pinning** ({{Glossary("HPKP")}}) was a security feature that used to tell a web client to associate a specific cryptographic public key with a certain web server to decrease the risk of {{Glossary("MITM")}} attacks with forged certificates. It has been removed in modern browsers and is no longer supported.
 
-To ensure the authenticity of a server's public key used in {{Glossary("TLS")}} sessions, this public key is wrapped into a X.509 certificate which is usually signed by a certificate authority ({{Glossary("Certificate_authority", "CA")}}). Web clients such as browsers trust a lot of these CAs, which can all create certificates for arbitrary domain names. If an attacker is able to compromise a single CA, they can perform MITM attacks on various TLS connections. HPKP can circumvent this threat for the {{Glossary("HTTPS")}} protocol by telling the client which public key belongs to a certain web server.
+To ensure the authenticity of a server's public key used in {{Glossary("TLS")}} sessions, this public key is wrapped into an X.509 certificate which is usually signed by a certificate authority ({{Glossary("Certificate_authority", "CA")}}). Web clients such as browsers trust a lot of these CAs, which can all create certificates for arbitrary domain names. If an attacker is able to compromise a single CA, they can perform MITM attacks on various TLS connections. HPKP can circumvent this threat for the {{Glossary("HTTPS")}} protocol by telling the client which public key belongs to a certain web server.
 
 HPKP is a _Trust on First Use_ ({{Glossary("TOFU")}}) technique. The first time a web server tells a client via a special HTTP header which public keys belong to it, the client stores this information for a given period of time. When the client visits the server again, it expects at least one certificate in the certificate chain to contain a public key whose fingerprint is already known via HPKP. If the server delivers an unknown public key, the client should present a warning to the user.
 
@@ -30,7 +30,7 @@ Public-Key-Pins: pin-sha256="base64=="; max-age=expireTime [; includeSubDomains]
 ```
 
 - `pin-sha256`
-  - : The quoted string is the Base64 encoded _Subject Public Key Information_ ({{Glossary("SPKI")}}) fingerprint. It is possible to specify multiple pins for different public keys. Some browsers might allow other hashing algorithms than SHA-256 in the future. See below on how to extract this information out of a certificate or key file.
+  - : The quoted string is the Base64 encoded _Subject Public Key Information_ (SPKI) fingerprint. It is possible to specify multiple pins for different public keys. Some browsers might allow other hashing algorithms than SHA-256 in the future. See below on how to extract this information out of a certificate or key file.
 - `max-age`
   - : The time, in seconds, that the browser should remember that this site is only to be accessed using one of the defined keys.
 - `includeSubDomains` {{optional_inline}}
@@ -38,7 +38,7 @@ Public-Key-Pins: pin-sha256="base64=="; max-age=expireTime [; includeSubDomains]
 - `report-uri` {{optional_inline}}
   - : If this optional parameter is specified, pin validation failures are reported to the given URL.
 
-> **Note:** The current specification requires including a second pin for a backup key which isn't yet used in production. This allows for changing the server's public key without breaking accessibility for clients that have already noted the pins. This is important for example when the former key gets compromised.
+> **Note:** The current specification requires including a second pin for a backup key that isn't yet used in production. This allows for changing the server's public key without breaking accessibility for clients that have already noted the pins. This is important for example when the former key gets compromised.
 
 ### Extracting the Base64 encoded public key information
 

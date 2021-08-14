@@ -19,7 +19,7 @@ control access to the network.
 Network operators sometimes require some authentication, acceptance of terms, or other
 user interaction before granting access (for example in an internet café or at an
 airport). They often identify clients who have not done so using their Media Access
-Control ({{Glossary("MAC")}}) addresses.
+Control (MAC) addresses.
 
 ## Status
 

@@ -23,7 +23,7 @@ Accept-Ranges: bytes
 Content-Length: 146515
 ```
 
-In this response, `Accept-Ranges: bytes` indicates that bytes can be used as unit to define a range. Here the {{HTTPHeader("Content-Length")}} header is also useful as it indicates the full size of the image to retrieve.
+In this response, `Accept-Ranges: bytes` indicates that bytes can be used as units to define a range. Here the {{HTTPHeader("Content-Length")}} header is also useful as it indicates the full size of the image to retrieve.
 
 If sites omit the `Accept-Ranges` header, they likely don't support partial requests. Some sites also explicitly send "`none`" as a value, indicating no support. In some apps, download managers disable their pause buttons in that case.
 

@@ -8,7 +8,7 @@ tags:
 ---
 {{HTTPSidebar}}
 
-HTTP has a concept of _conditional requests_, where the result, and even the success of a request, can be changed by comparing the affected resources with the value of a _validator_. Such requests can be useful to validate the content of a cache, and sparing a useless control, to verify the integrity of a document, like when resuming a download, or when preventing to lose updates when uploading or modifying a document on the server.
+HTTP has a concept of _conditional requests_, where the result, and even the success of a request, can be changed by comparing the affected resources with the value of a _validator_. Such requests can be useful to validate the content of a cache, and sparing a useless control, to verify the integrity of a document, like when resuming a download, or when preventing lose updates when uploading or modifying a document on the server.
 
 ## Principles
 
@@ -35,7 +35,7 @@ The kind of validation is independent of the validator used. Both {{HTTPHeader("
 
 ### Strong validation
 
-Strong validation consists of guaranteeing that the resource is, byte to byte, identical to the one it is compared too. This is mandatory for some conditional headers, and the default for the others. Strong validation is very strict and may be difficult to guarantee at the server level, but it does guarantee no data loss at any time, sometimes at the expense of performance.
+Strong validation consists of guaranteeing that the resource is, byte to byte, identical to the one it is compared to. This is mandatory for some conditional headers, and the default for the others. Strong validation is very strict and may be difficult to guarantee at the server level, but it does guarantee no data loss at any time, sometimes at the expense of performance.
 
 It is quite difficult to have a unique identifier for strong validation with {{HTTPHeader("Last-Modified")}}. Often this is done using an {{HTTPHeader("ETag")}} with the MD5 hash of the resource (or a derivative).
 
@@ -54,7 +54,7 @@ Several HTTP headers, called conditional headers, lead to conditional requests. 
 - {{HTTPHeader("If-Modified-Since")}}
   - : Succeeds if the {{HTTPHeader("Last-Modified")}} date of the distant resource is more recent than the one given in this header.
 - {{HTTPHeader("If-Unmodified-Since")}}
-  - : Succeeds if the {{HTTPHeader("Last-Modified")}} date of the distant resource is older or the same than the one given in this header.
+  - : Succeeds if the {{HTTPHeader("Last-Modified")}} date of the distant resource is older or the same as the one given in this header.
 - {{HTTPHeader("If-Range")}}
   - : Similar to {{HTTPHeader("If-Match")}}, or {{HTTPHeader("If-Unmodified-Since")}}, but can have only one single etag, or one date. If it fails, the range request fails, and instead of a {{HTTPStatus("206")}} `Partial Content` response, a {{HTTPStatus("200")}} `OK` is sent with the complete resource.
 
@@ -64,7 +64,7 @@ Several HTTP headers, called conditional headers, lead to conditional requests. 
 
 The most common use case for conditional requests is updating a cache. With an empty cache, or without a cache, the requested resource is sent back with a status of {{HTTPStatus("200")}} `OK`.
 
-![The request issued when the cache is empty triggers the resource to be downloaded, with both validator value sent as headers. The cache is then filled.](cache1.png)
+![The request issued when the cache is empty triggers the resource to be downloaded, with both validator values sent as headers. The cache is then filled.](cache1.png)
 
 Together with the resource, the validators are sent in the headers. In this example, both {{HTTPHeader("Last-Modified")}} and {{HTTPHeader("ETag")}} are sent, but it could equally have been only one of them. These validators are cached with the resource (like all headers) and will be used to craft conditional requests, once the cache becomes stale.
 
@@ -82,7 +82,7 @@ Besides the setting of the validators on the server side, this mechanism is tran
 
 ### Integrity of a partial download
 
-Partial downloading of files is a functionality of HTTP that allows to resume previous operations, saving bandwidth and time, by keeping the already obtained information:
+Partial downloading of files is a functionality of HTTP that allows resuming previous operations, saving bandwidth and time, by keeping the already obtained information:
 
 ![A download has been stopped and only partial content has been retrieved.](httpresume1.png)
 
@@ -110,13 +110,13 @@ With the {{HTTPMethod("PUT")}} method you are able to implement this. The client
 
 ![Updating a file with a PUT is very simple when concurrency is not involved.](httplock1.png)
 
-Unfortunately, things get a little inaccurate as soon as we take into account concurrency. While a client is locally modifying its new copy of the resource, a second client can fetch the same resource and do the same on its copy. What happens next is very unfortunate: when they commit back to the server, the modifications from the first client are discarded by the next client push, as this second client is unaware of the first client's changes to the resource. The decision on who wins, is not communicated to the other party. Which client's changes are to be kept, will vary with the speed they commit; this depends on the performance of the clients, of the server, and even of the human editing the document at the client. The winner will change from one time to the next. This is a {{glossary("race condition")}} and leads to problematic behaviors, which are difficult to detect and to debug:
+Unfortunately, things get a little inaccurate as soon as we take into account concurrency. While a client is locally modifying its new copy of the resource, a second client can fetch the same resource and do the same on its copy. What happens next is very unfortunate: when they commit back to the server, the modifications from the first client are discarded by the next client push, as this second client is unaware of the first client's changes to the resource. The decision on who wins is not communicated to the other party. Which client's changes are to be kept, will vary with the speed they commit; this depends on the performance of the clients, of the server, and even of the human editing the document at the client. The winner will change from one time to the next. This is a _race condition_ and leads to problematic behaviors, which are difficult to detect and to debug:
 
 ![When several clients update the same resource in parallel, we are facing a race condition: the slowest win, and the others don't even know they lost. Problematic!](httplock2.png)
 
 There is no way to deal with this problem without annoying one of the two clients. However, lost updates and race conditions are to be avoided. We want predictable results, and expect that the clients are notified when their changes are rejected.
 
-Conditional requests allow implementing the _optimistic locking algorithm_ (used by most wikis or source control systems). The concept is to allow all clients to get copies of the resource, then let them modify it locally, controlling concurrency by successfully allowing the first client submitting an update. All subsequent updates, based on the now obsolete version of the resource, are rejected:
+Conditional requests allow implementing the _optimistic locking algorithm_ (used by most wikis or source control systems). The concept is to allow all clients to get copies of the resource, then let them modify it locally, controlling concurrency by successfully allowing the first client to submit an update. All subsequent updates, based on the now obsolete version of the resource, are rejected:
 
 ![Conditional requests allow to implement optimistic locking: now the quickest wins, and the others get an error.](httplock3.png)
 
@@ -124,7 +124,7 @@ This is implemented using the {{HTTPHeader("If-Match")}} or {{HTTPHeader("If-Unm
 
 ### Dealing with the first upload of a resource
 
-The first upload of a resource is an edge case of the previous. Like any update of a resource, it is subject to a race condition if two clients try to perform at the similar times. To prevent this, conditional requests can be used: by adding {{HTTPHeader("If-None-Match")}} with the special value of `'*'`, representing any etag. The request will succeed, only if the resource didn't exist before:
+The first upload of a resource is an edge case of the previous. Like any update of a resource, it is subject to a race condition if two clients try to perform at similar times. To prevent this, conditional requests can be used: by adding {{HTTPHeader("If-None-Match")}} with the special value of `'*'`, representing any etag. The request will succeed, only if the resource didn't exist before:
 
 ![Like for a regular upload, the first upload of a resource is subject to a race condition: If-None-Match can prevent it.](httpfirst.png)
 

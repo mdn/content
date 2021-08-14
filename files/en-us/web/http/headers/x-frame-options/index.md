@@ -42,7 +42,7 @@ X-Frame-Options: SAMEORIGIN
 
 ### Directives
 
-If you specify `DENY`, not only will attempts to load the page in a frame fail when loaded from other sites, attempts to do so will fail when loaded from the same site. On the other hand, if you specify `SAMEORIGIN`, you can still use the page in a frame as long as the site including it in a frame is the same as the one serving the page.
+If you specify `DENY`, not only will the browser attempt to load the page in a frame fail when loaded from other sites, attempts to do so will fail when loaded from the same site. On the other hand, if you specify `SAMEORIGIN`, you can still use the page in a frame as long as the site including it in a frame is the same as the one serving the page.
 
 - `DENY`
   - : The page cannot be displayed in a frame, regardless of the site attempting to do so.

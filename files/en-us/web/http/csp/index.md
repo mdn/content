@@ -13,8 +13,8 @@ tags:
 
 **Content Security Policy** ({{Glossary("CSP")}}) is an added layer of security
 that helps to detect and mitigate certain types of attacks,
-including Cross Site Scripting ({{Glossary("Cross-site_scripting", "XSS")}}) and data injection attacks.
-These attacks are used for everything from data theft to site defacement to distribution of malware.
+including Cross-Site Scripting ({{Glossary("Cross-site_scripting", "XSS")}}) and data injection attacks.
+These attacks are used for everything from data theft to site defacement to distribute of malware.
 
 CSP is designed to be fully backward compatible (except CSP version 2 where there are
 some explicitly-mentioned inconsistencies in backward compatibility; more details [here](https://www.w3.org/TR/CSP2) section 1.1). Browsers that don't support
@@ -38,18 +38,18 @@ for example:
 
 ## Threats
 
-### Mitigating cross site scripting
+### Mitigating cross-site scripting
 
 A primary goal of CSP is to mitigate and report XSS attacks. XSS attacks exploit the
-browser's trust of the content received from the server. Malicious scripts are executed
+browser's trust in the content received from the server. Malicious scripts are executed
 by the victim's browser because the browser trusts the source of the content, even when
 it's not coming from where it seems to be coming from.
 
 CSP makes it possible for server administrators to reduce or eliminate the vectors by
 which XSS can occur by specifying the domains that the browser should consider to be
 valid sources of executable scripts. A CSP compatible browser will then only execute
-scripts loaded in source files received from those allowlisted domains, ignoring all
-other script (including inline scripts and event-handling HTML attributes).
+scripts loaded in source files received from those allowed domains, ignoring all
+other scripts (including inline scripts and event-handling HTML attributes).
 
 As an ultimate form of protection, sites that want to never allow scripts to be
 executed can opt to globally disallow script execution.
@@ -73,7 +73,7 @@ Configuring Content Security Policy involves adding the
 to control what resources the user agent is allowed to load for that page. For example,
 a page that uploads and displays images could allow images from anywhere, but restrict a
 form action to a specific endpoint. A properly designed Content Security Policy helps
-protect a page against a cross site scripting attack. This article explains how to
+protect a page against a cross-site scripting attack. This article explains how to
 construct such headers properly, and provides examples.
 
 ### Specifying your policy
@@ -139,8 +139,7 @@ Here, by default, content is only permitted from the document's origin, with the
 following exceptions:
 
 - Images may load from anywhere (note the "\*" wildcard).
-- Media is only allowed from media1.com and media2.com (and not from subdomains of
-  those sites).
+- Media is only allowed from media1.com and media2.com (and not from subdomains of those sites).
 - Executable script is only allowed from userscripts.example.com.
 
 ### Example 4
@@ -217,7 +216,7 @@ The report JSON object contains the following data:
 - `document-uri`
   - : The URI of the document in which the violation occurred.
 - `effective-directive`
-  - : The directive whose enforcement caused the violation. Some browsers may provide different values, such as Chrome providing `style-src-elem`/`style-src-attr`, even when the actual enforced directive was `style-src`.
+  - : The directive whose enforcement caused the violation. Some browsers may provide different values, such as Chrome providing `style-src-elem`/`style-src-attr`, even when the actually enforced directive was `style-src`.
 - `original-policy`
   - : The original policy as specified by the `Content-Security-Policy` HTTP
     header.
@@ -290,7 +289,7 @@ about cross-origin resources.
 A specific incompatibility exists in some versions of the Safari web browser, whereby
 if a Content Security Policy header is set, but not a Same Origin header, the browser
 will block self-hosted content and off-site content, and incorrectly report that this is
-due to a the Content Security Policy not allowing the content.
+due to the Content Security Policy not allowing the content.
 
 ## See also
 

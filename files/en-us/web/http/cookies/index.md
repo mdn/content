@@ -60,7 +60,7 @@ Set-Cookie: tasty_cookie=strawberry
 [page content]
 ```
 
-Then, with every subsequent request to the server, the browser sends back all previously stored cookies to the server using the {{HTTPHeader("Cookie")}} header.
+Then, with every subsequent request to the server, the browser sends back all previously-stored cookies to the server using the {{HTTPHeader("Cookie")}} header.
 
 ```GET /sample_page.html HTTP/2.0
 Host: www.example.org
@@ -87,7 +87,7 @@ For example:
 Set-Cookie: id=a3fWa; Expires=Thu, 31 Oct 2021 07:28:00 GMT;
 ```
 
-> **Note:** When an `Expires` date is set, the time and date set is relative to the client the cookie is being set on, not the server.
+> **Note:** When an `Expires` date and time are set, they are relative to the client the cookie is being set on, not the server.
 
 If your site authenticates users, it should regenerate and resend session cookies, even ones that already exist, whenever the user authenticates. This technique helps prevent [session fixation attacks](/en-US/docs/Web/Security/Types_of_attacks#session_fixation), where a third party can reuse a user's session.
 
@@ -178,7 +178,7 @@ Please note the security issues in the [Security](#security) section below. Cook
 
 ## Security
 
-> **Note:** Information should be stored in cookies with the understanding that all cookie values are visible to, and can be changed by, the end-user. Depending on the application, it may be desirable to use an opaque identifier which is looked-up by the server or to investigate alternative authentication/confidentiality mechanisms such as JSON Web Tokens.
+> **Note:** Information should be stored in cookies with the understanding that all cookie values are visible to, and can be changed by, the end-user. Depending on the application, it may be desirable to use an opaque identifier, which is looked up by the server or to investigate alternative authentication/confidentiality mechanisms such as JSON Web Tokens.
 
 Ways to mitigate attacks involving cookies:
 
@@ -191,7 +191,7 @@ Ways to mitigate attacks involving cookies:
 
 A cookie is associated with a domain. If this domain is the same as the domain of the page you are on, the cookie is called a _first-party cookie_. If the domain is different, it is a _third-party cookie_. While the server hosting a web page sets first-party cookies, the page may contain images or other components stored on servers in other domains (for example, ad banners), which may set third-party cookies. These are mainly used for advertising and tracking across the web. See for example the [types of cookies used by Google](https://policies.google.com/technologies/types).
 
-A third party server can build up a profile of a user's browsing history and habits based on cookies sent to it by the same browser when accessing multiple sites. Firefox, by default, blocks third-party cookies that are known to contain trackers. Third-party cookies (or just tracking cookies) may also be blocked by other browser settings or extensions. Cookie blocking can cause some third-party components (such as social media widgets) to not function as intended.
+A third-party server can build up a profile of a user's browsing history and habits based on cookies sent to it by the same browser when accessing multiple sites. Firefox, by default, blocks third-party cookies that are known to contain trackers. Third-party cookies (or just tracking cookies) may also be blocked by other browser settings or extensions. Cookie blocking can cause some third-party components (such as social media widgets) to not function as intended.
 
 > **Note:** Servers can (and should) set the cookie [SameSite attribute](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) to specify whether or not cookies may be sent to third party sites.
 

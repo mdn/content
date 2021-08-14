@@ -94,7 +94,7 @@ using HTTPS.
 Whenever the Strict-Transport-Security header is delivered to the browser, it will
 update the expiration time for that site, so sites can refresh this information and
 prevent the timeout from expiring. Should it be necessary to disable Strict Transport
-Security, setting the max-age to 0 (over a https connection) will immediately expire the
+Security, setting the max-age to 0 (over an https connection) will immediately expire the
 `Strict-Transport-Security` header, allowing access via http.
 
 ## Preloading Strict Transport Security
@@ -111,19 +111,18 @@ treated as official.
 
 ## Examples
 
-All present and future subdomains will be HTTPS for a max-age of 1 year. This blocks
-access to pages or sub domains that can only be served over HTTP.
+All present and future subdomains will be HTTPS for a `max-age` of 1 year. This blocks
+access to pages or subdomains that can only be served over HTTP.
 
 ```
 Strict-Transport-Security: max-age=31536000; includeSubDomains
 ```
+If a `max-age` of 1 year is acceptable for a domain, 
+however, two years is the recommended value as explained on <https://hstspreload.org>.
 
-In the following example, `max-age` is set to 2 years, raised from what was
-a former limit `max-age` of 1 year. Note that 1 year is acceptable for a
-domain to be included in browsers' HSTS preload lists. 2 years is, however, the
-recommended goal as a website's final HSTS configuration as explained on <https://hstspreload.org>. It also suffixed with
-`preload` which is necessary for inclusion in most major web browsers' HSTS
-preload lists, e.g. Chromium, Edge, & Firefox.
+In the following example, `max-age` is set to 2 years, and is suffixed with
+`preload`, which is necessary for inclusion in most major web browsers' HSTS
+preload lists, like Chromium, Edge, and Firefox.
 
 ```
 Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
