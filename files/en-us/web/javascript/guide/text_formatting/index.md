@@ -72,7 +72,7 @@ You should use string literals unless you specifically need to use a `String` ob
 const firstString = '2 + 2'; // Creates a string literal value
 const secondString = new String('2 + 2'); // Creates a String object
 eval(firstString); // Returns the number 4
-eval(secondString); // Returns the string "2 + 2"
+eval(secondString); // Returns a String object containing "2 + 2"
 ```
 
 A `String` object has one property, `length`, that indicates the number of UTF-16 code units in the string. For example, the following code assigns `helloLength` the value 13, because "Hello, World!" has 13 characters, each represented by one UTF-16 code unit. You can access each code unit using an array bracket style. You can't change individual characters because strings are immutable array-like objects:
