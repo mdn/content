@@ -19,9 +19,9 @@ In CSS, if you have an unbreakable string such as a very long word, by default i
 
 {{EmbedGHLiveSample("css-examples/css-text/inline-overflow.html", '100%', 420)}}
 
-CSS will display overflow in this way, because to do something else could cause data loss. In CSS data loss means that some of your content vanishes. So the initial value of {{cssxref("overflow")}} is `visible`, and we can see the overflowing text. It is generally better to be able to see overflow, even if it is messy. If things were to disappear or be cropped as would happen if `overflow` was set to `hidden` you might not spot it when previewing your site. Messy overflow is at least easy to spot, and in the worst case, your visitor will be able to see and read the content even if it looks a bit strange.
+CSS will display overflow in this way, because doing something else could cause data loss. In CSS data loss means that some of your content vanishes. So the initial value of {{cssxref("overflow")}} is `visible`, and we can see the overflowing text. It is generally better to be able to see overflow, even if it is messy. If things were to disappear or be cropped as would happen if `overflow` was set to `hidden` you might not spot it when previewing your site. Messy overflow is at least easy to spot, and in the worst case, your visitor will be able to see and read the content even if it looks a bit strange.
 
-In this next example you can see what happens if `overflow` is set to `hidden`.
+In this next example, you can see what happens if `overflow` is set to `hidden`.
 
 {{EmbedGHLiveSample("css-examples/css-text/inline-overflow-hidden.html", '100%', 420)}}
 
@@ -31,7 +31,7 @@ To find the minimum size of the box that will contain its contents with no overf
 
 {{EmbedGHLiveSample("css-examples/css-text/min-content.html", '100%', 420)}}
 
-Using `min-content` is therefore one possibility for overflowing boxes. If it is possible to allow the box to grow to be the minimum size required for the content, but no bigger, using this keyword will give you that sizing.
+Using `min-content` is therefore one possibility for overflowing boxes. If it is possible to allow the box to grow to be the minimum size required for the content, but no bigger, using this keyword will give you that size.
 
 ## Breaking long words
 
@@ -41,13 +41,13 @@ If the box needs to be a fixed size, or you are keen to ensure that long words c
 
 > **Note:** The `overflow-wrap` property acts in the same way as the non-standard property `word-wrap`. The `word-wrap` property is now treated by browsers as an alias of the standard property.
 
-An alternative property to try is {{cssxref("word-break")}}. This property will break the word at the point it overflows. It will cause a break even if placing the word onto a new line would allow it to display without breaking.
+An alternative property to try is {{cssxref("word-break")}}. This property will break the word at the point it overflows. It will cause a break-even if placing the word onto a new line would allow it to display without breaking.
 
-In this next example you can compare the difference between the two properties on the same string of text.
+In this next example, you can compare the difference between the two properties on the same string of text.
 
 {{EmbedGHLiveSample("css-examples/css-text/word-break.html", '100%', 700)}}
 
-This might be useful if you want to prevent a large gap appearing if there is just enough space for the string. Or, where there is another element that you would not want the break to happen immediately after.
+This might be useful if you want to prevent a large gap from appearing if there is just enough space for the string. Or, where there is another element that you would not want the break to happen immediately after.
 
 In the example below there is a checkbox and label. Let's say, you want the label to break should it be too long for the box. However, you don't want it to break directly after the checkbox.
 
@@ -55,7 +55,7 @@ In the example below there is a checkbox and label. Let's say, you want the labe
 
 ## Adding hyphens
 
-To add hypens when words are broken, use the CSS {{cssxref("hyphens")}} property. Using a value of `auto`, the browser is free to automatically break words at appropriate hyphenation points, following whatever rules it chooses. To have some control over the process, use a value of `manual`, then insert a hard or soft break character into the string. A hard break (`‐`) will always break, even if it is not necessary to do so. A soft break (`­`) only breaks if breaking is needed.
+To add hyphens when words are broken, use the CSS {{cssxref("hyphens")}} property. Using a value of `auto`, the browser is free to automatically break words at appropriate hyphenation points, following whatever rules it chooses. To have some control over the process, use a value of `manual`, then insert a hard or soft break character into the string. A hard break (`‐`) will always break, even if it is not necessary to do so. A soft break (`­`) only breaks if breaking is needed.
 
 {{EmbedGHLiveSample("css-examples/css-text/hyphens.html", '100%', 660)}}
 
