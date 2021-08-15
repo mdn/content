@@ -9,12 +9,12 @@ browser-compat: api.NDEFReader
 ---
 <p>{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}</p>
 
-<p class="summary"><span class="seoSummary">The <strong><code>NDEFReader</code></strong> interface of the <a href="/en-US/docs/Web/API/Web_NFC_API">Web NFC API</a> is used to read from and write data to compatible NFC devices, e.g. NFC tags supporting NDEF, when these devices are within the reader's magnetic induction field.</span></p>
+<p class="summary">The <strong><code>NDEFReader</code></strong> interface of the <a href="/en-US/docs/Web/API/Web_NFC_API">Web NFC API</a> is used to read from and write data to compatible NFC devices, e.g. NFC tags supporting NDEF, when these devices are within the reader's magnetic induction field.</p>
 
 <h2 id="Constructor">Constructor</h2>
 
 <dl>
- <dt>{{DOMxRef("NDEFReader.NDEFReader", "NDEFReader.NDEFReader()")}} {{Experimental_Inline}}</dt>
+ <dt>{{DOMxRef("NDEFReader.NDEFReader", "NDEFReader()")}} {{Experimental_Inline}}</dt>
  <dd>Returns a new <code>NDEFReader</code> object.</dd>
 </dl>
 
@@ -24,9 +24,9 @@ browser-compat: api.NDEFReader
 
 <dl>
  <dt>{{DOMxRef("NDEFReader.onreading")}} {{Experimental_Inline}}</dt>
- <dd>An {{domxref("EventHandler")}} called when the <code>reading</code> event is raised.</dd>
+ <dd>An <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> called when the <code>reading</code> event is raised.</dd>
  <dt>{{DOMxRef("NDEFReader.onreadingerror")}} {{Experimental_Inline}}</dt>
- <dd>An {{domxref("EventHandler")}} called when when the <code>readingerror</code> event is raised. This occurs when a tag is in proximity of a reading device, but cannot be read.</dd>
+ <dd>An <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> called when when the <code>readingerror</code> event is raised. This occurs when a tag is in proximity of a reading device, but cannot be read.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
