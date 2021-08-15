@@ -11,7 +11,7 @@ browser-compat: css.selectors.placeholder
 ---
 {{CSSRef}}
 
-The **`::placeholder`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the [placeholder text](/en-US/docs/Learn/Forms#the_placeholder_attribute) in an {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element.
+The **`::placeholder`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the [placeholder text](/en-US/docs/Web/HTML/Element/input#attr-placeholder) in an {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element.
 
 ```css
 ::placeholder {
