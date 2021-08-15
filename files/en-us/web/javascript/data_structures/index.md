@@ -66,7 +66,7 @@ To check for the largest available value or smallest available value within {{js
 
 The number type has only one integer with two representations: `0` is represented as both `-0` and `+0`. (`0` is an alias for `+0`.)
 
-In the praxis, this has almost no impact. For example, `+0 === -0` is `true`. However, you are able to notice this when you divide by zero:
+In practice, this has almost no impact. For example, `+0 === -0` is `true`. However, you are able to notice this when you divide by zero:
 
 ```js
 > 42 / +0
