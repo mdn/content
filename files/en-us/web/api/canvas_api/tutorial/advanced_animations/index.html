@@ -100,10 +100,9 @@ if (ball.x + ball.vx &gt; canvas.width || ball.x + ball.vx &lt; 0) {
 
 <p>Let's see how it looks in action so far. Move your mouse into the canvas to start the animation.</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" style="border: 1px solid" width="600" height="300"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html hidden">&lt;canvas id="canvas" style="border: 1px solid" width="600" height="300"&gt;&lt;/canvas&gt;</pre>
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+<pre class="brush: js hidden">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var raf;
 
@@ -150,7 +149,6 @@ canvas.addEventListener('mouseout', function(e) {
 });
 
 ball.draw();</pre>
-</div>
 
 <p>{{EmbedLiveSample("First_demo", "610", "310")}}</p>
 
@@ -163,12 +161,10 @@ ball.vy += .25;</pre>
 
 <p>This slows down the vertical velocity each frame, so that the ball will just bounce on the floor in the end.</p>
 
-<div class="hidden">
-<h6 id="Second_demo">Second demo</h6>
+<div id="Second_demo">
+<pre class="brush: html hidden">&lt;canvas id="canvas" style="border: 1px solid" width="600" height="300"&gt;&lt;/canvas&gt;</pre>
 
-<pre class="brush: html">&lt;canvas id="canvas" style="border: 1px solid" width="600" height="300"&gt;&lt;/canvas&gt;</pre>
-
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+<pre class="brush: js hidden">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var raf;
 
@@ -218,7 +214,6 @@ canvas.addEventListener('mouseout', function(e) {
 
 ball.draw();</pre>
 </div>
-
 <p>{{EmbedLiveSample("Second_demo", "610", "310")}}</p>
 
 <h2 id="Trailing_effect">Trailing effect</h2>
@@ -228,12 +223,10 @@ ball.draw();</pre>
 <pre class="brush: js">ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
 ctx.fillRect(0, 0, canvas.width, canvas.height);</pre>
 
-<div class="hidden">
-<h6 id="Third_demo">Third demo</h6>
+<div id="Third_demo">
+<pre class="brush: html hidden">&lt;canvas id="canvas" style="border: 1px solid" width="600" height="300"&gt;&lt;/canvas&gt;</pre>
 
-<pre class="brush: html">&lt;canvas id="canvas" style="border: 1px solid" width="600" height="300"&gt;&lt;/canvas&gt;</pre>
-
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+<pre class="brush: js hidden">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var raf;
 
@@ -291,9 +284,7 @@ ball.draw();</pre>
 
 <p>To get some control over the ball, we can make it follow our mouse using the <code><a href="/en-US/docs/Web/API/Element/mousemove_event">mousemove</a></code> event, for example. The <code><a href="/en-US/docs/Web/API/Element/click_event">click</a></code> event releases the ball and lets it bounce again.</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" style="border: 1px solid" width="600" height="300"&gt;&lt;/canvas&gt;</pre>
-</div>
+<pre class="brush: html hidden">&lt;canvas id="canvas" style="border: 1px solid" width="600" height="300"&gt;&lt;/canvas&gt;</pre>
 
 <pre class="brush: js">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');

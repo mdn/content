@@ -26,19 +26,13 @@ tags:
 
 <p>This code, executed when the {{event("load")}} event occurs, subtracts from the current time the time at which the navigation whose timing was recorded began ({{domxref("PerformanceTiming.navigationStart", "performance.timing.navigationStart")}}), and outputs that information to the screen by inserting it into an element.</p>
 
-<div class="hidden">
-<h4 id="HTML">HTML</h4>
-
-<pre class="brush: html">&lt;div class="output"&gt;
+<pre class="brush: html hidden">&lt;div class="output"&gt;
 &lt;/div&gt;</pre>
 
-<h4 id="CSS">CSS</h4>
-
-<pre class="brush: css">.output {
+<pre class="brush: css hidden">.output {
   border: 1px solid #bbb;
   font: 16px "Open Sans", "Helvetica", "Arial", sans-serif;
 }</pre>
-</div>
 
 <p>In tandem with appropriate HTML and CSS, the result is:</p>
 
@@ -91,19 +85,13 @@ tags:
 
 <p>This amends the previous example by looking at the contents of the <code>performance.navigation</code> object. {{domxref("PerformanceNavigation.type", "performance.navigation.type")}} indicates what kind of load operation took place: a navigation, a reload, or a shift through the browser's history. We also obtain the number of redirects that were incurred during the navigation from {{domxref("PerformanceNavigation.redirectCount", "performance.navigation.redirectCount")}}. This information is output to the screen just like the page load time was previously: by inserting it into the element with class <code>"output"</code>.</p>
 
-<div class="hidden">
-<h4 id="HTML_2">HTML</h4>
-
-<pre class="brush: html">&lt;div class="output"&gt;
+<pre class="brush: html hidden">&lt;div class="output"&gt;
 &lt;/div&gt;</pre>
 
-<h4 id="CSS_2">CSS</h4>
-
-<pre class="brush: css">.output {
+<pre class="brush: css hidden">.output {
   border: 1px solid #bbb;
   font: 16px "Open Sans", "Helvetica", "Arial", sans-serif;
 }</pre>
-</div>
 
 <p>With this code in place, the result looks like this:</p>
 

@@ -66,12 +66,12 @@ tags:
   --unregistered: #b4d455;
 }</pre>
 
-<div class="hidden" id="registered">
-<pre class="brush: html">&lt;button class="registered"&gt;Background Registered&lt;/button&gt;
+<div id="registered">
+<pre class="brush: html hidden">&lt;button class="registered"&gt;Background Registered&lt;/button&gt;
 &lt;button class="unregistered"&gt;Background Not Registered&lt;/button&gt;
 </pre>
 
-<pre class="brush: css">.registered {
+<pre class="brush: css hidden">.registered {
   --registered: #c0ffee;
   background-image: linear-gradient(to right, #fff, var(--registered));
   transition: --registered 1s ease-in-out;
@@ -102,7 +102,7 @@ button {
 
 </pre>
 
-<pre class="brush: js">window.CSS.registerProperty({
+<pre class="brush: js hidden">window.CSS.registerProperty({
   name: '--registered',
   syntax: '&lt;color&gt;',
   inherits: false,

@@ -151,10 +151,9 @@ observer.observe(target);
  <li>The last box has thresholds each 25%.</li>
 </ul>
 
-<div class="hidden">
-<h5 id="Threshold_example">Threshold example</h5>
+<div id="Threshold_example">
 
-<pre class="brush: html">&lt;template id="boxTemplate"&gt;
+<pre class="brush: html hidden">&lt;template id="boxTemplate"&gt;
   &lt;div class="sampleBox"&gt;
     &lt;div class="label topLeft"&gt;&lt;/div&gt;
     &lt;div class="label topRight"&gt;&lt;/div&gt;
@@ -170,7 +169,7 @@ observer.observe(target);
   &lt;/div&gt;
 &lt;/main&gt;</pre>
 
-<pre class="brush: css">.contents {
+<pre class="brush: css hidden">.contents {
   position: absolute;
   width: 700px;
   height: 1725px;
@@ -240,7 +239,7 @@ observer.observe(target);
 }
 </pre>
 
-<pre class="brush: js">let observers = [];
+<pre class="brush: js hidden">let observers = [];
 
 startup = () =&gt; {
   let wrapper = document.querySelector(".wrapper");
