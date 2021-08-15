@@ -15,7 +15,11 @@ browser-compat: javascript.grammar.template_literals
 ---
 {{JsSidebar("More")}}
 
-Template literals are literals delimited with backticks (<code>`</code>) allowing embedded expressions called *substitutions*. *Untagged* template literals result in strings, which is useful for string interpolation (and multiline strings, since unescaped newlines are allowed). *Tagged* template literals call a function (the *tag function*) with an array of any text segments from the literal followed by arguments with the values of any substitutions, which is useful for [DSLs](https://en.wikipedia.org/wiki/Domain-specific_language).
+Template literals are literals delimited with backticks (<code>`</code>), allowing embedded expressions called *substitutions*.
+
+* *Untagged* template literals result in strings, which makes them useful for string interpolation (and multiline strings, since unescaped newlines are allowed).
+
+* *Tagged* template literals call a function (the *tag function*) with an array of any text segments from the literal followed by arguments with the values of any substitutions, which is useful for [DSLs](https://en.wikipedia.org/wiki/Domain-specific_language).
 
 Template literals are sometimes informally called *template strings*, but they aren't string literals and can't be used everywhere a string literal can be used. Also, a tagged template literal may not result in a string; it's up to the tag function what it creates (if anything).
 
