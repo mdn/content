@@ -52,7 +52,7 @@ of `b = 5`, aka right operand of the assignment.
 
 As another example, the unique exponentiation operator has right-associativity, whereas
 other arithmetic operators have left-associativity. It is interesting to note that,
-the order of evaluation is always left-to-right irregardless of associativity and
+the order of evaluation is always left-to-right regardless of associativity and
 precedence.
 
 <table class="standard-table">
