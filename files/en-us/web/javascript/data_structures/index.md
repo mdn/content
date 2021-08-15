@@ -21,31 +21,20 @@ foo     = 'bar'; // foo is now a string
 foo     = true;  // foo is now a boolean
 ```
 
-## Data and Structure types
+## JavaScript types
 
-The latest ECMAScript standard defines nine types:
+The set of types in the JavaScript language consists of [_primitive values_](#primitive_values) and [_objects_](#objects).
 
-- Six **Data Types** that are [primitives](/en-US/docs/Glossary/Primitive), checked by [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) operator:
+- [Primitive values](#primitive_values) (immutable datum represented directly at the lowest level of the language)
+  - [Boolean type](#boolean_type)
+  - [Null type](#null_type)
+  - [Undefined type](#undefined_type)
+  - [Number type](#number_type)
+  - [BigInt type](#bigint_type)
+  - [String type](#string_type)
+  - [Symbol type](#symbol_type)
 
-  - [`undefined`](/en-US/docs/Glossary/undefined) : `typeof instance === "undefined"`
-  - [Boolean](/en-US/docs/Glossary/Boolean) : `typeof instance === "boolean"`
-  - [Number](/en-US/docs/Glossary/Number) : `typeof instance === "number"`
-  - [String](/en-US/docs/Glossary/String) : `typeof instance === "string"`
-  - [BigInt](/en-US/docs/Glossary/BigInt) : `typeof instance === "bigint"`
-  - [Symbol](/en-US/docs/Glossary/Symbol) : `typeof instance === "symbol"`
-
-- **Structural Types**:
-
-  - [Object](/en-US/docs/Glossary/Object) : `typeof instance === "object"`. Special non-data but **Structural type** for any [constructed](/en-US/docs/Learn/JavaScript/Objects#the_constructor) object instance also used as data structures: `new {{jsxref("Object")}}`, `new {{jsxref("Array")}}`, `new {{jsxref("Map")}}`, `new {{jsxref("Set")}}`, `new {{jsxref("WeakMap")}}`, `new {{jsxref("WeakSet")}}`, `new {{jsxref("Date")}}` and almost everything made with [`new` keyword](/en-US/docs/Web/JavaScript/Reference/Operators/new);
-  - [Function](/en-US/docs/Glossary/Function) : a non-data structure, though it also answers for `typeof` operator: `typeof instance === "function"`. This is merely a special shorthand for Functions, though every Function constructor is derived from `Object` constructor.
-
-- **Structural Root** Primitive:
-
-  - [`null`](/en-US/docs/Glossary/Null) : `typeof instance === "object"`. Special [primitive](/en-US/docs/Glossary/Primitive) type having additional usage for its value: if object is not inherited, then `null` is shown;
-
-Keep in mind the only valuable purpose of `typeof` operator usage is checking the Data Type. If we wish to check any Structural Type derived from `Object` it is pointless to use `typeof` for that, as we will always receive `"object"`. The proper way to check what sort of Object we are using is the {{jsxref("Operators/instanceof", "instanceof")}} keyword. But even in that case there might be misconceptions.
-
-As we can see the meaning of every primitive type is obvious except of `undefined` and `null` which are almost the same. This happens as the concept of Time is strictly connected with the purpose of algorithms. We can purport something that does not yet exist or does not exist anymore: **`undefined`**. But when we wish to be able to represent something that exists being empty, we have to invent another keyword. And that is what **`null`** stands for: the beginning of structural meaning.
+- [Objects](#objects) (collections of properties)
 
 ## Primitive values
 
