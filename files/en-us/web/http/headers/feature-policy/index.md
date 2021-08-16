@@ -42,7 +42,7 @@ Feature-Policy: <directive> <allowlist>
 
 - `<directive>`
   - : The Feature Policy directive to apply the `allowlist` to. See [Directives](#directives) below for a list of the permitted directive names.
-- \<allowlist>
+- `<allowlist>`
 
   - : An `allowlist` is a list of origins that takes one or more of the following values, separated by spaces:
 
@@ -110,6 +110,8 @@ Feature-Policy: <directive> <allowlist>
   - : Controls whether the current document is allowed to play a video in a Picture-in-Picture mode via the corresponding API.
 - {{httpheader("Feature-Policy/publickey-credentials-get", "publickey-credentials-get")}}
   - : Controls whether the current document is allowed to use the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) to retrieve already stored public-key credentials, i.e. via {{domxref("CredentialsContainer.get","navigator.credentials.get({publicKey: ..., ...})")}}.
+- {{httpheader("Feature-Policy/speaker-selection", "speaker-selection")}}
+  - : Controls whether the current document is allowed to use the [Audio Output Devices API](/en-US/docs/Web/API/Audio_Output_Devices_API) to list and select speakers.
 - {{httpheader('Feature-Policy/sync-xhr', 'sync-xhr')}}
   - : Controls whether the current document is allowed to make synchronous {{DOMxRef("XMLHttpRequest")}} requests.
 - {{httpheader('Feature-Policy/unoptimized-images', 'unoptimized-images')}} {{experimental_inline}}{{Non-standard_Inline}}
@@ -141,9 +143,7 @@ By specifying the `'none'` keyword for the origin list, the specified features w
 
 ## Specifications
 
-| Specification                                                                                                  |
-| -------------------------------------------------------------------------------------------------------------- |
-| [Permissions Policy](https://w3c.github.io/webappsec-permissions-policy/#permissions-policy-http-header-field) |
+{{Specifications}}
 
 ## Browser compatibility
 
