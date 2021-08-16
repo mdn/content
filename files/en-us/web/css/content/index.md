@@ -60,7 +60,7 @@ content: unset;
 ### Values
 
 - `none`
-  - : The pseudo-element is not generated.
+  - : When applied to a pseudo-element, the pseudo-element is not generated. If applied to an element, the value has no effect.
 - `normal`
   - : Computes to `none` for the `::before` and `::after` pseudo-elements.
 - {{cssxref("&lt;string&gt;")}}
