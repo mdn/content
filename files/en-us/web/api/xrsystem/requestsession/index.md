@@ -99,6 +99,8 @@ following:
   - : Enable the ability to obtain depth information using {{domxref("XRDepthInformation")}} objects.
 - `dom-overlay`
   - : Enable allowing to specify a DOM overlay element that will be displayed to the user.
+- `light-estimation`
+  - : Enable the ability to estimate environmental lighting conditions using {{domxref("XRLightEstimate")}} objects.
 - `local`
   - : Enable a tracking space whose native origin is located near the viewer's position at the time the session was created. The exact position depends on the underlying platform and implementation. The user isn't expected to move much if at all beyond their starting position, and tracking is optimized for this use case.
 - `local-floor`

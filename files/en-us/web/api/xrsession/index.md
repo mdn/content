@@ -35,6 +35,8 @@ _In addition to the properties listed below, `XRSession` inherits properties fro
   - : Returns a list of this session's {{DOMxRef("XRInputSource")}}s, each representing an input device used to control the camera and/or scene.
 - {{DOMxRef("XRSession.interactionMode", "interactionMode")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Returns this session's interaction mode, which describes the best space (according to the user agent) for the application to draw interactive UI for the current session.
+- {{DOMxRef("XRSession.preferredReflectionFormat", "preferredReflectionFormat")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+  - : Returns this session's preferred reflection format used for lighting estimation texture data.
 - {{DOMxRef("XRSession.renderState", "renderState")}} {{Experimental_Inline}}{{ReadOnlyInline}}
   - : An {{domxref("XRRenderState")}} object which contains options affecting how the imagery is rendered. This includes things such as the near and far clipping planes (distances defining how close and how far away objects can be and still get rendered), as well as field of view information.
 - {{DOMxRef("XRSession.visibilityState", "visibilityState")}} {{Experimental_Inline}}{{ReadOnlyInline}}
@@ -50,6 +52,8 @@ _`XRSession` provides the following methods in addition to those inherited from 
   - : Ends the WebXR session. Returns a {{jsxref("promise")}} which resolves when the session has been shut down.
 - {{DOMxRef("XRSession.requestAnimationFrame", "requestAnimationFrame()")}}
   - : Schedules the specified method to be called the next time the {{glossary("user agent")}} is working on rendering an animation frame for the WebXR device. Returns an integer value which can be used to identify the request for the purposes of canceling the callback using `cancelAnimationFrame()`. This method is comparable to the {{domxref("Window.requestAnimationFrame()")}} method.
+- {{DOMxRef("XRSession.requestLightProbe", "requestLightProbe()")}}
+  - : Requests an {{domxref("XRLightProbe")}} that can be used to estimate lighting information at a given point in the user's environment.
 - {{DOMxRef("XRSession.requestReferenceSpace", "requestReferenceSpace()")}}
   - : Requests that a new {{domxref("XRReferenceSpace")}} of the specified type be created. Returns a promise which resolves with the `XRReferenceSpace` or {{domxref("XRBoundedReferenceSpace")}} which was requested, or throws a `NotSupportedError` if the requested space type isn't supported by the device.
 - {{DOMxRef("XRSession.updateRenderState", "updateRenderState()")}}
