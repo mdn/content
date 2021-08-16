@@ -162,101 +162,15 @@ Most fonts have a particular weight which corresponds to one of the numbers in [
 
 For TrueType or OpenType variable fonts, the "wght" variation is used to implement varying widths.
 
-For the example below to work, you'll need a browser that supports the CSS Fonts Level 4 syntax in which font-weight can be any number between 1 and 1000.
+> **Note:** For the example below to work, you'll need a browser that supports the CSS Fonts Level 4 syntax in which `font-weight` can be any number between `1` and `1000`. The demo loads with `font-weight: 500;`. Change the value to see the weight of the text change.
 
-{{EmbedLiveSample("Variable_fonts", 1200, 180)}}
-
-#### HTML
-
-```html
-<header>
-    <input type="range" id="weight" name="weight" min="1" max="1000" />
-    <label for="weight">Weight</label>
-</header>
-<div class="container">
-    <p class="sample">...it would not be wonderful to meet a Megalosaurus, forty feet long or so, waddling like an elephantine lizard up Holborn Hill.</p>
-</div>
-```
-
-#### CSS
-
-```css
-/*
-Mutator Sans is created by LettError (https://github.com/LettError/mutatorSans)
-and is used here under the terms of its license:
-https://github.com/LettError/mutatorSans/blob/master/LICENSE
-*/
-
-@font-face {
-  src: url('https://mdn.mozillademos.org/files/16011/MutatorSans.ttf');
-  font-family:'MutatorSans';
-  font-style: normal;
-}
-
-label {
-  font: 1rem monospace;
-  white-space: nowrap;
-}
-
-.container {
-  max-height: 150px;
-  overflow-y: auto;
-}
-
-.sample {
-  text-transform: uppercase;
-  font: 1.5rem 'MutatorSans', sans-serif;
-}
-```
-
-```css hidden
-html, body {
-  max-height: 100vh;
-  max-width: 100vw;
-  overflow: hidden;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-header {
-  margin-bottom: 1.5rem;
-}
-
-.container {
-  flex-grow: 1;
-}
-
-.container > p {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-```
-
-#### JavaScript
-
-```js
-let weightLabel = document.querySelector('label[for="weight"]');
-let weightInput = document.querySelector('#weight');
-let sampleText = document.querySelector('.sample');
-
-function update() {
-  weightLabel.textContent = `font-weight: ${weightInput.value};`;
-  sampleText.style.fontWeight = weightInput.value;
-}
-
-weightInput.addEventListener('input', update);
-
-update();
-```
+{{EmbedGHLiveSample("css-examples/variable-fonts/font-weight.html", '100%', 860)}}
 
 ## Accessibility concerns
 
-People experiencing low vision conditions may have difficulty reading text set with a `font-weight` value of `100` (Thin/Hairline) or `200` (Extra Light), especially if the font has a [low contrast color ratio](/en-US/docs/Web/CSS/color#Accessibility_concerns).
+People experiencing low vision conditions may have difficulty reading text set with a `font-weight` value of `100` (Thin/Hairline) or `200` (Extra Light), especially if the font has a [low contrast color ratio](/en-US/docs/Web/CSS/color#accessibility_concerns).
 
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.8 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
 ## Formal definition
