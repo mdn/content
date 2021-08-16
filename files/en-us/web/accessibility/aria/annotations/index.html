@@ -96,9 +96,9 @@ tags:
 
 <p>If the descriptive text does appear in the UI, you can link the description to the widget using <code>aria-describedby</code>, like so:</p>
 
-<p>&lt;p id="fruit-desc"&gt;Choose your favourite fruit — the fruit with the highest number of votes will be added to the lunch options next week.&lt;/p&gt;</p>
+<pre class="brush: html">&lt;p id="fruit-desc"&gt;Choose your favourite fruit — the fruit with the highest number of votes will be added to the lunch options next week.&lt;/p&gt;
 
-<pre class="brush: html">&lt;section aria-describedby="fruit-desc"&gt;
+&lt;section aria-describedby="fruit-desc"&gt;
   &lt;form&gt;
     &lt;ul&gt;
       &lt;li&gt;&lt;label&gt;Apple: &lt;input type="radio" name="fruit" value="apple"&gt;&lt;/label&gt;&lt;/li&gt;
@@ -180,7 +180,7 @@ ins, [role="insertion"], del, [role="deletion"] {
 
 <p>Since <code>aria-details</code> can now accept multiple IDs, we can associate multiple comments with the same annotation, like so:</p>
 
-<pre>&lt;p&gt;The last half of the song is a slow-rising crescendo that peaks at the
+<pre class="brush: html">&lt;p&gt;The last half of the song is a slow-rising crescendo that peaks at the
 &lt;mark aria-details="thread-1 thread-2"&gt;end of the guitar solo&lt;/mark&gt;, before fading away sharply.&lt;/p&gt;
 
 &lt;div role="comment" id="thread-1" data-author="chris"&gt;
