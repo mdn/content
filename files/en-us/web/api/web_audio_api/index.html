@@ -32,14 +32,14 @@ tags:
 	<li>Connect the sources up to the effects, and the effects to the destination.</li>
 </ol>
 
-<p><img alt="A simple box diagram with an outer box labeled Audio context, and three inner boxes labeled Sources, Effects and Destination. The three inner boxes have arrow between them pointing from left to right, indicating the flow of audio information." src="audio-context_.png"></p>
+<p><img alt="A simple box diagram with an outer box labeled Audio context, and three inner boxes labeled Sources, Effects and Destination. The three inner boxes have arrows between them pointing from left to right, indicating the flow of audio information." src="audio-context_.png"></p>
 
 <p>Timing is controlled with high precision and low latency, allowing developers to write code that responds accurately to events and is able to target specific samples, even at a high sample rate. So applications such as drum machines and sequencers are well within reach.</p>
 
 <p>The Web Audio API also allows us to control how audio is <em>spatialized</em>. Using a system based on a <em>source-listener model</em>, it allows control of the <em>panning model</em> and deals with <em>distance-induced attenuation</em> induced by a moving source (or moving listener).</p>
 
-<div class="note">
-<p>You can read about the theory of the Web Audio API in a lot more detail in our article <a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API">Basic concepts behind Web Audio API</a>.</p>
+<div class="notecard note">
+<p><strong>Note:</strong> You can read about the theory of the Web Audio API in a lot more detail in our article <a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API">Basic concepts behind Web Audio API</a>.</p>
 </div>
 
 <h2 id="Web_Audio_API_target_audience">Web Audio API target audience</h2>
@@ -56,7 +56,7 @@ tags:
 
 <p>We also have other tutorials and comprehensive reference material available that covers all features of the API. See the sidebar on this page for more.</p>
 
-<p>If you are more familiar with the musical side of things, are familiar with music theory concepts, want to start building instruments, then you can go ahead and start building things with the advance tutorial and others as a guide (the above linked tutorial covers scheduling notes, creating bespoke oscillators and envelopes, as well as an LFO among other things.)</p>
+<p>If you are more familiar with the musical side of things, are familiar with music theory concepts, want to start building instruments, then you can go ahead and start building things with the advanced tutorial and others as a guide (the above-linked tutorial covers scheduling notes, creating bespoke oscillators and envelopes, as well as an LFO among other things.)</p>
 
 <p>If you aren't familiar with the programming basics, you might want to consult some beginner's JavaScript tutorials first and then come back here — see our <a href="/en-US/docs/Learn/JavaScript">Beginner's JavaScript learning module</a> for a great place to begin.</p>
 
@@ -196,7 +196,7 @@ tags:
 	<dt>{{event("audioprocess")}} (event) {{deprecated_inline}}</dt>
 	<dd>The <code>audioprocess</code> event is fired when an input buffer of a Web Audio API {{domxref("ScriptProcessorNode")}} is ready to be processed.</dd>
 	<dt>{{domxref("AudioProcessingEvent")}} {{deprecated_inline}}</dt>
-	<dd>The <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> <code>AudioProcessingEvent</code> represents events that occur when a {{domxref("ScriptProcessorNode")}} input buffer is ready to be processed.</dd>
+	<dd>The <code>AudioProcessingEvent</code> represents events that occur when a {{domxref("ScriptProcessorNode")}} input buffer is ready to be processed.</dd>
 </dl>
 
 <h3 id="Offlinebackground_audio_processing">Offline/background audio processing</h3>
@@ -222,17 +222,13 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
+<table>
 	<tbody>
 		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
+			<th>Specification</th>
 		</tr>
 		<tr>
-			<td>{{SpecName('Web Audio API')}}</td>
-			<td>{{Spec2('Web Audio API')}}</td>
-			<td></td>
+			<a href="https://webaudio.github.io/web-audio-api/">Web Audio API</a>
 		</tr>
 	</tbody>
 </table>
@@ -261,8 +257,8 @@ tags:
 	<li><a href="/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API">Visualizations with Web Audio API</a></li>
 	<li><a href="/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics">Web audio spatialisation basics</a></li>
 	<li><a href="/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode">Controlling multiple parameters with ConstantSourceNode</a></li>
-	<li><a href="http://www.html5rocks.com/tutorials/webaudio/positional_audio/">Mixing Positional Audio and WebGL</a></li>
-	<li><a href="http://www.html5rocks.com/tutorials/webaudio/games/">Developing Game Audio with the Web Audio API</a></li>
+	<li><a href="https://www.html5rocks.com/tutorials/webaudio/positional_audio/">Mixing Positional Audio and WebGL</a></li>
+	<li><a href="https://www.html5rocks.com/tutorials/webaudio/games/">Developing Game Audio with the Web Audio API</a></li>
 	<li><a href="/en-US/docs/Web/API/Web_Audio_API/Migrating_from_webkitAudioContext">Porting webkitAudioContext code to standards based AudioContext</a></li>
 </ul>
 

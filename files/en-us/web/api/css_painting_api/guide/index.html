@@ -135,17 +135,17 @@ tags:
 
 <p>Our header now has a highlight that changes according to it's size.</p>
 
-<div class="hidden" id="example2">
-<pre class="brush: js">CSS.paintWorklet.addModule('https://mdn.github.io/houdini-examples/cssPaint/intro/02partTwo/header-highlight.js');</pre>
+<div id="example2">
+<pre class="brush: js hidden">CSS.paintWorklet.addModule('https://mdn.github.io/houdini-examples/cssPaint/intro/02partTwo/header-highlight.js');</pre>
 
-<pre class="brush: css">.fancy {
+<pre class="brush: css hidden">.fancy {
   background-image: paint(headerHighlight);
 }
 .half {
     width: 50%;
 }</pre>
 
-<pre class="brush: html">&lt;h1 class="fancy"&gt;Largest Header&lt;/h1&gt;
+<pre class="brush: html hidden">&lt;h1 class="fancy"&gt;Largest Header&lt;/h1&gt;
 &lt;h6 class="fancy"&gt;Smallest Header&lt;/h6&gt;
 &lt;h3 class="fancy half"&gt;50% width header&lt;/h3&gt;
 </pre>

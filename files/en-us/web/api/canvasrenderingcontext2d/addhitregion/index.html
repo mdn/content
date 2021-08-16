@@ -112,10 +112,9 @@ ctx.stroke();
   the full smiley, check the browser compatibility table to see if your current browser
   supports hit regions already; you might need to activate a preference.)</p>
 
-<div class="hidden">
-  <h6 id="Playable_code">Playable code</h6>
+<div id="Playable_code">
 
-  <pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
+  <pre class="brush: html hidden">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
   &lt;input id="edit" type="button" value="Edit" /&gt;
   &lt;input id="reset" type="button" value="Reset" /&gt;
@@ -139,7 +138,7 @@ ctx.arc(100, 110, 50, 0, Math.PI, false);
 ctx.stroke();&lt;/textarea&gt;
 </pre>
 
-  <pre class="brush: js">var canvas = document.getElementById("canvas");
+  <pre class="brush: js hidden">var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");

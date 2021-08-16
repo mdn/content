@@ -1,0 +1,75 @@
+---
+title: NDEFReadingEvent.NDEFReadingEvent()
+slug: Web/API/NDEFReadingEvent/NDEFReadingEvent
+tags:
+  - API
+  - Constructor
+  - Reference
+  - NDEFReadingEvent
+browser-compat: api.NDEFReadingEvent.NDEFReadingEvent
+---
+<div>{{securecontext_header}}{{DefaultAPISidebar("")}}</div>
+
+<p class="summary">The <strong><code>NDEFReadingEvent()</code></strong> constructor creates a new {{domxref("NDEFReadingEvent")}} object which represents events dispatched on new NFC readings obtained by {{DOMxRef("NDEFReader")}}.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">new NDEFReadingEvent(type, options);</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+  <dt><code>type</code></dt>
+  <dd>Will always be <code>'type'</code>.</dd>
+  <dt><code>options</code></dt>
+  <dd>An object with the following members:
+    <dl>
+      <dt><code>serialNumber</code></dt>
+      <dd>The serial number of the device a message was read from.</dd>
+      <dt><code>message</code></dt>
+      <dd>An array of objects with the following members:
+        <dl>
+          <dt><code>data</code> {{optional_inline}}</dt>
+          <dd>Contains the data to be transmitted; one of a string, a {{domxref("BufferSource")}}, or an array of nested records.</dd>
+          <dt><code>encoding</code> {{optional_inline}}</dt>
+          <dd>A string specifying the record's encoding.</dd>
+          <dt><code>id</code> {{optional_inline}}</dt>
+          <dd>A developer-defined identifier for the record.</dd>
+          <dt><code>lang</code> {{optional_inline}}</dt>
+          <dd>A valid <a href="https://www.rfc-editor.org/info/bcp47">BCP47</a> language tag.</dd>
+          <dt><code>mediaType</code> {{optional_inline}}</dt>
+          <dd>A valid <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME type</a>.</dd>
+          <dt><code>recordType</code></dt>
+          <dd>A string indicating the type of data stored in <code>data</code>. It must be one of the following values:
+            <dl>
+              <dt><code>"absolute-url"</code></dt>
+              <dt>An absolute URL to the data.</dt>
+              <dt><code>"empty"</code></dt>
+              <dd>An empty {{domxref("NDEFRecord")}}.</dd>
+              <dt><code>"mime"</code></dt>
+              <dd>A valid <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME type</a>.</dd>
+              <dt><code>"smart-poster"</code></dt>
+              <dd>A smart poster as defined by the <a href="https://w3c.github.io/web-nfc/#bib-ndef-smartposter">NDEF-SMARTPOSTER</a> specification.</dd>
+              <dt><code>"text"</code></dt>
+              <dd>Text as defined by the <a href="https://w3c.github.io/web-nfc/#bib-ndef-text">NDEF-TEXT</a> specification.</dd>
+              <dt><code>"unknown"</code></dt>
+              <dd>The record type is not known.</dd>
+              <dt><code>"URL"</code></dt>
+              <dd>A URL as defined by the <a href="https://w3c.github.io/web-nfc/#bib-ndef-uri">NDEF-URI</a> specification.</dd>
+            </dl>
+          </dd>
+          </dd>
+        </dl>
+  </dd>
+</dl>
+
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+

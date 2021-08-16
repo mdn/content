@@ -97,11 +97,9 @@ function drawStar(ctx, r) {
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
 
-<pre class="brush: js">draw();</pre>
-</div>
+<pre class="brush: js hidden">draw();</pre>
 
 <p>In the first few lines of code, we draw a black rectangle the size of the canvas as a backdrop, then translate the origin to the center. Next, we create the circular clipping path by drawing an arc and calling <code>clip()</code>. Clipping paths are also part of the canvas save state. If we wanted to keep the original clipping path we could have saved the canvas state before creating the new one.</p>
 

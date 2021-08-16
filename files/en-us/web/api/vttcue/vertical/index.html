@@ -1,0 +1,54 @@
+---
+title: VTTCue.vertical
+slug: Web/API/VTTCue/vertical
+tags:
+  - API
+  - Property
+  - Reference
+  - vertical
+  - VTTCue
+browser-compat: api.VTTCue.vertical
+---
+<div>{{APIRef("WebVTT")}}</div>
+
+<p class="summary">The <strong><code>vertical</code></strong> property of the {{domxref("VTTCue")}} interface is a {{domxref("DOMString","string")}} representing the cue's writing direction.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">let vertical = VTTCue.vertical;
+VTTCue.vertical = "lr";</pre>
+
+<h3>Value</h3>
+<p>A {{domxref("DOMString","string")}} containing one of the following values:</p>
+
+<dl>
+  <dt><code>""</code> (an empty string)</dt>
+  <dd>Represents a horizontal writing direction.</dd>
+  <dt><code>"rl"</code></dt>
+  <dd>Represents a vertical writing direction growing to the left.</dd>
+  <dt><code>"lr"</code></dt>
+  <dd>Represents a vertical writing direction growing to the right.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In the following example a new {{domxref("VTTCue")}} is created, then the value of <code>vertical</code> is set to <code>"rl"</code>. The value is then printed to the console.</p>
+
+<pre class="brush: js">let video = document.querySelector('video');
+let track = video.addTextTrack("captions", "Captions", "en");
+track.mode = "showing";
+
+let cue1 = new VTTCue(0, 0.9, 'Hildy!');
+cue1.vertical = 'rl';
+console.log(cue1.vertical);
+
+track.addCue(cue1);
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

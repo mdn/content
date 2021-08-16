@@ -1,0 +1,63 @@
+---
+title: VTTCue.positionAlign
+slug: Web/API/VTTCue/positionAlign
+tags:
+  - API
+  - Property
+  - Reference
+  - positionAlign
+  - VTTCue
+browser-compat: api.VTTCue.positionAlign
+---
+<div>{{APIRef("WebVTT")}}</div>
+
+<p class="summary">The <strong><code>positionAlign</code></strong> property of the {{domxref("VTTCue")}} interface is used to determine what {{domxref("VTTCue.position")}} is anchored to.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">let positionAlign = VTTCue.position;
+VTTCue.position = a;</pre>
+
+<h3>Value</h3>
+<p>A {{domxref("DOMString","string")}} containing one of the following values:</p>
+<dl>
+  <dt><code>"line-left"</code></dt>
+  <dd>Line-left alignment.</dd>
+  <dt><code>"center"</code></dt>
+  <dd>Center alignment.</dd>
+  <dt><code>"line-right"</code></dt>
+  <dd>Line-right alignment.</dd>
+  <dt><code>"auto"</code></dt>
+  <dd>Automatic alignment, which depends on the text alignment of the cue, intepreted as follows:
+    <ul>
+      <li><strong>line-left:</strong> if the text alignment is left, the cue is using a LTR language and the text alignment is start, or the cue is using a RTL language and the text alignment is end.</li>
+      <li><strong>line-right:</strong> if the text alignment is right, the cue is using a RTL language and the text alignment is start, or the cue is using a LTR language and the text-alignment is end.</li>
+      <li><strong>center:</strong> if there is no text alignment position set.</li>
+    </ul>
+  </dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In the following example a new {{domxref("VTTCue")}} is created, then the value of <code>positionAlign</code> is set to <code>"line-right"</code>. The value is then printed to the console.</p>
+
+<pre class="brush: js">let video = document.querySelector('video');
+let track = video.addTextTrack("captions", "Captions", "en");
+track.mode = "showing";
+
+let cue1 = new VTTCue(0, 0.9, 'Hildy!');
+cue1.positionAlign = 'line-right';
+console.log(cue1.positionAlign);
+
+track.addCue(cue1);
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+

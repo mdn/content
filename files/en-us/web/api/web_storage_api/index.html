@@ -46,7 +46,7 @@ tags:
 </div>
 
 <div class="note">
-<p><strong>Note:</strong> Web Storage is not the same as <a href="/en-US/docs/Storage">mozStorage</a> (Mozilla's XPCOM interfaces to SQLite) or the <a href="/en-US/docs/Session_store_API">Session store API</a> (an <a href="/en-US/docs/XPCOM">XPCOM</a> storage utility for use by extensions).</p>
+<p><strong>Note:</strong> Web Storage is not the same as <code>mozStorage</code> (Mozilla's XPCOM interfaces to SQLite) or the <code>Session store API</code> (an XPCOM storage utility for use by extensions).</p>
 </div>
 
 <h2 id="Web_Storage_interfaces">Web Storage interfaces</h2>
@@ -55,7 +55,7 @@ tags:
  <dt>{{domxref("Storage")}}</dt>
  <dd>Allows you to set, retrieve and remove data for a specific domain and storage type (session or local.)</dd>
  <dt>{{domxref("Window")}}</dt>
- <dd>The Web Storage API extends the {{domxref("Window")}} object with two new properties — {{domxref("Window.sessionStorage")}} and {{domxref("Window.localStorage")}} — which provide access to the current domain's session and local {{domxref("Storage")}} objects respectively, and a {{domxref("Window.onstorage")}} event handler that fires when a storage area changes (e.g. a new item is stored.)</dd>
+ <dd>The Web Storage API extends the {{domxref("Window")}} object with two new properties — {{domxref("Window.sessionStorage")}} and {{domxref("Window.localStorage")}} — which provide access to the current domain's session and local {{domxref("Storage")}} objects respectively, and a {{domxref("WindowEventHandlers.onstorage")}} event handler that fires when a storage area changes (e.g. a new item is stored.)</dd>
  <dt>{{domxref("StorageEvent")}}</dt>
  <dd>The <code title="event-storage">storage</code> event is fired on a document's <code>Window</code> object when a storage area changes.</dd>
 </dl>
@@ -68,17 +68,16 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
+<table>
  <tbody>
   <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
+   <th>Specification</th>
   </tr>
   <tr>
-   <td>{{SpecName('HTML WHATWG', 'webstorage.html#webstorage')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
+   <td>
+    <a href="https://html.spec.whatwg.org/multipage/webstorage.html#webstorage">HTML Living Standard<br/>
+    # webstorage</a>
+   </td>
   </tr>
  </tbody>
 </table>

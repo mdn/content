@@ -22,7 +22,7 @@ tags:
  <dt>{{domxref("Animation")}}</dt>
  <dd>Provides playback controls and a timeline for an animation node or source. Can take an object created with the {{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}} constructor.</dd>
  <dt>{{domxref("KeyframeEffect")}}</dt>
- <dd>Describes sets of animatable properties and values, called <strong>keyframes</strong> and their <a href="/en-US/docs/Web/API/Web_Animations_API/Animation_timing_options">timing options</a>. These can then be played using the {{domxref("Animation.Animation", "Animation()")}} constructor.</dd>
+ <dd>Describes sets of animatable properties and values, called <strong>keyframes</strong> and their <a href="/en-US/docs/Web/API/EffectTiming">timing options</a>. These can then be played using the {{domxref("Animation.Animation", "Animation()")}} constructor.</dd>
  <dt>{{domxref("AnimationTimeline")}}</dt>
  <dd>Represents the timeline of animation. This interface exists to define timeline features (inherited by {{domxref("DocumentTimeline")}} and future timeline objects) and is not itself accessed by developers.</dd>
  <dt>{{domxref("AnimationEvent")}}</dt>
@@ -30,7 +30,7 @@ tags:
  <dt>{{domxref("DocumentTimeline")}}</dt>
  <dd>Represents animation timelines, including the default document timeline (accessed using the {{domxref("Document.timeline")}} property).</dd>
  <dt>{{domxref("EffectTiming")}}</dt>
- <dd>{{domxref("Element.animate()")}}, {{domxref("KeyframeEffectReadOnly.KeyframeEffectReadOnly()")}}, and {{domxref("KeyframeEffect.KeyframeEffect()")}} all accept an optional dictionary object of timing properties.</dd>
+ <dd>{{domxref("Element.animate()")}}, {{domxref("KeyframeEffect.KeyframeEffect")}}, and {{domxref("KeyframeEffect.KeyframeEffect()")}} all accept an optional dictionary object of timing properties.</dd>
 </dl>
 
 <h2 id="Extensions_to_other_interfaces">Extensions to other interfaces</h2>
@@ -57,17 +57,13 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
+<table>
  <tbody>
   <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
+   <th>Specification</th>
   </tr>
   <tr>
-   <td>{{SpecName('Web Animations')}}</td>
-   <td>{{Spec2('Web Animations')}}</td>
-   <td>Initial definition</td>
+   <td><a href="https://drafts.csswg.org/web-animations-1/">Web Animations</td>
   </tr>
  </tbody>
 </table>
@@ -80,6 +76,6 @@ tags:
  <li><a href="https://github.com/web-animations/web-animations-js">Polyfill</a></li>
  <li>Firefox's current implementation: <a href="https://birtles.github.io/areweanimatedyet/">AreWeAnimatedYet</a></li>
  <li>
-  <p><a href="http://codepen.io/danwilson/pen/xGBKVq">Browser support test</a></p>
+  <p><a href="https://codepen.io/danwilson/pen/xGBKVq">Browser support test</a></p>
  </li>
 </ul>

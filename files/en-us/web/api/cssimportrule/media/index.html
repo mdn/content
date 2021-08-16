@@ -20,12 +20,16 @@ browser-compat: api.CSSImportRule.media
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-	class="brush: js">var <var>media</var> = <var>CSSImportRule</var>.media;</pre>
+	class="brush: js">let media = CSSImportRule.media;</pre>
 
 <h3>Value</h3>
-<p>A {{domxref("MediaList")}} object.</p>
+<p>Returns a {{domxref("MediaList")}} object.</p>
+
+<p>The value of <code>media</code> can be set by passing a string containing the <code>media</code> attribute; for example <code>"print"</code>.</p>
 
 <h2 id="Examples">Examples</h2>
+
+<h3>Getting the media property</h3>
 
 <p>The following stylesheet includes a single {{cssxref("@import")}} rule. Therefore the
 	first item in the list of CSS rules will be a <code>CSSImportRule</code>. The
@@ -36,6 +40,13 @@ browser-compat: api.CSSImportRule.media
 
 <pre class="brush:javascript">let myRules = document.styleSheets[0].cssRules;
 console.log(myRules[0].media); //returns a MediaList</pre>
+
+<h3>Setting the media property</h3>
+
+<p>To change the <code>media</code> attribute of the associated stylesheet, set the value of <code>media</code> to a string containing the new value.</p>
+
+<pre class="brush:javascript">let myRules = document.styleSheets[0].cssRules;
+myRules[0].media = "print";</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
