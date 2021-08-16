@@ -92,7 +92,7 @@ browser-compat: html.elements.script
  <dt>{{htmlattrdef("nomodule")}}</dt>
  <dd>This Boolean attribute is set to indicate that the script should not be executed in browsers that support<a href="https://hacks.mozilla.org/2015/08/es6-in-depth-modules/"> ES2015 modules</a> — in effect, this can be used to serve fallback scripts to older browsers that do not support modular JavaScript code.</dd>
  <dt>{{htmlattrdef("nonce")}}</dt>
- <dd>A cryptographic nonce (number used once) to whitelist scripts in a <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src">script-src Content-Security-Policy</a>. The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial.</dd>
+ <dd>A cryptographic nonce (number used once) to allow scripts in a <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src">script-src Content-Security-Policy</a>. The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial.</dd>
  <dt id="attr-referrer">{{htmlattrdef("referrerpolicy")}}</dt>
  <dd>Indicates which <a href="/en-US/docs/Web/API/Document/referrer">referrer</a> to send when fetching the script, or resources fetched by the script:
   <ul>
