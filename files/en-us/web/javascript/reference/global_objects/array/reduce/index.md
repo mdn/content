@@ -17,7 +17,9 @@ browser-compat: javascript.builtins.Array.reduce
 
 The **`reduce()`** method executes a user-supplied “reducer” callback function on each element of the array, passing in the return value from the calculation on the preceding element. The final result of running the reducer across all elements of the array is a single value. 
 
-Perhaps the easiest-to-understand case for `reduce()` is to return the sum of all the elements in an array, by walking through the array element-by-element and accumulating a running sum of all the elements that precede each element, and then adding each element in turn to that accumulated sum — until there are no more elements to add — as shown in the following interactive example:
+Perhaps the easiest-to-understand case for `reduce()` is to return the sum of all the elements in an array. 
+The reducer walks through the array element-by-element, at each step adding the current array value to the result from the previous step (this result is the running sum of all the previous steps) — until there are no more elements to add.
+This is shown in the following interactive example:
 
 {{EmbedInteractiveExample("pages/js/array-reduce.html")}}
 
