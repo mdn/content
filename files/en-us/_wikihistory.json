@@ -152869,19 +152869,6 @@
       "jswisher"
     ]
   },
-  "Web/Progressive_web_apps/Developer_guide": {
-    "modified": "2020-09-06T08:17:28.701Z",
-    "contributors": [
-      "Deng_C1",
-      "Sheppy"
-    ]
-  },
-  "Web/Progressive_web_apps/Developer_guide/Installing": {
-    "modified": "2020-04-02T10:35:45.217Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
   "Web/Progressive_web_apps/Installable_PWAs": {
     "modified": "2020-08-25T10:28:50.283Z",
     "contributors": [
@@ -152892,6 +152879,12 @@
       "ExE-Boss",
       "end3r",
       "jswisher"
+    ]
+  },
+  "Web/Progressive_web_apps/Installing": {
+    "modified": "2020-04-02T10:35:45.217Z",
+    "contributors": [
+      "Sheppy"
     ]
   },
   "Web/Progressive_web_apps/Introduction": {
