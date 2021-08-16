@@ -84,7 +84,7 @@ The `break-before` property is specified as one of the keyword values from the l
 - `recto` {{experimental_inline}}
   - : Forces one or two page breaks right before the principal box, whichever will make the next page into a recto page. (A recto page is a right page in a left-to-right spread or a left page in a right-to-left spread.)
 - `verso` {{experimental_inline}}
-  - : Forces one or two page breaks right before the principal box, whichever will make the next page into a verso page. (A verso page is a left page in a left-to-right spread or a left right in a right-to-left spread.)
+  - : Forces one or two page breaks right before the principal box, whichever will make the next page into a verso page. (A verso page is a left page in a left-to-right spread or a right page in a right-to-left spread.)
 
 #### Column break values
 
