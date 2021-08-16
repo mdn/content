@@ -54,7 +54,7 @@ Pass `XRLightProbe` to get a reflection cube map whenever the {{domxref("XRLight
 ```js
 const glBinding = new XRWebGLBinding(xrSession, gl);
 const lightProbe = await xrSession.requestLightProbe();
-const glCubeMap = glBinding.getReflectionCubeMap(lightProbe);
+let glCubeMap = glBinding.getReflectionCubeMap(lightProbe);
 
 lightProbe.addEventListener('reflectionchange', () => {
   glCubeMap = glBinding.getReflectionCubeMap(lightProbe);
