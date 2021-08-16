@@ -33,6 +33,10 @@ requestLightProbe(options);
   - : An optional object configuring the light probe. Properties:
     - `reflectionFormat`: Internal reflection format indicating how the texture data is represented. Either `srgba8` (default value) or `rgba16f`. See also {{domxref("XRSession.preferredReflectionFormat")}}.
 
+### Return value
+
+A {{jsxref("Promise")}} that resolves to an {{domxref("XRLightProbe")}} object.
+
 ### Exceptions
 
 Rather than throwing true exceptions, `requestLightProbe()` rejects the
