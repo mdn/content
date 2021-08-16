@@ -15,10 +15,12 @@ browser-compat: javascript.builtins.Array.reduce
 ---
 {{JSRef}}
 
-The **`reduce()`** method executes a user-supplied “reducer” callback function on each element of the array, passing in the return value from the calculation on the preceding element. The final result of running the reducer across all elements of the array is a single value. 
+The **`reduce()`** method executes a user-supplied “reducer” callback function on each element of the array, passing in the return value from the calculation on the preceding element. The final result of running the reducer across all elements of the array is a single value.
 
-Perhaps the easiest-to-understand case for `reduce()` is to return the sum of all the elements in an array. 
+Perhaps the easiest-to-understand case for `reduce()` is to return the sum of all the elements in an array.
+
 The reducer walks through the array element-by-element, at each step adding the current array value to the result from the previous step (this result is the running sum of all the previous steps) — until there are no more elements to add.
+
 This is shown in the following interactive example:
 
 {{EmbedInteractiveExample("pages/js/array-reduce.html")}}
@@ -45,15 +47,15 @@ reduce(function callbackFn(previousValue, currentValue, currentIndex, array) { .
 
 ### Parameters
 
-- *callbackFn*
+- `callbackFn`
   - : A “reducer” function that takes four arguments:
-    - *previousValue* (the value resulting from the previous call to *callbackfn*)
+    - *previousValue* (the value resulting from the previous call to `callbackfn`)
     - *currentValue* (the value of the current element)
     - *currentIndex* {{optional_inline}}
     - *array* (the array to traverse) {{optional_inline}}
 
-- *initialValue* {{optional_inline}}
-  - : A value to which *previousValue* is initialized the first time the callback is called. If *initialValue* is specified, that also causes *currentValue* to be initialized to the first value in the array. If *initialValue* is *not* specified, *previousValue* is initialized to the first value in the array, and *currentValue* is initialized to the second value in the array.
+- `initialValue` {{optional_inline}}
+  - : A value to which *previousValue* is initialized the first time the callback is called. If `initialValue` is specified, that also causes *currentValue* to be initialized to the first value in the array. If `initialValue` is *not* specified, *previousValue* is initialized to the first value in the array, and *currentValue* is initialized to the second value in the array.
 
 ### Return value
 
@@ -61,22 +63,23 @@ The value that results from running the “reducer” callback function to compl
 
 ### Exceptions
 
-Throws a {{jsxref("TypeError")}} if the array contains no elements and *initialValue* is not provided.
+Throws a {{jsxref("TypeError")}} if the array contains no elements and `initialValue` is not provided.
 
 ## Description
 
-The ECMASCript spec describes the behavior of `reduce()` as follows:
+The ECMAScript spec describes the behavior of `reduce()` as follows:
 
 > *callbackfn* should be a function that takes four arguments. `reduce` calls the callback, as a function, once for each element after the first element present in the array, in ascending order.
 >
 > *callbackfn* is called with four arguments:
-> * the *previousValue* (value from the previous call to *callbackfn*)
-> * the *currentValue* (value of the current element)
-> * the *currentIndex*, and
-> * the object being traversed
+>
+> - the *previousValue* (value from the previous call to *callbackfn*)
+> - the *currentValue* (value of the current element)
+> - the *currentIndex*, and
+> - the object being traversed
 > The first time that callback is called, the *previousValue* and *currentValue* can be one of two values:
-> * If an *initialValue* was supplied in the call to `reduce`, then *previousValue* will be equal to *initialValue* and *currentValue* will be equal to the first value in the array.
-> * If no *initialValue* was supplied, then *previousValue* will be equal to the first value in the array and *currentValue* will be equal to the second.
+> - If an *initialValue* was supplied in the call to `reduce`, then *previousValue* will be equal to *initialValue* and *currentValue* will be equal to the first value in the array.
+> - If no *initialValue* was supplied, then *previousValue* will be equal to the first value in the array and *currentValue* will be equal to the second.
 > It is a {{jsxref("TypeError")}} if the array contains no elements and *initialValue* is not provided.
 >
 > `reduce` does not directly mutate the object on which it is called but the object may be mutated by the calls to *callbackfn*.
