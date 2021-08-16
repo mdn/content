@@ -62,7 +62,8 @@ Set-Cookie: tasty_cookie=strawberry
 
 Then, with every subsequent request to the server, the browser sends back all previously-stored cookies to the server using the {{HTTPHeader("Cookie")}} header.
 
-```GET /sample_page.html HTTP/2.0
+```
+GET /sample_page.html HTTP/2.0
 Host: www.example.org
 Cookie: yummy_cookie=choco; tasty_cookie=strawberry
 ```
