@@ -29,7 +29,7 @@ With Feature Policy, you opt-in to a set of "policies" for the browser to enforc
 Examples of what you can do with Feature Policy:
 
 - Change the default behavior of autoplay on mobile and third party videos.
-- Restrict a site from using sensitive APIs like camera or microphone.
+- Restrict a site from using sensitive devices like the camera, microphone, or speakers.
 - Allow iframes to use the [fullscreen API](/en-US/docs/Web/API/Fullscreen_API).
 - Block the use of outdated APIs like [synchronous XHR](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest) and {{domxref("document.write()")}}.
 - Ensure images are sized properly and are not too big for the viewport.
@@ -110,6 +110,7 @@ The features include (see [Features list](/en-US/docs/Web/HTTP/Headers/Feature-P
 - Midi
 - PaymentRequest
 - Picture-in-picture
+- Speakers
 - USB
 - Web Share API
 - VR / XR
