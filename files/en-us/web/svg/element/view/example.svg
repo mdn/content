@@ -1,19 +1,10 @@
-<svg width="600" height="200" viewBox="0 0 600 200"
-    xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 300 100" width="300" height="100" xmlns="http://www.w3.org/2000/svg">
+    <view id="one" viewBox="0 0 100 100" />
+    <circle cx="50" cy="50" r="40" fill="red" />
 
-  <circle r="50" cx="180" cy="50" fill="#8ca0ff"/>
+    <view id="two" viewBox="100 0 100 100" />
+    <circle cx="150" cy="50" r="40" fill="green" />
 
-  <view id="halfSizeView" viewBox="0 0 1200 400"/>
-  <view id="normalSizeView" viewBox="0 0 600 200"/>
-  <view id="doubleSizeView" viewBox="0 0 300 100"/>
-
-  <a href="#halfSizeView">
-    <text x="5" y="20" font-size="20">half size</text>
-  </a>
-  <a href="#normalSizeView">
-    <text x="5" y="40" font-size="20">normal size</text>
-  </a>
-  <a href="#doubleSizeView">
-    <text x="5" y="60" font-size="20">double size</text>
-  </a>
+    <view id="three" viewBox="200 0 100 100" />
+    <circle cx="250" cy="50" r="40" fill="blue" />
 </svg>
