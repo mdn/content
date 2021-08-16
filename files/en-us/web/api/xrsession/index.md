@@ -53,7 +53,7 @@ _`XRSession` provides the following methods in addition to those inherited from 
 - {{DOMxRef("XRSession.requestAnimationFrame", "requestAnimationFrame()")}}
   - : Schedules the specified method to be called the next time the {{glossary("user agent")}} is working on rendering an animation frame for the WebXR device. Returns an integer value which can be used to identify the request for the purposes of canceling the callback using `cancelAnimationFrame()`. This method is comparable to the {{domxref("Window.requestAnimationFrame()")}} method.
 - {{DOMxRef("XRSession.requestLightProbe", "requestLightProbe()")}}
-  - : Requests an {{domxref("XRLightProbe")}} that can be used to estimate lighting information at a given point in the user's environment.
+  - : Requests an {{domxref("XRLightProbe")}} that estimates lighting information at a given point in the user's environment.
 - {{DOMxRef("XRSession.requestReferenceSpace", "requestReferenceSpace()")}}
   - : Requests that a new {{domxref("XRReferenceSpace")}} of the specified type be created. Returns a promise which resolves with the `XRReferenceSpace` or {{domxref("XRBoundedReferenceSpace")}} which was requested, or throws a `NotSupportedError` if the requested space type isn't supported by the device.
 - {{DOMxRef("XRSession.updateRenderState", "updateRenderState()")}}

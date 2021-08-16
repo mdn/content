@@ -19,7 +19,7 @@ browser-compat: api.XRSession.requestLightProbe
 {{APIRef("WebXR Device API")}}
 
 The **`requestLightProbe()`** method of the
-{{domxref("XRSession")}} interface returns a {{jsxref("Promise")}} that resolves to an {{domxref("XRLightProbe")}} object that can be used to estimate lighting information at a given point in the user's environment.
+{{domxref("XRSession")}} interface returns a {{jsxref("Promise")}} that resolves with an {{domxref("XRLightProbe")}} object that estimates lighting information at a given point in the user's environment.
 
 ## Syntax
 
@@ -29,19 +29,18 @@ requestLightProbe(options);
 
 ### Parameters
 
-- `options`
-  - : An optional object configuring the light probe. Properties:
-    - `reflectionFormat`: Internal reflection format indicating how the texture data is represented. Either `srgba8` (default value) or `rgba16f`. See also {{domxref("XRSession.preferredReflectionFormat")}}.
+- `options` {{optional_inline}}
+  - : An object containing configuration options, specifically:
+    - `reflectionFormat`: The internal reflection format indicating how the texture data is represented, either `srgba8` (default value) or `rgba16f`. See also {{domxref("XRSession.preferredReflectionFormat")}}.
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves to an {{domxref("XRLightProbe")}} object.
+A {{jsxref("Promise")}} that resolves with an {{domxref("XRLightProbe")}} object.
 
 ### Exceptions
 
 Rather than throwing true exceptions, `requestLightProbe()` rejects the
-returned promise with a {{domxref("DOMException")}} whose name is found in the list
-below:
+returned promise with a {{domxref("DOMException")}}, specifically, one of the following:
 
 - `NotSupportedError`
   - : If `lighting-estimation` is not an enabled feature in {{domxref("XRSystem.requestSession()")}}.
