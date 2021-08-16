@@ -15,26 +15,6 @@ browser-compat: api.BluetoothRemoteGATTCharacteristic
 
 <p>The <code>BluetoothRemoteGattCharacteristic</code> interface of the <a href="/en-US/docs/Web/API/Web_Bluetooth_API">Web Bluetooth API</a> represents a GATT Characteristic, which is a basic data element that provides further information about a peripheral’s service.</p>
 
-<h2 id="Interface">Interface</h2>
-
-<pre>interface BluetoothRemoteGATTCharacteristic {
-  readonly attribute BluetoothRemoteGATTService service;
-  readonly attribute UUID uuid;
-  readonly attribute BluetoothCharacteristicProperties properties;
-  readonly attribute DataView? value;
-  Promise&lt;BluetoothRemoteGATTDescriptor&gt; getDescriptor(BluetoothDescriptorUUID <dfn>descriptor</dfn>);
-  Promise&lt;sequence&lt;BluetoothRemoteGATTDescriptor&gt;&gt;
-    getDescriptors(optional BluetoothDescriptorUUID <dfn>descriptor</dfn>);
-  Promise&lt;DataView&gt; readValue();
-  Promise&lt;void&gt; writeValue(BufferSource <dfn>value</dfn>);
-  Promise&lt;void&gt; writeValueWithResponse(BufferSource <dfn>value</dfn>);
-  Promise&lt;void&gt; writeValueWithoutResponse(BufferSource <dfn>value</dfn>);
-  Promise&lt;void&gt; startNotifications();
-  Promise&lt;void&gt; stopNotifications();
-};
-BluetoothRemoteGATTCharacteristic implements EventTarget;
-BluetoothRemoteGATTCharacteristic implements CharacteristicEventHandlers;</pre>
-
 <h2 id="Properties">Properties</h2>
 
 <dl>

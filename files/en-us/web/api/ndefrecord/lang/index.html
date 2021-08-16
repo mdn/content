@@ -7,19 +7,18 @@ tags:
 - Web NFC
 browser-compat: api.NDEFRecord.lang
 ---
-<p>{{Draft}}{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}</p>
+<p>{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}</p>
 
-<p class="summary"><span class="seoSummary">The <strong><code>lang</code></strong>
-    property ofthe {{DOMxRef("NDEFRecord")}} interface is {{DOMxRef("USVString")}}
-    containing the {{Glossary("language tag")}} of the record contents, if it is a
-    vailable.</span></p>
+<p class="summary">The <strong><code>lang</code></strong>
+    property of the {{DOMxRef("NDEFRecord")}} interface returns the language of
+    a textual payload, or <code>null</code> if one was not supplied.</p>
 
 <p>The record might be missing a language tag, for example, if the recorded information is
   not locale-specific.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><em>NDEFRecord</em>.lang</pre>
+<pre class="brush: js">NDEFRecord.lang</pre>
 
 <h3 id="Value">Value</h3>
 

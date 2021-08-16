@@ -1,0 +1,47 @@
+---
+title: VTTCue.text
+slug: Web/API/VTTCue/text
+tags:
+  - API
+  - Property
+  - Reference
+  - text
+  - VTTCue
+browser-compat: api.VTTCue.text
+---
+<div>{{APIRef("WebVTT")}}</div>
+
+<p class="summary">The <strong><code>text</code></strong> property of the {{domxref("VTTCue")}} interface represents the text contents of the cue.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">let text = VTTCue.text;
+VTTCue.text = a;</pre>
+
+<h3>Value</h3>
+<p>A {{domxref("DOMString")}} containing the raw text of the cue.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In the following example a new {{domxref("VTTCue")}} is created, then the value of <code>size</code> is set to the string <code>"new cue value"</code>. The value is then printed to the console.</p>
+
+<pre class="brush: js">let video = document.querySelector('video');
+let track = video.addTextTrack("captions", "Captions", "en");
+track.mode = "showing";
+
+let cue1 = new VTTCue(0, 0.9, 'Hildy!');
+cue1.text = 'new cue value';
+console.log(cue1.text) // 'new cue value';
+
+track.addCue(cue1);
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+

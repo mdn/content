@@ -7,20 +7,36 @@ tags:
 - Web NFC
 browser-compat: api.NDEFRecord.mediaType
 ---
-<p>{{Draft}}{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}</p>
+<p>{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}</p>
 
-<p class="summary"><span class="seoSummary">The <strong><code>mediaType</code></strong>
-    property ofthe {{DOMxRef("NDEFRecord")}} interface is {{DOMxRef("USVString")}}
-    containing the {{Glossary("MIME type")}} of the record payload.</span></p>
+<p class="summary">The <strong><code>mediaType</code></strong>
+    property of the {{DOMxRef("NDEFRecord")}} interface returns the {{Glossary("MIME type")}} of the record. This value will be <code>null</code> if <code>recordType</code> is not equal to <code>"mime"</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><em>NDEFRecord</em>.mediaType</pre>
+<pre class="brush: js">NDEFRecord.mediaType</pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A {{DOMxRef("USVString")}}, corresponding to a {{Glossary("MIME type")}} of the record
+<p>A {{DOMxRef("USVString")}}, containing the {{Glossary("MIME type")}} of the record
   payload.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>The following example loops over the records in an {{domxref("NDEFMessage")}} object, which is retrieved from {{domxref("NDEFReadingEvent.message")}}. It then uses the <code>mediaType</code> property to determine which of the records to parse.</p>
+
+<pre class="brush: js">const ndef = new NDEFReader();
+  await ndef.scan();
+  ndef.onreading = (event) => {
+    const decoder = new TextDecoder();
+    for (const record of event.message.records) {
+      if (record.mediaType === "application/json") {
+        const json = JSON.parse(decoder.decode(record.data));
+        const article =/^[aeio]/i.test(json.title) ? "an" : "a";
+        console.log(`${json.name} is ${article} ${json.title}`);
+      }
+    }
+  };</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

@@ -193,7 +193,7 @@ class Team(models.Model):
 
 <p>The Django model provides a simple query API for searching the associated database. This can match against a number of fields at a time using different criteria (e.g. exact, case-insensitive, greater than, etc.), and can support complex statements (for example, you can specify a search on U11 teams that have a team name that starts with "Fr" or ends with "al"). </p>
 
-<p>The code snippet shows a view function (resource handler) for displaying all of our U09 teams. The line in bold shows how we can use the model query API to filter for all records where the <code>team_level</code> field has exactly the text 'U09' (note how this criteria is passed to the <code>filter()</code> function as an argument, with the field name and match type separated by a double underscore: <strong>team_level__exact</strong>).</p>
+<p>The code snippet shows a view function (resource handler) for displaying all of our U09 teams. The <code>list_teams = Team.objects.filter(team_level__exact="U09")</code> line shows how we can use the model query API to filter for all records where the <code>team_level</code> field has exactly the text '<code>U09</code>' (note how this criteria is passed to the <code>filter()</code> function as an argument, with the field name and match type separated by a double underscore: <strong><code>team_level__exact</code></strong>).</p>
 
 <pre class="brush: python">## filename: views.py
 
@@ -201,7 +201,7 @@ from django.shortcuts import render
 from .models import Team
 
 def index(request):
-    <strong>list_teams = Team.objects.filter(team_level__exact="U09")</strong>
+    list_teams = Team.objects.filter(team_level__exact="U09")
     context = {'youngest_teams': list_teams}
     return render(request, '/best/index.html', context)
 </pre>

@@ -19,7 +19,7 @@ tags:
 </dl>
 <dl>
     <dt>{{domxref("HIDDevice")}}</dt>
-    <dd>Represents an HID device. It's possible for a single physical device to be represented by multiple `HIDDevice` obects.</dd>
+    <dd>Represents an HID device. It's possible for a single physical device to be represented by multiple <code>HIDDevice</code> obects.</dd>
 </dl>
 <dl>
     <dt>{{domxref("HIDInputReportEvent")}}</dt>
@@ -32,7 +32,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>You can connect to a device with {{domxref("HID.requestDevices")}}. In this case, we select from all the available devices.</p>
+<p>You can connect to a device with the {{domxref("HID.requestDevice","requestDevice()")}} method. In this case, we select from all the available devices.</p>
 
 <pre class="brush: js">
 const device = await navigator.hid.requestDevice({filters: []})
@@ -81,7 +81,7 @@ navigator.hid.addEventListener('disconnect', (event) => {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">Specification</th>

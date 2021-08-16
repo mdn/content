@@ -24,16 +24,6 @@ browser-compat: api.BluetoothRemoteGATTDescriptor
       (Firefox OS)</a>.</p>
 </div>
 
-<h2 id="Interface">Interface</h2>
-
-<pre class="brush: js">interface BluetoothRemoteGATTDescriptor {
-  readonly attribute BluetoothGATTCharacteristic characteristic;
-  readonly attribute UUID uuid;
-  readonly attribute ArrayBuffer? value;
-  Promise&lt;ArrayBuffer&gt; readValue();
-  Promise&lt;void&gt; writeValue(BufferSource value);
-};</pre>
-
 <h2 id="Properties">Properties</h2>
 
 <dl>

@@ -62,7 +62,7 @@ browser-compat: api.CacheStorage.keys
         if (cacheWhitelist.indexOf(key) === -1) {
           return caches.delete(key);
         }
-      });
+      }));
     })
   );
 });</pre>

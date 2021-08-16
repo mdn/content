@@ -38,8 +38,8 @@ var getAllKeysRequest = <em>IDBIndex</em>.getAll(<em>query</em>, <em>count</em>)
   <dd>A key or an {{domxref("IDBKeyRange")}} identifying the records to retrieve. If this
     value is null or missing, the browser will use an unbound key range.</dd>
   <dt><em>count</em> {{optional_inline}}</dt>
-  <dd>The number records to return. If this value exceeds the number of records in the
-    query, the browser will only retrieve the first item. If it is lower than
+  <dd>The number of records to return. If this value exceeds the number of records in the
+    query, the browser will only retrieve the queried records. If it is lower than
     <code>0</code> or greater than <code>2^32 - 1</code> a {{jsxref("TypeError")}}
     exception will be thrown.</dd>
 </dl>

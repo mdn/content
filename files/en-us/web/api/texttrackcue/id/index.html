@@ -1,0 +1,45 @@
+---
+title: TextTrackCue.id
+slug: Web/API/TextTrackCue/id
+tags:
+  - API
+  - Property
+  - Reference
+  - id
+  - TextTrackCue
+browser-compat: api.TextTrackCue.id
+---
+<div>{{APIRef("WebVTT")}}</div>
+
+<p class="summary">The <strong><code>id</code></strong> property of the {{domxref("TextTrackCue")}} interface returns and sets the identifier for this cue.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">let id = TextTrackCue.id;
+TextTrackCue.id = a;</pre>
+
+<h3>Value</h3>
+<p>A {{domxref("DOMString","string")}} containing the ID of this cue.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In the following example a new {{domxref("VTTCue")}} (which inherits from <code>TextTrackCue</code>) is created. The <code>id</code> property is then set to "first", before the cue is added.</p>
+
+<pre class="brush: js">let video = document.querySelector('video');
+let track = video.addTextTrack("captions", "Captions", "en");
+track.mode = "showing";
+
+let cue1 = new VTTCue(0, 0.9, 'Hildy!');
+cue1.id = "first";
+track.addCue(cue1);
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+

@@ -1,0 +1,47 @@
+---
+title: VTTCue.position
+slug: Web/API/VTTCue/position
+tags:
+  - API
+  - Property
+  - Reference
+  - position
+  - VTTCue
+browser-compat: api.VTTCue.position
+---
+<div>{{APIRef("WebVTT")}}</div>
+
+<p class="summary">The <strong><code>position</code></strong> property of the {{domxref("VTTCue")}} interface represents the indentation of the cue within the line.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">let position = VTTCue.position;
+VTTCue.position = "auto";</pre>
+
+<h3>Value</h3>
+<p>A number, or <code>"auto"</code> representing the identation of the cue within the line.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In the following example a new {{domxref("VTTCue")}} is created, then the value of <code>position</code> is set to <code>2</code>. The value is then printed to the console.</p>
+
+<pre class="brush: js">let video = document.querySelector('video');
+let track = video.addTextTrack("captions", "Captions", "en");
+track.mode = "showing";
+
+let cue1 = new VTTCue(0, 0.9, 'Hildy!');
+cue1.position = '2';
+console.log(cue1.position);
+
+track.addCue(cue1);
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+
