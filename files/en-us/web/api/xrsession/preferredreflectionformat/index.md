@@ -30,7 +30,7 @@ A string representing the reflection format. Possible values:
 
 ### Requesting a light probe with the system's preferred format
 
-You can request a light probe with {{domxref("XRSession.requestLightProbe()")}} and specify the system's preferred format by setting the `reflectionFormat` option to `preferredReflectionFormat`.
+You can request a light probe with {{domxref("XRSession.requestLightProbe()")}} and specify the system's preferred format by setting the `reflectionFormat` option equal to `XRSession.preferredReflectionFormat`.
 
 ```js
 const lightProbe = await xrSession.requestLightProbe({
