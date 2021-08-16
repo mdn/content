@@ -17,7 +17,8 @@ These are the values sent when the context doesn't give better information. Note
 
 | User Agent                 | Value                                                                                                                                                                   |
 | -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Firefox 72 and later [1]   | `text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8`                                                                                            |
+| Firefox 91 and later [1]   | `text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8`                                                                                 |
+| Firefox 72 to 91 [1]       | `text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8`                                                                                            |
 | Firefox 66 to 71 [1]       | `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8`                                                                                                       |
 | Firefox 65 [1]             | `text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8`                                                                                            |
 | Firefox 64 and earlier [1] | `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8`                                                                                                       |
@@ -39,7 +40,8 @@ When requesting an image, like through an HTML {{HTMLElement("img")}} element, u
 
 | User Agent                                                                                                                     | Value                                                                      |
 | ------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------- |
-| Firefox 65 and later [1]                                                                                                       | `image/webp,*/*`                                                           |
+| Firefox 92 and later [1]                                                                                                       | `image/avif,image/webp,*/*`                                                 |
+| Firefox 65 to 91 [1]                                                                                                           | `image/webp,*/*`                                                           |
 | Firefox 47 to 63 [1]                                                                                                           | `*/*`                                                                      |
 | Firefox prior to 47 [1]                                                                                                        | `image/png,image/*;q=0.8,*/*;q=0.5`                                        |
 | Safari (since Mac OS Big Sur)                                                                                                  | `image/webp,image/png,image/svg+xml,image/*;q=0.8,video/*;q=0.8,*/*;q=0.5` |
@@ -57,9 +59,9 @@ When a video is requested, via the {{HTMLElement("video")}} HTML element, most b
 | User Agent                     | Value                                                                              |
 | ------------------------------ | ---------------------------------------------------------------------------------- |
 | Firefox 3.6 and later          | `video/webm,video/ogg,video/*;q=0.9,application/ogg;q=0.7,audio/*;q=0.6,*/*;q=0.5` |
-| Firefox earlier than 3.6       | _no support for {{HTMLElement("video")}}_                                  |
+| Firefox earlier than 3.6       | _no support for {{HTMLElement("video")}}_                                          |
 | Chrome                         | `*/*`                                                                              |
-| Internet Explorer 8 or earlier | _no support for {{HTMLElement("video")}}_                                  |
+| Internet Explorer 8 or earlier | _no support for {{HTMLElement("video")}}_                                          |
 
 ## Values for audio resources
 
