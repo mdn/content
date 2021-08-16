@@ -52,7 +52,7 @@ returned promise with a {{domxref("DOMException")}}, specifically, one of the fo
 
 ### Requesting a light probe with the system's preferred format
 
-The default format is `srgb8`, however, some runtimes may use other (high dynamic range) formats. You can request the light probe with {{domxref("XRSession.preferredReflectionFormat")}} which reports the preferred internal format.
+The default format is `srgb8`, however, some rendering engines may use other (high dynamic range) formats. You can request the light probe with {{domxref("XRSession.preferredReflectionFormat")}} which reports the preferred internal format.
 
 ```js
 const lightProbe = await xrSession.requestLightProbe({
