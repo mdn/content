@@ -225,7 +225,7 @@ Reporting directives control the reporting process of CSP violations. See also t
 ### Other values
 
 - nonce-\*
-  - : A cryptographic nonce (only used once) to whitelist scripts. The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial. This is used in conjunction with the [script tag nonce attribute](/en-US/docs/Web/HTML/Element/script#attr-nonce). e.g. `nonce-DhcnhD3khTMePgXwdayK9BsMqXjhguVV`
+  - : A cryptographic nonce (only used once) to allow scripts. The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial. This is used in conjunction with the [script tag nonce attribute](/en-US/docs/Web/HTML/Element/script#attr-nonce). e.g. `nonce-DhcnhD3khTMePgXwdayK9BsMqXjhguVV`
 - sha\*-\*
   - : sha256, sha384, or sha512. followed by a dash and then the sha\* value. e.g. `sha256-jzgBGA4UWFFmpOBq0JpdsySukE1FrEN5bUpoK8Z29fY=`
 
