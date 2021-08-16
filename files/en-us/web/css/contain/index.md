@@ -67,7 +67,7 @@ The `contain` property is specified as either one of the following:
 - `layout`
   - : Indicates that nothing outside the element may affect its internal layout and vice versa.
 - `style`
-  - : Indicates that, for properties that can have effects on more than just an element and its descendants, those effects don't escape the containing element. Note that this value is marked "at-risk" in the spec and may not be supported everywhere.
+  - : Indicates that, for properties that can have effects on more than just an element and its descendants, those effects don't escape the containing element.
 - `paint`
   - : Indicates that descendants of the element don't display outside its bounds. If the containing box is offscreen, the browser does not need to paint its contained elements — these must also be offscreen as they are contained completely by that box. And if a descendant overflows the containing element's bounds, then that descendant will be clipped to the containing element's border-box.
 
