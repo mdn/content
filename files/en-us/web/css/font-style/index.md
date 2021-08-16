@@ -56,94 +56,9 @@ Variable fonts can offer a fine control over the degree to which an oblique face
 
 For TrueType or OpenType variable fonts, the `"slnt"` variation is used to implement varying slant angles for oblique, and the `"ital"` variation with a value of 1 is used to implement italic values. See {{cssxref("font-variation-settings")}}.
 
-For the example below to work, you'll need a browser that supports the CSS Fonts Level 4 syntax in which `font-style: oblique` can accept an `<angle>`.
+> **Note:** For the example below to work, you'll need a browser that supports the CSS Fonts Level 4 syntax in which `font-style: oblique` can accept an `<angle>`. The demo loads with `font-style: oblique 23deg;`. Change the value to see the slant of the text change.
 
-{{EmbedLiveSample("Variable_fonts", 1200, 180)}}
-
-#### HTML
-
-```html
-<header>
-    <input type="range" id="slant" name="slant" min="-90" max="90" />
-    <label for="slant">Slant</label>
-</header>
-<div class="container">
-    <p class="sample">...it would not be wonderful to meet a Megalosaurus, forty feet long or so, waddling like an elephantine lizard up Holborn Hill.</p>
-</div>
-```
-
-#### CSS
-
-```css
-/*
-AmstelvarAlpha-VF is created by David Berlow (https://github.com/TypeNetwork/Amstelvar)
-and is used here under the terms of its license:
-https://github.com/TypeNetwork/Amstelvar/blob/master/OFL.txt
-*/
-
-@font-face {
-  src: url('https://mdn.mozillademos.org/files/16044/AmstelvarAlpha-VF.ttf');
-  font-family:'AmstelvarAlpha';
-  font-style: normal;
-}
-
-label {
-  font: 1rem monospace;
-}
-
-.container {
-  max-height: 150px;
-  overflow: scroll;
-}
-
-.sample {
-  font: 2rem 'AmstelvarAlpha', sans-serif;
-}
-```
-
-```css hidden
-html, body {
-  max-height: 100vh;
-  max-width: 100vw;
-  overflow: hidden;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-header {
-  margin-bottom: 1.5rem;
-}
-
-.container {
-  flex-grow: 1;
-}
-
-.container > p {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-```
-
-#### JavaScript
-
-```js
-let slantLabel = document.querySelector('label[for="slant"]');
-let slantInput = document.querySelector('#slant');
-let sampleText = document.querySelector('.sample');
-
-function update() {
-  let slant = `oblique ${slantInput.value}deg`;
-  slantLabel.textContent = `font-style: ${slant};`;
-  sampleText.style.fontStyle = slant;
-}
-
-slantInput.addEventListener('input', update);
-
-update();
-```
+{{EmbedGHLiveSample("css-examples/variable-fonts/oblique.html", '100%', 860)}}
 
 ## Accessibility concerns
 

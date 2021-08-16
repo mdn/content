@@ -133,7 +133,7 @@ The table below demonstrates the effect of supplying various different percentag
 </table>
 
 - **Helvetica Neue**, which is installed by default on macOS, has a single condensed face in addition to the normal face. All values of `font-stretch` less than 100% select the condensed face, while all other values select the normal face.
-- **[League Mono Variable](http://tylerfinck.com/leaguemonovariable/)** is a variable font that offers something like a continuous range of widths for different percentage values of `font-stretch`.
+- **[League Mono Variable](https://tylerfinck.com/leaguemonovariable/)** is a variable font that offers something like a continuous range of widths for different percentage values of `font-stretch`.
 
 ## Formal definition
 
@@ -149,55 +149,7 @@ The table below demonstrates the effect of supplying various different percentag
 
 > **Note:** This example will only work in browsers that support `<percentage>` values.
 
-#### HTML
-
-```html
-<div class="container">
-    <p class="condensed">an elephantine lizard</p>
-    <p class="normal">an elephantine lizard</p>
-    <p class="expanded">an elephantine lizard</p>
-</div>
-```
-
-#### CSS
-
-```css
-/*
-This example uses the League Mono Variable font, developed by
-Tyler Finck (https://www.tylerfinck.com/) and used here under
-the terms of the SIL Open Font License, Version 1.1:
-http://scripts.sil.org/cms/scripts/page.php?item_id=OFL_web
-*/
-
-@font-face {
-  src: url('https://mdn.mozillademos.org/files/16014/LeagueMonoVariable.ttf');
-  font-family:'LeagueMonoVariable';
-  font-style: normal;
-  font-stretch: 1% 500%; /* Required by Chrome */
-}
-
-.container {
-  border: 10px solid #f5f9fa;
-  padding: 0 1rem;
-  font: 1.5rem 'LeagueMonoVariable', sans-serif;
-}
-
-.condensed {
-  font-stretch: 50%;
-}
-
-.normal {
-  font-stretch: 100%;
-}
-
-.expanded {
-  font-stretch: 200%;
-}
-```
-
-#### Result
-
-{{EmbedLiveSample("Setting_font_stretch_percentages", 1200, 250, "", "", "example-outcome-frame")}}
+{{EmbedGHLiveSample("css-examples/variable-fonts/font-stretch.html", '100%', 950)}}
 
 ## Specifications
 
