@@ -6,19 +6,18 @@ tags:
   - CSS
   - CSS Selectors
   - CSS:WebKit Extensions
-  - NeedsCompatTable
   - Non-standard
   - Pseudo-element
   - Reference
   - Selector
 ---
-{{CSSRef}}{{Draft}}{{Non-standard_Header}}
+{{CSSRef}}{{Non-standard_Header}}
 
 The `::-webkit-scrollbar` CSS pseudo-element affects the style of an element's scrollbar when it has `overflow:scroll;` set.
 
 > **Note:** If `overflow:scroll;` is not set, no scrollbar is displayed.
 
-> **Note:** `::-webkit-scrollbar` is only available in [Blink](https://www.chromium.org/blink)- and [WebKit](https://webkit.org)-based browsers (e.g., Chrome, Edge, Opera, Safari, all browsers on iOS, and [others](https://en.wikipedia.org/wiki/List_of_web_browsers#WebKit-based)).
+> **Note:** `::-webkit-scrollbar` is only available in [Blink](https://www.chromium.org/blink)- and [WebKit](https://webkit.org)-based browsers (e.g., Chrome, Edge, Opera, Safari, all browsers on iOS, and [others](https://en.wikipedia.org/wiki/List_of_web_browsers#WebKit-based)). A standardized method of styling scrollbars is available with {{cssxref("scrollbar-color")}} and {{cssxref("scrollbar-width")}}.
 
 ## CSS Scrollbar Selectors
 
@@ -31,10 +30,6 @@ You can use the following pseudo-elements to customize various parts of the scro
 - `::-webkit-scrollbar-track-piece` — the part of the track (progress bar) not covered by the handle.
 - `::-webkit-scrollbar-corner` — the bottom corner of the scrollbar, where both horizontal and vertical scrollbars meet This is often the bottom-right corner of the browser window.
 - `::-webkit-resizer` — the draggable resizing handle that appears at the bottom corner of some elements.
-
-## Syntax
-
-{{CSSSyntax}}
 
 ## Examples
 
@@ -137,5 +132,5 @@ Not part of any standard.
 
 - WebKit blog on [Styling Scrollbars](https://webkit.org/blog/363/styling-scrollbars/)
 - [WebKit test](https://trac.webkit.org/export/41842/trunk/LayoutTests/scrollbars/overflow-scrollbar-combinations.html) for scrollbar styles mentioned above
-- {{CSSxRef("-ms-overflow-style")}}
 - {{CSSxRef("scrollbar-width")}}
+- {{CSSxRef("scrollbar-color")}}
