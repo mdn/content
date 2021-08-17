@@ -37,6 +37,8 @@ In addition to providing a reference to the {{domxref("XRSession")}} for which t
   - : Returns a {{jsxref("Promise")}} which resolves to a free-floating {{domxref("XRAnchor")}} object.
 - {{domxref("XRFrame.getDepthInformation()", "getDepthInformation()")}}
   - : Returns an {{domxref("XRCPUDepthInformation")}} object containing CPU depth information for the frame.
+- {{domxref("XRFrame.getLightEstimate()", "getLightEstimate()")}}
+  - : Returns an {{domxref("XRLightEstimate")}} object containing estimated lighting values for an {{domxref("XRLightProbe")}}.
 - {{DOMxRef("XRFrame.getPose", "getPose()")}}
   - : Returns an {{domxref("XRPose")}} object representing the spatial relationship between the two specified {{domxref("XRSpace")}} objects.
 - {{DOMxRef("XRFrame.getViewerPose", "getViewerPose()")}}
