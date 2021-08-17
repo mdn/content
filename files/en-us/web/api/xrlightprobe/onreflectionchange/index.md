@@ -24,8 +24,11 @@ A function to be invoked whenever the {{domxref("XRLightProbe")}} receives a {{d
 
 ## Examples
 
+Whenever the `reflectionchange` event fires on a light probe, you can retrieve an updated cube map by calling {{domxref("XRWebGLBinding.getReflectionCubeMap()")}}. This is less expensive than retrieving lighting information with every {{domxref("XRFrame")}}.
 
 ```js
+const glBinding = new XRWebGLBinding(xrSession, gl);
+
 lightProbe.onreflectionchange = event => {
   glCubeMap = glBinding.getReflectionCubeMap(lightProbe);
 });

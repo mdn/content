@@ -35,19 +35,23 @@ None.
 
 ## Examples
 
-Typical use cases of the `XRLightProbe` interface:
+### Getting an `XRLightProbe` object for a session
 
-Get an `XRLightProbe` object for a session.
+Use the {{domxref("XRSession.requestLightProbe()")}} method to get a light probe.
 
 ```js
 const lightProbe = await xrSession.requestLightProbe();
 ```
 
-Use `probeSpace` for getting a probe pose within an {{domxref("XRFrame")}}.
+### Getting a probe pose within an `XRFrame`
+
+Pass the light probe's `probeSpace` to {{domxref("XRFrame.getPose()")}} to get a light probe for a pose.
 
 ```js
 const probePose = xrFrame.getPose(lightProbe.probeSpace, xrReferenceSpace);
 ```
+
+### Using the `reflectionchange` event
 
 Pass `XRLightProbe` to get a reflection cube map whenever the {{domxref("XRLightProbe.reflectionchange_event", "reflectionchange")}} event fires. See also {{domxref("XRWebGLBinding.getReflectionCubeMap()")}}.
 

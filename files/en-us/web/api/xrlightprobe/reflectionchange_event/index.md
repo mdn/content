@@ -37,7 +37,7 @@ The WebXR **`reflectionchange`** event is passed to an {{domxref("XRLightProbe")
 
 ## Examples
 
-You can pass an `XRLightProbe` to get a reflection cube map whenever the `reflectionchange` event fires to retrieve an updated cube map. This is less expensive than retrieving lighting information with every {{domxref("XRFrame")}}. See also {{domxref("XRWebGLBinding.getReflectionCubeMap()")}}.
+Whenever the `reflectionchange` event fires on a light probe, you can retrieve an updated cube map by calling {{domxref("XRWebGLBinding.getReflectionCubeMap()")}}. This is less expensive than retrieving lighting information with every {{domxref("XRFrame")}}.
 
 ```js
 const glBinding = new XRWebGLBinding(xrSession, gl);

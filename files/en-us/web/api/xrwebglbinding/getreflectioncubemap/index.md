@@ -33,6 +33,10 @@ A {{domxref("WebGLTexture")}} object.
 
 ## Examples
 
+You typically call `getReflectionCubeMap()` whenever the `reflectionchange` event fires on a light probe to retrieve an updated cube map. This is less expensive than retrieving lighting information with every {{domxref("XRFrame")}}.
+
+If the `rgba16f` format is used, enable the {{domxref("OES_texture_half_float")}} extension within WebGL 1.0 contexts.
+
 ```js
 const glBinding = new XRWebGLBinding(xrSession, gl);
 gl.getExtension('OES_texture_half_float'); // if rgba16f is the preferredReflectionFormat
