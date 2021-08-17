@@ -18,7 +18,7 @@
     },
     "AnalyserNode": {
       "inh": "AudioNode",
-      "impl": ["AudioNodePassThrough"]
+      "impl": []
     },
     "AnimationEvent": {
       "inh": "Event",
@@ -34,7 +34,7 @@
     },
     "AudioBufferSourceNode": {
       "inh": "AudioScheduledSourceNode",
-      "impl": ["AudioNodePassThrough"]
+      "impl": []
     },
     "AudioChannelManager": {
       "inh": "EventTarget",
@@ -98,7 +98,7 @@
     },
     "BiquadFilterNode": {
       "inh": "AudioNode",
-      "impl": ["AudioNodePassThrough"]
+      "impl": []
     },
     "BlobEvent": {
       "inh": "Event",
@@ -310,7 +310,7 @@
     },
     "CharacterData": {
       "inh": "Node",
-      "impl": ["ChildNode"]
+      "impl": []
     },
     "ChromeWorker": {
       "inh": "Worker",
@@ -354,7 +354,7 @@
     },
     "ConvolverNode": {
       "inh": "AudioNode",
-      "impl": ["AudioNodePassThrough"]
+      "impl": []
     },
     "Crypto": {
       "inh": "",
@@ -454,14 +454,10 @@
     },
     "DelayNode": {
       "inh": "AudioNode",
-      "impl": ["AudioNodePassThrough"]
+      "impl": []
     },
     "DesktopNotification": {
       "inh": "EventTarget",
-      "impl": []
-    },
-    "DeviceLightEvent": {
-      "inh": "Event",
       "impl": []
     },
     "DeviceMotionEvent": {
@@ -486,20 +482,15 @@
     },
     "Document": {
       "inh": "Node",
-      "impl": [
-        "XPathEvaluator",
-        "GlobalEventHandlers",
-        "ParentNode",
-        "GeometryUtils"
-      ]
+      "impl": ["XPathEvaluator", "GlobalEventHandlers"]
     },
     "DocumentFragment": {
       "inh": "Node",
-      "impl": ["ParentNode"]
+      "impl": []
     },
     "DocumentType": {
       "inh": "Node",
-      "impl": ["ChildNode"]
+      "impl": []
     },
     "DownloadEvent": {
       "inh": "Event",
@@ -511,11 +502,11 @@
     },
     "DynamicsCompressorNode": {
       "inh": "AudioNode",
-      "impl": ["AudioNodePassThrough"]
+      "impl": []
     },
     "Element": {
       "inh": "Node",
-      "impl": ["ChildNode", "ParentNode", "Animatable", "GeometryUtils"]
+      "impl": []
     },
     "EngineeringMode": {
       "inh": "EventTarget",
@@ -575,7 +566,7 @@
     },
     "GainNode": {
       "inh": "AudioNode",
-      "impl": ["AudioNodePassThrough"]
+      "impl": []
     },
     "GamepadAxisMoveEvent": {
       "inh": "GamepadEvent",
@@ -603,11 +594,7 @@
     },
     "HTMLAppletElement": {
       "inh": "HTMLElement",
-      "impl": [
-        "MozImageLoadingContent",
-        "MozFrameLoaderOwner",
-        "MozObjectLoadingContent"
-      ]
+      "impl": []
     },
     "HTMLAreaElement": {
       "inh": "HTMLElement",
@@ -675,11 +662,7 @@
     },
     "HTMLEmbedElement": {
       "inh": "HTMLElement",
-      "impl": [
-        "MozImageLoadingContent",
-        "MozFrameLoaderOwner",
-        "MozObjectLoadingContent"
-      ]
+      "impl": []
     },
     "HTMLFieldSetElement": {
       "inh": "HTMLElement",
@@ -699,7 +682,7 @@
     },
     "HTMLFrameElement": {
       "inh": "HTMLElement",
-      "impl": ["MozFrameLoaderOwner"]
+      "impl": []
     },
     "HTMLFrameSetElement": {
       "inh": "HTMLElement",
@@ -723,15 +706,15 @@
     },
     "HTMLIFrameElement": {
       "inh": "HTMLElement",
-      "impl": ["MozFrameLoaderOwner", "BrowserElement"]
+      "impl": ["BrowserElement"]
     },
     "HTMLImageElement": {
       "inh": "HTMLElement",
-      "impl": ["MozImageLoadingContent"]
+      "impl": []
     },
     "HTMLInputElement": {
       "inh": "HTMLElement",
-      "impl": ["MozImageLoadingContent", "MozPhonetic"]
+      "impl": []
     },
     "HTMLLIElement": {
       "inh": "HTMLElement",
@@ -747,7 +730,7 @@
     },
     "HTMLLinkElement": {
       "inh": "HTMLElement",
-      "impl": ["LinkStyle"]
+      "impl": []
     },
     "HTMLMapElement": {
       "inh": "HTMLElement",
@@ -783,11 +766,7 @@
     },
     "HTMLObjectElement": {
       "inh": "HTMLElement",
-      "impl": [
-        "MozImageLoadingContent",
-        "MozFrameLoaderOwner",
-        "MozObjectLoadingContent"
-      ]
+      "impl": []
     },
     "HTMLOptGroupElement": {
       "inh": "HTMLElement",
@@ -859,7 +838,7 @@
     },
     "HTMLStyleElement": {
       "inh": "HTMLElement",
-      "impl": ["LinkStyle"]
+      "impl": []
     },
     "HTMLTableCaptionElement": {
       "inh": "HTMLElement",
@@ -1023,7 +1002,7 @@
     },
     "MediaElementAudioSourceNode": {
       "inh": "AudioNode",
-      "impl": ["AudioNodePassThrough"]
+      "impl": []
     },
     "MediaEncryptedEvent": {
       "inh": "Event",
@@ -1059,7 +1038,7 @@
     },
     "MediaStreamAudioSourceNode": {
       "inh": "AudioNode",
-      "impl": ["AudioNodePassThrough"]
+      "impl": []
     },
     "MediaStreamEvent": {
       "inh": "Event",
@@ -1097,142 +1076,6 @@
       "inh": "MouseEvent",
       "impl": []
     },
-    "MozAbortablePromise": {
-      "inh": "_Promise",
-      "impl": []
-    },
-    "MozActivity": {
-      "inh": "DOMRequest",
-      "impl": []
-    },
-    "MozApplicationEvent": {
-      "inh": "Event",
-      "impl": []
-    },
-    "MozCdmaIccInfo": {
-      "inh": "MozIccInfo",
-      "impl": []
-    },
-    "MozCellBroadcast": {
-      "inh": "EventTarget",
-      "impl": []
-    },
-    "MozCellBroadcastEvent": {
-      "inh": "Event",
-      "impl": []
-    },
-    "MozClirModeEvent": {
-      "inh": "Event",
-      "impl": []
-    },
-    "MozContactChangeEvent": {
-      "inh": "Event",
-      "impl": []
-    },
-    "MozEmergencyCbModeEvent": {
-      "inh": "Event",
-      "impl": []
-    },
-    "MozGsmIccInfo": {
-      "inh": "MozIccInfo",
-      "impl": []
-    },
-    "MozIcc": {
-      "inh": "EventTarget",
-      "impl": []
-    },
-    "MozIccManager": {
-      "inh": "EventTarget",
-      "impl": []
-    },
-    "MozInputMethod": {
-      "inh": "EventTarget",
-      "impl": []
-    },
-    "MozInterAppMessageEvent": {
-      "inh": "Event",
-      "impl": []
-    },
-    "MozInterAppMessagePort": {
-      "inh": "EventTarget",
-      "impl": []
-    },
-    "MozMessageDeletedEvent": {
-      "inh": "Event",
-      "impl": []
-    },
-    "MozMmsEvent": {
-      "inh": "Event",
-      "impl": []
-    },
-    "MozMobileConnection": {
-      "inh": "EventTarget",
-      "impl": []
-    },
-    "MozMobileMessageManager": {
-      "inh": "EventTarget",
-      "impl": []
-    },
-    "MozNFC": {
-      "inh": "EventTarget",
-      "impl": ["MozNFCManager"]
-    },
-    "MozNFCPeerEvent": {
-      "inh": "Event",
-      "impl": []
-    },
-    "MozNFCTagEvent": {
-      "inh": "Event",
-      "impl": []
-    },
-    "MozOtaStatusEvent": {
-      "inh": "Event",
-      "impl": []
-    },
-    "MozSettingsEvent": {
-      "inh": "Event",
-      "impl": []
-    },
-    "MozSettingsTransactionEvent": {
-      "inh": "Event",
-      "impl": []
-    },
-    "MozSmsEvent": {
-      "inh": "Event",
-      "impl": []
-    },
-    "MozSpeakerManager": {
-      "inh": "EventTarget",
-      "impl": []
-    },
-    "MozStkCommandEvent": {
-      "inh": "Event",
-      "impl": []
-    },
-    "MozVoicemail": {
-      "inh": "EventTarget",
-      "impl": []
-    },
-    "MozVoicemailEvent": {
-      "inh": "Event",
-      "impl": []
-    },
-    "MozWifiConnectionInfoEvent": {
-      "inh": "Event",
-      "impl": []
-    },
-    "MozWifiManager": {
-      "inh": "EventTarget",
-      "impl": []
-    },
-    "MozWifiStationInfoEvent": {
-      "inh": "Event",
-      "impl": []
-    },
-    "MozWifiStatusChangeEvent": {
-      "inh": "Event",
-      "impl": []
-    },
     "MutationEvent": {
       "inh": "Event",
       "impl": []
@@ -1251,18 +1094,7 @@
     },
     "Navigator": {
       "inh": "",
-      "impl": [
-        "NavigatorID",
-        "NavigatorLanguage",
-        "NavigatorOnLine",
-        "NavigatorContentUtils",
-        "NavigatorStorageUtils",
-        "NavigatorFeatures",
-        "NavigatorGeolocation",
-        "NavigatorBattery",
-        "NavigatorDataStore",
-        "NavigatorMobileId"
-      ]
+      "impl": []
     },
     "NetworkInformation": {
       "inh": "EventTarget",
@@ -1310,7 +1142,7 @@
     },
     "OscillatorNode": {
       "inh": "AudioNode",
-      "impl": ["AudioNodePassThrough"]
+      "impl": []
     },
     "OTPCredential": {
       "inh": "Credential",
@@ -1330,7 +1162,7 @@
     },
     "PannerNode": {
       "inh": "AudioNode",
-      "impl": ["AudioNodePassThrough"]
+      "impl": []
     },
     "PaymentAddress": {
       "inh": "",
@@ -1444,6 +1276,10 @@
       "inh": "OrientationSensor",
       "impl": []
     },
+    "RTCDtlsTransport": {
+      "inh": "EventTarget",
+      "impl": []
+    },
     "RTCDTMFSender": {
       "inh": "EventTarget",
       "impl": []
@@ -1498,11 +1334,11 @@
     },
     "Request": {
       "inh": "",
-      "impl": ["Body"]
+      "impl": []
     },
     "Response": {
       "inh": "",
-      "impl": ["Body"]
+      "impl": []
     },
     "SensorErrorEvent": {
       "inh": "Event",
@@ -1726,7 +1562,7 @@
     },
     "SVGImageElement": {
       "inh": "SVGGraphicsElement",
-      "impl": ["MozImageLoadingContent", "SVGURIReference"]
+      "impl": ["SVGURIReference"]
     },
     "SVGLengthList": {
       "inh": "",
@@ -1958,7 +1794,7 @@
     },
     "ScriptProcessorNode": {
       "inh": "AudioNode",
-      "impl": ["AudioNodePassThrough"]
+      "impl": []
     },
     "ScrollAreaEvent": {
       "inh": "UIEvent",
@@ -1982,7 +1818,7 @@
     },
     "ServiceWorker": {
       "inh": "EventTarget",
-      "impl": ["AbstractWorker"]
+      "impl": []
     },
     "ServiceWorkerContainer": {
       "inh": "EventTarget",
@@ -2010,7 +1846,7 @@
     },
     "SharedWorker": {
       "inh": "EventTarget",
-      "impl": ["AbstractWorker"]
+      "impl": []
     },
     "SharedWorkerGlobalScope": {
       "inh": "WorkerGlobalScope",
@@ -2050,7 +1886,7 @@
     },
     "StereoPannerNode": {
       "inh": "AudioNode",
-      "impl": ["AudioNodePassThrough"]
+      "impl": []
     },
     "StorageEvent": {
       "inh": "Event",
@@ -2126,7 +1962,7 @@
     },
     "Text": {
       "inh": "CharacterData",
-      "impl": ["GeometryUtils"]
+      "impl": []
     },
     "TextTrack": {
       "inh": "EventTarget",
@@ -2222,7 +2058,7 @@
     },
     "WaveShaperNode": {
       "inh": "AudioNode",
-      "impl": ["AudioNodePassThrough"]
+      "impl": []
     },
     "WebGL2RenderingContext": {
       "inh": "WebGLRenderingContext",
@@ -2241,15 +2077,10 @@
       "impl": []
     },
     "Window": {
-      "inh": "",
+      "inh": "EventTarget",
       "impl": [
         "GlobalEventHandlers",
         "WindowEventHandlers",
-        "GlobalCrypto",
-        "SpeechSynthesisGetter",
-        "WindowModal",
-        "OnErrorEventHandlerForWindow",
-        "ChromeWindow",
         "WindowOrWorkerGlobalScope"
       ]
     },
@@ -2263,7 +2094,7 @@
     },
     "Worker": {
       "inh": "EventTarget",
-      "impl": ["AbstractWorker"]
+      "impl": []
     },
     "WorkerGlobalScope": {
       "inh": "EventTarget",
@@ -2275,12 +2106,7 @@
     },
     "WorkerNavigator": {
       "inh": "",
-      "impl": [
-        "NavigatorID",
-        "NavigatorLanguage",
-        "NavigatorOnLine",
-        "NavigatorDataStore"
-      ]
+      "impl": []
     },
     "XMLDocument": {
       "inh": "Document",
@@ -2316,6 +2142,10 @@
     },
     "XRBoundedReferenceSpace": {
       "inh": "XRReferenceSpace",
+      "impl": []
+    },
+    "XRCPUDepthInformation": {
+      "inh": "XRDepthInformation",
       "impl": []
     },
     "XRFrame": {
@@ -2382,6 +2212,10 @@
       "inh": "",
       "impl": []
     },
+    "XRWebGLDepthInformation": {
+      "inh": "XRDepthInformation",
+      "impl": []
+    },
     "XRWebGLLayer": {
       "inh": "",
       "impl": []
@@ -2396,7 +2230,7 @@
     },
     "XULElement": {
       "inh": "Element",
-      "impl": ["GlobalEventHandlers", "MozFrameLoaderOwner"]
+      "impl": ["GlobalEventHandlers"]
     }
   }
 ]

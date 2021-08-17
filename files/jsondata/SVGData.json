@@ -77,9 +77,9 @@
       "content": {
         "description": {
           "en-US": "Either:<br>\n    one or more <a href=\"/en-US/docs/Web/SVG/Element/glyphRef\" title=\"The glyphRef element provides a single possible glyph to the referencing &lt;altGlyph> substitution.\"><code>&lt;glyphRef&gt;</code></a> elements, or<br>\n    one or more <a href=\"/en-US/docs/Web/SVG/Element/altGlyphItem\" title=\"The altGlyphItem element provides a set of candidates for glyph substitution by the &lt;altglyph> element.\"><code>&lt;altGlyphItem&gt;</code></a> elements",
-          "fr": "L'un ou l'autre:<br>\n    un \u00e9l\u00e9ments ou plus <a class=\"new\" href=\"/fr/docs/Web/SVG/Element/glyphRef\" title=\"This page hasn't been written yet. Please consider contributing to MDN by writing it!\"><code>&lt;glyphRef&gt;</code></a>, ou<br>\n    un \u00e9l\u00e9ments ou plus<a class=\"new\" href=\"/fr/docs/Web/SVG/Element/altGlyphItem\" title=\"This page hasn't been written yet. Please consider contributing to MDN by writing it!\"><code>&lt;altGlyphItem&gt;</code></a>",
-          "pt-BR": "Ambos:<br>\n    um ou mais elementos <a class=\"new\" href=\"/pt-BR/docs/Web/SVG/Element/glyphRef\" title=\"This page hasn't been written yet. Please consider contributing to MDN by writing it!\"><code>&lt;glyphRef&gt;</code></a>, ou<br>\n    um ou mais elementos <a class=\"new\" href=\"/pt-BR/docs/Web/SVG/Element/altGlyphItem\" title=\"This page hasn't been written yet. Please consider contributing to MDN by writing it!\"><code>&lt;altGlyphItem&gt;</code></a>",
-          "zh-CN": "\u4e24\u8005\u4e4b\u4e00\uff1a<br>\n    \u4e00\u4e2a\u6216\u591a\u4e2a<a href=\"/zh-CN/docs/Web/SVG/Element/glyphRef\" title=\"glyphRef\u5143\u7d20\u4e3a\u5f15\u7528\u7684&lt;altGlyph>\u00a0\u66ff\u4ee3\u7269\u63d0\u4f9b\u4e86\u4e00\u4e2a\u552f\u4e00\u53ef\u80fd\u7684\u5b57\u5f62\u3002\"><code>&lt;glyphRef&gt;</code></a>\u5143\u7d20\uff0c\u6216\u8005\u4e00\u4e2a\u6216\u591a\u4e2a<a href=\"/zh-CN/docs/Web/SVG/Element/altGlyphItem\" class=\"new\" title=\"\u6b64\u9875\u9762\u4ecd\u672a\u88ab\u672c\u5730\u5316, \u671f\u5f85\u60a8\u7684\u7ffb\u8bd1!\"><code>&lt;altGlyphItem&gt;</code></a>\u5143\u7d20"
+          "fr": "L'un ou l'autre:<br>\n    un \u00e9l\u00e9ments ou plus <a href=\"/fr/docs/Web/SVG/Element/glyphRef\" title=\"The glyphRef element provides a single possible glyph to the referencing &lt;altGlyph> substitution.\"><code>&lt;glyphRef&gt;</code></a>, ou<br>\n    un \u00e9l\u00e9ments ou plus <a href=\"/fr/docs/Web/SVG/Element/altGlyphItem\" title=\"The altGlyphItem element provides a set of candidates for glyph substitution by the &lt;altglyph> element.\"><code>&lt;altGlyphItem&gt;</code></a>",
+          "pt-BR": "Ambos:<br>\n    um ou mais elementos <a href=\"/pt-BR/docs/Web/SVG/Element/glyphRef\" title=\"The glyphRef element provides a single possible glyph to the referencing &lt;altGlyph> substitution.\"><code>&lt;glyphRef&gt;</code></a>, ou<br>\n    um ou mais elementos <a href=\"/pt-BR/docs/Web/SVG/Element/altGlyphItem\" title=\"The altGlyphItem element provides a set of candidates for glyph substitution by the &lt;altglyph> element.\"><code>&lt;altGlyphItem&gt;</code></a>",
+          "zh-CN": "\u4e24\u8005\u4e4b\u4e00\uff1a<br>\n    \u4e00\u4e2a\u6216\u591a\u4e2a<a href=\"/zh-CN/docs/Web/SVG/Element/glyphRef\" title=\"glyphRef\u5143\u7d20\u4e3a\u5f15\u7528\u7684&lt;altGlyph>\u00a0\u66ff\u4ee3\u7269\u63d0\u4f9b\u4e86\u4e00\u4e2a\u552f\u4e00\u53ef\u80fd\u7684\u5b57\u5f62\u3002\"><code>&lt;glyphRef&gt;</code></a>\u5143\u7d20\uff0c\u6216\u8005\u4e00\u4e2a\u6216\u591a\u4e2a<a href=\"/zh-CN/docs/Web/SVG/Element/altGlyphItem\" title=\"\u6b64\u9875\u9762\u4ecd\u672a\u88ab\u672c\u5730\u5316, \u671f\u5f85\u60a8\u7684\u7ffb\u8bd1!\"><code>&lt;altGlyphItem&gt;</code></a>\u5143\u7d20"
         }
       },
       "attributes": ["coreAttributes"],
@@ -90,8 +90,8 @@
       "content": {
         "description": {
           "en-US": "One or more <a href=\"/en-US/docs/Web/SVG/Element/glyphRef\" title=\"The glyphRef element provides a single possible glyph to the referencing &lt;altGlyph> substitution.\"><code>&lt;glyphRef&gt;</code></a> elements",
-          "fr": "un \u00e9l\u00e9ments ou plus <a class=\"new\" href=\"/fr/docs/Web/SVG/Element/glyphRef\" title=\"This page hasn't been written yet. Please consider contributing to MDN by writing it!\"><code>&lt;glyphRef&gt;</code></a>",
-          "pt-BR": "Um ou mais elementos <a class=\"new\" href=\"/pt-BR/docs/Web/SVG/Element/glyphRef\" title=\"This page hasn't been written yet. Please consider contributing to MDN by writing it!\"><code>&lt;glyphRef&gt;</code></a>",
+          "fr": "un \u00e9l\u00e9ments ou plus <a href=\"/fr/docs/Web/SVG/Element/glyphRef\" title=\"The glyphRef element provides a single possible glyph to the referencing &lt;altGlyph> substitution.\"><code>&lt;glyphRef&gt;</code></a>",
+          "pt-BR": "Um ou mais elementos <a href=\"/pt-BR/docs/Web/SVG/Element/glyphRef\" title=\"The glyphRef element provides a single possible glyph to the referencing &lt;altGlyph> substitution.\"><code>&lt;glyphRef&gt;</code></a>",
           "zh-CN": "\u4e00\u4e2a\u6216\u591a\u4e2a<a href=\"/zh-CN/docs/Web/SVG/Element/glyphRef\" title=\"glyphRef\u5143\u7d20\u4e3a\u5f15\u7528\u7684&lt;altGlyph>\u00a0\u66ff\u4ee3\u7269\u63d0\u4f9b\u4e86\u4e00\u4e2a\u552f\u4e00\u53ef\u80fd\u7684\u5b57\u5f62\u3002\"><code>&lt;glyphRef&gt;</code></a>\u5143\u7d20"
         }
       },
@@ -462,8 +462,8 @@
       "categories": ["filterPrimitiveElement"],
       "content": {
         "description": {
-          "en-US": "Any number of <a href=\"/en/SVG/Element#Descriptive\" title=\"en/SVG/Element#Descriptive\">descriptive elements</a> and exactly one <a href=\"/en/SVG/Element#LightSource\" title=\"en/SVG/Element#LightSource\">light source element</a>, in any order.",
-          "zh-CN": "\u4efb\u610f\u6570\u91cf\u7684<a href=\"/en/SVG/Element#Descriptive\" title=\"en/SVG/Element#Descriptive\">\u63cf\u8ff0\u6027\u5143\u7d20</a>\u4ee5\u53ca\u4e0d\u591a\u4e0d\u5c11\u4e00\u4e2a<a href=\"/en/SVG/Element#LightSource\" title=\"en/SVG/Element#LightSource\">\u5149\u6e90\u5143\u7d20</a>\uff0c\u987a\u5e8f\u4e0d\u9650\u3002"
+          "en-US": "Any number of <a href=\"/en-US/SVG/Element#descriptive\">descriptive elements</a> and exactly one <a href=\"/en-US/SVG/Element#lightsource\">light source element</a>, in any order.",
+          "zh-CN": "\u4efb\u610f\u6570\u91cf\u7684<a href=\"/zh-CN/SVG/Element#descriptive\">\u63cf\u8ff0\u6027\u5143\u7d20</a>\u4ee5\u53ca\u4e0d\u591a\u4e0d\u5c11\u4e00\u4e2a<a href=\"/en-US/SVG/Element#lightsource\">\u5149\u6e90\u5143\u7d20</a>\uff0c\u987a\u5e8f\u4e0d\u9650\u3002"
         }
       },
       "attributes": [
@@ -693,8 +693,8 @@
       "categories": ["filterPrimitiveElement"],
       "content": {
         "description": {
-          "en-US": "Exactly one\u00a0<a href=\"/en/SVG/Element#LightSource\" title=\"en/SVG/Element#LightSource\">light source element</a>\u00a0first and any number of <a href=\"/en/SVG/Element#Descriptive\" title=\"en/SVG/Element#Descriptive\">descriptive elements</a>\u00a0in any order.",
-          "zh-CN": "\u6709\u4e14\u53ea\u6709\u4e00\u4e2a<a href=\"/en/SVG/Element#LightSource\" title=\"en/SVG/Element#LightSource\">\u5149\u6e90\u5143\u7d20</a>\u5728\u5148\uff0c\u4efb\u610f\u6570\u91cf\u7684<a href=\"/en/SVG/Element#Descriptive\" title=\"en/SVG/Element#Descriptive\">\u63cf\u8ff0\u6027\u5143\u7d20</a>\u987a\u5e8f\u4e0d\u9650\u3002"
+          "en-US": "Exactly one\u00a0<a href=\"/en-US/SVG/Element#lightsource\">light source element</a>\u00a0first and any number of <a href=\"/en-US/SVG/Element#descriptive\">descriptive elements</a>\u00a0in any order.",
+          "zh-CN": "\u6709\u4e14\u53ea\u6709\u4e00\u4e2a<a href=\"/zh-CN/SVG/Element#lightsource\">\u5149\u6e90\u5143\u7d20</a>\u5728\u5148\uff0c\u4efb\u610f\u6570\u91cf\u7684<a href=\"/zh-CN/SVG/Element#descriptive\">\u63cf\u8ff0\u6027\u5143\u7d20</a>\u987a\u5e8f\u4e0d\u9650\u3002"
         }
       },
       "attributes": [
@@ -827,8 +827,7 @@
       "categories": ["fontElement"],
       "content": {
         "description": {
-          "en-US": "Any number of <a href=\"/en/SVG/Element#Descriptive\" title=\"en/SVG/Attribute#Descriptive\">descriptive elements</a>\u00a0\u00bb and at most one <a href=\"/en-US/docs/Web/SVG/Element/font-face\" title=\"The font-face element corresponds to the CSS @font-face declaration. It defines a font's outer properties.\"><code>&lt;font-face&gt;</code></a> element, in any order.",
-          "zh-CN": "Any number of <a href=\"/en/SVG/Element#Descriptive\" title=\"en/SVG/Attribute#Descriptive\">descriptive elements</a>\u00a0\u00bb and at most one <a href=\"/zh-CN/docs/Web/SVG/Element/font-face\" title=\"This page hasn't been written yet. Please consider contributing to MDN by writing it!\"><code>&lt;font-face&gt;</code></a> element, in any order."
+          "en-US": "Any number of <a href=\"/en-US/SVG/Element#descriptive\">descriptive elements</a>\u00a0\u00bb and at most one <a href=\"/en-US/docs/Web/SVG/Element/font-face\" title=\"The font-face element corresponds to the CSS @font-face declaration. It defines a font's outer properties.\"><code>&lt;font-face&gt;</code></a> element, in any order."
         }
       },
       "attributes": [
