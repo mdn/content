@@ -39,11 +39,11 @@ browser-compat: api.ServiceWorkerGlobalScope.activate_event
 <p>The following snippet shows how you could use an <code>activate</code> event handler to upgrade a cache.</p>
 
 <pre class="brush: js">globalScope.addEventListener('activate', function(event) {
-  var cacheWhitelist = ['v2'];
+  var cacheAllowlist = ['v2'];
 
   event.waitUntil(
     caches.forEach(function(cache, cacheName) {
-      if (cacheWhitelist.indexOf(cacheName) == -1) {
+      if (cacheAllowlist.indexOf(cacheName) == -1) {
         return caches.delete(cacheName);
       }
     })

@@ -48,7 +48,7 @@ tags:
 
 <h3 id="Streaming_the_WebAssembly_module">Streaming the WebAssembly module</h3>
 
-<p>New in Firefox 58 is the ability to compile and instantiate WebAssembly modules directly from underlying sources. This is achieved using the {{jsxref("WebAssembly.compileStreaming()")}} and {{jsxref("WebAssembly.instantiateStreaming()")}} methods. These methods are easier than their non-streaming counterparts, because they can turn the byte code directly into <code>Module</code>/<code>Instance</code> instances, cutting out the need to separately put the {{domxref("Response")}} into an {{domxref("ArrayBuffer")}}.</p>
+<p>New in Firefox 58 is the ability to compile and instantiate WebAssembly modules directly from underlying sources. This is achieved using the {{jsxref("WebAssembly.compileStreaming()")}} and {{jsxref("WebAssembly.instantiateStreaming()")}} methods. These methods are easier than their non-streaming counterparts, because they can turn the byte code directly into <code>Module</code>/<code>Instance</code> instances, cutting out the need to separately put the {{domxref("Response")}} into an {{jsxref("ArrayBuffer")}}.</p>
 
 <p>This example (see our <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html">instantiate-streaming.html</a> demo on GitHub, and <a href="https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html">view it live</a> also) shows how to use <code>instantiateStreaming()</code> to fetch a wasm module, import a JavaScript function into it, compile and instantiate it, and access its exported function — all in one step.</p>
 
@@ -67,7 +67,7 @@ tags:
 
 <p>If you can't or don't want to use the streaming methods as described above, you can use the non-streaming methods {{jsxref("WebAssembly.compile")}} / {{jsxref("WebAssembly.instantiate")}} instead.</p>
 
-<p>These methods don't directly access the byte code, so require an extra step to turn the response into an {{domxref("ArrayBuffer")}} before compiling/instantiating the wasm module.</p>
+<p>These methods don't directly access the byte code, so require an extra step to turn the response into an {{jsxref("ArrayBuffer")}} before compiling/instantiating the wasm module.</p>
 
 <p>The equivalent code would look like this:</p>
 
@@ -129,7 +129,7 @@ tags:
 
 <p>If a maximum value was supplied upon creation of the memory instance, attempts to grow past this maximum will throw a {{jsxref("WebAssembly.RangeError")}} exception. The engine takes advantage of this supplied upper-bounds to reserve memory ahead of time, which can make resizing more efficient.</p>
 
-<p>Note: Since an {{domxref("ArrayBuffer")}}’s byteLength is immutable, after a successful {{jsxref("Memory.prototype.grow()")}} operation the buffer getter will return a new ArrayBuffer object (with the new byteLength) and any previous ArrayBuffer objects become “detached”, or disconnected from the underlying memory they previously pointed to.</p>
+<p>Note: Since an {{jsxref("ArrayBuffer")}}'s byteLength is immutable, after a successful {{jsxref("Memory.prototype.grow()")}} operation the buffer getter will return a new ArrayBuffer object (with the new byteLength) and any previous ArrayBuffer objects become "detached", or disconnected from the underlying memory they previously pointed to.</p>
 
 <p>Just like functions, linear memories can be defined inside a module or imported. Similarly, a module may also optionally export its memory. This means that JavaScript can get access to the memory of a WebAssembly instance either by creating a new <code>WebAssembly.Memory</code> and passing it in as an import or by receiving a Memory export (via <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports">Instance.prototype.exports</a></code>).</p>
 
@@ -167,7 +167,7 @@ console.log(sum);</pre>
  </li>
 </ol>
 
-<p>Note how we create the {{domxref("Uint32Array")}} view on the Memory object’s buffer (<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer">Memory.prototype.buffer</a></code>), not on the Memory itself.</p>
+<p>Note how we create the {{jsxref("Uint32Array")}} view on the Memory object's buffer (<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer">Memory.prototype.buffer</a></code>), not on the Memory itself.</p>
 
 <p>Memory imports work just like function imports, only Memory objects are passed as values instead of JavaScript functions. Memory imports are useful for two reasons:</p>
 

@@ -25,7 +25,7 @@ For a more in depth discussion of JavaScript programming follow the [JavaScript 
 
 ## What JavaScript implementations are available?
 
-The Mozilla project provides two JavaScript implementations. The first **ever** JavaScript was created by Brendan Eich at Netscape, and has since been updated to conform to ECMA-262 Edition 5 and later versions. This engine, code named [SpiderMonkey](/en-US/docs/Mozilla/Projects/SpiderMonkey), is implemented in C/C++. The [Rhino](/en-US/docs/Rhino) engine, created primarily by Norris Boyd (also at Netscape) is a JavaScript implementation written in Java. Like SpiderMonkey, Rhino is ECMA-262 Edition 5 compliant.
+The Mozilla project provides two JavaScript implementations. The first **ever** JavaScript was created by Brendan Eich at Netscape, and has since been updated to conform to ECMA-262 Edition 5 and later versions. This engine, code named [SpiderMonkey](https://spidermonkey.dev/), is implemented in C/C++. The [Rhino](https://en.wikipedia.org/wiki/Rhino_(JavaScript_engine)) engine, created primarily by Norris Boyd (also at Netscape) is a JavaScript implementation written in Java. Like SpiderMonkey, Rhino is ECMA-262 Edition 5 compliant.
 
 Several major runtime optimizations such as TraceMonkey (Firefox 3.5), JägerMonkey (Firefox 4) and IonMonkey were added to the SpiderMonkey JavaScript engine over time. Work is always ongoing to improve JavaScript execution performance.
 
@@ -34,7 +34,7 @@ Besides the above implementations, there are other popular JavaScript engines su
 - Google's [V8](https://code.google.com/p/v8/), which is used in the Google Chrome browser and recent versions of Opera browser. This is also the engine used by [Node.js](http://nodejs.org).
 - The [JavaScriptCore](https://www.webkit.org/projects/javascript/index.html) (SquirrelFish/Nitro) used in some WebKit browsers such as Apple Safari.
 - [Carakan](http://my.opera.com/ODIN/blog/carakan-faq) in old versions of Opera.
-- The [Chakra](https://en.wikipedia.org/wiki/Chakra_%28JScript_engine%29) engine used in Internet Explorer (although the language it implements is formally called "JScript" in order to avoid trademark issues).
+- The [Chakra](https://en.wikipedia.org/wiki/Chakra_%28JScript_engine%29) engine used in Internet Explorer (although the language it implements is formally called "JScript" in order to avoid trademark issues).
 
 Each of Mozilla's JavaScript engines expose a public API which application developers can use to integrate JavaScript into their software. By far, the most common host environment for JavaScript is web browsers. Web browsers typically use the public API to create **host objects** responsible for reflecting the [DOM](https://www.w3.org/DOM/) into JavaScript.
 
@@ -42,10 +42,6 @@ Another common application for JavaScript is as a (Web) server side scripting la
 
 ## JavaScript resources
 
-- [SpiderMonkey](/en-US/docs/Mozilla/Projects/SpiderMonkey)
-  - : Information specific to Mozilla's implementation of JavaScript in C/C++ engine (aka SpiderMonkey), including how to embed it in applications.
-- [Rhino](/en-US/docs/Rhino)
-  - : Information specific to the JavaScript implementation written in Java (aka Rhino).
 - [Language resources](/en-US/docs/Web/JavaScript/Language_Resources)
   - : Pointers to published JavaScript standards.
 - [A re-introduction to JavaScript](/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)

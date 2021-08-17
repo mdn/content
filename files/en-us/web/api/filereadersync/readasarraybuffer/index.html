@@ -5,7 +5,7 @@ browser-compat: api.FileReaderSync.readAsArrayBuffer
 ---
 <div>{{APIRef("File API")}}</div>
 
-<div><span class="seoSummary">The <code>readAsArrayBuffer()</code> method of the {{DOMxRef("FileReaderSync")}} interface allows to read {{DOMxRef("File")}} or {{DOMxRef("Blob")}} objects in a synchronous way into an {{DOMxRef("ArrayBuffer")}}. This interface is <a href="/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">only available</a> in <a href="/en-US/docs/Web/API/Worker">workers</a> as it enables synchronous I/O that could potentially block.</span></div>
+<div>The <code>readAsArrayBuffer()</code> method of the {{DOMxRef("FileReaderSync")}} interface allows to read {{DOMxRef("File")}} or {{DOMxRef("Blob")}} objects in a synchronous way into an {{jsxref("ArrayBuffer")}}. This interface is <a href="/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">only available</a> in <a href="/en-US/docs/Web/API/Worker">workers</a> as it enables synchronous I/O that could potentially block.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -18,12 +18,12 @@ browser-compat: api.FileReaderSync.readAsArrayBuffer
 
 <dl>
  <dt><code>blob</code></dt>
- <dd>The DOM {{DOMxRef("File")}} or {{DOMxRef("Blob")}} to read into the {{DOMxRef("File")}} or {{DOMxRef("ArrayBuffer")}}.</dd>
+ <dd>The DOM {{DOMxRef("File")}} or {{DOMxRef("Blob")}} to read into the {{DOMxRef("File")}} or {{jsxref("ArrayBuffer")}}.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>An {{DOMxRef("ArrayBuffer")}} representing the file's data.</p>
+<p>An {{jsxref("ArrayBuffer")}} representing the file's data.</p>
 
 <h2 id="Exceptions">Exceptions</h2>
 
@@ -31,7 +31,7 @@ browser-compat: api.FileReaderSync.readAsArrayBuffer
 
 <dl>
  <dt><code>NotFoundError</code></dt>
- <dd>is raised when the resource represented by the DOM {{DOMxRef("File")}} or {{DOMxRef("Blob")}} cannot be found, e.g. because it has been erased.</dd>
+ <dd>is raised when the resource represented by the DOM {{DOMxRef("File")}} or {{DOMxRef("Blob")}} cannot be found, e.g. because it has been erased.</dd>
  <dt><code>SecurityError</code></dt>
  <dd>is raised when one of the following problematic situation is detected:
  <ul>

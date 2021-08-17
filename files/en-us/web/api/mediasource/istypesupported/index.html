@@ -20,7 +20,7 @@ browser-compat: api.MediaSource.isTypeSupported
 
 <p><span class="seoSummary">The
     <code><strong>MediaSource.isTypeSupported()</strong></code> static method returns a
-    {{jsxref("Boolean")}} value which is <code>true</code> if the given MIME type is
+    boolean value which is <code>true</code> if the given MIME type is
     <em>likely</em> to be supported by the current {{Glossary("user agent")}}.</span> That
   is, if it can successfully create {{domxref("SourceBuffer")}} objects for that MIME
   type. If the returned value is <code>false</code>, then the user agent is certain that
@@ -42,7 +42,7 @@ browser-compat: api.MediaSource.isTypeSupported
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{jsxref("Boolean")}} which is <code>true</code> if the browser feels that it can
+<p>A boolean value which is <code>true</code> if the browser feels that it can
   <em>probably</em> play media of the specified type. This is <em>not</em> a guarantee,
   however, and your code must be prepared for the possibility that the media will not play
   correctly if at all. A value of <code>false</code> is a guarantee that media of the

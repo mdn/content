@@ -27,7 +27,7 @@ browser-compat: api.PublicKeyCredential
  <dt>{{domxref("PublicKeyCredential.id")}} {{ReadOnlyInline()}}{{securecontext_inline}}</dt>
  <dd>Inherited from {{domxref("Credential")}} and overridden to be the <a href="/en-US/docs/Glossary/Base64">base64url encoding</a> of {{domxref("PublicKeyCredential.rawId")}}.</dd>
  <dt>{{domxref("PublicKeyCredential.rawId")}} {{ReadOnlyInline()}}{{securecontext_inline}}</dt>
- <dd>An {{domxref("ArrayBuffer")}} that holds the globally unique identifier for this <code>PublicKeyCredential</code>. This identifier can be used to look up credentials for future calls to {{domxref("CredentialsContainer.get")}}.</dd>
+ <dd>An {{jsxref("ArrayBuffer")}} that holds the globally unique identifier for this <code>PublicKeyCredential</code>. This identifier can be used to look up credentials for future calls to {{domxref("CredentialsContainer.get")}}.</dd>
  <dt>{{domxref("PublicKeyCredential.response")}} {{ReadOnlyInline()}} {{securecontext_inline}}</dt>
  <dd>An instance of an {{domxref("AuthenticatorResponse")}} object. It is either of type {{domxref("AuthenticatorAttestationResponse")}} if the <code>PublicKeyCredential</code> was the results of a {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} call, or of type {{domxref("AuthenticatorAssertionResponse")}} if the <code>PublicKeyCredential</code> was the result of a {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}} call.</dd>
 </dl>

@@ -13,10 +13,10 @@ browser-compat: api.TextTrack.mode
 ---
 <div>{{APIRef("WebVTT")}}</div>
 
-<p><span class="seoSummary">The {{domxref("TextTrack")}} interface's
+<p>The {{domxref("TextTrack")}} interface's
     <code><strong>mode</strong></code> property is a string specifying and controlling the
     text track's mode: <code>disabled</code>, <code>hidden</code>, or
-    <code>showing</code>.</span> You can read this value to determine the current mode,
+    <code>showing</code>. You can read this value to determine the current mode,
   and you can change this value to switch modes.</p>
 
 <p class="note">Safari additionally requires the <code><strong>default</strong></code>
@@ -25,19 +25,12 @@ browser-compat: api.TextTrack.mode
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">var <em>mode</em> = <em>textTrack</em>.mode;
-
-<em>textTrack</em>.mode = "disabled" | "hidden" | "showing";</pre>
+<pre class="brush: js">let mode = textTrack.mode;
+textTrack.mode = a;</pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A {{domxref("DOMString")}} which indicates the track's current mode. The text track
-  mode is one of the values listed below, under {{anch("Text track mode constants")}}.</p>
-
-<h4 id="Text_track_mode_constants">Text track mode constants</h4>
-
-<p>The text track mode—sometimes identified using the IDL enum
-  <code>TextTrackMode</code>—must be one of the following values:</p>
+<p>A {{domxref("DOMString")}} which indicates the track's current mode. One of:</p>
 
 <dl>
   <dt><code>disabled</code></dt>

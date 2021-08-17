@@ -195,21 +195,13 @@ let sendMessage = message =&gt; {
 
 <p>In this simple example, we see that enqueueing a microtask causes the microtask's callback to run after the body of this top-level script is done running.</p>
 
-<div class="hidden">
-<h4 id="HTML">HTML</h4>
-
-<pre class="brush: html">&lt;pre id="log"&gt;
+<pre class="brush: html hidden">&lt;pre id="log"&gt;
 &lt;/pre&gt;</pre>
-</div>
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<div class="hidden">
-<p>The code below is used to log the output.</p>
-
-<pre class="brush: js">let logElem = document.getElementById("log");
+<pre class="brush: js hidden">let logElem = document.getElementById("log");
 let log = s =&gt; logElem.innerHTML += s + "&lt;br&gt;";</pre>
-</div>
 
 <p>In the following code, we see a call to {{domxref("WindowOrWorkerGlobalScope.queueMicrotask", "queueMicrotask()")}} used to schedule a microtask to run. This call is bracketed by calls to <code>log()</code>, a custom function that outputs text to the screen.</p>
 
@@ -227,19 +219,12 @@ log("After enqueueing the microtask");</pre>
 
 <p>In this example, a timeout is scheduled to fire after zero milliseconds (or "as soon as possible"). This demonstrates the difference between what "as soon as possible" means when scheduling a new task (such as by using <code>setTimeout()</code>) versus using a microtask.</p>
 
-<div class="hidden">
-<h4 id="HTML_2">HTML</h4>
-
-<pre class="brush: html">&lt;pre id="log"&gt;
+<pre class="brush: html hidden">&lt;pre id="log"&gt;
 &lt;/pre&gt;</pre>
-</div>
 
 <h4 id="JavaScript_2">JavaScript</h4>
 
-<div class="hidden">
-<p>The code below is used to log the output.</p>
-
-<pre class="brush: js">let logElem = document.getElementById("log");
+<pre class="brush: js hidden">let logElem = document.getElementById("log");
 let log = s =&gt; logElem.innerHTML += s + "&lt;br&gt;";</pre>
 </div>
 
@@ -266,21 +251,13 @@ log("Main program exiting");</pre>
 
 <p>This example expands slightly on the previous one by adding a function that does some work. This function uses <code>queueMicrotask()</code> to schedule a microtask. The important thing to take away from this one is that the microtask isn't processed when the function exits, but when the main program exits.</p>
 
-<div class="hidden">
-<h4 id="HTML_3">HTML</h4>
-
-<pre class="brush: html">&lt;pre id="log"&gt;
+<pre class="brush: html hidden">&lt;pre id="log"&gt;
 &lt;/pre&gt;</pre>
-</div>
 
 <h4 id="JavaScript_3">JavaScript</h4>
 
-<div class="hidden">
-<p>The code below is used to log the output.</p>
-
-<pre class="brush: js">let logElem = document.getElementById("log");
+<pre class="brush: js hidden">let logElem = document.getElementById("log");
 let log = s =&gt; logElem.innerHTML += s + "&lt;br&gt;";</pre>
-</div>
 
 <p>The main program code follows. The <code>doWork()</code> function here calls <code>queueMicrotask()</code>, yet the microtask still doesn't fire until the entire program exits, since that's when the task exits and there's nothing else on the execution stack.</p>
 

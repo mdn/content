@@ -88,7 +88,7 @@ usedOptions.locale;                // "de-DE"
 usedOptions.numberingSystem;       // "latn"
 usedOptions.notation;              // "standard"
 usedOptions.signDisplay;           // "auto"
-usedOption.style;                  // "decimal"
+usedOptions.style;                 // "decimal"
 usedOptions.minimumIntegerDigits;  // 1
 usedOptions.minimumFractionDigits; // 0
 usedOptions.maximumFractionDigits; // 3

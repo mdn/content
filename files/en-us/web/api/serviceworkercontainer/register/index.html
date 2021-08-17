@@ -51,6 +51,24 @@ browser-compat: api.ServiceWorkerContainer.register
         registration is set to the directory where the service worker script is located.
         See the <a href="#examples">Examples</a> section for more information on how it
         works.</li>
+      <li><code>type</code>: A {{domxref("DOMString")}} 
+        specifying the type of worker to create. Valid values are:
+        <ul>
+          <li><code>'classic'</code>: The loaded service worker is in a standard script. This is the default.</li>
+          <li><code>module</code>: The loaded service worker is in an 
+          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules">ES module</a>
+          and the import statement is available on 
+            worker contexts.
+          </li>
+        </ul>
+      </li>
+      <li><code>updateViaCache</code>: A string indicating how much of a service worker's resources will be updated when a call is made to {{domxref('ServiceWorkerRegistration.updateViaCache')}}. Valid values are:
+      <ul>
+        <li><code>'all'</code>: The service worker script and all of its imports will be updated.</li>
+        <li><code>'imports'</code>: Only imports referenced by the service worker script will be updated. This is the default.</li>
+        <li><code>'none'</code>: Neither the service worker, nor its imports will be updated.</li>
+      </ul>
+      </li>
     </ul>
   </dd>
 </dl>

@@ -65,7 +65,7 @@ browser-compat: api.Notification
  <dt>{{domxref("Notification.renotify")}} {{readonlyinline}}</dt>
  <dd>Specifies whether the user should be notified after a new notification replaces an old one.</dd>
  <dt>{{domxref("Notification.requireInteraction")}} {{readonlyinline}}</dt>
- <dd>A {{jsxref("Boolean")}} indicating that a notification should remain active until the user clicks or dismisses it, rather than closing automatically.</dd>
+ <dd>A boolean value indicating that a notification should remain active until the user clicks or dismisses it, rather than closing automatically.</dd>
  <dt>{{domxref("Notification.silent")}} {{readonlyinline}}</dt>
  <dd>Specifies whether the notification should be silent — i.e., no sounds or vibrations should be issued, regardless of the device settings.</dd>
  <dt>{{domxref("Notification.timestamp")}} {{readonlyinline}}</dt>
@@ -84,7 +84,7 @@ browser-compat: api.Notification
  <dt>{{domxref("Notification.onclose")}}</dt>
  <dd>A handler for the {{domxref("HTMLDialogElement/close_event", "close")}} event. It is triggered when the user closes the notification.</dd>
  <dt>{{domxref("Notification.onerror")}}</dt>
- <dd>A handler for the {{domxref("HTMLElement/error_event", "error")}} event. It is triggered each time the notification encounters an error.</dd>
+ <dd>A handler for the {{domxref("Element/error_event", "error")}} event. It is triggered each time the notification encounters an error.</dd>
  <dt>{{domxref("Notification.onshow")}}</dt>
  <dd>A handler for the {{domxref("Element/show_event", "show")}} event. It is triggered when the notification is displayed.</dd>
 </dl>
@@ -102,7 +102,7 @@ browser-compat: api.Notification
 
 <h3 id="Instance_methods">Instance methods</h3>
 
-<p>These properties are available only on an instance of the <code>Notification</code> object or through its <a href="/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain"><code>prototype</code></a>. The <code>Notification</code> object also inherits from the {{domxref("EventTarget")}} interface.</p>
+<p>These properties are available only on an instance of the <code>Notification</code> object or through its <a href="/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain"><code>prototype</code></a>. The <code>Notification</code> object also inherits from the {{domxref("EventTarget")}} interface.</p>
 
 <dl>
  <dt>{{domxref("Notification.close()")}}</dt>

@@ -25,7 +25,7 @@ tags:
 
 <p><img alt="" src="concept.png"></p>
 
-<p>There are more advantages too — you can detect when streams start or end, chain streams together, handle errors and cancel streams as required, and react to the speed of the stream is being read at.</p>
+<p>There are more advantages too — you can detect when streams start or end, chain streams together, handle errors and cancel streams as required, and react to the speed the stream is being read at.</p>
 
 <p>The basic usage of Streams hinges around making responses available as streams. For example, the response body returned by a successful <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch request</a> can be exposed as a {{domxref("ReadableStream")}}, and you can then read it using a reader created with {{domxref("ReadableStream.getReader()")}}, cancel it with {{domxref("ReadableStream.cancel()")}}, etc.</p>
 
@@ -124,19 +124,13 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
+<table>
   <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
+   <th>Specification</th>
   </tr>
   <tr>
-   <td>{{SpecName('Streams')}}</td>
-   <td>{{Spec2('Streams')}}</td>
-   <td>Initial definition.</td>
+   <td><a href="https://streams.spec.whatwg.org/">Streams Living Standard</a></td>
   </tr>
- </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

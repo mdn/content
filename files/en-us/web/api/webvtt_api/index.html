@@ -17,7 +17,7 @@ tags:
 ---
 <div>{{DefaultAPISidebar("WebVTT")}}</div>
 
-<p><span class="seoSummary"><strong>Web Video Text Tracks Format</strong> (<strong>WebVTT</strong>) is a format for displaying timed text tracks (such as subtitles or captions) using the {{HTMLElement("track")}} element.</span> The primary purpose of WebVTT files is to add text overlays to a {{HTMLElement("video")}}. WebVTT is a text based format, which must be encoded using {{Glossary("UTF-8")}}. Where you can use spaces you can also use tabs. There is also a small API available to represent and manage these tracks and the data needed to perform the playback of the text at the correct times.</p>
+<p><strong>Web Video Text Tracks Format</strong> (<strong>WebVTT</strong>) is a format for displaying timed text tracks (such as subtitles or captions) using the {{HTMLElement("track")}} element. The primary purpose of WebVTT files is to add text overlays to a {{HTMLElement("video")}}. WebVTT is a text based format, which must be encoded using {{Glossary("UTF-8")}}. Where you can use spaces you can also use tabs. There is also a small API available to represent and manage these tracks and the data needed to perform the playback of the text at the correct times.</p>
 
 <h2 id="WebVTT_files">WebVTT files</h2>
 
@@ -738,54 +738,6 @@ That's &lt;00:00:21.000&gt;amore
  </li>
 </ul>
 
-<h2 id="Interfaces">Interfaces</h2>
-
-<p>There are two interfaces or APIs used in WebVTT which are:</p>
-
-<h3 id="VTTCue_interface">VTTCue interface</h3>
-
-<p>It is used for providing an interface in Document Object Model API, where different attributes supported by it can be used to prepare and alter the cues in number of ways.</p>
-
-<p>Constructor is the first point for starting the Cue which is defined using the default constructor VTTCue(startTime, endTime, text) where starting time, ending time and text for cue can be adjusted. After that we can set the region for that particular cue to which this cue belongs using cue.region. Vertical, horizontal, line, lineAlign, Position, positionAlign, text, size and Align can be used to alter the cue and its formation, just like we can alter the objects form, shape and visibility in HTML using CSS. But the VTTCue interface is within the WebVTT provides the vast range of adjustment variables which can be used directly to alter the Cue. Following interface can be used to expose WebVTT cues in DOM API:</p>
-
-<pre class="brush: js">enum <dfn>AutoKeyword</dfn> { <dfn>"auto"</dfn> };
-enum <dfn>DirectionSetting</dfn> { <dfn>""</dfn> /* horizontal */, <dfn>"rl"</dfn>, <dfn>"lr"</dfn> };
-enum <dfn>LineAlignSetting</dfn> { <dfn>"start"</dfn>, <dfn>"center"</dfn>, <dfn>"end"</dfn> };
-enum <dfn>PositionAlignSetting</dfn> { <dfn>"line-left"</dfn>, <dfn>"center"</dfn>, <dfn>"line-right"</dfn>, <dfn>"auto"</dfn> };
-enum <dfn>AlignSetting</dfn> { <dfn>"start"</dfn>, <dfn>"center"</dfn>, <dfn>"end"</dfn>, <dfn>"left"</dfn>, <dfn>"right"</dfn> };
-[<a class="idl-code" href="https://w3c.github.io/webvtt/#dom-vttcue-vttcue" id="ref-for-dom-vttcue-vttcue-1">Constructor</a>(double <dfn>startTime</dfn>, double <dfn>endTime</dfn>, DOMString <dfn>text</dfn>)]
-interface <dfn>VTTCue</dfn> : <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#texttrackcue">TextTrackCue</a> {
-  attribute <a href="https://w3c.github.io/webvtt/#vttregion" id="ref-for-vttregion-1">VTTRegion</a>? <a class="idl-code" href="https://w3c.github.io/webvtt/#dom-vttcue-region" id="ref-for-dom-vttcue-region-1">region</a>;
-  attribute <a href="https://w3c.github.io/webvtt/#enumdef-directionsetting" id="ref-for-enumdef-directionsetting-1">DirectionSetting</a> <a class="idl-code" href="https://w3c.github.io/webvtt/#dom-vttcue-vertical" id="ref-for-dom-vttcue-vertical-1">vertical</a>;
-  attribute boolean <a class="idl-code" href="https://w3c.github.io/webvtt/#dom-vttcue-snaptolines" id="ref-for-dom-vttcue-snaptolines-2">snapToLines</a>;
-  attribute (double or <a href="https://w3c.github.io/webvtt/#enumdef-autokeyword" id="ref-for-enumdef-autokeyword-1">AutoKeyword</a>) <a class="idl-code" href="https://w3c.github.io/webvtt/#dom-vttcue-line" id="ref-for-dom-vttcue-line-2">line</a>;
-  attribute <a href="https://w3c.github.io/webvtt/#enumdef-linealignsetting" id="ref-for-enumdef-linealignsetting-1">LineAlignSetting</a> <a class="idl-code" href="https://w3c.github.io/webvtt/#dom-vttcue-linealign" id="ref-for-dom-vttcue-linealign-1">lineAlign</a>;
-  attribute (double or <a href="https://w3c.github.io/webvtt/#enumdef-autokeyword" id="ref-for-enumdef-autokeyword-2">AutoKeyword</a>) <a class="idl-code" href="https://w3c.github.io/webvtt/#dom-vttcue-position" id="ref-for-dom-vttcue-position-1">position</a>;
-  attribute <a href="https://w3c.github.io/webvtt/#enumdef-positionalignsetting" id="ref-for-enumdef-positionalignsetting-1">PositionAlignSetting</a> <a class="idl-code" href="https://w3c.github.io/webvtt/#dom-vttcue-positionalign" id="ref-for-dom-vttcue-positionalign-1">positionAlign</a>;
-  attribute double <a class="idl-code" href="https://w3c.github.io/webvtt/#dom-vttcue-size" id="ref-for-dom-vttcue-size-1">size</a>;
-  attribute <a href="https://w3c.github.io/webvtt/#enumdef-alignsetting" id="ref-for-enumdef-alignsetting-1">AlignSetting</a> <a class="idl-code" href="https://w3c.github.io/webvtt/#dom-vttcue-align" id="ref-for-dom-vttcue-align-1">align</a>;
-  attribute DOMString <a class="idl-code" href="https://w3c.github.io/webvtt/#dom-vttcue-text" id="ref-for-dom-vttcue-text-1">text</a>;
-  <a href="https://dom.spec.whatwg.org/#documentfragment">DocumentFragment</a> <a class="idl-code" href="https://w3c.github.io/webvtt/#dom-vttcue-getcueashtml" id="ref-for-dom-vttcue-getcueashtml-2">getCueAsHTML</a>();
-};</pre>
-
-<h3 id="VTT_Region_interface">VTT Region interface</h3>
-
-<p>This is the second interface in WebVTT API.</p>
-
-<p>The new keyword can be used for defining a new VTTRegion object which can then be used for containing the multiple cues. There are several properties of VTTRegion which are width, lines, regionAnchorX, RegionAnchorY, viewportAnchorX, viewportAnchorY and scroll that can be used to specify the look and feel of this VTT region. The interface code is given below which can be used to expose the WebVTT regions in DOM API:</p>
-
-<pre class="brush: js">enum <dfn>ScrollSetting</dfn> { <dfn>""</dfn> /* none */, <dfn>"up"</dfn> };
-[<a class="idl-code" href="https://w3c.github.io/webvtt/#dom-vttregion-vttregion" id="ref-for-dom-vttregion-vttregion-1">Constructor</a>]
-interface <dfn>VTTRegion</dfn> {
-  attribute double <a class="idl-code" href="https://w3c.github.io/webvtt/#dom-vttregion-width" id="ref-for-dom-vttregion-width-1">width</a>;
-  attribute long <a class="idl-code" href="https://w3c.github.io/webvtt/#dom-vttregion-lines" id="ref-for-dom-vttregion-lines-1">lines</a>;
-  attribute double <a class="idl-code" href="https://w3c.github.io/webvtt/#dom-vttregion-regionanchorx" id="ref-for-dom-vttregion-regionanchorx-1">regionAnchorX</a>;
-  attribute double <a class="idl-code" href="https://w3c.github.io/webvtt/#dom-vttregion-regionanchory" id="ref-for-dom-vttregion-regionanchory-1">regionAnchorY</a>;
-  attribute double <a class="idl-code" href="https://w3c.github.io/webvtt/#dom-vttregion-viewportanchorx" id="ref-for-dom-vttregion-viewportanchorx-1">viewportAnchorX</a>;
-  attribute double <a class="idl-code" href="https://w3c.github.io/webvtt/#dom-vttregion-viewportanchory" id="ref-for-dom-vttregion-viewportanchory-1">viewportAnchorY</a>;
-  attribute <a href="https://w3c.github.io/webvtt/#enumdef-scrollsetting" id="ref-for-enumdef-scrollsetting-1">ScrollSetting</a> <a class="idl-code" href="https://w3c.github.io/webvtt/#dom-vttregion-scroll" id="ref-for-dom-vttregion-scroll-1">scroll</a>;
-};</pre>
-
 <h2 id="Methods_and_properties">Methods and properties</h2>
 
 <p>The methods used in WebVTT are those which are used to alter the cue or region as the attributes for both interfaces are different. We can categorize them for better understanding relating to each interface in WebVTT:</p>
@@ -870,17 +822,13 @@ Sur les &lt;i.foreignphrase&gt;&lt;lang en&gt;playground&lt;/lang&gt;&lt;/i&gt;,
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
+<table>
  <tbody>
   <tr>
    <th>Specification</th>
-   <th>Status</th>
-   <th>Comment</th>
   </tr>
   <tr>
-   <td>{{SpecName("WebVTT")}}</td>
-   <td>{{Spec2("WebVTT")}}</td>
-   <td>Initial definition</td>
+   <td><a href="https://w3c.github.io/webvtt/">WebVTT: The Web Video Text Tracks Format</a></td>
   </tr>
  </tbody>
 </table>

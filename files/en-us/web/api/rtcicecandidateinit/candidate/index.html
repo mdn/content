@@ -17,11 +17,43 @@ browser-compat: api.RTCIceCandidateInit.candidate
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">The optional property <code><strong>candidate</strong></code> in the <strong>{{domxref("RTCIceCandidateInit")}}</strong> dictionary specifies the value of the {{domxref("RTCIceCandidate")}} object's {{domxref("RTCIceCandidate.candidate", "candidate")}} property.</span></p>
+<p>The optional property <code><strong>candidate</strong></code> in the <strong>{{domxref("RTCIceCandidateInit")}}</strong> dictionary specifies the value of the {{domxref("RTCIceCandidate")}} object's {{domxref("RTCIceCandidate.candidate", "candidate")}} property.</p>
 
 <h2 id="Value">Value</h2>
 
-<p>{{page("/en-US/docs/Web/API/RTCIceCandidate/candidate", "Value")}}</p>
+<!-- this is the value that would have been set in /en-US/docs/Web/API/RTCIceCandidate/candidate-->
+
+<p>A {{domxref("DOMString")}} describing the properties of the candidate, taken directly
+  from the {{Glossary("SDP")}} attribute <code>"candidate"</code>. The candidate string
+  specifies the network connectivity information for the candidate. If the
+  <code>candidate</code> is an empty string (<code>""</code>), the end of the candidate
+  list has been reached; this candidate is known as the "end-of-candidates" marker.</p>
+
+<p>The syntax of the candidate string is described in {{RFC(5245, "", 15.1)}}. For an
+  a-line (attribute line) that looks like this:</p>
+
+<pre>a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host</pre>
+
+<p>the corresponding <code>candidate</code> string's value will be
+  <code>"candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host"</code>.</p>
+
+<p>The {{Glossary("user agent")}} always prefers candidates with the highest
+  {{domxref("RTCIceCandidate.priority", "priority")}}, all else being equal. In the
+  example above, the priority is <code>2043278322</code>. The attributes are all separated
+  by a single space character, and are in a specific order. The complete list of
+  attributes for this example candidate is:</p>
+
+<ul>
+  <li>{{domxref("RTCIceCandidate.foundation", "foundation")}} = 4234997325</li>
+  <li>{{domxref("RTCIceCandidate.component", "component")}} = <code>"rtp"</code> (the
+    number 1 is encoded to this string; 2 becomes <code>"rtcp"</code>)</li>
+  <li>{{domxref("RTCIceCandidate.protocol", "protocol")}} = <code>"udp"</code></li>
+  <li>{{domxref("RTCIceCandidate.priority", "priority")}} = 2043278322</li>
+  <li>{{domxref("RTCIceCandidate/address", "ip")}} = <code>"192.168.0.56"</code></li>
+  <li>{{domxref("RTCIceCandidate.port", "port")}} = 44323</li>
+  <li>{{domxref("RTCIceCandidate.type", "type")}} = <code>"host"</code></li>
+</ul>
+
 
 <h2 id="Example">Example</h2>
 

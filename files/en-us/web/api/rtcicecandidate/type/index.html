@@ -9,6 +9,7 @@ tags:
   - RTCIceCandidate
   - Read-only
   - Reference
+  - Property
   - SDP
   - Type
   - WebRTC
@@ -17,21 +18,14 @@ browser-compat: api.RTCIceCandidate.type
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">The <strong>{{domxref("RTCIceCandidate")}}</strong>
-    interface's read-only <strong><code>type</code></strong> specifies the type of
-    candidate the object represents.</span></p>
+<p>The <strong>{{domxref("RTCIceCandidate")}}</strong> interface's read-only <strong><code>type</code></strong> specifies the type of candidate the object represents.</p>
 
-<p>The <code>type</code> field's value is set when the
-  {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate()")}} constructor is used.
-  You can't specify the value of <code>type</code> in the options object, but the address
-  is automatically extracted from the {{domxref("RTCIceCandidateInit.candidate",
-  "candidate")}} a-line, if it's formatted properly, being taken from its
-  <code>cand-type</code> field.</p>
+<p>The <code>type</code> field's value is set from the <code>candidateInfo</code> options object passed to the {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate()")}} constructor.
+  You can't specify the value of <code>type</code> directly in the options object, but its value is automatically extracted from the object's <code>candidate</code> a-line (the <code>cand-type</code> field), if it's formatted properly.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js">var <em>type</em> = <em>RTCIceCandidate</em>.type;</pre>
+<pre class="brush: js">var <em>type</em> = <em>RTCIceCandidate</em>.type;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -40,7 +34,7 @@ browser-compat: api.RTCIceCandidate.type
 <div id="value-list">
 <dl>
  <dt><code>host</code></dt>
- <dd>The candidate is a host candidate, whose IP address as specified in the {{domxref("RTCIceCandidate.ip")}} property is in fact the true address of the remote peer.</dd>
+ <dd>The candidate is a host candidate, whose IP address as specified in the {{domxref("RTCIceCandidate.address")}} property is in fact the true address of the remote peer.</dd>
  <dt><code>srflx</code></dt>
  <dd>The candidate is a server reflexive candidate; the <code>ip</code> indicates an intermediary address assigned by the {{Glossary("STUN")}} server to represent the candidate's peer anonymously.</dd>
  <dt><code>prflx</code></dt>
@@ -81,8 +75,7 @@ browser-compat: api.RTCIceCandidate.type
 
 <ul>
   <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API/Protocols">Introduction to WebRTC
-      protocols</a></li>
+  <li><a href="/en-US/docs/Web/API/WebRTC_API/Protocols">Introduction to WebRTC protocols</a></li>
   <li><a href="/en-US/docs/Web/API/WebRTC_API/Connectivity">WebRTC connectivity</a></li>
   <li>{{domxref("RTCIceCandidate.tcpType")}}</li>
 </ul>

@@ -34,11 +34,11 @@ browser-compat: api.MediaRecorder
  <dd>Returns the current state of the <code>MediaRecorder</code> object (<code>inactive</code>, <code>recording</code>, or <code>paused</code>.)</dd>
  <dt>{{domxref("MediaRecorder.stream")}} {{readonlyInline}}</dt>
  <dd>Returns the stream that was passed into the constructor when the <code>MediaRecorder</code> was created.</dd>
- <dt>{{domxref("MediaRecorder.ignoreMutedMedia")}}</dt>
+ <dt>{{domxref("MediaRecorder.ignoreMutedMedia")}} {{deprecated_inline}} {{non-standard_inline}}</dt>
  <dd>Indicates whether the <code>MediaRecorder</code> instance will record input when the input {{domxref("MediaStreamTrack")}} is muted. If this attribute is <code>false</code>, <code>MediaRecorder</code> will record silence for audio and black frames for video. The default is <code>false</code>.</dd>
- <dt>{{domxref("MediaRecorder.videoBitsPerSecond")}} {{readonlyInline}}</dt>
+ <dt>{{domxref("MediaRecorder.videoBitsPerSecond")}} {{readonlyInline}} {{experimental_inline}}</dt>
  <dd>Returns the video encoding bit rate in use. This may differ from the bit rate specified in the constructor (if it was provided).</dd>
- <dt>{{domxref("MediaRecorder.audioBitsPerSecond")}} {{readonlyInline}}</dt>
+ <dt>{{domxref("MediaRecorder.audioBitsPerSecond")}} {{readonlyInline}} {{experimental_inline}}</dt>
  <dd>Returns the audio encoding bit rate in use. This may differ from the bit rate specified in the constructor (if it was provided).</dd>
 </dl>
 

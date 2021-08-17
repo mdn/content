@@ -1,0 +1,45 @@
+---
+title: TextTrackCue.endTime
+slug: Web/API/TextTrackCue/endTime
+tags:
+  - API
+  - Property
+  - Reference
+  - endTime
+  - TextTrackCue
+browser-compat: api.TextTrackCue.endTime
+---
+<div>{{APIRef("WebVTT")}}</div>
+
+<p class="summary">The <strong><code>endTime</code></strong> property of the {{domxref("TextTrackCue")}} interface returns and sets the end time of the cue.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">let endTime = TextTrackCue.endTime;
+TextTrackCue.endTime = 10;</pre>
+
+<h3>Value</h3>
+<p>An integer representing the end time, in seconds.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In the following example a new {{domxref("VTTCue")}} (which inherits from <code>TextTrackCue</code>) is created starting at 0.1 second and ending at 0.9 seconds. The <code>endTime</code> property is then printed to the console.</p>
+
+<pre class="brush: js">let video = document.querySelector('video');
+let track = video.addTextTrack("captions", "Captions", "en");
+track.mode = "showing";
+
+let cue1 = new VTTCue(0.1, 0.9, 'Hildy!');
+console.log(cue1.endTime); // 0.9
+track.addCue(cue1);
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+

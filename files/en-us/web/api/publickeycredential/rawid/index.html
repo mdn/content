@@ -58,7 +58,7 @@ browser-compat: api.PublicKeyCredential.rawId
   ]
 };
 
-navigator.credentials.create({  publickey: options })
+navigator.credentials.create({  publicKey: options })
   .then(function (pubKeyCredential) {
     var rawId = pubKeyCredential.rawId;
     // Do something with rawId

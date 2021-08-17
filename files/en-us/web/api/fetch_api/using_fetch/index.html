@@ -35,9 +35,9 @@ tags:
   .then(data =&gt; console.log(data));
 </pre>
 
-<p>Here we are fetching a JSON file across the network and printing it to the console. The simplest use of <code>fetch()</code> takes one argument — the path to the resource you want to fetch — and returns a promise containing the response (a {{domxref("Response")}} object).</p>
+<p>Here we are fetching a JSON file across the network and printing it to the console. The simplest use of <code>fetch()</code> takes one argument — the path to the resource you want to fetch — and does not directly return the JSON response body but instead returns a promise that resolves with a {{domxref("Response")}} object.</p>
 
-<p>This is just an HTTP response, not the actual JSON. To extract the JSON body content from the response, we use the {{domxref("Response.json()")}} method.</p>
+<p>The {{domxref("Response")}} object, in turn, does not directly contain the actual JSON response body but is instead a representation of the entire HTTP response. So, to extract the JSON body content from the {{domxref("Response")}} object, we use the {{domxref("Response.json()", "json()")}} method, which returns a second promise that resolves with the result of parsing the response body text as JSON.</p>
 
 <div class="notecard note">
   <h4>Note</h4>
@@ -379,7 +379,7 @@ try {
 <ul>
  <li>{{domxref("Response.status")}} — An integer (default value 200) containing the response status code.</li>
  <li>{{domxref("Response.statusText")}} — A string (default value ""), which corresponds to the HTTP status code message. Note that HTTP/2 <a href="https://fetch.spec.whatwg.org/#concept-response-status-message">does not support</a> status messages.</li>
- <li>{{domxref("Response.ok")}} — seen in use above, this is a shorthand for checking that status is in the range 200-299 inclusive. This returns a {{jsxref("Boolean")}}.</li>
+ <li>{{domxref("Response.ok")}} — seen in use above, this is a shorthand for checking that status is in the range 200-299 inclusive. This returns a boolean value.</li>
 </ul>
 
 <p>They can also be created programmatically via JavaScript, but this is only really useful in {{domxref("Service_Worker_API", "ServiceWorkers")}}, when you are providing a custom response to a received request using a {{domxref("FetchEvent.respondWith","respondWith()")}} method:</p>

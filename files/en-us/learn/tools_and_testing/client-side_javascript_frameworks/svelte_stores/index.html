@@ -424,7 +424,7 @@ const removeCompletedTodos = () =&gt; {
 </ol>
 
 <p>Now we have to find a way to persist these todos. We could implement some code in our <code>App.svelte</code> component to read and save our todos to <a href="/en-US/docs/Web/API/Web_Storage_API">web storage</a> or to a web service.<br>
- But wouldn't be better if we could develop some generic store that allows us to persist its content? This would allow us to use it just like any other store, and abstract away the persistence mechanism. We could create a store that syncs its content to web storage, and later develop another one that syncs against a web service. Switching between them would be trivial and we wouldn't have to touch <code>App.svelte</code> at all.</p>
+ But wouldn't it be better if we could develop some generic store that allows us to persist its content? This would allow us to use it just like any other store, and abstract away the persistence mechanism. We could create a store that syncs its content to web storage, and later develop another one that syncs against a web service. Switching between them would be trivial and we wouldn't have to touch <code>App.svelte</code> at all.</p>
 
 <h3 id="Saving_our_todos">Saving our todos</h3>
 

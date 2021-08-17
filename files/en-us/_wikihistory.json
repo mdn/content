@@ -2823,15 +2823,6 @@
       "Jesse"
     ]
   },
-  "Glossary/GIJ": {
-    "modified": "2019-01-16T20:27:05.268Z",
-    "contributors": [
-      "klez",
-      "mbuttler",
-      "maybe",
-      "Jeremie"
-    ]
-  },
   "Glossary/GPL": {
     "modified": "2019-03-23T23:03:44.532Z",
     "contributors": [
@@ -34356,37 +34347,6 @@
       "fscholz"
     ]
   },
-  "Web/API/ConstrainBoolean": {
-    "modified": "2020-10-15T21:49:41.944Z",
-    "contributors": [
-      "sideshowbarker",
-      "lucian95",
-      "Sheppy"
-    ]
-  },
-  "Web/API/ConstrainDOMString": {
-    "modified": "2020-10-18T18:07:45.437Z",
-    "contributors": [
-      "taylorjdawson",
-      "sideshowbarker",
-      "lucian95",
-      "Sheppy"
-    ]
-  },
-  "Web/API/ConstrainDouble": {
-    "modified": "2020-10-15T21:49:41.625Z",
-    "contributors": [
-      "sideshowbarker",
-      "lucian95",
-      "Sheppy"
-    ]
-  },
-  "Web/API/ConstrainULong": {
-    "modified": "2020-10-15T22:26:33.190Z",
-    "contributors": [
-      "sideshowbarker"
-    ]
-  },
   "Web/API/Constraint_validation": {
     "modified": "2019-12-02T00:01:55.418Z",
     "contributors": [
@@ -35154,17 +35114,6 @@
     "contributors": [
       "chrisdavidmills",
       "gingerchris"
-    ]
-  },
-  "Web/API/DOMObject": {
-    "modified": "2019-03-23T23:59:07.618Z",
-    "contributors": [
-      "Sheppy",
-      "Sebastianz",
-      "teoli",
-      "kscarfone",
-      "ethertank",
-      "Brettz9"
     ]
   },
   "Web/API/DOMParser": {
@@ -37784,25 +37733,6 @@
       "Matej Lednar"
     ]
   },
-  "Web/API/Document/documentURIObject": {
-    "modified": "2020-10-15T21:04:21.490Z",
-    "contributors": [
-      "mfuji09",
-      "mfluehr",
-      "Tigt",
-      "fscholz",
-      "teoli",
-      "MHasan",
-      "kscarfone",
-      "nehasharma",
-      "Sheppy",
-      "ziyunfei",
-      "Mgjbot",
-      "Shoot",
-      "Nickolay",
-      "Waldo"
-    ]
-  },
   "Web/API/Document/domain": {
     "modified": "2020-11-09T22:06:15.283Z",
     "contributors": [
@@ -39286,26 +39216,6 @@
       "wbamberg"
     ]
   },
-  "Web/API/Document/popupNode": {
-    "modified": "2020-10-15T21:11:12.992Z",
-    "contributors": [
-      "wbamberg",
-      "ExE-Boss",
-      "fscholz",
-      "valtlai",
-      "teoli",
-      "Sebastianz",
-      "MHasan",
-      "kscarfone",
-      "gurdev_singh",
-      "Sheppy",
-      "Enn",
-      "Neil",
-      "Waldo",
-      "Nickolay",
-      "SylvainPasche"
-    ]
-  },
   "Web/API/Document/preferredStyleSheetSet": {
     "modified": "2020-10-15T21:13:11.203Z",
     "contributors": [
@@ -39775,24 +39685,6 @@
       "Ptak82",
       "Dria",
       "JesseW"
-    ]
-  },
-  "Web/API/Document/tooltipNode": {
-    "modified": "2020-10-15T21:04:24.259Z",
-    "contributors": [
-      "ExE-Boss",
-      "mfluehr",
-      "Tigt",
-      "fscholz",
-      "stevenwdv",
-      "teoli",
-      "MHasan",
-      "kscarfone",
-      "Prachi_Dighe",
-      "Sheppy",
-      "ziyunfei",
-      "Waldo",
-      "SylvainPasche"
     ]
   },
   "Web/API/Document/touchcancel_event": {
@@ -40510,14 +40402,6 @@
       "Andreas Wuest",
       "Nickolay",
       "Gor1"
-    ]
-  },
-  "Web/API/DoubleRange": {
-    "modified": "2020-10-15T21:49:40.615Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "Sheppy"
     ]
   },
   "Web/API/DragEvent": {
@@ -52059,14 +51943,6 @@
     "modified": "2020-10-15T22:23:10.524Z",
     "contributors": [
       "mfuji09",
-      "sideshowbarker",
-      "Sheppy"
-    ]
-  },
-  "Web/API/HTMLImageElement/lowSrc": {
-    "modified": "2020-11-24T11:09:18.826Z",
-    "contributors": [
-      "foolip",
       "sideshowbarker",
       "Sheppy"
     ]
@@ -71462,12 +71338,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/RTCIceGathererState": {
-    "modified": "2020-10-15T22:06:40.949Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
   "Web/API/RTCIceParameters": {
     "modified": "2020-10-15T22:06:42.205Z",
     "contributors": [
@@ -71482,12 +71352,6 @@
   },
   "Web/API/RTCIceParameters/usernameFragment": {
     "modified": "2020-10-15T22:06:44.472Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/RTCIceProtocol": {
-    "modified": "2020-10-15T22:06:16.004Z",
     "contributors": [
       "Sheppy"
     ]
@@ -71545,12 +71409,6 @@
     "contributors": [
       "sideshowbarker",
       "fscholz",
-      "Sheppy"
-    ]
-  },
-  "Web/API/RTCIceTcpCandidateType": {
-    "modified": "2020-10-15T22:06:15.898Z",
-    "contributors": [
       "Sheppy"
     ]
   },
@@ -80784,23 +80642,6 @@
       "jpmedley"
     ]
   },
-  "Web/API/Text/isElementContentWhitespace": {
-    "modified": "2020-10-15T21:06:49.084Z",
-    "contributors": [
-      "RainSlide",
-      "nakhodkiin",
-      "sideshowbarker",
-      "fscholz",
-      "teoli",
-      "afreen",
-      "Reachmeatshivam",
-      "Sheppy",
-      "ziyunfei",
-      "Ruakh",
-      "Jürgen Jeka",
-      "bcombee"
-    ]
-  },
   "Web/API/Text/replaceWholeText": {
     "modified": "2020-10-15T21:10:09.962Z",
     "contributors": [
@@ -81635,20 +81476,6 @@
       "jtyjty99999"
     ]
   },
-  "Web/API/TouchList/identifiedTouch": {
-    "modified": "2020-10-15T21:07:43.096Z",
-    "contributors": [
-      "bershanskiy",
-      "mfluehr",
-      "fscholz",
-      "coagmano",
-      "Sheppy",
-      "AFBarstow",
-      "MattBrubeck",
-      "jsx",
-      "kscarfone"
-    ]
-  },
   "Web/API/TouchList/item": {
     "modified": "2020-10-15T21:11:11.901Z",
     "contributors": [
@@ -82320,12 +82147,6 @@
       "Shaver",
       "JesseW",
       "cbiesinger"
-    ]
-  },
-  "Web/API/ULongRange": {
-    "modified": "2020-10-15T22:26:35.933Z",
-    "contributors": [
-      "sideshowbarker"
     ]
   },
   "Web/API/URL": {
@@ -84242,14 +84063,6 @@
     "modified": "2020-10-15T21:52:42.341Z",
     "contributors": [
       "fscholz"
-    ]
-  },
-  "Web/API/WEBGL_compressed_texture_atc": {
-    "modified": "2020-10-15T21:43:40.739Z",
-    "contributors": [
-      "fscholz",
-      "nmve",
-      "teoli"
     ]
   },
   "Web/API/WEBGL_compressed_texture_etc": {
@@ -104393,14 +104206,6 @@
       "gabriel_ivanica",
       "Sheppy",
       "ethertank"
-    ]
-  },
-  "Web/CSS/Tools/Linear-gradient_Generator": {
-    "modified": "2020-07-07T12:40:33.079Z",
-    "contributors": [
-      "wbamberg",
-      "gabriel_ivanica",
-      "teoli"
     ]
   },
   "Web/CSS/Tutorials": {
@@ -153064,19 +152869,6 @@
       "jswisher"
     ]
   },
-  "Web/Progressive_web_apps/Developer_guide": {
-    "modified": "2020-09-06T08:17:28.701Z",
-    "contributors": [
-      "Deng_C1",
-      "Sheppy"
-    ]
-  },
-  "Web/Progressive_web_apps/Developer_guide/Installing": {
-    "modified": "2020-04-02T10:35:45.217Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
   "Web/Progressive_web_apps/Installable_PWAs": {
     "modified": "2020-08-25T10:28:50.283Z",
     "contributors": [
@@ -153087,6 +152879,12 @@
       "ExE-Boss",
       "end3r",
       "jswisher"
+    ]
+  },
+  "Web/Progressive_web_apps/Installing": {
+    "modified": "2020-04-02T10:35:45.217Z",
+    "contributors": [
+      "Sheppy"
     ]
   },
   "Web/Progressive_web_apps/Introduction": {

@@ -33,7 +33,7 @@ tags:
 <ul>
  <li>Choose <strong>Accessibility</strong> in the <strong>Tools &gt; Web Developer</strong> menu.</li>
  <li>Select the <strong>Accessibility</strong> tab in the Developer Tools toolbox.</li>
- <li>Right-/<kbd>Ctrl</kbd>- click in the main browser window, and choose <strong>Inspect Accessibility Properties</strong> in the context menu.</li>
+ <li>Right-click in the main browser window, and choose <strong>Inspect Accessibility Properties</strong> in the context menu.</li>
  <li>Right-click an item in the HTML pane of the <a href="/en-US/docs/Tools/Page_Inspector">Page Inspector</a>, and choose <strong>Show Accessibility Properties</strong> in the context menu.</li>
 </ul>
 
@@ -51,7 +51,7 @@ tags:
 
 <p>The enabled accessibility panel looks like so:</p>
 
-<p><img alt='Shows issue checker toolbar with "contrast and "text label" options' src="accessibility-inspector-tabbing_order.png" style="border-style: solid; border-width: 1px;"></p>
+<p><img alt='Shows issue checker toolbar with "contrast" and "text label" options' src="accessibility-inspector-tabbing_order.png" style="border-style: solid; border-width: 1px;"></p>
 
 <p>On the left-hand side, there is a tree diagram representing all the items in the accessibility tree for the current page. Items with nested children have arrows that can be clicked to reveal the children, so you can move deeper into the hierarchy. Each item has two properties listed:</p>
 
@@ -87,19 +87,19 @@ tags:
 <p>The <em>Accessibility</em> tab is fully keyboard-accessible:</p>
 
 <ul>
- <li>You can tab between <em>Check for Issues</em>, <em>Simulate</em>, <em>Show tabbing order,</em> and left and right panels.</li>
+ <li>You can tab between <em>Check for Issues</em>, <em>Simulate</em>, <em>Show tabbing order</em>, and left and right panels.</li>
  <li>When one of the panels is focused, you can move the focus up and down items using the up and down arrow keys, and use the left and right arrow keys to expand and collapse expandable rows (e.g., different hierarchy levels of the accessibility tree).</li>
 </ul>
 
 <h3 id="Print_accessibility_tree_to_JSON">Print accessibility tree to JSON</h3>
 
-<p>You can print the contents of the accessibility tree to json by right-clicking on an entry in the Accessibility tab and selecting <strong>Print to JSON:</strong></p>
+<p>You can print the contents of the accessibility tree to JSON by right-clicking on an entry in the Accessibility tab and selecting <strong>Print to JSON:</strong></p>
 
 <p><strong><img alt="Print to JSON right-click menu in left panel" src="accessibility-inspector-print_tree_to_json.png" style="border-style: solid; border-width: 1px;"></strong></p>
 
 <p>When you do, you will get a new tab with the selected accessibility tree loaded into the JSON viewer:</p>
 
-<p><img alt="" src="accessibility_json.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="Accessibility tree loaded in new tab JSON viewer" src="accessibility_json.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Once opened, you can save or copy the data as necessary. The JSON viewer can also show you the raw JSON data on a separate tab in the viewer.</p>
 
@@ -126,11 +126,11 @@ tags:
 <p>You can check for accessibility issues by clicking the drop-down menu next to: <strong>Check for issues</strong>. The available menu items include:</p>
 
 <ul>
- <li><strong>None</strong> — Don't show the possible list of issues</li>
- <li><strong>All Issues</strong> — Check for all types of issues</li>
- <li><strong>Contrast</strong> — Check for <a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast">issues with visual contrast</a></li>
- <li><strong>Keyboard</strong> — Check for <a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Keyboard">issues with navigating via a keyboard</a></li>
- <li><strong>Text Labels</strong> — Check for <a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Text_labels_and_names">issues with missing text labels</a></li>
+ <li><strong>None</strong> — Don't show the possible list of issues.</li>
+ <li><strong>All Issues</strong> — Check for all types of issues.</li>
+ <li><strong>Contrast</strong> — Check for <a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast">issues with visual contrast.</a></li>
+ <li><strong>Keyboard</strong> — Check for <a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Keyboard">issues with navigating via a keyboard.</a></li>
+ <li><strong>Text Labels</strong> — Check for <a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Text_labels_and_names">issues with missing text labels.</a></li>
 </ul>
 
 <p>When you select one of the menu items, Firefox scans your document for the type of issues you selected. Depending on the size and complexity of your document, this may take a few seconds. When the scan is complete, the left side of the Accessibility Inspector panel displays only the items that have that type of issue. In the right side of the panel, the <em>Checks</em> subpanel lists the specific issue with the selected node. For each type of issue, there is a <strong>Learn more</strong> link to further information on <em>MDN Web Docs</em> about the issue.</p>
@@ -152,7 +152,7 @@ tags:
 
 <h3 id="Context_menu_options">Context menu options</h3>
 
-<p>An extra context menu option is added, both for the general context menu on the web page when right/<kbd>Ctrl</kbd> + clicking a UI feature, and the HTML pane of the page inspector when right/<kbd>Ctrl</kbd> + clicking a DOM element:</p>
+<p>An extra context menu option is added, both for the general context menu on the web page when right-clicking a UI feature, and the HTML pane of the page inspector when right-clicking a DOM element:</p>
 
 <p><img alt="context menu in the browser viewport, with a highlighted option: Inspect Accessibility Properties" src="web-page-context-menu.png" style="border-style: solid; border-width: 1px;"></p>
 
@@ -170,7 +170,7 @@ tags:
 
 <p>In the following example, you can see that the image has been highlighted and its role, graphic, name, "Road, Asphalt, Sky, Clouds, Fall", and the color contrast ratio, 3.46, appears in the information bar above it.</p>
 
-<p><img alt="" src="image_accessibility.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
+<p><img alt='image has been highlighted and graphic, "Road, Asphalt, Sky, Clouds, Fall", and Contrast:3.46 warning sign, appears in the information bar above it' src="image_accessibility.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
 
 <h4 id="Color_contrast">Color contrast</h4>
 
@@ -178,13 +178,13 @@ tags:
 
 <p>For example:</p>
 
-<p><img alt="A screenshot of color contrast highlighter where text contrast if below the AA WCAG threshold." src="screen_shot_2019-01-29_at_10.11.13.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="A screenshot of color contrast highlighter with warning sign where text contrast if below the AA WCAG threshold." src="screen_shot_2019-01-29_at_10.11.13.png" style="display: block; margin: 0px auto;"></p>
 
 <p>The color contrast in the image above is 2.86, so potentially not enough contrast to make it easy to read. Notice the warning symbol that indicates that the contrast fails to meet the acceptable contrast ratio.</p>
 
 <p>As of Firefox 65, viewing this information for some foreground text that has a complex background image (e.g. a gradient) gives you a range of color contrast values. For example:</p>
 
-<p><img alt="A screenshot of color contrast highlighter where for text over gradient background with contrast satisfying the AAA WCAG guidelines." src="screen_shot_2019-01-29_at_10.21.07.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="A screenshot of color contrast highlighter with checked sign where for text over gradient background with contrast satisfying the AAA WCAG guidelines." src="screen_shot_2019-01-29_at_10.21.07.png" style="display: block; margin: 0px auto;"></p>
 
 <p>In this example, the contrast ranges from 4.72 to 5.98. The numbers are followed by AAA and a checkmark in green, indicating that the large text has a contrast ratio of 4.5:1 or more, meeting the criteria for enhanced contrast, or Level AAA.</p>
 
@@ -196,7 +196,7 @@ tags:
 
 <p>The accessibility tab element picker looks slightly different from the Page Inspector HTML pane picker, as shown below:</p>
 
-<p><img alt="highlighted dom inspector picker button, with a tooltip saying Pick an element from the page" src="dom-inspector-picker.png" style="border-style: solid; border-width: 1px;"></p>
+<p><img alt="highlighted DOM inspector picker button, with a tooltip saying Pick an element from the page" src="dom-inspector-picker.png" style="border-style: solid; border-width: 1px;"></p>
 
 <p><img alt="highlighted accessibility inspector button, with a tooltip saying Pick accessible object from the page" src="accessibility-inspector-picker.png" style="border-style: solid; border-width: 1px;"></p>
 

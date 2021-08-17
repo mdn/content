@@ -116,8 +116,8 @@ A numeral system is a system for expressing numbers. The `numberingSystem` prope
 In the [Unicode locale string spec](https://www.unicode.org/reports/tr35/), the values that `numberingSystem` represents correspond to the key `nu`. `nu` is considered a locale string "extension subtag". These subtags add additional data about the locale, and are added to locale identifiers by first adding the `-u` key. To set the `numberingSystem` value via the string argument to the {{jsxref("Intl/Locale/Locale", "Locale")}} constructor, first add the `-u` extension key. Next, add the `-nu` extension key to indicate that you are adding a value for `numberingSystem`. Finally, add the `numberingSystem` value to the string.
 
 ```js
-let numberingSystemViaStr = new Intl.Locale("fr-Latn-FR-u-nu-mong");
-console.log(numberingSystemStr.numberingSystem); // Prints "mong"
+let locale = new Intl.Locale("fr-Latn-FR-u-nu-mong");
+console.log(locale.numberingSystem); // Prints "mong"
 ```
 
 ### Setting the `numberingSystem` value via the configuration object argument
@@ -125,8 +125,8 @@ console.log(numberingSystemStr.numberingSystem); // Prints "mong"
 The {{jsxref("Intl/Locale/Locale", "Intl.Locale")}} constructor has an optional configuration object argument, which can be used to pass extension types. Set the `numberingSystem` property of the configuration object to your desired `numberingSystem` value and pass it into the constructor.
 
 ```js
-let numberingSystemViaObj= new Intl.Locale("en-Latn-US", {numberingSystem: "latn"});
-console.log(us12hour.numberingSystem); // Prints "latn"
+let locale = new Intl.Locale("en-Latn-US", { numberingSystem: "latn" });
+console.log(locale.numberingSystem); // Prints "latn"
 ```
 
 ## Specifications

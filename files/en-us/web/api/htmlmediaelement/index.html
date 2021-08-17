@@ -28,7 +28,7 @@ browser-compat: api.HTMLMediaElement
  <dd>A {{domxref("AudioTrackList")}} that lists the {{domxref("AudioTrack")}} objects contained in the element.</dd>
  <dt>{{domxref("HTMLMediaElement.autoplay")}}</dt>
  <dd>
- <p>A {{jsxref("Boolean")}} that reflects the {{htmlattrxref("autoplay", "video")}} HTML attribute, indicating whether playback should automatically begin as soon as enough media is available to do so without interruption.</p>
+ <p>A boolean value that reflects the {{htmlattrxref("autoplay", "video")}} HTML attribute, indicating whether playback should automatically begin as soon as enough media is available to do so without interruption.</p>
 
  <div class="note"><strong>Note</strong>: Automatically playing audio when the user doesn't expect or desire it is a poor user experience and should be avoided in most cases, though there are exceptions. See the <a href="/en-US/docs/Web/Media/Autoplay_guide">Autoplay guide for media and Web Audio APIs</a> for more information. Keep in mind that browsers may ignore autoplay requests, so you should ensure that your code isn't dependent on autoplay working.</div>
  </dd>
@@ -100,9 +100,9 @@ browser-compat: api.HTMLMediaElement
 
 <dl>
  <dt>{{domxref("HTMLMediaElement.onencrypted")}}</dt>
- <dd>Sets the {{domxref('EventHandler')}} called when the media is encrypted.</dd>
+ <dd>Sets the event handler called when the media is encrypted.</dd>
  <dt>{{domxref("HTMLMediaElement.onwaitingforkey")}}</dt>
- <dd>Sets the {{domxref('EventHandler')}} called when playback is blocked while waiting for an encryption key.</dd>
+ <dd>Sets the event handler called when playback is blocked while waiting for an encryption key.</dd>
 </dl>
 
 <h2 id="Obsolete_attributes">Obsolete properties</h2>
@@ -134,7 +134,7 @@ browser-compat: api.HTMLMediaElement
  <dt>{{domxref("HTMLMediaElement.onmozinterruptbegin")}} {{non-standard_inline}} {{deprecated_inline}}</dt>
  <dd>Sets the <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> called when the media element is interrupted because of the Audio Channel manager. This was Firefox-specific, having been implemented for Firefox OS, and was removed in Firefox 55.</dd>
  <dt>{{domxref("HTMLMediaElement.onmozinterruptend")}} {{non-standard_inline}} {{deprecated_inline}}</dt>
- <dd>Sets the {{domxref('EventHandler')}} called when the interruption is concluded. This was Firefox-specific, having been implemented for Firefox OS, and was removed in Firefox 55.</dd>
+ <dd>Sets the event handler called when the interruption is concluded. This was Firefox-specific, having been implemented for Firefox OS, and was removed in Firefox 55.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>

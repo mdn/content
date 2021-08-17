@@ -26,19 +26,30 @@ browser-compat: api.File.name
 <h2 id="Example">Example</h2>
 
 <pre class="brush: html">&lt;input type="file" multiple onchange="processSelectedFiles(this)"&gt;
+
+&lt;div id="output"&gt;&lt;/div&gt;
 </pre>
 
-<pre class="brush: js">function processSelectedFiles(fileInput) {
-  var files = fileInput.files;
-
-  for (var i = 0; i &lt; files.length; i++) {
-    alert("Filename " + files[i].name);
+<pre class="brush: js">const output = document.querySelector("#output");
+function processSelectedFiles(fileInput) {
+  let files = fileInput.files;
+  output.textContent = "List of Selected Files:";
+  
+  for (let i = 0; i &lt; files.length; i++) {
+    output.textContent += `\nFilename: ${files[i].name}`;
   }
 }</pre>
 
-<p>Try the results out below:</p>
+<pre class="brush: css hidden">
+#output{
+  padding: 0.5em 0;
+  white-space: pre;
+}
+</pre>
 
-<p>{{ EmbedLiveSample('Example', 300, 50) }}</p>
+<h4 id="Result">Result</h4>
+
+<p>{{ EmbedLiveSample('Example', 300, 100) }}</p>
 
 <h2 id="Specifications">Specifications</h2>
 

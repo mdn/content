@@ -12,7 +12,7 @@ tags:
 ---
 <p>{{DefaultAPISidebar("Touch Events")}}</p>
 
-<p><span class="seoSummary">To provide quality support for touch-based user interfaces, touch events offer the ability to interpret finger (or stylus) activity on touch screens or trackpads.</span></p>
+<p>To provide quality support for touch-based user interfaces, touch events offer the ability to interpret finger (or stylus) activity on touch screens or trackpads.</p>
 
 <p>The touch events interfaces are relatively low-level APIs that can be used to support application-specific multi-touch interactions such as a two-finger gesture. A multi-touch interaction starts when a finger (or stylus) first touches the contact surface. Other fingers may subsequently touch the surface and optionally move across the touch surface. The interaction ends when the fingers are removed from the surface. During this interaction, an application receives touch events during the start, move, and end phases.</p>
 
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", startup);</pre>
 <pre class="brush: js">var ongoingTouches = [];
 </pre>
 
-<p>When a {{Event("touchstart")}} event occurs, indicating that a new touch on the surface has occurred, the <code>handleStart()</code> function below is called.</p>
+<p>When a {{domxref("Element/touchstart_event", "touchstart")}} event occurs, indicating that a new touch on the surface has occurred, the <code>handleStart()</code> function below is called.</p>
 
 <pre class="brush: js">function handleStart(evt) {
   evt.preventDefault();
@@ -256,7 +256,7 @@ document.addEventListener("DOMContentLoaded", startup);</pre>
 
 <h3 id="Handling_clicks">Handling clicks</h3>
 
-<p>Since calling <code>preventDefault()</code> on a {{event("touchstart")}} or the first {{domxref("Element/touchmove_event", "touchmove")}} event of a series prevents the corresponding mouse events from firing, it's common to call <code>preventDefault()</code> on <code>touchmove</code> rather than <code>touchstart</code>. That way, mouse events can still fire and things like links will continue to work. Alternatively, some frameworks have taken to refiring touch events as mouse events for this same purpose. (This example is oversimplified and may result in strange behavior. It is only intended as a guide.)</p>
+<p>Since calling <code>preventDefault()</code> on a {{domxref("Element/touchstart_event", "touchstart")}} or the first {{domxref("Element/touchmove_event", "touchmove")}} event of a series prevents the corresponding mouse events from firing, it's common to call <code>preventDefault()</code> on <code>touchmove</code> rather than <code>touchstart</code>. That way, mouse events can still fire and things like links will continue to work. Alternatively, some frameworks have taken to refiring touch events as mouse events for this same purpose. (This example is oversimplified and may result in strange behavior. It is only intended as a guide.)</p>
 
 <pre class="brush: js">function onTouch(evt) {
   evt.preventDefault();
@@ -295,24 +295,13 @@ document.addEventListener("DOMContentLoaded", startup);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
+<table>
   <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
+   <th>Specification</th>
   </tr>
   <tr>
-   <td>{{SpecName('Touch Events 2', '#touch-interface', 'Touch')}}</td>
-   <td>{{Spec2('Touch Events 2')}}</td>
-   <td>Added <code>radiusX</code>, <code>radiusY</code>, <code>rotationAngle</code>, <code>force</code> properties</td>
+   <td><a href="https://w3c.github.io/touch-events/">Touch Events</a></td>
   </tr>
-  <tr>
-   <td>{{SpecName('Touch Events', '#touch-interface', 'Touch')}}</td>
-   <td>{{Spec2('Touch Events')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
