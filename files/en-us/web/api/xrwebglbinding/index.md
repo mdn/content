@@ -24,6 +24,8 @@ The **`XRWebGLBinding`** interface is used to create layers that have a GPU bac
 
 - {{domxref("XRWebGLBinding.getDepthInformation()")}}
   - : Returns an {{domxref("XRWebGLDepthInformation")}} object containing WebGL depth information.
+- {{domxref("XRWebGLBinding.getReflectionCubeMap()")}}
+  - : Returns a {{domxref("WebGLTexture")}} object containing a reflection cube map texture.
 
 ## Specifications
 
