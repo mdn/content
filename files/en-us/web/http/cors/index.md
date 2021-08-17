@@ -341,11 +341,19 @@ CORS-preflight requests must never include credentials. The _response_ to a pref
 
 #### Credentialed requests and wildcards
 
-When responding to a credentialed request, the server **must** specify an origin in the value of the `Access-Control-Allow-Origin` header, instead of specifying the "`*`" wildcard.
+When responding to a credentialed request:
 
-Because the request headers in the above example include a `Cookie` header, the request would fail if the value of the `Access-Control-Allow-Origin` header was "\*". But it does not fail: Because the value of the `Access-Control-Allow-Origin` header is "`https://foo.example`" (an actual origin) rather than the "`*`" wildcard, the credential-cognizant content is returned to the invoking web content.
+- The server **must not** specify the "`*`" wildcard for the `Access-Control-Allow-Origin` response-header value, but must instead specify an explicit origin; for example: `Access-Control-Allow-Origin: https://example.com`
 
-Note that the `Set-Cookie` response header in the example above also sets a further cookie. In case of failure, an exception—depending on the API used—is raised.
+- The server **must not** specify the "`*`" wildcard for the `Access-Control-Allow-Headers` response-header value, but must instead specify an explicit list of header names; for example, `Access-Control-Allow-Headers: X-PINGOTHER, Content-Type`
+
+- The server **must not** specify the "`*`" wildcard for the `Access-Control-Allow-Methods` response-header value, but must instead specify an explicit list of method names; for example, `Access-Control-Allow-Methods: POST, GET`
+
+So if a request includes a `Cookie` header (the most-common type of credentials) and the response includes an `Access-Control-Allow-Origin: *` header (that is, with the wildcard), then the browser will block access to the response, and report a CORS error in the devtools console.
+
+But if a request includes a `Cookie` header and the response includes, for example, an `Access-Control-Allow-Origin: https://example.com` header (that is, an actual origin, rather than the wildcard), then the browser will allow access to the response from the specified origin.
+
+Also note that any `Set-Cookie` response header in a response would not set a cookie if the `Access-Control-Allow-Origin` value in that response is the "`*`" wildcard rather an actual origin.
 
 #### Third-party cookies
 
