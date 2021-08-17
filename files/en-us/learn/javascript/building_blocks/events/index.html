@@ -240,9 +240,7 @@ myElement.addEventListener('click', functionB);</pre>
 
 <h3 id="What_mechanism_should_I_use">What mechanism should I use?</h3>
 
-<p>You shouldn't use the HTML event handler attributes — those are outdated, and bad practice, as mentioned above.</p>
-
-<p>So for handling events, there are two methods you should consider:</p>
+<p>There are only two methods you should consider for handling events:</p>
 
 <ul>
  <li><a href="/en-US/docs/Web/Events/Event_handlers#using_onevent_properties">Event handler properties</a> have less power and options, but are easier to use. So as you begin learning, you might want to start with these.</li>
@@ -261,6 +259,8 @@ myElement.addEventListener('click', functionB);</pre>
 <pre class="brush: js">element.onclick = function1;
 element.onclick = function2;
 etc.</pre>
+
+<p>You should never use the HTML event handler attributes — those are outdated, and using them is bad practice.</p>
 
 <h2 id="Other_event_concepts">Other event concepts</h2>
 
