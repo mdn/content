@@ -110,8 +110,8 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     leading dots in domain names (`.example.com`) are ignored.
 
     Multiple host/domain values are _not_ allowed,
-    but if a domain _is_ specified, t
-    hen subdomains are always included.
+    but if a domain _is_ specified,
+    then subdomains are always included.
 
 - `Path=<path-value>` {{optional_inline}}
 
