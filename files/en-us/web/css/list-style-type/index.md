@@ -15,7 +15,7 @@ The **`list-style-type`** [CSS](/en-US/docs/Web/CSS) property sets the marker (s
 
 {{EmbedInteractiveExample("pages/css/list-style-type.html")}}
 
-The [color](/en-US/docs/CSS/color_value) of the marker will be the same as the computed color of the element it applies to.
+The [color](/en-US/docs/Web/CSS/color_value) of the marker will be the same as the computed color of the element it applies to.
 
 Only a few elements ({{HTMLElement("li")}} and {{HTMLElement("summary")}}) have a default value of `display: list-item`. However, the `list-style-type` property may be applied to any element whose {{cssxref("display")}} value is set to `list-item`. Moreover, because this property is inherited, it can be set on a parent element (commonly {{HTMLElement("ol")}} or {{HTMLElement("ul")}}) to make it apply to all list items.
 
@@ -47,11 +47,11 @@ list-style-type: revert;
 list-style-type: unset;
 ```
 
-The list-style-type property may be defined as any one of:
+The `list-style-type` property may be defined as any one of:
 
 - a `<custom-ident>` value
 - a `symbols()` value
-- a `><string>` value
+- a `<string>` value
 - the keyword `none`.
 
 Note that:
