@@ -41,7 +41,7 @@ navigator.mediaDevices.selectAudioOutput(options)
         <p><strong>Note:</strong> A user agent may choose to skip prompting the user if a specified non-null id was previously exposed to the user by <code>selectAudioOutput()</code> in an earlier session. 
           In this case the user agent may simply resolve with this device id, or a new id for the same device if it has changed.</p>
 
-        <p>This intended for applications that want to use persisted device ids.
+        <p>This is intended for applications that want to use persisted device ids.
           The ids <em>must be passed</em> through <code>selectAudioOutput()</code> successfully before they will work with {{domxref("HTMLMediaElement.setSinkId","setSinkId()")}}.</p>
       </div>
     </dd>
