@@ -35,7 +35,7 @@ None.
 ### Getting an `XRLightProbe` object
 
 First, use the {{domxref("XRSession.requestLightProbe()")}} method to get a light probe from a session.
-Then, within an {{domxref("XRFrame")}} loop, the {{domxref("XRFrame.getLightEstimate", "getLightEstimate()")}} method will return `XRLightEstimate` object containing the lighting values for each frame.
+Then, within an {{domxref("XRFrame")}} loop, the {{domxref("XRFrame.getLightEstimate", "getLightEstimate()")}} method will return a `XRLightEstimate` object containing the lighting values for each frame.
 
 ```js
 const lightProbe = await xrSession.requestLightProbe();

@@ -23,7 +23,7 @@ Spheral harmonic lighting is a technique that uses spherical functions instead o
 
 A {{jsxref("Float32Array")}} containing 9 spherical harmonics coefficients. The array contains 27 elements in total, with every 3 elements defining red, green, and blue components for each coefficient.
 
-The first 3 elements must be a valid lighting estimate component, the rest may be 0 due to privacy settings or limitations of the device to provide more data.
+The first 3 elements must be a valid lighting estimate component; the rest may be 0 due to privacy settings or limitations of the device to provide more data.
 
 ## Examples
 
