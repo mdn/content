@@ -47,8 +47,7 @@ Content-Security-Policy: prefetch-src <source> <source>;
 
 ### Sources
 
-{{page("/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src",
-  "common_sources")}}
+{{page("Web/HTTP/Headers/Content-Security-Policy/default-src", "Sources")}}
 
 ## Example
 
