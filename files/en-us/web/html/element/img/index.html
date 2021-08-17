@@ -44,19 +44,26 @@ browser-compat: html.elements.img
 
 <h2 id="Supported_image_formats">Supported image formats</h2>
 
-<p>The HTML standard doesn't list what image formats to support, so each {{glossary("user agent")}} supports different formats.</p>
-
-<p>{{page("/en-US/docs/Web/Media/Formats/Image_types", "Common_image_file_types")}}</p>
+<p>The HTML standard doesn't list what image formats to support, so {{glossary("user agent","user agents")}} may support different formats.</p>
 
 <div class="notecard note">
-	<h4>Tip</h4>
-	<p>Safari 11.1 added the ability to use a video format, as an animated gif replacement. No other browser supports this. See the <a href="https://crbug.com/791658">Chromium bug</a>, and <a href="http://bugzil.la/895131">Firefox bug</a> for more information.</p>
+	<p><strong>Note:</strong> The <a href="/en-US/docs/Web/Media/Formats/Image_types">Image file type and format guide</a> provides comprehensive information about image formats and their web browser support.
+	This section is just a summary!</p>
 </div>
 
-<div class="notecard note">
-	<h4>Note</h4>
-	<p>See <a href="/en-US/docs/Web/Media/Formats/Image_types">Image file type and format guide</a> for more comprehensive information about image formats supported by web browsers. This includes image formats that are supported but not recommended for web content (e.g. ICO, BMP, etc.)</p>
-</div>
+<p>The image file formats that are most commonly used on the web are:</p>
+<ul>
+	<li><a href="/en-US/docs/Web/Media/Formats/Image_types#apng">APNG (Animated Portable Network Graphics)</a> — Good choice for lossless animation sequences (GIF is less performant)</li>
+	<li><a href="/en-US/docs/Web/Media/Formats/Image_types#avif">AVIF (AV1 Image File Format)</a> — Good choice for both images and animated images due to high performance.</li>
+	<li><a href="/en-US/docs/Web/Media/Formats/Image_types#gif">GIF (Graphics Interchange Format)</a> — Good choice for <em>simple</em> images and animations.</li>
+	<li><a href="/en-US/docs/Web/Media/Formats/Image_types#jpeg">JPEG (Joint Photographic Expert Group image)</a> — Good choice for lossy compression of still images (currently the most popular).</li>
+	<li><a href="/en-US/docs/Web/Media/Formats/Image_types#png">PNG (Portable Network Graphics)</a> — Good choice for lossy compression of still images (slightly better quality than JPEG).</li>
+	<li><a href="/en-US/docs/Web/Media/Formats/Image_types#svg">SVG (Scalable Vector Graphics)</a> — Vector image format. Use for images that must be drawn accurately at different sizes.</li>
+	<li><a href="/en-US/docs/Web/Media/Formats/Image_types#webp">WebP (Web Picture format)</a> — Excellent choice for both images and animated images</li>
+</ul>
+
+
+<p>Formats like <a href="/en-US/docs/Web/Media/Formats/Image_types#webp">WebP</a> and <a href="/en-US/docs/Web/Media/Formats/Image_types#avif">AVIF</a> are highly recommended as they are now broadly (and somewhat deeply) supported by web browsers, and perform much better than PNG, JPEG, GIF for both still and animated images. SVG remains the recommended format for images that must be drawn accurately at different sizes.</p>
 
 <h2 id="Image_loading_errors">Image loading errors</h2>
 
