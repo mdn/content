@@ -29,14 +29,6 @@ jobs:
             node_modules
           key: ${{ runner.os }}-${{ hashFiles('yarn.lock') }}-${{ hashFiles('.github/workflows/pr-test.yml') }}
 
-      - name: Debug caching of node_modules
-        run: |
-
-          echo ${{ steps.cached-node_modules.outputs }}
-
-          echo ${{ hashFiles('**/yarn.lock') }}
-          echo ${{ runner.os }}
-
       - name: Install all yarn packages
         if: steps.cached-node_modules.outputs.cache-hit != 'true'
         run: |
