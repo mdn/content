@@ -6,102 +6,135 @@ tags:
   - Property
   - Reference
   - Template
-browser-compat: path.to.feature.NameOfTheProperty
+browser-compat: css.properties.NameOfTheProperty
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}
 
-<div class="note">
-<h2 id="Remove_before_publishing">Remove before publishing</h2>
+> **Note:** _Remove this whole explanatory note before publishing_
+>
+> ---
+>
+> **Page front matter:**
+>
+> The frontmatter at the top of the page is used to define "page metadata".
+> The values should be updated appropriately for the particular property.
+> 
+> ```
+> ---
+> title: NameOfTheProperty
+> slug: Web/CSS/NameOfTheProperty
+> tags:
+>   - CSS
+>   - Reference
+>   - CSS Property
+>   - NameOfTheProperty
+>   - Experimental
+>   - Deprecated
+> browser-compat: css.properties.NameOfTheProperty
+> ---
+> ```
+> - **title**
+>   - : Title heading displayed at top of page. Format as _NameOfTheProperty.
+>       For example, the [`background-color`](/en-US/docs/Web/CSS/background-color) property has a title of _background-color_. 
+> - **slug**
+>   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`). This will be formatted like `Web/CSS/NameOfTheProperty`.
+>       For example, the the [`background-color`](/en-US/docs/Web/CSS/background-color) property slug is `Web/CSS/background-color`. 
+> - **tags**
+>   - : Always include the following tags: **CSS**, **Reference**, **CSS Property**, _NameOfTheProperty_ (e.g. **background-color**).
+>
+>       Include the following tags as appropriate:
+>       - Category of property: **Layout**, **Graphics**, **CSS Background**, **CSS Colors**, _other tags as appropriate_
+>       - Technology status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete)).
+>       - Any other tags that represent terms people might search for related to the technology.
+> - **browser-compat**
+>   - : Replace the placeholder value <code>css.properties.NameOfTheProperty</code> with the query string for the property in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
+>       The toolchain automatically uses the key to populate the compatibility and specifications sections (replacing the `\{{Compat}}` and `\{{Specifications}}` macros in those sections, respectively).
+>
+>       Note that you may first need to create/update an entry for the property and its specification in our <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a>.
+>       See our [guide on how to do this](/en-US/docs/MDN/Structures/Compatibility_tables).
+>
+> ---
+>
+> **Top-of-page macros**
+>
+> A number of macro calls appear at the top of the content section (immediately below the page frontmatter).
+> You should update or delete them according to the advice below:
+> - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the technology is [experimental](/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental)).
+>   If the technology you are documenting is not experimental, you can remove this.
+>   If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the [Experimental features in Firefox](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+> - `\{{Deprecated_Header}}` — this generates a **Deprecated** banner that indicates that use of the technology is [discouraged](/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete).
+>   If it isn't, then you can remove the macro call.
+> - `\{{CSSRef}}` — this must be present on every CSS property page. It generates a suitable CSS sidebar, depending on what tags are included on the page.
+>   Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
+>
+> ---
+>
+> **Formal definition and Formal syntax sections**
+>
+> The content of the _Formal definition_ and _Formal syntax_ sections is generated in place of `\{{CSSInfo}}` and `\{{CSSSyntax}}` macro, respectively.
+> For these to populate you must ensure an appropriate entry has been filled in for the property in our [properties.json](https://github.com/mdn/data/blob/master/css/properties.json) data file.
+> See [properties.md](https://github.com/mdn/data/blob/master/css/properties.md) for more information.
+> 
+> _Remember to remove this whole explanatory note before publishing_
 
-<h3 id="Title_and_slug">Title and slug</h3>
+{{SeeCompatTable}}{{deprecated_header}}{{CSSRef}}
 
-<p>A CSS property page should have a <em>title</em> and <em>slug</em> of <em>Name</em>Of<em>TheProperty</em>. For example, the <a href="/en-US/docs/Web/CSS/background-color">background-color</a> property has a <em>title</em> and <em>slug</em> of <em>background-color</em>.</p>
+The summary paragraph — start by naming the property and saying what it does.
+This should ideally be 1 or 2 short sentences.
 
-<h3 id="Top_macros">Top macros</h3>
-
-<p>A number of macro calls appear at the top of the content section. You should update or delete them according to the advice below:</p>
-
-<ul>
-	<li>\{{SeeCompatTable}} — this generates a <strong>This is an experimental technology</strong> banner that indicates the technology is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental">experimental</a>). If the technology you are documenting is not experimental, you can remove this. If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the <a href="/en-US/docs/Mozilla/Firefox/Experimental_features">Experimental features in Firefox</a> page.</li>
-	<li>\{{deprecated_header}} — this generates a <strong>Deprecated</strong> banner that indicates the technology is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete">deprecated</a>. If it isn't, then you can remove the macro call.</li>
-	<li>
-	<div>\{{CSSRef}} — this generates a suitable CSS sidebar, depending on what tags are included on the page.</div>
-	</li>
-</ul>
-
-<h3 id="Tags">Tags</h3>
-
-<p>In an CSS property subpage, you need to include the following tags (see the <em>Tags</em> section at the bottom of the editor UI): <strong>CSS</strong>, <strong>Reference</strong>, <strong>CSS Property</strong>, <em>the name of the Property</em> (e.g. <strong>background-color</strong>), <strong>Layout, Graphics, CSS Background/CSS Colors/other category</strong> as appropriate, <strong>Experimental</strong> (if the technology is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental">experimental</a>), and <strong>Deprecated</strong> (if it is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete">deprecated</a>).</p>
-
-<h3 id="Browser_compatibility_and_specifications">Browser compatibility and specifications</h3>
-
-<p>To fill in the browser compat data and specifications sections, you first need to fill in an entry for the API into our <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a> — see our <a href="/en-US/docs/MDN/Structures/Compatibility_tables#the_new_way_the_browser_compat_data_repo_and_dynamic_tables">guide on how to do this</a>.</p>
-
-<p>Once that is done, you can show the compat data for the CSS property with a \{{Compat}} macro call and its specification information with a \{{Specifications}} macro call.</p>
-
-<h3 id="cssinfo_and_csssyntax_sections">\{{cssinfo}} and \{{csssyntax}} sections</h3>
-
-<p>To generate these sections, you need to make sure appropriate entry has been filled in for the property in our <a href="https://github.com/mdn/data/blob/master/css/properties.json">properties.json</a> data file. See <a href="https://github.com/mdn/data/blob/master/css/properties.md">properties.md</a> for more information.</p>
-</div>
-
-<div>{{draft}}{{SeeCompatTable}}{{deprecated_header}}{{CSSRef}}</div>
-
-<p><span class="summary">The summary paragraph — start by naming the property and saying what it does. This should ideally be 1 or 2 short sentences.</span></p>
-
-<pre class="brush: css">/* Insert code block showing common use cases */
+```css
+/* Insert code block showing common use cases */
 /* or categories of values */
-</pre>
+```
 
-<p>{{cssinfo}}</p>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+Include a description of the property and what component subvalues make up a complete value.
 
-<p>Include a description of the property and what component subvalues make up a complete value.</p>
+### Values
 
-<h3 id="Values">Values</h3>
+- {{cssxref("subvalue1")}}
+  - : Include a description of the subvalue, what its datatype is, and what it represents. Include one term and definition for each subvalue.
+- {{cssxref("subvalue2")}}
+  - : etc.
 
-<dl>
-	<dt><a id="&lt;color&gt;"></a>{{cssxref("subvalue1")}}</dt>
-	<dd>Include a description of the subvalue, what its datatype is, and what it represents. Include one term and definition for each subvalue.</dd>
-	<dt>{{cssxref("subvalue2")}}</dt>
-	<dd>etc.</dd>
-</dl>
+## Formal definition
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+{{CSSInfo}}
 
-{{csssyntax}}
+## Formal syntax
 
-<h2 id="Examples">Examples</h2>
+{{CSSSyntax}}
 
-<p>Fill in a simple example that nicely shows a typical usage of the property, then perhaps some more complex examples (see our guide on how to add <a href="/en-US/docs/MDN/Structures/Code_examples">code examples</a> for more information).</p>
+## Examples
 
-<pre class="brush: js">my code block</pre>
+Fill in a simple example that nicely shows a typical usage of the property, then perhaps some more complex examples (see our guide on how to add [code examples](/en-US/docs/MDN/Structures/Code_examples) for more information).
 
-<p>And/or include a list of links to useful code samples that live elsewhere:</p>
+```js
+my code block
+```
 
-<ul>
-	<li>x</li>
-	<li>y</li>
-	<li>z</li>
-</ul>
+And/or include a list of links to useful code samples that live elsewhere:
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+- x
+- y
+- z
 
-<p>Optionally, warn of any potential accessibility concerns that exist with using this property, and how to work around them. Remove this section if there are none to list.</p>
+## Accessibility concerns
 
-<h2 id="Specifications">Specifications</h2>
+Optionally, warn of any potential accessibility concerns that exist with using this property, and how to work around them. Remove this section if there are none to list.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility_2">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>Include list of</li>
-	<li>other links related to</li>
-	<li>this Element that might</li>
-	<li>be useful</li>
-</ul>
+- Include list of
+- other links related to
+- this Element that might
+- be useful
