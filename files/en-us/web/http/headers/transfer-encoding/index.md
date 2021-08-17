@@ -54,7 +54,6 @@ Transfer-Encoding: chunked
 Transfer-Encoding: compress
 Transfer-Encoding: deflate
 Transfer-Encoding: gzip
-Transfer-Encoding: identity
 
 // Several values can be listed, separated by a comma
 Transfer-Encoding: gzip, chunked
@@ -86,9 +85,6 @@ Transfer-Encoding: gzip, chunked
     program. The HTTP/1.1 standard also recommends that the servers supporting this
     content-encoding should recognize `x-gzip` as an alias, for compatibility
     purposes.
-- `identity`
-  - : Indicates the identity function (i.e. no compression, nor modification). This token,
-    except if explicitly specified, is always deemed acceptable.
 
 ## Examples
 
