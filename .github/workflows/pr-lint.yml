@@ -16,15 +16,11 @@ jobs:
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.4.0
-        with:
-          node-version: "12"
 
       - name: Install all yarn packages
-        run: |
-          cd pr-lint
-          yarn --frozen-lockfile
+        working-directory: pr-lint
+        run: yarn --frozen-lockfile
 
       - name: Run checks
-        run: |
-          cd pr-lint
-          yarn run check
+        working-directory: pr-lint
+        run: yarn run check
