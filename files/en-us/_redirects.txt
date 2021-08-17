@@ -11045,6 +11045,7 @@
 /en-US/docs/Web/Performance/business_case_for_performance	/en-US/docs/Learn/Performance/business_case_for_performance
 /en-US/docs/Web/Performance/learn	/en-US/docs/Web/Performance/How_browsers_work
 /en-US/docs/Web/Progressive_web_apps/Advantages	/en-US/docs/Web/Progressive_web_apps/Introduction#Advantages_of_web_applications
+/en-US/docs/Web/Progressive_web_apps/Developer_guide/Installing	/en-US/docs/Web/Progressive_web_apps/Installing
 /en-US/docs/Web/Progressive_web_apps/Discoverable	/en-US/docs/Web/Progressive_web_apps
 /en-US/docs/Web/Progressive_web_apps/Installable	/en-US/docs/Web/Progressive_web_apps
 /en-US/docs/Web/Progressive_web_apps/Linkable	/en-US/docs/Web/Progressive_web_apps
