@@ -29,6 +29,9 @@ jobs:
             node_modules
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
 
+      - name: Debug caching of node_modules
+        run: ${{ steps.cached-node_modules.outputs }}
+
       - name: Install all yarn packages
         if: steps.cached-node_modules.outputs.cache-hit != 'true'
         run: |
