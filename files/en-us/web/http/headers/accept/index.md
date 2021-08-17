@@ -82,5 +82,6 @@ Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8
 ## See also
 
 - HTTP [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation)
+- [List of default Accept values](/en-US/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values)
 - Header with the result of the content negotiation: {{HTTPHeader("Content-Type")}}
 - Other similar headers: {{HTTPHeader("TE")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}
