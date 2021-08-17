@@ -349,9 +349,9 @@ When responding to a credentialed request:
 
 - The server **must not** specify the "`*`" wildcard for the `Access-Control-Allow-Methods` response-header value, but must instead specify an explicit list of method names; for example, `Access-Control-Allow-Methods: POST, GET`
 
-So if a request includes a `Cookie` header (the most-common type of credentials) and the response includes an `Access-Control-Allow-Origin: *` header (that is, with the wildcard), then the browser will block access to the response, and report a CORS error in the devtools console.
+If a request includes a credential (most commonly a `Cookie` header) and the response includes an `Access-Control-Allow-Origin: *` header (that is, with the wildcard), the browser will block access to the response, and report a CORS error in the devtools console.
 
-But if a request includes a `Cookie` header and the response includes, for example, an `Access-Control-Allow-Origin: https://example.com` header (that is, an actual origin, rather than the wildcard), then the browser will allow access to the response from the specified origin.
+But if a request includes a credential (like the `Cookie` header) and the response includes an actual origin rather than the wildcard (like, for example, `Access-Control-Allow-Origin: https://example.com`), then the browser will allow access to the response from the specified origin.
 
 Also note that any `Set-Cookie` response header in a response would not set a cookie if the `Access-Control-Allow-Origin` value in that response is the "`*`" wildcard rather an actual origin.
 
