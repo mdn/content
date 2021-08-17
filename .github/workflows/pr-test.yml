@@ -27,7 +27,7 @@ jobs:
         with:
           path: |
             node_modules
-          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-${{ hashFiles('yarn.lock') }}-${{ hashFiles('.github/workflows/pr-test.yml') }}
 
       - name: Debug caching of node_modules
         run: |
