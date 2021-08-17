@@ -16,7 +16,7 @@ browser-compat: api.XRLightProbe.onreflectionchange
 ---
 {{APIRef("WebXR Device API")}}
 
-The **`onreflectionchange`** property of the {{DOMxRef("XRLightProbe")}} interface is and event handler property for the {{domxref("XRLightProbe.reflectionchange_event", "reflectionchange")}} event.
+The **`onreflectionchange`** property of the {{DOMxRef("XRLightProbe")}} interface is and event handler for the {{domxref("XRLightProbe.reflectionchange_event", "reflectionchange")}} event.
 
 ### Value
 

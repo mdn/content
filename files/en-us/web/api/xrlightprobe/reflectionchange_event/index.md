@@ -15,7 +15,7 @@ browser-compat: api.XRLightProbe.reflectionchange_event
 ---
 {{APIRef("WebXR Device API")}}
 
-The WebXR **`reflectionchange`** event is sent to an {{domxref("XRLightProbe")}} fires each time the estimated reflection cube map has changed (happens when the user moves around and the environment's lighting changes).
+The WebXR **`reflectionchange`** event is passed to an {{domxref("XRLightProbe")}} each time the estimated reflection cube map changes. This happens in response to use movements through different lighting conditions or to direct changes to lighting itself.
 
 <table class="properties">
   <tbody>

@@ -25,7 +25,7 @@ getReflectionCubeMap(lightProbe)
 ### Parameters
 
 - `lightProbe`
-  - : An {{domxref("XRLightProbe")}} object obtained from the session.
+  - : An {{domxref("XRLightProbe")}} object returned by calling {{domxref("XRSession.requestLightProbe()")}}.
 
 ### Return value
 
