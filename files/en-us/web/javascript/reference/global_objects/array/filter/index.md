@@ -159,7 +159,7 @@ let fruits = ['apple', 'banana', 'grapes', 'mango', 'orange']
  */
 function filterItems(arr, query) {
   return arr.filter(function(el) {
-      return el.toLowerCase().indexOf(query.toLowerCase()) !== -1
+    return el.toLowerCase().indexOf(query.toLowerCase()) !== -1
   })
 }
 
@@ -189,7 +189,7 @@ The following examples tests the behavior of the `filter` method when the array 
 
 ```js
 // Modifying each words
-let words = ['spray', 'limit', 'exuberant', 'destruction','elite', 'present']
+let words = ['spray', 'limit', 'exuberant', 'destruction', 'elite', 'present']
 
 const modifiedWords = words.filter( (word, index, arr) => {
   arr[index+1] +=' extra'
@@ -201,7 +201,7 @@ console.log(modifiedWords)
 // ["spray"]
 
 // Appending new words
-words = ['spray', 'limit', 'exuberant', 'destruction','elite', 'present']
+words = ['spray', 'limit', 'exuberant', 'destruction', 'elite', 'present']
 const appendedWords = words.filter( (word, index, arr) => {
   arr.push('new')
   return word.length < 6
