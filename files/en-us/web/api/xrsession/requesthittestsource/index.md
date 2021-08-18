@@ -70,10 +70,9 @@ let hitTestSource = null;
 
 xrSession.requestHitTestSource({
   space : viewerSpace, // obtained from xrSession.requestReferenceSpace("viewer");
-  entityTypes: ["point"],
   offsetRay : new XRRay({y: 0.5})
-}).then((pointHitTestSource) => {
-  hitTestSource = pointHitTestSource;
+}).then((viewerHitTestSource) => {
+  hitTestSource = viewerHitTestSource;
 });
 
 // frame loop
