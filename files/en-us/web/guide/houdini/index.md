@@ -1,6 +1,6 @@
 ---
 title: CSS Houdini
-slug: web/guide/houdini
+slug: Web/Guide/Houdini
 tags:
   - API
   - CSS
