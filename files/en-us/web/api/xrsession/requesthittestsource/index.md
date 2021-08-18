@@ -19,7 +19,7 @@ browser-compat: api.XRSession.requestHitTestSource
 {{APIRef("WebXR Device API")}}
 
 The **`requestHitTestSource()`** method of the
-{{domxref("XRSession")}} interface returns a {{jsxref("Promise")}} that resolves with an {{domxref("XRHitTestSource")}} object that can be used to obtain hit test results using the {{domxref("XRFrame.getHitTestResults()")}} method.
+{{domxref("XRSession")}} interface returns a {{jsxref("Promise")}} that resolves with an {{domxref("XRHitTestSource")}} object that can be passed to {{domxref("XRFrame.getHitTestResults()")}}.
 
 ## Syntax
 
@@ -32,7 +32,7 @@ requestHitTestSource(options);
 - `options`
   - : An object containing configuration options, specifically:
     - `space`: The {{domxref("XRSpace")}} that will be tracked by the hit test source.
-    - `entityTypes`: {{optional_inline}} An {{jsxref("Array")}} specifying the types of entities that should be used for the purposes of hit test source creation. If no no entity type is specified, the array defaults to a single element with the `plane` type. Possible types:
+    - `entityTypes`: {{optional_inline}} An {{jsxref("Array")}} specifying the types of entities to be used for hit test source creation. If no no entity type is specified, the array defaults to a single element with the `plane` type. Possible types:
       - `point`: Compute hit test results based on characteristic points detected.
       - `plane`: Compute hit test results based on real-world planes detected.
       - `mesh`: Compute hit test results based on meshes detected.
@@ -52,13 +52,13 @@ returned promise with a {{domxref("DOMException")}}, specifically, one of the fo
 - `InvalidStateError`
   - : If the session has already ended.
 - `NotAllowedError`
-  - : If there is an unreasonable amount of requests (some user agents might limit usage due to privacy reasons).
+  - : If there is an unreasonable amount of requests. Some user agents might limit usage for privacy reasons.
 
 ## Examples
 
 ### Requesting a hit test source
 
-To request a hit test source, make sure to start an {{domxref("XRSession")}} with the `hit-test` session feature enabled. Then you can configure the hit test source and store it for later use in the frame loop where you can use the {{domxref("XRFrame.getHitTestResults()")}} method to obtain the hit test result.
+To request a hit test source, start an {{domxref("XRSession")}} with the `hit-test` session feature enabled. Next, configure the hit test source and store it for later use in the frame loop and call {{domxref("XRFrame.getHitTestResults()")}} to obtain the result.
 
 ```js
 
