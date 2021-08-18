@@ -1,4 +1,4 @@
----
+--- 
 title: JavaScript data types and data structures
 slug: Web/JavaScript/Data_structures
 tags:
