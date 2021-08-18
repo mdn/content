@@ -40,7 +40,7 @@ The process for identifying the containing block depends entirely on the value o
 
 1.  If the `position` property is **`static`**, **`relative`**, or **`sticky`**, the containing block is formed by the edge of the _content box_ of the nearest ancestor element that is either **a block container** (such as an inline-block, block, or list-item element) or **establishes a formatting context** (such as a table container, flex container, grid container, or the block container itself).
 
-> **Note:** It is important to note that an inline element such as `<p>` **continues the [inline formatting context](https://www.w3.org/TR/css-display-3/#inline-formatting-context)** of its **block container** and does not establish an independent formatting context. Thus, inline elements cannot serve as containing blocks in the case above.
+> **Note:** It is important to note that an inline element such as `<span>` **continues the [inline formatting context](https://www.w3.org/TR/css-display-3/#inline-formatting-context)** of its **block container** and does not establish an independent formatting context. Thus, inline elements cannot serve as containing blocks in the case above.
 
 3.  If the `position` property is **`absolute`**, the containing block is formed by the edge of the _padding box_ of the nearest ancestor element that has a `position` value other than `static` (`fixed`, `absolute`, `relative`, or `sticky`).
 4.  If the `position` property is **`fixed`**, the containing block is established by the {{glossary("viewport")}} (in the case of continuous media) or the page area (in the case of paged media).
