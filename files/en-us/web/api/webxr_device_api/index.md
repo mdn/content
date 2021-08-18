@@ -29,74 +29,93 @@ To accomplish these things, the WebXR Device API provides the following key cap
 
 At the most basic level, a scene is presented in 3D by computing the perspective to apply to the scene in order to render it from the viewpoint of each of the user's eyes by computing the position of each eye and rendering the scene from that position, looking in the direction the user is currently facing. Each of these two images is rendered into a single framebuffer, with the left eye's rendered image on the left and the right eye's viewpoint rendered into the right half of the buffer. Once both eyes' perspectives on the scene have been rendered, the resulting framebuffer is delivered to the WebXR device to be presented to the user through their headset or other appropriate display device.
 
-## WebXR Device API concepts and usage
-
-**Figure: Example WebXR hardware setup**
-![Sketch of a person in a chair with wearing goggles labelled "Head mounted display (HMD)" facing a monitor with a webcam labeled "Position sensor"](hw-setup.png)
-
 While the older [WebVR API](/en-US/docs/Web/API/WebVR_API) was designed solely to support Virtual Reality (VR), WebXR provides support for both VR and Augmented Reality (AR) on the web. Support for AR functionality is added by the WebXR Augmented Reality Module.
 
 A typical XR device can have either 3 or 6 degrees of freedom and might or might not have an external positional sensor.
 
 The equipment may also include an accelerometer, barometer, or other sensors which are used to sense when the user moves through space, rotates their head, or the like.
 
-## Accessing the WebXR API
+## WebXR reference docs
 
-To gain access to the WebXR API within the context of a given window, use the {{domxref("navigator.xr")}} property, which returns an {{domxref("XRSystem")}} object through which the entire WebXR Device API is then exposed.
+<div class="index">
 
-- {{domxref("navigator.xr")}} {{ReadOnlyInline}}
-  - : This property, added to the {{domxref("Navigator")}} interface, returns the {{domxref("XRSystem")}} object through which the WebXR API is exposed. If this property is missing, WebXR is not available.
+### Initialization
 
-## WebXR interfaces
+- {{domxref("navigator.xr")}}
+- {{domxref("XRSystem")}}
+- {{domxref("XRPermissionStatus")}}
+- [`Feature-Policy: xr-spatial-tracking`](/en-US/docs/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking)
 
-- {{DOMxRef("XRSystem")}}
-  - : The {{domxref("Navigator.xr", "navigator.xr")}} property returns the window's instance of {{domxref("XRSystem")}}, which is the mechanism by which your code accesses the WebXR API. Using the `XRSystem` interface, you can create {{domxref("XRSession")}}s to represent actual AR and/or VR sessions.
-- {{DOMxRef("XRFrame")}}
-  - : While presenting an XR session, the state of all tracked objects which make up the session are represented by an `XRFrame`. To get an `XRFrame`, call the session's {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} method, providing a callback which will be called with the `XRFrame` once available. Events which communicate tracking states will also use `XRFrame` to contain that information.
-- {{DOMxRef("XRRenderState")}}
-  - : Provides a set of configurable properties which change how the imagery output by an `XRSession` is composited.
+### Session
+
 - {{DOMxRef("XRSession")}}
-  - : Provides the interface for interacting with XR hardware. Once an `XRSession` is obtained from {{domxref("XRSystem.requestSession", "navigator.xr.requestSession()")}}, the session can be used to check the position and orientation of the viewer, query the device for environment information, and present the virtual or augmented world to the user.
-- {{DOMxRef("XRSpace")}}
-  - : `XRSpace` is an opaque base class on which all virtual coordinate system interfaces are based. Positions in WebXR are always expressed in relation to a particular `XRSpace` at the time at which a particular {{domxref("XRFrame")}} takes place. The space's coordinate system has its origin at a given physical position.
-- {{DOMxRef("XRReferenceSpace")}}
-  - : A subclass of {{domxref("XRSpace")}} which is used to identify a spatial relationship in relation to the user's physical environment. The `XRReferenceSpace` coordinate system is expected to remain unchanged through the lifespan of the {{domxref("XRSession")}}.The world has no boundaries and extends infinitely in every direction.
-- {{DOMxRef("XRBoundedReferenceSpace")}}
-  - : `XRBoundedReferenceSpace` extends the {{domxref("XRReferenceSpace")}} coordinate system to further include support for a finite world with set boundaries. Unlike `XRReferenceSpace`, the origin must be located on the floor (that is, *y* = 0 at the floor). The x and z components of the origin are typically presumed to be located at or near the center of the room or surface.
-- {{DOMxRef("XRView")}}
-  - : Represents a single view into the XR scene for a particular frame. Each `XRView` corresponds to the video display surface used to present the scene to the user. For example, a given XR device might have two views: one for the left eye and one for the right. Each view has an offset used to shift the position of the view relative to the camera, in order to allow for creating stereographic effects.
-- {{DOMxRef("XRViewport")}}
-  - : Describes a viewport. A viewport is a rectangular portion of a graphic surface. In WebXR, a viewport represents the area of a drawing surface corresponding to a particular {{domxref("XRView")}}, such as the portion of the WebGL framebuffer used to render one of the two eyes' perspectives on the scene.
-- {{DOMxRef("XRRigidTransform")}}
-  - : A transform defined using a position and orientation in the virtual space's coordinate system as described by the {{domxref("XRSpace")}}.
-- {{DOMxRef("XRPose")}}
-  - : Describes a position and orientation in space relative to an {{domxref("XRSpace")}}.
-- {{DOMxRef("XRViewerPose")}}
-  - : Based on {{domxref("XRPose")}}, `XRViewerPose` specifies the state of a viewer of the WebXR scene as indicated by the XR device. Included is an array of {{domxref("XRView")}} objects, each representing one perspective on the scene. For example, it takes two views to create the stereoscopic view as perceived by human vision—one for the left eye and a second for the right eye. One view is offset to the left slightly from the viewer's position, and the other view is offset to the right by the same distance. The view list can also be used to represent the perspectives of each of the spectators of a scene, in a multi-user environment.
-- {{DOMxRef("XRInputSource")}}
-  - : Represents any input device the user can use to perform targeted actions within the same virtual space as the viewer. Input sources may include devices such as hand controllers, optical tracking systems, and other devices which are explicitly associated with the XR device. Other input devices such as keyboards, mice, and gamepads are not presented as `XRInputSource` instances.
-- {{DOMxRef("XRWebGLLayer")}}
-  - : A layer which serves as a [WebGL](/en-US/docs/Web/API/WebGL_API) frame buffer into which a scene's view is rendered. Using WebGL to render the scene gains substantial performance benefits due to graphics acceleration.
-
-### Event interfaces
-
-The following interfaces are used to represent the events used by the WebXR API.
-
-- {{domxref("XRInputSourceEvent")}}
-  - : Sent when the state of an {{domxref("XRInputSource")}} changes. This can happen, for example, when the position and/or orientation of the device changes, or when buttons are pressed or released.
-- {{domxref("XRInputSourcesChangeEvent")}}
-  - : Sent to indicate that the set of available input sources has changed for the {{domxref("XRSession")}}.
-- {{domxref("XRReferenceSpaceEvent")}}
-  - : Sent when the state of an {{domxref("XRReferenceSpace")}} changes.
 - {{domxref("XRSessionEvent")}}
-  - : Sent to indicate that the state of an {{domxref("XRSession")}} has changed. For example, if the position and/or orient
+- {{DOMxRef("XRRenderState")}}
 
-## Extensions to the WebGL API
+### Frame loop
 
-The WebGL API is extended by the WebXR specification to augment the WebGL context to allow it to be used to render views for display by a WebXR device.
+- {{DOMxRef("XRFrame")}}
 
+### Spaces
+
+- {{DOMxRef("XRSpace")}}
+- {{DOMxRef("XRReferenceSpace")}}
+- {{DOMxRef("XRBoundedReferenceSpace")}}
+- {{domxref("XRReferenceSpaceEvent")}}
+
+### Views
+
+- {{DOMxRef("XRView")}}
+- {{DOMxRef("XRViewport")}}
+
+### Geometric primitives
+
+- {{DOMxRef("XRRigidTransform")}}
+
+### Pose
+
+- {{DOMxRef("XRPose")}}
+- {{DOMxRef("XRViewerPose")}}
+
+### Input
+
+- {{DOMxRef("XRInputSource")}}
+- {{DOMxRef("XRInputSourceArray")}}
+- {{domxref("XRInputSourceEvent")}}
+- {{domxref("XRInputSourcesChangeEvent")}}
+
+### Layers / WebGL
+
+- {{DOMxRef("XRLayer")}}
+- {{DOMxRef("XRWebGLLayer")}}
+- {{DOMxRef("XRWebGLBinding")}}
 - {{domxref("WebGLRenderingContext.makeXRCompatible()")}}
-  - : Configures the WebGL context to be compatible with WebXR. If the context was not initially created with the {{domxref("HTMLCanvasElement.getContext", "xrCompatible")}} property set to `true`, you must call `makeXRCompatible()` prior to attempting to use the WebGL context for WebXR rendering. Returns a {{jsxref("Promise")}} which resolves once the context has been prepared, or is rejected if the context cannot be configured for use by WebXR.
+
+### Anchors
+
+- {{domxref("XRAnchor")}}
+- {{domxref("XRAnchorSet")}}
+
+### Depth sensing
+
+- {{domxref("XRDepthInformation")}}
+- {{domxref("XRCPUDepthInformation")}}
+- {{domxref("XRWebGLDepthInformation")}}
+
+### Hit testing
+
+- {{domxref("XRHitTestSource")}}
+- {{domxref("XRTransientInputHitTestSource")}}
+- {{domxref("XRHitTestResult")}}
+- {{domxref("XRTransientInputHitTestResult")}}
+- {{domxref("XRRay")}}
+
+### Lighting estimation
+
+- {{domxref("XRLightEstimate")}}
+- {{domxref("XRLightProbe")}}
+
+</div>
 
 ## Guides and tutorials
 
