@@ -52,6 +52,10 @@ _`XRSession` provides the following methods in addition to those inherited from 
   - : Ends the WebXR session. Returns a {{jsxref("promise")}} which resolves when the session has been shut down.
 - {{DOMxRef("XRSession.requestAnimationFrame", "requestAnimationFrame()")}}
   - : Schedules the specified method to be called the next time the {{glossary("user agent")}} is working on rendering an animation frame for the WebXR device. Returns an integer value which can be used to identify the request for the purposes of canceling the callback using `cancelAnimationFrame()`. This method is comparable to the {{domxref("Window.requestAnimationFrame()")}} method.
+- {{DOMxRef("XRSession.requestHitTestSource", "requestHitTestSource()")}}
+  - : Requests an {{domxref("XRHitTestSource")}} object that handles hit test subscription.
+- {{DOMxRef("XRSession.requestHitTestSourceForTransientInput", "requestHitTestSourceForTransientInput()")}}
+  - : Requests an {{domxref("XRTransientInputHitTestSource")}} object that handles hit test subscription for a transient input source.
 - {{DOMxRef("XRSession.requestLightProbe", "requestLightProbe()")}}
   - : Requests an {{domxref("XRLightProbe")}} that estimates lighting information at a given point in the user's environment.
 - {{DOMxRef("XRSession.requestReferenceSpace", "requestReferenceSpace()")}}

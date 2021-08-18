@@ -99,6 +99,8 @@ following:
   - : Enable the ability to obtain depth information using {{domxref("XRDepthInformation")}} objects.
 - `dom-overlay`
   - : Enable allowing to specify a DOM overlay element that will be displayed to the user.
+- `hit-test`
+  - : Enable hit testing features for performing hit tests against real world geometry.
 - `light-estimation`
   - : Enable the ability to estimate environmental lighting conditions using {{domxref("XRLightEstimate")}} objects.
 - `local`
@@ -120,6 +122,7 @@ Each reference space or feature type has minimum safety requirements. By session
 | --------------- | ----------------------------------- | -------------------------- |
 | `bounded-floor` | Always required                     | `xr-spatial-tracking`      |
 | `depth-sensing` | —                                   | `xr-spatial-tracking`      |
+| `hit-test`      | —                                   | `xr-spatial-tracking`      |
 | `local`         | Always required for inline sessions | `xr-spatial-tracking`      |
 | `local-floor`   | Always required                     | `xr-spatial-tracking`      |
 | `unbounded`     | Always required                     | `xr-spatial-tracking`      |
