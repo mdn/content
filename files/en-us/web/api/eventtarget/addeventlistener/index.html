@@ -520,9 +520,9 @@ function nonePassiveHandler(event) {
 <p>It is often desirable to reference the element on which the event handler was fired,
   such as when using a generic handler for a set of similar elements.</p>
 
-<p>If attaching a handler function to an element using <code>addEventListener()</code>,
-  the value of {{jsxref("Operators/this","this")}} inside the handler is a reference to
-  the element. It is the same as the value of the <code>currentTarget</code> property of
+<p>When attaching a handler function to an element using <code>addEventListener()</code>,
+  the value of {{jsxref("Operators/this","this")}} inside the handler will be a reference to
+  the element. It will be the same as the value of the <code>currentTarget</code> property of
   the event argument that is passed to the handler.</p>
 
 <pre class="brush: js">my_element.addEventListener('click', function (e) {
