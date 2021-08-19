@@ -15,7 +15,7 @@ browser-compat: api.XRHitTestSource
 
 The **`XRHitTestSource`** interface of the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) handles hit test subscriptions. You can get an `XRHitTestSource` object by using the {{domxref("XRSession.requestHitTestSource()")}} method.
 
-This object doesn't itself contain hit test results, but it is used to compute hit tests for each {{domxref("XRFrame")}} using {{domxref("XRFrame.getHitTestResults()")}} method which returns {{domxref("XRHitTestResult")}} objects.
+This object doesn't itself contain hit test results, but it is used to compute hit tests for each {{domxref("XRFrame")}} by calling {{domxref("XRFrame.getHitTestResults()")}}, which returns {{domxref("XRHitTestResult")}} objects.
 
 ## Properties
 
@@ -30,7 +30,7 @@ None.
 
 ### Getting an `XRHitTestSource` object for a session
 
-Use the {{domxref("XRSession.requestHitTestSource()")}} method to get a hit test source.
+Call {{domxref("XRSession.requestHitTestSource()")}} to get a hit test source.
 
 ```js
 const xrSession = navigator.xr.requestSession("immersive-ar", {
@@ -56,7 +56,7 @@ function onXRFrame(time, xrFrame) {
 
 ### Unsubscribe from hit test
 
-To unsubscribe from a hit test source, use the {{domxref("XRHitTestSource.cancel()")}} method. Since the object will no longer be usable, you can clean up and set the `XRHitTestSource` object to {{jsxref("null")}}.
+To unsubscribe from a hit test source, call {{domxref("XRHitTestSource.cancel()")}}. Since the object will no longer be usable, you can clean up and set the `XRHitTestSource` object to {{jsxref("null")}}.
 
 ```js
 hitTestSource.cancel();

@@ -33,7 +33,7 @@ Returns {{jsxref("undefined")}}.
 
 ### Unsubscribe from hit test
 
-The `cancel` method unsubscribes from a transient input hit test source. Since the {{domxref("XRTransientInputHitTestSource")}} object will no longer be usable, you can clean up and set it to {{jsxref("null")}}.
+The `cancel()` method unsubscribes from a transient input hit test source. Since the {{domxref("XRTransientInputHitTestSource")}} object will no longer be usable, you can clean up and set it to {{jsxref("null")}}.
 
 ```js
 transientHitTestSource.cancel();
