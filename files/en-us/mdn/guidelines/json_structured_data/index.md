@@ -18,7 +18,7 @@ There are several such files, and this document describes their purpose, structu
 
 Yet, MDN needs this information to create coherent Web-API sidebars (like with the `\{{APIRef}}` macro) with the proper reference pages, guides, and overview articles.
 
-GroupData does exactly that: for each API, it lists the interfaces, properties, methods, guides, and overview pages. It was also listing dictionaries and callbacks in the past. This use, though still supported, is deprecated and will be removed in the future.
+GroupData does exactly that: for each API, it lists the interfaces, properties, methods, guides, and overview pages. In the past, it also listed dictionaries and callbacks. But that use, though still supported, is deprecated and will be removed in the future.
 
 ### Structure of GroupData
 
