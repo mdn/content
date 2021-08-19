@@ -58,7 +58,7 @@ An entry in `GroupData.json` has the following structure:
   * : This key is both an ID used by sidebar macros like `\{{APIRef("Name_of_the_API")}}` and the name displayed in the sidebar itself. Choose it wisely.
     > **Warning:** If you want to change the name displayed in the sidebar, you must edit all the pages displaying it.
 * `"overview"`
-  * : This is a list containing one page, the overview page, used as the link for the `"Name_of_the_API"` text. The value is the _title of the page_, and the page must be in the `web/api/`directory.
+  * : This is a list containing one page: the overview page, used as the link for the `"Name_of_the_API"` text. The value is the _title of the page_, and the page must be in the `web/api/`directory.
 * `"guides"`
   * : This is a list of guides to display in the sidebar, in the same order. The values are _paths to the page_, starting with `/docs/`.
 * `"interfaces"`
