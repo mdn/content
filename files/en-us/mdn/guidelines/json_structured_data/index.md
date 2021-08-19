@@ -8,7 +8,7 @@ tags:
 ---
 {{MDNSidebar}}
 
-MDN stores data in well-defined structures when possible. This information is then centralized and can be updated once while used at numerous places.
+MDN stores data in well-defined structures when possible. This information is then centralized and can be updated once, while being used in numerous places.
 
 There are several such files, and this document describes their purpose, structure, and maintenance process.
 
