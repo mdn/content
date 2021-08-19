@@ -52,7 +52,7 @@ An entry in `GroupData.json` has the following structure:
 }
 ```
 
-where:
+…where:
 
 * `"Name_of_the_API"`
   * : This key is both an ID used by sidebar macros like `\{{APIRef("Name_of_the_API")}}` and the name displayed in the sidebar itself. Choose it wisely.
