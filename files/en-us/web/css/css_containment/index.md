@@ -37,7 +37,7 @@ article {
 
 Each article is independent of the other articles on the page, and so they have been given `contain: content` in order to indicate to the browser that this is the case. The browser can then use this information to make decisions about how to render the content. For example, it might not render articles that are outside the viewable area.
 
-If we give each `<article>` the `contain` property with a value of `content`, when new elements are inserted the browser understands it does not need to relayout or repaint any area outside of the containing element's subtree, although if the `<article>` is styled such that its size depends on its contents (e.g. with `height: auto`), then the browser may need to account for its size changing).
+If we give each `<article>` the `contain` property with a value of `content`, when new elements are inserted the browser understands it does not need to relayout or repaint any area outside of the containing element's subtree, although if the `<article>` is styled such that its size depends on its contents (e.g. with `height: auto`), then the browser may need to account for its size changing.
 
 We have told it by way of the `contain` property that each article is independent.
 
