@@ -47,12 +47,14 @@ To prevent ambiguity, each property that uses `<custom-ident>` forbids the use o
 
 ### Valid identifiers
 
-    nono79            A mix of alphanumeric characters and numbers
-    ground-level      A mix of alphanumeric characters and a dash
-    -test             A dash followed by alphanumeric characters
-    _internal         An underscore followed by alphanumeric characters
-    \22 toto          A Unicode character followed by a sequence of alphanumeric characters
-    bili\.bob         A correctly escaped period
+```plain example-good
+nono79            A mix of alphanumeric characters and numbers
+ground-level      A mix of alphanumeric characters and a dash
+-test             A dash followed by alphanumeric characters
+_internal         An underscore followed by alphanumeric characters
+\22 toto          A Unicode character followed by a sequence of alphanumeric characters
+bili\.bob         A correctly escaped period
+```
 
 ### Invalid identifiers
 
