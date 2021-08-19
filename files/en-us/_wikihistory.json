@@ -27516,17 +27516,6 @@
       "tregagnon"
     ]
   },
-  "Web/API/AnimationEvent/initAnimationEvent": {
-    "modified": "2020-10-15T21:24:41.397Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "erikadoyle",
-      "teoli",
-      "Sheppy",
-      "tregagnon"
-    ]
-  },
   "Web/API/AnimationEvent/pseudoElement": {
     "modified": "2020-10-15T21:24:40.901Z",
     "contributors": [
