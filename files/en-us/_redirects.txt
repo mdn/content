@@ -7865,6 +7865,7 @@
 /en-US/docs/Web/API/ImageData.data	/en-US/docs/Web/API/ImageData/data
 /en-US/docs/Web/API/ImageData.height	/en-US/docs/Web/API/ImageData/height
 /en-US/docs/Web/API/ImageData.width	/en-US/docs/Web/API/ImageData/width
+/en-US/docs/Web/API/Index	/en-US/docs/Web/API
 /en-US/docs/Web/API/IndexSync	/en-US/docs/Web/API/IDBIndexSync
 /en-US/docs/Web/API/IndexedDB	/en-US/docs/Web/API/IndexedDB_API
 /en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology
