@@ -30,5 +30,3 @@ A {{domxref("DataView")}}.
 ## Browser compatibility
 
 {{Compat}}
-
-
