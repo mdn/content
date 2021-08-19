@@ -22,7 +22,7 @@ GroupData does exactly that: for each API, it lists the interfaces, properties, 
 
 ### Structure of GroupData
 
-> **Warning:** Non-existing pages listed in this file are ignored (in en-US).
+> **Warning:** Non-existent pages listed in this file are ignored (in en-US).
 
 An entry in `GroupData.json` has the following structure:
 
