@@ -106,7 +106,7 @@ An entry in `InterfaceData.json` has the following structure:
 
 > **Note:** As mixins are deprecated, `"impl"` must be an empty list for all new interfaces.
 
-The value of `"Name_of_the_parent_interface"` is not a list but a single entry, mandatory; we must not list interfaces that don't inherit from another one.
+The value of `"Name_of_the_parent_interface"` is not a list but a single entry, mandatory; we must not list any interface that don't inherit from another one.
 
 ### Update process for InterfaceData
 
