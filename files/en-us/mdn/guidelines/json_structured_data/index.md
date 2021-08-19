@@ -16,7 +16,7 @@ There are several such files, and this document describes their purpose, structu
 
 `GroupData` is a JSON file collecting information about Web APIs. The grouping of APIs is somewhat fuzzy: any interface, method or property can be part of several APIs. The set of APIs grouped under a name is a convention used to communicate about a feature, without any technical enforcement.
 
-Yet, MDN needs this information to create coherent Web APIs sidebars (like with the `\{{APIRef}}` macro) with the proper reference pages, guides, and overview articles.
+Yet, MDN needs this information to create coherent Web-API sidebars (like with the `\{{APIRef}}` macro) with the proper reference pages, guides, and overview articles.
 
 GroupData does exactly that: for each API, it lists the interfaces, properties, methods, guides, and overview pages. It was also listing dictionaries and callbacks in the past. This use, though still supported, is deprecated and will be removed in the future.
 
