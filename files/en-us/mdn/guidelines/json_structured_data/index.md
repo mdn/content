@@ -120,6 +120,6 @@ The `InterfaceData.json` file is located [here](https://github.com/mdn/content/t
 
 > **Warning:** The `SpecData.json` file is no longer maintained. Canonical specification information is stored at w3c/browser-spec and in the `spec_url` key of features at mdn/browser-compat-data.
 
-The `\{{SpecName}}` and `\{{Spec2}}` macros that we are removing use the `SpecData.json` file. We do not accept any further contribution to it; instead, try either to insert a specification table with `\{{Specifications}}` macro or to hardcode the (good) link to the specification. Note that most of the time, mentioning or linking to a specification outside the _Specifications_ section is a sign of something not appropriately documented on MDN.
+The `\{{SpecName}}` and `\{{Spec2}}` macros that we are removing use the `SpecData.json` file. We do not accept any further contributions to the `SpecData.json` file; instead, either try to insert a specification table, using the `\{{Specifications}}` macro, or try to hardcode the (good) link to the specification. Note that most of the time, mentioning or linking to a specification outside the _Specifications_ section is a sign of something not appropriately documented on MDN.
 
 The `SpecData.json` file is located [here](https://github.com/mdn/content/tree/main/files/jsondata/SpecData.json) on Github.
