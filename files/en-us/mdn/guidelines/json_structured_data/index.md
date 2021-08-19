@@ -89,7 +89,7 @@ The `GroupData.json` file is located [here](https://github.com/mdn/content/tree/
 
 > **Note:** We hope to generate this file automatically from the data available via w3c/webref in the future.
 
-`InterfaceData` describes the hierarchy of the interfaces. It lists inheritance. In the past, it also listed mixins implemented by each interface, but this usage is deprecated, and we remove mixins from this file at the same rate MDN is updated.
+`InterfaceData` describes the hierarchy of the interfaces. It lists inheritance. In the past, it also listed mixins implemented by each interface; but that usage is deprecated, and we remove mixins from this file at the same rate MDN is updated.
 
 This inheritance data is used when building API sidebars and by the `\{{InheritanceDiagram}}` in the interface pages.
 
