@@ -79,7 +79,7 @@ There are two other keys, `"dictionaries"` and `"callbacks"`, operating on the s
 
 ### Update process for GroupData
 
-This file should be updated in the same PR as changes affecting the sidebar happens. That way, the sidebar is always up-to-date. Reviewers shouldn't merge PRs that don't adopt it.
+This file should be updated in the same PR where changes affecting the sidebar happens. That way, the sidebar is always up-to-date. Reviewers shouldn't merge PRs that don't adopt it.
 
 To test your changes, check that the sidebar in the files in your PR displays all entries correctly.
 
