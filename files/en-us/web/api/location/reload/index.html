@@ -27,7 +27,7 @@ browser-compat: api.Location.reload
 
 <h2 id="location.reload_has_no_parameter">location.reload() has no parameter</h2>
 
-<p>Firefox supports a non-standard <a href="https://searchfox.org/mozilla-central/source/dom/base/Location.cpp#551"><code>forceGet</code> boolean parameter</a> for <code>location.reload()</code>, to tell Fireox to bypass its cache and force-reload the current document. However, in all other browsers, any parameter you specify in a <code>location.reload()</code> call will be ignored and have no effect of any kind.</p>
+<p>Firefox supports a non-standard <a href="https://searchfox.org/mozilla-central/source/dom/base/Location.cpp#551"><code>forceGet</code> boolean parameter</a> for <code>location.reload()</code>, to tell Firefox to bypass its cache and force-reload the current document. However, in all other browsers, any parameter you specify in a <code>location.reload()</code> call will be ignored and have no effect of any kind.</p>
 
 <p>You may, though, come across instances of <code>location.reload(true)</code> in existing code that was written with the assumption the force-reload effect occurs in all browsers. A GitHub "<code>location.reload(true)</code>" search returns <a href="https://github.com/search?q=%22location.reload%28true%29%22&type=code">several hundred thousand results</a>. So there’s a lot of existing code which has it.</p>
 
