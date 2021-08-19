@@ -6785,8 +6785,9 @@
 /en-US/docs/Web/API/AnimationEvent.AnimationEvent	/en-US/docs/Web/API/AnimationEvent/AnimationEvent
 /en-US/docs/Web/API/AnimationEvent.animationName	/en-US/docs/Web/API/AnimationEvent/animationName
 /en-US/docs/Web/API/AnimationEvent.elapsedTime	/en-US/docs/Web/API/AnimationEvent/elapsedTime
-/en-US/docs/Web/API/AnimationEvent.initAnimationEvent	/en-US/docs/Web/API/AnimationEvent/initAnimationEvent
+/en-US/docs/Web/API/AnimationEvent.initAnimationEvent	/en-US/docs/Web/API/AnimationEvent/AnimationEvent
 /en-US/docs/Web/API/AnimationEvent.pseudoElement	/en-US/docs/Web/API/AnimationEvent/pseudoElement
+/en-US/docs/Web/API/AnimationEvent/initAnimationEvent	/en-US/docs/Web/API/AnimationEvent/AnimationEvent
 /en-US/docs/Web/API/AnimationPlaybackEvent/AnimationPlaybackEvent.timelineTime	/en-US/docs/Web/API/AnimationPlaybackEvent/timelineTime
 /en-US/docs/Web/API/AnimationPlayer	/en-US/docs/Web/API/Animation
 /en-US/docs/Web/API/AnimationPlayer.currentTime	/en-US/docs/Web/API/Animation/currentTime
