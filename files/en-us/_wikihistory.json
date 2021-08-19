@@ -57329,13 +57329,6 @@
       "jpmedley"
     ]
   },
-  "Web/API/Index": {
-    "modified": "2019-10-10T16:43:11.819Z",
-    "contributors": [
-      "kscarfone",
-      "fscholz"
-    ]
-  },
   "Web/API/IndexedDB_API": {
     "modified": "2020-12-09T03:15:23.621Z",
     "contributors": [
