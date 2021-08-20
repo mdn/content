@@ -1321,7 +1321,6 @@
 /en-US/docs/DOM/File.getAsDataURL	/en-US/docs/Web/API/File/getAsDataURL
 /en-US/docs/DOM/File.getAsText	/en-US/docs/Web/API/File/getAsText
 /en-US/docs/DOM/File.lastModifiedDate	/en-US/docs/Web/API/File/lastModifiedDate
-/en-US/docs/DOM/File.mozFullPath	/en-US/docs/Web/API/File/mozFullPath
 /en-US/docs/DOM/File.name	/en-US/docs/Web/API/File/name
 /en-US/docs/DOM/File.size	/en-US/docs/Web/API/Blob/size
 /en-US/docs/DOM/File.type	/en-US/docs/Web/API/Blob/type
@@ -7443,7 +7442,6 @@
 /en-US/docs/Web/API/File.getAsDataURL	/en-US/docs/Web/API/File/getAsDataURL
 /en-US/docs/Web/API/File.getAsText	/en-US/docs/Web/API/File/getAsText
 /en-US/docs/Web/API/File.lastModifiedDate	/en-US/docs/Web/API/File/lastModifiedDate
-/en-US/docs/Web/API/File.mozFullPath	/en-US/docs/Web/API/File/mozFullPath
 /en-US/docs/Web/API/File.name	/en-US/docs/Web/API/File/name
 /en-US/docs/Web/API/File.size	/en-US/docs/Web/API/Blob/size
 /en-US/docs/Web/API/File.type	/en-US/docs/Web/API/Blob/type
