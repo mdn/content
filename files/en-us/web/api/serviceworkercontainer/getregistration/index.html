@@ -15,20 +15,19 @@ browser-compat: api.ServiceWorkerContainer.getRegistration
 <p>The <strong><code>getRegistration()</code></strong> method of the
   {{domxref("ServiceWorkerContainer")}} interface gets a
   {{domxref("ServiceWorkerRegistration")}} object whose scope URL matches the provided
-  document URL.  The method returns a {{jsxref("Promise")}} that resolves to
+  client URL.  The method returns a {{jsxref("Promise")}} that resolves to
   a {{domxref("ServiceWorkerRegistration")}} or <code>undefined</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js"><em>serviceWorkerContainer</em>.getRegistration(<em>scope</em>).then(function(<em>serviceWorkerRegistration</em>) { ... });</pre>
+  class="brush: js"><em>serviceWorkerContainer</em>.getRegistration(<em>clientURL</em>).then(function(<em>serviceWorkerRegistration</em>) { ... });</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-  <dt><code>scope</code> {{optional_inline}}</dt>
-  <dd>A unique identifier for a service worker registration — the scope URL of the
-    registration object you want to return. This is usually a relative URL.</dd>
+  <dt><code>clientURL</code> {{optional_inline}}</dt>
+  <dd>The registration whose scope matches this URL will be returned. Relative URLs are resolved with the current client as the base. If this parameter is not provided, the current client's URL will be used by default.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
