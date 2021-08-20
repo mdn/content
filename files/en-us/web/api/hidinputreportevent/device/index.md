@@ -30,5 +30,3 @@ An {{domxref("HIDDevice")}}.
 ## Browser compatibility
 
 {{Compat}}
-
-

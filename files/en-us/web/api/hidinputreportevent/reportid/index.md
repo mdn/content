@@ -30,5 +30,3 @@ A one-byte identification prefix.
 ## Browser compatibility
 
 {{Compat}}
-
-
