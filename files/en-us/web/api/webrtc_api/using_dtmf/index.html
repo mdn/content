@@ -15,7 +15,7 @@ tags:
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">In order to more fully support audio/video conferencing, <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> supports sending {{Glossary("DTMF")}} to the remote peer on an {{domxref("RTCPeerConnection")}}. This article offers a brief high-level overview of how DTMF works over WebRTC, then provides a guide for everyday developers about how to send DTMF over an <code>RTCPeerConnection</code>. The DTMF system is often referred to as "touch tone," after an old trade name for the system.</span></p>
+<p>In order to more fully support audio/video conferencing, <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> supports sending {{Glossary("DTMF")}} to the remote peer on an {{domxref("RTCPeerConnection")}}. This article offers a brief high-level overview of how DTMF works over WebRTC, then provides a guide for everyday developers about how to send DTMF over an <code>RTCPeerConnection</code>. The DTMF system is often referred to as "touch tone," after an old trade name for the system.</p>
 
 <p>WebRTC doesn't send DTMF codes as audio data. Instead, they're sent out-of-band, as RTP payloads. Note, however, that although it's possible to <em>send</em> DTMF using WebRTC, there is currently no way to detect or receive <em>incoming</em> DTMF. WebRTC currently ignores these payloads; this is because WebRTC's DTMF support is primarily intended for use with legacy telephone services that rely on DTMF tones to perform tasks such as:</p>
 
