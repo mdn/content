@@ -79,7 +79,7 @@ em {
 
 #### Result
 
-{{ EmbedLiveSample('Disabling_font_synthesis', '', '50') }}
+{{ EmbedLiveSample('Disabling_font_synthesis', '', '75') }}
 
 ## Specifications
 
