@@ -15,7 +15,7 @@ tags:
 <ol>
  <li>Define a paint worklet using the <code><a href="/en-US/docs/Web/API/PaintWorklet/registerPaint">registerPaint()</a></code> function</li>
  <li>Register the worklet</li>
- <li>Include the <code>{{cssxref('paint()','paint()')}}</code> CSS function</li>
+ <li>Include the <code>{{cssxref('image/paint()','paint()')}}</code> CSS function</li>
 </ol>
 
 <p>To elaborate over these steps, we're going to start by creating a half-highlight background, like on this header:</p>
@@ -59,11 +59,9 @@ tags:
 
 <p>We tried to keep the example simple. For more options, look at the <a href="/en-US/docs/Web/HTML/Element/canvas">canvas documentation</a>. We also add a little bit of complexity later in this tutorial.</p>
 
-<h2 id="Using_the_paint_worklet">Using the paint worklet</h2>
+<h2 id="Registering_the_worklet">Registering the worklet</h3>
 
 <p>To use the paint worklet, we need to register it using <code><a href="/en-US/docs/Web/API/Worklet/addModule">addModule()</a></code> and include it in our CSS, ensuring the CSS selector matches a DOM node in our HTML</p>
-
-<h3 id="Registering_the_worklet">Registering the worklet</h3>
 
 <p>The setup and design of our paint worklet took place in the external script shown above. We need to register that <a href="/en-US/docs/Web/API/PaintWorklet">worklet</a> from our main script.</p>
 
@@ -71,9 +69,10 @@ tags:
 
 <p>This can be done using the paint worklet's <code>addModule()</code> method in a <code>&lt;script&gt;</code> within the main HTML or in an external JavaScript file linked to from the document.</p>
 
-<p>In our example, the paintworklet is stored on Github.</p>
+<h2 id="Using_the_paint_worklet">Using the paint worklet</h2>
 
-<div id="paintapi">
+<p>In our example, the paintworklet is stored on Github. To use it, we first register it:</p>
+
 <pre class="brush: js">CSS.paintWorklet.addModule('https://mdn.github.io/houdini-examples/cssPaint/intro/01partOne/header-highlight.js');</pre>
 
 <h3 id="Reference_the_paint_worklet_in_CSS">Reference the paint worklet in CSS</h3>
@@ -91,9 +90,8 @@ tags:
 <pre class="brush: html">&lt;h1 class="fancy"&gt;My Cool Header&lt;/h1&gt;</pre>
 
 <p>The following example will look like the image above in <a href="/en-US/docs/Web/API/CSS/paintWorklet#browser_compatibility">browsers supporting the CSS Painting API</a>.</p>
-</div>
 
-<p>{{EmbedLiveSample("paintapi", 120, 120)}}</p>
+<p>{{EmbedLiveSample("Using_the_paint_worklet", 120, 120)}}</p>
 
 <p>While you can't play with the worklet's script, you can alter the <code>background-size</code> and <code>background-position</code> to change the size and location of the background image.</p>
 

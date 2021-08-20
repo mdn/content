@@ -30,7 +30,7 @@ propertyIsEnumerable(prop)
 
 ### Return value
 
-A {{jsxref("Boolean")}} indicating whether the specified property is enumerable and is
+A `true` or `false` value indicating whether the specified property is enumerable and is
 the object's own property.
 
 ## Description

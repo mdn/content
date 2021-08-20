@@ -9967,10 +9967,13 @@
 /en-US/docs/Web/CSS/CSS3_Columns	/en-US/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts
 /en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations/Detecting_CSS_animation_support	/en-US/docs/Web/CSS/CSS_Animations/Detecting_CSS_animation_support
 /en-US/docs/Web/CSS/CSS_Background_and_Borders	/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders
+/en-US/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator	/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator
+/en-US/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator	/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator
+/en-US/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator	/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
 /en-US/docs/Web/CSS/CSS_Background_and_Borders/Scaling_background_images	/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
 /en-US/docs/Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds	/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 /en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images	/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
-/en-US/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator	/en-US/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator
+/en-US/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator	/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
 /en-US/docs/Web/CSS/CSS_Colors	/en-US/docs/Web/CSS/CSS_Color
 /en-US/docs/Web/CSS/CSS_Compositing_and_Blending	/en-US/docs/Web/CSS/Compositing_and_Blending
 /en-US/docs/Web/CSS/CSS_Device_Adaptation/Viewport_Concepts	/en-US/docs/Web/CSS/Viewport_concepts
@@ -10030,9 +10033,9 @@
 /en-US/docs/Web/CSS/Selector_lists	/en-US/docs/Web/CSS/Selector_list
 /en-US/docs/Web/CSS/Selectors	/en-US/docs/Web/CSS/CSS_Selectors
 /en-US/docs/Web/CSS/Text-overflow_TEST	/en-US/docs/Web/CSS/text-overflow
-/en-US/docs/Web/CSS/Tools/Border-image_generator	/en-US/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator
-/en-US/docs/Web/CSS/Tools/Border-radius_generator	/en-US/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator
-/en-US/docs/Web/CSS/Tools/Box-shadow_generator	/en-US/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator
+/en-US/docs/Web/CSS/Tools/Border-image_generator	/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator
+/en-US/docs/Web/CSS/Tools/Border-radius_generator	/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator
+/en-US/docs/Web/CSS/Tools/Box-shadow_generator	/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
 /en-US/docs/Web/CSS/Tools/ColorPicker_Tool	/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool
 /en-US/docs/Web/CSS/Understanding_CSS_z-index	/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index
 /en-US/docs/Web/CSS/Understanding_CSS_z-index/Adding_z-index	/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index
@@ -10724,6 +10727,7 @@
 /en-US/docs/Web/HTTP/X-Frame-Options	/en-US/docs/Web/HTTP/Headers/X-Frame-Options
 /en-US/docs/Web/HTTP/data_URIs	/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
 /en-US/docs/Web/HTTP/www_and_non-www_URLs	/en-US/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
+/en-US/docs/Web/Houdini	/en-US/docs//Web/Guide/Houdini
 /en-US/docs/Web/Houdini/CSS_Painting_API	/en-US/docs/Web/API/CSS_Painting_API/Guide
 /en-US/docs/Web/Houdini/CSS_Typed_OM	/en-US/docs/Web/API/CSS_Typed_OM_API
 /en-US/docs/Web/Houdini/Learn/CSS_Painting_API	/en-US/docs/Web/API/CSS_Painting_API/Guide

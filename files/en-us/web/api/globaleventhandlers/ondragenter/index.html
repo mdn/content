@@ -92,23 +92,16 @@ function dragend_handler(ev) {
  el.style.background = "pink";
 }
 
-function dragexit_handler(ev) {
- console.log("dragExit");
- // Change the source element's border back to green to signify a dragexit event
- ev.currentTarget.style.background = "green";
-}
-
 function init() {
  // Set handlers for the source's enter/leave/end/exit events
  var el=document.getElementById("source");
  el.ondragenter = dragenter_handler;
  el.ondragleave = dragleave_handler;
  el.ondragend = dragend_handler;
- el.ondragexit = dragexit_handler;
 }
 &lt;/script&gt;
 &lt;body onload="init();"&gt;
-&lt;h1&gt;Examples of &lt;code&gt;ondragenter&lt;/code&gt;, &lt;code&gt;ondragleave&lt;/code&gt;, &lt;code&gt;ondragend&lt;/code&gt;, &lt;code&gt;ondragexit&lt;/code&gt;&lt;/h1&gt;
+&lt;h1&gt;Examples of &lt;code&gt;ondragenter&lt;/code&gt;, &lt;code&gt;ondragleave&lt;/code&gt;, &lt;code&gt;ondragend&lt;/code&gt;&lt;/h1&gt;
  &lt;div&gt;
    &lt;p id="source" ondragstart="dragstart_handler(event);" draggable="true"&gt;
      Select this element, drag it to the Drop Zone and then release the selection to move the element.&lt;/p&gt;
