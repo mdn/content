@@ -14,13 +14,13 @@ browser-compat: api.Clients.claim
 ---
 <p>{{APIRef("Service Worker Clients")}}</p>
 
-<p><span class="seoSummary">The <strong><code>claim()</code></strong> method of the
+<p>The <strong><code>claim()</code></strong> method of the
     {{domxref("Clients")}} interface allows an active service worker to set itself as the
     {{domxref("ServiceWorkerContainer.controller", "controller")}} for all clients within
     its {{domxref("ServiceWorkerRegistration.scope", "scope")}}. This triggers a
     "<code>controllerchange</code>" event
     on {{domxref("ServiceWorkerContainer","navigator.serviceWorker")}} in any clients that
-    become controlled by this service worker.</span></p>
+    become controlled by this service worker.</p>
 
 <p>When a service worker is initially registered, pages won't use it until they next
   load. The <code>claim()</code> method causes those pages to be controlled immediately.
