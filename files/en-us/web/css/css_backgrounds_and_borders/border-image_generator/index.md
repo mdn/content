@@ -1,6 +1,6 @@
 ---
 title: Border-image generator
-slug: Web/CSS/CSS_Background_and_Borders/Border-image_generator
+slug: Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator
 tags:
   - CSS
   - Tools
