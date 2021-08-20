@@ -101369,38 +101369,6 @@
       "cers"
     ]
   },
-  "Web/CSS/CSS_Background_and_Borders/Border-image_generator": {
-    "modified": "2020-05-05T09:08:09.973Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfluehr",
-      "teoli",
-      "gabriel_ivanica"
-    ]
-  },
-  "Web/CSS/CSS_Background_and_Borders/Border-radius_generator": {
-    "modified": "2019-03-20T10:29:48.350Z",
-    "contributors": [
-      "alattalatta",
-      "mfluehr",
-      "Sheppy",
-      "teoli",
-      "gabriel_ivanica"
-    ]
-  },
-  "Web/CSS/CSS_Background_and_Borders/Box-shadow_generator": {
-    "modified": "2020-04-21T23:07:57.113Z",
-    "contributors": [
-      "sideshowbarker",
-      "mfluehr",
-      "fscholz",
-      "roanongh",
-      "teoli",
-      "Sheppy",
-      "gabriel_ivanica",
-      "groovecoder"
-    ]
-  },
   "Web/CSS/CSS_Backgrounds_and_Borders": {
     "modified": "2020-07-07T12:00:23.701Z",
     "contributors": [
@@ -101428,6 +101396,29 @@
       "tmhrtwg",
       "jonjohnjohnson",
       "mfluehr"
+    ]
+  },
+  "Web/CSS/CSS_Backgrounds_and_Borders/border-radius_generator": {
+    "modified": "2019-03-20T10:29:48.350Z",
+    "contributors": [
+      "alattalatta",
+      "mfluehr",
+      "Sheppy",
+      "teoli",
+      "gabriel_ivanica"
+    ]
+  },
+  "Web/CSS/CSS_Backgrounds_and_Borders/box-shadow_generator": {
+    "modified": "2020-04-21T23:07:57.113Z",
+    "contributors": [
+      "sideshowbarker",
+      "mfluehr",
+      "fscholz",
+      "roanongh",
+      "teoli",
+      "Sheppy",
+      "gabriel_ivanica",
+      "groovecoder"
     ]
   },
   "Web/CSS/CSS_Basic_User_Interface": {
@@ -159935,6 +159926,15 @@
       "MusikAnimal",
       "Sheppy",
       "jswisher"
+    ]
+  },
+  "web/css/css_backgrounds_and_borders/border-image_generator": {
+    "modified": "2020-05-05T09:08:09.973Z",
+    "contributors": [
+      "chrisdavidmills",
+      "mfluehr",
+      "teoli",
+      "gabriel_ivanica"
     ]
   }
 }

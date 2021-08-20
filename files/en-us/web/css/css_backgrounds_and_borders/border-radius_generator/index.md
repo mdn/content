@@ -1,6 +1,6 @@
 ---
 title: Border-radius generator
-slug: Web/CSS/CSS_Background_and_Borders/Border-radius_generator
+slug: Web/CSS/CSS_Backgrounds_and_Borders/border-radius_generator
 tags:
   - CSS
   - CSS Borders
