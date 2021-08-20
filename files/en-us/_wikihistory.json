@@ -93531,24 +93531,8 @@
       "MashKao"
     ]
   },
-  "Web/API/XMLHttpRequest/mozResponseArrayBuffer": {
-    "modified": "2019-03-23T22:32:48.895Z",
-    "contributors": [
-      "Sheppy",
-      "david_ross",
-      "MashKao"
-    ]
-  },
   "Web/API/XMLHttpRequest/mozSystem": {
     "modified": "2019-03-23T22:32:57.199Z",
-    "contributors": [
-      "Sheppy",
-      "david_ross",
-      "MashKao"
-    ]
-  },
-  "Web/API/XMLHttpRequest/multipart": {
-    "modified": "2019-03-23T22:32:49.038Z",
     "contributors": [
       "Sheppy",
       "david_ross",
