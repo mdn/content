@@ -51,11 +51,6 @@ tags:
    <td>…a dragged item enters a valid drop target. (See <a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#droptargets" title="Specifying Drop Targets">Specifying Drop Targets</a>.)</td>
   </tr>
   <tr>
-   <td>{{domxref('Document/dragexit_event', 'dragexit')}}</td>
-   <td>{{domxref('GlobalEventHandlers.ondragleave','ondragexit')}}</td>
-   <td>…an element is no longer the drag operation's immediate selection target.</td>
-  </tr>
-  <tr>
    <td>{{domxref('Document/dragleave_event', 'dragleave')}}</td>
    <td>{{domxref('GlobalEventHandlers.ondragleave','ondragleave')}}</td>
    <td>…a dragged item leaves a valid drop target.</td>
@@ -269,7 +264,7 @@ function drop_handler(ev) {
 
 <p>At the end of a drag operation, the {{domxref("Document/dragend_event", "dragend")}} event fires at the <em>source</em> element — the element that was the target of the drag start.</p>
 
-<p>This event fires regardless of whether the drag completed or was canceled. The {{domxref("Document/dragent_event", "dragend")}} event handler can check the value of the {{domxref("DataTransfer.dropEffect","dropEffect")}} property to determine if the drag operation succeeded or not.</p>
+<p>This event fires regardless of whether the drag completed or was canceled. The {{domxref("Document/dragend_event", "dragend")}} event handler can check the value of the {{domxref("DataTransfer.dropEffect","dropEffect")}} property to determine if the drag operation succeeded or not.</p>
 
 <p>For more information about handling the end of a drag operation, see:</p>
 
