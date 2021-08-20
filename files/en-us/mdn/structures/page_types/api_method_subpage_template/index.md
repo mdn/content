@@ -18,7 +18,7 @@ browser-compat: path.to.feature.NameOfTheMethod
 > **Page front matter:**
 >
 > The frontmatter at the top of the page is used to define "page metadata".
-> The values should be updated appropriately for the particular header.
+> The values should be updated appropriately for the particular method.
 > 
 > ```
 > ---
@@ -31,21 +31,23 @@ browser-compat: path.to.feature.NameOfTheMethod
 >   - Reference
 >   - Experimental
 >   - Deprecated
+>   - Non-standard
 > browser-compat: path.to.feature.NameOfTheMethod
 > ---
 > ```
 > - **title**
 >   - : Title heading displayed at top of page.
->       Format as _NameOfTheParentInterface_**.**_NameOfTheMethod_**()**. For example, the [count()](/en-US/docs/Web/API/IDBIndex/count) method of the [IDBIndex](/en-US/docs/Web/API/IDBIndex) interface has a _title_ of `IDBIndex.count()`.
+>       Format as _NameOfTheParentInterface_**.**_NameOfTheMethod_**()**.
+>       For example, the [count()](/en-US/docs/Web/API/IDBIndex/count) method of the [IDBIndex](/en-US/docs/Web/API/IDBIndex) interface has a _title_ of `IDBIndex.count()`.
 > - **slug**
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`).
 >       This will be formatted like `Web/API/NameOfTheParentInterface/NameOfTheMethod`.
 >       Note that the name of the method in the slug omits the parenthesis (it ends in `NameOfTheMethod` not `NameOfTheMethod()`).
 > - **tags**
->   - : Always include the following tags: **API**, **Reference**, **Method**,  the _name of the API_ (e.g. **WebVR**), the name of the _parent interface_ (e.g. **IDBIndex**), the name of the method (e.g. **count()**), 
+>   - : Always include the following tags: **API**, **Reference**, **Method**,  the _name of the API_ (e.g. **WebVR**), the name of the _parent interface_ (e.g. **IDBIndex**), the name of the method (e.g. **count()**).
 >
 >       Include the following tags as appropriate:
->       - Technology status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete)).
+>       - Technology status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete)), **Non-standard** if it isn't on a standards track.
 >       - Special requirements: **Secure context** (if it is available in a secure context only)
 >       - Any other tags that represent terms people might search for related to the technology.
 >         For example on WebVR interface pages we include **VR** and **Virtual reality**.
@@ -129,6 +131,6 @@ And/or include a list of links to useful code samples that live elsewhere:
 
 ## See also
 
-- Include list of other links related to
-- this API that might
-- be useful
+- Include list of
+- other links related to
+- this API that might be useful
