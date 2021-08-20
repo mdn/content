@@ -22,19 +22,19 @@ for each array element.
 
 ```js
 // Arrow function
-forEach((element) => { ... } )
-forEach((element, index) => { ... } )
-forEach((element, index, array) => { ... } )
+Array.prototype.forEach((element) => { ... } )
+Array.prototype.forEach((element, index) => { ... } )
+Array.prototype.forEach((element, index, array) => { ... } )
 
 // Callback function
-forEach(callbackFn)
-forEach(callbackFn, thisArg)
+Array.prototype.forEach(callbackFn)
+Array.prototype.forEach(callbackFn, thisArg)
 
 // Inline callback function
-forEach(function callbackFn(element) { ... })
-forEach(function callbackFn(element, index) { ... })
-forEach(function callbackFn(element, index, array){ ... })
-forEach(function callbackFn(element, index, array) { ... }, thisArg)
+Array.prototype.forEach(function callbackFn(element) { ... })
+Array.prototype.forEach(function callbackFn(element, index) { ... })
+Array.prototype.forEach(function callbackFn(element, index, array){ ... })
+Array.prototype.forEach(function callbackFn(element, index, array) { ... }, thisArg)
 ```
 
 ### Parameters
