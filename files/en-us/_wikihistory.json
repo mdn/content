@@ -101369,7 +101369,18 @@
       "cers"
     ]
   },
-  "Web/CSS/CSS_Background_and_Borders/Border-image_generator": {
+  "Web/CSS/CSS_Backgrounds_and_Borders": {
+    "modified": "2020-07-07T12:00:23.701Z",
+    "contributors": [
+      "wbamberg",
+      "fazl",
+      "fscholz",
+      "RainSlide",
+      "Sheppy",
+      "mfluehr"
+    ]
+  },
+  "Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator": {
     "modified": "2020-05-05T09:08:09.973Z",
     "contributors": [
       "chrisdavidmills",
@@ -101378,7 +101389,7 @@
       "gabriel_ivanica"
     ]
   },
-  "Web/CSS/CSS_Background_and_Borders/Border-radius_generator": {
+  "Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator": {
     "modified": "2019-03-20T10:29:48.350Z",
     "contributors": [
       "alattalatta",
@@ -101388,7 +101399,7 @@
       "gabriel_ivanica"
     ]
   },
-  "Web/CSS/CSS_Background_and_Borders/Box-shadow_generator": {
+  "Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator": {
     "modified": "2020-04-21T23:07:57.113Z",
     "contributors": [
       "sideshowbarker",
@@ -101399,17 +101410,6 @@
       "Sheppy",
       "gabriel_ivanica",
       "groovecoder"
-    ]
-  },
-  "Web/CSS/CSS_Backgrounds_and_Borders": {
-    "modified": "2020-07-07T12:00:23.701Z",
-    "contributors": [
-      "wbamberg",
-      "fazl",
-      "fscholz",
-      "RainSlide",
-      "Sheppy",
-      "mfluehr"
     ]
   },
   "Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images": {
