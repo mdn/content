@@ -1,6 +1,6 @@
 ---
 title: CSS Houdini
-slug: /Web/Guide/Houdini
+slug: Web/Guide/Houdini
 tags:
   - API
   - CSS
@@ -9,78 +9,138 @@ tags:
   - Landing
   - Web
 ---
-<p>Houdini is a set of low-level APIs that exposes parts of the CSS engine, giving developers the power to extend CSS by hooking into the styling and layout process of a browser’s rendering engine.  Houdini is a group of APIs that give developers direct access to the <a href="/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model</a> (CSSOM), enabling developers to write code the browser can parse as CSS, thereby creating new CSS features without waiting for them to be implemented natively in browsers.</p>
 
-<h2 id="Advantages_of_Houdini">Advantages of Houdini</h2>
+Houdini is a set of low-level APIs that exposes parts of the CSS engine,
+giving developers the power to extend CSS by hooking into the styling and layout process of a browser’s rendering engine.
+Houdini is a group of APIs that give developers direct access to the {{domxref("CSS_Object_Model")}} (CSSOM),
+enabling developers to write code the browser can parse as CSS,
+thereby creating new CSS features without waiting for them to be implemented natively in browsers.
 
-<p>Houdini enables faster parse times than using JavaScript <code><a href="/en-US/docs/Web/API/HTMLElement/style">style</a></code> for style changes. Browsers parse the CSSOM — including layout, paint, and composite processes — before applying any style updates found in scripts. In addition, layout, paint, and composite processes are repeated for JavaScript style updates. Houdini code doesn't wait for that first rendering cycle to be complete. Rather, it is included in that first cycle — creating renderable, understandable styles. Houdini provides an object-based API for working with CSS values in JavaScript.</p>
+## Advantages of Houdini
 
-<p>Houdini's CSS Typed OM is a CSS Object Model with types and methods, exposing values as JavaScript objects making for more intuitive CSS manipulation than previous string based <code><a href="/en-US/docs/Web/API/HTMLElement/style">HTMLElement.style</a></code> manipulations. Every element and style sheet rule has a style map which is accessible via its <code><a href="/en-US/docs/Web/API/StylePropertyMap">StylePropertyMap</a></code>.</p>
+Houdini enables faster parse times than using JavaScript {{domxref("HTMLElement.style")}} for style changes.
+Browsers parse the CSSOM — including layout, paint, and composite processes —
+before applying any style updates found in scripts.
+In addition, layout, paint, and composite processes are repeated for JavaScript style updates.
+Houdini code doesn't wait for that first rendering cycle to be complete.
+Rather, it is included in that first cycle — creating renderable, understandable styles.
+Houdini provides an object-based API for working with CSS values in JavaScript.
 
-<p>A feature of CSS Houdini is the <a href="/en-US/docs/Web/API/Worklet">Worklet</a>. With worklets, you can create modular CSS, requiring a single line of JavaScript to import configurable components: no pre-processors, post-processors or JavaScript frameworks needed.</p>
+Houdini's {{domxref("CSS Typed OM API")}} is a CSS Object Model with types and methods,
+exposing values as JavaScript objects
+making for more intuitive CSS manipulation than previous string based {{domxref("HTMLElement.style")}} manipulations.
+Every element and style sheet rule has a style map which is accessible via its {{domxref("StylePropertyMap")}}.
 
-<pre class="brush: js">&lt;script&gt;
-  CSS.paintWorklet.addModule('csscomponent.js');
-&lt;/script&gt;
-</pre>
+A feature of CSS Houdini is the {{domxref("Worklet")}}.
+With worklets, you can create modular CSS,
+requiring a single line of JavaScript to import configurable components:
+no pre-processors, post-processors or JavaScript frameworks needed.
 
-<p>This added module contains <code><a href="/en-US/docs/Web/API/PaintWorklet/registerPaint">registerPaint()</a></code> functions, which register completely configurable worklets.</p>
+```js
+CSS.paintWorklet.addModule('csscomponent.js');
+```
 
-<p>The CSS <code>paint()</code> function parameters include the name of the worklet, along with optional parameters. The worklet also has access to the element's custom properties: they don't need to be passed as function arguments.</p>
+This added module contains {{domxref("PaintWorklet.registerPaint")}} functions,
+which register completely configurable worklets.
 
-<pre class="brush: css">li {
+> **Note:** You can write your own worklets, or install components created by other people.
+> The [Houdini.how](https://houdini.how/) website is a collection of worklets,
+> with [instructions on how to use them](https://houdini.how/usage/).
+The CSS `paint()` function is an additional function supported by the {{cssxref("image")}} type.
+It takes parameters that include the name of the worklet,
+plus additional parameters needed by the worklet.
+The worklet also has access to the element's custom properties:
+they don't need to be passed as function arguments.
+
+In the following example the `paint()` function is passed a worklet called `myComponent`.
+
+```css
+li {
     background-image: paint(myComponent, stroke, 10px);
     --highlights: blue;
     --lowlights: green;
-}</pre>
+}
+```
 
-<div class="notecard note">
-<p><strong>Note</strong>: With great power comes great responsibility! With Houdini you <em>could</em> invent your own masonry, grid, or regions implementation, but doing so is not necessarily the best idea. The CSS Working group does a lot of work to ensure every feature is performant, handles all edge cases, and considers security, privacy, and accessibility. As you extend CSS with Houdini, make sure to keep these considerations in mind, and start small before moving on to more ambitious projects.</p>
-</div>
+> **Note:** With great power comes great responsibility!
+> With Houdini you _could_ invent your own masonry, grid, or regions implementation,
+> but doing so is not necessarily the best idea.
+> The CSS Working group does a lot of work to ensure every feature is performant,
+> handles all edge cases, and considers security, privacy, and accessibility.
+> As you extend CSS with Houdini, make sure to keep these considerations in mind,
+> and start small before moving on to more ambitious projects.
+## The Houdini APIs
 
-<h2 class="Documentation" id="The_Houdini_APIs">The Houdini APIs</h2>
+Below you can find links to the main reference pages covering the APIs that fall under the Houdini umbrella,
+along with links to guides to help you if you need guidance in learning how to use them.
 
-<p>Below you can find links to the main reference pages covering the APIs that fall under the Houdini umbrella, along with links to guides to help you if you need guidance in learning how to use them.</p>
+### CSS Properties and Values API
 
-<dl>
- <dt>CSS Parser API</dt>
- <dd>An API exposing the CSS parser more directly, for parsing arbitrary CSS-like languages into a mildly typed representation.<br>
- <br>
- No guide or reference has currently been written for this API.</dd>
- <dt>CSS Properties and Values API </dt>
- <dd>Defines an API for registering new CSS properties. Properties registered using this API are provided with a parse syntax that defines a type, inheritance behavior, and an initial value.<br>
- <br>
- <a href="/en-US/docs/Web/API/CSS_Properties_and_Values_API">CSS Properties and Values API reference</a><br>
- <a href="/en-US/docs/Web/API/CSS_Properties_and_Values_API/guide">CSS Properties and Values API guide</a></dd>
- <dt>CSS Typed OM</dt>
- <dd>Converting CSSOM value strings into meaningfully typed JavaScript representations and back can incur a significant performance overhead. The CSS Typed OM exposes CSS values as typed JavaScript objects to allow their performant manipulation.<br>
- <br>
- <a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed OM reference</a><br>
- <a href="/en-US/docs/Web/API/CSS_Typed_OM_API/Guide">CSS Typed OM guide</a></dd>
- <dt>CSS Layout API </dt>
- <dd>
- <p>Designed to improve the extensibility of CSS, this API enables developers to write their own layout algorithms, like masonry or line snapping. It is not yet natively available.<br>
-  <br>
-  No guide or reference has currently been written for this API.</p>
- </dd>
- <dt>CSS Painting API</dt>
- <dd>
- <p>Developed to improve the extensibility of CSS — allows developers to write JavaScript functions that can draw directly into an element's background, border, or content via the <code>paint()</code> CSS function.<br>
-  <br>
-  <a href="/en-US/docs/Web/API/CSS_Painting_API">CSS Painting API reference</a><br>
-  <a href="/en-US/docs/Web/API/CSS_Painting_API/Guide">CSS Painting API guide </a></p>
- </dd>
- <dt>Worklets </dt>
- <dd>
- <p>An API for running scripts in various stages of the rendering pipeline independent of the main JavaScript execution environment. Worklets are conceptually similar to <a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Web Workers</a>, and are called by and extend the rendering engine.<br>
-  <br>
-  <a href="/en-US/docs/Web/API/Worklet">Worklets reference</a></p>
- </dd>
-</dl>
+Defines an API for registering new CSS properties.
+Properties registered using this API are provided with a parse syntax that defines a type,
+inheritance behavior, and an initial value.
 
-<h2 id="See_also">See also</h2>
+- [CSS Properties and Values API reference](/en-US/docs/Web/API/CSS_Properties_and_Values_API)
+- [CSS Properties and Values API guide](/en-US/docs/Web/API/CSS_Properties_and_Values_API/guide)
+- [Smarter custom properties with Houdini's new API](https://web.dev/css-props-and-vals/)
 
-<ul>
-  <li>The <a href="https://houdini.how/">Worklet library</a> for examples and code.</li>
-  <li><a href="https://houdini.glitch.me/">Interactive introduction to Houdini</a></li>
-</ul>
+### CSS Typed OM
+
+Converting CSSOM value strings into meaningfully typed JavaScript representations and back can incur a significant performance overhead.
+The CSS Typed OM exposes CSS values as typed JavaScript objects to allow their performant manipulation.
+
+- [CSS Typed OM reference](/en-US/docs/Web/API/CSS_Typed_OM_API)
+- [CSS Typed OM guide](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
+- [Working with the new CSS Typed Object Model](https://developers.google.com/web/updates/2018/03/cssom)
+
+### CSS Painting API
+
+Developed to improve the extensibility of CSS,
+the Painting API allows developers to write JavaScript functions that can draw directly into an element's background,
+border, or content via the `paint()` CSS function.
+
+- [CSS Painting API reference](/en-US/docs/Web/API/CSS_Painting_API)
+- [CSS Painting API guide](/en-US/docs/Web/API/CSS_Painting_API/Guide)
+- [CSS Paint API](https://developers.google.com/web/updates/2018/01/paintapi)
+- [The CSS Paint API](https://css-tricks.com/the-css-paint-api/)
+- [Simulating Drop Shadows with the CSS Paint API](https://css-tricks.com/simulating-drop-shadows-with-the-css-paint-api/)
+- [CSS Paint API Being predictably random](https://jakearchibald.com/2020/css-paint-predictably-random/)
+
+
+### Worklets
+
+An API for running scripts in various stages of the rendering pipeline independent of the main JavaScript execution environment.
+Worklets are conceptually similar to [Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers),
+and are called by and extend the rendering engine.
+
+- [Worklets reference](/en-US/docs/Web/API/Worklet)
+
+### CSS Layout API
+
+Designed to improve the extensibility of CSS,
+this API enables developers to write their own layout algorithms,
+like masonry or line snapping.
+
+_This API has some partial support in Chrome Canary. It is not yet documented on MDN_
+
+### CSS Parser API
+
+An API exposing the CSS parser more directly, for parsing arbitrary CSS-like languages into a mildly typed representation.
+
+_This API is currently a proposal, and has no browser implementations or documentation on MDN._
+
+- [Proposal](https://github.com/WICG/css-parser-api)
+
+### Font Metrics API
+
+An API exposing font metrics, giving access to typographic layout results.
+
+_This API is currently a proposal, and has no browser implementations or documentation on MDN._
+
+- [Proposal](https://github.com/w3c/css-houdini-drafts/blob/main/font-metrics-api/README.md)
+
+## See also
+
+- The [Worklet library](https://houdini.how/) for examples and code.
+- [Interactive introduction to Houdini](https://houdini.glitch.me/)
+- [Is Houdini Ready Yet?](https://houdini.glitch.me/)
