@@ -37,7 +37,7 @@ of `zero`, `one`, `two`, `few`,
 ## Description
 
 This function selects a pluralization category according to the locale and formatting
-options of a {{jsxref("Intl/PluralRules")}} object.
+options of a {{jsxref("Intl.PluralRules")}} object.
 
 ## Examples
 

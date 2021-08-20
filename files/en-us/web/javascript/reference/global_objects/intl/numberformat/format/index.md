@@ -16,7 +16,7 @@ browser-compat: javascript.builtins.Intl.NumberFormat.format
 
 The **`Intl.NumberFormat.prototype.format()`** method formats a
 number according to the locale and formatting options of this
-{{jsxref("Intl/NumberFormat")}} object.
+{{jsxref("Intl.NumberFormat")}} object.
 
 {{EmbedInteractiveExample("pages/js/intl-numberformat-prototype-format.html",
 	"taller")}}
@@ -37,7 +37,7 @@ format(number)
 ## Description
 
 The `format` getter function formats a number into a string according to the
-locale and formatting options of this {{jsxref("Intl/NumberFormat")}} object.
+locale and formatting options of this {{jsxref("Intl.NumberFormat")}} object.
 
 ## Examples
 
@@ -56,7 +56,7 @@ console.log(numberFormat.format(654321.987));
 ### Using format with map
 
 Use the `format` getter function for formatting all numbers in an array.
-Note that the function is bound to the {{jsxref("Intl/NumberFormat")}} from which it was
+Note that the function is bound to the {{jsxref("Intl.NumberFormat")}} from which it was
 obtained, so it can be passed directly to {{jsxref("Array.prototype.map")}}. This is
 considered a historical artefact, as part of a convention which is no longer followed
 for new features, but is preserved to maintain compatibility with existing programs.
