@@ -1,6 +1,6 @@
 ---
 title: Box-shadow generator
-slug: Web/CSS/CSS_Background_and_Borders/Box-shadow_generator
+slug: Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
 tags:
   - CSS
   - Tools

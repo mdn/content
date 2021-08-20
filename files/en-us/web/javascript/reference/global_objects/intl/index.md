@@ -66,11 +66,11 @@ A locale identifier is a string that consists of:
 - "`zh-Hans-CN`": Chinese (language) written in simplified characters (script) as used in China (region)
 - "`en-emodeng`": English (language) in the "Early modern English" dialect (variant)
 
-Subtags identifying languages, scripts, regions (including countries), and (rarely used) variants are registered in the [IANA Language Subtag Registry](http://www.iana.org/assignments/language-subtag-registry). This registry is periodically updated over time, and implementations may not always be up to date, so don't rely too much on subtags being universally supported.
+Subtags identifying languages, scripts, regions (including countries), and (rarely used) variants are registered in the [IANA Language Subtag Registry](https://www.iana.org/assignments/language-subtag-registry). This registry is periodically updated over time, and implementations may not always be up to date, so don't rely too much on subtags being universally supported.
 
 BCP 47 extension sequences consist of a single digit or letter (other than `"x"`) and one or more two- to eight-letter or digit subtags separated by hyphens. Only one sequence is permitted for each digit or letter: "`de-a-foo-a-foo`" is invalid. BCP 47 extension subtags are defined in the [Unicode CLDR Project](https://github.com/unicode-org/cldr/tree/master/common/bcp47). Currently only two extensions have defined semantics:
 
-- The `"u"` (Unicode) extension can be used to request additional customization of {{jsxref("Intl/Collator")}}, {{jsxref("Intl/NumberFormat")}}, or {{jsxref("Intl/DateTimeFormat")}} objects. Examples:
+- The `"u"` (Unicode) extension can be used to request additional customization of {{jsxref("Intl.Collator")}}, {{jsxref("Intl.NumberFormat")}}, or {{jsxref("Intl.DateTimeFormat")}} objects. Examples:
 
   - "`de-DE-u-co-phonebk`": Use the phonebook variant of the German sort order, which interprets umlauted vowels as corresponding character pairs: ä → ae, ö → oe, ü → ue.
   - "`th-TH-u-nu-thai`": Use Thai digits (๐, ๑, ๒, ๓, ๔, ๕, ๖, ๗, ๘, ๙) in number formatting.
@@ -85,7 +85,7 @@ Finally, a private-use extension sequence using the letter `"x"` may appear, fol
 
 The list of locales specified by the `locales` argument, after Unicode extensions have been removed from them, is interpreted as a prioritized request from the application. The runtime compares it against the locales it has available and picks the best one available. Two matching algorithms exist: the "`lookup`" matcher follows the Lookup algorithm specified in [BCP 47](https://datatracker.ietf.org/doc/html/rfc4647#section-3.4); the "`best fit`" matcher lets the runtime provide a locale that's at least, but possibly more, suited for the request than the result of the Lookup algorithm. If the application doesn't provide a `locales` argument, or the runtime doesn't have a locale that matches the request, then the runtime's default locale is used. The matcher can be selected using a property of the `options` argument (see below).
 
-If the selected locale identifier had a Unicode extension sequence, that extension is now used to customize the constructed object or the behavior of the function. Each constructor or function supports only a subset of the keys defined for the Unicode extension, and the supported values often depend on the locale identifier. For example, the "`co`" key (collation) is only supported by {{jsxref("Intl/Collator")}}, and its "`phonebk`" value is only supported for German.
+If the selected locale identifier had a Unicode extension sequence, that extension is now used to customize the constructed object or the behavior of the function. Each constructor or function supports only a subset of the keys defined for the Unicode extension, and the supported values often depend on the locale identifier. For example, the "`co`" key (collation) is only supported by {{jsxref("Intl.Collator")}}, and its "`phonebk`" value is only supported for German.
 
 ### options argument
 

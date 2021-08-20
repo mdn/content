@@ -16,7 +16,7 @@ browser-compat: api.RTCRtpTransceiver
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">The WebRTC interface <strong><code>RTCRtpTransceiver</code></strong> describes a permanent pairing of an {{domxref("RTCRtpSender")}} and an {{domxref("RTCRtpReceiver")}}, along with some shared state.</span></p>
+<p>The WebRTC interface <strong><code>RTCRtpTransceiver</code></strong> describes a permanent pairing of an {{domxref("RTCRtpSender")}} and an {{domxref("RTCRtpReceiver")}}, along with some shared state.</p>
 
 <p>Each {{Glossary("SDP")}} media section describes one bidirectional SRTP ("Secure Real Time Protocol") stream (excepting the media section for {{domxref("RTCDataChannel")}}, if present). This pairing of send and receive SRTP streams is significant for some applications, so <code>RTCRtpTransceiver</code> is used to represent this pairing, along with other important state from the media section. Each non-disabled SRTP media section is always represented by exactly one transceiver.</p>
 

@@ -19,11 +19,11 @@ browser-compat: api.RTCIceTransport.getRemoteCandidates
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">The <strong>{{domxref("RTCIceTransport")}}</strong> method
+<p>The <strong>{{domxref("RTCIceTransport")}}</strong> method
     <code><strong>getRemoteCandidates()</strong></code> returns an array which contains
     one {{domxref("RTCIceCandidate")}} for each of the candidates that have been received
     from the remote peer so far during the current {{Glossary("ICE")}} gathering
-    session.</span></p>
+    session.</p>
 
 <p>Each time your signaling code calls {{domxref("RTCPeerConnection.addIceCandidate()")}}
   to add a received candidate to the ICE session, the ICE agent places it in the list
