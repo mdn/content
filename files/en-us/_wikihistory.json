@@ -45745,18 +45745,6 @@
       "grendel"
     ]
   },
-  "Web/API/FileError": {
-    "modified": "2020-10-15T21:06:25.989Z",
-    "contributors": [
-      "fscholz",
-      "jpmedley",
-      "Sebastianz",
-      "teoli",
-      "kscarfone",
-      "Sheppy",
-      "ziyunfei"
-    ]
-  },
   "Web/API/FileException": {
     "modified": "2020-10-15T21:08:18.736Z",
     "contributors": [
