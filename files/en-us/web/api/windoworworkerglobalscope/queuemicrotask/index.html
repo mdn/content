@@ -26,10 +26,12 @@ browser-compat: api.WindowOrWorkerGlobalScope.queueMicrotask
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p><span class="seoSummary">The <code><strong>queueMicrotask()</strong></code> method,
+<p>The <code><strong>queueMicrotask()</strong></code> method,
     which is exposed on the {{domxref("Window")}} or {{domxref("Worker")}} interface,
     queues a microtask to be executed at a safe time prior to control returning to the
-    browser's event loop.</span> The microtask is a short function which will run after
+    browser's event loop.</p>
+
+<p>The microtask is a short function which will run after
   the current task has completed its work and when there is no other code waiting to be
   run before control of the execution context is returned to the browser's event loop.</p>
 

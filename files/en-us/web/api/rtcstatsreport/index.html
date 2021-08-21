@@ -17,7 +17,9 @@ browser-compat: api.RTCStatsReport
 
 <p>{{draft("This page is currently incomplete and under active construction. Please be aware that it's not going to answer all of your questions just yet.")}}</p>
 
-<p><span class="seoSummary">The <code><strong>RTCStatsReport</strong></code> interface provides a statistics report obtained by calling one of the {{domxref("RTCPeerConnection.getStats()")}}, {{domxref("RTCRtpReceiver.getStats()")}}, and {{domxref("RTCRtpSender.getStats()")}} methods.</span> This statistics report contains a mapping of statistic category string names to objects containing the corresponding statistics data.</p>
+<p>The <code><strong>RTCStatsReport</strong></code> interface provides a statistics report obtained by calling one of the {{domxref("RTCPeerConnection.getStats()")}}, {{domxref("RTCRtpReceiver.getStats()")}}, and {{domxref("RTCRtpSender.getStats()")}} methods.</p>
+
+<p>This statistics report contains a mapping of statistic category string names to objects containing the corresponding statistics data.</p>
 
 <p>Calling <code>getStats()</code> on an {{domxref("RTCPeerConnection")}} lets you specify whether you wish to obtain statistics for outbound, inbound, or all streams on the connection. The {{domxref("RTCRtpReceiver")}} and {{domxref("RTCRtpSender")}} versions of <code>getStats()</code> specifically only return statistics available to the incoming or outgoing stream on which you call them.</p>
 

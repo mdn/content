@@ -15,11 +15,13 @@ browser-compat: api.MediaStreamTrack.enabled
 ---
 <div>{{APIRef("Media Capture and Streams")}}</div>
 
-<p><span class="seoSummary">The <strong><code>enabled</code></strong> property on the
+<p>The <strong><code>enabled</code></strong> property on the
     {{domxref("MediaStreamTrack")}} interface is a Boolean value which is
     <code>true</code> if the track is allowed to render the source stream or
     <code>false</code> if it is not. This can be used to intentionally mute a
-    track.</span> When enabled, a track's data is output from the source to the
+    track.</p>
+
+<p>When enabled, a track's data is output from the source to the
   destination; otherwise, empty frames are output.</p>
 
 <p>In the case of audio, a disabled track generates frames of silence (that is, frames in

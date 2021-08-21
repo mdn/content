@@ -15,7 +15,9 @@ browser-compat: api.PaymentDetailsUpdate
 ---
 <div>{{securecontext_header}}{{APIRef("Payment Request API")}}{{draft}}</div>
 
-<p><span class="seoSummary">The <code><strong>PaymentDetailsUpdate</strong></code> dictionary is used to provide updated information to the payment user interface after it has been instantiated.</span> This can be done either by calling the {{domxref("PaymentRequestUpdateEvent.updateWith()")}} method or by using the {{domxref("PaymentRequest.show()")}} method's <code>detailsPromise</code> parameter to provide a {{jsxref("Promise")}} that returns a <code>PaymentDetailsUpdate</code> that updates the payment information before the user interface is even enabled for the first time.</p>
+<p>The <code><strong>PaymentDetailsUpdate</strong></code> dictionary is used to provide updated information to the payment user interface after it has been instantiated.</p>
+
+<p>This can be done either by calling the {{domxref("PaymentRequestUpdateEvent.updateWith()")}} method or by using the {{domxref("PaymentRequest.show()")}} method's <code>detailsPromise</code> parameter to provide a {{jsxref("Promise")}} that returns a <code>PaymentDetailsUpdate</code> that updates the payment information before the user interface is even enabled for the first time.</p>
 
 <h2 id="Properties">Properties</h2>
 

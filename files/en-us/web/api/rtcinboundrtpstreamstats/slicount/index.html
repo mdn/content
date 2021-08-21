@@ -22,11 +22,13 @@ browser-compat: api.RTCInboundRtpStreamStats.sliCount
 ---
 <p>{{APIRef("WebRTC")}}</p>
 
-<p><span class="seoSummary">The <strong><code>sliCount</code></strong> property of the
+<p>The <strong><code>sliCount</code></strong> property of the
     {{domxref("RTCInboundRtpStreamStats")}} dictionary indicates how many <strong>Slice
       Loss Indication</strong> (<strong>SLI</strong>) packets the
     {{domxref("RTCRtpReceiver")}} for which this object provdes statistics sent to the
-    remote {{domxref("RTCRtpSender")}}.</span> An SLI packet is used by a decoder to let
+    remote {{domxref("RTCRtpSender")}}.</p>
+
+<p>An SLI packet is used by a decoder to let
   the encoder know that it's detected corruption of one or more consecutive macroblocks
   (in scan order) in the received media.</p>
 
