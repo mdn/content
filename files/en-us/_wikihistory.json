@@ -45682,18 +45682,6 @@
       "trevorh"
     ]
   },
-  "Web/API/File/mozFullPath": {
-    "modified": "2020-04-17T10:27:02.432Z",
-    "contributors": [
-      "maxloh",
-      "Sheppy",
-      "Jedipedia",
-      "kscarfone",
-      "teoli",
-      "iamanupmenon",
-      "Konami"
-    ]
-  },
   "Web/API/File/name": {
     "modified": "2020-10-15T21:14:30.919Z",
     "contributors": [

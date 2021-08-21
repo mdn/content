@@ -15,7 +15,9 @@ browser-compat: api.KeyboardEvent.keyCode
 ---
 <p>{{APIRef("DOM Events")}}{{Deprecated_Header}}</p>
 
-<p><span class="seoSummary">The deprecated <strong><code>KeyboardEvent.keyCode</code></strong> read-only property represents a system and implementation dependent numerical code identifying the unmodified value of the pressed key.</span> This is usually the decimal ASCII ({{RFC(20)}}) or Windows 1252 code corresponding to the key. If the key can't be identified, this value is <code>0</code>.</p>
+<p>The deprecated <strong><code>KeyboardEvent.keyCode</code></strong> read-only property represents a system and implementation dependent numerical code identifying the unmodified value of the pressed key.</p>
+
+<p>This is usually the decimal ASCII ({{RFC(20)}}) or Windows 1252 code corresponding to the key. If the key can't be identified, this value is <code>0</code>.</p>
 
 <p>You should avoid using this if possible; it's been deprecated for some time. Instead, you should use {{domxref("KeyboardEvent.code")}}, if it's implemented. Unfortunately, some browsers still don't have it, so you'll have to be careful to make sure you use one which is supported on all target browsers.</p>
 

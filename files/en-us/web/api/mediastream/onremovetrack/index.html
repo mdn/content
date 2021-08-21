@@ -13,11 +13,13 @@ browser-compat: api.MediaStream.onremovetrack
 ---
 <p>{{APIRef("Media Streams API")}}</p>
 
-<p><span class="seoSummary">The <strong><code>MediaStream.onremovetrack</code></strong>
+<p>The <strong><code>MediaStream.onremovetrack</code></strong>
     property is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> which specifies a function to be called
     when the {{event("removetrack")}} event occurs on a {{domxref("MediaStream")}}
     instance. This happens when a track of any kind is removed from the media
-    stream.</span> This event is fired when the browser removes a track from the stream
+    stream.</p>
+
+<p>This event is fired when the browser removes a track from the stream
   (such as when a {{domxref("RTCPeerConnection")}} is renegotiated or a stream being
   captured using {{domxref("HTMLMediaElement.captureStream()")}} gets a new set of tracks
   because the media element being captured loaded a new source.</p>

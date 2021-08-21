@@ -12,10 +12,12 @@ browser-compat: api.MediaStream.onaddtrack
 ---
 <p>{{APIRef("Media Streams API")}}</p>
 
-<p><span class="seoSummary">The <strong><code>MediaStream.onaddtrack</code></strong>
+<p>The <strong><code>MediaStream.onaddtrack</code></strong>
     property is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> which specifies a function to be called
     when the {{event("addtrack")}} event occurs on a {{domxref("MediaStream")}} instance.
-    This happens when a new track of any kind is added to the media stream.</span> This
+    This happens when a new track of any kind is added to the media stream.</p>
+
+<p>This
   event is fired when the browser adds a track to the stream (such as when a
   {{domxref("RTCPeerConnection")}} is renegotiated or a stream being captured using
   {{domxref("HTMLMediaElement.captureStream()")}} gets a new set of tracks because the

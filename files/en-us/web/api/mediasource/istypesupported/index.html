@@ -18,10 +18,12 @@ browser-compat: api.MediaSource.isTypeSupported
 ---
 <div>{{APIRef("Media Source Extensions")}}</div>
 
-<p><span class="seoSummary">The
+<p>The
     <code><strong>MediaSource.isTypeSupported()</strong></code> static method returns a
     boolean value which is <code>true</code> if the given MIME type is
-    <em>likely</em> to be supported by the current {{Glossary("user agent")}}.</span> That
+    <em>likely</em> to be supported by the current {{Glossary("user agent")}}.</p>
+
+<p>That
   is, if it can successfully create {{domxref("SourceBuffer")}} objects for that MIME
   type. If the returned value is <code>false</code>, then the user agent is certain that
   it <em>cannot</em> access media of the specified format.</p>

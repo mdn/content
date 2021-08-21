@@ -14,7 +14,9 @@ browser-compat: api.Cache.add
 ---
 <p>{{APIRef("Service Workers API")}}</p>
 
-<p><span class="seoSummary">The <strong><code>add()</code></strong> method of the {{domxref("Cache")}} interface takes a URL, retrieves it, and adds the resulting response object to the given cache. </span>The <code>add()</code> method is functionally equivalent to the following:</p>
+<p>The <strong><code>add()</code></strong> method of the {{domxref("Cache")}} interface takes a URL, retrieves it, and adds the resulting response object to the given cache.</p>
+
+<p>The <code>add()</code> method is functionally equivalent to the following:</p>
 
 <pre class="brush: js">fetch(url).then(function(response) {
   if (!response.ok) {
