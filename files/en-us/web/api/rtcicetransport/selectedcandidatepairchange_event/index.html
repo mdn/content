@@ -18,7 +18,9 @@ browser-compat: api.RTCIceTransport.selectedcandidatepairchange_event
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">A <strong><code>selectedcandidatepairchange</code></strong> event is sent to an {{domxref("RTCIceTransport")}} when the {{Glossary("ICE")}} agent selects a new pair of candidates that describe the endpoints of a viable connection.</span> The pair of candidates is in turn described by an {{domxref("RTCIceCandidatePair")}} object which contains one {{domxref("RTCIceCandidate")}} representing the local end of the connection, and another representing the remote end of the connection.</p>
+<p>A <strong><code>selectedcandidatepairchange</code></strong> event is sent to an {{domxref("RTCIceTransport")}} when the {{Glossary("ICE")}} agent selects a new pair of candidates that describe the endpoints of a viable connection.</p>
+
+<p>The pair of candidates is in turn described by an {{domxref("RTCIceCandidatePair")}} object which contains one {{domxref("RTCIceCandidate")}} representing the local end of the connection, and another representing the remote end of the connection.</p>
 
 <p>Together, the candidates can be used to establish a connection to be used by the {{domxref("RTCIceTransport")}}, and, by extension, by an {{domxref("RTCPeerConnection")}}.</p>
 

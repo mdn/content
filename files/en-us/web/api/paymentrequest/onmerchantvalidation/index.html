@@ -16,10 +16,12 @@ browser-compat: api.PaymentRequest.onmerchantvalidation
 ---
 <p>{{deprecated_header}}{{non-standard_header}}{{securecontext_header}}</p>
 
-<p><span class="seoSummary">The {{domxref("PaymentRequest")}} event handler
+<p>The {{domxref("PaymentRequest")}} event handler
     <code><strong>onmerchantvalidation</strong></code> is invoked when the
-    {{event("merchantvalidation")}}</span> is fired, indicating that the payment handler
-  (e.g., Apple Pay) requires the merchant to validate themselves. This is usually the
+    {{event("merchantvalidation")}} is fired, indicating that the payment handler
+  (e.g., Apple Pay) requires the merchant to validate themselves.</p>
+
+<p>This is usually the
   first event to be fired, and the user won't be able to proceed with a payment until the
   merchant validate themselves.</p>
 

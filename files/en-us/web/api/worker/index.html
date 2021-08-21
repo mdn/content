@@ -14,7 +14,9 @@ browser-compat: api.Worker
 ---
 <div>{{APIRef("Web Workers API")}}</div>
 
-<p><span class="seoSummary">The <strong><code>Worker</code></strong> interface of the <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers API</a> represents a background task that can be created via script, which can send messages back to its creator.</span> Creating a worker is done by calling the <code>Worker("path/to/worker/script")</code> constructor.</p>
+<p>The <strong><code>Worker</code></strong> interface of the <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers API</a> represents a background task that can be created via script, which can send messages back to its creator.</p>
+
+<p>Creating a worker is done by calling the <code>Worker("path/to/worker/script")</code> constructor.</p>
 
 <p>Workers may themselves spawn new workers, as long as those workers are hosted at the same <a href="/en-US/docs/Web/Security/Same-origin_policy">origin</a> as the parent page. (Note: <a href="https://bugs.webkit.org/show_bug.cgi?id=22723">nested workers are not yet implemented in WebKit</a>).</p>
 
