@@ -32,7 +32,7 @@ browser-compat: api.VRPose.position
 <p>Positions are measured in meters from an origin point — this point is either the position the sensor was first read at, or the position of the sensor at the point that {{domxref("VRDisplay.resetPose()")}} was last called.</p>
 
 <div class="note">
-<p><strong>Note</strong>: By default, all positions are given as a sitting space position. Transforming this point with {{domxref("VRStageParameters.sittingToStandingTransform")}} — when you are working with a room display for example — converts this to a standing space position.</p>
+<p><strong>Note:</strong> By default, all positions are given as a sitting space position. Transforming this point with {{domxref("VRStageParameters.sittingToStandingTransform")}} — when you are working with a room display for example — converts this to a standing space position.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -44,7 +44,7 @@ browser-compat: api.VRPose.position
 <p>A {{jsxref("Float32Array")}}, or null if the VR sensor is not able to provide position data.</p>
 
 <div class="note">
-<p><strong>Note</strong>: User agents may provide emulated position values through techniques such as neck modeling; when doing so they should still report {{domxref("VRDisplayCapabilities.hasPosition")}} as false.</p>
+<p><strong>Note:</strong> User agents may provide emulated position values through techniques such as neck modeling; when doing so they should still report {{domxref("VRDisplayCapabilities.hasPosition")}} as false.</p>
 </div>
 
 <h2 id="Examples">Examples</h2>

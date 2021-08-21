@@ -276,7 +276,7 @@ request.onupgradeneeded = function (event) {
 <p>To read the records of an existing object store, the transaction can either be in <code>readonly</code> or <code>readwrite</code> mode. To make changes to an existing object store, the transaction must be in <code>readwrite</code> mode. You open such transactions with {{domxref("IDBDatabase.transaction")}}. The method accepts two parameters: the <code>storeNames</code> (the scope, defined as an array of object stores that you want to access) and the <code>mode</code> (<code>readonly</code> or <code>readwrite</code>) for the transaction. The method returns a transaction object containing the {{domxref("IDBIndex.objectStore")}} method, which you can use to access your object store. By default, where no mode is specified, transactions open in <code>readonly</code> mode.</p>
 
 <div class="note">
-<p><strong>Note</strong>: As of Firefox 40, IndexedDB transactions have relaxed durability guarantees to increase performance (see {{Bug("1112702")}}.) Previously in a <code>readwrite</code> transaction {{domxref("IDBTransaction.oncomplete")}} was fired only when all data was guaranteed to have been flushed to disk. In Firefox 40+ the <code>complete</code> event is fired after the OS has been told to write the data but potentially before that data has actually been flushed to disk. The <code>complete</code> event may thus be delivered quicker than before, however, there exists a small chance that the entire transaction will be lost if the OS crashes or there is a loss of system power before the data is flushed to disk. Since such catastrophic events are rare most consumers should not need to concern themselves further. If you must ensure durability for some reason (e.g. you're storing critical data that cannot be recomputed later) you can force a transaction to flush to disk before delivering the <code>complete</code> event by creating a transaction using the experimental (non-standard) <code>readwriteflush</code> mode (see {{domxref("IDBDatabase.transaction")}}.</p>
+<p><strong>Note:</strong> As of Firefox 40, IndexedDB transactions have relaxed durability guarantees to increase performance (see {{Bug("1112702")}}.) Previously in a <code>readwrite</code> transaction {{domxref("IDBTransaction.oncomplete")}} was fired only when all data was guaranteed to have been flushed to disk. In Firefox 40+ the <code>complete</code> event is fired after the OS has been told to write the data but potentially before that data has actually been flushed to disk. The <code>complete</code> event may thus be delivered quicker than before, however, there exists a small chance that the entire transaction will be lost if the OS crashes or there is a loss of system power before the data is flushed to disk. Since such catastrophic events are rare most consumers should not need to concern themselves further. If you must ensure durability for some reason (e.g. you're storing critical data that cannot be recomputed later) you can force a transaction to flush to disk before delivering the <code>complete</code> event by creating a transaction using the experimental (non-standard) <code>readwriteflush</code> mode (see {{domxref("IDBDatabase.transaction")}}.</p>
 </div>
 
 <p>You can speed up data access by using the right scope and mode in the transaction. Here are a couple of tips:</p>
@@ -392,7 +392,7 @@ request.onsuccess = function(event) {
 <p>So here we're creating an <code>objectStore</code> and requesting a customer record out of it, identified by its ssn value (<code>444-44-4444</code>). We then put the result of that request in a variable (<code>data</code>), update the <code>age</code> property of this object, then create a second request (<code>requestUpdate</code>) to put the customer record back into the <code>objectStore</code>, overwriting the previous value.</p>
 
 <div class="note">
-<p><strong>Note</strong>: In this case we've had to specify a <code>readwrite</code> transaction because we want to write to the database, not just read from it.</p>
+<p><strong>Note:</strong> In this case we've had to specify a <code>readwrite</code> transaction because we want to write to the database, not just read from it.</p>
 </div>
 
 <h3 id="Using_a_cursor">Using a cursor</h3>
@@ -430,7 +430,7 @@ objectStore.openCursor().onsuccess = function(event) {
 };</pre>
 
 <div class="note">
-<p><strong>Note</strong>: Alternatively, you can use <code>getAll()</code> to handle this case (and <code>getAllKeys()</code>) . The following code does precisely the same thing as above:</p>
+<p><strong>Note:</strong> Alternatively, you can use <code>getAll()</code> to handle this case (and <code>getAllKeys()</code>) . The following code does precisely the same thing as above:</p>
 
 <pre class="brush: js">objectStore.getAll().onsuccess = function(event) {
   console.log("Got all customers: " + event.target.result);
@@ -626,7 +626,7 @@ function useDatabase(db) {
 <p>{{domxref("IDBIndex")}} has also had new properties added to it to specify if it has a locale specified, and what it is: <code>locale</code> (returns the locale if any, or null if none is specified) and <code>isAutoLocale</code> (returns <code>true</code> if the index was created with an auto locale, meaning that the platform's default locale is used, <code>false</code> otherwise.)</p>
 
 <div class="note">
-<p><strong>Note</strong>: This feature is currently hidden behind a flag — to enable it and experiment, go to <a>about:config</a> and enable <code>dom.indexedDB.experimental</code>.</p>
+<p><strong>Note:</strong> This feature is currently hidden behind a flag — to enable it and experiment, go to <a>about:config</a> and enable <code>dom.indexedDB.experimental</code>.</p>
 </div>
 
 <h2 id="Full_IndexedDB_example">Full IndexedDB example</h2>
@@ -1307,7 +1307,7 @@ input {
 <p>{{ LiveSampleLink('Full_IndexedDB_example', "Test the online live demo") }}</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: <code>window.indexedDB.open()</code> is asynchronous; the method will finish running long before the <code>success</code> event is fired. This means that a function (e.g. <code>openDb()</code>) that calls <code>open()</code> and <code>onsuccess</code> will return before the <code>onsuccess</code> handler has run. This issue is also true of other request methods such as <code>transaction()</code> and <code>get()</code>.</p>
+<p><strong>Note:</strong> <code>window.indexedDB.open()</code> is asynchronous; the method will finish running long before the <code>success</code> event is fired. This means that a function (e.g. <code>openDb()</code>) that calls <code>open()</code> and <code>onsuccess</code> will return before the <code>onsuccess</code> handler has run. This issue is also true of other request methods such as <code>transaction()</code> and <code>get()</code>.</p>
 </div>
 
 <h2 id="See_also">See also</h2>

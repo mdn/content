@@ -23,7 +23,7 @@ tags:
 <p>The worker context is represented by a {{domxref("DedicatedWorkerGlobalScope")}} object in the case of dedicated workers (standard workers that are utilized by a single script; shared workers use {{domxref("SharedWorkerGlobalScope")}}). A dedicated worker is only accessible from the script that first spawned it, whereas shared workers can be accessed from multiple scripts.</p>
 
 <div class="note">
-<p><strong>Note</strong>: See <a href="/en-US/docs/Web/API/Web_Workers_API">The Web Workers API landing page</a> for reference documentation on workers and additional guides.</p>
+<p><strong>Note:</strong> See <a href="/en-US/docs/Web/API/Web_Workers_API">The Web Workers API landing page</a> for reference documentation on workers and additional guides.</p>
 </div>
 
 <p>You can run whatever code you like inside the worker thread, with some exceptions. For example, you can't directly manipulate the DOM from inside a worker, or use some default methods and properties of the {{domxref("window")}} object. But you can use a large number of items available under <code>window</code>, including <a href="/en-US/docs/Web/API/WebSockets_API">WebSockets</a>, and data storage mechanisms like <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a>. See <a href="/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">Functions and classes available to workers</a> for more details.</p>
@@ -143,11 +143,11 @@ importScripts('//example.com/hello.js'); /* You can import scripts from other or
 <p>Here we'll concentrate on the differences between dedicated and shared workers. Note that in this example we have two HTML pages, each with JavaScript applied that uses the same single worker file.</p>
 
 <div class="note">
-<p><strong>Note</strong>: If SharedWorker can be accessed from several browsing contexts, all those browsing contexts must share the exact same origin (same protocol, host, and port).</p>
+<p><strong>Note:</strong> If SharedWorker can be accessed from several browsing contexts, all those browsing contexts must share the exact same origin (same protocol, host, and port).</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: In Firefox, shared workers cannot be shared between documents loaded in private and non-private windows ({{bug(1177621)}}).</p>
+<p><strong>Note:</strong> In Firefox, shared workers cannot be shared between documents loaded in private and non-private windows ({{bug(1177621)}}).</p>
 </div>
 
 <h3 id="Spawning_a_shared_worker">Spawning a shared worker</h3>
@@ -161,7 +161,7 @@ importScripts('//example.com/hello.js'); /* You can import scripts from other or
 <p>The port connection needs to be started either implicitly by use of the <code>onmessage</code> event handler or explicitly with the <code>start()</code> method before any messages can be posted. Calling <code>start()</code> is only needed if the <code>message</code> event is wired up via the <code>addEventListener()</code> method.</p>
 
 <div class="note">
-<p><strong>Note</strong>: When using the <code>start()</code> method to open the port connection, it needs to be called from both the parent thread and the worker thread if two-way communication is needed.</p>
+<p><strong>Note:</strong> When using the <code>start()</code> method to open the port connection, it needs to be called from both the parent thread and the worker thread if two-way communication is needed.</p>
 </div>
 
 <h3 id="Sending_messages_to_and_from_a_shared_worker">Sending messages to and from a shared worker</h3>
@@ -535,7 +535,7 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: For more information on transferable objects, performance, and feature-detection for this method, read <a href="https://updates.html5rocks.com/2011/12/Transferable-Objects-Lightning-Fast">Transferable Objects: Lightning Fast!</a> on HTML5 Rocks.</p>
+<p><strong>Note:</strong> For more information on transferable objects, performance, and feature-detection for this method, read <a href="https://updates.html5rocks.com/2011/12/Transferable-Objects-Lightning-Fast">Transferable Objects: Lightning Fast!</a> on HTML5 Rocks.</p>
 </div>
 
 <h2 id="Embedded_workers">Embedded workers</h2>
@@ -705,7 +705,7 @@ onmessage = function(event) {
 <p><img src="worker-source.png"></p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: Worker scripts are loaded when needed, and hence may not be present in the sources list when a page is first loaded.</p>
+<p><strong>Note:</strong> Worker scripts are loaded when needed, and hence may not be present in the sources list when a page is first loaded.</p>
 </div>
 
 <p>In the source pane you can <a href="/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint">set a breakpoint</a> (or <a href="/en-US/docs/Tools/Debugger/Set_a_logpoint">logpoint</a>) in a worker thread in the normal way. When execution is paused, the context of the debugger is updated to show correct <a href="/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint">breakpoints</a>, <a href="/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint#inline_variable_preview">inline variable preview</a>, <a href="/en-US/docs/Tools/Debugger/UI_Tour#call_stack">call stack</a>, etc., just as you'd expect.</p>
@@ -713,7 +713,7 @@ onmessage = function(event) {
 <p><img src="worker-breakpoints-callstack.png"></p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: For more information see <a href="/en-US/docs/Tools/Debugger">Firefox JavaScript Debugger</a>.</p>
+<p><strong>Note:</strong> For more information see <a href="/en-US/docs/Tools/Debugger">Firefox JavaScript Debugger</a>.</p>
 </div>
 
 <h2 id="Functions_and_interfaces_available_in_workers">Functions and interfaces available in workers</h2>
@@ -734,7 +734,7 @@ onmessage = function(event) {
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: For a complete list of functions available to workers, see <a href="/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">Functions and interfaces available to workers</a>.</p>
+<p><strong>Note:</strong> For a complete list of functions available to workers, see <a href="/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">Functions and interfaces available to workers</a>.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>

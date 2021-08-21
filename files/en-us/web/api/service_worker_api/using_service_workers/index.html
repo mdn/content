@@ -128,12 +128,12 @@ imgLoad('myLittleVader.jpg').then((response) =&gt; {
 <p>This all happens asynchronously.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can also chain promise calls together, for example:<br>
+<p><strong>Note:</strong> You can also chain promise calls together, for example:<br>
  <code>myPromise().then(success, failure).then(success).catch(failure);</code></p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: You can find a lot more out about promises by reading Jake Archibald’s excellent <a href="https://www.html5rocks.com/en/tutorials/es6/promises/">JavaScript Promises: there and back again</a>.</p>
+<p><strong>Note:</strong> You can find a lot more out about promises by reading Jake Archibald’s excellent <a href="https://www.html5rocks.com/en/tutorials/es6/promises/">JavaScript Promises: there and back again</a>.</p>
 </div>
 
 <h2 id="Service_workers_demo">Service workers demo</h2>
@@ -185,11 +185,11 @@ imgLoad('myLittleVader.jpg').then((response) =&gt; {
  A single service worker can control many pages. Each time a page within your scope is loaded, the service worker is installed against that page and operates on it. Bear in mind therefore that you need to be careful with global variables in the service worker script: each page doesn’t get its own unique worker.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Your service worker functions like a proxy server, allowing you to modify requests and responses, replace them with items from its own cache, and more.</p>
+<p><strong>Note:</strong> Your service worker functions like a proxy server, allowing you to modify requests and responses, replace them with items from its own cache, and more.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: One great thing about service workers is that if you use feature detection like we’ve shown above, browsers that don’t support service workers can just use your app online in the normal expected fashion. Furthermore, if you use AppCache and SW on a page, browsers that don’t support SW but do support AppCache will use that, and browsers that support both will ignore the AppCache and let SW take over.</p>
+<p><strong>Note:</strong> One great thing about service workers is that if you use feature detection like we’ve shown above, browsers that don’t support service workers can just use your app online in the normal expected fashion. Furthermore, if you use AppCache and SW on a page, browsers that don’t support SW but do support AppCache will use that, and browsers that support both will ignore the AppCache and let SW take over.</p>
 </div>
 
 <h4 id="Why_is_my_service_worker_failing_to_register">Why is my service worker failing to register?</h4>
@@ -248,11 +248,11 @@ imgLoad('myLittleVader.jpg').then((response) =&gt; {
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: <a href="/en-US/docs/Web/API/Web_Storage_API">localStorage</a> works in a similar way to service worker cache, but it is synchronous, so not allowed in service workers.</p>
+<p><strong>Note:</strong> <a href="/en-US/docs/Web/API/Web_Storage_API">localStorage</a> works in a similar way to service worker cache, but it is synchronous, so not allowed in service workers.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a> can be used inside a service worker for data storage if you require it.</p>
+<p><strong>Note:</strong> <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a> can be used inside a service worker for data storage if you require it.</p>
 </div>
 
 <h3 id="Custom_responses_to_requests">Custom responses to requests</h3>
@@ -433,7 +433,7 @@ event.request.body</pre>
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: You may serve your app from <code>http://localhost</code> (e.g. using <code>me@localhost:/my/app$ <strong>python -m SimpleHTTPServer</strong></code>) for local development. See <a href="https://www.w3.org/TR/service-workers/#security-considerations">Security considerations</a></p>
+<p><strong>Note:</strong> You may serve your app from <code>http://localhost</code> (e.g. using <code>me@localhost:/my/app$ <strong>python -m SimpleHTTPServer</strong></code>) for local development. See <a href="https://www.w3.org/TR/service-workers/#security-considerations">Security considerations</a></p>
 </div>
 
 <h2 id="See_also">See also</h2>

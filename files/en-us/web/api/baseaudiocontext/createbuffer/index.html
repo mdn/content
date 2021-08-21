@@ -26,7 +26,7 @@ browser-compat: api.BaseAudioContext.createBuffer
   reference page.</p>
 
 <div class="note">
-  <p><strong>Note</strong>: <code>createBuffer()</code> used to be able to take compressed
+  <p><strong>Note:</strong> <code>createBuffer()</code> used to be able to take compressed
     data and give back decoded samples, but this ability was removed from the specification,
     because all the decoding was done on the main thread, so
     <code>createBuffer()</code> was blocking other code execution. The asynchronous method
@@ -44,7 +44,7 @@ browser-compat: api.BaseAudioContext.createBuffer
 <h3 id="Parameters">Parameters</h3>
 
 <div class="note">
-  <p><strong>Note</strong>: For an in-depth explanation of how audio buffers work, and
+  <p><strong>Note:</strong> For an in-depth explanation of how audio buffers work, and
     what these parameters mean, read <a
       href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_buffers.3a_frames.2c_samples_and_channels">Audio
       buffers: frames, samples and channels</a> from our Basic concepts guide.</p>
@@ -100,7 +100,7 @@ var buffer = audioCtx.createBuffer(1, 22050, 22050);</pre>
   44100Hz = 1 second.</p>
 
 <div class="note">
-  <p><strong>Note</strong>: audio resampling is very similar to image resizing: say you've
+  <p><strong>Note:</strong> audio resampling is very similar to image resizing: say you've
     got a 16 x 16 image, but you want it to fill a 32x32 area: you resize (resample) it.
     the result has less quality (it can be blurry or edgy, depending on the resizing
     algorithm), but it works, and the resized image takes up less space. Resampled audio
