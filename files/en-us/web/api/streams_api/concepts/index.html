@@ -81,7 +81,7 @@ tags:
 <p><img alt="" src="pipechain.png"></p>
 
 <div class="note">
-<p><strong>Note</strong>: This functionality isn't fully thought through yet, or available in many browsers. At some point the spec writers hope to add something like a <code>TransformStream</code> class to make creating transform streams easier.</p>
+<p><strong>Note:</strong> This functionality isn't fully thought through yet, or available in many browsers. At some point the spec writers hope to add something like a <code>TransformStream</code> class to make creating transform streams easier.</p>
 </div>
 
 <h2 id="Backpressure">Backpressure</h2>
@@ -112,7 +112,7 @@ tags:
 <p>The <strong>desired size</strong> is the size of chunks the stream can still accept to keep the stream flowing but below the high water mark in size. After the calculation is performed, chunk generation will be slowed down/sped up as appropriate to keep the stream flowing as fast as possible while keeping the desired size above zero. If the value falls to zero (or below in the case of writable streams), it means that chunks are being generated faster than the stream can cope with, which results in problems.</p>
 
 <div class="note">
-<p><strong>Note</strong>: What happens in the case of zero or negative desired size hasn’t really been defined in the spec so far. Patience is a virtue.</p>
+<p><strong>Note:</strong> What happens in the case of zero or negative desired size hasn’t really been defined in the spec so far. Patience is a virtue.</p>
 </div>
 
 <p>As an example, let's take a chunk size of 1, and a high water mark of 3. This means that up to 3 chunks can be enqueued before the high water mark is reached and backpressure is applied.</p>
