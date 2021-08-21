@@ -36,4 +36,3 @@ _This interface inherits methods from its parent, {{domxref("Event")}}._
 ## Browser compatibility
 
 {{Compat}}
-
