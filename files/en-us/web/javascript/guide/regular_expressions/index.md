@@ -181,7 +181,7 @@ Parentheses around any part of the regular expression pattern causes that part o
 
 ## Using regular expressions in JavaScript
 
-Regular expressions are used with the [`RegExp`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp) methods [`test()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test) and [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) and with the [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) methods [`match()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match), [`replace()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace), [`search()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/search), and [`split()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split).
+Regular expressions are used with the {{jsxref("RegExp")}} methods {{jsxref("RegExp/test", "test()`")}} and {{jsxref("RegExp/exec", "exec")}} and with the {{jsxref("String")}} methods {{jsxref("String/match", "match()")}}, {{jsxref("String/replace", "replace()}}, {{jsxref("String/search", "search()")}}, and {{jsxref("String/split", "split()")}}.
 
 | Method                                                           | Description                                                                                                      |
 | ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
