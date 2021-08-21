@@ -11,7 +11,7 @@ browser-compat: api.HIDInputReportEvent.data
 ---
 {{securecontext_header}}{{DefaultAPISidebar("")}}
 
-The **`data`**  property of the {{domxref("HIDInputReportEvent")}} interface returns a {{domxref("DataView")}} containing the data from the input report, excluding the `reportId` if the HID interface uses report IDs.
+The **`data`**  property of the {{domxref("HIDInputReportEvent")}} interface returns a {{jsxref("DataView")}} containing the data from the input report, excluding the `reportId` if the HID interface uses report IDs.
 
 ## Syntax
 
@@ -21,7 +21,7 @@ let aDataView = HIDInputReportEvent.data;
 
 ### Value
 
-A {{domxref("DataView")}}.
+A {{jsxref("DataView")}}.
 
 ## Specifications
 
