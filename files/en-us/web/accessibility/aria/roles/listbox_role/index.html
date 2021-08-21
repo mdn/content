@@ -6,19 +6,19 @@ tags:
   - Accessibility
   - NeedsContent
 ---
-<p><span class="seoSummary">The <code>listbox</code> role is used for lists from which a user may select one or more items which are static and, unlike HTML &lt;select&gt; elements, may contain images.</span></p>
+<p>The <code>listbox</code> role is used for lists from which a user may select one or more items which are static and, unlike HTML {{HTMLElement('select')}} elements, may contain images.</p>
 
 <h2 id="Description">Description</h2>
 
-<p>The <code>listbox</code> role is used to identify an element that creates a list from which a user may select one or more static items, similar to the HTML &lt;select&gt; element. Unlike &lt;select&gt;, a listbox can contain images. Each child of a listbox should have a role of <a href="https://www.w3.org/TR/2010/WD-wai-aria-20100916/roles#option">option</a>.</p>
+<p>The <code>listbox</code> role is used to identify an element that creates a list from which a user may select one or more static items, similar to the HTML {{HTMLElement('select')}} element. Unlike {{HTMLElement('select')}}, a listbox can contain images. Each child of a listbox should have a role of <a href="https://www.w3.org/TR/2010/WD-wai-aria-20100916/roles#option">option</a>.</p>
 
-<p>It is highly recommended to use the HTML select element, or a group of radio buttons if only one item can be selected, or a group of checkboxes if multiple items can be selected, because there is a lot of keyboard interactivity to manage focus for all the descendants, and native HTML elements provide this functionality for you for free.</p>
+<p>It is highly recommended using the HTML select element, or a group of radio buttons if only one item can be selected, or a group of checkboxes if multiple items can be selected, because there is a lot of keyboard interactivity to manage focus for all the descendants, and native HTML elements provide this functionality for you for free.</p>
 
 <p>Elements with the role <code>listbox</code> have an implicit <code>aria-orientation</code> value of <code>vertical</code>.</p>
 
-<p class="p1">When a list is tabbed to, the first item in the list will be selected if nothing else already is. Up/down arrows navigate the list, and pressing Shift + Up/Down arrows will move and extend the selection. Typing one or more letters will navigate the list items (same letter goes to each item starting with that, different letters go to the first item starting with that entire string). If the current item has an associated context menu, Shift+F10 will launch that menu. If list items are checkable, Space can be used to toggle <a href="https://www.w3.org/TR/wai-aria-practices/#checkbox">checkboxes</a>. For selectable list items, Space toggles their selection, Shift+Space can be used to select contiguous items, Ctrl+Arrow moves without selecting, and Ctrl+Space can be used to select non-contiguous items. It is recommended that a checkbox, link or other method be used to select all items, and Ctrl+A could be used as a shortcut key for this.</p>
+<p>When a list is tabbed to, the first item in the list will be selected if nothing else already is. Up/down arrows navigate the list, and pressing Shift + Up/Down arrows will move and extend the selection. Typing one or more letters will navigate the list items (same letter goes to each item starting with that, different letters go to the first item starting with that entire string). If the current item has an associated context menu, Shift+F10 will launch that menu. If list items are checkable, Space can be used to toggle <a href="https://www.w3.org/TR/wai-aria-practices/#checkbox">checkboxes</a>. For selectable list items, Space toggles their selection, Shift+Space can be used to select contiguous items, Ctrl+Arrow moves without selecting, and Ctrl+Space can be used to select non-contiguous items. It is recommended that a checkbox, link or other method be used to select all items, and Ctrl+A could be used as a shortcut key for this.</p>
 
-<p class="li2">When the listbox role is added to an element, or such an element becomes visible, screen readers  announce the label and role of the listbox when it gets focus. If an option or item is focused within the list, it gets announced next, followed by an indication of the item's position with the list if the screen reader supports this. As focus moves within the list, the screen reader announces the relevant items.</p>
+<p>When the listbox role is added to an element, or such an element becomes visible, screen readers announce the label and role of the listbox when it gets focus. If an option or item is focused within the list, it gets announced next, followed by an indication of the item's position with the list if the screen reader supports this. As focus moves within the list, the screen reader announces the relevant items.</p>
 
 <h3 id="Associated_ARIA_roles_states_and_properties">Associated ARIA roles, states, and properties</h3>
 
@@ -26,7 +26,7 @@ tags:
 
 <dl>
 	<dt><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/option_role">option</a></dt>
-	<dd>One or more nested options are required. All selected options have <code>aria-selected</code> set to <code>true</code>. All options that are not selected have <code>aria-selected</code> set to <code>false</code>. If an option is not selectable, omit the <code>aria-selected</code>.</dd>
+	<dd>One or more nested options are required. All selected options have <code>aria-selected</code> set to <code>true</code>. All options that are not selected have <code>aria-selected</code> set to <code>false</code>. If an option is not selectable, omit the <code>aria-selected</code>.</dd>
 	<dt><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/List_role">list</a></dt>
 	<dd>A section containing <code>listitem</code> elements</dd>
 </dl>
@@ -35,25 +35,25 @@ tags:
 
 <dl>
 	<dt>aria-activedescendant</dt>
-	<dd>Holds the <code>id</code> string of the currently active element within the listbox. If that's an option element, then that would be the <code>id</code> of the most recently interacted with option, regardless of whether that option has an <code>aria-selected</code> value of <code>true</code> or not. Takes the value of only one <code>id</code>, even in a multiselectable listbox. If the <code>id</code> does not refer to a DOM descendant of the listbox, then that <code>id</code> must be included among the IDs in the <code>aria-owns</code> attribute.</dd>
+	<dd>Holds the <code>id</code> string of the currently active element within the listbox. If that's an option element, then that would be the <code>id</code> of the most recently interacted with option, regardless of whether that option has an <code>aria-selected</code> value of <code>true</code> or not. Takes the value of only one <code>id</code>, even in a multiselectable listbox. If the <code>id</code> does not refer to a DOM descendant of the listbox, then that <code>id</code> must be included among the IDs in the <code>aria-owns</code> attribute.</dd>
 	<dt>aria-owns</dt>
-	<dd>This is a space-separated list of element IDs which are not DOM child elements of the listbox. IDs listed here cannot also be listed in <code>aria-owns</code> attributes of any other elements.</dd>
+	<dd>This is a space-separated list of element IDs which are not DOM child elements of the listbox. IDs listed here cannot also be listed in <code>aria-owns</code> attributes of any other elements.</dd>
 	<dt>aria-multiselectable</dt>
-	<dd>Include and set to <code>true</code> if the user can select more than one option. If set to <code>true</code>, <em>every</em> selectable option should have an <code>aria-selected</code> attribute included and set to <code>true</code> or <code>false</code>.  Options which are <em>not</em> selectable <em>should not</em> have the <code>aria-selected</code> attribute.</dd>
+	<dd>Include and set to <code>true</code> if the user can select more than one option. If set to <code>true</code>, <em>every</em> selectable option should have an <code>aria-selected</code> attribute included and set to <code>true</code> or <code>false</code>.  Options which are <em>not</em> selectable <em>should not</em> have the <code>aria-selected</code> attribute.</dd>
 	<dd>If <code>false</code> or omitted, only the currently selected option, if any option is selected, needs the <code>aria-selected</code> attribute, and it must be set to <code>true</code>.</dd>
 	<dt>aria-required</dt>
-	<dd>A Boolean attribute which indicates that an option with a non-empty string value must be selected.</dd>
+	<dd>A Boolean attribute which indicates that an option with a non-empty string value must be selected.</dd>
 	<dt>aria-readonly</dt>
 	<dd>The user cannot change which options are selected or unselected, but the listbox is otherwise operable.</dd>
 	<dt>aria-label</dt>
-	<dd>A human-readable string value which identifies the listbox. If there's a visible label, then <code>aria-labelledby</code> should be used instead to refer to that label.</dd>
+	<dd>A human-readable string value which identifies the listbox. If there's a visible label, then <code>aria-labelledby</code> should be used instead to refer to that label.</dd>
 	<dt>aria-labelledby</dt>
-	<dd>Identifies the visible element or elements in a space-separated list of element IDs which identify the listbox. If there's no visible label, then <code>aria-label</code> should be used instead to include a label. (Note: "labelled", with two L's, is the correct spelling based on the accessibility API conventions.)</dd>
+	<dd>Identifies the visible element or elements in a space-separated list of element IDs which identify the listbox. If there's no visible label, then <code>aria-label</code> should be used instead to include a label. (Note: "labelled", with two L's, is the correct spelling based on the accessibility API conventions.)</dd>
 	<dt>aria-roledescription</dt>
-	<dd>A human-readable string value which more clearly identifies the role of the listbox. Screen readers will often read this value to the user after reading the label (if there is one), in place of saying "listbox".</dd>
+	<dd>A human-readable string value which more clearly identifies the role of the listbox. Screen readers will often read this value to the user after reading the label (if there is one), in place of saying "listbox".</dd>
 </dl>
 
-<p>(For further details and a full list of ARIA states and properties see the <a href="https://www.w3.org/TR/wai-aria-1.1/#listbox">ARIA <code>listbox</code> (role)</a> documentation.)</p>
+<p>(For further details and a full list of ARIA states and properties see the <a href="https://www.w3.org/TR/wai-aria-1.1/#listbox">ARIA <code>listbox</code> (role)</a> documentation.)</p>
 
 <h3 id="Keyboard_interactions">Keyboard interactions</h3>
 
@@ -120,64 +120,64 @@ tags:
 	<li>Update the aria-activedescendant value on the listbox to the id of the option the user just interacted with, even if they toggled the option to be unselected.</li>
 </ol>
 
-<div class="note">
-<p> <span class="ILfuVd yZ8quc">The first rule of ARIA use is you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and <strong>adding</strong> an ARIA role, state or property to make it accessible, then do so. The &lt;select&gt; element with descendant &lt;option&gt; elements handles all the needed interactions natively.</span></p>
+<div class="notecard note">
+  <p>The first rule of ARIA use is you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and <strong>adding</strong> an ARIA role, state or property to make it accessible, then do so. The {{HTMLElement('select')}} element with descendant {{HTMLElement('option')}} elements handles all the needed interactions natively.</p>
 </div>
 
 <h2 id="Examples">Examples</h2>
 
-<h4 class="p1" id="Example_1_A_single_select_listbox_that_uses_aria-activedescendant">Example 1: A single select listbox that uses aria-activedescendant</h4>
+<h4 id="Example_1_A_single_select_listbox_that_uses_aria-activedescendant">Example 1: A single select listbox that uses aria-activedescendant</h4>
 
-<p class="p2">The snippet below shows how the listbox role is added directly into the html source code. </p>
+<p>The snippet below shows how the listbox role is added directly into the html source code. </p>
 
 <pre class="brush: html">&lt;p id="listbox1label" role="label"&gt;Select a color:&lt;/p&gt;
 &lt;div role="listbox" tabindex="0" id="listbox1" aria-labelledby="listbox1label"
   onclick="return listItemClick(event);"
-  onkeydown="return listItemKeyEvent(event);"
+  onkeydown="return listItemKeyEvent(event);"
   onkeypress="return listItemKeyEvent(event);"
   aria-activedescendant="listbox1-1"&gt;
-    &lt;div role="option" id="listbox1-1" class="selected" aria-selected="true"&gt;Green&lt;/div&gt;
-    &lt;div role="option" id="listbox1-2"&gt;Orange&lt;/div&gt;
-    &lt;div role="option" id="listbox1-3"&gt;Red&lt;/div&gt;
-    &lt;div role="option" id="listbox1-4"&gt;Blue&lt;/div&gt;
-    &lt;div role="option" id="listbox1-5"&gt;Violet&lt;/div&gt;
-    &lt;div role="option" id="listbox1-6"&gt;Periwinkle&lt;/div&gt;
+    &lt;div role="option" id="listbox1-1" class="selected" aria-selected="true"&gt;Green&lt;/div&gt;
+    &lt;div role="option" id="listbox1-2"&gt;Orange&lt;/div&gt;
+    &lt;div role="option" id="listbox1-3"&gt;Red&lt;/div&gt;
+    &lt;div role="option" id="listbox1-4"&gt;Blue&lt;/div&gt;
+    &lt;div role="option" id="listbox1-5"&gt;Violet&lt;/div&gt;
+    &lt;div role="option" id="listbox1-6"&gt;Periwinkle&lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
-<p>This could have more easily been handled with the native HTML <a href="en-US/docs/Web/HTML/Element/select"><code>&lt;select&gt;</code> </a>and<a href="en-US/docs/Web/HTML/Element/label"> <code>&lt;label&gt;</code></a> elements</p>
+<p>This could have more easily been handled with the native HTML {{HTMLElement('select')}} and {{HTMLElement('label')}} elements.</p>
 
 <pre class="brush: html">&lt;label for="listbox1"&gt;Select a color:&lt;/label&gt;
 &lt;select id="listbox1"&gt;
    &lt;option selected&gt;Green&lt;/option&gt;
-   &lt;option&gt;Orange&lt;/option&gt;
-   &lt;option&gt;Red&lt;/option&gt;
+   &lt;option&gt;Orange&lt;/option&gt;
+   &lt;option&gt;Red&lt;/option&gt;
    &lt;option&gt;Blue&lt;/option&gt;
-   &lt;option&gt;Violet&lt;/option&gt;
-   &lt;option&gt;Periwinkle&lt;/option&gt;
+   &lt;option&gt;Violet&lt;/option&gt;
+   &lt;option&gt;Periwinkle&lt;/option&gt;
 &lt;/select&gt;</pre>
 
 <h4 id="More_examples">More examples</h4>
 
 <ul>
-	<li><a href="https://w3c.github.io/aria-practices/examples/listbox/listbox-scrollable.html">Scrollable Listbox Example</a>: Single-select listbox that scrolls to reveal more options, similar to HTML <code>select</code> with <code>size</code> attribute greater than one.</li>
-	<li><a href="https://w3c.github.io/aria-practices/examples/listbox/listbox-collapsible.html">Collapsible Dropdown Listbox Example</a>: Single-select collapsible listbox that expands when activated, similar to HTML <code>select</code> with the attribute <code>size="1"</code>.</li>
+	<li><a href="https://w3c.github.io/aria-practices/examples/listbox/listbox-scrollable.html">Scrollable Listbox Example</a>: Single-select listbox that scrolls to reveal more options, similar to HTML {{HTMLElement('select')}} with <code>size</code> attribute greater than one.</li>
+	<li><a href="https://w3c.github.io/aria-practices/examples/listbox/listbox-collapsible.html">Collapsible Dropdown Listbox Example</a>: Single-select collapsible listbox that expands when activated, similar to HTML {{HTMLElement('select')}} with the attribute <code>size="1"</code>.</li>
 	<li><a href="https://w3c.github.io/aria-practices/examples/listbox/listbox-rearrangeable.html">Example Listboxes with Rearrangeable Options</a>: Examples of both single-select and multi-select listboxes with accompanying toolbars where options can be added, moved, and removed.</li>
 </ul>
 
 <h2 id="Best_practices">Best practices</h2>
 
-<ul class="ul1">
-	<li class="li3">To be keyboard accessible, authors should <a href="https://www.w3.org/TR/wai-aria-1.1/#managingfocus">manage focus</a> of all descendants of this role.</li>
-	<li class="li3">It is recommended that authors use different styling for the selection when the list is not focused, e.g. a non-active selection is often shown with a lighter background color.</li>
-	<li class="li3">If the listbox is not part of another widget, it should have the <code><span class="s1">aria-labelledby</span></code> property set.</li>
-	<li class="li3">If one or more entries are not DOM children of listbox, additional <span class="s1">aria-*</span> properties will need to be set (see <a href="https://www.w3.org/TR/wai-aria-practices/#listbox_div">ARIA Best Practices</a>).</li>
-	<li class="li3">If there is a valid reason to <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-expanded">expand</a> the listbox, the <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role"><code>combobox</code></a> role may be more appropriate.</li>
+<ul>
+	<li>To be keyboard-accessible, authors should <a href="https://www.w3.org/TR/wai-aria-1.1/#managingfocus">manage focus</a> of all descendants of this role.</li>
+	<li>It is recommended that authors use different styling for the selection when the list is not focused, e.g. a non-active selection is often shown with a lighter background color.</li>
+	<li>If the listbox is not part of another widget, it should have the <code>aria-labelledby</code> property set.</li>
+	<li>If one or more entries are not DOM children of listbox, additional <code>aria-*</code> properties will need to be set (see <a href="https://www.w3.org/TR/wai-aria-practices/#listbox_div">ARIA Best Practices</a>).</li>
+	<li>If there is a valid reason to <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-expanded">expand</a> the listbox, the <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role"><code>combobox</code></a> role may be more appropriate.</li>
 </ul>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
+<table>
 	<tbody>
 		<tr>
 			<th scope="col">Specification</th>
@@ -201,15 +201,15 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li><a href="/en-US/docs/Web/HTML/Element/select">HTML <code>&lt;select&gt;</code> element</a></li>
-	<li><a href="/en-US/docs/Web/HTML/Element/label">HTML <code>&lt;label&gt;</code> element</a></li>
-	<li><a href="/en-US/docs/Web/HTML/Element/option">HTML <code>&lt;option&gt;</code> element</a></li>
+	<li>HTML {{HTMLElement('select')}} element</li>
+	<li>HTML {{HTMLElement('label')}} element</li>
+	<li>HTML {{HTMLElement('option')}} element</li>
 	<li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role">ARIA: <code>combobox</code> role</a></li>
 	<li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/option_role">ARIA: <code>option</code> role</a></li>
 	<li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/List_role">ARIA: <code>list</code> role</a></li>
 	<li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Listitem_role">ARIA: <code>listitem</code> role</a></li>
-	<li class="li2"><a href="https://www.w3.org/TR/wai-aria-practices/#Listbox">ARIA Best Practices – Listbox</a></li>
-	<li class="li2"><a href="https://www.w3.org/TR/wai-aria-1.1/#listbox">ARIA Role Model – Listbox</a></li>
+	<li><a href="https://www.w3.org/TR/wai-aria-practices/#Listbox">ARIA Best Practices – Listbox</a></li>
+	<li><a href="https://www.w3.org/TR/wai-aria-1.1/#listbox">ARIA Role Model – Listbox</a></li>
 </ul>
 
 <section id="Quick_links">
