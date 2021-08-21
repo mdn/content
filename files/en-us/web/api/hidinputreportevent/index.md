@@ -19,7 +19,7 @@ The **`HIDInputReportEvent`** interface of the {{domxref('WebHID API')}} is pass
 ## Properties
 
 - {{domxref("HIDInputReportEvent.data")}}{{readonlyinline}}
-  - : A {{domxref("DataView")}} containing the data from the input report, excluding the `reportId` if the HID interface uses report IDs.
+  - : A {{jsxref("DataView")}} containing the data from the input report, excluding the `reportId` if the HID interface uses report IDs.
 - {{domxref("HIDInputReportEvent.device")}}{{readonlyinline}}
   - : The {{domxref("HIDDevice")}} instance that represents the HID interface that sent the input report.
 - {{domxref("HIDInputReportEvent.reportId")}}{{readonlyinline}}
