@@ -328,8 +328,10 @@ obj.doSomethingLater(); // console prints "NaN", because the property "count" is
 ```js
 var obj = {
     count : 10,
-    doSomethingLater : function(){ // of course, arrow functions are not suited for methods
-        setTimeout( () => { // since the arrow function was created within the "obj", it assumes the object's "this"
+    doSomethingLater : function(){ // the traditional function binds "this" to the "obj" context
+        setTimeout( () => { // since the arrow function doesn't have its own binding and
+                            // setTimeout (as a function call) doesn't create a binding itself,
+                            // the "obj" context of the traditional function will be used within
             this.count++;
             console.log(this.count);
         }, 300);
