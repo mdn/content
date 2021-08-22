@@ -17,9 +17,9 @@ browser-compat: api.XMLHttpRequest.open
 <p>The {{domxref("XMLHttpRequest")}} method <code><strong>open()</strong></code>
   initializes a newly-created request, or re-initializes an existing one.</p>
 
-<div class="note"><strong>Note:</strong> Calling this method for an already active request
+<div class="note"><p><strong>Note:</strong> Calling this method for an already active request
   (one for which <code>open()</code> has already been called) is the equivalent of calling
-  {{domxref("XMLHttpRequest.abort", "abort()")}}.</div>
+  {{domxref("XMLHttpRequest.abort", "abort()")}}.</p></div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -42,10 +42,10 @@ browser-compat: api.XMLHttpRequest.open
     <code>true</code>, notification of a completed transaction is provided using event
     listeners. This <em>must</em> be true if the <code>multipart</code> attribute is
     <code>true</code>, or an exception will be thrown.
-    <div class="note"><strong>Note:</strong> Synchronous requests on the main thread can
+    <div class="note"><p><strong>Note:</strong> Synchronous requests on the main thread can
       be easily disruptive to the user experience and should be avoided; in fact, many
       browsers have deprecated synchronous XHR support on the main thread entirely.
-      Synchronous requests are permitted in {{domxref("Worker")}}s.</div>
+      Synchronous requests are permitted in {{domxref("Worker")}}s.</p></div>
   </dd>
   <dt><code>user</code> {{optional_inline}}</dt>
   <dd>The optional user name to use for authentication purposes; by default, this is the

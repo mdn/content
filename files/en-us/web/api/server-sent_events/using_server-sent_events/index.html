@@ -121,7 +121,7 @@ while (true) {
 
 <p>The event stream is a simple stream of text data which must be encoded using <a href="/en-US/docs/Glossary/UTF-8">UTF-8</a>. Messages in the event stream are separated by a pair of newline characters. A colon as the first character of a line is in essence a comment, and is ignored.</p>
 
-<div class="note"><strong>Note:</strong> The comment line can be used to prevent connections from timing out; a server can send a comment periodically to keep the connection alive.</div>
+<div class="note"><p><strong>Note:</strong> The comment line can be used to prevent connections from timing out; a server can send a comment periodically to keep the connection alive.</p></div>
 
 <p>Each message consists of one or more lines of text listing the fields for that message. Each field is represented by the field name, followed by a colon, followed by the text data for that field's value.</p>
 
@@ -142,7 +142,7 @@ while (true) {
 
 <p>All other field names are ignored.</p>
 
-<div class="note"><strong>Note:</strong> If a line doesn't contain a colon, the entire line is treated as the field name with an empty value string.</div>
+<div class="note"><p><strong>Note:</strong> If a line doesn't contain a colon, the entire line is treated as the field name with an empty value string.</p></div>
 
 <h3 id="Examples">Examples</h3>
 
