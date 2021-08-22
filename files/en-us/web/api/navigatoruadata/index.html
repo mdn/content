@@ -15,8 +15,7 @@ browser-compat: api.NavigatorUAData
 <p>An instance of this object is returned by calling {{domxref("Navigator.userAgentData")}}. Therefore, this interface has no constructor.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>The terms <em>high entropy</em> and <em>low entropy</em> refer to the amount of information these values reveal about the browser. The values returned as properties are deemed low entropy, and unlikely to identify a user. The values returned by {{domxref("NavigatorUAData.getHighEntropyValues()")}} could potentially reveal more information. These values are therefore retrieved via a {{jsxref("Promise")}}, allowing time for the browser to request user permission, or make other checks.</p>
+  <p><strong>Note:</strong> The terms <em>high entropy</em> and <em>low entropy</em> refer to the amount of information these values reveal about the browser. The values returned as properties are deemed low entropy, and unlikely to identify a user. The values returned by {{domxref("NavigatorUAData.getHighEntropyValues()")}} could potentially reveal more information. These values are therefore retrieved via a {{jsxref("Promise")}}, allowing time for the browser to request user permission, or make other checks.</p>
 </div>
 
 <h2 id="Properties">Properties</h2>

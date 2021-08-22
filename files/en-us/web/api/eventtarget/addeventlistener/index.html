@@ -97,8 +97,7 @@ target.addEventListener(type, listener, useCapture, wantsUntrusted); // wantsUnt
     <code><var>useCapture</var></code> defaults to <code>false</code>.</dd>
   <dd>
     <div class="notecard note">
-      <h4>Note</h4>
-      <p>For event listeners attached to the event target, the event is in the target phase,
+      <p><strong>Note:</strong> For event listeners attached to the event target, the event is in the target phase,
         rather than the capturing and bubbling phases.
         Event listeners in the “capturing” phase are called before event listeners in any non-capturing phases.</p>
     </div>
@@ -718,8 +717,7 @@ console.log(someString);  // Expected Value: 'Data' (will never output 'Data Aga
 </pre>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>Although inner scopes have access to <code>const</code>,
+  <p><strong>Note:</strong> Although inner scopes have access to <code>const</code>,
     <code>let</code> variables from outer scopes, you cannot expect any changes to these
     variables to be accessible after the event listener definition, within the same outer
     scope. Why? Because by the time the event listener would execute, the scope in which
@@ -735,8 +733,7 @@ console.log(someString);  // Expected Value: 'Data' (will never output 'Data Aga
   candidates for sharing data among scopes. Let's explore this.</p>
 
   <div class="notecard note">
-    <h4>Note</h4>
-  <p>Functions in JavaScript are actually objects. (Hence they too
+  <p><strong>Note:</strong> Functions in JavaScript are actually objects. (Hence they too
     can have properties, and will be retained in memory even after they finish executing
     if assigned to a variable that persists in memory.)</p>
 </div>
@@ -771,8 +768,7 @@ window.setInterval(function() {
   can respond to the change).</p>
 
   <div class="notecard note">
-    <h4>Note</h4>
-    <p>Objects are stored in variables by reference, meaning only the
+    <p><strong>Note:</strong> Objects are stored in variables by reference, meaning only the
     memory location of the actual data is stored in the variable. Among other things, this
     means variables that "store" objects can actually affect other variables that get
     assigned ("store") the same object reference. When two variables reference the same
@@ -781,8 +777,7 @@ window.setInterval(function() {
 </div>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>Because objects are stored in variables by reference, you can
+  <p><strong>Note:</strong> Because objects are stored in variables by reference, you can
     return an object from a function to keep it alive (preserve it in memory so you don't
     lose the data) after that function stops executing.</p>
 </div>
@@ -820,8 +815,7 @@ window.setInterval(function() {
   <code>handleEvent()</code> and also the {{event("DOMContentLoaded")}} event.</p>
 
   <div class="notecard note">
-    <h4>Note</h4>
-    <p><code>useCapture</code> is not supported, as IE 8 does not
+    <p><strong>Note:</strong> <code>useCapture</code> is not supported, as IE 8 does not
     have any alternative method. The following code only adds IE 8 support. This IE 8
     polyfill only works in standards mode: a doctype declaration is required.</p>
 </div>
@@ -1002,8 +996,7 @@ for(let i=0, j=0 ; i&lt;els.length ; i++){
   the user is scrolling.</p>
 
   <div class="notecard note">
-    <h4>Note</h4>
-    <p>See the compatibility table below if you need to know which
+    <p><strong>Note:</strong> See the compatibility table below if you need to know which
     browsers (and/or which versions of those browsers) implement this altered behavior.</p>
   </div>
 
