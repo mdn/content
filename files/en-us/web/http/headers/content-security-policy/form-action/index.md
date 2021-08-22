@@ -14,7 +14,7 @@ browser-compat: http.headers.csp.Content-Security-Policy.form-action
 ---
 {{HTTPSidebar}}
 
-The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`form`\*\***`-action`\*\* directive restricts the URLs which can be used as the target of a form submissions from a given context.
+The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`form-action`** directive restricts the URLs which can be used as the target of a form submissions from a given context.
 
 > **Warning:** Whether `form-action` should block redirects after a form submission is [debated](https://github.com/w3c/webappsec-csp/issues/8) and browser implementations of this aspect are inconsistent (e.g. Firefox 57 doesn't block the redirects whereas Chrome 63 does).
 
