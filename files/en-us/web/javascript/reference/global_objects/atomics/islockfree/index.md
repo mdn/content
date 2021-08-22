@@ -33,7 +33,7 @@ Atomics.isLockFree(size)
 
 ### Return value
 
-A {{jsxref("Boolean")}} indicating whether the operation is lock free.
+A `true` or `false` value indicating whether the operation is lock free.
 
 ## Examples
 
