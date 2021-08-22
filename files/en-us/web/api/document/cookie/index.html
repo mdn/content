@@ -52,10 +52,10 @@ browser-compat: api.Document.cookie
 					'<code>/mydir</code>') If not specified, defaults to the current path
 					of the current document location.</div>
 
-				<div class="note"><strong>Note:</strong> Prior to {{Gecko("6.0")}}, paths
+				<div class="note"><p><strong>Note:</strong> Prior to {{Gecko("6.0")}}, paths
 					with quotes were treated as if the quotes were part of the string,
 					instead of as if they were delimiters surrounding the actual path
-					string. This has been fixed.</div>
+					string. This has been fixed.</p></div>
 			</li>
 			<li id="new-cookie_domain"><code>;domain=<var>domain</var></code> (e.g.,
 				'<code>example.com</code>' or '<code>subdomain.example.com</code>'). If
@@ -63,9 +63,9 @@ browser-compat: api.Document.cookie
 				location. Contrary to earlier specifications, leading dots in domain names
 				are ignored, but browsers may decline to set the cookie containing such
 				dots. If a domain is specified, subdomains are always included.
-				<div class="note"><strong>Note:</strong> The domain <em>must</em> match
+				<div class="note"><p><strong>Note:</strong> The domain <em>must</em> match
 					the domain of the JavaScript origin. Setting cookies to foreign
-					domains will be silently ignored.</div>
+					domains will be silently ignored.</p></div>
 			</li>
 			<li id="new-cookie_max-age">
 				<code>;max-age=<var>max-age-in-seconds</var></code> (e.g.,
@@ -133,14 +133,14 @@ browser-compat: api.Document.cookie
 	</li>
 </ul>
 
-<div class="note"><strong>Note:</strong> As you can see from the code above,
+<div class="note"><p><strong>Note:</strong> As you can see from the code above,
 	<code>document.cookie</code> is an <a
 		href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#description">accessor
 		property</a> with native <em>setter</em> and <em>getter</em> functions, and
 	consequently is <em>not</em> a <a
 		href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#description">data
 		property</a> with a value: what you write is not the same as what you read,
-	everything is always mediated by the JavaScript interpreter.</div>
+	everything is always mediated by the JavaScript interpreter.</p></div>
 
 <h2 id="Examples">Examples</h2>
 

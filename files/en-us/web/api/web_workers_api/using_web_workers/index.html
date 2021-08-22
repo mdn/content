@@ -90,9 +90,9 @@ second.onchange = function() {
 
 <p>Here we grab the message event data and set it as the <code>textContent</code> of the result paragraph, so the user can see the result of the calculation.</p>
 
-<div class="note"><strong>Note</strong>: Notice that <code>onmessage</code> and <code>postMessage()</code> need to be hung off the <code>Worker</code> object when used in the main script thread, but not when used in the worker. This is because, inside the worker, the worker is effectively the global scope.</div>
+<div class="note"><p><strong>Note:</strong> Notice that <code>onmessage</code> and <code>postMessage()</code> need to be hung off the <code>Worker</code> object when used in the main script thread, but not when used in the worker. This is because, inside the worker, the worker is effectively the global scope.</p></div>
 
-<div class="note"><strong>Note</strong>: When a message is passed between the main thread and worker, it is copied or "transferred" (moved), not shared. Read {{anch("Transferring data to and from workers further details", "Transferring data to and from workers: further details")}} for a much more thorough explanation.</div>
+<div class="note"><p><strong>Note:</strong> When a message is passed between the main thread and worker, it is copied or "transferred" (moved), not shared. Read {{anch("Transferring data to and from workers further details", "Transferring data to and from workers: further details")}} for a much more thorough explanation.</p></div>
 
 <h3 id="Terminating_a_worker">Terminating a worker</h3>
 
@@ -134,7 +134,7 @@ importScripts('//example.com/hello.js'); /* You can import scripts from other or
 
 <p>The browser loads each listed script and executes it. Any global objects from each script may then be used by the worker. If the script can't be loaded, <code>NETWORK_ERROR</code> is thrown, and subsequent code will not be executed. Previously executed code (including code deferred using {{domxref("WindowOrWorkerGlobalScope.setTimeout")}}) will still be functional though. Function declarations <strong>after</strong> the <code>importScripts()</code> method are also kept, since these are always evaluated before the rest of the code.</p>
 
-<div class="note"><strong>Note</strong>: Scripts may be downloaded in any order, but will be executed in the order in which you pass the filenames into <code>importScripts()</code> . This is done synchronously; <code>importScripts()</code> does not return until all the scripts have been loaded and executed.</div>
+<div class="note"><p><strong>Note:</strong> Scripts may be downloaded in any order, but will be executed in the order in which you pass the filenames into <code>importScripts()</code> . This is done synchronously; <code>importScripts()</code> does not return until all the scripts have been loaded and executed.</p></div>
 
 <h2 id="Shared_workers">Shared workers</h2>
 
