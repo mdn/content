@@ -234,40 +234,25 @@ within your browser.
     yarn start
     ```
 
-    When you preview a page you can press a button to open its associated
-    document's `index.html` or `index.md` file in your preferred editor.
+    When you preview a page, you can press a button to open its associated
+    `index.html` or `index.md` file in your preferred editor.
     For this to work, you need to set an environment variable called `EDITOR`
-    before starting the preview server. For example, if you prefer VS Code as
-    your editor, you'll want to do something like this:
+    before starting the preview server. You can set this in an `.env` file
+    inside the root of your local `content` directory.
 
-    ```sh
-    export EDITOR=code
-    yarn start
+    Using the terminal with `bash` or PowerShell, add the variable to the
+    `.env` file like this:
+
+    ```shell
+    echo 'EDITOR=code' >> .env
     ```
 
-    Note, this is how you do it on terminals with `bash` (macOS and Linux). You
-    have to do it differently on Windows.
-
-    Now, when you're previewing a page and press the `Edit in your editor`
-    button, it will open the same as running:
+    This example sets VS Code as your editor. Now, when you're previewing a page
+    and press the `Edit in your editor` button, it will open as if you ran:
 
     ```sh
     code files/en-us/.../index.html
     ```
-
-    Instead of having to type `export EDITOR=code` every time prior to
-    `yarn start`, you can instead store this setting in your personal `.env` file
-    (this goes inside the root of your local `content` directory). If the `.env`
-    file doesn't already exist, you can create one and include the above setting
-    in it. Alternatively, running the following line will add the setting to the
-    `.env` file automatically, creating the file if it doesn't already exist:
-
-    ```sh
-    echo 'EDITOR=code' >> .env
-    ```
-
-    Now, it should be set like that even after you've closed and started a new
-    terminal window.
 
 1. Make your desired changes to one or more `index.html` or `index.md` files
 using your preferred code editor. **When thinking about your desired changes,
