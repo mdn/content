@@ -57,7 +57,7 @@ tags:
 
   <p>The security boundary imposed on IndexedDB prevents applications from accessing data with a different origin. For example, while an app or a page in <a href="https://www.example.com/app/">http://www.example.com/app/</a> can retrieve data from <a href="https://www.example.com/dir/">http://www.example.com/dir/</a>, because they have the same origin, it cannot retrieve data from <a href="https://www.example.com:8080/dir/">http://www.example.com:8080/dir/</a> (different port) or <a class="link-https" href="https://www.example.com/dir/">https://www.example.com/dir/</a> (different protocol), because they have different origins.</p>
 
-  <div class="note"><strong>Note</strong>: Third party window content (e.g. {{htmlelement("iframe")}} content) can access the IndexedDB store for the origin it is embedded into, unless the browser is set to <a href="https://support.mozilla.org/en-US/kb/disable-third-party-cookies">never accept third party cookies</a> (see {{bug("1147821")}}.)</div>
+  <div class="note"><p><strong>Note:</strong> Third party window content (e.g. {{htmlelement("iframe")}} content) can access the IndexedDB store for the origin it is embedded into, unless the browser is set to <a href="https://support.mozilla.org/en-US/kb/disable-third-party-cookies">never accept third party cookies</a> (see {{bug("1147821")}}.)</p></div>
  </li>
 </ul>
 
