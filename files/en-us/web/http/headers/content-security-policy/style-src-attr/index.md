@@ -18,7 +18,7 @@ browser-compat: http.headers.csp.Content-Security-Policy.style-src-attr
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
-**`style`\*\***`-src-attr`\*\* directive
+**`style-src-attr`** directive
 specifies valid sources for inline styles applied to individual DOM elements.
 
 <table class="properties">
