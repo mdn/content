@@ -143,7 +143,7 @@ In JavaScript, objects can be seen as a collection of properties. With the [obje
 
 There are two types of object properties: The [_data_ property](#data_property) and the [_accessor_ property](#accessor_property).
 
-> **Note:** Each property has corresponding *attributes.* Attributes are used internally by the JavaScript engine, so you cannot directly access them. That's why attributes are listed in double square brackets, rather than single.
+> **Note:** Each property has corresponding *attributes*. Attributes are used internally by the JavaScript engine, so you cannot directly access them. That's why attributes are listed in double square brackets, rather than single.
 >
 > See {{jsxref("Object.defineProperty()")}} to learn more.
 
@@ -185,7 +185,7 @@ Associates a key with a value, and has the following attributes:
         <p>
           If <code>true</code>, the property will be enumerated in
           <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in"
-            >for...in</a
+             ><code>for...in</code></a
           >
           loops.<br />See also
           <a
@@ -227,7 +227,7 @@ An accessor property has the following attributes:
 | ---------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------- |
 | [[Get]]          | Function object or `undefined` | The function is called with an empty argument list and retrieves the property value whenever a get access to the value is performed. See also [`get`](/en-US/docs/Web/JavaScript/Reference/Functions/get).               | `undefined`   |
 | [[Set]]          | Function object or `undefined` | The function is called with an argument that contains the assigned value and is executed whenever a specified property is attempted to be changed. See also [`set`](/en-US/docs/Web/JavaScript/Reference/Functions/set). | `undefined`   |
-| [[Enumerable]]   | Boolean                        | If `true`, the property will be enumerated in [for...in](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops.                                                                                                | `false`       |
+| [[Enumerable]]   | Boolean                        | If `true`, the property will be enumerated in [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops.                                                                                                | `false`       |
 | [[Configurable]] | Boolean                        | If `false`, the property can't be deleted and can't be changed to a data property.                                                                                                                                       | `false`       |
 
 ### "Normal" objects, and functions
@@ -244,7 +244,7 @@ When representing dates, the best choice is to use the built-in [`Date` utility]
 
 [Arrays](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) are regular objects for which there is a particular relationship between integer-keyed properties and the `length` property.
 
-Additionally, arrays inherit from `Array.prototype`, which provides to them a handful of convenient methods to manipulate arrays. For example, [`indexOf`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) (searching a value in the array) or [`push`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) (adding an element to the array), and so on. This makes Arrays a perfect candidate to represent lists or sets.
+Additionally, arrays inherit from `Array.prototype`, which provides to them a handful of convenient methods to manipulate arrays. For example, [`indexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) (searching a value in the array) or [`push()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) (adding an element to the array), and so on. This makes Arrays a perfect candidate to represent lists or sets.
 
 [Typed Arrays](/en-US/docs/Web/JavaScript/Typed_arrays) are new to JavaScript with ECMAScript 2015, and present an array-like view of an underlying binary data buffer. The following table helps determine the equivalent C data types:
 
