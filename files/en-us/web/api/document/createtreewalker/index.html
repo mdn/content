@@ -127,9 +127,10 @@ browser-compat: api.Document.createTreeWalker
 
 <h2 id="Example">Example</h2>
 
-<p>The following example goes through all nodes in the body, reduces the set of nodes to
-  elements, passes each node through as acceptable (it could reduce the set in the
-  <code>acceptNode()</code> method instead), and then makes use of tree walker iterator
+<p>The following example goes through all nodes in the body, filters out any non element nodes
+  (with the `NodeFilter.SHOW_ELEMENT` value), 
+  marks each remaining node as acceptable (The <code>acceptNode()</code> method could make
+  a different decision), and then makes use of tree walker iterator
   that is created to advance through the nodes (now all elements) and push them into an
   array.</p>
 
