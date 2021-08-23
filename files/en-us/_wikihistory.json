@@ -89850,34 +89850,6 @@
       "louisremi"
     ]
   },
-  "Web/API/Window/onmozbeforepaint": {
-    "modified": "2019-11-17T08:54:22.944Z",
-    "contributors": [
-      "Sheppy",
-      "fscholz",
-      "MHasan",
-      "teoli",
-      "Bzbarsky"
-    ]
-  },
-  "Web/API/Window/onpaint": {
-    "modified": "2020-12-10T09:07:45.084Z",
-    "contributors": [
-      "bershanskiy",
-      "mfuji09",
-      "mfluehr",
-      "Ac1521",
-      "fscholz",
-      "MHasan",
-      "teoli",
-      "libreGeekingKid",
-      "Sheppy",
-      "Ruakh",
-      "Nickolay",
-      "Mw22",
-      "alecananian"
-    ]
-  },
   "Web/API/Window/onvrdisplayactivate": {
     "modified": "2020-10-15T21:54:14.394Z",
     "contributors": [
