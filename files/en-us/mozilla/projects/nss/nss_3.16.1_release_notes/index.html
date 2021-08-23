@@ -1,0 +1,59 @@
+---
+title: NSS 3.16.1 release notes
+slug: Mozilla/Projects/NSS/NSS_3.16.1_release_notes
+---
+<h2 id="Introduction">Introduction</h2>
+<p>Network Security Services (NSS) 3.16.1 is a patch release for NSS 3.16. The bug fixes in NSS 3.16.1 are described in the "Bugs Fixed" section below.</p>
+<h2 id="Distribution_Information">Distribution Information</h2>
+<p>The HG tag is NSS_3_16_1_RTM. NSS 3.16.1 requires NSPR 4.10.5 or newer.</p>
+<p>NSS 3.16.1 source distributions are available on ftp.mozilla.org for secure HTTPS download:</p>
+<ul>
+ <li>Source tarballs:<br>
+  <a href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_16_1_RTM/src/">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_16_1_RTM/src/</a></li>
+</ul>
+<h2 id="New_in_NSS_3.16.1">New in NSS 3.16.1</h2>
+<h3 id="New_Functionality">New Functionality</h3>
+<ul>
+ <li>Added the "ECC" flag for modutil to select the module used for elliptic curve cryptography (ECC) operations.</li>
+</ul>
+<h4 id="New_Functions">New Functions</h4>
+<ul>
+ <li><em>in pk11pub.h</em>
+  <ul>
+   <li><b>PK11_ExportDERPrivateKeyInfo and PK11_ExportPrivKeyInfo</b> - exports a private key in a DER-encoded ASN.1 PrivateKeyInfo type or a SECKEYPrivateKeyInfo structure. Only RSA private keys are supported now.</li>
+  </ul>
+ </li>
+ <li><em>in secmod.h</em>
+  <ul>
+   <li><b>SECMOD_InternalToPubMechFlags</b> - converts from NSS-internal to public representation of mechanism flags.</li>
+  </ul>
+ </li>
+</ul>
+<h4 id="New_Types">New Types</h4>
+<ul>
+ <li><em>in sslt.h</em>
+  <ul>
+   <li><b>ssl_padding_xtn</b> - the value of this enum constant changed from the experimental value 35655 to the IANA-assigned value 21. .</li>
+  </ul>
+ </li>
+</ul>
+<h4 id="New_Macros">New Macros</h4>
+<ul>
+ <li><em>in secmod.h</em>
+  <ul>
+   <li><b>PUBLIC_MECH_ECC_FLAG</b> - a public mechanism flag for elliptic curve cryptography (ECC) operations.</li>
+  </ul>
+ </li>
+ <li><em>in utilmodt.h</em>
+  <ul>
+   <li><b>SECMOD_ECC_FLAG</b> - an NSS-internal mechanism flag for elliptic curve cryptography (ECC) operations. This macro has the same numeric value as <b>PUBLIC_MECH_ECC_FLAG.</b></li>
+  </ul>
+ </li>
+</ul>
+<h2 id="Notable_Changes_in_NSS_3.16.1">Notable Changes in NSS 3.16.1</h2>
+<ul>
+ <li>Imposed <a href="https://hg.mozilla.org/projects/nss/rev/742307da0792">name constraints</a> on the French government root CA ANSSI (DCISS).</li>
+</ul>
+<h2 id="Bugs_fixed_in_NSS_3.16.1">Bugs fixed in NSS 3.16.1</h2>
+<p>This Bugzilla query returns all the bugs fixed in NSS 3.16.1:</p>
+<p><a href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.16.1">https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.16.1</a></p>

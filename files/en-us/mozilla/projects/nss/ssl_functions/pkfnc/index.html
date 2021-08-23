@@ -1,0 +1,317 @@
+---
+title: pkfnc
+slug: Mozilla/Projects/NSS/SSL_functions/pkfnc
+---
+<div class="note">
+  <ul>
+    <li>This page is part of the <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/OLD_SSL_Reference">SSL Reference</a> that we are migrating into the format described in the <a href="/en-US/docs/MDN/Guidelines">MDN Style Guide</a>. If you are inclined to help with this migration, your help would be very much appreciated.</li>
+  </ul>
+  <ul>
+    <li>Upgraded documentation may be found in the <a href="/en-US/docs/Mozilla/Projects/NSS/Reference">Current NSS Reference</a>
+    </li>
+  </ul>
+</div>
+<h1 id="PKCS_11_Functions">PKCS #11 Functions</h1>
+<hr>
+<p><a id="1031576"> </a></p>
+
+<a id="1027946"></a>
+<h2 id="Chapter_7_PKCS_11_Functions">Chapter 7<br> PKCS #11 Functions</h2>
+<p><a id="1034215"> This chapter describes the core PKCS #11 functions that an application needs for communicating with cryptographic modules. In particular, these functions are used for obtaining certificates, keys, and passwords. </a></p>
+<p><a id="1035644"> </a><a href="#1035673"><code>PK11_FindCertFromNickname</code></a><br>
+  <a href="#1026891"><code>PK11_FindKeyByAnyCert</code></a><br>
+  <a href="#1030779"><code>PK11_GetSlotName</code></a><br>
+  <a href="#1026964"><code>PK11_GetTokenName</code></a><br>
+  <a href="#1026762"><code>PK11_IsHW</code></a><br>
+  <a href="#1022948"><code>PK11_IsPresent</code></a><br>
+  <a href="#1022991"><code>PK11_IsReadOnly</code></a><br>
+  <a href="#1023128"><code>PK11_SetPasswordFunc</code></a></p>
+<h4 id="PK11_FindCertFromNickname"> <a id="1035673"> PK11_FindCertFromNickname </a></h4>
+<p><a id="1026864"> Finds a certificate from its nickname.</a></p>
+<h5 id="Syntax"> <a id="1026865"> Syntax </a></h5>
+<pre><a id="1026866">#include &lt;pk11func.h&gt;
+#include &lt;certt.h&gt;</a></pre>
+<pre><a id="1026867">CERTCertificate *PK11_FindCertFromNickname(
+   char *nickname,
+   void *wincx);</a></pre>
+<h5 id="Parameters"> <a id="1026870"> Parameters </a></h5>
+<p><a id="1026884"> This function has the following parameters:</a></p>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        <pre>
+<a id="1026873">nickname</a></pre>
+      </td>
+      <td>
+        <p><a id="1034886"> A pointer to the nickname in the certificate database or to the nickname in the token. </a></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <pre>
+<a id="1026877">wincx</a></pre>
+      </td>
+      <td>
+        <p><a id="1026879"> A pointer to application data for the password callback function. This pointer is set with </a><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslfnc#1088040"><code>SSL_SetPKCS11PinArg</code></a> during SSL configuration. To retrieve its current value, use <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslfnc#1123385"><code>SSL_RevealPinArg</code></a>.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<h5 id="Returns"> <a id="1026885"> Returns </a></h5>
+<p><a id="1026886"> The function returns one of these values:</a></p>
+<ul>
+  <li><a id="1026887"> If successful, a pointer to a certificate structure.</a></li>
+  <li><a id="1026888"> If unsuccessful, <code>NULL</code>. </a></li>
+</ul>
+<h5 id="Description"> <a id="1032008"> Description </a></h5>
+<p><a id="1032009"> A nickname is an alias for a certificate subject. There may be multiple certificates with the same subject, and hence the same nickname. This function will return the newest certificate that matches the subject, based on the NotBefore / NotAfter fields of the certificate. When you are finished with the certificate structure returned by <code>PK11_FindCertFromNickname</code>, you must free it by calling </a><a href="sslcrt.html#1050532"><code>CERT_DestroyCertificate</code></a>.</p>
+<p><a id="1036272"> The <code>PK11_FindCertFromNickname</code> function calls the password callback function set with </a><a href="#1023128"><code>PK11_SetPasswordFunc</code></a> and passes it the pointer specified by the <code>wincx</code> parameter.</p>
+<h4 id="PK11_FindKeyByAnyCert"> <a id="1026891"> PK11_FindKeyByAnyCert </a></h4>
+<p><a id="1026892"> Finds the private key associated with a specified certificate in any available slot.</a></p>
+<h5 id="Syntax_2"> <a id="1026893"> Syntax </a></h5>
+<pre><a id="1032437">#include &lt;pk11func.h&gt;
+#include &lt;certt.h&gt;
+#include &lt;keyt.h&gt;</a></pre>
+<pre><a id="1028560">SECKEYPrivateKey *PK11_FindKeyByAnyCert(
+   CERTCertificate *cert,
+   void *wincx);</a></pre>
+<h5 id="Parameters_2"> <a id="1026899"> Parameters </a></h5>
+<p><a id="1026917"> This function has the following parameters:</a></p>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        <pre>
+<a id="1026902">cert</a></pre>
+      </td>
+      <td>
+        <p><a id="1030390"> A pointer to a certificate structure in the certificate database. </a></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <pre>
+<a id="1026906">wincx</a></pre>
+      </td>
+      <td>
+        <p><a id="1030392"> A pointer to application data for the password callback function. This pointer is set with </a><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslfnc#1088040"><code>SSL_SetPKCS11PinArg</code></a> during SSL configuration. To retrieve its current value, use <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslfnc#1123385"><code>SSL_RevealPinArg</code></a>.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<h5 id="Returns_2"> <a id="1026918"> Returns </a></h5>
+<p><a id="1026919"> The function returns one of these values:</a></p>
+<ul>
+  <li><a id="1026920"> If successful, a pointer to a private key structure.</a></li>
+  <li><a id="1026921"> If unsuccessful, <code>NULL</code>. </a></li>
+</ul>
+<h5 id="Description_2"> <a id="1031834"> Description </a></h5>
+<p><a id="1035317"> When you are finished with the private key structure returned by <code>PK11_FindKeyByAnyCert</code>, you must free it by calling </a><a href="sslkey.html#1051017"><code>SECKEY_DestroyPrivateKey</code></a>.</p>
+<p><a id="1036323"> The <code>PK11_FindKeyByAnyCert</code> function calls the password callback function set with </a><a href="#1023128"><code>PK11_SetPasswordFunc</code></a> and passes it the pointer specified by the <code>wincx</code> parameter.</p>
+<h4 id="PK11_GetSlotName"> <a id="1030779"> PK11_GetSlotName </a></h4>
+<p><a id="1026930"> Gets the name of a slot.</a></p>
+<h5 id="Syntax_3"> <a id="1026931"> Syntax </a></h5>
+<pre><a id="1032606">#include &lt;pk11func.h&gt;</a></pre>
+<pre><a id="1026933">char *PK11_GetSlotName(PK11SlotInfo *slot);</a></pre>
+<h5 id="Parameters_3"> <a id="1026934"> Parameters </a></h5>
+<p><a id="1026956"> This function has the following parameter:</a></p>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        <pre>
+<a id="1026937">slot</a></pre>
+      </td>
+      <td>
+        <p><a id="1026939"> A pointer to a slot info structure.</a></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<h5 id="Returns_3"> <a id="1026957"> Returns </a></h5>
+<p><a id="1026958"> The function returns one of these values:</a></p>
+<ul>
+  <li><a id="1026959"> If successful, a pointer to the name of the slot (a string).</a></li>
+  <li><a id="1026960"> If unsuccessful, <code>NULL</code>. </a></li>
+</ul>
+<h5 id="Description_3"> <a id="1032175"> Description </a></h5>
+<p><a id="1032176"> If the slot is freed, the string with the slot name may also be freed. If you want to preserve it, copy the string before freeing the slot. Do not try to free the string yourself. </a></p>
+<h4 id="PK11_GetTokenName"> <a id="1026964"> PK11_GetTokenName </a></h4>
+<p><a id="1029222"> Gets the name of the token.</a></p>
+<h5 id="Syntax_4"> <a id="1029223"> Syntax </a></h5>
+<pre><a id="1029224">#include &lt;pk11func.h&gt;</a></pre>
+<pre><a id="1029225">char *PK11_GetTokenName(PK11SlotInfo *slot);</a></pre>
+<h5 id="Parameters_4"> <a id="1029226"> Parameters </a></h5>
+<p><a id="1029232"> This function has the following parameter:</a></p>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        <pre>
+<a id="1029229">slot</a></pre>
+      </td>
+      <td>
+        <p><a id="1029231"> A pointer to a slot info structure.</a></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<h5 id="Returns_4"> <a id="1029233"> Returns </a></h5>
+<p><a id="1030468"> The function returns one of these values:</a></p>
+<ul>
+  <li><a id="1030469"> If successful, a pointer to the name of the token (a string).</a></li>
+  <li><a id="1030470"> If unsuccessful, <code>NULL</code>. </a></li>
+</ul>
+<h5 id="Description_4"> <a id="1035449"> Description </a></h5>
+<p><a id="1035450"> If the slot is freed, the string with the token name may also be freed. If you want to preserve it, copy the string before freeing the slot. Do not try to free the string yourself. </a></p>
+<h4 id="PK11_IsHW"> <a id="1026762"> PK11_IsHW </a></h4>
+<p><a id="1029354"> Finds out whether a slot is implemented in hardware or software.</a></p>
+<h5 id="Syntax_5"> <a id="1029355"> Syntax </a></h5>
+<pre><a id="1032634">#include &lt;pk11func.h&gt;
+#include &lt;prtypes.h&gt;</a></pre>
+<pre><a id="1029357">PRBool PK11_IsHW(PK11SlotInfo *slot);</a></pre>
+<h5 id="Parameters_5"> <a id="1029358"> Parameters </a></h5>
+<p><a id="1029364"> This function has the following parameter:</a></p>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        <pre>
+<a id="1029361">slot</a></pre>
+      </td>
+      <td>
+        <p><a id="1029363"> A pointer to a slot info structure.</a></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<h5 id="Returns_5"> <a id="1022918"> Returns </a></h5>
+<p><a id="1022919"> The function returns one of these values:</a></p>
+<ul>
+  <li><a id="1035481"> If the slot is implemented in hardware, <code>PR_TRUE</code>.</a></li>
+  <li><a id="1022921"> If the slot is implemented in software, <code>PR_FALSE</code>. </a></li>
+</ul>
+<h4 id="PK11_IsPresent"> <a id="1022948"> PK11_IsPresent </a></h4>
+<p><a id="1029667"> Finds out whether the token for a slot is available.</a></p>
+<h5 id="Syntax_6"> <a id="1029668"> Syntax </a></h5>
+<pre><a id="1032711">#include &lt;pk11func.h&gt;
+#include &lt;prtypes.h&gt;</a></pre>
+<pre><a id="1029670">PRBool PK11_IsPresent(PK11SlotInfo *slot);</a></pre>
+<h5 id="Parameters_6"> <a id="1029671"> Parameters </a></h5>
+<p><a id="1029677"> This function has the following parameter:</a></p>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        <pre>
+<a id="1029674">slot</a></pre>
+      </td>
+      <td>
+        <p><a id="1029676"> A pointer to a slot info structure.</a></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<h5 id="Returns_6"> <a id="1029678"> Returns </a></h5>
+<p><a id="1029679"> The function returns one of these values:</a></p>
+<ul>
+  <li><a id="1029680"> If token is available, <code>PR_TRUE</code>.</a></li>
+  <li><a id="1036451"> If token is disabled or missing, <code>PR_FALSE</code>.</a></li>
+</ul>
+<h4 id="PK11_IsReadOnly"> <a id="1022991"> PK11_IsReadOnly </a></h4>
+<p><a id="1029858"> Finds out whether a slot is read-only.</a></p>
+<h5 id="Syntax_7"> <a id="1029859"> Syntax </a></h5>
+<pre><a id="1032779">#include &lt;pk11func.h&gt;
+#include &lt;prtypes.h&gt;</a></pre>
+<pre><a id="1029861">PRBool PK11_IsReadOnly(PK11SlotInfo *slot);</a></pre>
+<h5 id="Parameters_7"> <a id="1029862"> Parameters </a></h5>
+<p><a id="1029868"> This function has the following parameter:</a></p>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        <pre>
+<a id="1029865">slot</a></pre>
+      </td>
+      <td>
+        <p><a id="1029867"> A pointer to a slot info structure.</a></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<h5 id="Returns_7"> <a id="1029869"> Returns </a></h5>
+<p><a id="1029870"> The function returns one of these values:</a></p>
+<ul>
+  <li><a id="1029871"> If slot is read-only, <code>PR_TRUE</code>.</a></li>
+  <li><a id="1029872"> Otherwise, <code>PR_FALSE</code>.</a></li>
+</ul>
+<h4 id="PK11_SetPasswordFunc"> <a id="1023128"> PK11_SetPasswordFunc </a></h4>
+<p><a id="1029908"> Defines a callback function used by the NSS libraries whenever information protected by a password needs to be retrieved from the key or certificate databases.</a></p>
+<h5 id="Syntax_8"> <a id="1029909"> Syntax </a></h5>
+<pre><a id="1036374">#include &lt;pk11func.h&gt;
+#include &lt;prtypes.h&gt;</a></pre>
+<pre><a id="1036408">void PK11_SetPasswordFunc(PK11PasswordFunc func);</a></pre>
+<h5 id="Parameter"> <a id="1036409"> Parameter </a></h5>
+<p><a id="1036419"> This function has the following parameter:</a></p>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        <pre>
+<a id="1036412">func</a></pre>
+      </td>
+      <td>
+        <p><a id="1036414"> A pointer to the callback function to set. </a></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<h5 id="Description_5"> <a id="1031394"> Description </a></h5>
+<p><a id="1036231"> During the course of an SSL operation, it may be necessary for the user to log in to a PKCS #11 token (either a smart card or soft token) to access protected information, such as a private key. Such information is protected with a password that can be retrieved by calling an application-supplied callback function. The callback function is identified in a call to <code>PK11_SetPasswordFunc</code> that takes place during NSS initialization. </a></p>
+<p><a id="1031395">The callback function set up by <code>PK11_SetPasswordFunc</code> has the following prototype:</a></p>
+<pre><a id="1031396">typedef char *(*PK11PasswordFunc)(
+   PK11SlotInfo *slot,
+   PRBool retry,
+   void *arg);</a></pre>
+<p><a id="1031406"> This callback function has the following parameters:</a></p>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        <pre>
+<a id="1031399">slot</a></pre>
+      </td>
+      <td>
+        <p><a id="1031401"> A pointer to a slot info structure.</a></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <pre>
+<a id="1031403">retry</a></pre>
+      </td>
+      <td>
+        <p><a id="1031405"> Set to <code>PR_TRUE</code> if this is a retry. This implies that the callback has previously returned the wrong password.</a></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <pre>
+<a id="1031470">arg</a></pre>
+      </td>
+      <td>
+        <p><a id="1032859"> A pointer supplied by the application that can be used to pass state information. Can be <code>NULL</code>.</a></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p><a id="997382"> This callback function returns one of these values:</a></p>
+<ul>
+  <li><a id="1036727"> If successful, a pointer to the password. This memory must have been allocated with </a><a href="../../../../../nspr/reference/html/prmem2.html#21428"><code>PR_Malloc</code></a> or <a href="../../../../../nspr/reference/html/plstr.html#21753"><code>PL_strdup</code></a>.</li>
+  <li><a id="1036732"> If unsuccessful, returns <code>NULL</code>.</a></li>
+</ul>
+<p><a id="1031767"> Many tokens keep track of the number of attempts to enter a password and do not allow further attempts after a certain point. Therefore, if the <code>retry</code> argument is <code>PR_TRUE</code>, indicating that the password was tried and is wrong, the callback function should return <code>NULL</code> to indicate that it is unsuccessful, rather than attempting to return the same password again. Failing to terminate when the <code>retry</code> argument is <code>PR_TRUE</code> can result in an endless loop.</a></p>
+<p><a id="1036508"> Several functions in the NSS libraries use the password callback function to obtain the password before performing operations that involve the protected information. The third parameter to the password callback function is application-defined and can be used for any purpose. For example, Communicator uses the parameter to pass information about which window is associated with the modal dialog box requesting the password from the user. When NSS libraries call the password callback function, the value they pass in the third parameter is determined by </a><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslfnc#1088040"><code>SSL_SetPKCS11PinArg</code></a>.</p>
+<h5 id="See_Also"> <a id="1036515"> See Also </a></h5>
+<p><a id="1036523"> For examples of password callback functions, see the samples in the </a><a href="/en-US/docs/Mozilla/Projects/NSS/NSS_Sample_Code">Samples</a> directory.</p>

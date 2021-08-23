@@ -1,0 +1,58 @@
+---
+title: NSS 3.56 release notes
+slug: Mozilla/Projects/NSS/NSS_3.56_release_notes
+---
+<h2 id="Introduction">Introduction</h2>
+
+<p>The NSS team has released Network Security Services (NSS) 3.56 on <strong>21 August 2020</strong>, which is a minor release.</p>
+
+<h2 id="Distribution_Information">Distribution Information</h2>
+
+<p>The HG tag is NSS_3_56_RTM. NSS 3.56 requires NSPR 4.28 or newer.</p>
+
+<p>NSS 3.56 source distributions are available on ftp.mozilla.org for secure HTTPS download:</p>
+
+<ul>
+ <li>Source tarballs:<br>
+  <a href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_56_RTM/src/">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_56_RTM/src/</a></li>
+</ul>
+
+<p>Other releases are available <a href="/en-US/docs/Mozilla/Projects/NSS/NSS_Releases">in NSS Releases</a>.</p>
+
+<h2 id="Notable_Changes_in_NSS_3.56">Notable Changes in NSS 3.56</h2>
+
+<ul>
+ <li>NSPR dependency updated to 4.28.</li>
+ <li>The known issue where Makefile builds failed to locate seccomon.h was fixed in <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1653975">Bug 1653975</a>.</li>
+</ul>
+
+<h2 id="Bugs_fixed_in_NSS_3.56">Bugs fixed in NSS 3.56</h2>
+
+<ul>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1650702">Bug 1650702</a> - Support SHA-1 HW acceleration on ARMv8</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1656981">Bug 1656981</a> - Use MPI comba and mulq optimizations on x86-64 MacOS.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1654142">Bug 1654142</a> - Add CPU feature detection for Intel SHA extension.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1648822">Bug 1648822</a> - Add stricter validation of DH keys in FIPS mode.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1656986">Bug 1656986</a> - Properly detect arm64 during GYP build architecture detection.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1652729">Bug 1652729</a> - Add build flag to disable RC2 and relocate to lib/freebl/deprecated.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1656429">Bug 1656429</a> - Correct RTT estimate used in 0-RTT anti-replay.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1588941">Bug 1588941</a> - Send empty certificate message when scheme selection fails.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1652032">Bug 1652032</a> - Fix failure to build in Windows arm64 makefile cross-compilation.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1625791">Bug 1625791</a> - Fix deadlock issue in nssSlot_IsTokenPresent.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1653975">Bug 1653975</a> - Fix 3.53 regression by setting "all" as the default makefile target.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1659792">Bug 1659792</a> - Fix broken libpkix tests with unexpired PayPal cert.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1659814">Bug 1659814</a> - Fix interop.sh failures with newer tls-interop commit and dependencies.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1656519">Bug 1656519</a> - Update NSPR dependency to 4.28.</li>
+</ul>
+
+<p>This Bugzilla query returns all the bugs fixed in NSS 3.56:</p>
+
+<p><a class="external" href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.56" rel="noopener">https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.56</a></p>
+
+<h2 id="Compatibility">Compatibility</h2>
+
+<p>NSS 3.56 shared libraries are backward compatible with all older NSS 3.x shared libraries. A program linked with older NSS 3.x shared libraries will work with NSS 3.56 shared libraries without recompiling or relinking. Furthermore, applications that restrict their use of NSS APIs to the functions listed in NSS Public Functions will remain compatible with future versions of the NSS shared libraries.</p>
+
+<h2 id="Feedback">Feedback</h2>
+
+<p>Bugs discovered should be reported by filing a bug report with<a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=NSS"> bugzilla.mozilla.org</a> (product NSS).</p>

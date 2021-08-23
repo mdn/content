@@ -1,0 +1,47 @@
+---
+title: FC_Finalize
+slug: Mozilla/Projects/NSS/Reference/FC_Finalize
+tags:
+  - NSS
+---
+
+<h3 id="Name"> Name </h3>
+<p>FC_Finalize - indicate that an application is done with the PKCS #11 library.
+</p>
+<h3 id="Syntax"> Syntax </h3>
+<pre class="eval"><a href="/en-US/CK_RV">CK_RV</a> FC_Finalize (<a href="/en-US/CK_VOID_PTR">CK_VOID_PTR</a> pReserved);
+</pre>
+<h3 id="Parameters"> Parameters </h3>
+<p><code>FC_Finalize</code> has one parameter:
+</p>
+<dl><dt><code>pReserved</code></dt><dd> must be <code>NULL</code>
+</dd></dl>
+<h3 id="Description"> Description </h3>
+<p><code>FC_Finalize</code> shuts down the <a href="/en-US/docs/Mozilla/Projects/NSS/Reference/NSS_cryptographic_module">NSS cryptographic module</a> in the <a href="/en-US/docs/Mozilla/Projects/NSS/Reference/NSS_cryptographic_module/FIPS_mode_of_operation">FIPS mode of operation</a>. If the library is not initialized, it does nothing.
+</p><p>The <code>pReserved</code> argument is not used and must be <code>NULL</code>.
+</p>
+<h3 id="Return_value"> Return value </h3>
+<p><code>FC_Finalize</code> always returns <code>CKR_OK</code>.
+</p>
+<div class="note">
+<p><code>FC_Finalize</code> should check the <code>pReserved</code> argument and return <code>CKR_ARGUMENTS_BAD</code> if <code>pReserved</code> is not <code>NULL</code>.
+</p><p><code>FC_Finalize</code> should return <code>CKR_CRYPTOKI_NOT_INITIALIZED</code> if the library is not initialized.
+</p>
+</div>
+<h3 id="Examples"> Examples </h3>
+<pre class="eval">#include &lt;assert.h&gt;
+
+CK_FUNCTION_LIST_PTR pFunctionList;
+CK_RV crv;
+
+crv = FC_GetFunctionList(&amp;pFunctionList);
+assert(crv == CKR_OK);
+
+...
+
+/* invoke FC_Finalize as pFunctionList-&gt;C_Finalize */
+crv = pFunctionList-&gt;C_Finalize(NULL);
+</pre>
+<h3 id="See_also"> See also </h3>
+<ul><li> <a href="/en-US/docs/Mozilla/Projects/NSS/Reference/FC_Initialize">FC_Initialize</a>, <a href="/en-US/NSC_Initialize">NSC_Initialize</a>, <a href="/en-US/NSC_Finalize">NSC_Finalize</a>
+</li></ul>

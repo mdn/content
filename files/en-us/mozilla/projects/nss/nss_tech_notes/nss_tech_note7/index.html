@@ -1,0 +1,116 @@
+---
+title: nss tech note7
+slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note7
+---
+<h2 id="RSA_Signing_and_Encryption_with_NSS">RSA Signing and Encryption with NSS</h2>
+<h3 id="NSS_Technical_Note_7">NSS Technical Note: 7</h3>
+<p>This technical note explains how to use NSS to perform RSA signing and encryption. The industry standard for RSA signing and encryption is <a href="http://www.rsasecurity.com/rsalabs/node.asp?id=2125">PKCS #1</a>. NSS supports PKCS #1 v1.5. NSS doesn't yet support PKCS #1 v2.0 and v2.1, in particular OAEP, but OAEP support is on our <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=158747">to-do list</a>. Your contribution is welcome.</p>
+<h3 id="Data_Types">Data Types</h3>
+<p>NSS uses the following data types to represent keys:</p>
+<ul>
+ <li><code>SECKEYPublicKey</code>: a public key, defined in "keythi.h".</li>
+ <li><code>SECKEYPrivateKey</code>: a private key, defined in "keythi.h".</li>
+ <li><code>PK11SymKey</code>: a symmetric key (often called a session key), defined in "secmodt.h".</li>
+</ul>
+<p>These data types should be used as if they were opaque structures, that is, they should only be created by some NSS functions and you always pass pointers to these data types to NSS functions and never examine the members of these structures.<br>
+ <br>
+ The strength of an RSA key pair is measured by the size of its modulus because given the modulus and public exponent, the best known algorithm for computing the private exponent is to factor the modulus. At present 1024 bit and 2048 bit RSA keys are the most common and recommended. To prevent denial-of-service attacks with huge public keys, NSS disallows modulus size greater than 8192 bits.<br>
+ <br>
+ How are these keys created in NSS? There are a few possibilities.</p>
+<ul>
+ <li>RSA key pairs may be generated inside a crypto module (also known as a token). Use <code>PK11_GenerateKeyPair()</code> to generate a key pair in a crypto module.</li>
+ <li>Key pairs may be generated elsewhere, exported in encrypted form, and imported into a crypto module.</li>
+ <li>Public keys may be imported into NSS. Call <code>SECKEY_ImportDERPublicKey()</code> with <code>type=CKK_RSA</code> to import a DER-encoded RSA public key. If you have the modulus and public exponent, you need to first encode them into an RSA public key and then import the public key into NSS.<br>
+  <br>
+  PKCS #1 defines an RSA public key as a <code>SEQUENCE</code> of modulus and public exponent, both of which are <code>INTEGER</code>s. Here is the ASN.1 type definition:
+  <pre>RSAPublicKey ::= SEQUENCE {
+  modulus INTEGER, -- n
+  publicExponent INTEGER -- e }
+</pre>
+  The following sample code (error handling omitted for brevity) encodes a <code>RSAPublicKey</code> from a modulus and a public exponent and imports the public key into NSS.
+  <pre>struct MyRSAPublicKey {
+    SECItem m_modulus;
+    SECItem m_exponent;
+} inPubKey;
+
+SECItem derPubKey;
+
+SECKEYPublicKey *pubKey;
+
+const SEC_ASN1Template MyRSAPublicKeyTemplate[] = {
+    { SEC_ASN1_SEQUENCE, 0, NULL, sizeof(MyRSAPublicKey) },
+    { SEC_ASN1_INTEGER, offsetof(MyRSAPublicKey,m_modulus), },
+    { SEC_ASN1_INTEGER, offsetof(MyRSAPublicKey,m_exponent), },
+    { 0, }
+};
+
+PRArenaPool *arena;
+
+/*
+ * Point inPubKey.m_modulus and m_exponent at the data, and
+ * then set their types to unsigned integers.
+ */
+inPubKey.m_modulus.type = siUnsignedInteger;
+inPubKey.m_exponent.type = siUnsignedInteger;
+
+arena = PORT_NewArena(DER_DEFAULT_CHUNKSIZE);
+SEC_ASN1EncodeItem(arena, &amp;derPubKey, &amp;inPubKey,
+                   MyRSAPublicKeyTemplate);
+pubKey = SECKEY_ImportDERPublicKey(&amp;derPubKey, CKK_RSA);
+PORT_FreeArena(arena, PR_FALSE);
+</pre>
+ </li>
+ <li>Public keys may be extracted from certificates. Given a certficate (<code>CERTCertificate *</code>), use <code>CERT_ExtractPublicKey()</code> to extract its public key. The returned public key may be used after the certificate is destroyed.</li>
+</ul>
+<p>When the keys are no longer needed, they need to be destroyed.</p>
+<ul>
+ <li>Use <code>SECKEY_DestroyPublicKey()</code> to destroy a public key (<code>SECKEYPublicKey *</code>).</li>
+ <li>Use <code>SECKEY_DestroyPrivateKey()</code> to destroy a private key (<code>SECKEYPrivateKey *</code>).</li>
+ <li>Unlike <code>SECKEYPublicKey</code> and <code>SECKEYPrivateKey</code>, <code>PK11SymKey</code> objects are reference counted. Use <code>PK11_ReferenceSymKey()</code> to acquire a reference to a symmetric key (<code>PK11SymKey *</code>). Use <code>PK11_FreeSymKey()</code> to release a reference to a symmetric key (<code>PK11SymKey *</code>); the symmetric key is destroyed when its reference count becomes zero.</li>
+</ul>
+<h3 id="Functions">Functions</h3>
+<p>RSA signing and encryption functions are provided by two layers of NSS function: the <code>SGN_</code> and <code>VFY_</code> functions in cryptohi.h, and the <code>PK11_</code> functions in pk11pub.h. As a general principle, you should use the highest layer of NSS you can possibly use for what you are trying to accomplish.<br>
+ <br>
+ For example, if you just need to generate or verify a signature, you can use the <code>SGN_</code> and <code>VFY_</code> functions in cryptohi.h.<br>
+ <br>
+ If you need to interoperate with a protocol that isn't implemented by NSS, then you may need to use the <code>PK11_</code> functions. (This API pretty much consists of what was needed to implement SSL and S/MIME, plus a few enhancements over the years to support JSS.) When using the <code>PK11_</code> interfaces, the same principal applies: use the highest available function.<br>
+ <br>
+ If you are really trying to send a key, you should use <code>PK11_PubWrapSymKey()</code>. For a low level signature, use <code>PK11_Sign()</code>. Both of these functions do the PKCS #1 wrapping of the data. <code>PK11_Sign</code> does not do the BER encoding of the hash (as is done in <code>SGN_</code> functions).<br>
+ <br>
+ If you are trying to just send data, use <code>PK11_PubEncryptPKCS1</code>.<br>
+ <br>
+ <code>PK11_PubEncryptRaw</code> is the lowest level function. It takes a modulus size data and does a raw RSA operation on the data. It's used to support SSL2, which modifies the key encoding to include the SSL version number.</p>
+<h3 id="PKCS_1_v1.5_Block_Formatting">PKCS #1 v1.5 Block Formatting</h3>
+<p><span style="font-weight: bold;">Question:</span><br>
+ <br>
+ In PKCS #1 v1.5 (Section 8.1 Encryption-block formatting) and v2.1 (Section 7.2.1 Encryption operation), PKCS1 v1.5 padding is described like this:<br>
+ <br>
+ <code>00 || 02 || PS || 00 || M</code><br>
+ <br>
+ but in PKCS #1 v2.0 (Section 9.1.2.1 Encoding operation, Step 3) and on the W3C web site (<a class="moz-txt-link-freetext" href="http://www.w3.org/TR/xmlenc-core/#rsa-1_5">http://www.w3.org/TR/xmlenc-core/#rsa-1_5</a>), PKCS1 v1.5 padding is described like this:<br>
+ <br>
+ <code>02 || PS || 00 || M</code><br>
+ <br>
+ 00 at the beginning is missing. Why?<br>
+ <br>
+ <span style="font-weight: bold;">Answer:</span><br>
+ <br>
+ The version without the initial 00 says :</p>
+<div style="margin-left: 40px;">
+ "PS is a string of strong pseudo-random octets [RANDOM] [...] long enough that the value of the quantity being CRYPTed is one octet shorter than the RSA modulus"</div>
+<p><br>
+ The version with the initial 00 instead says to pad to the same length as the RSA modulus.<br>
+ <br>
+ "The same length as the RSA modulus with an initial octet of 0" and "one octet shorter without that initial octet" are exactly the same thing because the formatted block is treated as a <span style="font-style: italic;">big-endian</span> big integer by the RSA algorithm. The leading 00 octet is simply eight most significant 0 bits. For example, 0x00123456 is equal to 0x123456.<br>
+ <br>
+ Perhaps this change made in PKCS #1 v2.0 confused many people, so it was reversed in v2.1.</p>
+<h3 id="Sample_Code">Sample Code</h3>
+<ul>
+ <li><a href="/en-US/docs/Mozilla/Projects/NSS/NSS_Sample_Code/NSS_Sample_Code_sample4">Sample Code 4: PKI Encryption</a></li>
+</ul>
+<h3 id="References">References</h3>
+<ul>
+ <li><a href="http://www.rsasecurity.com/rsalabs/node.asp?id=2125">RSA Labs PKCS #1 web site</a></li>
+ <li><a href="http://www.ietf.org/rfc/rfc3447.txt">RFC 3447</a>: RSA PKCS #1 v2.1</li>
+ <li><a href="http://www.dotnet247.com/247reference/a.aspx?u=http://pages.infinit.net/ctech/20031101-0151.html">Poupou's Blog: Common question: How to encrypt using RSA</a></li>
+</ul>

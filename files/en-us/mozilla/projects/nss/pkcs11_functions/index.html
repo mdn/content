@@ -1,0 +1,257 @@
+---
+title: NSS PKCS11 Functions
+slug: Mozilla/Projects/NSS/PKCS11_Functions
+tags:
+  - NSS
+---
+<h3 id="PKCS_.2311_Functions">PKCS #11 Functions</h3>
+<p>This chapter describes the core PKCS #11 functions that an application needs for communicating with cryptographic modules. In particular, these functions are used for obtaining certificates, keys, and passwords. This was converted from <a class="external" href="https://www.mozilla.org/projects/security/pki/nss/ref/ssl/pkfnc.html">"Chapter 7: PKCS #11 Functions"</a>.</p>
+<ul>
+  <li><a href="/en-US/docs/Mozilla/Projects/NSS/Reference">Back to the NSS reference main page.</a></li>
+  <li><a href="#secmod_loadusermodule">SECMOD_LoadUserModule</a></li>
+  <li><a href="#secmod_unloadusermodule">SECMOD_UnloadUserModule</a></li>
+  <li><a href="#secmod_openuserdb">SECMOD_OpenUserDB</a></li>
+  <li><a href="#secmod_closeuserdb">SECMOD_CloseUserDB</a></li>
+  <li><a href="#pk11_findcertfromnickname">PK11_FindCertFromNickname</a></li>
+  <li><a href="#pk11_findkeybyanycert">PK11_FindKeyByAnyCert</a></li>
+  <li><a href="#pk11_getslotname">PK11_GetSlotName</a></li>
+  <li><a href="#pk11_gettokenname">PK11_GetTokenName</a></li>
+  <li><a href="#pk11_ishw">PK11_IsHW</a></li>
+  <li><a href="#pk11_ispresent">PK11_IsPresent</a></li>
+  <li><a href="#pk11_isreadonly">PK11_IsReadOnly</a></li>
+  <li><a href="#pk11_setpasswordfunc">PK11_SetPasswordFunc</a></li>
+</ul>
+<h5 id="SECMOD_LoadUserModule">SECMOD_LoadUserModule</h5>
+<p>Load a new PKCS #11 module based on a moduleSpec.</p>
+<h6 id="Syntax">Syntax</h6>
+<pre> #include "secmod.h"
+
+ extern SECMODModule *SECMOD_LoadUserModule(char *moduleSpec, SECMODModule *parent, PRBool recurse);
+
+</pre>
+<h6 id="Parameters">Parameters</h6>
+<p>This function has the following parameters:</p>
+<p><em>moduleSpec</em> is a pkcs #11 moduleSpec. <em>parent</em> is the moduleDB that presented this module spec. For applications this value should be NULL. <em>recurse</em> is a boolean indicates whether or not the module should also launch additional pkcs #11 modules. This is only applicable if the loaded module is actually a moduleDB rather than a PKCS #11 module (see <a href="/en-US/docs/Mozilla/Projects/NSS/PKCS11/Module_Specs">PKCS11_Module_Specs</a>).</p>
+<h6 id="Returns">Returns</h6>
+<p>The function returns one of these values:</p>
+<ul> <li>If successful, a pointer to a SECMODModule. Caller owns the reference</li> <li>If unsuccessful, NULL.</li>
+</ul>
+
+<h6 id="Description">Description</h6>
+<p>SECMOD_LoadUserModule loads a new PKCS #11 module into NSS and connects it to the current NSS trust infrastructure. Once the module has been successfully loaded, other NSS calls will use it in the normal course of searching.</p>
+
+<p><em>modulespec</em> specifies how the module should be loaded. More information about module spec is available at <a href="/en-US/docs/Mozilla/Projects/NSS/PKCS11/Module_Specs">PKCS11_Module_Specs</a>. NSS parameters may be specified in module specs used by SECMOD_LoadUserModule.</p>
+<p>Module will continue to function in the NSS infrastructure until unloaded with SECMOD_UnloadUserModule.</p>
+<h5 id="SECMOD_UnloadUserModule">SECMOD_UnloadUserModule</h5>
+<p>Unload a PKCS #11 module.</p>
+<h6 id="Syntax_2">Syntax</h6>
+<pre> #include "secmod.h"
+
+ extern SECStatus SECMOD_UnloadUserModule(SECMODModule *module);
+
+</pre>
+<h6 id="Parameters_2">Parameters</h6>
+<p>This function has the following parameters:</p>
+<p><em>module</em> is the module to be unloaded.</p>
+<h6 id="Returns_2">Returns</h6>
+<p>The function returns one of these values:</p>
+<ul> <li>If successful, SECSuccess.</li> <li>If unsuccessful, SECFailure.</li>
+</ul>
+<h6 id="Description_2">Description</h6>
+<p>SECMOD_UnloadUserModule detaches a module from the nss trust domain and unloads it. The module should have previously been loaded by SECMOD_LoadUserModule.</p>
+<h5 id="SECMOD_CloseUserDB">SECMOD_CloseUserDB</h5>
+<p>Close an already opened user database. NOTE: the database must be in the internal token, and must be one created with SECMOD_OpenUserDB(). Once the database is closed, the slot will remain as an empty slot until it's used again with SECMOD_OpenUserDB().</p>
+<h6 id="Syntax_3">Syntax</h6>
+<pre> #include &lt;pk11pub.h&gt;
+
+ SECStatus SECMOD_CloseUserDB(PK11SlotInfo *slot)
+</pre>
+<h6 id="Parameters_3">Parameters</h6>
+<p>This function has the following parameter:</p>
+
+<p><em>slot</em> A pointer to a slot info structure. This slot must a slot created by SECMOD_OpenUserDB() at some point in the past.</p>
+<h6 id="Returns_3">Returns</h6>
+
+<p>The function returns one of these values:</p>
+<ul> <li>If successful, SECSuccess).</li> <li>If unsuccessful, SECFailure.</li>
+</ul>
+<h5 id="SECMOD_OpenUserDB">SECMOD_OpenUserDB</h5>
+<p>Open a new database using the softoken.</p>
+<h6 id="Syntax_4">Syntax</h6>
+<pre> #include "pk11pub.h"
+
+ PK11SlotInfo *SECMOD_OpenUserDB(const char *moduleSpec)
+</pre>
+<h6 id="Parameters_4">Parameters</h6>
+<p>This function has the following parameters:</p>
+<p><em>moduleSpec</em> is the same data that you would pass to softoken at initialization time under the 'tokens' options.</p>
+<h6 id="Returns_4">Returns</h6>
+<p>The function returns one of these values:</p>
+<ul> <li>If successful, a pointer to a slot.</li> <li>If unsuccessful, NULL.</li>
+</ul>
+<h6 id="Description_3">Description</h6>
+<p>Open a new database using the softoken. The caller is responsible for making sure the module spec is correct and usable. The caller should ask for one new database per call if the caller wants to get meaningful information about the new database.</p>
+<p>moduleSpec is the same data that you would pass to softoken at initialization time under the 'tokens' options. For example, if you would normally specify <em>tokens=&lt;0x4={{ mediawiki.external('configdir=\'./mybackup\' tokenDescription=\'Backup\'') }}&gt;</em> to softoken if you at init time, then you could specify "<em>configdir='./mybackup' tokenDescription='Backup'</em>" as your module spec here to open the database ./mybackup on the fly. The slot ID will be calculated for you by SECMOD_OpenUserDB().</p>
+<p>Typical parameters here are configdir, tokenDescription and flags. a Full list is below:</p>
+<p><em>configDir</em> The location of the databases for this token. If configDir is not specified, and noCertDB and noKeyDB is not specified, the load will fail.</p>
+<p><em>certPrefix</em> Cert prefix for this token.</p>
+<p><em>keyPrefix</em> Prefix for the key database for this token. (if not specified, certPrefix will be used).</p>
+<p><em>tokenDescription</em> The label value for this token returned in the CK_TOKEN_INFO structure with an internationalize string (UTF8). This value will be truncated at 32 bytes (no NULL, partial UTF8 characters dropped). You should specify a user friendly name here as this is the value the token will be referred to in most application UI's. You should make sure tokenDescription is unique.</p>
+<p><em>slotDescription</em> The slotDescription value for this token returned in the CK_SLOT_INFO structure with an internationalize string (UTF8). This value will be truncated at 64 bytes (no NULL, partialUTF8 characters dropped). This name will not change after thedatabase is closed. It should have some number to make this unique.</p>
+<p><em>minPWLen</em> Then minimum password length for this token.</p>
+<p><em>flags</em> A comma separated list of flag values, parsed case-insensitive.<br>
+Valid flags are:</p>
+<ul> <li><em>readOnly</em> - Databases should be opened read only.</li> <li><em>noCertDB</em> - Don't try to open a certificate database.</li> <li><em>noKeyDB</em> - Don't try to open a key database.</li> <li><em>forceOpen</em> - Don't fail to initialize the token if thedatabases could not be opened.</li> <li><em>passwordRequired</em> - zero length passwords are not acceptable(valid only if there is a keyDB).</li> <li><em>optimizeSpace</em> - allocate smaller hash tables and lock tables.When this flag is not specified, Softoken will allocatelarge tables to prevent lock contention.</li>
+</ul>
+<p>For more info on module strings see <a href="/en-US/docs/Mozilla/Projects/NSS/PKCS11/Module_Specs">PKCS11_Module_Specs</a>.</p>
+<p>This function will return a reference to a slot. The caller is responsible for freeing the slot reference when it is through. Freeing the slot reference will not unload the slot. That happens with the corresponding SECMOD_CloseUserDB() function. Until the SECMOD_CloseUserDB function is called, the newly opened database will be visible to any NSS calls search for keys or certs.</p>
+<h5 id="PK11_FindCertFromNickname">PK11_FindCertFromNickname</h5>
+<p>Finds a certificate from its nickname.</p>
+<h6 id="Syntax_5">Syntax</h6>
+<pre> #include &lt;pk11pub.h&gt;
+ #include &lt;certt.h&gt;
+
+ CERTCertificate *PK11_FindCertFromNickname(
+   char *nickname,
+   void *passwordArg);
+</pre>
+<h6 id="Parameters_5">Parameters</h6>
+<p>This function has the following parameters:</p>
+<p><em>nickname</em> A pointer to the nickname in the certificate database or to the nickname in the token.</p>
+<p><em>passwordArg</em> A pointer to application data for the password callback function. This pointer is set with SSL_SetPKCS11PinArg during SSL configuration. To retrieve its current value, use SSL_RevealPinArg.</p>
+<h6 id="Returns_5">Returns</h6>
+<p>The function returns one of these values:</p>
+<ul> <li>If successful, a pointer to a certificate structure.</li> <li>If unsuccessful, NULL.</li>
+</ul>
+<h6 id="Description_4">Description</h6>
+<p>When you are finished with the certificate structure returned by PK11_FindCertFromNickname, you must free it by calling CERT_DestroyCertificate.</p>
+<p>The PK11_FindCertFromNickname function calls the password callback function set with PK11_SetPasswordFunc and passes it the pointer specified by the wincx parameter.</p>
+<h5 id="PK11_FindKeyByAnyCert">PK11_FindKeyByAnyCert</h5>
+<p>Finds the private key associated with a specified certificate in any available slot.</p>
+<h6 id="Syntax_6">Syntax</h6>
+<pre> #include &lt;pk11pub.h&gt;
+ #include &lt;certt.h&gt;
+ #include &lt;keyt.h&gt;
+
+ SECKEYPrivateKey *PK11_FindKeyByAnyCert(
+   CERTCertificate *cert,
+   void *passwordArg);
+</pre>
+<h6 id="Parameters_6">Parameters</h6>
+<p>This function has the following parameters:</p>
+<p><em>cert</em> A pointer to a certificate structure in the certificate database.</p>
+<p><em>passwordArg</em> A pointer to application data for the password callback function. This pointer is set with SSL_SetPKCS11PinArg during SSL configuration. To retrieve its current value, use SSL_RevealPinArg.</p>
+<h6 id="Returns_6">Returns</h6>
+<p>The function returns one of these values:</p>
+<ul> <li>If successful, a pointer to a private key structure.</li> <li>If unsuccessful, NULL.</li>
+</ul>
+<h6 id="Description_5">Description</h6>
+<p>When you are finished with the private key structure returned by PK11_FindKeyByAnyCert, you must free it by calling SECKEY_DestroyPrivateKey.</p>
+<p>The PK11_FindKeyByAnyCert function calls the password callback function set with PK11_SetPasswordFunc and passes it the pointer specified by the wincx parameter.</p>
+<h5 id="PK11_GetSlotName">PK11_GetSlotName</h5>
+<p>Gets the name of a slot.</p>
+<h6 id="Syntax_7">Syntax</h6>
+<pre> #include &lt;pk11pub.h&gt;
+
+ char *PK11_GetSlotName(PK11SlotInfo *slot);
+</pre>
+<h6 id="Parameters_7">Parameters</h6>
+<p>This function has the following parameter:</p>
+<p><em>slot</em> A pointer to a slot info structure.</p>
+<h6 id="Returns_7">Returns</h6>
+<p>The function returns one of these values:</p>
+<ul> <li>If successful, a pointer to the name of the slot (a string).</li> <li>If unsuccessful, NULL.</li>
+</ul>
+<h6 id="Description_6">Description</h6>
+<p>If the slot is freed, the string with the slot name may also be freed. If you want to preserve it, copy the string before freeing the slot. Do not try to free the string yourself.</p>
+<h5 id="PK11_GetTokenName">PK11_GetTokenName</h5>
+<p>Gets the name of the token.</p>
+<h6 id="Syntax_8">Syntax</h6>
+<pre> #include &lt;pk11pub.h&gt;
+
+ char *PK11_GetTokenName(PK11SlotInfo *slot);
+</pre>
+<h6 id="Parameters_8">Parameters</h6>
+<p>This function has the following parameter:</p>
+<p><em>slot</em> A pointer to a slot info structure.</p>
+<h6 id="Returns_8">Returns</h6>
+<p>The function returns one of these values:</p>
+<ul> <li>If successful, a pointer to the name of the token (a string).</li> <li>If unsuccessful, NULL.</li>
+</ul>
+<h6 id="Description_7">Description</h6>
+<p>If the slot is freed, the string with the token name may also be freed. If you want to preserve it, copy the string before freeing the slot. Do not try to free the string yourself.</p>
+<h5 id="PK11_IsHW">PK11_IsHW</h5>
+<p>Finds out whether a slot is implemented in hardware or software.</p>
+<h6 id="Syntax_9">Syntax</h6>
+<pre> #include &lt;pk11pub.h&gt;
+ #include &lt;prtypes.h&gt;
+
+ PRBool PK11_IsHW(PK11SlotInfo *slot);
+</pre>
+<h6 id="Parameters_9">Parameters</h6>
+<p>This function has the following parameter:</p>
+<p><em>slot</em> A pointer to a slot info structure.</p>
+<h6 id="Returns_9">Returns</h6>
+<p>The function returns one of these values:</p>
+<ul> <li>If the slot is implemented in hardware, PR_TRUE.</li> <li>If the slot is implemented in software, PR_FALSE.</li>
+</ul>
+<h5 id="PK11_IsPresent">PK11_IsPresent</h5>
+<p>Finds out whether the token for a slot is available.</p>
+<h6 id="Syntax_10">Syntax</h6>
+<pre> #include &lt;pk11pub.h&gt;
+ #include &lt;prtypes.h&gt;
+
+ PRBool PK11_IsPresent(PK11SlotInfo *slot);
+</pre>
+<h6 id="Parameters_10">Parameters</h6>
+<p>This function has the following parameter:</p>
+<p><em>slot</em> A pointer to a slot info structure.</p>
+<h6 id="Returns_10">Returns</h6>
+<p>The function returns one of these values:</p>
+<ul> <li>If token is available, PR_TRUE.</li> <li>If token is disabled or missing, PR_FALSE.</li>
+</ul>
+<h5 id="PK11_IsReadOnly">PK11_IsReadOnly</h5>
+<p>Finds out whether a slot is read-only.</p>
+<h6 id="Syntax_11">Syntax</h6>
+<pre> #include &lt;pk11pub.h&gt;
+ #include &lt;prtypes.h&gt;
+
+ PRBool PK11_IsReadOnly(PK11SlotInfo *slot);
+</pre>
+<h6 id="Parameters_11">Parameters</h6>
+<p>This function has the following parameter:</p>
+<p><em>slot</em> A pointer to a slot info structure.</p>
+<h6 id="Returns_11">Returns</h6>
+<p>The function returns one of these values:</p>
+<ul> <li>If slot is read-only, PR_TRUE.</li> <li>Otherwise, PR_FALSE.</li>
+</ul>
+<h5 id="PK11_SetPasswordFunc">PK11_SetPasswordFunc</h5>
+<p>Defines a callback function used by the NSS libraries whenever information protected by a password needs to be retrieved from the key or certificate databases.</p>
+<h6 id="Syntax_12">Syntax</h6>
+<pre> #include &lt;pk11pub.h&gt;
+ #include &lt;prtypes.h&gt;
+
+ void PK11_SetPasswordFunc(PK11PasswordFunc func);
+</pre>
+<h6 id="Parameter">Parameter</h6>
+<p>This function has the following parameter:</p>
+<p><em>func</em> A pointer to the callback function to set.</p>
+<h6 id="Description_8">Description</h6>
+<p>During the course of an SSL operation, it may be necessary for the user to log in to a PKCS #11 token (either a smart card or soft token) to access protected information, such as a private key. Such information is protected with a password that can be retrieved by calling an application-supplied callback function. The callback function is identified in a call to PK11_SetPasswordFunc that takes place during NSS initialization.</p>
+<p>The callback function set up by PK11_SetPasswordFunc has the following prototype:</p>
+<pre class="eval">typedef char *(*PK11PasswordFunc)(
+  PK11SlotInfo *slot,
+  PRBool retry,
+  void *arg);
+</pre>
+<p>This callback function has the following parameters:</p>
+<p><em>slot</em> A pointer to a slot info structure.</p>
+<p><em>retry</em> Set to PR_TRUE if this is a retry. This implies that the callback has previously returned the wrong password.</p>
+<p><em>arg</em> A pointer supplied by the application that can be used to pass state information. Can be NULL.</p>
+<p>This callback function returns one of these values:</p>
+<ul> <li>If successful, a pointer to the password. This memory must have been allocated with PR_Malloc or PL_strdup.</li> <li>If unsuccessful, returns NULL.</li>
+</ul>
+<p>Many tokens keep track of the number of attempts to enter a password and do not allow further attempts after a certain point. Therefore, if the retry argument is PR_TRUE, indicating that the password was tried and is wrong, the callback function should return NULL to indicate that it is unsuccessful, rather than attempting to return the same password again. Failing to terminate when the retry argument is PR_TRUE can result in an endless loop.</p>
+<p>Several functions in the NSS libraries use the password callback function to obtain the password before performing operations that involve the protected information. The third parameter to the password callback function is application-defined and can be used for any purpose. For example, Mozilla uses the parameter to pass information about which window is associated with the modal dialog box requesting the password from the user. When NSS SSL libraries call the password callback function, the value they pass in the third parameter is determined by SSL_SetPKCS11PinArg.</p>
+<h6 id="See_Also">See Also</h6>
+<p>For examples of password callback functions, see the samples in the Samples directory.</p>

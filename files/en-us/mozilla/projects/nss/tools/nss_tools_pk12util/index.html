@@ -1,0 +1,393 @@
+---
+title: NSS Tools pk12util
+slug: Mozilla/Projects/NSS/tools/NSS_Tools_pk12util
+---
+<h2 id="Using_the_PKCS_12_Tool_(pk12util)">Using the PKCS #12 Tool (pk12util)</h2>
+
+
+Newsgroup: <a href="news://news.mozilla.org/mozilla.dev.tech.crypto">mozilla.dev.tech.crypto</a>
+
+
+<p>
+    The PKCS #12 utility makes sharing of certificates among Enterprise server
+    3.x and any server (Netscape products or non-Netscape products) that supports
+    PKCS#12 possible. The tool allows you to import certificates and keys
+    from pkcs #12 files into NSS or export them and also list certificates
+    and keys in such files.
+    <a id="1043099">
+    </a>
+</p>
+
+<h2 id="Availability_2"><a id="Availability"></a>
+    <a id="1031698">
+        Availability
+    </a>
+</h2><a id="1037781">
+    See the </a><a href="../release_notes.html">release notes</a> for the platforms
+this tool is available on.
+
+<h2 id="Synopsis">
+    Synopsis
+</h2>
+
+<b>pk12util</b> <code>-i <i>p12File</i> [-h <i>tokenname</i>] [-v] [common-options]</code>
+<br>  or<br>
+<b>pk12util</b> <code>-o <i>p12File</i> -n <i>certname</i> [-c <i>keyCipher</i>]
+[-C <i>certCipher</i>] [-m | --key_len <i>keyLen</i>] [-n | --cert_key_len <i>certKeyLen</i>] [common-options]</code>
+<br>  or<br>
+<b>pk12util</b> <code>-l <i>p12File</i> [-h <i>tokenname</i>] [-r] [common-options]</code>
+<br>  where<br>
+<b>[common-options]</b> =
+<code>[-d <i>dir</i>] [-P <i>dbprefix</i>]
+[-k <i>slotPasswordFile</i> | -K <i>slotPassword</i>] [-w <i>p12filePasswordFile</i> | -W <i>p12filePassword</i>]</code>
+<br>
+
+<h2 id="Syntax">
+    <a id="1028268">
+        Syntax
+    </a>
+</h2><a id="1033678">
+    To run the PKCS #12 Tool, type</a>
+<a id="1033679">
+    the command <code>pk12util</code> <i>option</i><code> [</code><i>arguments</i><code>]</code></a>
+<a id="1028271">where <i>option</i> and <i>arguments</i> are
+    combinations of the options and arguments listed in the following
+    section. Three of the options, -i, -o, and -l, should be considered commands
+    of the pk12util invocation. Each command takes several options. Options may take zero or
+    more arguments. To see a usage string, issue the pkcs12util command without any
+    options. </a>
+
+<h2 id="Options_and_Arguments">
+    <a id="1027593">
+        Options and Arguments
+    </a>
+</h2>
+
+<a id="1028291">
+    Options specify an action. Option arguments modify an action. The options and arguments for the
+    <code>pk12util</code> command are defined as follows:</a>
+<table>
+    <tbody>
+
+        <tr>
+            <td><a id="1043286">
+                    <b>Options</b></a></td>
+            <td>
+                <p><a id="1043288"></a></p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p><a id="1032245">
+                        <code>-i</code> <i>p12file</i></a></p>
+            </td>
+            <td>
+                <p><a id="1038808">
+                        Import a certificate and private key from the p12file into the database.</a></p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p><a id="1032249">
+                        <code>-o</code> <i>p12file</i></a></p>
+            </td>
+            <td>
+                <p><a id="1038844">
+                        Export certificate and private key, specified by the -n option, from the database to the p12
+                        file.
+                    </a></p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p><a id="1038660">
+                        <code>-l</code> <i>p12file</i></a></p>
+            </td>
+            <td>
+                <p><a id="1038851">
+                        List certificate and private key from the <code>p12file</code> file.
+                    </a></p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p><a id="1043282">
+                        <b>Arguments</b></a></p>
+            </td>
+            <td>
+                <p><a id="1043284">
+                    </a></p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p><a id="1038833">
+                        <code>-n</code> <i>certname</i></a></p>
+            </td>
+            <td>
+                <p>
+                    Specify the nickname of the cert and private key to export.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p><a id="1038834">
+                        <code>-d</code> <i>dir</i></a></p>
+            </td>
+            <td>
+                <p><a id="1039085">
+                        Specify the database directory into which to import to or export from certificates and keys.
+                        If not specified the directory defaults to $HOME/.netscape (when $HOME exists in the
+                        environment),
+                        or to ./.netscape (when $HOME does not exist in the environment). </a></p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>
+                    <code>-P</code> <i>prefix</i>
+                </p>
+            </td>
+            <td>
+                <p>
+                    Specify the prefix used on the <code>cert8.db</code> and <code>key3.db</code> files (for example,
+                    <code>my_cert8.db</code>
+                    and <code>my_key3.db</code>). This option is provided as a special case. Changing the names of the
+                    certificate and key databases is not recommended.
+                </p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p><a id="1037903">
+                        <code>-h</code> <i>tokenname</i></a></p>
+            </td>
+            <td>
+                <p><a id="1039095">
+                        Specify the name of the token to import into or export from</a></p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p><a id="1037899">
+                        <code>-v </code></a></p>
+            </td>
+            <td>
+                <p><a id="1039102">
+                        Enable debug logging when importing</a></p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p><a id="1038719">
+                        <code>-k</code> <i>slotPasswordFile</i></a></p>
+            </td>
+            <td>
+                <p><a id="1039652">
+                        Specify the text file containing the slot's password</a></p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p><a id="1038715">
+                        <code>-K</code> <i>slotPassword</i></a></p>
+            </td>
+            <td>
+                <p><a id="1038717">
+                        Specify a slot's password</a></p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>
+                    <code>-w</code> <i>p12filePasswordFile</i>
+                </p>
+            </td>
+            <td>
+                <p>
+                    Specify the text file containing the pkcs 12 file's password</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>
+                    <code>-W</code> <i>p12filePassword</i>
+                </p>
+            </td>
+            <td>
+                <p>
+                    Specify the pkcs 12 file's password</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>
+                    <code>-c</code> <i>key-cipher</i>
+                </p>
+            </td>
+            <td>
+                <p>
+                    Specify the key encryption algorithm</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    <code>-C</code> <i>certCipher</i>
+                </p>
+            </td>
+            <td>
+                <p>
+                    Specify the PFX encryption algorithm</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>
+                    <code>-m | --key_len</code> <i><br>keyLen</i>
+                </p>
+            </td>
+            <td>
+                <p>
+                    Specify the desired length of the symmetric key to be used to encrypt the private key</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>
+                    <code>-n | --cert_key_len</code> <i><br>certLeyLen</i>
+                </p>
+            </td>
+            <td>
+                <p>
+                    Specify the desired length of the symmetric key to be used to encrypt the top level protocol
+                    data unit</p>
+
+            </td>
+        </tr>
+    </tbody>
+</table>
+<table>
+    <tbody>
+        <tr>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="Password_Based_Encryption"><a id="PBE"></a>
+    <a id="1040303">
+        Password Based Encryption
+    </a>
+</h2>
+<a id="1040304">
+
+    <p>
+        PKCS #12 provides for not only the protection of the private keys but also the certificate and meta-data
+        associated with the keys. Password based encryption is used to protect private keys on export to a PKCS #12 file
+        and also the entire package when allowed. If no algorithm is specified, the tool defaults to using
+        "PKCS12 V2 PBE With SHA1 And 3KEY Triple DES-cbc" for private key encryption. For historical export control
+        reasons
+        "PKCS12 V2 PBE With SHA1 And 40 Bit RC4" is the default for the overall package encryption when not in FIPS mode
+        and
+        no package encryption when in FIPS mode. The private key is always protected with strong encryption by default.
+        A list of ciphers follows.</p>
+
+</a>
+<ul>
+    <li><a id="10403041">symmetric CBC ciphers for PKCS #5 V2:</a>
+        <ul>
+            <li>"DES_CBC"</li>
+            <li>"RC2-CBC"</li>
+            <li>"RC5-CBCPad"</li>
+            <li>"DES-EDE3-CBC"<br>
+                --- default for key encryption</li>
+            <li>"AES-128-CBC"</li>
+            <li>"AES-192-CBC"</li>
+            <li>"AES-256-CBC"</li>
+            <li>"CAMELLIA-128-CBC"</li>
+            <li>"CAMELLIA-192-CBC"</li>
+            <li>"CAMELLIA-256-CBC"</li>
+        </ul>
+    </li>
+    <li><a id="10403042"> PKCS #12 PBE Ciphers:</a>
+        <ul>
+            <li>"PKCS #12 PBE With Sha1 and 128 Bit RC4"</li>
+            <li>"PKCS #12 PBE With Sha1 and 40 Bit RC4"</li>
+            <li>"PKCS #12 PBE With Sha1 and Triple DES CBC"</li>
+            <li>"PKCS #12 PBE With Sha1 and 128 Bit RC2 CBC"</li>
+            <li>"PKCS #12 PBE With Sha1 and 40 Bit RC2 CBC"</li>
+            <li>"PKCS12 V2 PBE With SHA1 And 128 Bit RC4"</li>
+            <li>"PKCS12 V2 PBE With SHA1 And 40 Bit RC4"<br>
+                --- default for PFX encryption in non-fips mode, no encryption on fips mode</li>
+            <li>"PKCS12 V2 PBE With SHA1 And 3KEY Triple DES-cbc"</li>
+            <li>"PKCS12 V2 PBE With SHA1 And 2KEY Triple DES-cbc"</li>
+            <li>"PKCS12 V2 PBE With SHA1 And 128 Bit RC2 CBC"</li>
+            <li>"PKCS12 V2 PBE With SHA1 And 40 Bit RC2 CBC"</li>
+        </ul>
+    </li>
+    <li>PKCS #5 PBE Ciphers:
+        <ul>
+            <li>"PKCS #5 Password Based Encryption with MD2 and DES CBC"</li>
+            <li>"PKCS #5 Password Based Encryption with MD5 and DES CBC"</li>
+            <li>"PKCS #5 Password Based Encryption with SHA1 and DES CBC"</li>
+        </ul>
+    </li>
+</ul>
+<p>It should be noted that the crypto provider may be the softtoken module or an external hardware module.
+    It may be the case that the cryptographic module does not support the requested algorithm and a best fit will
+    be selected, likely to be the default. If no suitable replacement for the desired algorithm can be found a
+    "no security module can perform the requested operation" will appear on the error message.</p>
+
+<h2 id="Error_Codes"><a id="ErrorCodes"></a>
+    <a id="1040302">
+        Error Codes
+    </a>
+</h2>
+<a id="1043239">
+
+    <b>pk12util</b> can return the following values:</a>
+<p>
+    <b>0</b> - No error<br>
+    <b>1</b> - User Cancelled<br>
+    <b>2</b> - Usage error<br>
+    <b>6</b> - NLS init error<br>
+    <b>8</b> - Certificate DB open error<br>
+    <b>9</b> - Key DB open error<br>
+    <b>10</b> - File initialization error<br>
+    <b>11</b> - Unicode conversion error<br>
+    <b>12</b> - Temporary file creation error<br>
+    <b>13</b> - PKCS11 get slot error<br>
+    <b>14</b> - PKCS12 decoder start error<br>
+    <b>15</b> - error read from import file<br>
+    <b>16</b> - pkcs12 decode error<br>
+    <b>17</b> - pkcs12 decoder verify error<br>
+    <b>18</b> - pkcs12 decoder validate bags error<br>
+    <b>19</b> - pkcs12 decoder import bags error<br>
+    <b>20</b> - key db conversion version 3 to version 2 error<br>
+    <b>21</b> - cert db conversion version 7 to version 5 error<br>
+    <b>22</b> - cert and key dbs patch error<br>
+    <b>23</b> - get default cert db error<br>
+    <b>24</b> - find cert by nickname error<br>
+    <b>25</b> - create export context error<br>
+    <b>26</b> - PKCS12 add password itegrity error<br>
+    <b>27</b> - cert and key Safes creation error<br>
+    <b>28</b> - PKCS12 add cert and key error<br>
+    <b>29</b> - PKCS12 encode error<br>
+</p>

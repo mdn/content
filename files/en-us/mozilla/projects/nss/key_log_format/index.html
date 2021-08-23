@@ -1,0 +1,35 @@
+---
+title: NSS Key Log Format
+slug: Mozilla/Projects/NSS/Key_Log_Format
+---
+<p>Key logs can be written by NSS so that external programs can decrypt TLS connections. Wireshark 1.6.0 and above can use these log files to decrypt packets. You can tell Wireshark where to find the key file via <em>Edit→Preferences→Protocols→TLS→(Pre)-Master-Secret log filename</em>.</p>
+
+<p>Key logging is enabled by setting the environment variable <code>SSLKEYLOGFILE</code> to point to a file. Note: starting with <a href="/en-US/docs/Mozilla/Projects/NSS/NSS_3.24_release_notes">NSS 3.24</a> (used by Firefox 48 and 49 only), the <code>SSLKEYLOGFILE</code> approach is disabled by default for optimized builds using the Makefile (those using gyp via <code>build.sh</code> are <em>not</em> affected). Distributors can re-enable it at compile time though (using the <code>NSS_ALLOW_SSLKEYLOGFILE=1</code> make variable) which is done for the official Firefox binaries. (See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1188657">bug 1188657</a>.) Notably, Debian does not have this option enabled, see <a href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=842292">Debian bug 842292</a>.</p>
+
+<p>This key log file is a series of lines. Comment lines begin with a sharp character ('#') and are ignored. Secrets follow the format <code>&lt;Label&gt; &lt;space&gt; &lt;ClientRandom&gt; &lt;space&gt; &lt;Secret&gt;</code> where:</p>
+
+<ul>
+ <li><code>&lt;Label&gt;</code> describes the following secret.</li>
+ <li><code>&lt;ClientRandom&gt;</code> is 32 bytes Random value from the Client Hello message, encoded as 64 hexadecimal characters.</li>
+ <li><code>&lt;Secret&gt;</code> depends on the Label (see below).</li>
+</ul>
+
+<p>The following labels are defined, followed by a description of the secret:</p>
+
+<ul>
+ <li><code>RSA</code>: 48 bytes for the premaster secret, encoded as 96 hexadecimal characters (removed in NSS 3.34)</li>
+ <li><code>CLIENT_RANDOM</code>: 48 bytes for the master secret, encoded as 96 hexadecimal characters (for SSL 3.0, TLS 1.0, 1.1 and 1.2)</li>
+ <li><code>CLIENT_EARLY_TRAFFIC_SECRET</code>: the hex-encoded early traffic secret for the client side (for TLS 1.3)</li>
+ <li><code>CLIENT_HANDSHAKE_TRAFFIC_SECRET</code>: the hex-encoded handshake traffic secret for the client side (for TLS 1.3)</li>
+ <li><code>SERVER_HANDSHAKE_TRAFFIC_SECRET</code>: the hex-encoded handshake traffic secret for the server side (for TLS 1.3)</li>
+ <li><code>CLIENT_TRAFFIC_SECRET_0</code>: the first hex-encoded application traffic secret for the client side (for TLS 1.3)</li>
+ <li><code>SERVER_TRAFFIC_SECRET_0</code>: the first hex-encoded application traffic secret for the server side (for TLS 1.3)</li>
+ <li><code>EARLY_EXPORTER_SECRET</code>: the hex-encoded early exporter secret (for TLS 1.3).</li>
+ <li><code>EXPORTER_SECRET</code>: the hex-encoded exporter secret (for TLS 1.3)</li>
+</ul>
+
+<p>The <code>RSA</code> form allows ciphersuites using RSA key-agreement to be logged and was the first form supported by Wireshark 1.6.0. It has been superseded by <code>CLIENT_RANDOM</code> which also works with other key-agreement algorithms (such as those based on Diffie-Hellman) and is supported since Wireshark 1.8.0.</p>
+
+<p>The TLS 1.3 lines are supported since NSS 3.34 (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1287711">bug 1287711</a>) and Wireshark 2.4 (<code>EARLY_EXPORTER_SECRET</code> exists since NSS 3.35, <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1417331">bug 1417331</a>). The size of the hex-encoded secret depends on the selected cipher suite. It is 64, 96 or 128 characters for SHA256, SHA384 or SHA512 respectively.</p>
+
+<p>For Wireshark usage, see <a href="https://wiki.wireshark.org/SSL">SSL - Wireshark Wiki</a>.</p>

@@ -1,0 +1,275 @@
+---
+title: 'PKCS #11 Module Specs'
+slug: Mozilla/Projects/NSS/PKCS11/Module_Specs
+tags:
+  - NSS
+---
+<h3 id="PKCS_.2311_Module_Specs">PKCS #11 Module Specs</h3>
+
+<p>The following is a proposal to the <a class="external" href="https://en.wikipedia.org/wiki/PKCS">PKCS</a> #11 working group made in August 2001 for configuring PKCS #11 modules. NSS currently implements this proposal internally.</p>
+
+<p>The file format consists of name/value pairs of the form <code><em>name</em>=<em>value</em></code>. Each name/value pair is separated by a blank value. A single line, terminated by a '\n', '\r\n', or '\r' represents a single pkcs #11 library.</p>
+
+<p>Names can be any alpha/numeric combination, and are parsed case-insensitive.</p>
+
+<p>Values can contain any printable ASCII value, including UTF8 characters. Values can contain embedded blanks either through quoting the entire value, or by escaping the embedded blanks with '\'. The value is considered quoted if the first character after the '=' is ', ", {, [, or &lt;. If the value is quoted, then the value is terminated with and ending quote of the form ', ", ), ], }, or &gt; matching the respective starting quote. Ending quotes can be escaped. Embedded '\' characters are considered escape characters for the next character in the stream. Note that case must be preserved in the values.</p>
+
+<p>These modules specs can be passed by the application directly to NSS via the <code>SECMOD_LoadUserModule()</code> call. To initialize a PKCS #11 module 'on-the-fly'.</p>
+
+<h4 id="Recognized_Names">Recognized Names</h4>
+
+<p>All applications/libraries must be able recognize the following name values:</p>
+
+<dl>
+ <dt>library </dt>
+ <dd>This specifies the path to the pkcs #11 library.</dd>
+ <dt>name </dt>
+ <dd>This specifies the name of the pkcs #11 library.</dd>
+ <dt>parameter </dt>
+ <dd>This specifies a pkcs #11 library parameter with the application must pass to the pkcs #11 library at <code>C_Initialize()</code> time (see below).</dd>
+</dl>
+
+<p>In additions applications/libraries should be able to ignore additional name value pairs which are used to specify configuration for other applications. Of course these application/libraries should be able to parse their own name/value pairs.</p>
+
+<p>Each of these name/value pairs are optional.</p>
+
+<p>If the library is not specified, the line represents some application specific meta configuration data. Other applications and libraries can safely ignore this line.</p>
+
+<p>If the name is not specified, the application can use the library path to describe the PKCS #11 library in any UI it may have.</p>
+
+<p>If the parameter is not specified, no parameters are passed to the PKCS #11 module.</p>
+
+<p>If the application/library does not find its application/library specific data, it should use it's defaults for this pkcs #11 library.</p>
+
+<h4 id="Parameter_Passing">Parameter Passing</h4>
+
+<p>If the parameter is specified, the application/library will strip the value out, processing any outter quotes and escapes appropriately, and pass the parameter to the pkcs #11 library when it calls <code>C_Initialize()</code>.</p>
+
+<p>A new <code>CK_C_INITIALIZE_ARGS</code> structure is defined as</p>
+
+<pre>typedef struct CK_C_INITIALIZE_ARGS {
+  CK_CREATEMUTEX CreateMutex;
+  CK_DESTROYMUTEX DestroyMutex;
+  CK_LOCKMUTEX LockMutex;
+  CK_UNLOCKMUTEX UnlockMutex;
+  CK_FLAGS flags;
+  CK_VOID_PTR LibraryParameters;
+  CK_VOID_PTR pReserved;
+} CK_C_INITIALIZE_ARGS;
+</pre>
+
+<p>Applications/libraries must set LibraryParameters to <code>NULL</code> if no parameter value is specified. PKCS #11 libraries which accept parameters must check if the 'new' <code>pReserved</code> field is <code>NULL</code> if and only if <code>LibraryParameters</code> field is not <code>NULL</code>.</p>
+
+<h3 id="NSS_Specific_Parameters_in_Module_Specs">NSS Specific Parameters in Module Specs</h3>
+
+<p>Here are the NSS Application specific parameters in use. This data is currently stored in <code>secmod.db</code> or pkcs11.txt. This isn't part of the generic spec (that is other applications need not parse it, nor pkcs #11 modules need supply them or use them).</p>
+
+<pre class="eval"><strong>NSS</strong>="<em>nss_params</em>"
+</pre>
+
+<p><code><em>nss_params</em></code> are themselves name/value pairs, parsed with the same rules described above. Valid names inside <code>nss_params</code> are:</p>
+
+<dl>
+ <dt>flags</dt>
+ <dd>comma separated list of flag values, parsed case-insensitive.<br>
+ Valid flag values are:
+ <dl>
+  <dt>internal</dt>
+  <dd>this library is actually the Netscape internal library</dd>
+  <dt>fips</dt>
+  <dd>this library is the Netscape internal fips library.</dd>
+  <dt>critical</dt>
+  <dd>if this library cannot be loaded, completely fail initialization.</dd>
+  <dt>moduleDB</dt>
+  <dd>this library includes NSS specific functions to supply additional module specs for loading. <strong>moduleDBOnly</strong> - this library has no PKCS #11 functions and is only used for loading additional modules.</dd>
+ </dl>
+ </dd>
+ <dt>trustOrder</dt>
+ <dd>integer value specifying the order in which the trust information for certificates specified by tokens on this PKCS #11 library should be rolled up. A value of <kbd>0</kbd> means that tokens on this library should not supply trust information. The default trust order value is <kbd>50</kbd>. The relative order of two pkcs#11 libraries which have the same trustOrder value is undefined.</dd>
+ <dt>cipherOrder</dt>
+ <dd>integer value specifiying the order in which tokens are searched when looking for a token to do a generic operation (DES/Hashing, etc).</dd>
+ <dt>ciphers</dt>
+ <dd>comma separated list of ciphers this token will enable that isn't already enabled by the library (currently only <strong>FORTEZZA</strong> is defined) (case-insensitive).</dd>
+ <dt>slotParams</dt>
+ <dd>space separated list of name/value pairs where the name is a slotID and the value is a space separated list of parameters related to that slotID.
+ Valid slotParams values are:
+ <dl>
+  <dt>slotFlags</dt>
+  <dd>comma separated list of cipher groups which this slot is expected to be the default implementation for (case-insensitive).<br>
+  Valid flags are:
+  <dl>
+   <dt>RSA</dt>
+   <dd>This token should be used for all RSA operations (other than Private key operations where the key lives in another token).</dd>
+   <dt>DSA</dt>
+   <dd>This token should be used for all DSA operations (other than Private key operations where the key lives in another token).</dd>
+   <dt>RC4</dt>
+   <dd>This token should be used for all RC4 operations which are not constrained by an existing key in another token.</dd>
+   <dt>RC2</dt>
+   <dd>This token should be used for all RC2 operations which are not constrained by an existing key in another token.</dd>
+   <dt>DES</dt>
+   <dd>This token should be used for all DES, DES2, and DES3 operations which are not constrained by an existing key in another token.</dd>
+   <dt>DH</dt>
+   <dd>This token should be used for all DH operations (other than Private key operations where the key lives in another token).</dd>
+   <dt>FORTEZZA</dt>
+   <dd>This token should be used for all KEA operations (other than Private key operations where the key lives in another token), as well as SKIPJACK operations which are not constrained by an existing key in another token.</dd>
+   <dt>RC5</dt>
+   <dd>This token should be used for all RC5 operations which are not constrained by an existing key in another token.</dd>
+   <dt>SHA1</dt>
+   <dd>This token should be used for all basic SHA1 hashing.</dd>
+   <dt>MD5</dt>
+   <dd>This token should be used for all basic MD5 hashing.</dd>
+   <dt>MD2</dt>
+   <dd>This token should be used for all basic MD2 hashing.</dd>
+   <dt>SSL</dt>
+   <dd>This token should be used for SSL key derivation which are not constrained by an existing key in another token.</dd>
+   <dt>TLS</dt>
+   <dd>This token should be used for TLS key derivation which are not constrained by an existing key in another token.</dd>
+   <dt>AES</dt>
+   <dd>This token should be used for all AES operations which are not constrained by an existing key in another token.</dd>
+   <dt>RANDOM</dt>
+   <dd>This token should be used to generate random numbers when the application call 'PK11_GenerateRandom'.</dd>
+   <dt>PublicCerts</dt>
+   <dd>The certificates on this token can be read without authenticating to this token, and any user certs on this token have a matching public key which is also readable without authenticating. Setting this flags means NSS will not try to authenticate to the token when searching for Certificates. This removes spurious password prompts, but if incorrectly set it can also cause NSS to miss certificates in a token until that token is explicitly logged in.</dd>
+  </dl>
+  </dd>
+  <dt>rootFlags</dt>
+  <dd>comma separated of flags describing any root certs that may be stored (case-insensitive).
+  Valid flags are:
+  <dl>
+   <dt>hasRootCerts</dt>
+   <dd>claims that this token has the default root certs and trust values. At init time NSS, will try to look for a default root cert device if one has not already been loaded.</dd>
+   <dt>hasRootTrust</dt>
+   <dd>parsed but ignored.</dd>
+  </dl>
+  </dd>
+  <dt>timeout</dt>
+  <dd>time in minutes before the current authentication should be rechecked. This value is only used if askpwd is set to 'timeout'. (default = 0).</dd>
+  <dt>askpwd</dt>
+  <dd>case-insensitive flag describing how password prompts should be manages. Only one of the following can be specified.
+  <dl>
+   <dt>every</dt>
+   <dd>prompt whenever the a private key on this token needs to be access (this is on the entire token, not on a key-by-key basis.</dd>
+   <dt>timeout</dt>
+   <dd>whenever the last explicit login was longer than 'timeout' minutes ago.</dd>
+   <dt>only</dt>
+   <dd>authenticate to the token only when necessary (default).</dd>
+  </dl>
+  </dd>
+ </dl>
+ </dd>
+</dl>
+
+<p>Sample file:</p>
+
+<pre>library= name="Netscape Internal Crypto Module"   parameters="configdir=/u/relyea/.netscape certprefix= secmod=secmod.db" NSS="Flags=internal,pkcs11module TrustOrder=1 CipherOrder=-1 ciphers= slotParams={0x1=[slotFlags='RSA,DSA,DH,RC4,RC2,DES,MD2,MD5,SHA1,SSL,TLS,PublicCerts,Random'] 0x2=[slotFlags='RSA' askpw=only]}"
+library=dkck32.dll name="DataKey SignaSURE 3600" NSS="TrustOrder=50 ciphers= "
+library=swft32.dll name="Netscape Software Fortezza" parameters="keyfile=/u/relyea/keyfile" NSS="TrustOrder=50 ciphers=FORTEZZA slotParams=0x1=[slotFlags='FORTEZZA']"
+library=core32.dll name="Litronic Netsign"
+</pre>
+
+<h3 id="Softoken_Specific_Parameters">Softoken Specific Parameters</h3>
+
+<p>The internal NSS PKCS #11 implementation (softoken) requires Applications parameters. It will not initialize if the <strong>parameters</strong>= is not specified. If another application wishes to load the softoken, that application must supply a non-<code>NULL</code> <code>libraryParameters</code> value in the <code>CK_C_INITIALIZE_ARGS</code> structure passed at <code>C_INITIALIZE</code> time. The parameter passed to softoken is a space separated list of name/value pairs exactly like those specified in the PKCS #11 module spec.</p>
+
+<p>Valid values are:</p>
+
+<dl>
+ <dt>configDir </dt>
+ <dd>Configuration Directory where NSS can store persistant state information (typically databases).</dd>
+ <dt>secmod </dt>
+ <dd>Name of the secmod database (default = secmod.db).</dd>
+ <dt>certPrefix </dt>
+ <dd>Prefix for the cert database.</dd>
+ <dt>keyPrefix </dt>
+ <dd>Prefix for the key database.</dd>
+ <dt>minPWLen </dt>
+ <dd>Minimum password length in bytes.</dd>
+ <dt>manufacturerID </dt>
+ <dd>Override the default <code>manufactureID</code> value for the module returned in the <code>CK_INFO</code>, <code>CK_SLOT_INFO</code>, and <code>CK_TOKEN_INFO</code> structures with an internationalize string (UTF8). This value will be truncated at 32 bytes (no NULL, partial UTF8 characters dropped).</dd>
+ <dt>libraryDescription </dt>
+ <dd>Override the default <code>libraryDescription</code> value for the module returned in the <code>CK_INFO</code> structure with an internationalize string (UTF8). This value will be truncated at 32 bytes (no <code>NULL</code>, partial UTF8 characters dropped).</dd>
+ <dt>cryptoTokenDescription </dt>
+ <dd>Override the default label value for the internal crypto token returned in the <code>CK_TOKEN_INFO</code> structure with an internationalize string (UTF8). This value will be truncated at 32 bytes (no NULL, partial UTF8 characters dropped).</dd>
+ <dt>dbTokenDescription </dt>
+ <dd>Override the default label value for the internal DB token returned in the <code>CK_TOKEN_INFO</code> structure with an internationalize string (UTF8). This value will be truncated at 32 bytes (no NULL, partial UTF8 characters dropped).</dd>
+ <dt>FIPSTokenDescription </dt>
+ <dd>Override the default label value for the internal FIPS token returned in the <code>CK_TOKEN_INFO</code> structure with an internationalize string (UTF8). This value will be truncated at 32 bytes (no NULL, partial UTF8 characters dropped).</dd>
+ <dt>cryptoSlotDescription </dt>
+ <dd>Override the default <code>slotDescription</code> value for the internal crypto token returned in the <code>CK_SLOT_INFO</code> structure with an internationalize string (UTF8). This value will be truncated at 64 bytes (no NULL, partial UTF8 characters dropped).</dd>
+ <dt>dbSlotDescription </dt>
+ <dd>Override the default <code>slotDescription</code> value for the internal DB token returned in the <code>CK_SLOT_INFO</code> structure with an internationalize string (UTF8). This value will be truncated at 64 bytes (no NULL, partial UTF8 characters dropped).</dd>
+ <dt>FIPSSlotDescription </dt>
+ <dd>Override the default <code>slotDescription</code> value for the internal FIPS token returned in the <code>CK_SLOT_INFO</code> structure with an internationalize string (UTF8). This value will be truncated at 64 bytes (no NULL, partial UTF8 characters dropped).</dd>
+ <dt>flags </dt>
+ <dd>comma separated list of flag values, parsed case-insensitive.</dd>
+</dl>
+
+<h4 id="Flags">Flags</h4>
+
+<p>Valid flags are:</p>
+
+<dl>
+ <dt>noModDB </dt>
+ <dd>Don't open <code>secmod.db</code> and try to supply the strings. The MOD DB function is not through standard PKCS #11 interfaces.</dd>
+ <dt>readOnly </dt>
+ <dd>Databases should be opened read only.</dd>
+ <dt>noCertDB </dt>
+ <dd>Don't try to open a certificate database.</dd>
+ <dt>noKeyDB </dt>
+ <dd>Don't try to open a key database.</dd>
+ <dt>forceOpen </dt>
+ <dd>Don't fail to initialize the token if the databases could not be opened.</dd>
+ <dt>passwordRequired </dt>
+ <dd>Zero length passwords are not acceptable (valid only if there is a keyDB).</dd>
+ <dt>optimizeSpace </dt>
+ <dd>allocate smaller hash tables and lock tables. When this flag is not specified, Softoken will allocate large tables to prevent lock contention.</dd>
+ <dt>tokens </dt>
+ <dd>configure 'tokens' by hand. The tokens parameter specifies a space separated list of slotIDS, each of which specify their own set of parameters affecting that token. Typically 'tokens' would not be specified unless additional databases are to be opened as additional tokens. If tokens is specified, then all tokens (including the default tokens) need to be specified. If tokens is not specified, then softoken would default to the following specs:</dd>
+</dl>
+
+<p>In non-FIPS mode:</p>
+
+<pre class="eval">tokens=&lt;0x01=[configDir=<em>configDir</em> tokenDescription=<em>cryptoTokenDescription</em> slotDescription=<em>cryptoSlotDescription</em> flags=noCertDB,noKeyDB,<em>optimizeSpace</em>] 0x02=[configDir=<em>configDir</em> tokenDescription=<em>dbTokenDescription</em> slotDescription=<em>dbSlotDescription</em> certPrefix=<em>certPrefix</em> keyPrefix=<em>keyPrefix</em> flags=<em>flags</em> minPWLen=<em>minPWLen</em>]&gt;
+</pre>
+
+<p>In FIPS mode:</p>
+
+<pre class="eval">tokens=&lt;0x03=[configDir=<em>configDir</em> tokenDescription=<em>FIPSTokenDescription</em> slotDescription=<em>FIPSSlotDescription</em> certPrefix=<em>certPrefix</em> keyPrefix=<em>keyPrefix</em> flags=<em>flags</em> minPWLen=<em>minPWLen</em>]&gt;
+</pre>
+
+<p>where <em>configDir</em>, <em>cryptoTokenDescription</em>, <em>cryptoSlotDescription</em>, <em>dbTokenDescription</em>, <em>dbSlotDescription</em>, <em>FIPSTokenDescription</em>, <em>FIPSSlotDescription</em>, <em>optimizeSpace</em>, <em>certPrefix</em>, <em>keyPrefix</em>, <em>flags</em>, and <em>minPWLen</em> are copied from the parameters above.</p>
+
+<p>Parameters:</p>
+
+<dl>
+ <dt>configDir </dt>
+ <dd>The location of the databases for this token. If <code>configDir</code> is not specified, the default <code>configDir</code> specified earlier will be used.</dd>
+ <dt>certPrefix </dt>
+ <dd>Cert prefix for this token.</dd>
+ <dt>keyPrefix </dt>
+ <dd>Prefix for the key database for this token.</dd>
+ <dt>tokenDescription </dt>
+ <dd>The label value for this token returned in the <code>CK_TOKEN_INFO</code> structure with an internationalize string (UTF8). This value will be truncated at 32 bytes (no NULL, partial UTF8 characters dropped).</dd>
+ <dt>slotDescription </dt>
+ <dd>The <code>slotDescription</code> value for this token returned in the <code>CK_SLOT_INFO</code> structure with an internationalize string (UTF8). This value will be truncated at 64 bytes (no NULL, partial UTF8 characters dropped).</dd>
+ <dt>minPWLen </dt>
+ <dd>minimum password length for this token.</dd>
+ <dt>flags </dt>
+ <dd>comma separated list of flag values, parsed case-insensitive.<br>
+ Valid flags are:
+ <dl>
+  <dt>readOnly </dt>
+  <dd>Databases should be opened read only.</dd>
+  <dt>noCertDB </dt>
+  <dd>Don't try to open a certificate database.</dd>
+  <dt>noKeyDB </dt>
+  <dd>Don't try to open a key database.</dd>
+  <dt>forceOpen </dt>
+  <dd>Don't fail to initialize the token if the databases could not be opened.</dd>
+  <dt>passwordRequired </dt>
+  <dd>Zero length passwords are not acceptable (valid only if there is a <code>keyDB</code>).</dd>
+  <dt>optimizeSpace </dt>
+  <dd>allocate smaller hash tables and lock tables. When this flag is not specified, Softoken will allocate large tables to prevent lock contention.</dd>
+ </dl>
+ </dd>
+</dl>

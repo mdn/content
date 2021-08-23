@@ -1,0 +1,100 @@
+---
+title: NSS 3.15 release notes
+slug: Mozilla/Projects/NSS/NSS_3.15_release_notes
+---
+<h2 id="Introduction">Introduction</h2>
+<p>The NSS team has released Network Security Services (NSS) 3.15, which is a minor release.</p>
+<h2 id="Distribution_Information">Distribution Information</h2>
+<p>The HG tag is NSS_3_15_RTM. NSS 3.15 requires NSPR 4.10 or newer.</p>
+<p>NSS 3.15 source distributions are available on ftp.mozilla.org for secure HTTPS download:</p>
+<ul>
+  <li>Source tarballs:<br>
+    <a href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_15_RTM/src/">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_15_RTM/src/</a></li>
+</ul>
+<h2 id="New_in_NSS_3.15">New in NSS 3.15</h2>
+<h3 id="New_Functionality">New Functionality</h3>
+<ul>
+  <li>Support for OCSP Stapling (<a href="https://datatracker.ietf.org/doc/html/rfc6066">RFC 6066</a>, Certificate Status Request) has been added for both client and server sockets. TLS client applications may enable this via a call to <code>SSL_OptionSetDefault(SSL_ENABLE_OCSP_STAPLING, PR_TRUE);</code></li>
+  <li>Added function SECITEM_ReallocItemV2. It replaces function SECITEM_ReallocItem, which is now declared as obsolete.</li>
+  <li>Support for single-operation (eg: not multi-part) symmetric key encryption and decryption, via <em>PK11_Encrypt</em> and <em>PK11_Decrypt</em>.</li>
+  <li>certutil has been updated to support creating name constraints extensions.</li>
+</ul>
+<h4 id="New_Functions">New Functions</h4>
+<ul>
+  <li><em>in ssl.h</em>
+    <ul>
+      <li><b>SSL_PeerStapledOCSPResponse</b> - Returns the server's stapled OCSP response, when used with a TLS client socket that negotiated the <em>status_request</em> extension.</li>
+      <li><b>SSL_SetStapledOCSPResponses</b> - Set's a stapled OCSP response for a TLS server socket to return when clients send the <em>status_request</em> extension.</li>
+    </ul>
+  </li>
+  <li><em>in ocsp.h</em>
+    <ul>
+      <li><b>CERT_PostOCSPRequest</b> - Primarily intended for testing, permits the sending and receiving of raw OCSP request/responses.</li>
+    </ul>
+  </li>
+  <li><em>in secpkcs7.h</em>
+    <ul>
+      <li><b>SEC_PKCS7VerifyDetachedSignatureAtTime</b> - Verifies a PKCS#7 signature at a specific time other than the present time.</li>
+    </ul>
+  </li>
+  <li><em>in xconst.h</em>
+    <ul>
+      <li><b>CERT_EncodeNameConstraintsExtension</b> - Matching function for CERT_DecodeNameConstraintsExtension, added in NSS 3.10.</li>
+    </ul>
+  </li>
+  <li><em>in secitem.h</em>
+    <ul>
+      <li><b>SECITEM_AllocArray</b></li>
+      <li><b>SECITEM_DupArray</b></li>
+      <li><b>SECITEM_FreeArray</b></li>
+      <li><b>SECITEM_ZfreeArray</b> - Utility functions to handle the allocation and deallocation of <em>SECItemArray</em>s</li>
+      <li><b>SECITEM_ReallocItemV2</b> - Replaces <em>SECITEM_ReallocItem</em>, which is now obsolete. <em>SECITEM_ReallocItemV2</em> better matches caller expectations, in that it updates <code>item-&gt;len</code> on allocation. For more details of the issues with SECITEM_ReallocItem, see <a href="http://bugzil.la/298649">Bug 298649</a> and <a href="http://bugzil.la/298938">Bug 298938</a>.</li>
+    </ul>
+  </li>
+  <li><em>in pk11pub.h</em>
+    <ul>
+      <li><b>PK11_Decrypt</b> - Performs decryption as a single PKCS#11 operation (eg: not multi-part). This is necessary for AES-GCM.</li>
+      <li><b>PK11_Encrypt</b> - Performs encryption as a single PKCS#11 operation (eg: not multi-part). This is necessary for AES-GCM.</li>
+    </ul>
+  </li>
+</ul>
+<h4 id="New_Types">New Types</h4>
+<ul>
+  <li><em>in secitem.h</em>
+    <ul>
+      <li><b>SECItemArray</b> - Represents a variable-length array of <em>SECItem</em>s.</li>
+    </ul>
+  </li>
+</ul>
+<h4 id="New_Macros">New Macros</h4>
+<ul>
+  <li><em>in ssl.h</em>
+    <ul>
+      <li><b>SSL_ENABLE_OCSP_STAPLING</b> - Used with <em>SSL_OptionSet</em> to configure TLS client sockets to request the <em>certificate_status</em> extension (eg: OCSP stapling) when set to <b>PR_TRUE</b></li>
+    </ul>
+  </li>
+</ul>
+<h2 id="Notable_Changes_in_NSS_3.15">Notable Changes in NSS 3.15</h2>
+<ul>
+  <li><em>SECITEM_ReallocItem</em> is now deprecated. Please consider using <em>SECITEM_ReallocItemV2</em> in all future code.</li>
+  <li>
+    <p>NSS has migrated from CVS to the Mercurial source control management system.</p>
+    <p>Updated build instructions are available at <a href="/en-US/docs/Mozilla/Projects/NSS/Reference/Building_and_installing_NSS/Migration_to_HG">Migration to HG</a></p>
+    <p>As part of this migration, the source code directory layout has been re-organized.</p>
+  </li>
+  <li>
+    <p>The list of root CA certificates in the <em>nssckbi</em> module has been updated.</p>
+  </li>
+  <li>
+    <p>The default implementation of SSL_AuthCertificate has been updated to add certificate status responses stapled by the TLS server to the OCSP cache.</p>
+    <p>Applications that use SSL_AuthCertificateHook to override the default handler should add appropriate calls to <em>SSL_PeerStapledOCSPResponse</em> and <em>CERT_CacheOCSPResponseFromSideChannel</em>.</p>
+  </li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=554369">Bug 554369</a>: Fixed correctness of CERT_CacheOCSPResponseFromSideChannel and other OCSP caching behaviour.</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=853285">Bug 853285</a>: Fixed bugs in AES GCM.</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=341127">Bug 341127</a>: Fix the invalid read in rc4_wordconv.</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=831006">Faster NIST curve P-256 implementation</a>.</li>
+  <li>Dropped (32-bit) SPARC V8 processor support on Solaris. The shared library <code>libfreebl_32int_3.so</code> is no longer produced.</li>
+</ul>
+<h2 id="Bugs_fixed_in_NSS_3.15">Bugs fixed in NSS 3.15</h2>
+<p>This Bugzilla query returns all the bugs fixed in NSS 3.15:</p>
+<p><a href="https://bugzilla.mozilla.org/buglist.cgi?list_id=6278317&amp;resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.15">https://bugzilla.mozilla.org/buglist.cgi?list_id=6278317&amp;resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.15</a></p>

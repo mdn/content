@@ -1,0 +1,364 @@
+---
+title: 'NSS tools : crlutil'
+slug: Mozilla/Projects/NSS/Tools/crlutil
+---
+<p>Name<br>
+<br>
+   crlutil — List, generate, modify, or delete CRLs within the NSS security<br>
+   database file(s) and list, create, modify or delete certificates entries<br>
+   in a particular CRL.<br>
+<br>
+Synopsis<br>
+<br>
+   crlutil [options] <a href="arguments">arguments</a><br>
+<br>
+Description<br>
+<br>
+   The Certificate Revocation List (CRL) Management Tool, crlutil, is a<br>
+   command-line utility that can list, generate, modify, or delete CRLs<br>
+   within the NSS security database file(s) and list, create, modify or<br>
+   delete certificates entries in a particular CRL.<br>
+<br>
+   The key and certificate management process generally begins with creating<br>
+   keys in the key database, then generating and managing certificates in the<br>
+   certificate database(see certutil tool) and continues with certificates<br>
+   expiration or revocation.<br>
+<br>
+   This document discusses certificate revocation list management. For<br>
+   information on security module database management, see Using the Security<br>
+   Module Database Tool. For information on certificate and key database<br>
+   management, see Using the Certificate Database Tool.<br>
+<br>
+   To run the Certificate Revocation List Management Tool, type the command<br>
+<br>
+   crlutil option [arguments]<br>
+<br>
+   where options and arguments are combinations of the options and arguments<br>
+   listed in the following section. Each command takes one option. Each<br>
+   option may take zero or more arguments. To see a usage string, issue the<br>
+   command without options, or with the -H option.<br>
+<br>
+Options and Arguments<br>
+<br>
+   Options<br>
+<br>
+   Options specify an action. Option arguments modify an action. The options<br>
+   and arguments for the crlutil command are defined as follows:<br>
+<br>
+   -G<br>
+<br>
+           Create new Certificate Revocation List(CRL).<br>
+<br>
+   -D<br>
+<br>
+           Delete Certificate Revocation List from cert database.<br>
+<br>
+   -I<br>
+<br>
+           Import a CRL to the cert database<br>
+<br>
+   -E<br>
+<br>
+           Erase all CRLs of specified type from the cert database<br>
+<br>
+   -L<br>
+<br>
+           List existing CRL located in cert database file.<br>
+<br>
+   -M<br>
+<br>
+           Modify existing CRL which can be located in cert db or in<br>
+           arbitrary file. If located in file it should be encoded in ASN.1<br>
+           encode format.<br>
+<br>
+   -G<br>
+<br>
+   Arguments<br>
+<br>
+   Option arguments modify an action and are lowercase.<br>
+<br>
+   -B<br>
+<br>
+           Bypass CA signature checks.<br>
+<br>
+   -P dbprefix<br>
+<br>
+           Specify the prefix used on the NSS security database files (for<br>
+           example, my_cert8.db and my_key3.db). This option is provided as a<br>
+           special case. Changing the names of the certificate and key<br>
+           databases is not recommended.<br>
+<br>
+   -a<br>
+<br>
+           Use ASCII format or allow the use of ASCII format for input and<br>
+           output. This formatting follows RFC #1113.<br>
+<br>
+   -c crl-gen-file<br>
+<br>
+           Specify script file that will be used to control crl<br>
+           generation/modification. See crl-cript-file format below. If<br>
+           options -M|-G is used and -c crl-script-file is not specified,<br>
+           crlutil will read script data from standard input.<br>
+<br>
+   -d directory<br>
+<br>
+           Specify the database directory containing the certificate and key<br>
+           database files. On Unix the Certificate Database Tool defaults to<br>
+           $HOME/.netscape (that is, ~/.netscape). On Windows NT the default<br>
+           is the current directory.<br>
+<br>
+           The NSS database files must reside in the same directory.<br>
+<br>
+   -i crl-import-file<br>
+<br>
+           Specify the file which contains the CRL to import<br>
+<br>
+   -f password-file<br>
+<br>
+           Specify a file that will automatically supply the password to<br>
+           include in a certificate or to access a certificate database. This<br>
+           is a plain-text file containing one password. Be sure to prevent<br>
+           unauthorized access to this file.<br>
+<br>
+   -l algorithm-name<br>
+<br>
+           Specify a specific signature algorithm. List of possible<br>
+           algorithms: MD2 | MD4 | MD5 | SHA1 | SHA256 | SHA384 | SHA512<br>
+<br>
+   -n nickname<br>
+<br>
+           Specify the nickname of a certificate or key to list, create, add<br>
+           to a database, modify, or validate. Bracket the nickname string<br>
+           with quotation marks if it contains spaces.<br>
+<br>
+   -o output-file<br>
+<br>
+           Specify the output file name for new CRL. Bracket the output-file<br>
+           string with quotation marks if it contains spaces. If this<br>
+           argument is not used the output destination defaults to standard<br>
+           output.<br>
+<br>
+   -t crl-type<br>
+<br>
+           Specify type of CRL. possible types are: 0 - SEC_KRL_TYPE, 1 -<br>
+           SEC_CRL_TYPE. This option is obsolete<br>
+<br>
+   -u url<br>
+<br>
+           Specify the url.<br>
+<br>
+CRL Generation script syntax<br>
+<br>
+   CRL generation script file has the following syntax:<br>
+<br>
+   * Line with comments should have # as a first symbol of a line<br>
+<br>
+   * Set "this update" or "next update" CRL fields:<br>
+<br>
+   update=YYYYMMDDhhmmssZ nextupdate=YYYYMMDDhhmmssZ<br>
+<br>
+   Field "next update" is optional. Time should be in GeneralizedTime format<br>
+   (YYYYMMDDhhmmssZ). For example: 20050204153000Z<br>
+<br>
+   * Add an extension to a CRL or a crl certificate entry:<br>
+<br>
+   addext extension-name critical/non-critical [arg1[arg2 ...]]<br>
+<br>
+   Where:<br>
+<br>
+   extension-name: string value of a name of known extensions.<br>
+   critical/non-critical: is 1 when extension is critical and 0 otherwise.<br>
+   arg1, arg2: specific to extension type extension parameters<br>
+<br>
+   addext uses the range that was set earlier by addcert and will install an<br>
+   extension to every cert entries within the range.<br>
+<br>
+   * Add certificate entries(s) to CRL:<br>
+<br>
+   addcert range date<br>
+<br>
+   range: two integer values separated by dash: range of certificates that<br>
+   will be added by this command. dash is used as a delimiter. Only one cert<br>
+   will be added if there is no delimiter. date: revocation date of a cert.<br>
+   Date should be represented in GeneralizedTime format (YYYYMMDDhhmmssZ).<br>
+<br>
+   * Remove certificate entry(s) from CRL<br>
+<br>
+   rmcert range<br>
+<br>
+   Where:<br>
+<br>
+   range: two integer values separated by dash: range of certificates that<br>
+   will be added by this command. dash is used as a delimiter. Only one cert<br>
+   will be added if there is no delimiter.<br>
+<br>
+   * Change range of certificate entry(s) in CRL<br>
+<br>
+   range new-range<br>
+<br>
+   Where:<br>
+<br>
+   new-range: two integer values separated by dash: range of certificates<br>
+   that will be added by this command. dash is used as a delimiter. Only one<br>
+   cert will be added if there is no delimiter.<br>
+<br>
+   Implemented Extensions<br>
+<br>
+   The extensions defined for CRL provide methods for associating additional<br>
+   attributes with CRLs of theirs entries. For more information see RFC #3280<br>
+<br>
+   * Add The Authority Key Identifier extension:<br>
+<br>
+   The authority key identifier extension provides a means of identifying the<br>
+   public key corresponding to the private key used to sign a CRL.<br>
+<br>
+   authKeyId critical [key-id | dn cert-serial]<br>
+<br>
+   Where:<br>
+<br>
+   authKeyIdent: identifies the name of an extension critical: value of 1 of<br>
+   0. Should be set to 1 if this extension is critical or 0 otherwise.<br>
+   key-id: key identifier represented in octet string. dn:: is a CA<br>
+   distinguished name cert-serial: authority certificate serial number.<br>
+<br>
+   * Add Issuer Alternative Name extension:<br>
+<br>
+   The issuer alternative names extension allows additional identities to be<br>
+   associated with the issuer of the CRL. Defined options include an rfc822<br>
+   name (electronic mail address), a DNS name, an IP address, and a URI.<br>
+<br>
+   issuerAltNames non-critical name-list<br>
+<br>
+   Where:<br>
+<br>
+   subjAltNames: identifies the name of an extension should be set to 0 since<br>
+   this is non-critical extension name-list: comma separated list of names<br>
+<br>
+   * Add CRL Number extension:<br>
+<br>
+   The CRL number is a non-critical CRL extension which conveys a<br>
+   monotonically increasing sequence number for a given CRL scope and CRL<br>
+   issuer. This extension allows users to easily determine when a particular<br>
+   CRL supersedes another CRL<br>
+<br>
+   crlNumber non-critical number<br>
+<br>
+   Where:<br>
+<br>
+   crlNumber: identifies the name of an extension critical: should be set to<br>
+   0 since this is non-critical extension number: value of long which<br>
+   identifies the sequential number of a CRL.<br>
+<br>
+   * Add Revocation Reason Code extension:<br>
+<br>
+   The reasonCode is a non-critical CRL entry extension that identifies the<br>
+   reason for the certificate revocation.<br>
+<br>
+   reasonCode non-critical code<br>
+<br>
+   Where:<br>
+<br>
+   reasonCode: identifies the name of an extension non-critical: should be<br>
+   set to 0 since this is non-critical extension code: the following codes<br>
+   are available:<br>
+<br>
+   unspecified (0), keyCompromise (1), cACompromise (2), affiliationChanged<br>
+   (3), superseded (4), cessationOfOperation (5), certificateHold (6),<br>
+   removeFromCRL (8), privilegeWithdrawn (9), aACompromise (10)<br>
+<br>
+   * Add Invalidity Date extension:<br>
+<br>
+   The invalidity date is a non-critical CRL entry extension that provides<br>
+   the date on which it is known or suspected that the private key was<br>
+   compromised or that the certificate otherwise became invalid.<br>
+<br>
+   invalidityDate non-critical date<br>
+<br>
+   Where:<br>
+<br>
+   crlNumber: identifies the name of an extension non-critical: should be set<br>
+   to 0 since this is non-critical extension date: invalidity date of a cert.<br>
+   Date should be represented in GeneralizedTime format (YYYYMMDDhhmmssZ).<br>
+<br>
+Usage<br>
+<br>
+   The Certificate Revocation List Management Tool's capabilities are grouped<br>
+   as follows, using these combinations of options and arguments. Options and<br>
+   arguments in square brackets are optional, those without square brackets<br>
+   are required.<br>
+<br>
+   See "Implemented extensions" for more information regarding extensions and<br>
+   their parameters.<br>
+<br>
+   * Creating or modifying a CRL:<br>
+<br>
+ crlutil -G|-M -c crl-gen-file -n nickname [-i crl] [-u url] [-d keydir] [-P dbprefix] [-l alg] [-a] [-B]<br>
+<br>
+<br>
+   * Listing all CRls or a named CRL:<br>
+<br>
+         crlutil -L [-n crl-name] [-d krydir]<br>
+<br>
+<br>
+   * Deleting CRL from db:<br>
+<br>
+         crlutil -D -n nickname [-d keydir] [-P dbprefix]<br>
+<br>
+<br>
+   * Erasing CRLs from db:<br>
+<br>
+         crlutil -E [-d keydir] [-P dbprefix]<br>
+<br>
+<br>
+   * Deleting CRL from db:<br>
+<br>
+           crlutil -D -n nickname [-d keydir] [-P dbprefix]<br>
+<br>
+<br>
+   * Erasing CRLs from db:<br>
+<br>
+           crlutil -E [-d keydir] [-P dbprefix]<br>
+<br>
+<br>
+   * Import CRL from file:<br>
+<br>
+           crlutil -I -i crl [-t crlType] [-u url] [-d keydir] [-P dbprefix] [-B]<br>
+<br>
+<br>
+See also<br>
+<br>
+   certutil(1)<br>
+<br>
+See Also<br>
+<br>
+Additional Resources<br>
+<br>
+   NSS is maintained in conjunction with PKI and security-related projects<br>
+   through Mozilla dn Fedora. The most closely-related project is Dogtag PKI,<br>
+   with a project wiki at [1]<a class=" external" href="http://pki.fedoraproject.org/wiki/">http://pki.fedoraproject.org/wiki/</a>.<br>
+<br>
+   For information specifically about NSS, the NSS project wiki is located at<br>
+   [2]<a class=" external" href="https://www.mozilla.org/projects/security/pki/nss/">http://www.mozilla.org/projects/security/pki/nss/</a>. The NSS site relates<br>
+   directly to NSS code changes and releases.<br>
+<br>
+   Mailing lists: <a class=" link-mailto" href="mailto:pki-devel@redhat.com">pki-devel@redhat.com</a> and <a class=" link-mailto" href="mailto:pki-users@redhat.com">pki-users@redhat.com</a><br>
+<br>
+   IRC: Freenode at #dogtag-pki<br>
+<br>
+Authors<br>
+<br>
+   The NSS tools were written and maintained by developers with Netscape and<br>
+   now with Red Hat.<br>
+<br>
+   Authors: Elio Maldonado &lt;<a class=" link-mailto" href="mailto:emaldona@redhat.com">emaldona@redhat.com</a>&gt;, Deon Lackey<br>
+   &lt;<a class=" link-mailto" href="mailto:dlackey@redhat.com">dlackey@redhat.com</a>&gt;.<br>
+<br>
+Copyright<br>
+<br>
+   (c) 2010, Red Hat, Inc. Licensed under the GNU Public License version 2.<br>
+<br>
+References<br>
+<br>
+   Visible links<br>
+   1. <a class=" external" href="http://pki.fedoraproject.org/wiki/">http://pki.fedoraproject.org/wiki/</a><br>
+   2. <a class=" external" href="https://www.mozilla.org/projects/security/pki/nss/">http://www.mozilla.org/projects/security/pki/nss/</a></p>

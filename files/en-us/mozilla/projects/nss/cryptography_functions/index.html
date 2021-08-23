@@ -1,0 +1,1167 @@
+---
+title: Cryptography functions
+slug: Mozilla/Projects/NSS/Cryptography_functions
+tags:
+  - NSS
+---
+<p>The public functions listed here perform cryptographic operations based on the PKCS #11 interface.</p>
+<p>If documentation is available for a function listed below, the function name is linked to either its MDC wiki page or its entry in the <a class="external" href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/OLD_SSL_Reference">old SSL Reference</a>. The <a class="external" href="http://mxr.mozilla.org/">Mozilla Cross Reference</a> (MXR) link for each function provides access to the function definition, prototype definition, and source code references. The NSS version column indicates which versions of NSS support the function.</p>
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <th>Function name/documentation</th>
+      <th>Source code</th>
+      <th>NSS versions</th>
+    </tr>
+    <tr>
+      <td><code>PK11_AlgtagToMechanism</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_Authenticate</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_BlockData</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_ChangePW</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_CheckUserPassword</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_CipherOp</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_CloneContext</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_ConfigurePKCS11</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_ConvertSessionPrivKeyToTokenPrivKey</code></td>
+      <td>MXR</td>
+      <td>3.6 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_ConvertSessionSymKeyToTokenSymKey</code></td>
+      <td>MXR</td>
+      <td>3.6 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_CopyTokenPrivKeyToSessionPrivKey</code></td>
+      <td>MXR</td>
+      <td>3.11 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_CreateContextBySymKey</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_CreateDigestContext</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_CreateGenericObject </code></td>
+      <td>MXR</td>
+      <td>3.12 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_CreateMergeLog</code></td>
+      <td>MXR</td>
+      <td>3.12 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_CreatePBEAlgorithmID</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_CreatePBEV2AlgorithmID </code></td>
+      <td>MXR</td>
+      <td>3.12 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_DeleteTokenPrivateKey</code></td>
+      <td>MXR</td>
+      <td>3.4 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_DeleteTokenPublicKey</code></td>
+      <td>MXR</td>
+      <td>3.4 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_DeleteTokenSymKey</code></td>
+      <td>MXR</td>
+      <td>3.4 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_Derive</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_DeriveWithFlags</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_DeriveWithFlagsPerm</code></td>
+      <td>MXR</td>
+      <td>3.9 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_DestroyContext</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_DestroyGenericObject</code></td>
+      <td>MXR</td>
+      <td>3.9.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_DestroyGenericObjects</code></td>
+      <td>MXR</td>
+      <td>3.9.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_DestroyMergeLog </code></td>
+      <td>MXR</td>
+      <td>3.12 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_DestroyObject</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_DestroyTokenObject</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_DigestBegin</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_DigestKey</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_DigestOp</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_DigestFinal</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_DoesMechanism</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_ExportEncryptedPrivateKeyInfo</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_ExportEncryptedPrivKeyInfo</code></td>
+      <td>MXR</td>
+      <td>3.9 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_ExportPrivateKeyInfo</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_Finalize</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_FindBestKEAMatch</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_FindCertAndKeyByRecipientList</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_FindCertAndKeyByRecipientListNew</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_FindCertByIssuerAndSN</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_FindCertFromDERCert</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><a class="external" href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/pkfnc#1035673"><code>PK11_FindCertFromNickname</code></a></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_FindCertInSlot</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_FindGenericObjects</code></td>
+      <td>MXR</td>
+      <td>3.9.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_FindFixedKey</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><a class="external" href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/pkfnc#1026891"><code>PK11_FindKeyByAnyCert</code></a></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_FindKeyByDERCert</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_FindPrivateKeyFromCert</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_FindSlotByName</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_FindSlotsByNames</code></td>
+      <td>MXR</td>
+      <td>3.9 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_FortezzaHasKEA</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_FortezzaMapSig</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_FreeSlot</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_FreeSlotList</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_FreeSlotListElement</code></td>
+      <td>MXR</td>
+      <td>3.11 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_FreeSymKey</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GenerateFortezzaIV</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GenerateKeyPair</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GenerateKeyPairWithFlags</code></td>
+      <td>MXR</td>
+      <td>3.10.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GenerateKeyPairWithOpFlags</code></td>
+      <td>MXR</td>
+      <td>3.12 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GenerateNewParam</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GenerateRandom</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GenerateRandomOnSlot</code></td>
+      <td>MXR</td>
+      <td>3.11 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GetAllTokens</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GetAllSlotsForCert</code></td>
+      <td>MXR</td>
+      <td>3.12 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GetBestKeyLength</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GetBestSlot</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GetBestSlotMultiple</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GetBestWrapMechanism</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GetBlockSize</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GetCertFromPrivateKey</code></td>
+      <td>MXR</td>
+      <td>3.9.3 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GetCurrentWrapIndex</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GetDefaultArray</code></td>
+      <td>MXR</td>
+      <td>3.8 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GetDefaultFlags</code></td>
+      <td>MXR</td>
+      <td>3.8 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GetDisabledReason</code></td>
+      <td>MXR</td>
+      <td>3.8 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GetFirstSafe</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GetInternalKeySlot</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GetInternalSlot</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GetKeyGen</code></td>
+      <td>MXR</td>
+      <td>3.4 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GetKeyLength</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GetKeyStrength</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GetMechanism</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GetMinimumPwdLength</code></td>
+      <td>MXR</td>
+      <td>3.4 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GetModInfo</code></td>
+      <td>MXR</td>
+      <td>3.6 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GetModule</code></td>
+      <td>MXR</td>
+      <td>3.3 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GetModuleID</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GetNextGenericObject</code></td>
+      <td>MXR</td>
+      <td>3.9.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GetNextSafe</code></td>
+      <td>MXR</td>
+      <td>3.4 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GetNextSymKey</code></td>
+      <td>MXR</td>
+      <td>3.4 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GetPadMechanism</code></td>
+      <td>MXR</td>
+      <td>3.4 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GetPBECryptoMechanism </code></td>
+      <td>MXR</td>
+      <td>3.12 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GetPBEIV</code></td>
+      <td>MXR</td>
+      <td>3.6 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GetPQGParamsFromPrivateKey</code></td>
+      <td>MXR</td>
+      <td>3.4 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GetPrevGenericObject</code></td>
+      <td>MXR</td>
+      <td>3.9.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GetPrivateKeyNickname</code></td>
+      <td>MXR</td>
+      <td>3.4 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GetPrivateModulusLen</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GetPublicKeyNickname</code></td>
+      <td>MXR</td>
+      <td>3.4 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GetSlotFromKey</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GetSlotFromPrivateKey</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GetSlotID</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GetSlotInfo</code></td>
+      <td>MXR</td>
+      <td>3.4 and later</td>
+    </tr>
+    <tr>
+      <td><a class="external" href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/pkfnc#1030779"><code>PK11_GetSlotName</code></a></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GetSlotSeries</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GetSymKeyNickname</code></td>
+      <td>MXR</td>
+      <td>3.4 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GetSymKeyType</code></td>
+      <td>MXR</td>
+      <td>3.9 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GetSymKeyUserData</code></td>
+      <td>MXR</td>
+      <td>3.11 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GetTokenInfo</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><a class="external" href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslcrt#1026964"><code>PK11_GetTokenName</code></a></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GetWindow</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_GetWrapKey</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_HashBuf</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_HasRootCerts</code></td>
+      <td>MXR</td>
+      <td>3.4 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_ImportCert</code></td>
+      <td>MXR</td>
+      <td>3.5 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_ImportCertForKeyToSlot</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_ImportCRL</code></td>
+      <td>MXR</td>
+      <td>3.6 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_ImportDERCert</code></td>
+      <td>MXR</td>
+      <td>3.6 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_ImportDERPrivateKeyInfoAndReturnKey</code></td>
+      <td>MXR</td>
+      <td>3.4 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_ImportEncryptedPrivateKeyInfo</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_ImportPrivateKeyInfo</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_ImportPrivateKeyInfoAndReturnKey</code></td>
+      <td>MXR</td>
+      <td>3.4 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_ImportPublicKey</code></td>
+      <td>MXR</td>
+      <td>3.4 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_ImportSymKeyWithFlags</code></td>
+      <td>MXR</td>
+      <td>3.4 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_InitPin</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_IsFIPS</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_IsDisabled</code></td>
+      <td>MXR</td>
+      <td>3.4 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_IsFriendly</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><a class="external" href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/pkfnc#1026762"><code>PK11_IsHW</code></a></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_IsInternal</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><a class="external" href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslcrt#1026762"><code>PK11_IsPresent</code></a></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><a class="external" href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/pkfnc#1022991"><code>PK11_IsReadOnly</code></a></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_IsRemovable </code></td>
+      <td>MXR</td>
+      <td>3.12 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_IVFromParam</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_KeyGen</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_LinkGenericObject</code></td>
+      <td>MXR</td>
+      <td>3.9.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_ListCerts</code></td>
+      <td>MXR</td>
+      <td>3.2 and later. Updated 3.8 with new options. See bug <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=215186">215186</a></td>
+    </tr>
+    <tr>
+      <td><code>PK11_ListFixedKeysInSlot</code></td>
+      <td>MXR</td>
+      <td>3.4 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_ListPrivKeysInSlot</code></td>
+      <td>MXR</td>
+      <td>3.4 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_ListPublicKeysInSlot</code></td>
+      <td>MXR</td>
+      <td>3.4 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_LoadPrivKey</code></td>
+      <td>MXR</td>
+      <td>3.4 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_LogoutAll</code></td>
+      <td>MXR</td>
+      <td>3.4 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_MakeKEAPubKey</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_MapPBEMechanismToCryptoMechanism</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_MapSignKeyType</code></td>
+      <td>MXR</td>
+      <td>3.11 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_MechanismToAlgtag</code></td>
+      <td>MXR</td>
+      <td>3.4 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_MergeTokens </code></td>
+      <td>MXR</td>
+      <td>3.12 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_MoveSymKey</code></td>
+      <td>MXR</td>
+      <td>3.9 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_NeedLogin</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_NeedUserInit</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_ParamFromIV</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_ParamFromAlgid</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_ParamToAlgid</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_PBEKeyGen</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_PrivDecryptPKCS1</code></td>
+      <td>MXR</td>
+      <td>3.9.3 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_ProtectedAuthenticationPath</code></td>
+      <td>MXR</td>
+      <td>3.4 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_PubDecryptRaw</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_PubDerive</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_PubDeriveWithKDF</code></td>
+      <td>MXR</td>
+      <td>3.9 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_PubEncryptPKCS1</code></td>
+      <td>MXR</td>
+      <td>3.9.3 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_PubEncryptRaw</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_PubUnwrapSymKey</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_PubUnwrapSymKeyWithFlags</code></td>
+      <td>MXR</td>
+      <td>3.6 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_PubUnwrapSymKeyWithFlagsPerm</code></td>
+      <td>MXR</td>
+      <td>3.9 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_PubWrapSymKey</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_RandomUpdate</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_ReadRawAttribute</code></td>
+      <td>MXR</td>
+      <td>3.9.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_ReferenceSymKey</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_ResetToken</code></td>
+      <td>MXR</td>
+      <td>3.4 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_RestoreContext</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_SaveContext</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_SaveContextAlloc</code></td>
+      <td>MXR</td>
+      <td>3.6 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_SetFortezzaHack</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><a class="external" href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/pkfnc#1023128"><code>PK11_SetPasswordFunc</code></a></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_SetPrivateKeyNickname</code></td>
+      <td>MXR</td>
+      <td>3.4 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_SetPublicKeyNickname</code></td>
+      <td>MXR</td>
+      <td>3.4 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_SetSlotPWValues</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_SetSymKeyNickname</code></td>
+      <td>MXR</td>
+      <td>3.4 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_SetSymKeyUserData</code></td>
+      <td>MXR</td>
+      <td>3.11 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_SetWrapKey</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_Sign</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_SignatureLen</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_SymKeyFromHandle</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_TokenExists</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_TokenKeyGen</code></td>
+      <td>MXR</td>
+      <td>3.6 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_TokenKeyGenWithFlags</code></td>
+      <td>MXR</td>
+      <td>3.10.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_TokenRefresh</code></td>
+      <td>MXR</td>
+      <td>3.7.1 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_TraverseCertsForNicknameInSlot</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_TraverseCertsForSubjectInSlot</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_TraverseSlotCerts</code></td>
+      <td>MXR</td>
+      <td>3.4 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_UnlinkGenericObject</code></td>
+      <td>MXR</td>
+      <td>3.9.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_UnwrapSymKey</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_UnwrapSymKeyWithFlags</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_UnwrapSymKeyWithFlagsPerm</code></td>
+      <td>MXR</td>
+      <td>3.9 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_UpdateSlotAttribute</code></td>
+      <td>MXR</td>
+      <td>3.8 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_UserEnableSlot</code></td>
+      <td>MXR</td>
+      <td>3.8 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_UserDisableSlot</code></td>
+      <td>MXR</td>
+      <td>3.8 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_Verify</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_VerifyKeyOK</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_WaitForTokenEvent</code></td>
+      <td>MXR</td>
+      <td>3.7 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_WrapSymKey</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11_WriteRawAttribute </code></td>
+      <td>MXR</td>
+      <td>3.12 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11SDR_Encrypt</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>PK11SDR_Decrypt</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>SEC_DeletePermCertificate</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>SEC_DeletePermCRL</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>SEC_DerSignData</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>SEC_DestroyCrl</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>SEC_FindCrlByDERCert</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>SEC_FindCrlByName</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>SEC_LookupCrls</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>SEC_NewCrl</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>SEC_QuickDERDecodeItem</code></td>
+      <td>MXR</td>
+      <td>3.6 and later</td>
+    </tr>
+    <tr>
+      <td><code>SECKEY_CacheStaticFlags</code></td>
+      <td>MXR</td>
+      <td>3.10 and later</td>
+    </tr>
+    <tr>
+      <td><code>SECKEY_ConvertToPublicKey</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>SECKEY_CopyPrivateKey</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>SECKEY_CopyPublicKey</code></td>
+      <td>MXR</td>
+      <td>3.6 and later</td>
+    </tr>
+    <tr>
+      <td><code>SECKEY_CopySubjectPublicKeyInfo</code></td>
+      <td>MXR</td>
+      <td>3.4 and later</td>
+    </tr>
+    <tr>
+      <td><code>SECKEY_CreateDHPrivateKey</code></td>
+      <td>MXR</td>
+      <td>3.3 and later</td>
+    </tr>
+    <tr>
+      <td><code>SECKEY_CreateECPrivateKey</code></td>
+      <td>MXR</td>
+      <td>3.8 and later</td>
+    </tr>
+    <tr>
+      <td><code>SECKEY_CreateSubjectPublicKeyInfo</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>SECKEY_DecodeDERSubjectPublicKeyInfo</code></td>
+      <td>MXR</td>
+      <td>3.4 and later</td>
+    </tr>
+    <tr>
+      <td><a class="external" href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslkey#1051017"><code>SECKEY_DestroyPrivateKey</code></a></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>SECKEY_ECParamsToBasePointOrderLen</code></td>
+      <td>MXR</td>
+      <td>3.12 and later</td>
+    </tr>
+    <tr>
+      <td><code>SECKEY_ECParamsToKeySize</code></td>
+      <td>MXR</td>
+      <td>3.12 and later</td>
+    </tr>
+    <tr>
+      <td><code>SECKEY_DestroyPublicKeyList</code></td>
+      <td>MXR</td>
+      <td>3.4 and later</td>
+    </tr>
+    <tr>
+      <td><code>SECKEY_DestroySubjectPublicKeyInfo</code></td>
+      <td>MXR</td>
+      <td>3.2 and later</td>
+    </tr>
+    <tr>
+      <td><code>SECKEY_GetPublicKeyType</code></td>
+      <td>MXR</td>
+      <td>3.3 and later</td>
+    </tr>
+    <tr>
+      <td><code>SECKEY_PublicKeyStrengthInBits</code></td>
+      <td>MXR</td>
+      <td>3.8 and later</td>
+    </tr>
+    <tr>
+      <td><code>SECKEY_SignatureLen</code></td>
+      <td>MXR</td>
+      <td>3.11.2 and later</td>
+    </tr>
+  </tbody>
+</table>

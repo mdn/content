@@ -1,0 +1,35 @@
+---
+title: FC_Decrypt
+slug: Mozilla/Projects/NSS/Reference/FC_Decrypt
+tags:
+  - NSS
+---
+
+<h3 id="Name"> Name </h3>
+<p>FC_Decrypt - Decrypt a block of data.
+</p>
+<h3 id="Syntax"> Syntax </h3>
+<pre class="eval"><a href="/en-US/CK_RV">CK_RV</a> FC_Decrypt(
+  <a href="/en-US/CK_SESSION_HANDLE">CK_SESSION_HANDLE</a> hSession,
+  <a href="/en-US/CK_BYTE">CK_BYTE_PTR</a> pEncryptedData,
+  <a href="/en-US/CK_ULONG">CK_ULONG</a> usEncryptedDataLen,
+  <a href="/en-US/CK_BYTE">CK_BYTE_PTR</a> pData,
+  <a href="/en-US/CK_ULONG">CK_ULONG_PTR</a> pusDataLen
+);
+</pre>
+<h3 id="Parameters"> Parameters </h3>
+<dl><dt><code>hSession</code></dt><dd> {{ mediawiki.external('in') }} session handle.
+</dd><dt><code>pEncryptedData</code></dt><dd> {{ mediawiki.external('in') }} pointer to encrypted data block.
+</dd><dt><code>usEncryptedDataLen</code></dt><dd> {{ mediawiki.external('in') }} length of the data in bytes.
+</dd><dt><code>pData</code></dt><dd> {{ mediawiki.external('out') }} pointer to location where recovered data is to be stored.
+</dd><dt><code>pusDataLen</code></dt><dd> {{ mediawiki.external('in,out') }} pointer to location where the length of recovered data is to be stored.
+</dd></dl>
+<h3 id="Description"> Description </h3>
+<p><code>FC_Decrypt</code> decrypts a block of data according to the attributes of the previous call to <code>FC_DecryptInit</code>.
+</p><p>A user must log into the token (to assume the NSS User role) before calling <code>FC_Decrypt</code>.
+</p>
+<h3 id="Return_value"> Return value </h3>
+<h3 id="Examples"> Examples </h3>
+<h3 id="See_also"> See also </h3>
+<ul><li> <a href="/en-US/docs/Mozilla/Projects/NSS/Reference/FC_DecryptInit">FC_DecryptInit</a>, <a href="/en-US/NSC_Decrypt">NSC_Decrypt</a>
+</li></ul>

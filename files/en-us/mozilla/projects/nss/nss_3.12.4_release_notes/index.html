@@ -1,0 +1,348 @@
+---
+title: NSS 3.12.4 release notes
+slug: Mozilla/Projects/NSS/NSS_3.12.4_release_notes
+---
+<pre><span style="font-size: large;"><span style="font-family: Times New Roman;">2009-08-20</span></span></pre>
+<em>Newsgroup: <a class=" link-news"
+        href="news://news.mozilla.org/mozilla.dev.tech.crypto">mozilla.dev.tech.crypto</a></em>
+<h1 id="Introduction">Introduction</h1>
+<p>Network Security Services (NSS) 3.12.4 is a patch release for NSS 3.12. The bug fixes in NSS 3.12.4 are described in
+    the "<a href="#bugsfixed">Bugs Fixed</a>" section below.</p>
+<p>NSS 3.12.4 is tri-licensed under the MPL 1.1/GPL 2.0/LGPL 2.1.</p>
+<h1 id="Distribution_Information">Distribution Information</h1>
+<p>This release is built from the source, at the CVS repository rooted at cvs.mozilla.org:/cvsroot, with the CVS tag
+    <code>NSS_3_12_4_RTM</code>. 
+</p>
+<p>NSS 3.12.4 requires <a class=" external" href="https://www.mozilla.org/projects/nspr/release-notes/">NSPR 4.8</a>.
+    This is not a hard requirement. Our QA tested NSS 3.12.4 with NSPR 4.8, but it should work with NSPR 4.7.1 or later.
+</p>
+<p>You can check out the source from CVS by</p>
+<div class="note">cvs co -r NSPR_4_8_RTM NSPR <br> cvs co -r NSS_3_12_4_RTM NSS</div>
+<p>See the <a href="#docs">Documentation</a> section for the build instructions.</p>
+<p>NSS 3.12.4 source is also available on <code>ftp.mozilla.org</code> for secure HTTPS download:</p>
+<ul>
+    <li>Source tarball: <a class=" link-https"
+            href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_12_4_RTM/src/">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_12_4_RTM/src/</a>.
+    </li>
+</ul>
+<h1 id="Major_changes_in_NSS_3.12.4">Major changes in NSS 3.12.4</h1>
+<ul>
+    <li>NSS 3.12.4 is the version that we submitted to NIST for FIPS 140-2 validation.<br> Currently NSS 3.12.4 is in
+        the "Review Pending" state in the FIPS 140-2 pre-validation<br> list at <a class=" external"
+            href="http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140InProcess.pdf">http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140InProcess.pdf</a>
+    </li>
+    <li>Added CRL Distribution Point support (see cert.h). <br>
+        <strong>CERT_DecodeCRLIssuingDistributionPoint</strong><br> <strong>CERT_FindCRLIssuingDistPointExten</strong>
+    </li>
+
+    <li>The old documentation of the expression matching syntax rules was<br> incorrect, and the new corrected
+        documentation is as follows for <br> public nssutil functions (see portreq.h):
+        <ul>
+            <li><strong>PORT_RegExpValid</strong></li>
+            <li><strong>PORT_RegExpSearch</strong></li>
+            <li><strong>PORT_RegExpCaseSearch</strong></li>
+        </ul>
+    </li>
+    <li> These functions will match a string with a shell expression. The expressions<br> accepted are based loosely on
+        the
+        expressions accepted by zsh.<br>
+        Expected return values:<br> <br>
+        <ul>
+            <li>NON_SXP if exp is a standard string</li>
+            <li>INVALID_SXP if exp is a shell expression, but invalid</li>
+            <li>VALID_SXP if exp is a valid shell expression</li>
+        </ul>
+        Expression matching rules:<br>
+        <ul>
+            <li>* matches anything</li>
+            <li>? matches one character</li>
+            <li>\ will escape a special character</li>
+            <li>$ matches the end of the string</li>
+            <li>Bracketed expressions:<br> [abc] matches one occurrence of a, b, or c.<br> [^abc] matches any
+                character
+                except a, b, or c.<br> To be matched between [ and ], these characters must be escaped: \ ]<br> No
+                other
+                characters need be escaped between brackets.<br> Unnecessary escaping is permitted.</li>
+            <li>[a-z] matches any character between a and z, inclusive.<br> The two range-definition characters must
+                be
+                alphanumeric ASCII.<br> If one is upper case and the other is lower case, then the ASCII<br>
+                non-alphanumeric characters between Z and a will also be in range.</li>
+            <li>[^a-z] matches any character except those between a and z, inclusive.<br> These forms cannot be
+                combined, e.g [a-gp-z] does not work.</li>
+            <li>Exclusions:<br> As a top level, outter-most expression only, the expression<br> foo~bar will match
+                the
+                expression foo, provided it does not also<br> match the expression bar. Either expression or both
+                may be
+                a union.<br> Except between brackets, any unescaped ~ is an exclusion.<br> At most one exclusion is
+                permitted.<br> Exclusions cannot be nested (contain other exclusions).<br> example: *~abc will match
+                any
+                string except abc</li>
+            <li>Unions:<br> (foo|bar) will match either the expression foo, or the expression bar.<br> At least one
+                '|'
+                separator is required. More are permitted.<br> Expressions inside unions may not include unions or
+                exclusions.<br> Inside a union, to be matched and not treated as a special character,<br> these
+                characters must be escaped: \ ( | ) [ ~ except when they occur<br> inside a bracketed expression,
+                where
+                only \ and ] require escaping.</li>
+        </ul>
+    </li>
+    <li>New functions in the nss shared library:
+        <ul>
+            <li>PK11_IsInternalKeySlot (see pk11pub.h)</li>
+            <li>SECMOD_OpenNewSlot (see pk11pub.h)</li>
+        </ul>
+    </li>
+    <li>New error codes (see secerr.h):
+        <ul>
+            <li>SEC_ERROR_BAD_INFO_ACCESS_METHOD</li>
+            <li>SEC_ERROR_CRL_IMPORT_FAILED</li>
+        </ul>
+    </li>
+    <li>New OIDs (see secoidt.h) <ul>
+            <li>SEC_OID_X509_ANY_POLICY</li>
+        </ul>
+    </li>
+    <li>The nssckbi PKCS #11 module's version changed to 1.75.</li>
+    <li>Obsolete code for Win16 has been removed.</li>
+    <li>Support for OpenVMS has been removed.</li>
+</ul>
+<h1 id="Bugs_Fixed">Bugs Fixed</h1>
+<p>The following bugs have been fixed in NSS 3.12.4.</p>
+<ul>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=321755">Bug 321755</a>: implement
+        crlDistributionPoint extension in libPKIX</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=391434">Bug 391434</a>: avoid
+        multiple
+        encoding/decoding of PKIX_PL_OID to and from ascii string</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=405297">Bug 405297</a>: Problems
+        building nss/lib/ckfw/capi/ with MingW GCC</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=420991">Bug 420991</a>: libPKIX
+        returns wrong NSS error code</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=427135">Bug 427135</a>: Add
+        super-H
+        (sh3,4) architecture support</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=431958">Bug 431958</a>: Improve
+        DES
+        and SHA512 for x86_64 platform</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=433791">Bug 433791</a>: Win16
+        support
+        should be deleted from NSS</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=449332">Bug 449332</a>:
+        SECU_ParseCommandLine does not validate its inputs</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=453735">Bug 453735</a>: When using
+        cert9 (SQLite3) DB, set or change master password
+        fails</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=463544">Bug 463544</a>: warning:
+        passing enum* for an int* argument in pkix_validate.c</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=469588">Bug 469588</a>: Coverity
+        errors reported for softoken</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=470055">Bug 470055</a>:
+        pkix_HttpCertStore_FindSocketConnection reuses closed socket</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=470070">Bug 470070</a>: Multiple
+        object leaks reported by tinderbox</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=470479">Bug 470479</a>: IO timeout
+        during cert fetching makes libpkix abort validation.</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=470500">Bug 470500</a>: Firefox
+        3.1b2
+        Crash Report [[@ nssutil3.dll@0x34c0 ]</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=482742">Bug 482742</a>: Enable
+        building util independently of the rest of nss</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=483653">Bug 483653</a>: unable to
+        build certutil.exe for fennec/wince</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=485145">Bug 485145</a>:
+        Miscellaneous
+        crashes in signtool on Windows</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=485155">Bug 485155</a>:
+        NSS_ENABLE_PKIX_VERIFY=1 causes sec_error_unknown_issuer errors</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=485527">Bug 485527</a>: Rename the
+        _X86_ macro in lib/freebl</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=485658">Bug 485658</a>: vfychain
+        -p
+        reports revoked cert</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=485745">Bug 485745</a>: modify
+        fipstest.c to support CAVS 7.1 DRBG testing</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=486304">Bug 486304</a>:
+        cert7.db/cert8.db corruption when importing a large certificate (&gt;64K)</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=486405">Bug 486405</a>: Allocator
+        mismatches in pk12util.c</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=486537">Bug 486537</a>: Disable
+        execstack in freebl x86_64 builds on Linux</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=486698">Bug 486698</a>: Facilitate
+        the
+        building of major components independently and in a chain manner by downstream distributions</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=486999">Bug 486999</a>: Calling
+        SSL_SetSockPeerID a second time leaks the previous value</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=487007">Bug 487007</a>: Make
+        lib/jar
+        conform to NSS coding style</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=487162">Bug 487162</a>: ckfw/capi
+        build failure on windows</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=487239">Bug 487239</a>: nssutil.rc
+        doesn't compile on WinCE</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=487254">Bug 487254</a>: sftkmod.c
+        uses
+        POSIX file IO Functions on WinCE</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=487255">Bug 487255</a>: sdb.c uses
+        POSIX file IO Functions on WinCE</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=487487">Bug 487487</a>:
+        CERT_NameToAscii reports !Invalid AVA! whenever value exceeds 384 bytes</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=487736">Bug 487736</a>: libpkix
+        passes
+        wrong argument to DER_DecodeTimeChoice and crashes</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=487858">Bug 487858</a>: Remove
+        obsolete build options MOZILLA_SECURITY_BUILD and MOZILLA_BSAFE_BUILD</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=487884">Bug 487884</a>: object
+        leak in
+        libpkix library upon error</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=488067">Bug 488067</a>:
+        PK11_ImportCRL
+        reports SEC_ERROR_CRL_NOT_FOUND when it fails to import a CRL</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=488350">Bug 488350</a>: NSPR-free
+        freebl interface need to do post tests only in fips mode.</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=488396">Bug 488396</a>: DBM needs
+        to
+        be FIPS certifiable.</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=488550">Bug 488550</a>: crash in
+        certutil or pp when printing cert with empty subject name</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=488992">Bug 488992</a>: Fix
+        lib/freebl/win_rand.c warnings</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=489010">Bug 489010</a>: stop
+        exporting
+        mktemp and dbopen (again)</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=489287">Bug 489287</a>: Resolve a
+        few
+        remaining issues with NSS's new revocation flags</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=489710">Bug 489710</a>: byteswap
+        optimize for MSVC++</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=490154">Bug 490154</a>: Cryptokey
+        framework requires module to implement GenerateKey when they support KeyPairGeneration</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=491044">Bug 491044</a>: Remove
+        support
+        for VMS (a.k.a., OpenVMS) from NSS</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=491174">Bug 491174</a>:
+        CERT_PKIXVerifyCert reports wrong error code when EE cert is expired</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=491919">Bug 491919</a>: cert.h
+        doesn't
+        have valid functions prototypes</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=492131">Bug 492131</a>: A failure
+        to
+        import a cert from a P12 file leaves error code set to zero</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=492385">Bug 492385</a>: crash
+        freeing
+        named CRL entry on shutdown</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=493135">Bug 493135</a>: bltest
+        crashes
+        if it can't open the input file</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=493364">Bug 493364</a>: can't
+        build
+        with --disable-dbm option when not cross-compiling</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=493693">Bug 493693</a>: SSE2
+        instructions for bignum are not implemented on OS/2</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=493912">Bug 493912</a>:
+        sqlite3_reset
+        should be invoked in sdb_FindObjectsInit when error occurs</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=494073">Bug 494073</a>: update
+        RSA/DSA
+        powerupself tests to be compliant for 2011</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=494087">Bug 494087</a>: Passing
+        NULL
+        as the value of cert_pi_trustAnchors causes a crash in cert_pkixSetParam</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=494107">Bug 494107</a>: During
+        NSS_NoDB_Init(), softoken tries but fails to load libsqlite3.so crash [@ @0x0
+        ]</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=495097">Bug 495097</a>:
+        sdb_mapSQLError returns signed int</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=495103">Bug 495103</a>:
+        NSS_InitReadWrite(sql:&lt;dbdir&gt;) causes NSS to look for sql:&lt;dbdir&gt;/libnssckbi.so</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=495365">Bug 495365</a>: Add const
+        to
+        the 'nickname' parameter of SEC_CertNicknameConflict</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=495656">Bug 495656</a>:
+        NSS_InitReadWrite(sql:&lt;configdir&gt;) leaves behind a pkcs11.txu file if libnssckbi.so is in
+        &lt;configdir&gt;.</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=495717">Bug 495717</a>: Unable to
+        compile nss/cmd/certutil/keystuff.c on WinCE</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=496961">Bug 496961</a>: provide
+        truncated HMAC support for testing tool fipstest</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=497002">Bug 497002</a>: Lab
+        required
+        nspr-free freebl changes.</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=497217">Bug 497217</a>: The first
+        random value ever generated by the RNG should be discarded</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=498163">Bug 498163</a>: assert if
+        profile path contains cyrillic chars. [[@isspace - secmod_argIsBlank - secmod_argHasBlanks -
+        secmod_formatPair -
+        secmod_mkNewModuleSpec]</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=498509">Bug 498509</a>: Produce
+        debuggable optimized builds for Mozilla on MacOSX</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=498511">Bug 498511</a>: Produce
+        debuggable optimized NSS builds for Mozilla on Linux</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=499385">Bug 499385</a>: DRBG
+        Reseed
+        function needs to be tested on POST</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=499825">Bug 499825</a>:
+        utilrename.h
+        is missing from Solaris packages</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=502961">Bug 502961</a>: Allocator
+        mismatch in pk11mode</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=502965">Bug 502965</a>: Allocator
+        mismatch in sdrtest</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=502972">Bug 502972</a>: Another
+        allocator mismatch in sdrtest</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=504398">Bug 504398</a>:
+        pkix_pl_AIAMgr_GetHTTPCerts could crash if SEC_GetRegisteredHttpClient fails</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=504405">Bug 504405</a>:
+        pkix_pl_CrlDp_Create will fail on alloc success because of a missing !</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=504408">Bug 504408</a>:
+        pkix_pl_CrlDp_Create will always fail if dp-&gt;distPointType != generalName</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=504456">Bug 504456</a>:
+        Exploitable
+        heap overflow in NSS shell expression (filename globbing) parsing</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=505559">Bug 505559</a>: Need
+        function
+        to identify the one and only default internal private key slot.</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=505561">Bug 505561</a>: Need a
+        generic
+        function a la SECMOD_OpenUserDB() that can be used on non-softoken modules.</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=505858">Bug 505858</a>:
+        NSS_RegisterShutdown can return without unlocking nssShutdownList.lock</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=507041">Bug 507041</a>: Invalid
+        build
+        options for VC6</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=507228">Bug 507228</a>:
+        coreconf.dep
+        doesn't need to contain the NSS version number</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=507422">Bug 507422</a>: crash [[@
+        PORT_FreeArena - lg_mkSecretKeyRep] when PORT_NewArena fails</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=507482">Bug 507482</a>: NSS 3.12.3
+        (and later) doesn't build on AIX 5.1</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=507937">Bug 507937</a>: pwdecrypt
+        program problems</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=508259">Bug 508259</a>: Pk11mode
+        crashed on Linux2.4</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=508467">Bug 508467</a>: libpkix
+        ocsp
+        checker should use date argument to obtain the time for cert validity verification</li>
+    <li><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=510367">Bug 510367</a>: Fix the
+        UTF8
+        characters in the nickname string for AC Raíz Certicamara S.A.</li>
+</ul>
+<h1 id="Documentation">Documentation</h1>
+<p>For a list of the primary NSS documentation pages on developer.mozilla.org, see NSS. New and revised documents
+    available since the release of NSS 3.12 include the following:</p>
+<ul>
+    <li><a class="internal" href="/en-US/docs/Mozilla/Projects/NSS/Reference/Building_and_installing_NSS/Build_instructions"
+           >Build Instructions for
+            NSS 3.12.4</a></li>
+</ul>
+<h1 id="Compatibility">Compatibility</h1>
+<p>NSS 3.12.4 shared libraries are backward compatible with all older NSS 3.x shared libraries. A program linked
+    with
+    older NSS 3.x shared libraries will work with NSS 3.12.4 shared libraries without recompiling or relinking. 
+    Furthermore, applications that restrict their use of NSS APIs to the functions listed in <a
+        href="/ref/nssfunctions.html">NSS Public Functions</a> will remain compatible
+    with
+    future versions of the NSS shared libraries.</p>
+<h1 id="Feedback">Feedback</h1>
+<p>Bugs discovered should be reported by filing a bug report with <a class=" link-https"
+        href="https://bugzilla.mozilla.org/">mozilla.org Bugzilla</a> (product NSS).</p>

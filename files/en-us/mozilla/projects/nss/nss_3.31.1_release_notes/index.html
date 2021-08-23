@@ -1,0 +1,40 @@
+---
+title: NSS 3.31.1 release notes
+slug: Mozilla/Projects/NSS/NSS_3.31.1_release_notes
+---
+<div class="note">
+<p id="DRAFT_(remove_line_when_document_is_finished)"><strong>This is a DRAFT document.</strong> This notice will be removed when completed.</p>
+</div>
+
+<h2 id="Introduction">Introduction</h2>
+
+<p>The Network Security Services (NSS) team has released NSS 3.31.1, which is a patch release for NSS 3.31.</p>
+
+<h2 id="Distribution_information">Distribution information</h2>
+
+<p>The hg tag is NSS_3_31_1_RTM. NSS 3.31.1 requires Netscape Portable Runtime (NSPR) 4.15, or newer.</p>
+
+<p>NSS 3.31.1 source distributions are available on ftp.mozilla.org for secure HTTPS download:</p>
+
+<ul>
+ <li>Source tarballs:<br>
+  <a href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_31_1_RTM/src/">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_31_1_RTM/src/</a></li>
+</ul>
+
+<h2 id="New_in_NSS_3.31.1">New in NSS 3.31.1</h2>
+
+<p>No new functionality is introduced in this release.</p>
+
+<h2 id="Bugs_fixed_in_NSS_3.31.1">Bugs fixed in NSS 3.31.1</h2>
+
+<ul>
+ <li><a class="external external-icon" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1381784">Bug 1381784</a> - Potential deadlock when using an external PKCS#11 token.</li>
+</ul>
+
+<h2 id="Compatibility">Compatibility</h2>
+
+<p>NSS 3.31.1 shared libraries are backward compatible with all older NSS 3.x shared libraries. A program linked with older NSS 3.x shared libraries will work with NSS 3.31.1 shared libraries, without recompiling, or relinking. Furthermore, applications that restrict their use of NSS APIs to the functions listed in NSS Public Functions will remain compatible with future versions of the NSS shared libraries.</p>
+
+<h2 id="Feedback">Feedback</h2>
+
+<p>Bugs discovered should be reported by filing a bug report with<a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=NSS"> bugzilla.mozilla.org</a> (product NSS).</p>

@@ -1,0 +1,34 @@
+---
+title: NSS 3.17 release notes
+slug: Mozilla/Projects/NSS/NSS_3.17_release_notes
+---
+<h2 id="Introduction">Introduction</h2>
+<p>The NSS team has released Network Security Services (NSS) 3.17, which is a minor release.</p>
+<h2 id="Distribution_Information">Distribution Information</h2>
+<p>The HG tag is NSS_3_17_RTM. NSS 3.17 requires NSPR 4.10.7 or newer.</p>
+<p>NSS 3.17 source distributions are available on ftp.mozilla.org for secure HTTPS download:</p>
+<ul>
+ <li>Source tarballs:<br>
+  <a href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_17_RTM/src/">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_17_RTM/src/</a></li>
+</ul>
+<h2 id="New_in_NSS_3.17">New in NSS 3.17</h2>
+<h3 id="New_Functionality">New Functionality</h3>
+<ul>
+ <li>When using ECDHE, the TLS server code may be configured to generate a fresh ephemeral ECDH key for each handshake, by setting the SSL_REUSE_SERVER_ECDHE_KEY socket option to PR_FALSE. The SSL_REUSE_SERVER_ECDHE_KEY option defaults to PR_TRUE, which means the server's ephemeral ECDH key is reused for multiple handshakes. This option does not affect the TLS client code, which always generates a fresh ephemeral ECDH key for each handshake.</li>
+</ul>
+<p>New Macros</p>
+<ul>
+ <li><em>in ssl.h</em>
+  <ul>
+   <li><strong>SSL_REUSE_SERVER_ECDHE_KEY</strong></li>
+  </ul>
+ </li>
+</ul>
+<h2 id="Notable_Changes_in_NSS_3.17">Notable Changes in NSS 3.17</h2>
+<ul>
+ <li>The manual pages for the certutil and pp tools have been updated to document the new parameters that had been added in NSS 3.16.2.</li>
+ <li>On Windows, the new build variable USE_STATIC_RTL can be used to specify the static C runtime library should be used. By default the dynamic C runtime library is used.</li>
+</ul>
+<h2 id="Bugs_fixed_in_NSS_3.17">Bugs fixed in NSS 3.17</h2>
+<p>This Bugzilla query returns all the bugs fixed in NSS 3.17:</p>
+<p><a href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.17">https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.17</a></p>

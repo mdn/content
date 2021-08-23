@@ -1,0 +1,102 @@
+---
+title: NSS FAQ
+slug: Mozilla/Projects/NSS/FAQ
+tags:
+  - NSS
+  - NeedsUpdate
+---
+<h2 id="General_Questions">General Questions</h2>
+
+<h3 id="What_is_Network_Security_Services_.28NSS.29">What is Network Security Services (NSS)</h3>
+
+<p>NSS is set of libraries, APIs, utilities, and documentation designed to support cross-platform development of security-enabled client and server applications. It provides a complete open-source implementation of the crypto libraries used by Mozilla and other companies in the Firefox browser, AOL Instant Messenger (AIM), server products from Red Hat, and other products.</p>
+
+<p>For an overview of NSS, see <a href="/en-US/docs/Mozilla/Projects/NSS/Overview">Overview of NSS</a>. For detailed information on the open-source NSS project, see <a class="external" href="https://wiki.mozilla.org/NSS">NSS Project Page</a>.</p>
+
+<h3 id="What_can_I_do_with_NSS.3F_Is_NSS_appropriate_for_my_application.3F">What can I do with NSS? Is NSS appropriate for my application?</h3>
+
+<p>If you want add support for SSL, S/MIME, or other Internet security standards to your application, you can use Network Security Services (NSS) to do so. Because NSS provides complete support for all versions of SSL and TLS, it is particularly well-suited for applications that need to communicate with the many clients and servers that already support the SSL protocol.</p>
+
+<p>The PKCS #11 interface included in NSS means that your application can use <a href="#what_hardware_accelerators_are_supported.3f"> hardware accelerators</a> on the server and <a href="/en-US/docs/Mozilla/Projects/NSS/FAQ#how_do_i_integrate_smart_cards_into_my_application_using_nss.3f"> smart cards</a> for two-factor authentication.</p>
+
+<h3 id="How_does_NSS_compare_to_OpenSSL.3F">How does NSS compare to OpenSSL?</h3>
+
+<p><a class="external" href="https://www.openssl.org/">OpenSSL</a> is an open source project that implements server-side SSL, TLS, and a general-purpose cryptography library. It does not support PKCS #11. It is based on the SSLeay library developed by Eric A. Young and Tim J. Hudson. OpenSSL is widely used in Apache servers and is licensed under an Apache-style licence.</p>
+
+<p>NSS supports both server and client applications as well as <a href="/en-US/docs/Mozilla/Projects/NSS/PKCS11/FAQ"> PKCS #11</a> and S/MIME. To permit its use in as many contexts as possible, NSS is licensed under the <a class="external" href="https://www.mozilla.org/MPL/">Mozilla Public License</a>, version 2.</p>
+
+<h3 id="How_does_NSS_compare_to_SSLRef.3F">How does NSS compare to SSLRef?</h3>
+
+<p>SSLRef was an early reference implementation of the SSL protocol. It contains bugs that were never fixed, doesn't support TLS or the new 56-bit export cipher suites, and does not contain the fix to the Bleichenbacher attack on PKCS#1.</p>
+
+<p>Netscape no longer maintains SSLRef or makes it available. It was built as an example of an SSL implementation, not for creating production applications.</p>
+
+<p>NSS was designed from the ground up for use by commercial developers. It provides a complete software development kit that uses the same architecture used to support security features in many client and server products from Netscape and other companies.</p>
+
+<h3 id="What_platforms_and_development_environments_are_supported.3F">What platforms and development environments are supported?</h3>
+
+<div class="warning">This section is out of date</div>
+
+<p>iPlanet E-Commerce Solutions has certified NSS 3.1 on 18 platforms, including AIX 4.3, HP-UX 11.0, Red Hat Linux 6.0, Solaris (2.6 or later), Windows NT (4.0 or later), and Windows 2000. Other contributors are in the process of certifying additional platforms. The NSS 3.1 API requires C or C++ development environments.</p>
+
+<p>For the latest NSS release notes and detailed platform information, see <a class="external" href="https://wiki.mozilla.org/NSS">Project Information</a>.</p>
+
+<h3 id="What_cryptography_standards_are_supported.3F">What cryptography standards are supported?</h3>
+
+<p>NSS supports <a href="/en-US/docs/Glossary/SSL">SSL v2 and v3</a>, <a href="/en-US/docs/Glossary/TLS">TLS</a>, <a href="/en-US/docs/Glossary/PKCS_.235">PKCS #5</a>, <a href="/en-US/docs/Glossary/PKCS_.237">PKCS #7</a>, <a href="/en-US/docs/Glossary/PKCS_.2311">PKCS #11</a>, <a href="/en-US/docs/Glossary/PKCS_.2312">PKCS #12</a>, <a href="/en-US/Glossary/en-US/docs/Glossary/S.2FMIME">S/MIME</a>, and <a href="/en-US/docs/Mozilla/Security/x509_Certificates">X.509 v3</a> certificates. For complete details, see <a class="external" href="http://www-archive.mozilla.org/projects/security/pki/nss/nss-3.11/nss-3.11-algorithms.html">Encryption Technologies Available in NSS 3.11</a></p>
+
+<h3 id="What_is_the_relationship_between_NSS_and_PSM.3F">What is the relationship between NSS and PSM?</h3>
+
+<p>Personal Security Manager (PSM) is built on top of NSS. It consists of libraries and a daemon designed to support cross-platform development of security-enabled client applications. The PSM binary provides a client module that performs cryptographic operations on behalf of applications. Netscape Personal Security Manager ships with Netscape 6 and the Gateway Connected Touch Pad with Instant AOL, and is also available for use with Communicator 4.7x.</p>
+
+<h3 id="Where_can_I_get_the_source.3F">Where can I get the source?</h3>
+
+<p>For instructions on how to check out and build the NSS source code, see <a class="external" href="/en-US/docs/Mozilla/Projects/NSS/NSS_Sources_Building_Testing">Build Instructions for NSS</a>.</p>
+
+<h3 id="How_much_does_it_cost.3F">How much does it cost?</h3>
+
+<p>NSS source code and binaries (when they become available) are completely free. No license fees, no royalty fees, no subscription fees.</p>
+
+<h2 id="Developer_Questions">Developer Questions</h2>
+
+<h3 id="What_hardware_accelerators_are_supported.3F">What hardware accelerators are supported?</h3>
+
+<p>NSS supports the PKCS #11 interface for hardware acceleration. Since leading accelerator vendors such as Chrysalis-IT, nCipher, and Rainbow Technologies also support this interface, NSS-enabled applications can support a wide variety of hardware accelerators.</p>
+
+<h3 id="How_do_I_integrate_smart_cards_into_my_application_using_NSS.3F">How do I integrate smart cards into my application using NSS?</h3>
+
+<p>NSS supports the PKCS #11 interface for smart card integration. Applications that use the PKCS #11 interface provided by NSS will therefore support smart cards from leading vendors such as ActiveCard, Litronic, SafeNet, and SecureID Technologies that also support the PKCS #11 interface.</p>
+
+<h3 id="Does_NSS_require_Netscape_Portable_Runtime_.28NSPR.29.3F">Does NSS require Netscape Portable Runtime (NSPR)?</h3>
+
+<h5 id="To_provide_cross-platform_support_NSS_utilizes_Netscape_Portable_Runtime_NSPR_libraries_as_a_portability_interface_and_implementation_that_provides_consistent_cross-platform_semantics_for_network_IO_and_threading_models._You_can_use_NSPR_throughout_your_application_or_only_in_the_portion_that_calls_into_NSS._Mozilla_strongly_recommends_that_multithreaded_applications_use_the_NSPR_or_native_OS_threading_model._In_recent_NSPR_releases_the_NSPR_threading_model_is_compatible_with_the_native_threading_model_if_the_OS_has_native_threads._Alternatively_you_can_adapt_the_open-source_NSPR_implementation_to_be_compatible_with_your_existing_applications_threading_models._More_information_about_NSPR_may_be_found_at_Netscape_Portable_Runtime.">To provide cross-platform support, NSS utilizes Netscape Portable Runtime (NSPR) libraries as a portability interface and implementation that provides consistent cross-platform semantics for network I/O and threading models. You can use NSPR throughout your application or only in the portion that calls into NSS. Mozilla strongly recommends that multithreaded applications use the NSPR or native OS threading model. (In recent NSPR releases, the NSPR threading model is compatible with the native threading model if the OS has native threads.) Alternatively, you can adapt the open-source NSPR implementation to be compatible with your existing application's threading models. More information about NSPR may be found at <a href="/en-US/docs/Mozilla/Projects/NSPR">Netscape Portable Runtime</a>.</h5>
+
+<h3 id="Can_I_use_NSS_even_if_my_application_protocol_isn.27t_HTTP.3F">Can I use NSS even if my application protocol isn't HTTP?</h3>
+
+<p>Yes, TLS is independent of application protocols. It works with common Internet standard application protocols (HTTP, POP3, FTP, SMTP, etc.) as well as custom application protocols using TCP/IP.</p>
+
+<h3 id="How_long_does_it_take_to_integrate_NSS_into_my_application.3F">How long does it take to integrate NSS into my application?</h3>
+
+<p>The integration effort depends on an number of factors, such as developer skill set, application complexity, and the level of security required for your application. NSS includes detailed documentation of the SSL API and sample code that demonstrates basic SSL functionality (setting up an encrypted session, server authentication, and client authentication) to help jump start the integration process. However, there is little or no documentation currently available for the rest of the NSS API. If your application requires sophisticated certificate management, smart card support, or hardware acceleration, your integration effort will be more extensive.</p>
+
+<h3 id="Where_can_I_download_the_NSS_tools.3F">Where can I download the NSS tools?</h3>
+
+<p>Binary builds of NSS for several platforms including the command-line tools can be downloaded from <a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/">http://ftp.mozilla.org/pub/mozilla.o...y/nss/releases/</a>. NSPR, which you will need as well, can be downloaded from <a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/nspr/releases/">http://ftp.mozilla.org/pub/mozilla.org/nspr/releases/</a>.</p>
+
+<h3 id="How_can_I_learn_more_about_SSL.3F">How can I learn more about TLS?</h3>
+
+<p>See <a href="/en-US/docs/Glossary/TLS">https://developer.mozilla.org/en-US/docs/Glossary/TLS</a>.</p>
+
+<h2 id="Licensing_Questions">Licensing Questions</h2>
+
+<h3 id="How_is_NSS_licensed.3F">How is NSS licensed?</h3>
+
+<p>NSS is available under the <a class="external external-icon" href="https://www.mozilla.org/MPL/">Mozilla Public License</a>, version 2.</p>
+
+<h3 id="Is_NSS_available_outside_the_United_States.3F">Is NSS available outside the United States?</h3>
+
+<div class="warning">This section is out of date</div>
+
+<p>Yes; see <a class="external" href="NSS_reference/Building_and_installing_NSS/Build_instructions">Build Instructions for NSS 3.1.</a> and <a class="link-ftp" href="ftp://ftp.mozilla.org/pub/mozilla.org/security/">ftp://ftp.mozilla.org/pub/mozilla.org/security/</a>. However, NSS source code is subject to the U.S. Export Administration Regulations and other U.S. law, and may not be exported or re-exported to certain countries (Cuba, Iran, Iraq, Libya, North Korea, Serbia, Sudan, Syria, and Taleban-controlled areas of Afghanistan as of January 2000) or to persons or entities prohibited from receiving U.S. exports (including those (a) on the Bureau of Industry and Security Denied Parties List or Entity List, (b) on the Office of Foreign Assets Control list of Specially Designated Nationals and Blocked Persons, and (c) involved with missile technology or nuclear, chemical or biological weapons).</p>
+
+<p>For more information about U.S. export controls on encryption software, see the <a href="Mozilla_Crypto_FAQ#1-3">Mozilla Crypto FAQ</a>.</p>

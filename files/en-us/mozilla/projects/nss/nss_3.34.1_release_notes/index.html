@@ -1,0 +1,59 @@
+---
+title: NSS 3.34.1 release notes
+slug: Mozilla/Projects/NSS/NSS_3.34.1_release_notes
+---
+<h2 id="Introduction">Introduction</h2>
+
+<p>The Network Security Services (NSS) team has released NSS 3.34.1, which is a minor release.</p>
+
+<h2 id="Distribution_information">Distribution information</h2>
+
+<p>The hg tag is NSS_3_34.1_RTM. NSS 3.34.1 requires Netscape Portable Runtime (NSPR) 4.17, or newer.</p>
+
+<p>NSS 3.34.1 source distributions are available on ftp.mozilla.org for secure HTTPS download:</p>
+
+<ul>
+ <li>Source tarballs:<br>
+  <a href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_34_1_RTM/src/">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_34_1_RTM/src/</a></li>
+</ul>
+
+<h2 id="Notable_Changes_in_NSS_3.34.1">Notable Changes in NSS 3.34.1</h2>
+
+<ul>
+ <li>The following CA certificate was <strong>Re-Added</strong>. It was previously removed in NSS 3.34, but now re-added with only the Email trust bit set. (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1418678">bug 1418678</a>)
+
+  <ul>
+   <li>CN = Certum CA, O=Unizeto Sp. z o.o.
+    <ul>
+     <li>SHA-256 Fingerprint: D8:E0:FE:BC:1D:B2:E3:8D:00:94:0F:37:D2:7D:41:34:4D:99:3E:73:4B:99:D5:65:6D:97:78:D4:D8:14:36:24</li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li>Removed entries from certdata.txt for actively distrusted certificates that have expired (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1409872">bug 1409872</a>).</li>
+ <li>The version of the CA list was set to 2.20.</li>
+</ul>
+
+<h2 id="New_in_NSS_3.34">New in NSS 3.34</h2>
+
+<h3 id="New_Functionality">New Functionality</h3>
+
+<ul>
+ <li>None</li>
+</ul>
+
+<h4 id="New_Functions">New Functions</h4>
+
+<h2 id="Bugs_fixed_in_NSS_3.34.1">Bugs fixed in NSS 3.34.1</h2>
+
+<p>This Bugzilla query returns all the bugs fixed in NSS 3.34.1:</p>
+
+<p><a href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.34.1">https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.34.1</a></p>
+
+<h2 id="Compatibility">Compatibility</h2>
+
+<p>NSS 3.34.1 shared libraries are backward compatible with all older NSS 3.x shared libraries. A program linked with older NSS 3.x shared libraries will work with NSS 3.34 shared libraries, without recompiling, or relinking. Furthermore, applications that restrict their use of NSS APIs to the functions listed in NSS Public Functions will remain compatible with future versions of the NSS shared libraries.</p>
+
+<h2 id="Feedback">Feedback</h2>
+
+<p>Bugs discovered should be reported by filing a bug report with<a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=NSS"> bugzilla.mozilla.org</a> (select product 'NSS').</p>

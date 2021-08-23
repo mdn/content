@@ -1,0 +1,152 @@
+---
+title: NSS 3.18 release notes
+slug: Mozilla/Projects/NSS/NSS_3.18_release_notes
+tags:
+  - Guide
+  - NSS
+  - NeedsContent
+  - Security
+---
+<h2 id="Introduction">Introduction</h2>
+
+<p>The NSS team has released Network Security Services (NSS) 3.18, which is a minor release.</p>
+
+<h2 id="Distribution_Information">Distribution Information</h2>
+
+<p>The HG tag is NSS_3_18_RTM. NSS 3.18 requires NSPR 4.10.8 or newer.</p>
+
+<p>NSS 3.18 source distributions are available on ftp.mozilla.org for secure HTTPS download:</p>
+
+<ul>
+ <li>Source tarballs:<br>
+  <a href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_18_RTM/src/">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_18_RTM/src/</a></li>
+</ul>
+
+<h2 id="New_in_NSS_3.18">New in NSS 3.18</h2>
+
+<h3 id="New_Functionality">New Functionality</h3>
+
+<ul>
+ <li>When importing certificates and keys from a PKCS#12 source, it's now possible to override the nicknames, prior to importing them into the NSS database, using new API SEC_PKCS12DecoderRenameCertNicknames.</li>
+ <li>The tstclnt test utility program has new command-line options -C, -D, -b and -R.<br>
+  Use -C one, two or three times to print information about the certificates received from a server, and information about the locally found and trusted issuer certificates, to diagnose server side configuration issues. It is possible to run tstclnt without providing a database (-D). A PKCS#11 library that contains root CA certificates can be loaded by tstclnt, which may either be the nssckbi library provided by NSS (-b) or another compatible library (-R).</li>
+</ul>
+
+<h4 id="New_Functions">New Functions</h4>
+
+<ul>
+ <li><em>in certdb.h</em>
+
+  <ul>
+   <li><strong>SEC_CheckCrlTimes</strong> - Check the validity of a CRL at the given time.</li>
+   <li><strong>SEC_GetCrlTimes</strong> - Extract the validity times from a CRL.</li>
+  </ul>
+ </li>
+ <li><em>in p12.h</em>
+  <ul>
+   <li><strong>SEC_PKCS12DecoderRenameCertNicknames</strong> - call an application provided callback for each certificate found in a SEC_PKCS12DecoderContext.</li>
+  </ul>
+ </li>
+ <li><em>in pk11pub.h</em>
+  <ul>
+   <li><strong>__PK11_SetCertificateNickname</strong> - this is an internal symbol for NSS use only, as with all exported NSS symbols that have a leading underscore '_'. Applications that use or depend on these symbols can and will break in future NSS releases.</li>
+  </ul>
+ </li>
+</ul>
+
+<h4 id="New_Types">New Types</h4>
+
+<ul>
+ <li><em>in p12.h</em>
+
+  <ul>
+   <li><strong>SEC_PKCS12NicknameRenameCallback</strong> - a function pointer definition. An application that uses SEC_PKCS12DecoderRenameCertNicknames must implement a callback function that implements this function interface.</li>
+  </ul>
+ </li>
+</ul>
+
+<h2 id="Notable_Changes_in_NSS_3.18">Notable Changes in NSS 3.18</h2>
+
+<ul>
+ <li>The highest TLS protocol version enabled by default has been increased from TLS 1.0 to TLS 1.2. Similarly, the highest DTLS protocol version enabled by default has been increased from DTLS 1.0 to DTLS 1.2.</li>
+ <li>The default key size used by certutil when creating an RSA key pair has been increased from 1024 bits to 2048 bits.</li>
+ <li>On Mac OS X, by default the softokn shared library will link with the sqlite library installed by the operating system, if it is version 3.5 or newer.</li>
+ <li>The following CA certificates had the Websites and Code Signing <strong> trust bits turned off </strong>
+  <ul>
+   <li>OU = Equifax Secure Certificate Authority
+    <ul>
+     <li>SHA1 Fingerprint: D2:32:09:AD:23:D3:14:23:21:74:E4:0D:7F:9D:62:13:97:86:63:3A</li>
+    </ul>
+   </li>
+   <li>CN = Equifax Secure Global eBusiness CA-1
+    <ul>
+     <li>SHA1 Fingerprint: 7E:78:4A:10:1C:82:65:CC:2D:E1:F1:6D:47:B4:40:CA:D9:0A:19:45</li>
+    </ul>
+   </li>
+   <li>CN = TC TrustCenter Class 3 CA II
+    <ul>
+     <li>SHA1 Fingerprint: 80:25:EF:F4:6E:70:C8:D4:72:24:65:84:FE:40:3B:8A:8D:6A:DB:F5</li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li>The following CA certificates were <strong>Added</strong>
+  <ul>
+   <li>CN = Staat der Nederlanden Root CA - G3
+    <ul>
+     <li>SHA1 Fingerprint: D8:EB:6B:41:51:92:59:E0:F3:E7:85:00:C0:3D:B6:88:97:C9:EE:FC</li>
+    </ul>
+   </li>
+   <li>CN = Staat der Nederlanden EV Root CA
+    <ul>
+     <li>SHA1 Fingerprint: 76:E2:7E:C1:4F:DB:82:C1:C0:A6:75:B5:05:BE:3D:29:B4:ED:DB:BB</li>
+    </ul>
+   </li>
+   <li>CN = IdenTrust Commercial Root CA 1
+    <ul>
+     <li>SHA1 Fingerprint: DF:71:7E:AA:4A:D9:4E:C9:55:84:99:60:2D:48:DE:5F:BC:F0:3A:25</li>
+    </ul>
+   </li>
+   <li>CN = IdenTrust Public Sector Root CA 1
+    <ul>
+     <li>SHA1 Fingerprint: BA:29:41:60:77:98:3F:F4:F3:EF:F2:31:05:3B:2E:EA:6D:4D:45:FD</li>
+    </ul>
+   </li>
+   <li>CN = S-TRUST Universal Root CA
+    <ul>
+     <li>SHA1 Fingerprint: 1B:3D:11:14:EA:7A:0F:95:58:54:41:95:BF:6B:25:82:AB:40:CE:9A</li>
+    </ul>
+   </li>
+   <li>CN = Entrust Root Certification Authority - G2
+    <ul>
+     <li>SHA1 Fingerprint: 8C:F4:27:FD:79:0C:3A:D1:66:06:8D:E8:1E:57:EF:BB:93:22:72:D4</li>
+    </ul>
+   </li>
+   <li>CN = Entrust Root Certification Authority - EC1
+    <ul>
+     <li>SHA1 Fingerprint: 20:D8:06:40:DF:9B:25:F5:12:25:3A:11:EA:F7:59:8A:EB:14:B5:47</li>
+    </ul>
+   </li>
+   <li>CN = CFCA EV ROOT
+    <ul>
+     <li>SHA1 Fingerprint: E2:B8:29:4B:55:84:AB:6B:58:C2:90:46:6C:AC:3F:B8:39:8F:84:83</li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li>The version number of the updated root CA list has been set to 2.3</li>
+</ul>
+
+<h2 id="Bugs_fixed_in_NSS_3.18">Bugs fixed in NSS 3.18</h2>
+
+<p>This Bugzilla query returns all the bugs fixed in NSS 3.18:</p>
+
+<p><a href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.18">https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.18</a></p>
+
+<h2 id="Compatibility">Compatibility</h2>
+
+<p>NSS 3.18 shared libraries are backward compatible with all older NSS 3.x shared libraries. A program linked with older NSS 3.x shared libraries will work with NSS 3.18 shared libraries without recompiling or relinking. Furthermore, applications that restrict their use of NSS APIs to the functions listed in NSS Public Functions will remain compatible with future versions of the NSS shared libraries.</p>
+
+<h2 id="Feedback">Feedback</h2>
+
+<p>Bugs discovered should be reported by filing a bug report with<a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=NSS"> bugzilla.mozilla.org</a> (product NSS).</p>

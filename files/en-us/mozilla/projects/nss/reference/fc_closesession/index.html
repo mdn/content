@@ -1,0 +1,27 @@
+---
+title: FC_CloseSession
+slug: Mozilla/Projects/NSS/Reference/FC_CloseSession
+tags:
+  - NSS
+---
+
+<h3 id="Name"> Name </h3>
+<p>FC_CloseSession - close a session opened between an application and a token.
+</p>
+<h3 id="Syntax"> Syntax </h3>
+<pre class="eval"><a href="/en-US/CK_RV">CK_RV</a> FC_CloseSession(
+  <a href="/en-US/CK_SESSION_HANDLE">CK_SESSION_HANDLE</a> hSession
+);
+</pre>
+<h3 id="Parameters"> Parameters </h3>
+<dl><dt><code>hSession</code></dt><dd> {{ mediawiki.external('in') }} the session handle to be closed.
+</dd></dl>
+<h3 id="Description"> Description </h3>
+<p><code>FC_CloseSession</code> closes a session between an application and a token.
+</p><p>A user may call <code>FC_CloseSession</code> without logging into the token (to assume the NSS User role).
+</p>
+<h3 id="Return_value"> Return value </h3>
+<h3 id="Examples"> Examples </h3>
+<h3 id="See_also"> See also </h3>
+<ul><li> <a href="/en-US/docs/Mozilla/Projects/NSS/Reference/FC_OpenSession">FC_OpenSession</a>
+</li></ul>

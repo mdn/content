@@ -1,0 +1,78 @@
+---
+title: NSS 3.53 release notes
+slug: Mozilla/Projects/NSS/NSS_3.53_release_notes
+---
+<h2 id="Introduction">Introduction</h2>
+
+<p>The NSS team released Network Security Services (NSS) 3.53 on <strong>29 May 2020</strong>. NSS 3.53 will be a long-term support release, supporting Firefox 78 ESR.</p>
+
+<p>The NSS team would like to recognize first-time contributors:</p>
+
+<ul>
+ <li>Jan-Marek Glogowski</li>
+ <li>Jeff Walden</li>
+</ul>
+
+<h2 id="Distribution_Information">Distribution Information</h2>
+
+<p>The HG tag is NSS_3_53_RTM. NSS 3.53 requires NSPR 4.25 or newer.</p>
+
+<p>NSS 3.53 source distributions are available on ftp.mozilla.org for secure HTTPS download:</p>
+
+<ul>
+ <li>Source tarballs:<br>
+  <a href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_53_RTM/src/">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_53_RTM/src/</a></li>
+</ul>
+
+<p>Other releases are available <a href="/en-US/docs/Mozilla/Projects/NSS/NSS_Releases">in NSS Releases</a>.</p>
+
+<h2 id="Notable_Changes_in_NSS_3.53">Notable Changes in NSS 3.53</h2>
+
+<ul>
+ <li>When using the Makefiles, NSS can be built in parallel, speeding up those builds to more similar performance as the build.sh/ninja/gyp system. (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=290526">Bug 290526</a>)</li>
+ <li>SEED is now moved into a new freebl directory <kbd>freebl/deprecated</kbd> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1636389">Bug 1636389</a>).
+  <ul>
+   <li>SEED will be disabled by default in a future release of NSS. At that time, users will need to set the compile-time flag (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1622033">Bug 1622033</a>) to disable that deprecation in order to use the algorithm.</li>
+   <li>Algorithms marked as deprecated will ultimately be removed.</li>
+  </ul>
+ </li>
+ <li>Several root certificates in the Mozilla program now set the <kbd>CKA_NSS_SERVER_DISTRUST_AFTER</kbd> attribute, which NSS consumers can query to further refine trust decisions. (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1618404">Bug 1618404, </a><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1621159">Bug 1621159</a>) If a builtin certificate has a <kbd>CKA_NSS_SERVER_DISTRUST_AFTER</kbd> timestamp before the  <kbd>SCT</kbd> or <kbd>NotBefore</kbd> date of a certificate that builtin issued, then clients can elect not to trust it.
+  <ul>
+   <li>This attribute provides a more graceful phase-out for certificate authorities than complete removal from the root certificate builtin store.</li>
+  </ul>
+ </li>
+</ul>
+
+<h2 id="Bugs_fixed_in_NSS_3.53">Bugs fixed in NSS 3.53</h2>
+
+<ul>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1640260">Bug 1640260</a> - Initialize PBE params (ASAN fix)</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1618404">Bug 1618404</a> - Set CKA_NSS_SERVER_DISTRUST_AFTER for Symantec root certs</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1621159">Bug 1621159</a> - Set CKA_NSS_SERVER_DISTRUST_AFTER for Consorci AOC, GRCA, and SK ID root certs</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1629414">Bug 1629414</a> - PPC64: Correct compilation error between VMX vs. VSX vector instructions</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1639033">Bug 1639033</a> - Fix various compile warnings in NSS</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1640041">Bug 1640041</a> - Fix a null pointer in security/nss/lib/ssl/sslencode.c:67</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1640042">Bug 1640042</a> - Fix a null pointer in security/nss/lib/ssl/sslsock.c:4460</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1638289">Bug 1638289</a> - Avoid multiple definitions of SHA{256,384,512}_* symbols when linking libfreeblpriv3.so in Firefox on ppc64le</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1636389">Bug 1636389</a> - Relocate deprecated SEED algorithm</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1637083">Bug 1637083</a> - lib/ckfw: No such file or directory. Stop.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1561331">Bug 1561331</a> - Additional modular inverse test</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1629553">Bug 1629553</a> - Rework and cleanup gmake builds</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1438431">Bug 1438431</a> - Remove mkdepend and "depend" make target</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=290526">Bug 290526</a> - Support parallel building of NSS when using the Makefiles</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1636206">Bug 1636206</a> - HACL* update after changes in libintvector.h</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1636058">Bug 1636058</a> - Fix building NSS on Debian s390x, mips64el, and riscv64</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1622033">Bug 1622033</a> - Add option to build without SEED</li>
+</ul>
+
+<p>This Bugzilla query returns all the bugs fixed in NSS 3.53:</p>
+
+<p><a class="external" href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.53" rel="noopener">https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.53</a></p>
+
+<h2 id="Compatibility">Compatibility</h2>
+
+<p>NSS 3.53 shared libraries are backward compatible with all older NSS 3.x shared libraries. A program linked with older NSS 3.x shared libraries will work with NSS 3.53 shared libraries without recompiling or relinking. Furthermore, applications that restrict their use of NSS APIs to the functions listed in NSS Public Functions will remain compatible with future versions of the NSS shared libraries.</p>
+
+<h2 id="Feedback">Feedback</h2>
+
+<p>Bugs discovered should be reported by filing a bug report with<a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=NSS"> bugzilla.mozilla.org</a> (product NSS).</p>

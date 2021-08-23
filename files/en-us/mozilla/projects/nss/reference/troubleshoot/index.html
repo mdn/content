@@ -1,0 +1,50 @@
+---
+title: troubleshoot
+slug: Mozilla/Projects/NSS/Reference/troubleshoot
+---
+<h2 id="Troubleshooting_NSS_and_JSS_Builds">Troubleshooting NSS and JSS Builds</h2>
+<p>Newsgroup: <a href="nntp://news.mozilla.org/mozilla.dev.tech.crypto">mozilla.dev.tech.crypto</a></p>
+<p>This page summarizes information on troubleshooting the NSS and JSS build and test systems, including known problems and configuration suggestions.</p>
+<p>If you have suggestions for this page, please post them to <a href="nntp://news.mozilla.org/mozilla.dev.tech.crypto">mozilla.dev.tech.crypto</a>.</p>
+
+<h3>Building NSS</h3>
+
+<ul>
+ <li>Having /usr/ucb/bin in the path before /usr/ccs/bin breaks the build on 64-bit Solaris.</li>
+ <li>The Solaris compiler needs to be workshop-5.0 or greater.</li>
+ <li>The 64-bit builds don't support gcc.</li>
+ <li>If the build fails early on the gmakein coreconf try updating your cvs tree with -P:<br>
+  <br>
+  cd mozilla<br>
+  cvs update -P</li>
+ <li>Building a 32-bit version on a 64-bit may fail with:
+  <pre>/usr/include/features.h:324:26: fatal error: bits/predefs.h: No such file or directory
+
+</pre>
+  <p>In this case remember to set USE_64=1</p>
+ </li>
+</ul>
+
+<h3>Testing NSS</h3>
+
+<p>The SSL stress test opens 2,048 TCP connections in quick succession. Kernel data structures may remain allocated for these connections for up to two minutes. Some systems may not be configured to allow this many simultaneous connections by default; if the stress tests fail, try increasing the number of simultaneous sockets supported.</p>
+
+<h3>Building JSS</h3>
+
+<ul>
+ <li><b>Windows Only:</b> The shell invoked by gmake, <code>shmsdos.exe</code>, is likely to crash when invoking some Java tools on Windows. The current workaround is to use some other shell in place of <code>shmsdos</code>, such as <code>sh.exe</code>, which should be distributed with the <a href="http://sourceware.cygnus.com/cygwin/download.html">Cygnus toolkit</a> you installed to build NSS. The change is unfortunately rather drastic: to trick gmake, you rename the shell program.
+  <blockquote>
+   cd c:/Programs/cygnus/bin
+   <i>
+    (or wherever your GNU tools are installed)</i>
+   <br>
+   cp shmsdos.exe shmsdos.bak
+   <i>
+    (backup shmsdos)</i>
+   <br>
+   cp sh.exe shmsdos.exe
+   <i>
+    (substitute alternative shell)</i>
+  </blockquote>
+  Making this change will probably break other builds you are  making on the same machine. You may need to switch the shell back and forthdepending on which product you are building. We will try to provide a moreconvenient solution in the future. If you have the MKS toolkit installed,  the &lt;tt&gt;sh.exe&lt;/tt&gt; that comes with this toolkit can be used as well.</li>
+</ul>

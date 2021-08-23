@@ -1,0 +1,37 @@
+---
+title: NSS CERTVerify Log
+slug: Mozilla/Projects/NSS/CERTVerify_Log
+tags:
+  - NSS
+---
+<h3 id="CERTVerifyLog">CERTVerifyLog</h3>
+<p>All the NSS verify functions except, the *VerifyNow() functions, take a parameter called 'CERTVerifyLog'. If you supply the log parameter, NSS will continue chain validation after each error . The log tells you what the problem was with the chain and what certificate in the chain failed.</p>
+<p>To create a log:</p>
+<pre class="eval">#include "secport.h"
+#include "certt.h"
+
+CERTVerifyLog *log;
+
+arena = PORT_NewArena(512);
+log =  PORT_ArenaZNew(arena,log);
+log-&gt;arena = arena;
+</pre>
+<p>You can then pass this log into your favorite cert verify function. On return:</p>
+<ul> <li>log-&gt;count is the number of entries.</li> <li>log-&gt;head is the first entry;</li> <li>log-&gt;tail is the last entry.</li>
+</ul>
+<p>Each entry is a CERTVerifyLogNode. Defined in certt.h:</p>
+<pre class="eval">/*
+ * This structure is used to keep a log of errors when verifying
+ * a cert chain.  This allows multiple errors to be reported all at
+ * once.
+ */
+struct CERTVerifyLogNodeStr {
+  CERTCertificate *cert;      /* what cert had the error */
+  long error;                 /* what error was it? */
+  unsigned int depth;         /* how far up the chain are we */
+  void *arg;                  /* error specific argument */
+  struct CERTVerifyLogNodeStr *next; /* next in the list */
+  struct CERTVerifyLogNodeStr *prev; /* next in the list */
+};
+</pre>
+<p>The list is a doubly linked NULL terminated list sorted from low to high based on depth into the cert chain. When you are through, you will need to walk the list and free all the cert entries, then free the arena.</p>
