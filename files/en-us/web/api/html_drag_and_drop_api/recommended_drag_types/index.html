@@ -10,7 +10,7 @@ tags:
 <p>The HTML Drag and Drop API supports dragging various types of data, including plain text, URLs, HTML code, files, etc. The document describes best practices for common draggable data types.</p>
 
 <div class="overheadIndicator nonStandard nonStandardHeader">
-<p><strong>Caution:</strong><br>
+<p><strong>Warning:</strong><br>
  All methods and properties in this document with a <code>moz</code> prefix, such as <code>mozSetDataAt()</code>, will <strong>only</strong> work with Gecko-based browsers.</p>
 </div>
 
@@ -43,7 +43,7 @@ dt.setData("text/plain", "https://www.mozilla.org");
 <p>To drag multiple links, separate each link inside the <code>text/uri-list</code> data with a CRLF linebreak. Lines that begin with a number sign (<code>#</code>) are comments, and should not be considered URLs. You can use comments to indicate the purpose of a URL, the title associated with a URL, or other data.</p>
 
 <div class="notecard warning">
-<p>The <code>text/plain</code> fallback for multiple links should include all URLs, but no comments.</p>
+<p><strong>Warning:</strong> The <code>text/plain</code> fallback for multiple links should include all URLs, but no comments.</p>
 </div>
 
 <p>For example, this sample <code>text/uri-list</code> data contains two links and a comment:</p>
@@ -56,7 +56,7 @@ http://www.example.com
 <p>When retrieving a dropped link, ensure you handle when multiple links are dragged, including any comments. For convenience, the special type <code>URL</code> may be used to refer to the first valid link within data for the <code>text/uri-list</code> type.</p>
 
 <div class="notecard warning">
-<p>Do not add data with the <code>URL</code> type — attempting to do so will set the value of the <code>text/uri-list</code> type instead.</p>
+<p><strong>Warning:</strong> Do not add data with the <code>URL</code> type — attempting to do so will set the value of the <code>text/uri-list</code> type instead.</p>
 </div>
 
 <pre class="brush: js">var url = event.dataTransfer.getData("URL");
