@@ -110,7 +110,7 @@ Include a description of the property and what component subvalues make up a com
 
 Fill in a simple example that nicely shows a typical usage of the property, then perhaps some more complex examples (see our guide on how to add [code examples](/en-US/docs/MDN/Structures/Code_examples) for more information).
 
-```js
+```css
 my code block
 ```
 
