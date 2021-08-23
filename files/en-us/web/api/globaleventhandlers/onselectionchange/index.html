@@ -4,7 +4,6 @@ slug: Web/API/GlobalEventHandlers/onselectionchange
 tags:
   - API
   - Event Handler
-  - Experimental
   - GlobalEventHandlers
   - Property
   - Reference
@@ -13,22 +12,29 @@ tags:
   - onselectionchange
 browser-compat: api.GlobalEventHandlers.onselectionchange
 ---
-<div>{{ApiRef('DOM')}} {{SeeCompatTable}}</div>
+<div>{{ApiRef('DOM')}}</div>
 
-<p>The <code><strong>onselectionchange</strong></code> property of the {{domxref("GlobalEventHandlers")}} mixin is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> that processes {{event("selectionchange")}} events.</p>
+<p>The <code><strong>onselectionchange</strong></code> property of the {{domxref("GlobalEventHandlers")}} mixin is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> for <code>selectionchange</code> events.</p>
 
-<p>The <code>selectionchange</code> event fires when the text selected on a webpage changes.</p>
+<p>The {{domxref("HTMLTextAreaElement.selectionchange_event")}} and {{domxref("HTMLInputElement.selectionchange_event")}} events are fired, respectively, when the text selection within a {{HTMLElement("textarea")}} or {{HTMLElement("input")}} element is changed or the caret moves.</p>
+
+<p>The {{domxref("Document.selectionchange_event")}} is fired when the {{domxref("Selection")}} of a {{domxref("Document")}} is changed.
+  The {{domxref("Selection")}} consists of a starting position and (optionally) a range of HTML nodes from that position.
+  Clicking or starting a selection outside of a text field will generally fire this event.</p>
+
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><em>object</em>.onselectionchange = <em>functionRef</em>;
+<pre class="brush: js">document.onselectionchange = <em>functionRef</em>;
 </pre>
 
 <h3 id="Value">Value</h3>
 
-<p><code>functionRef</code> is a function name or a <a href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function expression</a>. The function receives a {{domxref("FocusEvent")}} object as its sole argument.</p>
+<p><code>functionRef</code> is a function name or a <a href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function expression</a>. The function receives an {{domxref("Event")}} object as its sole argument.</p>
 
 <h2 id="Example">Example</h2>
+
+<h3 id="getting_the_changed_document_selection">Getting the changed Document Selection</h3>
 
 <pre class="brush: js">let selection;
 
@@ -38,6 +44,24 @@ document.onselectionchange = function() {
 };</pre>
 
 <p>For a full example, see our <a href="https://github.com/chrisdavidmills/selection-api-examples/#key-quote-generator-see-it-running-live">Key quote generator</a> demo.</p>
+
+<h3 id="using_selectionchange_with_text_controls">Getting selectionchange within a text control</h3>
+
+<p>To get information about the selection on a text in an {{HTMLElement("input")}} or {{HTMLElement("textarea")}} use the <code>selectionStart</code>, <code>selectionEnd</code>, and <code>selectionDirection</code> properties of {{domxref("HTMLInputElement")}} or {{domxref("HTMLTextAreaElement")}}, as appropriate.
+The code fragment shows how to do this (for either type), using an element with the id <code>myinput</code>.</p>
+
+<div class="notecard note">
+  <p><strong>Note:</strong> We don't use {{domxref("Selection")}} here, because we're interested in the selected text, not the {{domxref("Document")}}.</p>
+</div>
+
+<pre class="brush: js">let myinput = document.getElementById("myinput");
+  
+myinput.addEventListener("selectionchange", () => {
+  document.getElementById("start").textContent = myinput.selectionStart;
+  document.getElementById("end").textContent = myinput.selectionEnd;
+  document.getElementById("direction").textContent = myinput.selectionDirection;
+});
+</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
