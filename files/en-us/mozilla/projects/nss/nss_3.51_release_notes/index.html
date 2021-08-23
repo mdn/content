@@ -1,0 +1,64 @@
+---
+title: NSS 3.51 release notes
+slug: Mozilla/Projects/NSS/NSS_3.51_release_notes
+---
+<h2 id="Introduction">Introduction</h2>
+
+<p>The NSS team has released Network Security Services (NSS) 3.51 on <strong>6 March 2020</strong>, which is a minor release.</p>
+
+<p>The NSS team would like to recognize first-time contributors:</p>
+
+<ul>
+	<li><cite>Dmitry Baryshkov</cite></li>
+	<li>Victor Tapia</li>
+</ul>
+
+<h2 id="Distribution_Information">Distribution Information</h2>
+
+<p>The HG tag is NSS_3_51_RTM. NSS 3.51 requires NSPR 4.25 or newer.</p>
+
+<p>NSS 3.51 source distributions are available on ftp.mozilla.org for secure HTTPS download:</p>
+
+<ul>
+	<li>Source tarballs:<br>
+	<a href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_51_RTM/src/">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_51_RTM/src/</a></li>
+</ul>
+
+<p>Other releases are available <a href="/en-US/docs/Mozilla/Projects/NSS/NSS_Releases">in NSS Releases</a>.</p>
+
+<h2 id="Notable_Changes_in_NSS_3.51">Notable Changes in NSS 3.51</h2>
+
+<ul>
+	<li>Updated DTLS 1.3 implementation to Draft-34. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1608892">Bug 1608892</a> for details.</li>
+</ul>
+
+<h2 id="Bugs_fixed_in_NSS_3.51">Bugs fixed in NSS 3.51</h2>
+
+<ul>
+	<li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1608892">Bug 1608892</a> - Update DTLS 1.3 implementation to draft-34.</li>
+	<li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1611209">Bug 1611209</a> - Correct swapped PKCS11 values of CKM_AES_CMAC and CKM_AES_CMAC_GENERAL</li>
+	<li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1612259">Bug 1612259</a> - Complete integration of Wycheproof ECDH test cases</li>
+	<li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1614183">Bug 1614183</a> - Check if PPC __has_include(&lt;sys/auxv.h&gt;)</li>
+	<li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1614786">Bug 1614786</a> - Fix a compilation error for ‘getFIPSEnv’ "defined but not used"</li>
+	<li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1615208">Bug 1615208</a> - Send DTLS version numbers in DTLS 1.3 supported_versions extension to avoid an incompatibility.</li>
+	<li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1538980">Bug 1538980</a> - SECU_ReadDERFromFile calls strstr on a string that isn't guaranteed to be null-terminated</li>
+	<li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1561337">Bug 1561337</a> - Correct a warning for comparison of integers of different signs: 'int' and 'unsigned long' in security/nss/lib/freebl/ecl/ecp_25519.c:88</li>
+	<li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1609751">Bug 1609751</a> - Add test for mp_int clamping</li>
+	<li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1582169">Bug 1582169</a> - Don't attempt to read the fips_enabled flag on the machine unless NSS was built with FIPS enabled</li>
+	<li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1431940">Bug 1431940</a> - Fix a null pointer dereference in BLAKE2B_Update</li>
+	<li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1617387">Bug 1617387</a> - Fix compiler warning in secsign.c</li>
+	<li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1618400">Bug 1618400</a> - Fix a OpenBSD/arm64 compilation error: unused variable 'getauxval'</li>
+	<li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1610687">Bug 1610687</a> - Fix a crash on unaligned CMACContext.aes.keySchedule when using AES-NI intrinsics</li>
+</ul>
+
+<p>This Bugzilla query returns all the bugs fixed in NSS 3.51:</p>
+
+<p><a href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.51">https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.51</a></p>
+
+<h2 id="Compatibility">Compatibility</h2>
+
+<p>NSS 3.51 shared libraries are backward compatible with all older NSS 3.x shared libraries. A program linked with older NSS 3.x shared libraries will work with NSS 3.51 shared libraries without recompiling or relinking. Furthermore, applications that restrict their use of NSS APIs to the functions listed in NSS Public Functions will remain compatible with future versions of the NSS shared libraries.</p>
+
+<h2 id="Feedback">Feedback</h2>
+
+<p>Bugs discovered should be reported by filing a bug report with<a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=NSS"> bugzilla.mozilla.org</a> (product NSS).</p>

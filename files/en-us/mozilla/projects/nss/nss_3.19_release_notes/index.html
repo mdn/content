@@ -1,0 +1,70 @@
+---
+title: NSS 3.19 release notes
+slug: Mozilla/Projects/NSS/NSS_3.19_release_notes
+---
+<h2 id="Introduction">Introduction</h2>
+
+<p>The NSS team has released Network Security Services (NSS) 3.19, which is a minor security release.</p>
+
+<h2 id="Distribution_Information">Distribution Information</h2>
+
+<p>The HG tag is NSS_3_19_RTM. NSS 3.19 requires NSPR 4.10.8 or newer.</p>
+
+<p>NSS 3.19 source distributions are available on ftp.mozilla.org for secure HTTPS download:</p>
+
+<ul>
+ <li>Source tarballs:<br>
+  <a href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_19_RTM/src/">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_19_RTM/src/</a></li>
+</ul>
+
+<h2 id="Security_Fixes_in_NSS_3.19">Security Fixes in NSS 3.19</h2>
+
+<ul>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1086145">Bug 1086145</a> / <a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-2721">CVE-2015-2721</a> - Fixed a bug related to the ordering of TLS handshake messages. This was also known as <a href="https://www.smacktls.com/">SMACK</a>.</li>
+</ul>
+
+<h2 id="New_in_NSS_3.19">New in NSS 3.19</h2>
+
+<h3 id="New_Functionality">New Functionality</h3>
+
+<ul>
+ <li>For some certificates, such as root CA certificates that don't embed any constraints, NSS might impose additional constraints such as name constraints. A new API (<a href="http://mxr.mozilla.org/nss/ident?i=CERT_GetImposedNameConstraints">CERT_GetImposedNameConstraints</a>) has been added that allows one to lookup imposed constraints.</li>
+ <li>It is possible to override the directory (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1138820">SQLITE_LIB_DIR</a>) in which the NSS build system will look for the sqlite library.</li>
+</ul>
+
+<h4 id="New_Functions">New Functions</h4>
+
+<ul>
+ <li><em>in cert.h</em>
+
+  <ul>
+   <li><strong>CERT_GetImposedNameConstraints</strong> - Check if any imposed constraints exist for the given certificate, and if found, return the constraints as encoded certificate extensions.</li>
+  </ul>
+ </li>
+</ul>
+
+<h2 id="Notable_Changes_in_NSS_3.19">Notable Changes in NSS 3.19</h2>
+
+<ul>
+ <li>The SSL 3 protocol has been disabled by default.</li>
+ <li>NSS now more strictly validates TLS extensions and will fail a handshake that contains malformed extensions (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=753136">bug 753136</a>).</li>
+ <li>In TLS 1.2 handshakes, NSS advertises support for the SHA512 hash algorithm in order to be compatible with TLS servers that use certificates with a SHA512 signature (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1155922">bug 1155922</a>).</li>
+</ul>
+
+<h2 id="Bugs_fixed_in_NSS_3.19">Bugs fixed in NSS 3.19</h2>
+
+<p>This Bugzilla query returns all the bugs fixed in NSS 3.19:</p>
+
+<p><a href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.19">https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.19</a></p>
+
+<h2 id="Acknowledgements">Acknowledgements</h2>
+
+<p>The NSS development team would like to thank Karthikeyan Bhargavan from <a href="http://inria.fr/">INRIA</a> for responsibly disclosing the issue in <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1086145">bug 1086145</a>.</p>
+
+<h2 id="Compatibility">Compatibility</h2>
+
+<p>NSS 3.19 shared libraries are backward compatible with all older NSS 3.x shared libraries. A program linked with older NSS 3.x shared libraries will work with NSS 3.19 shared libraries without recompiling or relinking. Furthermore, applications that restrict their use of NSS APIs to the functions listed in NSS Public Functions will remain compatible with future versions of the NSS shared libraries.</p>
+
+<h2 id="Feedback">Feedback</h2>
+
+<p>Bugs discovered should be reported by filing a bug report with<a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=NSS"> bugzilla.mozilla.org</a> (product NSS).</p>

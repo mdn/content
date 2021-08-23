@@ -1,0 +1,56 @@
+---
+title: NSS 3.62 release notes
+slug: Mozilla/Projects/NSS/NSS_3.62_release_notes
+---
+<h2 id="Introduction">Introduction</h2>
+
+<p>The NSS team released Network Security Services (NSS) 3.62 on <strong>19 February 2021</strong>, which is a minor release.</p>
+
+
+<h2 id="Distribution_Information">Distribution Information</h2>
+
+<p>The HG tag is NSS_3_62_RTM. NSS 3.62 requires NSPR 4.29 or newer.</p>
+
+<p>NSS 3.62 source distributions are available on ftp.mozilla.org for secure HTTPS download:</p>
+
+<ul>
+ <li>Source tarballs:<br>
+  <a href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_62_RTM/src/">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_62_RTM/src/</a></li>
+</ul>
+
+<p>Other releases are available <a href="/en-US/docs/Mozilla/Projects/NSS/NSS_Releases">in NSS Releases</a>.</p>
+
+<h2 id="Bugs_fixed_in_NSS_3.62">Bugs fixed in NSS 3.62</h2>
+
+<ul>
+  <li> Bug 1688374 - Fix parallel build NSS-3.61 with make.</li>
+  <li> Bug 1682044 - pkix_Build_GatherCerts() + pkix_CacheCert_Add() can corrupt "cachedCertTable".</li>
+  <li> Bug 1690583 - Fix CH padding extension size calculation.</li>
+  <li> Bug 1690421 - Adjust 3.62 ABI report formatting for new libabigail.</li>
+  <li> Bug 1690421 - Install packaged libabigail in docker-builds image.</li>
+  <li> Bug 1689228 - Minor ECH -09 fixes for interop testing, fuzzing.</li>
+  <li> Bug 1674819 - Fixup a51fae403328, enum type may be signed.</li>
+  <li> Bug 1681585 - Add ECH support to selfserv.</li>
+  <li> Bug 1681585 - Update ECH to Draft-09.</li>
+  <li> Bug 1678398 - Add Export/Import functions for HPKE context.</li>
+  <li> Bug 1678398 - Update HPKE to draft-07.</li>
+</ul>
+
+<p>This Bugzilla query returns all the bugs fixed in NSS 3.62:</p>
+
+<p><a class="external" href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.62" rel="noopener">https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.62</a></p>
+
+<h2 id="Compatibility">Compatibility</h2>
+
+<p>NSS 3.62 shared libraries are backwards-compatible with all older NSS 3.x shared libraries. A program linked with older NSS 3.x shared libraries will work with NSS 3.62 shared libraries without recompiling or relinking. Furthermore, applications that restrict their use of NSS APIs to the functions listed in NSS Public Functions will remain compatible with future versions of the NSS shared libraries.</p>
+
+<h2 id="Feedback">Feedback</h2>
+
+<p>Bugs discovered should be reported by filing a bug report on <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=NSS">bugzilla.mozilla.org</a> (product NSS).</p>
+
+<h2 id="Notes">Notes</h2>
+
+<p>Due to changes to MDN, we have been notified that the NSS documentation will have to move off of MDN. It is not fully clear yet,
+but the proposed solution is to move the documentation in-tree (nss/docs), to the md/sphinx format, and have it either rendered as a sub-section of the Firefox source docs or as a standalone website. More information will follow in the NSS 3.63 notes.</p>
+
+<p>Regarding the Release day, in order to organize release process better and avoid issues, we will likely move the release day to Thursdays. Please take a look at the release calendar for the exact dates.</p>

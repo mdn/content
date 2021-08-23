@@ -1,0 +1,42 @@
+---
+title: NSS 3.44.2 release notes
+slug: Mozilla/Projects/NSS/NSS_3.44.2_release_notes
+---
+<h2 dir="ltr" id="Introduction" style="line-height: 1.38; margin-top: 18pt; margin-bottom: 4pt;">Introduction</h2>
+
+<p dir="ltr" style="line-height: 1.38; margin-top: 12pt; margin-bottom: 12pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Network Security Services (NSS) 3.44.2 is a patch release for NSS 3.44. The bug fixes in NSS 3.44.2 are described in the "Bugs Fixed" section below. It was released on 2 October 2019.</span></p>
+
+<h2 dir="ltr" id="Distribution_Information" style="line-height: 1.38; margin-top: 18pt; margin-bottom: 4pt;">Distribution Information</h2>
+
+<p dir="ltr" style="line-height: 1.38; margin-top: 12pt; margin-bottom: 12pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">The HG tag is NSS_3_44_2_RTM. NSS 3.44.2 requires NSPR 4.21 or newer.</span></p>
+
+<p dir="ltr" style="list-style-type: disc; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre; line-height: 1.38; margin-top: 12pt; margin-bottom: 12pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">NSS 3.44.2 source distributions are available on ftp.mozilla.org for secure HTTPS download:</span></p>
+
+<ul dir="ltr">
+	<li style="list-style-type: disc; font-size: 11pt; font-family: Arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre; line-height: 1.38; margin-top: 12pt; margin-bottom: 12pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Source tarballs:</span> <a href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_44_2_RTM/src/" style="text-decoration: none;"><u>https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_44_2_RTM/src/</u></a></li>
+</ul>
+
+<p dir="ltr" style="line-height: 1.38; margin-top: 12pt; margin-bottom: 12pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Other releases are available in NSS Releases.</span></p>
+
+<h2 dir="ltr" id="New_in_NSS_3.44.2" style="line-height: 1.38; margin-top: 18pt; margin-bottom: 4pt;">New in NSS 3.44.2</h2>
+
+<p dir="ltr" style="line-height: 1.38; margin-top: 12pt; margin-bottom: 12pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">No new functionality is introduced in this release.</span></p>
+
+<h2 dir="ltr" id="Bugs_fixed_in_NSS_3.44.2" style="line-height: 1.38; margin-top: 18pt; margin-bottom: 4pt;">Bugs fixed in NSS 3.44.2</h2>
+
+<ul>
+	<li style="list-style-type: disc; font-size: 11pt; font-family: Arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre; line-height: 1.38; margin-top: 12pt; margin-bottom: 0pt;"><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1582343" style="text-decoration: none;"><u>Bug 1582343</u></a><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> - Soft token MAC verification not constant time</span></li>
+	<li style="list-style-type: disc; font-size: 11pt; font-family: Arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre; line-height: 1.38; margin-top: 12pt; margin-bottom: 0pt;"><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1577953" style="text-decoration: none;"><u>Bug 1577953</u></a><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> - Remove arbitrary HKDF output limit by allocating space as needed</span></li>
+</ul>
+
+<p dir="ltr" style="line-height: 1.38; margin-top: 12pt; margin-bottom: 12pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">This Bugzilla query returns all the bugs fixed in NSS 3.44.2:</span></p>
+
+<p dir="ltr" style="line-height: 1.38; margin-top: 12pt; margin-bottom: 12pt;"><a href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.44.2" style="text-decoration: none;"><u>https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.44.2</u></a></p>
+
+<h2 dir="ltr" id="Compatibility" style="line-height: 1.38; margin-top: 18pt; margin-bottom: 4pt;">Compatibility</h2>
+
+<p dir="ltr" style="line-height: 1.38; margin-top: 12pt; margin-bottom: 12pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">NSS 3.44.2 shared libraries are backward compatible with all older NSS 3.x shared libraries. A program linked with older NSS 3.x shared libraries will work with NSS 3.44.2 shared libraries without recompiling or relinking. Furthermore, applications that restrict their use of NSS APIs to the functions listed in NSS Public Functions will remain compatible with future versions of the NSS shared libraries.</span></p>
+
+<h2 dir="ltr" id="Feedback" style="line-height: 1.38; margin-top: 18pt; margin-bottom: 4pt;">Feedback</h2>
+
+<p dir="ltr" style="line-height: 1.38; margin-top: 12pt; margin-bottom: 12pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Bugs discovered should be reported by filing a bug report with</span><a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=NSS" style="text-decoration: none;"><u> bugzilla.mozilla.org</u></a><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> (product NSS).</span></p>

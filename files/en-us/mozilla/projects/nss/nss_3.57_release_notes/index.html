@@ -1,0 +1,117 @@
+---
+title: NSS 3.57 release notes
+slug: Mozilla/Projects/NSS/NSS_3.57_release_notes
+---
+<h2 id="Introduction">Introduction</h2>
+
+<p>The NSS team has released Network Security Services (NSS) 3.57 on <strong>18 September 2020</strong>, which is a minor release.</p>
+
+<p>The NSS team would like to recognize first-time contributors:</p>
+
+<ul>
+ <li><cite>Khem Raj</cite></li>
+</ul>
+
+<h2 id="Distribution_Information">Distribution Information</h2>
+
+<p>The HG tag is NSS_3_57_RTM. NSS 3.57 requires NSPR 4.29 or newer.</p>
+
+<p>NSS 3.57 source distributions are available on ftp.mozilla.org for secure HTTPS download:</p>
+
+<ul>
+ <li>Source tarballs:<br>
+  <a href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_57_RTM/src/">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_57_RTM/src/</a></li>
+</ul>
+
+<p>Other releases are available <a href="/en-US/docs/Mozilla/Projects/NSS/NSS_Releases">in NSS Releases</a>.</p>
+
+<h2 id="Notable_Changes_in_NSS_3.57">Notable Changes in NSS 3.57</h2>
+
+<ul>
+ <li>NSPR dependency updated to 4.29.</li>
+</ul>
+
+<h3 id="Certificate_Authority_Changes">Certificate Authority Changes</h3>
+
+<ul>
+ <li>The following CA certificates were Added:
+  <ul>
+   <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1663049">Bug 1663049 </a>- CN=Trustwave Global Certification Authority
+
+    <ul>
+     <li>SHA-256 Fingerprint: 97552015F5DDFC3C8788C006944555408894450084F100867086BC1A2BB58DC8</li>
+    </ul>
+   </li>
+   <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1663049">Bug 1663049 </a>- CN=Trustwave Global ECC P256 Certification Authority
+    <ul>
+     <li>SHA-256 Fingerprint: 945BBC825EA554F489D1FD51A73DDF2EA624AC7019A05205225C22A78CCFA8B4</li>
+    </ul>
+   </li>
+   <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1663049">Bug 1663049 </a>- CN=Trustwave Global ECC P384 Certification Authority
+    <ul>
+     <li>SHA-256 Fingerprint: 55903859C8C0C3EBB8759ECE4E2557225FF5758BBD38EBD48276601E1BD58097</li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li>The following CA certificates were Removed:
+  <ul>
+   <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1651211">Bug 1651211</a> - CN=EE Certification Centre Root CA
+    <ul>
+     <li>SHA-256 Fingerprint:<br>
+      3E84BA4342908516E77573C0992F0979CA084E4685681FF195CCBA8A229B8A76</li>
+    </ul>
+   </li>
+   <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1656077">Bug 1656077</a> - O=Government Root Certification Authority; C=TW
+    <ul>
+     <li>SHA-256 Fingerprint:<br>
+      7600295EEFE85B9E1FD624DB76062AAAAE59818A54D2774CD4C0B2C01131E1B3</li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li>Trust settings for the following CA certificates were Modified:
+  <ul>
+   <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1653092">Bug 1653092</a> - CN=OISTE WISeKey Global Root GA CA
+    <ul>
+     <li>Websites (server authentication) trust bit removed.</li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+<h2 id="Bugs_fixed_in_NSS_3.57">Bugs fixed in NSS 3.57</h2>
+
+<ul>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1651211">Bug 1651211</a> - Remove EE Certification Centre Root CA certificate.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1653092">Bug 1653092</a> - Turn off Websites Trust Bit for OISTE WISeKey Global Root GA CA.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1656077">Bug 1656077 </a>- Remove Taiwan Government Root Certification Authority certificate.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1663049">Bug 1663049 </a>- Add SecureTrust's Trustwave Global root certificates to NSS.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1659256">Bug 1659256</a> - AArch64 AES optimization shouldn't be enabled with gcc 4.8.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1651834">Bug 1651834 </a>- Fix Clang static analyzer warnings.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1661378">Bug 1661378</a> - Fix Build failure with Clang 11.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1659727">Bug 1659727</a> - Fix mpcpucache.c invalid output constraint on Linux/ARM.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1662738">Bug 1662738</a> - Only run freebl_fips_RNG_PowerUpSelfTest when linked with NSPR.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1661810">Bug 1661810</a> - Fix Crash @ arm_aes_encrypt_ecb_128 when building with Clang 11.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1659252">Bug 1659252</a> - Fix Make build with NSS_DISABLE_DBM=1.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1660304">Bug 1660304</a> - Add POST tests for KDFs as required by FIPS.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1663346">Bug 1663346</a> - Use 64-bit compilation on e2k architecture.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1605922">Bug 1605922</a> - Account for negative sign in mp_radix_size.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1653641">Bug 1653641</a> - Cleanup inaccurate DTLS comments, code review fixes.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1660372">Bug 1660372</a> - NSS 3.57 should depend on NSPR 4.29</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1660734">Bug 1660734</a> - Fix Makefile typos.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1660735">Bug 1660735</a> - Fix Makefile typos.</li>
+</ul>
+
+<p>This Bugzilla query returns all the bugs fixed in NSS 3.57:</p>
+
+<p><a class="external" href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.57" rel="noopener">https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.57</a></p>
+
+<h2 id="Compatibility">Compatibility</h2>
+
+<p>NSS 3.57 shared libraries are backward compatible with all older NSS 3.x shared libraries. A program linked with older NSS 3.x shared libraries will work with NSS 3.57 shared libraries without recompiling or relinking. Furthermore, applications that restrict their use of NSS APIs to the functions listed in NSS Public Functions will remain compatible with future versions of the NSS shared libraries.</p>
+
+<h2 id="Feedback">Feedback</h2>
+
+<p>Bugs discovered should be reported by filing a bug report with<a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=NSS"> bugzilla.mozilla.org</a> (product NSS).</p>

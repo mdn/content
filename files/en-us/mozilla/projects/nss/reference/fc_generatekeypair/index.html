@@ -1,0 +1,41 @@
+---
+title: FC_GenerateKeyPair
+slug: Mozilla/Projects/NSS/Reference/FC_GenerateKeyPair
+tags:
+  - NSS
+---
+
+<h3 id="Name"> Name </h3>
+<p>FC_GenerateKeyPair - generate a new public/private key pair
+</p>
+<h3 id="Syntax"> Syntax </h3>
+<pre class="eval"><a href="/en-US/CK_RV">CK_RV</a> FC_GenerateKeyPair(
+  <a href="/en-US/CK_SESSION_HANDLE">CK_SESSION_HANDLE</a> hSession,
+  <a href="/en-US/CK_MECHANISM">CK_MECHANISM_PTR</a> pMechanism,
+  <a href="/en-US/CK_ATTRIBUTE">CK_ATTRIBUTE_PTR</a> pPublicKeyTemplate,
+  <a href="/en-US/CK_ULONG">CK_ULONG</a> usPublicKeyAttributeCount,
+  <a href="/en-US/CK_ATTRIBUTE">CK_ATTRIBUTE_PTR</a> pPrivateKeyTemplate,
+  <a href="/en-US/CK_ULONG">CK_ULONG</a> usPrivateKeyAttributeCount,
+  <a href="/en-US/CK_OBJECT_HANDLE">CK_OBJECT_HANDLE_PTR</a> phPublicKey,
+  <a href="/en-US/CK_OBJECT_HANDLE">CK_OBJECT_HANDLE_PTR</a> phPrivateKey
+);
+</pre>
+<h3 id="Parameters"> Parameters </h3>
+<dl><dt><code>hSession</code></dt><dd> {{ mediawiki.external('in') }} session handle.
+</dd><dt><code>pMechanism</code></dt><dd> {{ mediawiki.external('in') }} pointer to the mechanism to use.
+</dd><dt><code>pPublicKeyTemplate</code></dt><dd> {{ mediawiki.external('in') }} pointer to the public key template.
+</dd><dt><code>usPublicKeyAttributeCount</code></dt><dd> {{ mediawiki.external('in') }} number of attributes in the public key template.
+</dd><dt><code>pPrivateKeyTemplate</code></dt><dd> {{ mediawiki.external('in') }} pointer to the private key template.
+</dd><dt><code>usPrivateKeyAttributeCount</code></dt><dd> {{ mediawiki.external('in') }} number of attributes in the private key template.
+</dd><dt><code>phPublicKey</code></dt><dd> {{ mediawiki.external('out') }} pointer to the location to receive the handle of the new public key.
+</dd><dt><code>phPrivateKey</code></dt><dd> {{ mediawiki.external('out') }} pointer to the location to receive the handle of the new private key.
+</dd></dl>
+<h3 id="Description"> Description </h3>
+<p><code>FC_GenerateKeyPair</code> generates a public/private key pair, creating new key objects. The handles of new keys are returned.
+</p><p>A user must log into the token (to assume the NSS User role) before calling <code>FC_GenerateKeyPair</code>.
+</p>
+<h3 id="Return_value"> Return value </h3>
+<h3 id="Examples"> Examples </h3>
+<h3 id="See_also"> See also </h3>
+<ul><li> <a href="/en-US/NSC_GenerateKeyPair">NSC_GenerateKeyPair</a>
+</li></ul>

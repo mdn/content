@@ -1,0 +1,94 @@
+---
+title: NSS 3.52 release notes
+slug: Mozilla/Projects/NSS/NSS_3.52_release_notes
+---
+<h2 id="Introduction">Introduction</h2>
+
+<p>The NSS team has released Network Security Services (NSS) 3.52 on <strong>1 May 2020</strong>.</p>
+
+<p>The NSS team would like to recognize first-time contributors:</p>
+
+<ul>
+ <li><cite>zhujianwei7</cite> </li>
+ <li><cite>Hans Petter Jansson</cite></li>
+</ul>
+
+<h2 id="Distribution_Information">Distribution Information</h2>
+
+<p>The HG tag is NSS_3_52_RTM. NSS 3.52 requires NSPR 4.25 or newer.</p>
+
+<p>NSS 3.52 source distributions are available on ftp.mozilla.org for secure HTTPS download:</p>
+
+<ul>
+ <li>Source tarballs:<br>
+  <a href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_52_RTM/src/">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_52_RTM/src/</a></li>
+</ul>
+
+<p>Other releases are available <a href="/en-US/docs/Mozilla/Projects/NSS/NSS_Releases">in NSS Releases</a>.</p>
+
+<h2 id="Notable_Changes_in_NSS_3.52">Notable Changes in NSS 3.52</h2>
+
+<ul>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1603628">Bug 1603628</a> - Update NSS to support PKCS #11 v3.0.
+
+  <ul>
+   <li>Note: This change modifies the CK_GCM_PARAMS struct to include the ulIvBits field which, prior to PKCS #11 v3.0, was ambiguously defined and not included in the NSS definition. If an application is recompiled with NSS 3.52+, this field must be initialized to a value corresponding to ulIvLen. Alternatively, defining NSS_PKCS11_2_0_COMPAT will yield the old definition. See the bug for more information.</li>
+  </ul>
+ </li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1623374">Bug 1623374</a> - Support new PKCS #11 v3.0 Message Interface for AES-GCM and ChaChaPoly.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1612493">Bug 1612493</a> - Integrate AVX2 ChaCha20, Poly1305, and ChaCha20Poly1305 from HACL*.</li>
+</ul>
+
+<h2 id="Bugs_fixed_in_NSS_3.52">Bugs fixed in NSS 3.52</h2>
+
+<ul>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1633498">Bug 1633498</a> - Fix unused variable 'getauxval' error on iOS compilation.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1630721">Bug 1630721</a> - Add Softoken functions for FIPS.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1630458">Bug 1630458 </a>- Fix problem of GYP MSVC builds not producing debug symbol files.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1629663">Bug 1629663</a> - Add IKEv1 Quick Mode KDF.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1629661">Bug 1629661 </a>- MPConfig calls in SSL initialize policy before NSS is initialized.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1629655">Bug 1629655</a> - Support temporary session objects in ckfw.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1629105">Bug 1629105</a> - Add PKCS11 v3.0 functions to module debug logger.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1626751">Bug 1626751</a> - Fix error in generation of fuzz32 docker image after updates.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1625133">Bug 1625133</a> - Fix implicit declaration of function 'getopt' error.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1624864">Bug 1624864</a> - Allow building of gcm-arm32-neon on non-armv7 architectures.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1624402">Bug 1624402 </a>- Fix compilation error in Firefox Android.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1624130">Bug 1624130 </a>- Require CK_FUNCTION_LIST structs to be packed.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1624377">Bug 1624377</a> - Fix clang warning for unknown argument '-msse4'.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1623374">Bug 1623374</a> - Support new PKCS #11 v3.0 Message Interface for AES-GCM and ChaChaPoly.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1623184">Bug 1623184</a> - Fix freebl_cpuid for querying Extended Features.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1622555">Bug 1622555</a> - Fix argument parsing in lowhashtest.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1620799">Bug 1620799</a> - Introduce NSS_DISABLE_GCM_ARM32_NEON to build on arm32 without NEON support.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1619102">Bug 1619102</a> - Add workaround option to include both DTLS and TLS versions in DTLS supported_versions.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1619056">Bug 1619056</a> - Update README: TLS 1.3 is not experimental anymore.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1618915">Bug 1618915</a> - Fix UBSAN issue in ssl_ParseSessionTicket.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1618739">Bug 1618739</a> - Don't assert fuzzer behavior in SSL_ParseSessionTicket.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1617968">Bug 1617968</a> - Update Delegated Credentials implementation to draft-07.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1617533">Bug 1617533</a> - Update HACL* dependencies for libintvector.h</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1613238">Bug 1613238</a> - Add vector accelerated SHA2 for POWER 8+.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1612493">Bug 1612493</a> - Integrate AVX2 ChaCha20, Poly1305, and ChaCha20Poly1305 from HACL*.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1612281">Bug 1612281</a> - Maintain PKCS11 C_GetAttributeValue semantics on attributes that lack NSS database columns.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1612260">Bug 1612260</a> - Add Wycheproof RSA test vectors.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1608250">Bug 1608250</a> - broken fipstest handling of KI_len.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1608245">Bug 1608245</a> - Consistently handle NULL slot/session.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1603801">Bug 1603801</a> - Avoid dcache pollution from sdb_measureAccess().</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1603628">Bug 1603628</a> - Update NSS to support PKCS #11 v3.0.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1561637">Bug 1561637</a> - TLS 1.3 does not work in FIPS mode.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1531906">Bug 1531906</a> - Fix overzealous assertion when evicting a cached sessionID or using external cache.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1465613">Bug 1465613</a> - Fix issue where testlib makefile build produced extraneous object files.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1619959">Bug 1619959</a> - Properly handle multi-block SEED ECB inputs.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1630925">Bug 1630925</a> - Guard all instances of NSSCMSSignedData.signerInfo to avoid a CMS crash</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1571677">Bug 1571677</a> - Name Constraints validation: CN treated as DNS name even when syntactically invalid as DNS name</li>
+</ul>
+
+<p>This Bugzilla query returns all the bugs fixed in NSS 3.52:</p>
+
+<p><a class="external" href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.52" rel="noopener">https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.52</a></p>
+
+<h2 id="Compatibility">Compatibility</h2>
+
+<p>NSS 3.52 shared libraries are backward compatible with all older NSS 3.x shared libraries. A program linked with older NSS 3.x shared libraries will work with NSS 3.52 shared libraries without recompiling or relinking. Furthermore, applications that restrict their use of NSS APIs to the functions listed in NSS Public Functions will remain compatible with future versions of the NSS shared libraries.</p>
+
+<h2 id="Feedback">Feedback</h2>
+
+<p>Bugs discovered should be reported by filing a bug report with<a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=NSS"> bugzilla.mozilla.org</a> (product NSS).</p>

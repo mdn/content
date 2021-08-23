@@ -1,0 +1,41 @@
+---
+title: FC_UnwrapKey
+slug: Mozilla/Projects/NSS/Reference/FC_UnwrapKey
+tags:
+  - NSS
+---
+
+<h3 id="Name"> Name </h3>
+<p>FC_UnwrapKey - unwrap a key
+</p>
+<h3 id="Syntax"> Syntax </h3>
+<pre class="eval"><a href="/en-US/CK_RV">CK_RV</a> FC_UnwrapKey(
+  <a href="/en-US/CK_SESSION_HANDLE">CK_SESSION_HANDLE</a> hSession,
+  <a href="/en-US/CK_MECHANISM">CK_MECHANISM_PTR</a> pMechanism,
+  <a href="/en-US/CK_OBJECT_HANDLE">CK_OBJECT_HANDLE</a> hUnwrappingKey,
+  <a href="/en-US/CK_BYTE">CK_BYTE_PTR</a> pWrappedKey,
+  <a href="/en-US/CK_ULONG">CK_ULONG</a> usWrappedKeyLen,
+  <a href="/en-US/CK_ATTRIBUTE">CK_ATTRIBUTE_PTR</a> pTemplate,
+  <a href="/en-US/CK_ULONG">CK_ULONG</a> usAttributeCount,
+  <a href="/en-US/CK_OBJECT_HANDLE">CK_OBJECT_HANDLE_PTR</a> phKey
+);
+</pre>
+<h3 id="Parameters"> Parameters </h3>
+<dl><dt><code>hSession</code></dt><dd> {{ mediawiki.external('in') }} session handle.
+</dd><dt><code>pMechanism</code></dt><dd> {{ mediawiki.external('in') }} pointer to the mechanism to use.
+</dd><dt><code>hUnwrappingKey</code></dt><dd> {{ mediawiki.external('in') }} handle of the ket to use for unwrapping.
+</dd><dt><code>pWrappedKey</code></dt><dd> {{ mediawiki.external('in') }} pointer to the wrapped key.
+</dd><dt><code>usWrappedKeyLen</code></dt><dd> {{ mediawiki.external('in') }} length of the wrapped key.
+</dd><dt><code>pTemplate</code></dt><dd> {{ mediawiki.external('in') }} pointer to the list of attributes for the unwrapped key.
+</dd><dt><code>usAttributeCount</code></dt><dd> {{ mediawiki.external('in') }} number of attributes in the template.
+</dd><dt><code>phKey</code></dt><dd> {{ mediawiki.external('out') }} pointer to the location to receive the handle of the unwrapped key.
+</dd></dl>
+<h3 id="Description"> Description </h3>
+<p><code>FC_UnwrapKey</code> unwraps (decrypts) a key and creates a new key opbject. If <code>pWrappedKey</code> is NULL the length of the wrapped key is returned in <code>pusWrappedKeyLen</code> and FC_UnwrapKey may be called again with <code>pWrappedKey</code> set to retrieve the wrapped key.
+</p><p>A user must log into the token (to assume the NSS User role) before calling <code>FC_UnwrapKey</code>.
+</p>
+<h3 id="Return_value"> Return value </h3>
+<h3 id="Examples"> Examples </h3>
+<h3 id="See_also"> See also </h3>
+<ul><li> <a href="/en-US/NSC_UnwrapKey">NSC_UnwrapKey</a>
+</li></ul>

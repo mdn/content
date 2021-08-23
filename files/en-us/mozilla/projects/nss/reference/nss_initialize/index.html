@@ -1,0 +1,35 @@
+---
+title: NSS_Initialize
+slug: Mozilla/Projects/NSS/Reference/NSS_Initialize
+---
+<h3 id="Name">Name</h3>
+<p>NSS_Initialize - initialize NSS.</p>
+<h3 id="Syntax">Syntax</h3>
+<pre class="eval">SECStatus NSS_Initialize(const char *configdir,
+                         const char *certPrefix,
+                         const char *keyPrefix,
+                         const char *secmodName,
+                         PRUint32 flags);
+</pre>
+<h3 id="Parameters">Parameters</h3>
+<p><code>NSS_Initialize</code> has five parameters:</p>
+<dl> <dt><code>configdir</code></dt> <dd>{{ mediawiki.external('in') }} the directory where the certificate, key, and module databases live. To-do: document the "sql:" prefix.</dd> <dt><code>certPrefix</code></dt> <dd>{{ mediawiki.external('in') }} prefix added to the beginning of the certificate database, for example, "https-server1-".</dd> <dt><code>keyPrefix</code></dt> <dd>{{ mediawiki.external('in') }} prefix added to the beginning of the key database, for example, "https-server1-".</dd> <dt><code>secmodName</code></dt> <dd>{{ mediawiki.external('in') }} name of the security module database, usually "secmod.db".</dd> <dt><code>flags</code></dt> <dd>{{ mediawiki.external('in') }} bit flags that specify how NSS should be initialized.</dd>
+</dl>
+<h3 id="Description">Description</h3>
+<p><code>NSS_Initialize</code> initializes NSS. It is more flexible than <code>NSS_Init</code>, <code>NSS_InitReadWrite</code>, and <code>NSS_NoDB_Init</code>. If any of those simpler NSS initialization functions suffices for your needs, call that instead.</p>
+<p>The <code>flags</code> parameter is a bitwise OR of the following flags:</p>
+<ul> <li>NSS_INIT_READONLY - Open the databases read only.</li> <li>NSS_INIT_NOCERTDB - Don't open the cert DB and key DB's, just initialize the volatile certdb.</li> <li>NSS_INIT_NOMODDB - Don't open the security module DB, just initialize the  PKCS #11 module.</li> <li>NSS_INIT_FORCEOPEN - Continue to force initializations even if the databases cannot be opened.</li> <li>NSS_INIT_NOROOTINIT - Don't try to look for the root certs module automatically.</li> <li>NSS_INIT_OPTIMIZESPACE - Optimize for space instead of speed. Use smaller tables and caches.</li> <li>NSS_INIT_PK11THREADSAFE - only load PKCS#11 modules that are thread-safe, i.e., that support locking - either OS locking or NSS-provided locks . If a PKCS#11 module isn't thread-safe, don't serialize its calls; just don't load it instead. This is necessary if another piece of code is using the same PKCS#11 modules that NSS is accessing without going through NSS, for example, the Java SunPKCS11 provider.</li> <li>NSS_INIT_PK11RELOAD - ignore the CKR_CRYPTOKI_ALREADY_INITIALIZED error when loading PKCS#11 modules. This is necessary if another piece of code is using the same PKCS#11 modules that NSS is accessing without going through NSS, for example, Java SunPKCS11 provider.</li> <li>NSS_INIT_NOPK11FINALIZE - never call C_Finalize on any PKCS#11 module. This may be necessary in order to ensure continuous operation and proper shutdown sequence if another piece of code is using the same PKCS#11 modules that NSS is accessing without going through NSS, for example, Java SunPKCS11 provider. The following limitation applies when this is set : SECMOD_WaitForAnyTokenEvent will not use C_WaitForSlotEvent, in order to prevent the need for C_Finalize. This call will be emulated instead.</li> <li>NSS_INIT_RESERVED - Currently has no effect, but may be used in the future to trigger better cooperation between PKCS#11 modules used by both NSS and the Java SunPKCS11 provider. This should occur after a new flag is defined for C_Initialize by the PKCS#11 working group.</li> <li>NSS_INIT_COOPERATE - Sets the above four recommended options for applications that use both NSS and the Java SunPKCS11 provider.</li>
+</ul>
+<h3 id="Return_value">Return value</h3>
+<p><code>NSS_Initialize</code> returns SECSuccess on success, or SECFailure on failure.</p>
+<h3 id="Examples">Examples</h3>
+<pre class="eval">#include &lt;nss.h&gt;
+
+SECStatus rv;
+const char *configdir;
+
+configdir = ...;  /* application-specific */
+rv = NSS_Initialize(configdir, "", "", SECMOD_DB, NSS_INIT_NOROOTINIT | NSS_INIT_OPTIMIZESPACE);<br></pre>
+<h3 id="See_also">See also</h3>
+<ul> <li>NSS_Init, NSS_InitReadWrite, NSS_NoDB_Init, NSS_Shutdown</li>
+</ul>

@@ -1,0 +1,35 @@
+---
+title: FC_VerifyRecover
+slug: Mozilla/Projects/NSS/Reference/FC_VerifyRecover
+tags:
+  - NSS
+---
+
+<h3 id="Name"> Name </h3>
+<p>FC_VerifyRecover - Verify data in a single recoverable operation.
+</p>
+<h3 id="Syntax"> Syntax </h3>
+<pre class="eval"><a href="/en-US/CK_RV">CK_RV</a> FC_VerifyRecover(
+  <a href="/en-US/CK_SESSION_HANDLE">CK_SESSION_HANDLE</a> hSession,
+  <a href="/en-US/CK_BYTE">CK_BYTE_PTR</a> pSignature,
+  <a href="/en-US/CK_ULONG">CK_ULONG</a> usSignatureLen,
+  <a href="/en-US/CK_BYTE">CK_BYTE_PTR</a> pData,
+  <a href="/en-US/CK_ULONG">CK_ULONG_PTR</a> pusDataLen
+);
+</pre>
+<h3 id="Parameters"> Parameters </h3>
+<dl><dt><code>hSession</code></dt><dd> {{ mediawiki.external('in') }} session handle.
+</dd><dt><code>pSignature</code></dt><dd> {{ mediawiki.external('in') }} mechanism to be used for the signing operation.
+</dd><dt><code>usSignatureLen</code></dt><dd> {{ mediawiki.external('in') }} handle of the key to be usedn.
+</dd><dt><code>pData</code></dt><dd> {{ mediawiki.external('out') }} pointer to the buffer or NULL.
+</dd><dt><code>pusDataLen</code></dt><dd> {{ mediawiki.external('in, out') }} pointer to the size of the output buffer, replaced by the length of the signature if the operation is successful.
+</dd></dl>
+<h3 id="Description"> Description </h3>
+<p><code>FC_VerifyRecover</code> verifies data in a single operation where the (digest) data can be recovered from the signature. If <code>pSignature</code> is NULL only the length of the signature is returned in <code>*pusSignatureLen</code>.
+</p><p>A user must log into the token (to assume the NSS User role) before calling <code>FC_VerifyRecover</code>.
+</p>
+<h3 id="Return_value"> Return value </h3>
+<h3 id="Examples"> Examples </h3>
+<h3 id="See_also"> See also </h3>
+<ul><li> <a href="/en-US/NSC_VerifyRecover">NSC_VerifyRecover</a>
+</li></ul>

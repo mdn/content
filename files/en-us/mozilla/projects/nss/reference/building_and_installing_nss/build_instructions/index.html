@@ -1,0 +1,102 @@
+---
+title: Build instructions
+slug: Mozilla/Projects/NSS/Reference/Building_and_installing_NSS/Build_instructions
+tags:
+  - NSS
+---
+<div class="blockIndicator note">
+<p>These instructions are outdated.  Use the <a href="/en-US/docs/Mozilla/Projects/NSS/Building">Building NSS</a> page for more recent information.</p>
+</div>
+
+<p>Numerous optional features of NSS builds are controlled through make variables.</p>
+
+<p>gmake is GNU make, usually your Linux-distro-regular "make" binary file, unless maybe it is a BSD make. Make variables may be set on the gmake command line, e.g.,</p>
+
+<pre class="eval">  gmake variable=value variable=value target1 target2</pre>
+
+<p>or defined in the environment, e.g. (for POSIX shells),</p>
+
+<pre class="eval">  variable=value; export variable
+  gmake target1 target2
+</pre>
+
+<p>Here are some (not all) of the make variables that affect NSS builds:</p>
+
+<ul>
+ <li>BUILD_OPT: If set to 1, means do optimized non-DEBUG build. Default is DEBUG, non-optimized build.</li>
+ <li>USE_DEBUG_RTL: If set to 1, on Windows, causes build with debug version of the C run-time library.</li>
+ <li>NS_USE_GCC: On platforms where gcc is not the native compiler, tells NSS to build with gcc instead of the native compiler. Default is to build with the native compiler.</li>
+ <li>USE_64: On platforms that support both 32-bit and 64-bit ABIs, tells NSS to build for the 64-bit ABI. Default is 32-bit ABI, except on platforms that do not support a 32-bit ABI.</li>
+ <li>MOZ_DEBUG_SYMBOLS: tells NSS to build with debug symbols, even in an optimized build. On windows, in both DEBUG and optimized builds, when using MSVC, tells NSS to put symbols in a .pdb file. Required to build with MSVC 8 (2005 Express). Default is not to put debug symbols into optimized builds, and for MSVC, is to put symbols into the .exe or .dll file.</li>
+ <li>NSDISTMODE: If set to 'copy', mozilla/dist/&lt;OBJ_STUFF&gt;/bin/* real files instead of symbolic links.</li>
+</ul>
+
+<p>These variables should be either undefined, or set to "1". Results are undefined for variables set to "0".</p>
+
+<p>For Windows, install the <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Windows_Prerequisites#mozillabuild" rel="internal" style="text-decoration: none; color: rgb(4, 137, 183) !important; cursor: default;">MozillaBuild</a> environment and Microsoft Visual Studio 2010. (The free edition works, and other versions like Visual Studio 2008 and Visual Studio 2012 may also work.) Use start-shell-msvc2010.bat from MozillaBuild to get a bash shell with the PATH already configured, and execute these instructions from within that bash shell.</p>
+
+<p>For RHEL-5, you need to use the new assembler. You can install the new assembler as root as follows:</p>
+
+<pre>yum install binutils220</pre>
+
+<p>You can then use the new assembler by adding /usr/libexec/binutils220 to the beginning of your build path. This can be done in sh or bash as follows:</p>
+
+<pre>export PATH=/usr/libexec/binutils220:$PATH</pre>
+
+<p>The following build instructions should work for all platforms (with some platform-specific changes as noted).</p>
+
+<h3 id="Build_Instructions_for_Recent_Versions_(Mercurial)">Build Instructions for Recent Versions (Mercurial)</h3>
+
+<ol>
+ <li>Clone the NSPR and NSS repositories.
+  <pre>hg clone https://hg.mozilla.org/projects/nspr
+hg clone https://hg.mozilla.org/projects/nss
+</pre>
+ </li>
+ <li>If you want to build a releases other than the tips of these repositories, then switch to the release tags:
+  <pre>cd nspr
+hg update NSPR_4_9_5_RTM
+cd ../nss
+hg update NSS_3_14_2_RTM
+cd ..
+</pre>
+ </li>
+ <li>Set environment variables:
+  <ol>
+   <li>If you want a non-debug optimized build, set <code>BUILD_OPT=1</code> in your environment. Otherwise, you get a debug build. On Windows, if you want a debug build with the system's debug RTL libraries, set <code>USE_DEBUG_RTL=1</code> in your environment.</li>
+   <li>On Unix platforms, except Alpha/OSF1, if you want a build for the system's 64-bit ABI, set <code>USE_64=1</code> in your environment. By default, NSS builds for the 32-bit environment on all platforms except Alpha/OSF1.</li>
+   <li>To build with <code>gcc</code> on platforms other than Linux and Windows, you need to set two more environment variables:
+    <ul>
+     <li><code>NS_USE_GCC=1</code><br>
+      <code>NO_MDUPDATE=1</code></li>
+    </ul>
+   </li>
+   <li>For HP-UX, you must set the environment variable <code>USE_PTHREADS</code> to 1.</li>
+  </ol>
+ </li>
+ <li><code>cd nss</code></li>
+ <li><code>gmake nss_build_all </code></li>
+</ol>
+
+<p>The output of the build will be in the <code>dist</code> directory alongside the <code>nspr</code> and <code>nss</code> directories.</p>
+
+<p>For information on troubleshooting the build system, see <a href="/en-US/docs/Mozilla/Projects/NSS/Reference/troubleshoot">Troubleshooting NSS and JSS Build Systems</a>.</p>
+
+<h3 id="Build_Instructions_for_Older_Versions_(CVS)">Build Instructions for Older Versions (CVS)</h3>
+
+<ol>
+ <li>Set the environment variable <code>CVSROOT</code> to <code>:pserver:<a class="link-mailto" href="mailto:anonymous@cvs-mirror.mozilla.org">anonymous@cvs-mirror.mozilla.org</a>:/cvsroot</code></li>
+ <li><code>cvs login</code> (if you haven't before).</li>
+ <li>Check out NSPR and NSS:
+  <pre>cvs co -r NSPR_4_9_5_RTM NSPR
+cvs co -r NSS_3_14_2_RTM NSS
+</pre>
+ </li>
+ <li>Set environment variables as described in the Mercurial-based instructions.</li>
+ <li><code>cd mozilla/security/nss</code></li>
+ <li><code>gmake nss_build_all</code></li>
+</ol>
+
+<p>The output of the build will be in <code>mozilla/dist</code> subdirectory.</p>
+
+<p>For information on troubleshooting the build system, see <a href="/en-US/docs/Mozilla/Projects/NSS/Reference/troubleshoot">Troubleshooting NSS and JSS Build Systems</a>.</p>

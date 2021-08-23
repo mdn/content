@@ -1,0 +1,152 @@
+---
+title: NSS 3.41 release notes
+slug: Mozilla/Projects/NSS/NSS_3.41_release_notes
+---
+<h2 id="Introduction">Introduction</h2>
+
+<p>The NSS team has released Network Security Services (NSS) 3.41 on 7 December 2018, which is a minor release.</p>
+
+<h2 id="Distribution_Information">Distribution Information</h2>
+
+<p>The HG tag is NSS_3_41_RTM. NSS 3.41 requires NSPR 4.20 or newer.</p>
+
+<p>NSS 3.41 source distributions are available on ftp.mozilla.org for secure HTTPS download:</p>
+
+<ul>
+	<li>Source tarballs:<br>
+	<a href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_41_RTM/src/">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_41_RTM/src/</a></li>
+</ul>
+
+<h2 id="New_in_NSS_3.41">New in NSS 3.41</h2>
+
+<h3 id="New_Functionality">New Functionality</h3>
+
+<ul>
+	<li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1252891">Bug 1252891</a> - Implemented EKU handling for IPsec IKE.</li>
+	<li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1423043">Bug 1423043</a> - Enable half-closed states for TLS.</li>
+	<li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1493215">Bug 1493215 </a>- Enabled the following ciphersuites by default:
+	<ul>
+		<li>TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384</li>
+		<li>TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</li>
+		<li>TLS_DHE_RSA_WITH_AES_256_GCM_SHA384</li>
+		<li>TLS_RSA_WITH_AES_256_GCM_SHA384</li>
+	</ul>
+	</li>
+</ul>
+
+<h4 id="New_Functions">New Functions</h4>
+
+<ul>
+	<li>none</li>
+</ul>
+
+<h2 id="Notable_Changes_in_NSS_3.41">Notable Changes in NSS 3.41</h2>
+
+<ul>
+	<li>The following CA certificates were <strong>Added</strong>:
+
+	<ul>
+		<li>CN = Certigna Root CA
+		<ul>
+			<li>SHA-256 Fingerprint: D48D3D23EEDB50A459E55197601C27774B9D7B18C94D5A059511A10250B93168</li>
+		</ul>
+		</li>
+		<li>CN = GTS Root R1
+		<ul>
+			<li>SHA-256 Fingerprint: 2A575471E31340BC21581CBD2CF13E158463203ECE94BCF9D3CC196BF09A5472</li>
+		</ul>
+		</li>
+		<li>CN = GTS Root R2
+		<ul>
+			<li>SHA-256 Fingerprint: C45D7BB08E6D67E62E4235110B564E5F78FD92EF058C840AEA4E6455D7585C60</li>
+		</ul>
+		</li>
+		<li>CN = GTS Root R3
+		<ul>
+			<li>SHA-256 Fingerprint: 15D5B8774619EA7D54CE1CA6D0B0C403E037A917F131E8A04E1E6B7A71BABCE5</li>
+		</ul>
+		</li>
+		<li>CN = GTS Root R4
+		<ul>
+			<li>SHA-256 Fingerprint: 71CCA5391F9E794B04802530B363E121DA8A3043BB26662FEA4DCA7FC951A4BD</li>
+		</ul>
+		</li>
+		<li>CN = UCA Global G2 Root
+		<ul>
+			<li>SHA-256 Fingerprint: 9BEA11C976FE014764C1BE56A6F914B5A560317ABD9988393382E5161AA0493C</li>
+		</ul>
+		</li>
+		<li>CN = UCA Extended Validation Root
+		<ul>
+			<li>SHA-256 Fingerprint: D43AF9B35473755C9684FC06D7D8CB70EE5C28E773FB294EB41EE71722924D24</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+	<li>The following CA certificates were <strong>Removed</strong>:
+	<ul>
+		<li>CN = AC Raíz Certicámara S.A.
+		<ul>
+			<li>SHA-256 Fingerprint: A6C51E0DA5CA0A9309D2E4C0E40C2AF9107AAE8203857FE198E3E769E343085C</li>
+		</ul>
+		</li>
+		<li>CN = Certplus Root CA G1
+		<ul>
+			<li>SHA-256 Fingerprint: 152A402BFCDF2CD548054D2275B39C7FCA3EC0978078B0F0EA76E561A6C7433E</li>
+		</ul>
+		</li>
+		<li>CN = Certplus Root CA G2
+		<ul>
+			<li>SHA-256 Fingerprint: 6CC05041E6445E74696C4CFBC9F80F543B7EABBB44B4CE6F787C6A9971C42F17</li>
+		</ul>
+		</li>
+		<li>CN = OpenTrust Root CA G1
+		<ul>
+			<li>SHA-256 Fingerprint: 56C77128D98C18D91B4CFDFFBC25EE9103D4758EA2ABAD826A90F3457D460EB4</li>
+		</ul>
+		</li>
+		<li>CN = OpenTrust Root CA G2
+		<ul>
+			<li>SHA-256 Fingerprint: 27995829FE6A7515C1BFE848F9C4761DB16C225929257BF40D0894F29EA8BAF2</li>
+		</ul>
+		</li>
+		<li>CN = OpenTrust Root CA G3
+		<ul>
+			<li>SHA-256 Fingerprint: B7C36231706E81078C367CB896198F1E3208DD926949DD8F5709A410F75B6292</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>
+
+<h2 id="Bugs_fixed_in_NSS_3.41">Bugs fixed in NSS 3.41</h2>
+
+<ul>
+	<li>
+	<p><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1412829">Bug 1412829</a>, Reject empty supported_signature_algorithms in Certificate Request in TLS 1.2</p>
+	</li>
+	<li>
+	<p><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1485864" rel="noopener">Bug 1485864</a> - Cache side-channel variant of the Bleichenbacher attack (CVE-2018-12404)</p>
+	</li>
+	<li>
+	<p><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1481271">Bug 1481271</a> - Resend the same ticket in ClientHello after HelloRetryRequest</p>
+	</li>
+	<li>
+	<p><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1493769">Bug 1493769</a> - Set session_id for external resumption tokens</p>
+	</li>
+	<li>
+	<p><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1507179">Bug 1507179</a> - Reject CCS after handshake is complete in TLS 1.3</p>
+	</li>
+</ul>
+
+<p>This Bugzilla query returns all the bugs fixed in NSS 3.41:</p>
+
+<p><a href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.41">https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.41</a></p>
+
+<h2 id="Compatibility">Compatibility</h2>
+
+<p>NSS 3.41 shared libraries are backward compatible with all older NSS 3.x shared libraries. A program linked with older NSS 3.x shared libraries will work with NSS 3.41 shared libraries without recompiling or relinking. Furthermore, applications that restrict their use of NSS APIs to the functions listed in NSS Public Functions will remain compatible with future versions of the NSS shared libraries.</p>
+
+<h2 id="Feedback">Feedback</h2>
+
+<p>Bugs discovered should be reported by filing a bug report with<a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=NSS"> bugzilla.mozilla.org</a> (product NSS).</p>

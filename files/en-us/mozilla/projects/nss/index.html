@@ -1,0 +1,172 @@
+---
+title: Network Security Services
+slug: Mozilla/Projects/NSS
+tags:
+  - JSS
+  - NSS
+  - NeedsMigration
+---
+<p><strong>Network Security Services</strong> (<strong>NSS</strong>) is a set of libraries designed to support cross-platform development of security-enabled client and server applications. Applications built with NSS can support SSL v3, TLS, PKCS #5, PKCS #7, PKCS #11, PKCS #12, S/MIME, X.509 v3 certificates, and other security standards.</p>
+
+<p>For detailed information on standards supported, see <a href="/en-US/docs/Mozilla/Projects/NSS/Overview" title="Overview_of_NSS">Overview of NSS</a>. For a list of frequently asked questions, see the <a href="/en-US/docs/Mozilla/Projects/NSS/FAQ">FAQ</a>.</p>
+
+<p>NSS is available under the Mozilla Public License. For information on downloading NSS releases as tar files, see <a href="/en-US/docs/Mozilla/Projects/NSS/NSS_Sources_Building_Testing">Download PKI Source</a>.</p>
+
+<p>If you're a developer and would like to contribute to NSS, you might want to read the documents <a href="/en-US/docs/Mozilla/Projects/NSS/An_overview_of_NSS_Internals">highlevel overview of internal details of NSS</a> and <a href="/en-US/docs/Mozilla/Projects/NSS/Getting_started_with_NSS">getting started with NSS</a>.</p>
+
+<table class="topicpage-table">
+ <tbody>
+  <tr>
+   <td>
+    <h2 id="Documentation">Documentation</h2>
+
+    <h3 id="Background_Information">Background Information</h3>
+
+    <dl>
+     <dt><a href="/en-US/docs/Mozilla/Projects/NSS/Overview">Overview of NSS</a></dt>
+     <dd>Provides a brief summary of NSS and its capabilities.</dd>
+     <dt><a href="/en-US/docs/Mozilla/Projects/NSS/FAQ">NSS FAQ</a></dt>
+     <dd>Answers basic questions about NSS.</dd>
+     <dt><a href="/en-US/docs/Archive/Security/Introduction_to_Public-Key_Cryptography">Introduction to Public-Key Cryptography</a></dt>
+     <dd>Explains the basic concepts of public-key cryptography that underlie NSS.</dd>
+     <dt><a href="/en-US/docs/Archive/Security/Introduction_to_SSL">Introduction to SSL</a></dt>
+     <dd>Introduces the SSL protocol, including information about cryptographic ciphers supported by SSL and the steps involved in the SSL handshake.</dd>
+    </dl>
+
+    <h3 id="Getting_Started">Getting Started</h3>
+
+    <dl>
+     <dt><a href="/en-US/docs/Mozilla/Projects/NSS/NSS_Releases">NSS Releases</a></dt>
+     <dd>This page contains information about the current and past releases of NSS.</dd>
+     <dt><a href="/en-US/docs/Mozilla/Projects/NSS/NSS_Sources_Building_Testing">Get the source code and Build it</a></dt>
+     <dd>Instructions on how to build NSS on the different supported platforms.</dd>
+     <dt><a href="/en-US/docs/Mozilla/Developer_guide/Source_Code/Mercurial">Get Mozilla Source Code Using Mercurial</a></dt>
+     <dd>Information about with working with Mercurial.</dd>
+     <dt><a href="/en-US/docs/Mozilla/Developer_guide/Source_Code/CVS">Get Mozilla Source Code Using CVS (deprecated)</a></dt>
+     <dd>Old deprecated CVS documentation.</dd>
+    </dl>
+
+    <h3 id="NSS_APIs">NSS APIs</h3>
+
+    <dl>
+     <dt><a href="/en-US/docs/Mozilla/Projects/NSS/Introduction_to_Network_Security_Services">Introduction to Network Security Services</a></dt>
+     <dd>Provides an overview of the NSS libraries and what you need to know to use them.</dd>
+     <dt><a href="NSS/SSL_functions">NSS SSL Public Functions</a></dt>
+     <dd>Summarizes the SSL APIs exported by the NSS shared libraries.</dd>
+     <dt><a href="/en-US/docs/Mozilla/Projects/NSS/Reference">NSS SSL Reference</a></dt>
+     <dd>API used to invoke SSL operations.</dd>
+     <dt><a href="NSS/NSS_API_GUIDELINES">NSS API Guidelines</a></dt>
+     <dd>Explains how the libraries and code are organized, and guidelines for developing code (naming conventions, error handling, thread safety, etc.)</dd>
+     <dt><a href="NSS/nss_tech_notes">NSS Technical Notes</a></dt>
+     <dd>Links to NSS technical notes, which provide latest information about new NSS features and supplementary documentation for advanced topics in programming with NSS.</dd>
+    </dl>
+
+    <h3 id="Tools_testing_and_other_technical_details">Tools, testing, and other technical details</h3>
+
+    <dl>
+     <dt><a href="/en-US/docs/Mozilla/Projects/NSS/Building">Build Instructions for NSS</a></dt>
+     <dd>Describe how to check out and build NSS releases.</dd>
+    </dl>
+
+    <dl>
+     <dt><a href="/en-US/docs/Mozilla/Projects/NSS/NSS_Developer_Tutorial">NSS Developer Tutorial</a></dt>
+     <dd>How to make changes in NSS. Coding style, maintaining ABI compatibility.</dd>
+    </dl>
+
+    <dl>
+     <dt><a href="NSS/Tools">NSS Tools</a></dt>
+     <dd>Tools for developing, debugging, and managing applications that use NSS.</dd>
+     <dt><a href="NSS/NSS_Sample_Code">Sample Code</a></dt>
+     <dd>Demonstrates how NSS can be used for cryptographic operations, certificate handling, SSL, etc.</dd>
+     <dt><a href="NSS/NSS_Third-Party_Code">Third-Party Code</a></dt>
+     <dd>A list of third-party code included in the NSS library.</dd>
+     <dt><a href="https://www-archive.mozilla.org/projects/security/pki/nss/testnss_32.html">NSS 3.2 Test Suite</a></dt>
+     <dd><strong>Archived version.</strong> Describes how to run the standard NSS tests.</dd>
+     <dt><a href="https://www-archive.mozilla.org/projects/security/pki/nss/performance_reports.html">NSS Performance Reports</a></dt>
+     <dd><strong>Archived version.</strong> Links to performance reports for NSS 3.2 and later releases.</dd>
+     <dt><a href="https://www-archive.mozilla.org/projects/security/pki/nss/nss-3.11/nss-3.11-algorithms.html">Encryption Technologies Available in NSS 3.11</a></dt>
+     <dd><strong>Archived version.</strong> Lists the cryptographic algorithms used by NSS 3.11.</dd>
+     <dt><a href="https://www-archive.mozilla.org/projects/security/pki/nss/loadable_certs.html">NSS 3.1 Loadable Root Certificates</a></dt>
+     <dd><strong>Archived version.</strong> Describes the scheme for loading root CA certificates.</dd>
+     <dt><a href="https://www-archive.mozilla.org/projects/security/pki/nss/db_formats.html">cert7.db</a></dt>
+     <dd><strong>Archived version.</strong> General format of the cert7.db database.</dd>
+    </dl>
+
+    <h3 id="PKCS_11_information">PKCS #11 information</h3>
+
+    <ul>
+     <li><a href="/en-US/docs/Mozilla/Projects/NSS/PKCS11">Documentation on PKCS #11 modules</a></li>
+     <li><a href="/en-US/docs/Mozilla/Projects/NSS/PKCS11_Implement">Implementing PKCS #11 for NSS</a></li>
+     <li><a href="/en-US/docs/Mozilla/Projects/NSS/PKCS11/Module_Specs">The strings NSS uses to load PKCS #11 modules</a></li>
+     <li><a href="/en-US/docs/Mozilla/Projects/NSS/PKCS11/FAQ">PKCS #11 FAQ</a></li>
+     <li><a href="/en-US/docs/PKCS11_Jar_Install">Using the JAR Installation Manager to Install a PKCS #11 Cryptographic Module</a></li>
+     <li><a href="https://www-archive.mozilla.org/projects/security/pki/pkcs11/">PKCS #11 Conformance Testing - Archived version</a></li>
+    </ul>
+
+    <h3 id="CA_certificates_pre-loaded_into_NSS">CA certificates pre-loaded into NSS</h3>
+
+    <ul>
+     <li><a href="https://www.mozilla.org/projects/security/certs/policy/">Mozilla CA certificate policy</a></li>
+     <li><a href="https://wiki.mozilla.org/CA/Included_Certificates">List of pre-loaded CA certificates</a>
+      <ul>
+       <li>Consumers of this list must consider the trust bit setting for each included root certificate. <a href="https://www.imperialviolet.org/2012/01/30/mozillaroots.html">More Information</a>, <a href="https://github.com/agl/extract-nss-root-certs">Extracting roots and their trust bits</a></li>
+      </ul>
+     </li>
+    </ul>
+
+    <h3 id="NSS_is_built_on_top_of_Netscape_Portable_Runtime_NSPR">NSS is built on top of Netscape Portable Runtime (NSPR)</h3>
+
+    <dl>
+     <dt><a href="NSPR">Netscape Portable Runtime</a></dt>
+     <dd>NSPR project page.</dd>
+     <dt><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference">NSPR Reference</a></dt>
+     <dd>NSPR API documentation.</dd>
+    </dl>
+
+    <h3 id="Additional_Information">Additional Information</h3>
+
+    <ul>
+     <li><a href="/en-US/docs/JavaScript_crypto">Using the window.crypto object from JavaScript</a></li>
+     <li><a href="/en-US/docs/Mozilla/Projects/NSS/HTTP_delegation">Delegation of HTTP download for OCSP</a></li>
+     <li><a href="/en-US/docs/Mozilla/Projects/NSS/TLS_Cipher_Suite_Discovery">TLS Cipher Suite Discovery</a></li>
+     <li><a href="/en-US/docs/Mozilla/Projects/NSS/Certificate_Download_Specification">NSS Certificate Download Specification</a></li>
+     <li><a href="/en-US/docs/Mozilla/Projects/NSS/FIPS_Mode_-_an_explanation" title="FIPS Mode - an explanation">FIPS Mode - an explanation</a></li>
+     <li><a href="/en-US/docs/Mozilla/Projects/NSS/Key_Log_Format" title="NSS Key Log Format">Format of key log files</a></li>
+    </ul>
+
+    <h3 id="Planning">Planning</h3>
+
+    <p>Information on NSS planning can be found at <a class="external" href="https://wiki.mozilla.org/NSS">wiki.mozilla.org</a>, including:</p>
+
+    <ul>
+     <li><a class="external" href="https://wiki.mozilla.org/FIPS_Validation">FIPS Validation</a></li>
+     <li><a class="external" href="https://wiki.mozilla.org/NSS:Roadmap">NSS Roadmap page</a></li>
+     <li><a href="https://fedoraproject.org/wiki/User:Mitr/NSS:DeveloperFriendliness">NSS Improvement Project</a></li>
+    </ul>
+   </td>
+   <td>
+
+
+    <h3 id="Community">Community</h3>
+
+    <ul>
+     <li>View Mozilla Security forums...</li>
+    </ul>
+
+    <p>{{ DiscussionList("dev-security", "mozilla.dev.security") }}</p>
+
+    <ul>
+     <li>View Mozilla Cryptography forums...</li>
+    </ul>
+
+    <p>{{ DiscussionList("dev-tech-crypto", "mozilla.dev.tech.crypto") }}</p>
+
+    <h3 id="Related_Topics">Related Topics</h3>
+
+    <ul>
+     <li><a href="/en-US/docs/Security">Security</a></li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>

@@ -1,0 +1,42 @@
+---
+title: NSS Tools certutil-tasks
+slug: Mozilla/Projects/NSS/tools/NSS_Tools_certutil-tasks
+---
+<h1 id="NSS_Security_Tools_certutil_Tasks">NSS Security Tools: certutil Tasks</h1>
+
+  <p>Newsgroup: <a href="news://news.mozilla.org/mozilla.dev.tech.crypto">mozilla.dev.tech.crypto</a><br>
+
+
+  </p><h1 id="Task_List">Task List</h1>
+
+  <ol>
+    <li>Better error reporting. Most certutil errors provide no detail.
+    Mistakes with command-line options just print a usage message.</li>
+
+    <li>Improve certificate listings. Allow for sorting by name and trust.
+    Sorting by trust will return CA certs first.</li>
+
+    <li>Allow listing and lookup of keys by index and nickname.</li>
+
+    <li>Improve coherence of key and certificate nicknames.</li>
+
+    <li>Remove keys "stranded" without a certificate (except for the imminent
+    (????) encryption key for password files).</li>
+
+    <li>Support importing keys from a file.</li>
+
+    <li>Improve hardware token support.</li>
+
+    <li>(bugfix) Some certificate extensions cause certutil to crash.</li>
+
+    <li>(bugfix) Certificate entries require a serial number; one should be
+    generated automatically if not provided.</li>
+
+    <li>(bugfix) Null password is given to new <code class="filename">key3.db</code>; should prompt user for an initial password.</li>
+
+    <li>(bugfix) Listing provate keys does not work: requires password
+    authentication.</li>
+
+    <li>(bugfix) Listing certificate extensions has typos and does not provide
+    much information.</li>
+  </ol>

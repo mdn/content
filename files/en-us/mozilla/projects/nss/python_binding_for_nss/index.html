@@ -1,0 +1,1692 @@
+---
+title: Python binding for NSS
+slug: Mozilla/Projects/NSS/Python_binding_for_NSS
+---
+<h2 id="Project_Information">Project Information</h2>
+
+<p>python-nss is a Python binding for NSS (Network Security Services) and NSPR (Netscape Portable Runtime). NSS provides cryptography services supporting SSL, TLS, PKI, PKIX, X509, PKCS*, etc. NSS is an alternative to OpenSSL and used extensively by major software projects. NSS is FIPS-140 certified.</p>
+
+<p>NSS is built upon NSPR because NSPR provides an abstraction of common operating system services, particularly in the areas of networking and process management. Python also provides an abstraction of common operating system services but because NSS and NSPR are tightly bound python-nss exposes elements of NSPR.</p>
+
+<p>For information on NSS and NSPR, see the following:</p>
+
+<ul>
+ <li><a href="/en-US/docs/Mozilla/Projects/NSS">Network Security Services (NSS)</a>. NSS project page.</li>
+ <li><a href="/docs/NSPR">Netscape Portable Runtime</a>. NSPR project page.</li>
+ <li><a href="/docs/NSPR_API_Reference">NSPR Reference</a>. NSPR API documentation.</li>
+</ul>
+
+<h3 id="Design_Goals">Design Goals</h3>
+
+<p>NSS and NSPR are C language API's which python-nss "wraps" and exposes to Python programs. The design of python-nss follows these basic guiding principles:</p>
+
+<ul>
+ <li>Be a thin layer with almost a one-to-one mapping of NSS/NSPR calls to python methods and functions. Programmers already familiar with NSS/NSPR will be quite comfortable with python-nss.</li>
+ <li>Be "Pythonic". The term Pythonic means to follow accepted Python paradigms and idoms in the Python language and libraries. Thus when deciding if the NSS/NSPR API should be rigidly followed or a more Pythonic API provided the Pythonic implementation wins because Python programmers do not want to write C programs in Python, rather they want their Python code to feel like Python code with the richness of full Python.</li>
+ <li>Identifer names follow the preferred Python style instead of the style in the NSS/NSPR C header files.
+  <ul>
+   <li>Classes are camel-case. Class names always begin with a upper case letter and are then followed by a mix of lower and upper case letters, a upper case letter is used to separate words. Acronyms always appear as a contiguous string of upper case letters.</li>
+   <li>Method, function and property names are always lower case with words separated by underscores.</li>
+   <li>Constants are all upper case with words separated by underscores, they match the NSS/NSPR C API.</li>
+  </ul>
+ </li>
+ <li>Every module, class, function, and method has associated documentation and is exposed via the standard Python methodology. This documentation is available via the numerous Python documentation extraction tools. Also see the <a href="https://mozilla.github.io/python-nss-docs/">generated HTML documentation</a> provided with each release.</li>
+ <li>NSS/NSPR structs are exposed as Python objects.</li>
+ <li>NSS/NSPR functions which operate on a NSS/NSPR object (i.e. struct) become methods of that object.</li>
+ <li>NSS/NSPR objects which are collections support the Python iteration protocol. In other words they can be iterated over, indexed by position, or used as slices.</li>
+ <li>NSS/NSPR objects whose collection elements can be referenced by name support associative indexing.</li>
+ <li>NSS/NSPR objects which have "get" and "set" API function calls are exposed as Python properties.</li>
+ <li>All NSS/NSPR Python objects can print their current value by evaluting the Python object in a string context or by using the Python str() function.</li>
+ <li>Support threading. The Python Global Interpreter Lock (GIL) is released prior to calling NSS/NSPR C functions and reaquired after the NSS/NSPR C function returns. This allows other Python threads to execute during the time a NSS/NSPR function is progress in another thread. Also, any "global" values which are set in python-nss are actually thread-local. Examples of this are the various callbacks which can be set and their parameters. Thus each thread gets it own set of callbacks.</li>
+ <li>Many methods/functions provide sane default (keyword) parameters freeing the Python programmer from having to specify all parameters yet allowing them to be overriden when necessary.</li>
+ <li>Error codes are <em>never</em> returned from methods/functions. python-nss follows the existing Python exception mechanism. Any error reported by NSS/NSPR is converted into a Python exception and raised. The exact error code, error description, and often contextual error information will be present in the exception object.</li>
+ <li>Enumerated constants used in the NSS/NSPR API's are available in the Python module under the <em>exact</em> same name as they appear in the C header files of NSS/NSPR.</li>
+ <li>Convenience functions are provided to translate between the numeric value of an enumerated constant and it's string representation and visa versa.</li>
+ <li>python-nss internally supports UTF-8. Strings may be Python str objects or Python unicode objects. If a Python unicode object is passed to a NSS/NSPR function it will be encoded as UTF-8 first before being passed to NSS/NSPR.</li>
+ <li>python-nss tries to be flexible when generating a print representation of complex objects. For simplicity you can receive a block of formatted text but if you need more control, such as when building GUI elments you can access a list of "lines", each line is paired with an indentation level value. The (indent, text) pairs allow you to insert the item into a GUI tree structure or simply change the indentation formatting.</li>
+ <li>Deprecated elements of the python-nss API are marked with Python deprecation warnings as well as being documented in the nss module documentation. As of Python 2.7 deprecation warnings are no longer reported by default. It is suggested Python developers using python-nss periodically run their code with deprecation warnings enabled. Depercated elements will persist for a least two releases before being removed from the API entirely.</li>
+</ul>
+
+<h2 id="Project_History">Project History</h2>
+
+<p>Red Hat utilizes both NSS and Python in many of it's projects, however it was not previously possible to call NSS directly from Python. To solve this problem Red Hat generously funded the initial development of python-nss as well as it's continued maintenance. Red Hat following it's open source philosophy has contributed the source to the Mozilla security project. Red Hat welcomes all interested contributors who would like to contribute the python-nss project as part of an open source community. The initial release of python-nss occurred in September 2008 with it's inclusion in the Fedora distribution. The source code to python-nss was first imported into the Mozilla CVS repository on June 9th 2009. python-nss is currently available in:</p>
+
+<ul>
+ <li>Fedora</li>
+ <li>RHEL 6</li>
+</ul>
+
+<p>The principal developer of python-nss is John Dennis <a href="mailto:jdennis@redhat.com">jdennis@redhat.com</a>. Additional contributors are:</p>
+
+<ul>
+ <li>Miloslav Trmač <a href="mailto:mitr@redhat.com">mitr@redhat.com</a></li>
+ <li>Bohuslav Kabrda slavek@redhat.com</li>
+</ul>
+
+<p>The python-nss binding is still young despite having been utilized in several major software projects. Thus it's major version number is still at zero. This is primarily so the developers can make changes to the API as experiece grows with it. For example it is already known there are some naming inconsistencies. Elments of the API are probably not ideally partitioned into proper namespaces via Python modules. Some functionality and interface have already been deprecated due to lessons learned. Thus at some point in the future when it is felt the API has solidified and been further proven in the field a 1.0 release will be made. At that point in time existing users of the python-nss API will need to some elements of their code. A migration script will be provided to assist them.</p>
+
+<h2 id="Licensing_Information">Licensing Information</h2>
+
+<p>python-nss is available under the Mozilla Public License, the GNU General Public License, and the GNU Lesser General Public License. For information on downloading python-nss releases as tar files, see <a href="#sourcedownload">Source Download</a>.</p>
+
+<h2 id="Documentation">Documentation</h2>
+
+<h4 id="python-nss_API_documentation">python-nss API documentation</h4>
+
+<p>The python-nss API documentation for the current release can be viewed at <a href="https://mozilla.github.io/python-nss-docs/"> python-nss API documentation</a>.</p>
+
+<p>The API documentation is generated from the python-nss source code and compiled modules. You can build it yourself via <code>./setup.py build_doc</code>. Most distributions include the python-nss API documentation in the python-nss packaging. Consult your distribution for more information.</p>
+
+<h4 id="Example_Code">Example Code</h4>
+
+<p>The doc/examples directory contains numerous examples of python-nss programs and libraries you may wish to consult. They illustrate suggested usage and best practice.</p>
+
+<h4 id="Test_Code">Test Code</h4>
+
+<p>In addition the test directory contains unit tests that also illustrate python-nss usage, however unlike the examples the unit tests are geared towards testing rather than expository illustration.</p>
+
+<h4 id="Other_Documentation">Other Documentation</h4>
+
+<p>The doc directory contains other files you may wish to review.</p>
+
+<h2 id="How_to_Report_a_Bug">How to Report a Bug</h2>
+
+<p>python-nss bugs are currently being tracked in the Red Hat bugzilla system for Fedora. You can enter a bug report <a href="https://bugzilla.redhat.com/enter_bug.cgi?product=Fedora;component=python-nss">here</a>.</p>
+
+<h2 id="Source_Download_Area">Source Download Area</h2>
+
+<p>Source downloads are maintained <a href="https://ftp.mozilla.org/pub/mozilla.org/security/python-nss/releases/">here</a>. Links to download URL for a specific release can be found in the <a href="#release_info">Release Information</a> section.</p>
+
+<h2 id="Mozilla_Source_Code_Management_(SCM)_Information">Mozilla Source Code Management (SCM) Information</h2>
+
+<p>On March 21, 2013 the NSS project switched from using CVS as it's source code manager (SCM) to Mercurial, also known as <code>hg</code>. All prior CVS information (including release tags) were imported into the new Mercurial repositories, as such there is no need to utilize the deprecated CVS repositories, use Mercurial instead.</p>
+
+<p>To check out python-nss source code from Mercurial do this:</p>
+
+<p><code>hg clone https://hg.mozilla.org/projects/python-nss</code></p>
+
+<p>The SCM tags for various python-nss releases can be found in the <a href="#release_info">Release Information</a>.</p>
+
+<p>You may want to review the <a href="/en-US/docs/Mozilla/Developer_guide/Source_Code/Mercurial">Getting Mozilla Source Code Using Mercurial</a> documentation for more information with working with Mercurial.</p>
+
+<p>The old deprecated CVS documentation can be found here: <a href="/en-US/docs/Mozilla/Developer_guide/Source_Code/CVS">Getting Mozilla Source Code Using CVS</a>.</p>
+
+<p>The old deprecated python-nss CVS source code location is <code class="filename">mozilla/security/python/nss</code>.</p>
+
+<h2 id="Release_Information">Release Information</h2>
+
+<h3 id="Release_1.0.1">Release 1.0.1</h3>
+
+<table>
+ <tbody>
+  <tr>
+   <td style="vertical-align: top;">Release Date</td>
+   <td style="vertical-align: top;">2017-02-28</td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">SCM Tag</td>
+   <td style="vertical-align: top;">PYNSS_RELEASE_1_0_1</td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">Source Download</td>
+   <td style="vertical-align: top;"><a href="https://ftp.mozilla.org/pub/mozilla.org/security/python-nss/releases/PYNSS_RELEASE_1_0_1/src/">https://ftp.mozilla.org/pub/mozilla.org/security/python-nss/releases/PYNSS_RELEASE_1_0_1/src/</a></td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">Change Log</td>
+   <td style="vertical-align: top;">
+    <ul>
+     <li>Add TLS 1.3 cipher suites</li>
+     <li>ssl_cipher_info.py now attempts to enable TLS 1.3</li>
+     <li>Fix build issue in setup.py. python-nss can now be build
+         as Python wheel, e.g. `pip wheel -w dist .`</li>
+     <li>The following constants were added:
+      <ul>
+       <li>ssl.TLS_AES_128_GCM_SHA256</li>
+       <li>ssl.TLS_AES_256_GCM_SHA384</li>
+       <li>ssl.TLS_CHACHA20_POLY1305_SHA256</li>
+      </ul>
+     </li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Release_1.0.0">Release 1.0.0</h3>
+
+<table>
+ <tbody>
+  <tr>
+   <td style="vertical-align: top;">Release Date</td>
+   <td style="vertical-align: top;">2016-09-01</td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">SCM Tag</td>
+   <td style="vertical-align: top;">PYNSS_RELEASE_1_0_0</td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">Source Download</td>
+   <td style="vertical-align: top;"><a href="https://ftp.mozilla.org/pub/mozilla.org/security/python-nss/releases/PYNSS_RELEASE_1_0_0/src/">https://ftp.mozilla.org/pub/mozilla.org/security/python-nss/releases/PYNSS_RELEASE_1_0_0/src/</a></td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">Change Log</td>
+   <td style="vertical-align: top;">
+    <p>Official 1.0.0 release, only minor tweaks from the 1.0.0beta1 release.</p>
+
+    <ul>
+     <li>Allow custom include root in setup.py as command line arg.</li>
+     <li>Add TLS chacha20 poly1305 constants.</li>
+     <li>Remove checks for whether a socket is open for reading. It's not possible for the binding to know in all cases, especially if the socket is created from an xternal socket passed in.</li>
+     <li>The following module functions were added:
+      <ul>
+       <li>nss.get_all_tokens</li>
+      </ul>
+     </li>
+     <li>The following constants were added:
+      <ul>
+       <li>ssl.TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256</li>
+       <li>ssl.TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256</li>
+       <li>ssl.TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256</li>
+       <li>ssl.TLS_ECDHE_PSK_WITH_CHACHA20_POLY1305_SHA256</li>
+       <li>ssl.TLS_DHE_PSK_WITH_CHACHA20_POLY1305_SHA256</li>
+      </ul>
+     </li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Release_1.0.0beta1">Release 1.0.0beta1</h3>
+
+<table>
+ <tbody>
+  <tr>
+   <td style="vertical-align: top;">Release Date</td>
+   <td style="vertical-align: top;">2016-02-16</td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">SCM Tag</td>
+   <td style="vertical-align: top;">PYNSS_RELEASE_1_0_0beta1</td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">Source Download</td>
+   <td style="vertical-align: top;"><a href="https://ftp.mozilla.org/pub/mozilla.org/security/python-nss/releases/PYNSS_RELEASE_1_0_0beta1/src/">https://ftp.mozilla.org/pub/mozilla.org/security/python-nss/releases/PYNSS_RELEASE_1_0_0beta1/src/</a></td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">Change Log</td>
+   <td style="vertical-align: top;">
+    <p>The primary enhancement in this version is support for Python3. A single code base supports both Py2 (minimum version 2.7) and Py3</p>
+
+    <ul>
+     <li>When built for Py2:
+      <ul>
+       <li>text will be a Unicode object</li>
+       <li>binary data will be a str object</li>
+       <li>ints will be Python long object</li>
+      </ul>
+     </li>
+     <li>When built for Py3:
+      <ul>
+       <li>text will be a str object</li>
+       <li>binary data will be a bytes object</li>
+       <li>ints will be a Python int object</li>
+      </ul>
+     </li>
+     <li>All pure Python tests and examples have been ported to Py3 syntax but should continue to run under Py2.</li>
+     <li>The following class methods were added:
+      <ul>
+       <li>PK11Slot.check_security_officer_passwd</li>
+       <li>PK11Slot.check_user_passwd</li>
+       <li>PK11Slot.change_passwd</li>
+       <li>PK11Slot.init_pin</li>
+      </ul>
+     </li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Release_0.17.0">Release 0.17.0</h3>
+
+<table>
+ <tbody>
+  <tr>
+   <td style="vertical-align: top;">Release Date</td>
+   <td style="vertical-align: top;">2014-11-07</td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">SCM Tag</td>
+   <td style="vertical-align: top;">PYNSS_RELEASE_0_17_0</td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">Source Download</td>
+   <td style="vertical-align: top;"><a href="https://ftp.mozilla.org/pub/mozilla.org/security/python-nss/releases/PYNSS_RELEASE_0_17_0/src/">https://ftp.mozilla.org/pub/mozilla.org/security/python-nss/releases/PYNSS_RELEASE_0_17_0/src/</a></td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">Change Log</td>
+   <td style="vertical-align: top;">
+    <p>The primary enhancement in this version is adding support for PBKDF2</p>
+
+    <ul>
+     <li>The following module functions were added:
+      <ul>
+       <li>nss.create_pbev2_algorithm_id</li>
+      </ul>
+     </li>
+     <li>The following class methods were added:
+      <ul>
+       <li>nss.AlgorithmID.get_pbe_crypto_mechanism</li>
+       <li>nss.AlgorithmID.get_pbe_iv</li>
+       <li>nss.PK11Slot.pbe_key_gen</li>
+       <li>nss.PK11Slot.format_lines</li>
+       <li>nss.PK11Slot.format</li>
+       <li>nss.Pk11SymKey.format_lines</li>
+       <li>nss.Pk11SymKey.format</li>
+       <li>nss.SecItem.to_base64</li>
+       <li>nss.SecItem.format_lines</li>
+       <li>nss.SecItem.format</li>
+      </ul>
+     </li>
+     <li>The following files were added:
+      <ul>
+       <li>doc/examples/pbkdf2_example.py</li>
+      </ul>
+     </li>
+     <li>The SecItem constructor added 'ascii' parameter to permit initialization from base64 and/or PEM textual data.</li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Release_0.16.0">Release 0.16.0</h3>
+
+<table>
+ <tbody>
+  <tr>
+   <td style="vertical-align: top;">Release Date</td>
+   <td style="vertical-align: top;">2014-10-29</td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">SCM Tag</td>
+   <td style="vertical-align: top;">PYNSS_RELEASE_0_16_0</td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">Source Download</td>
+   <td style="vertical-align: top;"><a href="https://ftp.mozilla.org/pub/mozilla.org/security/python-nss/releases/PYNSS_RELEASE_0_16_0/src/">https://ftp.mozilla.org/pub/mozilla.org/security/python-nss/releases/PYNSS_RELEASE_0_16_0/src/</a></td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">Change Log</td>
+   <td style="vertical-align: top;">
+    <p>The primary enhancements in this version is adding support for the setting trust attributes on a Certificate, the SSL version range API, information on the SSL cipher suites and information on the SSL connection.</p>
+
+    <ul>
+     <li>The following module functions were added:
+      <ul>
+       <li>ssl.get_ssl_version_from_major_minor</li>
+       <li>ssl.get_default_ssl_version_range</li>
+       <li>ssl.get_supported_ssl_version_range</li>
+       <li>ssl.set_default_ssl_version_range</li>
+       <li>ssl.ssl_library_version_from_name</li>
+       <li>ssl.ssl_library_version_name</li>
+       <li>ssl.get_cipher_suite_info</li>
+       <li>ssl.ssl_cipher_suite_name</li>
+       <li>ssl.ssl_cipher_suite_from_name</li>
+      </ul>
+     </li>
+     <li>The following deprecated module functions were removed:
+      <ul>
+       <li>ssl.nssinit</li>
+       <li>ssl.nss_ini</li>
+       <li>ssl.nss_shutdown</li>
+      </ul>
+     </li>
+     <li>The following classes were added:
+      <ul>
+       <li>SSLCipherSuiteInfo</li>
+       <li>SSLChannelInfo</li>
+      </ul>
+     </li>
+     <li>The following class methods were added:
+      <ul>
+       <li>Certificate.trust_flags</li>
+       <li>Certificate.set_trust_attributes</li>
+       <li>SSLSocket.set_ssl_version_range</li>
+       <li>SSLSocket.get_ssl_version_range</li>
+       <li>SSLSocket.get_ssl_channel_info</li>
+       <li>SSLSocket.get_negotiated_host</li>
+       <li>SSLSocket.connection_info_format_lines</li>
+       <li>SSLSocket.connection_info_format</li>
+       <li>SSLSocket.connection_info_str</li>
+       <li>SSLCipherSuiteInfo.format_lines</li>
+       <li>SSLCipherSuiteInfo.format</li>
+       <li>SSLChannelInfo.format_lines</li>
+       <li>SSLChannelInfo.format</li>
+      </ul>
+     </li>
+     <li>The following class properties were added:
+      <ul>
+       <li>Certificate.ssl_trust_flags</li>
+       <li>Certificate.email_trust_flags</li>
+       <li>Certificate.signing_trust_flags</li>
+       <li>SSLCipherSuiteInfo.cipher_suite</li>
+       <li>SSLCipherSuiteInfo.cipher_suite_name</li>
+       <li>SSLCipherSuiteInfo.auth_algorithm</li>
+       <li>SSLCipherSuiteInfo.auth_algorithm_name</li>
+       <li>SSLCipherSuiteInfo.kea_type</li>
+       <li>SSLCipherSuiteInfo.kea_type_name</li>
+       <li>SSLCipherSuiteInfo.symmetric_cipher</li>
+       <li>SSLCipherSuiteInfo.symmetric_cipher_name</li>
+       <li>SSLCipherSuiteInfo.symmetric_key_bits</li>
+       <li>SSLCipherSuiteInfo.symmetric_key_space</li>
+       <li>SSLCipherSuiteInfo.effective_key_bits</li>
+       <li>SSLCipherSuiteInfo.mac_algorithm</li>
+       <li>SSLCipherSuiteInfo.mac_algorithm_name</li>
+       <li>SSLCipherSuiteInfo.mac_bits</li>
+       <li>SSLCipherSuiteInfo.is_fips</li>
+       <li>SSLCipherSuiteInfo.is_exportable</li>
+       <li>SSLCipherSuiteInfo.is_nonstandard</li>
+       <li>SSLChannelInfo.protocol_version</li>
+       <li>SSLChannelInfo.protocol_version_str</li>
+       <li>SSLChannelInfo.protocol_version_enum</li>
+       <li>SSLChannelInfo.major_protocol_version</li>
+       <li>SSLChannelInfo.minor_protocol_version</li>
+       <li>SSLChannelInfo.cipher_suite</li>
+       <li>SSLChannelInfo.auth_key_bits</li>
+       <li>SSLChannelInfo.kea_key_bits</li>
+       <li>SSLChannelInfo.creation_time</li>
+       <li>SSLChannelInfo.creation_time_utc</li>
+       <li>SSLChannelInfo.last_access_time</li>
+       <li>SSLChannelInfo.last_access_time_utc</li>
+       <li>SSLChannelInfo.expiration_time</li>
+       <li>SSLChannelInfo.expiration_time_utc</li>
+       <li>SSLChannelInfo.compression_method</li>
+       <li>SSLChannelInfo.compression_method_name</li>
+       <li>SSLChannelInfo.session_id</li>
+      </ul>
+     </li>
+     <li>The following files were added:
+      <ul>
+       <li>doc/examples/cert_trust.py</li>
+       <li>doc/examples/ssl_version_range.py</li>
+      </ul>
+     </li>
+     <li>The following constants were added:
+      <ul>
+       <li>nss.CERTDB_TERMINAL_RECORD</li>
+       <li>nss.CERTDB_VALID_PEER</li>
+       <li>nss.CERTDB_TRUSTED</li>
+       <li>nss.CERTDB_SEND_WARN</li>
+       <li>nss.CERTDB_VALID_CA</li>
+       <li>nss.CERTDB_TRUSTED_CA</li>
+       <li>nss.CERTDB_NS_TRUSTED_CA</li>
+       <li>nss.CERTDB_USER</li>
+       <li>nss.CERTDB_TRUSTED_CLIENT_CA</li>
+       <li>nss.CERTDB_GOVT_APPROVED_CA</li>
+       <li>ssl.SRTP_AES128_CM_HMAC_SHA1_32</li>
+       <li>ssl.SRTP_AES128_CM_HMAC_SHA1_80</li>
+       <li>ssl.SRTP_NULL_HMAC_SHA1_32</li>
+       <li>ssl.SRTP_NULL_HMAC_SHA1_80</li>
+       <li>ssl.SSL_CK_DES_192_EDE3_CBC_WITH_MD5</li>
+       <li>ssl.SSL_CK_DES_64_CBC_WITH_MD5</li>
+       <li>ssl.SSL_CK_IDEA_128_CBC_WITH_MD5</li>
+       <li>ssl.SSL_CK_RC2_128_CBC_EXPORT40_WITH_MD5</li>
+       <li>ssl.SSL_CK_RC2_128_CBC_WITH_MD5</li>
+       <li>ssl.SSL_CK_RC4_128_EXPORT40_WITH_MD5</li>
+       <li>ssl.SSL_CK_RC4_128_WITH_MD5</li>
+       <li>ssl.SSL_FORTEZZA_DMS_WITH_FORTEZZA_CBC_SHA</li>
+       <li>ssl.SSL_FORTEZZA_DMS_WITH_NULL_SHA</li>
+       <li>ssl.SSL_FORTEZZA_DMS_WITH_RC4_128_SHA</li>
+       <li>ssl.SSL_RSA_OLDFIPS_WITH_3DES_EDE_CBC_SHA</li>
+       <li>ssl.SSL_RSA_OLDFIPS_WITH_DES_CBC_SHA</li>
+       <li>ssl.TLS_DHE_DSS_EXPORT_WITH_DES40_CBC_SHA</li>
+       <li>ssl.TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA</li>
+       <li>ssl.TLS_DHE_DSS_WITH_AES_128_GCM_SHA256</li>
+       <li>ssl.TLS_DHE_DSS_WITH_CAMELLIA_128_CBC_SHA</li>
+       <li>ssl.TLS_DHE_DSS_WITH_CAMELLIA_256_CBC_SHA</li>
+       <li>ssl.TLS_DHE_DSS_WITH_DES_CBC_SHA</li>
+       <li>ssl.TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA</li>
+       <li>ssl.TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA</li>
+       <li>ssl.TLS_DHE_RSA_WITH_AES_128_CBC_SHA256</li>
+       <li>ssl.TLS_DHE_RSA_WITH_AES_128_GCM_SHA256</li>
+       <li>ssl.TLS_DHE_RSA_WITH_AES_256_CBC_SHA256</li>
+       <li>ssl.TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA</li>
+       <li>ssl.TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA</li>
+       <li>ssl.TLS_DHE_RSA_WITH_DES_CBC_SHA</li>
+       <li>ssl.TLS_DH_ANON_WITH_CAMELLIA_128_CBC_SHA</li>
+       <li>ssl.TLS_DH_ANON_WITH_CAMELLIA_256_CBC_SHA</li>
+       <li>ssl.TLS_DH_DSS_EXPORT_WITH_DES40_CBC_SHA</li>
+       <li>ssl.TLS_DH_DSS_WITH_3DES_EDE_CBC_SHA</li>
+       <li>ssl.TLS_DH_DSS_WITH_CAMELLIA_128_CBC_SHA</li>
+       <li>ssl.TLS_DH_DSS_WITH_CAMELLIA_256_CBC_SHA</li>
+       <li>ssl.TLS_DH_DSS_WITH_DES_CBC_SHA</li>
+       <li>ssl.TLS_DH_RSA_EXPORT_WITH_DES40_CBC_SHA</li>
+       <li>ssl.TLS_DH_RSA_WITH_3DES_EDE_CBC_SHA</li>
+       <li>ssl.TLS_DH_RSA_WITH_CAMELLIA_128_CBC_SHA</li>
+       <li>ssl.TLS_DH_RSA_WITH_CAMELLIA_256_CBC_SHA</li>
+       <li>ssl.TLS_DH_RSA_WITH_DES_CBC_SHA</li>
+       <li>ssl.TLS_DH_anon_EXPORT_WITH_DES40_CBC_SHA</li>
+       <li>ssl.TLS_DH_anon_EXPORT_WITH_RC4_40_MD5</li>
+       <li>ssl.TLS_DH_anon_WITH_3DES_EDE_CBC_SHA</li>
+       <li>ssl.TLS_DH_anon_WITH_AES_128_CBC_SHA</li>
+       <li>ssl.TLS_DH_anon_WITH_AES_256_CBC_SHA</li>
+       <li>ssl.TLS_DH_anon_WITH_CAMELLIA_128_CBC_SHA</li>
+       <li>ssl.TLS_DH_anon_WITH_CAMELLIA_256_CBC_SHA</li>
+       <li>ssl.TLS_DH_anon_WITH_DES_CBC_SHA</li>
+       <li>ssl.TLS_DH_anon_WITH_RC4_128_MD5</li>
+       <li>ssl.TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256</li>
+       <li>ssl.TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256</li>
+       <li>ssl.TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256</li>
+       <li>ssl.TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</li>
+       <li>ssl.TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256</li>
+       <li>ssl.TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256</li>
+       <li>ssl.TLS_EMPTY_RENEGOTIATION_INFO_SCSV</li>
+       <li>ssl.TLS_FALLBACK_SCSV</li>
+       <li>ssl.TLS_NULL_WITH_NULL_NULL</li>
+       <li>ssl.TLS_RSA_EXPORT_WITH_DES40_CBC_SHA</li>
+       <li>ssl.TLS_RSA_EXPORT_WITH_RC2_CBC_40_MD5</li>
+       <li>ssl.TLS_RSA_EXPORT_WITH_RC4_40_MD5</li>
+       <li>ssl.TLS_RSA_WITH_3DES_EDE_CBC_SHA</li>
+       <li>ssl.TLS_RSA_WITH_AES_128_CBC_SHA256</li>
+       <li>ssl.TLS_RSA_WITH_AES_128_GCM_SHA256</li>
+       <li>ssl.TLS_RSA_WITH_AES_256_CBC_SHA256</li>
+       <li>ssl.TLS_RSA_WITH_CAMELLIA_128_CBC_SHA</li>
+       <li>ssl.TLS_RSA_WITH_CAMELLIA_256_CBC_SHA</li>
+       <li>ssl.TLS_RSA_WITH_DES_CBC_SHA</li>
+       <li>ssl.TLS_RSA_WITH_IDEA_CBC_SHA</li>
+       <li>ssl.TLS_RSA_WITH_NULL_MD5</li>
+       <li>ssl.TLS_RSA_WITH_NULL_SHA</li>
+       <li>ssl.TLS_RSA_WITH_NULL_SHA256</li>
+       <li>ssl.TLS_RSA_WITH_RC4_128_MD5</li>
+       <li>ssl.TLS_RSA_WITH_RC4_128_SHA</li>
+       <li>ssl.TLS_RSA_WITH_SEED_CBC_SHA</li>
+       <li>ssl.SSL_VARIANT_DATAGRAM</li>
+       <li>ssl.SSL_VARIANT_STREAM</li>
+       <li>ssl.SSL_LIBRARY_VERSION_2</li>
+       <li>ssl.SSL_LIBRARY_VERSION_3_0</li>
+       <li>ssl.SSL_LIBRARY_VERSION_TLS_1_0</li>
+       <li>ssl.SSL_LIBRARY_VERSION_TLS_1_1</li>
+       <li>ssl.SSL_LIBRARY_VERSION_TLS_1_2</li>
+       <li>ssl.SSL_LIBRARY_VERSION_TLS_1_3</li>
+       <li>ssl.ssl2</li>
+       <li>ssl.ssl3</li>
+       <li>ssl.tls1.0</li>
+       <li>ssl.tls1.1</li>
+       <li>ssl.tls1.2</li>
+       <li>ssl.tls1.3</li>
+      </ul>
+     </li>
+     <li>The following methods were missing thread locks, this has been fixed.
+      <ul>
+       <li>nss.nss_initialize</li>
+       <li>nss.nss_init_context</li>
+       <li>nss.nss_shutdown_context</li>
+      </ul>
+     </li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Release_0.15.0">Release 0.15.0</h3>
+
+<table>
+ <tbody>
+  <tr>
+   <td style="vertical-align: top;">Release Date</td>
+   <td style="vertical-align: top;">2014-09-09</td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">SCM Tag</td>
+   <td style="vertical-align: top;">PYNSS_RELEASE_0_15_0</td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">Source Download</td>
+   <td style="vertical-align: top;"><a href="https://ftp.mozilla.org/pub/mozilla.org/security/python-nss/releases/PYNSS_RELEASE_0_15_0/src/">https://ftp.mozilla.org/pub/mozilla.org/security/python-nss/releases/PYNSS_RELEASE_0_15_0/src/</a></td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">Change Log</td>
+   <td style="vertical-align: top;">
+    <p>The primary enhancements in this version was fixing access to extensions in a CertificateRequest and giving access to CertificateRequest attributes.  There is a bug in NSS which hides the existence of extensions in a CSR if the extensions are not contained in the first CSR  attribute. This was fixable in python-nss without requiring a patch  to NSS. Formerly python-nss did not provide access to the attributes in a CSR only the extensions, with this release all components of a  CSR can be accessed. See test/test_cert_request.py for examples.</p>
+
+    <ul>
+     <li>Add ability to read PEM data from a string.</li>
+     <li>Add more build instructions to README. Source README into package long description.</li>
+     <li>A SecItem now converts almost all DER encoded data to a string when it's str method is invoked, formerly it was limited to only a few objects.</li>
+     <li>The following classes were added:
+      <ul>
+       <li>CERTAttribute</li>
+      </ul>
+     </li>
+     <li>The following class methods were added:
+      <ul>
+       <li>CertAttribute.format_lines</li>
+       <li>CertAttribute.format</li>
+       <li>nss.SecItem.get_integer</li>
+      </ul>
+     </li>
+     <li>The following class properties were added:
+      <ul>
+       <li>CertificateRequest.attributes</li>
+       <li>CertAttribute.type_oid</li>
+       <li>CertAttribute.type_tag</li>
+       <li>CertAttribute.type_str</li>
+       <li>CertAttribute.values</li>
+      </ul>
+     </li>
+     <li>The following module functions were added:
+      <ul>
+       <li>base64_to_binary</li>
+      </ul>
+     </li>
+     <li>The following files were added:
+      <ul>
+       <li>test_cert_request</li>
+      </ul>
+     </li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Release_0.14.1">Release 0.14.1</h3>
+
+<table>
+ <tbody>
+  <tr>
+   <td style="vertical-align: top;">Release Date</td>
+   <td style="vertical-align: top;">2013-10-28</td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">SCM Tag</td>
+   <td style="vertical-align: top;">PYNSS_RELEASE_0_14_1</td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">Source Download</td>
+   <td style="vertical-align: top;"><a href="https://ftp.mozilla.org/pub/mozilla.org/security/python-nss/releases/PYNSS_RELEASE_0_14_1/src/">https://ftp.mozilla.org/pub/mozilla.org/security/python-nss/releases/PYNSS_RELEASE_0_14_1/src/</a></td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">Change Log</td>
+   <td style="vertical-align: top;">
+    <p>Release 0.14.1 contains only modifications to tests and examples, otherwise functionally it is the same as release 0.14.0</p>
+
+    <ul>
+     <li>
+      <p>Fix bug in ssl_example.py and test_client_server.py where complete data was not read from socket. The Beast CVE fix in NSS causes only one octet to be sent in the first socket packet and then the remaining data is sent normally, this is known as 1/n-1 record splitting. The example and test SSL code sent short messages and then did a sock.recv(1024). We had always received the entire message in one sock.recv() call because it was so short. But sock.recv() does not guarantee how much data will be received, thus this was a coding mistake. The solution is straight forward, use newlines as a record separator and call sock.readline() instead of sock.recv(). sock.readline() calls sock.recv() internally until a complete line is read or the socket is closed.</p>
+     </li>
+     <li>
+      <p>Rewrite setup_certs.py, it was written like an expect script reacting to prompts read from a pseudo terminal but it was fragile and would hang on some systems. New version uses temporary password file and writes hardcoded responses to the stdin of certuil and modutil.</p>
+     </li>
+     <li>
+      <p>setup_certs now creates a new sql sytle NSS database (sql:pki)</p>
+     </li>
+     <li>
+      <p>All tests and examples now load the sql:pki database. Command line arg and variable changed from dbdir to db_name to reflect the database specification is no longer just a directory.</p>
+     </li>
+     <li>
+      <p>All command line process in test and examples now uses modern argparse module instead of deprecated getopt and optparse. Some command line args were tweaked.</p>
+     </li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Release_0.14.0">Release 0.14.0</h3>
+
+<table>
+ <tbody>
+  <tr>
+   <td style="vertical-align: top;">Release Date</td>
+   <td style="vertical-align: top;">2013-05-10</td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">SCM Tag</td>
+   <td style="vertical-align: top;">PYNSS_RELEASE_0_14_0</td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">Source Download</td>
+   <td style="vertical-align: top;"><a href="https://ftp.mozilla.org/pub/mozilla.org/security/python-nss/releases/PYNSS_RELEASE_0_14_0/src/">https://ftp.mozilla.org/pub/mozilla.org/security/python-nss/releases/PYNSS_RELEASE_0_14_0/src/</a></td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">Change Log</td>
+   <td style="vertical-align: top;">
+    <p>The primary enhancements in this version is support of certifcate validation, OCSP support, and support for the certificate "Authority Information Access" extension.</p>
+
+    <p>Enhanced certifcate validation including CA certs can be done via Certificate.verify() or Certificate.is_ca_cert(). When cert validation fails you can now obtain diagnostic information as to why the cert failed to validate. This is encapsulated in the CertVerifyLog class which is a iterable collection of CertVerifyLogNode objects. Most people will probablby just print the string representation of the returned CertVerifyLog object. Cert validation logging is handled by the Certificate.verify() method. Support has also been added for the various key usage and cert type entities which feature prominently during cert validation.</p>
+
+    <ul>
+     <li>
+      <p>Certificate() constructor signature changed from</p>
+
+      <p>Certificate(data=None, der_is_signed=True)</p>
+
+      <p>to</p>
+
+      <p>Certificate(data, certdb=cert_get_default_certdb(), perm=False, nickname=None)</p>
+
+      <p>This change was necessary because all certs should be added to the NSS temporary database when they are loaded, but earlier code failed to do that. It's is not likely that an previous code was failing to pass initialization data or the der_is_signed flag so this change should be backwards compatible.</p>
+     </li>
+     <li>
+      <p>Fix bug #922247, PKCS12Decoder.database_import() method. Importing into a NSS database would sometimes fail or segfault.</p>
+     </li>
+     <li>
+      <p>Error codes and descriptions were updated from upstream NSPR &amp; NSS.</p>
+     </li>
+     <li>
+      <p>The password callback did not allow for breaking out of a password prompting loop, now if None is returned from the password callback the password prompting is terminated.</p>
+     </li>
+     <li>
+      <p>nss.nss_shutdown_context now called from InitContext destructor, this assures the context is shutdown even if the programmer forgot to. It's still best to explicitly shut it down, this is just failsafe.</p>
+     </li>
+     <li>
+      <p>Support was added for shutdown callbacks.</p>
+     </li>
+     <li>
+      <p>cert_dump.py extended to print NS_CERT_TYPE_EXTENSION</p>
+     </li>
+     <li>
+      <p>cert_usage_flags, nss_init_flags now support optional repr_kind parameter</p>
+     </li>
+     <li>The following classes were added:
+      <ul>
+       <li>nss.CertVerifyLogNode</li>
+       <li>nss.CertVerifyLog</li>
+       <li>error.CertVerifyError (exception)</li>
+       <li>nss.AuthorityInfoAccess</li>
+       <li>nss.AuthorityInfoAccesses</li>
+      </ul>
+     </li>
+     <li>The following class methods were added:
+      <ul>
+       <li>nss.Certificate.is_ca_cert</li>
+       <li>nss.Certificate.verify</li>
+       <li>nss.Certificate.verify_with_log</li>
+       <li>nss.Certificate.get_cert_chain</li>
+       <li>nss.Certificate.check_ocsp_status</li>
+       <li>nss.PK11Slot.list_certs</li>
+       <li>nss.CertVerifyLogNode.format_lines</li>
+       <li>nss.CertVerifyLog.format_lines</li>
+       <li>nss.CRLDistributionPts.format_lines</li>
+      </ul>
+     </li>
+     <li>The following class properties were added:
+      <ul>
+       <li>nss.CertVerifyLogNode.certificate</li>
+       <li>nss.CertVerifyLogNode.error</li>
+       <li>nss.CertVerifyLogNode.depth</li>
+       <li>nss.CertVerifyLog.count</li>
+      </ul>
+     </li>
+     <li>The following module functions were added:
+      <ul>
+       <li>nss.x509_cert_type</li>
+       <li>nss.key_usage_flags</li>
+       <li>nss.list_certs</li>
+       <li>nss.find_certs_from_email_addr</li>
+       <li>nss.find_certs_from_nickname</li>
+       <li>nss.nss_get_version</li>
+       <li>nss.nss_version_check</li>
+       <li>nss.set_shutdown_callback</li>
+       <li>nss.get_use_pkix_for_validation</li>
+       <li>nss.set_use_pkix_for_validation</li>
+       <li>nss.enable_ocsp_checking</li>
+       <li>nss.disable_ocsp_checking</li>
+       <li>nss.set_ocsp_cache_settings</li>
+       <li>nss.set_ocsp_failure_mode</li>
+       <li>nss.set_ocsp_timeout</li>
+       <li>nss.clear_ocsp_cache</li>
+       <li>nss.set_ocsp_default_responder</li>
+       <li>nss.enable_ocsp_default_responder</li>
+       <li>nss.disable_ocsp_default_responder</li>
+      </ul>
+     </li>
+     <li>The following files were added:
+      <ul>
+       <li>src/py_traceback.h</li>
+       <li>doc/examples/verify_cert.py</li>
+       <li>test/test_misc.py</li>
+      </ul>
+     </li>
+     <li>The following constants were added:
+      <ul>
+       <li>nss.KU_DIGITAL_SIGNATURE</li>
+       <li>nss.KU_NON_REPUDIATION</li>
+       <li>nss.KU_KEY_ENCIPHERMENT</li>
+       <li>nss.KU_DATA_ENCIPHERMENT</li>
+       <li>nss.KU_KEY_AGREEMENT</li>
+       <li>nss.KU_KEY_CERT_SIGN</li>
+       <li>nss.KU_CRL_SIGN</li>
+       <li>nss.KU_ENCIPHER_ONLY</li>
+       <li>nss.KU_ALL</li>
+       <li>nss.KU_DIGITAL_SIGNATURE_OR_NON_REPUDIATION</li>
+       <li>nss.KU_KEY_AGREEMENT_OR_ENCIPHERMENT</li>
+       <li>nss.KU_NS_GOVT_APPROVED</li>
+       <li>nss.PK11CertListUnique</li>
+       <li>nss.PK11CertListUser</li>
+       <li>nss.PK11CertListRootUnique</li>
+       <li>nss.PK11CertListCA</li>
+       <li>nss.PK11CertListCAUnique</li>
+       <li>nss.PK11CertListUserUnique</li>
+       <li>nss.PK11CertListAll</li>
+       <li>nss.certUsageSSLClient</li>
+       <li>nss.certUsageSSLServer</li>
+       <li>nss.certUsageSSLServerWithStepUp</li>
+       <li>nss.certUsageSSLCA</li>
+       <li>nss.certUsageEmailSigner</li>
+       <li>nss.certUsageEmailRecipient</li>
+       <li>nss.certUsageObjectSigner</li>
+       <li>nss.certUsageUserCertImport</li>
+       <li>nss.certUsageVerifyCA</li>
+       <li>nss.certUsageProtectedObjectSigner</li>
+       <li>nss.certUsageStatusResponder</li>
+       <li>nss.certUsageAnyCA</li>
+       <li>nss.ocspMode_FailureIsVerificationFailure</li>
+       <li>nss.ocspMode_FailureIsNotAVerificationFailure</li>
+      </ul>
+     </li>
+    </ul>
+
+    <table>
+     <thead>
+      <tr class="header">
+       <th>Internal Changes</th>
+      </tr>
+     </thead>
+     <tbody>
+     </tbody>
+    </table>
+
+    <ul>
+     <li>Reimplement exception handling
+      <ul>
+       <li>NSPRError is now derived from StandardException instead of EnvironmentError. It was never correct to derive from EnvironmentError but was difficult to implement a new subclassed exception with it's own attributes, using EnvironmentError had been expedient.</li>
+       <li>NSPRError now derived from StandardException, provides:
+        <ul>
+         <li>errno (numeric error code)</li>
+         <li>strerror (error description associated with error code)</li>
+         <li>error_message (optional detailed message)</li>
+         <li>error_code (alias for errno)</li>
+         <li>error_desc (alias for strerror)</li>
+        </ul>
+       </li>
+       <li>CertVerifyError derived from NSPRError, extends with:
+        <ul>
+         <li>usages (bitmask of returned usages)</li>
+         <li>log (CertVerifyLog object)</li>
+        </ul>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <p>Expose error lookup to sibling modules</p>
+     </li>
+     <li>
+      <p>Use macros for bitmask_to_list functions to reduce code duplication and centralize logic.</p>
+     </li>
+     <li>
+      <p>Add repr_kind parameter to cert_trust_flags_str()</p>
+     </li>
+     <li>
+      <p>Add support for repr_kind AsEnumName to bitstring table lookup.</p>
+     </li>
+     <li>
+      <p>Add cert_type_bitstr_to_tuple() lookup function</p>
+     </li>
+     <li>
+      <p>Add PRTimeConvert(), used to convert Python time values to PRTime, centralizes conversion logic, reduces duplication</p>
+     </li>
+     <li>
+      <p>Add UTF8OrNoneConvert to better handle unicode parameters which are optional.</p>
+     </li>
+     <li>
+      <p>Add Certificate_summary_format_lines() utility to generate concise certificate identification info for output.</p>
+     </li>
+     <li>
+      <p>Certificate_new_from_CERTCertificate now takes add_reference parameter to properly reference count certs, should fix shutdown busy problems.</p>
+     </li>
+     <li>
+      <p>Add print_traceback(), print_cert() debugging support.</p>
+     </li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Release_0.13.0">Release 0.13.0</h3>
+
+<table>
+ <tbody>
+  <tr>
+   <td style="vertical-align: top;">Release Date</td>
+   <td style="vertical-align: top;">2012-10-09</td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">SCM Tag</td>
+   <td style="vertical-align: top;">PYNSS_RELEASE_0_13_0</td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">Source Download</td>
+   <td style="vertical-align: top;"><a href="https://ftp.mozilla.org/pub/mozilla.org/security/python-nss/releases/PYNSS_RELEASE_0_13_0/src/">https://ftp.mozilla.org/pub/mozilla.org/security/python-nss/releases/PYNSS_RELEASE_0_13_0/src/</a></td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">Change Log</td>
+   <td style="vertical-align: top;">
+    <ul>
+     <li>Fix NSS SECITEM_CompareItem bug via workaround.</li>
+     <li>Fix incorrect format strings in PyArg_ParseTuple* for:
+      <ul>
+       <li>GeneralName</li>
+       <li>BasicConstraints</li>
+       <li>cert_x509_key_usage</li>
+      </ul>
+     </li>
+     <li>Fix bug when decoding certificate BasicConstraints extension</li>
+     <li>Fix hang in setup_certs.</li>
+     <li>For NSS &gt;= 3.13 support CERTDB_TERMINAL_RECORD</li>
+     <li>You can now query for a specific certificate extension Certficate.get_extension()</li>
+     <li>The PublicKey formatting (i.e. format_lines) was augmented to format DSA keys (formerly it only recognized RSA keys).</li>
+     <li>Allow labels and values to be justified when printing objects</li>
+    </ul>
+
+    <h5 id="The_following_classes_were_added">The following classes were added</h5>
+
+    <ul>
+     <li>RSAGenParams</li>
+    </ul>
+
+    <h5 id="The_following_class_methods_were_added">The following class methods were added</h5>
+
+    <ul>
+     <li>nss.nss.Certificate.get_extension</li>
+     <li>nss.nss.PK11Slot.generate_key_pair</li>
+     <li>nss.nss.DSAPublicKey.format</li>
+     <li>nss.nss.DSAPublicKey.format_lines</li>
+    </ul>
+
+    <h5 id="The_following_module_functions_were_added">The following module functions were added</h5>
+
+    <ul>
+     <li>nss.nss.pub_wrap_sym_key</li>
+    </ul>
+
+    <h5 id="The_following_internal_utilities_were_added">The following internal utilities were added</h5>
+
+    <ul>
+     <li>PyString_UTF8</li>
+     <li>SecItem_new_alloc()</li>
+    </ul>
+
+    <h5 id="The_following_class_constructors_were_modified_to_accept_intialization_parameters">The following class constructors were modified to accept intialization parameters</h5>
+
+    <ul>
+     <li>KEYPQGParams (DSA generation parameters)</li>
+    </ul>
+
+    <h5 id="The_following_were_deprecated">The following were deprecated</h5>
+
+    <ul>
+     <li>nss.nss.make_line_pairs (replaced by nss.nss.make_line_fmt_tuples)</li>
+    </ul>
+
+    <h5 id="Deprecated_Functionality">Deprecated Functionality</h5>
+    make_line_pairs() has been replaced by make_line_fmt_tuples() because 2-valued tuples were not sufficently general. It is expected very few programs will have used this function, it's mostly used internally but provided as a support utility.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Release_0.12.0">Release 0.12.0</h3>
+
+<table>
+ <tbody>
+  <tr>
+   <td style="vertical-align: top;">Release Date</td>
+   <td style="vertical-align: top;">2011-06-06</td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">SCM Tag</td>
+   <td style="vertical-align: top;">PYNSS_RELEASE_0_12_0</td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">Source Download</td>
+   <td style="vertical-align: top;"><a href="https://ftp.mozilla.org/pub/mozilla.org/security/python-nss/releases/PYNSS_RELEASE_0_12_0/src/">https://ftp.mozilla.org/pub/mozilla.org/security/python-nss/releases/PYNSS_RELEASE_0_12_0/src/</a></td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">Change Log</td>
+   <td style="vertical-align: top;">
+    <ul>
+     <li>Major new enhancement is additon of PKCS12 support and AlgorithmID's.</li>
+     <li>setup.py build enhancements
+      <ul>
+       <li>Now searches for the NSS and NSPR header files rather than hardcoding their location. This makes building friendlier on other systems (i.e. debian)</li>
+       <li>Now takes optional command line arguments, -d or --debug will turn on debug options during the build.</li>
+      </ul>
+     </li>
+     <li>Fix reference counting bug in PK11_password_callback() which contributed to NSS not being able to shutdown due to resources still in use.</li>
+     <li>Add UTF-8 support to ssl.config_server_session_id_cache()</li>
+     <li>Added unit tests for cipher, digest, client_server.</li>
+     <li>All unittests now run, added test/run_tests to invoke full test suite.</li>
+     <li>Fix bug in test/setup_certs.py, hardcoded full path to libnssckbi.so was causing failures on 64-bit systems, just use the libnssckbi.so basename, modutil will find it on the standard search path.</li>
+     <li>doc/examples/cert_dump.py uses new AlgorithmID class to dump Signature Algorithm</li>
+     <li>doc/examples/ssl_example.py now can cleanly shutdown NSS.</li>
+     <li>Exception error messages now include PR error text if available.</li>
+    </ul>
+
+    <h5 id="The_following_classes_were_replaced">The following classes were replaced</h5>
+
+    <ul>
+     <li>SignatureAlgorithm replaced by new class AlgorithmID</li>
+    </ul>
+
+    <h5 id="The_following_classes_were_added_2">The following classes were added</h5>
+
+    <ul>
+     <li>AlgorithmID</li>
+     <li>PKCS12DecodeItem</li>
+     <li>PKCS12Decoder</li>
+    </ul>
+
+    <h5 id="The_following_class_methods_were_added_2">The following class methods were added</h5>
+
+    <ul>
+     <li>PK11Slot.authenticate()</li>
+     <li>PK11Slot.get_disabled_reason()</li>
+     <li>PK11Slot.has_protected_authentication_path()</li>
+     <li>PK11Slot.has_root_certs()</li>
+     <li>PK11Slot.is_disabled()</li>
+     <li>PK11Slot.is_friendly()</li>
+     <li>PK11Slot.is_internal()</li>
+     <li>PK11Slot.is_logged_in()</li>
+     <li>PK11Slot.is_removable()</li>
+     <li>PK11Slot.logout()</li>
+     <li>PK11Slot.need_login()</li>
+     <li>PK11Slot.need_user_init()</li>
+     <li>PK11Slot.user_disable()</li>
+     <li>PK11Slot.user_enable()</li>
+     <li>PKCS12DecodeItem.format()</li>
+     <li>PKCS12DecodeItem.format_lines()</li>
+     <li>PKCS12Decoder.database_import()</li>
+     <li>PKCS12Decoder.format()</li>
+     <li>PKCS12Decoder.format_lines()</li>
+    </ul>
+
+    <h5 id="The_following_class_properties_were_added">The following class properties were added</h5>
+
+    <ul>
+     <li>AlgorithmID.id_oid</li>
+     <li>AlgorithmID.id_str</li>
+     <li>AlgorithmID.id_tag</li>
+     <li>AlgorithmID.parameters</li>
+     <li>PKCS12DecodeItem.certificate</li>
+     <li>PKCS12DecodeItem.friendly_name</li>
+     <li>PKCS12DecodeItem.has_key</li>
+     <li>PKCS12DecodeItem.shroud_algorithm_id</li>
+     <li>PKCS12DecodeItem.signed_cert_der</li>
+     <li>PKCS12DecodeItem.type</li>
+     <li>SignedData.data</li>
+     <li>SignedData.der</li>
+    </ul>
+
+    <h5 id="The_following_module_functions_were_added_2">The following module functions were added</h5>
+
+    <ul>
+     <li>nss.nss.dump_certificate_cache_info()</li>
+     <li>nss.nss.find_slot_by_name()</li>
+     <li>nss.nss.fingerprint_format_lines()</li>
+     <li>nss.nss.get_internal_slot()</li>
+     <li>nss.nss.is_fips()</li>
+     <li>nss.nss.need_pw_init()</li>
+     <li>nss.nss.nss_init_read_write()</li>
+     <li>nss.nss.pk11_disabled_reason_name()</li>
+     <li>nss.nss.pk11_disabled_reason_str()</li>
+     <li>nss.nss.pk11_logout_all()</li>
+     <li>nss.nss.pkcs12_cipher_from_name()</li>
+     <li>nss.nss.pkcs12_cipher_name()</li>
+     <li>nss.nss.pkcs12_enable_all_ciphers()</li>
+     <li>nss.nss.pkcs12_enable_cipher()</li>
+     <li>nss.nss.pkcs12_export()</li>
+     <li>nss.nss.pkcs12_map_cipher()</li>
+     <li>nss.nss.pkcs12_set_nickname_collision_callback()</li>
+     <li>nss.nss.pkcs12_set_preferred_cipher()</li>
+     <li>nss.nss.token_exists()</li>
+     <li>nss.ssl.config_mp_server_sid_cache()</li>
+     <li>nss.ssl.config_server_session_id_cache_with_opt()</li>
+     <li>nss.ssl.get_max_server_cache_locks()</li>
+     <li>nss.ssl.set_max_server_cache_locks()</li>
+     <li>nss.ssl.shutdown_server_session_id_cache()</li>
+    </ul>
+
+    <h5 id="The_following_constants_were_added">The following constants were added</h5>
+
+    <ul>
+     <li>nss.nss.int.PK11_DIS_COULD_NOT_INIT_TOKEN</li>
+     <li>nss.nss.int.PK11_DIS_NONE</li>
+     <li>nss.nss.int.PK11_DIS_TOKEN_NOT_PRESENT</li>
+     <li>nss.nss.int.PK11_DIS_TOKEN_VERIFY_FAILED</li>
+     <li>nss.nss.int.PK11_DIS_USER_SELECTED</li>
+     <li>nss.nss.int.PKCS12_DES_56</li>
+     <li>nss.nss.int.PKCS12_DES_EDE3_168</li>
+     <li>nss.nss.int.PKCS12_RC2_CBC_128</li>
+     <li>nss.nss.int.PKCS12_RC2_CBC_40</li>
+     <li>nss.nss.int.PKCS12_RC4_128</li>
+     <li>nss.nss.int.PKCS12_RC4_40</li>
+    </ul>
+
+    <h5 id="The_following_files_were_added">The following files were added</h5>
+
+    <ul>
+     <li>test/run_tests</li>
+     <li>test/test_cipher.py (replaces cipher_test.py)</li>
+     <li>test/test_client_server.py</li>
+     <li>test/test_digest.py (replaces digest_test.py)</li>
+     <li>test/test_pkcs12.py</li>
+    </ul>
+
+    <h5 id="Deprecated_Functionality_2">Deprecated Functionality</h5>
+
+    <ul>
+     <li>SignatureAlgorithm</li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Release_0.11.0">Release 0.11.0</h3>
+
+<table>
+ <tbody>
+  <tr>
+   <td style="vertical-align: top;">Release Date</td>
+   <td style="vertical-align: top;">2011-02-21</td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">SCM Tag</td>
+   <td style="vertical-align: top;">PYNSS_RELEASE_0_11_0</td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">Source Download</td>
+   <td style="vertical-align: top;"><a href="https://ftp.mozilla.org/pub/mozilla.org/security/python-nss/releases/PYNSS_RELEASE_0_11_0/src/">https://ftp.mozilla.org/pub/mozilla.org/security/python-nss/releases/PYNSS_RELEASE_0_11_0/src/</a></td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">Change Log</td>
+   <td style="vertical-align: top;">
+    <h5 id="External_Changes">External Changes</h5>
+
+    <ul>
+     <li>Add AddrInfo class to support IPv6 address resolution. Supports iteration over it's set of NetworkAddress objects and provides hostname, canonical_name object properties.</li>
+     <li>Add PR_AI_* constants.</li>
+     <li>NetworkAddress constructor and NetworkAddress.set_from_string() added optional family parameter. This is necessary for utilizing PR_GetAddrInfoByName().</li>
+     <li>NetworkAddress initialized via a string parameter are now initialized via PR_GetAddrInfoByName using family.</li>
+     <li>Add NetworkAddress.address property to return the address sans the port as a string. NetworkAddress.str() includes the port. For IPv6 the a hex string must be enclosed in brackets if a port is appended to it, the bracketed hex address with appended with a port is unappropriate in some circumstances, hence the new address property to permit either the address string with a port or without a port.</li>
+     <li>Fix the implementation of the NetworkAddress.family property, it was returning bogus data due to wrong native data size.</li>
+     <li>HostEntry objects now support iteration and indexing of their NetworkAddress members.</li>
+     <li>Add io.addr_family_name() function to return string representation of PR_AF_* constants.</li>
+     <li>Modify example and test code to utilize AddrInfo instead of deprecated NetworkAddress functionality. Add address family command argument to ssl_example.</li>
+     <li>Fix pty import statement in test/setup_certs.py</li>
+    </ul>
+
+    <h5 id="Deprecated_Functionality_3">Deprecated Functionality</h5>
+
+    <ul>
+     <li>NetworkAddress initialized via a string parameter is now deprecated. AddrInfo should be used instead.</li>
+     <li>NetworkAddress.set_from_string is now deprecated. AddrInfo should be used instead.</li>
+     <li>NetworkAddress.hostentry is deprecated. It was a bad idea, NetworkAddress objects can support both IPv4 and IPv6, but a HostEntry object can only support IPv4. Plus the implementation depdended on being able to perform a reverse DNS lookup which is not always possible.</li>
+     <li>HostEntry.get_network_addresses() and HostEntry.get_network_address() are now deprecated. In addition their port parameter is now no longer respected. HostEntry objects now support iteration and indexing of their NetworkAddress and that should be used to access their NetworkAddress objects instead.</li>
+    </ul>
+
+    <h5 id="Internal_Changes">Internal Changes</h5>
+
+    <ul>
+     <li>Utilize PR_NetAddrFamily() access macro instead of explict access.</li>
+     <li>Add PRNetAddr_port() utility to hide host vs. network byte order requirements when accessing the port inside a PRNetAddr and simplify accessing the IPv4 vs. IPv6 port variants.</li>
+     <li>Replace the use of PR_InitializeNetAddr() with PR_SetNetAddr(), the later properly handles IPv6, the former did not.</li>
+     <li>Rename NetworkAddress.addr to NetworkAddress.pr_netaddr for naming consistency.</li>
+     <li>Update HostEntry documentation to indicate it's deprecated status.</li>
+     <li>Remove redundant implementation of NetworkAddress_new_from_PRNetAddr from py_ssl.c and properly import the implementation from py_nspr_io.c.</li>
+     <li>The following other non-IPv6 fixes were also made because they were discovered while doing the IPv6 work:</li>
+     <li>Move definition of TYPE_READY to py_nspr_common.h so it can be shared. Update all modules to utilize it.</li>
+     <li>Replace incorrect use of free() with PyMem_Free for string data returned by Python's utf-8 encoder.</li>
+     <li>Add header dependency information to setup.py so modules will be rebuilt when header files change.</li>
+     <li>Add utility tuple_str() to convert a tuple to a string representation by calling str() on each object in the tuple. Tuple.str() in CPython only calls repr() on each member.</li>
+     <li>HostEntry objects now store their aliases and NetworkAddress's in internal tuples.</li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Release_0.10.0">Release 0.10.0</h3>
+
+<table>
+ <tbody>
+  <tr>
+   <td style="vertical-align: top;">Release Date</td>
+   <td style="vertical-align: top;">2010-07-25</td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">SCM Tag</td>
+   <td style="vertical-align: top;">PYNSS_RELEASE_0_10_0</td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">Source Download</td>
+   <td style="vertical-align: top;"><a href="https://ftp.mozilla.org/pub/mozilla.org/security/python-nss/releases/PYNSS_RELEASE_0_10_0/src/">https://ftp.mozilla.org/pub/mozilla.org/security/python-nss/releases/PYNSS_RELEASE_0_10_0/src/</a></td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">Change Log</td>
+   <td style="vertical-align: top;">
+    <h5 id="The_following_classes_were_added_3">The following classes were added:</h5>
+
+    <ul>
+     <li>InitParameters</li>
+     <li>InitContext</li>
+    </ul>
+
+    <h5 id="The_following_module_functions_were_added_3">The following module functions were added:</h5>
+
+    <ul>
+     <li>nss.nss.nss_initialize()</li>
+     <li>nss.nss.nss_init_context()</li>
+     <li>nss.nss.nss_shutdown_context()</li>
+     <li>nss.nss.nss_init_flags()</li>
+    </ul>
+
+    <h5 id="The_following_constants_were_added_2">The following constants were added:</h5>
+
+    <ul>
+     <li>NSS_INIT_READONLY</li>
+     <li>NSS_INIT_NOCERTDB</li>
+     <li>NSS_INIT_NOMODDB</li>
+     <li>NSS_INIT_FORCEOPEN</li>
+     <li>NSS_INIT_NOROOTINIT</li>
+     <li>NSS_INIT_OPTIMIZESPACE</li>
+     <li>NSS_INIT_PK11THREADSAFE</li>
+     <li>NSS_INIT_PK11RELOAD</li>
+     <li>NSS_INIT_NOPK11FINALIZE</li>
+     <li>NSS_INIT_RESERVED</li>
+     <li>NSS_INIT_COOPERATE</li>
+    </ul>
+
+    <h5 id="The_following_file_was_added">The following file was added:</h5>
+
+    <ul>
+     <li>test/setup_certs.py</li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Release_0.9.0">Release 0.9.0</h3>
+
+<table>
+ <tbody>
+  <tr>
+   <td style="vertical-align: top;">Release Date</td>
+   <td style="vertical-align: top;">2010-05-28</td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">SCM Tag</td>
+   <td style="vertical-align: top;">PYNSS_RELEASE_0_9_0</td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">Source Download</td>
+   <td style="vertical-align: top;"> </td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">Change Log</td>
+   <td style="vertical-align: top;">
+    <h5 id="General_Modifications">General Modifications:</h5>
+
+    <ul>
+     <li>Correct definciencies in auth_certificate_callback found in several of the example files and documentation. If you've copied that code you should merge those changes in.</li>
+     <li>Unicode objects now accepted as well as str objects for interfaces expecting a string.</li>
+     <li>Sockets were enhanced thusly:
+      <ul>
+       <li>Threads will now yield during blocking IO.</li>
+       <li>Socket.makefile() reimplemented
+        <ul>
+         <li>file object methods that had been missing (readlines(), sendall(), and iteration) were implemented</li>
+         <li>makefile now just returns the same</li>
+         <li>Socket object but increments an "open" ref count. Thus a Socket object behaves like a file object and must be closed once for each makefile() call before it's actually closed.</li>
+        </ul>
+       </li>
+       <li>Sockets now support the iter protocol</li>
+       <li>Added methods:
+        <ul>
+         <li>Socket.readlines()</li>
+         <li>Socket.sendall()</li>
+        </ul>
+       </li>
+      </ul>
+     </li>
+     <li>Apply patches from Miloslav Trmač &lt;mitr@redhat.com&gt; for ref counting and threading support. Thanks Miloslav!</li>
+     <li>Review all ref counting, numerous ref counting fixes</li>
+     <li>Implement cyclic garbage collection support by adding object traversal and clear methods</li>
+     <li>Identify static variables, move to thread local storage</li>
+     <li>Remove python-nss specific httplib.py, no longer needed python-nss now compatible with standard library</li>
+     <li>Rewrite httplib_example.py to use standard library and illustrate ssl, non-ssl, connection class, http class usage</li>
+    </ul>
+
+    <h5 id="The_following_classes_were_added_4">The following classes were added:</h5>
+
+    <ul>
+     <li>AuthKeyID</li>
+     <li>BasicConstraints</li>
+     <li>CRLDistributionPoint</li>
+     <li>CRLDistributionPts</li>
+     <li>CertificateExtension</li>
+     <li>GeneralName</li>
+     <li>SignedCRL</li>
+     <li>DN</li>
+     <li>RDN</li>
+     <li>AVA</li>
+     <li>CertificateRequest</li>
+    </ul>
+
+    <h5 id="The_following_module_functions_were_added_4">The following module functions were added:</h5>
+
+    <ul>
+     <li>nss.nss.nss_is_initialized()</li>
+     <li>nss.nss.cert_crl_reason_from_name()</li>
+     <li>nss.nss.cert_crl_reason_name()</li>
+     <li>nss.nss.cert_general_name_type_from_name()</li>
+     <li>nss.nss.cert_general_name_type_name()</li>
+     <li>nss.nss.cert_usage_flags()</li>
+     <li>nss.nss.decode_der_crl()</li>
+     <li>nss.nss.der_universal_secitem_fmt_lines()</li>
+     <li>nss.nss.import_crl()</li>
+     <li>nss.nss.make_line_pairs()</li>
+     <li>nss.nss.oid_dotted_decimal()</li>
+     <li>nss.nss.oid_str()</li>
+     <li>nss.nss.oid_tag()</li>
+     <li>nss.nss.oid_tag_name()</li>
+     <li>nss.nss.read_der_from_file()</li>
+     <li>nss.nss.x509_alt_name()</li>
+     <li>nss.nss.x509_ext_key_usage()</li>
+     <li>nss.nss.x509_key_usage()</li>
+    </ul>
+
+    <h5 id="The_following_class_methods_and_properties_were_added">The following class methods and properties were added:</h5>
+    Note: it's a method if the name is suffixed with (), a propety otherwise
+
+    <ul>
+     <li>Socket.next()</li>
+     <li>Socket.readlines()</li>
+     <li>Socket.sendall()</li>
+     <li>SSLSocket.next()</li>
+     <li>SSLSocket.readlines()</li>
+     <li>SSLSocket.sendall()</li>
+     <li>AuthKeyID.key_id</li>
+     <li>AuthKeyID.serial_number</li>
+     <li>AuthKeyID.get_general_names()</li>
+     <li>CRLDistributionPoint.issuer</li>
+     <li>CRLDistributionPoint.get_general_names()</li>
+     <li>CRLDistributionPoint.get_reasons()</li>
+     <li>CertDB.find_crl_by_cert()</li>
+     <li>CertDB.find_crl_by_name()</li>
+     <li>Certificate.extensions</li>
+     <li>CertificateExtension.critical</li>
+     <li>CertificateExtension.name</li>
+     <li>CertificateExtension.oid</li>
+     <li>CertificateExtension.oid_tag</li>
+     <li>CertificateExtension.value</li>
+     <li>GeneralName.type_enum</li>
+     <li>GeneralName.type_name</li>
+     <li>GeneralName.type_string</li>
+     <li>SecItem.der_to_hex()</li>
+     <li>SecItem.get_oid_sequence()</li>
+     <li>SecItem.to_hex()</li>
+     <li>SignedCRL.delete_permanently()</li>
+     <li>AVA.oid</li>
+     <li>AVA.oid_tag</li>
+     <li>AVA.value</li>
+     <li>AVA.value_str</li>
+     <li>DN.cert_uid</li>
+     <li>DN.common_name</li>
+     <li>DN.country_name</li>
+     <li>DN.dc_name</li>
+     <li>DN.email_address</li>
+     <li>DN.locality_name</li>
+     <li>DN.org_name</li>
+     <li>DN.org_unit_name</li>
+     <li>DN.state_name</li>
+     <li>DN.add_rdn()</li>
+     <li>DN.has_key()</li>
+     <li>RDN.has_key()</li>
+    </ul>
+
+    <h5 id="The_following_module_functions_were_removed">The following module functions were removed:</h5>
+    Note: use nss.nss.oid_tag() instead
+
+    <ul>
+     <li>nss.nss.sec_oid_tag_from_name()</li>
+     <li>nss.nss.sec_oid_tag_name()</li>
+     <li>nss.nss.sec_oid_tag_str()</li>
+    </ul>
+
+    <h5 id="The_following_files_were_added_2">The following files were added:</h5>
+
+    <ul>
+     <li>doc/examples/cert_dump.py</li>
+     <li>test/test_cert_components.py</li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Release_0.8.0">Release 0.8.0</h3>
+
+<table>
+ <tbody>
+  <tr>
+   <td style="vertical-align: top;">Release Date</td>
+   <td style="vertical-align: top;">2009-09-21</td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">SCM Tag</td>
+   <td style="vertical-align: top;">PYNSS_RELEASE_0_8_0</td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">Source Download</td>
+   <td style="vertical-align: top;"> </td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">Change Log</td>
+   <td style="vertical-align: top;">
+    <h5 id="General_Modifications_2">General Modifications:</h5>
+
+    <ul>
+     <li>SecItem's now support indexing and slicing on their data</li>
+     <li>Clean up parsing and parameter validation of variable arg functions</li>
+    </ul>
+
+    <h5 id="The_following_were_added">The following were added:</h5>
+
+    <ul>
+     <li>SecItem.type SecItem.len</li>
+     <li>SecItem.data</li>
+     <li>PK11SymKey.key_data</li>
+     <li>PK11SymKey.key_length</li>
+     <li>PK11SymKey.slot</li>
+     <li>create_context_by_sym_key</li>
+     <li>param_from_iv</li>
+     <li>generate_new_param</li>
+     <li>get_iv_length</li>
+     <li>get_block_size</li>
+     <li>get_pad_mechanism</li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Release_0.7.0">Release 0.7.0</h3>
+
+<table>
+ <tbody>
+  <tr>
+   <td style="vertical-align: top;">Release Date</td>
+   <td style="vertical-align: top;">2009-09-18</td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">SCM Tag</td>
+   <td style="vertical-align: top;"> </td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">Source Download</td>
+   <td style="vertical-align: top;"> </td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">Change Log</td>
+   <td style="vertical-align: top;">
+    <h5 id="General_Modifications_3">General Modifications:</h5>
+
+    <ul>
+     <li>add support for symmetric encryption/decryption</li>
+     <li>more support for digests (hashes)</li>
+    </ul>
+
+    <h5 id="The_following_classes_added">The following classes added:</h5>
+
+    <ul>
+     <li>PK11SymKey</li>
+     <li>PK11Context</li>
+    </ul>
+
+    <h5 id="The_following_methods_and_functions_added">The following methods and functions added:</h5>
+
+    <ul>
+     <li>get_best_wrap_mechanism</li>
+     <li>get_best_key_length</li>
+     <li>key_gen</li>
+     <li>derive</li>
+     <li>get_key_length</li>
+     <li>digest_key</li>
+     <li>clone_context</li>
+     <li>digest_begin</li>
+     <li>digest_op</li>
+     <li>cipher_op</li>
+     <li>finalize</li>
+     <li>digest_final</li>
+     <li>read_hex</li>
+     <li>hash_buf</li>
+     <li>sec_oid_tag_str</li>
+     <li>sec_oid_tag_name</li>
+     <li>sec_oid_tag_from_name</li>
+     <li>key_mechanism_type_name</li>
+     <li>key_mechanism_type_from_name</li>
+     <li>pk11_attribute_type_name</li>
+     <li>pk11_attribute_type_from_name</li>
+     <li>get_best_slot</li>
+     <li>get_internal_key_slot</li>
+     <li>create_context_by_sym_key</li>
+     <li>import_sym_key</li>
+     <li>create_digest_context</li>
+     <li>param_from_iv</li>
+     <li>param_from_algid</li>
+     <li>generate_new_param</li>
+     <li>algtag_to_mechanism</li>
+     <li>mechanism_to_algtag</li>
+    </ul>
+
+    <h5 id="The_following_files_added">The following files added:</h5>
+
+    <ul>
+     <li>test/cipher_test.py</li>
+     <li>test/digest_test.py</li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Release_0.6.0">Release 0.6.0</h3>
+
+<table>
+ <tbody>
+  <tr>
+   <td style="vertical-align: top;">Release Date</td>
+   <td style="vertical-align: top;">2009-07-08</td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">SCM Tag</td>
+   <td style="vertical-align: top;"> </td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">Source Download</td>
+   <td style="vertical-align: top;"> </td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">Change Log</td>
+   <td style="vertical-align: top;">
+    <h5 id="General_Modifications_4">General Modifications:</h5>
+
+    <ul>
+     <li>fix Red Hat bug #510343 client_auth_data_callback seg faults if False is returned from callback</li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Release_0.5.0">Release 0.5.0</h3>
+
+<table>
+ <tbody>
+  <tr>
+   <td style="vertical-align: top;">Release Date</td>
+   <td style="vertical-align: top;">2009-07-01</td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">SCM Tag</td>
+   <td style="vertical-align: top;"> </td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">Source Download</td>
+   <td style="vertical-align: top;"> </td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">Change Log</td>
+   <td style="vertical-align: top;">
+    <h5 id="General_Modifications_5">General Modifications:</h5>
+
+    <ul>
+     <li>restore ssl.nss_init and ssl.nss_shutdown but make them deprecated</li>
+     <li>add __version__ string to nss module</li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Release_0.4.0">Release 0.4.0</h3>
+
+<table>
+ <tbody>
+  <tr>
+   <td style="vertical-align: top;">Release Date</td>
+   <td style="vertical-align: top;">2009-06-30</td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">SCM Tag</td>
+   <td style="vertical-align: top;"> </td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">Source Download</td>
+   <td style="vertical-align: top;"> </td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">Change Log</td>
+   <td style="vertical-align: top;">
+    <h5 id="General_Modifications_6">General Modifications:</h5>
+
+    <ul>
+     <li>add binding for NSS_NoDB_Init(), Red Hat bug #509002</li>
+     <li>move nss_init and nss_shutdown from ssl module to nss module</li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Release_0.3.0">Release 0.3.0</h3>
+
+<table>
+ <tbody>
+  <tr>
+   <td style="vertical-align: top;">Release Date</td>
+   <td style="vertical-align: top;">2009-06-04</td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">SCM Tag</td>
+   <td style="vertical-align: top;"> </td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">Source Download</td>
+   <td style="vertical-align: top;"> </td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">Change Log</td>
+   <td style="vertical-align: top;">
+    <h5 id="General_Modifications_7">General Modifications:</h5>
+
+    <ul>
+     <li>import to Mozilla CVS, tweak directory layout</li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Release_0.2.0">Release 0.2.0</h3>
+
+<table>
+ <tbody>
+  <tr>
+   <td style="vertical-align: top;">Release Date</td>
+   <td style="vertical-align: top;">2009-05-21</td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">SCM Tag</td>
+   <td style="vertical-align: top;"> </td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">Source Download</td>
+   <td style="vertical-align: top;"> </td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">Change Log</td>
+   <td style="vertical-align: top;">
+    <h5 id="General_Modifications_8">General Modifications:</h5>
+
+    <ul>
+     <li>apply patch from Red Hat bug #472805, (Miloslav Trmač)</li>
+     <li>Don't allow closing a socket twice, that causes crashes.</li>
+     <li>Fix return value creation in SSLSocket.get_security_status</li>
+     <li>Convert licensing to MPL tri-license</li>
+    </ul>
+
+    <h5 id="The_following_were_added_2">The following were added:</h5>
+
+    <ul>
+     <li>nss.io.Socket.new_socket_pair()</li>
+     <li>nss.io.Socket.poll()</li>
+     <li>nss.io.Socket.import_tcp_socket()</li>
+     <li>nss.nss.Certificate.get_subject_common_name()</li>
+     <li>nss.nss.generate_random()</li>
+     <li>nss.ssl.SSLSocket.import_tcp_socket()</li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Release_0.1.0">Release 0.1.0</h3>
+
+<table>
+ <tbody>
+  <tr>
+   <td style="vertical-align: top;">Release Date</td>
+   <td style="vertical-align: top;">2008-07-09</td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">SCM Tag</td>
+   <td style="vertical-align: top;"> </td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">Source Download</td>
+   <td style="vertical-align: top;"> </td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">Change Log</td>
+   <td style="vertical-align: top;">Initial release</td>
+  </tr>
+ </tbody>
+</table>

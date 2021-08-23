@@ -1,0 +1,35 @@
+---
+title: FC_DigestEncryptUpdate
+slug: Mozilla/Projects/NSS/Reference/FC_DigestEncryptUpdate
+tags:
+  - NSS
+---
+
+<h3 id="Name"> Name </h3>
+<p>FC_DigestEncryptUpdate - continue a multi-part digest and encryption operation
+</p>
+<h3 id="Syntax"> Syntax </h3>
+<pre class="eval"><a href="/en-US/CK_RV">CK_RV</a> FC_DigestEncryptUpdate(
+  <a href="/en-US/CK_SESSION_HANDLE">CK_SESSION_HANDLE</a> hSession,
+  <a href="/en-US/CK_BYTE_PTR">CK_BYTE_PTR</a> pPart,
+  <a href="/en-US/CK_ULONG">CK_ULONG</a> ulPartLen,
+  <a href="/en-US/CK_BYTE_PTR">CK_BYTE_PTR</a> pEncryptedPart,
+  <a href="/en-US/CK_ULONG_PTR">CK_ULONG_PTR</a> pulEncryptedPartLen
+);
+</pre>
+<h3 id="Parameters"> Parameters </h3>
+<dl><dt><code>hSession</code></dt><dd> {{ mediawiki.external('in') }} session handle.
+</dd><dt><code>pPart</code></dt><dd> {{ mediawiki.external('in') }} pointer to the data part.
+</dd><dt><code>ulPartLen</code></dt><dd> {{ mediawiki.external('in') }} length of data in bytes.
+</dd><dt><code>pEncryptedPart</code></dt><dd> {{ mediawiki.external('in') }} pointer to the location which receives the digested and encrypted part or NULL.
+</dd><dt><code>pulEncryptedPartLen</code></dt><dd> {{ mediawiki.external('in') }} pointer to the length of the encrypted part buffer.
+</dd></dl>
+<h3 id="Description"> Description </h3>
+<p><code>FC_DigestEncryptUpdate</code> continues a multi-part digest and encryption operation. After calling both <code>FC_DigestInit</code> and <code>FC_EncryptInit</code> to set up the operations this function may be called multiple times. The operation is finished by calls to <code>FC_DigestFinal</code> and <code>FC_EncryptFinal</code> in that order.
+</p><p>A user must log into the token (to assume the NSS User role) before calling <code>FC_DigestEncryptUpdate</code>.
+</p>
+<h3 id="Return_value"> Return value </h3>
+<h3 id="Examples"> Examples </h3>
+<h3 id="See_also"> See also </h3>
+<ul><li> <a href="/en-US/NSC_DigestEncryptUpdate">NSC_DigestEncryptUpdate</a>
+</li></ul>

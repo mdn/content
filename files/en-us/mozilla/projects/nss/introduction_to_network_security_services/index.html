@@ -1,0 +1,147 @@
+---
+title: Introduction to Network Security Services
+slug: Mozilla/Projects/NSS/Introduction_to_Network_Security_Services
+tags:
+  - Introduction
+  - Mozilla
+  - NSS
+---
+<p><strong>Network Security Services (NSS)</strong> is a set of libraries designed to support cross-platform development of communications applications that support SSL, S/MIME, and other Internet security standards. For a general overview of NSS and the standards it supports, see <a href="/en-US/docs/Mozilla/Projects/NSS/Overview">Overview of NSS</a>.</p>
+
+<h3 id="Shared_Libraries">Shared libraries</h3>
+
+<p>Network Security Services provides both static libraries and shared libraries. Applications that use the shared libraries must use only the APIs that they export. Three shared libraries export public functions:</p>
+
+<ul>
+ <li>The SSL library supports core SSL operations.</li>
+ <li>The S/MIME library supports core S/MIME operations.</li>
+ <li>The NSS library supports core crypto operations.</li>
+</ul>
+
+<p>We guarantee that applications using the exported APIs will remain compatible with future versions of those libraries. For a complete list of public functions exported by these shared libraries in NSS 3.2, see <a href="/en-US/docs/Mozilla/Projects/NSS/Reference/NSS_functions">NSS functions</a>.</p>
+
+<p>For information on which static libraries in NSS 3.1.1 are replaced by each of the above shared libraries in NSS 3.2 , see <a class="external" href="https://www-archive.mozilla.org/projects/security/pki/nss/release_notes_32.html#migration">Migration from NSS 3.1.1</a>.</p>
+
+<p>Figure 1, below, shows a simplified view of the relationships among the three shared libraries listed above and NSPR, which provides low-level cross platform support for operations such as threading and I/O. (Note that NSPR is a separate Mozilla project; see <a href="/en-US/docs/Mozilla/Projects/NSPR">Netscape Portable Runtime</a> for details.)</p>
+
+<p><img alt="Diagram showing the relationships among core NSS libraries and NSPR." src="nss.gif"></p>
+
+<h3 id="Naming_Conventions_and_Special_Libraries">Naming conventions and special libraries</h3>
+
+<p>Windows and Unix use different naming conventions for static and dynamic libraries:</p>
+
+<table class=" standard-table">
+ <tbody>
+  <tr>
+   <th> </th>
+   <th>Windows</th>
+   <th>Unix</th>
+  </tr>
+  <tr>
+   <th>static</th>
+   <td><code>.lib</code></td>
+   <td><code>.a</code></td>
+  </tr>
+  <tr>
+   <th>dynamic</th>
+   <td><code>.dll</code></td>
+   <td><code>.so</code> or <code>.sl</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>In addition, Windows has "import" libraries that bind to dynamic libraries. So the NSS library has the following forms:</p>
+
+<ul>
+ <li><code>libnss3.so</code> - Unix shared library</li>
+ <li><code>libnss3.sl</code> - HP-UX shared library</li>
+ <li><code>libnss.a</code> - Unix static library</li>
+ <li><code>nss3.dll</code> - Windows shared library</li>
+ <li><code>nss3.lib</code> - Windows import library binding to <code>nss3.dll</code></li>
+ <li><code>nss.lib</code> - Windows static library</li>
+</ul>
+
+<p>NSS, SSL, and S/MIME have all of the above forms.</p>
+
+<p>The following static libraries aren't included in any shared libraries</p>
+
+<ul>
+ <li><code>libcrmf.a</code>/<code>crmf.lib</code> provides an API for CRMF operations.</li>
+ <li><code>libjar.a</code>/<code>jar.lib</code> provides an API for creating JAR files.</li>
+</ul>
+
+<p>The following static libraries are included only in external loadable PKCS #11 modules:</p>
+
+<ul>
+ <li><code>libnssckfw.a</code>/<code>nssckfw.lib</code> provides an API for writing PKCS #11 modules.</li>
+ <li><code>libswfci.a</code>/<code>swfci.lib</code> provides support for software FORTEZZA.</li>
+</ul>
+
+<p>The following shared libraries are standalone loadable modules, not meant to be linked with directly:</p>
+
+<ul>
+ <li><code>libfort.so</code>/<code>libfort.sl</code>/<code>fort32.dll</code> provides support for hardware FORTEZZA.</li>
+ <li><code>libswft.so</code>/<code>libswft.sl</code>/<code>swft32.dll</code> provides support for software FORTEZZA.</li>
+ <li><code>libnssckbi.so</code>/<code>libnssckbi.sl</code>/<code>nssckbi.dll</code> defines the default set of trusted root certificates.</li>
+</ul>
+
+<h3 id="Support_for_ILP32">Support for ILP32</h3>
+
+<p>In NSS 3.2 and later versions, there are two new shared libraries for the platforms HP-UX for PARisc CPUs and Solaris for (Ultra)Sparc (not x86) CPUs. These HP and Solaris platforms allow programs that use the ILP32 program model to run on both 32-bit CPUs and 64-bit CPUs. The two libraries exist to provide optimal performance on each of the two types of CPUs.</p>
+
+<p>These two extra shared libraries are not supplied on any other platforms. The names of these libraries are platform-dependent, as shown in the following table.</p>
+
+<table class="standard-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <th>Platform</th>
+   <th>for 32-bit CPUs</th>
+   <th>for 64-bit CPUs</th>
+  </tr>
+  <tr>
+   <td>Solaris/Sparc</td>
+   <td><code>libfreebl_pure32_3.so</code></td>
+   <td><code>libfreebl_hybrid_3.so</code></td>
+  </tr>
+  <tr>
+   <td>HPUX/PARisc</td>
+   <td><code>libfreebl_pure32_3.sl</code></td>
+   <td><code>libfreebl_hybrid_3.sl</code></td>
+  </tr>
+  <tr>
+   <td>AIX (planned for a future release)</td>
+   <td><code>libfreebl_pure32_3_shr.a</code></td>
+   <td><code>libfreebl_hybrid_3_shr.a</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>An application should not link against these libraries, because they are dynamically loaded by NSS at run time. Linking the application against one or the other of these libraries may produce an application program that can only run on one type of CPU (e.g. only on 64-bit CPUs, not on 32-bit CPUs) or that doesn't use the more efficient 64-bit code on 64-bit CPUs, which defeats the purpose of having these shared libraries.</p>
+
+<p>On platforms for which these shared libraries exist, NSS 3.2 will fail if these shared libs are not present. So, an application must include these files in its distribution of NSS shared libraries. These shared libraries should be installed in the same directory where the other NSS shared libraries (such as <code>libnss3.so</code>) are installed. Both shared libs should always be installed whether the target system has a 32-bit CPU or a 64-bit CPU. NSS will pick the right one for the local system at run time.</p>
+
+<p>Note that NSS 3.x is also available in the LP64 model for these platforms, but the LP64 model of NSS 3.x does not have these two extra shared libraries.</p>
+
+<h3 id="What_You_Should_Already_Know">What you should already know</h3>
+
+<p>Before using NSS, you should be familiar with the following topics:</p>
+
+<ul>
+ <li>Concepts and techniques of public-key cryptography</li>
+ <li>The Secure Sockets Layer (SSL) protocol</li>
+ <li>The PKCS #11 standard for cryptographic token interfaces</li>
+ <li>Cross-platform development issues and techniques</li>
+</ul>
+
+<h3 id="Where_to_Find_More_Information">Where to find more information</h3>
+
+<p>For information about PKI and SSL that you should understand before using NSS, see the following:</p>
+
+<ul>
+ <li><a href="/en-US/docs/Archive/Security/Introduction_to_Public-Key_Cryptography">Introduction to Public-Key Cryptography</a></li>
+ <li><a href="/en-US/docs/Archive/Security/Introduction_to_SSL">Introduction to SSL</a></li>
+</ul>
+
+<p>For links to API documentation, build instructions, and other useful information, see the <a href="/en-US/docs/Mozilla/Projects/NSS">NSS Project Page</a>.</p>
+
+<p>As mentioned above, NSS is built on top of NSPR. The API documentation for NSPR is available at <a href="/en-US/docs/Mozilla/Projects/NSPR/Reference">NSPR API Reference</a>.</p>

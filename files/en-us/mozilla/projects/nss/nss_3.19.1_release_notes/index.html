@@ -1,0 +1,63 @@
+---
+title: NSS 3.19.1 release notes
+slug: Mozilla/Projects/NSS/NSS_3.19.1_release_notes
+---
+<h2 id="Introduction">Introduction</h2>
+
+<p>Network Security Services (NSS) 3.19.1 is a security release for NSS 3.19. The bug fixes in NSS 3.19.1 are described in the "Bugs Fixed" section below.</p>
+
+<h2 id="Distribution_Information">Distribution Information</h2>
+
+<p>The HG tag is NSS_3_19_1_RTM. NSS 3.19.1 requires NSPR 4.10.8 or newer.</p>
+
+<p>NSS 3.19.1 source distributions are available on ftp.mozilla.org for secure HTTPS download:</p>
+
+<ul>
+ <li>Source tarballs:<br>
+  <a href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_19_1_RTM/src/">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_19_1_RTM/src/</a></li>
+</ul>
+
+<h2 id="Security_Fixes_in_NSS_3.19.1" style="font-size: 2.14285714285714rem;">Security Fixes in NSS 3.19.1</h2>
+
+<ul>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1138554">Bug 1138554</a> / <a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-4000">CVE-2015-4000</a> - The minimum strength of keys that libssl will accept for finite field algorithms (RSA, Diffie-Hellman, and DSA) have been increased to 1023 bits.</li>
+</ul>
+
+<h2 id="New_in_NSS_3.19.1">New in NSS 3.19.1</h2>
+
+<h3 id="New_Functionality">New Functionality</h3>
+
+<p>No new functionality is introduced in this release. This patch release includes a fix for the recently published <a href="https://weakdh.org/">logjam attack</a>.</p>
+
+<h2 id="Notable_Changes_in_NSS_3.19.1">Notable Changes in NSS 3.19.1</h2>
+
+<ul>
+ <li>NSS reports the bit length of keys more accurately.  Thus, the SECKEY_PublicKeyStrength and SECKEY_PublicKeyStrengthInBits functions could report smaller values for values that have leading zero values. This affects the key strength values that are reported by SSL_GetChannelInfo.</li>
+ <li>The minimum size of keys that NSS will generate, import, or use has been raised:
+  <ul>
+   <li>The minimum modulus size for RSA keys is now 512 bits</li>
+   <li>The minimum modulus size for DSA keys is now 1023 bits</li>
+   <li>The minimum modulus size for Diffie-Hellman keys is now 1023 bits</li>
+  </ul>
+ </li>
+</ul>
+
+<h2 id="Bugs_fixed_in_NSS_3.19.1">Bugs fixed in NSS 3.19.1</h2>
+
+<p>This Bugzilla query returns all the bugs fixed in NSS 3.19.1:</p>
+
+<p><a href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.19.1">https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.19.1</a></p>
+
+<h2 id="Acknowledgements">Acknowledgements</h2>
+
+<p>The NSS development team would like to thank Matthew Green and Karthikeyan Bhargavan for responsibly disclosing the issue in <a class="external external-icon" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1138554">bug 1138554</a>.</p>
+
+<h2 id="Compatibility">Compatibility</h2>
+
+<p>NSS 3.19.1 shared libraries are backward compatible with all older NSS 3.x shared libraries. A program linked with older NSS 3.x shared libraries will work with NSS 3.19.1 shared libraries without recompiling or relinking. Furthermore, applications that restrict their use of NSS APIs to the functions listed in NSS Public Functions will remain compatible with future versions of the NSS shared libraries.</p>
+
+<p><strong>Note:</strong> NSS 3.19.1 increases the minimum size of keys it is willing to use. This has been shown to break some applications. <a href="/en-US/docs/Mozilla/Projects/NSS/NSS_3.19.2_release_notes">NSS 3.19.2</a> reverts the behaviour to the NSS 3.19 and earlier limits.</p>
+
+<h2 id="Feedback">Feedback</h2>
+
+<p>Bugs discovered should be reported by filing a bug report with<a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=NSS"> bugzilla.mozilla.org</a> (product NSS).</p>

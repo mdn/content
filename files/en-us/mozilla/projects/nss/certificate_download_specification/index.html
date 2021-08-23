@@ -1,0 +1,88 @@
+---
+title: NSS Certificate Download Specification
+slug: Mozilla/Projects/NSS/Certificate_Download_Specification
+tags:
+  - NSS
+---
+<p>This document describes the data formats used by NSS 3.x for installing certificates. This document is currently being revised and has not yet been reviewed for accuracy.</p>
+
+<h2 id="Data_Formats">Data Formats</h2>
+
+<p>NSS can accept certificates in several formats. In all cases the certificates are X509 version 1, 2, or 3.</p>
+
+<h3 id="Binary_Formats">Binary Formats</h3>
+
+<p>NSS's certificate loader will recognize several binary formats. They are:</p>
+
+<ul>
+ <li><strong>DER encoded certificate:</strong> This is a single binary DER encoded certificate.</li>
+ <li><strong>PKCS#7 certificate chain:</strong> This is a single <a class="link-ftp" href="ftp://ftp.rfc-editor.org/in-notes/rfc2315.txt">PKCS#7</a> <code>SignedData</code> object. The only significant field in the <code>SignedData</code> object is the <code>certificates</code> field, which may contain multiple certificates to be imported together. The contents of the <code>version</code>, <code>digestAlgorithms</code>, <code>contentInfo</code>, <code>crls</code>, and <code>signerInfos</code> fields are ignored.</li>
+ <li><strong>Netscape Certificate Sequence:</strong> This is another <a class="link-ftp" href="ftp://ftp.rfc-editor.org/in-notes/rfc2315.txt">PKCS#7</a> object format, and like the <code>SignedData</code> format, it allows multiple certificates to be imported together. This format is simpler than the <a class="link-ftp" href="ftp://ftp.rfc-editor.org/in-notes/rfc2315.txt">PKCS#7</a> <code>SignedData</code> object format. It consists of a <a class="link-ftp" href="ftp://ftp.rfc-editor.org/in-notes/rfc2315.txt">PKCS#7</a> <code>ContentInfo</code> structure, wrapping a sequence of certificates. The <code>contentType</code> field OID must be <code>netscape-cert-sequence</code> (see <a href="/en-US/docs/Mozilla/Projects/NSS/Certificate_Download_Specification#object_identifiers">Object Identifiers</a>). The <code>content</code> field is the following ASN.1 structure:</li>
+</ul>
+
+<pre class="eval">   CertificateSequence ::= SEQUENCE OF Certificate
+</pre>
+
+<p>See the section below on <a href="/en-US/docs/Mozilla/Projects/NSS/Certificate_Download_Specification#importing_certificate_chains">Certificate Chains</a> for more information about how multiple certificates are handled.</p>
+
+<h3 id="Text_Formats">Text Formats</h3>
+
+<p>Any of the above <a href="/en-US/docs/Mozilla/Projects/NSS/Certificate_Download_Specification#binary_formats">binary formats</a> can also be imported in text form. The text form begins with the following line:</p>
+
+<pre class="eval">   -----BEGIN CERTIFICATE-----
+</pre>
+
+<p>Following this line should be the certificate data, which can be in any of the <a href="/en-US/docs/Mozilla/Projects/NSS/Certificate_Download_Specification#binary_formats">binary formats</a> described above. This data must be base64 encoded as described by <a class="external" href="https://datatracker.ietf.org/doc/html/rfc1113">RFC 1113</a>. Following the data should be the following line:</p>
+
+<pre class="eval">   -----END CERTIFICATE-----
+</pre>
+
+<p>In a text format download, NSS ignores any text before the first <code>BEGIN CERTIFICATE</code> line, and ignores any text after the first <code>END CERTIFICATE</code> line. Between those two lines, there must be exactly ONE item of any of the supported binary formats described above, and that one item must be base64 encoded. Regardless of which of the supported binary formats is used, the <code>BEGIN</code> and <code>END</code> lines must say <code>CERTIFICATE</code>, and not any other word (such as <code>KEY</code>). The <code>BEGIN</code> and <code>END</code> lines must begin and end with 5 dashes, with no extra leading or trailing white space (excluding the End Of Line characters).</p>
+
+<h2 id="Importing_Certificate_Chains">Importing Certificate Chains</h2>
+
+<p>Several of the formats described above can contain several certificates. When NSS's certificate decoder encounters one of these collections of multiple certificates they are handled in the following way:</p>
+
+<ul>
+ <li>The first certificate is processed in a context specific manner, depending upon how it is being imported. For Mozilla browsers, this handling will depend upon the mime <code>Content-Type</code> that is used on the object being downloaded. For NSS-based servers it will depend upon the options selected in the server's administration interface.</li>
+</ul>
+
+<ul>
+ <li>Subsequent certificates are all treated the same. If the certificates contain a <code>BasicConstraints</code> certificate extension that indicates they are CA certificates, and do not already exist in the local certificate database, they are added as untrusted CAs. In this way they may be used for certificate chain validation, as long as there is a trusted CA somewhere along the chain.</li>
+</ul>
+
+<h3 id="Importing_Certificates_into_Mozilla_browsers">Importing Certificates into Mozilla browsers</h3>
+
+<p>Mozilla browsers import certificates found in HTTP protocol responses. There are several mime content types that are used to indicate to the browser what type of certificate is being imported. These mime types are:</p>
+
+<ul>
+ <li><strong><code>application/x-x509-user-cert</code></strong> The certificate being downloaded is a user certificate belonging to the user operating the browser. If the private key associated with the certificate does not exist in the user's local key database, then an error dialog is generated and the certificate is not imported. If a certificate chain is being imported then the first certificate in the chain must be the user certificate, and any subsequent certificates will be added as untrusted CA certificates to the local database.</li>
+ <li><strong><code>application/x-x509-ca-cert</code></strong> The certificate being downloaded represents a Certificate Authority. When it is downloaded the user will be shown a sequence of dialogs that will guide them through the process of accepting the Certificate Authority and deciding if they wish to trust sites certified by the CA. If a certificate chain is being imported then the first certificate in the chain must be the CA certificate, and any subsequent certificates will be added as untrusted CA certificates to the local database.</li>
+ <li><strong><code>application/x-x509-email-cert</code></strong> The certificate being downloaded is a user certificate belonging to another user for use with S/MIME. If a certificate chain is being imported then the first certificate in the chain must be the user certificate, and any subsequent certificates will be added as untrusted CA certificates to the local database. This is intended to allow people or CAs to post their e-mail certificates on web pages for download by other users who want to send them encrypted mail.</li>
+</ul>
+
+<p>Note: the browser checks that the size of the object being downloaded matches the size of the encoded certificates. Therefore it is important to ensure that no extra characters, such as NULLs or LineFeeds are added at the end of the object.</p>
+
+<h3 id="Importing_Certificates_into_NSS-based_servers">Importing Certificates into NSS-based servers</h3>
+
+<p>Consult your server's administration guide for the most accurate information. For some NSS-base servers, the following information is correct.</p>
+
+<p>Server certificates are imported via the server admin interface. Certificates are pasted into a text input field in an HTML form, and then the form is submitted to the admin server. Since the certificates are pasted into text fields, only the <a href="/en-US/docs/Mozilla/Projects/NSS/Certificate_Download_Specification#text_formats">text formats</a> described above are supported for servers. The type of certificate being imported (e.g. server or CA or cert chain) is specified by the server administrator by selections made on the admin pages. If a certificate chain is being imported then the first certificate in the chain must be the server or CA certificate, and any subsequent certificates will be added as untrusted CA certificates to the local database.</p>
+
+<h2 id="Object_Identifiers">Object Identifiers</h2>
+
+<p>The base of all Netscape object ids is:</p>
+
+<pre class="eval">   netscape OBJECT IDENTIFIER ::= { 2 16 840 1 113730 }
+</pre>
+
+<p>The hexadecimal byte value of this OID when DER encoded is:</p>
+
+<pre class="eval">   0x60, 0x86, 0x48, 0x01, 0x86, 0xf8, 0x42
+</pre>
+
+<p>The following OIDs are mentioned in this document:</p>
+
+<pre class="eval">   netscape-data-type     OBJECT IDENTIFIER :: = { netscape 2 }
+   netscape-cert-sequence OBJECT IDENTIFIER :: = { netscape-data-type 5 }
+</pre>

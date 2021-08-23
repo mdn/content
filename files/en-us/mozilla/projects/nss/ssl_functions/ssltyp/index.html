@@ -1,0 +1,204 @@
+---
+title: ssltyp
+slug: Mozilla/Projects/NSS/SSL_functions/ssltyp
+---
+<div class="note">
+  <ul>
+    <li>This page is part of the <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/OLD_SSL_Reference">SSL Reference</a> that we are migrating into the format described in the <a href="/en-US/docs/Project:MDC_style_guide">MDN Style Guide</a>. If you are inclined to help with this migration, your help would be very much appreciated.</li>
+  </ul>
+  <ul>
+    <li>Upgraded documentation may be found in the <a href="/NSS_reference">Current NSS Reference</a>
+    </li>
+  </ul>
+</div>
+<h1 id="Selected_SSL_Types_and_Structures">Selected SSL Types and Structures</h1>
+<hr>
+<p><a id="1030507"></a></p>
+<h2 id="Chapter_3_Selected_SSL_Types_and_Structures">Chapter 3<br>
+  <a id="1029792"> Selected SSL Types and Structures </a></h2>
+<p><a id="1029793"> This chapter describes some of the most important types and structures used with the functions described in the rest of this document, and how to manage the memory used for them. Additional types are described with the functions that use them or in the header files.</a></p>
+<p><a id="1030889"> </a><a href="#1030559">Types and Structures</a><br>
+  <a href="#1029645">Managing SECItem Memory</a></p>
+<h2 id="Types_and_Structures"><a id="1030559"> Types and Structures </a></h2>
+<p><a id="1030587"> These types and structures are described here:</a></p>
+<p><a id="1028704"> </a><a href="#1028465"><code>CERTCertDBHandle</code></a><br>
+  <a href="#1027387"><code>CERTCertificate</code></a><br>
+  <a href="#1028593"><code>PK11SlotInfo</code></a><br>
+  <a href="#1026076"><code>SECItem</code></a><br>
+  <a href="#1026727"><code>SECKEYPrivateKey</code></a><br>
+  <a href="#1026722"><code>SECStatus</code></a></p>
+<p><a id="1029417"> Additional types used by a single function only are described with the function's entry in each chapter. Some of these functions also use types defined by NSPR and described in the </a><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference">NSPR Reference</a>.</p>
+<p>&lt;a id="&gt; Many of the structures presented here (<a href="#1028465"><code>CERTCertDBHandle</code></a>, <a href="#1027387"><code>CERTCertificate</code></a>, <a href="#1028593"><code>PK11SlotInfo</code></a>, and <a href="#1026727"><code>SECKEYPrivateKey</code></a>) are opaque--that is, they are types defined as structures (for example, <code>CERTCertDBHandleStr</code>) that may change in future releases of Network Security Services. As long as you use the form shown here, your code will not need revision.</p>
+<h4 id="CERTCertDBHandle"> <a id="1028465"> CERTCertDBHandle </a></h4>
+<p><a id="1027307"> An opaque handle structure for open certificate databases.</a></p>
+<h5 id="Syntax"> <a id="1029008"> Syntax </a></h5>
+<pre><a id="1027336">#include &lt;<code>certt.h&gt;</code></a></pre>
+<pre><a id="1029013">typedef struct CERTCertDBHandleStr CERTCertDBHandle;</a></pre>
+<h4 id="CERTCertificate"> <a id="1027387"> CERTCertificate </a></h4>
+<p><a id="1027388"> An opaque X.509 certificate object.</a></p>
+<h5 id="Syntax_2"> <a id="1029288"> Syntax </a></h5>
+<pre><a id="1029289">#include &lt;<code>certt.h&gt;</code></a></pre>
+<pre><a id="1027422">typedef struct CERTCertificateStr CERTCertificate;</a></pre>
+<h5 id="Description"> <a id="1029889"> Description </a></h5>
+<p><a id="1029894"> Certificate structures are shared objects. When an application makes a copy of a particular certificate structure that already exists in memory, SSL makes a <i>shallow</i> copy--that is, it increments the reference count for that object rather than making a whole new copy. When you call </a><a href="sslcrt.html#1050532"><code>CERT_DestroyCertificate</code></a>, the function decrements the reference count and, if the reference count reaches zero as a result, frees the memory. The use of the word "destroy" in function names or in the description of a function often implies reference counting.</p>
+<p><a id="1029891"> Never alter the contents of a certificate structure. If you attempt to do so, the change affects all the shallow copies of that structure and can cause severe problems. </a></p>
+<h4 id="PK11SlotInfo"> <a id="1028593"> PK11SlotInfo </a></h4>
+<p><a id="1028594"> An opaque structure representing a physical or logical PKCS #11 slot.</a></p>
+<h5 id="Syntax_3"> <a id="1029298"> Syntax </a></h5>
+<pre><a id="1029299">#include &lt;<code>pk11expt.h&gt;</code></a></pre>
+<p><a id="1028595"> <code>typedef struct PK11SlotInfo</code>Str <code>PK11SlotInfo</code>;</a></p>
+<h4 id="SECItem"> <a id="1026076"> SECItem </a></h4>
+<p><a id="1029392"> A structure that points to other structures. </a></p>
+<h5 id="Syntax_4"> <a id="1029337"> Syntax </a></h5>
+<pre><a id="1029342">#include &lt;seccomon.h&gt;
+#include &lt;prtypes.h&gt;
+#include &lt;secport.h&gt;</a></pre>
+<pre><a id="1026306">typedef enum {
+    siBuffer,
+    siClearDataBuffer,
+    siCipherDataBuffer,
+    siDERCertBuffer,
+    siEncodedCertBuffer,
+    siDERNameBuffer,
+    siEncodedNameBuffer,
+    siAsciiNameString,
+    siAsciiString,
+    siDEROID
+} SECItemType;</a></pre>
+<pre><a id="1029386">typedef struct SECItemStr SECItem;</a></pre>
+<pre><a id="1027621">struct SECItemStr {
+    SECItemType type;
+    unsigned char *data;
+    unsigned int len;
+};</a></pre>
+<h5 id="Description_2"> <a id="1030926"> Description </a></h5>
+<p><a id="1030934"> A <code>SECItem</code> structure can be used to associate your own data with an SSL socket.</a></p>
+<p><a id="1030983"> To free a structure pointed to by a <code>SECItem</code>, and, if desired, the <code>SECItem</code> structure itself, use one the functions </a><a href="#1030620"><code>SECItem_FreeItem</code></a> or <a href="#1030773"><code>SECItem_ZfreeItem</code></a>.</p>
+<h4 id="SECKEYPrivateKey"> <a id="1026727"> SECKEYPrivateKey </a></h4>
+<p><a id="1027674"> An opaque, generic key structure.</a></p>
+<h5 id="Syntax_5"> <a id="1029313"> Syntax </a></h5>
+<pre><a id="1029314">#include &lt;<code>keyt.h&gt;</code></a></pre>
+<pre><a id="1027665">typedef struct SECKEYPrivateKeyStr SECKEYPrivateKey;</a></pre>
+<h5 id="Description_3"> <a id="1029925"> Description </a></h5>
+<p><a id="1029926"> Key structures are not shared objects. When an application makes a copy of a particular key structure that already exists in memory, SSL makes a <i>deep</i> copy--that is, it makes a whole new copy of that object. When you call </a><a href="sslkey.html#1051017"><code>SECKEY_DestroyPrivateKey</code></a>, the function both frees the memory and sets all the bits to zero.</p>
+<p><a id="1029933"> Never alter the contents of a key structure. Treat the structure as read only. </a></p>
+<h4 id="SECStatus"> <a id="1026722"> SECStatus </a></h4>
+<p><a id="1026094"> The return value for many SSL functions. </a></p>
+<h5 id="Syntax_6"> <a id="1026287"> Syntax </a></h5>
+<pre><a id="1027737">#include &lt;<code>seccomon.h&gt;</code></a></pre>
+<pre><a id="1029324">typedef enum {
+    SECWouldBlock = -2,
+    SECFailure = -1,
+    SECSuccess = 0
+} SECStatus;</a></pre>
+<h5 id="Enumerators"> <a id="1026433"> Enumerators </a></h5>
+<p><a id="1029618"> The enum includes the following enumerators:</a></p>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        <pre>
+<a id="1029622">SECWouldBlock</a></pre>
+      </td>
+      <td>
+        <p><a id="1029624"> Reserved for internal use.</a></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <pre>
+<a id="1029626">SECFailure</a></pre>
+      </td>
+      <td>
+        <p><a id="1029628"> The operation failed. To find out why, call </a><code><a href="../../../../../nspr/reference/html/prerr.html#26127">PR_GetError</a></code>.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <pre>
+<a id="1029630">SECSuccess</a></pre>
+      </td>
+      <td>
+        <p><a id="1029632"> The operation succeeded. In this case the value returned by </a><code><a href="../../../../../nspr/reference/html/prerr.html#26127">PR_GetError</a></code> is meaningless.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<h2 id="Managing_SECItem_Memory"><a id="1029645"> Managing SECItem Memory </a></h2>
+<p><a id="1030704"> These functions are available for managing the memory associated with <code>SECItem</code> structures and the structures to which they point.</a></p>
+<p><a id="1030852"> </a><a href="#1030620"><code>SECItem_FreeItem</code></a><br>
+  <a href="#1030773"><code>SECItem_ZfreeItem</code></a></p>
+<h4 id="SECItem_FreeItem"> <a id="1030620"> SECItem_FreeItem </a></h4>
+<p><a id="1030621"> Frees the memory associated with a <code>SECItem</code> structure.</a></p>
+<h5 id="Syntax_7"> <a id="1030622"> Syntax </a></h5>
+<pre><a id="1030623">#include &lt;prtypes.h&gt; </a></pre>
+<pre><a id="1030624">SECStatus SECItem_FreeItem (
+   SECItem *item,
+   PRBool freeItem)</a></pre>
+<h5 id="Parameter"> <a id="1030625"> Parameter </a></h5>
+<p><a id="1030631"> This function has the following parameter:</a></p>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        <p><a id="1030628"><code>item</code></a></p>
+      </td>
+      <td>
+        <p><a id="1030630"> A pointer to a <code>SECItem</code> structure.</a></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><a id="1030680"> freeItem</a></p>
+      </td>
+      <td>
+        <p><a id="1030682"> When <code>PR_FALSE</code>, free only the structure pointed to. Otherwise, free both the structure pointed to and the <code>SECItem</code> structure itself.</a></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<h5 id="Returns"> <a id="1030632"> Returns </a></h5>
+<p><a id="1030633"> The function returns one of these value<var>s</var>:</a></p>
+<ul>
+  <li><a id="1030634"> If successful, <code>SECSuccess</code>.</a></li>
+  <li><a id="1030637"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="../../../../../nspr/reference/html/prerr.html#26127">PR_GetError</a> to retrieve the error code.</li>
+</ul>
+<h5 id="Description_4"> <a id="1030638"> Description </a></h5>
+<p><a id="1030639"> This function frees the memory associated with the structure to which the specified item points, when that structure is no longer used. When <code>freeItem</code> is not <code>PR_FALSE</code>, also frees the item structure itself.</a></p>
+<h4 id="SECItem_ZfreeItem"> <a id="1030773"> SECItem_ZfreeItem </a></h4>
+<p><a id="1030774"> Zeroes and frees the memory associated with a <code>SECItem</code> structure.</a></p>
+<h5 id="Syntax_8"> <a id="1030775"> Syntax </a></h5>
+<pre><a id="1030776">#include &lt;prtypes.h&gt; </a></pre>
+<pre><a id="1030777">SECStatus SECItem_ZfreeItem (
+   SECItem *item,
+   PRBool freeItem)</a></pre>
+<h5 id="Parameter_2"> <a id="1030778"> Parameter </a></h5>
+<p><a id="1030788"> This function has the following parameter:</a></p>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        <p><a id="1030781"><code>item</code></a></p>
+      </td>
+      <td>
+        <p><a id="1030783"> A pointer to a <code>SECItem</code> structure.</a></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><a id="1030785"> freeItem</a></p>
+      </td>
+      <td>
+        <p><a id="1030787"> When <code>PR_FALSE</code>, free only the structure pointed to. Otherwise, free both the structure pointed to and the <code>SECItem</code> structure itself.</a></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<h5 id="Returns_2"> <a id="1030789"> Returns </a></h5>
+<p><a id="1030790"> The function returns one of these value<var>s</var>:</a></p>
+<ul>
+  <li><a id="1030791"> If successful, <code>SECSuccess</code>.</a></li>
+  <li><a id="1030794"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="../../../../../nspr/reference/html/prerr.html#26127">PR_GetError</a> to retrieve the error code.</li>
+</ul>
+<h5 id="Description_5"> <a id="1030795"> Description </a></h5>
+<p><a id="1030796"> This function is similar to </a><a href="#1030620"><code>SECItem_FreeItem</code></a>, except that it overwrites the structures to be freed with zeroes before it frees them. Zeros and frees the memory associated with the structure to which the specified item points, when that structure is no longer used. When <code>freeItem</code> is not <code>PR_FALSE</code>, also zeroes and frees the item structure itself.<a id="1030611"></a></p>

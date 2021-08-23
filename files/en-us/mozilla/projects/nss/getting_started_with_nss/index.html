@@ -1,0 +1,59 @@
+---
+title: Getting Started With NSS
+slug: Mozilla/Projects/NSS/Getting_started_with_NSS
+tags:
+  - Samples WIP
+---
+<h2 id="How_to_get_involved_with_NSS">How to get involved with NSS</h2>
+
+<p>Network Security Services (NSS) is a base library for cryptographic algorithms and secure network protocols used by Mozilla software.<br>
+<br>
+Would you like to get involved and help us to improve the core security of Mozilla Firefox and other applications that make use of NSS? We are looking forward to your contributions!<br>
+<br>
+We have a large list of tasks waiting for attention, and we are happy to assist you in identifying areas that match your interest or skills. You can find us on <a href="/en-US/docs/Mozilla/QA/Getting_Started_with_IRC" title="Mozilla IRC">Mozilla IRC</a> in channel <a href="irc://irc.mozilla.org/#nss" title="irc://irc.mozilla.org/nss">#nss</a> or you could ask your questions on the <a href="https://lists.mozilla.org/listinfo/dev-tech-crypto/">mozilla.dev.tech.crypto</a> newsgroup.</p>
+
+<p>The NSS library and its supporting command line tools are written in the C programming language. Its build system and the automated tests are based on makefiles and bash scripts.</p>
+
+<p>Over time, many documents have been produced that describe various aspects of NSS. You can start with:</p>
+
+<ul>
+	<li>the current <a href="/en-US/docs/NSS">primary NSS documentation page</a> from which we link to other documentation.</li>
+	<li>a <a href="/en-US/docs/Overview_of_NSS">General Overview</a> of the applications that use NSS and the features it provides.</li>
+	<li>a high level <a href="/en-US/docs/Mozilla/Projects/NSS/An_overview_of_NSS_Internals">Introduction to the Internals of NSS</a>.</li>
+	<li>learn about getting the <a href="/en-US/docs/Mozilla/Projects/NSS/NSS_Sources_Building_Testing">NSS sources, building, and testing.</a></li>
+	<li><a href="https://www-archive.mozilla.org/projects/security/pki/nss/">Old documentation</a> that is on the archived mozilla.org website.</li>
+</ul>
+
+<p>(Unfortunately the NSS project doesn't have a technical writer at this time, so our documentation is not as organized as we would like it to be. You could contribute by organizing it in a better way.)</p>
+
+<h2 id="NSS_Sample_Code">NSS Sample Code</h2>
+
+<p>A good place to start learning how to write NSS applications are the command line tools that are maintained by the NSS developers. You can find them in subdirectory mozilla/security/nss/cmd</p>
+
+<p>Or have a look at some basic <a href="/en-US/docs/Mozilla/Projects/NSS/NSS_Sample_Code">NSS sample code</a>.</p>
+
+<p>A new set of samples is currently under development and review, see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=490238">Create new NSS samples</a>.</p>
+
+<p>You are welcome to download the samples via: hg clone https://hg.mozilla.org/projects/nss; cd nss; hg update SAMPLES_BRANCH</p>
+
+<h2 id="How_to_Contribute">How to Contribute</h2>
+
+<p>... (this section is still under construction, but there are many contribution opportunities)</p>
+
+<p>Start by opening a bugzilla account at <a href="https://bugzilla.mozilla.org/"> bugzilla.mozilla.org</a> if you don't have one.</p>
+
+<p>NSS :: Libraries component for issues you'd like to work on. We maintain a list of <a href="https://bugzilla.mozilla.org/buglist.cgi?keywords=good-first-bug%2C%20&amp;keywords_type=allwords&amp;classification=Components&amp;query_format=advanced&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;component=Libraries&amp;product=NSS">NSS bugs marked with a keyword "good-first-bug" that you can view</a>.</p>
+
+<h3 id="Creating_your_Patch">Creating your Patch</h3>
+
+<p>Seee our section on <a href="/en-US/docs/Mozilla/Projects/NSS/NSS_Sources_Building_Testing">NSS sources, building, and testing </a>to get started making your patch. When you're satisfied with it, you'll need code review.</p>
+
+<h3 id="Code_Review">Code Review</h3>
+
+<p><a href="https://phabricator.services.mozilla.com">http://phabricator.services.mozilla.com/</a> is our code review tool, which uses your Bugzilla account. Use our <a href="https://moz-conduit.readthedocs.io/en/latest/phabricator-user.html">Phabricator user instructions to upload patches for review</a>.</p>
+
+<p>Some items that will be evaluated during code review are <a href="https://github.com/mozilla/nss-tools/blob/master/nss-code-review-checklist.yaml">listed in checklist form on Github.</a></p>
+
+<p>After passing review, your patch can be landed by a member of the NSS team. You can find us on <a href="/en-US/docs/Mozilla/QA/Getting_Started_with_IRC" title="Mozilla IRC">Mozilla IRC</a> in channel <a href="irc://irc.mozilla.org/#nss" title="irc://irc.mozilla.org/nss">#nss</a>.</p>
+
+<p>Note that we don't land code that isn't both reviewed and tested. Code only works when it has tests, and tests only work when they're part of the automation.</p>

@@ -1,0 +1,28 @@
+---
+title: FC_GetFunctionStatus
+slug: Mozilla/Projects/NSS/Reference/FC_GetFunctionStatus
+tags:
+  - NSS
+---
+
+<h3 id="Name"> Name </h3>
+<p>FC_GetFunctionStatus - get the status of a function running in parallel
+</p>
+<h3 id="Syntax"> Syntax </h3>
+<pre class="eval"><a href="/en-US/CK_RV">CK_RV</a> FC_GetFunctionStatus(
+  <a href="/en-US/CK_SESSION_HANDLE">CK_SESSION_HANDLE</a> hSession
+);
+</pre>
+<h3 id="Parameters"> Parameters </h3>
+<dl><dt><code>hSession</code></dt><dd> {{ mediawiki.external('in') }} session handle.
+</dd></dl>
+<h3 id="Description"> Description </h3>
+<p><code>FC_GetFunctionStatus</code> is a legacy function that simply returns <code>CKR_FUNCTION_NOT_PARALLEL</code>.
+</p>
+<h3 id="Return_value"> Return value </h3>
+<p><code>FC_GetFunctionStatus</code> always returns <code>CKR_FUNCTION_NOT_PARALLEL</code>.
+</p>
+<h3 id="Examples"> Examples </h3>
+<h3 id="See_also"> See also </h3>
+<ul><li> <a href="/en-US/NSC_GetFunctionStatus">NSC_GetFunctionStatus</a>
+</li></ul>

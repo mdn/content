@@ -1,0 +1,86 @@
+---
+title: NSS 3.17.1 release notes
+slug: Mozilla/Projects/NSS/NSS_3.17.1_release_notes
+tags:
+  - Reference
+  - Security
+---
+<h2 id="Introduction">Introduction</h2>
+
+<p>Network Security Services (NSS) 3.17.1 is a patch release for NSS 3.17. The bug fixes in NSS 3.17.1 are described in the "Bugs Fixed" section below.</p>
+
+<h2 id="Distribution_Information">Distribution Information</h2>
+
+<p>The HG tag is NSS_3_17_1_RTM. NSS 3.17.1 requires NSPR 4.10.7 or newer.</p>
+
+<p>NSS 3.17.1 source distributions are available on ftp.mozilla.org for secure HTTPS download:</p>
+
+<ul>
+ <li>Source tarballs:<br>
+  <a href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_17_1_RTM/src/">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_17_1_RTM/src/</a></li>
+</ul>
+
+<h2 id="Security_Advisories">Security Advisories</h2>
+
+<p>The following security-relevant bugs have been resolved in NSS 3.17.1. Users are encouraged to upgrade immediately.</p>
+
+<ul>
+ <li><a class="external external-icon" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1064636">Bug 1064636</a> - (CVE-2014-1568) RSA Signature Forgery in NSS. See also <a class="external external-icon" href="https://www.mozilla.org/security/announce/2014/mfsa2014-73.html">MFSA 2014-73</a> for details.</li>
+</ul>
+
+<h2 id="New_in_NSS_3.17.1">New in NSS 3.17.1</h2>
+
+<p>This patch release adds new functionality and fixes a bug that caused NSS to accept forged RSA signatures.</p>
+
+<p>A new symbol, _SGN_VerifyPKCS1DigestInfo is exported in this release. As with all exported NSS symbols that have a leading underscore '_', this is an internal symbol for NSS use only. Applications that use or depend on these symbols can and will break in future NSS releases.</p>
+
+<h3 id="New_Functionality">New Functionality</h3>
+
+<ul>
+ <li><a href="https://datatracker.ietf.org/doc/html/draft-ietf-tls-downgrade-scsv-00">TLS_FALLBACK_SCSV</a> is a signaling cipher suite value that indicates a handshake is the result of TLS version fallback.</li>
+</ul>
+
+<h4 id="New_Macros">New Macros</h4>
+
+<ul>
+ <li><em>in ssl.h</em>
+
+  <ul>
+   <li><b>SSL_ENABLE_FALLBACK_SCSV</b> - an SSL socket option that enables TLS_FALLBACK_SCSV. Off by default.</li>
+  </ul>
+ </li>
+ <li><em>in sslerr.h</em>
+  <ul>
+   <li><b>SSL_ERROR_INAPPROPRIATE_FALLBACK_ALERT</b> - a new SSL error code.</li>
+  </ul>
+ </li>
+ <li><em>in sslproto.h</em>
+  <ul>
+   <li><b>TLS_FALLBACK_SCSV</b> - a signaling cipher suite value that indicates a handshake is the result of TLS version fallback.</li>
+  </ul>
+ </li>
+</ul>
+
+<h2 id="Notable_Changes_in_NSS_3.17.1">Notable Changes in NSS 3.17.1</h2>
+
+<ul>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1058933">Signature algorithms now use SHA-256 instead of SHA-1 by default</a>.</li>
+ <li>Added support for Linux on little-endian powerpc64.</li>
+</ul>
+
+<h2 id="Bugs_fixed_in_NSS_3.17.1">Bugs fixed in NSS 3.17.1</h2>
+
+<p>This Bugzilla query returns all the bugs fixed in NSS 3.17.1:<br>
+ <a href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.17.1">https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.17.1</a></p>
+
+<h2 id="Acknowledgements">Acknowledgements</h2>
+
+<p>The NSS development team would like to thank Antoine Delignat-Lavaud, security researcher at Inria Paris in team Prosecco, and the Advanced Threat Research team at Intel Security, who both independently discovered and reported this issue, for responsibly disclosing the issue by providing advance copies of their research.</p>
+
+<h2 id="Compatibility">Compatibility</h2>
+
+<p>NSS 3.17.1 shared libraries are backward compatible with all older NSS 3.x shared libraries. A program linked with older NSS 3.x shared libraries will work with NSS 3.17.1 shared libraries without recompiling or relinking. Furthermore, applications that restrict their use of NSS APIs to the functions listed in NSS Public Functions will remain compatible with future versions of the NSS shared libraries.</p>
+
+<h2 id="Feedback">Feedback</h2>
+
+<p>Bugs discovered should be reported by filing a bug report with<a class="external external-icon" href="https://bugzilla.mozilla.org/enter_bug.cgi?product=NSS"> bugzilla.mozilla.org</a> (product NSS).</p>

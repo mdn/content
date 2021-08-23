@@ -1,0 +1,34 @@
+---
+title: FC_SetOperationState
+slug: Mozilla/Projects/NSS/Reference/FC_SetOperationState
+tags:
+  - NSS
+---
+
+<h3 id="Name"> Name </h3>
+<p>FC_SetOperationState - restore the cryptographic operation state of a session.
+</p>
+<h3 id="Syntax"> Syntax </h3>
+<pre class="eval"><a href="/en-US/CK_RV">CK_RV</a> FC_SetOperationState(
+  <a href="/en-US/CK_SESSION_HANDLE">CK_SESSION_HANDLE</a> hSession,
+  <a href="/en-US/CK_BYTE">CK_BYTE_PTR</a> pOperationState,
+  <a href="/en-US/CK_ULONG">CK_ULONG</a> ulOperationStateLen,
+  <a href="/en-US/CK_OBJECT_HANDLE">CK_OBJECT_HANDLE</a> hEncryptionKey,
+  <a href="/en-US/CK_OBJECT_HANDLE">CK_OBJECT_HANDLE</a> hAuthenticationKey
+);
+</pre>
+<h3 id="Parameters"> Parameters </h3>
+<dl><dt><code>hSession</code></dt><dd> {{ mediawiki.external('in') }} handle of the open session.
+</dd><dt><code>pOperationState</code></dt><dd> {{ mediawiki.external('in') }} pointer to a byte array containing the operation state.
+</dd><dt><code>ulOperationStateLen</code></dt><dd> {{ mediawiki.external('in') }} contains the total length (in bytes) of the operation state.
+</dd><dt><code>hEncryptionKey</code></dt><dd> {{ mediawiki.external('in') }} handle of the encryption or decryption key to be used in a stored session or zero if no key is needed.
+</dd><dt><code>hAuthenticationKey</code></dt><dd> {{ mediawiki.external('in') }} handle of the authentication key to be used in the stored session or zero if none is needed.
+</dd></dl>
+<h3 id="Description"> Description </h3>
+<p><code>FC_SetOperationState</code> restores the cryptographic operations state of a session from an array of bytes obtained with <code>FC_GetOperationState</code>. This function only works for digest operations for now. Therefore, a user may call <code>FC_SetOperationState</code> without logging into the token (to assume the NSS User role).
+</p>
+<h3 id="Return_value"> Return value </h3>
+<h3 id="Examples"> Examples </h3>
+<h3 id="See_also"> See also </h3>
+<ul><li> <a href="/en-US/docs/Mozilla/Projects/NSS/Reference/FC_GetOperationState">FC_GetOperationState</a>, <a href="/en-US/NSC_SetOperationState">NSC_SetOperationState</a>
+</li></ul>

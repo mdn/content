@@ -1,0 +1,24 @@
+---
+title: NSS cryptographic module
+slug: Mozilla/Projects/NSS/Reference/NSS_cryptographic_module
+tags:
+  - NSS
+---
+
+<p>This chapter describes the data types and functions that one can use to perform cryptographic operations with the NSS cryptographic module. The NSS cryptographic module uses the industry standard <a class="external" href="http://www.rsasecurity.com/rsalabs/node.asp?id=2133">PKCS #11</a> v2.20 as its API with some extensions. Therefore, an application that supports PKCS #11 cryptographic tokens can be easily modified to use the NSS cryptographic module.</p>
+
+<p>The NSS cryptographic module has two modes of operation: the non-FIPS (default) mode and FIPS mode. The FIPS mode is an Approved mode of operation compliant to FIPS 140-2. Both modes of operation use the same data types but are implemented by different functions.</p>
+
+<ul>
+ <li>The standard PKCS #11 function C_GetFunctionList or the equivalent NSC_GetFunctionList function returns pointers to the functions that implement the default mode of operation.</li>
+ <li>To enable the FIPS mode of operation, use the function FC_GetFunctionList instead to get pointers to the functions that implement the FIPS mode of operation.</li>
+</ul>
+
+<p>The NSS cryptographic module also exports the function NSC_ModuleDBFunc for managing the NSS module database secmod.db. The following sections document the data types and functions.</p>
+
+<ul>
+ <li><a href="/en-US/docs/Mozilla/Projects/NSS/Reference/NSS_cryptographic_module/Data_types">PKCS #11 data types</a></li>
+ <li><a href="/en-US/docs/Mozilla/Projects/NSS/PKCS11_Functions">PKCS #11 functions in the non-FIPS (default) mode of operation</a></li>
+ <li><a href="/en-US/docs/Mozilla/Projects/NSS/Reference/NSS_cryptographic_module/FIPS_mode_of_operation">PKCS #11 functions in the FIPS mode of operation</a></li>
+ <li>NSC_ModuleDBFunc</li>
+</ul>

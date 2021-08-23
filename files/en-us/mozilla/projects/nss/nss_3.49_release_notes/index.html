@@ -1,0 +1,64 @@
+---
+title: NSS 3.49 release notes
+slug: Mozilla/Projects/NSS/NSS_3.49_release_notes
+---
+<h2 id="Introduction">Introduction</h2>
+
+<p>The NSS team has released Network Security Services (NSS) 3.49 on <strong>3 January 2020</strong>, which is a minor release.</p>
+
+<p>The NSS team would like to recognize first-time contributors:</p>
+
+<ul>
+ <li>Alex Henrie</li>
+</ul>
+
+<h2 id="Distribution_Information">Distribution Information</h2>
+
+<p>The HG tag is NSS_3_49_RTM. NSS 3.49 requires NSPR 4.24 or newer.</p>
+
+<p>NSS 3.49 source distributions are available on ftp.mozilla.org for secure HTTPS download:</p>
+
+<ul>
+ <li>Source tarballs:<br>
+  <a href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_49_RTM/src/">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_49_RTM/src/</a></li>
+</ul>
+
+<p>Other releases are available <a href="/en-US/docs/Mozilla/Projects/NSS/NSS_Releases">in NSS Releases</a>.</p>
+
+<h2 id="Notable_Changes_in_NSS_3.49">Notable Changes in NSS 3.49</h2>
+
+<ul>
+ <li>The legacy DBM database, <strong>libnssdbm</strong>, is no longer built by default when using gyp builds. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1594933">Bug 1594933 </a>for details.</li>
+</ul>
+
+<h2 id="Bugs_fixed_in_NSS_3.49">Bugs fixed in NSS 3.49</h2>
+
+<ul>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1513586">Bug 1513586</a> - Set downgrade sentinel for client TLS versions lower than 1.2.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1606025">Bug 1606025</a> - Remove -Wmaybe-uninitialized warning in sslsnce.c</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1606119">Bug 1606119</a> - Fix PPC HW Crypto build failure</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1605545">Bug 1605545</a> - Memory leak in Pk11Install_Platform_Generate</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1602288">Bug 1602288</a> - Fix build failure due to missing posix signal.h</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1588714">Bug 1588714</a> - Implement CheckARMSupport for Win64/aarch64</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1585189">Bug 1585189</a> - NSS database uses 3DES instead of AES to encrypt DB entries</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1603257">Bug 1603257</a> - Fix UBSAN issue in softoken CKM_NSS_CHACHA20_CTR initialization</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1590001">Bug 1590001</a> - Additional HRR Tests (CVE-2019-17023)</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1600144">Bug 1600144</a> - Treat ClientHello with message_seq of 1 as a second ClientHello</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1603027">Bug 1603027</a> - Test that ESNI is regenerated after HelloRetryRequest</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1593167">Bug 1593167</a> - Intermittent mis-reporting potential security risk SEC_ERROR_UNKNOWN_ISSUER</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1535787">Bug 1535787</a> - Fix automation/release/nss-release-helper.py on MacOS</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1594933">Bug 1594933</a> - Disable building DBM by default</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1562548">Bug 1562548</a> - Improve GCM perfomance on aarch32</li>
+</ul>
+
+<p>This Bugzilla query returns all the bugs fixed in NSS 3.49:</p>
+
+<p><a href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.49">https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.49</a></p>
+
+<h2 id="Compatibility">Compatibility</h2>
+
+<p>NSS 3.49 shared libraries are backward compatible with all older NSS 3.x shared libraries. A program linked with older NSS 3.x shared libraries will work with NSS 3.49 shared libraries without recompiling or relinking. Furthermore, applications that restrict their use of NSS APIs to the functions listed in NSS Public Functions will remain compatible with future versions of the NSS shared libraries.</p>
+
+<h2 id="Feedback">Feedback</h2>
+
+<p>Bugs discovered should be reported by filing a bug report with<a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=NSS"> bugzilla.mozilla.org</a> (product NSS).</p>

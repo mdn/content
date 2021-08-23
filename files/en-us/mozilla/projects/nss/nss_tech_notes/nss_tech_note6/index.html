@@ -1,0 +1,95 @@
+---
+title: nss tech note6
+slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note6
+---
+<h2 id="NSS_.chk_Files_for_the_FIPS_140_Mode">NSS .chk Files for the FIPS 140 Mode<br>
+</h2>
+<h3 id="NSS_Technical_Note_6">NSS Technical Note: 6</h3>
+In NSS 3.8, we added checksum files required for the NSS softoken to
+operate in FIPS 140 mode.<br>
+<br>
+The new checksum file is called <span style="font-family: monospace;">libsoftokn3.chk</span>
+on Unix/Linux and <span style="font-family: monospace;">softokn3.chk</span>
+on Windows.  It must be put in the same directory as the NSS
+libraries. The <span style="font-family: monospace;">libsoftokn3.chk/softokn3.chk</span>
+file contains a checksum for the softoken. When in FIPS 140
+mode, the softoken is required to compute its checksum and compare it
+with the value in <span style="font-family: monospace;">libsoftokn3.chk/softokn3.chk</span>.<br>
+ <br>
+<p>The following applies to NSS 3.8 through 3.10 :
+</p><p>On 32-bit Solaris SPARC (i.e., not x86, and not 64-bit SPARC) and
+32-bit HP-UX PA-RISC (i.e., not Itanium, and not 64-bit PA-RISC), there
+are two more .chk files: <span style="font-family: monospace;">libfreebl_pure32_3.chk</span>
+and <span style="font-family: monospace;">libfreebl_hybrid_3.chk</span>.<br>
+ <br>
+</p><p>The following applies to NSS 3.11 :
+</p><p>The low-level freebl cryptographic code has been separated from softoken on all platforms. Even on platforms for which there is only one implementation of freebl, there is now a separate freebl shared library. The freebl library implements a private interface internal to NSS.
+</p><ul>
+<li>On 32-bit Windows and 32-bit OS/2, this shared library is called freebl3.dll, and the corresponding .chk file is called <span style="font-family: monospace;">freebl3.chk</span> .
+</li><li>On 32-bit Solaris x86, 64-bit Solaris x64 (AMD64), 32-bit Linux x86, 64-bit Linux x86-64, 32-bit AIX and 64-bit AIX, this shared library is called libfreebl3.so, and the corresponding .chk file is called <span style="font-family: monospace;">libfreebl3.chk</span> .
+</li><li>On the 32-bit Solaris SPARC architecture, there are 3 freebl libraries :
+<ul>
+<li>libfreebl_32int64_3.so for UltraSparc T1 CPUs, with a corresponding <span style="font-family: monospace;">libfreebl_32int64_3.chk</span>
+</li><li>libfreebl_32fpu_3.so for other UltraSparc CPUs, with a corresponding <span style="font-family: monospace;">libfreebl_32fpu_3.chk</span>
+</li><li>libfreebl_32int_3.so for SPARC V8 CPUs, with a corresponding <span style="font-family: monospace;">libfreebl_32int_3.chk</span>
+</li></ul>
+</li><li>On the 64-bit Solaris SPARC architecture, there are 2 freebl libraries :
+<ul>
+<li>libfreebl_64int_3.so for UltraSparc T1 CPUs, with a corresponding <span style="font-family: monospace;">libfreebl_64int_3.chk</span>
+</li><li>libfreebl_64fpu_3.so for other UltraSparc CPUs, with a corresponding <span style="font-family: monospace;">libfreebl_64fpu_3.chk</span>
+</li></ul>
+</li><li>On the 32-bit HP-UX PA-RISC architecture, there are 2 freebl libraries :
+<ul>
+<li>libfreebl_32fpu_3.sl for CPUs that do multiply operations faster in floating point, with a corresponding <span style="font-family: monospace;">libfreebl_32fpu_3.chk</span>
+</li><li>libfreebl_32int_3.sl for other PA-RISC CPUs, with a corresponding <span style="font-family: monospace;">libfreebl_32int_3.chk</span>
+</li></ul>
+</li><li>On the 64-bit HP-UX PA-RISC architecture, there is only one freebl library, called libfreebl3.sl, with a corresponding <span style="font-family: monospace;">libfreebl3.chk</span>
+</li></ul>
+
+
+Applications should always use NSS binaries that are the output of the regular NSS build process. If your application modifies NSS binaries for any reason after they were built, then :
+<ul>
+<li>The FIPS 140 mode of operation will no longer work, because the chk files will no longer match the softoken and freebl shared libraries .
+</li><li>The softoken and freebl binaries won't match any NSS binaries that may have been submitted to NIST for validation, and thus may not be verified as being the actual FIPS 140 validated cryptographic module . The only way to meet this requirement is for your application never to modify the NSS binaries.
+</li><li>Any offer of binary support that may have been previously made to you by NSS developers is null and void.
+</li></ul>
+
+If your build process modifies NSS libraries in any way (for example, to strip the symbols), it should consider not doing so for the reasons cited above.
+If you still decide to make unsupported changes, you can allow the softoken to come up in FIPS 140 mode of operation by regenerating the .chk files
+yourself.  The tool to do that is called <span style="font-family: monospace;">shlibsign</span>.  It is released
+as part of the NSS binary distributions.<br>
+<br>
+If your build process does not modify NSS shared libraries, you can
+just use the .chk files in the NSS binary distributions.<br>
+ <br>
+So you have two options.<br>
+ <br>
+1. Do not modify NSS libraries in your build process.
+Specifically, do not modify <span style="font-family: monospace;">libsoftokn3.so</span>,
+<span style="font-family: monospace;">libsoftokn3.sl</span>, <span style="font-family: monospace;">softokn3.dll</span>, <span style="font-family: monospace;">libfreebl_pure32_3.so</span>, <span style="font-family: monospace;">libfreebl_pure32_3.sl</span>, <span style="font-family: monospace;">libfreebl_hybrid_3.so</span>,<span style="font-family: monospace;"> libfreebl_hybrid_3.sl</span>,
+<span style="font-family: monospace;"> libfreebl3.so</span>,
+<span style="font-family: monospace;"> libfreebl3.sl</span>,
+<span style="font-family: monospace;"> freebl3.dll</span>,
+<span style="font-family: monospace;"> libfreebl_32int64_3.so</span>,
+<span style="font-family: monospace;"> libfreebl_32int_3.so</span>,
+<span style="font-family: monospace;"> libfreebl_32fpu_3.so</span>,
+<span style="font-family: monospace;"> libfreebl_64int_3.so</span>,
+<span style="font-family: monospace;"> libfreebl_64fpu_3.so</span>,
+<span style="font-family: monospace;"> libfreebl_32int_3.sl</span>,
+<span style="font-family: monospace;"> libfreebl_32fpu_3.sl</span>; or<br>
+ <br>
+2. Use <span style="font-family: monospace;">shlibsign</span> to
+regenerate the .chk files.  For example, on 32-bit Solaris SPARC for NSS 3.11,
+say<br>
+ <br>
+<span style="font-family: monospace;">shlibsign -v -i libsoftokn3.so</span><br>
+<span style="font-family: monospace;">shlibsign -v -i
+libfreebl_32int64_3.so</span><br>
+<span style="font-family: monospace;">shlibsign -v -i
+libfreebl_32fpu_3.so</span><br>shlibsign -v -i
+libfreebl_32int_3.so<br>
+ <br>
+(You need to set <span style="font-family: monospace;">LD_LIBRARY_PATH</span>
+appropriately and specify the correct pathnames of the libraries.)<br>
+ <br>
+Option 1 is simpler and highly preferred.<br>

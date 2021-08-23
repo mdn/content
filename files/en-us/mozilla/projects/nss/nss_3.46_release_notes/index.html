@@ -1,0 +1,136 @@
+---
+title: NSS 3.46 release notes
+slug: Mozilla/Projects/NSS/NSS_3.46_release_notes
+---
+<h2 id="Introduction">Introduction</h2>
+
+<p>The NSS team has released Network Security Services (NSS) 3.46 on <strong>30 August 2019</strong>, which is a minor release.</p>
+
+<p>The NSS team would like to recognize first-time contributors:</p>
+
+<ul>
+ <li>Giulio Benetti</li>
+ <li>Louis Dassy</li>
+ <li>Mike Kaganski</li>
+ <li>xhimanshuz</li>
+</ul>
+
+<h2 id="Distribution_Information">Distribution Information</h2>
+
+<p>The HG tag is NSS_3_46_RTM. NSS 3.46 requires NSPR 4.22 or newer.</p>
+
+<p>NSS 3.46 source distributions are available on ftp.mozilla.org for secure HTTPS download:</p>
+
+<ul>
+ <li>Source tarballs:<br>
+  <a href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_46_RTM/src/">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_46_RTM/src/</a></li>
+</ul>
+
+<p>Other releases are available <a href="/en-US/docs/Mozilla/Projects/NSS/NSS_Releases">in NSS Releases</a>.</p>
+
+<h2 id="New_in_NSS_3.46">New in NSS 3.46</h2>
+
+<p>This release contains no significant new functionality, but concentrates on providing improved performance, stability, and security.  Of particular note are significant improvements to AES-GCM performance on ARM.</p>
+
+<h2 id="Notable_Changes_in_NSS_3.46">Notable Changes in NSS 3.46</h2>
+
+<h3 id="Certificate_Authority_Changes">Certificate Authority Changes</h3>
+
+<ul>
+ <li>The following CA certificates were <strong>Removed</strong>:
+
+  <ul>
+   <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1574670">Bug 1574670</a> - Remove expired Class 2 Primary root certificate
+
+    <ul>
+     <li>SHA-256 Fingerprint: 0F993C8AEF97BAAF5687140ED59AD1821BB4AFACF0AA9A58B5D57A338A3AFBCB</li>
+    </ul>
+   </li>
+   <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1574670">Bug 1574670</a> - Remove expired UTN-USERFirst-Client root certificate
+    <ul>
+     <li>SHA-256 Fingerprint: 43F257412D440D627476974F877DA8F1FC2444565A367AE60EDDC27A412531AE</li>
+    </ul>
+   </li>
+   <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1574670">Bug 1574670</a> - Remove expired Deutsche Telekom Root CA 2 root certificate
+    <ul>
+     <li>SHA-256 Fingerprint: B6191A50D0C3977F7DA99BCDAAC86A227DAEB9679EC70BA3B0C9D92271C170D3</li>
+    </ul>
+   </li>
+   <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1566569">Bug 1566569</a> - Remove Swisscom Root CA 2 root certificate
+    <ul>
+     <li>SHA-256 Fingerprint: F09B122C7114F4A09BD4EA4F4A99D558B46E4C25CD81140D29C05613914C3841</li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+<h2 id="Upcoming_changes_to_default_TLS_configuration">Upcoming changes to default TLS configuration</h2>
+
+<p>The next NSS team plans to make two changes to the default TLS configuration in NSS 3.47, which will be released in October:</p>
+
+<ul>
+ <li><a href="https://datatracker.ietf.org/doc/html/rfc8446">TLS 1.3</a> will be the default maximum TLS version.  See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1573118">Bug 1573118</a> for details.</li>
+ <li><a href="https://datatracker.ietf.org/doc/html/rfc7627">TLS extended master secret</a> will be enabled by default, where possible.  See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1575411">Bug 1575411</a> for details.</li>
+</ul>
+
+<h2 id="Bugs_fixed_in_NSS_3.46">Bugs fixed in NSS 3.46</h2>
+
+<ul>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1572164">Bug 1572164</a> - Don't unnecessarily free session in NSC_WrapKey</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1574220">Bug 1574220</a> - Improve controls after errors in tstcln, selfserv and vfyserv cmds</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1550636">Bug 1550636</a> - Upgrade SQLite in NSS to a 2019 version</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1572593">Bug 1572593</a> - Reset advertised extensions in ssl_ConstructExtensions</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1415118">Bug 1415118</a> - NSS build with ./build.sh --enable-libpkix fails</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1539788">Bug 1539788</a> - Add length checks for cryptographic primitives (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=CVE-2019-17006">CVE-2019-17006</a>)</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1542077">Bug 1542077</a> - mp_set_ulong and mp_set_int should return errors on bad values</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1572791">Bug 1572791</a> - Read out-of-bounds in DER_DecodeTimeChoice_Util from SSLExp_DelegateCredential</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1560593">Bug 1560593</a> - Cleanup.sh script does not set error exit code for tests that "Failed with core"</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1566601">Bug 1566601</a> - Add Wycheproof test vectors for AES-KW</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1571316">Bug 1571316</a> - curve25519_32.c:280: undefined reference to `PR_Assert' when building NSS 3.45 on armhf-linux</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1516593">Bug 1516593</a> - Client to generate new random during renegotiation</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1563258">Bug 1563258</a> - fips.sh fails due to non-existent "resp" directories</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1561598">Bug 1561598</a> - Remove -Wmaybe-uninitialized warning in pqg.c</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1560806">Bug 1560806</a> - Increase softoken password max size to 500 characters</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1568776">Bug 1568776</a> - Output paths relative to repository in NSS coverity</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1453408">Bug 1453408</a> - modutil -changepw fails in FIPS mode if password is an empty string</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1564727">Bug 1564727</a> - Use a PSS SPKI when possible for delegated credentials</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1493916">Bug 1493916</a> - fix ppc64 inline assembler for clang</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1561588">Bug 1561588</a> - Remove -Wmaybe-uninitialized warning in p7env.c</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1561548">Bug 1561548</a> - Remove -Wmaybe-uninitialized warning in pkix_pl_ldapdefaultclient.c</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1512605">Bug 1512605</a> - Incorrect alert description after unencrypted Finished msg</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1564715">Bug 1564715</a> - Read /proc/cpuinfo when AT_HWCAP2 returns 0</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1532194">Bug 1532194</a> - Remove or fix -DDEBUG_$USER from make builds</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1565577">Bug 1565577</a> - Visual Studio's cl.exe -? hangs on Windows x64 when building nss since changeset 9162c654d06915f0f15948fbf67d4103a229226f</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1564875">Bug 1564875</a> - Improve rebuilding with build.sh</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1565243">Bug 1565243</a> - Support TC_OWNER without email address in nss taskgraph</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1563778">Bug 1563778</a> - Increase maxRunTime on Mac taskcluster Tools, SSL tests</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1561591">Bug 1561591</a> - Remove -Wmaybe-uninitialized warning in tstclnt.c</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1561587">Bug 1561587</a> - Remove -Wmaybe-uninitialized warning in lgattr.c</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1561558">Bug 1561558</a> - Remove -Wmaybe-uninitialized warning in httpserv.c</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1561556">Bug 1561556</a> - Remove -Wmaybe-uninitialized warning in tls13esni.c</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1561332">Bug 1561332</a> - ec.c:28 warning: comparison of integers of different signs: 'int' and 'unsigned long'</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1564714">Bug 1564714</a> - Print certutil commands during setup</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1565013">Bug 1565013</a> - HACL image builder times out while fetching gpg key</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1563786">Bug 1563786</a> - Update hacl-star docker image to pull specific commit</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1559012">Bug 1559012</a> - Improve GCM perfomance using PMULL2</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1528666">Bug 1528666</a> - Correct resumption validation checks</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1568803">Bug 1568803</a> - More tests for client certificate authentication</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1564284">Bug 1564284</a> - Support profile mobility across Windows and Linux</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1573942">Bug 1573942</a> - Gtest for pkcs11.txt with different breaking line formats</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1575968">Bug 1575968</a> - Add strsclnt option to enforce the use of either IPv4 or IPv6</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1549847">Bug 1549847</a> - Fix NSS builds on iOS</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1485533">Bug 1485533</a> - Enable NSS_SSL_TESTS on taskcluster</li>
+</ul>
+
+<p>This Bugzilla query returns all the bugs fixed in NSS 3.46:</p>
+
+<p><a href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.46">https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.46</a></p>
+
+<h2 id="Compatibility">Compatibility</h2>
+
+<p>NSS 3.46 shared libraries are backward compatible with all older NSS 3.x shared libraries. A program linked with older NSS 3.x shared libraries will work with NSS 3.46 shared libraries without recompiling or relinking. Furthermore, applications that restrict their use of NSS APIs to the functions listed in NSS Public Functions will remain compatible with future versions of the NSS shared libraries.</p>
+
+<h2 id="Feedback">Feedback</h2>
+
+<p>Bugs discovered should be reported by filing a bug report with<a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=NSS"> bugzilla.mozilla.org</a> (product NSS).</p>

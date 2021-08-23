@@ -1,0 +1,393 @@
+---
+title: NSS Tools crlutil
+slug: Mozilla/Projects/NSS/tools/NSS_Tools_crlutil
+---
+<h2 id="Using_the_Certificate_Revocation_List_Management_Tool">Using the Certificate Revocation List Management Tool</h2>
+<p>Newsgroup: <a href="news://news.mozilla.org/mozilla.dev.tech.crypto">mozilla.dev.tech.crypto</a></p>
+<p>The Certificate Revocation List (CRL) Management Tool is a command-line utility that can list, generate, modify, or delete CRLs within the NSS security database file(s) and list, create, modify or delete certificates entries in a particular CRL.</p>
+<p><a id="1038902"> The key and certificate management process generally begins with creating keys in the key database, then generating and managing certificates in the certificate database(see </a><code><a href="NSS_Tools_certutil">certutil</a></code> tool) and continues with certificates expiration or revocation.</p>
+<p><a id="1037764"> This document discusses certificate revocation list management. For information on security module database management, see </a><a href="NSS_Tools_modutil">Using the Security Module Database Tool</a>. For information on certificate and key database management, see <a href="NSS_Tools_certutil">Using the Certificate Database Tool</a>.</p>
+<h2 id="Availability_2"><a id="Availability"></a> <a id="1031698"> Availability </a></h2>
+<p><a id="1037781"> See the </a><a href="/en-US/docs/NSS/NSS_Releases">release notes</a> for the platforms this tool is available on.</p>
+<h2 id="Syntax_2"><a id="Syntax"></a> <a id="1028268"> Syntax </a></h2>
+<p><a id="1033678"> To run the Certificate Revocation List Management Tool, type the command</a></p>
+<p><a id="1033679"> <code>crlutil</code> <i>option</i><var> [</var><i>arguments</i><var>]</var></a></p>
+<p><a id="1028271"> where <i>options</i> and <i>arguments</i> are combinations of the options and arguments listed in the following section. Each command takes one option. Each option may take zero or more arguments. To see a usage string, issue the command without options, or with the <code>-H</code> option.</a></p>
+<h3 id="Options_and_Arguments"> <a id="1027593"> Options and Arguments </a></h3>
+<p><a id="1028291"> Options specify an action and are uppercase. Option arguments modify an action and are lowercase. Certificate Revocation List Management Tool command options and their arguments are defined as follows:</a></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><a id="1038207"> <b>Options </b></a></td>
+      <td>
+        <p><a id="1038205"> </a></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><a id="1032245"> <code>-G</code></a></p>
+      </td>
+      <td>
+        <p><a id="1032247"> Create new Certificate Revocation List(CRL). </a></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><a id="1032249"> <code>-D</code></a></p>
+      </td>
+      <td>
+        <p><a id="1032251"> Delete Certificate Revocation List from cert database. </a></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><a id="1033985"> <code>-I</code></a></p>
+      </td>
+      <td>
+        <p><a id="1033987"> Import a CRL to the cert database </a></p>
+        <p><a id="1038712"> </a></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><a id="1033981"> <code>-E</code></a></p>
+      </td>
+      <td>
+        <p><a id="1033983"> Erase all CRLs of specified type from the cert database</a></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><a id="1039087"> <code>-L</code></a></p>
+      </td>
+      <td>
+        <p><a id="1039125"> List existing CRL located in cert database file. </a></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><a id="1039079"> <code>-M</code></a></p>
+      </td>
+      <td>
+        <p><a id="1039109"> Modify existing CRL which can be located in cert db or in arbitrary file. If located in file it should be encoded in ASN.1 encode format. </a></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><a id="1038213"> <b>Arguments</b></a></p>
+      </td>
+      <td>
+        <p><a id="1038156"> </a></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><a id="1033953"> <code>-B</code></a></p>
+      </td>
+      <td>
+        <p><a id="1033955"> Bypass CA signature checks. </a></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><a id="1033941"> <code>-P </code><i>dbprefix</i></a></p>
+      </td>
+      <td>
+        <p>Specify the prefix used on the <code>NSS security database</code> files (for example, <code>my_cert8.db</code> and <code>my_key3.db</code>). This option is provided as a special case. Changing the names of the certificate and key databases is not recommended.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><code>-a</code></p>
+      </td>
+      <td>
+        <p>Use ASCII format or allow the use of ASCII format for input and output. This formatting follows <a href="http://andrew2.andrew.cmu.edu/rfc/rfc1113.html">RFC #1113</a>.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><a id="1033949"> <code>-c </code><i>crl-gen-file</i></a></p>
+      </td>
+      <td>
+        <p><a id="1034296"> Specify script file that will be used to control crl generation/modification. See crl-cript-file </a><a href="#10232455">format</a> below. If options <i>-M|-G</i> is used and <i>-c crl-script-file</i> is not specified, crlutil will read script data from standard input.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><a id="1033945"> <code>-d </code><i>directory</i></a></p>
+      </td>
+      <td>
+        <p><a id="1038653"> Specify the database directory containing the certificate and key database files. On Unix the Certificate Database Tool defaults to <code>$HOME/.netscape</code> (that is, <code>~/.netscape</code>). On Windows NT the default is the current directory.</a></p>
+        <p><a id="1038660"> </a></p>
+        <p><a id="1038654"> The <code>NSS database</code> files must reside in the same directory.</a></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><a id="1034106"> <code>-i </code><i>crl-import-file</i></a></p>
+      </td>
+      <td>
+        <p><a id="1034108"> Specify the file which contains the CRL to import</a></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><a id="1034102"> <code>-f </code><i>password-file</i></a></p>
+      </td>
+      <td>
+        <p><a id="1034396"> Specify a file that will automatically supply the password to include in a certificate or to access a certificate database. This is a plain-text file containing one password. Be sure to prevent unauthorized access to this file. </a></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><a id="1039243"> <code>-l </code><i>algorithm-name</i></a></p>
+      </td>
+      <td>
+        <p><a id="1038301"> Specify a specific signature algorithm. List of possible algorithms: MD2 | MD4 | MD5 | SHA1 | SHA256 | SHA384 | SHA512 </a></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><code>-n </code><i>nickname</i></p>
+      </td>
+      <td>
+        <p><a id="1034080"> Specify the nickname of a certificate or key to list, create, add to a database, modify, or validate. Bracket the <i>nickname</i> string with quotation marks if it contains spaces. </a></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><a id="1034074"> <code>-o </code><i>output-file</i></a></p>
+      </td>
+      <td>
+        <p><a id="1034076"> Specify the output file name for new CRL. Bracket the <i>output-file</i> string with quotation marks if it contains spaces. If this argument is not used the output destination defaults to standard output. </a></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><a id="1034070"> <code>-t </code><i>crl-type</i></a></p>
+      </td>
+      <td>
+        <p><a id="1034068"> Specify type of CRL. possible types are: 0 - SEC_KRL_TYPE, 1 - SEC_CRL_TYPE. <b>This option is obsolete</b> </a></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><a id="1034062"> <code>-u </code><i>url</i></a></p>
+      </td>
+      <td>
+        <p><a id="1034064"> Specify the url. </a></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table>
+  <tbody>
+    <tr>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+<h2 id="CRL_Generation_script_syntax"><a id="10232455"> CRL Generation script syntax:</a></h2>
+<p><a id="125455"></a> CRL generation script file has the following syntax:</p>
+
+<ul>
+  <li>Line with comments should have &lt;bold&gt;<i>#</i>&lt;/bold&gt; as a first symbol of a line
+  </li>
+  <li>Set <i>"this update"</i> or <i>"next update"</i> CRL fields:
+    <blockquote>
+      <code>update=YYYYMMDDhhmmssZ</code><br>
+      <code>nextupdate=YYYYMMDDhhmmssZ</code>
+    </blockquote>
+    Field "next update" is optional. Time should be in <i>GeneralizedTime</i> format (YYYYMMDDhhmmssZ).<br>
+    For example: <code>20050204153000Z</code></li>
+  <li>Add an extension to a CRL or a crl certificate entry:
+    <blockquote>
+      <code>addext</code><i>extension-name</i> <i>critical/non-critical</i><code> [</code><i>arg1</i><code>[</code><i>arg2</i> <code>...]]</code>
+    </blockquote>
+    Where:<br>
+    <blockquote>
+      <code>extension-name</code>: string value of a name of known extensions.<br>
+      <code>critical/non-critical</code>: is 1 when extension is critical and 0 otherwise.<br>
+      <code>arg1, arg2</code>: specific to extension type extension parameters
+    </blockquote>
+    <code>addext</code> uses the range that was set earlier by <code>addcert</code> and will install an extension to every cert entries within the range.
+    <p>See <i><a href="#3543811">"Implemented extensions"</a></i> for more information regarding extensions and theirs parameters.</p>
+  </li>
+  <li>Add certificate entries(s) to CRL:
+    <blockquote>
+      <code>addcert</code><i>range</i> <i>date</i>
+    </blockquote>
+    Where:<br>
+    <blockquote>
+      <code>range</code>: two integer values separated by <code><b>dash</b></code>: range of certificates that will be added by this command. <code><b>dash</b></code> is used as a delimiter. Only one cert will be added if there is no delimiter.<br>
+      <code>date</code>: revocation date of a cert. Date should be represented in GeneralizedTime format (YYYYMMDDhhmmssZ).
+    </blockquote>
+  </li>
+  <li>Remove certificate entry(s) from CRL
+    <blockquote>
+      <code>rmcert</code> <i>range</i>
+    </blockquote>
+    Where:<br>
+    <blockquote>
+      <code>range</code>: two integer values separated by <code><b>dash</b></code>: range of certificates that will be added by this command. <code><b>dash</b></code> is used as a delimiter. Only one cert will be added if there is no delimiter.
+    </blockquote>
+  </li>
+  <li>Change range of certificate entry(s) in CRL
+    <blockquote>
+      <code>range</code> <i>new-range</i>
+    </blockquote>
+    Where:<br>
+    <blockquote>
+      <code>new-range</code>: two integer values separated by <code><b>dash</b></code>: range of certificates that will be added by this command. <code><b>dash</b></code> is used as a delimiter. Only one cert will be added if there is no delimiter.</blockquote>
+  </li>
+</ul>
+<h2 id="Implemented_Extensions"><a id="3543811"> Implemented Extensions</a></h2>
+<p><a id="1037923"> The extensions defined for CRL provide methods for associating additional attributes with CRLs of theirs entries. For more information see </a><a href="http://www.faqs.org/rfcs/rfc3280.html">RFC #3280</a></p>
+<ul>
+  <li>Add The Authority Key Identifier extension:
+    <p>The authority key identifier extension provides a means of identifying the public key corresponding to the private key used to sign a CRL.</p>
+    <blockquote>
+      <code>authKeyId</code> <i>critical</i> [<i>key-id</i> | <i>dn</i> <i>cert-serial</i>]
+    </blockquote>
+    Where:<br>
+    <blockquote>
+      <code>authKeyIdent</code>: identifies the name of an extension<br>
+      <code>critical</code>: value of 1 of 0. Should be set to 1 if this extension is critical or 0 otherwise.<br>
+      <code>key-id</code>: key identifier represented in octet string. <code>dn:</code>: is a CA distinguished name <code>cert-serial</code>: authority certificate serial number.</blockquote>
+  </li>
+  <li>Add Issuer Alternative Name extension:
+    <p>The issuer alternative names extension allows additional identities to be associated with the issuer of the CRL. Defined options include an rfc822 name (electronic mail address), a DNS name, an IP address, and a URI.</p>
+    <blockquote>
+      <code>issuerAltNames</code> <i>non-critical</i> <i>name-list</i>
+    </blockquote>
+    Where:<br>
+    <blockquote>
+      <code>subjAltNames</code>: identifies the name of an extension<br>
+      should be set to 0 since this is non-critical extension<br>
+      <code>name-list</code>: comma separated list of names
+    </blockquote>
+  </li>
+  <li>Add CRL Number extension:
+    <p>The CRL number is a non-critical CRL extension which conveys a monotonically increasing sequence number for a given CRL scope and CRL issuer. This extension allows users to easily determine when a particular CRL supersedes another CRL</p>
+    <blockquote>
+      <code>crlNumber</code> <i>non-critical</i> <i>number</i>
+    </blockquote>
+    Where:<br>
+    <blockquote>
+      <code>crlNumber</code>: identifies the name of an extension<br>
+      <code>critical</code>: should be set to 0 since this is non-critical extension<br>
+      <code>number</code>: value of <code>long</code> which identifies the sequential number of a CRL.
+    </blockquote>
+  </li>
+  <li>Add Revocation Reason Code extension:
+    <p>The reasonCode is a non-critical CRL entry extension that identifies the reason for the certificate revocation.</p>
+    <blockquote>
+      <code>reasonCode</code> <i>non-critical</i> <i>code</i>
+    </blockquote>
+    Where:<br>
+    <blockquote>
+      <code>reasonCode</code>: identifies the name of an extension<br>
+      <code>non-critical</code>: should be set to 0 since this is non-critical extension<br>
+      <code>code</code>: the following codes are available:<br>
+      <blockquote>
+        unspecified (0),<br>
+        keyCompromise (1),<br>
+        cACompromise (2),<br>
+        affiliationChanged (3),<br>
+        superseded (4),<br>
+        cessationOfOperation (5),<br>
+        certificateHold (6),<br>
+        removeFromCRL (8),<br>
+        privilegeWithdrawn (9),<br>
+        aACompromise (10)
+      </blockquote>
+    </blockquote>
+  </li>
+  <li>Add Invalidity Date extension:
+    <p>The invalidity date is a non-critical CRL entry extension that provides the date on which it is known or suspected that the private key was compromised or that the certificate otherwise became invalid.</p>
+    <blockquote>
+      invalidityDate <i>non-critical</i> <i>date</i>
+    </blockquote>
+    Where:<br>
+    <blockquote>
+      <code>crlNumber</code>: identifies the name of an extension<br>
+      <code>non-critical</code>: should be set to 0 since this is non-critical extension <code>date</code>: invalidity date of a cert. Date should be represented in GeneralizedTime format (YYYYMMDDhhmmssZ).
+    </blockquote>
+  </li>
+</ul>
+<h2 id="Usage_2"><a id="Usage"></a> <a id="1028519"> Usage</a></h2>
+<p>The Certificate Revocation List Management Tool's capabilities are grouped as follows, using these combinations of options and arguments. Options and arguments in square brackets are optional, those without square brackets are required.</p>
+
+<blockquote>
+  <a id="1037925"> <code>-G|-M -c crl-gen-file -n nickname [-i </code><i>crl</i><code>] [-u </code><i>url</i><code>] [-d </code><i>keydir</i><code>] [-P </code><i>dbprefix</i><code>] [-l </code><i>alg</i><code>] [-a] [-B] </code></a></blockquote>
+<blockquote>
+  <a id="1037935"> <code>-L [-n </code><i>crl-name</i><code>] [-d </code><i>krydir</i><code>] </code></a></blockquote>
+<blockquote>
+  <code>crlutil -D -n nickname [-d </code><i>keydir</i><code>] [-P </code><i>dbprefix</i><code>] </code></blockquote>
+<blockquote>
+  <code>crlutil -E [-d </code><i>keydir</i><code>] [-P </code><i>dbprefix</i><code>] </code></blockquote>
+<blockquote>
+  <code>crlutil -I -i crl [-t </code><i>crlType</i><code>] [-u </code><i>url</i><code>] [-d </code><i>keydir</i><code>] [-P </code><i>dbprefix</i><code>] [-B] </code></blockquote>
+<ul>
+  <li><a id="1037924"> Creating or modifying a CRL: </a></li>
+  <li><a id="1037934"> Listing all CRls or a named CRL: </a></li>
+  <li>Deleting CRL from db:</li>
+  <li>Erasing CRLs from db:</li>
+  <li>Import CRL from file:</li>
+</ul>
+<h2 id="Examples_2"><a id="Examples"></a> <a id="1037918"> Examples </a></h2>
+<p><a id="1038537"> </a><a href="NSS_Tools_certutil#1028724"> Creating a New CRL</a><br>
+  <a href="NSS_Tools_certutil#1034026">Listing CRLs in a Database</a><br>
+  <a href="NSS_Tools_certutil#1034026">Deleting CRL from a Database</a><br>
+  <a href="NSS_Tools_certutil#1034026">Importing CRL into a Database</a><br>
+  <a href="NSS_Tools_certutil#1034026">Modifiying CRL in a Database</a></p>
+<h3 id="Creating_a_New_CRL"> <a id="1028724"> Creating a New CRL </a></h3>
+<p><a id="1034720"> This example creates a new CRL and importing it in to a Database in the specified directory: </a></p>
+
+<p><a id="1034722"> <code>crlutil -G -d </code><i>certdir</i><code> -n </code><i>cert-nickname</i><code> -c </code><i>crl-script-file</i></a></p>
+<p>or</p>
+<p><code>crlutil -G -d </code><i>certdir</i><code> -n </code><i>cert-nickname</i><code> &lt;&lt;<i>EOF<br>
+  update=20050204153000Z<br>
+  addcert 34-40 20050104153000Z<br>
+  EOF</i></code></p>
+<p>Where <i>cert-nickname</i> is the name the new CRL will be signed with.</p>
+<h3 id="Listing_CRLs_in_a_Database"><a id="1034026"> Listing CRLs in a Database </a></h3>
+<p><a id="1034749"> This example lists all the CRLs in the <code>NSS database</code> in the specified directory: </a></p>
+<p><a id="1034751"> <code>crlutil -L -d </code><i>certdir</i> </a></p>
+<p><a id="1034753"> The CRL Management Tool displays output similar to the following: </a></p>
+<p><a id="1034755"> <code>CRL Name              CRL Type</code></a></p>
+<p><a id="1037237"> <code>CN=NSS Test CA,O=BOGUS NSS,L=Mountain View,ST=California,C=US  CRL<br>
+  CN=John Smith,O=Netscape,L=Mountain View,ST=California,C=US  CRL</code></a></p>
+<p>To view a particular CRL user should specify <i>-n nickname</i> parameter.<br>
+  <code>crlutil -L -d </code><i>certdir</i><code> -n </code><i> nickname</i></p>
+
+<p><code>CRL Info:<br>
+  :<br>
+      Version: 2 (0x1)<br>
+      Signature Algorithm: PKCS #1 MD5 With RSA Encryption<br>
+      Issuer: "CN=NSS Test CA,O=BOGUS NSS,L=Mountain View,ST=California,C=US"<br>
+      This Update: Wed Feb 23 12:08:38 2005<br>
+      Entry (1):<br>
+          Serial Number: 40 (0x28)<br>
+          Revocation Date: Wed Feb 23 12:08:10 2005<br>
+      Entry (2):<br>
+          Serial Number: 42 (0x2a)<br>
+          Revocation Date: Wed Feb 23 12:08:40 2005</code></p>
+<h3 id="Deleting_CRL_from_a_Database"><a id="1028731"> Deleting CRL from a Database</a></h3>
+<p><a id="1035439"> This example deletes CRL from a database in the specified directory: </a></p>
+<p><a id="1035441"> <code>crlutil -D -n </code><i>nickname</i><code> -d </code><i>certdir</i> </a></p>
+<h3 id="Importing_CRL_into_a_Database"><a id="1034020"> Importing CRL into a Database </a></h3>
+<p>This example imports CRL into a database: </p>
+<p><code>crlutil -I -i </code><i>crl-file</i><code> -d </code><i>certdir</i></p>
+<p>File should has binary format of ASN.1 encoded CRL data. </p>
+<h3 id="Modifying_CRL_in_a_Database">Modifying CRL in a Database</h3>
+<p>This example modifies a new CRL and importing it in to a Database in the specified directory:</p>
+<p><code>crlutil -G -d </code><i>certdir</i><code> -n </code><i>cert-nickname</i><code> -c </code><i>crl-script-file</i></p>
+<p>or</p>
+<p><code>crlutil -M -d </code><i>certdir</i><code> -n </code><i>cert-nickname</i><code> &lt;&lt;<i>EOF<br>
+  update=20050204153000Z<br>
+  addcert 40-60 20050105153000Z<br>
+  EOF</i></code></p>
+<p>The CRL Management Tool extracts existing CRL from a database, will modify and sign with certificate <i>cert-nickname</i> and will store it in database. To modify while importing CRL from file user should supply <code>-i </code><i>import-crl-file</i> option. </p>
+<hr>

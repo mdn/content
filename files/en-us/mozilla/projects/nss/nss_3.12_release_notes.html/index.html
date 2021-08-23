@@ -1,0 +1,892 @@
+---
+title: NSS_3.12_release_notes.html
+slug: Mozilla/Projects/NSS/NSS_3.12_release_notes.html
+---
+<h2 id="NSS_3.12_Release_Notes"> NSS 3.12 Release Notes</h2>
+
+<h3 id="17_June_2008">17 June 2008</h3>
+
+<p> Newsgroup: <a href="news://news.mozilla.org/mozilla.dev.tech.crypto">mozilla.dev.tech.crypto</a></p>
+
+<h3 id="Contents"> Contents</h3>
+<ul>
+  <li> <a href="#introduction">Introduction</a></li>
+  <li> <a href="#distribution_information">Distribution Information</a></li>
+  <li> <a href="#new_in_nss_3.12">New in NSS 3.12</a></li>
+  <li> <a href="#bugs_fixed">Bugs Fixed</a></li>
+  <li> <a href="#documentation">Documentation</a></li>
+  <li> <a href="#compatibility">Compatibility</a></li>
+  <li> <a href="#feedback">Feedback</a></li>
+</ul>
+<hr>
+<h3 id="Introduction">Introduction</h3>
+Network Security Services (NSS) 3.12 is a minor release with the
+following new features:<br>
+<ul>
+  <li>SQLite-Based Shareable Certificate and Key Databases</li>
+  <li>libpkix: an RFC 3280 Compliant Certificate Path Validation Library</li>
+  <li>Camellia cipher support</li>
+  <li>TLS session ticket extension (RFC 5077)</li>
+</ul>
+NSS 3.12 is tri-licensed under the MPL 1.1/GPL 2.0/LGPL 2.1.
+
+<p>Note: Firefox 3 uses NSS 3.12, but not the new SQLite-based shareable
+  certificate and key databases. We missed the deadline to enable that feature
+  in Firefox 3.</p>
+<hr>
+<h3 id="Distribution_Information">Distribution Information</h3>
+The CVS tag for the NSS 3.12 release is NSS_3_12_RTM.
+NSS 3.12 requires <a href="https://www.mozilla.org/projects/nspr/release-notes/nspr471.html">NSPR
+  4.7.1</a>.<br>
+<br>
+See the <a href="#docs">Documentation</a> section for the build
+instructions.<br>
+<p>NSS 3.12 source and binary distributions are also available on ftp.mozilla.org
+  for secure HTTPS download: </p>
+<ul>
+  <li> Source tarballs: <a
+      href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_12_RTM/src/">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_12_RTM/src/</a>.
+  </li>
+  <li> Binary distributions: <a
+      href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_12_RTM/">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_12_RTM/</a>.
+    Both debug and optimized builds are provided. Go to the subdirectory
+    for your platform, DBG (debug) or OPT (optimized), to get the tar.gz
+    or zip file. The tar.gz or zip file expands to an nss-3.12
+    directory containing three subdirectories:
+    <ul>
+      <li> include - NSS header files</li>
+      <li> lib - NSS shared libraries</li>
+      <li> bin - <a href="https://www.mozilla.org/projects/security/pki/nss/tools/">NSS
+          Tools</a> and test
+        programs</li>
+    </ul>
+  </li>
+</ul>
+You also need to download the NSPR 4.7.1 binary distributions to get
+the NSPR 4.7.1 header files and shared libraries, which NSS 3.12
+requires. NSPR 4.7.1 binary distributions are in <a
+  href="https://ftp.mozilla.org/pub/mozilla.org/nspr/releases/v4.7.1/">https://ftp.mozilla.org/pub/mozilla.org/nspr/releases/v4.7.1/</a>.
+<p>
+  NSS 3.12 libraries have the following versions:
+</p>
+<ul>
+  <li>sqlite3: 3.3.17</li>
+  <li>nssckbi: 1.70</li>
+  <li>softokn3 and freebl3: 3.12.0.3</li>
+  <li>other NSS libraries: 3.12.0.3</li>
+</ul>
+<hr>
+<h3 id="New_in_NSS_3.12">New in NSS 3.12</h3>
+<ul>
+  <li>3 new shared library are shipped with NSS 3.12:
+    <ul>
+      <li>nssutil</li>
+      <li>sqlite</li>
+      <li>nssdbm</li>
+    </ul>
+  </li>
+  <li>1 new include file is shipped with NSS3.12:
+    <ul>
+      <li>utilrename.h</li>
+    </ul>
+  </li>
+  <li>New functions in the nss shared library:
+    <ul>
+      <li>CERT_CheckNameSpace (see cert.h)</li>
+      <li>CERT_EncodeCertPoliciesExtension (see cert.h)</li>
+      <li>CERT_EncodeInfoAccessExtension (see cert.h)</li>
+      <li>CERT_EncodeInhibitAnyExtension (see cert.h)</li>
+      <li>CERT_EncodeNoticeReference (see cert.h)</li>
+      <li>CERT_EncodePolicyConstraintsExtension (see cert.h)</li>
+      <li>CERT_EncodePolicyMappingExtension (see cert.h)</li>
+      <li>CERT_EncodeSubjectKeyID (see certdb/cert.h)</li>
+      <li>CERT_EncodeUserNotice (see cert.h)</li>
+      <li>CERT_FindCRLEntryReasonExten (see cert.h)</li>
+      <li>CERT_FindCRLNumberExten (see cert.h)</li>
+      <li>CERT_FindNameConstraintsExten (see cert.h)</li>
+      <li>CERT_GetClassicOCSPDisabledPolicy (see cert.h)</li>
+      <li>CERT_GetClassicOCSPEnabledHardFailurePolicy (see cert.h)</li>
+      <li>CERT_GetClassicOCSPEnabledSoftFailurePolicy (see cert.h)</li>
+      <li>CERT_GetPKIXVerifyNistRevocationPolicy (see cert.h)</li>
+      <li>CERT_GetUsePKIXForValidation (see cert.h)</li>
+      <li>CERT_GetValidDNSPatternsFromCert (see cert.h)</li>
+      <li>CERT_NewTempCertificate (see cert.h)</li>
+      <li>CERT_SetOCSPTimeout (see certhigh/ocsp.h)</li>
+      <li>CERT_SetUsePKIXForValidation (see cert.h)</li>
+      <li>CERT_PKIXVerifyCert (see cert.h)</li>
+      <li>HASH_GetType (see sechash.h)</li>
+      <li>NSS_InitWithMerge (see nss.h)</li>
+      <li>PK11_CreateMergeLog (see pk11pub.h)</li>
+      <li>PK11_CreateGenericObject (see pk11pub.h)</li>
+      <li>PK11_CreatePBEV2AlgorithmID (see pk11pub.h)</li>
+      <li>PK11_DestroyMergeLog (see pk11pub.h)</li>
+      <li>PK11_GenerateKeyPairWithOpFlags (see pk11pub.h)</li>
+      <li>PK11_GetPBECryptoMechanism (see pk11pub.h)</li>
+      <li>PK11_IsRemovable (see pk11pub.h)</li>
+      <li>PK11_MergeTokens (see pk11pub.h)</li>
+      <li>PK11_WriteRawAttribute (see pk11pub.h)</li>
+      <li>SECKEY_ECParamsToBasePointOrderLen (see keyhi.h)</li>
+      <li>SECKEY_ECParamsToKeySize (see keyhi.h)</li>
+      <li>SECMOD_DeleteModuleEx (see secmod.h)</li>
+      <li>SEC_GetRegisteredHttpClient (see ocsp.h)</li>
+      <li>SEC_PKCS5IsAlgorithmPBEAlgTag (see secpkcs5.h)</li>
+      <li>VFY_CreateContextDirect (see cryptohi.h)</li>
+      <li>VFY_CreateContextWithAlgorithmID (see cryptohi.h)</li>
+      <li>VFY_VerifyDataDirect (see cryptohi.h)</li>
+      <li>VFY_VerifyDataWithAlgorithmID (see cryptohi.h)</li>
+      <li>VFY_VerifyDigestDirect (see cryptohi.h)</li>
+      <li>VFY_VerifyDigestWithAlgorithmID (see cryptohi.h)</li>
+    </ul>
+  </li>
+  <li>New macros for Camellia support (see blapit.h):
+    <ul>
+      <li>NSS_CAMELLIA</li>
+      <li>NSS_CAMELLIA_CBC</li>
+      <li>CAMELLIA_BLOCK_SIZE</li>
+    </ul>
+  </li>
+  <li>New macros for RSA (see blapit.h):
+    <ul>
+      <li>RSA_MAX_MODULUS_BITS</li>
+      <li>RSA_MAX_EXPONENT_BITS</li>
+    </ul>
+  </li>
+  <li>New macros in certt.h:
+    <ul>
+      <li>X.509 v3
+        <ul>
+          <li>KU_ENCIPHER_ONLY</li>
+          <li>CERT_MAX_SERIAL_NUMBER_BYTES</li>
+          <li>CERT_MAX_DN_BYTES</li>
+        </ul>
+      </li>
+      <li>PKIX
+        <ul>
+          <li>CERT_REV_M_DO_NOT_TEST_USING_THIS_METHOD</li>
+          <li>CERT_REV_M_TEST_USING_THIS_METHOD</li>
+          <li>CERT_REV_M_ALLOW_NETWORK_FETCHING</li>
+          <li>CERT_REV_M_FORBID_NETWORK_FETCHING</li>
+          <li>CERT_REV_M_ALLOW_IMPLICIT_DEFAULT_SOURCE</li>
+          <li>CERT_REV_M_IGNORE_IMPLICIT_DEFAULT_SOURCE</li>
+          <li>CERT_REV_M_SKIP_TEST_ON_MISSING_SOURCE</li>
+          <li>CERT_REV_M_REQUIRE_INFO_ON_MISSING_SOURCE</li>
+          <li>CERT_REV_M_IGNORE_MISSING_FRESH_INFO</li>
+          <li>CERT_REV_M_FAIL_ON_MISSING_FRESH_INFO</li>
+          <li>CERT_REV_M_STOP_TESTING_ON_FRESH_INFO</li>
+          <li>CERT_REV_M_CONTINUE_TESTING_ON_FRESH_INFO</li>
+          <li>CERT_REV_MI_TEST_EACH_METHOD_SEPARATELY</li>
+          <li>CERT_REV_MI_TEST_ALL_LOCAL_INFORMATION_FIRST</li>
+          <li>CERT_REV_MI_NO_OVERALL_INFO_REQUIREMENT</li>
+          <li>CERT_REV_MI_REQUIRE_SOME_FRESH_INFO_AVAILABLE</li>
+          <li>CERT_POLICY_FLAG_NO_MAPPING</li>
+          <li>CERT_POLICY_FLAG_EXPLICIT</li>
+          <li>CERT_POLICY_FLAG_NO_ANY</li>
+          <li>CERT_ENABLE_LDAP_FETCH</li>
+          <li>CERT_ENABLE_HTTP_FETCH</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>New macro in utilrename.h:
+    <ul>
+      <li>SMIME_AES_CBC_128</li>
+    </ul>
+  </li>
+  <li>The nssckbi PKCS #11 module's version changed to 1.70.</li>
+
+  <li>In pkcs11n.h, all the _NETSCAPE_ macros are renamed with _NSS_
+    <ul>
+      <li>For example, CKO_NETSCAPE_CRL becomes CKO_NSS_CRL.</li>
+    </ul>
+  </li>
+  <li>New for PKCS #11 (see pkcs11t.h for details):
+    <ul>
+      <li>CKK: Keys
+        <ul>
+          <li>CKK_CAMELLIA</li>
+        </ul>
+      </li>
+      <li>CKM: Mechanisms
+        <ul>
+          <li>CKM_SHA224_RSA_PKCS</li>
+          <li>CKM_SHA224_RSA_PKCS_PSS</li>
+          <li>CKM_SHA224</li>
+          <li>CKM_SHA224_HMAC</li>
+          <li>CKM_SHA224_HMAC_GENERAL</li>
+          <li>CKM_SHA224_KEY_DERIVATION</li>
+          <li>CKM_CAMELLIA_KEY_GEN</li>
+          <li>CKM_CAMELLIA_ECB</li>
+          <li>CKM_CAMELLIA_CBC</li>
+          <li>CKM_CAMELLIA_MAC</li>
+          <li>CKM_CAMELLIA_MAC_GENERAL</li>
+          <li>CKM_CAMELLIA_CBC_PAD</li>
+          <li>CKM_CAMELLIA_ECB_ENCRYPT_DATA</li>
+          <li>CKM_CAMELLIA_CBC_ENCRYPT_DATA</li>
+        </ul>
+      </li>
+      <li>CKG: MFGs
+        <ul>
+          <li>CKG_MGF1_SHA224</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>New error codes (see secerr.h):
+    <ul>
+      <li>SEC_ERROR_NOT_INITIALIZED</li>
+      <li>SEC_ERROR_TOKEN_NOT_LOGGED_IN</li>
+      <li>SEC_ERROR_OCSP_RESPONDER_CERT_INVALID</li>
+      <li>SEC_ERROR_OCSP_BAD_SIGNATURE</li>
+      <li>SEC_ERROR_OUT_OF_SEARCH_LIMITS</li>
+      <li>SEC_ERROR_INVALID_POLICY_MAPPING</li>
+      <li>SEC_ERROR_POLICY_VALIDATION_FAILED</li>
+      <li>SEC_ERROR_UNKNOWN_AIA_LOCATION_TYPE</li>
+      <li>SEC_ERROR_BAD_HTTP_RESPONSE</li>
+      <li>SEC_ERROR_BAD_LDAP_RESPONSE</li>
+      <li>SEC_ERROR_FAILED_TO_ENCODE_DATA</li>
+      <li>SEC_ERROR_BAD_INFO_ACCESS_LOCATION</li>
+      <li>SEC_ERROR_LIBPKIX_INTERNAL</li>
+    </ul>
+  </li>
+  <li>New mechanism flags (see secmod.h)
+    <ul>
+      <li>PUBLIC_MECH_AES_FLAG</li>
+      <li>PUBLIC_MECH_SHA256_FLAG</li>
+      <li>PUBLIC_MECH_SHA512_FLAG</li>
+      <li>PUBLIC_MECH_CAMELLIA_FLAG</li>
+    </ul>
+  </li>
+  <li>New OIDs (see secoidt.h)
+    <ul>
+      <li>new EC Signature oids
+        <ul>
+          <li>SEC_OID_ANSIX962_ECDSA_SIGNATURE_RECOMMENDED_DIGEST</li>
+          <li>SEC_OID_ANSIX962_ECDSA_SIGNATURE_SPECIFIED_DIGEST</li>
+          <li>SEC_OID_ANSIX962_ECDSA_SHA224_SIGNATURE</li>
+          <li>SEC_OID_ANSIX962_ECDSA_SHA256_SIGNATURE</li>
+          <li>SEC_OID_ANSIX962_ECDSA_SHA384_SIGNATURE</li>
+          <li>SEC_OID_ANSIX962_ECDSA_SHA512_SIGNATURE</li>
+        </ul>
+      </li>
+      <li>More id-ce and id-pe OIDs from RFC 3280
+        <ul>
+          <li>SEC_OID_X509_HOLD_INSTRUCTION_CODE</li>
+          <li>SEC_OID_X509_DELTA_CRL_INDICATOR</li>
+          <li>SEC_OID_X509_ISSUING_DISTRIBUTION_POINT</li>
+          <li>SEC_OID_X509_CERT_ISSUER</li>
+          <li>SEC_OID_X509_FRESHEST_CRL</li>
+          <li>SEC_OID_X509_INHIBIT_ANY_POLICY</li>
+          <li>SEC_OID_X509_SUBJECT_INFO_ACCESS</li>
+        </ul>
+      </li>
+      <li>Camellia OIDs (RFC3657)
+        <ul>
+          <li>SEC_OID_CAMELLIA_128_CBC</li>
+          <li>SEC_OID_CAMELLIA_192_CBC</li>
+          <li>SEC_OID_CAMELLIA_256_CBC</li>
+        </ul>
+      </li>
+      <li>PKCS 5 V2 OIDS
+        <ul>
+          <li>SEC_OID_PKCS5_PBKDF2</li>
+          <li>SEC_OID_PKCS5_PBES2</li>
+          <li>SEC_OID_PKCS5_PBMAC1</li>
+          <li>SEC_OID_HMAC_SHA1</li>
+          <li>SEC_OID_HMAC_SHA224</li>
+          <li>SEC_OID_HMAC_SHA256</li>
+          <li>SEC_OID_HMAC_SHA384</li>
+          <li>SEC_OID_HMAC_SHA512</li>
+          <li>SEC_OID_PKIX_TIMESTAMPING</li>
+          <li>SEC_OID_PKIX_CA_REPOSITORY</li>
+          <li>SEC_OID_ISO_SHA1_WITH_RSA_SIGNATURE</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Changed OIDs (see secoidt.h)
+    <ul>
+      <li>SEC_OID_PKCS12_KEY_USAGE changed to SEC_OID_BOGUS_KEY_USAGE</li>
+      <li>SEC_OID_ANSIX962_ECDSA_SIGNATURE_WITH_SHA1_DIGEST changed to SEC_OID_ANSIX962_ECDSA_SHA1_SIGNATURE</li>
+      <li>Note: SEC_OID_ANSIX962_ECDSA_SIGNATURE_WITH_SHA1_DIGEST is also kept for compatibility reasons.</li>
+    </ul>
+  </li>
+  <li>TLS Session ticket extension (off by default)
+    <ul>
+      <li>See SSL_ENABLE_SESSION_TICKETS in ssl.h</li>
+    </ul>
+  </li>
+  <li>New SSL error codes (see sslerr.h)
+    <ul>
+      <li>SSL_ERROR_UNSUPPORTED_EXTENSION_ALERT</li>
+      <li>SSL_ERROR_CERTIFICATE_UNOBTAINABLE_ALERT</li>
+      <li>SSL_ERROR_UNRECOGNIZED_NAME_ALERT</li>
+      <li>SSL_ERROR_BAD_CERT_STATUS_RESPONSE_ALERT</li>
+      <li>SSL_ERROR_BAD_CERT_HASH_VALUE_ALERT</li>
+      <li>SSL_ERROR_RX_UNEXPECTED_NEW_SESSION_TICKET</li>
+      <li>SSL_ERROR_RX_MALFORMED_NEW_SESSION_TICKET</li>
+    </ul>
+  </li>
+  <li>New TLS cipher suites (see sslproto.h):
+    <ul>
+      <li>TLS_RSA_WITH_CAMELLIA_128_CBC_SHA</li>
+      <li>TLS_DHE_DSS_WITH_CAMELLIA_128_CBC_SHA</li>
+      <li>TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA</li>
+      <li>TLS_RSA_WITH_CAMELLIA_256_CBC_SHA</li>
+      <li>TLS_DHE_DSS_WITH_CAMELLIA_256_CBC_SHA</li>
+      <li>TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA</li>
+    </ul>
+  </li>
+  <li>Note: the following TLS cipher suites are declared but are not yet implemented:
+    <ul>
+      <li>TLS_DH_DSS_WITH_CAMELLIA_128_CBC_SHA</li>
+      <li>TLS_DH_RSA_WITH_CAMELLIA_128_CBC_SHA</li>
+      <li>TLS_DH_ANON_WITH_CAMELLIA_128_CBC_SHA</li>
+      <li>TLS_DH_DSS_WITH_CAMELLIA_256_CBC_SHA</li>
+      <li>TLS_DH_RSA_WITH_CAMELLIA_256_CBC_SHA</li>
+      <li>TLS_DH_ANON_WITH_CAMELLIA_256_CBC_SHA</li>
+      <li>TLS_ECDH_anon_WITH_NULL_SHA</li>
+      <li>TLS_ECDH_anon_WITH_RC4_128_SHA</li>
+      <li>TLS_ECDH_anon_WITH_3DES_EDE_CBC_SHA</li>
+      <li>TLS_ECDH_anon_WITH_AES_128_CBC_SHA</li>
+      <li>TLS_ECDH_anon_WITH_AES_256_CBC_SHA</li>
+    </ul>
+  </li>
+</ul>
+<hr>
+<h3 id="Bugs_Fixed">Bugs Fixed</h3>
+The following bugs have been fixed in NSS 3.12.<br>
+<ul>
+
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=354403">Bug 354403</a>: nssList_CreateIterator returns
+    pointer to a freed memory if the function fails to allocate a lock</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=399236">Bug 399236</a>: pkix wrapper must print debug output
+    into stderr</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=399300">Bug 399300</a>: PKIX error results not freed after
+    use.</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=414985">Bug 414985</a>: Crash in pkix_pl_OcspRequest_Destroy
+  </li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=421870">Bug 421870</a>: Strsclnt crashed in PKIX tests.</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=429388">Bug 429388</a>: vfychain.main leaks memory</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=396044">Bug 396044</a>: Warning: usage of uninitialized
+    variable in ckfw/object.c(174)</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=396045">Bug 396045</a>: Warning: usage of uninitialized
+    variable in ckfw/mechanism.c(719)</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=401986">Bug 401986</a>: Mac OS X leopard build failure in
+    legacydb</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=325805">Bug 325805</a>: diff considers
+    mozilla/security/nss/cmd/pk11util/scripts/pkey a binary file</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=385151">Bug 385151</a>: Remove the link time dependency from
+    NSS to Softoken</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=387892">Bug 387892</a>: Add Entrust root CA certificate(s)
+    to NSS</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=433386">Bug 433386</a>: when system clock is off by more
+    than two days, OSCP check fails, can result in crash if user tries to view certificate [[@ SECITEM_CompareItem_Util]
+    [[@ memcmp]</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=396256">Bug 396256</a>: certutil and pp do not print all the
+    GeneralNames in a CRLDP extension</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=398019">Bug 398019</a>: correct confusing and erroneous
+    comments in DER_AsciiToTime</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=422866">Bug 422866</a>: vfychain -pp command crashes in
+    NSS_shutdown</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=345779">Bug 345779</a>: Useless assignment statements in
+    ec_GF2m_pt_mul_mont</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=349011">Bug 349011</a>: please stop exporting these crmf_
+    symbols</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=397178">Bug 397178</a>: Crash when entering
+    chrome://pippki/content/resetpassword.xul in URL bar</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=403822">Bug 403822</a>: pkix_pl_OcspRequest_Create can leave
+    some members uninitialized</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=403910">Bug 403910</a>: CERT_FindUserCertByUsage() returns
+    wrong certificate if multiple certs with same subject available</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=404919">Bug 404919</a>: memory leak in sftkdb_ReadSecmodDB()
+    (sftkmod.c)</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=406120">Bug 406120</a>: Allow application to specify OCSP
+    timeout</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=361025">Bug 361025</a>: Support for Camellia Cipher Suites
+    to TLS RFC4132</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=376417">Bug 376417</a>: PK11_GenerateKeyPair needs to get
+    the key usage from the caller.</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=391291">Bug 391291</a>: Shared Database Integrity checks not
+    yet implemented.</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=391292">Bug 391292</a>: Shared Database implementation slow
+  </li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=391294">Bug 391294</a>: Shared Database implementation
+    really slow on network file systems</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=392521">Bug 392521</a>: Automatic shared db update fails if
+    user opens database R/W but never supplies a password</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=392522">Bug 392522</a>: Integrity hashes must be updated
+    when passwords are changed.</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=401610">Bug 401610</a>: Shared DB fails on IOPR tests</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=388120">Bug 388120</a>: build error due to SEC_BEGIN_PROTOS
+    / SEC_END_PROTOS are undefined</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=415264">Bug 415264</a>: Make Security use of new NSPR rotate
+    macros</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=317052">Bug 317052</a>: lib/base/whatnspr.c is obsolete</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=317323">Bug 317323</a>: Set NSPR31_LIB_PREFIX to empty
+    explicitly for WIN95 and WINCE builds</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=320336">Bug 320336</a>: SECITEM_AllocItem returns a non-NULL
+    pointer if the allocation of its 'data' buffer fails</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=327529">Bug 327529</a>: Can't pass 0 as an unnamed null
+    pointer argument to CERT_CreateRDN</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=334683">Bug 334683</a>: Extraneous semicolons cause Empty
+    declaration compiler warnings</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=335275">Bug 335275</a>: Compile with the GCC flag
+    -Werror-implicit-function-declaration</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=354565">Bug 354565</a>: fipstest sha_test needs to detect
+    SHA tests that are incorrectly configured for BIT oriented implementations</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=356595">Bug 356595</a>: On Windows, RNG_SystemInfoForRNG
+    calls GetCurrentProcess, which returns the constant (HANDLE)-1.</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=357015">Bug 357015</a>: On Windows, ReadSystemFiles reads 21
+    files as opposed to 10 files in C:\WINDOWS\system32.</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=361076">Bug 361076</a>: Clean up the USE_PTHREADS related
+    code in coreconf/SunOS5.mk.</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=361077">Bug 361077</a>: Clean up the USE_PTHREADS related
+    code in coreconf/HP-UX*.mk.</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=402114">Bug 402114</a>: Fix the incorrect function
+    prototypes of SSL handshake callbacks</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=402308">Bug 402308</a>: Fix miscellaneous compiler warnings
+    in nss/cmd</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=402777">Bug 402777</a>: lib/util can't be built stand-alone.
+  </li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=407866">Bug 407866</a>: Contributed improvement to
+    security/nss/lib/freebl/mpi/mp_comba.c</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=410587">Bug 410587</a>: SSL_GetChannelInfo returns
+    SECSuccess on invalid arguments</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=416508">Bug 416508</a>: Fix a _MSC_VER typo in sha512.c, and
+    use SEC_BEGIN_PROTOS/SEC_END_PROTOS in secport.h</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=419242">Bug 419242</a>: 'all' is not the default makefile
+    target in lib/softoken and lib/softoken/legacydb</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=419523">Bug 419523</a>: Export Cert_NewTempCertificate.</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=287061">Bug 287061</a>: CRL number should be a big integer,
+    not ulong</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=301213">Bug 301213</a>: Combine internal libpkix function
+    tests into a single statically linked program</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=324740">Bug 324740</a>: add generation of SIA and AIA
+    extensions to certutil</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=339737">Bug 339737</a>: LIBPKIX OCSP checking calls
+    CERT_VerifyCert</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=358785">Bug 358785</a>: Merge NSS_LIBPKIX_BRANCH back to
+    trunk</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=365966">Bug 365966</a>: infinite recursive call in
+    VFY_VerifyDigestDirect</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=382078">Bug 382078</a>: pkix default http client returns
+    error when try to get an ocsp response.</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=384926">Bug 384926</a>: libpkix build problems</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=389411">Bug 389411</a>: Mingw build error - undefined
+    reference to `_imp__PKIX_ERRORNAMES'</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=389904">Bug 389904</a>: avoid multiple decoding/encoding
+    while creating and using PKIX_PL_X500Name</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=390209">Bug 390209</a>: pkix AIA manager tries to get certs
+    using AIA url with OCSP access method</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=390233">Bug 390233</a>: umbrella bug for libPKIX cert
+    validation failures discovered from running vfyserv</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=390499">Bug 390499</a>: libpkix does not check cached cert
+    chain for revocation</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=390502">Bug 390502</a>: libpkix fails cert validation when
+    no valid CRL (NIST validation policy is always enforced)</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=390530">Bug 390530</a>: libpkix does not support time
+    override</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=390536">Bug 390536</a>: Cert validation functions must
+    validate leaf cert themselves</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=390554">Bug 390554</a>: all PKIX_NULLCHECK_ errors are
+    reported as PKIX ALLOC ERROR</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=390888">Bug 390888</a>: CERT_Verify* functions should be
+    able to use libPKIX</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=391457">Bug 391457</a>: libpkix does not check for object
+    ref leak at shutdown</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=391774">Bug 391774</a>: PKIX_Shutdown is not called by
+    nssinit.c</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=393174">Bug 393174</a>: Memory leaks in ocspclnt/PKIX.</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=395093">Bug 395093</a>:
+    pkix_pl_HttpCertStore_ProcessCertResponse is unable to process certs in DER format</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=395224">Bug 395224</a>: Don't reject certs with critical
+    NetscapeCertType extensions in libPKIX</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=395427">Bug 395427</a>: PKIX_PL_Initialize must not call
+    NSS_Init</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=395850">Bug 395850</a>: build of libpkix tests creates links
+    to nonexistant shared libraries and breaks windows build</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=398401">Bug 398401</a>: Memory leak in PKIX init.</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=399326">Bug 399326</a>: libpkix is unable to validate cert
+    for certUsageStatusResponder</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=400947">Bug 400947</a>: thread unsafe operation in
+    PKIX_PL_HashTable_Add cause selfserv to crash.</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=402773">Bug 402773</a>: Verify the list of public header
+    files in NSS 3.12</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=403470">Bug 403470</a>: Strsclnt + tstclnt crashes when PKIX
+    enabled.</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=403685">Bug 403685</a>: Application crashes after having
+    called CERT_PKIXVerifyCert</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=408434">Bug 408434</a>: Crash with PKIX based verify</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=411614">Bug 411614</a>: Explicit Policy does not seem to
+    work.</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=417024">Bug 417024</a>: Convert libpkix error code into nss
+    error code</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=422859">Bug 422859</a>: libPKIX builds &amp; validates chain
+    to root not in the caller-provided anchor list</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=425516">Bug 425516</a>: need to destroy data pointed by
+    CERTValOutParam array in case of error</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=426450">Bug 426450</a>: PKIX_PL_HashTable_Remove leaks
+    hashtable key object</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=429230">Bug 429230</a>: memory leak in pkix_CheckCert
+    function</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=392696">Bug 392696</a>: Fix copyright boilerplate in all new
+    PKIX code</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=300928">Bug 300928</a>: Integrate libpkix to NSS</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=303457">Bug 303457</a>: extensions newly supported in
+    libpkix must be marked supported</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=331096">Bug 331096</a>: NSS Softoken must detect forks on
+    all unix-ish platforms</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=390710">Bug 390710</a>: CERTNameConstraintsTemplate is
+    incorrect</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=416928">Bug 416928</a>: DER decode error on this policy
+    extension</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=375019">Bug 375019</a>: Cache-enable pkix_OcspChecker_Check
+  </li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=391454">Bug 391454</a>: libPKIX does not honor NSS's
+    override trust flags</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=403682">Bug 403682</a>: CERT_PKIXVerifyCert never succeeds
+  </li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=324744">Bug 324744</a>: add generation of policy extensions
+    to certutil</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=390973">Bug 390973</a>: Add long option names to
+    SECU_ParseCommandLine</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=161326">Bug 161326</a>: need API to convert dotted OID
+    format to/from octet representation</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=376737">Bug 376737</a>: CERT_ImportCerts routinely sets
+    VALID_PEER or VALID_CA OVERRIDE trust flags</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=390381">Bug 390381</a>: libpkix rejects cert chain when root
+    CA cert has no basic constraints</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=391183">Bug 391183</a>: rename libPKIX error string number
+    type to pkix error number types</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=397122">Bug 397122</a>: NSS 3.12 alpha treats a key3.db with
+    no global salt as having no password</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=405966">Bug 405966</a>: Unknown signature OID 1.3.14.3.2.29
+    causes sec_error_bad_signature, 3.11 ignores it</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=413010">Bug 413010</a>: CERT_CompareRDN may return a false
+    match</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=417664">Bug 417664</a>: false positive crl revocation test
+    on ppc/ppc64 NSS_ENABLE_PKIX_VERIFY=1</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=404526">Bug 404526</a>: glibc detected free(): invalid
+    pointer</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=300929">Bug 300929</a>: Certificate Policy extensions not
+    supported</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=129303">Bug 129303</a>: NSS needs to expose interfaces to
+    deal with multiple token sources of certs.</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=217538">Bug 217538</a>: softoken databases cannot be shared
+    between multiple processes</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=294531">Bug 294531</a>: Design new interfaces for
+    certificate path building and verification for libPKIX</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=326482">Bug 326482</a>: NSS ECC performance problems (intel)
+  </li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=391296">Bug 391296</a>: Need an update helper for Shared
+    Databases</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=395090">Bug 395090</a>: remove duplication of pkcs7 code
+    from pkix_pl_httpcertstore.c</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=401026">Bug 401026</a>: Need to provide a way to modify and
+    create new PKCS #11 objects.</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=403680">Bug 403680</a>: CERT_PKIXVerifyCert fails if CRLs
+    are missing, implement cert_pi_revocationFlags</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=427706">Bug 427706</a>: NSS_3_12_RC1 crashes in passwordmgr
+    tests</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=426245">Bug 426245</a>: Assertion failure went undetected by
+    tinderbox</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=158242">Bug 158242</a>: PK11_PutCRL is very memory
+    inefficient</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=287563">Bug 287563</a>: Please make
+    cert_CompareNameWithConstraints a non-static function</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=301496">Bug 301496</a>: NSS_Shutdown failure in p7sign</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=324878">Bug 324878</a>: crlutil -L outputs false CRL names
+  </li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=337010">Bug 337010</a>: OOM crash [[@ NSC_DigestKey]
+    Dereferencing possibly NULL att</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=343231">Bug 343231</a>: certutil issues certs for invalid
+    requests</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=353371">Bug 353371</a>: Klocwork 91117 - Null Pointer
+    Dereference in CERT_CertChainFromCert</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=353374">Bug 353374</a>: Klocwork 76494 - Null ptr derefs in
+    CERT_FormatName</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=353375">Bug 353375</a>: Klocwork 76513 - Null ptr deref in
+    nssCertificateList_DoCallback</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=353413">Bug 353413</a>: Klocwork 76541 free uninitialized
+    pointer in CERT_FindCertURLExtension</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=353416">Bug 353416</a>: Klocwork 76593 null ptr deref in
+    nssCryptokiPrivateKey_SetCertificate</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=353423">Bug 353423</a>: Klocwork bugs in
+    nss/lib/pk11wrap/dev3hack.c</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=353739">Bug 353739</a>: Klocwork Null ptr dereferences in
+    instance.c</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=353741">Bug 353741</a>: klocwork cascading memory leak in
+    mpp_make_prime</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=353742">Bug 353742</a>: klocwork null ptr dereference in
+    ocsp_DecodeResponseBytes</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=353748">Bug 353748</a>: klocwork null ptr dereferences in
+    pki3hack.c</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=353760">Bug 353760</a>: klocwork null pointer dereference in
+    p7decode.c</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=353763">Bug 353763</a>: klocwork Null ptr dereferences in
+    pk11cert.c</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=353773">Bug 353773</a>: klocwork Null ptr dereferences in
+    pk11nobj.c</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=353777">Bug 353777</a>: Klocwork Null ptr dereferences in
+    pk11obj.c</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=353780">Bug 353780</a>: Klocwork NULL ptr dereferences in
+    pkcs11.c</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=353865">Bug 353865</a>: klocwork Null ptr deref in
+    softoken/pk11db.c</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=353888">Bug 353888</a>: klockwork IDs for ssl3con.c</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=353895">Bug 353895</a>: klocwork Null ptr derefs in
+    pki/pkibase.c</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=353902">Bug 353902</a>: klocwork bugs in stanpcertdb.c</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=353903">Bug 353903</a>: klocwork oom crash in
+    softoken/keydb.c</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=353908">Bug 353908</a>: klocwork OOM crash in tdcache.c</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=353909">Bug 353909</a>: klocwork ptr dereference before NULL
+    check in devutil.c</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=353912">Bug 353912</a>: Misc klocwork bugs in lib/ckfw</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=354008">Bug 354008</a>: klocwork bugs in freebl</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=359331">Bug 359331</a>: modutil -changepw strict shutdown
+    failure</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=373367">Bug 373367</a>: verify OCSP response signature in
+    libpkix without decoding and reencoding</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=390542">Bug 390542</a>: libpkix fails to validate a chain
+    that consists only of one self issued, trusted cert</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=390728">Bug 390728</a>: pkix_pl_OcspRequest_Create throws an
+    error if it was not able to get AIA location</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=397825">Bug 397825</a>: libpkix: ifdef code that uses user
+    object types</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=397832">Bug 397832</a>: libpkix leaks memory if a macro
+    calls a function that returns an error</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=402727">Bug 402727</a>: functions responsible for creating
+    an object leak if subsequent function code produces an error</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=402731">Bug 402731</a>: pkix_pl_Pk11CertStore_CrlQuery will
+    crash if fails to acquire DP cache.</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=406647">Bug 406647</a>: libpkix does not use user defined
+    revocation checkers</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=407064">Bug 407064</a>: pkix_pl_LdapCertStore_BuildCrlList
+    should not fail if a crl fails to be decoded</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=421216">Bug 421216</a>: libpkix test nss_thread leaks a test
+    certificate</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=301259">Bug 301259</a>: signtool Usage message is unhelpful
+  </li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=389781">Bug 389781</a>: NSS should be built size-optimized
+    in browser builds on Linux, Windows, and Mac</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=90426">Bug 90426</a>: use of obsolete typedefs in public NSS
+    headers</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=113323">Bug 113323</a>: The first argument to
+    PK11_FindCertFromNickname should be const.</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=132485">Bug 132485</a>: built-in root certs slot description
+    is empty</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=177184">Bug 177184</a>: NSS_CMSDecoder_Cancel might have a
+    leak</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=232392">Bug 232392</a>: Erroneous root CA tests in NSS
+    Libraries</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=286642">Bug 286642</a>: util should be in a shared library
+  </li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=287052">Bug 287052</a>: Function to get CRL Entry reason
+    code has incorrect prototype and implementation</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=299308">Bug 299308</a>: Need additional APIs in the CRL
+    cache for libpkix</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=335039">Bug 335039</a>: nssCKFWCryptoOperation_UpdateCombo
+    is not declared</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=340917">Bug 340917</a>: crlutil should init NSS read-only
+    for some options</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=350948">Bug 350948</a>: freebl macro change can give 1%
+    improvement in RSA performance on amd64</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=352439">Bug 352439</a>: Reference leaks in modutil</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=369144">Bug 369144</a>: certutil needs option to generate
+    SubjectKeyID extension</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=391771">Bug 391771</a>: pk11_config_name and
+    pk11_config_strings leaked on shutdown</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=401194">Bug 401194</a>: crash in lg_FindObjects on win64
+  </li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=405652">Bug 405652</a>: In the TLS ClientHello message the
+    gmt_unix_time is incorrect</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=424917">Bug 424917</a>: Performance regression with studio
+    12 compiler</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=391770">Bug 391770</a>: OCSP_Global.monitor is leaked on
+    shutdown</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=403687">Bug 403687</a>: move pkix functions to
+    certvfypkix.c, turn off EV_TEST_HACK</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=428105">Bug 428105</a>: CERT_SetOCSPTimeout is not defined
+    in any public header file</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=213359">Bug 213359</a>: enhance PK12util to extract certs
+    from p12 file</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=329067">Bug 329067</a>: NSS encodes cert distinguished name
+    attributes with wrong string type</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=339906">Bug 339906</a>: sec_pkcs12_install_bags passes
+    uninitialized variables to functions</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=396484">Bug 396484</a>: certutil doesn't truncate existing
+    temporary files when writing them</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=251594">Bug 251594</a>: Certificate from PKCS#12 file with
+    colon in friendlyName not selectable for signing/encryption</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=321584">Bug 321584</a>: NSS PKCS12 decoder fails to import
+    bags without nicknames</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=332633">Bug 332633</a>: remove duplicate header files in
+    nss/cmd/sslsample</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=335019">Bug 335019</a>: pk12util takes friendly name from
+    key, not cert</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=339173">Bug 339173</a>: mem leak whenever
+    SECMOD_HANDLE_STRING_ARG called in loop</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=353904">Bug 353904</a>: klocwork Null ptr deref in
+    secasn1d.c</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=366390">Bug 366390</a>: correct misleading function names in
+    fipstest</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=370536">Bug 370536</a>: Memory leaks in pointer tracker code
+    in DEBUG builds only</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=372242">Bug 372242</a>: CERT_CompareRDN uses incorrect
+    algorithm</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=379753">Bug 379753</a>: S/MIME should support AES</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=381375">Bug 381375</a>: ocspclnt doesn't work on Windows
+  </li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=398693">Bug 398693</a>: DER_AsciiToTime produces incorrect
+    output for dates 1950-1970</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=420212">Bug 420212</a>: Empty cert DNs handled badly,
+    display as !INVALID AVA!</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=420979">Bug 420979</a>: vfychain ignores -b TIME option when
+    -p option is present</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=403563">Bug 403563</a>: Implement the TLS session ticket
+    extension (STE)</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=400917">Bug 400917</a>: Want exported function that outputs
+    all host names for DNS name matching</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=315643">Bug 315643</a>: test_buildchain_resourcelimits won't
+    build</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=353745">Bug 353745</a>: klocwork null ptr dereference in
+    PKCS12 decoder</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=338367">Bug 338367</a>: The GF2M_POPULATE and GFP_POPULATE
+    should check the ecCurve_map array index bounds before use</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=201139">Bug 201139</a>: SSLTap should display plain text for
+    NULL cipher suites</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=233806">Bug 233806</a>: Support NIST CRL policy</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=279085">Bug 279085</a>: NSS tools display public exponent as
+    negative number</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=363480">Bug 363480</a>: ocspclnt needs option to take cert
+    from specified file</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=265715">Bug 265715</a>: remove unused hsearch.c DBM code
+  </li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=337361">Bug 337361</a>: Leaks in jar_parse_any
+    (security/nss/lib/jar/jarver.c)</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=338453">Bug 338453</a>: Leaks in
+    security/nss/lib/jar/jarfile.c</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=351408">Bug 351408</a>: Leaks in JAR_JAR_sign_archive
+    (security/nss/lib/jar/jarjart.c)</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=351443">Bug 351443</a>: Remove unused code from
+    mozilla/security/nss/lib/jar</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=351510">Bug 351510</a>: Remove USE_MOZ_THREAD code from
+    mozilla/security/lib/jar</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=118830">Bug 118830</a>: NSS public header files should be
+    C++ safe</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=123996">Bug 123996</a>: certutil -H doesn't document
+    certutil -C -a</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=178894">Bug 178894</a>: Quick decoder updates for lib/certdb
+    and lib/certhigh</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=220115">Bug 220115</a>: CKM_INVALID_MECHANISM should be an
+    unsigned long constant.</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=330721">Bug 330721</a>: Remove OS/2 VACPP compiler support
+    from NSS</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=408260">Bug 408260</a>: certutil usage doesn't give enough
+    information about trust arguments</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=410226">Bug 410226</a>: leak in create_objects_from_handles
+  </li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=415007">Bug 415007</a>:
+    PK11_FindCertFromDERSubjectAndNickname is dead code</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=416267">Bug 416267</a>: compiler warnings on solaris due to
+    extra semicolon in SEC_ASN1_MKSUB</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=419763">Bug 419763</a>: logger thread should be joined on
+    exit</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=424471">Bug 424471</a>: counter overflow in bltest</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=229335">Bug 229335</a>: Remove certificates that expired in
+    August 2004 from tree</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=346551">Bug 346551</a>: init SECItem derTemp in
+    crmf_encode_popoprivkey</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=395080">Bug 395080</a>: Double backslash in sysDir filenames
+    causes problems on OS/2</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=341371">Bug 341371</a>: certutil lacks a way to request a
+    certificate with an existing key</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=382292">Bug 382292</a>: add support for Camellia to
+    cmd/symkeyutil</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=385642">Bug 385642</a>: Add additional cert usage(s) for
+    certutil's -V -u option</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=175741">Bug 175741</a>: strict aliasing bugs in mozilla/dbm
+  </li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=210584">Bug 210584</a>: CERT_AsciiToName doesn't accept all
+    valid values</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=298540">Bug 298540</a>: vfychain usage option should be
+    improved and documented</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=323570">Bug 323570</a>: Make dbck Debug mode work with
+    Softoken</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=371470">Bug 371470</a>: vfychain needs option to verify for
+    specific date</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=387621">Bug 387621</a>: certutil's random noise generator
+    isn't very efficient</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=390185">Bug 390185</a>: signtool error message wrongly uses
+    the term database</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=391651">Bug 391651</a>: Need config.mk file for Windows
+    Vista</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=396322">Bug 396322</a>: Fix secutil's code and NSS tools
+    that print public keys</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=417641">Bug 417641</a>: miscellaneous minor NSS bugs</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=334914">Bug 334914</a>: hopefully useless null check of out
+    it in JAR_find_next</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=95323">Bug 95323</a>: ckfw should support cipher operations.
+  </li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=337088">Bug 337088</a>: Coverity 405, PK11_ParamToAlgid() in
+    mozilla/security/nss/lib/pk11wrap/pk11mech.c</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=339907">Bug 339907</a>: oaep_xor_with_h1 allocates and leaks
+    sha1cx</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=341122">Bug 341122</a>: Coverity 633 SFTK_DestroySlotData
+    uses slot-&gt;slotLock then checks it for NULL</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=351140">Bug 351140</a>: Coverity 995, potential crash in
+    ecgroup_fromNameAndHex</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=362278">Bug 362278</a>: lib/util includes header files from
+    other NSS directories</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=228190">Bug 228190</a>: Remove unnecessary NSS_ENABLE_ECC
+    defines from manifest.mn</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=412906">Bug 412906</a>: remove sha.c and sha.h from
+    lib/freebl</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=353543">Bug 353543</a>: valgrind uninitialized memory read
+    in nssPKIObjectCollection_AddInstances</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=377548">Bug 377548</a>: NSS QA test program certutil's
+    default DSA prime is only 512 bits</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=333405">Bug 333405</a>: item cleanup is unused DEADCODE in
+    SECITEM_AllocItem loser</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=288730">Bug 288730</a>: compiler warnings in certutil</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=337251">Bug 337251</a>: warning: /* within comment</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=362967">Bug 362967</a>: export SECMOD_DeleteModuleEx</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=389248">Bug 389248</a>: NSS build failure when
+    NSS_ENABLE_ECC is not defined</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=390451">Bug 390451</a>: Remembered passwords lost when
+    changing Master Password</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=418546">Bug 418546</a>: reference leak in
+    CERT_PKIXVerifyCert</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=390074">Bug 390074</a>: OS/2 sign.cmd doesn't find
+    sqlite3.dll</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=417392">Bug 417392</a>: certutil -L -n reports bogus trust
+    flags</li>
+
+</ul>
+<hr>
+<h3 id="Documentation">Documentation</h3>
+For a list of the primary NSS documentation pages on mozilla.org, see <a href="../index.html#Documentation">NSS
+  Documentation</a>. New and
+revised documents available since the release of NSS 3.11 include the
+following:
+<ul>
+  <li><a href="/en-US/docs/Mozilla/Projects/NSS/Reference/Building_and_installing_NSS/Build_instructions">Build Instructions for NSS
+      3.11.4 and above</a></li>
+  <li><a href="http://wiki.mozilla.org/NSS_Shared_DB">NSS Shared DB</a></li>
+  <li><a href="/en-US/docs/Mozilla/Projects/NSS/Reference/NSS_environment_variables">NSS environment variables</a></li>
+</ul>
+<hr>
+<h3 id="Compatibility">Compatibility</h3>
+NSS 3.12 shared libraries are backward compatible with all older NSS
+3.x shared libraries. A program linked with older NSS 3.x shared
+libraries will work with NSS 3.12 shared libraries without
+recompiling or relinking. Furthermore, applications that restrict
+their use of NSS APIs to the functions listed in <a href="../ref/nssfunctions.html">NSS Public Functions</a>
+will remain compatible with future versions of the NSS shared
+libraries.
+<hr>
+<h3 id="Feedback">Feedback</h3>
+Bugs discovered should be reported by filing a bug report with <a href="https://bugzilla.mozilla.org/">mozilla.org
+  Bugzilla</a>(product
+NSS).<br>
