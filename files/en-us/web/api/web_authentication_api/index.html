@@ -32,7 +32,7 @@ tags:
 </ul>
 
 <div class="notecard note">
-<p><strong>Please note:</strong> Both <code>create()</code> and <code>get()</code> require a <a href="/en-US/docs/Web/Security/Secure_Contexts">secure context</a> (i.e. the server is connected by HTTPS or is the localhost), and will not be available for use if the browser is not operating in a secure context.</p>
+<p><strong>Note:</strong> Both <code>create()</code> and <code>get()</code> require a <a href="/en-US/docs/Web/Security/Secure_Contexts">secure context</a> (i.e. the server is connected by HTTPS or is the localhost), and will not be available for use if the browser is not operating in a secure context.</p>
 </div>
 
 <p>In their most basic forms, both <code>create()</code> and <code>get()</code> receive a very large random number called the "challenge" from the server and they return the challenge signed by the private key back to the server. This proves to the server that a user is in possession of the private key required for authentication without revealing any secrets over the network.</p>

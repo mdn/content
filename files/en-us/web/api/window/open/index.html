@@ -21,7 +21,7 @@ browser-compat: api.Window.open
   resource is loaded into it.</p>
 
 <div class="notecard note">
-   <p>Note that for brevity, this document will generally use the term "window" as a
+   <p><strong>Note:</strong> For brevity, this document will generally use the term "window" as a
    shorthand for "a browsing context in a tab or window".</p>
 </div>
 
@@ -112,9 +112,8 @@ function openRequestedPopup() {
   special value <code>_blank</code> for <code><var>windowName</var></code>.</p>
 
 <div class="notecard note">
-  <p id="Note_on_use_of_window_open">Note on the use of <code>window.open()</code> to
-    reopen an existing window with name <code><var>windowName</var></code> : This
-    functionality is not valid for all browsers and more with variable conditions.
+  <p><strong>Note:</strong> The use of <code>window.open()</code> to
+    reopen an existing window with name <code><var>windowName</var></code> is not valid for all browsers and more with variable conditions.
     <s>Firefox (50.0.1) functions as described: from the same domain+port reopen with same
       name will access the previously created window</s>. Google Chrome (55.0.2883.87 m )
     on the other hand will do it only from the same parent (as if the window was created
@@ -139,7 +138,7 @@ function openRequestedPopup() {
   main window.</p>
 
 <div class="notecard note">
-  <p><strong>Tip</strong>: Note that in some browsers, users can override the
+  <p><strong>Note:</strong> In some browsers, users can override the
     <code><var>windowFeatures</var></code> settings and enable (or prevent the disabling
     of) features. Further, control of some window features is available only on some browsers
     and platforms (See <a href="#popup_condition">popup condition</a> section)
@@ -276,7 +275,7 @@ function openRequestedPopup() {
     If <code><var>windowFeatures</var></code> is non-empty, <code>resizable</code>
     defaults to on.
     <div class="notecard note">
-      <p><strong>Tip</strong>: For accessibility reasons, it is strongly recommended to
+      <p><strong>Note:</strong> For accessibility reasons, it is strongly recommended to
         set this feature always on</p>
     </div>
   </dd>
@@ -289,8 +288,8 @@ function openRequestedPopup() {
     <br>
     See <a href="#note_on_scrollbars">note on scrollbars</a>.
     <div class="notecard note">
-      <p><strong>Tip</strong>: For accessibility reasons, it is strongly encouraged to set
-        this feature always on</p>
+      <p><strong>Note:</strong> For accessibility reasons, it is strongly encouraged to set
+        this feature always on.</p>
     </div>
   </dd>
 </dl>
