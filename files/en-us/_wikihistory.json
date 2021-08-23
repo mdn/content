@@ -32576,17 +32576,6 @@
       "Brettz9"
     ]
   },
-  "Web/API/CanvasRenderingContext2D/addHitRegion": {
-    "modified": "2020-10-15T21:31:27.202Z",
-    "contributors": [
-      "mfuji09",
-      "sideshowbarker",
-      "mfluehr",
-      "fscholz",
-      "nmve",
-      "Taken"
-    ]
-  },
   "Web/API/CanvasRenderingContext2D/arc": {
     "modified": "2020-10-15T21:30:13.647Z",
     "contributors": [
@@ -32640,15 +32629,6 @@
       "fscholz",
       "nmve",
       "erikadoyle"
-    ]
-  },
-  "Web/API/CanvasRenderingContext2D/clearHitRegions": {
-    "modified": "2020-10-15T21:31:57.038Z",
-    "contributors": [
-      "sideshowbarker",
-      "mfluehr",
-      "fscholz",
-      "nmve"
     ]
   },
   "Web/API/CanvasRenderingContext2D/clearRect": {
@@ -33113,15 +33093,6 @@
       "fscholz",
       "nmve",
       "erikadoyle"
-    ]
-  },
-  "Web/API/CanvasRenderingContext2D/removeHitRegion": {
-    "modified": "2020-10-15T21:31:55.876Z",
-    "contributors": [
-      "sideshowbarker",
-      "mfluehr",
-      "fscholz",
-      "nmve"
     ]
   },
   "Web/API/CanvasRenderingContext2D/resetTransform": {

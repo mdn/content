@@ -7036,13 +7036,11 @@
 /en-US/docs/Web/API/CanvasGradient.addColorStop	/en-US/docs/Web/API/CanvasGradient/addColorStop
 /en-US/docs/Web/API/CanvasPattern.setTransform	/en-US/docs/Web/API/CanvasPattern/setTransform
 /en-US/docs/Web/API/CanvasPixelArray	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray
-/en-US/docs/Web/API/CanvasRenderingContext2D.addHitRegion	/en-US/docs/Web/API/CanvasRenderingContext2D/addHitRegion
 /en-US/docs/Web/API/CanvasRenderingContext2D.arc	/en-US/docs/Web/API/CanvasRenderingContext2D/arc
 /en-US/docs/Web/API/CanvasRenderingContext2D.arcTo	/en-US/docs/Web/API/CanvasRenderingContext2D/arcTo
 /en-US/docs/Web/API/CanvasRenderingContext2D.beginPath	/en-US/docs/Web/API/CanvasRenderingContext2D/beginPath
 /en-US/docs/Web/API/CanvasRenderingContext2D.bezierCurveTo	/en-US/docs/Web/API/CanvasRenderingContext2D/bezierCurveTo
 /en-US/docs/Web/API/CanvasRenderingContext2D.canvas	/en-US/docs/Web/API/CanvasRenderingContext2D/canvas
-/en-US/docs/Web/API/CanvasRenderingContext2D.clearHitRegions	/en-US/docs/Web/API/CanvasRenderingContext2D/clearHitRegions
 /en-US/docs/Web/API/CanvasRenderingContext2D.clearRect	/en-US/docs/Web/API/CanvasRenderingContext2D/clearRect
 /en-US/docs/Web/API/CanvasRenderingContext2D.clip	/en-US/docs/Web/API/CanvasRenderingContext2D/clip
 /en-US/docs/Web/API/CanvasRenderingContext2D.closePath	/en-US/docs/Web/API/CanvasRenderingContext2D/closePath
@@ -7081,7 +7079,6 @@
 /en-US/docs/Web/API/CanvasRenderingContext2D.putImageData	/en-US/docs/Web/API/CanvasRenderingContext2D/putImageData
 /en-US/docs/Web/API/CanvasRenderingContext2D.quadraticCurveTo	/en-US/docs/Web/API/CanvasRenderingContext2D/quadraticCurveTo
 /en-US/docs/Web/API/CanvasRenderingContext2D.rect	/en-US/docs/Web/API/CanvasRenderingContext2D/rect
-/en-US/docs/Web/API/CanvasRenderingContext2D.removeHitRegion	/en-US/docs/Web/API/CanvasRenderingContext2D/removeHitRegion
 /en-US/docs/Web/API/CanvasRenderingContext2D.resetTransform	/en-US/docs/Web/API/CanvasRenderingContext2D/resetTransform
 /en-US/docs/Web/API/CanvasRenderingContext2D.restore	/en-US/docs/Web/API/CanvasRenderingContext2D/restore
 /en-US/docs/Web/API/CanvasRenderingContext2D.rotate	/en-US/docs/Web/API/CanvasRenderingContext2D/rotate
@@ -9342,7 +9339,6 @@
 /en-US/docs/Web/API/range.startOffset	/en-US/docs/Web/API/range/startOffset
 /en-US/docs/Web/API/range.surroundContents	/en-US/docs/Web/API/range/surroundContents
 /en-US/docs/Web/API/range.toString	/en-US/docs/Web/API/range/toString
-/en-US/docs/Web/API/removeHitRegion	/en-US/docs/Web/API/CanvasRenderingContext2D/removeHitRegion
 /en-US/docs/Web/API/select.type	/en-US/docs/Web/API/HTMLSelectElement/type
 /en-US/docs/Web/API/sessionStorage	/en-US/docs/Web/API/Window/sessionStorage
 /en-US/docs/Web/API/style.media	/en-US/docs/Web/API/HTMLStyleElement/media
