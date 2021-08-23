@@ -15,7 +15,7 @@ tags:
 <p>The File and Directory Entries API simulates a local file system that web apps can navigate within and access files in. You can develop apps which read, write, and create files and/or directories in a virtual, sandboxed file system.</p>
 
 <div class="note">
-<p>Because this is a non-standard API, whose specification is not currently on a standards track, it's important to keep in mind that not all browsers implement it, and those that do may implement only small portions of it. Check the {{anch("Browser compatibility")}} section for details.</p>
+<p><strong>Note:</strong> Because this is a non-standard API, whose specification is not currently on a standards track, it's important to keep in mind that not all browsers implement it, and those that do may implement only small portions of it. Check the {{anch("Browser compatibility")}} section for details.</p>
 </div>
 
 <p>Two very similar APIs exist depending on whether you desire asynchronous or synchronous behavior. The synchronous API is intended to be used inside a {{domxref("Worker")}} and will return the values you desire. The asynchronous API will not block and functions and the API will not return values; instead, you will need to supply a callback function to handle the response whenever it arrives.</p>

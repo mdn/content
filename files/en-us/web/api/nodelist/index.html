@@ -13,7 +13,7 @@ browser-compat: api.NodeList
 <p><strong><code>NodeList</code></strong> objects are collections of <a href="/en-US/docs/Web/API/Node">nodes</a>, usually returned by properties such as {{domxref("Node.childNodes")}} and methods such as {{domxref("document.querySelectorAll()")}}.</p>
 
 <div class="note">
-<p>Although <code>NodeList</code> is not an <code>Array</code>, it is possible to iterate over it with <code>forEach()</code>. It can also be converted to a real <code>Array</code> using {{jsxref("Array.from()")}}.</p>
+<p><strong>Note:</strong> Although <code>NodeList</code> is not an <code>Array</code>, it is possible to iterate over it with <code>forEach()</code>. It can also be converted to a real <code>Array</code> using {{jsxref("Array.from()")}}.</p>
 
 <p>However, some older browsers have not implemented <code>NodeList.forEach()</code> nor <code>Array.from()</code>. This can be circumvented by using {{jsxref("Array.forEach()", "Array.prototype.forEach()")}} — see this document's <a href="#example">Example</a>.</p>
 </div>
