@@ -63,11 +63,11 @@ tags:
 
 <div class="index">
 <ul>
- <li>{{anch("ISO-BMFF", "3GP")}}</li>
+ <li>{{anch("iso_base_media_file_format_mp4_quicktime_and_3gp", "3GP")}}</li>
  <li>{{anch("AV1")}}</li>
- <li>{{anch("ISO-BMFF", "ISO BMFF")}}</li>
- <li>{{anch("ISO-BMFF", "MPEG-4")}}</li>
- <li>{{anch("ISO-BMFF", "QuickTime")}}</li>
+ <li>{{anch("iso_base_media_file_format_mp4_quicktime_and_3gp", "ISO BMFF")}}</li>
+ <li>{{anch("iso_base_media_file_format_mp4_quicktime_and_3gp", "MPEG-4")}}</li>
+ <li>{{anch("iso_base_media_file_format_mp4_quicktime_and_3gp", "QuickTime")}}</li>
  <li>{{anch("WebM")}}</li>
 </ul>
 </div>
@@ -213,7 +213,7 @@ tags:
  <dd>AV1 Main Profile, level 5.3, Main tier, 10 bits per color component. The remaining properties are taken from the defaults: 4:2:0 chroma subsampling, BT.709 color primaries, transfer characteristics, and matrix coefficients. Studio swing representation.</dd>
 </dl>
 
-<h3 id="ISO_Base_Media_File_Format_MP4_QuickTime_and_3GP"><a id="ISO-BMFF">ISO Base Media File Format: MP4, QuickTime, and 3GP</a></h3>
+<h3 id="iso_base_media_file_format_mp4_quicktime_and_3gp">ISO Base Media File Format: MP4, QuickTime, and 3GP</h3>
 
 <p>All media types based upon the {{interwiki("wikipedia", "ISO Base Media File Format")}} (ISO BMFF) share the same syntax for the <code>codecs</code> parameter. These media types include <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MPEG-4</a> (and, in fact, the <a href="/en-US/docs/Web/Media/Formats/Containers#quicktime">QuickTime</a> file format upon which MPEG-4 is based) as well as <a href="/en-US/docs/Web/Media/Formats/Containers#3gp">3GP</a>. Both video and audio tracks can be described using the <code>codecs</code> parameter with the following MIME types:</p>
 
@@ -267,7 +267,7 @@ tags:
  <dt><code>cccc[.pp]*</code> (Generic ISO BMFF)</dt>
  <dd>Where <code>cccc</code> is the four-character ID for the codec and <code>pp</code> is where zero or more two-character encoded property values go.</dd>
  <dt><code>mp4a.oo[.A]</code> (MPEG-4 audio)</dt>
- <dd>Where <code>oo</code> is the Object Type Indication value describing the contents of the media more precisely and <code>A</code> is the one-digit <em>audio</em> OTI. The possible values for the OTI can be found on the MP4 Registration Authority web site's <a href="http://mp4ra.org/#/object_types">Object Types page</a>. For example, Opus audio in an MP4 file is <code>mp4a.ad</code>. For further details, see {{anch("MPEG-4 audio")}}.</dd>
+ <dd>Where <code>oo</code> is the Object Type Indication value describing the contents of the media more precisely and <code>A</code> is the one-digit <em>audio</em> OTI. The possible values for the OTI can be found on the MP4 Registration Authority web site's <a href="https://mp4ra.org/#/object_types">Object Types page</a>. For example, Opus audio in an MP4 file is <code>mp4a.ad</code>. For further details, see {{anch("MPEG-4 audio")}}.</dd>
  <dt><code>mp4v.oo[.V]</code> (MPEG-4 video)</dt>
  <dd>Here, <code>oo</code> is again the OTI describing the contents more precisely, while <code>V</code> is the one-digit <em>video</em> OTI.</dd>
  <dt><code>avc1.oo[.PPCCLL]</code> (AVC video)</dt>
@@ -435,7 +435,7 @@ tags:
 
 <pre class="brush: plain">mp4a.oo[.A]</pre>
 
-<p>Here, <code>oo</code> is the two-digit hexadecimal Object Type Indication which specifies the codec class being used for the media. The OTIs are assigned by the <a href="http://mp4ra.org/">MP4 Registration Authority</a>, which maintains a <a href="http://mp4ra.org/#/object_types">list of the possible OTI values</a>. A special value is <code>40</code>; this indicates that the media is MPEG-4 audio (ISO/IEC 14496 Part 3). In order to be more specific still, a third component—the Audio Object Type—is added for OTI <code>40</code> to narrow the type down to a specific subtype of MPEG-4.</p>
+<p>Here, <code>oo</code> is the two-digit hexadecimal Object Type Indication which specifies the codec class being used for the media. The OTIs are assigned by the <a href="https://mp4ra.org/">MP4 Registration Authority</a>, which maintains a <a href="https://mp4ra.org/#/object_types">list of the possible OTI values</a>. A special value is <code>40</code>; this indicates that the media is MPEG-4 audio (ISO/IEC 14496 Part 3). In order to be more specific still, a third component—the Audio Object Type—is added for OTI <code>40</code> to narrow the type down to a specific subtype of MPEG-4.</p>
 
 <p>The Audio Object Type is specified as a one or two digit <em>decimal</em> value (unlike most other values in the <code>codecs</code> parameter, which use hexadecimal). For example, MPEG-4's AAC-LC has an audio object type number of <code>2</code>, so the full <code>codecs</code> value representing AAC-LC is <code>mp4a.40.2</code>.</p>
 
