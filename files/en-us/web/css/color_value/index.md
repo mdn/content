@@ -1083,7 +1083,7 @@ Please note that LCH hue is not the same as HSL hue and LCH chroma is not the sa
 
 CSS Color 4 introduced this notation.
 Colors specified via the [`color()`](<https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color()>) function can specify a color in any of the predefined color spaces,
-as well as custom color spaces, defined via the [`@color-profile`](https://developer.mozilla.org/en-US/docs/Web/CSS/@color-profile) rule.
+as well as custom color spaces, defined via the [`@color-profile`](/en-US/docs/Web/CSS/@color-profile) rule.
 
 ## Interpolation
 
