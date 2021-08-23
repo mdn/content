@@ -45,7 +45,7 @@ localStorage.setItem('colorSetting', '#a4509b');</pre>
 <h3 id="Testing_for_availability">Testing for availability</h3>
 
 <div class="notecard note">
-<p>Note: This API is available in current versions of all major browsers. Testing for availability is necessary only if you must support very old browsers, such as Internet Explorer 6 or 7, or in the limited circumstances described below.</p>
+<p><strong>Note:</strong> This API is available in current versions of all major browsers. Testing for availability is necessary only if you must support very old browsers, such as Internet Explorer 6 or 7, or in the limited circumstances described below.</p>
 </div>
 
 <p>Browsers that support localStorage have a property on the window object named <code>localStorage</code>. However, just asserting that the property exists may throw exceptions. If the <code>localStorage</code> object does exist, there is still no guarantee that the localStorage API is actually available, as various browsers offer settings that disable localStorage. So a browser may <em>support</em> localStorage, but not make it <em>available</em> to the scripts on the page.</p>
@@ -122,7 +122,7 @@ else {
 
 <h3 id="Getting_values_from_storage">Getting values from storage</h3>
 
-<p>As noted above, values can be retrieved from storage using {{domxref("Storage.getItem()")}}. This takes the key of the data item as an argument, and returns the data value. For example:</p>
+<p><strong>Note:</strong> As noted above, values can be retrieved from storage using {{domxref("Storage.getItem()")}}. This takes the key of the data item as an argument, and returns the data value. For example:</p>
 
 <pre class="brush: js">function setStyles() {
   var currentColor = localStorage.getItem('bgcolor');

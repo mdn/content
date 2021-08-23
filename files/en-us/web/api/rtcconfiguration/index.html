@@ -86,7 +86,7 @@ browser-compat: api.RTCConfiguration
     Although only one certificate is used by a given connection,
     providing certificates for multiple algorithms may improve the odds of successfully connecting in some circumstances.
     See <a href="/en-US/docs/Web/API/RTCConfiguration/certificates#using_certificates">Using certificates</a> for further information.
-    <div class="note">This configuration option cannot be changed after it is first specified; once the certificates have been set, this property is ignored in future calls to {{domxref("RTCPeerConnection.setConfiguration()")}}.</div>
+    <div class="note"><p><strong>Note:</strong> This configuration option cannot be changed after it is first specified; once the certificates have been set, this property is ignored in future calls to {{domxref("RTCPeerConnection.setConfiguration()")}}.</p></div>
   </dd>
 
   <dt>{{domxref("RTCConfiguration.iceCandidatePoolSize", "iceCandidatePoolSize")}} {{optional_inline}}</dt>
@@ -98,7 +98,7 @@ browser-compat: api.RTCConfiguration
     before you start trying to connect,
     so that they're already available for inspection
     when {{domxref("RTCPeerConnection.setLocalDescription()")}} is called.
-    <div class="note">Changing the size of the ICE candidate pool may trigger the beginning of ICE gathering.</div>
+    <div class="note"><p><strong>Note:</strong> Changing the size of the ICE candidate pool may trigger the beginning of ICE gathering.</p></div>
   </dd>
 
   <dt>{{domxref("RTCConfiguration.iceServers", "iceServers")}} {{optional_inline}}</dt>

@@ -18,7 +18,7 @@ tags:
 <p>WebSockets communicate over a <a href="https://en.wikipedia.org/wiki/Transmission_Control_Protocol">TCP (Transmission Control Protocol)</a> connection. Luckily, C# has a <a href="https://msdn.microsoft.com/en-us/library/system.net.sockets.tcplistener.aspx">TcpListener</a> class which does as the name suggests. It is in the <em>System.Net.Sockets</em> namespace.</p>
 
 <div class="note">
-<p>It is a good idea to include the namespace with the <code>using</code> keyword in order to write less. It allows usage of a namespace's classes without typing the full namespace every time.</p>
+<p><strong>Note:</strong> It is a good idea to include the namespace with the <code>using</code> keyword in order to write less. It allows usage of a namespace's classes without typing the full namespace every time.</p>
 </div>
 
 <h3 id="TcpListener">TcpListener</h3>
@@ -30,7 +30,7 @@ tags:
 <p><code>localaddr</code> specifies the IP of the listener, and <code>port</code> specifies the port.</p>
 
 <div class="note">
-<p>To create an <code>IPAddress</code> object from a <code>string</code>, use the <code>Parse</code> static method of <code>IPAddress</code><em>.</em></p>
+<p><strong>Note:</strong> To create an <code>IPAddress</code> object from a <code>string</code>, use the <code>Parse</code> static method of <code>IPAddress</code><em>.</em></p>
 </div>
 
 <p>Methods:</p>
@@ -225,7 +225,7 @@ if (Regex.IsMatch(data, "^GET")) {
 </ul>
 
 <div class="note">
-<p>Because the first bit is always 1 for client-to-server messages, you can subtract 128 from this byte to get rid of the MASK bit.</p>
+<p><strong>Note:</strong> Because the first bit is always 1 for client-to-server messages, you can subtract 128 from this byte to get rid of the MASK bit.</p>
 </div>
 
 <p>Note that the MASK bit is set in our message. This means that the next four bytes (61, 84, 35, and 6) are the mask bytes used to decode the message. These bytes change with every message.</p>

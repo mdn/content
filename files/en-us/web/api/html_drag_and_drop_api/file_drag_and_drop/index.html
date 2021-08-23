@@ -12,7 +12,7 @@ tags:
 
 <p>The main steps to drag and drop are to define a <em>drop zone</em> (i.e. a target element for the file drop) and to define event handlers for the {{event("drop")}} and {{event("dragover")}} events. These steps are described below, including example code snippets. The full source code is available in <a href="https://github.com/mdn/dom-examples/tree/master/drag-and-drop">MDN's drag-and-drop repository</a> (pull requests and/or issues are welcome).</p>
 
-<p class="note">Note: {{domxref("HTML_Drag_and_Drop_API","HTML drag and drop")}} defines two different APIs to support dragging and dropping files. One API is the {{domxref("DataTransfer")}} interface and the second API is the {{domxref("DataTransferItem")}} and {{domxref("DataTransferItemList")}} interfaces. This example illustrates the use of both APIs (and does not use any Gecko specific interfaces).</p>
+<p>Note that {{domxref("HTML_Drag_and_Drop_API","HTML drag and drop")}} defines two different APIs to support dragging and dropping files. One API is the {{domxref("DataTransfer")}} interface and the second API is the {{domxref("DataTransferItem")}} and {{domxref("DataTransferItemList")}} interfaces. This example illustrates the use of both APIs (and does not use any Gecko specific interfaces).</p>
 
 <h2 id="Define_the_drop_zone">Define the drop <em>zone</em></h2>
 
@@ -39,7 +39,7 @@ tags:
 </pre>
 
 <div class="note">
-<p>Note that <code>dragstart</code> and <code>dragend</code> events are not fired when dragging a file into the browser from the OS.</p>
+<p><strong>Note:</strong> <code>dragstart</code> and <code>dragend</code> events are not fired when dragging a file into the browser from the OS.</p>
 </div>
 
 <h2 id="Process_the_drop">Process the drop</h2>
