@@ -17,8 +17,7 @@ browser-compat: svg.elements.symbol
 <pre class="brush: css">html,body,svg { height:100% }</pre>
 </div>
 
-<pre class="brush: html">&lt;svg viewBox="0 0 80 20" xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
+<pre class="brush: html">&lt;svg viewBox="0 0 80 20" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!-- Our symbol in its own coordinate system --&gt;
   &lt;symbol id="myDot" width="10" height="10" viewBox="0 0 2 2"&gt;
     &lt;circle cx="1" cy="1" r="1" /&gt;
@@ -28,11 +27,11 @@ browser-compat: svg.elements.symbol
   &lt;path d="M0,10 h80 M10,0 v20 M25,0 v20 M40,0 v20 M55,0 v20 M70,0 v20" fill="none" stroke="pink" /&gt;
 
   &lt;!-- All instances of our symbol --&gt;
-  &lt;use xlink:href="#myDot" x="5"  y="5" style="opacity:1.0" /&gt;
-  &lt;use xlink:href="#myDot" x="20" y="5" style="opacity:0.8" /&gt;
-  &lt;use xlink:href="#myDot" x="35" y="5" style="opacity:0.6" /&gt;
-  &lt;use xlink:href="#myDot" x="50" y="5" style="opacity:0.4" /&gt;
-  &lt;use xlink:href="#myDot" x="65" y="5" style="opacity:0.2" /&gt;
+  &lt;use href="#myDot" x="5"  y="5" style="opacity:1.0" /&gt;
+  &lt;use href="#myDot" x="20" y="5" style="opacity:0.8" /&gt;
+  &lt;use href="#myDot" x="35" y="5" style="opacity:0.6" /&gt;
+  &lt;use href="#myDot" x="50" y="5" style="opacity:0.4" /&gt;
+  &lt;use href="#myDot" x="65" y="5" style="opacity:0.2" /&gt;
 &lt;/svg&gt;</pre>
 
 <p>{{EmbedLiveSample('Example', 150, '100%')}}</p>
