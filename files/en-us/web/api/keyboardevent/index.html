@@ -196,7 +196,7 @@ browser-compat: api.KeyboardEvent
 <p>Some keys toggle the state of an indicator light; these include keys such as Caps Lock, Num Lock, and Scroll Lock. On Windows and Linux, these keys dispatch only the <code>keydown</code> and <code>keyup</code> events.</p>
 
 <div class="note">
-<p>On Linux, Firefox 12 and earlier also dispatched the <code>keypress</code> event for these keys.</p>
+<p><strong>Note:</strong> On Linux, Firefox 12 and earlier also dispatched the <code>keypress</code> event for these keys.</p>
 </div>
 
 <p>However, a limitation of the macOS event model causes Caps Lock to dispatch only the <code>keydown</code> event. Num Lock was supported on some older laptop models (2007 models and older), but since then, macOS hasn't supported Num Lock even on external keyboards. On older MacBooks with a Num Lock key, that key doesn't generate any key events. Gecko does support the Scroll Lock key if an external keyboard which has an F14 key is connected. In certain older versions of Firefox, this key generated a <code>keypress</code> event; this inconsistent behavior was {{bug(602812)}}.</p>

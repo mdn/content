@@ -730,7 +730,7 @@ onmessage = function(event) {
 <p>The main thing you <em>can't</em> do in a Worker is directly affect the parent page. This includes manipulating the DOM and using that page's objects. You have to do it indirectly, by sending a message back to the main script via {{domxref("DedicatedWorkerGlobalScope.postMessage")}}, then actioning the changes from there.</p>
 
 <div class="notecard note">
-<p>You can test whether a method is available to workers using the site: <a href="https://worker-playground.glitch.me/">https://worker-playground.glitch.me/</a> . For example, if you enter <a href="/en-US/docs/Web/API/EventSource">EventSource</a> into the site on Firefox 84 you'll see that this is not supported in service workers, but is in dedicated and shared workers.</p>
+<p><strong>Note:</strong> You can test whether a method is available to workers using the site: <a href="https://worker-playground.glitch.me/">https://worker-playground.glitch.me/</a> . For example, if you enter <a href="/en-US/docs/Web/API/EventSource">EventSource</a> into the site on Firefox 84 you'll see that this is not supported in service workers, but is in dedicated and shared workers.</p>
 </div>
 
 <div class="note">

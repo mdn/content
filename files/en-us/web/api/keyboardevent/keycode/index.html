@@ -22,7 +22,7 @@ browser-compat: api.KeyboardEvent.keyCode
 <p>You should avoid using this if possible; it's been deprecated for some time. Instead, you should use {{domxref("KeyboardEvent.code")}}, if it's implemented. Unfortunately, some browsers still don't have it, so you'll have to be careful to make sure you use one which is supported on all target browsers.</p>
 
 <div class="note">
-<p>Web developers shouldn't use the <code>keyCode</code> attribute for printable characters when handling <code>keydown</code> and <code>keyup</code> events. As described above, the <code>keyCode</code> attribute is not useful for printable characters, especially those input with the <kbd>Shift</kbd> or <kbd>Alt</kbd> key pressed. When implementing a shortcut key handler, the {{event("keypress")}} event is usually better (at least when Gecko is the runtime in use). See <a href="/en-US/docs/Gecko_Keypress_Event">Gecko Keypress Event</a> for details.</p>
+<p><strong>Note:</strong> Web developers shouldn't use the <code>keyCode</code> attribute for printable characters when handling <code>keydown</code> and <code>keyup</code> events. As described above, the <code>keyCode</code> attribute is not useful for printable characters, especially those input with the <kbd>Shift</kbd> or <kbd>Alt</kbd> key pressed. When implementing a shortcut key handler, the {{event("keypress")}} event is usually better (at least when Gecko is the runtime in use). See <a href="/en-US/docs/Gecko_Keypress_Event">Gecko Keypress Event</a> for details.</p>
 </div>
 
 <h2 id="Example">Example</h2>
