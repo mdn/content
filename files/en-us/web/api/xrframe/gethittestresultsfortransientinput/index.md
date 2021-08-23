@@ -12,7 +12,7 @@ browser-compat: api.XRFrame.getHitTestResultsForTransientInput
 ---
 {{APIRef("WebXR Device API")}}
 
-The **`getHitTestResultsForTransientInput()`** method of the {{domxref("XRFrame")}} interface returns an array of {{domxref("XRTransientInputHitResult")}} objects containing transient input hit test results for a given {{domxref("XRTransientInputHitTestSource")}}.
+The **`getHitTestResultsForTransientInput()`** method of the {{domxref("XRFrame")}} interface returns an array of {{domxref("XRTransientInputHitTestResult")}} objects containing transient input hit test results for a given {{domxref("XRTransientInputHitTestSource")}}.
 
 ## Syntax
 
@@ -27,7 +27,7 @@ getHitTestResultsForTransientInput(hitTestSource)
 
 ### Return value
 
-An array of {{domxref("XRTransientInputHitResult")}} objects.
+An array of {{domxref("XRTransientInputHitTestResult")}} objects.
 
 ## Examples
 
