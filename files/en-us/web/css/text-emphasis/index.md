@@ -19,7 +19,7 @@ The `text-emphasis` property is quite different from {{cssxref("text-decoration"
 
 The size of the emphasis symbol, like ruby symbols, is about 50% of the size of the font, and `text-emphasis` may affect line height when the current leading is not enough for the marks.
 
-> **Note:** `text-emphasis` doesn't reset the value of {{cssxref("text-emphasis-position")}}. This is because if the style and the color of emphasis marks may vary in a text, it is extremely unlikely that their position will. In the very rare cases when this is needed, the property {{cssxref("text-emphasis-position")}}.
+> **Note:** `text-emphasis` doesn't reset the value of {{cssxref("text-emphasis-position")}}. This is because if the style and the color of emphasis marks may vary in a text, it is extremely unlikely that their position will. In the very rare cases when this is needed, use the property {{cssxref("text-emphasis-position")}}.
 
 ## Constituent properties
 
