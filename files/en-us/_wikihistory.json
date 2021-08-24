@@ -94183,32 +94183,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/XRPermissionDescriptor": {
-    "modified": "2020-10-15T22:28:59.254Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/XRPermissionDescriptor/mode": {
-    "modified": "2020-10-15T22:28:59.818Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/XRPermissionDescriptor/optionalFeatures": {
-    "modified": "2020-10-15T22:28:59.659Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/XRPermissionDescriptor/requiredFeatures": {
-    "modified": "2020-10-15T22:29:00.797Z",
-    "contributors": [
-      "sideshowbarker",
-      "srisuk19766",
-      "Sheppy"
-    ]
-  },
   "Web/API/XRPermissionStatus": {
     "modified": "2020-10-15T22:29:00.643Z",
     "contributors": [
