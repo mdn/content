@@ -9,36 +9,68 @@ tags:
 - Share
 browser-compat: api.Navigator.canShare
 ---
-<div>{{APIRef("HTML
-  DOM")}}{{Non-standard_Header}}{{SeeCompatTable}}{{securecontext_header}}</div>
+<div>{{APIRef("HTML DOM")}}{{Non-standard_Header}}{{SeeCompatTable}}{{securecontext_header}}</div>
 
-<p>The <strong><code>Navigator.canShare()</code></strong> method of the
-  Web Share API returns <code>true</code> if a call to {{domxref("navigator.share()")}}
-  would succeed.</p>
+<p>The <strong><code>Navigator.canShare()</code></strong> method of the Web Share API returns <code>true</code> if a call to {{domxref("navigator.share()")}} would succeed.</p>
+
+<p>The Web Share API is gated by the <a href="/en-US/docs/Web/API/Permissions_API"><code>web-share</code> permission</a> (and corresponding <a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy/web-share">web-share</a> permission policy).
+  The <strong><code>canShare()</code></strong> method will return <code>false</code> if the permission is supported on the platform but has not been granted.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js">const <em>canShare</em> = navigator.canShare(<em>data</em>);</pre>
+<pre class="brush: js">navigator.canShare()
+navigator.canShare(data)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
   <dt><code>data</code> {{optional_inline}}</dt>
-  <dd>An object containing data to share that matches what you would pass to
-    {{domxref("navigator.share()")}}.</dd>
+  <dd>An object containing data to share that matches what you would pass to {{domxref("navigator.share()")}}.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{jsxref('Boolean')}}. True if data can be shared with
-  {{domxref("Navigator.share()")}}.</p>
+<p>The value <code>true</code> if the specified <code>data</code> can be shared with {{domxref("Navigator.share()")}}, otherwise <code>false</code>.</p>
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js">if(navigator.canShare(data)) {
-  // We can use share() to share the data! Woop!
-}</pre>
+<p>The example checks whether <code>navigator.canShare()</code> is defined, and if so uses it to check whether <code>navigator.share()</code> can share the specified data.</p>
+
+<div class="notecard note">
+  <p><strong>Note:</strong>The separate check for whether <code>navigator.canShare()</code> is defined is needed because "<code>if (navigator.canShare)</code>" evaluates <code>false</code> in this case, even if the <code>navigator.share()</code> method might be supported and otherwise work.</p>
+</div>
+
+<h3 id="HTML">HTML</h3>
+
+<p>The HTML just creates a paragraph in which to display the result of the test.</p>
+
+<pre class="brush: html">&lt;p class="result"&gt;&lt;/p&gt;</pre>
+
+<h3 id="JavaScript">JavaScript</h3>
+
+<pre class="brush: js">let shareData = {
+  title: 'MDN',
+  text: 'Learn web development on MDN!',
+  url: 'https://developer.mozilla.org',
+}
+
+const resultPara = document.querySelector('.result');
+
+if (typeof navigator.canShare === 'undefined') {
+  resultPara.textContent = 'navigator.canShare() not supported.';
+}
+else if (navigator.canShare && navigator.canShare(shareData)) {
+  resultPara.textContent = 'navigator.canShare() supported. We can use navigator.share() to send the data.';
+} else {
+  resultPara.textContent = 'navigator.canShare() supported. Specified data cannot be shared.';
+}
+</pre>
+
+<h3 id="Result">Result</h3>
+
+<p>The box below should state whether <code>navigator.canShare()</code> is supported on this browser, and if so, whether or not we can use <code>navigator.share()</code> to share the specified data:</p>
+
+<p>{{EmbedLiveSample('Examples')}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
