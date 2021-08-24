@@ -61,7 +61,7 @@ To configure Apache to send the `X-Frame-Options` header for all pages, add this
 
 ```
 Header always set X-Frame-Options "SAMEORIGIN"
-``
+```
 
 To configure Apache to set the `X-Frame-Options` DENY, add this to your site's configuration:
 
