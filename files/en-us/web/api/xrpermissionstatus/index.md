@@ -28,7 +28,7 @@ The **`XRPermissionStatus`** interface defines the object returned by calling 
 _In addition to the properties listed below, `XRPermissionStatus` includes the properties defined by its parent interface, {{domxref("PermissionStatus")}}._
 
 - {{domxref("XRPermissionStatus.granted", "granted")}}
-  - : An array of strings listing the names of the features for which permission has been granted as of the time at which `navigator.permissions.query()` was called. Any feature which was specified in either the `optionalFeatures`or `requiredFeatures`, "requiredFeatures")}} when calling `navigator.permissions.query()` are listed in `granted` if and only if permission to use them is granted.
+  - : An array of strings listing the names of the features for which permission has been granted as of the time at which `navigator.permissions.query()` was called. Any feature which was specified in either `optionalFeatures` or `requiredFeatures` when calling `navigator.permissions.query()` are listed in `granted` if and only if permission to use them is granted.
 
 ## Specifications
 
