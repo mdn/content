@@ -50,7 +50,7 @@ browser-compat: webextensions.api.downloads.download
   <dt><code>conflictAction</code>{{optional_inline}}</dt>
   <dd>A string representing the action you want taken if there is a filename conflict, as defined in the {{WebExtAPIRef('downloads.FilenameConflictAction')}} type (defaults to "uniquify" when it is not specified).</dd>
   <dt><code>cookieStoreId</code>{{optional_inline}}</dt>
-  <dd>The cookie store ID of the contextual identity the download is associated with. If omitted, the default cookie store is used. Use requires the "cookies" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions">API permission</a>.
+  <dd>The cookie store ID of the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities">contextual identity</a> the download is associated with. If omitted, the default cookie store is used. Use requires the "cookies" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions">API permission</a>.
   </dd>
   <dt><code>filename</code>{{optional_inline}}</dt>
   <dd>A <code>string</code> representing a file path relative to the default downloads directory — this provides the location where you want the file to be saved, and what filename you want to use. Absolute paths, empty paths, path components that start and/or end with a dot (.), and paths containing back-references (<code>../</code>) will cause an error. If omitted, this value will default to the filename already given to the download file, and a location immediately inside the downloads directory.</dd>
