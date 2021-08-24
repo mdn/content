@@ -22,7 +22,7 @@ browser-compat: api.XRRigidTransform.XRRigidTransform
 {{APIRef("WebXR Device API")}}
 
 The
-**` XRRigidTransform``() `** constructor creates and
+**`XRRigidTransform()`** constructor creates and
 returns a new {{domxref("XRRigidTransform")}} object, representing the position and
 orientation of a point or object. Among other things,
 `XRRigidTransform` is used when providing a transform to translate between
