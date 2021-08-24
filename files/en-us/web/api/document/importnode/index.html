@@ -34,17 +34,18 @@ importNode(externalNode, deep)</pre>
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-  <dt><code><var>externalNode</var></code></dt>
+  <dt><code>externalNode</code></dt>
   <dd>The external {{domxref("Node")}} or {{domxref("DocumentFragment")}} to import into
     the current document.</dd>
-  <dt><code><var>deep</var></code> {{optional_inline}}</dt>
-  <dd>A Boolean which controls whether to include the entire DOM subtree of the
-    <code><var>externalNode</var></code> in the import.
+  <dt><code>deep</code> {{optional_inline}}</dt>
+  <dd>A boolean flag, whose default value is <code>false</code>, 
+    which controls whether to include the entire DOM subtree 
+    of the <code>externalNode<</code> in the import.
     <ul>
-      <li>If <code><var>deep</var></code> is set to <code>true</code>, then
+      <li>If <code>deep</code> is set to <code>true</code>, then
         <code><var>externalNode</var></code> and all of its descendants are copied.</li>
-      <li>If <code><var>deep</var></code> is set to <code>false</code>, then only
-        <code><var>externalNode</var></code> is imported — the new node has no children.
+      <li>If <code>deep</code> is set to <code>false</code>, then only
+        <code>externalNode</code> is imported — the new node has no children.
       </li>
     </ul>
   </dd>
