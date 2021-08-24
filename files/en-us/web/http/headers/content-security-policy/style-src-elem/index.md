@@ -63,9 +63,6 @@ Content-Security-Policy: style-src-elem <source> <source>;
 
 {{page("Web/HTTP/Headers/Content-Security-Policy/connect-src", "Sources")}}
 
-- 'report-sample'
-  - : Requires a sample of the violating code to be included in the violation report.
-
 ## Examples
 
 TBD
