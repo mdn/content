@@ -234,25 +234,22 @@ within your browser.
     yarn start
     ```
 
-    When you preview a page, you can press a button to open its associated
-    `index.html` or `index.md` file in your preferred editor.
-    For this to work, you need to set an environment variable called `EDITOR`
-    before starting the preview server. You can set this in an `.env` file
-    inside the root of your local `content` directory.
+1. When browsing a page locally, you can press the **Open in your editor**
+   button to edit the associated `index.html` or `index.md` file.
 
-    Using the terminal with `bash` or PowerShell, add the variable to the
-    `.env` file like this:
+   To specify VS Code as your preferred editor, create a file named `.env` in
+   the root of your local `content` directory that contains the following line:
 
-    ```shell
-    echo 'EDITOR=code' >> .env
-    ```
+   ```sh
+   EDITOR=code
+   ```
 
-    This example sets VS Code as your editor. Now, when you're previewing a page
-    and press the `Edit in your editor` button, it will open as if you ran:
+   You can create the file from a terminal using `bash` or PowerShell with the
+   command `echo 'EDITOR=code' >> .env`.
 
-    ```sh
-    code files/en-us/.../index.html
-    ```
+   `EDITOR` is an environment variable. You can set it to any editor you like
+   using the normal mechanism for your operating system/shell (i.e. you don't
+   have to use the `.env` file or VS Code).
 
 1. Make your desired changes to one or more `index.html` or `index.md` files
 using your preferred code editor. **When thinking about your desired changes,
