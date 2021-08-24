@@ -34,7 +34,7 @@ The _locale_'s Unicode locale identifier string.
 
 ## Description
 
-The `locale` object is a JavaScript representation of a concept
+The `Locale` object is a JavaScript representation of a concept
 Unicode locale identifier. Information about a particular locale (language, script,
 calendar type, etc.) can be encoded in a locale identifier string. To make it easier
 to work with these locale identifiers, the `Locale` object was
