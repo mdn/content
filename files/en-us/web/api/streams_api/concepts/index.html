@@ -36,7 +36,7 @@ tags:
 <p>Note that there are two different types of readable stream. As well as the conventional readable stream there is a type called a byte stream — this is an extended version of a conventional stream for reading underlying byte sources. Compared with the conventional readable stream, byte streams are allowed to be read by BYOB readers (BYOB, "bring your own buffer"). This kind of readers allow streams to be read straight into a buffer supplied by the developer, minimizing the copying required. Which underlying stream (and by extension, reader and controller) your code will use depends on how the stream was created in the first place (see the {{domxref("ReadableStream.ReadableStream","ReadableStream()")}} constructor page).</p>
 
 <div class="warning">
-<p><strong>Important</strong>: Byte streams are not implemented anywhere as yet, and questions have been raised as to whether the spec details are in a finished enough state for them to be implemented. This may change over time.</p>
+<p><strong>Warning:</strong> Byte streams are not implemented anywhere as yet, and questions have been raised as to whether the spec details are in a finished enough state for them to be implemented. This may change over time.</p>
 </div>
 
 <p>You can make use of ready-made readable streams via mechanisms like a {{domxref("Response.body")}} from a fetch request, or roll your own streams using the {{domxref("ReadableStream.ReadableStream","ReadableStream()")}} constructor.</p>

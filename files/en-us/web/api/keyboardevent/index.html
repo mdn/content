@@ -98,7 +98,7 @@ browser-compat: api.KeyboardEvent
  <dd>Returns a boolean value that is <code>true</code> if the <kbd>Alt</kbd> ( <kbd>Option</kbd> or <kbd>⌥</kbd> on OS X) key was active when the key event was generated.</dd>
  <dt>{{domxref("KeyboardEvent.code")}} {{Readonlyinline}}</dt>
  <dd>Returns a {{domxref("DOMString")}} with the code value of the physical key represented by the event.
- <div class="warning"><strong>Warning:</strong> This ignores the user's keyboard layout, so that if the user presses the key at the "Y" position in a QWERTY keyboard layout (near the middle of the row above the home row), this will always return "KeyY", even if the user has a QWERTZ keyboard (which would mean the user expects a "Z" and all the other properties would indicate a "Z") or a Dvorak keyboard layout (where the user would expect an "F"). If you want to display the correct keystrokes to the user, you can use {{domxref("Keyboard.getLayoutMap()")}}.</div>
+ <div class="warning"><p><strong>Warning:</strong> This ignores the user's keyboard layout, so that if the user presses the key at the "Y" position in a QWERTY keyboard layout (near the middle of the row above the home row), this will always return "KeyY", even if the user has a QWERTZ keyboard (which would mean the user expects a "Z" and all the other properties would indicate a "Z") or a Dvorak keyboard layout (where the user would expect an "F"). If you want to display the correct keystrokes to the user, you can use {{domxref("Keyboard.getLayoutMap()")}}.</p></div>
  </dd>
  <dt>{{domxref("KeyboardEvent.ctrlKey")}} {{Readonlyinline}}</dt>
  <dd>Returns a boolean value that is <code>true</code> if the <kbd>Ctrl</kbd> key was active when the key event was generated.</dd>
@@ -147,11 +147,11 @@ browser-compat: api.KeyboardEvent
  </dd>
  <dt>{{domxref("KeyboardEvent.charCode")}} {{Deprecated_inline}}{{Readonlyinline}}</dt>
  <dd>Returns a {{jsxref("Number")}} representing the Unicode reference number of the key; this attribute is used only by the <code>keypress</code> event. For keys whose <code>char</code> attribute contains multiple characters, this is the Unicode value of the first character in that attribute. In Firefox 26 this returns codes for printable characters.
- <div class="warning"><strong>Warning:</strong> This attribute is deprecated; you should use {{domxref("KeyboardEvent.key")}} instead, if available.</div>
+ <div class="warning"><p><strong>Warning:</strong> This attribute is deprecated; you should use {{domxref("KeyboardEvent.key")}} instead, if available.</p></div>
  </dd>
  <dt>{{domxref("KeyboardEvent.keyCode")}} {{deprecated_inline}}{{Readonlyinline}}</dt>
  <dd>Returns a {{jsxref("Number")}} representing a system and implementation dependent numerical code identifying the unmodified value of the pressed key.
- <div class="warning"><strong>Warning:</strong> This attribute is deprecated; you should use {{domxref("KeyboardEvent.key")}} instead, if available.</div>
+ <div class="warning"><p><strong>Warning:</strong> This attribute is deprecated; you should use {{domxref("KeyboardEvent.key")}} instead, if available.</p></div>
  </dd>
  <dt>{{domxref("KeyboardEvent.keyIdentifier")}} {{Non-standard_inline}}{{deprecated_inline}}{{Readonlyinline}}</dt>
  <dd>This property is non-standard and has been deprecated in favor of {{domxref("KeyboardEvent.key")}}. It was part of an old version of DOM Level 3 Events.</dd>
@@ -159,7 +159,7 @@ browser-compat: api.KeyboardEvent
  <dd>This is a non-standard deprecated alias for {{domxref("KeyboardEvent.location")}}. It was part of an old version of DOM Level 3 Events.</dd>
  <dt>{{domxref("KeyboardEvent.which")}} {{deprecated_inline}} {{Readonlyinline}}</dt>
  <dd>Returns a {{jsxref("Number")}} representing a system and implementation dependent numeric code identifying the unmodified value of the pressed key; this is usually the same as <code>keyCode</code>.
- <div class="warning"><strong>Warning:</strong> This attribute is deprecated; you should use {{domxref("KeyboardEvent.key")}} instead, if available.</div>
+ <div class="warning"><p><strong>Warning:</strong> This attribute is deprecated; you should use {{domxref("KeyboardEvent.key")}} instead, if available.</p></div>
  </dd>
 </dl>
 

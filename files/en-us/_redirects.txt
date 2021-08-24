@@ -2231,8 +2231,6 @@
 /en-US/docs/DOM/window.onmouseout	/en-US/docs/Web/API/GlobalEventHandlers/onmouseout
 /en-US/docs/DOM/window.onmouseover	/en-US/docs/Web/API/GlobalEventHandlers/onmouseover
 /en-US/docs/DOM/window.onmouseup	/en-US/docs/Web/API/GlobalEventHandlers/onmouseup
-/en-US/docs/DOM/window.onmozbeforepaint	/en-US/docs/Web/API/Window/onmozbeforepaint
-/en-US/docs/DOM/window.onpaint	/en-US/docs/Web/API/Window/onpaint
 /en-US/docs/DOM/window.onpopstate	/en-US/docs/Web/API/WindowEventHandlers/onpopstate
 /en-US/docs/DOM/window.onreset	/en-US/docs/Web/API/GlobalEventHandlers/onreset
 /en-US/docs/DOM/window.onresize	/en-US/docs/Web/API/GlobalEventHandlers/onresize
@@ -2672,7 +2670,6 @@
 /en-US/docs/DOM:window.onmouseout	/en-US/docs/Web/API/GlobalEventHandlers/onmouseout
 /en-US/docs/DOM:window.onmouseover	/en-US/docs/Web/API/GlobalEventHandlers/onmouseover
 /en-US/docs/DOM:window.onmouseup	/en-US/docs/Web/API/GlobalEventHandlers/onmouseup
-/en-US/docs/DOM:window.onpaint	/en-US/docs/Web/API/Window/onpaint
 /en-US/docs/DOM:window.onpopstate	/en-US/docs/Web/API/WindowEventHandlers/onpopstate
 /en-US/docs/DOM:window.onreset	/en-US/docs/Web/API/GlobalEventHandlers/onreset
 /en-US/docs/DOM:window.onresize	/en-US/docs/Web/API/GlobalEventHandlers/onresize
@@ -3412,8 +3409,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.onmouseout	/en-US/docs/Web/API/GlobalEventHandlers/onmouseout
 /en-US/docs/Document_Object_Model_(DOM)/window.onmouseover	/en-US/docs/Web/API/GlobalEventHandlers/onmouseover
 /en-US/docs/Document_Object_Model_(DOM)/window.onmouseup	/en-US/docs/Web/API/GlobalEventHandlers/onmouseup
-/en-US/docs/Document_Object_Model_(DOM)/window.onmozbeforepaint	/en-US/docs/Web/API/Window/onmozbeforepaint
-/en-US/docs/Document_Object_Model_(DOM)/window.onpaint	/en-US/docs/Web/API/Window/onpaint
 /en-US/docs/Document_Object_Model_(DOM)/window.onpopstate	/en-US/docs/Web/API/WindowEventHandlers/onpopstate
 /en-US/docs/Document_Object_Model_(DOM)/window.onreset	/en-US/docs/Web/API/GlobalEventHandlers/onreset
 /en-US/docs/Document_Object_Model_(DOM)/window.onresize	/en-US/docs/Web/API/GlobalEventHandlers/onresize
@@ -9484,8 +9479,6 @@
 /en-US/docs/Web/API/window.onmouseout	/en-US/docs/Web/API/GlobalEventHandlers/onmouseout
 /en-US/docs/Web/API/window.onmouseover	/en-US/docs/Web/API/GlobalEventHandlers/onmouseover
 /en-US/docs/Web/API/window.onmouseup	/en-US/docs/Web/API/GlobalEventHandlers/onmouseup
-/en-US/docs/Web/API/window.onmozbeforepaint	/en-US/docs/Web/API/Window/onmozbeforepaint
-/en-US/docs/Web/API/window.onpaint	/en-US/docs/Web/API/Window/onpaint
 /en-US/docs/Web/API/window.onpopstate	/en-US/docs/Web/API/WindowEventHandlers/onpopstate
 /en-US/docs/Web/API/window.onreset	/en-US/docs/Web/API/GlobalEventHandlers/onreset
 /en-US/docs/Web/API/window.onresize	/en-US/docs/Web/API/GlobalEventHandlers/onresize

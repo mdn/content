@@ -117,7 +117,7 @@ form.addEventListener('submit', function(ev) {
 </div>
 
 <div class="warning">
-<p><strong>Warning</strong>: When using FormData to submit POST requests using {{ domxref("XMLHttpRequest") }} or the {{ domxref("Fetch_API") }} with the <code>multipart/form-data</code> Content-Type (e.g. when uploading Files and Blobs to the server), <em>do not</em> explicitly set the <a href="/en-US/docs/Web/HTTP/Headers/Content-Type"><code>Content-Type</code></a> header on the request. Doing so will prevent the browser from being able to set the Content-Type header with the boundary expression it will use to delimit form fields in the request body.</p>
+<p><strong>Warning:</strong> When using FormData to submit POST requests using {{ domxref("XMLHttpRequest") }} or the {{ domxref("Fetch_API") }} with the <code>multipart/form-data</code> Content-Type (e.g. when uploading Files and Blobs to the server), <em>do not</em> explicitly set the <a href="/en-US/docs/Web/HTTP/Headers/Content-Type"><code>Content-Type</code></a> header on the request. Doing so will prevent the browser from being able to set the Content-Type header with the boundary expression it will use to delimit form fields in the request body.</p>
 </div>
 
 <p>You can also append a {{ domxref("File") }} or {{ domxref("Blob") }} directly to the {{ domxref("FormData") }} object, like this:</p>
