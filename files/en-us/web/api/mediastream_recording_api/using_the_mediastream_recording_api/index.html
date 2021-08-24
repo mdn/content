@@ -12,9 +12,9 @@ tags:
 ---
 <div>{{DefaultAPISidebar("MediaStream Recording")}}</div>
 
-<div class="summary">
-<p><span class="seoSummary">The <a href="/en-US/docs/Web/API/MediaStream_Recording_API">MediaStream Recording API</a> makes it easy to record audio and/or video streams. When used with {{domxref("MediaDevices.getUserMedia()","navigator.mediaDevices.getUserMedia()")}}, it provides an easy way to record from the user's input devices and instantly use the result in web apps.</span> Both audio and video may be recorded, separately or together. This article aims to provide a basic guide on how to use the MediaRecorder interface, which provides this API.</p>
-</div>
+<p>The <a href="/en-US/docs/Web/API/MediaStream_Recording_API">MediaStream Recording API</a> makes it easy to record audio and/or video streams. When used with {{domxref("MediaDevices.getUserMedia()","navigator.mediaDevices.getUserMedia()")}}, it provides an easy way to record from the user's input devices and instantly use the result in web apps.</p>
+
+<p>Both audio and video may be recorded, separately or together. This article aims to provide a basic guide on how to use the MediaRecorder interface, which provides this API.</p>
 
 <h2 id="A_sample_application_Web_Dictaphone">A sample application: Web Dictaphone</h2>
 
@@ -53,7 +53,7 @@ tags:
 }</pre>
 
 <div class="note">
-<p><strong>Note</strong>: <code>calc()</code> has good support across modern browsers too, even going back to Internet Explorer 9.</p>
+<p><strong>Note:</strong> <code>calc()</code> has good support across modern browsers too, even going back to Internet Explorer 9.</p>
 </div>
 
 <h3 id="Checkbox_hack_for_showinghiding">Checkbox hack for showing/hiding</h3>
@@ -141,7 +141,7 @@ const soundClips = document.querySelector('.sound-clips');</pre>
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: All of the code below is placed inside the <code>getUserMedia</code> success callback.</p>
+<p><strong>Note:</strong> All of the code below is placed inside the <code>getUserMedia</code> success callback.</p>
 </div>
 
 <h2 id="Capturing_the_media_stream">Capturing the media stream</h2>
@@ -171,7 +171,7 @@ mediaRecorder.ondataavailable = function(e) {
 }</pre>
 
 <div class="notecard note">
-<p><strong>Note</strong>: The browser will fire <code>dataavailable</code> events as needed, but if you want to intervene you can also include a timeslice when invoking the <code>start()</code> method — for example <code>start(10000)</code> — to control this interval, or call {{domxref("MediaRecorder.requestData()")}} to trigger an event when you need it.</p>
+<p><strong>Note:</strong> The browser will fire <code>dataavailable</code> events as needed, but if you want to intervene you can also include a timeslice when invoking the <code>start()</code> method — for example <code>start(10000)</code> — to control this interval, or call {{domxref("MediaRecorder.requestData()")}} to trigger an event when you need it.</p>
 </div>
 
 <p>Lastly, we use the {{domxref("MediaRecorder.stop()")}} method to stop the recording when the stop button is pressed, and finalize the {{domxref("Blob")}} ready for use somewhere else in our application.</p>

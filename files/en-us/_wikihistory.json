@@ -1,4 +1,16 @@
 {
+  "/Web/Guide/Houdini": {
+    "modified": "2020-07-16T03:51:08.991Z",
+    "contributors": [
+      "Wind1808",
+      "enva-2-7-1-2",
+      "estelle",
+      "chrisdavidmills",
+      "SphinxKnight",
+      "jason2477",
+      "Sheppy"
+    ]
+  },
   "Games": {
     "modified": "2020-11-30T03:07:29.673Z",
     "contributors": [
@@ -25006,26 +25018,6 @@
       "Norville"
     ]
   },
-  "Tools/Firefox_OS_1.1_Simulator": {
-    "modified": "2020-07-16T22:35:57.316Z",
-    "contributors": [
-      "wbamberg",
-      "kscarfone",
-      "KhaledSamir",
-      "groovecoder",
-      "davepenalosa",
-      "keshav_khanna"
-    ]
-  },
-  "Tools/Firefox_OS_Simulator_clone": {
-    "modified": "2020-07-16T22:36:22.742Z",
-    "contributors": [
-      "wbamberg",
-      "maximelore",
-      "kscarfone",
-      "Cherie69"
-    ]
-  },
   "Tools/Index": {
     "modified": "2020-12-13T12:30:04.366Z",
     "contributors": [
@@ -32564,17 +32556,6 @@
       "Brettz9"
     ]
   },
-  "Web/API/CanvasRenderingContext2D/addHitRegion": {
-    "modified": "2020-10-15T21:31:27.202Z",
-    "contributors": [
-      "mfuji09",
-      "sideshowbarker",
-      "mfluehr",
-      "fscholz",
-      "nmve",
-      "Taken"
-    ]
-  },
   "Web/API/CanvasRenderingContext2D/arc": {
     "modified": "2020-10-15T21:30:13.647Z",
     "contributors": [
@@ -32628,15 +32609,6 @@
       "fscholz",
       "nmve",
       "erikadoyle"
-    ]
-  },
-  "Web/API/CanvasRenderingContext2D/clearHitRegions": {
-    "modified": "2020-10-15T21:31:57.038Z",
-    "contributors": [
-      "sideshowbarker",
-      "mfluehr",
-      "fscholz",
-      "nmve"
     ]
   },
   "Web/API/CanvasRenderingContext2D/clearRect": {
@@ -33101,15 +33073,6 @@
       "fscholz",
       "nmve",
       "erikadoyle"
-    ]
-  },
-  "Web/API/CanvasRenderingContext2D/removeHitRegion": {
-    "modified": "2020-10-15T21:31:55.876Z",
-    "contributors": [
-      "sideshowbarker",
-      "mfluehr",
-      "fscholz",
-      "nmve"
     ]
   },
   "Web/API/CanvasRenderingContext2D/resetTransform": {
@@ -45670,18 +45633,6 @@
       "trevorh"
     ]
   },
-  "Web/API/File/mozFullPath": {
-    "modified": "2020-04-17T10:27:02.432Z",
-    "contributors": [
-      "maxloh",
-      "Sheppy",
-      "Jedipedia",
-      "kscarfone",
-      "teoli",
-      "iamanupmenon",
-      "Konami"
-    ]
-  },
   "Web/API/File/name": {
     "modified": "2020-10-15T21:14:30.919Z",
     "contributors": [
@@ -45743,18 +45694,6 @@
       "teoli",
       "Sheppy",
       "grendel"
-    ]
-  },
-  "Web/API/FileError": {
-    "modified": "2020-10-15T21:06:25.989Z",
-    "contributors": [
-      "fscholz",
-      "jpmedley",
-      "Sebastianz",
-      "teoli",
-      "kscarfone",
-      "Sheppy",
-      "ziyunfei"
     ]
   },
   "Web/API/FileException": {
@@ -57327,13 +57266,6 @@
       "fscholz",
       "libbymc",
       "jpmedley"
-    ]
-  },
-  "Web/API/Index": {
-    "modified": "2019-10-10T16:43:11.819Z",
-    "contributors": [
-      "kscarfone",
-      "fscholz"
     ]
   },
   "Web/API/IndexedDB_API": {
@@ -89918,34 +89850,6 @@
       "louisremi"
     ]
   },
-  "Web/API/Window/onmozbeforepaint": {
-    "modified": "2019-11-17T08:54:22.944Z",
-    "contributors": [
-      "Sheppy",
-      "fscholz",
-      "MHasan",
-      "teoli",
-      "Bzbarsky"
-    ]
-  },
-  "Web/API/Window/onpaint": {
-    "modified": "2020-12-10T09:07:45.084Z",
-    "contributors": [
-      "bershanskiy",
-      "mfuji09",
-      "mfluehr",
-      "Ac1521",
-      "fscholz",
-      "MHasan",
-      "teoli",
-      "libreGeekingKid",
-      "Sheppy",
-      "Ruakh",
-      "Nickolay",
-      "Mw22",
-      "alecananian"
-    ]
-  },
   "Web/API/Window/onvrdisplayactivate": {
     "modified": "2020-10-15T21:54:14.394Z",
     "contributors": [
@@ -93538,24 +93442,8 @@
       "MashKao"
     ]
   },
-  "Web/API/XMLHttpRequest/mozResponseArrayBuffer": {
-    "modified": "2019-03-23T22:32:48.895Z",
-    "contributors": [
-      "Sheppy",
-      "david_ross",
-      "MashKao"
-    ]
-  },
   "Web/API/XMLHttpRequest/mozSystem": {
     "modified": "2019-03-23T22:32:57.199Z",
-    "contributors": [
-      "Sheppy",
-      "david_ross",
-      "MashKao"
-    ]
-  },
-  "Web/API/XMLHttpRequest/multipart": {
-    "modified": "2019-03-23T22:32:49.038Z",
     "contributors": [
       "Sheppy",
       "david_ross",
@@ -94264,32 +94152,6 @@
     "modified": "2020-10-15T22:27:49.155Z",
     "contributors": [
       "sideshowbarker",
-      "Sheppy"
-    ]
-  },
-  "Web/API/XRPermissionDescriptor": {
-    "modified": "2020-10-15T22:28:59.254Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/XRPermissionDescriptor/mode": {
-    "modified": "2020-10-15T22:28:59.818Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/XRPermissionDescriptor/optionalFeatures": {
-    "modified": "2020-10-15T22:28:59.659Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/XRPermissionDescriptor/requiredFeatures": {
-    "modified": "2020-10-15T22:29:00.797Z",
-    "contributors": [
-      "sideshowbarker",
-      "srisuk19766",
       "Sheppy"
     ]
   },
@@ -101376,7 +101238,18 @@
       "cers"
     ]
   },
-  "Web/CSS/CSS_Background_and_Borders/Border-image_generator": {
+  "Web/CSS/CSS_Backgrounds_and_Borders": {
+    "modified": "2020-07-07T12:00:23.701Z",
+    "contributors": [
+      "wbamberg",
+      "fazl",
+      "fscholz",
+      "RainSlide",
+      "Sheppy",
+      "mfluehr"
+    ]
+  },
+  "Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator": {
     "modified": "2020-05-05T09:08:09.973Z",
     "contributors": [
       "chrisdavidmills",
@@ -101385,7 +101258,7 @@
       "gabriel_ivanica"
     ]
   },
-  "Web/CSS/CSS_Background_and_Borders/Border-radius_generator": {
+  "Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator": {
     "modified": "2019-03-20T10:29:48.350Z",
     "contributors": [
       "alattalatta",
@@ -101395,7 +101268,7 @@
       "gabriel_ivanica"
     ]
   },
-  "Web/CSS/CSS_Background_and_Borders/Box-shadow_generator": {
+  "Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator": {
     "modified": "2020-04-21T23:07:57.113Z",
     "contributors": [
       "sideshowbarker",
@@ -101406,17 +101279,6 @@
       "Sheppy",
       "gabriel_ivanica",
       "groovecoder"
-    ]
-  },
-  "Web/CSS/CSS_Backgrounds_and_Borders": {
-    "modified": "2020-07-07T12:00:23.701Z",
-    "contributors": [
-      "wbamberg",
-      "fazl",
-      "fscholz",
-      "RainSlide",
-      "Sheppy",
-      "mfluehr"
     ]
   },
   "Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images": {
@@ -129149,18 +129011,6 @@
     "modified": "2019-03-23T22:17:37.220Z",
     "contributors": [
       "fscholz"
-    ]
-  },
-  "Web/Houdini": {
-    "modified": "2020-07-16T03:51:08.991Z",
-    "contributors": [
-      "Wind1808",
-      "enva-2-7-1-2",
-      "estelle",
-      "chrisdavidmills",
-      "SphinxKnight",
-      "jason2477",
-      "Sheppy"
     ]
   },
   "Web/JavaScript": {

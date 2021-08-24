@@ -19,10 +19,12 @@ browser-compat: api.MutationObserver.takeRecords
 ---
 <div>{{APIRef("DOM WHATWG")}}</div>
 
-<p><span class="seoSummary">The {{domxref("MutationObserver")}} method
+<p>The {{domxref("MutationObserver")}} method
     <code><strong>takeRecords()</strong></code> returns a list of all matching DOM changes
     that have been detected but not yet processed by the observer's callback function,
-    leaving the mutation queue empty.</span> The most common use case for this is to
+    leaving the mutation queue empty.</p>
+
+<p>The most common use case for this is to
   immediately fetch all pending mutation records immediately prior to disconnecting the
   observer, so that any pending mutations can be processed when shutting down the
   observer.</p>

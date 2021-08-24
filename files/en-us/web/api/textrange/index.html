@@ -10,8 +10,7 @@ tags:
 <div>{{ ApiRef("DOM") }}{{Non-standard_Header}}</div>
 
 <div class="notecard warning">
-<p><strong>IE Only</strong></p>
-This property is IE specific. Although it is well supported by IE, most other browsers no longer support this property. This property should only be used as one of the solutions when you need to be compatible with lower versions of IE, rather than relying on it completely in cross browser scripts.</div>
+<p><strong>Warning:</strong> This property is IE specific. Although it is well supported by IE, most other browsers no longer support this property. This property should only be used as one of the solutions when you need to be compatible with lower versions of IE, rather than relying on it completely in cross browser scripts.</p></div>
 
 <p>A <code>TextRange</code> object represents a fragment of text in a document, similar to the standard defined {{domxref("Range")}} interface.</p>
 
@@ -110,7 +109,7 @@ range.select();
 <h3 id="Use_TextRange_to_Operate_the_Selection">Use TextRange to Operate the Selection</h3>
 
 <div class="notecard warning">
-<p>Valid only under <strong>IE9</strong>. The {{domxref("selection")}} interface should be used first, if the browser allows it.</p>
+<p><strong>Warning:</strong> Valid only under <strong>IE9</strong>. The {{domxref("selection")}} interface should be used first, if the browser allows it.</p>
 </div>
 
 <p>{{domxref("document.selection")}} property returns a non-standard <code>selection</code> object, and the <code>selection.createRange()</code> method creates a <code>TextRange</code> object consistent with the currently selection.</p>

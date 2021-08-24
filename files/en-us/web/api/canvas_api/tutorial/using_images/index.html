@@ -10,9 +10,7 @@ tags:
 ---
 <div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Transformations" )}}</div>
 
-<div class="summary">
 <p>Until now we have created our own <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes">shapes</a> and <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">applied styles</a> to them. One of the more exciting features of {{HTMLElement("canvas")}} is the ability to use images.  These can be used to do dynamic photo compositing or as backdrops of graphs, for sprites in games, and so forth. External images can be used in any format supported by the browser, such as PNG, GIF, or JPEG. You can even use the image produced by other canvas elements on the same page as the source!</p>
-</div>
 
 <p>Importing images into a canvas is basically a two step process:</p>
 
@@ -121,7 +119,7 @@ img.src = 'data:image/gif;base64,R0lGODlhCwALAIAAAAAA3pn/ZiH5BAEAAAEALAAAAAALAAs
 </dl>
 
 <div class="note">
-<p>SVG images must specify a width and height in the root &lt;svg&gt; element.</p>
+<p><strong>Note:</strong> SVG images must specify a width and height in the root &lt;svg&gt; element.</p>
 </div>
 
 <h3 id="Example_A_simple_line_graph">Example: A simple line graph</h3>
@@ -168,7 +166,7 @@ img.src = 'data:image/gif;base64,R0lGODlhCwALAIAAAAAA3pn/ZiH5BAEAAAEALAAAAAALAAs
 <p>In this example, we'll use an image as a wallpaper and repeat it several times on the canvas. This is done by looping and placing the scaled images at different positions. In the code below, the first <code>for</code> loop iterates over the rows. The second <code>for</code> loop iterates over the columns. The image is scaled to one third of its original size, which is 50x38 pixels.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Images can become blurry when scaling up or grainy if they're scaled down too much. Scaling is probably best not done if you've got some text in it which needs to remain legible.</p>
+<p><strong>Note:</strong> Images can become blurry when scaling up or grainy if they're scaled down too much. Scaling is probably best not done if you've got some text in it which needs to remain legible.</p>
 </div>
 
 <pre class="brush: html hidden">&lt;html&gt;

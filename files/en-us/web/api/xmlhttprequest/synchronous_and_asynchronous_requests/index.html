@@ -134,7 +134,7 @@ loadFile("message.txt", 2000, showMessage, "New message!\n");
 
 <h2 id="Synchronous_request">Synchronous request</h2>
 
-<div class="note"><strong>Note:</strong> Starting with Gecko 30.0 {{geckoRelease("30.0")}}, Blink 39.0, and Edge 13, synchronous requests on the main thread have been deprecated due to their negative impact on the user experience.</div>
+<div class="note"><p><strong>Note:</strong> Starting with Gecko 30.0 {{geckoRelease("30.0")}}, Blink 39.0, and Edge 13, synchronous requests on the main thread have been deprecated due to their negative impact on the user experience.</p></div>
 
 <p>Synchronous XHR requests often cause hangs on the web. But developers typically don't notice the problem because the hang only manifests with poor network conditions or when the remote server is slow to respond. Synchronous XHR is now in deprecation state. The recommendation is that developers move away from the synchronous API and instead use asynchronous requests.</p>
 
@@ -198,7 +198,7 @@ if (request.status === 200) {
 };
 </pre>
 
-<div class="note"><strong>Note:</strong> The effect is asynchronous, because of the use of the <code>Worker</code>.</div>
+<div class="note"><p><strong>Note:</strong> The effect is asynchronous, because of the use of the <code>Worker</code>.</p></div>
 
 <p>This pattern can be useful, for example in order to interact with the server in the background, or to preload content. See <a class="internal" href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</a> for examples and details.</p>
 

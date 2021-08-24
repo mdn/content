@@ -17,9 +17,11 @@ tags:
 ---
 <div>{{APIRef("XMLHttpRequest")}}</div>
 
-<p><span class="seoSummary">In this guide, we'll take a look at how to use
+<p>In this guide, we'll take a look at how to use
     {{domxref("XMLHttpRequest")}} to issue <a href="/en-US/docs/Web/HTTP">HTTP</a>
-    requests in order to exchange data between the web site and a server</span>. Examples
+    requests in order to exchange data between the web site and a server.</p>
+
+<p>Examples
   of both common and more obscure use cases for <code>XMLHttpRequest</code> are included.
 </p>
 
@@ -50,9 +52,9 @@ oReq.send();</pre>
     and asynchronous requests</a> page. Do not use synchronous requests outside Web
   Workers.</p>
 
-<div class="note"><strong>Note:</strong> Starting with Gecko 30.0 {{ geckoRelease("30.0")
+<div class="note"><p><strong>Note:</strong> Starting with Gecko 30.0 {{ geckoRelease("30.0")
   }}, synchronous requests on the main thread have been deprecated due to the negative
-  effects to the user experience.</div>
+  effects to the user experience.</p></div>
 
 <div class="notecard note">
   <p><strong>Note:</strong> The constructor function
@@ -213,9 +215,9 @@ function transferCanceled(evt) {
 <p>Lines 3-6 add event listeners for the various events that are sent while performing a
   data transfer using <code>XMLHttpRequest</code>.</p>
 
-<div class="note"><strong>Note:</strong> You need to add the event listeners before
+<div class="note"><p><strong>Note:</strong> You need to add the event listeners before
   calling <code>open()</code> on the request. Otherwise the <code>progress</code> events
-  will not fire.</div>
+  will not fire.</p></div>
 
 <p>The progress event handler, specified by the <code>updateProgress()</code> function in
   this example, receives the total number of bytes to transfer as well as the number of
@@ -238,8 +240,8 @@ oReq.upload.addEventListener("abort", transferCanceled);
 oReq.open();
 </pre>
 
-<div class="note"><strong>Note:</strong> Progress events are not available for the
-  <code>file:</code> protocol.</div>
+<div class="note"><p><strong>Note:</strong> Progress events are not available for the
+  <code>file:</code> protocol.</p></div>
 
 <div class="note">
   <p><strong>Note:</strong> Starting in {{Gecko("9.0")}}, progress events can now be
@@ -660,13 +662,13 @@ print_r($_FILES);
 
 <pre class="brush: js">AJAXSubmit(myForm);</pre>
 
-<div class="note"><strong>Note:</strong> This framework uses the {{domxref("FileReader")}}
+<div class="note"><p><strong>Note:</strong> This framework uses the {{domxref("FileReader")}}
   API to transmit file uploads. This is a recent API and is not implemented in IE9 or
   below. For this reason, the AJAX-only upload is considered <strong>an experimental
     technique</strong>. If you do not need to upload binary files, this framework works
-  fine in most browsers.</div>
+  fine in most browsers.</p></div>
 
-<div class="note"><strong>Note:</strong> The best way to send binary content is via
+<div class="note"><p><strong>Note:</strong> The best way to send binary content is via
   {{jsxref("ArrayBuffer", "ArrayBuffers")}} or {{domxref("Blob", "Blobs")}} in conjuncton
   with the {{domxref("XMLHttpRequest.send()", "send()")}} method and possibly the
   {{domxref("FileReader.readAsArrayBuffer()", "readAsArrayBuffer()")}} method of the
@@ -676,11 +678,11 @@ print_r($_FILES);
   method in conjunction with the {{domxref("FileReader.readAsBinaryString()",
   "readAsBinaryString()")}} method of the <code>FileReader</code> API. As such, the above
   script makes sense only when you are dealing with small files. If you do not intend to
-  upload binary content, consider instead using the <code>FormData</code> API.</div>
+  upload binary content, consider instead using the <code>FormData</code> API.</p></div>
 
-<div class="note"><strong>Note:</strong> The non-standard <code>sendAsBinary</code> method
+<div class="note"><p><strong>Note:</strong> The non-standard <code>sendAsBinary</code> method
   is considered deprecated as of Gecko 31 {{geckoRelease(31)}} and will be removed soon.
-  The standard <code>send(Blob data)</code> method can be used instead.</div>
+  The standard <code>send(Blob data)</code> method can be used instead.</p></div>
 
 <h3 id="Using_FormData_objects">Using FormData objects</h3>
 
@@ -820,7 +822,7 @@ function AJAXSubmit (oFormElement) {
 &lt;/html&gt;</pre>
 
 
-<div class="note"><strong>Note:</strong> As we said,<strong> {{domxref("FormData")}}
+<div class="note"><p><strong>Note:</strong> As we said,<strong> {{domxref("FormData")}}
     objects are not <a
       href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">stringifiable</a>
     objects</strong>. If you want to stringify a submitted data, use <a
@@ -828,7 +830,7 @@ function AJAXSubmit (oFormElement) {
   also that, although in this example there are some <code>file</code> {{
   HTMLElement("input") }} fields, <strong>when you submit a form through the
     <code>FormData</code> API you do not need to use the {{domxref("FileReader")}} API
-    also</strong>: files are automatically loaded and uploaded.</div>
+    also</strong>: files are automatically loaded and uploaded.</p></div>
 
 <h2 id="Get_last_modified_date">Get last modified date</h2>
 

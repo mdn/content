@@ -19,7 +19,9 @@ browser-compat: api.AudioWorklet
 ---
 <p>{{APIRef("Web Audio API")}}{{securecontext_header}}</p>
 
-<p class="summary"><span class="seoSummary">The <strong><code>AudioWorklet</code></strong> interface of the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> is used to supply custom audio processing scripts that execute in a separate thread to provide very low latency audio processing.</span> The worklet's code is run in the {{domxref("AudioWorkletGlobalScope")}} global execution context, using a separate Web Audio thread which is shared by the worklet and other audio nodes.</p>
+<p>The <strong><code>AudioWorklet</code></strong> interface of the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> is used to supply custom audio processing scripts that execute in a separate thread to provide very low latency audio processing.</p>
+
+<p>The worklet's code is run in the {{domxref("AudioWorkletGlobalScope")}} global execution context, using a separate Web Audio thread which is shared by the worklet and other audio nodes.</p>
 
 <p>Access the audio context's instance of <code>AudioWorklet</code> through the {{domxref("BaseAudioContext.audioWorklet")}} property.</p>
 

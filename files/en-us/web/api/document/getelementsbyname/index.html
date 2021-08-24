@@ -55,7 +55,7 @@ browser-compat: api.Document.getElementsByName
   even elements which do not support the <code>name</code> attribute at all.</p>
 
 <div class="warning">
-  <p>The <strong>getElementsByName</strong> method works differently in IE10 and below.
+  <p><strong>Warning:</strong> The <strong>getElementsByName</strong> method works differently in IE10 and below.
     There, <code>getElementsByName()</code> also returns elements that have an <a
       href="/en-US/docs/Web/HTML/Global_attributes/id"><code>id</code> attribute</a> with
     the specified value. Be careful not to use the same string as both a <code>name</code>
@@ -63,13 +63,13 @@ browser-compat: api.Document.getElementsByName
 </div>
 
 <div class="warning">
-  <p>The <strong>getElementsByName</strong> method works differently in IE. There,
+  <p><strong>Warning:</strong> The <strong>getElementsByName</strong> method works differently in IE. There,
     <code>getElementsByName()</code> does not return all elements which may not have a
     <code>name</code> attribute (such as <code>&lt;span&gt;</code>).</p>
 </div>
 
 <div class="warning">
-  <p>Both IE and Edge return an {{domxref("HTMLCollection")}}, not a
+  <p><strong>Warning:</strong> Both IE and Edge return an {{domxref("HTMLCollection")}}, not a
     {{domxref("NodeList")}}</p>
 </div>
 

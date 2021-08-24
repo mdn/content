@@ -549,7 +549,7 @@ tags:
 
 <h2 id="SVG">SVG</h2>
 
-<h3 id="Property_math-style">Presentation attribute: d</h3>
+<h3 id="Presentation_attribute">Presentation attribute: d</h3>
 
 <p>The SVG {{SVGAttr('d')}} attribute, used to define a path to be drawn, is now a <a href="/en-US/docs/Web/SVG/Attribute/Presentation#attr-d">presentation attribute</a>. It can be used as a property in CSS and accepts the values <a href="/en-US/docs/Web/CSS/path()">path()</a> or <code>none</code>. (See {{bug(1340422)}} for more details.)</p>
 
@@ -1255,6 +1255,54 @@ tags:
  </tbody>
 </table>
 
+
+<h4 id="AVIF_compliance_strictness">AVIF compliance strictness</h4>
+
+<p>The <code>image.avif.compliance_strictness</code> preference can be used to control the <em>strictness</em> appliied when processing <a href="/en-US/docs/Web/Media/Formats/Image_types#avif">AVIF</a> images.
+  This allows Firefox users to display images that render on some other browsers, even if they are not strictly compliant.</p>
+
+<p>Permitted values are:</p>
+<ul>
+  <li><code>0</code>: Accept images with specification violations in both recommendations ("should" language) and requirements ("shall" language), provided they can be safely or unambigiously intepretted.</li>
+  <li><code>1</code> (default): Reject violations of requirements, but allow violations of recommendations.</li>
+  <li><code>2</code>: Strict. Reject any violations in requirements or recommendations.</li>
+</ul>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col" style="vertical-align: bottom;">Release channel</th>
+   <th scope="col" style="vertical-align: bottom;">Version added</th>
+   <th scope="col" style="vertical-align: bottom;">Default value</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">Nightly</th>
+   <td>92</td>
+   <td>1</td>
+  </tr>
+  <tr>
+   <th scope="row">Developer Edition</th>
+   <td>92</td>
+   <td>1</td>
+  </tr>
+  <tr>
+   <th scope="row">Beta</th>
+   <td>92</td>
+   <td>1</td>
+  </tr>
+  <tr>
+   <th scope="row">Release</th>
+   <td>92</td>
+   <td>1</td>
+  </tr>
+  <tr>
+   <th scope="row">Preference name</th>
+   <th colspan="2"><code>image.avif.compliance_strictness</code></th>
+  </tr>
+ </tbody>
+</table>
 
 <h4 id="AV1_support_for_Firefox_on_Android">AV1 support for Firefox on Android</h4>
 

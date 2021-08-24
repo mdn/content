@@ -25,7 +25,7 @@ browser-compat: api.GlobalEventHandlers.ontransitionend
     href="/en-US/docs/Web/CSS/CSS_Transitions">CSS transition</a> completes.</p>
 
 <div class="note">
-  <p>If the transition is removed from its target node before the transition completes
+  <p><strong>Note:</strong> If the transition is removed from its target node before the transition completes
     execution, the {{event("transitionend")}} event won't be generated. One way this can
     happen is by changing the value of the {{cssxref("transition-property")}} attribute
     which applies to the target. Another is if the {{cssxref("display")}} attribute is set
@@ -50,7 +50,7 @@ browser-compat: api.GlobalEventHandlers.ontransitionend
   should be the same as the value of {{cssxref("transition-duration")}}.</p>
 
 <div class="note">
-  <p><code>elapsedTime</code> does not include time prior to the transition effect
+  <p><strong>Note:</strong> <code>elapsedTime</code> does not include time prior to the transition effect
     beginning; that means that the value of {{cssxref("transition-delay")}} doesn't affect
     the value of <code>elapsedTime</code>, which is zero until the delay period ends and
     the animation begins.</p>

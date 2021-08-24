@@ -15,7 +15,7 @@ browser-compat: api.InstallEvent
 ---
 <div>{{non-standard_header}}{{deprecated_header}}</div>
 
-<p><span class="seoSummary">The parameter passed into the {{domxref("ServiceWorkerGlobalScope.oninstall", "oninstall")}} handler, the <code>InstallEvent</code> interface represents an install action that is dispatched on the {{domxref("ServiceWorkerGlobalScope")}} of a {{domxref("ServiceWorker")}}. As a child of {{domxref("ExtendableEvent")}}, it ensures that functional events such as {{domxref("FetchEvent")}} are not dispatched during installation. </span></p>
+<p>The parameter passed into the {{domxref("ServiceWorkerGlobalScope.oninstall", "oninstall")}} handler, the <code>InstallEvent</code> interface represents an install action that is dispatched on the {{domxref("ServiceWorkerGlobalScope")}} of a {{domxref("ServiceWorker")}}. As a child of {{domxref("ExtendableEvent")}}, it ensures that functional events such as {{domxref("FetchEvent")}} are not dispatched during installation. </p>
 
 <p>This interface inherits from the {{domxref("ExtendableEvent")}} interface.</p>
 
@@ -48,7 +48,7 @@ browser-compat: api.InstallEvent
 <p>The code snippet also shows a best practice for versioning caches used by the service worker. Although this example has only one cache, you can use this approach for multiple caches. The code maps a shorthand identifier for a cache to a specific, versioned cache name.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Logging statements are visible in Google Chrome via the "Inspect" interface for the relevant service worker accessed via chrome://serviceworker-internals.</p>
+<p><strong>Note:</strong> Logging statements are visible in Google Chrome via the "Inspect" interface for the relevant service worker accessed via chrome://serviceworker-internals.</p>
 </div>
 
 <pre class="brush: js">var CACHE_VERSION = 1;

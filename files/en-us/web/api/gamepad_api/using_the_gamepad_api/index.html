@@ -10,7 +10,7 @@ tags:
 ---
 <p>{{DefaultAPISidebar("Gamepad API")}}</p>
 
-<p><span class="seoSummary">HTML5 introduced many of the necessary components for rich, interactive game development. Technologies like <code>&lt;canvas&gt;</code>, WebGL, <code>&lt;audio&gt;</code>, and <code>&lt;video&gt;</code>, along with JavaScript implementations, have matured to the point where they can now support many tasks previously requiring native code. The Gamepad API is a way for developers and designers to access and use gamepads and other game controllers.</span></p>
+<p>HTML5 introduced many of the necessary components for rich, interactive game development. Technologies like <code>&lt;canvas&gt;</code>, WebGL, <code>&lt;audio&gt;</code>, and <code>&lt;video&gt;</code>, along with JavaScript implementations, have matured to the point where they can now support many tasks previously requiring native code. The Gamepad API is a way for developers and designers to access and use gamepads and other game controllers.</p>
 
 <p>The <a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a> introduces new events on the {{ domxref("Window") }} object for reading gamepad and controller (hereby referred to as <em>gamepad</em>) state. In addition to these events, the API also adds a {{ domxref("Gamepad") }} object, which you can use to query the state of a connected gamepad, and a {{ domxref("navigator.getGamepads()") }} method which you can use to get a list of gamepads known to the page.</p>
 
@@ -97,7 +97,7 @@ window.addEventListener("gamepaddisconnected", function(e) { gamepadHandler(e, f
 </ul>
 
 <div class="notecard note">
-<p><strong>Note</strong>: The Gamepad object is available on the {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} event rather than the {{ domxref("Window") }} object itself, for security reasons. Once we have a reference to it, we can query its properties for information about the current state of the gamepad. Behind the scenes, this object will be updated every time the gamepad's state changes.</p>
+<p><strong>Note:</strong> The Gamepad object is available on the {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} event rather than the {{ domxref("Window") }} object itself, for security reasons. Once we have a reference to it, we can query its properties for information about the current state of the gamepad. Behind the scenes, this object will be updated every time the gamepad's state changes.</p>
 </div>
 
 <h3 id="Using_button_information">Using button information</h3>

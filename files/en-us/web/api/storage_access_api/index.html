@@ -9,7 +9,9 @@ tags:
 ---
 <div>{{DefaultAPISidebar("Storage Access API")}}{{SeeCompatTable}}</div>
 
-<p><span class="seoSummary">The Storage Access API provides a way for embedded, cross-origin content to gain unrestricted access to storage that it would normally only have access to in a first-party context (we refer to this as an origin’s <em>first-party</em> storage).</span> The API provides methods that allow embedded resources to check whether they currently have access to their first-party storage, and to request access to their first-party storage from the user agent.</p>
+<p>The Storage Access API provides a way for embedded, cross-origin content to gain unrestricted access to storage that it would normally only have access to in a first-party context (we refer to this as an origin’s <em>first-party</em> storage).</p>
+
+<p>The API provides methods that allow embedded resources to check whether they currently have access to their first-party storage, and to request access to their first-party storage from the user agent.</p>
 
 <h2 id="Concepts_and_usage">Concepts and usage</h2>
 
@@ -68,7 +70,7 @@ tags:
 </dl>
 
 <div class="note">
-<p><strong>Note</strong>: User interaction propagates to the Promise returned by both of these methods, allowing the callers to take actions that require user interaction without requiring a second click from the user. For example, a caller could open a pop-up window from the resolved Promise without triggering Firefox’s pop-up blocker.</p>
+<p><strong>Note:</strong> User interaction propagates to the Promise returned by both of these methods, allowing the callers to take actions that require user interaction without requiring a second click from the user. For example, a caller could open a pop-up window from the resolved Promise without triggering Firefox’s pop-up blocker.</p>
 </div>
 
 <h2 id="Extensions_to_&lt;iframe&gt;_sandbox">Extensions to &lt;iframe&gt; sandbox</h2>

@@ -15,10 +15,12 @@ browser-compat: api.WindowOrWorkerGlobalScope.fetch
 ---
 <p>{{APIRef("Fetch API")}}</p>
 
-<p><span class="seoSummary">The <code><strong>fetch()</strong></code> method of the
+<p>The <code><strong>fetch()</strong></code> method of the
     {{domxref("WindowOrWorkerGlobalScope")}} mixin starts the process of fetching a
     resource from the network, returning a promise which is fulfilled once the response is
-    available.</span> The promise resolves to the {{domxref("Response")}} object
+    available.</p>
+
+<p>The promise resolves to the {{domxref("Response")}} object
   representing the response to your request. The promise <em>does not</em> reject on HTTP
   errors — it only rejects on network errors. You must use <code>then</code> handlers to
   check for HTTP errors.</p>
@@ -39,7 +41,7 @@ browser-compat: api.WindowOrWorkerGlobalScope.fetch
   rather than the directive of the resources it's retrieving.</p>
 
 <div class="note">
-  <p><strong>Note</strong>: The <code>fetch()</code> method's parameters are identical to
+  <p><strong>Note:</strong> The <code>fetch()</code> method's parameters are identical to
     those of the {{domxref("Request.Request","Request()")}} constructor.</p>
 </div>
 
@@ -94,8 +96,7 @@ browser-compat: api.WindowOrWorkerGlobalScope.fetch
           <dt><code>include</code></dt>
           <dd>Tells browsers to include credentials in both same- and cross-origin requests, and always use any credentials sent back in responses.
             <div class="notecard note">
-              <h4>Note</h4>
-              <p>Credentials may be included in simple and "final" cross-origin requests, but should not be included in <a href="/en-US/docs/Web/HTTP/CORS#preflight_requests_and_credentials">CORS preflight requests</a>.</p>
+              <p><strong>Note:</strong> Credentials may be included in simple and "final" cross-origin requests, but should not be included in <a href="/en-US/docs/Web/HTTP/CORS#preflight_requests_and_credentials">CORS preflight requests</a>.</p>
             </div>
           </dd>
         </dl>

@@ -48,7 +48,7 @@ div.menu-bar li:hover > ul {
 }
 ```
 
-For a beginner-level introduction to the syntax of selectors, see our [guide on CSS Selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors). Be aware that any [syntax](/en-US/docs/Web/CSS/syntax) error in a rule definition invalidates the entire rule. Invalid rules are ignored by the browser. Note that CSS rule definitions are entirely (ASCII) [text-based](https://www.w3.org/TR/css-syntax-3/#intro), whereas DOM-CSS / CSSOM (the rule management system) is [object-based](https://www.w3.org/TR/cssom/#introduction).
+For a beginner-level introduction to the syntax of selectors, see our [guide on CSS Selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors). Be aware that any [syntax](/en-US/docs/Web/CSS/Syntax) error in a rule definition invalidates the entire rule. Invalid rules are ignored by the browser. Note that CSS rule definitions are entirely (ASCII) [text-based](https://www.w3.org/TR/css-syntax-3/#intro), whereas DOM-CSS / CSSOM (the rule management system) is [object-based](https://www.w3.org/TR/cssom/#introduction).
 
 ### At-rule syntax
 
@@ -133,13 +133,13 @@ Combinators are selectors that establish a relationship between two or more simp
 ### Layout
 
 - [Block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context)
-- [Box model](/en-US/docs/Web/CSS/box_model)
-- [Containing block](/en-US/docs/Web/CSS/All_About_The_Containing_Block)
+- [Box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [Containing block](/en-US/docs/Web/CSS/Containing_block)
 - [Layout mode](/en-US/docs/Web/CSS/Layout_mode)
 - [Margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
 - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
 - [Stacking context](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)
-- [Visual formatting model](/en-US/docs/Web/Guide/CSS/Visual_formatting_model)
+- [Visual formatting model](/en-US/docs/Web/CSS/Visual_formatting_model)
 
 ## DOM-CSS / CSSOM
 

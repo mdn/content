@@ -10,9 +10,7 @@ tags:
 ---
 <p>{{ServiceWorkerSidebar}}</p>
 
-<div class="summary">
 <p>This article provides information on getting started with service workers, including basic architecture, registering a service worker, the install and activation process for a new service worker, updating your service worker, cache control and custom responses, all in the context of a simple app with offline functionality. </p>
-</div>
 
 <h2 id="The_premise_of_service_workers">The premise of service workers</h2>
 
@@ -21,8 +19,7 @@ tags:
  The previous attempt — <a href="/en-US/docs/Web/HTML/Using_the_application_cache">AppCache</a> — seemed to be a good idea because it allowed you to specify assets to cache really easily. However, it made many assumptions about what you were trying to do and then broke horribly when your app didn’t follow those assumptions exactly. Read Jake Archibald's (unfortunately-titled but well-written) <a href="https://alistapart.com/article/application-cache-is-a-douchebag">Application Cache is a Douchebag</a> for more details.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>From Firefox 84, AppCache has been removed ({{bug("1619673")}}). It is also planned for removal in Chomium 90, and is deprecated in Safari.</p>
+  <p><strong>Note:</strong> From Firefox 84, AppCache has been removed ({{bug("1619673")}}). It is also planned for removal in Chomium 90, and is deprecated in Safari.</p>
 </div>
 
 <p>Service workers should finally fix these issues. Service worker syntax is more complex than that of AppCache, but the trade off is that you can use JavaScript to control your AppCache-implied behaviors with a fine degree of granularity, allowing you to handle this problem and many more. Using a Service worker you can easily set an app up to use cached assets first, thus providing a default experience even when offline, before then getting more data from the network (commonly known as <a href="http://offlinefirst.org/">Offline First</a>). This is already available with native apps, which is one of the main reasons native apps are often chosen over web apps.</p>
@@ -83,8 +80,7 @@ tags:
  Instead, we could build our own promise to handle this kind of case. (See our <a href="https://github.com/mdn/js-examples/tree/master/promises-test">Promises test</a> example for the source code, or <a href="https://mdn.github.io/js-examples/promises-test/">look at it running live</a>.)</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>A real service worker implementation would use caching and onfetch rather than the XMLHttpRequest API. Those features are not used here so that you can focus on understanding Promises.</p>
+  <p><strong>Note:</strong> A real service worker implementation would use caching and onfetch rather than the XMLHttpRequest API. Those features are not used here so that you can focus on understanding Promises.</p>
 </div>
 
 
@@ -130,12 +126,12 @@ imgLoad('myLittleVader.jpg').then((response) =&gt; {
 <p>This all happens asynchronously.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can also chain promise calls together, for example:<br>
+<p><strong>Note:</strong> You can also chain promise calls together, for example:<br>
  <code>myPromise().then(success, failure).then(success).catch(failure);</code></p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: You can find a lot more out about promises by reading Jake Archibald’s excellent <a href="https://www.html5rocks.com/en/tutorials/es6/promises/">JavaScript Promises: there and back again</a>.</p>
+<p><strong>Note:</strong> You can find a lot more out about promises by reading Jake Archibald’s excellent <a href="https://www.html5rocks.com/en/tutorials/es6/promises/">JavaScript Promises: there and back again</a>.</p>
 </div>
 
 <h2 id="Service_workers_demo">Service workers demo</h2>
@@ -187,11 +183,11 @@ imgLoad('myLittleVader.jpg').then((response) =&gt; {
  A single service worker can control many pages. Each time a page within your scope is loaded, the service worker is installed against that page and operates on it. Bear in mind therefore that you need to be careful with global variables in the service worker script: each page doesn’t get its own unique worker.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Your service worker functions like a proxy server, allowing you to modify requests and responses, replace them with items from its own cache, and more.</p>
+<p><strong>Note:</strong> Your service worker functions like a proxy server, allowing you to modify requests and responses, replace them with items from its own cache, and more.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: One great thing about service workers is that if you use feature detection like we’ve shown above, browsers that don’t support service workers can just use your app online in the normal expected fashion. Furthermore, if you use AppCache and SW on a page, browsers that don’t support SW but do support AppCache will use that, and browsers that support both will ignore the AppCache and let SW take over.</p>
+<p><strong>Note:</strong> One great thing about service workers is that if you use feature detection like we’ve shown above, browsers that don’t support service workers can just use your app online in the normal expected fashion. Furthermore, if you use AppCache and SW on a page, browsers that don’t support SW but do support AppCache will use that, and browsers that support both will ignore the AppCache and let SW take over.</p>
 </div>
 
 <h4 id="Why_is_my_service_worker_failing_to_register">Why is my service worker failing to register?</h4>
@@ -250,11 +246,11 @@ imgLoad('myLittleVader.jpg').then((response) =&gt; {
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: <a href="/en-US/docs/Web/API/Web_Storage_API">localStorage</a> works in a similar way to service worker cache, but it is synchronous, so not allowed in service workers.</p>
+<p><strong>Note:</strong> <a href="/en-US/docs/Web/API/Web_Storage_API">localStorage</a> works in a similar way to service worker cache, but it is synchronous, so not allowed in service workers.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a> can be used inside a service worker for data storage if you require it.</p>
+<p><strong>Note:</strong> <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a> can be used inside a service worker for data storage if you require it.</p>
 </div>
 
 <h3 id="Custom_responses_to_requests">Custom responses to requests</h3>
@@ -435,7 +431,7 @@ event.request.body</pre>
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: You may serve your app from <code>http://localhost</code> (e.g. using <code>me@localhost:/my/app$ <strong>python -m SimpleHTTPServer</strong></code>) for local development. See <a href="https://www.w3.org/TR/service-workers/#security-considerations">Security considerations</a></p>
+<p><strong>Note:</strong> You may serve your app from <code>http://localhost</code> (e.g. using <code>me@localhost:/my/app$ <strong>python -m SimpleHTTPServer</strong></code>) for local development. See <a href="https://www.w3.org/TR/service-workers/#security-considerations">Security considerations</a></p>
 </div>
 
 <h2 id="See_also">See also</h2>

@@ -14,10 +14,9 @@ browser-compat: api.ServiceWorkerContainer.register
 ---
 <div>{{APIRef("Service Workers API")}}</div>
 
-<p><span class="seoSummary">The <strong><code>register()</code></strong> method of the
+<p>The <strong><code>register()</code></strong> method of the
     {{domxref("ServiceWorkerContainer")}} interface creates or updates a
-    {{domxref("ServiceWorkerRegistration")}} for the given <code>scriptURL</code>.</span>
-</p>
+    {{domxref("ServiceWorkerRegistration")}} for the given <code>scriptURL</code>.</p>
 
 <p>If successful, a service worker registration ties the provided script URL to a
   <em>scope</em>, which is subsequently used for navigation matching. You can call this
@@ -51,13 +50,13 @@ browser-compat: api.ServiceWorkerContainer.register
         registration is set to the directory where the service worker script is located.
         See the <a href="#examples">Examples</a> section for more information on how it
         works.</li>
-      <li><code>type</code>: A {{domxref("DOMString")}} 
+      <li><code>type</code>: A {{domxref("DOMString")}}
         specifying the type of worker to create. Valid values are:
         <ul>
           <li><code>'classic'</code>: The loaded service worker is in a standard script. This is the default.</li>
-          <li><code>module</code>: The loaded service worker is in an 
-          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules">ES module</a>
-          and the import statement is available on 
+          <li><code>module</code>: The loaded service worker is in an
+          <a href="/en-US/docs/Web/JavaScript/Guide/Modules">ES module</a>
+          and the import statement is available on
             worker contexts.
           </li>
         </ul>

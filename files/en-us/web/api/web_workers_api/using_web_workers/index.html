@@ -12,7 +12,9 @@ tags:
 ---
 <div>{{DefaultAPISidebar("Web Workers API")}}</div>
 
-<p><span class="seoSummary">Web Workers are a simple means for web content to run scripts in background threads. The worker thread can perform tasks without interfering with the user interface. In addition, they can perform I/O using <code><a class="internal" href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> (although the <code>responseXML</code> and <code>channel</code> attributes are always null) or <code><a href="/en-US/docs/Web/API/Fetch_API">fetch</a></code> (with no such restrictions). Once created, a worker can send messages to the JavaScript code that created it by posting messages to an event handler specified by that code (and vice versa).</span> This article provides a detailed introduction to using web workers.</p>
+<p>Web Workers are a simple means for web content to run scripts in background threads. The worker thread can perform tasks without interfering with the user interface. In addition, they can perform I/O using <code><a class="internal" href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> (although the <code>responseXML</code> and <code>channel</code> attributes are always null) or <code><a href="/en-US/docs/Web/API/Fetch_API">fetch</a></code> (with no such restrictions). Once created, a worker can send messages to the JavaScript code that created it by posting messages to an event handler specified by that code (and vice versa).</p>
+
+<p>This article provides a detailed introduction to using web workers.</p>
 
 <h2 id="Web_Workers_API">Web Workers API</h2>
 
@@ -21,7 +23,7 @@ tags:
 <p>The worker context is represented by a {{domxref("DedicatedWorkerGlobalScope")}} object in the case of dedicated workers (standard workers that are utilized by a single script; shared workers use {{domxref("SharedWorkerGlobalScope")}}). A dedicated worker is only accessible from the script that first spawned it, whereas shared workers can be accessed from multiple scripts.</p>
 
 <div class="note">
-<p><strong>Note</strong>: See <a href="/en-US/docs/Web/API/Web_Workers_API">The Web Workers API landing page</a> for reference documentation on workers and additional guides.</p>
+<p><strong>Note:</strong> See <a href="/en-US/docs/Web/API/Web_Workers_API">The Web Workers API landing page</a> for reference documentation on workers and additional guides.</p>
 </div>
 
 <p>You can run whatever code you like inside the worker thread, with some exceptions. For example, you can't directly manipulate the DOM from inside a worker, or use some default methods and properties of the {{domxref("window")}} object. But you can use a large number of items available under <code>window</code>, including <a href="/en-US/docs/Web/API/WebSockets_API">WebSockets</a>, and data storage mechanisms like <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a>. See <a href="/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">Functions and classes available to workers</a> for more details.</p>
@@ -88,9 +90,9 @@ second.onchange = function() {
 
 <p>Here we grab the message event data and set it as the <code>textContent</code> of the result paragraph, so the user can see the result of the calculation.</p>
 
-<div class="note"><strong>Note</strong>: Notice that <code>onmessage</code> and <code>postMessage()</code> need to be hung off the <code>Worker</code> object when used in the main script thread, but not when used in the worker. This is because, inside the worker, the worker is effectively the global scope.</div>
+<div class="note"><p><strong>Note:</strong> Notice that <code>onmessage</code> and <code>postMessage()</code> need to be hung off the <code>Worker</code> object when used in the main script thread, but not when used in the worker. This is because, inside the worker, the worker is effectively the global scope.</p></div>
 
-<div class="note"><strong>Note</strong>: When a message is passed between the main thread and worker, it is copied or "transferred" (moved), not shared. Read {{anch("Transferring data to and from workers further details", "Transferring data to and from workers: further details")}} for a much more thorough explanation.</div>
+<div class="note"><p><strong>Note:</strong> When a message is passed between the main thread and worker, it is copied or "transferred" (moved), not shared. Read {{anch("Transferring data to and from workers further details", "Transferring data to and from workers: further details")}} for a much more thorough explanation.</p></div>
 
 <h3 id="Terminating_a_worker">Terminating a worker</h3>
 
@@ -132,7 +134,7 @@ importScripts('//example.com/hello.js'); /* You can import scripts from other or
 
 <p>The browser loads each listed script and executes it. Any global objects from each script may then be used by the worker. If the script can't be loaded, <code>NETWORK_ERROR</code> is thrown, and subsequent code will not be executed. Previously executed code (including code deferred using {{domxref("WindowOrWorkerGlobalScope.setTimeout")}}) will still be functional though. Function declarations <strong>after</strong> the <code>importScripts()</code> method are also kept, since these are always evaluated before the rest of the code.</p>
 
-<div class="note"><strong>Note</strong>: Scripts may be downloaded in any order, but will be executed in the order in which you pass the filenames into <code>importScripts()</code> . This is done synchronously; <code>importScripts()</code> does not return until all the scripts have been loaded and executed.</div>
+<div class="note"><p><strong>Note:</strong> Scripts may be downloaded in any order, but will be executed in the order in which you pass the filenames into <code>importScripts()</code> . This is done synchronously; <code>importScripts()</code> does not return until all the scripts have been loaded and executed.</p></div>
 
 <h2 id="Shared_workers">Shared workers</h2>
 
@@ -141,11 +143,11 @@ importScripts('//example.com/hello.js'); /* You can import scripts from other or
 <p>Here we'll concentrate on the differences between dedicated and shared workers. Note that in this example we have two HTML pages, each with JavaScript applied that uses the same single worker file.</p>
 
 <div class="note">
-<p><strong>Note</strong>: If SharedWorker can be accessed from several browsing contexts, all those browsing contexts must share the exact same origin (same protocol, host, and port).</p>
+<p><strong>Note:</strong> If SharedWorker can be accessed from several browsing contexts, all those browsing contexts must share the exact same origin (same protocol, host, and port).</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: In Firefox, shared workers cannot be shared between documents loaded in private and non-private windows ({{bug(1177621)}}).</p>
+<p><strong>Note:</strong> In Firefox, shared workers cannot be shared between documents loaded in private and non-private windows ({{bug(1177621)}}).</p>
 </div>
 
 <h3 id="Spawning_a_shared_worker">Spawning a shared worker</h3>
@@ -159,7 +161,7 @@ importScripts('//example.com/hello.js'); /* You can import scripts from other or
 <p>The port connection needs to be started either implicitly by use of the <code>onmessage</code> event handler or explicitly with the <code>start()</code> method before any messages can be posted. Calling <code>start()</code> is only needed if the <code>message</code> event is wired up via the <code>addEventListener()</code> method.</p>
 
 <div class="note">
-<p><strong>Note</strong>: When using the <code>start()</code> method to open the port connection, it needs to be called from both the parent thread and the worker thread if two-way communication is needed.</p>
+<p><strong>Note:</strong> When using the <code>start()</code> method to open the port connection, it needs to be called from both the parent thread and the worker thread if two-way communication is needed.</p>
 </div>
 
 <h3 id="Sending_messages_to_and_from_a_shared_worker">Sending messages to and from a shared worker</h3>
@@ -533,7 +535,7 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: For more information on transferable objects, performance, and feature-detection for this method, read <a href="https://updates.html5rocks.com/2011/12/Transferable-Objects-Lightning-Fast">Transferable Objects: Lightning Fast!</a> on HTML5 Rocks.</p>
+<p><strong>Note:</strong> For more information on transferable objects, performance, and feature-detection for this method, read <a href="https://updates.html5rocks.com/2011/12/Transferable-Objects-Lightning-Fast">Transferable Objects: Lightning Fast!</a> on HTML5 Rocks.</p>
 </div>
 
 <h2 id="Embedded_workers">Embedded workers</h2>
@@ -703,7 +705,7 @@ onmessage = function(event) {
 <p><img src="worker-source.png"></p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: Worker scripts are loaded when needed, and hence may not be present in the sources list when a page is first loaded.</p>
+<p><strong>Note:</strong> Worker scripts are loaded when needed, and hence may not be present in the sources list when a page is first loaded.</p>
 </div>
 
 <p>In the source pane you can <a href="/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint">set a breakpoint</a> (or <a href="/en-US/docs/Tools/Debugger/Set_a_logpoint">logpoint</a>) in a worker thread in the normal way. When execution is paused, the context of the debugger is updated to show correct <a href="/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint">breakpoints</a>, <a href="/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint#inline_variable_preview">inline variable preview</a>, <a href="/en-US/docs/Tools/Debugger/UI_Tour#call_stack">call stack</a>, etc., just as you'd expect.</p>
@@ -711,7 +713,7 @@ onmessage = function(event) {
 <p><img src="worker-breakpoints-callstack.png"></p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: For more information see <a href="/en-US/docs/Tools/Debugger">Firefox JavaScript Debugger</a>.</p>
+<p><strong>Note:</strong> For more information see <a href="/en-US/docs/Tools/Debugger">Firefox JavaScript Debugger</a>.</p>
 </div>
 
 <h2 id="Functions_and_interfaces_available_in_workers">Functions and interfaces available in workers</h2>
@@ -728,11 +730,11 @@ onmessage = function(event) {
 <p>The main thing you <em>can't</em> do in a Worker is directly affect the parent page. This includes manipulating the DOM and using that page's objects. You have to do it indirectly, by sending a message back to the main script via {{domxref("DedicatedWorkerGlobalScope.postMessage")}}, then actioning the changes from there.</p>
 
 <div class="notecard note">
-<p>You can test whether a method is available to workers using the site: <a href="https://worker-playground.glitch.me/">https://worker-playground.glitch.me/</a> . For example, if you enter <a href="/en-US/docs/Web/API/EventSource">EventSource</a> into the site on Firefox 84 you'll see that this is not supported in service workers, but is in dedicated and shared workers.</p>
+<p><strong>Note:</strong> You can test whether a method is available to workers using the site: <a href="https://worker-playground.glitch.me/">https://worker-playground.glitch.me/</a> . For example, if you enter <a href="/en-US/docs/Web/API/EventSource">EventSource</a> into the site on Firefox 84 you'll see that this is not supported in service workers, but is in dedicated and shared workers.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: For a complete list of functions available to workers, see <a href="/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">Functions and interfaces available to workers</a>.</p>
+<p><strong>Note:</strong> For a complete list of functions available to workers, see <a href="/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">Functions and interfaces available to workers</a>.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>

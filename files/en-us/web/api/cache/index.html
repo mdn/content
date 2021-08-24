@@ -16,20 +16,18 @@ browser-compat: api.Cache
 ---
 <div>{{APIRef("Service Workers API")}}</div>
 
-<p><span class="seoSummary">The <strong><code>Cache</code></strong> interface provides a persistent storage mechanism for <code>{{domxref("Request")}}</code> / <code>{{domxref("Response")}}</code> object pairs that are cached in long lived memory. How long a Cache lives is browser dependent, but a single origin's scripts can typically rely on the presence of a previously populated Cache. Note that the <code>Cache</code> interface is exposed to windowed scopes as well as workers. You don't have to use it in conjunction with service workers, even though it is defined in the service worker spec.</span></p>
+<p>The <strong><code>Cache</code></strong> interface provides a persistent storage mechanism for <code>{{domxref("Request")}}</code> / <code>{{domxref("Response")}}</code> object pairs that are cached in long lived memory. How long a Cache lives is browser dependent, but a single origin's scripts can typically rely on the presence of a previously populated Cache. Note that the <code>Cache</code> interface is exposed to windowed scopes as well as workers. You don't have to use it in conjunction with service workers, even though it is defined in the service worker spec.</p>
 
 <p>An origin can have multiple, named <code>Cache</code> objects. You are responsible for implementing how your script (e.g. in a {{domxref("ServiceWorker")}}) handles <code>Cache</code> updates. Items in a <code>Cache</code> do not get updated unless explicitly requested; they don’t expire unless deleted. Use {{domxref("CacheStorage.open", "CacheStorage.open()")}} to open a specific named <code>Cache</code> object and then call any of the <code>Cache</code> methods to maintain the <code>Cache</code>.</p>
 
 <p>You are also responsible for periodically purging cache entries. Each browser has a hard limit on the amount of cache storage that a given origin can use. Cache quota usage estimates are available via the {{domxref("StorageEstimate")}} API. The browser does its best to manage disk space, but it may delete the Cache storage for an origin. The browser will generally delete all of the data for an origin or none of the data for an origin. Make sure to version caches by name and use the caches only from the version of the script that they can safely operate on. See <a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers#deleting_old_caches">Deleting old caches</a> for more information.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>The key matching algorithm depends on the <a href="https://www.fastly.com/blog/best-practices-for-using-the-vary-header">VARY header</a> in the value. So matching a new key requires looking at both key and value for entries in the Cache.</p>
+  <p><strong>Note:</strong> The key matching algorithm depends on the <a href="https://www.fastly.com/blog/best-practices-for-using-the-vary-header">VARY header</a> in the value. So matching a new key requires looking at both key and value for entries in the Cache.</p>
 </div>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>The caching API doesn't honor HTTP caching headers.</p>
+  <p><strong>Note:</strong> The caching API doesn't honor HTTP caching headers.</p>
 </div>
 
 <p>{{AvailableInWorkers}}</p>
@@ -67,8 +65,7 @@ browser-compat: api.Cache
 <p>In the code example, <code>caches</code> is a property of the {{domxref("ServiceWorkerGlobalScope")}}. It holds the <code>CacheStorage</code> object, by which it can access the {{domxref("CacheStorage")}} interface. This is an implementation of the {{domxref("WindowOrWorkerGlobalScope")}} mixin.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>In Chrome, visit <code>chrome://inspect/#service-workers</code> and click on the "inspect" link below the registered service worker to view logging statements for the various actions the <code><a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js">service-worker.js</a></code> script is performing.</p>
+  <p><strong>Note:</strong> In Chrome, visit <code>chrome://inspect/#service-workers</code> and click on the "inspect" link below the registered service worker to view logging statements for the various actions the <code><a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js">service-worker.js</a></code> script is performing.</p>
 </div>
 
 <pre class="brush: js">var CACHE_VERSION = 1;

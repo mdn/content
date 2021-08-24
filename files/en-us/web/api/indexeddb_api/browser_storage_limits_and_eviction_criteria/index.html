@@ -12,10 +12,10 @@ tags:
 ---
 <div>{{DefaultAPISidebar("IndexedDB")}}</div>
 
-<p class="summary">There are a number of web technologies that store data of one kind or another on the client-side (i.e., on your local disk). The process by which the browser works out how much space to allocate to web data storage and what to delete when that limit is reached is not simple, and differs between browsers. This article describes how browsers determine what local content to purge and when in order to free up needed local storage space.</p>
+<p>There are a number of web technologies that store data of one kind or another on the client-side (i.e., on your local disk). The process by which the browser works out how much space to allocate to web data storage and what to delete when that limit is reached is not simple, and differs between browsers. This article describes how browsers determine what local content to purge and when in order to free up needed local storage space.</p>
 
 <div class="note">
-<p><strong>Note</strong>: The information below should be fairly accurate for most modern browsers, but browser specifics are called out where known. Opera and Chrome should behave the same in all cases. <a href="http://www.opera.com/mobile/mini">Opera Mini</a> (still presto-based, server-side rendering) doesn't store any data on the client.</p>
+<p><strong>Note:</strong> The information below should be fairly accurate for most modern browsers, but browser specifics are called out where known. Opera and Chrome should behave the same in all cases. <a href="http://www.opera.com/mobile/mini">Opera Mini</a> (still presto-based, server-side rendering) doesn't store any data on the client.</p>
 </div>
 
 <h2 id="What_technologies_use_browser_data_storage">What technologies use browser data storage?</h2>
@@ -30,11 +30,11 @@ tags:
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: In Firefox, <a href="/en-US/docs/Web/API/Web_Storage_API">Web Storage</a> will soon start to use the same storage management tools too, as described in this document.</p>
+<p><strong>Note:</strong> In Firefox, <a href="/en-US/docs/Web/API/Web_Storage_API">Web Storage</a> will soon start to use the same storage management tools too, as described in this document.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: In private browsing mode, most data storage is not supported. Local storage data and cookies are still stored, but they are ephemeral — the data is deleted when you close the last private browsing window.</p>
+<p><strong>Note:</strong> In private browsing mode, most data storage is not supported. Local storage data and cookies are still stored, but they are ephemeral — the data is deleted when you close the last private browsing window.</p>
 </div>
 
 <p>The "last access time" of origins is updated when any of these are activated/deactivated — origin eviction will delete data for all these quota clients.</p>
@@ -69,20 +69,20 @@ tags:
 
 <div>
 <div class="note">
-<p><strong>Note</strong>: After introducing <a href="/en-US/docs/Web/API/Storage_API">Storage API</a>, the "permanent" folder can be considered obsolete; the "permanent" folder only stores IndexedDB persistent-type databases. It doesn't matter if box mode is "best-effort" or "persistent" — data is stored under &lt;profile&gt;/storage/default.</p>
+<p><strong>Note:</strong> After introducing <a href="/en-US/docs/Web/API/Storage_API">Storage API</a>, the "permanent" folder can be considered obsolete; the "permanent" folder only stores IndexedDB persistent-type databases. It doesn't matter if box mode is "best-effort" or "persistent" — data is stored under &lt;profile&gt;/storage/default.</p>
 </div>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: In Firefox, you can find your profile folder by entering <code>about:support</code> in the URL bar, and pressing the <em>Show in...</em> button (e.g., <em>Show in Finder</em> on Mac OS X) next to the <em>Profile Folder</em> title.</p>
+<p><strong>Note:</strong> In Firefox, you can find your profile folder by entering <code>about:support</code> in the URL bar, and pressing the <em>Show in...</em> button (e.g., <em>Show in Finder</em> on Mac OS X) next to the <em>Profile Folder</em> title.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: If you are looking around in your Profile at the data stored, you might see a fourth folder: <code>persistent</code>. Basically, the <code>persistent</code> folder was renamed to <code>permanent</code> a while ago to keep upgrades/migration simpler.</p>
+<p><strong>Note:</strong> If you are looking around in your Profile at the data stored, you might see a fourth folder: <code>persistent</code>. Basically, the <code>persistent</code> folder was renamed to <code>permanent</code> a while ago to keep upgrades/migration simpler.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: Users shouldn’t add their own directories or files under <code>&lt;profile&gt;/storage</code>. This will cause storage initialization to fail; for example, {{domxref("IDBFactory.open()", "open()")}} will fire an error event.</p>
+<p><strong>Note:</strong> Users shouldn’t add their own directories or files under <code>&lt;profile&gt;/storage</code>. This will cause storage initialization to fail; for example, {{domxref("IDBFactory.open()", "open()")}} will fire an error event.</p>
 </div>
 
 <h2 id="Storage_limits">Storage limits</h2>
@@ -110,15 +110,15 @@ tags:
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: The group limit can't be more than the global limit, despite the minimum group limit mentioned above. If you had a really low memory situation where the global limit was, say, 8 MB, then the group limit would also be 8 MB.</p>
+<p><strong>Note:</strong> The group limit can't be more than the global limit, despite the minimum group limit mentioned above. If you had a really low memory situation where the global limit was, say, 8 MB, then the group limit would also be 8 MB.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: If the group limit is exceeded, or if origin eviction couldn't free enough space, the browser will throw a <code>QuotaExceededError</code>.</p>
+<p><strong>Note:</strong> If the group limit is exceeded, or if origin eviction couldn't free enough space, the browser will throw a <code>QuotaExceededError</code>.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: In Chrome the soft and hard storage quota limits has changed since <strong>M66</strong>. More information can be found <a href="https://chromium.googlesource.com/chromium/src/+/refs/heads/master/storage/browser/quota/quota_settings.cc#68">here.</a></p>
+<p><strong>Note:</strong> In Chrome the soft and hard storage quota limits has changed since <strong>M66</strong>. More information can be found <a href="https://chromium.googlesource.com/chromium/src/+/refs/heads/master/storage/browser/quota/quota_settings.cc#68">here.</a></p>
 </div>
 
 <h2 id="LRU_policy">LRU policy</h2>

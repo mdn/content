@@ -15,15 +15,15 @@ browser-compat: api.CacheStorage.open
 ---
 <p>{{APIRef("Service Workers API")}}</p>
 
-<p><span class="seoSummary">The <strong><code>open()</code></strong> method of the
+<p>The <strong><code>open()</code></strong> method of the
     {{domxref("CacheStorage")}} interface returns a {{jsxref("Promise")}} that resolves to
-    the {{domxref("Cache")}} object matching the <code>cacheName</code>.</span></p>
+    the {{domxref("Cache")}} object matching the <code>cacheName</code>.</p>
 
 <p>You can access <code>CacheStorage</code> through the global
   {{domxref("WindowOrWorkerGlobalScope.caches", "caches")}} property.</p>
 
 <div class="note">
-  <p><strong>Note</strong>: If the specified {{domxref("Cache")}} does not exist, a new
+  <p><strong>Note:</strong> If the specified {{domxref("Cache")}} does not exist, a new
     cache is created with that <code>cacheName</code> and a {{jsxref("Promise")}} that
     resolves to this new {{domxref("Cache")}} object is returned.</p>
 </div>

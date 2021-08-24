@@ -12,14 +12,14 @@ browser-compat: api.Report
 ---
 <div>{{SeeCompatTable}}{{APIRef("Reporting API")}}</div>
 
-<p class="summary">The <code>Report</code> interface of the <a href="/en-US/docs/Web/API/Reporting_API">Reporting API</a> represents a single report.</p>
+<p>The <code>Report</code> interface of the <a href="/en-US/docs/Web/API/Reporting_API">Reporting API</a> represents a single report.</p>
 
-<p class="summary">Reports can be accessed in a number of ways:</p>
+<p>Reports can be accessed in a number of ways:</p>
 
 <ul>
- <li class="summary">Via the {{domxref("ReportingObserver.takeRecords()")}} method — this returns all reports in an observer's report queue, and then empties the queue.</li>
- <li class="summary">Via the <code>reports</code> parameter of the callback function passed into the <code><a href="/en-US/docs/Web/API/ReportingObserver/ReportingObserver">ReportingObserver()</a></code> constructor upon creation of a new observer instance. This contains the list of reports currently contained in the observer's report queue.</li>
- <li class="summary">By sending requests to the endpoints defined via the {{httpheader("Report-To")}} HTTP header.</li>
+ <li>Via the {{domxref("ReportingObserver.takeRecords()")}} method — this returns all reports in an observer's report queue, and then empties the queue.</li>
+ <li>Via the <code>reports</code> parameter of the callback function passed into the <code><a href="/en-US/docs/Web/API/ReportingObserver/ReportingObserver">ReportingObserver()</a></code> constructor upon creation of a new observer instance. This contains the list of reports currently contained in the observer's report queue.</li>
+ <li>By sending requests to the endpoints defined via the {{httpheader("Report-To")}} HTTP header.</li>
 </ul>
 
 <h2 id="Properties">Properties</h2>

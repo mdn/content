@@ -15,7 +15,7 @@ browser-compat: javascript.builtins.Intl.Collator.compare
 {{JSRef}}
 
 The **`Intl.Collator.prototype.compare()`** method compares two
-strings according to the sort order of this {{jsxref("Intl/Collator")}} object.
+strings according to the sort order of this {{jsxref("Intl.Collator")}} object.
 
 {{EmbedInteractiveExample("pages/js/intl-collator-prototype-compare.html")}}
 
@@ -36,7 +36,7 @@ compare(string1, string2)
 
 The `compare` getter function returns a number indicating how
 `string1` and `string2` compare to each
-other according to the sort order of this {{jsxref("Intl/Collator")}} object: a negative
+other according to the sort order of this {{jsxref("Intl.Collator")}} object: a negative
 value if `string1` comes before `string2`;
 a positive value if `string1` comes after
 `string2`; 0 if they are considered equal.

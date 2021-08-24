@@ -43,7 +43,7 @@ canvas.requestPointerLock()
 </pre>
 
 <div class="note">
-<p>If a user has exited pointer lock via the <a href="https://w3c.github.io/pointerlock/#dfn-default-unlock-gesture">default unlock gesture</a>, or pointer lock has not previously been entered for this document, an event generated as a result of an <a href="https://w3c.github.io/pointerlock/#dfn-engagement-gesture">engagement gesture</a> must be received by the document before <a href="https://w3c.github.io/pointerlock/#dom-element-requestpointerlock"><code>requestPointerLock</code></a> will succeed. (from <a href="https://w3c.github.io/pointerlock/#extensions-to-the-element-interface">https://w3c.github.io/pointerlock/#extensions-to-the-element-interface</a>)</p>
+<p><strong>Note:</strong> If a user has exited pointer lock via the <a href="https://w3c.github.io/pointerlock/#dfn-default-unlock-gesture">default unlock gesture</a>, or pointer lock has not previously been entered for this document, an event generated as a result of an <a href="https://w3c.github.io/pointerlock/#dfn-engagement-gesture">engagement gesture</a> must be received by the document before <a href="https://w3c.github.io/pointerlock/#dom-element-requestpointerlock"><code>requestPointerLock</code></a> will succeed. (from <a href="https://w3c.github.io/pointerlock/#extensions-to-the-element-interface">https://w3c.github.io/pointerlock/#extensions-to-the-element-interface</a>)</p>
 </div>
 
 <h3 id="pointerLockElement_and_exitPointerLock">pointerLockElement and exitPointerLock()</h3>
@@ -102,7 +102,7 @@ function lockError(e) {
   alert("Pointer lock failed");
 }</pre>
 
-<div class="note"><strong>Note</strong>: until Firefox 50 the above events were prefixed with <code>moz</code> in Firefox.</div>
+<div class="note"><p><strong>Note:</strong> until Firefox 50 the above events were prefixed with <code>moz</code> in Firefox.</p></div>
 
 <h2 id="Extensions_to_mouse_events">Extensions to mouse events</h2>
 
