@@ -20,9 +20,9 @@ browser-compat: api.AudioWorkletProcessor.AudioWorkletProcessor
 
 <h2 id="Syntax">Syntax</h2>
 
-<div class="note">The <code>AudioWorkletProcessor</code> and classes that derive from it
+<div class="note"><p><strong>Note:</strong> The <code>AudioWorkletProcessor</code> and classes that derive from it
   cannot be instantiated directly from a user-supplied code. Instead, they are created
-  only internally by the creation of an associated {{domxref("AudioWorkletNode")}}s.</div>
+  only internally by the creation of an associated {{domxref("AudioWorkletNode")}}s.</p></div>
 
 <pre class="brush: js">new AudioWorkletProcessor(<em>options</em>);
 </pre>
@@ -31,7 +31,7 @@ browser-compat: api.AudioWorkletProcessor.AudioWorkletProcessor
 
 <dl>
   <dt><code>options</code></dt>
-  <dd>An object that is passed as <em>options</em> parameter to the 
+  <dd>An object that is passed as <em>options</em> parameter to the
     {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode constructor")}} and
     passed through <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">the structured clone algorithm</a>.
     Available properties are as follows:
@@ -48,7 +48,7 @@ browser-compat: api.AudioWorkletProcessor.AudioWorkletProcessor
       <dt><code>processorOptions</code> {{optional_inline}}</dt>
       <dd>Any additional data that can be used for custom initialization of the underlying {{domxref("AudioWorkletProcessor")}}.</dd>
     </dl>
-    
+
     Note that there are default values for the first two properties, so even if there are no
     <em>options</em> object passed to the {{domxref("AudioWorkletNode.AudioWorkletNode",
     "AudioWorkletNode constructor")}}, the <em>options</em> object passed by the node to

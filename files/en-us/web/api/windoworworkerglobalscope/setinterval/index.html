@@ -436,11 +436,11 @@ window.setInterval = function (vCallback, nDelay /*, argumentToPass1, argumentTo
   } : vCallback, nDelay);
 };</pre>
 
-<div class="note">These two replacements also enable the HTML5 standard passage of
+<div class="note"><p><strong>Note:</strong> These two replacements also enable the HTML5 standard passage of
   arbitrary arguments to the callback functions of timers in IE. So they can be used as
   <em>non-standard-compliant</em> polyfills also. See the <a
     href="#callback_arguments">callback arguments paragraph</a> for a
-  <em>standard-compliant</em> polyfill.</div>
+  <em>standard-compliant</em> polyfill.</p></div>
 
 <p>New feature test:</p>
 
@@ -460,7 +460,7 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // prints "two" after 2,5 s
   problem is <a href="#minidaemon_-_a_framework_for_managing_timers">the following
     framework</a>.</p>
 
-<div class="note">JavaScript 1.8.5 introduces the
+<div class="note"><p><strong>Note:</strong> JavaScript 1.8.5 introduces the
   <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">Function.prototype.bind()</a></code>
   method, which lets you specify the value that should be used as <code>this</code> for
   all calls to a given function. This lets you easily bypass problems where it's unclear
@@ -468,7 +468,7 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // prints "two" after 2,5 s
   ES2015 supports <a
     href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow
     functions</a>, with lexical this allowing us to write setInterval( () =&gt;
-  this.myMethod) if we're inside myArray method.</div>
+  this.myMethod) if we're inside myArray method.</p></div>
 
 <h2 id="MiniDaemon_-_A_framework_for_managing_timers">MiniDaemon - A framework for
   managing timers</h2>
@@ -555,9 +555,9 @@ MiniDaemon.prototype.start = function (bReverse) {
 };
 </pre>
 
-<div class="note">MiniDaemon passes arguments to the callback function. If you want to
+<div class="note"><p><strong>Note:</strong> MiniDaemon passes arguments to the callback function. If you want to
   work on it with browsers that natively do not support this feature, use one of the
-  methods proposed above.</div>
+  methods proposed above.</p></div>
 
 <h3 id="Syntax_2">Syntax</h3>
 
