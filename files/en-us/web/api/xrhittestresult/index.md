@@ -22,7 +22,7 @@ None.
 ## Methods
 
 - {{domxref("XRHitTestResult.createAnchor()")}}
-  - : Creates an {{domxref("XRAnchor")}} from the hit test result.
+  - : Returns a {{jsxref("Promise")}} that resolves with an {{domxref("XRAnchor")}} created from the hit test result.
 - {{domxref("XRHitTestResult.getPose()")}}
   - : Returns the {{domxref("XRPose")}} of the hit test result relative to the given base space.
 
@@ -30,7 +30,7 @@ None.
 
 ### Getting `XRHitTestResult` objects within the frame loop
 
-To get hit test results, you need to provide a {{domxref("XRHitTestSource")}}. See {{domxref("XRSession.requestHitTestSource()")}} for more information.
+In addition to showing `XRHitTestResult` within a frame loop, this example demonstrates a few things you must do before requesting this object. While setting up the session, specify `"hit-test"` as one of the `requiredFeatures`. Next, call {{domxref("XRSession.requestHitTestSource()")}} with the desired references. (Obtain this by calling {{domxref("XRSession.requestReferenceSpace()")}}.) This returns a {{domxref("XRHitTestSource")}}. That you will use in the frame loop to get `XRHitTestResult` objects. 
 
 ```js
 const xrSession = navigator.xr.requestSession("immersive-ar", {
@@ -68,7 +68,7 @@ if (hitTestResults.length > 0) {
 
 ### Creating an anchor from a hit test result
 
-Once you found intersections on real-world surfaces using hit testing, you can create an {{domxref("XRAnchor")}} to attach a virtual object to that location.
+Once you find intersections on real-world surfaces using hit testing, you can create an {{domxref("XRAnchor")}} to attach a virtual object to that location.
 
 ```js
 hitTestResult.createAnchor().then((anchor) => {

@@ -24,7 +24,7 @@ getPose(baseSpace)
 ### Parameters
 
 - `baseSpace`
-  - : An {{domxref("XRSpace")}} to use as the base or origin for the purposes of computing the relative position and orientation.
+  - : An {{domxref("XRSpace")}} to use as the base or origin for computing the relative position and orientation of hit test results.
 
 ### Return value
 
@@ -34,7 +34,7 @@ Returns an {{domxref("XRPose")}} object.
 
 ### Getting the hit test result's pose
 
-Use `getPose()` to query a single hit test result's pose.
+The following example uses `getPose()` to query a single hit test result's pose.
 
 ```js
 let hitTestResults = xrFrame.getHitTestResults(hitTestSource);

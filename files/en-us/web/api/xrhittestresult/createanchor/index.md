@@ -27,13 +27,13 @@ None.
 
 ### Return value
 
-A {{jsxref("Promise")}} resolving to an {{domxref("XRAnchor")}} object.
+A {{jsxref("Promise")}} resolving with an {{domxref("XRAnchor")}} object.
 
 ## Examples
 
 ### Creating an anchor from a hit test result
 
-Once you found intersections on real-world surfaces by using hit testing, you can create an {{domxref("XRAnchor")}} to attach a virtual object to that location.
+The following example starts with an {{domxref("XRHitTestResult")}} retrieved by calling {{domxref("XRFrame.getHitTestResults()")}}. After calling `createAnchor()`, the Promise resolves with an {{domxref("XRAnchor")}} to attach a virtual object to that location.
 
 ```js
 hitTestResult.createAnchor().then((anchor) => {
