@@ -84,7 +84,7 @@ DBOpenRequest.onsuccess = function(event) {
 // been created before, or a new version number has been
 // submitted via the window.indexedDB.open line above
 DBOpenRequest.onupgradeneeded = function(event) {
-  var db = event.target.result;
+  var db = DBOpenRequest.result;
 
   db.onerror = function(event) {
     note.innerHTML += '&lt;li&gt;Error loading database.&lt;/li&gt;';
