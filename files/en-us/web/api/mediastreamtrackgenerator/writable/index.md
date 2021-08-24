@@ -9,37 +9,32 @@ tags:
   - MediaStreamTrackGenerator
 browser-compat: api.MediaStreamTrackGenerator.writable
 ---
-{{DefaultAPISidebar("")}}
+{{DefaultAPISidebar("Insertable Streams for MediaStreamTrack API")}}
 
-The **`writable`**  property of the {{domxref("MediaStreamTrackGenerator")}} interface 
+The **`writable`**  property of the {{domxref("MediaStreamTrackGenerator")}} interface returns a {{domxref("WritableStream")}}. This allows the writing of media frames to the `MediaStreamTrackGenerator`. The frames will be audio or video, the type is dictated by the kind of `MediaStreamTrackGenerator` that has been created.
 
 ## Syntax
 
 ```js
-let awritable = MediaStreamTrackGenerator.writable;
-// Remove this one if the property is read only.
-MediaStreamTrackGenerator.writable = a;
+let writable = MediaStreamTrackGenerator.writable;
 ```
 
 ### Value
 
-
+A {{domxref("WritableStream")}}.
 
 ## Examples
 
-Fill in a simple example that nicely shows a typical usage of the API, then perhaps some more complex examples (see our guide on how to add [code examples](/en-US/docs/MDN/Contribute/Structures/Code_examples) for more information).
-
-This text should be replaced with a brief description of what the example demonstrates.
+In the following example video frames are transformed then written to the {{domxref("WritableStream")}} accessed with `MediaStreamTrackGenerator.writable`.
 
 ```js
-my code block
+const trackProcessor = new MediaStreamTrackProcessor({ track: videoTrack });
+const trackGenerator = new MediaStreamTrackGenerator({ kind: 'video' });
+
+/* */
+
+trackProcessor.readable.pipeThrough(transformer).pipeTo(trackGenerator.writable);
 ```
-
-And/or include a list of links to useful code samples that live elsewhere:
-
-*   x
-*   y
-*   z
 
 ## Specifications
 

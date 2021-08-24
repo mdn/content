@@ -8,41 +8,42 @@ tags:
   - MediaStreamTrackProcessor
 browser-compat: api.MediaStreamTrackProcessor
 ---
-{{DefaultAPISidebar("")}}
+{{DefaultAPISidebar("Insertable Streams for MediaStreamTrack API")}}
 
-The **`MediaStreamTrackProcessor`** interface of the {{domxref('','','',' ')}} 
+The **`MediaStreamTrackProcessor`** interface of the {{domxref('Insertable Streams for MediaStreamTrack API')}} consumes a {{domxref("MediaStreamTrack")}} object's source and generates a stream of media frames.
 
-## Description
+## Constructor
 
- 
+- {{domxref("MediaStreamTrackProcessor.MediaStreamTrackProcessor()")}}
+  - : Creates a new `MediaStreamTrackProcessor` object.
 
 ## Properties
 
-
-
-### Event handlers
-
-
-
-## Methods
-
-
+- {{domxref("MediaStreamTrackProcessor.readable")}}
+  - : A {{domxref("ReadableStream")}}.
 
 ## Examples
 
-Fill in a simple example that nicely shows a typical usage of the API, then perhaps some more complex examples (see our guide on how to add [code examples](/en-US/docs/MDN/Contribute/Structures/Code_examples) for more information).
-
-This text should be replaced with a brief description of what the example demonstrates.
+The following example is from the article [Insertable streams for MediaStreamTrack](https://web.dev/mediastreamtrack-insertable-media-processing/), and demonstrates a barcode scanner application, which transforms the stream accessed via {{domxref("MediaStreamTrackProcessor.readable")}}.
 
 ```js
-my code block
+const stream = await getUserMedia({ video: true });
+const videoTrack = stream.getVideoTracks()[0];
+
+const trackProcessor = new MediaStreamTrackProcessor({ track: videoTrack });
+const trackGenerator = new MediaStreamTrackGenerator({ kind: 'video' });
+
+const transformer = new TransformStream({
+  async transform(videoFrame, controller) {
+    const barcodes = await detectBarcodes(videoFrame);
+    const newFrame = highlightBarcodes(videoFrame, barcodes);
+    videoFrame.close();
+    controller.enqueue(newFrame);
+  },
+});
+
+trackProcessor.readable.pipeThrough(transformer).pipeTo(trackGenerator.writable);
 ```
-
-And/or include a list of links to useful code samples that live elsewhere:
-
-*   x
-*   y
-*   z
 
 ## Specifications
 

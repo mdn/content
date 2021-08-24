@@ -9,37 +9,32 @@ tags:
   - MediaStreamTrackProcessor
 browser-compat: api.MediaStreamTrackProcessor.readable
 ---
-{{DefaultAPISidebar("")}}
+{{DefaultAPISidebar("Insertable Streams for MediaStreamTrack API")}}
 
-The **`readable`**  property of the {{domxref("MediaStreamTrackProcessor")}} interface 
+The **`readable`**  property of the {{domxref("MediaStreamTrackProcessor")}} interface returns a {{domxref("ReadableStream")}}.
 
 ## Syntax
 
 ```js
-let areadable = MediaStreamTrackProcessor.readable;
-// Remove this one if the property is read only.
-MediaStreamTrackProcessor.readable = a;
+let readable = MediaStreamTrackProcessor.readable;
 ```
 
 ### Value
 
-
+A {{domxref("ReadableStream")}}.
 
 ## Examples
 
-Fill in a simple example that nicely shows a typical usage of the API, then perhaps some more complex examples (see our guide on how to add [code examples](/en-US/docs/MDN/Contribute/Structures/Code_examples) for more information).
-
-This text should be replaced with a brief description of what the example demonstrates.
+In the following example video frames from the {{domxref("ReadableStream")}} are transformed.
 
 ```js
-my code block
+const trackProcessor = new MediaStreamTrackProcessor({ track: videoTrack });
+const trackGenerator = new MediaStreamTrackGenerator({ kind: 'video' });
+
+/* */
+
+trackProcessor.readable.pipeThrough(transformer).pipeTo(trackGenerator.writable);
 ```
-
-And/or include a list of links to useful code samples that live elsewhere:
-
-*   x
-*   y
-*   z
 
 ## Specifications
 

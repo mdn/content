@@ -8,31 +8,30 @@ tags:
   - MediaStreamTrackProcessor
 browser-compat: api.MediaStreamTrackProcessor.MediaStreamTrackProcessor
 ---
-{{DefaultAPISidebar("")}}
+{{DefaultAPISidebar("Insertable Streams for MediaStreamTrack API")}}
 
-The **`MediaStreamTrackProcessor()`** constructor creates a new {{domxref("MediaStreamTrackProcessor")}} object which 
+The **`MediaStreamTrackProcessor()`** constructor creates a new {{domxref("MediaStreamTrackProcessor")}} object which
 
 ## Syntax
 
 ```js
-new MediaStreamTrackProcessor();
+new MediaStreamTrackProcessor(init);
 ```
 
 ### Parameters
 
-
+- `track`
+  - : A {{domxref("MediaStreamTrack")}}.
+- `maxBufferSize`{{Optional_Inline}}
+  - : An integer specifying the maximum number of media frames to be buffered.
 
 ## Examples
 
-Fill in a simple example that nicely shows a typical usage of the API, then perhaps some more complex examples (see our guide on how to add [code examples](/en-US/docs/MDN/Contribute/Structures/Code_examples) for more information).
-
-This text should be replaced with a brief description of what the example demonstrates.
+In the following example a new `MediaStreamTrackProcessor` is created.
 
 ```js
-my code block
+const trackProcessor = new MediaStreamTrackProcessor({ track: videoTrack });
 ```
-
-And/or include a list of links to useful code samples that live elsewhere:
 
 ## Specifications
 

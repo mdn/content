@@ -8,41 +8,50 @@ tags:
   - MediaStreamTrackGenerator
 browser-compat: api.MediaStreamTrackGenerator
 ---
-{{DefaultAPISidebar("")}}
+{{DefaultAPISidebar("Insertable Streams for MediaStreamTrack API")}}
 
-The **`MediaStreamTrackGenerator`** interface of the {{domxref('','','',' ')}} 
+The **`MediaStreamTrackGenerator`** interface of the {{domxref('Insertable Streams for MediaStreamTrack API')}} creates a {{domxref("WritableStream")}} that acts as a {{domxref("MediaStreamTrack")}} source.
 
-## Description
+The object consumes a stream of media frames as input, which can be audio or video frames.
 
- 
+## Constructor
+
+- {{domxref("MediaStreamTrackGenerator.MediaStreamTrackGenerator()")}}
+  - : Creates a new `MediaStreamTrackGenerator` object which accepts either {{domxref("VideoFrame")}} or {{domxref("AudioFrame")}} objects.
 
 ## Properties
 
+_This interface also inherits properties from {{domxref("MediaStreamTrack")}}._
 
-
-### Event handlers
-
-
+- {{domxref("MediaStreamTrackGenerator.writable")}}
+  - : A {{domxref("WritableStream")}}.
 
 ## Methods
 
-
+_This interface doesn't implement any specific methods, but inherits methods from {{domxref("MediaStreamTrack")}}._
 
 ## Examples
 
-Fill in a simple example that nicely shows a typical usage of the API, then perhaps some more complex examples (see our guide on how to add [code examples](/en-US/docs/MDN/Contribute/Structures/Code_examples) for more information).
-
-This text should be replaced with a brief description of what the example demonstrates.
+The following example is from the article [Insertable streams for MediaStreamTrack](https://web.dev/mediastreamtrack-insertable-media-processing/), and demonstrates a barcode scanner application, which identifies and processes barcodes before writing the transformed frames to the writablestream of {{domxref("MediaStreamTrackGenerator.writable")}}.
 
 ```js
-my code block
+const stream = await getUserMedia({ video: true });
+const videoTrack = stream.getVideoTracks()[0];
+
+const trackProcessor = new MediaStreamTrackProcessor({ track: videoTrack });
+const trackGenerator = new MediaStreamTrackGenerator({ kind: 'video' });
+
+const transformer = new TransformStream({
+  async transform(videoFrame, controller) {
+    const barcodes = await detectBarcodes(videoFrame);
+    const newFrame = highlightBarcodes(videoFrame, barcodes);
+    videoFrame.close();
+    controller.enqueue(newFrame);
+  },
+});
+
+trackProcessor.readable.pipeThrough(transformer).pipeTo(trackGenerator.writable);
 ```
-
-And/or include a list of links to useful code samples that live elsewhere:
-
-*   x
-*   y
-*   z
 
 ## Specifications
 
@@ -51,4 +60,3 @@ And/or include a list of links to useful code samples that live elsewhere:
 ## Browser compatibility
 
 {{Compat}}
-
