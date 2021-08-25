@@ -11,18 +11,14 @@ tags:
 ---
 <p>{{PreviousNext("Learn/WebGL/By_example/Hello_GLSL","Learn/WebGL/By_example/Textures_from_code")}}</p>
 
-<div id="hello-vertex-attributes">
-<p id="hello-vertex-attributes-summary">This WebGL example demonstrates how to combine shader programming and user interaction by sending user input to the shader using vertex attributes.</p>
+<p>This WebGL example demonstrates how to combine shader programming and user interaction by sending user input to the shader using vertex attributes.</p>
 
-<p>{{EmbedLiveSample("hello-vertex-attributes-source",660,425)}}</p>
+<h2 id="Hello_World_program_in_GLSL">Hello World program in GLSL</h2>
 
-<div id="hello-vertex-attributes-intro">
-<h3 id="Hello_World_program_in_GLSL">Hello World program in GLSL</h3>
+<p>{{EmbedLiveSample("Hello_World_program_in_GLSL",660,425)}}</p>
 
 <p>How to send input to a shader program by saving data in GPU memory.</p>
-</div>
 
-<div id="hello-vertex-attributes-source">
 <pre class="brush: html hidden">&lt;p&gt;First encounter with attributes and sending data to GPU. Click
 on the canvas to change the horizontal position of the square.&lt;/p&gt;
 </pre>
@@ -75,7 +71,7 @@ void main() {
 <pre class="brush: js hidden">;(function(){
 </pre>
 
-<pre class="brush: js" id="livesample-js">"use strict"
+<pre class="brush: js">"use strict"
 window.addEventListener("load", setupWebGL, false);
 var gl,
   program;
@@ -169,7 +165,5 @@ function cleanup() {
 </pre>
 
 <p>The source code of this example is also available on <a href="https://github.com/idofilin/webgl-by-example/tree/master/hello-vertex-attributes">GitHub</a>.</p>
-</div>
-</div>
 
 <p>{{PreviousNext("Learn/WebGL/By_example/Hello_GLSL","Learn/WebGL/By_example/Textures_from_code")}}</p>
