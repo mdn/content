@@ -10,7 +10,7 @@ browser-compat: api.MediaStreamTrackProcessor.MediaStreamTrackProcessor
 ---
 {{DefaultAPISidebar("Insertable Streams for MediaStreamTrack API")}}
 
-The **`MediaStreamTrackProcessor()`** constructor creates a new {{domxref("MediaStreamTrackProcessor")}} object which
+The **`MediaStreamTrackProcessor()`** constructor creates a new {{domxref("MediaStreamTrackProcessor")}} object which consumes a {{domxref("MediaStreamTrack")}} object's source and generates a stream of media frames.
 
 ## Syntax
 
@@ -20,10 +20,12 @@ new MediaStreamTrackProcessor(init);
 
 ### Parameters
 
-- `track`
-  - : A {{domxref("MediaStreamTrack")}}.
-- `maxBufferSize`{{Optional_Inline}}
-  - : An integer specifying the maximum number of media frames to be buffered.
+- `options`
+  - : An object with the following properties:
+    - `track`
+      - : A {{domxref("MediaStreamTrack")}}.
+    - `maxBufferSize`{{Optional_Inline}}
+      - : An integer specifying the maximum number of media frames to be buffered.
 
 ## Examples
 

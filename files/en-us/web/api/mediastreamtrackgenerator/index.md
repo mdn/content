@@ -11,7 +11,6 @@ browser-compat: api.MediaStreamTrackGenerator
 {{DefaultAPISidebar("Insertable Streams for MediaStreamTrack API")}}
 
 The **`MediaStreamTrackGenerator`** interface of the {{domxref('Insertable Streams for MediaStreamTrack API')}} creates a {{domxref("WritableStream")}} that acts as a {{domxref("MediaStreamTrack")}} source.
-
 The object consumes a stream of media frames as input, which can be audio or video frames.
 
 ## Constructor
@@ -32,7 +31,7 @@ _This interface doesn't implement any specific methods, but inherits methods fro
 
 ## Examples
 
-The following example is from the article [Insertable streams for MediaStreamTrack](https://web.dev/mediastreamtrack-insertable-media-processing/), and demonstrates a barcode scanner application, which identifies and processes barcodes before writing the transformed frames to the writablestream of {{domxref("MediaStreamTrackGenerator.writable")}}.
+The following example is from the article [Insertable streams for MediaStreamTrack](https://web.dev/mediastreamtrack-insertable-media-processing/), and demonstrates a barcode scanner application, which process barcodes and  highlights them before writing the transformed frames to the writablestream of {{domxref("MediaStreamTrackGenerator.writable")}}.
 
 ```js
 const stream = await getUserMedia({ video: true });

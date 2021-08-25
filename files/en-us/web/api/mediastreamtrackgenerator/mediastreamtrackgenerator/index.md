@@ -15,17 +15,17 @@ The **`MediaStreamTrackGenerator()`** constructor creates a new {{domxref("Media
 ## Syntax
 
 ```js
-new MediaStreamTrackGenerator(init);
+new MediaStreamTrackGenerator(options);
 ```
 
 ### Parameters
 
-- `init`
+- `options`
   - : An object containing the property `kind`, which is a {{domxref("DOMString", "string")}} with one of the following values:
       - `"audio"`
-        - : The stream accepts {{domxref("AudioTrack")}} objects.
+        - : Specifies that the stream accepts {{domxref("AudioTrack")}} objects.
       - `"video"`
-        - : The stream accepts {{domxref("VideoTrack")}} objects.
+        - : Specifies that the stream accepts {{domxref("VideoTrack")}} objects.
 
 ## Exceptions
 

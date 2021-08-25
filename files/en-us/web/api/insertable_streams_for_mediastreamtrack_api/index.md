@@ -6,7 +6,6 @@ tags:
   -
   - Overview
   - Reference
-browser-compat: api.ContactAddress
 ---
 {{DefaultAPISidebar("Insertable Streams for MediaStreamTrack API")}}
 
@@ -25,7 +24,7 @@ When processing video or audio, you sometimes want to insert additional elements
 
 ## Examples
 
-The following example is from the article [Insertable streams for MediaStreamTrack](https://web.dev/mediastreamtrack-insertable-media-processing/), and demonstrates a barcode scanner application, which transforms the stream accessed via {{domxref("MediaStreamTrackProcessor.readable")}}.
+The following example is from the article [Insertable streams for MediaStreamTrack](https://web.dev/mediastreamtrack-insertable-media-processing/), and demonstrates a barcode scanner application that highlights a barcode in a video stream. This transforms the stream accessed via {{domxref("MediaStreamTrackProcessor.readable")}}.
 
 ```js
 const stream = await getUserMedia({ video: true });
