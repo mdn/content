@@ -3,7 +3,6 @@ title: Insertable Streams for MediaStreamTrack API
 slug: Web/API/Insertable_Streams_for_MediaStreamTrack_API
 tags:
   - API
-  -
   - Overview
   - Reference
 ---
