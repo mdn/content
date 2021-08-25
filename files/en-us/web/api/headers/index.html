@@ -71,13 +71,6 @@ browser-compat: api.Headers
 <p><strong>Note:</strong> When Header values are iterated over, they are automatically sorted in lexicographical order, and values from duplicate header names are combined.</p>
 </div>
 
-<h3 id="Obsolete_methods">Obsolete methods</h3>
-
-<dl>
- <dt>{{domxref("Headers.getAll()")}}</dt>
- <dd>Used to return an array of all the values of a header within a <code>Headers</code> object with a given name; this method has now been deleted from the spec, and {{domxref("Headers.get()")}} now returns all values of a given name instead of just the first one.</dd>
-</dl>
-
 <h2 id="Examples">Examples</h2>
 
 <p>In the following snippet, we create a new header using the <code>Headers()</code> constructor, add a new header to it using <code>append()</code>, then return that header value using <code>get()</code>:</p>

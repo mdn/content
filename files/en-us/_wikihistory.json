@@ -55062,17 +55062,6 @@
       "kscarfone"
     ]
   },
-  "Web/API/Headers/getAll": {
-    "modified": "2020-10-15T21:33:27.725Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "jpmedley",
-      "ziyunfei",
-      "chrisdavidmills",
-      "kscarfone"
-    ]
-  },
   "Web/API/Headers/has": {
     "modified": "2020-10-15T21:33:26.894Z",
     "contributors": [
