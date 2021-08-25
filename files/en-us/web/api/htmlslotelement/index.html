@@ -11,18 +11,20 @@ browser-compat: api.HTMLSlotElement
 ---
 <p>{{APIRef('Web Components')}}</p>
 
-<p>The <strong><code>HTMLSlotElement</code></strong> interface of the <a href="/en-US/docs/Web/Web_Components/Shadow_DOM">Shadow DOM API</a> enables access to the name and assigned nodes of an HTML {{HTMLElement("slot")}} element.</p>
+<p>The <strong><code>HTMLSlotElement</code></strong> interface of the <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">Shadow DOM API</a> enables access to the name and assigned nodes of an HTML {{HTMLElement("slot")}} element.</p>
 
 <h2 id="Properties">Properties</h2>
 
 <dl>
  <dt>{{domxref('HTMLSlotElement.name')}}</dt>
- <dd>{{domxref("DOMString")}}: Can be used to get and set the slot's name.</dd>
+ <dd>A {{domxref("DOMString","string")}} used to get and set the slot's name.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
 
 <dl>
+ <dt>{{domxref('HTMLSlotElement.assign()')}}</dt>
+ <dd>Sets the manually assigned nodes for this slot to the given nodes.</dd>
  <dt>{{domxref('HTMLSlotElement.assignedNodes()')}}</dt>
  <dd>Returns a sequence of the nodes assigned to this slot, and if the <code>flatten</code> option is set to <code>true</code>, the assigned nodes of any other slots that are descendants of this slot. If no assigned nodes are found, it returns the slot's fallback content.</dd>
  <dt>{{domxref('HTMLSlotElement.assignedElements()')}}</dt>
