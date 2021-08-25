@@ -86,7 +86,7 @@ browser-compat: api.KeyboardEvent.keyCode
  </li>
 </ol>
 
-<p id="keyCode_of_punctuation_keys_on_some_keyboard_layout">Starting in Firefox 60 {{geckoRelease("60.0")}}, Gecko sets <code>keyCode</code> values of punctuation keys as far as possible (when points 7.1 or 7.2 in the above list are reached) with the following rules:</p>
+<p>Starting in Firefox 60 {{geckoRelease("60.0")}}, Gecko sets <code>keyCode</code> values of punctuation keys as far as possible (when points 7.1 or 7.2 in the above list are reached) with the following rules:</p>
 
 <div class="warning">
 <p><strong>Warning:</strong> The purpose of these new additional rules is for making users whose keyboard layouts map unicode characters to punctuation keys in a US keyboard layout can use web applications which support Firefox only with ASCII-capable keyboard layouts or just with a US keyboard layout. Otherwise, the newly mapped <code>keyCode</code> values may be conflict with other keys. For example, if the active keyboard layout is Russian, the <code>keyCode</code> value of <strong>both</strong> the <code>"Period"</code> key and <code>"Slash"</code> key are <code>190</code> (<code>KeyEvent.DOM_VK_PERIOD</code>). If you need to distinguish those keys but you don't want to support all keyboard layouts in the world by yourself, you should probably use {{domxref("KeyboardEvent.code")}}.</p>

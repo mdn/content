@@ -26,7 +26,7 @@ tags:
   })
 </pre>
 
-<p id="sect1">Next, isolate the visual part of the media stream. Do this by calling {{domxref("MediaStream.getVideoTracks()")}}. This returns an array of {{domxref("MediaStreamTrack")}} objects. The code below assumes that the first item in the <code>MediaStreamTrack</code> array is the one to use. You can use the properties of the <code>MediaStreamTrack</code> objects to select the one you need.</p>
+<p>Next, isolate the visual part of the media stream. Do this by calling {{domxref("MediaStream.getVideoTracks()")}}. This returns an array of {{domxref("MediaStreamTrack")}} objects. The code below assumes that the first item in the <code>MediaStreamTrack</code> array is the one to use. You can use the properties of the <code>MediaStreamTrack</code> objects to select the one you need.</p>
 
 <pre class="brush: js">const track = mediaStream.getVideoTracks()[0];</pre>
 
