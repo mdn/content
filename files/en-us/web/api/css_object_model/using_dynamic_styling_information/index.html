@@ -56,7 +56,6 @@ The stylesheet declaration for the body's background color is modified via JavaS
 
 <p>To change a particular element's style, you can adapt the following example for the element(s) you want to style.</p>
 
-<div id="Example2">
 <pre class="brush: html">&lt;html&gt;
 &lt;head&gt;
 &lt;title&gt;simple style example&lt;/title&gt;
@@ -93,9 +92,8 @@ function resetStyle(elemId) {
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Example2') }}</p>
+<p>{{ EmbedLiveSample('Modify_an_element_style') }}</p>
 
 <p>The {{domxref("window.getComputedStyle", "getComputedStyle()")}} method on the <code>document.defaultView</code> object returns all styles that have actually been computed for an element.</p>
 
@@ -103,9 +101,10 @@ function resetStyle(elemId) {
 
 <p>The <code>style</code> object represents an individual style statement. The style object is accessed from the <code>document</code> or from the elements to which that style is applied. It represents the <em>in-line</em> styles on a particular element.</p>
 
+<h3>Setting style properties</h3>
+
 <p>More important than the two properties noted here is the use of the <code>style</code> object to set individual style properties on an element:</p>
 
-<div id="DOM_Style_Object_code_sample">
 <pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
  &lt;head&gt;
@@ -128,9 +127,8 @@ function resetStyle(elemId) {
  &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('DOM_Style_Object_code_sample') }}</p>
+<p>{{ EmbedLiveSample('Setting_style_properties') }}</p>
 
 <p>The <strong>media</strong> and <strong>type</strong> of the style may or may not be given.</p>
 
