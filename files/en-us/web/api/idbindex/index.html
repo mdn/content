@@ -13,7 +13,7 @@ browser-compat: api.IDBIndex
 ---
 <p>{{APIRef("IndexedDB")}}</p>
 
-<p><code>IDBIndex</code> interface of the <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a> provides asynchronous access to an <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_index">index</a> in a database. An index is a kind of object store for looking up records in another object store, called the referenced object store. You use this interface to retrieve data.</p>
+<p><code>IDBIndex</code> interface of the <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a> provides asynchronous access to an <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#index">index</a> in a database. An index is a kind of object store for looking up records in another object store, called the referenced object store. You use this interface to retrieve data.</p>
 
 <p>You can retrieve records in an object store through the primary key or by using an index. An index lets you look up records in an object store using properties of the values in the object stores records other than the primary key</p>
 
@@ -35,7 +35,7 @@ browser-compat: api.IDBIndex
  <dt>{{domxref("IDBIndex.objectStore")}} {{readonlyInline}}</dt>
  <dd>The name of the object store referenced by this index.</dd>
  <dt>{{domxref("IDBIndex.keyPath")}} {{readonlyInline}}</dt>
- <dd>The <a href="/en-US/docs/Web/API/IndexedDB_API#gloss_key_path">key path</a> of this index. If null, this index is not <a href="/en-US/docs/Web/API/IDBIndex#gloss_auto-populated">auto-populated</a>.</dd>
+ <dd>The <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path">key path</a> of this index. If null, this index is not auto-populated.</dd>
  <dt>{{domxref("IDBIndex.multiEntry")}} {{readonlyInline}}</dt>
  <dd>Affects how the index behaves when the result of evaluating the index's key path yields an array. If <code>true</code>, there is one record in the index for each item in an array of keys. If <code>false</code>, then there is one record for each key that is an array.</dd>
  <dt>{{domxref("IDBIndex.unique")}} {{readonlyInline}}</dt>
@@ -58,7 +58,7 @@ browser-compat: api.IDBIndex
  <dt>{{domxref("IDBIndex.getAllKeys()")}}</dt>
  <dd>Returns an {{domxref("IDBRequest")}} object, in a separate thread, finds all matching keys in the referenced object store that correspond to the given key or are in range, if <code>key</code> is an {{domxref("IDBKeyRange")}}.</dd>
  <dt>{{domxref("IDBIndex.openCursor()")}}</dt>
- <dd>Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a <a href="/en-US/docs/Web/API/IndexedDB_API#gloss_cursor">cursor</a> over the specified key range.</dd>
+ <dd>Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#cursor">cursor</a> over the specified key range.</dd>
  <dt>{{domxref("IDBIndex.openKeyCursor()")}}</dt>
  <dd>Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a cursor over the specified key range, as arranged by this index.</dd>
 </dl>
