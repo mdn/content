@@ -67,22 +67,26 @@ tags:
 
 <p>Most whitespace characters are ignored, not all of them are. In the earlier example one of the spaces between "Hello" and "World!" still exists when the page is rendered in a browser. There are rules in the browser engine that decide which whitespace characters are useful and which aren’t — these are specified at least in part in <a href="https://www.w3.org/TR/css-text-3">CSS Text Module Level 3</a>, and especially the parts about the <a href="https://www.w3.org/TR/css-text-3/#white-space-property">CSS <code>white-space</code> property</a> and <a href="https://www.w3.org/TR/css-text-3/#white-space-processing">whitespace processing details</a>, but we also offer an easier explanation below.</p>
 
-<p>Let’s take another really simple example. To make it easier, we’ve illustrated all spaces with ◦, all tabs with ⇥ , and all line breaks with ⏎:</p>
+<h4>Example</h4>
+
+<p>Let’s take another example. To make it easier, we’ve added a comment that shows all spaces with ◦, all tabs with ⇥ , and all line breaks with ⏎:</p>
 
 <p>This example:</p>
 
-<pre class="brush: html">&lt;h1&gt;◦◦◦Hello◦⏎
-⇥⇥⇥⇥&lt;span&gt;◦World!&lt;/span&gt;⇥◦◦&lt;/h1&gt;</pre>
+<pre class="brush: html">&lt;h1&gt;   Hello
+        &lt;span&gt; World!&lt;/span&gt;   &lt;/h1&gt;
+
+&lt;!--
+&lt;h1&gt;◦◦◦Hello◦⏎
+⇥⇥⇥⇥&lt;span&gt;◦World!&lt;/span&gt;⇥◦◦&lt;/h1&gt;
+--&gt;
+</pre>
 
 <p>is rendered in the browser like so:</p>
 
-<div id="Hidden_example">
+<p>{{EmbedLiveSample('Example')}}</p>
 
-<pre class="brush: html hidden">&lt;h1&gt;   Hello
-    &lt;span&gt; World!&lt;/span&gt;   &lt;/h1&gt;</pre>
-</div>
-
-<p>{{EmbedLiveSample('Hidden_example')}}</p>
+<h4>Explanation</h4>
 
 <p>The <code>&lt;h1&gt;</code> element contains only inline elements. In fact it contains:</p>
 
@@ -136,28 +140,34 @@ tags:
 
 <p>Above we just looked at elements that contain inline elements, and inline formatting contexts. If an element contains at least one block element, then it instead establishes what is called a <a href="/en-US/docs/Web/Guide/CSS/Block_formatting_context">block formatting context</a>.</p>
 
-<p>Within this context, whitespace is treated very differently. Let’s take a look at an example to explain how. We've marked the whitespace characters as before.</p>
+<p>Within this context, whitespace is treated very differently.</p>
 
-<pre class="brush: html">&lt;body&gt;⏎
-⇥&lt;div&gt;◦◦Hello◦◦&lt;/div&gt;⏎
-⏎
-◦◦◦&lt;div&gt;◦◦World!◦◦&lt;/div&gt;◦◦⏎
-&lt;/body&gt;</pre>
+<h4>Example</h4>
+
+Let’s take a look at an example to explain how. We've marked the whitespace characters as before.</p>
 
 <p>We have 3 text nodes that contain only whitespace, one before the first <code>&lt;div&gt;</code>, one between the 2 <code>&lt;divs&gt;</code>, and one after the second <code>&lt;div&gt;</code>.</p>
 
-<p>This renders like so:</p>
-
-<div id="Hidden_example_2">
-
-<pre class="brush: html hidden">&lt;body&gt;
+<pre class="brush: html">&lt;body&gt;
   &lt;div&gt;  Hello  &lt;/div&gt;
 
    &lt;div&gt;  World!   &lt;/div&gt;
-&lt;/body&gt;</pre>
-</div>
+&lt;/body&gt;
 
-<p>{{EmbedLiveSample('Hidden_example_2')}}</p>
+&lt;!--
+&lt;body&gt;⏎
+⇥&lt;div&gt;◦◦Hello◦◦&lt;/div&gt;⏎
+⏎
+◦◦◦&lt;div&gt;◦◦World!◦◦&lt;/div&gt;◦◦⏎
+&lt;/body&gt;
+--&gt;
+</pre>
+
+<p>This renders like so:</p>
+
+<p>{{EmbedLiveSample('Example_2')}}</p>
+
+<h4>Explanation</h4>
 
 <p>We can summarize how the whitespace here is handled as follows (the may be some slight differences in exact behavior between browsers, but this basically works):</p>
 
@@ -195,7 +205,9 @@ tags:
 
 <p>Because they are blocks, many people expect that they will behave as such, but really they don’t. If there is formatting whitespace between adjacent inline elements, this will result in space in the layout, just like the spaces between words in text.</p>
 
-<p>Consider this example (again, the whitespace characters in the HTML are marked so they are visible):</p>
+<h3>Example</h3>
+
+<p>Consider this example (again, we've included an HTML comment that shows the whitespace characters in the HTML):</p>
 
 <pre class="brush: css">.people-list {
   list-style-type: none;
@@ -212,7 +224,22 @@ tags:
 }
 </pre>
 
-<pre class="brush: html">&lt;ul class="people-list"&gt;⏎
+<pre class="brush: html">&lt;ul class="people-list"&gt;
+
+    &lt;li&gt;&lt;/li&gt;
+
+    &lt;li&gt;&lt;/li&gt;
+
+    &lt;li&gt;&lt;/li&gt;
+
+    &lt;li&gt;&lt;/li&gt;
+
+    &lt;li&gt;&lt;/li&gt;
+
+  &lt;/ul&gt;
+
+&lt;!--
+&lt;ul class="people-list"&gt;⏎
 
 ◦◦&lt;li&gt;&lt;/li&gt;⏎
 
@@ -224,38 +251,21 @@ tags:
 
 ◦◦&lt;li&gt;&lt;/li&gt;⏎
 
-&lt;/ul&gt;</pre>
+&lt;/ul&gt;
+--&gt;
+</pre>
 
 <p>This renders as follows:</p>
 
-<div id="Hidden_example_3">
-
-<pre class="brush: css hidden">.people-list { list-style-type: none; margin: 0; padding: 0; }
-.people-list li { display: inline-block; width: 2em; height: 2em; background: #f06; border: 1px solid; }
-</pre>
-
-<pre class="brush: html hidden">&lt;ul class="people-list"&gt;
-
-  &lt;li&gt;&lt;/li&gt;
-
-  &lt;li&gt;&lt;/li&gt;
-
-  &lt;li&gt;&lt;/li&gt;
-
-  &lt;li&gt;&lt;/li&gt;
-
-  &lt;li&gt;&lt;/li&gt;
-
-&lt;/ul&gt;</pre>
-</div>
-
-<p>{{EmbedLiveSample('Hidden_example_3')}}</p>
+<p>{{EmbedLiveSample('Example_3')}}</p>
 
 <p>You probably don't want the gaps in between the blocks — depending on the use case (is this a list of avatars, or horizontal nav buttons?), you probably want the element sides flush with each other, and to be able to control any spacing yourself.</p>
 
 <p>The Firefox DevTools HTML Inspector will highlight text nodes, and also show you exactly what area the elements are taking up — useful if you are wondering what is causing the problem, and are maybe thinking you've got some extra margin in there or something!</p>
 
 <p><img alt="" src="whitespace-devtools.png"></p>
+
+<h3>Solutions</h3>
 
 <p>There are a few ways of getting around this problem:</p>
 
