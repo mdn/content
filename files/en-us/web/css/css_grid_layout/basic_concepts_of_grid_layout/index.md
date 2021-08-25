@@ -512,7 +512,7 @@ _Gutters_ or _alleys_ between grid cells can be created using the {{cssxref("col
 }
 ```
 
-> **Note:** When grid first shipped in browsers the {{cssxref("column-gap")}}, {{cssxref("row-gap")}} and {{cssxref("gap")}} were prefixed with the `grid-` prefix as {{cssxref("column-gap")}}, {{cssxref("row-gap")}} and {{cssxref("gap")}} respectively.
+> **Note:** When grid first shipped in browsers the {{cssxref("column-gap")}}, {{cssxref("row-gap")}} and {{cssxref("gap")}} were prefixed with the `grid-` prefix as `grid-column-gap`, `grid-row-gap` and `grid-gap` respectively.
 >
 > Browsers all now support unprefixed values, however the prefixed versions will be maintained as aliases making them safe to use.
 
