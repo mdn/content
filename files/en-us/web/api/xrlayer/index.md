@@ -24,16 +24,6 @@ Below is a list of interfaces based on the <code>XRLayer</code> interface.
 
 *Inherits methods from its parent, {{domxref("EventTarget")}}*.
 
-## Classes extending `XRLayer`
-
-- {{domxref("XRCompositionLayer")}}
-  - {{domxref("XRCubeLayer")}}
-  - {{domxref("XRCylinderLayer")}}
-  - {{domxref("XREquirectLayer")}}
-  - {{domxref("XRProjectionLayer")}}
-  - {{domxref("XRQuadLayer")}}
-- {{domxref("XRWebGLLayer")}}
-
 ## Specifications
 
 {{Specifications}}
