@@ -43,39 +43,45 @@ browser-compat: api.Element.clientLeft
 <pre class="brush: js">var <var>left</var> = <var>element</var>.clientLeft;
 </pre>
 
+
 <h2 id="Example">Example</h2>
 
-<div id="offsetContainer"
-	style="margin: 40px 50px 50px; background-color: rgb(255, 255, 204); border: 4px dashed black; color: black; position: relative; display: inline-block;">
-	<div id="idDiv"
-		style="margin: 24px 29px; border: 24px black solid; padding: 0px 28px; width: 199px; height: 102px; overflow: auto; background-color: white; font-size: 13px!important; font-family: Arial, sans-serif;">
-		<p id="PaddingTopLabel"
-			style="text-align: center; font-style: italic; font-weight: bold; font-size: 13px!important; font-family: Arial, sans-serif; margin: 0px;">
-			padding-top</p>
+<p>In the following example, the client area has a white background and a 24px black <code>border-left</code>. The <code>clientLeft</code> value is the distance from where the margin (yellow) area ends and the padding and content areas (white) begin: that is, 24px.</p>
 
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-			incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-			nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-		</p>
+<h3>HTML</h3>
 
-		<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-			fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-			culpa qui officia deserunt mollit anim id est laborum.</p>
+<pre class="brush: html">
+&lt;div id="container"&gt;
+  &lt;div id="contained"&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+	  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+	  nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
 
-		<p id="PaddingBottomLabel"
-			style="text-align: center; font-style: italic; font-weight: bold; font-size: 13px!important; font-family: Arial, sans-serif; margin: 0px;">
-			padding-bottom</p>
-	</div>
-	<strong
-		style="color: blue; font-family: arial,sans-serif; font-size: 13px!important; font-weight: bold; left: -32px; position: absolute; top: 85px;">Left</strong>
-	<strong
-		style="color: blue; font-family: arial,sans-serif; font-size: 13px!important; font-weight: bold; left: 170px; position: absolute; top: -24px;">Top</strong>
-	<strong
-		style="color: blue; font-family: arial,sans-serif; font-size: 13px!important; font-weight: bold; left: 370px; position: absolute; top: 85px;">Right</strong>
-	<strong
-		style="color: blue; font-family: arial,sans-serif; font-size: 13px!important; font-weight: bold; left: 164px; position: absolute; top: 203px;">Bottom</strong>
-	<em>margin-top</em> <em>margin-bottom</em> <em>border-top</em> <em>border-bottom</em>
-</div>
+<h3>CSS</h3>
+
+<pre class="brush: css">
+
+#container {
+	margin: 3rem;
+	background-color: rgb(255, 255, 204);
+	border: 4px dashed black;
+}
+
+#contained {
+	margin: 1rem;
+	border-left: 24px black solid;
+	padding: 0px 28px;
+	overflow: auto;
+	background-color: white;
+}
+</pre>
+
+<h3>Result</h3>
+
+{{EmbedLiveSample("Example", 400, 350)}}
 
 <h2 id="Specifications">Specifications</h2>
 
