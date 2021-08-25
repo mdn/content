@@ -2022,7 +2022,7 @@
     },
     "URL": {
       "inh": "",
-      "impl": ["URLUtils", "URLUtilsSearchParams"]
+      "impl": []
     },
     "USSDReceivedEvent": {
       "inh": "Event",
