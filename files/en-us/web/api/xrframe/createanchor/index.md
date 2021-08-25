@@ -15,6 +15,8 @@ browser-compat: api.XRFrame.createAnchor
 
 The **`createAnchor()`** method of the {{domxref("XRFrame")}} interface creates a free-floating {{domxref("XRAnchor")}} which will be fixed relative to the real world.
 
+See {{domxref("XRHitTestResult.createAnchor()")}} for creating an anchor from a hit test result that is attached to a real world object.
+
 ## Syntax
 
 ```js
@@ -53,3 +55,7 @@ frame.createAnchor(anchorPose, referenceSpace).then((anchor) => {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("XRHitTestResult.createAnchor()")}}

@@ -12,7 +12,7 @@ browser-compat: api.XRFrame.getHitTestResults
 ---
 {{APIRef("WebXR Device API")}}
 
-The **`getHitTestResults()`** method of the {{domxref("XRFrame")}} interface returns an array of {{domxref("XRHitResult")}} objects containing hit test results for a given {{domxref("XRHitTestSource")}}.
+The **`getHitTestResults()`** method of the {{domxref("XRFrame")}} interface returns an array of {{domxref("XRHitTestResult")}} objects containing hit test results for a given {{domxref("XRHitTestSource")}}.
 
 ## Syntax
 
@@ -27,7 +27,7 @@ getHitTestResults(hitTestSource)
 
 ### Return value
 
-An array of {{domxref("XRHitResult")}} objects.
+An array of {{domxref("XRHitTestResult")}} objects.
 
 ## Examples
 
