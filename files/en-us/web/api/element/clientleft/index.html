@@ -13,20 +13,14 @@ browser-compat: api.Element.clientLeft
 <div>{{ APIRef("DOM") }}</div>
 
 <p>The width of the left border of an element in pixels. It includes the width of the
-	vertical scrollbar if the text direction of the element is right–to–left and if there
+	vertical scrollbar if the text direction of the element is right-to-left and if there
 	is an overflow causing a left vertical scrollbar to be rendered.
 	<code>clientLeft</code> does not include the left margin or the left padding.
 	<code>clientLeft</code> is read-only.</p>
 
-<p>When <a class="external"
-		href="http://kb.mozillazine.org/Layout.scrollbar.side"><code>layout.scrollbar.side</code>
-		preference</a> is set to 1 or to 3 and when the text-direction is set to RTL,
-	<strong>then the vertical scrollbar is positioned on the left</strong> and this
-	impacts the way clientLeft is computed.</p>
-
 <div class="note">
 	<p><strong>Note:</strong> This property will round the value to an integer. If you
-		need a fractional value, use {{ domxref("element.getBoundingClientRect()") }}. 
+		need a fractional value, use {{ domxref("element.getBoundingClientRect()") }}.
 	</p>
 </div>
 
@@ -34,7 +28,7 @@ browser-compat: api.Element.clientLeft
 
 <div class="note">
 	<p><strong>Note:</strong> When an element has
-		<code>display: inline</code>, <code>clientLeft</code> returns <code>0</code>
+		<code>display: inline</code>, <code>clientLeft</code> returns <code>0</code>
 		regardless of the element's border.</p>
 </div>
 
@@ -90,16 +84,3 @@ browser-compat: api.Element.clientLeft
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <p>{{Compat}}</p>
-
-<h2 id="Notes">Notes</h2>
-
-<p><code>clientLeft</code> was first introduced in the MS IE DHTML object model.</p>
-
-<p>The position of the vertical scrollbar in right–to–left text direction set on the
-	element will depend on the <a class="external"
-		href="http://kb.mozillazine.org/Layout.scrollbar.side"><code>layout.scrollbar.side</code>
-		preference</a></p>
-
-<p>Gecko-based applications support <code>clientLeft</code>
-	starting with Gecko 1.9 (Firefox 3, implemented in {{
-	Bug(111207) }}). This property is not supported in Firefox 2 and earlier.</p>
