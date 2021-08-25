@@ -1,0 +1,134 @@
+---
+title: 'ARIA: textbox role'
+slug: Web/Accessibility/ARIA/Roles/textbox_role
+tags:
+  - ARIA
+  - Accessibility
+  - NeedsContent
+---
+The `textbox` role is used to identify an element that allows the input of free-form text. Whenever possible, rather than using this role, use an {{HTMLElement("input")}} element with [type="text"](/en-US/docs/Web/HTML/Element/input/text), for single-line input, or a {{HTMLElement("textarea")}} element for multi-line input.
+
+## Description
+
+<p class="p2">When an element has the <code>textbox</code> role, the browser sends an accessible textbox event to assistive technologies, which can then notify the user about it.</p>
+
+<p class="p2">The default is a single line input, in which <kbd>Return</kbd> or <kbd>Enter</kbd> submits the form; in this case, it is preferable to use an HTML {{HTMLElement("input")}} with <code>type="text"</code>. To create a multi-line text box which supports line breaks, as in an HTML {{HTMLElement("textarea")}}, set <code><span class="s1">aria-multiline="true"</span></code>. Including the HTML <code>contenteditable</code> attribute ensures the text node is editable.</p>
+
+```html
+<!-- Simple text input field -->
+<div id="txtboxLabel">Enter your five-digit zipcode</div>
+<div role="textbox" contenteditable="true" aria-placeholder="5-digit zipcode" aria-labelledby="txtboxLabel"></div>
+
+<!-- Multi-line text area -->
+<div id="txtboxMultilineLabel">Enter the tags for the article</div>
+<div role="textbox" contenteditable="true" aria-multiline="true"
+   aria-labelledby="txtboxMultilineLabel" aria-required="true"></div>
+```
+
+Semantic elements are more concise and require no JavaScript to support textbox features.
+
+```html
+<label for="txtbox">Enter your five-digit zipcode</label>
+<input type="text" placeholder="5-digit zipcode" id="txtbox"/>
+
+<!-- Multi-line text area -->
+<label for="txtboxMultiline">Enter the tags for the article</label>
+<textarea id="txtboxMultiline" required></textarea>
+```
+
+<p class="p2">Where a text field is read-only, indicated this by setting <code><span class="s1">aria-readonly="true"</span></code> on the element.</p>
+
+### Associated ARIA properties
+
+- `aria-activedescendant` attribute
+  - : Taking as it's value the ID of is either a descendant of the element with DOM focus or is a logical descendant as indicated by the `aria-owns` attribute, it indicates when that element has focus, when it is part of a composite widget such as a [combobox](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox). For example, in a combobox, focus may remain on the textbox while the value of `aria-activedescendant` on the textbox element refers to a descendant of a popup listbox that is controlled by the textbox.This attribute must be updated programmatically as the focus changes.
+- `aria-autocomplete` attribute
+
+  - : Indicates whether and how the user's input into the field could trigger display of a prediction of the intended value. It supports the following values:
+
+    - `inline`: Predicted text is inserted after the caret.
+    - `list`: Predicted text is presented as a collection of values.
+    - `both`: Predicted text is presented as a collection of values, with the text needed to complete one value inserted after the caret.
+    - `none` (default): Predicted text is not offered.
+
+    If list or both is set, the `aria-controls` and `aria-haspopup` attributes should also be included. The value of `aria-controls` is the ID of the element that contains the list of suggested values. Additionally, either the textbox or a containing element with role `combobox` has a value for `aria-haspopup` that matches the role of the element that contains the list of suggested values.
+
+- `aria-multiline` attribute
+
+  - : If `aria-multiline="true`" is set, the AT informs the user that the textbox supports multi-line input, with the expectation that
+
+    <kbd>Enter</kbd>
+
+    or
+
+    <kbd>Return</kbd>
+
+    will create a line break rather than submitting the form. ARIA does not alter the behavior of the element; rather this feature must be controlled by the developer. If false is set, or the attribute is omitted and defaults to false, the user expectation is that the control is a single line text box, and
+
+    <kbd>Enter</kbd>
+
+    or
+
+    <kbd>Return</kbd>
+
+    submits the form.
+
+- `aria-placeholder` attribute
+  - : Represents a hint (word or phrase) to the user about what to enter into the text field. The hint should be a sample value or a brief description of the expected format.This information should not be used as a substitute for a label: a label is focusable, permanent, indicates what kind of information is expected, and increases the hit area for setting focus on the control, whereas placeholder text is only temporary hint about the expected value, which if implemented incorrectly can decrease accessibility. The placeholder should be visible when the control's value is the empty string such as when the control first receives focus and when users remove a previously-entered value. Instead of using `aria-placeholder`, use the semantic `<input type="text">` or `<textarea>` with a `placeholder` attribute.
+- `aria-readonly` attribute
+  - : Indicates that the user cannot modify the value of the text field. Instead of using `aria-readonly`, use the semantic `<input type="text">` or `<textarea>` with a `readonly` attribute.
+- `aria-required` attribute
+  - : Indicates that a value must be provided for the field before it is submitted. Instead of using `aria-required`, use the semantic `<input type="text">` or `<textarea>` with a `required` attribute.
+
+### Keyboard interactions
+
+In a single-line use (when `aria-multiline` is `false` or not used), the Return or Enter key submits the form. In a multi-line use (when `aria-multiline` is `true`), Return or Enter key inserts a line break.
+
+### JavaScript features
+
+All features associated with any and all properties and states must be maintained, and forms submission on enter or return on a single line textbox needs to be handled.
+
+- Focus event handler and aria-activedescendant attribute
+  - : If you are implementing a composite widget, such as a combobox composed of a text box and a listbox, you need to manage the `aria-activedescendant` attribute using a handler. Before using this technique, ensure that the browsers you need to target currently support it. See the [specification of aria-descendent](https://www.w3.org/TR/wai-aria-1.1/#aria-activedescendant) for further information.
+
+<div class="note"><p><span class="ILfuVd yZ8quc">It is a better practice to use an {{HTMLElement("input")}} element with type="text", or a {{HTMLElement("textarea")}} element instead of the ARIA textbox role. When using either semantic element, the ARIA textbox role is not necessary. </span>See <a href="https://www.w3.org/TR/aria-in-html/">Notes on Using ARIA in HTML</a>.</p></div>
+
+## Possible effects on user agents and assistive technology 
+
+<p class="p1">When the <code>textbox</code> role is added to an element, or such an element becomes visible, the user agent should do the following:</p>
+
+<ul class="ul1"><li class="li2">Expose the element as having a textbox role in the operating system's accessibility API.</li><li class="li2">Fire an accessible textbox event using the operating system's accessibility API if it supports it.</li></ul>
+
+<p class="p1">Assistive technology products should listen for such an event and notify the user accordingly:</p>
+
+<ul class="ul1"><li class="li2">Screen readers should announce its label and role when focus first lands on a textbox. If it also contains content, this should be announced as with a regular textbox.</li><li class="li2">Screen magnifiers may enlarge the textbox.</li></ul>
+
+<div class="note"><strong>Note:</strong> Opinions may differ on how assistive technology should handle this technique. The information provided above is one of those opinions and therefore not normative.</div>
+
+## Examples
+
+### Example 1: Adding the role in the HTML code for single line input
+
+<p class="p2">The snippet below shows how the textbox role is added directly into the HTML source code.</p>
+
+```html
+<div role="textbox" contenteditable="true"></div>
+```
+
+<h3 class="p1" id="Example_2_Adding_the_role_in_the_HTML_code_for_multi-line_input">Example 2: Adding the role in the HTML code for multi-line input</h3>
+
+<p class="p2">The snippet below shows how the textbox role is added directly into the HTML source code.</p>
+
+```html
+<div role="textbox" contenteditable="true" aria-multiline="true"></div>
+```
+
+## Best practices
+
+<ul><li class="li1">Be sure to add the <code>contenteditable="true"</code> attribute to the HTML element to which this role is applied. Do so even if you set <code>aria-readonly</code> to <code>true</code>; in this way, you communicate that the content would be editable if it were not read-only.</li></ul>
+
+## See also
+
+- [ARIA: search role](/en-US/docs/Web/Accessibility/ARIA/Roles/Search_role)
+
+<section id="Quick_links"><ol><li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li></ol></section>
