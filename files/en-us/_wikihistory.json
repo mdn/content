@@ -81925,23 +81925,6 @@
       "JesseW"
     ]
   },
-  "Web/API/UIEvent/isChar": {
-    "modified": "2020-10-15T21:05:49.419Z",
-    "contributors": [
-      "fscholz",
-      "Sheppy",
-      "teoli",
-      "SphinxKnight",
-      "kscarfone",
-      "ethertank",
-      "bending_the_rules",
-      "ziyunfei",
-      "Jabez",
-      "Ptak82",
-      "Dria",
-      "JesseW"
-    ]
-  },
   "Web/API/UIEvent/layerX": {
     "modified": "2020-10-15T21:11:16.143Z",
     "contributors": [
