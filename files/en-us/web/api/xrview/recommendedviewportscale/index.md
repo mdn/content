@@ -23,7 +23,7 @@ A number greater than 0.0 and less than or equal to 1.0; or {{jsxref("null")}} i
 
 ### Dynamic viewport scaling
 
-Dynamic viewport scaling allows applications to only use a subset of the available framebuffer. The feature may not be available on all systems since it depends on driver support, so you might want to ensure that `requestViewportScale()` exists before calling it. The `recommendedViewportScale` property contains the user agent's recommended value based on internal heuristics. If the user agent doesn't provide a recommended viewport scale, its value is `null` and the call to `requestViewportScale()` is ignored.
+Dynamic viewport scaling allows applications to only use a subset of the available framebuffer. The feature may not be available on all systems since it depends on driver support, so you might want to ensure that {{domxref("XRView.requestViewportScale")}} exists before calling it. 
 
 ```js
 for (let view of pose.views) {
