@@ -50,201 +50,214 @@ tags:
 
 <h3 id="Monitor_availability_of_presentation_displays">Monitor availability of presentation displays</h3>
 
-<pre class="brush: js"><span class="hljs-comment">&lt;!-- controller.html --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"presentBtn"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"display: none;"</span>&gt;</span>Present<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-  <span class="hljs-comment">// The Present button is visible if at least one presentation display is available</span>
-  <span class="hljs-keyword">var</span> presentBtn = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"presentBtn"</span>);
-  <span class="hljs-comment">// It is also possible to use relative presentation URL e.g. "presentation.html"</span>
-  <span class="hljs-keyword">var</span> presUrls = [<span class="hljs-string">"http://example.com/presentation.html"</span>,
-                  <span class="hljs-string">"http://example.net/alternate.html"</span>];
-  <span class="hljs-comment">// show or hide present button depending on display availability</span>
-  <span class="hljs-keyword">var</span> handleAvailabilityChange = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">available</span>) </span>{
-    presentBtn.style.display = available ? <span class="hljs-string">"inline"</span> : <span class="hljs-string">"none"</span>;
+<pre class="brush: html">
+&lt;!-- controller.html --&gt;
+&lt;button id="presentBtn" style="display: none;"&gt;Present&lt;/button&gt;
+&lt;script&gt;
+  // The Present button is visible if at least one presentation display is available
+  var presentBtn = document.getElementById("presentBtn");
+  // It is also possible to use relative presentation URL e.g. "presentation.html"
+  var presUrls = ["http://example.com/presentation.html",
+                  "http://example.net/alternate.html"];
+  // show or hide present button depending on display availability
+  var handleAvailabilityChange = function(available) {
+    presentBtn.style.display = available ? "inline" : "none";
   };
-  <span class="hljs-comment">// Promise is resolved as soon as the presentation display availability is</span>
-  <span class="hljs-comment">// known.</span>
-  <span class="hljs-keyword">var</span> request = <span class="hljs-keyword">new</span> PresentationRequest(presUrls);
-  request.getAvailability().then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">availability</span>) </span>{
-    <span class="hljs-comment">// availability.value may be kept up-to-date by the controlling UA as long</span>
-    <span class="hljs-comment">// as the availability object is alive. It is advised for the web developers</span>
-    <span class="hljs-comment">// to discard the object as soon as it's not needed.</span>
+  // Promise is resolved as soon as the presentation display availability is
+  // known.
+  var request = new PresentationRequest(presUrls);
+  request.getAvailability().then(function(availability) {
+    // availability.value may be kept up-to-date by the controlling UA as long
+    // as the availability object is alive. It is advised for the web developers
+    // to discard the object as soon as it's not needed.
     handleAvailabilityChange(availability.value);
-    availability.onchange = <span class="hljs-function"><span class="hljs-keyword">function</span>() </span>{ handleAvailabilityChange(<span class="hljs-keyword">this</span>.value); };
-  }).catch(<span class="hljs-function"><span class="hljs-keyword">function</span>() </span>{
-    <span class="hljs-comment">// Availability monitoring is not supported by the platform, so discovery of</span>
-    <span class="hljs-comment">// presentation displays will happen only after request.start() is called.</span>
-    <span class="hljs-comment">// Pretend the devices are available for simplicity; or, one could implement</span>
-    <span class="hljs-comment">// a third state for the button.</span>
-    handleAvailabilityChange(<span class="hljs-literal">true</span>);
+    availability.onchange = function() { handleAvailabilityChange(this.value); };
+  }).catch(function() {
+    // Availability monitoring is not supported by the platform, so discovery of
+    // presentation displays will happen only after request.start() is called.
+    // Pretend the devices are available for simplicity; or, one could implement
+    // a third state for the button.
+    handleAvailabilityChange(true);
   });
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+&lt;/script&gt;
+</pre>
 
 <h3 id="Starting_a_new_presentation">Starting a new presentation</h3>
 
-<pre class="brush: js"><span class="hljs-comment">&lt;!-- controller.html --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-  presentBtn.onclick = <span class="hljs-function"><span class="hljs-keyword">function</span> () </span>{
-    <span class="hljs-comment">// Start new presentation.</span>
+<pre class="brush: html">
+&lt;!-- controller.html --&gt;
+&lt;script&gt;
+  presentBtn.onclick = function () {
+    // Start new presentation.
     request.start()
-      <span class="hljs-comment">// The connection to the presentation will be passed to setConnection on</span>
-      <span class="hljs-comment">// success.</span>
+      // The connection to the presentation will be passed to setConnection on
+      // success.
       .then(setConnection);
-      <span class="hljs-comment">// Otherwise, the user canceled the selection dialog or no screens were</span>
-      <span class="hljs-comment">// found.</span>
+      // Otherwise, the user canceled the selection dialog or no screens were
+      // found.
   };
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+&lt;/script&gt;
+</pre>
 
 <h3 id="Reconnect_to_a_presentation">Reconnect to a presentation</h3>
 
-<pre class="brush: js"><span class="hljs-comment">&lt;!-- controller.html --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"reconnectBtn"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"display: none;"</span>&gt;</span>Reconnect<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-  <span class="hljs-keyword">var</span> reconnect = <span class="hljs-function"><span class="hljs-keyword">function</span> () </span>{
-    <span class="hljs-comment">// read presId from localStorage if exists</span>
-    <span class="hljs-keyword">var</span> presId = localStorage[<span class="hljs-string">"presId"</span>];
-    <span class="hljs-comment">// presId is mandatory when reconnecting to a presentation.</span>
-    <span class="hljs-keyword">if</span> (!!presId) {
+<pre class="brush: html">
+&lt;!-- controller.html --&gt;
+&lt;button id="reconnectBtn" style="display: none;"&gt;Reconnect&lt;/button&gt;
+&lt;script&gt;
+  var reconnect = function () {
+    // read presId from localStorage if exists
+    var presId = localStorage["presId"];
+    // presId is mandatory when reconnecting to a presentation.
+    if (!!presId) {
       request.reconnect(presId)
-        <span class="hljs-comment">// The new connection to the presentation will be passed to</span>
-        <span class="hljs-comment">// setConnection on success.</span>
+        // The new connection to the presentation will be passed to
+        // setConnection on success.
         .then(setConnection);
-        <span class="hljs-comment">// No connection found for presUrl and presId, or an error occurred.</span>
+        // No connection found for presUrl and presId, or an error occurred.
     }
   };
-  <span class="hljs-comment">// On navigation of the controller, reconnect automatically.</span>
-  <span class="hljs-built_in">document</span>.addEventListener(<span class="hljs-string">"DOMContentLoaded"</span>, reconnect);
-  <span class="hljs-comment">// Or allow manual reconnection.</span>
+  // On navigation of the controller, reconnect automatically.
+  document.addEventListener("DOMContentLoaded", reconnect);
+  // Or allow manual reconnection.
   reconnectBtn.onclick = reconnect;
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+&lt;/script&gt;
+</pre>
 
 <h3 id="Presentation_initiation_by_the_controlling_UA">Presentation initiation by the controlling UA</h3>
 
-<pre class="brush: js"><span class="hljs-comment">&lt;!-- controller.html --&gt;</span>
-<span class="hljs-comment">&lt;!-- Setting presentation.defaultRequest allows the page to specify the
+<pre class="brush: html">
+&lt;!-- controller.html --&gt;
+&lt;!-- Setting presentation.defaultRequest allows the page to specify the
      PresentationRequest to use when the controlling UA initiates a
-     presentation. --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-  navigator.presentation.defaultRequest = <span class="hljs-keyword">new</span> PresentationRequest(presUrls);
-  navigator.presentation.defaultRequest.onconnectionavailable = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">evt</span>) </span>{
+     presentation. --&gt;
+&lt;script&gt;
+  navigator.presentation.defaultRequest = new PresentationRequest(presUrls);
+  navigator.presentation.defaultRequest.onconnectionavailable = function(evt) {
     setConnection(evt.connection);
   };
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+&lt;/script&gt;
+</pre>
 
 <h3 id="Monitor_connections_state_and_exchange_data">Monitor connection's state and exchange data</h3>
 
-<pre class="brush: js"><span class="hljs-comment">&lt;!-- controller.html --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"disconnectBtn"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"display: none;"</span>&gt;</span>Disconnect<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"stopBtn"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"display: none;"</span>&gt;</span>Stop<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"reconnectBtn"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"display: none;"</span>&gt;</span>Reconnect<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-  <span class="hljs-keyword">let</span> connection;
+<pre class="brush: html">
+&lt;!-- controller.html --&gt;
+&lt;button id="disconnectBtn" style="display: none;"&gt;Disconnect&lt;/button&gt;
+&lt;button id="stopBtn" style="display: none;"&gt;Stop&lt;/button&gt;
+&lt;button id="reconnectBtn" style="display: none;"&gt;Reconnect&lt;/button&gt;
+&lt;script&gt;
+  let connection;
 
-  <span class="hljs-comment">// The Disconnect and Stop buttons are visible if there is a connected presentation</span>
-  <span class="hljs-keyword">const</span> stopBtn = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">"#stopBtn"</span>);
-  <span class="hljs-keyword">const</span> reconnectBtn = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">"#reconnectBtn"</span>);
-  <span class="hljs-keyword">const</span> disconnectBtn = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">"#disconnectBtn"</span>);
+  // The Disconnect and Stop buttons are visible if there is a connected presentation
+  const stopBtn = document.querySelector("#stopBtn");
+  const reconnectBtn = document.querySelector("#reconnectBtn");
+  const disconnectBtn = document.querySelector("#disconnectBtn");
 
-  stopBtn.onclick = <span class="hljs-function"><span class="hljs-params">_</span> =&gt;</span> {
-    connection &amp;&amp; connection.terminate();
+  stopBtn.onclick = _ =&gt; {
+    connection && connection.terminate();
   };
 
-  disconnectBtn.onclick = <span class="hljs-function"><span class="hljs-params">_</span> =&gt;</span> {
-    connection &amp;&amp; connection.close();
+  disconnectBtn.onclick = _ =&gt; {
+    connection && connection.close();
   };
 
-  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setConnection</span>(<span class="hljs-params">newConnection</span>) </span>{
-    <span class="hljs-comment">// Disconnect from existing presentation, if not attempting to reconnect</span>
-    <span class="hljs-keyword">if</span> (connection &amp;&amp; connection != newConnection &amp;&amp; connection.state != <span class="hljs-string">'closed'</span>) {
-      connection.onclosed = <span class="hljs-literal">undefined</span>;
+  function setConnection(newConnection) {
+    // Disconnect from existing presentation, if not attempting to reconnect
+    if (connection && connection != newConnection && connection.state != 'closed') {
+      connection.onclosed = undefined;
       connection.close();
     }
 
-    <span class="hljs-comment">// Set the new connection and save the presentation ID</span>
+    // Set the new connection and save the presentation ID
     connection = newConnection;
-    localStorage[<span class="hljs-string">"presId"</span>] = connection.id;
+    localStorage["presId"] = connection.id;
 
-    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">showConnectedUI</span>() </span>{
-      <span class="hljs-comment">// Allow the user to disconnect from or terminate the presentation</span>
-      stopBtn.style.display = <span class="hljs-string">"inline"</span>;
-      disconnectBtn.style.display = <span class="hljs-string">"inline"</span>;
-      reconnectBtn.style.display = <span class="hljs-string">"none"</span>;
+    function showConnectedUI() {
+      // Allow the user to disconnect from or terminate the presentation
+      stopBtn.style.display = "inline";
+      disconnectBtn.style.display = "inline";
+      reconnectBtn.style.display = "none";
     }
 
-    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">showDisconnectedUI</span>() </span>{
-      disconnectBtn.style.display = <span class="hljs-string">"none"</span>;
-      stopBtn.style.display = <span class="hljs-string">"none"</span>;
-      reconnectBtn.style.display = localStorage[<span class="hljs-string">"presId"</span>] ? <span class="hljs-string">"inline"</span> : <span class="hljs-string">"none"</span>;
+    function showDisconnectedUI() {
+      disconnectBtn.style.display = "none";
+      stopBtn.style.display = "none";
+      reconnectBtn.style.display = localStorage["presId"] ? "inline" : "none";
     }
 
-    <span class="hljs-comment">// Monitor the connection state</span>
-    connection.onconnect = <span class="hljs-function"><span class="hljs-params">_</span> =&gt;</span> {
+    // Monitor the connection state
+    connection.onconnect = _ =&gt; {
       showConnectedUI();
 
-      <span class="hljs-comment">// Register message handler</span>
-      connection.onmessage = <span class="hljs-function"><span class="hljs-params">message</span> =&gt;</span> {
-        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Received message: <span class="hljs-subst">${message.data}</span>`</span>);
+      // Register message handler
+      connection.onmessage = message =&gt; {
+        console.log(`Received message: ${message.data}`);
       };
 
-      <span class="hljs-comment">// Send initial message to presentation page</span>
-      connection.send(<span class="hljs-string">"Say hello"</span>);
+      // Send initial message to presentation page
+      connection.send("Say hello");
     };
 
-    connection.onclose = <span class="hljs-function"><span class="hljs-params">_</span> =&gt;</span> {
-      connection = <span class="hljs-literal">null</span>;
+    connection.onclose = _ =&gt; {
+      connection = null;
       showDisconnectedUI();
     };
 
-    connection.onterminate = <span class="hljs-function"><span class="hljs-params">_</span> =&gt;</span> {
-      <span class="hljs-comment">// Remove presId from localStorage if exists</span>
-      <span class="hljs-keyword">delete</span> localStorage[<span class="hljs-string">"presId"</span>];
-      connection = <span class="hljs-literal">null</span>;
+    connection.onterminate = _ =&gt; {
+      // Remove presId from localStorage if exists
+      delete localStorage["presId"];
+      connection = null;
       showDisconnectedUI();
     };
   };
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+&lt;/script&gt;</pre>
 
 <h3 id="Monitor_available_connections_and_say_hello">Monitor available connection(s) and say hello</h3>
 
-<pre class="brush: js"><span class="hljs-comment">&lt;!-- presentation.html --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-  <span class="hljs-keyword">var</span> addConnection = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">connection</span>) </span>{
-    <span class="hljs-keyword">this</span>.onmessage = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">message</span>) </span>{
-      <span class="hljs-keyword">if</span> (message.data == <span class="hljs-string">"say hello"</span>)
-        <span class="hljs-keyword">this</span>.send(<span class="hljs-string">"hello"</span>);
+<pre class="brush: html">
+&lt;!-- presentation.html --&gt;
+&lt;script&gt;
+  var addConnection = function(connection) {
+    this.onmessage = function (message) {
+      if (message.data == "say hello")
+        this.send("hello");
     };
   };
 
-  navigator.presentation.receiver.connectionList.then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">list</span>) </span>{
-    list.connections.map(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">connection</span>) </span>{
+  navigator.presentation.receiver.connectionList.then(function (list) {
+    list.connections.map(function (connection) {
       addConnection(connection);
     });
-    list.onconnectionavailable = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">evt</span>) </span>{
+    list.onconnectionavailable = function (evt) {
       addConnection(evt.connection);
     };
   });
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+&lt;/script&gt;
+</pre>
 
 <h3 id="Passing_locale_information_with_a_message">Passing locale information with a message</h3>
 
-<pre class="brush: js"><span class="hljs-comment">&lt;!-- controller.html --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-  connection.send(<span class="hljs-string">"{string: '你好，世界!', lang: 'zh-CN'}"</span>);
-  connection.send(<span class="hljs-string">"{string: 'こんにちは、世界!', lang: 'ja'}"</span>);
-  connection.send(<span class="hljs-string">"{string: '안녕하세요, 세계!', lang: 'ko'}"</span>);
-  connection.send(<span class="hljs-string">"{string: 'Hello, world!', lang: 'en-US'}"</span>);
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<pre class="brush: html">
+&lt;!-- controller.html --&gt;
+&lt;script&gt;
+  connection.send("{string: '你好，世界!', lang: 'zh-CN'}");
+  connection.send("{string: 'こんにちは、世界!', lang: 'ja'}");
+  connection.send("{string: '안녕하세요, 세계!', lang: 'ko'}");
+  connection.send("{string: 'Hello, world!', lang: 'en-US'}");
+&lt;/script&gt;
 
-<span class="hljs-comment">&lt;!-- presentation.html --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-  connection.onmessage = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">message</span>) </span>{
-    <span class="hljs-keyword">var</span> messageObj = <span class="hljs-built_in">JSON</span>.parse(message.data);
-    <span class="hljs-keyword">var</span> spanElt = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">"SPAN"</span>);
+&lt;!-- presentation.html --&gt;
+&lt;script&gt;
+  connection.onmessage = function (message) {
+    var messageObj = JSON.parse(message.data);
+    var spanElt = document.createElement("SPAN");
     spanElt.lang = messageObj.lang;
     spanElt.textContent = messageObj.string;
-    <span class="hljs-built_in">document</span>.appendChild(spanElt);
+    document.appendChild(spanElt);
   };
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+&lt;/script&gt;
+</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
