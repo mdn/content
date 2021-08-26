@@ -21,7 +21,7 @@ browser-compat: api.XRView
 ---
 {{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
-The [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)'s **`XRView`** interface provides information describing a single view into the XR scene for a specific frame, providing orientation and position information for the viewpoint. You can think of it as a description of a specific eye or camera and how it views the world. A 3D frame will involve two views, one for each eye, separated by an appropriate distance which approximates the distance between the viewer's eyes. This allows the two views, when projected in isolation into the appropriate eyes, to simulate a 3D world.
+The [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)'s **`XRView`** interface describes a single view into the XR scene for a specific frame, providing orientation and position information for the viewpoint. You can think of it as a description of a specific eye or camera and how it views the world. A 3D frame will involve two views, one for each eye, separated by an appropriate distance which approximates the distance between the viewer's eyes. This allows the two views, when projected in isolation into the appropriate eyes, to simulate a 3D world.
 
 ## Properties
 
@@ -31,8 +31,15 @@ The [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)'s **`XRView`** inte
   - : Returns a boolean indicating if the `XRView` is a first-person observer view.
 - {{domxref("XRView.projectionMatrix", "projectionMatrix")}} {{ReadOnlyInline}}
   - : The projection matrix that will transform the scene to appear correctly given the point-of-view indicated by `eye`. This matrix should be used directly in order to avoid presentation distortions that may lead to potentially serious user discomfort.
+- {{domxref("XRView.recommendedViewportScale", "recommendedViewportScale")}} {{ReadOnlyInline}}
+  - : The recommended viewport scale value that you can use for `requestViewportScale()` if the user agent has such a recommendation; {{jsxref("null")}} otherwise.
 - {{domxref("XRView.transform", "transform")}} {{ReadOnlyInline}}
   - : An {{domxref("XRRigidTransform")}} which describes the current position and orientation of the viewpoint in relation to the {{domxref("XRReferenceSpace")}} specified when {{domxref("XRFrame.getViewerPose", "getViewerPose()")}} was called on the {{domxref("XRFrame")}} being rendered.
+
+## Methods
+
+- {{domxref("XRView.requestViewportScale", "requestViewportScale()")}} {{ReadOnlyInline}}
+  - : Requests that the user agent should set the requested viewport scale for this viewport to the requested value.
 
 ## Usage notes
 
@@ -40,7 +47,7 @@ The [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)'s **`XRView`** inte
 
 While rendering a scene, the set of views that are used to render the scene for the viewer as of the current frame are obtained by calling the {{domxref("XRFrame")}} object's {{domxref("XRFrame.getViewerPose", "getViewerPose()")}}  method to get the {{domxref("XRViewerPose")}} representing (in essence) the position of the viewer's head. That object's {{domxref("XRViewerPose.views", "views")}} property is a list of all of the `XRView` objects representing the viewpoints which can be used to construct the scene for presentation to the user.
 
-It's possible to have `XRView` objects which represent overlapping regions as well as entirely disparate regions; in a game, you might have views that can be presented to observe a remote site using a security camera or other device, for example. In other words, don't assume there are exactly two views on a given viewer; there can be as few as one (such as when rendering the scene in `inline` mode, and potentially many (especially if the field of view is very large). There might also be views representing observers watching the action, or other viewspoints not direclty associated with a player's eye.
+It's possible to have `XRView` objects which represent overlapping regions as well as entirely disparate regions; in a game, you might have views that can be presented to observe a remote site using a security camera or other device, for example. In other words, don't assume there are exactly two views on a given viewer; there can be as few as one (such as when rendering the scene in `inline` mode, and potentially many (especially if the field of view is very large). There might also be views representing observers watching the action, or other viewpoints not directly associated with a player's eye.
 
 In addition, the number of views can change at any time, depending on the needs of the time. So you should process the view list every time without making assumptions based on previous frames.
 
@@ -48,7 +55,7 @@ All positions and orientations within the views for a given {{domxref("XRViewerP
 
 ### The destination rendering layer
 
-To render a frame, you just iterate over the `XRViewerPose`'s views, rendering each of them into the appropriate viewport within the frame's {{domxref("XRWebGLLayer")}}. Currently, the specification (and therefore all current implementations of WebXR) is designed around rendering every `XRView` into a single `XRWebGLLayer`, which is then presented on the XR device with half used for the left eye and half for the right eye. The {{domxref("XRViewport")}} for each view is used to position the rendering into the correct half of the layer.
+To render a frame, you iterate over the `XRViewerPose`'s views, rendering each of them into the appropriate viewport within the frame's {{domxref("XRWebGLLayer")}}. Currently, the specification (and therefore all current implementations of WebXR) is designed around rendering every `XRView` into a single `XRWebGLLayer`, which is then presented on the XR device with half used for the left eye and half for the right eye. The {{domxref("XRViewport")}} for each view is used to position the rendering into the correct half of the layer.
 
 If in the future it becomes possible for each view to render into a different layer, there would have to be changes made to the API, so it's safe for now to assume that all views will render into the same layer.
 
@@ -56,7 +63,7 @@ If in the future it becomes possible for each view to render into a different la
 
 ### Preparing to render every view for a pose
 
-To draw eerything the user sees each frame requires iterating over the list of views returned by the {{domxref("XRViewerPose")}} object's  {{domxref("XRViewerPose.views", "views")}} list:
+To draw everything the user sees, each frame requires iterating over the list of views returned by the {{domxref("XRViewerPose")}} object's  {{domxref("XRViewerPose.views", "views")}} list:
 
 ```js
 for (let view of pose.views) {
