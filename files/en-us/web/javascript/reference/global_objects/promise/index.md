@@ -70,7 +70,7 @@ myPromise
 .catch(handleRejectedAny);
 ```
 
-Using `{{JSxRef("Functions/Arrow_functions", "Arrow Function Expressions")}}` for the callback functions, an implementation of a promise chain might look something like this:
+Using {{JSxRef("Functions/Arrow_functions", "Arrow Function Expressions", "", 1)}} for the callback functions, an implementation of a promise chain might look something like this:
 
 ```js
 promise1
