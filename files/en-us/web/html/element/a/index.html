@@ -412,13 +412,15 @@ document.querySelector('a').addEventListener('click', event =&gt;
 <p>A <strong>skip link</strong> is a link placed as early as possible in {{HTMLElement("body")}} content that points to the beginning of the page's main content. Usually, CSS hides a skip link offscreen until focused.</p>
 
 <pre>&lt;body&gt;
-  &lt;a href="#content"&gt;Skip to main content&lt;/a&gt;
+  &lt;a href="#content" class="skip-link" &gt;Skip to main content&lt;/a&gt;
 
   &lt;header&gt;
     …
   &lt;/header&gt;
 
-  &lt;main id="content"&gt; &lt;!-- The skip link jumps to here --&gt;
+  &lt;main id="content"&gt; &lt;/main&gt; &lt;!-- The skip link jumps to here --&gt;
+  
+  &lt;/body&gt;
 </pre>
 
 <pre class="brush: css">.skip-link {
