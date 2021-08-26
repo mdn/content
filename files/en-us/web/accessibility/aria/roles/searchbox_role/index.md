@@ -1,0 +1,41 @@
+---
+title: 'ARIA: searchbox role'
+slug: Web/Accessibility/ARIA/roles/searchbox_role
+tags: 
+
+  - Accessibility
+  - ARIA
+  - roles
+  - NeedsContent
+---
+
+
+
+## Description
+
+### Associated WAI-ARIA roles, states, and properties
+
+### Keyboard interactions
+
+### Required JavaScript features
+
+## Examples
+
+## Accessibility Concerns
+
+## Best Practices
+
+### Prefer HTML
+
+## Specifications
+
+| Specification                                                                                                                    | Status                                           |
+| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
+| {{SpecName("ARIA","#searchbox role","ARIA: searchbox role")}}                                             | {{Spec2('ARIA')}}                         |
+| {{SpecName("ARIA Authoring Practices","#aria_lh_searchbox_role","searchbox role")}} | {{Spec2('ARIA Authoring Practices')}} |
+
+
+## See Also
+
+
+<section id="Quick_links"><ol><li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li></ol></section>

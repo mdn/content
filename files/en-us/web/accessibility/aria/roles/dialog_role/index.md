@@ -110,7 +110,7 @@ When the dialog is correctly labeled and focus is moved to an element (often an 
 
 ### Notes 
 
-<div class="note"><strong>Note:</strong> While it is possible to prevent keyboard users from moving focus to elements outside of the dialog, screen reader users may still be able to navigate to that content using their screen reader's virtual cursor. It is important for developers to ensure that content outside of the modal dialog is inaccessible to all users while the modal dialog is active.</div>
+**Note:** While it is possible to prevent keyboard users from moving focus to elements outside of the dialog, screen reader users may still be able to navigate to that content using their screen reader's virtual cursor. It is important for developers to ensure that content outside of the modal dialog is inaccessible to all users while the modal dialog is active.
 
 ## Specifications
 
@@ -124,7 +124,7 @@ Coming soon
 
 ## See also
 
-- [ARIA: alertdialog role](/en-US/docs/Web/Accessibility/ARIA/Roles/Alertdialog_Role)
+- [ARIA: alertdialog role](/en-US/docs/web/Accessibility/ARIA/roles/alertdialog_role)
 - [Using the alertdialog role](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role)
 
 <section id="Quick_links"><ol><li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li></ol></section>

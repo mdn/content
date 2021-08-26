@@ -8,7 +8,7 @@ tags:
   - ARIA widget
   - Reference
 ---
-<p class="summary"><span class="seoSummary">The <a href="https://www.w3.org/TR/wai-aria-1.1/#alert">alert</a> role can be used to tell the user an element has been dynamically updated. Screen readers will instantly start reading out the updated content when the role is added. If the user is expected to close the alert, then the <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Alertdialog_Role">alertdialog</a> role should be used instead.</span></p>
+<p class="summary"><span class="seoSummary">The <a href="https://www.w3.org/TR/wai-aria-1.1/#alert">alert</a> role can be used to tell the user an element has been dynamically updated. Screen readers will instantly start reading out the updated content when the role is added. If the user is expected to close the alert, then the [alertdialog](/en-US/docs/Web/Accessibility/ARIA/Roles/Alertdialog_Role) role should be used instead.</span></p>
 
 ## Description
 
