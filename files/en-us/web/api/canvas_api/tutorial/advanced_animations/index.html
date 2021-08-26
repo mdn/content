@@ -44,7 +44,7 @@ ball.draw();</pre>
 
 <p>Now that we have a ball, we are ready to add a basic animation like we have learned in the <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations">last chapter</a> of this tutorial. Again, {{domxref("window.requestAnimationFrame()")}} helps us to control the animation. The ball gets moving by adding a velocity vector to the position. For each frame, we also {{domxref("CanvasRenderingContext2D.clearRect", "clear", "", 1)}} the canvas to remove old circles from prior frames.</p>
 
-<pre class="brush: js; highlight:[8,9,24,25]">var canvas = document.getElementById('canvas');
+<pre class="brush: js;">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var raf;
 
