@@ -66,7 +66,7 @@ precedence and associativity](/en-US/docs/Web/JavaScript/Reference/Operators/Ope
 ```js
 var a, b, c;
 
-a = b = 3, c = 4; // Returns 4 in console
+a = b = 3, c = 4; // Returns 3 in console
 console.log(a); // 3 (left-most)
 
 var x, y, z;
