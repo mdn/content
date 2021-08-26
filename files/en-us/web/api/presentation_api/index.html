@@ -50,7 +50,6 @@ tags:
 
 <h3 id="Monitor_availability_of_presentation_displays">Monitor availability of presentation displays</h3>
 
-<div class="example">
 <pre class="brush: js"><span class="hljs-comment">&lt;!-- controller.html --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"presentBtn"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"display: none;"</span>&gt;</span>Present<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
@@ -80,11 +79,9 @@ tags:
     handleAvailabilityChange(<span class="hljs-literal">true</span>);
   });
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
-</div>
 
 <h3 id="Starting_a_new_presentation">Starting a new presentation</h3>
 
-<div class="example">
 <pre class="brush: js"><span class="hljs-comment">&lt;!-- controller.html --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
   presentBtn.onclick = <span class="hljs-function"><span class="hljs-keyword">function</span> () </span>{
@@ -97,11 +94,9 @@ tags:
       <span class="hljs-comment">// found.</span>
   };
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
-</div>
 
 <h3 id="Reconnect_to_a_presentation">Reconnect to a presentation</h3>
 
-<div class="example">
 <pre class="brush: js"><span class="hljs-comment">&lt;!-- controller.html --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"reconnectBtn"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"display: none;"</span>&gt;</span>Reconnect<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
@@ -122,11 +117,9 @@ tags:
   <span class="hljs-comment">// Or allow manual reconnection.</span>
   reconnectBtn.onclick = reconnect;
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
-</div>
 
 <h3 id="Presentation_initiation_by_the_controlling_UA">Presentation initiation by the controlling UA</h3>
 
-<div class="example">
 <pre class="brush: js"><span class="hljs-comment">&lt;!-- controller.html --&gt;</span>
 <span class="hljs-comment">&lt;!-- Setting presentation.defaultRequest allows the page to specify the
      PresentationRequest to use when the controlling UA initiates a
@@ -137,11 +130,9 @@ tags:
     setConnection(evt.connection);
   };
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
-</div>
 
 <h3 id="Monitor_connections_state_and_exchange_data">Monitor connection's state and exchange data</h3>
 
-<div class="example">
 <pre class="brush: js"><span class="hljs-comment">&lt;!-- controller.html --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"disconnectBtn"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"display: none;"</span>&gt;</span>Disconnect<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"stopBtn"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"display: none;"</span>&gt;</span>Stop<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
@@ -212,11 +203,9 @@ tags:
     };
   };
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
-</div>
 
 <h3 id="Monitor_available_connections_and_say_hello">Monitor available connection(s) and say hello</h3>
 
-<div class="example">
 <pre class="brush: js"><span class="hljs-comment">&lt;!-- presentation.html --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
   <span class="hljs-keyword">var</span> addConnection = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">connection</span>) </span>{
@@ -235,11 +224,9 @@ tags:
     };
   });
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
-</div>
 
 <h3 id="Passing_locale_information_with_a_message">Passing locale information with a message</h3>
 
-<div class="example">
 <pre class="brush: js"><span class="hljs-comment">&lt;!-- controller.html --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
   connection.send(<span class="hljs-string">"{string: '你好，世界!', lang: 'zh-CN'}"</span>);
@@ -258,11 +245,11 @@ tags:
     <span class="hljs-built_in">document</span>.appendChild(spanElt);
   };
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
-</div>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table>
+ <tbody>
   <tr>
    <th>Specification</th>
   </tr>
@@ -276,10 +263,8 @@ tags:
 
 <h3 id="Presentation"><code>Presentation</code></h3>
 
-<div>
 
 <p>{{Compat("api.Presentation")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
