@@ -91822,39 +91822,6 @@
       "Bzbarsky"
     ]
   },
-  "Web/API/WindowOrWorkerGlobalScope/clearTimeout": {
-    "modified": "2020-10-15T21:09:05.105Z",
-    "contributors": [
-      "mfuji09",
-      "Skimmy",
-      "fscholz",
-      "erikadoyle",
-      "nmve",
-      "chrisdavidmills",
-      "DLuPi",
-      "Sheppy",
-      "tiffling",
-      "tvthatsme",
-      "Qwick",
-      "githue",
-      "hweeks",
-      "teoli",
-      "AshfaqHossain",
-      "basemnassar11",
-      "ethertank",
-      "fusionchess",
-      "jyasskin",
-      "karbassi",
-      "qfel13",
-      "kswedberg",
-      "Mgjbot",
-      "Nickolay",
-      "BenoitL",
-      "Dria",
-      "Callek",
-      "JesseW"
-    ]
-  },
   "Web/API/WindowOrWorkerGlobalScope/createImageBitmap": {
     "modified": "2020-10-15T21:37:56.407Z",
     "contributors": [
@@ -94765,6 +94732,39 @@
       "Mgjbot",
       "BenoitL",
       "Maian",
+      "JesseW"
+    ]
+  },
+  "Web/API/clearTimeout": {
+    "modified": "2020-10-15T21:09:05.105Z",
+    "contributors": [
+      "mfuji09",
+      "Skimmy",
+      "fscholz",
+      "erikadoyle",
+      "nmve",
+      "chrisdavidmills",
+      "DLuPi",
+      "Sheppy",
+      "tiffling",
+      "tvthatsme",
+      "Qwick",
+      "githue",
+      "hweeks",
+      "teoli",
+      "AshfaqHossain",
+      "basemnassar11",
+      "ethertank",
+      "fusionchess",
+      "jyasskin",
+      "karbassi",
+      "qfel13",
+      "kswedberg",
+      "Mgjbot",
+      "Nickolay",
+      "BenoitL",
+      "Dria",
+      "Callek",
       "JesseW"
     ]
   },

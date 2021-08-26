@@ -70,7 +70,7 @@ var <em>intervalID</em> = setInterval(function[, delay]);
 <p>It may be helpful to be aware that <code>setInterval()</code> and
   {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}} share the same pool
   of IDs, and that <code>clearInterval()</code> and
-  {{domxref("WindowOrWorkerGlobalScope.clearTimeout", "clearTimeout()")}} can technically
+  {{domxref("clearTimeout", "clearTimeout()")}} can technically
   be used interchangeably. For clarity, however, you should try to always match them to
   avoid confusion when maintaining your code.</p>
 
@@ -762,7 +762,7 @@ MiniDaemon.prototype.start = function (bReverse) {
 <ul>
   <li>A polyfill of <code>setInterval</code> which allows passing arguments to the callback is available in <a href="https://github.com/zloirock/core-js#settimeout-and-setinterval"><code>core-js</code></a></li>
   <li>{{domxref("WindowOrWorkerGlobalScope.setTimeout")}}</li>
-  <li>{{domxref("WindowOrWorkerGlobalScope.clearTimeout")}}</li>
+  <li>{{domxref("clearTimeout")}}</li>
   <li>{{domxref("clearInterval")}}</li>
   <li>{{domxref("window.requestAnimationFrame")}}</li>
 </ul>

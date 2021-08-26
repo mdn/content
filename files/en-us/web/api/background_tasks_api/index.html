@@ -65,7 +65,7 @@ tags:
   clearTimeout(id);
 }</pre>
 
-<p>If <code>cancelIdleCallback()</code> isn't defined, this creates one which passes the specified callback ID through to {{domxref("WindowOrWorkerGlobalScope/clearTimeout", "clearTimeout()")}}.</p>
+<p>If <code>cancelIdleCallback()</code> isn't defined, this creates one which passes the specified callback ID through to {{domxref("clearTimeout()")}}.</p>
 
 <p>Now your code will work even on browsers that don't support the Background Tasks API, albeit not as efficiently.</p>
 
