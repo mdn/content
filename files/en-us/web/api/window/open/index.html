@@ -161,12 +161,12 @@ function openRequestedPopup() {
 </div>
 
 <dl>
-  <dt id="left"><code>left</code> or <code>screenX</code></dt>
+  <dt><code>left</code> or <code>screenX</code></dt>
   <dd>Specifies the distance the new window is placed from the left side of the work area
     for applications of the user's operating system to the leftmost border (resizing
     handle) of the browser window. The new window cannot be initially positioned
     offscreen.</dd>
-  <dt id="top"><code>top</code> or <code>screenY</code></dt>
+  <dt><code>top</code> or <code>screenY</code></dt>
   <dd>Specifies the distance the new window is placed from the top side of the work area
     for applications of the user's operating system to the topmost border (resizing
     handle) of the browser window. The new window cannot be initially positioned
@@ -189,12 +189,12 @@ function openRequestedPopup() {
 </div>
 
 <dl>
-  <dt id="width"><code>width</code> or <code>innerWidth</code></dt>
+  <dt><code>width</code> or <code>innerWidth</code></dt>
   <dd>Specifies the width of the content area, viewing area of the new secondary window in
     pixels. The width value includes the width of the vertical scrollbar if present. The
     width value does not include the sidebar if it is expanded. The minimum required value
     is 100.</dd>
-  <dt id="height"><code>height</code> or <code>innerHeight</code></dt>
+  <dt><code>height</code> or <code>innerHeight</code></dt>
   <dd>Specifies the height of the content area, viewing area of the new secondary window
     in pixels. The height value includes the height of the horizontal scrollbar if
     present. The height value does not include other UI parts such as location bar, title
@@ -297,7 +297,7 @@ function openRequestedPopup() {
 <h3 id="Window_functionality_features">Window functionality features</h3>
 
 <dl>
-  <dt id="noopener"><code>noopener</code></dt>
+  <dt><code>noopener</code></dt>
   <dd>If this feature is set, the newly-opened window will open as normal, except that it
     will not have access back to the originating window (via {{domxref("Window.opener")}}
     — it returns <code>null</code>). In addition, the <code>window.open()</code> call will
@@ -314,13 +314,13 @@ function openRequestedPopup() {
     more information and for browser compatibility details, including information about
     ancillary effects.
   </dd>
-  <dt id="noreferrer"><code>noreferrer</code></dt>
+  <dt><code>noreferrer</code></dt>
   <dd>If this feature is set, the request to load the content located at the specified URL
     will be loaded with the request's <code>referrer</code> set to
     <code>noreferrer</code>; this prevents the request from sending the URL of the page
     that initiated the request to the server where the request is sent. In addition,
     setting this feature also automatically sets
-    <code><a href="#noopener">noopener</a></code>. See
+    <code>noopener</code>. See
     <code><a href="/en-US/docs/Web/HTML/Link_types#noreferrer">rel="noreferrer"</a></code>
     for additional details and compatibility information. Firefox introduced support for
     <code>noreferrer</code> in Firefox 68.</dd>
