@@ -25,7 +25,7 @@ An {{domxref("XRInputSource")}} object.
 
 ### Filtering input sources
 
-The {{domxref("XRTransientInputHitTestResult.inputSource", "inputSource")}} property allows you to filter hit test results by input source.
+The `inputSource` property allows you to filter hit test results by input source.
 
 ```js
 // frame loop

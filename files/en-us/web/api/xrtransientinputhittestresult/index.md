@@ -32,7 +32,7 @@ None.
 
 ### Accessing transient input hit test results
 
-There are two arrays involved when accessing transient input hit test results. First, you get an array of `XRTransientInputHitTestResult` objects by calling {{domxref("XRFrame.getHitTestResultsForTransientInput()")}}. Second, in order to get to the actual {{domxref("XRHitTestResult")}} objects for an input source, you need the `results` property.
+Two arrays are used to access transient input hit test results. First, you get an array of `XRTransientInputHitTestResult` objects by calling {{domxref("XRFrame.getHitTestResultsForTransientInput()")}}. Second, to get to the actual {{domxref("XRHitTestResult")}} objects for an input source, you dereference the `results` property on one of the `XRTransientInputHitTestResult` objects.
 
 ```js
 // frame loop
