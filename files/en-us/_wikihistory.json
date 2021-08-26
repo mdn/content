@@ -91822,30 +91822,6 @@
       "Bzbarsky"
     ]
   },
-  "Web/API/WindowOrWorkerGlobalScope/clearInterval": {
-    "modified": "2020-10-15T21:11:20.211Z",
-    "contributors": [
-      "mileskrell",
-      "fscholz",
-      "erikadoyle",
-      "chrisdavidmills",
-      "Sheppy",
-      "cvrebert",
-      "dyagmin",
-      "teoli",
-      "Mats.Palmgren",
-      "ethertank",
-      "ziyunfei",
-      "fusionchess",
-      "qfel13",
-      "Nickolay",
-      "Taken",
-      "Mgjbot",
-      "BenoitL",
-      "Maian",
-      "JesseW"
-    ]
-  },
   "Web/API/WindowOrWorkerGlobalScope/clearTimeout": {
     "modified": "2020-10-15T21:09:05.105Z",
     "contributors": [
@@ -94766,6 +94742,30 @@
       "chrisdavidmills",
       "teoli",
       "kscarfone"
+    ]
+  },
+  "Web/API/clearInterval": {
+    "modified": "2020-10-15T21:11:20.211Z",
+    "contributors": [
+      "mileskrell",
+      "fscholz",
+      "erikadoyle",
+      "chrisdavidmills",
+      "Sheppy",
+      "cvrebert",
+      "dyagmin",
+      "teoli",
+      "Mats.Palmgren",
+      "ethertank",
+      "ziyunfei",
+      "fusionchess",
+      "qfel13",
+      "Nickolay",
+      "Taken",
+      "Mgjbot",
+      "BenoitL",
+      "Maian",
+      "JesseW"
     ]
   },
   "Web/API/console": {

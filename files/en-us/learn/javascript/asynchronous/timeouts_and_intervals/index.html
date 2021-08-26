@@ -139,7 +139,7 @@ const createClock = setInterval(displayTime, 1000);</pre>
 
 <h3 id="Clearing_intervals">Clearing intervals</h3>
 
-<p><code>setInterval()</code> keeps running a task forever, unless you do something about it. You'll probably want a way to stop such tasks, otherwise you may end up getting errors when the browser can't complete any further versions of the task, or if the animation being handled by the task has finished. You can do this the same way you stop timeouts — by passing the identifier returned by the <code>setInterval()</code> call to the <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval">clearInterval()</a></code> function:</p>
+<p><code>setInterval()</code> keeps running a task forever, unless you do something about it. You'll probably want a way to stop such tasks, otherwise you may end up getting errors when the browser can't complete any further versions of the task, or if the animation being handled by the task has finished. You can do this the same way you stop timeouts — by passing the identifier returned by the <code>setInterval()</code> call to the <code><a href="/en-US/docs/Web/API/clearInterval">clearInterval()</a></code> function:</p>
 
 <pre class="brush: js">const myInterval = setInterval(myFunction, 2000);
 
@@ -533,7 +533,7 @@ const result = document.querySelector('.result');</pre>
   rotateCount = (timestamp - startTime) / 3;
 
   rotateCount %= 360;
-  
+
   spinner.style.transform = 'rotate(' + rotateCount + 'deg)';
   rAF = requestAnimationFrame(draw);
 }</pre>

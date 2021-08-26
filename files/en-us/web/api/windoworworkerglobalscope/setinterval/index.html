@@ -24,7 +24,7 @@ browser-compat: api.WindowOrWorkerGlobalScope.setInterval
     call.</p>
 
 <p>This method returns an interval ID which uniquely identifies the interval, so you
-  can remove it later by calling {{domxref("WindowOrWorkerGlobalScope.clearInterval",
+  can remove it later by calling {{domxref("clearInterval",
   "clearInterval()")}}. This method is defined by the
   {{domxref("WindowOrWorkerGlobalScope")}} mixin.</p>
 
@@ -65,7 +65,7 @@ var <em>intervalID</em> = setInterval(function[, delay]);
 
 <p>The returned <code>intervalID</code> is a numeric, non-zero value which identifies the
   timer created by the call to <code>setInterval()</code>; this value can be passed to
-  {{domxref("WindowOrWorkerGlobalScope.clearInterval()")}} to cancel the interval.</p>
+  {{domxref("clearInterval()")}} to cancel the interval.</p>
 
 <p>It may be helpful to be aware that <code>setInterval()</code> and
   {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}} share the same pool
@@ -302,7 +302,7 @@ Vivamus blandit massa ut metus mattis in fringilla lectus imperdiet. Proin ac an
 &lt;/html&gt;</pre>
 
 <p><a href="/files/3997/typewriter.html">View this demo in action</a>. See also: <a
-    href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval"><code>clearInterval()</code></a>.</p>
+    href="/en-US/docs/Web/API/clearInterval"><code>clearInterval()</code></a>.</p>
 
 <h2 id="Callback_arguments">Callback arguments</h2>
 
@@ -699,7 +699,7 @@ MiniDaemon.prototype.start = function (bReverse) {
 
 <p>The <code>setInterval()</code> function is commonly used to set a delay for functions
   that are executed again and again, such as animations. You can cancel the interval using
-  {{domxref("WindowOrWorkerGlobalScope.clearInterval()")}}.</p>
+  {{domxref("clearInterval()")}}.</p>
 
 <p>If you wish to have your function called <em>once</em> after the specified delay, use
   {{domxref("WindowOrWorkerGlobalScope.setTimeout()")}}.</p>
@@ -763,6 +763,6 @@ MiniDaemon.prototype.start = function (bReverse) {
   <li>A polyfill of <code>setInterval</code> which allows passing arguments to the callback is available in <a href="https://github.com/zloirock/core-js#settimeout-and-setinterval"><code>core-js</code></a></li>
   <li>{{domxref("WindowOrWorkerGlobalScope.setTimeout")}}</li>
   <li>{{domxref("WindowOrWorkerGlobalScope.clearTimeout")}}</li>
-  <li>{{domxref("WindowOrWorkerGlobalScope.clearInterval")}}</li>
+  <li>{{domxref("clearInterval")}}</li>
   <li>{{domxref("window.requestAnimationFrame")}}</li>
 </ul>
