@@ -11,7 +11,7 @@ browser-compat: api.AbortSignal.abort
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p class="summary">The static <strong><code>AbortSignal.abort()</code></strong> method returns an {{domxref("AbortSignal")}} that is already set as aborted (and which does not trigger an abort event).</p>
+<p>The static <strong><code>AbortSignal.abort()</code></strong> method returns an {{domxref("AbortSignal")}} that is already set as aborted (and which does not trigger an abort event).</p>
 
 <p>This is shorthand for the following code:</p>
 
@@ -22,8 +22,7 @@ return controller.signal;</pre>
 <p>This could, for example, be passed to a fetch method in order to run its abort logic (i.e. it may be that code is organised such that the abort logic should be run even if the intended fetch operation has not been started).</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>The method is similar in purpose to {{JSxRef("Promise.reject")}}</p>
+  <p><strong>Note:</strong> The method is similar in purpose to {{JSxRef("Promise.reject")}}</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>

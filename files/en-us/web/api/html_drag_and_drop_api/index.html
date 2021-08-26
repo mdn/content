@@ -12,7 +12,9 @@ tags:
 ---
 <div>{{DefaultAPISidebar("HTML Drag and Drop API")}}</div>
 
-<p><span class="seoSummary"><strong>HTML Drag and Drop</strong> interfaces enable applications to use drag-and-drop features in browsers.</span> The user may select <em>draggable</em> elements with a mouse, drag those elements to a <em>droppable</em> element, and drop them by releasing the mouse button. A translucent representation of the <em>draggable</em> elements follows the pointer during the drag operation.</p>
+<p><strong>HTML Drag and Drop</strong> interfaces enable applications to use drag-and-drop features in browsers.</p>
+
+<p>The user may select <em>draggable</em> elements with a mouse, drag those elements to a <em>droppable</em> element, and drop them by releasing the mouse button. A translucent representation of the <em>draggable</em> elements follows the pointer during the drag operation.</p>
 
 <p>For web sites, extensions, and XUL applications, you can customize which elements can become <em>draggable</em>, the type of feedback the <em>draggable</em> elements produce, and the <em>droppable</em> elements.</p>
 
@@ -49,11 +51,6 @@ tags:
    <td>{{domxref('Document/dragenter_event', 'dragenter')}}</td>
    <td>{{domxref('GlobalEventHandlers.ondragenter','ondragenter')}}</td>
    <td>…a dragged item enters a valid drop target. (See <a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#droptargets" title="Specifying Drop Targets">Specifying Drop Targets</a>.)</td>
-  </tr>
-  <tr>
-   <td>{{domxref('Document/dragexit_event', 'dragexit')}}</td>
-   <td>{{domxref('GlobalEventHandlers.ondragleave','ondragexit')}}</td>
-   <td>…an element is no longer the drag operation's immediate selection target.</td>
   </tr>
   <tr>
    <td>{{domxref('Document/dragleave_event', 'dragleave')}}</td>
@@ -269,7 +266,7 @@ function drop_handler(ev) {
 
 <p>At the end of a drag operation, the {{domxref("Document/dragend_event", "dragend")}} event fires at the <em>source</em> element — the element that was the target of the drag start.</p>
 
-<p>This event fires regardless of whether the drag completed or was canceled. The {{domxref("Document/dragent_event", "dragend")}} event handler can check the value of the {{domxref("DataTransfer.dropEffect","dropEffect")}} property to determine if the drag operation succeeded or not.</p>
+<p>This event fires regardless of whether the drag completed or was canceled. The {{domxref("Document/dragend_event", "dragend")}} event handler can check the value of the {{domxref("DataTransfer.dropEffect","dropEffect")}} property to determine if the drag operation succeeded or not.</p>
 
 <p>For more information about handling the end of a drag operation, see:</p>
 

@@ -13,9 +13,7 @@ tags:
 ---
 <p>{{DefaultAPISidebar("IndexedDB")}}</p>
 
-<div class="summary">
 <p>IndexedDB is a way for you to persistently store data inside a user's browser. Because it lets you create web applications with rich query abilities regardless of network availability, your applications can work both online and offline. </p>
-</div>
 
 <h2 id="About_this_document">About this document</h2>
 
@@ -77,7 +75,7 @@ var request = window.indexedDB.open("MyTestDatabase", 3);
 <p>The second parameter to the open method is the version of the database. The version of the database determines the database schema — the object stores in the database and their structure. If the database doesn't already exist, it is created by the <code>open</code> operation, then an <code>onupgradeneeded</code> event is triggered and you create the database schema in the handler for this event. If the database does exist but you are specifying an upgraded version number, an <code>onupgradeneeded</code> event is triggered straight away, allowing you to provide an updated schema in its handler. More on this later in <a href="#updating_the_version_of_the_database">Updating the version of the database</a> below, and the {{ domxref("IDBFactory.open") }} reference page. </p>
 
 <div class="warning">
-<p><strong>Important</strong>: The version number is an <code>unsigned long long</code> number, which means that it can be a very big integer. It also means that you can't use a float, otherwise it will be converted to the closest lower integer and the transaction may not start, nor the <code>upgradeneeded</code> event trigger. So for example, don't use 2.4 as a version number:<br>
+<p><strong>Warning:</strong> The version number is an <code>unsigned long long</code> number, which means that it can be a very big integer. It also means that you can't use a float, otherwise it will be converted to the closest lower integer and the transaction may not start, nor the <code>upgradeneeded</code> event trigger. So for example, don't use 2.4 as a version number:<br>
  <code>var request = indexedDB.open("MyTestDatabase", 2.4); // don't do this, as the version will be rounded to 2</code></p>
 </div>
 
@@ -144,7 +142,7 @@ request.onupgradeneeded = function(event) {
 
 <h3 id="Structuring_the_database">Structuring the database</h3>
 
-<p>Now to structure the database. IndexedDB uses object stores rather than tables, and a single database can contain any number of object stores. Whenever a value is stored in an object store, it is associated with a key. There are several different ways that a key can be supplied depending on whether the object store uses a <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_keypath">key path</a> or a <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_keygenerator">key generator</a>.</p>
+<p>Now to structure the database. IndexedDB uses object stores rather than tables, and a single database can contain any number of object stores. Whenever a value is stored in an object store, it is associated with a key. There are several different ways that a key can be supplied depending on whether the object store uses a <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path">key path</a> or a <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_generator">key generator</a>.</p>
 
 <p>The following table shows the different ways the keys are supplied:</p>
 
@@ -278,14 +276,14 @@ request.onupgradeneeded = function (event) {
 <p>To read the records of an existing object store, the transaction can either be in <code>readonly</code> or <code>readwrite</code> mode. To make changes to an existing object store, the transaction must be in <code>readwrite</code> mode. You open such transactions with {{domxref("IDBDatabase.transaction")}}. The method accepts two parameters: the <code>storeNames</code> (the scope, defined as an array of object stores that you want to access) and the <code>mode</code> (<code>readonly</code> or <code>readwrite</code>) for the transaction. The method returns a transaction object containing the {{domxref("IDBIndex.objectStore")}} method, which you can use to access your object store. By default, where no mode is specified, transactions open in <code>readonly</code> mode.</p>
 
 <div class="note">
-<p><strong>Note</strong>: As of Firefox 40, IndexedDB transactions have relaxed durability guarantees to increase performance (see {{Bug("1112702")}}.) Previously in a <code>readwrite</code> transaction {{domxref("IDBTransaction.oncomplete")}} was fired only when all data was guaranteed to have been flushed to disk. In Firefox 40+ the <code>complete</code> event is fired after the OS has been told to write the data but potentially before that data has actually been flushed to disk. The <code>complete</code> event may thus be delivered quicker than before, however, there exists a small chance that the entire transaction will be lost if the OS crashes or there is a loss of system power before the data is flushed to disk. Since such catastrophic events are rare most consumers should not need to concern themselves further. If you must ensure durability for some reason (e.g. you're storing critical data that cannot be recomputed later) you can force a transaction to flush to disk before delivering the <code>complete</code> event by creating a transaction using the experimental (non-standard) <code>readwriteflush</code> mode (see {{domxref("IDBDatabase.transaction")}}.</p>
+<p><strong>Note:</strong> As of Firefox 40, IndexedDB transactions have relaxed durability guarantees to increase performance (see {{Bug("1112702")}}.) Previously in a <code>readwrite</code> transaction {{domxref("IDBTransaction.oncomplete")}} was fired only when all data was guaranteed to have been flushed to disk. In Firefox 40+ the <code>complete</code> event is fired after the OS has been told to write the data but potentially before that data has actually been flushed to disk. The <code>complete</code> event may thus be delivered quicker than before, however, there exists a small chance that the entire transaction will be lost if the OS crashes or there is a loss of system power before the data is flushed to disk. Since such catastrophic events are rare most consumers should not need to concern themselves further. If you must ensure durability for some reason (e.g. you're storing critical data that cannot be recomputed later) you can force a transaction to flush to disk before delivering the <code>complete</code> event by creating a transaction using the experimental (non-standard) <code>readwriteflush</code> mode (see {{domxref("IDBDatabase.transaction")}}.</p>
 </div>
 
 <p>You can speed up data access by using the right scope and mode in the transaction. Here are a couple of tips:</p>
 
 <ul>
  <li>When defining the scope, specify only the object stores you need. This way, you can run multiple transactions with non-overlapping scopes concurrently.</li>
- <li>Only specify a <code>readwrite</code> transaction mode when necessary. You can concurrently run multiple <code>readonly</code> transactions with overlapping scopes, but you can have only one <code>readwrite</code> transaction for an object store. To learn more, see the definition for <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_transaction">transaction</a> in the <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology">IndexedDB key characteristics and basic terminology</a> article.</li>
+ <li>Only specify a <code>readwrite</code> transaction mode when necessary. You can concurrently run multiple <code>readonly</code> transactions with overlapping scopes, but you can have only one <code>readwrite</code> transaction for an object store. To learn more, see the definition for <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#transaction">transaction</a> in the <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology">IndexedDB key characteristics and basic terminology</a> article.</li>
 </ul>
 
 <h3 id="Adding_data_to_the_database">Adding data to the database</h3>
@@ -362,7 +360,7 @@ request.onsuccess = function(event) {
 
 <ul>
  <li>When defining the <a href="#scope">scope</a>, specify only the object stores you need. This way, you can run multiple transactions with non-overlapping scopes concurrently.</li>
- <li>Only specify a readwrite transaction mode when necessary. You can concurrently run multiple readonly transactions with overlapping scopes, but you can have only one readwrite transaction for an object store. To learn more, see the definition for <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_transaction">transaction</a> in the <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology">IndexedDB key characteristics and basic terminology</a> article.</li>
+ <li>Only specify a readwrite transaction mode when necessary. You can concurrently run multiple readonly transactions with overlapping scopes, but you can have only one readwrite transaction for an object store. To learn more, see the definition for <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#transaction">transaction</a> in the <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology">IndexedDB key characteristics and basic terminology</a> article.</li>
 </ul>
 
 <h3 id="Updating_an_entry_in_the_database">Updating an entry in the database</h3>
@@ -394,7 +392,7 @@ request.onsuccess = function(event) {
 <p>So here we're creating an <code>objectStore</code> and requesting a customer record out of it, identified by its ssn value (<code>444-44-4444</code>). We then put the result of that request in a variable (<code>data</code>), update the <code>age</code> property of this object, then create a second request (<code>requestUpdate</code>) to put the customer record back into the <code>objectStore</code>, overwriting the previous value.</p>
 
 <div class="note">
-<p><strong>Note</strong>: In this case we've had to specify a <code>readwrite</code> transaction because we want to write to the database, not just read from it.</p>
+<p><strong>Note:</strong> In this case we've had to specify a <code>readwrite</code> transaction because we want to write to the database, not just read from it.</p>
 </div>
 
 <h3 id="Using_a_cursor">Using a cursor</h3>
@@ -432,7 +430,7 @@ objectStore.openCursor().onsuccess = function(event) {
 };</pre>
 
 <div class="note">
-<p><strong>Note</strong>: Alternatively, you can use <code>getAll()</code> to handle this case (and <code>getAllKeys()</code>) . The following code does precisely the same thing as above:</p>
+<p><strong>Note:</strong> Alternatively, you can use <code>getAll()</code> to handle this case (and <code>getAllKeys()</code>) . The following code does precisely the same thing as above:</p>
 
 <pre class="brush: js">objectStore.getAll().onsuccess = function(event) {
   console.log("Got all customers: " + event.target.result);
@@ -628,7 +626,7 @@ function useDatabase(db) {
 <p>{{domxref("IDBIndex")}} has also had new properties added to it to specify if it has a locale specified, and what it is: <code>locale</code> (returns the locale if any, or null if none is specified) and <code>isAutoLocale</code> (returns <code>true</code> if the index was created with an auto locale, meaning that the platform's default locale is used, <code>false</code> otherwise.)</p>
 
 <div class="note">
-<p><strong>Note</strong>: This feature is currently hidden behind a flag — to enable it and experiment, go to <a>about:config</a> and enable <code>dom.indexedDB.experimental</code>.</p>
+<p><strong>Note:</strong> This feature is currently hidden behind a flag — to enable it and experiment, go to <a>about:config</a> and enable <code>dom.indexedDB.experimental</code>.</p>
 </div>
 
 <h2 id="Full_IndexedDB_example">Full IndexedDB example</h2>
@@ -1309,7 +1307,7 @@ input {
 <p>{{ LiveSampleLink('Full_IndexedDB_example', "Test the online live demo") }}</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: <code>window.indexedDB.open()</code> is asynchronous; the method will finish running long before the <code>success</code> event is fired. This means that a function (e.g. <code>openDb()</code>) that calls <code>open()</code> and <code>onsuccess</code> will return before the <code>onsuccess</code> handler has run. This issue is also true of other request methods such as <code>transaction()</code> and <code>get()</code>.</p>
+<p><strong>Note:</strong> <code>window.indexedDB.open()</code> is asynchronous; the method will finish running long before the <code>success</code> event is fired. This means that a function (e.g. <code>openDb()</code>) that calls <code>open()</code> and <code>onsuccess</code> will return before the <code>onsuccess</code> handler has run. This issue is also true of other request methods such as <code>transaction()</code> and <code>get()</code>.</p>
 </div>
 
 <h2 id="See_also">See also</h2>

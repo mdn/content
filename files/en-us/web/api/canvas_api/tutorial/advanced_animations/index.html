@@ -8,9 +8,7 @@ tags:
 ---
 <div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}</div>
 
-<div class="summary">
 <p>In the last chapter we made some <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations">basic animations</a> and got to know ways to get things moving. In this part we will have a closer look at the motion itself and are going to add some physics to make our animations more advanced.</p>
-</div>
 
 <h2 id="Drawing_a_ball">Drawing a ball</h2>
 
@@ -98,11 +96,15 @@ if (ball.x + ball.vx &gt; canvas.width || ball.x + ball.vx &lt; 0) {
 
 <h3 id="First_demo">First demo</h3>
 
-<p>Let's see how it looks in action so far. Move your mouse into the canvas to start the animation.</p>
+<p>Let's see how it looks in action so far.</p>
 
-<pre class="brush: html hidden">&lt;canvas id="canvas" style="border: 1px solid" width="600" height="300"&gt;&lt;/canvas&gt;</pre>
+<h4>HTML</h4>
 
-<pre class="brush: js hidden">var canvas = document.getElementById('canvas');
+<pre class="brush: html">&lt;canvas id="canvas" style="border: 1px solid" width="600" height="300"&gt;&lt;/canvas&gt;</pre>
+
+<h4>JavaScript</h4>
+
+<pre class="brush: js">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var raf;
 
@@ -150,7 +152,11 @@ canvas.addEventListener('mouseout', function(e) {
 
 ball.draw();</pre>
 
-<p>{{EmbedLiveSample("First_demo", "610", "310")}}</p>
+<h4>Result</h4>
+
+<p>Move your mouse into the canvas to start the animation.</p>
+
+<p>{{EmbedLiveSample("First_demo", "610", "340")}}</p>
 
 <h2 id="Acceleration">Acceleration</h2>
 
@@ -161,10 +167,15 @@ ball.vy += .25;</pre>
 
 <p>This slows down the vertical velocity each frame, so that the ball will just bounce on the floor in the end.</p>
 
-<div id="Second_demo">
-<pre class="brush: html hidden">&lt;canvas id="canvas" style="border: 1px solid" width="600" height="300"&gt;&lt;/canvas&gt;</pre>
+<h3>Second demo</h3>
 
-<pre class="brush: js hidden">var canvas = document.getElementById('canvas');
+<h4>HTML</h4>
+
+<pre class="brush: html">&lt;canvas id="canvas" style="border: 1px solid" width="600" height="300"&gt;&lt;/canvas&gt;</pre>
+
+<h4>JavaScript</h4>
+
+<pre class="brush: js">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var raf;
 
@@ -213,8 +224,10 @@ canvas.addEventListener('mouseout', function(e) {
 });
 
 ball.draw();</pre>
-</div>
-<p>{{EmbedLiveSample("Second_demo", "610", "310")}}</p>
+
+<h4>Result</h4>
+
+<p>{{EmbedLiveSample("Second_demo", "610", "340")}}</p>
 
 <h2 id="Trailing_effect">Trailing effect</h2>
 
@@ -223,10 +236,15 @@ ball.draw();</pre>
 <pre class="brush: js">ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
 ctx.fillRect(0, 0, canvas.width, canvas.height);</pre>
 
-<div id="Third_demo">
-<pre class="brush: html hidden">&lt;canvas id="canvas" style="border: 1px solid" width="600" height="300"&gt;&lt;/canvas&gt;</pre>
+<h3>Third demo</h3>
 
-<pre class="brush: js hidden">var canvas = document.getElementById('canvas');
+<h4>HTML</h4>
+
+<pre class="brush: html">&lt;canvas id="canvas" style="border: 1px solid" width="600" height="300"&gt;&lt;/canvas&gt;</pre>
+
+<h4>JavaScript</h4>
+
+<pre class="brush: js">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var raf;
 
@@ -276,15 +294,22 @@ canvas.addEventListener('mouseout', function(e) {
 });
 
 ball.draw();</pre>
-</div>
 
-<p>{{EmbedLiveSample("Third_demo", "610", "310")}}</p>
+<h4>Result</h4>
+
+<p>{{EmbedLiveSample("Third_demo", "610", "340")}}</p>
 
 <h2 id="Adding_mouse_control">Adding mouse control</h2>
 
 <p>To get some control over the ball, we can make it follow our mouse using the <code><a href="/en-US/docs/Web/API/Element/mousemove_event">mousemove</a></code> event, for example. The <code><a href="/en-US/docs/Web/API/Element/click_event">click</a></code> event releases the ball and lets it bounce again.</p>
 
-<pre class="brush: html hidden">&lt;canvas id="canvas" style="border: 1px solid" width="600" height="300"&gt;&lt;/canvas&gt;</pre>
+<h3>Fourth demo</h3>
+
+<h4>HTML</h4>
+
+<pre class="brush: html">&lt;canvas id="canvas" style="border: 1px solid" width="600" height="300"&gt;&lt;/canvas&gt;</pre>
+
+<h4>JavaScript</h4>
 
 <pre class="brush: js">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
@@ -352,9 +377,11 @@ canvas.addEventListener('mouseout', function(e) {
 ball.draw();
 </pre>
 
+<h4>Result</h4>
+
 <p>Move the ball using your mouse and release it with a click.</p>
 
-<p>{{EmbedLiveSample("Adding_mouse_control", "610", "310")}}</p>
+<p>{{EmbedLiveSample("Fourth_demo", "610", "340")}}</p>
 
 <h2 id="Breakout">Breakout</h2>
 

@@ -15,9 +15,11 @@ browser-compat: api.MediaRecorder.MediaRecorder
 ---
 <div>{{APIRef("MediaStream Recording")}}</div>
 
-<p><span class="seoSummary">The <strong><code>MediaRecorder()</code></strong> constructor
+<p>The <strong><code>MediaRecorder()</code></strong> constructor
     creates a new {{domxref("MediaRecorder")}} object that will record a specified
-    {{domxref("MediaStream")}}.</span> The object can optionally be configured to record
+    {{domxref("MediaStream")}}.</p>
+
+<p>The object can optionally be configured to record
   using a specific media container (file type), and, further, can specify the exact codec
   and codec configuration(s) to use by specifying <a
     href="/en-US/docs/Web/Media/Formats/codecs_parameter">the <code>codecs</code>
@@ -63,12 +65,12 @@ browser-compat: api.MediaRecorder.MediaRecorder
     </ul>
 
     <div class="note">
-      <p>If bits per second values are not specified for video and/or audio, the default
+      <p><strong>Note:</strong> If bits per second values are not specified for video and/or audio, the default
         adopted for video is 2.5Mbps, while the audio default is adaptive, depending upon
         the sample rate and the number of channels.</p>
     </div>
     <div class="notecard note">
-      <p>Video resolution, frame rate and similar settings are specified as constraints
+      <p><strong>Note:</strong> Video resolution, frame rate and similar settings are specified as constraints
         when calling {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}},
         not here in the MediaRecorder API.</p>
     </div>

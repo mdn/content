@@ -15,7 +15,7 @@ browser-compat: http.headers.csp.Content-Security-Policy.font-src
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
-**`font`\*\***`-src`\*\* directive specifies
+**`font-src`** directive specifies
 valid sources for fonts loaded using {{cssxref("@font-face")}}.
 
 <table class="properties">

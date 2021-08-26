@@ -12,7 +12,7 @@ tags:
 ---
 <div>{{securecontext_header}}{{DefaultAPISidebar("Web Authentication API")}}</div>
 
-<p class="summary">The Web Authentication API is an extension of the <a href="/en-US/docs/Web/API/Credential_Management_API">Credential Management API</a> that enables strong authentication with public key cryptography, enabling passwordless authentication and/or secure second-factor authentication without SMS texts.</p>
+<p>The Web Authentication API is an extension of the <a href="/en-US/docs/Web/API/Credential_Management_API">Credential Management API</a> that enables strong authentication with public key cryptography, enabling passwordless authentication and/or secure second-factor authentication without SMS texts.</p>
 
 <h2 id="Web_authentication_concepts_and_usage">Web authentication concepts and usage</h2>
 
@@ -32,7 +32,7 @@ tags:
 </ul>
 
 <div class="notecard note">
-<p><strong>Please note:</strong> Both <code>create()</code> and <code>get()</code> require a <a href="/en-US/docs/Web/Security/Secure_Contexts">secure context</a> (i.e. the server is connected by HTTPS or is the localhost), and will not be available for use if the browser is not operating in a secure context.</p>
+<p><strong>Note:</strong> Both <code>create()</code> and <code>get()</code> require a <a href="/en-US/docs/Web/Security/Secure_Contexts">secure context</a> (i.e. the server is connected by HTTPS or is the localhost), and will not be available for use if the browser is not operating in a secure context.</p>
 </div>
 
 <p>In their most basic forms, both <code>create()</code> and <code>get()</code> receive a very large random number called the "challenge" from the server and they return the challenge signed by the private key back to the server. This proves to the server that a user is in possession of the private key required for authentication without revealing any secrets over the network.</p>
@@ -123,7 +123,7 @@ tags:
 <h2 id="Examples">Examples</h2>
 
 <div class="notecard warning">
-<p> For security reasons, web authentication calls ({{domxref('CredentialsContainer.create','create()')}} and {{domxref('CredentialsContainer.get','get()')}}) are cancelled if the browser window loses focus while the call is pending.</p>
+<p><strong>Warning:</strong> For security reasons, web authentication calls ({{domxref('CredentialsContainer.create','create()')}} and {{domxref('CredentialsContainer.get','get()')}}) are cancelled if the browser window loses focus while the call is pending.</p>
 </div>
 
 <pre class="brush: js">// sample arguments for registration

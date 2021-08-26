@@ -21,11 +21,12 @@ browser-compat: api.RTCOutboundRtpStreamStats.firCount
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">The <strong><code>firCount</code></strong> property of the
+<p>The <strong><code>firCount</code></strong> property of the
     {{domxref("RTCOutboundRtpStreamStats")}} dictionary indicates the number of
     <strong>Full Intra Request</strong> (<strong>FIR</strong>) that the remote
-    {{domxref("RTCRtpReceiver")}} has sent to this {{domxref("RTCRtpSender")}}.</span> A
-  FIR packet is sent when the receiver finds that it has fallen behind and needs to skip
+    {{domxref("RTCRtpReceiver")}} has sent to this {{domxref("RTCRtpSender")}}. </p>
+
+<p>A FIR packet is sent when the receiver finds that it has fallen behind and needs to skip
   frames in order to catch up; the sender should respond by sending a full frame instead
   of a delta frame.</p>
 

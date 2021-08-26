@@ -20,14 +20,14 @@ browser-compat: api.ServiceWorkerGlobalScope.onmessage
   incoming messages are received.</p>
 
 <div class="note">
-  <p><strong>Note</strong>: Service workers define the extendable event to allow extending
+  <p><strong>Note:</strong> Service workers define the extendable event to allow extending
     the lifetime of the event. For the <code>message</code> event, service workers use the
     {{domxref("ExtendableMessageEvent")}} interface which extends the
     {{domxref("ExtendableEvent")}} interface.</p>
 </div>
 
 <div class="note">
-  <p><strong>Note</strong>: Messages received from service worker contexts (e.g. as the
+  <p><strong>Note:</strong> Messages received from service worker contexts (e.g. as the
     event object of <code>onmessage</code>) are represented by {{domxref("MessageEvent")}}
     objects in modern browsers, for consistency with other web messaging features. (They
     used to be represented by {{domxref("ServiceWorkerMessageEvent")}} objects, which have

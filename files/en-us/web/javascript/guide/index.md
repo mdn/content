@@ -12,7 +12,9 @@ The JavaScript Guide shows you how to use [JavaScript](/en-US/docs/Web/JavaScrip
 
 This Guide is divided into the following chapters.
 
-## [Introduction](/en-US/docs/Web/JavaScript/Guide/Introduction)
+## Introduction
+
+Overview: [Introduction](/en-US/docs/Web/JavaScript/Guide/Introduction)
 
 - [About this guide](/en-US/docs/Web/JavaScript/Guide/Introduction#where_to_find_javascript_information)
 - [About JavaScript](/en-US/docs/Web/JavaScript/Guide/Introduction#what_is_javascript)
@@ -21,7 +23,9 @@ This Guide is divided into the following chapters.
 - [Tools](/en-US/docs/Web/JavaScript/Guide/Introduction#getting_started_with_javascript)
 - [Hello World](/en-US/docs/Web/JavaScript/Guide/Introduction#hello_world)
 
-## [Grammar and types](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types)
+## Grammar and types
+
+Overview: [Grammar and types](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types)
 
 - [Basic syntax & comments](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#basics)
 - [Declarations](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#declarations)
@@ -30,14 +34,18 @@ This Guide is divided into the following chapters.
 - [Data structures and types](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#data_structures_and_types)
 - [Literals](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#literals)
 
-## [Control flow and error handling](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
+## Control flow and error handling
+
+Overview: [Control flow and error handling](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
 
 - [`if...else`](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#if...else_statement)
 - [`switch`](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#switch_statement)
 - [`try`/`catch`/`throw`](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#exception_handling_statements)
 - [Error objects](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#utilizing_error_objects)
 
-## [Loops and iteration](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
+## Loops and iteration
+
+Oveview: [Loops and iteration](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
 
 - [`for`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for_statement)
 - [`while`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#while_statement)
@@ -47,7 +55,9 @@ This Guide is divided into the following chapters.
 - [`for..in`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...in_statement)
 - [`for..of`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)
 
-## [Functions](/en-US/docs/Web/JavaScript/Guide/Functions)
+## Functions
+
+Overview: [Functions](/en-US/docs/Web/JavaScript/Guide/Functions)
 
 - [Defining functions](/en-US/docs/Web/JavaScript/Guide/Functions#defining_functions)
 - [Calling functions](/en-US/docs/Web/JavaScript/Guide/Functions#calling_functions)
@@ -56,21 +66,27 @@ This Guide is divided into the following chapters.
 - [Arguments](/en-US/docs/Web/JavaScript/Guide/Functions#using_the_arguments_object) & [parameters](/en-US/docs/Web/JavaScript/Guide/Functions#function_parameters)
 - [Arrow functions](/en-US/docs/Web/JavaScript/Guide/Functions#arrow_functions)
 
-## [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+## Expressions and operators
+
+Overview: [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)
 
 - [Assignment](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment_operators) & [Comparisons](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#comparison_operators)
 - [Arithmetic operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#arithmetic_operators)
 - [Bitwise](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators) & [logical operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#logical_operators)
 - [Conditional (ternary) operator](</en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#conditional_(ternary)_operator>)
 
-## [Numbers and dates](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates)
+## Numbers and dates
+
+Overview: [Numbers and dates](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates)
 
 - [Number literals](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates#numbers)
 - [`Number` object](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates#number_object)
 - [`Math` object](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates#math_object)
 - [`Date` object](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates#date_object)
 
-## [Text formatting](/en-US/docs/Web/JavaScript/Guide/Text_formatting)
+## Text formatting
+
+Overview: [Text formatting](/en-US/docs/Web/JavaScript/Guide/Text_formatting)
 
 - [String literals](/en-US/docs/Web/JavaScript/Guide/Text_formatting#string_literals)
 - [`String` object](/en-US/docs/Web/JavaScript/Guide/Text_formatting#string_objects)
@@ -78,32 +94,42 @@ This Guide is divided into the following chapters.
 - [Internationalization](/en-US/docs/Web/JavaScript/Guide/Text_formatting#internationalization)
 - [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
 
-## [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+## Indexed collections
+
+Overview: [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
 
 - [Arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#array_object)
 - [Typed arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#typed_arrays)
 
-## [Keyed collections](/en-US/docs/Web/JavaScript/Guide/Keyed_collections)
+## Keyed collections
+
+Overview: [Keyed collections](/en-US/docs/Web/JavaScript/Guide/Keyed_collections)
 
 - [`Map`](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#map_object)
 - [`WeakMap`](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_object)
 - [`Set`](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#set_object)
 - [`WeakSet`](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#weakset_object)
 
-## [Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
+## Working with objects
+
+Overview: [Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
 
 - [Objects and properties](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#objects_and_properties)
 - [Creating objects](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#creating_new_objects)
 - [Defining methods](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_methods)
 - [Getter and setter](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters)
 
-## [Details of the object model](/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)
+## Details of the object model
+
+Overview: [Details of the object model](/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)
 
 - [Prototype-based OOP](/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#class-based_vs._prototype-based_languages)
 - [Creating object hierarchies](/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#creating_the_hierarchy)
 - [Inheritance](/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#property_inheritance_revisited)
 
-## [Promises](/en-US/docs/Web/JavaScript/Guide/Using_promises)
+## Promises
+
+Overview: [Promises](/en-US/docs/Web/JavaScript/Guide/Using_promises)
 
 - [Guarantees](/en-US/docs/Web/JavaScript/Guide/Using_promises#guarantees)
 - [Chaining](/en-US/docs/Web/JavaScript/Guide/Using_promises#chaining)
@@ -111,20 +137,26 @@ This Guide is divided into the following chapters.
 - [Composition](/en-US/docs/Web/JavaScript/Guide/Using_promises#composition)
 - [Timing](/en-US/docs/Web/JavaScript/Guide/Using_promises#timing)
 
-## [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+## Iterators and generators
+
+Overview: [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
 
 - [Iterators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#iterators)
 - [Iterables](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#iterables)
 - [Generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#generators)
 
-## [Meta programming](/en-US/docs/Web/JavaScript/Guide/Meta_programming)
+## Meta programming
+
+Overview: [Meta programming](/en-US/docs/Web/JavaScript/Guide/Meta_programming)
 
 - [`Proxy`](/en-US/docs/Web/JavaScript/Guide/Meta_programming#proxies)
 - [Handlers and traps](/en-US/docs/Web/JavaScript/Guide/Meta_programming#handlers_and_traps)
 - [Revocable Proxy](/en-US/docs/Web/JavaScript/Guide/Meta_programming#revocable_proxy)
 - [`Reflect`](/en-US/docs/Web/JavaScript/Guide/Meta_programming#reflection)
 
-## [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules)
+## JavaScript modules
+
+Overview: [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules)
 
 - [Exporting](/en-US/docs/Web/JavaScript/Guide/Modules#exporting_module_features)
 - [Importing](/en-US/docs/Web/JavaScript/Guide/Modules#importing_features_into_your_script)

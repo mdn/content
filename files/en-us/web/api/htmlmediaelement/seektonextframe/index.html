@@ -18,7 +18,7 @@ browser-compat: api.HTMLMediaElement.seekToNextFrame
   asynchronously advances the current play position to the next frame in the media.</p>
 
 <div class="warning">
-  <p>This non-standard method is part of an experimentation process around support for
+  <p><strong>Warning:</strong> This non-standard method is part of an experimentation process around support for
     non-real-time access to media for tasks including filtering, editing, and so forth.
     You should <em>not</em> use this method in production code, because its implementation
     may change—or be removed outright—without notice. You are, however, invited to
@@ -52,7 +52,7 @@ browser-compat: api.HTMLMediaElement.seekToNextFrame
 <p>A {{jsxref("Promise")}} which is fulfilled once the seek operation has completed.</p>
 
 <div class="note">
-  <p>Firefox 49 returns {{jsxref("undefined")}} instead of a promise, and performs the
+  <p><strong>Note:</strong> Firefox 49 returns {{jsxref("undefined")}} instead of a promise, and performs the
     seek operation synchronously.</p>
 </div>
 

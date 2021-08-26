@@ -22,12 +22,13 @@ tags:
   - Photos
   - SVG
   - WebP
+  - AVIF
   - gif
   - icon
 ---
 <div>{{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}</div>
 
-<p><span class="seoSummary">In this guide, we'll cover the image file types generally supported by web browsers, and provide insights that will help you select the most appropriate formats to use for your site's imagery.</span></p>
+<p>In this guide, we'll cover the image file types generally supported by web browsers, and provide insights that will help you select the most appropriate formats to use for your site's imagery.</p>
 
 <h2 id="Common_image_file_types">Common image file types</h2>
 
@@ -60,7 +61,7 @@ tags:
    <td><code>.avif</code></td>
    <td>
     <p>Good choice for both images and animated images due to high performance and royalty free image format. It offers much better compression than PNG or JPEG with support for higher color depths, animated frames, transparency etc. Note that when using AVIF, you should include fallbacks to formats with better browser support (i.e. using the <code><a href="/en-US/docs/Web/HTML/Element/picture">&lt;picture&gt;</a></code> element). <br>
-     <strong>Supported:</strong> Chrome, Opera, Firefox (behind a <a href="/en-US/docs/Mozilla/Firefox/Experimental_features#avif_av1_image_file_format_support">preference</a>. Basic support only; advanced features like animated images and colorspace support yet to the implemented).</p>
+     <strong>Supported:</strong> Chrome, Opera, Firefox (still images only: animated images not implemented).</p>
    </td>
   </tr>
   <tr>
@@ -252,10 +253,11 @@ tags:
 <a id="avif"></a>
 <h3 id="AVIF_image">AVIF image</h3>
 
-<p>AV1 Image File Format (AVIF) is a powerful new, open source, royalty-free file format that encodes <dfn>AV1 bitstreams in the High Efficiency Image File Format (HEIF) container. </dfn></p>
+<p>AV1 Image File Format (AVIF) is a powerful, open source, royalty-free file format that encodes <dfn>AV1 bitstreams in the High Efficiency Image File Format (HEIF) container.</dfn></p>
 
 <div class="notecard note">
-  <p><strong>Note:</strong> AVIF has potential to become the "next big thing" for sharing images in web content. It offers state-of-the-art features and performance, without the encumbrance of complicated licensing and patent royalties that have hampered comparable alternatives.</p>
+  <p><strong>Note:</strong> AVIF has potential to become the "next big thing" for sharing images in web content.
+    It offers state-of-the-art features and performance, without the encumbrance of complicated licensing and patent royalties that have hampered comparable alternatives.</p>
 </div>
 
 <p><dfn>AV1 is a coding format that was originally designed for video transmission over the Internet. The format benefits from the signficant advances in video encoding in recent years, and may potentially benefit from the associated support for hardware rendering. However it also has disadvantages for some cases, as video and image encoding have some different requirements.</dfn></p>
@@ -272,10 +274,12 @@ tags:
  <li>Wide Color Gamut: Support for images that can contain a larger range of colors.</li>
 </ul>
 
-<p>AVIF does not support progressive rendering, so files must be fully downloaded before they can be displayed. This often has little impact on real-world user experience because AVIF files are much smaller than the equivalent JPEG or PNG files, and hence can be downloaded and displayed much faster. For larger file size the impact can become significant, and you should consider using a format that supports progressive rendering.</p>
+<p>AVIF does not support progressive rendering, so files must be fully downloaded before they can be displayed.
+  This often has little impact on real-world user experience because AVIF files are much smaller than the equivalent JPEG or PNG files, and hence can be downloaded and displayed much faster.
+  For larger file size the impact can become significant, and you should consider using a format that supports progressive rendering.</p>
 
-<p>AVIF is supported on desktop in Chrome, Opera and Firefox (behind a <a href="/en-US/docs/Mozilla/Firefox/Experimental_features#avif_av1_image_file_format_support">preference</a>).
-  As support is not yet comprehensive (and has no historical depth) you should provide a fallback in either {{anch("JPEG")}} or {{anch("PNG")}} format using <a href="/en-US/docs/Web/HTML/Element/picture">the <code>&lt;picture&gt;</code> element</a> (or some other approach).</p>
+<p>AVIF is supported on desktop in Chrome, Opera and Firefox (Firefox supports still images but not animations).
+  As support is not yet comprehensive (and has little historical depth) you should provide a fallback in  {{anch("WebP")}}, {{anch("JPEG")}} or {{anch("PNG")}} format using <a href="/en-US/docs/Web/HTML/Element/picture">the <code>&lt;picture&gt;</code> element</a> (or some other approach).</p>
 
 <table class="standard-table">
  <tbody>
@@ -295,9 +299,11 @@ tags:
   </tr>
   <tr>
    <th scope="row">Browser compatibility</th>
-   <td>Chrome 85, Opera 71, and Firefox (behind a <a href="/en-US/docs/Mozilla/Firefox/Experimental_features#avif_av1_image_file_format_support">preference</a>).
+   <td>Chrome 85, Opera 71, and Firefox 92.
     <ul>
-      <li>Firefox 77 and later require the preference <code>image.avif.enable</code> set <code>true</code>. Firefox provides <em>basic</em> support for AVIF images. More advanced features are still in development — including animated images and colorspace support ({{bug(1682995)}}).</li>
+      <li>Firefox 92 supports still images, with colorspace support for both full and limited range colors, image transforms for mirroring and rotation. The preference <a href="/en-US/docs/Mozilla/Firefox/Experimental_features#avif_compliance_strictness">image.avif.compliance_strictness</a> can be used to adjust the compliance strictness with the specification.
+        Animated images are not supported.</li>
+      <li>Firefox 77 to 91 require the preference <code>image.avif.enable</code> set <code>true</code> and provides only basic support.</li>
     </ul>
    </td>
   </tr>

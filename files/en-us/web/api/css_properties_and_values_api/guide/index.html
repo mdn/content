@@ -10,7 +10,7 @@ tags:
   - JavaScript
   - Learn
 ---
-<p>{{SeeCompatTable}} The <strong>CSS Properties and Values API</strong> — part of the <a href="/en-US/docs/Web/Houdini">CSS Houdini</a> umbrella of APIs — <span class="seoSummary">allows the registration of {{cssxref('--*', 'CSS custom properties')}}, allowing for property type checking, default values, and properties that do or do not inherit their value.</span></p>
+<p>{{SeeCompatTable}} The <strong>CSS Properties and Values API</strong> — part of the <a href="/en-US/docs/Web/Houdini">CSS Houdini</a> umbrella of APIs — allows the registration of {{cssxref('--*', 'CSS custom properties')}}, allowing for property type checking, default values, and properties that do or do not inherit their value.</p>
 
 <h2 id="Registering_a_custom_property">Registering a custom property</h2>
 
@@ -44,34 +44,15 @@ tags:
 
 <p>In this example, the custom property <code>--registered</code> has been registered using the syntax <code>&lt;color&gt;</code> and then used in a linear gradient. That property is then transitioned on hover or focus to a different color. Notice that with the registered property the transition works, but that it doesn't with the unregistered property!</p>
 
-<pre class="brush: css">.registered {
-  --registered: #c0ffee;
-  background-image: linear-gradient(to right, #fff, var(--registered));
-  transition: --registered 1s ease-in-out;
-}
+<h3>HTML</h3>
 
-.registered:hover,
-.registered:focus {
-  --registered: #b4d455;
-}
-
-.unregistered {
-  --unregistered: #c0ffee;
-  background-image: linear-gradient(to right, #fff, var(--unregistered));
-  transition: --unregistered 1s ease-in-out;
-}
-
-.unregistered:hover,
-.unregistered:focus {
-  --unregistered: #b4d455;
-}</pre>
-
-<div id="registered">
-<pre class="brush: html hidden">&lt;button class="registered"&gt;Background Registered&lt;/button&gt;
+<pre class="brush: html">&lt;button class="registered"&gt;Background Registered&lt;/button&gt;
 &lt;button class="unregistered"&gt;Background Not Registered&lt;/button&gt;
 </pre>
 
-<pre class="brush: css hidden">.registered {
+<h3>CSS</h3>
+
+<pre class="brush: css">.registered {
   --registered: #c0ffee;
   background-image: linear-gradient(to right, #fff, var(--registered));
   transition: --registered 1s ease-in-out;
@@ -102,15 +83,18 @@ button {
 
 </pre>
 
-<pre class="brush: js hidden">window.CSS.registerProperty({
+<h3>JavaScript</h3>
+
+<pre class="brush: js">window.CSS.registerProperty({
   name: '--registered',
   syntax: '&lt;color&gt;',
   inherits: false,
   initialValue: 'red',
 });</pre>
-</div>
 
-<p>{{EmbedLiveSample("registered", 320, 320)}}</p>
+<h3>Result</h3>
+
+<p>{{EmbedLiveSample("Using_registered_custom_properties", 320, 320)}}</p>
 
 <p>While not functionally accurate, a good way to think about the difference between the unregistered property in the above example and the registered property is the difference between a {{cssxref('custom-ident')}} and a number when trying to animate {{cssxref('height')}}. You cannot transition or animate from <code>auto</code> to a number because the browser doesn't know what the value of <code>auto</code> is until it's calculated. With an unregisterd property, the browser likewise doesn't know what the value <em>may be</em> until it's calculated, and because of that, it can't set up a transition from one value to another. When registered, though, you've told the browser what type of value it should expect, and because it knows that, it can then set up the transitions properly.</p>
 

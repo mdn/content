@@ -16,7 +16,7 @@ browser-compat: javascript.builtins.Intl.DisplayNames.resolvedOptions
 
 The **`Intl.DisplayNames.prototype.resolvedOptions()`** method
 returns a new object with properties reflecting the locale and style formatting
-options computed during the construction of the current {{jsxref("Intl/DisplayNames")}}
+options computed during the construction of the current {{jsxref("Intl.DisplayNames")}}
 object.
 
 ## Syntax
@@ -28,7 +28,7 @@ resolvedOptions()
 ### Return value
 
 An object with properties reflecting the locale and formatting options computed during
-the construction of the given {{jsxref("Intl/DisplayNames")}} object.
+the construction of the given {{jsxref("Intl.DisplayNames")}} object.
 
 ## Description
 

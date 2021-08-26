@@ -15,15 +15,16 @@ browser-compat: api.Event.returnValue
 ---
 <div>{{APIRef("DOM Events")}}{{Deprecated_Header}}</div>
 
-<p><span class="seoSummary">The {{domxref("Event")}} property
+<p>The {{domxref("Event")}} property
     <code><strong>returnValue</strong></code> indicates whether the default action for
-    this event has been prevented or not.</span> It is set to <code>true</code> by
+    this event has been prevented or not.</p>
+
+<p>It is set to <code>true</code> by
   default, allowing the default action to occur. Setting this property to
   <code>false</code> prevents the default action.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>While <code>returnValue</code> has been adopted into the DOM
+  <p><strong>Note:</strong> While <code>returnValue</code> has been adopted into the DOM
     standard, it is present primarily to support existing code. You should use
     {{DOMxRef("Event.preventDefault", "preventDefault()")}}, and
     {{domxref("Event.defaultPrevented", "defaultPrevented")}} instead of this historical

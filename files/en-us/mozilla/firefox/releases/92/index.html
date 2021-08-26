@@ -26,7 +26,7 @@ tags:
   <li>The two-value syntax for the {{cssxref("font-size-adjust")}} property is now supported ({{bug(1720131)}}).</li>
   <li>The {{cssxref("@font-face/size-adjust")}} descriptor is now supported ({{bug(1720131)}}).</li>
   <li>The CSS {{cssxref("accent-color")}} property has been implemented ({{bug(1722031)}}).</li>
-  <li>The <code>system-ui</code> value is now supported for the {{cssxref("font-face")}} property ({{bug(1226042)}}).</li>
+  <li>The <code>system-ui</code> value is now supported for the {{cssxref("font-family")}} property ({{bug(1226042)}}).</li>
 </ul>
 
 <h4 id="removals_css">Removals</h4>
@@ -41,6 +41,10 @@ tags:
 
 <h3 id="HTTP">HTTP</h3>
 
+<ul>
+  <li>The default HTTP {{HTTPHeader("ACCEPT")}} header for <em>images</em> changed to: <code>image/avif,image/webp,*/*</code> (following addition of support for the <a href="/en-US/docs/Web/Media/Formats/Image_types#avif">AVIF</a> image format). ({{bug(1682995)}}).</li>
+</ul>
+
 <h4 id="removals_http">Removals</h4>
 
 <h3 id="Security">Security</h3>
@@ -49,7 +53,15 @@ tags:
 
 <h3 id="APIs">APIs</h3>
 
+<ul>
+  <li>The <code>disabledFeatures</code> static property has been implemented for Custom Elements ({{bug(1723396)}}).</li>
+</ul>
+
 <h4 id="DOM">DOM</h4>
+
+<ul>
+  <li>You can now monitor for changes to text selections in {{HTMLElement("input")}} or {{HTMLElement("textarea")}} by listening for <code>selectionchange</code> events in {{domxref("HTMLInputElement.selectionchange_event", "HTMLInputElement")}} and {{domxref("HTMLTextAreaElement/selectionchange_event", "HTMLTextAreaElement")}}, respectively ({{bug(1648944)}}).</li>
+</ul>
 
 <h4 id="Media_WebRTC_and_Web_Audio">Media, WebRTC, and Web Audio</h4>
 
@@ -66,6 +78,15 @@ tags:
 <h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
 
 <h4 id="removals_webext">Removals</h4>
+
+<h3 id="Other">Other</h3>
+
+<ul>
+  <li>Support for <a href="/en-US/docs/Web/Media/Formats/Image_types#avif">AVIF</a> images is now enabled by default ({{bug(1682995)}}).
+    This format has excellent compression and no patent restrictions ( it was developed by the <a href="http://aomedia.org/">Alliance for Open Media</a>).
+    Firefox can display still images, with colorspace support for both full and limited range colors, and image transforms for mirroring and rotation.
+    The preference <a href="/en-US/docs/Mozilla/Firefox/Experimental_features#avif_compliance_strictness">image.avif.compliance_strictness</a> can be used to adjust the compliance strictness with the specification. Animated images are not supported.</li>
+</ul>
 
 <h2 id="Older_versions">Older versions</h2>
 

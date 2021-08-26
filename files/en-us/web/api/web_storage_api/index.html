@@ -30,7 +30,7 @@ tags:
  <li><code>localStorage</code> does the same thing, but persists even when the browser is closed and reopened.
   <ul>
    <li>Stores data with no expiration date, and gets cleared only through JavaScript, or clearing the Browser cache / Locally Stored Data.</li>
-   <li>Storage limit is the maximum amongst the three.</li>
+   <li>Storage limit is the maximum amongst the two.</li>
   </ul>
  </li>
 </ul>
@@ -38,11 +38,11 @@ tags:
 <p>These mechanisms are available via the {{domxref("Window.sessionStorage")}} and {{domxref("Window.localStorage")}} properties (to be more precise, in supporting browsers the <code>Window</code> object implements the <code>WindowLocalStorage</code> and <code>WindowSessionStorage</code> objects, which the <code>localStorage</code> and <code>sessionStorage</code> properties hang off) — invoking one of these will create an instance of the {{domxref("Storage")}} object, through which data items can be set, retrieved and removed. A different Storage object is used for the <code>sessionStorage</code> and <code>localStorage</code> for each origin — they function and are controlled separately.</p>
 
 <div class="note">
-<p><strong>Note</strong>: From Firefox 45 onwards, when the browser crashes/restarts, the amount of data saved per origin is limited to 10MB. This has been done to avoid memory issues caused by excessive usage of web storage.</p>
+<p><strong>Note:</strong> From Firefox 45 onwards, when the browser crashes/restarts, the amount of data saved per origin is limited to 10MB. This has been done to avoid memory issues caused by excessive usage of web storage.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: Access to Web Storage from third-party IFrames is denied if the user has <a href="https://support.mozilla.org/en-US/kb/disable-third-party-cookies">disabled third-party cookies</a> (Firefox implements this behavior from <a href="/en-US/docs/Mozilla/Firefox/Releases/43">version 43</a> onwards.)</p>
+<p><strong>Note:</strong> Access to Web Storage from third-party IFrames is denied if the user has <a href="https://support.mozilla.org/en-US/kb/disable-third-party-cookies">disabled third-party cookies</a> (Firefox implements this behavior from <a href="/en-US/docs/Mozilla/Firefox/Releases/43">version 43</a> onwards.)</p>
 </div>
 
 <div class="note">

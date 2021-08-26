@@ -10,7 +10,7 @@ tags:
 
 In the [article covering the basic concepts of grid layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout), we started to look at how to position items on a grid using line numbers. In this article we will fully explore how this fundamental feature of the specification works.
 
-Starting your exploration of grid with numbered lines is the most logical place to begin, as when you use grid layout you always have numbered lines. The lines are numbered for columns and rows, and are indexed from 1. Note that grid is indexed according to the writing mode of the document. In a left to right language such as English line 1 is on the left-hand side of the grid. If you are working in a right-to-left language then line 1 will be the far right of the grid. We will learn more about the interaction between writing modes and grids in a later guide.
+Starting your exploration of grid with numbered lines is the most logical place to begin, as when you use grid layout you always have numbered lines. The lines are numbered for columns and rows, and are indexed from 1. Note that grid is indexed according to the writing mode of the document. In a left to right language such as English line 1 is on the left-hand side of the grid. If you are working in a right-to-left language such as Arabic then line 1 will be the far right of the grid. We will learn more about the interaction between writing modes and grids in a later guide.
 
 ## A basic example
 
@@ -72,7 +72,7 @@ We can use line-based placement to control where these items sit on the grid. I 
 
 As you position some items, other items on the grid will continue to be laid out using the auto-placement rules. We will take a proper look at how these work in a later guide but you can see as you work that grid is laying out un-placed items into empty cells of the grid.
 
-Addressing each item individually we can place all four items spanning row and column tracks. Note that we can leave cells empty if we wish. One of the very nice things about Grid Layout is this ability to have white space in our designs without having to push things around using margins to prevent floats from rising up into the space we have left.
+Addressing each item individually we can place all four items spanning row and column tracks. Note that we can leave cells empty if we wish. One of the very nice things about Grid Layout is the ability to have white space in our designs without having to push things around using margins to prevent floats from rising up into the space we have left.
 
 ```css hidden
 * {box-sizing: border-box;}
@@ -368,13 +368,13 @@ This order of values for `grid-area` can seem a little strange, it is the opposi
 - inline-start
 - inline-end
 
-We are working in English, a left-to-right language. Our block-start is the top row line of the grid container, block-end the final row line of the container. Our inline-start is the left-hand column line as inline-start is always the point from which text would be written in the current writing mode, inline-end is the final column line of our grid.
+We are working in English, a left-to-right language. Our block-start is the top row line of the grid container, block-end is the final row line of the container. Our inline-start is the left-hand column line as inline-start is always the point from which text would be written in the current writing mode, inline-end is the final column line of our grid.
 
 When we specify our grid area using the `grid-area` property we first define both start lines `block-start` and `inline-start`, then both end lines `block-end` and `inline-end`. This seems unusual at first as we are used to the physical properties of top, right, bottom and left but makes more sense if you start to think of websites as being multi-directional in writing mode.
 
 ## Counting backwards
 
-We can also count backwards from the block and inline end of the grid, for English that would be the right hand column line and final row line. These lines can be addressed as `-1`, and you can count back from there – so the penultimate line is `-2`. It is worth noting that the final line is the final line of the _explicit grid_, the grid defined by `grid-template-columns` and `grid-template-rows`, and does not take into account any rows or columns added in the _implicit grid_ outside of that.
+We can also count backwards from the block and inline end of the grid, for English that would be the right hand column line and final row line. These lines can be addressed as `-1`, and you can count back from there – so the second last line is `-2`. It is worth noting that the final line is the final line of the _explicit grid_, the grid defined by `grid-template-columns` and `grid-template-rows`, and does not take into account any rows or columns added in the _implicit grid_ outside of that.
 
 In this next example I have flipped the layout we were working with by working from the right and bottom of our grid when placing the items.
 

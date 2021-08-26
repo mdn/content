@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{DefaultAPISidebar("Web Storage API")}}</div>
 
-<p><span class="seoSummary">The Web Storage API provides mechanisms by which browsers can securely store key/value pairs.</span></p>
+<p>The Web Storage API provides mechanisms by which browsers can securely store key/value pairs.</p>
 
 <p>This article provides a walkthrough of how to make use of this technology.</p>
 
@@ -24,7 +24,7 @@ localStorage['colorSetting'] = '#a4509b';
 localStorage.setItem('colorSetting', '#a4509b');</pre>
 
 <div class="note">
-<p><strong>Note</strong>: It's recommended to use the Web Storage API (<code>setItem</code>, <code>getItem</code>, <code>removeItem</code>, <code>key</code>, <code>length</code>) to prevent the <a href="https://www.2ality.com/2012/01/objects-as-maps.html">pitfalls</a> associated with using plain objects as key-value stores.</p>
+<p><strong>Note:</strong> It's recommended to use the Web Storage API (<code>setItem</code>, <code>getItem</code>, <code>removeItem</code>, <code>key</code>, <code>length</code>) to prevent the <a href="https://www.2ality.com/2012/01/objects-as-maps.html">pitfalls</a> associated with using plain objects as key-value stores.</p>
 </div>
 
 <p>The two mechanisms within Web Storage are as follows:</p>
@@ -45,7 +45,7 @@ localStorage.setItem('colorSetting', '#a4509b');</pre>
 <h3 id="Testing_for_availability">Testing for availability</h3>
 
 <div class="notecard note">
-<p>Note: This API is available in current versions of all major browsers. Testing for availability is necessary only if you must support very old browsers, such as Internet Explorer 6 or 7, or in the limited circumstances described below.</p>
+<p><strong>Note:</strong> This API is available in current versions of all major browsers. Testing for availability is necessary only if you must support very old browsers, such as Internet Explorer 6 or 7, or in the limited circumstances described below.</p>
 </div>
 
 <p>Browsers that support localStorage have a property on the window object named <code>localStorage</code>. However, just asserting that the property exists may throw exceptions. If the <code>localStorage</code> object does exist, there is still no guarantee that the localStorage API is actually available, as various browsers offer settings that disable localStorage. So a browser may <em>support</em> localStorage, but not make it <em>available</em> to the scripts on the page.</p>
@@ -103,7 +103,7 @@ else {
 <p><img alt="" src="event-output.png"></p>
 
 <div class="note">
-<p><strong>Note</strong>: As well as viewing the example pages live using the above links, you can also <a href="https://github.com/mdn/dom-examples/tree/master/web-storage">check out the source code</a>.</p>
+<p><strong>Note:</strong> As well as viewing the example pages live using the above links, you can also <a href="https://github.com/mdn/dom-examples/tree/master/web-storage">check out the source code</a>.</p>
 </div>
 
 <h3 id="Testing_whether_your_storage_has_been_populated">Testing whether your storage has been populated</h3>
@@ -118,11 +118,11 @@ else {
 
 <p>The {{domxref("Storage.getItem()")}} method is used to get a data item from storage; in this case, we are testing to see whether the <code>bgcolor</code> item exists; if not, we run <code>populateStorage()</code> to add the existing customization values to the storage. If there are already values there, we run <code>setStyles()</code> to update the page styling with the stored values.</p>
 
-<p><strong>Note</strong>: You could also use {{domxref("Storage.length")}} to test whether the storage object is empty or not.</p>
+<p><strong>Note:</strong> You could also use {{domxref("Storage.length")}} to test whether the storage object is empty or not.</p>
 
 <h3 id="Getting_values_from_storage">Getting values from storage</h3>
 
-<p>As noted above, values can be retrieved from storage using {{domxref("Storage.getItem()")}}. This takes the key of the data item as an argument, and returns the data value. For example:</p>
+<p><strong>Note:</strong> As noted above, values can be retrieved from storage using {{domxref("Storage.getItem()")}}. This takes the key of the data item as an argument, and returns the data value. For example:</p>
 
 <pre class="brush: js">function setStyles() {
   var currentColor = localStorage.getItem('bgcolor');

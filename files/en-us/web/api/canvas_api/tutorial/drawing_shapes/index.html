@@ -12,9 +12,7 @@ tags:
 ---
 <div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}</div>
 
-<div class="summary">
 <p>Now that we have set up our <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_usage">canvas environment</a>, we can get into the details of how to draw on the canvas. By the end of this article, you will have learned how to draw rectangles, triangles, lines, arcs and curves, providing familiarity with some of the basic shapes. Working with paths is essential when drawing objects onto the canvas and we will see how that can be done.</p>
-</div>
 
 <h2 id="The_grid">The grid</h2>
 
@@ -100,13 +98,13 @@ tags:
 
 <p>The first step to create a path is to call the <code>beginPath()</code>. Internally, paths are stored as a list of sub-paths (lines, arcs, etc) which together form a shape. Every time this method is called, the list is reset and we can start drawing new shapes.</p>
 
-<div class="note"><strong>Note:</strong> When the current path is empty, such as immediately after calling <code>beginPath()</code>, or on a newly created canvas, the first path construction command is always treated as a <code>moveTo()</code>, regardless of what it actually is. For that reason, you will almost always want to specifically set your starting position after resetting a path.</div>
+<div class="note"><p><strong>Note:</strong> When the current path is empty, such as immediately after calling <code>beginPath()</code>, or on a newly created canvas, the first path construction command is always treated as a <code>moveTo()</code>, regardless of what it actually is. For that reason, you will almost always want to specifically set your starting position after resetting a path.</p></div>
 
 <p>The second step is calling the methods that actually specify the paths to be drawn. We'll see these shortly.</p>
 
 <p>The third, and an optional step, is to call <code>closePath()</code>. This method tries to close the shape by drawing a straight line from the current point to the start. If the shape has already been closed or there's only one point in the list, this function does nothing.</p>
 
-<div class="note"><strong>Note:</strong> When you call <code>fill()</code>, any open shapes are closed automatically, so you don't have to call <code>closePath()</code>. This is <strong>not</strong> the case when you call <code>stroke()</code>.</div>
+<div class="note"><p><strong>Note:</strong> When you call <code>fill()</code>, any open shapes are closed automatically, so you don't have to call <code>closePath()</code>. This is <strong>not</strong> the case when you call <code>stroke()</code>.</p></div>
 
 <h3 id="Drawing_a_triangle">Drawing a triangle</h3>
 
@@ -248,7 +246,7 @@ tags:
 <p>Let's have a more detailed look at the <code>arc</code> method, which takes six parameters: <code>x</code> and <code>y</code> are the coordinates of the center of the circle on which the arc should be drawn. <code>radius</code> is self-explanatory. The <code>startAngle</code> and <code>endAngle</code> parameters define the start and end points of the arc in radians, along the curve of the circle. These are measured from the x axis. The <code>counterclockwise</code> parameter is a Boolean value which, when <code>true</code>, draws the arc counterclockwise; otherwise, the arc is drawn clockwise.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Angles in the <code>arc</code> function are measured in radians, not degrees. To convert degrees to radians you can use the following JavaScript expression: <code>radians = (Math.PI/180)*degrees</code>.</p>
+<p><strong>Note:</strong> Angles in the <code>arc</code> function are measured in radians, not degrees. To convert degrees to radians you can use the following JavaScript expression: <code>radians = (Math.PI/180)*degrees</code>.</p>
 </div>
 
 <p>The following example is a little more complex than the ones we've seen above. It draws 12 different arcs all with different angles and fills.</p>

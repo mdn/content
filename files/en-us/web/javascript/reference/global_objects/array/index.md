@@ -314,6 +314,10 @@ The properties and elements returned from this match are as follows:
   - : Returns the found `element` in the array, if some element in the array satisfies the testing function, or `undefined` if not found.
 - {{jsxref("Array.prototype.findIndex()")}}
   - : Returns the found index in the array, if an element in the array satisfies the testing function, or `-1` if not found.
+- {{jsxref("Array.prototype.flat()")}}
+  - : Returns a new array with all sub-array elements concatenated into it recursively up to the specified depth. 
+- {{jsxref("Array.prototype.flatMap()")}}
+  - : Returns a new array formed by applying a given callback function to each element of the array, and then flattening the result by one level.
 - {{jsxref("Array.prototype.forEach()")}}
   - : Calls a function for each element in the array.
 - {{jsxref("Array.prototype.includes()")}}

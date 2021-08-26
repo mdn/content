@@ -1321,11 +1321,9 @@
 /en-US/docs/DOM/File.getAsDataURL	/en-US/docs/Web/API/File/getAsDataURL
 /en-US/docs/DOM/File.getAsText	/en-US/docs/Web/API/File/getAsText
 /en-US/docs/DOM/File.lastModifiedDate	/en-US/docs/Web/API/File/lastModifiedDate
-/en-US/docs/DOM/File.mozFullPath	/en-US/docs/Web/API/File/mozFullPath
 /en-US/docs/DOM/File.name	/en-US/docs/Web/API/File/name
 /en-US/docs/DOM/File.size	/en-US/docs/Web/API/Blob/size
 /en-US/docs/DOM/File.type	/en-US/docs/Web/API/Blob/type
-/en-US/docs/DOM/FileError	/en-US/docs/Web/API/FileError
 /en-US/docs/DOM/FileList	/en-US/docs/Web/API/FileList
 /en-US/docs/DOM/FileReader	/en-US/docs/Web/API/FileReader
 /en-US/docs/DOM/FileReaderSync	/en-US/docs/Web/API/FileReaderSync
@@ -1338,7 +1336,6 @@
 /en-US/docs/DOM/File_API/File_System_API/EntrySync	/en-US/docs/Web/API/FileSystemEntrySync
 /en-US/docs/DOM/File_API/File_System_API/FileEntry	/en-US/docs/Web/API/FileSystemFileEntry
 /en-US/docs/DOM/File_API/File_System_API/FileEntrySync	/en-US/docs/Web/API/FileEntrySync
-/en-US/docs/DOM/File_API/File_System_API/FileError	/en-US/docs/Web/API/FileError
 /en-US/docs/DOM/File_API/File_System_API/FileException	/en-US/docs/Web/API/FileException
 /en-US/docs/DOM/File_API/File_System_API/FileSystem	/en-US/docs/Web/API/FileSystem
 /en-US/docs/DOM/File_API/File_System_API/FileSystemSync	/en-US/docs/Web/API/FileSystemSync
@@ -2010,15 +2007,14 @@
 /en-US/docs/DOM/event.initEvent	/en-US/docs/Web/API/Event/initEvent
 /en-US/docs/DOM/event.initMouseEvent	/en-US/docs/Web/API/MouseEvent/initMouseEvent
 /en-US/docs/DOM/event.initUIEvent	/en-US/docs/Web/API/UIEvent/initUIEvent
-/en-US/docs/DOM/event.isChar	/en-US/docs/Web/API/UIEvent/isChar
 /en-US/docs/DOM/event.keyCode	/en-US/docs/Web/API/KeyboardEvent/keyCode
 /en-US/docs/DOM/event.layerX	/en-US/docs/Web/API/UIEvent/layerX
 /en-US/docs/DOM/event.layerY	/en-US/docs/Web/API/UIEvent/layerY
 /en-US/docs/DOM/event.metaKey	/en-US/docs/Web/API/MouseEvent/metaKey
 /en-US/docs/DOM/event.mozInputSource	/en-US/docs/Web/API/MouseEvent/mozInputSource
 /en-US/docs/DOM/event.originalTarget	/en-US/docs/Web/API/Event/originalTarget
-/en-US/docs/DOM/event.pageX	/en-US/docs/Web/API/UIEvent/pageX
-/en-US/docs/DOM/event.pageY	/en-US/docs/Web/API/UIEvent/pageY
+/en-US/docs/DOM/event.pageX	/en-US/docs/Web/API/MouseEvent/pageX
+/en-US/docs/DOM/event.pageY	/en-US/docs/Web/API/MouseEvent/pageY
 /en-US/docs/DOM/event.relatedTarget	/en-US/docs/Web/API/MouseEvent/relatedTarget
 /en-US/docs/DOM/event.screenX	/en-US/docs/Web/API/MouseEvent/screenX
 /en-US/docs/DOM/event.screenY	/en-US/docs/Web/API/MouseEvent/screenY
@@ -2234,8 +2230,6 @@
 /en-US/docs/DOM/window.onmouseout	/en-US/docs/Web/API/GlobalEventHandlers/onmouseout
 /en-US/docs/DOM/window.onmouseover	/en-US/docs/Web/API/GlobalEventHandlers/onmouseover
 /en-US/docs/DOM/window.onmouseup	/en-US/docs/Web/API/GlobalEventHandlers/onmouseup
-/en-US/docs/DOM/window.onmozbeforepaint	/en-US/docs/Web/API/Window/onmozbeforepaint
-/en-US/docs/DOM/window.onpaint	/en-US/docs/Web/API/Window/onpaint
 /en-US/docs/DOM/window.onpopstate	/en-US/docs/Web/API/WindowEventHandlers/onpopstate
 /en-US/docs/DOM/window.onreset	/en-US/docs/Web/API/GlobalEventHandlers/onreset
 /en-US/docs/DOM/window.onresize	/en-US/docs/Web/API/GlobalEventHandlers/onresize
@@ -2507,14 +2501,13 @@
 /en-US/docs/DOM:event.initEvent	/en-US/docs/Web/API/Event/initEvent
 /en-US/docs/DOM:event.initMouseEvent	/en-US/docs/Web/API/MouseEvent/initMouseEvent
 /en-US/docs/DOM:event.initUIEvent	/en-US/docs/Web/API/UIEvent/initUIEvent
-/en-US/docs/DOM:event.isChar	/en-US/docs/Web/API/UIEvent/isChar
 /en-US/docs/DOM:event.keyCode	/en-US/docs/Web/API/KeyboardEvent/keyCode
 /en-US/docs/DOM:event.layerX	/en-US/docs/Web/API/UIEvent/layerX
 /en-US/docs/DOM:event.layerY	/en-US/docs/Web/API/UIEvent/layerY
 /en-US/docs/DOM:event.metaKey	/en-US/docs/Web/API/MouseEvent/metaKey
 /en-US/docs/DOM:event.originalTarget	/en-US/docs/Web/API/Event/originalTarget
-/en-US/docs/DOM:event.pageX	/en-US/docs/Web/API/UIEvent/pageX
-/en-US/docs/DOM:event.pageY	/en-US/docs/Web/API/UIEvent/pageY
+/en-US/docs/DOM:event.pageX	/en-US/docs/Web/API/MouseEvent/pageX
+/en-US/docs/DOM:event.pageY	/en-US/docs/Web/API/MouseEvent/pageY
 /en-US/docs/DOM:event.relatedTarget	/en-US/docs/Web/API/MouseEvent/relatedTarget
 /en-US/docs/DOM:event.screenX	/en-US/docs/Web/API/MouseEvent/screenX
 /en-US/docs/DOM:event.screenY	/en-US/docs/Web/API/MouseEvent/screenY
@@ -2675,7 +2668,6 @@
 /en-US/docs/DOM:window.onmouseout	/en-US/docs/Web/API/GlobalEventHandlers/onmouseout
 /en-US/docs/DOM:window.onmouseover	/en-US/docs/Web/API/GlobalEventHandlers/onmouseover
 /en-US/docs/DOM:window.onmouseup	/en-US/docs/Web/API/GlobalEventHandlers/onmouseup
-/en-US/docs/DOM:window.onpaint	/en-US/docs/Web/API/Window/onpaint
 /en-US/docs/DOM:window.onpopstate	/en-US/docs/Web/API/WindowEventHandlers/onpopstate
 /en-US/docs/DOM:window.onreset	/en-US/docs/Web/API/GlobalEventHandlers/onreset
 /en-US/docs/DOM:window.onresize	/en-US/docs/Web/API/GlobalEventHandlers/onresize
@@ -2847,7 +2839,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/File.name	/en-US/docs/Web/API/File/name
 /en-US/docs/Document_Object_Model_(DOM)/File.size	/en-US/docs/Web/API/Blob/size
 /en-US/docs/Document_Object_Model_(DOM)/File.type	/en-US/docs/Web/API/Blob/type
-/en-US/docs/Document_Object_Model_(DOM)/FileError	/en-US/docs/Web/API/FileError
 /en-US/docs/Document_Object_Model_(DOM)/FileList	/en-US/docs/Web/API/FileList
 /en-US/docs/Document_Object_Model_(DOM)/FileReader	/en-US/docs/Web/API/FileReader
 /en-US/docs/Document_Object_Model_(DOM)/FileReaderSync	/en-US/docs/Web/API/FileReaderSync
@@ -2860,7 +2851,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/File_API/File_System_API/EntrySync	/en-US/docs/Web/API/FileSystemEntrySync
 /en-US/docs/Document_Object_Model_(DOM)/File_API/File_System_API/FileEntry	/en-US/docs/Web/API/FileSystemFileEntry
 /en-US/docs/Document_Object_Model_(DOM)/File_API/File_System_API/FileEntrySync	/en-US/docs/Web/API/FileEntrySync
-/en-US/docs/Document_Object_Model_(DOM)/File_API/File_System_API/FileError	/en-US/docs/Web/API/FileError
 /en-US/docs/Document_Object_Model_(DOM)/File_API/File_System_API/FileException	/en-US/docs/Web/API/FileException
 /en-US/docs/Document_Object_Model_(DOM)/File_API/File_System_API/FileSystem	/en-US/docs/Web/API/FileSystem
 /en-US/docs/Document_Object_Model_(DOM)/File_API/File_System_API/FileSystemSync	/en-US/docs/Web/API/FileSystemSync
@@ -3263,7 +3253,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/event.initEvent	/en-US/docs/Web/API/Event/initEvent
 /en-US/docs/Document_Object_Model_(DOM)/event.initMouseEvent	/en-US/docs/Web/API/MouseEvent/initMouseEvent
 /en-US/docs/Document_Object_Model_(DOM)/event.initUIEvent	/en-US/docs/Web/API/UIEvent/initUIEvent
-/en-US/docs/Document_Object_Model_(DOM)/event.isChar	/en-US/docs/Web/API/UIEvent/isChar
 /en-US/docs/Document_Object_Model_(DOM)/event.keyCode	/en-US/docs/Web/API/KeyboardEvent/keyCode
 /en-US/docs/Document_Object_Model_(DOM)/event.layerX	/en-US/docs/Web/API/UIEvent/layerX
 /en-US/docs/Document_Object_Model_(DOM)/event.layerY	/en-US/docs/Web/API/UIEvent/layerY
@@ -3417,8 +3406,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.onmouseout	/en-US/docs/Web/API/GlobalEventHandlers/onmouseout
 /en-US/docs/Document_Object_Model_(DOM)/window.onmouseover	/en-US/docs/Web/API/GlobalEventHandlers/onmouseover
 /en-US/docs/Document_Object_Model_(DOM)/window.onmouseup	/en-US/docs/Web/API/GlobalEventHandlers/onmouseup
-/en-US/docs/Document_Object_Model_(DOM)/window.onmozbeforepaint	/en-US/docs/Web/API/Window/onmozbeforepaint
-/en-US/docs/Document_Object_Model_(DOM)/window.onpaint	/en-US/docs/Web/API/Window/onpaint
 /en-US/docs/Document_Object_Model_(DOM)/window.onpopstate	/en-US/docs/Web/API/WindowEventHandlers/onpopstate
 /en-US/docs/Document_Object_Model_(DOM)/window.onreset	/en-US/docs/Web/API/GlobalEventHandlers/onreset
 /en-US/docs/Document_Object_Model_(DOM)/window.onresize	/en-US/docs/Web/API/GlobalEventHandlers/onresize
@@ -5754,6 +5741,7 @@
 /en-US/docs/Mozilla/Firefox/Releases/Firefox_47_for_developers	/en-US/docs/Mozilla/Firefox/Releases/47
 /en-US/docs/Mozilla/Firefox/Releases/developers	/en-US/docs/Mozilla/Firefox/Releases/63
 /en-US/docs/Mozilla/Performance/Scroll-linked_effects	https://firefox-source-docs.mozilla.org/performance/scroll-linked_effects.html
+/en-US/docs/Mozilla/QA/Bug_writing_guidelines	https://bugzilla.mozilla.org/page.cgi?id=bug-writing.html
 /en-US/docs/Mozilla/Virtualenv	https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla/virtualenv
 /en-US/docs/Mozilla_CSS_Extensions	/en-US/docs/Web/CSS/Mozilla_Extensions
 /en-US/docs/Mozilla_MathML_Project/Authoring	/en-US/docs/Web/MathML/Authoring
@@ -6785,8 +6773,9 @@
 /en-US/docs/Web/API/AnimationEvent.AnimationEvent	/en-US/docs/Web/API/AnimationEvent/AnimationEvent
 /en-US/docs/Web/API/AnimationEvent.animationName	/en-US/docs/Web/API/AnimationEvent/animationName
 /en-US/docs/Web/API/AnimationEvent.elapsedTime	/en-US/docs/Web/API/AnimationEvent/elapsedTime
-/en-US/docs/Web/API/AnimationEvent.initAnimationEvent	/en-US/docs/Web/API/AnimationEvent/initAnimationEvent
+/en-US/docs/Web/API/AnimationEvent.initAnimationEvent	/en-US/docs/Web/API/AnimationEvent/AnimationEvent
 /en-US/docs/Web/API/AnimationEvent.pseudoElement	/en-US/docs/Web/API/AnimationEvent/pseudoElement
+/en-US/docs/Web/API/AnimationEvent/initAnimationEvent	/en-US/docs/Web/API/AnimationEvent/AnimationEvent
 /en-US/docs/Web/API/AnimationPlaybackEvent/AnimationPlaybackEvent.timelineTime	/en-US/docs/Web/API/AnimationPlaybackEvent/timelineTime
 /en-US/docs/Web/API/AnimationPlayer	/en-US/docs/Web/API/Animation
 /en-US/docs/Web/API/AnimationPlayer.currentTime	/en-US/docs/Web/API/Animation/currentTime
@@ -7040,13 +7029,11 @@
 /en-US/docs/Web/API/CanvasGradient.addColorStop	/en-US/docs/Web/API/CanvasGradient/addColorStop
 /en-US/docs/Web/API/CanvasPattern.setTransform	/en-US/docs/Web/API/CanvasPattern/setTransform
 /en-US/docs/Web/API/CanvasPixelArray	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray
-/en-US/docs/Web/API/CanvasRenderingContext2D.addHitRegion	/en-US/docs/Web/API/CanvasRenderingContext2D/addHitRegion
 /en-US/docs/Web/API/CanvasRenderingContext2D.arc	/en-US/docs/Web/API/CanvasRenderingContext2D/arc
 /en-US/docs/Web/API/CanvasRenderingContext2D.arcTo	/en-US/docs/Web/API/CanvasRenderingContext2D/arcTo
 /en-US/docs/Web/API/CanvasRenderingContext2D.beginPath	/en-US/docs/Web/API/CanvasRenderingContext2D/beginPath
 /en-US/docs/Web/API/CanvasRenderingContext2D.bezierCurveTo	/en-US/docs/Web/API/CanvasRenderingContext2D/bezierCurveTo
 /en-US/docs/Web/API/CanvasRenderingContext2D.canvas	/en-US/docs/Web/API/CanvasRenderingContext2D/canvas
-/en-US/docs/Web/API/CanvasRenderingContext2D.clearHitRegions	/en-US/docs/Web/API/CanvasRenderingContext2D/clearHitRegions
 /en-US/docs/Web/API/CanvasRenderingContext2D.clearRect	/en-US/docs/Web/API/CanvasRenderingContext2D/clearRect
 /en-US/docs/Web/API/CanvasRenderingContext2D.clip	/en-US/docs/Web/API/CanvasRenderingContext2D/clip
 /en-US/docs/Web/API/CanvasRenderingContext2D.closePath	/en-US/docs/Web/API/CanvasRenderingContext2D/closePath
@@ -7085,7 +7072,6 @@
 /en-US/docs/Web/API/CanvasRenderingContext2D.putImageData	/en-US/docs/Web/API/CanvasRenderingContext2D/putImageData
 /en-US/docs/Web/API/CanvasRenderingContext2D.quadraticCurveTo	/en-US/docs/Web/API/CanvasRenderingContext2D/quadraticCurveTo
 /en-US/docs/Web/API/CanvasRenderingContext2D.rect	/en-US/docs/Web/API/CanvasRenderingContext2D/rect
-/en-US/docs/Web/API/CanvasRenderingContext2D.removeHitRegion	/en-US/docs/Web/API/CanvasRenderingContext2D/removeHitRegion
 /en-US/docs/Web/API/CanvasRenderingContext2D.resetTransform	/en-US/docs/Web/API/CanvasRenderingContext2D/resetTransform
 /en-US/docs/Web/API/CanvasRenderingContext2D.restore	/en-US/docs/Web/API/CanvasRenderingContext2D/restore
 /en-US/docs/Web/API/CanvasRenderingContext2D.rotate	/en-US/docs/Web/API/CanvasRenderingContext2D/rotate
@@ -7442,7 +7428,6 @@
 /en-US/docs/Web/API/File.getAsDataURL	/en-US/docs/Web/API/File/getAsDataURL
 /en-US/docs/Web/API/File.getAsText	/en-US/docs/Web/API/File/getAsText
 /en-US/docs/Web/API/File.lastModifiedDate	/en-US/docs/Web/API/File/lastModifiedDate
-/en-US/docs/Web/API/File.mozFullPath	/en-US/docs/Web/API/File/mozFullPath
 /en-US/docs/Web/API/File.name	/en-US/docs/Web/API/File/name
 /en-US/docs/Web/API/File.size	/en-US/docs/Web/API/Blob/size
 /en-US/docs/Web/API/File.type	/en-US/docs/Web/API/Blob/type
@@ -7750,6 +7735,7 @@
 /en-US/docs/Web/API/HTML_DOM	/en-US/docs/Web/API/HTML_DOM_API
 /en-US/docs/Web/API/HTML_Santizer_API	/en-US/docs/Web/API/HTML_Sanitizer_API
 /en-US/docs/Web/API/HashChangeEvent/HashChangeEvent.oldURL	/en-US/docs/Web/API/HashChangeEvent/oldURL
+/en-US/docs/Web/API/Headers/getAll	/en-US/docs/Web/API/Headers/get
 /en-US/docs/Web/API/History.length	/en-US/docs/Web/API/History/length
 /en-US/docs/Web/API/IDBCursor.advance	/en-US/docs/Web/API/IDBCursor/advance
 /en-US/docs/Web/API/IDBCursor.continue	/en-US/docs/Web/API/IDBCursor/continue
@@ -7864,6 +7850,7 @@
 /en-US/docs/Web/API/ImageData.data	/en-US/docs/Web/API/ImageData/data
 /en-US/docs/Web/API/ImageData.height	/en-US/docs/Web/API/ImageData/height
 /en-US/docs/Web/API/ImageData.width	/en-US/docs/Web/API/ImageData/width
+/en-US/docs/Web/API/Index	/en-US/docs/Web/API
 /en-US/docs/Web/API/IndexSync	/en-US/docs/Web/API/IDBIndexSync
 /en-US/docs/Web/API/IndexedDB	/en-US/docs/Web/API/IndexedDB_API
 /en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology
@@ -8656,15 +8643,16 @@
 /en-US/docs/Web/API/TreeWalker.previousSibling	/en-US/docs/Web/API/TreeWalker/previousSibling
 /en-US/docs/Web/API/UIEvent.UIEvent	/en-US/docs/Web/API/UIEvent/UIEvent
 /en-US/docs/Web/API/UIEvent.initUIEvent	/en-US/docs/Web/API/UIEvent/initUIEvent
-/en-US/docs/Web/API/UIEvent.isChar	/en-US/docs/Web/API/UIEvent/isChar
 /en-US/docs/Web/API/UIEvent.layerX	/en-US/docs/Web/API/UIEvent/layerX
 /en-US/docs/Web/API/UIEvent.layerY	/en-US/docs/Web/API/UIEvent/layerY
-/en-US/docs/Web/API/UIEvent.pageX	/en-US/docs/Web/API/UIEvent/pageX
-/en-US/docs/Web/API/UIEvent.pageY	/en-US/docs/Web/API/UIEvent/pageY
+/en-US/docs/Web/API/UIEvent.pageX	/en-US/docs/Web/API/MouseEvent/pageX
+/en-US/docs/Web/API/UIEvent.pageY	/en-US/docs/Web/API/MouseEvent/pageY
 /en-US/docs/Web/API/UIEvent.view	/en-US/docs/Web/API/UIEvent/view
 /en-US/docs/Web/API/UIEvent.which	/en-US/docs/Web/API/KeyboardEvent/which
 /en-US/docs/Web/API/UIEvent/UIEvent.detail	/en-US/docs/Web/API/UIEvent/detail
 /en-US/docs/Web/API/UIEvent/cancelBubble	/en-US/docs/Web/API/Event/cancelBubble
+/en-US/docs/Web/API/UIEvent/pageX	/en-US/docs/Web/API/MouseEvent/pageX
+/en-US/docs/Web/API/UIEvent/pageY	/en-US/docs/Web/API/MouseEvent/pageY
 /en-US/docs/Web/API/ULongRange	/en-US/docs/Web/API/MediaTrackConstraints
 /en-US/docs/Web/API/URL.URL	/en-US/docs/Web/API/URL/URL
 /en-US/docs/Web/API/URL.createObjectURL	/en-US/docs/Web/API/URL/createObjectURL
@@ -9236,7 +9224,6 @@
 /en-US/docs/Web/API/event.initKeyEvent	/en-US/docs/Web/API/KeyboardEvent/initKeyEvent
 /en-US/docs/Web/API/event.initMouseEvent	/en-US/docs/Web/API/MouseEvent/initMouseEvent
 /en-US/docs/Web/API/event.initUIEvent	/en-US/docs/Web/API/UIEvent/initUIEvent
-/en-US/docs/Web/API/event.isChar	/en-US/docs/Web/API/UIEvent/isChar
 /en-US/docs/Web/API/event.isTrusted	/en-US/docs/Web/API/Event/isTrusted
 /en-US/docs/Web/API/event.keyCode	/en-US/docs/Web/API/KeyboardEvent/keyCode
 /en-US/docs/Web/API/event.layerX	/en-US/docs/Web/API/UIEvent/layerX
@@ -9244,8 +9231,8 @@
 /en-US/docs/Web/API/event.metaKey	/en-US/docs/Web/API/MouseEvent/metaKey
 /en-US/docs/Web/API/event.mozInputSource	/en-US/docs/Web/API/MouseEvent/mozInputSource
 /en-US/docs/Web/API/event.originalTarget	/en-US/docs/Web/API/Event/originalTarget
-/en-US/docs/Web/API/event.pageX	/en-US/docs/Web/API/UIEvent/pageX
-/en-US/docs/Web/API/event.pageY	/en-US/docs/Web/API/UIEvent/pageY
+/en-US/docs/Web/API/event.pageX	/en-US/docs/Web/API/MouseEvent/pageX
+/en-US/docs/Web/API/event.pageY	/en-US/docs/Web/API/MouseEvent/pageY
 /en-US/docs/Web/API/event.preventDefault	/en-US/docs/Web/API/Event/preventDefault
 /en-US/docs/Web/API/event.relatedTarget	/en-US/docs/Web/API/MouseEvent/relatedTarget
 /en-US/docs/Web/API/event.screenX	/en-US/docs/Web/API/MouseEvent/screenX
@@ -9346,7 +9333,6 @@
 /en-US/docs/Web/API/range.startOffset	/en-US/docs/Web/API/range/startOffset
 /en-US/docs/Web/API/range.surroundContents	/en-US/docs/Web/API/range/surroundContents
 /en-US/docs/Web/API/range.toString	/en-US/docs/Web/API/range/toString
-/en-US/docs/Web/API/removeHitRegion	/en-US/docs/Web/API/CanvasRenderingContext2D/removeHitRegion
 /en-US/docs/Web/API/select.type	/en-US/docs/Web/API/HTMLSelectElement/type
 /en-US/docs/Web/API/sessionStorage	/en-US/docs/Web/API/Window/sessionStorage
 /en-US/docs/Web/API/style.media	/en-US/docs/Web/API/HTMLStyleElement/media
@@ -9491,8 +9477,6 @@
 /en-US/docs/Web/API/window.onmouseout	/en-US/docs/Web/API/GlobalEventHandlers/onmouseout
 /en-US/docs/Web/API/window.onmouseover	/en-US/docs/Web/API/GlobalEventHandlers/onmouseover
 /en-US/docs/Web/API/window.onmouseup	/en-US/docs/Web/API/GlobalEventHandlers/onmouseup
-/en-US/docs/Web/API/window.onmozbeforepaint	/en-US/docs/Web/API/Window/onmozbeforepaint
-/en-US/docs/Web/API/window.onpaint	/en-US/docs/Web/API/Window/onpaint
 /en-US/docs/Web/API/window.onpopstate	/en-US/docs/Web/API/WindowEventHandlers/onpopstate
 /en-US/docs/Web/API/window.onreset	/en-US/docs/Web/API/GlobalEventHandlers/onreset
 /en-US/docs/Web/API/window.onresize	/en-US/docs/Web/API/GlobalEventHandlers/onresize
@@ -9965,10 +9949,13 @@
 /en-US/docs/Web/CSS/CSS3_Columns	/en-US/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts
 /en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations/Detecting_CSS_animation_support	/en-US/docs/Web/CSS/CSS_Animations/Detecting_CSS_animation_support
 /en-US/docs/Web/CSS/CSS_Background_and_Borders	/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders
+/en-US/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator	/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator
+/en-US/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator	/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator
+/en-US/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator	/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
 /en-US/docs/Web/CSS/CSS_Background_and_Borders/Scaling_background_images	/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
 /en-US/docs/Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds	/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 /en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images	/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
-/en-US/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator	/en-US/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator
+/en-US/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator	/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
 /en-US/docs/Web/CSS/CSS_Colors	/en-US/docs/Web/CSS/CSS_Color
 /en-US/docs/Web/CSS/CSS_Compositing_and_Blending	/en-US/docs/Web/CSS/Compositing_and_Blending
 /en-US/docs/Web/CSS/CSS_Device_Adaptation/Viewport_Concepts	/en-US/docs/Web/CSS/Viewport_concepts
@@ -10028,9 +10015,9 @@
 /en-US/docs/Web/CSS/Selector_lists	/en-US/docs/Web/CSS/Selector_list
 /en-US/docs/Web/CSS/Selectors	/en-US/docs/Web/CSS/CSS_Selectors
 /en-US/docs/Web/CSS/Text-overflow_TEST	/en-US/docs/Web/CSS/text-overflow
-/en-US/docs/Web/CSS/Tools/Border-image_generator	/en-US/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator
-/en-US/docs/Web/CSS/Tools/Border-radius_generator	/en-US/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator
-/en-US/docs/Web/CSS/Tools/Box-shadow_generator	/en-US/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator
+/en-US/docs/Web/CSS/Tools/Border-image_generator	/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator
+/en-US/docs/Web/CSS/Tools/Border-radius_generator	/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator
+/en-US/docs/Web/CSS/Tools/Box-shadow_generator	/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
 /en-US/docs/Web/CSS/Tools/ColorPicker_Tool	/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool
 /en-US/docs/Web/CSS/Understanding_CSS_z-index	/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index
 /en-US/docs/Web/CSS/Understanding_CSS_z-index/Adding_z-index	/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index
@@ -10481,7 +10468,6 @@
 /en-US/docs/Web/Guide/API/DOM/Using_full_screen_mode	/en-US/docs/Web/API/Fullscreen_API
 /en-US/docs/Web/Guide/API/DOM/Whitespace_in_the_DOM	/en-US/docs/Web/API/Document_Object_Model/Whitespace
 /en-US/docs/Web/Guide/API/File System	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
-/en-US/docs/Web/Guide/API/File System/FileError	/en-US/docs/Web/API/FileError
 /en-US/docs/Web/Guide/API/File System/Introduction	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
 /en-US/docs/Web/Guide/API/Gamepad	/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API
 /en-US/docs/Web/Guide/API/Vibration	/en-US/docs/Web/API/Vibration_API
@@ -10565,7 +10551,6 @@
 /en-US/docs/Web/Guide/Events/Touch_events_(Mozilla_experimental)	/en-US/docs/Web/API/Touch_events/Mozilla_experimental_events
 /en-US/docs/Web/Guide/Events/Using_device_orientation_with_3D_transforms	/en-US/docs/Web/Events/Using_device_orientation_with_3D_transforms
 /en-US/docs/Web/Guide/File_System_API	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
-/en-US/docs/Web/Guide/File_System_API/FileError	/en-US/docs/Web/API/FileError
 /en-US/docs/Web/Guide/File_System_API/Introduction	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
 /en-US/docs/Web/Guide/Graphics/Drawing_graphics_with_canvas	/en-US/docs/Web/API/Canvas_API/Tutorial
 /en-US/docs/Web/Guide/HTML	/en-US/docs/Learn/HTML
@@ -10722,6 +10707,7 @@
 /en-US/docs/Web/HTTP/X-Frame-Options	/en-US/docs/Web/HTTP/Headers/X-Frame-Options
 /en-US/docs/Web/HTTP/data_URIs	/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
 /en-US/docs/Web/HTTP/www_and_non-www_URLs	/en-US/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
+/en-US/docs/Web/Houdini	/en-US/docs/Web/Guide/Houdini
 /en-US/docs/Web/Houdini/CSS_Painting_API	/en-US/docs/Web/API/CSS_Painting_API/Guide
 /en-US/docs/Web/Houdini/CSS_Typed_OM	/en-US/docs/Web/API/CSS_Typed_OM_API
 /en-US/docs/Web/Houdini/Learn/CSS_Painting_API	/en-US/docs/Web/API/CSS_Painting_API/Guide
@@ -11372,7 +11358,6 @@
 /en-US/docs/WebGL/WebGLRenderingContext	/en-US/docs/Web/API/WebGLRenderingContext
 /en-US/docs/WebGL/WebGL_best_practices	/en-US/docs/Web/API/WebGL_API/WebGL_best_practices
 /en-US/docs/WebGuide/API/File_System	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
-/en-US/docs/WebGuide/API/File_System/FileError	/en-US/docs/Web/API/FileError
 /en-US/docs/WebGuide/API/File_System/Introduction	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
 /en-US/docs/WebRTC	/en-US/docs/Web/API/WebRTC_API
 /en-US/docs/WebRTC/Introduction	/en-US/docs/Web/API/WebRTC_API
@@ -11797,7 +11782,6 @@
 /en-US/docs/inset-block-start	/en-US/docs/Web/CSS/inset-block-start
 /en-US/docs/inset-inline-end	/en-US/docs/Web/CSS/inset-inline-end
 /en-US/docs/inset-inline-start	/en-US/docs/Web/CSS/inset-inline-start
-/en-US/docs/isChar	/en-US/docs/Web/API/UIEvent/isChar
 /en-US/docs/item	/en-US/docs/Web/API/NodeList/item
 /en-US/docs/javascript_new_testpage	/en-US/docs/Web/JavaScript
 /en-US/docs/js	/en-US/docs/Web/JavaScript

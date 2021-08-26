@@ -13,24 +13,18 @@ tags:
 ---
 <p>{{PreviousNext("Learn/WebGL/By_example/Raining_rectangles","Learn/WebGL/By_example/Hello_vertex_attributes")}}</p>
 
-<div id="hello-glsl">
-<div class="summary">
-<p id="hello-glsl-summary"><span class="seoSummary">This WebGL example demonstrates a very basic GLSL shader program that draws a solid color square.</span></p>
-</div>
+<p>This WebGL example demonstrates a very basic GLSL shader program that draws a solid color square.</p>
 
 <div class="note">
-<p><strong>Note</strong>: This example will most likely work in all modern desktop browsers. But it may not work in some mobile or older browsers. If the canvas remains blank, you can check the output of the next example, which draws exactly the same thing. But remember to read through the explanations and code on this page, before moving on to the next.</p>
+<p><strong>Note:</strong> This example will most likely work in all modern desktop browsers. But it may not work in some mobile or older browsers. If the canvas remains blank, you can check the output of the next example, which draws exactly the same thing. But remember to read through the explanations and code on this page, before moving on to the next.</p>
 </div>
 
-<p>{{EmbedLiveSample("hello-glsl-source",660,425)}}</p>
+<h2 id="Hello_World_program_in_GLSL">Hello World program in GLSL</h2>
 
-<div id="hello-glsl-intro">
-<h3 id="Hello_World_program_in_GLSL">Hello World program in GLSL</h3>
+<p>{{EmbedLiveSample("Hello_World_program_in_GLSL",660,425)}}</p>
 
 <p>A very simple first shader program.</p>
-</div>
 
-<div id="hello-glsl-source">
 <pre class="brush: html hidden">&lt;p&gt;Hello World! Hello GLSL!&lt;/p&gt;
 </pre>
 
@@ -56,7 +50,6 @@ button {
   padding : 0.6em;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;script type="x-shader/x-vertex" id="vertex-shader"&gt;
 #version 100
@@ -78,7 +71,7 @@ void main() {
 <pre class="brush: js hidden">;(function(){
 </pre>
 
-<pre class="brush: js" id="livesample-js">"use strict"
+<pre class="brush: js">"use strict"
 window.addEventListener("load", setupWebGL, false);
 var gl,
   program;
@@ -161,7 +154,5 @@ if (program)
 </pre>
 
 <p>The source code of this example is also available on <a href="https://github.com/idofilin/webgl-by-example/tree/master/hello-glsl">GitHub</a>.</p>
-</div>
-</div>
 
 <p>{{PreviousNext("Learn/WebGL/By_example/Raining_rectangles","Learn/WebGL/By_example/Hello_vertex_attributes")}}</p>

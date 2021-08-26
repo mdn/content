@@ -11,7 +11,7 @@ browser-compat: api.MIDIPort.close
 ---
 <div>{{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}</div>
 
-<p class="summary">The <strong><code>close()</code></strong> method of the {{domxref("MIDIPort")}} interface makes the access to the MIDI device connected to this <code>MIDIPort</code> unavailable.</p>
+<p>The <strong><code>close()</code></strong> method of the {{domxref("MIDIPort")}} interface makes the access to the MIDI device connected to this <code>MIDIPort</code> unavailable.</p>
 
 <p>If the port is successfully closed a new {{domxref("MIDICOnnectionEvent")}} is queued to the {{domxref("MIDIPort.onstatechange")}} and {{domxref("MIDIAccess.onstatechange")}} event handlers, and the {{domxref("MIDIPort.connection")}} property is changed to <code>"closed"</code>.</p>
 

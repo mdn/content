@@ -10,7 +10,7 @@ browser-compat: javascript.builtins.Atomics.or
 ---
 {{JSRef}}
 
-The static **`Atomics`\*\***`.or()`\*\*
+The static **`Atomics.or()`**
 method computes a bitwise OR with a given value at a given position in the array, and
 returns the old value at that position. This atomic operation guarantees that no other
 write happens until the modified value is written back.
