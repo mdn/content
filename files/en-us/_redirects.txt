@@ -7165,7 +7165,6 @@
 /en-US/docs/Web/API/CountQueueingStrategy/CountQueueingStrategy	/en-US/docs/Web/API/CountQueuingStrategy/CountQueuingStrategy
 /en-US/docs/Web/API/CountQueueingStrategy/size	/en-US/docs/Web/API/CountQueuingStrategy/size
 /en-US/docs/Web/API/CountQueuingStrategy/CountQueueingStrategy	/en-US/docs/Web/API/CountQueuingStrategy/CountQueuingStrategy
-/en-US/docs/Web/API/CreateImageBitmap	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap
 /en-US/docs/Web/API/CredentialContainer	/en-US/docs/Web/API/CredentialsContainer
 /en-US/docs/Web/API/CredentialContainer/get	/en-US/docs/Web/API/CredentialsContainer/get
 /en-US/docs/Web/API/CredentialContainer/requireUserMediation	/en-US/docs/Web/API/CredentialsContainer/preventSilentAccess
@@ -7847,7 +7846,7 @@
 /en-US/docs/Web/API/IDBVersionChangeEvent.version	/en-US/docs/Web/API/IDBVersionChangeEvent/version
 /en-US/docs/Web/API/IIRFilterNode/getFrequencyResponse()	/en-US/docs/Web/API/IIRFilterNode/getFrequencyResponse
 /en-US/docs/Web/API/Image	/en-US/docs/Web/API/HTMLImageElement/Image
-/en-US/docs/Web/API/ImageBitmapFactories/createImageBitmap	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap
+/en-US/docs/Web/API/ImageBitmapFactories/createImageBitmap	/en-US/docs/Web/API/createImageBitmap
 /en-US/docs/Web/API/ImageBitmapRenderingContext/transferImageBitmap	/en-US/docs/Web/API/ImageBitmapRenderingContext/transferFromImageBitmap
 /en-US/docs/Web/API/ImageData.ImageData	/en-US/docs/Web/API/ImageData/ImageData
 /en-US/docs/Web/API/ImageData.data	/en-US/docs/Web/API/ImageData/data
@@ -8934,6 +8933,7 @@
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/caches	/en-US/docs/Web/API/caches
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval	/en-US/docs/Web/API/clearInterval
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout	/en-US/docs/Web/API/clearTimeout
+/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap	/en-US/docs/Web/API/createImageBitmap
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/rejectionhandled_event	/en-US/docs/Web/API/Window/rejectionhandled_event
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/unhandledrejection_event	/en-US/docs/Web/API/Window/unhandledrejection_event
 /en-US/docs/Web/API/WindowSessionStorage	/en-US/docs/Web/API/Window/sessionStorage
