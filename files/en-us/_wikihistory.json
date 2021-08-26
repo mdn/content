@@ -81981,54 +81981,6 @@
       "JesseW"
     ]
   },
-  "Web/API/UIEvent/pageX": {
-    "modified": "2020-10-15T21:11:16.084Z",
-    "contributors": [
-      "fscholz",
-      "Sheppy",
-      "john-hu",
-      "cvrebert",
-      "jpmedley",
-      "teoli",
-      "jsx",
-      "kscarfone",
-      "rashidtherash",
-      "Kartik_Chadha",
-      "Shraddha_Magdum",
-      "DomenicDenicola",
-      "trevorh",
-      "Matej Lednar",
-      "Julgon",
-      "Jabez",
-      "Nickolay",
-      "Ptak82",
-      "Dria",
-      "JesseW"
-    ]
-  },
-  "Web/API/UIEvent/pageY": {
-    "modified": "2020-10-15T21:06:49.267Z",
-    "contributors": [
-      "mfluehr",
-      "fscholz",
-      "cvrebert",
-      "jpmedley",
-      "teoli",
-      "jsx",
-      "kscarfone",
-      "rashidtherash",
-      "Kartik_Chadha",
-      "Shraddha_Magdum",
-      "Sheppy",
-      "ziyunfei",
-      "Matej Lednar",
-      "Jabez",
-      "Nickolay",
-      "Ptak82",
-      "Dria",
-      "JesseW"
-    ]
-  },
   "Web/API/UIEvent/sourceCapabilities": {
     "modified": "2020-10-15T21:40:30.601Z",
     "contributors": [
