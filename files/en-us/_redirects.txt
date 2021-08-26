@@ -8864,7 +8864,7 @@
 /en-US/docs/Web/API/Window/addEventListener	/en-US/docs/Web/API/EventTarget/addEventListener
 /en-US/docs/Web/API/Window/atob	/en-US/docs/Web/API/atob
 /en-US/docs/Web/API/Window/btoa	/en-US/docs/Web/API/btoa
-/en-US/docs/Web/API/Window/caches	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/caches
+/en-US/docs/Web/API/Window/caches	/en-US/docs/Web/API/caches
 /en-US/docs/Web/API/Window/clearInterval	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval
 /en-US/docs/Web/API/Window/clearTimeout	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout
 /en-US/docs/Web/API/Window/convertPointFromNodeToPage	/en-US/docs/Web/API/Window/webkitConvertPointFromNodeToPage
@@ -8931,6 +8931,7 @@
 /en-US/docs/Web/API/WindowLocalStorage.localStorage	/en-US/docs/Web/API/Window/localStorage
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/atob	/en-US/docs/Web/API/atob
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/btoa	/en-US/docs/Web/API/btoa
+/en-US/docs/Web/API/WindowOrWorkerGlobalScope/caches	/en-US/docs/Web/API/caches
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/rejectionhandled_event	/en-US/docs/Web/API/Window/rejectionhandled_event
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/unhandledrejection_event	/en-US/docs/Web/API/Window/unhandledrejection_event
 /en-US/docs/Web/API/WindowSessionStorage	/en-US/docs/Web/API/Window/sessionStorage
@@ -8967,10 +8968,10 @@
 /en-US/docs/Web/API/WorkerGlobalScope.ononline	/en-US/docs/Web/API/WorkerGlobalScope/ononline
 /en-US/docs/Web/API/WorkerGlobalScope.performance	/en-US/docs/Web/API/WorkerGlobalScope/performance
 /en-US/docs/Web/API/WorkerGlobalScope.self	/en-US/docs/Web/API/WorkerGlobalScope/self
-/en-US/docs/Web/API/WorkerGlobalScope/WorkerGlobalScope.caches	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/caches
+/en-US/docs/Web/API/WorkerGlobalScope/WorkerGlobalScope.caches	/en-US/docs/Web/API/caches
 /en-US/docs/Web/API/WorkerGlobalScope/atob	/en-US/docs/Web/API/atob
 /en-US/docs/Web/API/WorkerGlobalScope/btoa	/en-US/docs/Web/API/btoa
-/en-US/docs/Web/API/WorkerGlobalScope/caches	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/caches
+/en-US/docs/Web/API/WorkerGlobalScope/caches	/en-US/docs/Web/API/caches
 /en-US/docs/Web/API/WorkerGlobalScope/clearInterval	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval
 /en-US/docs/Web/API/WorkerGlobalScope/clearTimeout	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout
 /en-US/docs/Web/API/WorkerGlobalScope/close	/en-US/docs/Web/API/DedicatedWorkerGlobalScope/close

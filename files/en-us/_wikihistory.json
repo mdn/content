@@ -91822,17 +91822,6 @@
       "Bzbarsky"
     ]
   },
-  "Web/API/WindowOrWorkerGlobalScope/caches": {
-    "modified": "2020-10-15T21:33:54.725Z",
-    "contributors": [
-      "mfluehr",
-      "fscholz",
-      "rifai",
-      "chrisdavidmills",
-      "teoli",
-      "kscarfone"
-    ]
-  },
   "Web/API/WindowOrWorkerGlobalScope/clearInterval": {
     "modified": "2020-10-15T21:11:20.211Z",
     "contributors": [
@@ -94766,6 +94755,17 @@
       "Celelibi",
       "Callek",
       "alecananian"
+    ]
+  },
+  "Web/API/caches": {
+    "modified": "2020-10-15T21:33:54.725Z",
+    "contributors": [
+      "mfluehr",
+      "fscholz",
+      "rifai",
+      "chrisdavidmills",
+      "teoli",
+      "kscarfone"
     ]
   },
   "Web/API/console": {
