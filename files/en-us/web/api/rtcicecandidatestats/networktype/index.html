@@ -53,7 +53,7 @@ browser-compat: api.RTCIceCandidateStats.networkType
   statistics reports for candidates that use or would use a cellular data network to a log
   view.</p>
 
-<pre class="brush: js; highlight[4]">window.setInterval(function() {
+<pre class="brush: js;">window.setInterval(function() {
   myPeerConnection.getStats(null).then(stats =&gt; {
     let statsOutput = "";
 

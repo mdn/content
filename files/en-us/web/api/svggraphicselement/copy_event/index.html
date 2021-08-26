@@ -67,7 +67,7 @@ browser-compat: api.SVGGraphicsElement.copy_event
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js; highlight[1]">document.getElementsByTagName("text")[0].addEventListener("copy", evt =&gt; {
+<pre class="brush: js;.addEventListener("copy", evt =&gt; {
   evt.clipboardData.setData('text/plain', document.getSelection().toString().toUpperCase());
   evt.preventDefault();
 });</pre>

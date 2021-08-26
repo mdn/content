@@ -44,7 +44,7 @@ ctx.fillStyle = 'rgba(255, 165, 0, 1)';
 
 <p>In this example, we once again use two <code>for</code> loops to draw a grid of rectangles, each in a different color. The resulting image should look something like the screenshot. There is nothing too spectacular happening here. We use the two variables <code>i</code> and <code>j</code> to generate a unique RGB color for each square, and only modify the red and green values. The blue channel has a fixed value. By modifying the channels, you can generate all kinds of palettes. By increasing the steps, you can achieve something that looks like the color palettes Photoshop uses.</p>
 
-<pre class="brush: js highlight[5,6]">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   for (var i = 0; i &lt; 6; i++) {
     for (var j = 0; j &lt; 6; j++) {
@@ -67,7 +67,7 @@ ctx.fillStyle = 'rgba(255, 165, 0, 1)';
 
 <p>This example is similar to the one above, but uses the <code>strokeStyle</code> property to change the colors of the shapes' outlines. We use the <code>arc()</code> method to draw circles instead of squares.</p>
 
-<pre class="brush: js highlight[5,6]">  function draw() {
+<pre class="brush: js">  function draw() {
     var ctx = document.getElementById('canvas').getContext('2d');
     for (var i = 0; i &lt; 6; i++) {
       for (var j = 0; j &lt; 6; j++) {
@@ -114,7 +114,7 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 
 <p>In this example, we'll draw a background of four different colored squares. On top of these, we'll draw a set of semi-transparent circles. The <code>globalAlpha</code> property is set at <code>0.2</code> which will be used for all shapes from that point on. Every step in the <code>for</code> loop draws a set of circles with an increasing radius. The final result is a radial gradient. By overlaying ever more circles on top of each other, we effectively reduce the transparency of the circles that have already been drawn. By increasing the step count and in effect drawing more circles, the background would completely disappear from the center of the image.</p>
 
-<pre class="brush: js highlight[15]">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   // draw background
   ctx.fillStyle = '#FD0';
@@ -148,7 +148,7 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 
 <p>In this second example, we do something similar to the one above, but instead of drawing circles on top of each other, I've drawn small rectangles with increasing opacity. Using <code>rgba()</code> gives you a little more control and flexibility because we can set the fill and stroke style individually.</p>
 
-<pre class="brush: js highlight[16]">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   // Draw background
@@ -207,7 +207,7 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 
 <p>In the example below, 10 straight lines are drawn with increasing line widths. The line on the far left is 1.0 units wide. However, the leftmost and all other odd-integer-width thickness lines do not appear crisp, because of the path's positioning.</p>
 
-<pre class="brush: js highlight[4]">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   for (var i = 0; i &lt; 10; i++) {
     ctx.lineWidth = 1 + i;
@@ -260,7 +260,7 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 
 <p>The line on the left uses the default <code>butt</code> option. You'll notice that it's drawn completely flush with the guides. The second is set to use the <code>round</code> option. This adds a semicircle to the end that has a radius half the width of the line. The line on the right uses the <code>square</code> option. This adds a box with an equal width and half the height of the line thickness.</p>
 
-<pre class="brush: js highlight[18]">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   var lineCap = ['butt', 'round', 'square'];
 
@@ -309,7 +309,7 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 
 <p>The example below draws three different paths, demonstrating each of these three <code>lineJoin</code> property settings; the output is shown above.</p>
 
-<pre class="brush: js highlight[6]">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   var lineJoin = ['round', 'bevel', 'miter'];
   ctx.lineWidth = 10;
@@ -352,7 +352,7 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 
 <p>If you specify a <code>miterLimit</code> value below 4.2 in this demo, none of the visible corners will join with a miter extension, but only with a small bevel near the blue lines; with a <code>miterLimit</code> above 10, most corners in this demo should join with a miter far away from the blue lines, and whose height is decreasing between corners from left to right because they connect with growing angles; with intermediate values, the corners on the left side will only join with a bevel near the blue lines, and the corners on the right side with a miter extension (also with a decreasing height).</p>
 
-<pre class="brush: js highlight[18]">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   // Clear canvas
@@ -412,7 +412,7 @@ draw();</pre>
 
 <pre class="brush: html hidden">&lt;canvas id="canvas" width="110" height="110"&gt;&lt;/canvas&gt;</pre>
 
-<pre class="brush: js highlight[6]">var ctx = document.getElementById('canvas').getContext('2d');
+<pre class="brush: js">var ctx = document.getElementById('canvas').getContext('2d');
 var offset = 0;
 
 function draw() {
@@ -472,7 +472,7 @@ lineargradient.addColorStop(1, 'black');
 
 <p>In this example, we'll create two different gradients. As you can see here, both the <code>strokeStyle</code> and <code>fillStyle</code> properties can accept a <code>canvasGradient</code> object as valid input.</p>
 
-<pre class="brush: js highlight[5,11]">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   // Create gradients
@@ -511,7 +511,7 @@ lineargradient.addColorStop(1, 'black');
 
 <p>In this example, we'll define four different radial gradients. Because we have control over the start and closing points of the gradient, we can achieve more complex effects than we would normally have in the "classic" radial gradients we see in, for instance, Photoshop (that is, a gradient with a single center point where the gradient expands outward in a circular shape).</p>
 
-<pre class="brush: js highlight[5,10,15,20]">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   // Create gradients
@@ -639,7 +639,7 @@ var ptrn = ctx.createPattern(img, 'repeat');
 
 <p>In this last example, we'll create a pattern to assign to the <code>fillStyle</code> property. The only thing worth noting is the use of the image's <code>onload</code> handler. This is to make sure the image is loaded before it is assigned to the pattern.</p>
 
-<pre class="brush: js highlight[10]">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   // create new image object to use as pattern
@@ -691,7 +691,7 @@ var ptrn = ctx.createPattern(img, 'repeat');
 
 <p>This example draws a text string with a shadowing effect.</p>
 
-<pre class="brush: js highlight[4,5,6,7]">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   ctx.shadowOffsetX = 2;
@@ -726,7 +726,7 @@ var ptrn = ctx.createPattern(img, 'repeat');
 
 <p>In this example we are using the <code>evenodd</code> rule.</p>
 
-<pre class="brush: js highlight[6]">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   ctx.beginPath();
   ctx.arc(50, 50, 30, 0, Math.PI * 2, true);
