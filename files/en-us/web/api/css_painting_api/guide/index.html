@@ -59,7 +59,7 @@ tags:
 
 <p>We tried to keep the example simple. For more options, look at the <a href="/en-US/docs/Web/HTML/Element/canvas">canvas documentation</a>. We also add a little bit of complexity later in this tutorial.</p>
 
-<h2 id="Registering_the_worklet">Registering the worklet</h3>
+<h2 id="Registering_the_worklet">Registering the worklet</h2>
 
 <p>To use the paint worklet, we need to register it using <code><a href="/en-US/docs/Web/API/Worklet/addModule">addModule()</a></code> and include it in our CSS, ensuring the CSS selector matches a DOM node in our HTML</p>
 
@@ -103,6 +103,8 @@ tags:
 
 <p>In the above image, the background proportional to the size of the element. The 3rd example has <code>width: 50%</code>; set on the block level element, making the element narrower and therefore the background image narrower.</p>
 
+<h3>The paint worklet</h3>
+
 <p>The code to do this looks like so:</p>
 
 <pre class="brush: js">registerPaint('headerHighlight', class {
@@ -131,29 +133,37 @@ tags:
 
 <p>We can pass the second parameter into the <code>paint()</code> function to give us access to the width and the height of the element, via <code>.width</code> and <code>.height</code> properties.</p>
 
-<p>Our header now has a highlight that changes according to it's size.</p>
+<p>Our header now has a highlight that changes according to its size.</p>
 
-<div id="example2">
-<pre class="brush: js hidden">CSS.paintWorklet.addModule('https://mdn.github.io/houdini-examples/cssPaint/intro/02partTwo/header-highlight.js');</pre>
+<h3>Using the paint worklet</h3>
 
-<pre class="brush: css hidden">.fancy {
+<h4>HTML</h4>
+
+<pre class="brush: html">&lt;h1 class="fancy"&gt;Largest Header&lt;/h1&gt;
+&lt;h6 class="fancy"&gt;Smallest Header&lt;/h6&gt;
+&lt;h3 class="fancy half"&gt;50% width header&lt;/h3&gt;
+</pre>
+
+<h4>CSS</h4>
+
+<p>While you can't play with the worklet's script, you can alter the element's <code>font-size</code> and <code>width</code> to change the size of the background image.</p>
+
+<pre class="brush: css">.fancy {
   background-image: paint(headerHighlight);
 }
 .half {
     width: 50%;
 }</pre>
 
-<pre class="brush: html hidden">&lt;h1 class="fancy"&gt;Largest Header&lt;/h1&gt;
-&lt;h6 class="fancy"&gt;Smallest Header&lt;/h6&gt;
-&lt;h3 class="fancy half"&gt;50% width header&lt;/h3&gt;
-</pre>
-</div>
+<h4>JavaScript</h4>
 
-<p>While you can't play with the worklet's script, you can alter the element's <code>font-size</code> and <code>width</code> to change the size of the background image.</p>
+<pre class="brush: js">CSS.paintWorklet.addModule('https://mdn.github.io/houdini-examples/cssPaint/intro/02partTwo/header-highlight.js');</pre>
 
-<p>In browsers that support the CSS Paint API, the example below should appear like the image above.</p>
+<h4>Result</h4>
 
-<p>{{EmbedLiveSample("example2", 300, 300)}}</p>
+<p>In <a href="/en-US/docs/Web/API/CSS/paintWorklet#browser_compatibility">browsers that support the CSS Paint API</a>, the elements in the example below should get yellow backgrounds proportional to their font size.</p>
+
+<p>{{EmbedLiveSample("Using_the_paint_worklet_2", 300, 300)}}</p>
 
 <h2 id="Custom_properties">Custom properties</h2>
 
@@ -172,56 +182,15 @@ tags:
 
 <p>The three parameters of the <code>paint()</code> function include the drawing context, paint size and properties. To be able to access properties, we include the static <code>inputProperties()</code> method, which provides live access to CSS properties, including regular properties and <a href="/en-US/docs/Web/CSS/CSS_Variables">custom properties</a>, and returns an <code><a href="/en-US/docs/Glossary/array">array</a></code> of property names. We'll take a look at <code>inputArguments</code> in the last section.</p>
 
-<h3 id="Example">Example</h3>
-
-<div id="example3">
 <p>Let's create a list of items with a background image that rotates between three different colors and three widths.</p>
 
 <p><img alt="The width and color of the background image changes based on the custom properties" src="boxbg.png"></p>
 
-<p>In our CSS, we provide a different color and a width subtractor for the background box we've created via the <code>--boxColor</code> and <code>--widthSubtractor</code> custom properties.</p>
+<p>To achieve this we'll define two custom CSS properties, <code>--boxColor</code> and <code>--widthSubtractor</code>.</p>
 
-<pre class="brush: html; hidden">&lt;ul&gt;
-    &lt;li&gt;item 1&lt;/li&gt;
-    &lt;li&gt;item 2&lt;/li&gt;
-    &lt;li&gt;item 3&lt;/li&gt;
-    &lt;li&gt;item 4&lt;/li&gt;
-    &lt;li&gt;item 5&lt;/li&gt;
-    &lt;li&gt;item 6&lt;/li&gt;
-    &lt;li&gt;item 7&lt;/li&gt;
-    &lt;li&gt;item 8&lt;/li&gt;
-    &lt;li&gt;item 9&lt;/li&gt;
-    &lt;li&gt;item 10&lt;/li&gt;
-    &lt;li&gt;item 11&lt;/li&gt;
-    &lt;li&gt;item 12&lt;/li&gt;
-    &lt;li&gt;item 13&lt;/li&gt;
-    &lt;li&gt;item 14&lt;/li&gt;
-    &lt;li&gt;item 15&lt;/li&gt;
-    &lt;li&gt;item 16&lt;/li&gt;
-    &lt;li&gt;item 17&lt;/li&gt;
-    &lt;li&gt;item&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+<h3>The paint worklet</h3>
 
-<pre class="brush: js; hidden">CSS.paintWorklet.addModule('https://mdn.github.io/houdini-examples/cssPaint/intro/worklets/boxbg.js');</pre>
-
-<pre class="brush: css">li {
-   background-image: paint(boxbg);
-   --boxColor: hsla(55, 90%, 60%, 1.0);
-}
-
-li:nth-of-type(3n) {
-   --boxColor: hsla(155, 90%, 60%, 1.0);
-   --widthSubtractor: 20;
-}
-
-li:nth-of-type(3n+1) {
-   --boxColor: hsla(255, 90%, 60%, 1.0);
-   --widthSubtractor: 40;
-}</pre>
-</div>
-
-<p>In our worklet, we can reference those custom properties.</p>
+<p>In our worklet, we can reference these custom properties.</p>
 
 <pre class="brush: js">registerPaint('boxbg', class {
 
@@ -247,19 +216,70 @@ li:nth-of-type(3n+1) {
 
 <p>We used the <code>inputProperties()</code> method in the <code>registerPaint()</code> class to get the values of two custom properties set on an element that has <code>boxbg</code> applied to it and then used those within our <code>paint()</code> function. The <code>inputProperties()</code> method can return all properties affecting the element, not just custom properties.</p>
 
+<h3>Using the paint worklet</h3>
+
+<h4>HTML</h4>
+
+<pre class="brush: html">&lt;ul&gt;
+    &lt;li&gt;item 1&lt;/li&gt;
+    &lt;li&gt;item 2&lt;/li&gt;
+    &lt;li&gt;item 3&lt;/li&gt;
+    &lt;li&gt;item 4&lt;/li&gt;
+    &lt;li&gt;item 5&lt;/li&gt;
+    &lt;li&gt;item 6&lt;/li&gt;
+    &lt;li&gt;item 7&lt;/li&gt;
+    &lt;li&gt;item 8&lt;/li&gt;
+    &lt;li&gt;item 9&lt;/li&gt;
+    &lt;li&gt;item 10&lt;/li&gt;
+    &lt;li&gt;item 11&lt;/li&gt;
+    &lt;li&gt;item 12&lt;/li&gt;
+    &lt;li&gt;item 13&lt;/li&gt;
+    &lt;li&gt;item 14&lt;/li&gt;
+    &lt;li&gt;item 15&lt;/li&gt;
+    &lt;li&gt;item 16&lt;/li&gt;
+    &lt;li&gt;item 17&lt;/li&gt;
+    &lt;li&gt;item&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+<h4>CSS</h4>
+
+<p>In our CSS, we define the <code>--boxColor</code> and <code>--widthSubtractor</code> custom properties.</p>
+
+<pre class="brush: css">li {
+   background-image: paint(boxbg);
+   --boxColor: hsla(55, 90%, 60%, 1.0);
+}
+
+li:nth-of-type(3n) {
+   --boxColor: hsla(155, 90%, 60%, 1.0);
+   --widthSubtractor: 20;
+}
+
+li:nth-of-type(3n+1) {
+   --boxColor: hsla(255, 90%, 60%, 1.0);
+   --widthSubtractor: 40;
+}</pre>
+
+<h4>JavaScript</h4>
+
 <p>In our <code>&lt;script&gt;</code> we register the worklet:</p>
 
 <pre class="brush: js">CSS.paintWorklet.addModule('https://mdn.github.io/houdini-examples/cssPaint/intro/worklet/boxbg.js');</pre>
 
-<p>{{EmbedLiveSample("example3", 300, 300)}}</p>
+<h4>Result</h4>
 
 <p>While you can't play with the worklet's script, you can alter the custom property values to change the colors and width of the background image.</p>
+
+<p>{{EmbedLiveSample("Using_the_paint_worklet_3", 300, 300)}}</p>
 
 <h2 id="Adding_complexity">Adding complexity</h2>
 
 <p>The above examples might not seem very exciting, as you could recreate them in a few different ways with existing CSS properties, e.g. by positioning some decorative <a href="/en-US/docs/Learn/CSS/Howto/Generated_content">generated content</a> with <code><a href="/en-US/docs/Web/CSS/::before">::before</a>,</code> or including <code>background: linear-gradient(yellow, yellow) 0 15px / 200px 20px no-repeat;</code> What makes the CSS Painting API so interesting and powerful is that you can create complex images, passing variables, that automatically resize.</p>
 
 <p>Let's take a look at a more complex paint example.</p>
+
+<h3>The paint worklet</h3>
 
 <pre class="brush: js">registerPaint('headerHighlight', class {
   static get inputProperties() { return ['--highColor']; }
@@ -300,7 +320,8 @@ li:nth-of-type(3n+1) {
   } // paint
 });</pre>
 
-<div id="example4">
+<h3>Using the paint worklet</h3>
+
 <p>We can then create a little HTML that will accept this image as backgrounds:</p>
 
 <pre class="brush: html">&lt;h1 class="fancy"&gt;Largest Header&lt;/h1&gt;
@@ -320,12 +341,11 @@ h6 { --highColor: hsla(355, 90%, 60%, 0.3); }</pre>
 
 <pre class="brush: js">CSS.paintWorklet.addModule('https://mdn.github.io/houdini-examples/cssPaint/intro/03partThree/header-highlight.js');</pre>
 
-<p>{{EmbedLiveSample("example4", 300, 300)}}</p>
+<p>{{EmbedLiveSample("Using_the_paint_worklet_4", 300, 300)}}</p>
 
 <p>While you can't edit the worklet itself, you can play around with the CSS and HTML. Maybe try <code><a href="/en-US/docs/Web/CSS/float">float</a></code> and <code><a href="/en-US/docs/Web/CSS/clear">clear</a></code> on the headers?</p>
 
 <p>You could try making the background images above without the CSS paint API. It is doable, but you would have to declare a different, fairly complex linear gradient for each different color you wanted to create. With the CSS Paint API, one worklet can be re-used, with different colors passed in this case.</p>
-</div>
 
 <h2 id="Passing_parameters">Passing parameters</h2>
 
@@ -410,6 +430,8 @@ h6 { --highColor: hsla(355, 90%, 60%, 0.3); }</pre>
 
 <p>Now we can really start to see the benefits of this API, if we can control a myriad of drawing parameters from our CSS through both custom properties and extra <code>paint()</code> function arguments, then we can really start to build reusable and highly controllable styling functions.</p>
 
+<h3>The paint worklet</h3>
+
 <pre class="brush: js">registerPaint('hollowHighlights', class {
 
   static get inputProperties() { return ['--boxColor']; }
@@ -481,9 +503,10 @@ h6 { --highColor: hsla(355, 90%, 60%, 0.3); }</pre>
 });
 </pre>
 
+<h3>Using the paint worklet</h3>
+
 <p>We can set different colors, stroke widths, and pick whether the background image should be filled or hollow:</p>
 
-<div id="example5">
 <pre class="brush: css">li {
    --boxColor: hsla(155, 90%, 60%, 0.5);
    background-image: paint(hollowHighlights, stroke, 5px);
@@ -524,9 +547,8 @@ li:nth-of-type(3n+1) {
 <p>In our <code>&lt;script&gt;</code> we register the worklet:</p>
 
 <pre class="brush: js">CSS.paintWorklet.addModule('https://mdn.github.io/houdini-examples/cssPaint/intro/worklets/hollow.js');</pre>
-</div>
 
-<p>{{EmbedLiveSample("example5", 300, 300)}}</p>
+<p>{{EmbedLiveSample("Using_the_paint_worklet_5", 300, 300)}}</p>
 
 <h2 id="See_also">See also</h2>
 
