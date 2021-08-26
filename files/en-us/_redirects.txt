@@ -2137,7 +2137,7 @@
 /en-US/docs/DOM/window.confirm	/en-US/docs/Web/API/Window/confirm
 /en-US/docs/DOM/window.content	/en-US/docs/Web/API/Window/content
 /en-US/docs/DOM/window.controllers	/en-US/docs/Web/API/Window/controllers
-/en-US/docs/DOM/window.crypto	/en-US/docs/Web/API/Window/crypto
+/en-US/docs/DOM/window.crypto	/en-US/docs/Web/API/crypto
 /en-US/docs/DOM/window.crypto.getRandomValues	/en-US/docs/Web/API/Crypto/getRandomValues
 /en-US/docs/DOM/window.defaultStatus	/en-US/docs/Web/API/Window/defaultStatus
 /en-US/docs/DOM/window.dialogArguments	/en-US/docs/Web/API/Window/dialogArguments
@@ -2607,7 +2607,7 @@
 /en-US/docs/DOM:window.confirm	/en-US/docs/Web/API/Window/confirm
 /en-US/docs/DOM:window.content	/en-US/docs/Web/API/Window/content
 /en-US/docs/DOM:window.controllers	/en-US/docs/Web/API/Window/controllers
-/en-US/docs/DOM:window.crypto	/en-US/docs/Web/API/Window/crypto
+/en-US/docs/DOM:window.crypto	/en-US/docs/Web/API/crypto
 /en-US/docs/DOM:window.defaultStatus	/en-US/docs/Web/API/Window/defaultStatus
 /en-US/docs/DOM:window.directories	/en-US/docs/Web/API/Window/directories
 /en-US/docs/DOM:window.document	/en-US/docs/Web/API/Window/document
@@ -3339,7 +3339,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.confirm	/en-US/docs/Web/API/Window/confirm
 /en-US/docs/Document_Object_Model_(DOM)/window.content	/en-US/docs/Web/API/Window/content
 /en-US/docs/Document_Object_Model_(DOM)/window.controllers	/en-US/docs/Web/API/Window/controllers
-/en-US/docs/Document_Object_Model_(DOM)/window.crypto	/en-US/docs/Web/API/Window/crypto
+/en-US/docs/Document_Object_Model_(DOM)/window.crypto	/en-US/docs/Web/API/crypto
 /en-US/docs/Document_Object_Model_(DOM)/window.crypto.getRandomValues	/en-US/docs/Web/API/Crypto/getRandomValues
 /en-US/docs/Document_Object_Model_(DOM)/window.defaultStatus	/en-US/docs/Web/API/Window/defaultStatus
 /en-US/docs/Document_Object_Model_(DOM)/window.dialogArguments	/en-US/docs/Web/API/Window/dialogArguments
@@ -8868,6 +8868,7 @@
 /en-US/docs/Web/API/Window/clearTimeout	/en-US/docs/Web/API/clearTimeout
 /en-US/docs/Web/API/Window/convertPointFromNodeToPage	/en-US/docs/Web/API/Window/webkitConvertPointFromNodeToPage
 /en-US/docs/Web/API/Window/convertPointFromPageToNode	/en-US/docs/Web/API/Window/webkitConvertPointFromPageToNode
+/en-US/docs/Web/API/Window/crypto	/en-US/docs/Web/API/crypto
 /en-US/docs/Web/API/Window/fetch	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch
 /en-US/docs/Web/API/Window/indexedDB	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB
 /en-US/docs/Web/API/Window/mozRequestAnimationFrame	/en-US/docs/Web/API/window/requestAnimationFrame
@@ -9393,7 +9394,7 @@
 /en-US/docs/Web/API/window.confirm	/en-US/docs/Web/API/Window/confirm
 /en-US/docs/Web/API/window.content	/en-US/docs/Web/API/Window/content
 /en-US/docs/Web/API/window.controllers	/en-US/docs/Web/API/Window/controllers
-/en-US/docs/Web/API/window.crypto	/en-US/docs/Web/API/Window/crypto
+/en-US/docs/Web/API/window.crypto	/en-US/docs/Web/API/crypto
 /en-US/docs/Web/API/window.crypto.getRandomValues	/en-US/docs/Web/API/Crypto/getRandomValues
 /en-US/docs/Web/API/window.defaultStatus	/en-US/docs/Web/API/Window/defaultStatus
 /en-US/docs/Web/API/window.dialogArguments	/en-US/docs/Web/API/Window/dialogArguments
@@ -11903,7 +11904,7 @@
 /en-US/docs/window.closed	/en-US/docs/Web/API/Window/closed
 /en-US/docs/window.confirm	/en-US/docs/Web/API/Window/confirm
 /en-US/docs/window.controllers	/en-US/docs/Web/API/Window/controllers
-/en-US/docs/window.crypto	/en-US/docs/Web/API/Window/crypto
+/en-US/docs/window.crypto	/en-US/docs/Web/API/crypto
 /en-US/docs/window.defaultStatus	/en-US/docs/Web/API/Window/defaultStatus
 /en-US/docs/window.directories	/en-US/docs/Web/API/Window/directories
 /en-US/docs/window.document	/en-US/docs/Web/API/Window/document
