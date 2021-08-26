@@ -234,40 +234,22 @@ within your browser.
     yarn start
     ```
 
-    When you preview a page you can press a button to open its associated
-    document's `index.html` or `index.md` file in your preferred editor.
-    For this to work, you need to set an environment variable called `EDITOR`
-    before starting the preview server. For example, if you prefer VS Code as
-    your editor, you'll want to do something like this:
+1. When browsing a page locally, you can press the **Open in your editor**
+   button to edit the associated `index.html` or `index.md` file.
 
-    ```sh
-    export EDITOR=code
-    yarn start
-    ```
+   To specify VS Code as your preferred editor, create a file named `.env` in
+   the root of your local `content` directory that contains the following line:
 
-    Note, this is how you do it on terminals with `bash` (macOS and Linux). You
-    have to do it differently on Windows.
+   ```sh
+   EDITOR=code
+   ```
 
-    Now, when you're previewing a page and press the `Edit in your editor`
-    button, it will open the same as running:
+   You can create the file from a terminal using `bash` or PowerShell with the
+   command `echo 'EDITOR=code' >> .env`.
 
-    ```sh
-    code files/en-us/.../index.html
-    ```
-
-    Instead of having to type `export EDITOR=code` every time prior to
-    `yarn start`, you can instead store this setting in your personal `.env` file
-    (this goes inside the root of your local `content` directory). If the `.env`
-    file doesn't already exist, you can create one and include the above setting
-    in it. Alternatively, running the following line will add the setting to the
-    `.env` file automatically, creating the file if it doesn't already exist:
-
-    ```sh
-    echo 'EDITOR=code' >> .env
-    ```
-
-    Now, it should be set like that even after you've closed and started a new
-    terminal window.
+   `EDITOR` is an environment variable. You can set it to any editor you like
+   using the normal mechanism for your operating system/shell (i.e. you don't
+   have to use the `.env` file or VS Code).
 
 1. Make your desired changes to one or more `index.html` or `index.md` files
 using your preferred code editor. **When thinking about your desired changes,
