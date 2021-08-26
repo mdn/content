@@ -99605,13 +99605,6 @@
       "teoli"
     ]
   },
-  "Web/CSS/:state": {
-    "modified": "2020-10-15T22:28:39.844Z",
-    "contributors": [
-      "wbamberg",
-      "ExE-Boss"
-    ]
-  },
   "Web/CSS/:target": {
     "modified": "2020-10-15T21:02:23.944Z",
     "contributors": [
