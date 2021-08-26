@@ -144,7 +144,7 @@ function doSomething(onContent, onError) {
 ### Optional chaining with expressions
 
 You can also use the optional chaining operator when accessing properties with an expression using 
-[the bracket notation of the property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#bracket_notation):
+[the bracket notation of the property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#bracket_notation):
 
 ```js
 let nestedProp = obj?.['prop' + 'Name'];
