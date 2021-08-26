@@ -15,7 +15,7 @@ browser-compat: api.XRView.recommendedViewportScale
 
 The read-only **`recommendedViewportScale`** property of the {{domxref("XRView")}} interface is the recommended viewport scale value that you can use for {{domxref("XRView.requestViewportScale()")}} if the user agent has such a recommendation; {{jsxref("null")}} otherwise.
 
-### Value
+## Value
 
 A number greater than 0.0 and less than or equal to 1.0; or {{jsxref("null")}} if the user agent does not provide a recommended scale.
 
