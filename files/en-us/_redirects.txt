@@ -8934,6 +8934,7 @@
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval	/en-US/docs/Web/API/clearInterval
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout	/en-US/docs/Web/API/clearTimeout
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap	/en-US/docs/Web/API/createImageBitmap
+/en-US/docs/Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated	/en-US/docs/Web/API/crossOriginIsolated
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/rejectionhandled_event	/en-US/docs/Web/API/Window/rejectionhandled_event
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/unhandledrejection_event	/en-US/docs/Web/API/Window/unhandledrejection_event
 /en-US/docs/Web/API/WindowSessionStorage	/en-US/docs/Web/API/Window/sessionStorage

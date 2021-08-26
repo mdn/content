@@ -91822,13 +91822,6 @@
       "Bzbarsky"
     ]
   },
-  "Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated": {
-    "modified": "2020-10-15T22:25:16.295Z",
-    "contributors": [
-      "ExE-Boss",
-      "chrisdavidmills"
-    ]
-  },
   "Web/API/WindowOrWorkerGlobalScope/fetch": {
     "modified": "2020-10-15T21:33:25.494Z",
     "contributors": [
@@ -95267,6 +95260,13 @@
       "zeird",
       "Kaku",
       "adria"
+    ]
+  },
+  "Web/API/crossOriginIsolated": {
+    "modified": "2020-10-15T22:25:16.295Z",
+    "contributors": [
+      "ExE-Boss",
+      "chrisdavidmills"
     ]
   },
   "Web/API/getCandidateWindowClientRect": {
