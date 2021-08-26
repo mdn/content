@@ -37,7 +37,7 @@ browser-compat: api.IDBEnvironment
 
 <p>The following code creates a request for a database to be opened asynchronously, after which the database is opened when the request's <code>onsuccess</code> handler is fired:</p>
 
-<pre class="brush: js;highlight:[3]">var db;
+<pre class="brush: js;">var db;
 function openDB() {
  var DBOpenRequest = window.indexedDB.open("toDoList");
  DBOpenRequest.onsuccess = function(e) {

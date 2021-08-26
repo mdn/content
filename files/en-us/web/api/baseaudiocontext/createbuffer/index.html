@@ -116,7 +116,7 @@ var buffer = audioCtx.createBuffer(1, 22050, 22050);</pre>
     href="https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html">view
     the source</a>.</p>
 
-<pre class="brush: js;highlight[14]">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+<pre class="brush: js;">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 // Create an empty three-second stereo buffer at the sample rate of the AudioContext
 var myArrayBuffer = audioCtx.createBuffer(2, audioCtx.sampleRate * 3, audioCtx.sampleRate);

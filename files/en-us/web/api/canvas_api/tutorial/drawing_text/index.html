@@ -26,7 +26,7 @@ tags:
 
 <p>The text is filled using the current <code>fillStyle</code>.</p>
 
-<pre class="brush: js;highlight[4]">function draw() {
+<pre class="brush: js;">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   ctx.font = '48px serif';
   ctx.fillText('Hello world', 10, 50);
@@ -42,7 +42,7 @@ tags:
 
 <p>The text is filled using the current <code>strokeStyle</code>.</p>
 
-<pre class="brush: js;highlight[4]">function draw() {
+<pre class="brush: js;">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   ctx.font = '48px serif';
   ctx.strokeText('Hello world', 10, 50);
@@ -86,7 +86,7 @@ baselines, due to glyphs extending far outside the em square." src="baselines.pn
 
 <p>Edit the code below and see your changes update live in the canvas:</p>
 
-<pre class="brush: js;highlight[2]">ctx.font = '48px serif';
+<pre class="brush: js;">ctx.font = '48px serif';
 ctx.textBaseline = 'hanging';
 ctx.strokeText('Hello world', 0, 100);
 </pre>
@@ -144,7 +144,7 @@ window.addEventListener('load', drawCanvas);
 
 <p>The following code snippet shows how you can measure a text and get its width.</p>
 
-<pre class="brush: js;highlight[3]">function draw() {
+<pre class="brush: js;">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   var text = ctx.measureText('foo'); // TextMetrics object
   text.width; // 16;
