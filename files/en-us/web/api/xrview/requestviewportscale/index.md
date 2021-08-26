@@ -34,7 +34,7 @@ Returns {{jsxref("undefined")}}.
 
 ### Dynamic viewport scaling
 
-Dynamic viewport scaling allows applications to only use a subset of the available framebuffer. The feature may not be available on all systems since it depends on driver support, so you might want to ensure that `requestViewportScale()` exists before calling it.
+Dynamic viewport scaling allows applications to only use a subset of the available {{domxref("XRWebGLLayer.framebuffer", "framebuffer")}}. The feature may not be available on all systems since it depends on driver support, so you might want to ensure that `requestViewportScale()` exists before calling it.
 
 The `scale` parameter can be a number greater than 0.0 and less than or equal to 1.0.
 
