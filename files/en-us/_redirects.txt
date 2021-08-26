@@ -2007,7 +2007,6 @@
 /en-US/docs/DOM/event.initEvent	/en-US/docs/Web/API/Event/initEvent
 /en-US/docs/DOM/event.initMouseEvent	/en-US/docs/Web/API/MouseEvent/initMouseEvent
 /en-US/docs/DOM/event.initUIEvent	/en-US/docs/Web/API/UIEvent/initUIEvent
-/en-US/docs/DOM/event.isChar	/en-US/docs/Web/API/UIEvent/isChar
 /en-US/docs/DOM/event.keyCode	/en-US/docs/Web/API/KeyboardEvent/keyCode
 /en-US/docs/DOM/event.layerX	/en-US/docs/Web/API/UIEvent/layerX
 /en-US/docs/DOM/event.layerY	/en-US/docs/Web/API/UIEvent/layerY
@@ -2502,7 +2501,6 @@
 /en-US/docs/DOM:event.initEvent	/en-US/docs/Web/API/Event/initEvent
 /en-US/docs/DOM:event.initMouseEvent	/en-US/docs/Web/API/MouseEvent/initMouseEvent
 /en-US/docs/DOM:event.initUIEvent	/en-US/docs/Web/API/UIEvent/initUIEvent
-/en-US/docs/DOM:event.isChar	/en-US/docs/Web/API/UIEvent/isChar
 /en-US/docs/DOM:event.keyCode	/en-US/docs/Web/API/KeyboardEvent/keyCode
 /en-US/docs/DOM:event.layerX	/en-US/docs/Web/API/UIEvent/layerX
 /en-US/docs/DOM:event.layerY	/en-US/docs/Web/API/UIEvent/layerY
@@ -3255,7 +3253,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/event.initEvent	/en-US/docs/Web/API/Event/initEvent
 /en-US/docs/Document_Object_Model_(DOM)/event.initMouseEvent	/en-US/docs/Web/API/MouseEvent/initMouseEvent
 /en-US/docs/Document_Object_Model_(DOM)/event.initUIEvent	/en-US/docs/Web/API/UIEvent/initUIEvent
-/en-US/docs/Document_Object_Model_(DOM)/event.isChar	/en-US/docs/Web/API/UIEvent/isChar
 /en-US/docs/Document_Object_Model_(DOM)/event.keyCode	/en-US/docs/Web/API/KeyboardEvent/keyCode
 /en-US/docs/Document_Object_Model_(DOM)/event.layerX	/en-US/docs/Web/API/UIEvent/layerX
 /en-US/docs/Document_Object_Model_(DOM)/event.layerY	/en-US/docs/Web/API/UIEvent/layerY
@@ -8646,7 +8643,6 @@
 /en-US/docs/Web/API/TreeWalker.previousSibling	/en-US/docs/Web/API/TreeWalker/previousSibling
 /en-US/docs/Web/API/UIEvent.UIEvent	/en-US/docs/Web/API/UIEvent/UIEvent
 /en-US/docs/Web/API/UIEvent.initUIEvent	/en-US/docs/Web/API/UIEvent/initUIEvent
-/en-US/docs/Web/API/UIEvent.isChar	/en-US/docs/Web/API/UIEvent/isChar
 /en-US/docs/Web/API/UIEvent.layerX	/en-US/docs/Web/API/UIEvent/layerX
 /en-US/docs/Web/API/UIEvent.layerY	/en-US/docs/Web/API/UIEvent/layerY
 /en-US/docs/Web/API/UIEvent.pageX	/en-US/docs/Web/API/MouseEvent/pageX
@@ -9228,7 +9224,6 @@
 /en-US/docs/Web/API/event.initKeyEvent	/en-US/docs/Web/API/KeyboardEvent/initKeyEvent
 /en-US/docs/Web/API/event.initMouseEvent	/en-US/docs/Web/API/MouseEvent/initMouseEvent
 /en-US/docs/Web/API/event.initUIEvent	/en-US/docs/Web/API/UIEvent/initUIEvent
-/en-US/docs/Web/API/event.isChar	/en-US/docs/Web/API/UIEvent/isChar
 /en-US/docs/Web/API/event.isTrusted	/en-US/docs/Web/API/Event/isTrusted
 /en-US/docs/Web/API/event.keyCode	/en-US/docs/Web/API/KeyboardEvent/keyCode
 /en-US/docs/Web/API/event.layerX	/en-US/docs/Web/API/UIEvent/layerX
@@ -11787,7 +11782,6 @@
 /en-US/docs/inset-block-start	/en-US/docs/Web/CSS/inset-block-start
 /en-US/docs/inset-inline-end	/en-US/docs/Web/CSS/inset-inline-end
 /en-US/docs/inset-inline-start	/en-US/docs/Web/CSS/inset-inline-start
-/en-US/docs/isChar	/en-US/docs/Web/API/UIEvent/isChar
 /en-US/docs/item	/en-US/docs/Web/API/NodeList/item
 /en-US/docs/javascript_new_testpage	/en-US/docs/Web/JavaScript
 /en-US/docs/js	/en-US/docs/Web/JavaScript
