@@ -18,16 +18,20 @@ browser-compat: api.AudioParam
 
 <p>An <code>AudioParam</code> can be set to a specific value or a change in value, and can be scheduled to happen at a specific time and following a specific pattern.</p>
 
-<p>There are two kinds of <code>AudioParam</code>, <em>a-rate</em> and <em>k-rate</em> parameters:</p>
-
-<ul>
- <li id="a-rate">An <em>a-rate</em> <code>AudioParam</code> takes the current audio parameter value for each <a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_buffers.3a_frames.2c_samples_and_channels">sample frame</a> of the audio signal.</li>
- <li id="k-rate">A <em>k-rate</em> <code>AudioParam</code> uses the same initial audio parameter value for the whole block processed, that is 128 sample frames. In other words, the same value applies to every frame in the audio as it's processed by the node.</li>
-</ul>
-
-<p>Each {{domxref("AudioNode")}} defines which of its parameters are <em>a-rate</em> or <em>k-rate</em> in the spec.</p>
-
 <p>Each <code>AudioParam</code> has a list of events, initially empty, that define when and how values change. When this list is not empty, changes using the <code>AudioParam.value</code> attributes are ignored. This list of events allows us to schedule changes that have to happen at very precise times, using arbitrary timelime-based automation curves. The time used is the one defined in {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}.</p>
+
+<h2>AudioParam types</h2>
+
+<p>There are two kinds of <code>AudioParam</code>, <em>a-rate</em> and <em>k-rate</em> parameters. Each {{domxref("AudioNode")}} defines which of its parameters are <em>a-rate</em> or <em>k-rate</em> in the spec.</p>
+
+<h3>a-rate</h3>
+
+<p>An <em>a-rate</em> <code>AudioParam</code> takes the current audio parameter value for each <a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_buffers.3a_frames.2c_samples_and_channels">sample frame</a> of the audio signal.</p>
+
+<h3>k-rate</h3>
+
+<p>A <em>k-rate</em> <code>AudioParam</code> uses the same initial audio parameter value for the whole block processed, that is 128 sample frames. In other words, the same value applies to every frame in the audio as it's processed by the node.</li>
+</p>
 
 <h2 id="Properties">Properties</h2>
 
