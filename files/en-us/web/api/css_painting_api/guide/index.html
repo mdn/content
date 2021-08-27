@@ -269,9 +269,9 @@ li:nth-of-type(3n+1) {
 
 <h4>Result</h4>
 
-<p>While you can't play with the worklet's script, you can alter the custom property values to change the colors and width of the background image.</p>
+<p>While you can't play with the worklet's script, you can alter the custom property values in DevTools to change the colors and width of the background image.</p>
 
-<p>{{EmbedLiveSample("Using_the_paint_worklet_3", 300, 300)}}</p>
+{{EmbedGHLiveSample("css-examples/houdini/css_painting_api/example-boxbg.html", '100%', 400)}}
 
 <h2 id="Adding_complexity">Adding complexity</h2>
 
@@ -348,6 +348,10 @@ h6 { --highColor: hsla(355, 90%, 60%, 0.3); }</pre>
 <p>You could try making the background images above without the CSS paint API. It is doable, but you would have to declare a different, fairly complex linear gradient for each different color you wanted to create. With the CSS Paint API, one worklet can be re-used, with different colors passed in this case.</p>
 
 <h2 id="Passing_parameters">Passing parameters</h2>
+
+<div class="notecard note">
+  <p><strong>Note: </strong> The following example requires the Experimental Web Platform features flag to be enabled in Chrome or Edge by visiting <code>abbout://flags</code>.</p>
+</div>
 
 <p>With the CSS Paint API, we not only have access to custom properties and regular properties, but we can pass custom arguments to the <code>paint()</code> function as well.</p>
 
