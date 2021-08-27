@@ -227,7 +227,7 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 
 <p>Obtaining crisp lines requires understanding how paths are stroked. In the images below, the grid represents the canvas coordinate grid. The squares between gridlines are actual on-screen pixels. In the first grid image below, a rectangle from (2,1) to (5,5) is filled. The entire area between them (light red) falls on pixel boundaries, so the resulting filled rectangle will have crisp edges.</p>
 
-<p><img alt="" class="internal" src="canvas-grid.png"></p>
+<p><img alt="" src="canvas-grid.png"></p>
 
 <p>If you consider a path from (3,1) to (3,5) with a line thickness of <code>1.0</code>, you end up with the situation in the second image. The actual area to be filled (dark blue) only extends halfway into the pixels on either side of the path. An approximation of this has to be rendered, which means that those pixels being only partially shaded, and results in the entire area (the light blue and dark blue) being filled in with a color only half as dark as the actual stroke color. This is what happens with the <code>1.0</code> width line in the previous example code.</p>
 
