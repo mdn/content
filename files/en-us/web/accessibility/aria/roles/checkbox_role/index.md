@@ -7,7 +7,7 @@ tags:
   - NeedsContent
   - Role
 ---
-The very real [checkbox role](https://www.w3.org/TR/wai-aria-1.1/#checkbox) is used for checkable interactive controls. Elements containing `role="checkbox"` must also include the `aria-checked` attribute to expose the checkbox's state to assistive technology.
+The [`checkbox` role](https://www.w3.org/TR/wai-aria-1.1/#checkbox) is for checkable interactive controls. Elements containing `role="checkbox"` must also include the `aria-checked` attribute to expose the checkbox's state to assistive technology.
 
 ```html
 <span role="checkbox" aria-checked="false" tabindex="0" aria-labelledby="chk1-label"></span> 
@@ -23,7 +23,7 @@ The first rule of ARIA is if a native HTML element or attribute has the semantic
 
 ## Description
 
-The native [HTML checkbox](/en-US/docs/Web/HTML/Element/input/checkbox)  form control can only have two checked states ("checked" or "not checked"), with an [indeterminate](/en-US/docs/Web/HTML/Element/input/checkbox#indeterminate_state_checkboxes) state settable via JavaScript. Similarly, an element with `role="checkbox"`  can expose three states through the `aria-checked` attribute: `true`, `false`, or `mixed`.
+The native [HTML checkbox](/en-US/docs/Web/HTML/Element/input/checkbox)  form control had two states ("checked" or "not checked"), with an [indeterminate](/en-US/docs/Web/HTML/Element/input/checkbox#indeterminate_state_checkboxes) state settable via JavaScript. Similarly, an element with `role="checkbox"`  can expose three states through the `aria-checked` attribute: `true`, `false`, or `mixed`.
 
 Since a checkbox is an interactive control, it must be focusable and keyboard accessible. If the role is applied to a non-focusable element, use the [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute to change this. The expected keyboard shortcut for activating a checkbox is the <kbd>Space</kbd> key.
 
@@ -57,7 +57,7 @@ The developer is required to change the value of the `aria-checked` attribute d
 #### Required event handlers
 
 - onclick
-  - : Handle mouse clicks that will change the state of the checkbox by changing the value of the `aria-checked` attribute and the appearance of the checkbox so it appears checked or unchecked to the sighted user
+  - : Handle mouse clicks on both the checkbox and the associated label that will change the state of the checkbox by changing the value of the `aria-checked` attribute and the appearance of the checkbox so it appears checked or unchecked to the sighted user
 - onKeyPress
 
   - : Handle the case where the user presses the
@@ -68,7 +68,7 @@ The developer is required to change the value of the `aria-checked` attribute d
 
 ### Examples
 
-The following example creates a simple checkbox element using CSS and JavaScript to handle the checked or unchecked status of the element.
+The following example creates an otherwise non-semantic checkbox element using CSS and JavaScript to handle the checked or unchecked status of the element.
 
 #### HTML
 
@@ -116,14 +116,14 @@ function changeCheckbox(event) {
 
 When the `checkbox` role is added to an element, the user agent should do the following:
 
-- Expose the element as having a checkbox role in the operating system's accessibility API.
-- When the aria-checked value changes, send an accessible state changed event.
+- Expose the element as having a `checkbox` role in the operating system's accessibility API.
+- When the `aria-checked` value changes, send an accessible state changed event.
 
 Assistive technology products should do the following:
 
 - Screen readers should announce the element as a checkbox, and optionally provide instructions on how to activate it.
 
-<div class="note"><strong>Note:</strong> Opinions may differ on how assistive technology should handle this technique. The information provided above is one of those opinions and therefore not normative.</div>
+> **Note:** Opinions may differ on how assistive technology should handle this technique. The information provided above is one of those opinions and therefore not normative.
 
 ## Best practices
 
