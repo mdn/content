@@ -10,7 +10,7 @@ tags:
 ---
 {{draft}}
 
-The timer role indicates to assistive technologies that an element is a numerical counter listing the amount of elapsed time from a starting point or the remaining time until an end point.
+The **`timer`** role indicates to assistive technologies that an element is a numerical counter listing the amount of elapsed time from a starting point or the remaining time until an end point.
 
 ```html
 <div role="timer" id="eggtimer">0</div>
@@ -28,11 +28,7 @@ The `timer` role indicates to assistive technologies that this part of the web c
   - : Used to provide the name of the timer.
 - aria-live
 
-  - : Elements with the role `timer` have an implicit
-
-    <a class="property-reference" href="https://www.w3.org/TR/wai-aria-1.1/#aria-live"><code>aria-live</code></a>
-
-    value of `off`.
+  - : Elements with the role `timer` have an implicit [aria-live](https://www.w3.org/TR/wai-aria-1.1/#aria-live) value of `off`.
 
 - aria-describedby
   - : Used to indicate the idref of an element that contains additional instructions for navigating or operating this element.
@@ -54,7 +50,7 @@ The <kbd>tab</kbd> , <kbd>Space</kbd> and <kbd>Enter</kbd> keys, as well as <kbd
 - Changing attribute values
   - : `aria-activedescendant` is used to manage the focus inside the application container. Set in response to keyboard or other application events that change focus or point of interaction.
 
-<div class="note"><p>The <code>timer</code> role does not have a related HTML widget and XXX. The author of the timer must take full responsibility for not letting users get stuck in a focus limbo or trap focus inside something the user cannot exit of. All aspects of interaction, including returning to the regular web content on other parts of the page, must be handled. Use wisely, and cautiously!</p></div>
+> **Note**: The `timer` role does not have a related HTML widget and XXX. The author of the timer must take full responsibility for not letting users get stuck in a focus limbo or trap focus inside something the user cannot exit of. All aspects of interaction, including returning to the regular web content on other parts of the page, must be handled. Use wisely, and cautiously!</p></div>
 
 ## Examples
 
