@@ -41,7 +41,7 @@ with webdriver.Firefox() as driver:
 
     results = driver.find_elements_by_css_selector("h3&gt;a")
     for i, result in results.iteritems():
-        print(f"#{i}: {result.text} ({result.get_property('herf')})")
+        print(f"#{i}: {result.text} ({result.get_property('href')})")
 </pre>
 
 <p>This might produce output akin to this:</p>
