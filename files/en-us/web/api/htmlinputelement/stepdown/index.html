@@ -31,8 +31,7 @@ browser-compat: api.HTMLInputElement.stepDown
   {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number",
   "number")}}, and {{HTMLElement("input/range", "range")}}.</p>
 
-<p>Given <code
-    class="brush: html">&lt;input id="myTime" type="time" max="17:00" step="900" value="17:00"&gt;</code>,
+<p>Given <code>&lt;input id="myTime" type="time" max="17:00" step="900" value="17:00"&gt;</code>,
   invoking <code>myTime.step(3)</code> will change the value to 16:15, decrementing the
   time by <code>3 * 900</code>, or 45 minutes. <code>myTime.step()</code>, with no
   parameter, would have resulted in <code>16:45</code>, as <code>n</code> defaults to
