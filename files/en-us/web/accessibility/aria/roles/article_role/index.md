@@ -89,9 +89,9 @@ This role corresponds to the `<article>` element in HTML, and that element shoul
 
 ## See also
 
-- [feed role](/en-US/docs/Web/Accessibility/ARIA/Roles/Feed_Role)
-- [section role](/en-US/docs/Web/Accessibility/ARIA/Roles/Section_Role)
-- [\<article> element](/en-US/docs/Web/HTML/Element/article)
-- {{Glossary("RSS")}}
+- [`feed` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Feed_Role)
+- [`section` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Section_Role)
+- [`<article>` element](/en-US/docs/Web/HTML/Element/article)
+- {{Glossary("RSS")}} glossary definition
 
 <section id="Quick_links"><ol><li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li></ol></section>
