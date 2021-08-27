@@ -448,6 +448,24 @@
       "properties": [],
       "events": []
     },
+    "File and Directory Entries API": {
+      "overview": ["File and Directory Entries API"],
+      "guides": [
+        "/docs/Web/API/File_and_Directory_Entries_API/Introduction",
+        "/docs/Web/API/File_and_Directory_Entries_API/Firefox_support"
+      ],
+      "interfaces": [
+        "FileSystemDirectoryEntry",
+        "FileSystemDirectoryReader",
+        "FileSystemEntry",
+        "FileSystemFileEntry",
+        "FileSystemFlags",
+        "FileSystem"
+      ],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "File System Access API": {
       "overview": ["File System Access API"],
       "guides": [],
@@ -467,27 +485,11 @@
       "events": []
     },
     "File System API": {
-      "overview": ["File and Directory Entries API"],
-      "guides": [
-        "/docs/Web/API/File_and_Directory_Entries_API/Introduction",
-        "/docs/Web/API/File_and_Directory_Entries_API/Firefox_support"
-      ],
       "interfaces": [
         "FileError",
         "FileException",
         "FileHandle",
         "FileRequest",
-        "FileSystemDirectoryEntry",
-        "FileSystemDirectoryEntrySync",
-        "FileSystemDirectoryReader",
-        "FileSystemDirectoryReaderSync",
-        "FileSystemEntry",
-        "FileSystemEntrySync",
-        "FileSystemFileEntry",
-        "FileSystemFileEntrySync",
-        "FileSystemFlags",
-        "FileSystem",
-        "FileSystemSync",
         "HTMLInputElement",
         "LocalFileSystem",
         "LocalFileSystemSync",
