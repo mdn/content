@@ -58,7 +58,7 @@ To create an interactive widget that has a tabular structure, use the grid patte
   - : One of the three possible contexts (along with grid and treegrid) in which you'll find a row, it identifies the row as being part of a non-interactive table structure containing data arranged in rows and columns, similar to the native \<table> HTML element.
 - [role="grid"](/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role)
   - : One of the three possible contexts (along with table and treegrid) in which you'll find a row, it identifies the row as being part of a non-interactive table structure containing data arranged in rows and columns, similar to the native \<table> HTML element.
-- [role="treegrid"](/en-US/docs/Web/Accessibility/ARIA/Roles/gridtree_role)
+- [role="treegrid"](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role)
   - : Similar to a grid, but with rows that can be expanded and collapsed in the same manner as for a tree.
 
 #### Descendant roles

@@ -48,7 +48,7 @@ To create an ARIA table header, table footer or table body, add `role="rowgroup
   - : One of the three possible contexts (along with grid and treegrid) in which you'll find a row.  It identifies the row as being part of a non-interactive table structure containing data arranged in rows and columns, similar to the native [`<table>`](/en-US/docs/Web/HTML/Element/table) HTML element.
 - [role="grid"](/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role)
   - : One of the three possible contexts (along with table and treegrid) in which you'll find a row. It identifies the row as being part of a non-interactive table structure containing data arranged in rows and columns, similar to the native [`<table>`](/en-US/docs/Web/HTML/Element/table) HTML element.
-- [role="treegrid"](/en-US/docs/Web/Accessibility/ARIA/Roles/Gridtree_Role)
+- [role="treegrid"](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_Role)
   - : Similar to a grid, but with rows that can be expanded and collapsed in the same manner as for a tree.
 
 #### Descendant roles
