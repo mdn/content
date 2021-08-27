@@ -15,9 +15,9 @@ browser-compat: api.XRTransientInputHitTestResult.inputSource
 ---
 {{APIRef("WebXR Device API")}}
 
-The _read-only_ **`inputSource`** property of the {{DOMxRef("XRTransientInputHitTestResult")}} interface is an {{domxref("XRInputSource")}} object that was used to compute the {{domxref("XRTransientInputHitTestResult.results", "results")}} array.
+The _read-only_ **`inputSource`** property of the {{DOMxRef("XRTransientInputHitTestResult")}} interface represents an {{domxref("XRInputSource")}} object that was used to compute the {{domxref("XRTransientInputHitTestResult.results", "results")}} array.
 
-### Value
+## Value
 
 An {{domxref("XRInputSource")}} object.
 

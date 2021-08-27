@@ -15,9 +15,9 @@ browser-compat: api.XRTransientInputHitTestResult.results
 ---
 {{APIRef("WebXR Device API")}}
 
-The _read-only_ **`results`** property of the {{DOMxRef("XRTransientInputHitTestResult")}} interface is an array of {{domxref("XRHitTestResult")}} objects with the hit test results for the input source ordered by the distance along the ray used to perform the hit test, with the closest result at 0th position.
+The _read-only_ **`results`** property of the {{DOMxRef("XRTransientInputHitTestResult")}} interface represents an array of {{domxref("XRHitTestResult")}} objects containing the hit test results for the input source, ordered by the distance along the ray used to perform the hit test, with the closest result at position 0.
 
-### Value
+## Value
 
 An array of {{domxref("XRHitTestResult")}} objects.
 
