@@ -6,7 +6,8 @@ tags:
   - Accessibility
   - NeedsContent
 ---
-<p class="summary"><span class="seoSummary">A <code>banner</code> role represents general and informative content frequently placed at the beginning of the page. This usually includes a logo, company name, search icon, photo related to the page, or slogan.</span></p>
+
+A `banner` role represents general and informative content frequently placed at the beginning of the page. This usually includes a logo, company name, search icon, photo related to the page, or slogan.
 
 ```html
 <div role="banner">
@@ -75,9 +76,6 @@ While it is best to use the `header` element and ensure it is not a descendant 
 | {{SpecName("ARIA","#banner","ARIA: banner role")}}                                         | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices","#aria_lh_banner","Banner landmark role")}} | {{Spec2('ARIA Authoring Practices')}} |
 
-## Screen reader support
-
-TBD
 
 ## See also
 
