@@ -8,7 +8,6 @@ tags:
   - Reference
   - Role Timer
 ---
-{{draft}}
 
 The **`timer`** role indicates to assistive technologies that an element is a numerical counter listing the amount of elapsed time from a starting point or the remaining time until an end point. 
 
