@@ -23,7 +23,7 @@ The `navigation` role is [a landmark](/en-US/docs/Web/Accessibility/ARIA/ARIA_Te
 
 It is preferable to use the HTML5 [`<nav>` element](/en-US/docs/Web/HTML/Element/nav) to define a navigation landmark. If the HTML5 nav element technique is not being used, use a `role="navigation"` attribute to define a navigation landmark.
 
-<div class="note"><p>Using the <a href="/en-US/docs/Web/HTML/Element/nav"><code>&#x3C;nav></code> element</a> will automatically communicate a section has a role of <code>navigation</code>. Developers should always prefer using the correct semantic HTML element over using ARIA.</p></div>
+<div class="note"><p>Using the <a href="/en-US/docs/Web/HTML/Element/nav">`<nav>` element</a> will automatically communicate a section has a role of `navigation`. Developers should always prefer using the correct semantic HTML element over using ARIA.</p></div>
 
 ### Associated WAI-ARIA Roles, States, and Properties
 

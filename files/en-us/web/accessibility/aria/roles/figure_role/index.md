@@ -96,9 +96,9 @@ We could extend the initial example on the page to also identify a paragraph tha
       <img src="diagram.png"
            alt="diagram showing the four layers of awesome and their relative priority order —
                 music, cats, nature, and ice cream">
-      <pre><code>
+      <pre>`
         let awesome = ['music', 'cats', 'nature', 'ice cream'];
-      </code></pre>
+      `</pre>
       <p id="figure-1">Figure 1: The four layers of awesome.</p>
     </div>
 
@@ -113,9 +113,9 @@ If at all possible, you<span class="ILfuVd yZ8quc"> should use the appropriate s
   <img src="diagram.png"
        alt="diagram showing the four layers of awesome and their relative priority order —
        music, cats, nature, and ice cream">
-  <pre><code>
+  <pre>`
     let awesome = ['music', 'cats', 'nature', 'ice cream'];
-  </code></pre>
+  `</pre>
   <figcaption>Figure 1: The four layers of awesome.</figcaption>
 </figure>
 ```

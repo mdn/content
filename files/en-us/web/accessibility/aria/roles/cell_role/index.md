@@ -33,7 +33,7 @@ Each element with `role="cell"` MUST be nested in a container element with `role
 
 A cell can contain a number of property attributes clarifying the cell's position within the tabular data structure, including `aria-colindex`, `aria-colspan`, `aria-rowindex`, and `aria-rowspan`.
 
-<div class="note"><p>Using the native HTML table element (&#x3C;table>) along with the table row element (&#x3C;tr>) and table cell element (&#x3C;td>) whenever possible is strongly encouraged.</p></div>
+> **Note** Using the native HTML table element (`<table>`) along with the table row element (`<tr>`) and table cell element (`<td>`) whenever possible is strongly encouraged.
 
 ### Associated WAI-ARIA roles, states, and properties
 
@@ -47,16 +47,16 @@ A cell can contain a number of property attributes clarifying the cell's positio
   - : One of the three possible contexts (along with `grid` and `treegrid`) in which you'll find a row containing cells. Table identifies the cell as being part of a non-interactive table structure containing data arranged in rows and columns, similar to the native HTML [`<table>`](/en-US/docs/Web/HTML/Element/table) element.
 - [role="grid"](/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role)
   - : One of the three possible contexts (along with `table` and `treegrid`) in which you'll find a row containing `cells` and `gridcells`. `Grid` identifies a cell as being part of a possibly interactive table structure containing data arranged in rows and columns, similar to the native [`<table>`](/en-US/docs/Web/HTML/Element/table) HTML element.
-- role="treegrid"
+- [role="treegrid"](/en-US/docs/Web/Accessibility/ARIA/roles/treegrid_role)
   - : Similar to a grid, but with rows that can be expanded and collapsed in the same manner as for a tree.
 
 #### Subclass roles
 
-- role="gridcell"
+- [role="gridcell"](/en-US/docs/Web/Accessibility/ARIA/Roles/Gridcell_role)
   - : A cell in a row within a `grid` or `treegrid.`
-- role="columnheader"
+- [role="columnheader"](/en-US/docs/Web/Accessibility/ARIA/roles/columnheader_role)
   - : A header cell that is the structural equivalent of the HTML [`<th>`](/en-US/docs/Web/HTML/Element/th) element with a column scope. Unlike a plain cell, the `columnheader` role establishes a relationship between it and all cells in the corresponding column.
-- role="rowheader"
+- [role="rowheader"](/en-US/docs/Web/Accessibility/ARIA/roles/rowheader_role)
   - : A header cell that is the structural equivalent of the HTML [`<th>`](/en-US/docs/Web/HTML/Element/th) element with a row scope. Unlike a plain cell, the `rowheader` role establishes a relationship between it and all cells in the corresponding row.
 
 #### States and properties
@@ -157,9 +157,9 @@ none
 
 ## See also
 
-- [role="row"](/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role)
-- [HTML\<td> element](/en-US/docs/Web/HTML/Element/td)
-- [HTML \<th> element ](/en-US/docs/Web/HTML/Element/th)
+- [`role="row"`](/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role)
+- [HTML `<td>` element](/en-US/docs/Web/HTML/Element/td)
+- [HTML `<th>` element ](/en-US/docs/Web/HTML/Element/th)
 - [HTML table advanced features and accessibility](/en-US/docs/Learn/HTML/Tables/Advanced)
 - [HTML table basics](/en-US/docs/Learn/HTML/Tables/Basics)
 

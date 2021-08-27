@@ -46,7 +46,7 @@ None.
 
 ```html
 <div role="region" aria-labelledby="region-heading">
-  <h2 id="region-heading">This heading's <code>id</code> attribute helps this region have an accessible name</h2>
+  <h2 id="region-heading">This heading's `id` attribute helps this region have an accessible name</h2>
   <!-- region content -->
 </div>
 ```
@@ -69,7 +69,7 @@ If there is more than one `region` landmark role in a document, provide a label 
 
 ```html
 <div role="region" aria-labelledby="use-discretion">
-  <h3 id="use-discretion">Please use the <code>region</code> role with discretion</h3>
+  <h3 id="use-discretion">Please use the `region` role with discretion</h3>
   <!-- content -->
 </div>
 

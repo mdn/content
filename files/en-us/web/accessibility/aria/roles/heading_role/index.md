@@ -35,7 +35,7 @@ This role does not require any special keyboard navigation. As with any heading,
 - Changing attribute values
   - : Usually not required, unless dynamically inserting content. In that case, the newly-added headings need aria-level attributes whose values are consistent with the rest of the document structure.
 
-<div class="note"><p><span class="ILfuVd yZ8quc">Instead of using a <code>&#x3C;div></code> or <code>&#x3C;span></code> with a <code>heading</code> role and <code>aria-level</code>, consider using a native <code>&#x3C;h1></code> through <code>&#x3C;h6></code> element instead to indicate that this text is a heading, and what part of the structure it represents.</span></p></div>
+<div class="note"><p><span class="ILfuVd yZ8quc">Instead of using a `<div>` or `<span>` with a `heading` role and `aria-level`, consider using a native `<h1>` through `<h6>` element instead to indicate that this text is a heading, and what part of the structure it represents.</span></p></div>
 
 ## Examples
 

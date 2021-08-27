@@ -73,7 +73,7 @@ or use an ordered list if the order of the list items matters:
 
 <div class="notecard note"><p><strong>Note</strong>: The ARIA list/listitem roles don't distinguish between ordered and unordered lists.</p></div>
 
-<div class="notecard note"><p><strong>Note</strong>: If you are marking up a list of items that will function as a tabbed interface, you should instead use the <code>tab</code>, <code>tabpanel</code>, and <code>tablist</code> roles.</p></div>
+<div class="notecard note"><p><strong>Note</strong>: If you are marking up a list of items that will function as a tabbed interface, you should instead use the `tab`, `tabpanel`, and `tablist` roles.</p></div>
 
 ## Specifications
 

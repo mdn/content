@@ -31,7 +31,7 @@ The `contentinfo` role is [a landmark](/en-US/docs/Web/Accessibility/ARIA/ARIA_T
 
 Each page should only include one `contentinfo` landmark, created by either using the [`<footer>` element](/en-US/docs/Web/HTML/Element/footer) or by declaring `role="contentinfo"`. `contentinfo` landmarks present in content embedded via [`<iframe>` elements](/en-US/docs/Web/HTML/Element/iframe) do not count towards this limit.
 
-<div class="note"><p>Using the <a href="/en-US/docs/Web/HTML/Element/footer"><code>&#x3C;footer></code> element</a> will automatically communicate a section has a role of <code>contentinfo</code>. Developers should always prefer using the correct semantic HTML element over using ARIA, making sure to <a href="/en-US/docs/Web/HTML/Element/footer#accessibility_concerns">test for known issues</a> in VoiceOver.</p></div>
+<div class="note"><p>Using the <a href="/en-US/docs/Web/HTML/Element/footer">`<footer>` element</a> will automatically communicate a section has a role of `contentinfo`. Developers should always prefer using the correct semantic HTML element over using ARIA, making sure to <a href="/en-US/docs/Web/HTML/Element/footer#accessibility_concerns">test for known issues</a> in VoiceOver.</p></div>
 
 ## Examples
 

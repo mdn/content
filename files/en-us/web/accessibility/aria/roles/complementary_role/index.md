@@ -22,7 +22,7 @@ This is a sidebar containing links to event sponsors.
 
 The `complementary` role is [a landmark](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles) role. Landmarks can be used by assistive technology to quickly identify and navigate to large sections of the document. Content listed within a container with the `complementary` landmark role should make sense if separated from the main content of the document.
 
-<div class="note"><p>Using the <a href="/en-US/docs/Web/HTML/Element/aside"><code>&#x3C;aside></code> element</a> will automatically communicate a section has a role of <code>complementary</code>. Developers should always prefer using the correct semantic HTML element over using ARIA.</p></div>
+<div class="note"><p>Using the <a href="/en-US/docs/Web/HTML/Element/aside">`<aside>` element</a> will automatically communicate a section has a role of `complementary`. Developers should always prefer using the correct semantic HTML element over using ARIA.</p></div>
 
 ## Examples
 

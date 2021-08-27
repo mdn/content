@@ -10,9 +10,9 @@ The `textbox` role is used to identify an element that allows the input of free-
 
 ## Description
 
-<p class="p2">When an element has the <code>textbox</code> role, the browser sends an accessible textbox event to assistive technologies, which can then notify the user about it.</p>
+<p class="p2">When an element has the `textbox` role, the browser sends an accessible textbox event to assistive technologies, which can then notify the user about it.</p>
 
-<p class="p2">The default is a single line input, in which <kbd>Return</kbd> or <kbd>Enter</kbd> submits the form; in this case, it is preferable to use an HTML {{HTMLElement("input")}} with <code>type="text"</code>. To create a multi-line text box which supports line breaks, as in an HTML {{HTMLElement("textarea")}}, set <code><span class="s1">aria-multiline="true"</span></code>. Including the HTML <code>contenteditable</code> attribute ensures the text node is editable.</p>
+<p class="p2">The default is a single line input, in which <kbd>Return</kbd> or <kbd>Enter</kbd> submits the form; in this case, it is preferable to use an HTML {{HTMLElement("input")}} with `type="text"`. To create a multi-line text box which supports line breaks, as in an HTML {{HTMLElement("textarea")}}, set `<span class="s1">aria-multiline="true"</span>`. Including the HTML `contenteditable` attribute ensures the text node is editable.</p>
 
 ```html
 <!-- Simple text input field -->
@@ -36,7 +36,7 @@ Semantic elements are more concise and require no JavaScript to support textbox 
 <textarea id="txtboxMultiline" required></textarea>
 ```
 
-<p class="p2">Where a text field is read-only, indicated this by setting <code><span class="s1">aria-readonly="true"</span></code> on the element.</p>
+<p class="p2">Where a text field is read-only, indicated this by setting `<span class="s1">aria-readonly="true"</span>` on the element.</p>
 
 ### Associated ARIA properties
 
@@ -95,7 +95,7 @@ All features associated with any and all properties and states must be maintaine
 
 ## Possible effects on user agents and assistive technology 
 
-<p class="p1">When the <code>textbox</code> role is added to an element, or such an element becomes visible, the user agent should do the following:</p>
+<p class="p1">When the `textbox` role is added to an element, or such an element becomes visible, the user agent should do the following:</p>
 
 <ul class="ul1"><li class="li2">Expose the element as having a textbox role in the operating system's accessibility API.</li><li class="li2">Fire an accessible textbox event using the operating system's accessibility API if it supports it.</li></ul>
 
@@ -125,7 +125,7 @@ All features associated with any and all properties and states must be maintaine
 
 ## Best practices
 
-<ul><li class="li1">Be sure to add the <code>contenteditable="true"</code> attribute to the HTML element to which this role is applied. Do so even if you set <code>aria-readonly</code> to <code>true</code>; in this way, you communicate that the content would be editable if it were not read-only.</li></ul>
+<ul><li class="li1">Be sure to add the `contenteditable="true"` attribute to the HTML element to which this role is applied. Do so even if you set `aria-readonly` to `true`; in this way, you communicate that the content would be editable if it were not read-only.</li></ul>
 
 ## See also
 

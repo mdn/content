@@ -75,7 +75,7 @@ or use an ordered list if the order of the list items matters:
 
 As an aside, note that if you are using the semantic HTML elements of ol or ul and apply a role of [presentation](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role), each child `li` element inherits the `presentation` role because ARIA requires the `listitem` elements to have the parent `list` element. So, the `li` elements are not exposed to assistive technologies, but elements contained inside of those `li` elements, including nested lists, are visible to assistive technologies.
 
-<div class="notecard note"><p><strong>Note</strong>: If you are marking up a list of items that will function as a tabbed interface, you should instead use the <code>tab</code>, <code>tabpanel</code>, and <code>tablist</code> roles.</p></div>
+<div class="notecard note"><p><strong>Note</strong>: If you are marking up a list of items that will function as a tabbed interface, you should instead use the `tab`, `tabpanel`, and `tablist` roles.</p></div>
 
 ## Specifications
 

@@ -51,12 +51,12 @@ If a document contains two `main` roles, say updating page content when triggere
 
 ```html
 <main>
-  <h1>Active <code>main</code> element</h1>
+  <h1>Active `main` element</h1>
   <!-- content -->
 </main>
 
 <main hidden>
-  <h1>Hidden <code>main</code> element</h1>
+  <h1>Hidden `main` element</h1>
   <!-- content -->
 </main>
 ```

@@ -20,13 +20,13 @@ The `form` [landmark role](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#la
 
 This is a form that collects and saves a user's contact information.
 
-<div class="warning"><p><strong>Important</strong>: Use an HTML {{htmlelement("form")}} element to contain your form controls, rather than the ARIA <code>form</code> role, unless you have a very good reason. The HTML <code>&#x3C;form></code> element is sufficient to tell assistive technologies that there is a form.</p></div>
+<div class="warning"><p><strong>Important</strong>: Use an HTML {{htmlelement("form")}} element to contain your form controls, rather than the ARIA `form` role, unless you have a very good reason. The HTML `<form>` element is sufficient to tell assistive technologies that there is a form.</p></div>
 
 ## Description
 
 A `form` [landmark](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles) identifies a region of content that contains a collection of items and objects that, as a whole, combine to create a form when no other named landmark is appropriate (e.g. [`main`](/en-US/docs/Web/Accessibility/ARIA/Roles/Main_role) or [`search`](/en-US/docs/Web/Accessibility/ARIA/Roles/Search_role)).
 
-<div class="note"><p>Using the <a href="/en-US/docs/Web/HTML/Element/form"><code>&#x3C;form></code> element</a> will automatically communicate a section of content as a <code>form</code> landmark, if it is provided an accessible name. Developers should always prefer using the correct semantic HTML element over using ARIA.</p></div>
+<div class="note"><p>Using the <a href="/en-US/docs/Web/HTML/Element/form">`<form>` element</a> will automatically communicate a section of content as a `form` landmark, if it is provided an accessible name. Developers should always prefer using the correct semantic HTML element over using ARIA.</p></div>
 
 Use the HTML [`<form>` element](/en-US/docs/Web/HTML/Element/form) if possible. The \<form> element defines a `form` landmark when it has an accessible name (e.g. `aria-labelledby`, `aria-label` or `title`). Make sure to have a unique label on each form in a document to help users understand the purpose of the form. This label should be visible to all users, not just assistive technology users. Use the `search` landmark instead of the `form` landmark when the form is used for search functionality.
 
@@ -82,7 +82,7 @@ You do not need to declare `role="form"` on every [form element](/en-US/docs/Web
 
 ### Search
 
-If a form is used to search, <span class="ILfuVd yZ8quc">you should use the more specialized <code>role="search"</code> value</span>.
+If a form is used to search, <span class="ILfuVd yZ8quc">you should use the more specialized `role="search"` value</span>.
 
 ### Labeling landmarks
 
