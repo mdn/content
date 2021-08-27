@@ -17,7 +17,7 @@ browser-compat: api.XRRay.origin
 
 The _read-only_ **`origin`** property of the {{DOMxRef("XRRay")}} interface is a {{domxref("DOMPointReadOnly")}} representing the 3-dimensional point in space that the ray originates from, in meters.
 
-### Value
+## Value
 
 A {{domxref("DOMPointReadOnly")}} object.
 

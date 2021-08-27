@@ -19,7 +19,7 @@ The _read-only_ **`matrix`** property of the {{DOMxRef("XRRay")}} interface is a
 
 The transform from a ray originates at [0, 0, 0] and extends down the negative z-axis to the ray described by the `XRRay`'s `origin` and `direction`.
 
-### Value
+## Value
 
 A {{jsxref("Float32Array")}} object.
 

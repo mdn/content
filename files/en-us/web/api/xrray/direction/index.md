@@ -17,7 +17,7 @@ browser-compat: api.XRRay.direction
 
 The _read-only_ **`direction`** property of the {{DOMxRef("XRRay")}} interface is a {{domxref("DOMPointReadOnly")}} representing the ray's 3-dimensional directional vector, normalized to a length of 1.0.
 
-### Value
+## Value
 
 A {{domxref("DOMPointReadOnly")}} object.
 
