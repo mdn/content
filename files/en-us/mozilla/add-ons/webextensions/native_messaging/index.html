@@ -12,7 +12,7 @@ tags:
 
 <p>Native messaging also enables extensions to access resources that are not accessible through WebExtension APIs (e.g, particular hardwares).</p>
 
-<p>The native application is not installed or managed by the browser. The native application is installed, using the underlying operating system's installation machinery. Create a JSON file called the "host manifest" or "app manifest". Install the JSON file in a defined location. The app manifest fill will describe how the browser can connect to the native application.</p>
+<p>The native application is not installed or managed by the browser. The native application is installed, using the underlying operating system's installation machinery. Create a JSON file called the "host manifest" or "app manifest". Install the JSON file in a defined location. The app manifest file will describe how the browser can connect to the native application.</p>
 
 <p>The extension must request the <code>"nativeMessaging"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> in the <code>manifest.json</code> file. Also, the native application must grant permission for the extension by including the ID in the <code>"allowed_extensions"</code> field of the app manifest.</p>
 
