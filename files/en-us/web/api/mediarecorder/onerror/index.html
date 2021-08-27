@@ -74,38 +74,37 @@ browser-compat: api.MediaRecorder.onerror
   either the <code>MediaRecorder</code> or the name of the error that occurred if any
   exceptions are thrown during the setup process.</p>
 
-<div class="codecopy codecopy-lg">
-  <pre class="brush: js ">function recordStream(stream) {
-  let recorder = null;
-  let bufferList = [];
+<pre class="brush: js ">function recordStream(stream) {
+let recorder = null;
+let bufferList = [];
 
-  try {
-    recorder = new MediaRecorder(stream);
-  } catch(err) {
-    return err.name;     /* return the error name */
-  }
+try {
+  recorder = new MediaRecorder(stream);
+} catch(err) {
+  return err.name;     /* return the error name */
+}
 
-  recorder.ondataavailable = function(event) {
-    bufferList.push(event.data);
-  };
+recorder.ondataavailable = function(event) {
+  bufferList.push(event.data);
+};
 
-  recorder.onerror = function(event) {
-    let error = event.error;
+recorder.onerror = function(event) {
+  let error = event.error;
 
-    switch(error.name) {
-      case InvalidStateError:
-        showNotification(&quot;You can't record the video right &quot; +
-                         &quot;now. Try again later.&quot;);
-        break;
-      case SecurityError:
-        showNotification(&quot;Recording the specified source &quot; +
-                         &quot;is not allowed due to security &quot; +
-                         &quot;restrictions.&quot;);
-        break;
-      default:
-        showNotification(&quot;A problem occurred while trying &quot; +
-                         &quot;to record the video.&quot;);
-        break;
+  switch(error.name) {
+    case InvalidStateError:
+      showNotification(&quot;You can't record the video right &quot; +
+                       &quot;now. Try again later.&quot;);
+      break;
+    case SecurityError:
+      showNotification(&quot;Recording the specified source &quot; +
+                       &quot;is not allowed due to security &quot; +
+                       &quot;restrictions.&quot;);
+      break;
+    default:
+      showNotification(&quot;A problem occurred while trying &quot; +
+                       &quot;to record the video.&quot;);
+      break;
     }
   };
 
@@ -115,7 +114,6 @@ browser-compat: api.MediaRecorder.onerror
   recorder.start(100);  /* 100ms time slices per buffer */
   return recorder;
 }</pre>
-</div>
 
 <h2 id="Specifications">Specifications</h2>
 
