@@ -16,7 +16,7 @@ tags:
 
 <p>Mozilla supports the ability to drag multiple items using some additional non-standard methods. These are methods that mirror the {{domxref("DataTransfer.types","types")}} property as well as the {{domxref("DataTransfer.getData","getData()")}}, {{domxref("DataTransfer.setData","setData()")}} and {{domxref("DataTransfer.clearData","clearData()")}} methods, however, they take an additional argument that specifies the index of the item to retrieve, modify or remove.</p>
 
-<p class="note">The drag processing described in this document use the {{domxref("DataTransfer")}} interface. This processing does <em>not</em> use the {{domxref("DataTransferItem")}} interface nor the {{domxref("DataTransferItemList")}} interface.</p>
+<p>The drag processing described in this document use the {{domxref("DataTransfer")}} interface. This processing does <em>not</em> use the {{domxref("DataTransferItem")}} interface nor the {{domxref("DataTransferItemList")}} interface.</p>
 
 <h2 id="Setting_and_getting_with_indices">Setting and getting with indices</h2>
 
@@ -34,7 +34,7 @@ dt.mozSetDataAt("text/plain", "Second data to drag", 1);
 <pre>event.dataTransfer.mozClearDataAt("text/plain", 1);
 </pre>
 
-<p class="note">Caution: removing the last format for a particular index will remove that item entirely, shifting the remaining items down, so the later items will have different indices. For example:</p>
+<p>Caution: removing the last format for a particular index will remove that item entirely, shifting the remaining items down, so the later items will have different indices. For example:</p>
 
 <pre>var dt = event.dataTransfer;
 dt.mozSetDataAt("text/uri-list", "URL1", 0);
