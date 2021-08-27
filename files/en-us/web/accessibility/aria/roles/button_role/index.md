@@ -9,19 +9,19 @@ tags:
   - Button Role
   - Reference
 ---
-<p class="summary"><span class="seoSummary">The <strong><a href="https://www.w3.org/WAI/PF/aria/roles#button">button</a></strong> role should be used for clickable elements that trigger a response when activated by the user. Adding <code>role="button"</code> will make an element appear as a button control to a screen reader. This role can be used in combination with the <code>aria-pressed</code> attribute to create toggle buttons.</span></p>
+The [`button`](https://www.w3.org/WAI/PF/aria/roles#button) role is for clickable elements that trigger a response when activated by the user. Adding `role="button"` tells the screen reader the element is a button, but provides no button functionality. Use {{HTMLElement("button")}} or {{HTMLElement("input")}} with `type="button"` instead. This role can be used in combination with the `aria-pressed` attribute to create toggle buttons.</span></p>
 
 ```html
 <div id="saveChanges" tabindex="0" role="button" aria-pressed="false">Save</div>
 ```
 
-The above example creates a simple button which is first in the focus order, though {{HTMLElement("button")}} or {{HTMLElement("input")}} with `type="button"` should be used for buttons:
+The above example creates a focusable button, requiring JavaScript and CSS to include button appearance and functionality; features provided by default when using the {{HTMLElement("button")}} and {{HTMLElement("input")}} with `type="button"` elements:
 
 ```html
 <button id="saveChanges">Save</button>
 ```
 
-<div class="note"><p><strong>Note</strong>: If using role="button" instead of the semantic <code>&#x3C;button></code> or <code>&#x3C;input type="button"></code> elements, you will need to make the element focusable and have to define event handlers for {{event("click")}} and {{event("keydown")}} events, including the <kbd>Enter</kbd> and <kbd>Space</kbd> keys, in order to process the user's input. See the <a href="https://www.w3.org/TR/wai-aria-practices/examples/button/button.html">official WAI-ARIA example code</a>.</p></div>
+> **Note:** If using role="button" instead of the semantic `<button>` or `<input type="button">` elements, you will need to make the element focusable and have to define event handlers for {{event("click")}} and {{event("keydown")}} events, including the <kbd>Enter</kbd> and <kbd>Space</kbd> keys, in order to process the user's input. See [the official WAI-ARIA example code](https://www.w3.org/TR/wai-aria-practices/examples/button/button.html).
 
 ## Description
 
@@ -171,7 +171,7 @@ In this snippet a {{HTMLElement("span")}} element is converted to a toggle butto
 </span>
 
 <audio id="audio" src="https://soundbible.com/mp3/Tyrannosaurus%20Rex%20Roar-SoundBible.com-807702404.mp3">
-  Your browser does not support the <code>audio</code> element.
+  Your browser does not support the `audio` element.
 </audio>
 ```
 
@@ -230,7 +230,7 @@ function toggleButton(element) {
 
 Buttons are interactive controls and thus focusable. If the `button` role is added to an element that is not focusable by itself (such as `<span>`, `<div>` or `<p>`) then, the `tabindex` attribute has to be used to make the button focusable.
 
-<p class="warning"><strong>Warning:</strong> Be careful when marking up links with the button role. Buttons are expected to be triggered using the <kbd>Space</kbd> or <kbd>Enter</kbd> key, while links are expected to be triggered using the <kbd>Enter</kbd> key. In other words, when links are used to behave like buttons, adding <code>role="button" </code>alone is not sufficient. It will also be necessary to add a key event handler that listens for the <kbd>Space</kbd> key in order to be consistent with native buttons.</p>
+> **Warning:** Be careful when marking up links with the button role. Buttons are expected to be triggered using the <kbd>Space</kbd> or <kbd>Enter</kbd> key, while links are expected to be triggered using the <kbd>Enter</kbd> key. In other words, when links are used to behave like buttons, adding `role="button" `alone is not sufficient. It will also be necessary to add a key event handler that listens for the <kbd>Space</kbd> key in order to be consistent with native buttons.
 
 When the `button` role is used, screen readers announce the element as a button, generally saying "click" followed by the button's accessible name. The accessible name is either the content of the element or the value of an `aria-label` or element referenced by an  `aria-labelledby` attribute, or description, if included.
 
