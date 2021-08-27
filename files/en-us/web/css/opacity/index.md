@@ -106,8 +106,8 @@ div { background-color: yellow; }
 #### HTML
 
 ```html
-<img src="//developer.mozilla.org/static/img/opengraph-logo.png"
-  alt="MDN logo" width="128" height="146"
+<img src="//interactive-examples.mdn.mozilla.net/media/dino.svg"
+  alt="MDN Dino" width="128" height="146"
   class="opacity">
 ```
 
