@@ -31,7 +31,7 @@ tags:
 
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#columnheader role","ARIA: columnheader role")}}                                             | {{Spec2('ARIA')}}                         |
+| {{SpecName("ARIA","#columnheader","ARIA: columnheader role")}}                                             | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices","#aria_lh_columnheader_role","columnheader role")}} | {{Spec2('ARIA Authoring Practices')}} |
 
 
