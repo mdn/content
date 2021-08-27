@@ -71,7 +71,7 @@ window.history.go()
 
 <p>The following example assigns a listener to the <code>onpopstate</code> property. And then illustrates some of the methods of the history object to add, replace, and move within the browser history for the current tab.</p>
 
-<pre class="brush:js line-numbers language-js">window.onpopstate = function(event) {
+<pre class="brush:js line-numbers">window.onpopstate = function(event) {
   alert(`location: ${document.location}, state: ${JSON.stringify(event.state)}`)
 }
 

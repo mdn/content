@@ -38,7 +38,7 @@ browser-compat: api.EventSource.message_event
 
 <p>In this basic example, an <code>EventSource</code> is created to receive events from the server; a page with the name <code>sse.php</code> is responsible for generating the events.</p>
 
-<pre class="brush: js line-numbers language-js">var evtSource = new EventSource('sse.php');
+<pre class="brush: js line-numbers">var evtSource = new EventSource('sse.php');
 var eventList = document.querySelector('ul');
 
 evtSource.addEventListener('message', (e) =&gt; {
