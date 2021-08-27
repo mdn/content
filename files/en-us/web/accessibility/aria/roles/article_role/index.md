@@ -9,7 +9,8 @@ tags:
   - Article role
   - Reference
 ---
-<p class="summary"><span class="seoSummary">The <code>article</code> role indicates a section of a page that could easily stand on its own on a page, in a document, or on a website. It is usually set on related content items such as comments, forum posts, newspaper articles or other items grouped together on one page.</span></p>
+
+The `article` role indicates a section of a page that could easily stand on its own on a page, in a document, or on a website. It is usually set on related content items such as comments, forum posts, newspaper articles or other items grouped together on one page.
 
 ```html
 <div role="article">
@@ -23,7 +24,7 @@ tags:
 
 This example shows two articles side by side on one page that could be structured similarly and are related.
 
-<div class="note"><p>Instead of a <code>div</code> with an <code>article</code> role, use the &#x3C;article> element. <span class="ILfuVd yZ8quc">Always use native element if available</span>.</p></div>
+> **Note:** Instead of a `<div>` with an `article` role, use the `<article>` element. **Always use native element if available**
 
 Instead of using `role="article"`, the `<article>` element can be used.
 
@@ -69,7 +70,7 @@ This role does not support any specific keyboard interaction.
 - Changing attribute values
   - : When constructing a feed, set the `aria-posinset` and `aria-setsize` attributes on each article role to the appropriate values, bearing in mind that `aria-posinset` is 1-based.
 
-<div class="note"><p><span class="ILfuVd yZ8quc">Always use native element if available</span>. Instead of a <code>div</code> with the <code>article</code> role, the &#x3C;article> element should be used.</p></div>
+> **note:** **Always use native element if available.** Instead of a `<div>` with the `article` role, the `<article>` element should be used.
 
 ## Examples
 
