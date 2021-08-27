@@ -9578,7 +9578,8 @@
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/x-ms-format-detection	/en-US/docs/Web/HTML/Global_attributes/x-ms-format-detection
 /en-US/docs/Web/Accessibility/ARIA/Basic_form_hints	/en-US/docs/Web/Accessibility/ARIA/forms/Basic_form_hints
 /en-US/docs/Web/Accessibility/ARIA/Roles/ARIA:_tabpanel_role	/en-US/docs/Web/Accessibility/ARIA/Roles/Tabpanel_Role
-/en-US/docs/Web/Accessibility/ARIA/Roles/ARIA:_timer_role	/en-US/docs/Web/Accessibility/ARIA/Roles/ARIA_timer_role
+/en-US/docs/Web/Accessibility/ARIA/Roles/ARIA:_timer_role	/en-US/docs/Web/Accessibility/ARIA/Roles/timer_role
+/en-US/docs/Web/Accessibility/ARIA/Roles/aria_timer_role	/en-US/docs/Web/Accessibility/ARIA/Roles/timer_role
 /en-US/docs/Web/Accessibility/ARIA/Roles/checkbox	/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role
 /en-US/docs/Web/Accessibility/ARIA/Roles/dialog	/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role
 /en-US/docs/Web/Accessibility/ARIA/examples	/en-US/docs/Web/Accessibility/ARIA/ARIA_Test_Cases
