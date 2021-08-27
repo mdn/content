@@ -85,7 +85,7 @@ tags:
 
 <p>Now that we've created a video decoding configuration we can pass it as a paramater of the {{domxref("MediaCapabilities.decodingInfo", "decodingInfo()")}} method to determine if a video matching this configuration would be decodable and if the playback would be smooth and power efficient.</p>
 
-<pre class="brush: js language-js">var promise = navigator.mediaCapabilities.decodingInfo(videoConfiguration);</pre>
+<pre class="brush: js">var promise = navigator.mediaCapabilities.decodingInfo(videoConfiguration);</pre>
 
 <p>The <code>decodingInfo()</code> and {{domxref("MediaCapabilities.encodingInfo", "encodingInfo()")}} methods both return promises. Once the promises state is fulfilled, you can access the {{domxref("MediaCapabilitiesInfo")}} interface's <code>supported</code>, <code>smooth</code>, and <code>powerEfficient</code> properties.</p>
 
@@ -93,7 +93,7 @@ tags:
 
 <p>Instead of the assigning the promise to a variable, we can output the values returned by the promise to the console:</p>
 
-<pre class="brush: js language-js">navigator.mediaCapabilities.decodingInfo(videoConfiguration).then(result =&gt; {
+<pre class="brush: js">navigator.mediaCapabilities.decodingInfo(videoConfiguration).then(result =&gt; {
   console.log('This configuration is ' +
     (result.supported ? '' : 'not ') + 'supported, ' +
     (result.smooth ? '' : 'not ') + 'smooth, and ' +
