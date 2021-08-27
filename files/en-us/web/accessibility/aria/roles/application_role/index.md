@@ -62,7 +62,7 @@ The <kbd>tab</kbd> , <kbd>Space</kbd> and <kbd>Enter</kbd> keys, as well as <kbd
 - Changing attribute values
   - : `aria-activedescendant` is used to manage the focus inside the application container. Set in response to keyboard or other application events that change focus or point of interaction.
 
-<div class="note"><p>The <code>application</code> role does not have a related HTML widget and thus is completely free form. The author of the application must take full responsibility for not letting users get stuck in a focus limbo or trap focus inside something the user cannot exit of. All aspects of interaction, including returning to the regular web content on other parts of the page, must be handled. Use wisely, and cautiously!</p></div>
+>**Note** The `application` role does not have a related HTML widget and thus is completely free form. The author of the application must take full responsibility for not letting users get stuck in a focus limbo or trap focus inside something the user cannot exit of. All aspects of interaction, including returning to the regular web content on other parts of the page, must be handled. Use wisely, and cautiously!
 
 ## Examples
 
@@ -89,5 +89,6 @@ Applying the `application` role will cause this and all of the descendant elemen
 See also
 
 - [If you use the WAI-ARIA role "application", please do so wisely](https://www.marcozehe.de/2012/02/06/if-you-use-the-wai-aria-role-application-please-do-so-wisely/) - blog post by Marco Zehe
+- [Using the ARIA application role](https://tink.uk/using-the-aria-application-role/) - by Léonie Watson
 
 <section id="Quick_links"><ol><li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li></ol></section>
