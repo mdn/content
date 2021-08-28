@@ -86,15 +86,7 @@ baselines, due to glyphs extending far outside the em square." src="baselines.pn
 
 <p>Edit the code below and see your changes update live in the canvas:</p>
 
-<pre class="brush: js;">ctx.font = '48px serif';
-ctx.textBaseline = 'hanging';
-ctx.strokeText('Hello world', 0, 100);
-</pre>
-
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
   &lt;input id="edit" type="button" value="Edit" /&gt;
   &lt;input id="reset" type="button" value="Reset" /&gt;
@@ -105,7 +97,7 @@ ctx.textBaseline = "hanging";
 ctx.strokeText("Hello world", 0, 100);&lt;/textarea&gt;
 </pre>
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+<pre class="brush: js hidden">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
@@ -129,9 +121,8 @@ edit.addEventListener('click', function() {
 textarea.addEventListener('input', drawCanvas);
 window.addEventListener('load', drawCanvas);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+<p>{{ EmbedLiveSample('A_textBaseline_example', 700, 400) }}</p>
 
 <h2 id="Advanced_text_measurements">Advanced text measurements</h2>
 
