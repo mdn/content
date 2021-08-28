@@ -33,8 +33,8 @@ If you want to avoid using user agent detection, you have options!
 
   - : Feature detection is where you don't try to figure out which browser is rendering your page, but instead, you check to see if the specific feature you need is available. If it's not, you use a fallback. In those rare cases where behavior differs between browsers, instead of checking the user agent string, you should instead implement a test to detect how the browser implements the API and determine how to use it from that. An example of feature detection is as follows. In 2017, Chrome [unflagged experimental lookbehind support in regular expressions](https://www.chromestatus.com/feature/5668726032564224), but no other browser supported it. So, you might have thought to do this:
 
-    ```js
-        // this code snippet splits a string in a special notation
+```js
+// this code snippet splits a string in a special notation
 
         if (navigator.userAgent.indexOf("Chrome") !== -1){
             // YES! The user is suspected to support look-behind regexps
@@ -54,17 +54,17 @@ If you want to avoid using user agent detection, you have options!
         }
         console.log(splitUpString("fooBare")); // ["fooB", "are"]
         console.log(splitUpString("jQWhy")); // ["jQ", "W", "hy"]
-        ```
+```
 
-    The above code would have made several incorrect assumptions:
-    First, it assumed that all user agent strings that include the substring "Chrome" are Chrome. UA strings are notoriously misleading.
-    Then, it assumed that the lookbehind feature would always be available if the browser was Chrome. The agent might be an older version of Chrome, from before support was added, or (because the feature was experimental at the time) it could be a later version of Chrome that removed it.
-    Most importantly, it assumed no other browsers would support the feature. Support could have been added to other browsers at any time, but this code would have continued choosing the inferior path.
+The above code would have made several incorrect assumptions:
+First, it assumed that all user agent strings that include the substring "Chrome" are Chrome. UA strings are notoriously misleading.
+Then, it assumed that the lookbehind feature would always be available if the browser was Chrome. The agent might be an older version of Chrome, from before support was added, or (because the feature was experimental at the time) it could be a later version of Chrome that removed it.
+Most importantly, it assumed no other browsers would support the feature. Support could have been added to other browsers at any time, but this code would have continued choosing the inferior path.
 
-    Problems like these can be avoided by testing for support of the feature itself instead:
+Problems like these can be avoided by testing for support of the feature itself instead:
 
-    <!-- prettier-ignore -->
-    ```js
+<!-- prettier-ignore -->
+```js
         var isLookBehindSupported = false;
 
         try {
@@ -81,11 +81,11 @@ If you want to avoid using user agent detection, you have options!
         } : function(str) {
             return str.replace(/[A-Z]/g,"z$1").split(/z(?=[A-Z])/g);
         };
-        ```
+```
 
-    As the above code demonstrates, there is **always** a way to test browser support without user agent sniffing. There is **never** any reason to check the user agent string for this.
+As the above code demonstrates, there is **always** a way to test browser support without user agent sniffing. There is **never** any reason to check the user agent string for this.
 
-    Lastly, the above code snippets bring about a critical issue with cross-browser coding that must always be taken into account. Don't unintentionally use the API you are testing for in unsupported browsers. This may sound obvious and simple, but sometimes it is not. For example, in the above code snippets, using lookbehind in short-regexp notation (e.g. /reg/igm) will cause a parser error in unsupported browsers. Thus, in the above example, you would use _new RegExp("(?<=look_behind_stuff)");_ instead of _/(?<=look_behind_stuff)/_, even in the lookbehind supported section of your code.
+Lastly, the above code snippets bring about a critical issue with cross-browser coding that must always be taken into account. Don't unintentionally use the API you are testing for in unsupported browsers. This may sound obvious and simple, but sometimes it is not. For example, in the above code snippets, using lookbehind in short-regexp notation (e.g. /reg/igm) will cause a parser error in unsupported browsers. Thus, in the above example, you would use _new RegExp("(?<=look_behind_stuff)");_ instead of _/(?<=look_behind_stuff)/_, even in the lookbehind supported section of your code.
 
 - Progressive enhancement
   - : This design technique involves developing your Web site in 'layers', using a bottom-up approach, starting with a simpler layer and improving the capabilities of the site in successive layers, each using more features.
