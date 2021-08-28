@@ -88638,22 +88638,6 @@
       "Matej Lednar"
     ]
   },
-  "Web/API/Window/directories": {
-    "modified": "2019-03-24T00:04:06.041Z",
-    "contributors": [
-      "sarafec",
-      "fscholz",
-      "teoli",
-      "kscarfone",
-      "Sheppy",
-      "trevorh",
-      "Ms2ger",
-      "Mgjbot",
-      "Dria",
-      "Callek",
-      "JesseW"
-    ]
-  },
   "Web/API/Window/document": {
     "modified": "2020-12-02T10:36:56.203Z",
     "contributors": [
