@@ -88460,29 +88460,6 @@
       "RobG"
     ]
   },
-  "Web/API/Window/controllers": {
-    "modified": "2020-01-26T14:02:36.044Z",
-    "contributors": [
-      "alattalatta",
-      "SphinxKnight",
-      "NIHSANIPASUWAN",
-      "mfluehr",
-      "fscholz",
-      "teoli",
-      "kscarfone",
-      "ethertank",
-      "Sheppy",
-      "stanton",
-      "SergeG",
-      "Neil",
-      "Mgjbot",
-      "Andreas Wuest",
-      "Nickolay",
-      "Dria",
-      "Callek",
-      "JesseW"
-    ]
-  },
   "Web/API/Window/copy_event": {
     "modified": "2020-10-15T22:16:13.286Z",
     "contributors": [
