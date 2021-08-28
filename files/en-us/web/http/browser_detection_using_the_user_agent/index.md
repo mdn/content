@@ -35,25 +35,24 @@ If you want to avoid using user agent detection, you have options!
 
 ```js
 // this code snippet splits a string in a special notation
-
-        if (navigator.userAgent.indexOf("Chrome") !== -1){
-            // YES! The user is suspected to support look-behind regexps
-            // DO NOT USE /(?<=[A-Z])/. It will cause a syntax error in
-            //  browsers that do not support look-behind expressions
-            //  because all browsers parse the entire script, including
-            //  sections of the code that are never executed.
-            var camelCaseExpression = new RegExp("(?<=[A-Z])");
-            var splitUpString = function(str) {
-                return (""+str).split(camelCaseExpression);
-            };
-        } else {
-            /*This fallback code is much less performant, but works*/
-            var splitUpString = function(str){
-                return str.replace(/[A-Z]/g,"z$1").split(/z(?=[A-Z])/g);
-            };
-        }
-        console.log(splitUpString("fooBare")); // ["fooB", "are"]
-        console.log(splitUpString("jQWhy")); // ["jQ", "W", "hy"]
+if (navigator.userAgent.indexOf("Chrome") !== -1){
+    // YES! The user is suspected to support look-behind regexps
+    // DO NOT USE /(?<=[A-Z])/. It will cause a syntax error in
+    //  browsers that do not support look-behind expressions
+    //  because all browsers parse the entire script, including
+    //  sections of the code that are never executed.
+    var camelCaseExpression = new RegExp("(?<=[A-Z])");
+    var splitUpString = function(str) {
+        return (""+str).split(camelCaseExpression);
+    };
+} else {
+    /*This fallback code is much less performant, but works*/
+    var splitUpString = function(str){
+        return str.replace(/[A-Z]/g,"z$1").split(/z(?=[A-Z])/g);
+    };
+}
+console.log(splitUpString("fooBare")); // ["fooB", "are"]
+console.log(splitUpString("jQWhy")); // ["jQ", "W", "hy"]
 ```
 
 The above code would have made several incorrect assumptions:
@@ -65,22 +64,22 @@ Problems like these can be avoided by testing for support of the feature itself 
 
 <!-- prettier-ignore -->
 ```js
-        var isLookBehindSupported = false;
+var isLookBehindSupported = false;
 
-        try {
-            new RegExp("(?<=)");
-            isLookBehindSupported = true;
-        } catch (err) {
-            // If the agent doesn't support lookbehinds, the attempted
-            // creation of a RegExp object using that syntax throws and
-            // isLookBehindSupported remains false.
-        }
+try {
+    new RegExp("(?<=)");
+    isLookBehindSupported = true;
+} catch (err) {
+    // If the agent doesn't support lookbehinds, the attempted
+    // creation of a RegExp object using that syntax throws and
+    // isLookBehindSupported remains false.
+}
 
-        var splitUpString = isLookBehindSupported ? function(str) {
-            return (""+str).split(new RegExp("(?<=[A-Z])"));
-        } : function(str) {
-            return str.replace(/[A-Z]/g,"z$1").split(/z(?=[A-Z])/g);
-        };
+var splitUpString = isLookBehindSupported ? function(str) {
+    return (""+str).split(new RegExp("(?<=[A-Z])"));
+} : function(str) {
+    return str.replace(/[A-Z]/g,"z$1").split(/z(?=[A-Z])/g);
+};
 ```
 
 As the above code demonstrates, there is **always** a way to test browser support without user agent sniffing. There is **never** any reason to check the user agent string for this.
@@ -96,28 +95,28 @@ Lastly, the above code snippets bring about a critical issue with cross-browser 
   - : Arguably the most common use and misuse of user agent sniffing is to detect if the device is a mobile device. However, people too often overlook what they are really after. People use user agent sniffing to detect if the users' device is touch-friendly and has a small screen so they can optimize their website accordingly. While user agent sniffing can sometimes detect these, not all devices are the same: some mobile devices have big screen sizes, some desktops have a small touchscreen, some people use smart TV's which are an entirely different ballgame altogether, and some people can dynamically change the width and height of their screen by flipping their tablet on its side! So, user agent sniffing is definitely not the way to go. Thankfully, there are much better alternatives. Use [Navigator.maxTouchPoints](/en-US/docs/Web/API/Navigator/maxTouchPoints) to detect if the user's device has a touchscreen. Then, default back to checking the user agent screen only _if (!("maxTouchPoints" in navigator)) { /\*Code here\*/}_. Using this information of whether the device has a touchscreen, do not change the entire layout of the website just for touch devices: you will only create more work and maintenance for yourself. Rather, add in touch conveniences such as bigger, more easily clickable buttons (you can do this using CSS by increasing the font size). Here is an example of code that increases the padding of #exampleButton to 1em on mobile devices.
 
 ```js
-        var hasTouchScreen = false;
-        if ("maxTouchPoints" in navigator) {
-            hasTouchScreen = navigator.maxTouchPoints > 0;
-        } else if ("msMaxTouchPoints" in navigator) {
-            hasTouchScreen = navigator.msMaxTouchPoints > 0;
-        } else {
-            var mQ = window.matchMedia && matchMedia("(pointer:coarse)");
-            if (mQ && mQ.media === "(pointer:coarse)") {
-                hasTouchScreen = !!mQ.matches;
-            } else if ('orientation' in window) {
-                hasTouchScreen = true; // deprecated, but good fallback
-            } else {
-                // Only as a last resort, fall back to user agent sniffing
-                var UA = navigator.userAgent;
-                hasTouchScreen = (
-                    /\b(BlackBerry|webOS|iPhone|IEMobile)\b/i.test(UA) ||
-                    /\b(Android|Windows Phone|iPad|iPod)\b/i.test(UA)
-                );
-            }
-        }
-        if (hasTouchScreen)
-            document.getElementById("exampleButton").style.padding="1em";
+var hasTouchScreen = false;
+if ("maxTouchPoints" in navigator) {
+    hasTouchScreen = navigator.maxTouchPoints > 0;
+} else if ("msMaxTouchPoints" in navigator) {
+    hasTouchScreen = navigator.msMaxTouchPoints > 0;
+} else {
+    var mQ = window.matchMedia && matchMedia("(pointer:coarse)");
+    if (mQ && mQ.media === "(pointer:coarse)") {
+        hasTouchScreen = !!mQ.matches;
+    } else if ('orientation' in window) {
+        hasTouchScreen = true; // deprecated, but good fallback
+    } else {
+        // Only as a last resort, fall back to user agent sniffing
+        var UA = navigator.userAgent;
+        hasTouchScreen = (
+            /\b(BlackBerry|webOS|iPhone|IEMobile)\b/i.test(UA) ||
+            /\b(Android|Windows Phone|iPad|iPod)\b/i.test(UA)
+        );
+    }
+}
+if (hasTouchScreen)
+    document.getElementById("exampleButton").style.padding="1em";
 ```
 
 As for the screen size, use _window\.innerWidth_ and window\.addEventListener("resize", function(){ /\*refresh screen size dependent things\*/ }). What you want to do for screen size is not slash off information on smaller screens. That will only annoy people because it will force them to use the desktop version. Rather, try to have fewer columns of information in a longer page on smaller screens while having more columns with a shorter page on larger screen sizes. This effect can be easily achieved using CSS [flexboxes](/en-US/docs/Learn/CSS/CSS_layout/Flexbox), sometimes with [floats](/en-US/docs/Learn/CSS/CSS_layout/Floats) as a partial fallback.
