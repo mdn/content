@@ -32,7 +32,7 @@ browser-compat: api.CSSFontFaceRule
 
 <p>This example uses the CSS found as an example on the {{cssxref("@font-face")}} page. The first {{domxref("CSSRule")}} returned will be a <code>CSSFontFaceRule</code>.</p>
 
-<pre class="brush:css">@font-face {
+<pre class="brush: css">@font-face {
   font-family: MyHelvetica;
   src: local("Helvetica Neue Bold"),
   local("HelveticaNeue-Bold"),
@@ -40,7 +40,7 @@ browser-compat: api.CSSFontFaceRule
   font-weight: bold;
 }</pre>
 
-<pre class="brush:javascript">let myRules = document.styleSheets[0].cssRules;
+<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
 console.log(myRules[0]); //a CSSFontFaceRule</pre>
 
 <h2 id="Specifications">Specifications</h2>

@@ -13,7 +13,9 @@ browser-compat: api.AudioWorkletNode
 ---
 <p>{{APIRef("Web Audio API")}}</p>
 
-<div class="blockIndicator secureContexts">Although the interface is available outside <a href="/en-US/docs/Web/Security/Secure_Contexts">secure contexts</a>, the {{domxref("BaseAudioContext.audioWorklet")}} property is not, thus custom {{domxref("AudioWorkletProcessor")}}s cannot be defined outside them.</div>
+<div class="notecard note">
+<p><strong>Note:</strong> Although the interface is available outside <a href="/en-US/docs/Web/Security/Secure_Contexts">secure contexts</a>, the {{domxref("BaseAudioContext.audioWorklet")}} property is not, thus custom {{domxref("AudioWorkletProcessor")}}s cannot be defined outside them.</p>
+</div>
 
 <p>The <strong><code>AudioWorkletNode</code></strong> interface of the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> represents a base class for a user-defined {{domxref("AudioNode")}}, which can be connected to an audio routing graph along with other nodes. It has an associated {{domxref("AudioWorkletProcessor")}}, which does the actual audio processing in a Web Audio rendering thread.</p>
 

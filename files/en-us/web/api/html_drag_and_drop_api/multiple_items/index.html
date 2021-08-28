@@ -9,9 +9,8 @@ tags:
 ---
 <p>{{DefaultAPISidebar("HTML Drag and Drop API")}}</p>
 
-<div class="overheadIndicator nonStandard nonStandardHeader">
-<p><strong>Caution:</strong><br>
- All of the methods and properties with a <strong>moz</strong> prefix (such as <strong>mozSetDataAt()</strong> are Gecko specific interfaces. These interfaces will <strong>only</strong> work with Gecko based browsers.</p>
+<div class="notecard warning">
+<p><strong>Warning:</strong> All of the methods and properties with a <strong>moz</strong> prefix (such as <strong>mozSetDataAt()</strong> are Gecko specific interfaces. These interfaces will <strong>only</strong> work with Gecko based browsers.</p>
 </div>
 
 <p>Mozilla supports the ability to drag multiple items using some additional non-standard methods. These are methods that mirror the {{domxref("DataTransfer.types","types")}} property as well as the {{domxref("DataTransfer.getData","getData()")}}, {{domxref("DataTransfer.setData","setData()")}} and {{domxref("DataTransfer.clearData","clearData()")}} methods, however, they take an additional argument that specifies the index of the item to retrieve, modify or remove.</p>
