@@ -20,8 +20,7 @@ li:nth-child(2) {
   color: lime;
 }
 
-/* Selects every fourth element
-   among any group of siblings */
+/* Select each element from any group of siblings whichever is a multiple of four. */
 :nth-child(4n) {
   color: lime;
 }
@@ -71,7 +70,7 @@ li:nth-child(2) {
 - `:nth-child(3n+4)`
   - : Represents elements **4** \[=(3×0)+4], **7** \[=(3×1)+4], **10** \[=(3×2)+4], **13** \[=(3×3)+4], **etc.**
 - `:nth-child(-n+3)`
-  - : Represents the first three elements. \[=-0+3, -1+3, -2+3]
+  - : Represents the first three elements. **3** \[=-0+3], **2** \[=-1+3], **1** [=-2+3]
 - `p:nth-child(n)`
   - : Represents every `<p>` element in a group of siblings. This selects the same elements as a simple `p` selector (although with a higher specificity).
 - `p:nth-child(1)` or `p:nth-child(0n+1)`
