@@ -18,9 +18,9 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Timeouts_and_intervals", "Learn/JavaScript/Asynchronous/Async_await", "Learn/JavaScript/Asynchronous")}}</div>
 
-<p class="summary"><span class="seoSummary"><strong>Promises</strong> are a comparatively new feature of the JavaScript language that allow you to defer further actions until after a previous action has completed, or respond to its failure.</span> This is useful for setting up a sequence of async operations to work correctly. This article shows you how promises work, how you'll see them in use with web APIs, and how to write your own.</p>
+<p class="summary"><strong>Promises</strong> are a comparatively new feature of the JavaScript language that allow you to defer further actions until after a previous action has completed, or respond to its failure. This is useful for setting up a sequence of async operations to work correctly. This article shows you how promises work, how you'll see them in use with web APIs, and how to write your own.</p>
 
-<table class="learn-box standard-table">
+<table class="learn-box">
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -213,7 +213,7 @@ tags:
 
   <pre class="brush: js">let promise3 = promise2.then(myBlob =&gt; {
 
-})</pre>
+});</pre>
  </li>
  <li>
    <p>Now let's fill in the body of the <code>.then()</code> callback. Add the following lines inside the curly braces:</p>
@@ -534,7 +534,7 @@ document.body.appendChild(para);</pre>
       }, interval);
     }
   });
-};</pre>
+}</pre>
 
 <p>Here we are passing two arguments into a custom function — a message to do something with, and the time interval to pass before doing the thing. Inside the function we then return a new <code>Promise</code> object — invoking the function will return the promise we want to use.</p>
 
