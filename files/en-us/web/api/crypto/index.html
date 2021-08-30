@@ -20,7 +20,7 @@ browser-compat: api.Crypto
 
 <p>{{AvailableInWorkers}}</p>
 
-<p>The <a href="/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API</a> is accessed through the {{domxref("crypto")}} property, which is a <code>Crypto</code> object.</p>
+<p>The <a href="/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API</a> is accessed through the {{domxref("Window.crypto")}} property, which is a <code>Crypto</code> object.</p>
 
 <h2 id="Properties">Properties</h2>
 
@@ -42,7 +42,7 @@ browser-compat: api.Crypto
 
 <h2 id="Usage_notes">Usage notes</h2>
 
-<p>You should avoid using the Web Crypto API on insecure contexts, even though the <code>Crypto</code> interface is present on insecure contexts, as is the {{domxref("crypto")}} property. In addition, the <code>Crypto</code> method {{domxref("Crypto.getRandomValues", "getRandomValues()")}} is available on insecure contexts, but the {{domxref("Crypto.subtle", "subtle")}} property is not.</p>
+<p>You should avoid using the Web Crypto API on insecure contexts, even though the <code>Crypto</code> interface is present on insecure contexts, as is the {{domxref("Window.crypto")}} property. In addition, the <code>Crypto</code> method {{domxref("Crypto.getRandomValues", "getRandomValues()")}} is available on insecure contexts, but the {{domxref("Crypto.subtle", "subtle")}} property is not.</p>
 
 <p>In general, you probably should just treat <code>Crypto</code> as available only on secure contexts.</p>
 
