@@ -17,7 +17,7 @@ There is standardization work ongoing that enables developers to create [`Shared
 
 > **Note:** Starting with Firefox 79, the features described in this document are enabled by default.
 >
-> Chrome intends to implement similar restrictions.
+> Chrome started enforcing these restrictions starting with Chrome 92 on desktop and Chrome 88 on Android.
 
 ## New HTTP header bonanza
 
@@ -56,3 +56,4 @@ The WebAssembly Threads proposal also defines a new set of [atomic](https://gith
 - `Cross-Origin-Embedder-Policy`: [whatwg/html issue #4175](https://github.com/whatwg/html/issues/4175), [draft specification](https://mikewest.github.io/corpp/).
 - `Cross-Origin-Resource-Policy`: [standardized in Fetch](https://fetch.spec.whatwg.org/#cross-origin-resource-policy-header), new `cross-origin` value is part of the `Cross-Origin-Embedder-Policy` effort.
 - `postMessage()` changes and [`self.crossOriginIsolated`](/en-US/docs/Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated): [whatwg/html issue #4732](https://github.com/whatwg/html/issues/4732), [whatwg/html issue #4872](https://github.com/whatwg/html/issues/4872), [draft specification](https://github.com/whatwg/html/pull/4734).
+- [SharedArrayBuffer updates in Android Chrome 88 and Desktop Chrome 92](https://developer.chrome.com/blog/enabling-shared-array-buffer/)
