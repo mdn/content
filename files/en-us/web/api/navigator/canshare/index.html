@@ -13,9 +13,15 @@ browser-compat: api.Navigator.canShare
 
 <p>The <strong><code>Navigator.canShare()</code></strong> method of the <a href="/en-US/docs/Web/API/Web_Share_API">Web Share API</a> returns <code>true</code> if the equivalent call to {{domxref("navigator.share()")}} would succeed.</p>
 
-<p>The method will generally return <code>false</code> if the implementation does not support sharing of an indicated data type, for example files, or if sharing that data type would be considered a "hostile share" by the user-agent.
-  Note however that the method will simply ignore data properties that are not recognised/understood by the user agent.</p>
+<p>The method will return <code>false</code> if the data cannot be <em>validated</em>. Reasons the data might be invalid include:</p>
 
+<ul>
+  <li>The <code>data</code> parameter has been omitted or only only contains "unknown" properties. Note that any properties that are not recognized by the user agent are ignored.</li>
+  <li>URL data is badly formatted</li>
+  <li>Files are specified but the implementation does not support file sharing.</li>
+  <li>Sharing the specified data would be considered a "hostile share" by the user-agent.</li>
+</ul>
+  
 <p>The Web Share API is gated by the <a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy/web-share">web-share</a> permission policy.
     The <strong><code>canShare()</code></strong> method will return <code>false</code> if the permission is supported but has not been granted.</p>
 
