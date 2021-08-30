@@ -119,7 +119,7 @@ browser-compat: api.Navigator.share
 <p>To share files, first test for and call {{domxref("navigator.canShare()")}}. Then include an array of files in the call to <code>navigator.share()</code>:</p>
 
 <div class="notecard note">
-  <p><strong>Note:</strong> This code sample handles feature detection by testing for <code>navigator.canShare()</code> rather than for <code>navigator.share()</code>.
+  <p><strong>Note:</strong> This sample feature detects by testing for <code>navigator.canShare()</code> rather than for <code>navigator.share()</code>.
     The data object passed to <code>canShare()</code> only includes the <code>files</code> property. Image, video, audio, and text files can be shared.</p>
 </div>
 
