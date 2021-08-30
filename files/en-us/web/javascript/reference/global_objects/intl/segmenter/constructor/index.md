@@ -2,8 +2,13 @@
 title: Intl.Segmenter constructor
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/constructor
 tags:
-  - JavaScript
+  - Constructor
+  - Segmenter
+  - Internationalization
   - Intl
+  - JavaScript
+  - Localization
+  - Reference
 browser-compat: javascript.builtins.Intl.Segmenter.constructor
 ---
 
