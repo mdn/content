@@ -1,5 +1,5 @@
 ---
-title: Intl.Segmenter constructor
+title: Intl.Segmenter() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/constructor
 tags:
   - Constructor
