@@ -71,12 +71,15 @@ browser-compat: api.ContentIndex.add
 
 <dl>
   <dt><code>TypeError</code></dt>
-  <dd>If the service worker's registration is not present or the service worker does not
-    contain a {{domxref('FetchEvent')}}.</dd>
-  <dd>If the <code>id</code>, <code>title</code>, <code>description</code> or
-    <code>url</code> are missing, not of type {{jsxref('String')}}, or an empty
-    {{jsxref('String')}}.</dd>
-  <dd>If <code>icons</code> images are not of image type.</dd>
+  <dd><p>This exception is thrown in the following conditions:</p>
+    <ul>
+      <li>The service worker's registration is not present or the service worker does not
+      contain a {{domxref('FetchEvent')}}.</li>
+      <li>The <code>id</code>, <code>title</code>, <code>description</code> or
+      <code>url</code> are missing, not of type {{jsxref('String')}}, or an empty {{jsxref('String')}}.</li>
+      <li>The items referenced by <code>icons</code> are not of image type.</li>
+    </ul>
+  </dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
