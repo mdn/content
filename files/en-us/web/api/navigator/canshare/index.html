@@ -13,19 +13,11 @@ browser-compat: api.Navigator.canShare
 
 <p>The <strong><code>Navigator.canShare()</code></strong> method of the <a href="/en-US/docs/Web/API/Web_Share_API">Web Share API</a> returns <code>true</code> if the equivalent call to {{domxref("navigator.share()")}} would succeed.</p>
 
-<p>The method can be used to feature-test if a data types is supported on a particular platform, including both the existing fields and new share data type extensions.</p>
+<p>The method will generally return <code>false</code> if the implementation does not support sharing of an indicated data type, for example files, or if sharing that data type would be considered a "hostile share" by the user-agent.
+  Note however that the method will simply ignore data properties that are not recognised/understood by the user agent.</p>
 
-<p>The Web Share API is gated by the <a href="/en-US/docs/Web/API/Permissions_API"><code>web-share</code> permission</a> (and corresponding <a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy/web-share">web-share</a> permission policy).
-  The <strong><code>canShare()</code></strong> method will return <code>false</code> if the permission is supported on the platform but has not been granted.</p>
-
-<div class="notecard warning">
-  <p><strong>Warning:</strong> The method is flawed in that it may return <code>true</code> for invalid share data that specifies more than one property:</p>
-  <ul>
-    <li>Unsupported fields will be ignored: if there are other supported and valid fields in the share data parameter the method will return <code>true</code> even though part of the data is not shareable.</li>
-    <li>The specification does not require that new supported fields in the data are valid. It is possible that extension fields might be dropped even if valid, and the data still be considered "sharable".</li>
-  </ul> 
-  <p>The method is recommended for feature detection. If used with a single field it will return <code>true</code> only if that field is supported and valid.</p>
-</div>
+<p>The Web Share API is gated by the <a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy/web-share">web-share</a> permission policy.
+    The <strong><code>canShare()</code></strong> method will return <code>false</code> if the permission is supported but has not been granted.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -36,19 +28,19 @@ navigator.canShare(data)</pre>
 
 <dl>
   <dt><code>data</code> {{optional_inline}}</dt>
-  <dd><p>An object defining the share data to test. Typically, an object with the same properties is passed to {{domxref("navigator.share()")}} if this call returns <code>true</code>.</p>
+  <dd><p>An object defining the share data to test.
+    Typically, an object with the same properties is passed to {{domxref("navigator.share()")}} if this call returns <code>true</code>.</p>
 
-  <dd><p>All properties are optional but at least one valid data property must be specified or the method will return <code>false</code>.</p>
+  <p>Properties that are unknown to the user agent are ignored; share data is only assessed on properties understood by the user agent.
+    All properties are optional but at least one known data property must be specified or the method will return <code>false</code>.</p>
 
   <p>The "base" set of options are listed below:</p>
     <ul>
       <li><code>url</code>: A {{domxref("USVString")}} representing a URL to be shared.</li>
       <li><code>text</code>: A {{domxref("USVString")}} representing text to be shared.</li>
       <li><code>title</code>: A {{domxref("USVString")}} representing the title to be shared.</li>
-      <li><code>files</code>: An array of files to be shared.</li>
+      <li><code>files</code>: An array of {{domxref("File")}} objects representing files to be shared.</li>
     </ul>
-   <p>Additional options may be supported in future.
-     Properties that are not supported on a particular platform will be ignored (the method will return <code>false</code> if there are no other valid properties in the data).</p>
   </dd>
 </dl>
 
@@ -62,7 +54,7 @@ navigator.canShare(data)</pre>
 
 <h3 id="sending_the_mdn_url">Sending the MDN URL</h3>
 
-<p>The example checks whether <code>navigator.canShare()</code> is defined, and if so uses it to check whether <code>navigator.share()</code> can share the specified data.</p>
+<p>The example uses <code>navigator.canShare()</code> to check whether <code>navigator.share()</code> can share the specified data.</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -71,10 +63,6 @@ navigator.canShare(data)</pre>
 <pre class="brush: html">&lt;p class="result"&gt;&lt;/p&gt;</pre>
 
 <h4 id="JavaScript">JavaScript</h4>
-
-<div class="notecard note">
-  <p><strong>Note:</strong>The first test on <code>!navigator.canShare</code> is needed because the method maybe be <code>undefined</code> even if <code>navigator.share()</code> is supported.</p>
-</div>
 
 <pre class="brush: js">let shareData = {
   title: 'MDN',
@@ -103,24 +91,27 @@ else if (navigator.canShare(shareData)) {
 
 <h3>Feature checking example</h3>
 
-<p>The javascript code fragment below demonstrates the logic for checking whether new share data is actually supported.</p>
+<p>The method can be used to feature-test if a particular data property is valid and shareable.
+  If used with a single <code>data</code> property it will return <code>true</code> only if that property is valid and can be shared on the platform.</p>
+
+<p>The javascript code fragment below demonstrates the logic for checking that a data property is supported.</p>
 
 <pre class="brush: js">// Feature that may not be supported
-let testShare = { someNewKey: 'Some kind of magic data' }
+let testShare = { someNewProperty: 'Data to share' }
 
 // Complex data that uses new key
 const shareData = {
   title: 'MDN',
   text: 'Learn web development on MDN!',
   url: 'https://developer.mozilla.org',
-  someNewKey: 'Some kind of magic data'
+  someNewProperty: 'Data to share'
 }
 
-//Test just the key before sharing
+// Test key is valid and supported before sharing
 if (navigator.canShare(testShare)) {
   // Use navigator.share() to share 'shareData'
 } else {
-  // Handle case that new data type can't be shared.
+  // Handle case that new data property can't be shared.
 }
 </pre>
 
@@ -139,4 +130,3 @@ if (navigator.canShare(testShare)) {
   <li>{{domxref("navigator.share()")}}</li>
   <li><a href="https://wpt.live/web-share/">https://wpt.live/web-share/</a> (web platform tests)</li>
 </ul>
-<p></p>
