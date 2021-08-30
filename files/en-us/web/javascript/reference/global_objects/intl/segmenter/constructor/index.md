@@ -19,7 +19,6 @@ The Intl.Segmenter() constructor creates {{jsxref('Intl/Segmenter','Intl.Segment
 ```js
 new Intl.segmenter();
 new Intl.segmenter(locale);
-new Intl.segmenter(options);
 new Intl.segmenter(locale, options);
 ```
 
