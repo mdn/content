@@ -55,7 +55,7 @@ Comments are used to add hints, notes, suggestions, or warnings to JavaScript co
 
 JavaScript has two long-standing ways to add comments to code.
 
-The first way is the `//` comment**;** this makes all text following it on the same line into a comment. For example:
+The first way is the `//` comment; this makes all text following it on the same line into a comment. For example:
 
 ```js
 function comment() {
