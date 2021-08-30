@@ -141,9 +141,9 @@ The result of evaluating an equality operator is always of type `Boolean` based 
 - {{JSxRef("Operators/Inequality", "!=")}}
   - : Inequality operator.
 - {{JSxRef("Operators/Strict_equality", "===")}}
-  - : Identity operator.
+  - : Strict equality operator.
 - {{JSxRef("Operators/Strict_inequality", "!==")}}
-  - : Nonidentity operator.
+  - : Strict inequality operator.
 
 ### Bitwise shift operators
 
