@@ -61,8 +61,7 @@ tags:
 <p>This sort of remotely accessible computing/networking hardware is referred to as <em>Infrastructure as a Service (IaaS)</em>. Many IaaS vendors provide options to preinstall a particular operating system, onto which you must install the other components of your production environment. Other vendors allow you to select more fully-featured environments, perhaps including a complete Node setup.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>Pre-built environments can make setting up your website very easy because they reduce the configuration, but the available options may limit you to an unfamiliar server (or other components) and may be based on an older version of the OS. Often it is better to install components yourself so that you get the ones that you want, and when you need to upgrade parts of the system, you have some idea of where to start!</p>
+  <p><strong>Note:</strong> Pre-built environments can make setting up your website very easy because they reduce the configuration, but the available options may limit you to an unfamiliar server (or other components) and may be based on an older version of the OS. Often it is better to install components yourself so that you get the ones that you want, and when you need to upgrade parts of the system, you have some idea of where to start!</p>
 </div>
 
 <p>Other hosting providers support Express as part of a <em>Platform as a Service</em> (<em>PaaS</em>) offering. When using this sort of hosting you don't need to worry about most of your production environment (servers, load balancers, etc.) as the host platform takes care of those for you. That makes deployment quite easy because you just need to concentrate on your web application and not any other server infrastructure.</p>
@@ -70,8 +69,7 @@ tags:
 <p>Some developers will choose the increased flexibility provided by IaaS over PaaS, while others will appreciate the reduced maintenance overhead and easier scaling of PaaS. When you're getting started, setting up your website on a PaaS system is much easier, so that is what we'll do in this tutorial.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>If you choose a Node/Express-friendly hosting provider they should provide instructions on how to set up an Express website using different configurations of web server, application server, reverse proxy, etc. For example, there are many step-by-step guides for various configurations in the <a href="https://www.digitalocean.com/community/tutorials?q=node">Digital Ocean Node community docs</a>.</p>
+  <p><strong>Note:</strong> If you choose a Node/Express-friendly hosting provider they should provide instructions on how to set up an Express website using different configurations of web server, application server, reverse proxy, etc. For example, there are many step-by-step guides for various configurations in the <a href="https://www.digitalocean.com/community/tutorials?q=node">Digital Ocean Node community docs</a>.</p>
 </div>
 
 <h2 id="Choosing_a_hosting_provider">Choosing a hosting provider</h2>
@@ -102,8 +100,7 @@ tags:
 <p>Many providers also have a "basic" tier that provides more useful levels of computing power and fewer limitations. <a href="https://www.digitalocean.com/">Digital Ocean</a> is an example of a popular hosting provider that offers a relatively inexpensive basic computing tier (in the $5 per month lower range at time of writing).</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>Remember that price is not the only selection criterion. If your website is successful, it may turn out that scalability is the most important consideration.</p>
+  <p><strong>Note:</strong> Remember that price is not the only selection criterion. If your website is successful, it may turn out that scalability is the most important consideration.</p>
 </div>
 
 <h2 id="Getting_your_website_ready_to_publish">Getting your website ready to publish</h2>
@@ -113,8 +110,7 @@ tags:
 <p>In the following subsections, we outline the most important changes that you should make to your app.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>There are other useful tips in the Express docs — see <a href="https://expressjs.com/en/advanced/best-practice-performance.html">Production best practices: performance and reliability</a> and <a href="https://expressjs.com/en/advanced/best-practice-security.html">Production Best Practices: Security</a>.</p>
+  <p><strong>Note:</strong> There are other useful tips in the Express docs — see <a href="https://expressjs.com/en/advanced/best-practice-performance.html">Production best practices: performance and reliability</a> and <a href="https://expressjs.com/en/advanced/best-practice-security.html">Production Best Practices: Security</a>.</p>
 </div>
 
 <h3 id="Set_NODE_ENV_to_production">Set NODE_ENV to 'production'</h3>
@@ -124,8 +120,7 @@ tags:
 <p>This change can be made either by using <code>export</code>, an environment file, or the OS initialization system.  </p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>This is actually a change you make in your environment setup rather than your app, but important enough to note here! We'll show how this is set for our hosting example below. </p>
+  <p><strong>Note:</strong> This is actually a change you make in your environment setup rather than your app, but important enough to note here! We'll show how this is set for our hosting example below. </p>
 </div>
 
 <h3 id="Log_appropriately">Log appropriately</h3>
@@ -197,8 +192,7 @@ app.use('/catalog', catalogRouter);  // Add catalog routes to middleware chain.
 </pre>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>For a high-traffic website in production you wouldn't use this middleware. Instead, you would use a reverse proxy like <em>nginx</em>.</p>
+  <p><strong>Note:</strong> For a high-traffic website in production you wouldn't use this middleware. Instead, you would use a reverse proxy like <em>nginx</em>.</p>
 </div>
 
 <h3 id="Use_Helmet_to_protect_against_well_known_vulnerabilities">Use Helmet to protect against well known vulnerabilities</h3>
@@ -222,8 +216,7 @@ var app = express();
 ...</pre>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>The command above adds a <em>subset</em> of the available headers (these make sense for most sites). You can add/disable specific headers as needed by following the <a href="https://www.npmjs.com/package/helmet">instructions for using helmet here</a>.</p>
+  <p><strong>Note:</strong> The command above adds a <em>subset</em> of the available headers (these make sense for most sites). You can add/disable specific headers as needed by following the <a href="https://www.npmjs.com/package/helmet">instructions for using helmet here</a>.</p>
 </div>
 
 <h2 id="Example_Installing_LocalLibrary_on_Heroku">Example: Installing LocalLibrary on Heroku</h2>
@@ -271,8 +264,7 @@ var app = express();
 <p>Heroku is integrated with <strong>git,</strong> the source code version control system. The Heroku client you install will use git to synchronize changes you upload. The Heroku client creates a new "remote" repository named <em>heroku.</em> It connects to a repository of your code on the Heroku cloud. During development, you use git to store changes on your own repository. When you want to deploy your site, you sync your changes to the Heroku repository.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>If you're accustomed to following good software development practices you may already be using git or some other SCM system. If you already have a git repository, skip this step.</p>
+  <p><strong>Note:</strong> If you're accustomed to following good software development practices you may already be using git or some other SCM system. If you already have a git repository, skip this step.</p>
 </div>
 
 <p>There are a lot of ways of to work with git. One easy workflow is to first set up an account on <a href="https://github.com/">GitHub</a>, create a new repository there and then clone it to your local machine:</p>
@@ -339,8 +331,7 @@ Changes to be committed:
 <p>When this operation completes, you should be able to go back to the page on GitHub where you created your repo, refresh the page, and see that your whole application has now been uploaded. You can continue to update your repository as files change using this add/commit/push cycle.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>This is a good point to make a backup of your "vanilla" project — while some of the changes we're going to be making in the following sections might be useful for deployment on any platform (or development) others might not.</p>
+  <p><strong>Note:</strong> This is a good point to make a backup of your "vanilla" project — while some of the changes we're going to be making in the following sections might be useful for deployment on any platform (or development) others might not.</p>
   
   <p>The <em>best</em> way to do this is to use <em>git</em> to manage your revisions. With <em>git</em> you can not only go back to a particular past version, but you can maintain this in a separate "branch" from your production changes and cherry-pick any changes to move between production and development branches. <a href="https://help.github.com/articles/good-resources-for-learning-git-and-github/">Learning Git</a> is well worth the effort, but is beyond the scope of this topic.</p>
   
@@ -436,8 +427,7 @@ git push origin main</pre>
 <pre class="brush: bash">heroku create</pre>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>You can name the remote if you like by specifying a value after "create". If you don't then you'll get a random name. The name is used in the default URL.</p>
+  <p><strong>Note:</strong> You can name the remote if you like by specifying a value after "create". If you don't then you'll get a random name. The name is used in the default URL.</p>
 </div>
 
 <p>We can then push our app to the Heroku repository as shown below. This will upload the app, get all its dependencies, package it in a dyno, and start the site.</p>
@@ -449,13 +439,11 @@ git push origin main</pre>
 <pre class="brush: bash">heroku open</pre>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>This may result in the Heroku page error page. This will be remedied in the next section.</p>
+  <p><strong>Note:</strong> This may result in the Heroku page error page. This will be remedied in the next section.</p>
 </div>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>The site will be running using our development database. Create some books and other objects, and check out whether the site is behaving as you expect. In the next section, we'll set it to use our new database.</p>
+  <p><strong>Note:</strong> The site will be running using our development database. Create some books and other objects, and check out whether the site is behaving as you expect. In the next section, we'll set it to use our new database.</p>
 </div>
 
 <h3 id="Setting_configuration_variables">Setting configuration variables</h3>
@@ -475,8 +463,7 @@ MONGODB_URI: mongodb+srv://cooluser:coolpassword@cluster0-mbdj7.mongodb.net/loca
 </pre>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>On some operating systems you may need to set the set the URL between single quotation marks (e.g. <code>heroku config:set MONGODB_URI='mongodb+srv://...'</code>).</p>
+  <p><strong>Note:</strong> On some operating systems you may need to set the set the URL between single quotation marks (e.g. <code>heroku config:set MONGODB_URI='mongodb+srv://...'</code>).</p>
 </div>
 
 <p>You can inspect your configuration variables at any time using the <code>heroku config</code> command — try this now:</p>
@@ -490,8 +477,7 @@ NODE_ENV:    production
 <p>Heroku will restart your app when it updates the variables. If you check the home page now it should show zero values for your object counts, as the changes above mean that we're now using a new (empty) database.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>If you got the Heroku error page in the last section. Now try rerunning the last section.</p>
+  <p><strong>Note:</strong> If you got the Heroku error page in the last section. Now try rerunning the last section.</p>
 </div>
 
 <h3 id="Managing_addons">Managing addons</h3>

@@ -63,8 +63,7 @@ tags:
 <p>Django has continued to grow and improve, from its first milestone release (1.0) in September 2008 through to the recently-released version 3.1 (2020). Each release has added new functionality and bug fixes, ranging from support for new types of databases, template engines, and caching, through to the addition of "generic" view functions and classes (which reduce the amount of code that developers have to write for a number of programming tasks). </p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>Check out the <a href="https://docs.djangoproject.com/en/stable/releases/">release notes</a> on the Django website to see what has changed in recent versions, and how much work is going into making Django better.</p>
+  <p><strong>Note:</strong> Check out the <a href="https://docs.djangoproject.com/en/stable/releases/">release notes</a> on the Django website to see what has changed in recent versions, and how much work is going into making Django better.</p>
 </div>
 
 <p>Django is now a thriving, collaborative open source project, with many thousands of users and contributors. While it does still have some features that reflect its origin, Django has evolved into a versatile framework that is capable of developing any type of website.</p>
@@ -103,8 +102,7 @@ tags:
 </ul>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>Django refers to this organization as the "Model View Template (MVT)" architecture. It has many similarities to the more familiar <a href="/en-US/docs/Glossary/MVC">Model View Controller</a> architecture. </p>
+  <p><strong>Note:</strong> Django refers to this organization as the "Model View Template (MVT)" architecture. It has many similarities to the more familiar <a href="/en-US/docs/Glossary/MVC">Model View Controller</a> architecture. </p>
 </div>
 
 <p>The sections below will give you an idea of what these main parts of a Django app look like (we'll go into more detail later on in the course, once we've set up a development environment).</p>
@@ -145,8 +143,7 @@ def index(request):
 </pre>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>A little bit of Python:</p>
+  <p><strong>Note:</strong> A little bit of Python:</p>
 
   <ul>
     <li><a href="https://docs.python.org/3/tutorial/modules.html">Python modules</a> are "libraries" of functions, stored in separate files, that we might want to use in our code. Here we import just the <code>HttpResponse</code> object from the <code>django.http</code> module so that we can use it in our view: <code>from django.http import HttpResponse</code> . There are other ways of importing some or all objects from a module.</li>
@@ -179,8 +176,7 @@ class Team(models.Model):
 </pre>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>A little bit of Python:</p>
+  <p><strong>Note:</strong> A little bit of Python:</p>
 
   <ul>
    <li>Python supports "object-oriented programming", a style of programming where we organize our code into objects, which include related data and functions for operating on that data. Objects can also inherit/extend/derive from other objects, allowing common behavior between related objects to be shared. In Python we use the keyword <code>class</code> to define the "blueprint" for an object. We can create multiple specific <em>instances</em> of the type of object based on the model in the class.<br>

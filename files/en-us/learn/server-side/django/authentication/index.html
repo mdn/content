@@ -40,8 +40,7 @@ tags:
 <p>Django provides an authentication and authorization ("permission") system, built on top of the session framework discussed in the <a href="/en-US/docs/Learn/Server-side/Django/Sessions">previous tutorial</a>, that allows you to verify user credentials and define what actions each user is allowed to perform. The framework includes built-in models for <code>Users</code> and <code>Groups</code> (a generic way of applying permissions to more than one user at a time), permissions/flags that designate whether a user may perform a task, forms and views for logging in users, and view tools for restricting content.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>According to Django the authentication system aims to be very generic, and so does not provide some features provided in other web authentication systems. Solutions for some common problems are available as third-party packages. For example, throttling of login attempts and authentication against third parties (e.g. OAuth).</p>
+  <p><strong>Note:</strong> According to Django the authentication system aims to be very generic, and so does not provide some features provided in other web authentication systems. Solutions for some common problems are available as third-party packages. For example, throttling of login attempts and authentication against third parties (e.g. OAuth).</p>
 </div>
 
 <p>In this tutorial, we'll show you how to enable user authentication in the <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> website, create your own login and logout pages, add permissions to your models, and control access to pages. We'll use the authentication/permissions to display lists of books that have been borrowed for both users and librarians.</p>
@@ -55,8 +54,7 @@ tags:
 <p>The authentication was enabled automatically when we <a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">created the skeleton website</a> (in tutorial 2) so you don't need to do anything more at this point.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>The necessary configuration was all done for us when we created the app using the <code>django-admin startproject</code> command. The database tables for users and model permissions were created when we first called <code>python manage.py migrate</code>.</p>
+  <p><strong>Note:</strong> The necessary configuration was all done for us when we created the app using the <code>django-admin startproject</code> command. The database tables for users and model permissions were created when we first called <code>python manage.py migrate</code>.</p>
 </div>
 
 <p>The configuration is set up in the <code>INSTALLED_APPS</code> and <code>MIDDLEWARE</code> sections of the project file (<strong>locallibrary/locallibrary/settings.py</strong>), as shown below:</p>
@@ -80,8 +78,7 @@ MIDDLEWARE = [
 <p>You already created your first user when we looked at the <a href="/en-US/docs/Learn/Server-side/Django/Admin_site">Django admin site</a> in tutorial 4 (this was a superuser, created with the command <code>python manage.py createsuperuser)</code>. Our superuser is already authenticated and has all permissions, so we'll need to create a test user to represent a normal site user. We'll be using the admin site to create our <em>locallibrary</em> groups and website logins, as it is one of the quickest ways to do so.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>You can also create users programmatically, as shown below. You would have to do this, for example, if developing an interface to allow users to create their own logins (you shouldn't give users access to the admin site).</p>
+  <p><strong>Note:</strong> You can also create users programmatically, as shown below. You would have to do this, for example, if developing an interface to allow users to create their own logins (you shouldn't give users access to the admin site).</p>
 
 <pre class="brush: python">from django.contrib.auth.models import User
 
@@ -127,8 +124,7 @@ user.save()
 <p>That's it! Now you have a "normal library member" account that you will be able to use for testing (once we've implemented the pages to enable them to log in).</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>You should try creating another library member user. Also, create a group for Librarians, and add a user to that too!</p>
+  <p><strong>Note:</strong> You should try creating another library member user. Also, create a group for Librarians, and add a user to that too!</p>
 </div>
 
 <h2 id="Setting_up_your_authentication_views">Setting up your authentication views</h2>
@@ -138,13 +134,11 @@ user.save()
 <p>In this section, we show how to integrate the default system into the <em>LocalLibrary</em> website and create the templates. We'll put them in the main project URLs.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>You don't have to use any of this code, but it is likely that you'll want to because it makes things a lot easier. You'll almost certainly need to change the form handling code if you change your user model (an advanced topic!) but even so, you would still be able to use the stock view functions.</p>
+  <p><strong>Note:</strong> You don't have to use any of this code, but it is likely that you'll want to because it makes things a lot easier. You'll almost certainly need to change the form handling code if you change your user model (an advanced topic!) but even so, you would still be able to use the stock view functions.</p>
 </div>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>In this case, we could reasonably put the authentication pages, including the URLs and templates, inside our catalog application. However, if we had multiple applications it would be better to separate out this shared login behavior and have it available across the whole site, so that is what we've shown here!</p>
+  <p><strong>Note:</strong> In this case, we could reasonably put the authentication pages, including the URLs and templates, inside our catalog application. However, if we had multiple applications it would be better to separate out this shared login behavior and have it available across the whole site, so that is what we've shown here!</p>
 </div>
 
 <h3 id="Project_URLs">Project URLs</h3>
@@ -160,8 +154,7 @@ urlpatterns += [
 <p>Navigate to the <a href="http://127.0.0.1:8000/accounts/">http://127.0.0.1:8000/accounts/</a> URL (note the trailing forward slash!) and Django will show an error that it could not find this URL, and listing all the URLs it tried. From this you can see the URLs that will work, for example:</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>Using the above method adds the following URLs with names in square brackets, which can be used to reverse the URL mappings. You don't have to implement anything else — the above URL mapping automatically maps the below mentioned URLs.</p>
+  <p><strong>Note:</strong> Using the above method adds the following URLs with names in square brackets, which can be used to reverse the URL mappings. You don't have to implement anything else — the above URL mapping automatically maps the below mentioned URLs.</p>
 
 <pre class="brush: python">accounts/ login/ [name='login']
 accounts/ logout/ [name='logout']
@@ -187,8 +180,7 @@ Exception Value:    <strong>registration/login.html</strong></pre>
 <p>For this site, we'll put our HTML pages in the <strong>templates/registration/</strong> directory. This directory should be in your project root directory, i.e the same directory as the <strong>catalog</strong> and <strong>locallibrary</strong> folders. Please create these folders now.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>Your folder structure should now look like the below:<br>
+  <p><strong>Note:</strong> Your folder structure should now look like the below:<br>
  locallibrary (Django project folder)<br>
     |_catalog<br>
     |_locallibrary<br>
@@ -395,8 +387,7 @@ LOGIN_REDIRECT_URL = '/'
 <p>You'll be able to test the password reset functionality from the link in the login page. <strong>Be aware that Django will only send reset emails to addresses (users) that are already stored in its database!</strong></p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>The password reset system requires that your website supports email, which is beyond the scope of this article, so this part <strong>won't work yet</strong>. To allow testing, put the following line at the end of your settings.py file. This logs any emails sent to the console (so you can copy the password reset link from the console).</p>
+  <p><strong>Note:</strong> The password reset system requires that your website supports email, which is beyond the scope of this article, so this part <strong>won't work yet</strong>. To allow testing, put the following line at the end of your settings.py file. This logs any emails sent to the console (so you can copy the password reset link from the console).</p>
 
   <pre class="brush: python">EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'</pre>
 
@@ -432,8 +423,7 @@ LOGIN_REDIRECT_URL = '/'
 <p>We create the login and logout link URLs using the <code>url</code> template tag and the names of the respective URL configurations. Note also how we have appended <code>?next=\{{request.path}}</code> to the end of the URLs. What this does is add a URL parameter <code>next</code> containing the address (URL) of the <em>current</em> page, to the end of the linked URL. After the user has successfully logged in/out, the views will use this "<code>next</code>" value to redirect the user back to the page where they first clicked the login/logout link.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>Try it out! If you're on the home page and you click Login/Logout in the sidebar, then after the operation completes you should end up back on the same page.</p>
+  <p><strong>Note:</strong> Try it out! If you're on the home page and you click Login/Logout in the sidebar, then after the operation completes you should end up back on the same page.</p>
 </div>
 
 <h3 id="Testing_in_views">Testing in views</h3>
@@ -447,8 +437,7 @@ def my_view(request):
     ...</pre>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>You can do the same sort of thing manually by testing on <code>request.user.is_authenticated</code>, but the decorator is much more convenient!</p>
+  <p><strong>Note:</strong> You can do the same sort of thing manually by testing on <code>request.user.is_authenticated</code>, but the decorator is much more convenient!</p>
 </div>
 
 <p>Similarly, the easiest way to restrict access to logged-in users in your class-based views is to derive from <code>LoginRequiredMixin</code>. You need to declare this mixin first in the superclass list, before the main view class.</p>
@@ -502,8 +491,7 @@ def is_overdue(self):
     return False</pre>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>We first verify whether <code>due_back</code> is empty before making a comparison. An empty <code>due_back</code> field would cause Django to throw an error instead of showing the page: empty values are not comparable. This is not something we would want our users to experience!</p>
+  <p><strong>Note:</strong> We first verify whether <code>due_back</code> is empty before making a comparison. An empty <code>due_back</code> field would cause Django to throw an error instead of showing the page: empty values are not comparable. This is not something we would want our users to experience!</p>
 </div>
 
 <p>Now that we've updated our models, we'll need to make fresh migrations on the project and then apply those migrations:</p>
@@ -535,8 +523,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 <p>Now that it's possible to loan books to a specific user, go and loan out a number of <code>BookInstance</code> records. Set their <code>borrowed</code> field to your test user, make the <code>status</code> "On loan", and set due dates both in the future and the past.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>We won't spell the process out, as you already know how to use the Admin site!</p>
+  <p><strong>Note:</strong> We won't spell the process out, as you already know how to use the Admin site!</p>
 </div>
 
 <h3 id="On_loan_view">On loan view</h3>
@@ -674,8 +661,7 @@ class MyView(PermissionRequiredMixin, View):
     # the catalog application doesn't have such permission!</pre>
 
 <div class="notecard note">
-      <h4>Note</h4>
-      <p>There is a small default difference in the behavior above. By <strong>default</strong> for a logged-in user with a permission violation:</p>
+  <p><strong>Note:</strong> There is a small default difference in the behavior above. By <strong>default</strong> for a logged-in user with a permission violation:</p>
 
 <ul>
  <li><code>@permission_required</code> redirects to login screen (HTTP Status 302).</li>

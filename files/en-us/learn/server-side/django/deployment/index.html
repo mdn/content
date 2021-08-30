@@ -57,8 +57,7 @@ tags:
 </ul>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>Depending on how your production is configured you might also have a reverse proxy, load balancer, etc.</p>
+  <p><strong>Note:</strong> Depending on how your production is configured you might also have a reverse proxy, load balancer, etc.</p>
 </div>
 
 <p>The server computer could be located on your premises and connected to the Internet by a fast link, but it is far more common to use a computer that is hosted "in the cloud". What this actually means is that your code is run on some remote computer (or possibly a "virtual" computer) in your hosting company's data center(s). The remote server will usually offer some guaranteed level of computing resources (e.g. CPU, RAM, storage memory, etc.) and Internet connectivity for a certain price.</p>
@@ -66,8 +65,7 @@ tags:
 <p>This sort of remotely accessible computing/networking hardware is referred to as <em>Infrastructure as a Service (IaaS)</em>. Many IaaS vendors provide options to preinstall a particular operating system, onto which you must install the other components of your production environment. Other vendors allow you to select more fully-featured environments, perhaps including a complete Django and web-server setup.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>Pre-built environments can make setting up your website very easy because they reduce the configuration, but the available options may limit you to an unfamiliar server (or other components) and may be based on an older version of the OS. Often it is better to install components yourself, so that you get the ones that you want, and when you need to upgrade parts of the system, you have some idea of where to start!</p>
+  <p><strong>Note:</strong> Pre-built environments can make setting up your website very easy because they reduce the configuration, but the available options may limit you to an unfamiliar server (or other components) and may be based on an older version of the OS. Often it is better to install components yourself, so that you get the ones that you want, and when you need to upgrade parts of the system, you have some idea of where to start!</p>
 </div>
 
 <p>Other hosting providers support Django as part of a <em>Platform as a Service</em> (PaaS) offering. In this sort of hosting you don't need to worry about most of your production environment (web server, application server, load balancers) as the host platform takes care of those for you (along with most of what you need to do in order to scale your application). That makes deployment quite easy, because you just need to concentrate on your web application and not all the other server infrastructure.</p>
@@ -75,8 +73,7 @@ tags:
 <p>Some developers will choose the increased flexibility provided by IaaS over PaaS, while others will appreciate the reduced maintenance overhead and easier scaling of PaaS. When you're getting started, setting up your website on a PaaS system is much easier, and so that is what we'll do in this tutorial.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>If you choose a Python/Django-friendly hosting provider they should provide instructions on how to set up a Django website using different configurations of webserver, application server, reverse proxy, etc (this won't be relevant if you choose a PaaS). For example, there are many step-by-step guides for various configurations in the <a href="https://www.digitalocean.com/community/tutorials?q=django">Digital Ocean Django community docs</a>.</p>
+  <p><strong>Note:</strong> If you choose a Python/Django-friendly hosting provider they should provide instructions on how to set up a Django website using different configurations of webserver, application server, reverse proxy, etc (this won't be relevant if you choose a PaaS). For example, there are many step-by-step guides for various configurations in the <a href="https://www.digitalocean.com/community/tutorials?q=django">Digital Ocean Django community docs</a>.</p>
 </div>
 
 <h2 id="Choosing_a_hosting_provider">Choosing a hosting provider</h2>
@@ -102,8 +99,7 @@ tags:
 <p>Many providers also have a "basic" tier that provides more useful levels of computing power and fewer limitations. <a href="https://www.digitalocean.com/">Digital Ocean</a> and <a href="https://www.pythonanywhere.com/">Python Anywhere</a> are examples of popular hosting providers that offer a relatively inexpensive basic computing tier (in the $5 to $10USD per month range).</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>Remember that price is not the only selection criteria. If your website is successful, it may turn out that scalability is the most important consideration.</p>
+  <p><strong>Note:</strong> Remember that price is not the only selection criteria. If your website is successful, it may turn out that scalability is the most important consideration.</p>
 </div>
 
 <h2 id="Getting_your_website_ready_to_publish">Getting your website ready to publish</h2>
@@ -208,8 +204,7 @@ with open('/etc/secret_key.txt') as f:
 <p>Once we've done all that we can set up a Heroku account, get the Heroku client, and use it to install our website.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>The instructions below reflect how to work with Heroku at time of writing. If Heroku significantly change their processes, you may wish to instead check their setup documents: <a href="https://devcenter.heroku.com/articles/getting-started-with-python#introduction">Getting Started on Heroku with Django</a>.</p>
+  <p><strong>Note:</strong> The instructions below reflect how to work with Heroku at time of writing. If Heroku significantly change their processes, you may wish to instead check their setup documents: <a href="https://devcenter.heroku.com/articles/getting-started-with-python#introduction">Getting Started on Heroku with Django</a>.</p>
 </div>
 
 <p>That's all the overview you need in order to get started (see <a href="https://devcenter.heroku.com/articles/how-heroku-works">How Heroku works</a> for a more comprehensive guide).</p>
@@ -219,8 +214,7 @@ with open('/etc/secret_key.txt') as f:
 <p>Heroku is closely integrated with the <strong>git</strong> source code version control system, using it to upload/synchronise any changes you make to the live system. It does this by adding a new heroku "remote" repository named <em>heroku</em> pointing to a repository for your source on the Heroku cloud. During development you use git to store changes on your own repository. When you want to deploy your site, you sync your changes to the Heroku repository.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>If you're used to following good software development practices you are probably already using git or some other SCM system. If you already have a git repository, then you can skip this step.</p>
+  <p><strong>Note:</strong> If you're used to following good software development practices you are probably already using git or some other SCM system. If you already have a git repository, then you can skip this step.</p>
 </div>
 
 <p>There are a lot of ways to work with git, but one of the easiest is to first set up an account on <a href="https://github.com/">Github</a>, create the repository there, and then sync to it locally:</p>
@@ -328,8 +322,7 @@ Changes to be committed:
 <p>Install <em>Gunicorn</em> locally on the command line using <em>pip</em> (which we installed when <a href="/en-US/docs/Learn/Server-side/Django/development_environment">setting up the development environment</a>):</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>Make sure that you're in your Python virtual environment (use the <code>workon [name-of-virtual-environment]</code> command) before you install <em>Gunicorn</em> and further modules with <em>pip</em>, or you might experience problems with importing these modules in your <strong>/locallibrary/settings.py</strong> file in the later sections. </p>
+  <p><strong>Note:</strong> Make sure that you're in your Python virtual environment (use the <code>workon [name-of-virtual-environment]</code> command) before you install <em>Gunicorn</em> and further modules with <em>pip</em>, or you might experience problems with importing these modules in your <strong>/locallibrary/settings.py</strong> file in the later sections. </p>
 </div>
 
 <pre class="brush: bash">pip3 install gunicorn
@@ -360,7 +353,7 @@ db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)</pre>
 
 <div class="notecard note">
-  <h4>Note</h4>
+  <p><strong>Note:</strong></p>
 <ul>
  <li>We'll still be using SQLite during development because the <code>DATABASE_URL</code> environment variable will not be set on our development computer.</li>
  <li>The value <code>conn_max_age=500</code> makes the connection persistent, which is far more efficient than recreating the connection on every request cycle. However, this is optional and can be removed if needed.</li>
@@ -386,8 +379,7 @@ pip3 install psycopg2-binary
 <p>During development we used Django and the Django development web server to serve our static files (CSS, JavaScript, etc.). In a production environment we instead typically serve static files from a content delivery network (CDN) or the web server.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>Serving static files via Django/web application is inefficient because the requests have to pass through unnecessary additional code (Django) rather than being handled directly by the web server or a completely separate CDN. While this doesn't matter for local use during development, it would have a significant performance impact if we were to use the same approach in production. </p>
+  <p><strong>Note:</strong> Serving static files via Django/web application is inefficient because the requests have to pass through unnecessary additional code (Django) rather than being handled directly by the web server or a completely separate CDN. While this doesn't matter for local use during development, it would have a significant performance impact if we were to use the same approach in production. </p>
 </div>
 
 <p>To make it easy to host static files separately from the Django web application, Django provides the <em>collectstatic</em> tool to collect these files for deployment (there is a settings variable that defines where the files should be collected when <em>collectstatic</em> is run). Django templates refer to the hosting location of the static files relative to a settings variable (<code>STATIC_URL</code>), so that this can be changed if the static files are moved to another host/server.</p>
@@ -423,8 +415,7 @@ STATIC_URL = '/static/'
 <p>There are many ways to serve static files in production (we saw the relevant Django settings in the previous sections). Heroku recommends using the <a href="https://warehouse.python.org/project/whitenoise/">WhiteNoise</a> project for serving of static assets directly from Gunicorn in production.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>Heroku automatically calls <em>collectstatic</em> and prepares your static files for use by WhiteNoise after it uploads your application. Check out <a href="https://warehouse.python.org/project/whitenoise/">WhiteNoise</a> documentation for an explanation of how it works and why the implementation is a relatively efficient method for serving these files.</p>
+  <p><strong>Note:</strong> Heroku automatically calls <em>collectstatic</em> and prepares your static files for use by WhiteNoise after it uploads your application. Check out <a href="https://warehouse.python.org/project/whitenoise/">WhiteNoise</a> documentation for an explanation of how it works and why the implementation is a relatively efficient method for serving these files.</p>
 </div>
 
 <p>The steps to set up <em>WhiteNoise</em> to use with the project are <a href="https://whitenoise.evans.io/en/stable/django.html">given here</a> (and reproduced below):</p>
@@ -475,8 +466,7 @@ whitenoise==5.2.0
 </pre>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>Make sure that a <strong>psycopg2</strong> line like the one above is present! Even if you didn't install this locally then you should still add it to <strong>requirements.txt</strong>.</p>
+  <p><strong>Note:</strong> Make sure that a <strong>psycopg2</strong> line like the one above is present! Even if you didn't install this locally then you should still add it to <strong>requirements.txt</strong>.</p>
 </div>
 
 <h4 id="Runtime">Runtime</h4>
@@ -486,8 +476,7 @@ whitenoise==5.2.0
 <pre>python-3.8.6</pre>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>Heroku only supports a small number of <a href="https://devcenter.heroku.com/articles/python-support#supported-python-runtimes">Python runtimes</a> (at time of writing, this includes the one above). Heroku will use a supported runtime irrespective of the value specified in this file.</p>
+  <p><strong>Note:</strong> Heroku only supports a small number of <a href="https://devcenter.heroku.com/articles/python-support#supported-python-runtimes">Python runtimes</a> (at time of writing, this includes the one above). Heroku will use a supported runtime irrespective of the value specified in this file.</p>
 </div>
 
 <h4 id="Re-test_and_save_changes_to_Github">Re-test and save changes to Github</h4>
@@ -533,8 +522,7 @@ git push origin main
 <pre class="brush: bash">heroku create</pre>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>You can name the remote if you like by specifying a value after "create". If you don't then you'll get a random name. The name is used in the default URL.</p>
+  <p><strong>Note:</strong> You can name the remote if you like by specifying a value after "create". If you don't then you'll get a random name. The name is used in the default URL.</p>
 </div>
 
 <p>We can then push our app to the Heroku repository as shown below. This will upload the app, package it in a dyno, run <em>collectstatic</em>, and start the site.</p>
@@ -585,8 +573,7 @@ DATABASE_URL: postgres://uzfnbcyxidzgrl:j2jkUFDF6OGGqxkgg7Hk3ilbZI@ec2-54-243-20
 <p>If you recall from the section on <a href="#getting_your_website_ready_to_publish">getting the website ready to publish</a>, we have to set environment variables for <code>DJANGO_SECRET_KEY</code> and <code>DJANGO_DEBUG</code>. Let's do this now.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>The secret key needs to be really secret! One way to generate a new key is to use the <a href="https://www.miniwebtool.com/django-secret-key-generator/">Django Secret Key Generator</a>.</p>
+  <p><strong>Note:</strong> The secret key needs to be really secret! One way to generate a new key is to use the <a href="https://www.miniwebtool.com/django-secret-key-generator/">Django Secret Key Generator</a>.</p>
 </div>
 
 <p>We set <code>DJANGO_SECRET_KEY</code> using the <code>config:set</code> command (as shown below). Remember to use your own secret key!</p>
@@ -619,8 +606,7 @@ git push origin main
 git push heroku main</pre>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>After the site update to Heroku completes, enter a URL that does not exist (e.g. <strong>/catalog/doesnotexist/</strong>). Previously this would have displayed a detailed debug page, but now you should just see a simple "Not Found" page.</p>
+  <p><strong>Note:</strong> After the site update to Heroku completes, enter a URL that does not exist (e.g. <strong>/catalog/doesnotexist/</strong>). Previously this would have displayed a detailed debug page, but now you should just see a simple "Not Found" page.</p>
 </div>
 
 <h3 id="Debugging">Debugging</h3>
