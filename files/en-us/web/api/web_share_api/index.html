@@ -19,7 +19,7 @@ tags:
 
 <ul>
   <li>{{domxref("navigator.canShare()")}}: Returns a boolean indicating whether the specified data is sharable.</li>
-  <li>{{domxref("navigator.share()")}}: Share the specified data. This method must be called on a button click or other user activation (requires {{Glossary("transient activation")}}).</li>
+  <li>{{domxref("navigator.share()")}}: Returns a {{jsxref("Promise")}} that resolves if the passed data was successfully sent to a share target. This method must be called on a button click or other user activation (requires {{Glossary("transient activation")}}).</li>
 </ul>
 
 <p>The Web Share API is gated by the <a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy/web-share">web-share</a> permission policy.
