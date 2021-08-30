@@ -36,10 +36,22 @@ An array containing all locales from <var>localeArray</var> that are supported b
 
 ## Examples
 
+### Using supportedLocalesOf()
+
+Assuming a runtime that supports Indonesian and German but not Balinese in list
+formatting, `supportedLocalesOf` returns the Indonesian and German language
+tags unchanged, even though `pinyin` collation is neither relevant to segmentation
+nor used with Indonesian, and a specialized German for Indonesia is
+unlikely to be supported. Note the specification of the "`lookup`"
+algorithm here — a "`best fit`" matcher might decide that Indonesian is an
+adequate match for Balinese since most Balinese speakers also understand Indonesian,
+and therefore return the Balinese language tag as well.
+
 ```js
-let validLocales = Intl.Segmenter.supportedLocalesOf(["yue", "zh", "en", "xy", "fr"]);
-console.log(validLocales);
-// => ["zh", "en", "fr"]
+const locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
+const options = { localeMatcher: 'lookup' };
+console.log(Intl.Segmenter.supportedLocalesOf(locales, options).join(', '));
+// → "id-u-co-pinyin, de-ID"
 ```
 
 ## Specifications

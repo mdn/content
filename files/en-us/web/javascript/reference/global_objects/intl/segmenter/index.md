@@ -8,12 +8,12 @@ browser-compat: javascript.builtins.Intl.Segmenter
 ---
 {{JSRef}}
 
-The **`Intl.Segmenter`** object is a constructor for segmenters, which are objects that enable language-sensitive string splitting between graphemes.
+The **`Intl.Segmenter`** object enables language-sensitive text segmentation.
 
 ## Constructor
 
 - {{jsxref("Intl.Segmenter/constructor", "Intl.Segmenter()")}}
-  - : Creates a new `Segmenter` object.
+  - : Creates a new `Intl.Segmenter` object.
 
 ## Static methods
 

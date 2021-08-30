@@ -12,7 +12,7 @@ tags:
 browser-compat: javascript.builtins.Intl.Segmenter.constructor
 ---
 
-The constructor for a new locale-dependent {{jsxref('Intl/Segmenter','Intl.Segmenter')}} object.
+The Intl.Segmenter() constructor creates {{jsxref('Intl/Segmenter','Intl.Segmenter')}} objects that enable locale-sensitive text segmentation.
 
 ## Syntax
 
@@ -28,11 +28,11 @@ new Intl.segmenter(locale, options);
 - `locale` {{ optional_inline }}
   - : A string value indicating the locale by which graphemes, words, and sentences should be determined.  Locales are described using [BCP 47](https://datatracker.ietf.org/doc/html/bcp47) language tags (see the [IANA language subtag registry](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry) for a full list).  If no <var>locale</var> value is supplied, the runtime's default locale is used instead.
 - `options` {{ optional_inline }}
-  - : An object containing the option values.  Possible options are:
+  - : An object with some or all of the following properties:
     - `granularity` {{ optional_inline }}
       - : A string.  Possible values are:
         - `grapheme` (default)
-          - : Split the input into segments by grapheme, as determined by the locale.
+          - : Split the input into segments at grapheme cluster (user-perceived character) boundaries, as determined by the locale.
         - `word`
           - : Split the input into segments at word boundaries, as determined by the locale.
         - `sentence`
@@ -51,10 +51,13 @@ A new `Intl.Segmenter` {{jsxref('Intl/Segmenter/segments','Segments instance',''
 
 ## Examples
 
+### Basic usage
+
+The following example shows how to count words in a string using the Spanish language.
+
 ```js
-// Create a Spanish-language sentence segmenter
-const spanishSegmenter = new Intl.Segmenter("es", {granularity: "sentence"});
-```
+const spanishSegmenter = new Intl.Segmenter("es", {granularity: "word"});
+console.log([...spanishSegmenter.segment(text)].filter(segment => segment.isWordLike).length);
 
 ## Specifications
 

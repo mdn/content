@@ -7,7 +7,7 @@ tags:
 browser-compat: javascript.builtins.Intl.Segmenter
 ---
 
-The `.containing()` method returns a {{jsxref('Intl.Segmenter/SegmentData','SegmentData object','','nomono')}} describing the segment in the string, including the code unit at the specified code unit.
+The `.containing()` method returns a {{jsxref('Intl.Segmenter/SegmentData','SegmentData object','','nomono')}} describing the segment in the string that includes the code unit at the specified index.
 
 ## Syntax
 
