@@ -13,7 +13,7 @@ browser-compat: api.Navigator.share
 
 <p>The <strong><code>navigator.share()</code></strong> method of the <a href="/en-US/docs/Web/API/Web_Share_API">Web Share API</a> invokes the native sharing mechanism of the device to share data such as text, URLs, or files. The available <em>share targets</em> depend on the device, but might include the clipboard, contacts and email applications, websites, bluetooth, etc.</p>
 
-<p>The method requires that the current document has the <a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy/web-share">web-share</a> permission policy and {{Glossary("transient activation")}} (it must be triggered off a UI event like a button click and cannot be launched at arbitrary points by a script). Further the method must specify valid data that is supported for sharing by the native implementation.</p>
+<p>This method requires that the current document have the <a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy/web-share">web-share</a> permission policy and {{Glossary("transient activation")}}. (It must be triggered off a UI event like a button click and cannot be launched at arbitrary points by a script.) Further, the method must specify valid data that is supported for sharing by the native implementation.</p>
 
 <p>The method resolves a {{jsxref("Promise")}} with <code>undefined</code> as soon as the data is successfully passed to the <em>share target</em>.</p>
 
