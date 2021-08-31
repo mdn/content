@@ -83,7 +83,7 @@ target.addEventListener(type, listener, useCapture, wantsUntrusted); // wantsUnt
     </dl>
   </dd>
   <dt><code><var>useCapture</var></code> {{optional_inline}}</dt>
-  <dd>A boolean value indicating whether events of this type will be dispatched to
+  <dd><p>A boolean value indicating whether events of this type will be dispatched to
     the registered <code><var>listener</var></code> <em>before</em> being dispatched to
     any <code>EventTarget</code> beneath it in the DOM tree. Events that are bubbling
     upward through the tree will not trigger a listener designated to use capture. Event
@@ -94,8 +94,7 @@ target.addEventListener(type, listener, useCapture, wantsUntrusted); // wantsUnt
       Level 3 Events</a> and <a
       href="https://www.quirksmode.org/js/events_order.html#link4">JavaScript Event
       order</a> for a detailed explanation. If not specified,
-    <code><var>useCapture</var></code> defaults to <code>false</code>.</dd>
-  <dd>
+    <code><var>useCapture</var></code> defaults to <code>false</code>.</p>
     <div class="notecard note">
       <p><strong>Note:</strong> For event listeners attached to the event target, the event is in the target phase,
         rather than the capturing and bubbling phases.

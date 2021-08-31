@@ -52,8 +52,10 @@ console.log(child_nodes.length); // outputs "3"
 
 <dl>
  <dt>{{domxref("NodeList.item()")}}</dt>
- <dd>Returns an item in the list by its index, or <code>null</code> if the index is out-of-bounds.</dd>
- <dd>An alternative to accessing <code>nodeList[<var>i</var>]</code> (which instead returns  <code>undefined</code> when <code><var>i</var></code> is out-of-bounds). This is mostly useful for non-JavaScript DOM implementations.</dd>
+ <dd>
+   <p>Returns an item in the list by its index, or <code>null</code> if the index is out-of-bounds.</p>
+   <p>An alternative to accessing <code>nodeList[<var>i</var>]</code> (which instead returns  <code>undefined</code> when <code><var>i</var></code> is out-of-bounds). This is mostly useful for non-JavaScript DOM implementations.</p>
+ </dd>
  <dt>{{domxref("NodeList.entries()")}}</dt>
  <dd>Returns an {{jsxref("Iteration_protocols","iterator")}}, allowing code to go through all key/value pairs contained in the collection. (In this case, the keys are numbers starting from <code>0</code> and the values are nodes.)</dd>
  <dt>{{domxref("NodeList.forEach()")}}</dt>
