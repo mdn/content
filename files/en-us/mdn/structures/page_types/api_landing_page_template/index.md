@@ -108,7 +108,7 @@ For a practical usage guide with code examples, you should include a "Usage..." 
 
 To help improve content discoverability and {{Glossary("SEO")}}, keep the following tips in mind:
 
-## _Name of API_ interfaces
+## Interfaces
 
 - {{domxref("NameOfTheInterface")}}
   - : Include a brief description of the interface and what it does here.
