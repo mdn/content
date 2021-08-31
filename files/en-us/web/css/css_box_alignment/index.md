@@ -164,7 +164,7 @@ In the below example, a grid layout uses the `gap` shorthand to set a `10px` gap
 
 {{EmbedGHLiveSample("css-examples/box-alignment/overview/grid-gap.html", '100%', 500)}}
 
-In this example I am using the {{cssxref("gap")}} property in addition to {{cssxref("gap")}}. The gap properties were originally prefixed with `grid-` in the Grid Layout specification and some browsers only support these prefixed versions.
+In this example I am using the `grid-gap` property instead of {{cssxref("gap")}}. The gap properties were originally prefixed with `grid-` in the Grid Layout specification and some browsers only support these prefixed versions.
 
 - {{cssxref("row-gap")}}
 - {{cssxref("column-gap")}}
