@@ -33,7 +33,7 @@ browser-compat: api.CacheStorage
 <p>You can access <code>CacheStorage</code> through the global {{domxref("WindowOrWorkerGlobalScope.caches", "caches")}} property.</p>
 
 <div class="notecard note">
-  <p><strong>Note:</strong> CacheStorage always rejects with a <code>SecurityError</code> on untrusted origins (i.e. those that aren't using HTTPS, although this definition will likely become more complex in the future.) When testing on Firefox, you can get around this by checking the <strong>Enable Service Workers over HTTP (when toolbox is open)</strong> option in the Firefox Devtools options/gear menu. Furthermore, CacheStorage requires disk access in Firefox, due to which it may be unavailable in private mode. </p>
+  <p><strong>Note:</strong> <code>CacheStorage</code> always rejects with a <code>SecurityError</code> on untrusted origins (i.e. those that aren't using HTTPS, although this definition will likely become more complex in the future.) When testing on Firefox, you can get around this by checking the <strong>Enable Service Workers over HTTP (when toolbox is open)</strong> option in the Firefox Devtools options/gear menu. Furthermore, because <code>CacheStorage</code> requires disk access, it may be unavailable in private mode in Firefox.</p>
 </div>
 
 <div class="notecard note">
