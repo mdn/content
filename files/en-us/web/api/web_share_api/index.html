@@ -13,22 +13,40 @@ tags:
 
 <p>The <strong>Web Share API</strong> provides a mechanism for sharing text, links, files, and other content to an arbitrary <em>share target</em> selected by the user.</p>
 
-<p>The available share targets are provided using the native mechanisms of the underlying operating system. They might, for example, include the system clipboard or other services, Bluetooth or WiFi, email, contacts or messaging applications, and websites.</p>
-
-<p>The API consists of just two methods:</p>
-
-<ul>
-  <li>{{domxref("navigator.canShare()")}}: Returns a boolean indicating whether the specified data is sharable.</li>
-  <li>{{domxref("navigator.share()")}}: Returns a {{jsxref("Promise")}} that resolves if the passed data was successfully sent to a share target. This method must be called on a button click or other user activation (requires {{Glossary("transient activation")}}).</li>
-</ul>
-
-<p>The Web Share API is gated by the <a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy/web-share">web-share</a> permission policy.
-  If the policy is supported but has not been granted, both methods will indicate that the data is not sharable.</p>
+{{securecontext_header}}
 
 <div class="notecard note">
   <p><strong>Note:</strong> This API is <em>not available</em> in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a> (not exposed via {{domxref("WorkerNavigator")}}).</p>
 </div>
 
+<div class="notecard note">
+  <p><strong>Note:</strong> This API should not be confused with the <a href="/en-US/docs/Web/API/Web_Share_Target_API">Web Share Target API</a>, which allows a website to specify itself as a share target.</p>
+</div>
+
+<h2 id="concepts_and_usage">Concepts and usage</h2>
+
+<p>The <strong>Web Share API</strong> allows a site to share text, links, files, and other content to user-selected share targets, utilizing the sharing mechanisms of the underlying operating system.
+These share targets typically include the system clipboard, email, contacts or messaging applications, and Bluetooth or WiFi channels.</p>
+
+<p>The API has just two methods.
+  The {{domxref("navigator.canShare()")}} method may be used to first validate whether some data is "sharable", prior to passing it to {{domxref("navigator.share()")}} for sending.</p>
+
+<p>The {{domxref("navigator.share()")}} method invokes the native sharing mechanism of the underlying operating system and passes the specified data.
+    It requires {{Glossary("transient activation")}}, and hence must be triggered off a UI event like a button click.
+    Further, the method must specify valid data that is supported for sharing by the native implementation.</p>
+
+<p>The Web Share API is gated by the <a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy/web-share">web-share</a> permission policy.
+  If the policy is supported but has not been granted, both methods will indicate that the data is not sharable.</p>
+
+<h2 id="interfaces">Interfaces</h2>
+
+<dl>
+ <dt>{{domxref("navigator.canShare()")}}</dt>
+ <dd>Returns a boolean indicating whether the specified data is sharable.</dd>
+ <dt>{{domxref("navigator.share()")}}</dt>
+ <dd>Returns a {{jsxref("Promise")}} that resolves if the passed data was successfully sent to a share target.
+   This method must be called on a button click or other user activation (requires {{Glossary("transient activation")}}).</dd>
+</dl>
 
 <h2 id="Example">Example</h2>
 
@@ -64,9 +82,10 @@ btn.addEventListener('click', async () => {
 
 {{Compat("api.Navigator.share")}}
 
+{{Compat("api.Navigator.canShare")}}
+
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="https://wpt.live/web-share/">https://wpt.live/web-share/</a> (web platform tests)</li>
   <li><a href="https://web.dev/web-share-target/">Receiving shared data with the Web Share Target API</a> (https://web.dev/)</li>
 </ul>
