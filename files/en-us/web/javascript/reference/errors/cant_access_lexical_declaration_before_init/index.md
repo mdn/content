@@ -56,7 +56,7 @@ test();
 
 ### Valid cases
 
-But, in this case we already declared a variable using `let` keyword before accessing it, so we encounter no error. Also, notice how we are accessing "bar" variable (declared using `var` keyword), even before it is declared (returns undefined) without encountering any error that's because of [hoisted](/en-US/docs/Glossary/Hoisting) nature of `var` variables.
+In the following example, we correctly declare a variable using the `let` keyword before accessing it, so we encounter no error. And in contrast, notice how we are accessing the `bar` variable even before it is declared — without encountering any error. That's because of the [hoisted](/en-US/docs/Glossary/Hoisting) nature of `var` variables.
 
 ```js example-good
 function test(){
