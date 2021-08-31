@@ -131,7 +131,9 @@ function displayImage(blob) {
   document.body.appendChild(image);
 }
 
-loadAsset('coffee.jpg', 'blob', displayImage);</pre>
+loadAsset('coffee.jpg', 'blob', displayImage);
+// Blob stands for "Binary Large Object" and is a collection of binary data stored as a single entity. Blobs are typically images, audio or other multimedia objects
+</pre>
 
 <p>Here we create a <code>displayImage()</code> function that represents a blob passed to it as an object URL, then creates an image to display the URL in, appending it to the document's <code>&lt;body&gt;</code>. However, we then create a <code>loadAsset()</code> function that takes a callback as a parameter, along with a URL to fetch and a content type. It uses <code>XMLHttpRequest</code> (often abbreviated to "XHR") to fetch the resource at the given URL, then pass the response to the callback to do something with. In this case the callback is waiting on the XHR call to finish downloading the resource (using the <code><a href="/en-US/docs/Web/API/XMLHttpRequestEventTarget/onload">onload</a></code> event handler) before it passes it to the callback.</p>
 
