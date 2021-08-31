@@ -88,7 +88,7 @@ module.exports = router;
 </pre>
 
 <div class="notecard note">
-<p><strong>Note:</strong> Above we are defining our route handler callbacks directly in the router functions. In the LocalLibrary we'll define these callbacks in a separate controller module.</p>
+  <p><strong>Note:</strong> Above we are defining our route handler callbacks directly in the router functions. In the LocalLibrary we'll define these callbacks in a separate controller module.</p>
 </div>
 
 <p>To use the router module in our main app file we first <code>require()</code> the route module (<strong>wiki.js</strong>). We then call <code>use()</code> on the <em>Express</em> application to add the Router to the middleware handling path, specifying a URL path of 'wiki'.</p>
@@ -204,11 +204,11 @@ app.use('/wiki', wiki);</pre>
 <p>Start by creating a folder for our controllers in the project root (<strong>/controllers</strong>) and then create separate controller files/modules for handling each of the models:</p>
 
 <pre>/express-locallibrary-tutorial  //the project root
-  <strong>/controllers</strong>
-    <strong>authorController.js</strong>
-    <strong>bookController.js</strong>
-    <strong>bookinstanceController.js</strong>
-    <strong>genreController.js</strong></pre>
+  /controllers
+    authorController.js
+    bookController.js
+    bookinstanceController.js
+    genreController.js</pre>
 
 <h3 id="Author_controller">Author controller</h3>
 
@@ -357,13 +357,14 @@ exports.genre_update_post = function(req, res) {
 
 <h4 id="Book_controller">Book controller</h4>
 
-<p>Open the <strong>/controllers/bookController.js</strong> file and copy in the following code. This follows the same pattern as the other controller modules, but additionally has an <code>index()</code> function for displaying the site welcome page:</p>
+<p>Open the <strong>/controllers/bookController.js</strong> file and copy in the following code.
+This follows the same pattern as the other controller modules, but additionally has an <code>index()</code> function for displaying the site welcome page:</p>
 
 <pre class="brush: js">var Book = require('../models/book');
 
-<strong>exports.index = function(req, res) {
+exports.index = function(req, res) {
     res.send('NOT IMPLEMENTED: Site Home Page');
-};</strong>
+};
 
 // Display list of all books.
 exports.book_list = function(req, res) {
@@ -410,19 +411,20 @@ exports.book_update_post = function(req, res) {
 
 <p>Next we create <em>routes</em> for all the URLs <a href="#local_libary_routes">needed by the LocalLibrary website</a>, which will call the controller functions we defined in the previous section.</p>
 
-<p>The skeleton already has a <strong>./routes</strong> folder containing routes for the <em>index</em> and <em>users</em>. Create another route file — <strong>catalog.js</strong> — inside this folder, as shown.</p>
+<p>The skeleton already has a <strong>./routes</strong> folder containing routes for the <em>index</em> and <em>users</em>.
+Create another route file — <strong>catalog.js</strong> — inside this folder, as shown.</p>
 
 <pre>/express-locallibrary-tutorial //the project root
   /routes
     index.js
     users.js
-    <strong>catalog.js</strong></pre>
+    catalog.js</pre>
 
 <p>Open <strong>/routes/catalog.js</strong> and copy in the code below:</p>
 
-<pre class="brush: js"><strong>var express = require('express');
+<pre class="brush: js">var express = require('express');
 var router = express.Router();
-</strong>
+
 // Require controller modules.
 var book_controller = require('../controllers/bookController');
 var author_controller = require('../controllers/authorController');
@@ -536,7 +538,7 @@ router.get('/bookinstance/:id', book_instance_controller.bookinstance_detail);
 // GET request for list of all BookInstance.
 router.get('/bookinstances', book_instance_controller.bookinstance_list);
 
-<strong>module.exports = router;</strong>
+module.exports = router;
 </pre>
 
 <p>The module requires Express and then uses it to create a <code>Router</code> object. The routes are all set up on the router, which is then exported.</p>

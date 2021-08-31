@@ -61,15 +61,15 @@ tags:
 
 <pre class="brush: python">INSTALLED_APPS = [
     ...
-<strong>    'django.contrib.auth',  </strong>#Core authentication framework and its default models.
-<strong>    'django.contrib.contenttypes',  #</strong>Django content type system (allows permissions to be associated with models).
+    'django.contrib.auth',  #Core authentication framework and its default models.
+    'django.contrib.contenttypes',  #Django content type system (allows permissions to be associated with models).
     ....
 
 MIDDLEWARE = [
     ...
-<strong>    'django.contrib.sessions.middleware.SessionMiddleware',</strong>  #Manages sessions across requests
+    'django.contrib.sessions.middleware.SessionMiddleware',  #Manages sessions across requests
     ...
-<strong>    'django.contrib.auth.middleware.AuthenticationMiddleware',</strong>  #Associates users with requests using sessions.
+    'django.contrib.auth.middleware.AuthenticationMiddleware',  #Associates users with requests using sessions.
     ....
 </pre>
 
@@ -169,10 +169,11 @@ accounts/ reset/&lt;uidb64&gt;/&lt;token&gt;/ [name='password_reset_confirm']
 accounts/ reset/done/ [name='password_reset_complete']</pre>
 </div>
 
-<p>Now try to navigate to the login URL (<a href="http://127.0.0.1:8000/accounts/login/">http://127.0.0.1:8000/accounts/login/</a>). This will fail again, but with an error that tells you that we're missing the required template (<strong>registration/login.html</strong>) on the template search path. You'll see the following lines listed in the yellow section at the top:</p>
+<p>Now try to navigate to the login URL (<a href="http://127.0.0.1:8000/accounts/login/">http://127.0.0.1:8000/accounts/login/</a>). This will fail again, but with an error that tells you that we're missing the required template (<strong>registration/login.html</strong>) on the template search path.
+You'll see the following lines listed in the yellow section at the top:</p>
 
 <pre class="brush: python">Exception Type:    TemplateDoesNotExist
-Exception Value:    <strong>registration/login.html</strong></pre>
+Exception Value:    registration/login.html</pre>
 
 <p>The next step is to create a registration directory on the search path and then add the <strong>login.html</strong> file.</p>
 
@@ -203,7 +204,7 @@ Exception Value:    <strong>registration/login.html</strong></pre>
     TEMPLATES = [
       {
        ...
-    <strong>   'DIRS': [os.path.join(BASE_DIR, 'templates')],</strong>
+       'DIRS': [os.path.join(BASE_DIR, 'templates')],
        'APP_DIRS': True,
        ...
     </pre>
@@ -413,12 +414,12 @@ LOGIN_REDIRECT_URL = '/'
 
     ...
 
-   <strong>{% if user.is_authenticated %}</strong>
-     &lt;li&gt;User: <strong>\{{ user.get_username }}</strong>&lt;/li&gt;
+   {% if user.is_authenticated %}
+     &lt;li&gt;User: \{{ user.get_username }}&lt;/li&gt;
      &lt;li&gt;&lt;a href="{% url 'logout'%}?next=\{{request.path}}"&gt;Logout&lt;/a&gt;&lt;/li&gt;
-   <strong>{% else %}</strong>
+   {% else %}
      &lt;li&gt;&lt;a href="{% url 'login'%}?next=\{{request.path}}"&gt;Login&lt;/a&gt;&lt;/li&gt;
-   <strong>{% endif %} </strong>
+   {% endif %}
   &lt;/ul&gt;</pre>
 
 <p>As you can see, we use <code>if</code>-<code>else</code>-<code>endif</code> template tags to conditionally display text based on whether <code>\{{ user.is_authenticated }}</code> is true. If the user is authenticated then we know that we have a valid user, so we call <code>\{{ user.get_username }}</code> to display their name.</p>
@@ -485,7 +486,7 @@ class MyView(LoginRequiredMixin, View):
 
 <pre class="brush: python">from datetime import date</pre>
 
-<p class="brush: python">Now add the following property definition to the <code>BookInstance</code> class:</p>
+<p>Now add the following property definition to the <code>BookInstance</code> class:</p>
 
 <pre class="brush: python">@property
 def is_overdue(self):
@@ -505,11 +506,12 @@ python3 manage.py migrate
 
 <h3 id="Admin">Admin</h3>
 
-<p>Now open <strong>catalog/admin.py</strong>, and add the <code>borrower</code> field to the <code>BookInstanceAdmin</code> class in both the <code>list_display</code> and the <code>fieldsets</code> as shown below. This will make the field visible in the Admin section, allowing us to assign a <code>User</code> to a <code>BookInstance</code> when needed.</p>
+<p>Now open <strong>catalog/admin.py</strong>, and add the <code>borrower</code> field to the <code>BookInstanceAdmin</code> class in both the <code>list_display</code> and the <code>fieldsets</code> as shown below.
+This will make the field visible in the Admin section, allowing us to assign a <code>User</code> to a <code>BookInstance</code> when needed.</p>
 
 <pre class="brush: python">@admin.register(BookInstance)
 class BookInstanceAdmin(admin.ModelAdmin):
-    list_display = ('book', 'status'<strong>, 'borrower'</strong>, 'due_back', 'id')
+    list_display = ('book', 'status', 'borrower', 'due_back', 'id')
     list_filter = ('status', 'due_back')
 
     fieldsets = (
@@ -517,7 +519,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
             'fields': ('book','imprint', 'id')
         }),
         ('Availability', {
-            'fields': ('status', 'due_back'<strong>,'borrower'</strong>)
+            'fields': ('status', 'due_back','borrower')
         }),
     )</pre>
 
@@ -617,13 +619,15 @@ class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
 
 <h3 id="Models_2">Models</h3>
 
-<p>Defining permissions is done on the model "<code>class Meta</code>" section, using the <code>permissions</code> field. You can specify as many permissions as you need in a tuple, each permission itself being defined in a nested tuple containing the permission name and permission display value. For example, we might define a permission to allow a user to mark that a book has been returned as shown:</p>
+<p>Defining permissions is done on the model "<code>class Meta</code>" section, using the <code>permissions</code> field.
+You can specify as many permissions as you need in a tuple, each permission itself being defined in a nested tuple containing the permission name and permission display value.
+For example, we might define a permission to allow a user to mark that a book has been returned as shown:</p>
 
 <pre class="brush: python">class BookInstance(models.Model):
     ...
     class Meta:
         ...
-        <strong>permissions = (("can_mark_returned", "Set book as returned"),)</strong></pre>
+        permissions = (("can_mark_returned", "Set book as returned"),)</pre>
 
 <p>We could then assign the permission to a "Librarian" group in the Admin site.</p>
 

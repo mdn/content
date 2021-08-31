@@ -533,13 +533,13 @@ response = self.client.get(reverse('authors'))
 <p>Once we have the response we query it for its status code, the template used, whether or not the response is paginated, the number of items returned, and the total number of items.</p>
 
 <div class="notecard note">
-    <p><strong>Note:</strong> </p>
-    <p class="brush: python">Note: If you set the <code>paginate_by</code> variable in your <strong>/catalog/views.py</strong> file to a number other than 10, make sure to update the lines that test that the correct number of items are displayed in paginated templates above and in following sections. For example, if you set the variable for the author list page to 5, update the line above to:</p>
+    <p><strong>Note:</strong> If you set the <code>paginate_by</code> variable in your <strong>/catalog/views.py</strong> file to a number other than 10, make sure to update the lines that test that the correct number of items are displayed in paginated templates above and in following sections. For example, if you set the variable for the author list page to 5, update the line above to:</p>
 
     <pre class="brush: python">self.assertTrue(len(response.context['author_list']) == 5)</pre>
 </div>
 
-<p>The most interesting variable we demonstrate above is <code>response.context</code>, which is the context variable passed to the template by the view. This is incredibly useful for testing, because it allows us to confirm that our template is getting all the data it needs. In other words we can check that we're using the intended template and what data the template is getting, which goes a long way to verifying that any rendering issues are solely due to template.</p>
+<p>The most interesting variable we demonstrate above is <code>response.context</code>, which is the context variable passed to the template by the view.
+This is incredibly useful for testing, because it allows us to confirm that our template is getting all the data it needs. In other words we can check that we're using the intended template and what data the template is getting, which goes a long way to verifying that any rendering issues are solely due to template.</p>
 
 <h4 id="Views_that_are_restricted_to_logged_in_users">Views that are restricted to logged in users</h4>
 

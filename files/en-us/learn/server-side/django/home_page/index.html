@@ -95,10 +95,11 @@ tags:
   <p><strong>Note:</strong> Whenever Django encounters the import function <code><a href="https://docs.djangoproject.com/en/3.1/ref/urls/#django.urls.include" title="django.conf.urls.include">django.urls.include()</a></code>, it splits the URL string at the designated end character and sends the remaining substring to the included <em>URLconf</em> module for further processing.</p>
 </div>
 
-<p>We also created a placeholder file for the <em>URLConf</em> module, named <strong>/catalog/urls.py</strong>. Add the following lines to that file: </p>
+<p>We also created a placeholder file for the <em>URLConf</em> module, named <strong>/catalog/urls.py</strong>.
+Add the following lines to that file: </p>
 
 <pre class="brush: python">urlpatterns = [
-<strong>    path('', views.index, name='index'),</strong>
+    path('', views.index, name='index'),
 ]</pre>
 
 <p>The <code>path()</code> function defines the following:</p>

@@ -280,29 +280,33 @@ GET /stylesheets/style.css 200 4.886 ms - 111
 
 <h3 id="Directory_structure">Directory structure</h3>
 
-<p>The generated project, now that you have installed dependencies, has the following file structure (files are the items <strong>not</strong> prefixed with "/"). The <strong>package.json</strong> file defines the application dependencies and other information. It also defines a startup script that will call the application entry point, the JavaScript file <strong>/bin/www</strong>. This sets up some of the application error handling and then loads <strong>app.js</strong> to do the rest of the work. The app routes are stored in separate modules under the <strong>routes/</strong> directory. The templates are stored under the /<strong>views</strong> directory.</p>
+<p>The generated project, now that you have installed dependencies, has the following file structure (files are the items <strong>not</strong> prefixed with "/").
+The <strong>package.json</strong> file defines the application dependencies and other information.
+It also defines a startup script that will call the application entry point, the JavaScript file <strong>/bin/www</strong>.
+This sets up some of the application error handling and then loads <strong>app.js</strong> to do the rest of the work.
+The app routes are stored in separate modules under the <strong>routes/</strong> directory.
+The templates are stored under the /<strong>views</strong> directory.</p>
 
 <pre>/express-locallibrary-tutorial
-    <strong>app.js</strong>
+    app.js
     /bin
-        <strong>www</strong>
-    <strong>package.json</strong>
-    <strong>package-lock.json</strong>
+        www
+    package.json
+    package-lock.json
     /node_modules
         [about 6700 subdirectories and files]
     /public
         /images
         /javascripts
         /stylesheets
-            <strong>style.css</strong>
+            style.css
     /routes
-        <strong>index.js</strong>
-        <strong>users.js</strong>
+        index.js
+        users.js
     /views
-        <strong>error.pug</strong>
-        <strong>index.pug</strong>
-        <strong>layout.pug</strong>
-
+        error.pug
+        index.pug
+        layout.pug
 </pre>
 
 <p>The following sections describe the files in a little more detail.</p>
@@ -362,7 +366,7 @@ GET /stylesheets/style.css 200 4.886 ms - 111
  * Module dependencies.
  */
 
-<strong>var app = require('../app');</strong>
+var app = require('../app');
 </pre>
 
 <div class="notecard note">
@@ -411,13 +415,15 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 </pre>
 
-<p>The next set of functions call <code>app.use()</code> to add the <em>middleware</em> libraries into the request handling chain. In addition to the 3rd party libraries we imported previously, we use the <code>express.static</code> middleware to get <em>Express</em> to serve all the static files in the <strong>/public</strong> directory in the project root.</p>
+<p>The next set of functions call <code>app.use()</code> to add the <em>middleware</em> libraries into the request handling chain.
+In addition to the 3rd party libraries we imported previously, we use the <code>express.static</code> middleware to get <em>Express</em> to serve all the static files in the <strong>/public</strong> directory in the project root.</p>
 
 <pre class="brush: js">app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-<strong>app.use(express.static(path.join(__dirname, 'public')));</strong>
+
+app.use(express.static(path.join(__dirname, 'public')));
 </pre>
 
 <p>Now that all the other middleware is set up, we add our (previously imported) route-handling code to the request handling chain. The imported code will define particular routes for the different <em>parts</em> of the site:</p>
@@ -456,14 +462,16 @@ app.use(function(err, req, res, next) {
 
 <h3 id="Routes">Routes</h3>
 
-<p>The route file <strong>/routes/users.js</strong> is shown below (route files share a similar structure, so we don't need to also show <strong>index.js</strong>). First, it loads the <em>express</em> module and uses it to get an <code>express.Router</code> object. Then it specifies a route on that object and lastly exports the router from the module (this is what allows the file to be imported into <strong>app.js</strong>).</p>
+<p>The route file <strong>/routes/users.js</strong> is shown below (route files share a similar structure, so we don't need to also show <strong>index.js</strong>).
+First, it loads the <em>express</em> module and uses it to get an <code>express.Router</code> object.
+Then it specifies a route on that object and lastly exports the router from the module (this is what allows the file to be imported into <strong>app.js</strong>).</p>
 
 <pre class="brush: js">var express = require('express');
 var router = express.Router();
 
 /* GET users listing. */
-<strong>router.get('/', function(req, res, next) {
-  res.send('respond with a resource');</strong>
+router.get('/', function(req, res, next) {
+  res.send('respond with a resource');
 });
 
 module.exports = router;

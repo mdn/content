@@ -419,13 +419,14 @@ def book_detail_view(request, primary_key):
 
 
 <div class="notecard note">
-  <p><strong>Note:</strong> The author link in the template above has an empty URL because we've not yet created an author detail page to link to. Once the detail page exists we can get its URL with either of these two approaches:</p>
+  <p><strong>Note:</strong> The author link in the template above has an empty URL because we've not yet created an author detail page to link to.
+  Once the detail page exists we can get its URL with either of these two approaches:</p>
   <ul>
     <li>Use the <code>url</code> template tag to reverse the 'author-detail' URL (defined in the URL mapper), passing it the author instance for the book: 
-      <pre>&lt;a href="<strong>{% url 'author-detail' book.author.pk %}</strong>"&gt;\{{ book.author }}&lt;/a&gt;</pre>
+      <pre>&lt;a href="{% url 'author-detail' book.author.pk %}"&gt;\{{ book.author }}&lt;/a&gt;</pre>
     </li>
     <li>Call the author model's <code>get_absolute_url()</code> method (this performs the same reversing operation):
-      <pre>&lt;a href="<strong>\{{ book.author.get_absolute_url }}</strong>"&gt;\{{ book.author }}&lt;/a&gt;</pre>
+      <pre>&lt;a href="\{{ book.author.get_absolute_url }}"&gt;\{{ book.author }}&lt;/a&gt;</pre>
     </li>
   </ul>
   <p>While both methods effectively do the same thing, <code>get_absolute_url()</code> is preferred because it helps you write more consistent and maintainable code (any changes only need to be done in one place: the author model).</p>
@@ -482,8 +483,8 @@ def book_detail_view(request, primary_key):
     def __str__(self):
         return f'{self.last_name}, {self.first_name}'
 
-<strong>    class Meta:
-        ordering = ['last_name']</strong></pre>
+    class Meta:
+        ordering = ['last_name']</pre>
 
   <p>Of course, the field doesn't need to be <code>last_name</code>: it could be any other.</p>
 
@@ -494,9 +495,10 @@ def book_detail_view(request, primary_key):
 <p>The second interesting (and non-obvious) thing in the template is where we set a class (<code>text-success</code>, <code>text-danger</code>, <code>text-warning</code>) to color-code the human readable status text for each book instance ("available", "maintenance", etc.). Astute readers will note that the method <code>BookInstance.get_status_display()</code> that we use to get the status text does not appear elsewhere in the code.</p>
 
 <pre class="brush: python"> &lt;p class="{% if copy.status == 'a' %}text-success{% elif copy.status == 'm' %}text-danger{% else %}text-warning{% endif %}"&gt;
- <strong>\{{ copy.get_status_display }}</strong> &lt;/p&gt;</pre>
+ \{{ copy.get_status_display }} &lt;/p&gt;</pre>
 
-<p>This function is automatically created because <code>BookInstance.status</code> is a <a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#choices">choices field</a>. Django automatically creates a method <code>get_<strong>FOO</strong>_display()</code> for every choices field "<code>Foo</code>" in a model, which can be used to get the current value of the field. </p>
+<p>This function is automatically created because <code>BookInstance.status</code> is a <a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#choices">choices field</a>.
+Django automatically creates a method <code>get_<strong>FOO</strong>_display()</code> for every choices field "<code>Foo</code>" in a model, which can be used to get the current value of the field. </p>
 
 <h2 id="What_does_it_look_like_2">What does it look like?</h2>
 

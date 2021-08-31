@@ -163,16 +163,17 @@ class RenewBookForm(forms.Form):
 
 <p>Update your forms.py file so it looks like this:</p>
 
-<pre class="brush: python"><strong>import datetime</strong>
+<pre class="brush: python">import datetime
 
 from django import forms
-<strong>from django.core.exceptions import ValidationError
+
+from django.core.exceptions import ValidationError
 from django.utils.translation import ugettext_lazy as _
-</strong>
+
 class RenewBookForm(forms.Form):
     renewal_date = forms.DateField(help_text="Enter a date between now and 4 weeks (default 3).")
 
-<strong>    def clean_renewal_date(self):
+    def clean_renewal_date(self):
         data = self.cleaned_data['renewal_date']
 
         # Check if a date is not in the past.
@@ -184,9 +185,10 @@ class RenewBookForm(forms.Form):
             raise ValidationError(_('Invalid date - renewal more than 4 weeks ahead'))
 
         # Remember to always return the cleaned data.
-        return data</strong></pre>
+        return data</pre>
 
-<p>There are two important things to note. The first is that we get our data using <code>self.cleaned_data['renewal_date']</code> and that we return this data whether or not we change it at the end of the function. This step gets us the data "cleaned" and sanitized of potentially unsafe input using the default validators, and converted into the correct standard type for the data (in this case a Python <code>datetime.datetime</code> object).</p>
+<p>There are two important things to note. The first is that we get our data using <code>self.cleaned_data['renewal_date']</code> and that we return this data whether or not we change it at the end of the function.
+This step gets us the data "cleaned" and sanitized of potentially unsafe input using the default validators, and converted into the correct standard type for the data (in this case a Python <code>datetime.datetime</code> object).</p>
 
 <p>The second point is that if a value falls outside our range we raise a <code>ValidationError</code>, specifying the error text that we want to display in the form if an invalid value is entered. The example above also wraps this text in one of <a href="https://docs.djangoproject.com/en/3.1/topics/i18n/translation/">Django's translation functions</a> <code>ugettext_lazy()</code> (imported as <code>_()</code>), which is good practice if you want to translate your site later.</p>
 
@@ -216,7 +218,8 @@ class RenewBookForm(forms.Form):
 
 <p>For forms that use a <code>POST</code> request to submit information to the server, the most common pattern is for the view to test against the <code>POST</code> request type (<code>if request.method == 'POST':</code>) to identify form validation requests and <code>GET</code> (using an <code>else</code> condition) to identify the initial form creation request. If you want to submit your data using a <code>GET</code> request, then a typical approach for identifying whether this is the first or subsequent view invocation is to read the form data (e.g. to read a hidden value in the form).</p>
 
-<p>The book renewal process will be writing to our database, so, by convention, we use the <code>POST</code> request approach. The code fragment below shows the (very standard) pattern for this sort of function view. </p>
+<p>The book renewal process will be writing to our database, so, by convention, we use the <code>POST</code> request approach.
+The code fragment below shows the (very standard) pattern for this sort of function view.</p>
 
 <pre class="brush: python">import datetime
 
@@ -230,13 +233,13 @@ def renew_book_librarian(request, pk):
     book_instance = get_object_or_404(BookInstance, pk=pk)
 
     # If this is a POST request then process the Form data
-<strong>    if request.method == 'POST':</strong>
+    if request.method == 'POST':
 
         # Create a form instance and populate it with data from the request (binding):
         form = RenewBookForm(request.POST)
 
         # Check if the form is valid:
-        <strong>if form.is_valid():</strong>
+        if form.is_valid():
             # process the data in form.cleaned_data as required (here we just write it to the model due_back field)
             book_instance.due_back = form.cleaned_data['renewal_date']
             book_instance.save()
@@ -245,7 +248,7 @@ def renew_book_librarian(request, pk):
             return HttpResponseRedirect(reverse('all-borrowed') )
 
     # If this is a GET (or any other method) create the default form.
-<strong>    else:</strong>
+    else:
         proposed_renewal_date = datetime.date.today() + datetime.timedelta(weeks=3)
         form = RenewBookForm(initial={'renewal_date': proposed_renewal_date})
 
@@ -379,16 +382,17 @@ def renew_book_librarian(request, pk):
   &lt;p&gt;Borrower: \{{ book_instance.borrower }}&lt;/p&gt;
   &lt;p{% if book_instance.is_overdue %} class="text-danger"{% endif %}&gt;Due date: \{{ book_instance.due_back }}&lt;/p&gt;
 
-<strong>  &lt;form action="" method="post"&gt;
+  &lt;form action="" method="post"&gt;
     {% csrf_token %}
     &lt;table&gt;
     \{{ form.as_table }}
     &lt;/table&gt;
     &lt;input type="submit" value="Submit"&gt;
-  &lt;/form&gt;</strong>
+  &lt;/form&gt;
 {% endblock %}</pre>
 
-<p>Most of this will be completely familiar from previous tutorials. We extend the base template and then redefine the content block. We are able to reference <code>\{{ book_instance }}</code> (and its variables) because it was passed into the context object in the <code>render()</code> function, and we use these to list the book title, borrower, and the original due date.</p>
+<p>Most of this will be completely familiar from previous tutorials.
+We extend the base template and then redefine the content block. We are able to reference <code>\{{ book_instance }}</code> (and its variables) because it was passed into the context object in the <code>render()</code> function, and we use these to list the book title, borrower, and the original due date.</p>
 
 <p>The form code is relatively simple. First, we declare the <code>form</code> tags, specifying where the form is to be submitted (<code>action</code>) and the <code>method</code> for submitting the data (in this case an "HTTP POST") — if you recall the <a href="#html_forms">HTML Forms</a> overview at the top of the page, an empty <code>action</code> as shown, means that the form data will be posted back to the current URL of the page (which is what we want!). Inside the tags, we define the <code>submit</code> input, which a user can press to submit the data. The <code>{% csrf_token %}</code> added just inside the form tags is part of Django's cross-site forgery protection.</p>
 
@@ -495,23 +499,26 @@ class RenewBookModelForm(ModelForm):
   <p><strong>Note:</strong> This might not look like all that much simpler than just using a <code>Form</code> (and it isn't in this case, because we just have one field). However, if you have a lot of fields, it can reduce the amount of code quite significantly!</p>
 </div>
 
-<p>The rest of the information comes from the model field definitions (e.g. labels, widgets, help text, error messages). If these aren't quite right, then we can override them in our <code>class Meta</code>, specifying a dictionary containing the field to change and its new value. For example, in this form, we might want a label for our field of "<em>Renewal date</em>" (rather than the default based on the field name: <em>Due Back</em>), and we also want our help text to be specific to this use case. The <code>Meta</code> below shows you how to override these fields, and you can similarly set <code>widgets</code> and <code>error_messages</code> if the defaults aren't sufficient.</p>
+<p>The rest of the information comes from the model field definitions (e.g. labels, widgets, help text, error messages). If these aren't quite right, then we can override them in our <code>class Meta</code>, specifying a dictionary containing the field to change and its new value. For example, in this form, we might want a label for our field of "<em>Renewal date</em>" (rather than the default based on the field name: <em>Due Back</em>), and we also want our help text to be specific to this use case.
+The <code>Meta</code> below shows you how to override these fields, and you can similarly set <code>widgets</code> and <code>error_messages</code> if the defaults aren't sufficient.</p>
 
 <pre class="brush: python">class Meta:
     model = BookInstance
     fields = ['due_back']
-<strong>    labels = {'due_back': _('New renewal date')}
-    help_texts = {'due_back': _('Enter a date between now and 4 weeks (default 3).')} </strong>
+    labels = {'due_back': _('New renewal date')}
+    help_texts = {'due_back': _('Enter a date between now and 4 weeks (default 3).')} 
 </pre>
 
-<p>To add validation you can use the same approach as for a normal <code>Form</code> — you define a function named <code>clean_<em>field_name</em>()</code> and raise <code>ValidationError</code> exceptions for invalid values. The only difference with respect to our original form is that the model field is named <code>due_back</code> and not "<code>renewal_date</code>". This change is necessary since the corresponding field in <code>BookInstance</code> is called <code>due_back</code>. </p>
+<p>To add validation you can use the same approach as for a normal <code>Form</code> — you define a function named <code>clean_<em>field_name</em>()</code> and raise <code>ValidationError</code> exceptions for invalid values.
+The only difference with respect to our original form is that the model field is named <code>due_back</code> and not "<code>renewal_date</code>".
+This change is necessary since the corresponding field in <code>BookInstance</code> is called <code>due_back</code>. </p>
 
 <pre class="brush: python">from django.forms import ModelForm
 
 from catalog.models import BookInstance
 
 class RenewBookModelForm(ModelForm):
-<strong>    def clean_due_back(self):
+    def clean_due_back(self):
        data = self.cleaned_data['due_back']
 
        # Check if a date is not in the past.
@@ -524,7 +531,7 @@ class RenewBookModelForm(ModelForm):
 
        # Remember to always return the cleaned data.
        return data
-</strong>
+
     class Meta:
         model = BookInstance
         fields = ['due_back']

@@ -145,7 +145,7 @@ server.listen(port, hostname, () =&gt; {
 <p>First lets consider the standard Express <a href="https://expressjs.com/en/starter/hello-world.html">Hello World</a> example (we discuss each part of this below, and in the following sections).</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> If you have Node and Express already installed (or if you install them as shown in the <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment">next article</a>), you can save this code in a text file called <strong>app.js</strong> and run it in a bash command prompt by calling:   </p>
+<p><strong>Note:</strong> If you have Node and Express already installed (or if you install them as shown in the <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment">next article</a>), you can save this code in a text file called <strong>app.js</strong> and run it in a bash command prompt by calling:</p>
 
 <p><strong><code>node ./app.js</code></strong></p>
 </div>
@@ -154,9 +154,9 @@ server.listen(port, hostname, () =&gt; {
 const app = express();
 const port = 3000;
 
-<strong>app.get('/', (req, res) =&gt; {
+app.get('/', (req, res) =&gt; {
   res.send('Hello World!')
-});</strong>
+});
 
 app.listen(port, () =&gt; {
   console.log(`Example app listening on port ${port}!`)
@@ -259,7 +259,7 @@ console.log('Second');
 <p>The callback function takes a request and a response object as arguments. In this case, the method calls <code><a href="https://expressjs.com/en/4x/api.html#res.send">send()</a></code> on the response to return the string "Hello World!" There are a <a href="https://expressjs.com/en/guide/routing.html#response-methods">number of other response methods</a> for ending the request/response cycle, for example, you could call <code><a href="https://expressjs.com/en/4x/api.html#res.json">res.json()</a></code> to send a JSON response or <code><a href="https://expressjs.com/en/4x/api.html#res.sendFile">res.sendFile()</a></code> to send a file.</p>
 
 <div class="notecard note">
-<p><strong>JavaScript tip:</strong> You can use any argument names you like in the callback functions; when the callback is invoked the first argument will always be the request and the second will always be the response. It makes sense to name them such that you can identify the object you're working with in the body of the callback.</p>
+<p><strong>Note:</strong> You can use any argument names you like in the callback functions; when the callback is invoked the first argument will always be the request and the second will always be the response. It makes sense to name them such that you can identify the object you're working with in the body of the callback.</p>
 </div>
 
 <p>The <em>Express application</em> object also provides methods to define route handlers for all the other HTTP verbs, which are mostly used in exactly the same way:</p>
@@ -317,7 +317,8 @@ app.use('/wiki', wiki);</pre>
 
 <p>Most apps will use <em>third-party</em> middleware in order to simplify common web development tasks like working with cookies, sessions, user authentication, accessing request <code>POST</code> and JSON data, logging, etc. You can find a <a href="https://expressjs.com/en/resources/middleware.html">list of middleware packages maintained by the Express team</a> (which also includes other popular 3rd party packages). Other Express packages are available on the NPM package manager.</p>
 
-<p>To use third party middleware you first need to install it into your app using NPM. For example, to install the <a href="https://expressjs.com/en/resources/middleware/morgan.html">morgan</a> HTTP request logger middleware, you'd do this:</p>
+<p>To use third party middleware you first need to install it into your app using NPM.
+For example, to install the <a href="https://expressjs.com/en/resources/middleware/morgan.html">morgan</a> HTTP request logger middleware, you'd do this:</p>
 
 <pre class="brush: bash">$ npm install morgan
 </pre>
@@ -325,13 +326,13 @@ app.use('/wiki', wiki);</pre>
 <p>You could then call <code>use()</code> on the <em>Express application object</em> to add the middleware to the stack:</p>
 
 <pre class="brush: js">const express = require('express');
-const <strong>logger = require('morgan');</strong>
+const logger = require('morgan');
 const app = express();
-<strong>app.use(logger('dev'));</strong>
+app.use(logger('dev'));
 ...</pre>
 
 <div class="notecard note">
-<p><strong>Note:</strong> Middleware and routing functions are called in the order that they are declared. For some middleware the order is important (for example if session middleware depends on cookie middleware, then the cookie handler must be added first). It is almost always the case that middleware is called before setting routes, or your route handlers will not have access to functionality added by your middleware.</p>
+  <p><strong>Note:</strong> Middleware and routing functions are called in the order that they are declared. For some middleware the order is important (for example if session middleware depends on cookie middleware, then the cookie handler must be added first). It is almost always the case that middleware is called before setting routes, or your route handlers will not have access to functionality added by your middleware.</p>
 </div>
 
 <p>You can write your own middleware functions, and you are likely to have to do so (if only to create error handling code). The <strong>only</strong> difference between a middleware function and a route handler callback is that middleware functions have a third argument <code>next</code>, which middleware functions are expected to call if they are not that which completes the request cycle (when the middleware function is called, this contains the <em>next</em> function that must be called).</p>

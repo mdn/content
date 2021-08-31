@@ -233,10 +233,12 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <h3 id="Add_list_filters">Add list filters</h3>
 
-<p>Once you've got a lot of items in a list, it can be useful to be able to filter which items are displayed. This is done by listing fields in the <code>list_filter</code> attribute. Replace your current <code>BookInstanceAdmin</code> class with the code fragment below.</p>
+<p>Once you've got a lot of items in a list, it can be useful to be able to filter which items are displayed.
+This is done by listing fields in the <code>list_filter</code> attribute.
+Replace your current <code>BookInstanceAdmin</code> class with the code fragment below.</p>
 
 <pre class="brush: python">class BookInstanceAdmin(admin.ModelAdmin):
-<strong>    list_filter = ('status', 'due_back')</strong>
+    list_filter = ('status', 'due_back')
 </pre>
 
 <p>The list view will now include a filter box to the right. Note how you can choose dates and status to filter the values:</p>

@@ -48,15 +48,17 @@ tags:
  <li>Hook up the <strong>url/path</strong> mapper for each application.</li>
 </ol>
 
-<p>For the <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Local Library website</a>, the website and project folders are named <em>locallibrary</em>, and includes one application named <em>catalog</em>. The top-level folder structure will therefore be as follows:</p>
+<p>For the <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Local Library website</a>, the website and project folders are named <em>locallibrary</em>, and includes one application named <em>catalog</em>.
+The top-level folder structure will therefore be as follows:</p>
 
-<pre class="brush: bash"><em>locallibrary/         # Website folder</em>
-    <strong>manage.py         </strong><em># Script to run Django tools for this project</em> (created using django-admin)
-    <em>locallibrary/     # Website/project folder </em>(created using django-admin)
-    <em>catalog/          # Application folder </em>(created using manage.py)
+<pre class="brush: bash">locallibrary/         # Website folder
+    manage.py         # Script to run Django tools for this project (created using django-admin)
+    locallibrary/     # Website/project folder (created using django-admin)
+    catalog/          # Application folder (created using manage.py)
 </pre>
 
-<p>The following sections discuss the process steps in detail, and show how you can test your changes. At the end of this article, we discuss other site-wide configuration you might also do at this stage.</p>
+<p>The following sections discuss the process steps in detail, and show how you can test your changes.
+At the end of this article, we discuss other site-wide configuration you might also do at this stage.</p>
 
 <h2 id="Creating_the_project">Creating the project</h2>
 
@@ -74,9 +76,9 @@ cd locallibrary</pre>
 
 <p>The <code>django-admin</code> tool creates a folder/file structure as follows:</p>
 
-<pre class="brush: bash"><em>locallibrary/</em>
+<pre class="brush: bash">locallibrary/
     manage.py
-    <em>locallibrary/</em>
+    locallibrary/
         __init__.py
         settings.py
         urls.py

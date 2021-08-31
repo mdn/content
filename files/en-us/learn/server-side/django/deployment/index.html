@@ -129,19 +129,20 @@ with open('/etc/secret_key.txt') as f:
 
 <p>Let's change the <em>LocalLibrary</em> application so that we read our <code>SECRET_KEY</code> and <code>DEBUG</code> variables from environment variables if they are defined, but otherwise use the default values in the configuration file.</p>
 
-<p>Open <strong>/locallibrary/settings.py</strong>, disable the original <code>SECRET_KEY</code> configuration and add the new lines as shown below in <strong>bold</strong>. During development no environment variable will be specified for the key, so the default value will be used (it shouldn't matter what key you use here, or if the key "leaks", because you won't use it in production).</p>
+<p>Open <strong>/locallibrary/settings.py</strong>, disable the original <code>SECRET_KEY</code> configuration and add the new lines as shown below.
+During development no environment variable will be specified for the key, so the default value will be used (it shouldn't matter what key you use here, or if the key "leaks", because you won't use it in production).</p>
 
 <pre class="brush: python"># SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = "cg#p$g+j9tax!#a3cup@1$8obt2_+&amp;k3q+pmu)5%asj6yjpkag"
-<strong>import os</strong>
-<strong>SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'cg#p$g+j9tax!#a3cup@1$8obt2_+&amp;k3q+pmu)5%asj6yjpkag')</strong>
+import os
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'cg#p$g+j9tax!#a3cup@1$8obt2_+&amp;k3q+pmu)5%asj6yjpkag')
 </pre>
 
 <p>Then comment out the existing <code>DEBUG</code> setting and add the new line shown below.</p>
 
 <pre class="brush: python"># SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
-<strong>DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'</strong>
+DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 </pre>
 
 <p>The value of the <code>DEBUG</code> will be <code>True</code> by default, but will only be <code>False</code> if the value of the <code>DJANGO_DEBUG</code> environment variable is set to <code>False</code>. Please note that environment variables are strings and not Python types. We therefore need to compare strings. The only way to set the <code>DEBUG</code> variable to <code>False</code> is to actually set it to the string <code>False</code></p>
@@ -430,7 +431,7 @@ STATIC_URL = '/static/'
 
 <pre>MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    <strong>'whitenoise.middleware.WhiteNoiseMiddleware',</strong>
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -453,12 +454,13 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 <pre class="brush: bash">pip3 freeze &gt; requirements.txt</pre>
 
-<p>After installing all the different dependencies above, your <strong>requirements.txt</strong> file should have <em>at least</em> these items listed (though the version numbers may be different). Please delete any other dependencies not listed below, unless you've explicitly added them for this application.</p>
+<p>After installing all the different dependencies above, your <strong>requirements.txt</strong> file should have <em>at least</em> these items listed (though the version numbers may be different).
+Please delete any other dependencies not listed below, unless you've explicitly added them for this application.</p>
 
 <pre>dj-database-url==0.5.0
 Django==3.1.2
 gunicorn==20.0.4
-<strong>psycopg2-binary==2.8.6</strong>
+psycopg2-binary==2.8.6
 whitenoise==5.2.0
 </pre>
 
