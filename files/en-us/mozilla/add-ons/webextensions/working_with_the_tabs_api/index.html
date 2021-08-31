@@ -391,7 +391,7 @@ Define the other menu items
 
 <p>The next set of functions enable you to get ({{WebExtAPIRef("tabs.getZoom")}}) and set ({{WebExtAPIRef("tabs.setZoom")}}) the zoom level within a tab. You can also retrieve the zoom settings ({{WebExtAPIRef("tabs.getZoomSettings")}}) but, at the time of writing, the ability to set the settings ({{WebExtAPIRef("tabs.setZoomSettings")}}) wasn’t available in Firefox.</p>
 
-<p>The level of zoom can be between 30% and 300% (represented as decimals <code>0.3</code> to <code>3</code>).</p>
+<p>The level of zoom can be between 30% and 500% (represented as decimals <code>0.3</code> to <code>5</code>).</p>
 
 <p>In Firefox the default zoom settings are:</p>
 
@@ -422,7 +422,7 @@ Define the other menu items
 <p><code>tabs.js</code> starts by defining several constants used in the zoom code:</p>
 
 <pre class="brush: js">const ZOOM_INCREMENT = 0.2;
-const MAX_ZOOM = 3;
+const MAX_ZOOM = 5;
 const MIN_ZOOM = 0.3;
 const DEFAULT_ZOOM = 1;
 </pre>
@@ -435,7 +435,7 @@ const DEFAULT_ZOOM = 1;
    callOnActiveTab((tab) =&gt; {
      var gettingZoom = browser.tabs.getZoom(tab.id);
      gettingZoom.then((zoomFactor) =&gt; {
-       //the maximum zoomFactor is 3, it can't go higher
+       //the maximum zoomFactor is 5, it can't go higher
        if (zoomFactor &gt;= MAX_ZOOM) {
          alert("Tab zoom factor is already at max!");
        } else {
