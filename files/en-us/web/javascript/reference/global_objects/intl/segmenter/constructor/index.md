@@ -25,7 +25,10 @@ new Intl.segmenter(locale, options);
 ### Parameters
 
 - `locale` {{ optional_inline }}
-  - : A string value indicating the locale by which graphemes, words, and sentences should be determined.  Locales are described using [BCP 47](https://datatracker.ietf.org/doc/html/bcp47) language tags (see the [IANA language subtag registry](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry) for a full list).  If no <var>locale</var> value is supplied, the runtime's default locale is used instead.
+  - : A string with a BCP 47 language tag, or an array of such strings. For the general
+    form and interpretation of the `locales` argument, see the
+    {{jsxref("Global_Objects/Intl", "Intl", "#Locale_identification_and_negotiation",
+      1)}} page.
 - `options` {{ optional_inline }}
   - : An object with some or all of the following properties:
     - `granularity` {{ optional_inline }}
@@ -37,11 +40,10 @@ new Intl.segmenter(locale, options);
         - `sentence`
           - : Split the input into segments at sentence boundaries, as determined by the locale.
     - `localeMatcher` {{ optional_inline }}
-      - : A string which sets the method used to determine the value of the `locale` property.  Possible values are:
-        - `best fit` (default)
-          - : Locales are matched using an implementation-dependent algorithm.
-        - `lookup`
-          - : Locales are matched using the algorithm described in [section 3.4 of RFC 4647](https://datatracker.ietf.org/doc/html/rfc4647#section-3.4).
+      - : The locale matching algorithm to use. Possible values are "`lookup`"
+        and "`best fit`"; the default is "`best fit`". For
+        information about this option, see the {{jsxref("Global_Objects/Intl", "Intl",
+        "#Locale_negotiation", 1)}} page.
 
 
 ### Return value
