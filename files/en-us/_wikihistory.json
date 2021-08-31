@@ -91808,17 +91808,6 @@
       "Bzbarsky"
     ]
   },
-  "Web/API/WindowOrWorkerGlobalScope/origin": {
-    "modified": "2020-10-15T21:51:30.388Z",
-    "contributors": [
-      "mfuji09",
-      "fscholz",
-      "Sheppy",
-      "Bzbarsky",
-      "chrisdavidmills",
-      "ziyunfei"
-    ]
-  },
   "Web/API/WindowOrWorkerGlobalScope/queueMicrotask": {
     "modified": "2020-10-15T22:21:06.789Z",
     "contributors": [
@@ -95320,6 +95309,17 @@
     "modified": "2019-03-18T21:29:51.663Z",
     "contributors": [
       "mattwojo"
+    ]
+  },
+  "Web/API/origin": {
+    "modified": "2020-10-15T21:51:30.388Z",
+    "contributors": [
+      "mfuji09",
+      "fscholz",
+      "Sheppy",
+      "Bzbarsky",
+      "chrisdavidmills",
+      "ziyunfei"
     ]
   },
   "Web/API/window/getDefaultComputedStyle": {
