@@ -121,7 +121,25 @@ browser.webRequest.onBeforeRequest.addListener(
 
 <p>Finally we'll use <code>webRequest</code> to modify request headers. In this example we'll modify the "User-Agent" header so the browser identifies itself as Opera 12.16, but only when visiting pages under http://useragentstring.com/".</p>
 
-<p>The "manifest.json" can stay the same as in the previous example.</p>
+<p>Update your "manifest.json" to include <code>http://useragentstring.com/</code></p>
+
+<pre class="brush: json">{
+  "description": "Demonstrating webRequests",
+  "manifest_version": 2,
+  "name": "webRequest-demo",
+  "version": "1.0",
+
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "http://useragentstring.com/"
+  ],
+
+  "background": {
+    "scripts": ["background.js"]
+  }
+}</pre>
+
 
 <p>Replace "background.js" with code like this:</p>
 
