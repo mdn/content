@@ -24,7 +24,7 @@ ElementInternals.setValidity(flags, message, anchor);</pre>
 <dl>
   <dt><code>flags</code>{{Optional_Inline}}</dt>
   <dd>A dictionary object containing one or more flags indicating the validity state of the element:
-    <ul>
+    <dl>
       <dt><code>valueMissing</code></dt>
       <dd>A boolean value that is <code>true</code> if the element has a {{htmlattrxref("required", "input")}} attribute, but no value, or <code>false</code> otherwise. If <code>true</code>, the element matches the {{cssxref(":invalid")}} CSS pseudo-class.</dd>
       <dt><code>typeMismatch</code></dt>
@@ -45,7 +45,7 @@ ElementInternals.setValidity(flags, message, anchor);</pre>
       <dd>A boolean value that is <code>true</code> if the user has provided input that the browser is unable to convert.</dd>
       <dt><code>customError</code></dt>
       <dd>A boolean value indicating whether the element's custom validity message has been set to a non-empty string by calling the element's {{domxref('HTMLObjectElement.setCustomValidity', 'setCustomValidity()')}} method.</dd>
-    </ul>
+    </dl>
 
     <div class="notecard note">
       <p><strong>Note:</strong> To set all flags to <code>false</code>, indicating that this element passes all constraints validation, pass in an empty object <code>{}</code>. In this case, you do not need to also pass a <code>message</code>.</p>
@@ -89,5 +89,3 @@ ElementInternals.setValidity(flags, message, anchor);</pre>
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <p>{{Compat}}</p>
-
-
