@@ -59,14 +59,14 @@ tags:
  <li>Navigate to the author-creation page (which should be at URL: <code><a href="http://127.0.0.1:8000/catalog/author/create/">http://127.0.0.1:8000/catalog/author/create/</a></code>).</li>
  <li>Enter names and date details for a new user, and then append the following text to the Last Name field:<br>
   <code>&lt;script&gt;alert('Test alert');&lt;/script&gt;</code>.<br>
-  <img alt="Author Form XSS test" src="author_create_form_alert_xss.png" style="border-style: solid; border-width: 1px;">
+  <img alt="Author Form XSS test" src="author_create_form_alert_xss.png">
   <div class="notecard note">
     <p><strong>Note:</strong> This is a harmless script that, if executed, will display an alert box in your browser. If the alert is displayed when you submit the record then the site is vulnerable to XSS threats.</p>
   </div>
  </li>
  <li>Press <strong>Submit</strong> to save the record.</li>
  <li>When you save the author it will be displayed as shown below. Because of the XSS protections the <code>alert()</code> should not be run. Instead the script is displayed as plain text.
- <img alt="Author detail view XSS test" src="author_detail_alert_xss.png" style="border-style: solid; border-width: 1px;"></li>
+ <img alt="Author detail view XSS test" src="author_detail_alert_xss.png"></li>
 </ol>
 
 <p>If you view the page HTML source code, you can see that the dangerous characters for the script tags have been turned into their harmless escape code equivalents (e.g. <code>&gt;</code> is now <code>&amp;gt;</code>)</p>

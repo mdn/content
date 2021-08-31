@@ -85,13 +85,13 @@ admin.site.register(BookInstance)
 
 <p>This part of the site displays all our models, grouped by installed application. You can click on a model name to go to a screen that lists all its associated records, and you can further click on those records to edit them. You can also directly click the <strong>Add</strong> link next to each model to start creating a record of that type.</p>
 
-<p><img alt="Admin Site - Home page" src="admin_home.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="Admin Site - Home page" src="admin_home.png"></p>
 
 <p>Click on the <strong>Add </strong>link to the right of <em>Books</em> to create a new book (this will display a dialog much like the one below). Note how the titles of each field, the type of widget used, and the <code>help_text</code> (if any) match the values you specified in the model. </p>
 
 <p>Enter values for the fields. You can create new authors or genres by pressing the <strong>+</strong> button next to the respective fields (or select existing values from the lists if you've already created them). When you're done you can press <strong>SAVE</strong>, <strong>Save and add another</strong>, or <strong>Save and continue editing</strong> to save the record.</p>
 
-<p><img alt="Admin Site - Book Add" src="admin_book_add.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="Admin Site - Book Add" src="admin_book_add.png"></p>
 
 <div class="notecard note">
 <p><strong>Note:</strong> At this point we'd like you to spend some time adding a few books, authors, and genres (e.g. Fantasy) to your application. Make sure that each author and genre includes a couple of different books (this will make your list and detail views more interesting when we implement them later on in the article series).</p>
@@ -99,19 +99,19 @@ admin.site.register(BookInstance)
 
 <p>When you've finished adding books, click on the <strong>Home</strong> link in the top bookmark to be taken back to the main admin page. Then click on the <strong>Books</strong> link to display the current list of books (or on one of the other links to see other model lists). Now that you've added a few books, the list might look similar to the screenshot below. The title of each book is displayed; this is the value returned in the Book model's <code>__str__()</code> method that we specified in the last article.</p>
 
-<p><img alt="Admin Site - List of book objects" src="admin_book_list.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="Admin Site - List of book objects" src="admin_book_list.png"></p>
 
 <p>From this list you can delete books by selecting the checkbox next to the book you don't want, selecting the <em>delete...</em> action from the <em>Action</em> drop-down list, and then pressing the <strong>Go</strong> button. You can also add new books by pressing the <strong>ADD BOOK</strong> button. </p>
 
 <p>You can edit a book by selecting its name in the link. The edit page for a book, shown below, is almost identical to the "Add" page. The main differences are the page title (<em>Change book</em>) and the addition of <strong>Delete</strong>, <strong>HISTORY</strong> and <strong>VIEW ON SITE</strong> buttons (this last button appears because we defined the <code>get_absolute_url()</code> method in our model).</p>
 
-<p><img alt="Admin Site - Book Edit" src="admin_book_modify.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="Admin Site - Book Edit" src="admin_book_modify.png"></p>
 
 <p>Now navigate back to the <strong>Home</strong> page (using the <em>Home</em> link in the breadcrumb trail) and then view the <strong>Author</strong> and <strong>Genre</strong> lists — you should already have quite a few created from when you added the new books, but feel free to add some more.</p>
 
 <p>What you won't have is any <em>Book Instances</em>, because these are not created from Books (although you can create a <code>Book</code> from a <code>BookInstance</code> — this is the nature of the <code>ForeignKey</code> field). Navigate back to the <em>Home</em> page and press the associated <strong>Add</strong> button to display the <em>Add book instance</em> screen below. Note the large, globally unique Id, which can be used to separately identify a single copy of a book in the library.</p>
 
-<p><img alt="Admin Site - BookInstance Add" src="admin_bookinstance_add.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="Admin Site - BookInstance Add" src="admin_bookinstance_add.png"></p>
 
 <p>Create a number of these records for each of your books. Set the status as <em>Available</em> for at least some records and <em>On loan</em> for others. If the status is <strong>not</strong> <em>Available</em>, then also set a future <em>Due back</em> date.</p>
 
@@ -198,7 +198,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <p>Now navigate to the author list in your website. The fields above should now be displayed, like so:</p>
 
-<p><img alt="Admin Site - Improved Author List" src="admin_improved_author_list.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="Admin Site - Improved Author List" src="admin_improved_author_list.png"></p>
 
 <p>For our <code>Book</code> model we'll additionally display the <code>author</code> and <code>genre</code>. The <code>author</code> is a <code>ForeignKey</code> field (one-to-many) relationship, and so will be represented by the <code>__str__()</code> value for the associated record. Replace the <code>BookAdmin</code> class with the version below.</p>
 
@@ -223,7 +223,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <p>After saving the model and updated admin, open your website and go to the <em>Books</em> list page; you should see a book list like the one below:</p>
 
-<p><img alt="Admin Site - Improved Book List" src="admin_improved_book_list.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="Admin Site - Improved Book List" src="admin_improved_book_list.png"></p>
 
 <p>The <code>Genre</code> model (and the <code>Language</code> model, if you defined one) both have a single field, so there is no point creating an additional model for them to display additional fields.</p>
 
@@ -264,7 +264,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <p>In your website go to the author detail view — it should now appear as shown below:</p>
 
-<p><img alt="Admin Site - Improved Author Detail" src="admin_improved_author_detail.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="Admin Site - Improved Author Detail" src="admin_improved_author_detail.png"></p>
 
 <div class="notecard note">
 <p><strong>Note:</strong> You can also use the <code>exclude</code> attribute to declare a list of attributes to be excluded from the form (all other attributes in the model will be displayed). </p>
@@ -293,7 +293,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <p>Now navigate to a book instance view in your website; the form should appear as shown below:</p>
 
-<p><img alt="Admin Site - Improved BookInstance Detail with sections" src="admin_improved_bookinstance_detail_sections.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="Admin Site - Improved BookInstance Detail with sections" src="admin_improved_bookinstance_detail_sections.png"></p>
 
 <h3 id="Inline_editing_of_associated_records">Inline editing of associated records</h3>
 
@@ -312,7 +312,7 @@ class BookAdmin(admin.ModelAdmin):
 
 <p>Now navigate to a view for a <code>Book</code> in your website — at the bottom you should now see the book instances relating to this book (immediately below the book's genre fields):</p>
 
-<p><img alt="Admin Site - Book with Inlines" src="admin_improved_book_detail_inlines.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="Admin Site - Book with Inlines" src="admin_improved_book_detail_inlines.png"></p>
 
 <p>In this case all we've done is declare our tabular inline class, which just adds all fields from the <em>inlined</em> model. You can specify all sorts of additional information for the layout, including the fields to display, their order, whether they are read only or not, etc. (see <a href="https://docs.djangoproject.com/en/3.1/ref/contrib/admin/#django.contrib.admin.TabularInline">TabularInline</a> for more information). </p>
 

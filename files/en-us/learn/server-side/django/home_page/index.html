@@ -43,7 +43,7 @@ tags:
  <li>Templates to use when rendering data in the views.</li>
 </ul>
 
-<p><img alt="" src="basic-django.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="basic-django.png"></p>
 
 <p>As you'll see in the next section, we have 5 pages to display, which is too much information to document in a single article. Therefore, this article will focus on how to implement the home page, and we'll cover the other pages in a subsequent article. This should give you a good end-to-end understanding of how URL mappers, views, and models work in practice.</p>
 
@@ -363,7 +363,7 @@ return render(request, 'index.html', context=context)</pre>
 
 <p>At this point we have created all required resources to display the index page. Run the server (<code>python3 manage.py runserver</code>) and open <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a> in your browser. If everything is configured correctly, your site should look like the following screenshot.</p>
 
-<p><img alt="Index page for LocalLibrary website" src="index_page_ok.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="Index page for LocalLibrary website" src="index_page_ok.png"></p>
 
 <div class="notecard note">
   <p><strong>Note:</strong> The <strong>All books</strong> and <strong>All authors</strong> links will not work yet because the paths, views, and templates for those pages are not defined. We just inserted placeholders for those links in the <code>base_generic.html</code> template.</p>

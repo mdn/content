@@ -187,11 +187,11 @@ block content
 
 <p>Run the application, open your browser to <a href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>, then select the <em>Create new genre</em> link. If everything is set up correctly, your site should look something like the following screenshot. After you enter a value, it should be saved and you'll be taken to the genre detail page.</p>
 
-<p><img alt="Genre Create Page - Express Local Library site" src="locallibary_express_genre_create_empty.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="Genre Create Page - Express Local Library site" src="locallibary_express_genre_create_empty.png"></p>
 
 <p>The only error we validate against server-side is that the genre field must not be empty. The screenshot below shows what the error list would look like if you didn't supply a genre (highlighted in red).</p>
 
-<p><img alt="" src="locallibary_express_genre_create_error.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="locallibary_express_genre_create_error.png"></p>
 
 <div class="notecard note">
 <p><strong>Note:</strong> Our validation uses <code>trim()</code> to ensure that whitespace is not accepted as a genre name. We can also validate that the field is not empty on the client side by adding the value <code>required='true'</code> to the field definition in the form:</p>
