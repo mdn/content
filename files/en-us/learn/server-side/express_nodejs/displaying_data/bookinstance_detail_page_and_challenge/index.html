@@ -36,7 +36,7 @@ exports.bookinstance_detail = function(req, res, <strong>next</strong>) {
 };
 </pre>
 
-<p>The method calls <code>BookInstance.findById()</code> with the ID of a specific book instance extracted from the URL (using the route), and accessed within the controller via the request parameters: <code style="font-style: normal; font-weight: normal;">req.params.id</code>). It then calls <code>populate()</code> to get the details of the associated <code>Book</code>.</p>
+<p>The method calls <code>BookInstance.findById()</code> with the ID of a specific book instance extracted from the URL (using the route), and accessed within the controller via the request parameters: <code>req.params.id</code>). It then calls <code>populate()</code> to get the details of the associated <code>Book</code>.</p>
 
 <h3 id="View">View</h3>
 

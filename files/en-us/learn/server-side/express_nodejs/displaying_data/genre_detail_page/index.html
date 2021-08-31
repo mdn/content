@@ -50,9 +50,9 @@ exports.genre_detail = function(req, res, <strong>next</strong>) {
 
 <p>The method uses <code>async.parallel()</code> to query the genre name and its associated books in parallel, with the callback rendering the page when (if) both requests complete successfully.</p>
 
-<p>The ID of the required genre record is encoded at the end of the URL and extracted automatically based on the route definition (<strong>/genre/:id</strong>). The ID is accessed within the controller via the request parameters: <code style="font-style: normal; font-weight: normal;">req.params.id</code>. It is used in <code style="font-style: normal; font-weight: normal;">Genre.findById()</code> to get the current genre. It is also used to get all <code>Book</code> objects that have the genre ID in their <code>genre</code> field: <code>Book.find({ 'genre': req.params.id })</code>.</p>
+<p>The ID of the required genre record is encoded at the end of the URL and extracted automatically based on the route definition (<strong>/genre/:id</strong>). The ID is accessed within the controller via the request parameters: <code>req.params.id</code>. It is used in <code>Genre.findById()</code> to get the current genre. It is also used to get all <code>Book</code> objects that have the genre ID in their <code>genre</code> field: <code>Book.find({ 'genre': req.params.id })</code>.</p>
 
-<div class="note">
+<div class="notecard note">
 <p><strong>Note:</strong> If the genre does not exist in the database (i.e. it may have been deleted) then <code>findById()</code>  will return successfully with no results. In this case we want to display a "not found" page, so we create an <code>Error</code> object and pass it to the <code>next</code> middleware function in the chain. </p>
 
 <pre class="brush: js"><strong>if (results.genre==null) { // No results.
@@ -99,8 +99,8 @@ block content
 
 <p><img alt="Genre Detail Page - Express Local Library site" src="locallibary_express_genre_detail.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
-<div class="note">
-<p>You might get an error similar to this:</p>
+<div class="notecard note">
+<p><strong>Note:</strong> You might get an error similar to this:</p>
 
 <pre class="brush: bash">Cast to ObjectId failed for value " 59347139895ea23f9430ecbb" at path "_id" for model "Genre"
 </pre>

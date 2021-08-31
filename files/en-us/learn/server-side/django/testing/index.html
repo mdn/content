@@ -16,7 +16,7 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/Server-side/Django/Forms", "Learn/Server-side/Django/Deployment", "Learn/Server-side/Django")}}</div>
 
-<p class="summary">As websites grow they become harder to test manually. Not only is there more to test, but, as interactions between components become more complex, a small change in one area can impact other areas, so more changes will be required to ensure everything keeps working and errors are not introduced as more changes are made. One way to mitigate these problems is to write automated tests, which can easily and reliably be run every time you make a change. This tutorial shows how to automate <em>unit testing</em> of your website using Django's test framework.</p>
+<p>As websites grow they become harder to test manually. Not only is there more to test, but, as interactions between components become more complex, a small change in one area can impact other areas, so more changes will be required to ensure everything keeps working and errors are not introduced as more changes are made. One way to mitigate these problems is to write automated tests, which can easily and reliably be run every time you make a change. This tutorial shows how to automate <em>unit testing</em> of your website using Django's test framework.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -108,7 +108,7 @@ tags:
     def __str__(self):
         return '%s, %s' % (self.last_name, self.first_name)</pre>
 
-<p>Similarly, you should check that the custom methods <code style="font-style: normal; font-weight: normal;">get_absolute_url()</code> and <code style="font-style: normal; font-weight: normal;">__str__()</code> behave as required because they are your code/business logic. In the case of <code style="font-style: normal; font-weight: normal;">get_absolute_url()</code> you can trust that the Django <code>reverse()</code> method has been implemented properly, so what you're testing is that the associated view has actually been defined.</p>
+<p>Similarly, you should check that the custom methods <code>get_absolute_url()</code> and <code>__str__()</code> behave as required because they are your code/business logic. In the case of <code>get_absolute_url()</code> you can trust that the Django <code>reverse()</code> method has been implemented properly, so what you're testing is that the associated view has actually been defined.</p>
 
 <div class="notecard note">
   <p><strong>Note:</strong> Astute readers may note that we would also want to constrain the date of birth and death to sensible values, and check that death comes after birth. In Django this constraint would be added to your form classes (although you can define validators for model fields and model validators these are only used at the form level if they are called by the model's clean() method. This requires a ModelForm or the model's clean() method needs to be specifically called.)</p>

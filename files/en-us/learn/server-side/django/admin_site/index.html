@@ -16,7 +16,7 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}</div>
 
-<p class="summary">Now that we've created models for the <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> website, we'll use the Django Admin site to add some "real" book data. First we'll show you how to register the models with the admin site, then we'll show you how to login and create some data. At the end of the article we will show some of the ways you can further improve the presentation of the Admin site.</p>
+<p>Now that we've created models for the <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> website, we'll use the Django Admin site to add some "real" book data. First we'll show you how to register the models with the admin site, then we'll show you how to login and create some data. At the end of the article we will show some of the ways you can further improve the presentation of the Admin site.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -58,7 +58,9 @@ admin.site.register(Genre)
 admin.site.register(BookInstance)
 </pre>
 
-<div class="note"><strong>Note</strong>: If you accepted the challenge to create a model to represent the natural language of a book (<a href="/en-US/docs/Learn/Server-side/Django/Models">see the models tutorial article</a>), import and register it too!</div>
+<div class="notecard note">
+  <p><strong>Note:</strong> If you accepted the challenge to create a model to represent the natural language of a book (<a href="/en-US/docs/Learn/Server-side/Django/Models">see the models tutorial article</a>), import and register it too!</p>
+</div>
 
 <p>This is the simplest way of registering a model, or models, with the site. The admin site is highly customisable, and we'll talk more about the other ways of registering your models further down.</p>
 
@@ -91,8 +93,8 @@ admin.site.register(BookInstance)
 
 <p><img alt="Admin Site - Book Add" src="admin_book_add.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
-<div class="note">
-<p><strong>Note</strong>: At this point we'd like you to spend some time adding a few books, authors, and genres (e.g. Fantasy) to your application. Make sure that each author and genre includes a couple of different books (this will make your list and detail views more interesting when we implement them later on in the article series).</p>
+<div class="notecard note">
+<p><strong>Note:</strong> At this point we'd like you to spend some time adding a few books, authors, and genres (e.g. Fantasy) to your application. Make sure that each author and genre includes a couple of different books (this will make your list and detail views more interesting when we implement them later on in the article series).</p>
 </div>
 
 <p>When you've finished adding books, click on the <strong>Home</strong> link in the top bookmark to be taken back to the main admin page. Then click on the <strong>Books</strong> link to display the current list of books (or on one of the other links to see other model lists). Now that you've added a few books, the list might look similar to the screenshot below. The title of each book is displayed; this is the value returned in the Book model's <code>__str__()</code> method that we specified in the last article.</p>
@@ -206,8 +208,8 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <p>Unfortunately we can't directly specify the <code>genre</code> field in <code>list_display</code> because it is a <code>ManyToManyField</code> (Django prevents this because there would be a large database access "cost" in doing so). Instead we'll define a <code>display_genre</code> function to get the information as a string (this is the function we've called above; we'll define it below).</p>
 
-<div class="note">
-<p><strong>Note</strong>: Getting the <code>genre</code> may not be a good idea here, because of the "cost" of the database operation. We're showing you how because calling functions in your models can be very useful for other reasons — for example to add a <em>Delete</em> link next to every item in the list.</p>
+<div class="notecard note">
+<p><strong>Note:</strong> Getting the <code>genre</code> may not be a good idea here, because of the "cost" of the database operation. We're showing you how because calling functions in your models can be very useful for other reasons — for example to add a <em>Delete</em> link next to every item in the list.</p>
 </div>
 
 <p>Add the following code into your <code>Book</code> model (<strong>models.py</strong>). This creates a string from the first three values of the <code>genre</code> field (if they exist) and creates a <code>short_description</code> that can be used in the admin site for this method.</p>
@@ -225,13 +227,13 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <p>The <code>Genre</code> model (and the <code>Language</code> model, if you defined one) both have a single field, so there is no point creating an additional model for them to display additional fields.</p>
 
-<div class="note">
-<p><strong>Note</strong>: It is worth updating the <code>BookInstance</code> model list to show at least the status and the expected return date. We've added that as a challenge at the end of this article!</p>
+<div class="notecard note">
+<p><strong>Note:</strong> It is worth updating the <code>BookInstance</code> model list to show at least the status and the expected return date. We've added that as a challenge at the end of this article!</p>
 </div>
 
 <h3 id="Add_list_filters">Add list filters</h3>
 
-<p>Once you've got a lot of items in a list, it can be useful to be able to filter which items are displayed. This is done by listing fields in the <code>list_filter</code> attribute. Replace your current <code style="font-style: normal; font-weight: normal;">BookInstanceAdmin</code> class with the code fragment below.</p>
+<p>Once you've got a lot of items in a list, it can be useful to be able to filter which items are displayed. This is done by listing fields in the <code>list_filter</code> attribute. Replace your current <code>BookInstanceAdmin</code> class with the code fragment below.</p>
 
 <pre class="brush: python">class BookInstanceAdmin(admin.ModelAdmin):
 <strong>    list_filter = ('status', 'due_back')</strong>
@@ -245,8 +247,8 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <p>By default, the detail views lay out all fields vertically, in their order of declaration in the model. You can change the order of declaration, which fields are displayed (or excluded), whether sections are used to organize the information, whether fields are displayed horizontally or vertically, and even what edit widgets are used in the admin forms.</p>
 
-<div class="note">
-<p><strong>Note</strong>: The <em>LocalLibrary</em> models are relatively simple so there isn't a huge need for us to change the layout; we'll make some changes anyway however, just to show you how.</p>
+<div class="notecard note">
+<p><strong>Note:</strong> The <em>LocalLibrary</em> models are relatively simple so there isn't a huge need for us to change the layout; we'll make some changes anyway however, just to show you how.</p>
 </div>
 
 <h4 id="Controlling_which_fields_are_displayed_and_laid_out">Controlling which fields are displayed and laid out</h4>
@@ -264,8 +266,8 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <p><img alt="Admin Site - Improved Author Detail" src="admin_improved_author_detail.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
-<div class="note">
-<p><strong>Note</strong>: You can also use the <code>exclude</code> attribute to declare a list of attributes to be excluded from the form (all other attributes in the model will be displayed). </p>
+<div class="notecard note">
+<p><strong>Note:</strong> You can also use the <code>exclude</code> attribute to declare a list of attributes to be excluded from the form (all other attributes in the model will be displayed). </p>
 </div>
 
 <h4 id="Sectioning_the_detail_view">Sectioning the detail view</h4>
@@ -314,8 +316,8 @@ class BookAdmin(admin.ModelAdmin):
 
 <p>In this case all we've done is declare our tabular inline class, which just adds all fields from the <em>inlined</em> model. You can specify all sorts of additional information for the layout, including the fields to display, their order, whether they are read only or not, etc. (see <a href="https://docs.djangoproject.com/en/3.1/ref/contrib/admin/#django.contrib.admin.TabularInline">TabularInline</a> for more information). </p>
 
-<div class="note">
-<p><strong>Note</strong>: There are some painful limits in this functionality! In the screenshot above we have three existing book instances, followed by three placeholders for new book instances (which look very similar!). It would be better to have NO spare book instances by default and just add them with the <strong>Add another Book instance</strong> link, or to be able to just list the <code>BookInstance</code>s as non-readable links from here. The first option can be done by setting the <code>extra</code> attribute to <code>0</code> in <code>BooksInstanceInline</code> model, try it by yourself.</p>
+<div class="notecard note">
+<p><strong>Note:</strong> There are some painful limits in this functionality! In the screenshot above we have three existing book instances, followed by three placeholders for new book instances (which look very similar!). It would be better to have NO spare book instances by default and just add them with the <strong>Add another Book instance</strong> link, or to be able to just list the <code>BookInstance</code>s as non-readable links from here. The first option can be done by setting the <code>extra</code> attribute to <code>0</code> in <code>BooksInstanceInline</code> model, try it by yourself.</p>
 </div>
 
 <h2 id="Challenge_yourself">Challenge yourself</h2>

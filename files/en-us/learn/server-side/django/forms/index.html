@@ -16,7 +16,7 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}</div>
 
-<p class="summary">In this tutorial, we'll show you how to work with HTML Forms in Django, and, in particular, the easiest way to write forms to create, update, and delete model instances. As part of this demonstration, we'll extend the <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> website so that librarians can renew books, and create, update, and delete authors using our own forms (rather than using the admin application).</p>
+<p>In this tutorial, we'll show you how to work with HTML Forms in Django, and, in particular, the easiest way to write forms to create, update, and delete model instances. As part of this demonstration, we'll extend the <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> website so that librarians can renew books, and create, update, and delete authors using our own forms (rather than using the admin application).</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -57,7 +57,7 @@ tags:
     &lt;input type="submit" value="OK"&gt;
 &lt;/form&gt;</pre>
 
-<p>While here we just have one text field for entering the team name, a form <em>may</em> have any number of other input elements and their associated labels. The field's <code>type</code> attribute defines what sort of widget will be displayed. The <code>name</code> and <code>id</code> of the field are used to identify the field in JavaScript/CSS/HTML, while <code>value</code> defines the initial value for the field when it is first displayed. The matching team label is specified using the <code style="font-style: normal; font-weight: normal;">label</code> tag (see "Enter name" above), with a <code style="font-style: normal; font-weight: normal;">for</code> field containing the <code style="font-style: normal; font-weight: normal;">id</code> value of the associated <code style="font-style: normal; font-weight: normal;">input</code>.</p>
+<p>While here we just have one text field for entering the team name, a form <em>may</em> have any number of other input elements and their associated labels. The field's <code>type</code> attribute defines what sort of widget will be displayed. The <code>name</code> and <code>id</code> of the field are used to identify the field in JavaScript/CSS/HTML, while <code>value</code> defines the initial value for the field when it is first displayed. The matching team label is specified using the <code>label</code> tag (see "Enter name" above), with a <code>for</code> field containing the <code>id</code> value of the associated <code>input</code>.</p>
 
 <p>The <code>submit</code> input will be displayed as a button (by default) that can be pressed by the user to upload the data in all the other input elements in the form to the server (in this case, just the <code>team_name</code>). The form attributes define the HTTP <code>method</code> used to send the data and the destination of the data on the server (<code>action</code>):</p>
 

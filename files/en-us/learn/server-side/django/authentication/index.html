@@ -20,7 +20,7 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}</div>
 
-<p class="summary">In this tutorial, we'll show you how to allow users to log in to your site with their own accounts, and how to control what they can do and see based on whether or not they are logged in and their <em>permissions</em>. As part of this demonstration, we'll extend the <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> website, adding login and logout pages, and user- and staff-specific pages for viewing books that have been borrowed.</p>
+<p>In this tutorial, we'll show you how to allow users to log in to your site with their own accounts, and how to control what they can do and see based on whether or not they are logged in and their <em>permissions</em>. As part of this demonstration, we'll extend the <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> website, adding login and logout pages, and user- and staff-specific pages for viewing books that have been borrowed.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -104,7 +104,8 @@ user.save()
 <p>First lets create a new group for our library members.</p>
 
 <ol>
- <li>Click the <strong>Add</strong> button (next to Group) to create a new <em>Group</em>; enter the <strong>Name</strong> "Library Members" for the group.<img alt="Admin site - add group" src="admin_authentication_add_group.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></li>
+ <li>Click the <strong>Add</strong> button (next to Group) to create a new <em>Group</em>; enter the <strong>Name</strong> "Library Members" for the group.
+ <img alt="Admin site - add group" src="admin_authentication_add_group.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></li>
  <li>We don't need any permissions for the group, so just press <strong>SAVE</strong> (you will be taken to a list of groups).</li>
 </ol>
 
@@ -116,8 +117,10 @@ user.save()
  <li>Enter an appropriate <strong>Username</strong> and <strong>Password</strong>/<strong>Password confirmation</strong> for your test user</li>
  <li>Press <strong>SAVE</strong> to create the user.<br>
   <br>
-  The admin site will create the new user and immediately take you to a <em>Change user</em> screen where you can change your <strong>username</strong> and add information for the User model's optional fields. These fields include the first name, last name, email address, and the user's status and permissions (only the <strong>Active</strong> flag should be set). Further down you can specify the user's groups and permissions, and see important dates related to the user (e.g. their join date and last login date).<img alt="Admin site - add user pt2" src="admin_authentication_add_user_prt2.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></li>
- <li>In the <em>Groups</em> section, select <strong>Library Member</strong> group from the list of <em>Available groups</em>, and then press the <strong>right-arrow</strong> between the boxes to move it into the <em>Chosen groups</em> box.<img alt="Admin site - add user to group" src="admin_authentication_user_add_group.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></li>
+  The admin site will create the new user and immediately take you to a <em>Change user</em> screen where you can change your <strong>username</strong> and add information for the User model's optional fields. These fields include the first name, last name, email address, and the user's status and permissions (only the <strong>Active</strong> flag should be set). Further down you can specify the user's groups and permissions, and see important dates related to the user (e.g. their join date and last login date).
+  <img alt="Admin site - add user pt2" src="admin_authentication_add_user_prt2.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></li>
+ <li>In the <em>Groups</em> section, select <strong>Library Member</strong> group from the list of <em>Available groups</em>, and then press the <strong>right-arrow</strong> between the boxes to move it into the <em>Chosen groups</em> box.
+   <img alt="Admin site - add user to group" src="admin_authentication_user_add_group.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></li>
  <li>We don't need to do anything else here, so just select <strong>SAVE</strong> again, to go to the list of users.</li>
 </ol>
 

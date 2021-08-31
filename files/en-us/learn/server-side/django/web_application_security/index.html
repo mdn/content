@@ -17,7 +17,7 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/Server-side/Django/Deployment", "Learn/Server-side/Django/django_assessment_blog", "Learn/Server-side/Django")}}</div>
 
-<p class="summary">Protecting user data is an essential part of any website design. We previously explained some of the more common security threats in the article <a href="/en-US/docs/Web/Security">Web security</a> — this article provides a practical demonstration of how Django's in-built protections handle such threats.</p>
+<p>Protecting user data is an essential part of any website design. We previously explained some of the more common security threats in the article <a href="/en-US/docs/Web/Security">Web security</a> — this article provides a practical demonstration of how Django's in-built protections handle such threats.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -65,7 +65,8 @@ tags:
   </div>
  </li>
  <li>Press <strong>Submit</strong> to save the record.</li>
- <li>When you save the author it will be displayed as shown below. Because of the XSS protections the <code>alert()</code> should not be run. Instead the script is displayed as plain text.<img alt="Author detail view XSS test" src="author_detail_alert_xss.png" style="border-style: solid; border-width: 1px;"></li>
+ <li>When you save the author it will be displayed as shown below. Because of the XSS protections the <code>alert()</code> should not be run. Instead the script is displayed as plain text.
+ <img alt="Author detail view XSS test" src="author_detail_alert_xss.png" style="border-style: solid; border-width: 1px;"></li>
 </ol>
 
 <p>If you view the page HTML source code, you can see that the dangerous characters for the script tags have been turned into their harmless escape code equivalents (e.g. <code>&gt;</code> is now <code>&amp;gt;</code>)</p>

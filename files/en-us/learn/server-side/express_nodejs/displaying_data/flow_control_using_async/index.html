@@ -8,21 +8,21 @@ tags:
   - part 5
   - server-side
 ---
-<p>The controller code for some of our <em>LocalLibrary</em> pages will depend on the results of multiple asynchronous requests, which may be required to run either in some particular order or in parallel. In order to manage flow control, and render pages when we have all the required information available, we'll use the popular node <a class="external external-icon" href="https://www.npmjs.com/package/async" rel="noopener">async</a> module.</p>
+<p>The controller code for some of our <em>LocalLibrary</em> pages will depend on the results of multiple asynchronous requests, which may be required to run either in some particular order or in parallel. In order to manage flow control, and render pages when we have all the required information available, we'll use the popular node <a href="https://www.npmjs.com/package/async" rel="noopener">async</a> module.</p>
 
-<div class="note">
+<div class="notecard note">
 <p><strong>Note:</strong> There are a number of other ways to manage asynchronous behavior and flow control in JavaScript, including relatively recent JavaScript language features like <a href="/en-US/docs/Archive/Add-ons/Techniques/Promises">Promises</a>.</p>
 </div>
 
-<p>Async has a lot of useful methods (check out <a class="external external-icon" href="https://caolan.github.io/async/v3/docs.html" rel="noopener">the documentation</a>). Some of the more important functions are:</p>
+<p>Async has a lot of useful methods (check out <a href="https://caolan.github.io/async/v3/docs.html" rel="noopener">the documentation</a>). Some of the more important functions are:</p>
 
 <ul>
- <li><code><a class="external external-icon" href="https://caolan.github.io/async/v3/docs.html#parallel" rel="noopener">async.parallel()</a></code> to execute any operations that must be performed in parallel.</li>
- <li><code><a class="external external-icon" href="https://caolan.github.io/async/v3/docs.html#series" rel="noopener">async.series()</a></code> for when we need to ensure that asynchronous operations are performed in series.</li>
- <li><code><a class="external external-icon" href="https://caolan.github.io/async/v3/docs.html#waterfall" rel="noopener">async.waterfall()</a></code> for operations that must be run in series, with each operation depending on the results of preceding operations.</li>
+ <li><code><a href="https://caolan.github.io/async/v3/docs.html#parallel" rel="noopener">async.parallel()</a></code> to execute any operations that must be performed in parallel.</li>
+ <li><code><a href="https://caolan.github.io/async/v3/docs.html#series" rel="noopener">async.series()</a></code> for when we need to ensure that asynchronous operations are performed in series.</li>
+ <li><code><a href="https://caolan.github.io/async/v3/docs.html#waterfall" rel="noopener">async.waterfall()</a></code> for operations that must be run in series, with each operation depending on the results of preceding operations.</li>
 </ul>
 
-<h2 class="highlight-spanned" id="Why_is_this_needed"><span class="highlight-span">Why is this needed?</span></h2>
+<h2 id="Why_is_this_needed">Why is this needed?</h2>
 
 <p>Most of the methods we use in <em>Express</em> are asynchronous—you specify an operation to perform, passing a callback. The method returns immediately, and the callback is invoked when the requested operation completes. By convention in <em>Express</em>, callback functions pass an <em>error</em> value as the first parameter (or <code>null</code> on success) and the results from the function (if there are any) as the second parameter.</p>
 
@@ -39,13 +39,13 @@ tags:
 }
 </pre>
 
-<p>What if you need to make <strong>multiple</strong> asynchronous queries, and you can't render the page until all the operations have completed? A naive implementation could "daisy chain" the requests, kicking off subsequent requests in the callback of a previous request, and rendering the response in the final callback. The problem with this approach is that our requests would have to be run in series, even though it might be more efficient to run them in parallel. This could also result in complicated nested code, commonly referred to as <a class="external external-icon" href="http://callbackhell.com/" rel="noopener">callback hell</a>.</p>
+<p>What if you need to make <strong>multiple</strong> asynchronous queries, and you can't render the page until all the operations have completed? A naive implementation could "daisy chain" the requests, kicking off subsequent requests in the callback of a previous request, and rendering the response in the final callback. The problem with this approach is that our requests would have to be run in series, even though it might be more efficient to run them in parallel. This could also result in complicated nested code, commonly referred to as <a href="http://callbackhell.com/" rel="noopener">callback hell</a>.</p>
 
 <p>A much better solution would be to execute all the requests in parallel and then have a single callback that executes when all of the queries have completed. This is the sort of flow operation that the <em>Async</em> module makes easy!</p>
 
-<h2 class="highlight-spanned" id="Asynchronous_operations_in_parallel"><span class="highlight-span">Asynchronous operations in parallel</span></h2>
+<h2 id="Asynchronous_operations_in_parallel">Asynchronous operations in parallel</h2>
 
-<p>The method <code><a class="external external-icon" href="https://caolan.github.io/async/v3/docs.html#parallel" rel="noopener">async.parallel()</a></code> is used to run multiple asynchronous operations in parallel.</p>
+<p>The method <code><a href="https://caolan.github.io/async/v3/docs.html#parallel" rel="noopener">async.parallel()</a></code> is used to run multiple asynchronous operations in parallel.</p>
 
 <p>The first argument to <code>async.parallel()</code> is a collection of the asynchronous functions to run (an array, object or other iterable). Each function is passed a <code>callback(err, result)</code> which it must call on completion with an error <code>err</code> (which can be <code>null</code>) and an optional <code>results</code> value.</p>
 
@@ -53,7 +53,7 @@ tags:
 
 <p>The example below shows how this works when we pass an object as the first argument. As you can see, the results are <em>returned</em> in an object with the same property names as the original functions that were passed in.</p>
 
-<pre class="brush: js line-numbers  language-js">async.parallel({
+<pre class="brush: js">async.parallel({
   one: function(callback) { ... },
   two: function(callback) { ... },
   ...
@@ -67,11 +67,11 @@ tags:
 
 <p>If you instead pass an array of functions as the first argument, the results will be an array (the array order results will match the original order that the functions were declared—not the order in which they completed).</p>
 
-<h2 class="highlight-spanned" id="Asynchronous_operations_in_series"><span class="highlight-span">Asynchronous operations in series</span></h2>
+<h2 id="Asynchronous_operations_in_series">Asynchronous operations in series</h2>
 
-<p>The method <code><a class="external external-icon" href="https://caolan.github.io/async/v3/docs.html#series" rel="noopener">async.series()</a></code> is used to run multiple asynchronous operations in sequence, when subsequent functions do not depend on the output of earlier functions. It is essentially declared and behaves in the same way as <code>async.parallel()</code>.</p>
+<p>The method <code><a href="https://caolan.github.io/async/v3/docs.html#series" rel="noopener">async.series()</a></code> is used to run multiple asynchronous operations in sequence, when subsequent functions do not depend on the output of earlier functions. It is essentially declared and behaves in the same way as <code>async.parallel()</code>.</p>
 
-<pre class="brush: js line-numbers  language-js">async.series({
+<pre class="brush: js">async.series({
   one: function(callback) { ... },
   two: function(callback) { ... },
   ...
@@ -83,11 +83,11 @@ tags:
   }
 );</pre>
 
-<div class="note">
+<div class="notecard note">
 <p><strong>Note:</strong> The ECMAScript (JavaScript) language specification states that the order of enumeration of an object is undefined, so it is possible that the functions will not be called in the same order as you specify them on all platforms. If the order really is important, then you should pass an array instead of an object, as shown below.</p>
 </div>
 
-<pre class="brush: js line-numbers  language-js">async.series([
+<pre class="brush: js">async.series([
   function(callback) {
     // do some stuff ...
     callback(null, 'one');
@@ -103,13 +103,13 @@ tags:
   }
 );</pre>
 
-<h2 class="highlight-spanned" id="Dependent_asynchronous_operations_in_series"><span class="highlight-span">Dependent asynchronous operations in series</span></h2>
+<h2 id="Dependent_asynchronous_operations_in_series">Dependent asynchronous operations in series</h2>
 
-<p>The method <code><a class="external external-icon" href="https://caolan.github.io/async/v3/docs.html#waterfall" rel="noopener">async.waterfall()</a></code> is used to run multiple asynchronous operations in sequence when each operation is dependent on the result of the previous operation.</p>
+<p>The method <code><a href="https://caolan.github.io/async/v3/docs.html#waterfall" rel="noopener">async.waterfall()</a></code> is used to run multiple asynchronous operations in sequence when each operation is dependent on the result of the previous operation.</p>
 
 <p>The callback invoked by each asynchronous function contains <code>null</code> for the first argument and results in subsequent arguments. Each function in the series takes the results arguments of the previous callback as the first parameters, and then a callback function. When all operations are complete, a final callback is invoked with the result of the last operation. The way this works is more clear when you consider the code fragment below (this example is from the <em>async</em> documentation):</p>
 
-<pre class="brush: js line-numbers  language-js">async.waterfall([
+<pre class="brush: js">async.waterfall([
   function(callback) {
     callback(null, 'one', 'two');
   },
@@ -126,11 +126,11 @@ tags:
 }
 );</pre>
 
-<h2 class="highlight-spanned" id="Installing_async"><span class="highlight-span">Installing async</span></h2>
+<h2 id="Installing_async">Installing async</h2>
 
 <p>Install the async module using the NPM package manager so that we can use it in our code. You do this in the usual way, by opening a prompt in the root of the <em>LocalLibrary</em> project and entering the following command:</p>
 
-<pre class="brush: bash line-numbers  language-bash">npm install async</pre>
+<pre class="brush: bash">npm install async</pre>
 
 <h2 id="Next_steps">Next steps</h2>
 
