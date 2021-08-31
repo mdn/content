@@ -44,8 +44,6 @@ tags:
 
 <p>So for example, when a content script accesses the page's <a href="/en-US/docs/Web/API/Window">window</a>, it won't see any properties the page script added to the window, and if the page script has redefined any existing properties of the window, the content script will see the original version.</p>
 
-<p>For the full story on Xray vision, see the articles on <a href="/en-US/docs/Mozilla/Tech/Xray_vision">Xray vision</a> and <a href="/en-US/docs/Mozilla/Gecko/Script_security">Script security</a>.</p>
-
 <h2 id="Accessing_page_script_objects_from_content_scripts">Accessing page script objects from content scripts</h2>
 
 <p>In Firefox, DOM objects in content scripts get an extra property <code>wrappedJSObject</code>. This is an "unwrapped" version of the object, which includes any changes made to that object by any page scripts.</p>
@@ -154,8 +152,6 @@ exportFunction(notify, window, {defineAs:'notify'});</pre>
 
 <pre class="brush: js">window.notify("Message from the page script!");</pre>
 
-<p>For the full story, see <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.exportFunction">Components.utils.exportFunction</a></code>.</p>
-
 <h3 id="cloneInto">cloneInto</h3>
 
 <p>Given an object defined in the content script, this creates a clone of the object in the page script's scope, thereby making the clone accessible to page scripts. By default, this uses the <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured clone algorithm</a> to clone the object, meaning that functions in the object are not included in the clone. To include functions, pass the <code>cloneFunctions</code> option.</p>
@@ -187,8 +183,6 @@ window.wrappedJSObject.messenger = cloneInto(
 <p>Now page scripts will see a new property on the window, <code>messenger</code>, which has a function <code>notify()</code>:</p>
 
 <pre class="brush: js">window.messenger.notify("Message from the page script!");</pre>
-
-<p>For the full story, see <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.cloneInto">Components.utils.cloneInto</a></code>.</p>
 
 <h3 id="Constructors_from_the_page_context">Constructors from the page context</h3>
 

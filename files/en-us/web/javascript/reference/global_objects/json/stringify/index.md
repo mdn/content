@@ -48,8 +48,9 @@ JSON.stringify(value, replacer, space)
     `10`). Values less than 1 indicate that no space should be used.
 
     If this is a `String`, the string (or the first 10 characters of the
-    string, if it's longer than that) is used as white space. If this parameter is not
-    provided (or is {{JSxRef("null")}}), no white space is used.
+    string, if it's longer than that) is used as white space. 
+    
+    If this parameter is not provided (or is {{JSxRef("null")}}), no white space is used.
 
 ### Return value
 

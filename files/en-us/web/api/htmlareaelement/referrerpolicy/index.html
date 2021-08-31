@@ -65,7 +65,7 @@ browser-compat: api.HTMLAreaElement.referrerPolicy
 <pre class="brush: html">&lt;img usemap="#mapAround" width="100" height="100" src="/img/logo@2x.png" /&gt;
 &lt;map id="myMap" name="mapAround" /&gt;&gt;</pre>
 
-<pre class="brush: js;highligh:[4]">var elt = document.createElement("area");
+<pre class="brush: js">var elt = document.createElement("area");
 elt.href = "/img2.png";
 elt.shape = "rect";
 elt.referrerPolicy = "no-referrer";

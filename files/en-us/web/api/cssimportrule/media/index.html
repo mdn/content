@@ -38,14 +38,14 @@ browser-compat: api.CSSImportRule.media
 
 <pre class="brush:css">@import url("style.css") screen;</pre>
 
-<pre class="brush:javascript">let myRules = document.styleSheets[0].cssRules;
+<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
 console.log(myRules[0].media); //returns a MediaList</pre>
 
 <h3>Setting the media property</h3>
 
 <p>To change the <code>media</code> attribute of the associated stylesheet, set the value of <code>media</code> to a string containing the new value.</p>
 
-<pre class="brush:javascript">let myRules = document.styleSheets[0].cssRules;
+<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
 myRules[0].media = "print";</pre>
 
 <h2 id="Specifications">Specifications</h2>

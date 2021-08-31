@@ -73,7 +73,7 @@ browser-compat: api.IDBDatabase
 
 <p>In the following code snippet, we open a database asynchronously ({{domxref("IDBFactory")}}), handle success and error cases, and create a new object store in the case that an upgrade is needed ({{ domxref("IDBdatabase") }}). For a complete working example, see our <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> app (<a href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
 
-<pre class="brush: js;highlight:[15,28,30,31,32,37]">// Let us open our database
+<pre class="brush: js;">// Let us open our database
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // these two event handlers act on the IDBDatabase object,

@@ -46,7 +46,7 @@ opacity: unset;
 
 Using `opacity` with a value other than `1` places the element in a new [stacking context](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context).
 
-If you [do not want to apply opacity to child elements](http://stackoverflow.com/questions/13508877/resetting-the-opacity-of-a-child-elements-maple-browser-samsung-tv-app), use the {{cssxref("background")}} property instead. For example:
+If you [do not want to apply opacity to child elements](https://stackoverflow.com/questions/13508877/resetting-the-opacity-of-a-child-elements-maple-browser-samsung-tv-app), use the {{cssxref("background")}} property instead. For example:
 
 ```css
 background: rgba(0, 0, 0, 0.4);
@@ -106,8 +106,8 @@ div { background-color: yellow; }
 #### HTML
 
 ```html
-<img src="//developer.mozilla.org/static/img/opengraph-logo.png"
-  alt="MDN logo" width="128" height="146"
+<img src="//interactive-examples.mdn.mozilla.net/media/dino.svg"
+  alt="MDN Dino" width="128" height="146"
   class="opacity">
 ```
 

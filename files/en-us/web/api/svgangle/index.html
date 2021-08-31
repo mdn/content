@@ -72,11 +72,14 @@ browser-compat: api.SVGAngle
 <dl>
  <dt><code>newValueSpecifiedUnits</code></dt>
  <dd>
- <p>Reset the value as a number with an associated unitType, thereby replacing the values for all of the attributes on the object.</p>
+   <p>Reset the value as a number with an associated unitType, thereby replacing the values for all of the attributes on the object.</p>
 
- <p><strong>Exceptions:</strong></p>
- A {{domxref("DOMException")}} with code <code>NOT_SUPPORTED_ERR</code> is raised if <code>unitType</code> is <code>SVG_ANGLETYPE_UNKNOWN</code> or not a valid unit type constant (one of the other <code>SVG_ANGLETYPE_*</code> constants defined on this interface).</dd>
- <dd>A {{domxref("DOMException")}} with code <code>NO_MODIFICATION_ALLOWED_ERR</code> is raised when the length corresponds to a read only attribute or when the object itself is read only.</dd>
+   <p><strong>Exceptions:</strong></p>
+   <ul>
+     <li>A {{domxref("DOMException")}} with code <code>NOT_SUPPORTED_ERR</code> is raised if <code>unitType</code> is <code>SVG_ANGLETYPE_UNKNOWN</code> or not a valid unit type constant (one of the other <code>SVG_ANGLETYPE_*</code> constants defined on this interface).</li>
+     <li>A {{domxref("DOMException")}} with code <code>NO_MODIFICATION_ALLOWED_ERR</code> is raised when the length corresponds to a read only attribute or when the object itself is read only.</li>
+   </ul>
+ </dd>
  <dt><code>convertToSpecifiedUnits</code></dt>
  <dd>Preserve the same underlying stored value, but reset the stored unit identifier to the given <code><em>unitType</em></code>. Object attributes <code>unitType</code>, <code>valueInSpecifiedUnits</code>, and <code>valueAsString</code> might be modified as a result of this method.</dd>
 </dl>

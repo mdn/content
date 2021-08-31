@@ -4,18 +4,16 @@ slug: Web/API/FileSystemDirectoryEntry
 tags:
   - API
   - File API
-  - File System API
   - File and Directory Entries API
   - FileSystemDirectoryEntry
   - Files
   - Interface
   - NeedsMarkupWork
-  - Non-standard
   - Offline
   - Reference
 browser-compat: api.FileSystemDirectoryEntry
 ---
-<div>{{APIRef("File System API")}}{{SeeCompatTable}}</div>
+<div>{{APIRef("File and Directory Entries API")}}</div>
 
 <p>The <strong><code>FileSystemDirectoryEntry</code></strong> interface of the <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</a> represents a directory in a file system. It provides methods which make it possible to access and manipulate the files in a directory, as well as to access the entries within the directory.</p>
 
@@ -62,13 +60,6 @@ window.requestFileSystem(TEMPORARY, 1024*1024 /*1MB*/, onFs, onError);</pre>
  <dd>Returns a {{domxref("FileSystemDirectoryEntry")}} object representing a directory located at a given path, relative to the directory on which the method is called.</dd>
  <dt>{{domxref("FileSystemDirectoryEntry.getFile", "getFile()")}}</dt>
  <dd>Returns a {{domxref("FileSystemFileEntry")}} object representing a file located within the directory's hierarchy, given a path relative to the directory on which the method is called.</dd>
-</dl>
-
-<h3 id="Obsolete_methods">Obsolete methods</h3>
-
-<dl>
- <dt>{{domxref("FileSystemDirectoryEntry.removeRecursively", "removeRecursively()")}}</dt>
- <dd>Deletes a directory and all of its contents, including the contents of subdirectories. This has been removed from the spec.</dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>

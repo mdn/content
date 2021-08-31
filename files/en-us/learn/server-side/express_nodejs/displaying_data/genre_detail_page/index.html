@@ -21,9 +21,9 @@ var async = require('async');
 <p>Find the exported <code>genre_detail</code><code>()</code> controller method and replace it with the following code.</p>
 
 <pre class="brush: js">// Display detail page for a specific Genre.
-exports.genre_detail = function(req, res, <strong>next</strong>) {
+exports.genre_detail = function(req, res, next) {
 
-<strong>    async.parallel({
+    async.parallel({
         genre: function(callback) {
             Genre.findById(req.params.id)
               .exec(callback);
@@ -43,23 +43,26 @@ exports.genre_detail = function(req, res, <strong>next</strong>) {
         }
         // Successful, so render
         res.render('genre_detail', { title: 'Genre Detail', genre: results.genre, genre_books: results.genre_books } );
-    });</strong>
+    });
 
 };
 </pre>
 
 <p>The method uses <code>async.parallel()</code> to query the genre name and its associated books in parallel, with the callback rendering the page when (if) both requests complete successfully.</p>
 
-<p>The ID of the required genre record is encoded at the end of the URL and extracted automatically based on the route definition (<strong>/genre/:id</strong>). The ID is accessed within the controller via the request parameters: <code style="font-style: normal; font-weight: normal;">req.params.id</code>. It is used in <code style="font-style: normal; font-weight: normal;">Genre.findById()</code> to get the current genre. It is also used to get all <code>Book</code> objects that have the genre ID in their <code>genre</code> field: <code>Book.find({ 'genre': req.params.id })</code>.</p>
+<p>The ID of the required genre record is encoded at the end of the URL and extracted automatically based on the route definition (<strong>/genre/:id</strong>).
+The ID is accessed within the controller via the request parameters: <code>req.params.id</code>.
+It is used in <code>Genre.findById()</code> to get the current genre.
+It is also used to get all <code>Book</code> objects that have the genre ID in their <code>genre</code> field: <code>Book.find({ 'genre': req.params.id })</code>.</p>
 
-<div class="note">
+<div class="notecard note">
 <p><strong>Note:</strong> If the genre does not exist in the database (i.e. it may have been deleted) then <code>findById()</code>  will return successfully with no results. In this case we want to display a "not found" page, so we create an <code>Error</code> object and pass it to the <code>next</code> middleware function in the chain. </p>
 
-<pre class="brush: js"><strong>if (results.genre==null) { // No results.
+<pre class="brush: js">if (results.genre==null) { // No results.
     var err = new Error('Genre not found');
     err.status = 404;
     return next(err);
-}</strong>
+}
 </pre>
 
 <p>The message will then propagate through to our error handling code (this was set up when we <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website#error_handling">generated the app skeleton</a> - for more information see <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction#handling_errors">Handling Errors</a>).</p>
@@ -75,7 +78,7 @@ exports.genre_detail = function(req, res, <strong>next</strong>) {
 
 block content
 
-  <strong>h1 Genre: #{genre.name}</strong>
+  h1 Genre: #{genre.name}
 
   div(style='margin-left:20px;margin-top:20px')
 
@@ -97,10 +100,10 @@ block content
 
 <p>Run the application and open your browser to <a href="http://localhost:3000/">http://localhost:3000/</a>. Select the <em>All genres</em> link, then select one of the genres (e.g. "Fantasy"). If everything is set up correctly, your page should look something like the following screenshot.</p>
 
-<p><img alt="Genre Detail Page - Express Local Library site" src="locallibary_express_genre_detail.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="Genre Detail Page - Express Local Library site" src="locallibary_express_genre_detail.png"></p>
 
-<div class="note">
-<p>You might get an error similar to this:</p>
+<div class="notecard note">
+<p><strong>Note:</strong> You might get an error similar to this:</p>
 
 <pre class="brush: bash">Cast to ObjectId failed for value " 59347139895ea23f9430ecbb" at path "_id" for model "Genre"
 </pre>

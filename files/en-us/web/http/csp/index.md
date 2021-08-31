@@ -64,7 +64,7 @@ data transfer, but also marking all [cookies with
 the `secure` attribute](/en-US/docs/Web/HTTP/Cookies) and providing automatic redirects from HTTP
 pages to their HTTPS counterparts. Sites may also use the
 {{HTTPHeader("Strict-Transport-Security")}} HTTP header to ensure that browsers connect
-to them only over an encrypted channel**.**
+to them only over an encrypted channel.
 
 ## Using CSP
 
