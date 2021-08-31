@@ -15,13 +15,13 @@ browser-compat: api.XRRay.matrix
 ---
 {{APIRef("WebXR Device API")}}
 
-The _read-only_ **`matrix`** property of the {{DOMxRef("XRRay")}} interface is a {{jsxref("Float32Array")}} matrix which represents a transform that can be used to position objects along the `XRRay`.
+The _read-only_ **`matrix`** property of the {{DOMxRef("XRRay")}} interface is a transform that can be used to position objects along the `XRRay`. This is a 4 by 4 matrix given as a 16 element {{jsxref("Float32Array")}} in column major order.
 
 The transform from a ray originates at [0, 0, 0] and extends down the negative z-axis to the ray described by the `XRRay`'s `origin` and `direction`.
 
 ## Value
 
-A {{jsxref("Float32Array")}} object.
+A 16 element {{jsxref("Float32Array")}} object representing a 4 by 4 matrix in column major order.
 
 ## Examples
 

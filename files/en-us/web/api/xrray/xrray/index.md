@@ -11,7 +11,7 @@ browser-compat: api.XRRay.XRRay
 ---
 {{APIRef("WebXR Device API")}}
 
-The **`XRRay()`** constructor creates and returns a new {{domxref("XRRay")}} object which is a geometric ray described by an origin point and a direction vector.
+The **`XRRay()`** constructor creates a new {{domxref("XRRay")}} object which is a geometric ray described by an origin point and a direction vector.
 
 ## Syntax
 
@@ -47,7 +47,7 @@ A `TypeError` is thrown,
 
 ### Creating `XRRay` objects
 
-The `XRRay()` constructor allows to create new rays by either providing an `origin` point and a `direction` vector, or by passing in an {{domxref("XRRigidTransform")}} object.
+The `XRRay()` constructor allows to creating new rays by either providing an `origin` point and a `direction` vector, or by passing in an {{domxref("XRRigidTransform")}} object.
 
 ```js
 // Default configuration
