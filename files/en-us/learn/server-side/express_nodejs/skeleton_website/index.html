@@ -112,8 +112,7 @@ tags:
 
 
 <div class="notecard note">
-  <h4>Tip</h4>
-  <p>There are many resources on the Internet to help you compare the different options!</p>
+  <p><strong>Note:</strong> There are many resources on the Internet to help you compare the different options!</p>
 </div>
 
 <p>For this project, we'll use the <a href="https://pugjs.org/api/getting-started.html">Pug</a> templating engine (this is the recently-renamed Jade engine), as this is one of the most popular Express/JavaScript templating languages and is supported out of the box by the generator.</p>
@@ -473,8 +472,7 @@ module.exports = router;
 <p>The route defines a callback that will be invoked whenever an HTTP <code>GET</code> request with the correct pattern is detected. The matching pattern is the route specified when the module is imported ('<code>/users</code>') plus whatever is defined in this file ('<code>/</code>'). In other words, this route will be used when a URL of <code>/users/</code> is received.</p>
 
 <div class="notecard note">
-  <h4>Tip</h4>
-  <p>Try this out by running the server with node and visiting the URL in your browser: <a href="http://localhost:3000/users/">http://localhost:3000/users/</a>. You should see a message: 'respond with a resource'.</p>
+  <p><strong>Note:</strong> Try this out by running the server with node and visiting the URL in your browser: <a href="http://localhost:3000/users/">http://localhost:3000/users/</a>. You should see a message: 'respond with a resource'.</p>
 </div>
 
 <p>One thing of interest above is that the callback function has the third argument '<code>next</code>', and is hence a middleware function rather than a simple route callback. While the code doesn't currently use the <code>next</code> argument, it may be useful in the future if you want to add multiple route handlers to the <code>'/'</code> route path.</p>

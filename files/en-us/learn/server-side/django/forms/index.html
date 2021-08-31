@@ -314,8 +314,7 @@ def renew_book_librarian(request, pk):
 <p>If the form is valid, then we can start to use the data, accessing it through the <code>form.cleaned_data</code> attribute (e.g. <code>data = form.cleaned_data['renewal_date']</code>). Here we just save the data into the <code>due_back</code> value of the associated <code>BookInstance</code> object.</p>
 
 <div class="notecard warning">
-    <h4>Warning</h4>
-    <p>While you can also access the form data directly through the request (for example, <code>request.POST['renewal_date']</code> or <code>request.GET['renewal_date']</code> if using a GET request), this is NOT recommended. The cleaned data is sanitized, validated, and converted into Python-friendly types.</p>
+    <p><strong>Warning:</strong> While you can also access the form data directly through the request (for example, <code>request.POST['renewal_date']</code> or <code>request.GET['renewal_date']</code> if using a GET request), this is NOT recommended. The cleaned data is sanitized, validated, and converted into Python-friendly types.</p>
 </div>
 
 <p>The final step in the form-handling part of the view is to redirect to another page, usually a "success" page. In this case, we use <code>HttpResponseRedirect</code> and <code>reverse()</code> to redirect to the view named <code>'all-borrowed'</code> (this was created as the "challenge" in <a href="/en-US/docs/Learn/Server-side/Django/Authentication#challenge_yourself">Django Tutorial Part 8: User authentication and permissions</a>). If you didn't create that page consider redirecting to the home page at URL '/').</p>

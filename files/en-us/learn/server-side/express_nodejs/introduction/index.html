@@ -145,7 +145,7 @@ server.listen(port, hostname, () =&gt; {
 <p>First lets consider the standard Express <a href="https://expressjs.com/en/starter/hello-world.html">Hello World</a> example (we discuss each part of this below, and in the following sections).</p>
 
 <div class="notecard note">
-<p><strong>Tip:</strong> If you have Node and Express already installed (or if you install them as shown in the <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment">next article</a>), you can save this code in a text file called <strong>app.js</strong> and run it in a bash command prompt by calling:   </p>
+<p><strong>Note:</strong> If you have Node and Express already installed (or if you install them as shown in the <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment">next article</a>), you can save this code in a text file called <strong>app.js</strong> and run it in a bash command prompt by calling:   </p>
 
 <p><strong><code>node ./app.js</code></strong></p>
 </div>
@@ -182,7 +182,7 @@ const app = express();
 <p>You can also create your own modules that can be imported in the same way.</p>
 
 <div class="notecard note">
-<p><strong>Tip:</strong> You will <em>want</em> to create your own modules, because this allows you to organize your code into manageable parts — a monolithic single-file application is hard to understand and maintain. Using modules also helps you manage your namespace, because only the variables you explicitly export are imported when you use a module.</p>
+<p><strong>Note:</strong> You will <em>want</em> to create your own modules, because this allows you to organize your code into manageable parts — a monolithic single-file application is hard to understand and maintain. Using modules also helps you manage your namespace, because only the variables you explicitly export are imported when you use a module.</p>
 </div>
 
 <p>To make objects available outside of a module you just need to expose them as additional properties on the <code>exports</code> object. For example, the <strong>square.js</strong> module below is a file that exports <code>area()</code> and <code>perimeter()</code> methods:</p>
@@ -240,7 +240,7 @@ console.log('Second');
 <p>There are a number of ways for an asynchronous API to notify your application that it has completed. The most common way is to register a callback function when you invoke the asynchronous API, that will be called back when the operation completes. This is the approach used above.</p>
 
 <div class="notecard note">
-<p><strong>Tip:</strong> Using callbacks can be quite "messy" if you have a sequence of dependent asynchronous operations that must be performed in order because this results in multiple levels of nested callbacks. This problem is commonly known as "callback hell". This problem can be reduced by good coding practices (see <a href="http://callbackhell.com/">http://callbackhell.com/</a>), using a module like <a href="https://www.npmjs.com/package/async">async</a>, or even moving to ES6 features like <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a>.</p>
+<p><strong>Note:</strong> Using callbacks can be quite "messy" if you have a sequence of dependent asynchronous operations that must be performed in order because this results in multiple levels of nested callbacks. This problem is commonly known as "callback hell". This problem can be reduced by good coding practices (see <a href="http://callbackhell.com/">http://callbackhell.com/</a>), using a module like <a href="https://www.npmjs.com/package/async">async</a>, or even moving to ES6 features like <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a>.</p>
 </div>
 
 <div class="notecard note">

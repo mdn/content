@@ -107,8 +107,7 @@ tags:
 <p>The <a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">Django skeleton website</a> created using the <em>django-admin</em> and <em>manage.py</em> tools are configured to make development easier. Many of the Django project settings (specified in <strong>settings.py</strong>) should be different for production, either for security or performance reasons.</p>
 
 <div class="notecard note">
-  <h4>Tip</h4>
-<p>It is common to have a separate <strong>settings.py</strong> file for production, and to import sensitive settings from a separate file or an environment variable. This file should then be protected, even if the rest of the source code is available on a public repository.</p>
+  <p><strong>Note:</strong> It is common to have a separate <strong>settings.py</strong> file for production, and to import sensitive settings from a separate file or an environment variable. This file should then be protected, even if the rest of the source code is available on a public repository.</p>
 </div>
 
 <p>The critical settings that you must check are:</p>
@@ -286,15 +285,13 @@ Changes to be committed:
 </ol>
 
 <div class="notecard warning">
-  <h4>Warning</h4>
-  <p>In 2020 Github change the default repo branch name to "main" (from "master"). If using an older/existing repository you might call <code>git push origin master</code> instead.</p>
+  <p><strong>Warning:</strong> In 2020 Github change the default repo branch name to "main" (from "master"). If using an older/existing repository you might call <code>git push origin master</code> instead.</p>
 </div>
 
 <p>When this operation completes, you should be able to go back to the page on Github where you created your repo, refresh the page, and see that your whole application has now been uploaded. You can continue to update your repository as files change using this add/commit/push cycle.</p>
 
 <div class="notecard note">
-  <h4>Tip</h4>
-  <p>This is a good point to make a backup of your "vanilla" project — while some of the changes we're going to be making in the following sections might be useful for deployment on any platform (or development) others might not.</p>
+  <p><strong>Note:</strong> This is a good point to make a backup of your "vanilla" project — while some of the changes we're going to be making in the following sections might be useful for deployment on any platform (or development) others might not.</p>
 
   <p>The <em>best</em> way to do this is to use <em>git</em> to manage your revisions. With <em>git</em> you can not only go back to a particular old version, but you can maintain this in a separate "branch" from your production changes and cherry-pick any changes to move between production and development branches. <a href="https://help.github.com/articles/good-resources-for-learning-git-and-github/">Learning Git</a> is well worth the effort, but is beyond the scope of this topic.</p>
 

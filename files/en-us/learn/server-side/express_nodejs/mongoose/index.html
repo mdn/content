@@ -61,8 +61,7 @@ tags:
 <p>The benefit of using an ORM is that programmers can continue to think in terms of JavaScript objects rather than database semantics — this is particularly true if you need to work with different databases (on either the same or different websites). They also provide an obvious place to perform data validation.</p>
 
 <div class="notecard note">
-  <h4>Tip</h4>
-<p>Using ODM/ORMs often results in lower costs for development and maintenance! Unless you're very familiar with the native query language or performance is paramount, you should strongly consider using an ODM.</p>
+  <p><strong>Note:</strong> Using ODM/ORMs often results in lower costs for development and maintenance! Unless you're very familiar with the native query language or performance is paramount, you should strongly consider using an ODM.</p>
 </div>
 
 <h3 id="What_ORMODM_should_I_use">What ORM/ODM should I use?</h3>
@@ -90,8 +89,7 @@ tags:
 <p>This ODM and database combination is extremely popular in the Node community, partially because the document storage and query system looks very much like JSON, and is hence familiar to JavaScript developers.</p>
 
 <div class="notecard note">
-  <h4>Tip</h4>
-  <p>You don't need to know MongoDB in order to use Mongoose, although parts of the <a href="https://mongoosejs.com/docs/guide.html">Mongoose documentation</a> <em>are</em> easier to use and understand if you are already familiar with MongoDB.</p>
+  <p><strong>Note:</strong> You don't need to know MongoDB in order to use Mongoose, although parts of the <a href="https://mongoosejs.com/docs/guide.html">Mongoose documentation</a> <em>are</em> easier to use and understand if you are already familiar with MongoDB.</p>
 </div>
 
 <p>The rest of this tutorial shows how to define and access the Mongoose schema and models for the <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">LocalLibrary website</a> example.</p>
@@ -163,8 +161,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));</pre>
 <p>You can get the default <code>Connection</code> object with <code>mongoose.connection</code>. Once connected, the open event is fired on the <code>Connection</code> instance.</p>
 
 <div class="notecard note">
-  <h4>Tip</h4>
-  <p>If you need to create additional connections you can use <code>mongoose.createConnection()</code>. This takes the same form of database URI (with host, database, port, options etc.) as <code>connect()</code> and returns a <code>Connection</code> object).</p>
+  <p><strong>Note:</strong> If you need to create additional connections you can use <code>mongoose.createConnection()</code>. This takes the same form of database URI (with host, database, port, options etc.) as <code>connect()</code> and returns a <code>Connection</code> object).</p>
 </div>
 
 <h3 id="Defining_and_creating_models">Defining and creating models</h3>

@@ -315,8 +315,7 @@ class Book(models.Model):
 <p>In both field types the related model class is declared as the first unnamed parameter using either the model class or a string containing the name of the related model. You must use the name of the model as a string if the associated class has not yet been defined in this file before it is referenced! The other parameters of interest in the <code>author</code> field are <code>null=True</code>, which allows the database to store a <code>Null</code> value if no author is selected, and <code>on_delete=models.SET_NULL</code>, which will set the value of the book's author field to <code>Null</code> if the associated author record is deleted.</p>
 
 <div class="notecard warning">
-    <h4>Warning</h4>
-    <p>By default <code>on_delete=models.CASCADE</code>, which means that if the author was deleted, this book would be deleted too! We use <code>SET_NULL</code> here, but we could also use <code>PROTECT</code> or <code>RESTRICT</code> to prevent the author being deleted while any book uses it.</p>
+  <p><strong>Warning:</strong> By default <code>on_delete=models.CASCADE</code>, which means that if the author was deleted, this book would be deleted too! We use <code>SET_NULL</code> here, but we could also use <code>PROTECT</code> or <code>RESTRICT</code> to prevent the author being deleted while any book uses it.</p>
 </div>
 
 <p>The model also defines <code>__str__()</code> , using the book's <code>title</code> field to represent a <code>Book</code> record. The final method, <code>get_absolute_url()</code> returns a URL that can be used to access a detail record for this model (for this to work we will have to define a URL mapping that has the name <code>book-detail</code>, and define an associated view and template).</p>
