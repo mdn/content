@@ -108,9 +108,10 @@ tags:
  <li>A view function that will be called if the URL pattern is detected: <code>views.index</code>,  which is the function named <code>index()</code> in the <strong>views.py</strong> file. </li>
 </ul>
 
-<p>The <code>path()</code> function also specifies a <code>name</code> parameter, which is a unique identifier for <em>this</em> particular URL mapping. You can use the name to "reverse" the mapper, i.e.  to dynamically create a URL that  points to the resource that the mapper is designed to handle. For example, we can use the name parameter to link to our home page from any other page by adding the following link in a template:</p>
+<p>The <code>path()</code> function also specifies a <code>name</code> parameter, which is a unique identifier for <em>this</em> particular URL mapping. You can use the name to "reverse" the mapper, i.e.  to dynamically create a URL that  points to the resource that the mapper is designed to handle.
+For example, we can use the name parameter to link to our home page from any other page by adding the following link in a template:</p>
 
-<pre class="brush: html">&lt;a href="<strong>{% url 'index' %}</strong>"&gt;Home&lt;/a&gt;.</pre>
+<pre class="brush: html">&lt;a href="{% url 'index' %}"&gt;Home&lt;/a&gt;.</pre>
 
 <div class="notecard note">
   <p><strong>Note:</strong> We can hard code the link as in <code>&lt;a href="<strong>/catalog/</strong>"&gt;Home&lt;/a&gt;</code>), but if we change the pattern for our home page, for example, to <code>/catalog/index</code>) the templates will no longer link correctly. Using a reversed url mapping is more robust.</p>
@@ -186,7 +187,10 @@ def index(request):
 
 <p>Much of the HTML and navigation structure will be the same in every page of our site. Instead of duplicating boilerplate code on every page, you can use the Django templating language to declare a base template, and then extend it to replace just the bits that are different for each specific page. </p>
 
-<p>The following code snippet is a sample base template from a <strong>base_generic.html</strong> file. We'll be creating the template for LocalLibrary shortly. The sample below includes common HTML with sections for a title, a sidebar, and main contents marked with the named <code>block</code> and <code>endblock</code> template tags, shown in bold. You can leave the blocks empty, or include default content to use when rendering pages derived from the template.</p>
+<p>The following code snippet is a sample base template from a <strong>base_generic.html</strong> file.
+We'll be creating the template for LocalLibrary shortly.
+The sample below includes common HTML with sections for a title, a sidebar, and main contents marked with the named <code>block</code> and <code>endblock</code> template tags.
+You can leave the blocks empty, or include default content to use when rendering pages derived from the template.</p>
 
 <div class="notecard note">
   <p><strong>Note:</strong> Template <em>tags</em> are functions that you can use in a template to loop through lists, perform conditional operations based on the value of a variable, and so on. In addition to template tags, the template syntax allows you to reference variables that are passed into the template from the view, and use <em>template filters to</em> format variables (for example, to convert a string to lower case).</p>
@@ -195,11 +199,11 @@ def index(request):
 <pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
-  <strong>{% block title %}</strong>&lt;title&gt;Local Library&lt;/title&gt;<strong>{% endblock %}</strong>
+  {% block title %}&lt;title&gt;Local Library&lt;/title&gt;{% endblock %}
 &lt;/head&gt;
 &lt;body&gt;
-  <strong>{% block sidebar %}</strong>&lt;!-- insert default navigation text for every page --&gt;<strong>{% endblock %}</strong>
-  <strong>{% block content %}</strong>&lt;!-- default content text (typically empty) --&gt;<strong>{% endblock %}</strong>
+  {% block sidebar %}&lt;!-- insert default navigation text for every page --&gt;{% endblock %}
+  {% block content %}&lt;!-- default content text (typically empty) --&gt;{% endblock %}
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
@@ -266,7 +270,8 @@ def index(request):
 
 <h4 id="The_index_template">The index template</h4>
 
-<p>Create a new HTML file <strong><em>index.html </em></strong>in <strong>/locallibrary/catalog/templates/</strong> and paste the following code in the file. This code extends our base template on the first line, and then replaces the default <code>content</code> block for the template. </p>
+<p>Create a new HTML file <strong><em>index.html </em></strong>in <strong>/locallibrary/catalog/templates/</strong> and paste the following code in the file.
+This code extends our base template on the first line, and then replaces the default <code>content</code> block for the template. </p>
 
 <pre class="brush: html">{% extends "base_generic.html" %}
 
@@ -276,10 +281,10 @@ def index(request):
   &lt;h2&gt;Dynamic content&lt;/h2&gt;
   &lt;p&gt;The library has the following record counts:&lt;/p&gt;
   &lt;ul&gt;
-    &lt;li&gt;&lt;strong&gt;Books:&lt;/strong&gt; <strong>\{{ num_books }}</strong>&lt;/li&gt;
-    &lt;li&gt;&lt;strong&gt;Copies:&lt;/strong&gt; <strong>\{{ num_instances }}</strong>&lt;/li&gt;
-    &lt;li&gt;&lt;strong&gt;Copies available:&lt;/strong&gt; <strong>\{{ num_instances_available }}</strong>&lt;/li&gt;
-    &lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; <strong>\{{ num_authors }}</strong>&lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;Books:&lt;/strong&gt; \{{ num_books }}&lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;Copies:&lt;/strong&gt; \{{ num_instances }}&lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;Copies available:&lt;/strong&gt; \{{ num_instances_available }}&lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; \{{ num_authors }}&lt;/li&gt;
   &lt;/ul&gt;
 {% endblock %}</pre>
 
@@ -289,13 +294,14 @@ def index(request):
   <p><strong>Note:</strong> You can easily recognize template variables and template tags (functions) - variables are enclosed in double braces (<code>\{{ num_books }}</code>), and tags are enclosed in single braces with percentage signs (<code>{% extends "base_generic.html" %}</code>).</p>
 </div>
 
-<p>The important thing to note here is that variables are named with the <em>keys</em> that we pass into the <code>context</code> dictionary in the <code>render()</code> function of our view (see sample below). Variables will be replaced with their associated <em>values</em> when the template is rendered.  </p>
+<p>The important thing to note here is that variables are named with the <em>keys</em> that we pass into the <code>context</code> dictionary in the <code>render()</code> function of our view (see sample below).
+Variables will be replaced with their associated <em>values</em> when the template is rendered.</p>
 
 <pre class="brush: python">context = {
-    '<strong>num_books</strong>': num_books,
-    '<strong>num_instances</strong>': num_instances,
-    '<strong>num_instances_available</strong>': num_instances_available,
-    '<strong>num_authors</strong>': num_authors,
+    'num_books': num_books,
+    'num_instances': num_instances,
+    'num_instances_available': num_instances_available,
+    'num_authors': num_authors,
 }
 
 return render(request, 'index.html', context=context)</pre>
@@ -333,7 +339,8 @@ return render(request, 'index.html', context=context)</pre>
 
 <h4 id="Configuring_where_to_find_the_templates">Configuring where to find the templates</h4>
 
-<p>The location where Django searches for templates is specified in the <code>TEMPLATES</code> object in the <strong>settings.py</strong> file. The default <strong>settings.py</strong> (as created for this tutorial) looks something like this:</p>
+<p>The location where Django searches for templates is specified in the <code>TEMPLATES</code> object in the <strong>settings.py</strong> file.
+The default <strong>settings.py</strong> (as created for this tutorial) looks something like this:</p>
 
 <pre class="brush: python">TEMPLATES = [
     {

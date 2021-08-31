@@ -115,21 +115,22 @@ cd locallibrary</pre>
   <p>If you are using Python 3.7.0 or later, you should only use  <code>py manage.py startapp catalog</code></p>
 </div>
 
-<p>The tool creates a new folder and populates it with files for the different parts of the application (shown in bold in the following example). Most of the files are named after their purpose (e.g. views should be stored in <strong>views.py</strong>, models in <strong>models.py</strong>, tests in <strong>tests.py</strong>, administration site configuration in <strong>admin.py</strong>, application registration in <strong>apps.py</strong>) and contain some minimal boilerplate code for working with the associated objects.</p>
+<p>The tool creates a new folder and populates it with files for the different parts of the application (shown in the following example).
+Most of the files are named after their purpose (e.g. views should be stored in <strong>views.py</strong>, models in <strong>models.py</strong>, tests in <strong>tests.py</strong>, administration site configuration in <strong>admin.py</strong>, application registration in <strong>apps.py</strong>) and contain some minimal boilerplate code for working with the associated objects.</p>
 
 <p>The updated project directory should now look like this:</p>
 
-<pre class="brush: bash"><em>locallibrary/</em>
+<pre class="brush: bash">locallibrary/
     manage.py
-    <em>locallibrary/
-</em><strong>    <em>catalog/</em>
+    locallibrary/
+    catalog/
         admin.py
         apps.py
         models.py
         tests.py
         views.py
         __init__.py
-        <em>migrations/</em></strong>
+        migrations/
 </pre>
 
 <p>In addition we now have:</p>
@@ -314,8 +315,8 @@ urlpatterns = [
 python3 manage.py migrate
 </pre>
 
-<div class="warning">
-<p><strong>Important</strong>: You'll need to run these commands every time your models change in a way that will affect the structure of the data that needs to be stored (including both addition and removal of whole models and individual fields).</p>
+<div class="notecard warning">
+<p><strong>Warning:</strong> You'll need to run these commands every time your models change in a way that will affect the structure of the data that needs to be stored (including both addition and removal of whole models and individual fields).</p>
 </div>
 
 <p>The <code>makemigrations</code> command <em>creates</em> (but does not apply) the migrations for all applications installed in your project. You can specify the application name as well to just run a migration for a single project. This gives you a chance to check out the code for these migrations before they are applied. If you're a Django expert, you may choose to tweak them slightly!</p>
