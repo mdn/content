@@ -89257,20 +89257,6 @@
       "Wladimir_Palant"
     ]
   },
-  "Web/API/Window/isSecureContext": {
-    "modified": "2020-10-29T06:26:42.696Z",
-    "contributors": [
-      "chrisdavidmills",
-      "connorshea",
-      "erikadoyle",
-      "mnoorenberghe",
-      "simevidas",
-      "fscholz",
-      "jonathanKingston",
-      "rolfedh",
-      "jpmedley"
-    ]
-  },
   "Web/API/Window/languagechange_event": {
     "modified": "2020-10-15T21:27:31.490Z",
     "contributors": [
@@ -91820,18 +91806,6 @@
       "fscholz",
       "kenrick95",
       "Bzbarsky"
-    ]
-  },
-  "Web/API/WindowOrWorkerGlobalScope/isSecureContext": {
-    "modified": "2020-10-15T21:51:32.759Z",
-    "contributors": [
-      "mfuji09",
-      "alattalatta",
-      "rugk",
-      "fscholz",
-      "kenrick95",
-      "chrisdavidmills",
-      "jpmedley"
     ]
   },
   "Web/API/WindowOrWorkerGlobalScope/origin": {
@@ -95273,6 +95247,18 @@
       "chrisdavidmills",
       "libbymc",
       "teoli"
+    ]
+  },
+  "Web/API/isSecureContext": {
+    "modified": "2020-10-15T21:51:32.759Z",
+    "contributors": [
+      "mfuji09",
+      "alattalatta",
+      "rugk",
+      "fscholz",
+      "kenrick95",
+      "chrisdavidmills",
+      "jpmedley"
     ]
   },
   "Web/API/msCaching": {
