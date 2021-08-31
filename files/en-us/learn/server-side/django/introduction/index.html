@@ -14,7 +14,9 @@ tags:
 
 <div>{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}</div>
 
-<p class="summary"><span class="seoSummary">In this first Django article, we answer the question "What is Django?" and give you an overview of what makes this web framework special.</span> We'll outline the main features, including some of the advanced functionality that we won't have time to cover in detail in this module. We'll also show you some of the main building blocks of a Django application (although at this point you won't yet have a development environment in which to test it).</p>
+<p>In this first Django article, we answer the question "What is Django?" and give you an overview of what makes this web framework special.</p>
+
+<p>We'll outline the main features, including some of the advanced functionality that we won't have time to cover in detail in this module. We'll also show you some of the main building blocks of a Django application (although at this point you won't yet have a development environment in which to test it).</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -92,7 +94,7 @@ tags:
 
 <p>Django web applications typically group the code that handles each of these steps into separate files:</p>
 
-<p><img alt="" src="basic-django.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="Django - files for views, model, urls, template" src="basic-django.png"></p>
 
 <ul>
  <li><strong>URLs: </strong>While it is possible to process requests from every single URL via a single function, it is much more maintainable to write a separate view function to handle each resource. A URL mapper is used to redirect HTTP requests to the appropriate view based on the request URL. The URL mapper can also match particular patterns of strings or digits that appear in a URL and pass these to a view function as data.</li>
@@ -109,10 +111,12 @@ tags:
 
 <h3 id="Sending_the_request_to_the_right_view_urls.py">Sending the request to the right view (urls.py)</h3>
 
-<p>A URL mapper is typically stored in a file named <strong>urls.py</strong>. In the example below, the mapper (<code>urlpatterns</code>) defines a list of mappings between <em>routes</em> (specific URL <em>patterns)</em> and corresponding view functions. If an HTTP Request is received that has a URL matching a specified pattern, then the associated view function will be called and passed the request.</p>
+<p>A URL mapper is typically stored in a file named <strong>urls.py</strong>.
+In the example below, the mapper (<code>urlpatterns</code>) defines a list of mappings between <em>routes</em> (specific URL <em>patterns)</em> and corresponding view functions.
+If an HTTP Request is received that has a URL matching a specified pattern, then the associated view function will be called and passed the request.</p>
 
 <pre class="brush: python">urlpatterns = [
-    <strong>path('admin/', admin.site.urls),</strong>
+    path('admin/', admin.site.urls),
     path('book/&lt;int:id&gt;/', views.book_detail, name='book_detail'),
     path('catalog/', include('catalog.urls')),
     re_path(r'^([0-9]+)/$', views.best),

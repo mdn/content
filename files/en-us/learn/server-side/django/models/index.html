@@ -16,7 +16,7 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}</div>
 
-<p class="summary">This article shows how to define models for the LocalLibrary website. It explains what a model is, how it is declared, and some of the main field types. It also briefly shows a few of the main ways you can access model data.</p>
+<p>This article shows how to define models for the LocalLibrary website. It explains what a model is, how it is declared, and some of the main field types. It also briefly shows a few of the main ways you can access model data.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -245,14 +245,16 @@ number_wild_books = wild_books.count()
 
 <p>The fields to match and the type of match are defined in the filter parameter name, using the format: <code>field_name__match_type</code> (note the <em>double underscore</em> between <code>title</code> and <code>contains</code> above). Above we're filtering <code>title</code> with a case-sensitive match. There are many other types of matches you can do: <code>icontains</code> (case insensitive), <code>iexact</code> (case-insensitive exact match), <code>exact</code> (case-sensitive exact match) and <code>in</code>, <code>gt</code> (greater than), <code>startswith</code>, etc. The <a href="https://docs.djangoproject.com/en/3.1/ref/models/querysets/#field-lookups">full list is here</a>.</p>
 
-<p>In some cases you'll need to filter on a field that defines a one-to-many relationship to another model (e.g. a <code>ForeignKey</code>). In this case you can "index" to fields within the related model with additional double underscores. So for example to filter for books with a specific genre pattern, you will have to index to the <code>name</code> through the <code>genre</code> field, as shown below:</p>
+<p>In some cases you'll need to filter on a field that defines a one-to-many relationship to another model (e.g. a <code>ForeignKey</code>). In this case you can "index" to fields within the related model with additional double underscores.
+So for example to filter for books with a specific genre pattern, you will have to index to the <code>name</code> through the <code>genre</code> field, as shown below:</p>
 
 <pre class="brush: python"># Will match on: Fiction, Science fiction, non-fiction etc.
-books_containing_genre = Book.objects.filter(genre<strong>__</strong>name<strong>__</strong>icontains='fiction')
+books_containing_genre = Book.objects.filter(genre__name__icontains='fiction')
 </pre>
 
 <div class="notecard note">
-  <p><strong>Note:</strong> You can use underscores (<code>__</code>) to navigate as many levels of relationships (<code>ForeignKey</code>/<code>ManyToManyField</code>) as you like. For example, a <code>Book</code> that had different types, defined using a further "cover" relationship might have a parameter name: <code>type__cover__name__exact='hard'.</code></p>
+  <p><strong>Note:</strong> You can use underscores (<code>__</code>) to navigate as many levels of relationships (<code>ForeignKey</code>/<code>ManyToManyField</code>) as you like.
+  For example, a <code>Book</code> that had different types, defined using a further "cover" relationship might have a parameter name: <code>type__cover__name__exact='hard'.</code></p>
 </div>
 
 <p>There is a lot more you can do with queries, including backwards searches from related models, chaining filters, returning a smaller set of values etc. For more information see <a href="https://docs.djangoproject.com/en/3.1/topics/db/queries/">Making queries</a> (Django Docs).</p>
@@ -315,8 +317,7 @@ class Book(models.Model):
 <p>In both field types the related model class is declared as the first unnamed parameter using either the model class or a string containing the name of the related model. You must use the name of the model as a string if the associated class has not yet been defined in this file before it is referenced! The other parameters of interest in the <code>author</code> field are <code>null=True</code>, which allows the database to store a <code>Null</code> value if no author is selected, and <code>on_delete=models.SET_NULL</code>, which will set the value of the book's author field to <code>Null</code> if the associated author record is deleted.</p>
 
 <div class="notecard warning">
-    <h4>Warning</h4>
-    <p>By default <code>on_delete=models.CASCADE</code>, which means that if the author was deleted, this book would be deleted too! We use <code>SET_NULL</code> here, but we could also use <code>PROTECT</code> or <code>RESTRICT</code> to prevent the author being deleted while any book uses it.</p>
+  <p><strong>Warning:</strong> By default <code>on_delete=models.CASCADE</code>, which means that if the author was deleted, this book would be deleted too! We use <code>SET_NULL</code> here, but we could also use <code>PROTECT</code> or <code>RESTRICT</code> to prevent the author being deleted while any book uses it.</p>
 </div>
 
 <p>The model also defines <code>__str__()</code> , using the book's <code>title</code> field to represent a <code>Book</code> record. The final method, <code>get_absolute_url()</code> returns a URL that can be used to access a detail record for this model (for this to work we will have to define a URL mapping that has the name <code>book-detail</code>, and define an associated view and template).</p>

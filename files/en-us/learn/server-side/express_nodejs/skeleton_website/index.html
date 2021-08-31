@@ -16,7 +16,7 @@ tags:
 
 <p>{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs")}}</p>
 
-<p class="summary">This second article in our <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">Express Tutorial</a> shows how you can create a "skeleton" website project which you can then go on to populate with site-specific routes, templates/views, and database calls.</p>
+<p>This second article in our <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">Express Tutorial</a> shows how you can create a "skeleton" website project which you can then go on to populate with site-specific routes, templates/views, and database calls.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -112,8 +112,7 @@ tags:
 
 
 <div class="notecard note">
-  <h4>Tip</h4>
-  <p>There are many resources on the Internet to help you compare the different options!</p>
+  <p><strong>Note:</strong> There are many resources on the Internet to help you compare the different options!</p>
 </div>
 
 <p>For this project, we'll use the <a href="https://pugjs.org/api/getting-started.html">Pug</a> templating engine (this is the recently-renamed Jade engine), as this is one of the most popular Express/JavaScript templating languages and is supported out of the box by the generator.</p>
@@ -213,7 +212,7 @@ npm install</pre>
 
 <p>You should see a browser page that looks like this:</p>
 
-<p><img alt="Browser for default Express app generator website" src="expressgeneratorskeletonwebsite.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="Browser for default Express app generator website" src="expressgeneratorskeletonwebsite.png"></p>
 
 <p>Congratulations! You now have a working Express application that can be accessed via port 3000.</p>
 
@@ -281,29 +280,33 @@ GET /stylesheets/style.css 200 4.886 ms - 111
 
 <h3 id="Directory_structure">Directory structure</h3>
 
-<p>The generated project, now that you have installed dependencies, has the following file structure (files are the items <strong>not</strong> prefixed with "/"). The <strong>package.json</strong> file defines the application dependencies and other information. It also defines a startup script that will call the application entry point, the JavaScript file <strong>/bin/www</strong>. This sets up some of the application error handling and then loads <strong>app.js</strong> to do the rest of the work. The app routes are stored in separate modules under the <strong>routes/</strong> directory. The templates are stored under the /<strong>views</strong> directory.</p>
+<p>The generated project, now that you have installed dependencies, has the following file structure (files are the items <strong>not</strong> prefixed with "/").
+The <strong>package.json</strong> file defines the application dependencies and other information.
+It also defines a startup script that will call the application entry point, the JavaScript file <strong>/bin/www</strong>.
+This sets up some of the application error handling and then loads <strong>app.js</strong> to do the rest of the work.
+The app routes are stored in separate modules under the <strong>routes/</strong> directory.
+The templates are stored under the /<strong>views</strong> directory.</p>
 
 <pre>/express-locallibrary-tutorial
-    <strong>app.js</strong>
+    app.js
     /bin
-        <strong>www</strong>
-    <strong>package.json</strong>
-    <strong>package-lock.json</strong>
+        www
+    package.json
+    package-lock.json
     /node_modules
         [about 6700 subdirectories and files]
     /public
         /images
         /javascripts
         /stylesheets
-            <strong>style.css</strong>
+            style.css
     /routes
-        <strong>index.js</strong>
-        <strong>users.js</strong>
+        index.js
+        users.js
     /views
-        <strong>error.pug</strong>
-        <strong>index.pug</strong>
-        <strong>layout.pug</strong>
-
+        error.pug
+        index.pug
+        layout.pug
 </pre>
 
 <p>The following sections describe the files in a little more detail.</p>
@@ -363,7 +366,7 @@ GET /stylesheets/style.css 200 4.886 ms - 111
  * Module dependencies.
  */
 
-<strong>var app = require('../app');</strong>
+var app = require('../app');
 </pre>
 
 <div class="notecard note">
@@ -412,13 +415,15 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 </pre>
 
-<p>The next set of functions call <code>app.use()</code> to add the <em>middleware</em> libraries into the request handling chain. In addition to the 3rd party libraries we imported previously, we use the <code>express.static</code> middleware to get <em>Express</em> to serve all the static files in the <strong>/public</strong> directory in the project root.</p>
+<p>The next set of functions call <code>app.use()</code> to add the <em>middleware</em> libraries into the request handling chain.
+In addition to the 3rd party libraries we imported previously, we use the <code>express.static</code> middleware to get <em>Express</em> to serve all the static files in the <strong>/public</strong> directory in the project root.</p>
 
 <pre class="brush: js">app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-<strong>app.use(express.static(path.join(__dirname, 'public')));</strong>
+
+app.use(express.static(path.join(__dirname, 'public')));
 </pre>
 
 <p>Now that all the other middleware is set up, we add our (previously imported) route-handling code to the request handling chain. The imported code will define particular routes for the different <em>parts</em> of the site:</p>
@@ -457,14 +462,16 @@ app.use(function(err, req, res, next) {
 
 <h3 id="Routes">Routes</h3>
 
-<p>The route file <strong>/routes/users.js</strong> is shown below (route files share a similar structure, so we don't need to also show <strong>index.js</strong>). First, it loads the <em>express</em> module and uses it to get an <code>express.Router</code> object. Then it specifies a route on that object and lastly exports the router from the module (this is what allows the file to be imported into <strong>app.js</strong>).</p>
+<p>The route file <strong>/routes/users.js</strong> is shown below (route files share a similar structure, so we don't need to also show <strong>index.js</strong>).
+First, it loads the <em>express</em> module and uses it to get an <code>express.Router</code> object.
+Then it specifies a route on that object and lastly exports the router from the module (this is what allows the file to be imported into <strong>app.js</strong>).</p>
 
 <pre class="brush: js">var express = require('express');
 var router = express.Router();
 
 /* GET users listing. */
-<strong>router.get('/', function(req, res, next) {
-  res.send('respond with a resource');</strong>
+router.get('/', function(req, res, next) {
+  res.send('respond with a resource');
 });
 
 module.exports = router;
@@ -473,8 +480,7 @@ module.exports = router;
 <p>The route defines a callback that will be invoked whenever an HTTP <code>GET</code> request with the correct pattern is detected. The matching pattern is the route specified when the module is imported ('<code>/users</code>') plus whatever is defined in this file ('<code>/</code>'). In other words, this route will be used when a URL of <code>/users/</code> is received.</p>
 
 <div class="notecard note">
-  <h4>Tip</h4>
-  <p>Try this out by running the server with node and visiting the URL in your browser: <a href="http://localhost:3000/users/">http://localhost:3000/users/</a>. You should see a message: 'respond with a resource'.</p>
+  <p><strong>Note:</strong> Try this out by running the server with node and visiting the URL in your browser: <a href="http://localhost:3000/users/">http://localhost:3000/users/</a>. You should see a message: 'respond with a resource'.</p>
 </div>
 
 <p>One thing of interest above is that the callback function has the third argument '<code>next</code>', and is hence a middleware function rather than a simple route callback. While the code doesn't currently use the <code>next</code> argument, it may be useful in the future if you want to add multiple route handlers to the <code>'/'</code> route path.</p>

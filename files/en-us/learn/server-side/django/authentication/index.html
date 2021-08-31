@@ -20,7 +20,7 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}</div>
 
-<p class="summary">In this tutorial, we'll show you how to allow users to log in to your site with their own accounts, and how to control what they can do and see based on whether or not they are logged in and their <em>permissions</em>. As part of this demonstration, we'll extend the <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> website, adding login and logout pages, and user- and staff-specific pages for viewing books that have been borrowed.</p>
+<p>In this tutorial, we'll show you how to allow users to log in to your site with their own accounts, and how to control what they can do and see based on whether or not they are logged in and their <em>permissions</em>. As part of this demonstration, we'll extend the <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> website, adding login and logout pages, and user- and staff-specific pages for viewing books that have been borrowed.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -61,15 +61,15 @@ tags:
 
 <pre class="brush: python">INSTALLED_APPS = [
     ...
-<strong>    'django.contrib.auth',  </strong>#Core authentication framework and its default models.
-<strong>    'django.contrib.contenttypes',  #</strong>Django content type system (allows permissions to be associated with models).
+    'django.contrib.auth',  #Core authentication framework and its default models.
+    'django.contrib.contenttypes',  #Django content type system (allows permissions to be associated with models).
     ....
 
 MIDDLEWARE = [
     ...
-<strong>    'django.contrib.sessions.middleware.SessionMiddleware',</strong>  #Manages sessions across requests
+    'django.contrib.sessions.middleware.SessionMiddleware',  #Manages sessions across requests
     ...
-<strong>    'django.contrib.auth.middleware.AuthenticationMiddleware',</strong>  #Associates users with requests using sessions.
+    'django.contrib.auth.middleware.AuthenticationMiddleware',  #Associates users with requests using sessions.
     ....
 </pre>
 
@@ -99,12 +99,13 @@ user.save()
 
 <p>Start the development server and navigate to the admin site in your local web browser (<a href="http://127.0.0.1:8000/admin/">http://127.0.0.1:8000/admin/</a>). Login to the site using the credentials for your superuser account. The top level of the Admin site displays all of your models, sorted by "Django application". From the <strong>Authentication and Authorization</strong> section, you can click the <strong>Users</strong> or <strong>Groups</strong> links to see their existing records.</p>
 
-<p><img alt="Admin site - add groups or users" src="admin_authentication_add.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="Admin site - add groups or users" src="admin_authentication_add.png"></p>
 
 <p>First lets create a new group for our library members.</p>
 
 <ol>
- <li>Click the <strong>Add</strong> button (next to Group) to create a new <em>Group</em>; enter the <strong>Name</strong> "Library Members" for the group.<img alt="Admin site - add group" src="admin_authentication_add_group.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></li>
+ <li>Click the <strong>Add</strong> button (next to Group) to create a new <em>Group</em>; enter the <strong>Name</strong> "Library Members" for the group.
+ <img alt="Admin site - add group" src="admin_authentication_add_group.png"></li>
  <li>We don't need any permissions for the group, so just press <strong>SAVE</strong> (you will be taken to a list of groups).</li>
 </ol>
 
@@ -112,12 +113,14 @@ user.save()
 
 <ol>
  <li>Navigate back to the home page of the admin site</li>
- <li>Click the <strong>Add</strong> button next to <em>Users</em> to open the <em>Add user</em> dialog box.<img alt="Admin site - add user pt1" src="admin_authentication_add_user_prt1.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></li>
+ <li>Click the <strong>Add</strong> button next to <em>Users</em> to open the <em>Add user</em> dialog box.<img alt="Admin site - add user pt1" src="admin_authentication_add_user_prt1.png"></li>
  <li>Enter an appropriate <strong>Username</strong> and <strong>Password</strong>/<strong>Password confirmation</strong> for your test user</li>
  <li>Press <strong>SAVE</strong> to create the user.<br>
   <br>
-  The admin site will create the new user and immediately take you to a <em>Change user</em> screen where you can change your <strong>username</strong> and add information for the User model's optional fields. These fields include the first name, last name, email address, and the user's status and permissions (only the <strong>Active</strong> flag should be set). Further down you can specify the user's groups and permissions, and see important dates related to the user (e.g. their join date and last login date).<img alt="Admin site - add user pt2" src="admin_authentication_add_user_prt2.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></li>
- <li>In the <em>Groups</em> section, select <strong>Library Member</strong> group from the list of <em>Available groups</em>, and then press the <strong>right-arrow</strong> between the boxes to move it into the <em>Chosen groups</em> box.<img alt="Admin site - add user to group" src="admin_authentication_user_add_group.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></li>
+  The admin site will create the new user and immediately take you to a <em>Change user</em> screen where you can change your <strong>username</strong> and add information for the User model's optional fields. These fields include the first name, last name, email address, and the user's status and permissions (only the <strong>Active</strong> flag should be set). Further down you can specify the user's groups and permissions, and see important dates related to the user (e.g. their join date and last login date).
+  <img alt="Admin site - add user pt2" src="admin_authentication_add_user_prt2.png"></li>
+ <li>In the <em>Groups</em> section, select <strong>Library Member</strong> group from the list of <em>Available groups</em>, and then press the <strong>right-arrow</strong> between the boxes to move it into the <em>Chosen groups</em> box.
+   <img alt="Admin site - add user to group" src="admin_authentication_user_add_group.png"></li>
  <li>We don't need to do anything else here, so just select <strong>SAVE</strong> again, to go to the list of users.</li>
 </ol>
 
@@ -166,10 +169,11 @@ accounts/ reset/&lt;uidb64&gt;/&lt;token&gt;/ [name='password_reset_confirm']
 accounts/ reset/done/ [name='password_reset_complete']</pre>
 </div>
 
-<p>Now try to navigate to the login URL (<a href="http://127.0.0.1:8000/accounts/login/">http://127.0.0.1:8000/accounts/login/</a>). This will fail again, but with an error that tells you that we're missing the required template (<strong>registration/login.html</strong>) on the template search path. You'll see the following lines listed in the yellow section at the top:</p>
+<p>Now try to navigate to the login URL (<a href="http://127.0.0.1:8000/accounts/login/">http://127.0.0.1:8000/accounts/login/</a>). This will fail again, but with an error that tells you that we're missing the required template (<strong>registration/login.html</strong>) on the template search path.
+You'll see the following lines listed in the yellow section at the top:</p>
 
 <pre class="brush: python">Exception Type:    TemplateDoesNotExist
-Exception Value:    <strong>registration/login.html</strong></pre>
+Exception Value:    registration/login.html</pre>
 
 <p>The next step is to create a registration directory on the search path and then add the <strong>login.html</strong> file.</p>
 
@@ -200,7 +204,7 @@ Exception Value:    <strong>registration/login.html</strong></pre>
     TEMPLATES = [
       {
        ...
-    <strong>   'DIRS': [os.path.join(BASE_DIR, 'templates')],</strong>
+       'DIRS': [os.path.join(BASE_DIR, 'templates')],
        'APP_DIRS': True,
        ...
     </pre>
@@ -209,8 +213,8 @@ Exception Value:    <strong>registration/login.html</strong></pre>
 
 <h3 id="Login_template">Login template</h3>
 
-<div class="warning">
-<p><strong>Important</strong>: The authentication templates provided in this article are a very basic/slightly modified version of the Django demonstration login templates. You may need to customise them for your own use!</p>
+<div class="notecard warning">
+<p><strong>Warning:</strong> The authentication templates provided in this article are a very basic/slightly modified version of the Django demonstration login templates. You may need to customise them for your own use!</p>
 </div>
 
 <p>Create a new HTML file called /<strong>locallibrary/templates/registration/login.html</strong> and give it the following contents:</p>
@@ -257,7 +261,7 @@ Exception Value:    <strong>registration/login.html</strong></pre>
 
 <p>Navigate back to the login page (<a href="http://127.0.0.1:8000/accounts/login/">http://127.0.0.1:8000/accounts/login/</a>) once you've saved your template, and you should see something like this:</p>
 
-<p><img alt="Library login page v1" src="library_login.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="Library login page v1" src="library_login.png"></p>
 
 <p>If you log in using valid credentials, you'll be redirected to another page (by default this will be <a href="http://127.0.0.1:8000/accounts/profile/">http://127.0.0.1:8000/accounts/profile/</a>). The problem is that, by default, Django expects that upon logging in you will want to be taken to a profile page, which may or may not be the case. As you haven't defined this page yet, you'll get another error!</p>
 
@@ -282,7 +286,7 @@ LOGIN_REDIRECT_URL = '/'
 
 <p>This template is very simple. It just displays a message informing you that you have been logged out, and provides a link that you can press to go back to the login screen. If you go to the logout URL again you should see this page:</p>
 
-<p><img alt="Library logout page v1" src="library_logout.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="Library logout page v1" src="library_logout.png"></p>
 
 <h3 id="Password_reset_templates">Password reset templates</h3>
 
@@ -410,12 +414,12 @@ LOGIN_REDIRECT_URL = '/'
 
     ...
 
-   <strong>{% if user.is_authenticated %}</strong>
-     &lt;li&gt;User: <strong>\{{ user.get_username }}</strong>&lt;/li&gt;
+   {% if user.is_authenticated %}
+     &lt;li&gt;User: \{{ user.get_username }}&lt;/li&gt;
      &lt;li&gt;&lt;a href="{% url 'logout'%}?next=\{{request.path}}"&gt;Logout&lt;/a&gt;&lt;/li&gt;
-   <strong>{% else %}</strong>
+   {% else %}
      &lt;li&gt;&lt;a href="{% url 'login'%}?next=\{{request.path}}"&gt;Login&lt;/a&gt;&lt;/li&gt;
-   <strong>{% endif %} </strong>
+   {% endif %}
   &lt;/ul&gt;</pre>
 
 <p>As you can see, we use <code>if</code>-<code>else</code>-<code>endif</code> template tags to conditionally display text based on whether <code>\{{ user.is_authenticated }}</code> is true. If the user is authenticated then we know that we have a valid user, so we call <code>\{{ user.get_username }}</code> to display their name.</p>
@@ -482,7 +486,7 @@ class MyView(LoginRequiredMixin, View):
 
 <pre class="brush: python">from datetime import date</pre>
 
-<p class="brush: python">Now add the following property definition to the <code>BookInstance</code> class:</p>
+<p>Now add the following property definition to the <code>BookInstance</code> class:</p>
 
 <pre class="brush: python">@property
 def is_overdue(self):
@@ -502,11 +506,12 @@ python3 manage.py migrate
 
 <h3 id="Admin">Admin</h3>
 
-<p>Now open <strong>catalog/admin.py</strong>, and add the <code>borrower</code> field to the <code>BookInstanceAdmin</code> class in both the <code>list_display</code> and the <code>fieldsets</code> as shown below. This will make the field visible in the Admin section, allowing us to assign a <code>User</code> to a <code>BookInstance</code> when needed.</p>
+<p>Now open <strong>catalog/admin.py</strong>, and add the <code>borrower</code> field to the <code>BookInstanceAdmin</code> class in both the <code>list_display</code> and the <code>fieldsets</code> as shown below.
+This will make the field visible in the Admin section, allowing us to assign a <code>User</code> to a <code>BookInstance</code> when needed.</p>
 
 <pre class="brush: python">@admin.register(BookInstance)
 class BookInstanceAdmin(admin.ModelAdmin):
-    list_display = ('book', 'status'<strong>, 'borrower'</strong>, 'due_back', 'id')
+    list_display = ('book', 'status', 'borrower', 'due_back', 'id')
     list_filter = ('status', 'due_back')
 
     fieldsets = (
@@ -514,7 +519,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
             'fields': ('book','imprint', 'id')
         }),
         ('Availability', {
-            'fields': ('status', 'due_back'<strong>,'borrower'</strong>)
+            'fields': ('status', 'due_back','borrower')
         }),
     )</pre>
 
@@ -604,7 +609,7 @@ class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
 
 <p>When any user is logged in, they'll see the <em>My Borrowed</em> link in the sidebar, and the list of books displayed as below (the first book has no due date, which is a bug we hope to fix in a later tutorial!).</p>
 
-<p><img alt="Library - borrowed books by user" src="library_borrowed_by_user.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="Library - borrowed books by user" src="library_borrowed_by_user.png"></p>
 
 <h2 id="Permissions">Permissions</h2>
 
@@ -614,13 +619,15 @@ class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
 
 <h3 id="Models_2">Models</h3>
 
-<p>Defining permissions is done on the model "<code>class Meta</code>" section, using the <code>permissions</code> field. You can specify as many permissions as you need in a tuple, each permission itself being defined in a nested tuple containing the permission name and permission display value. For example, we might define a permission to allow a user to mark that a book has been returned as shown:</p>
+<p>Defining permissions is done on the model "<code>class Meta</code>" section, using the <code>permissions</code> field.
+You can specify as many permissions as you need in a tuple, each permission itself being defined in a nested tuple containing the permission name and permission display value.
+For example, we might define a permission to allow a user to mark that a book has been returned as shown:</p>
 
 <pre class="brush: python">class BookInstance(models.Model):
     ...
     class Meta:
         ...
-        <strong>permissions = (("can_mark_returned", "Set book as returned"),)</strong></pre>
+        permissions = (("can_mark_returned", "Set book as returned"),)</pre>
 
 <p>We could then assign the permission to a "Librarian" group in the Admin site.</p>
 
@@ -689,13 +696,12 @@ def my_view(request):
 <p>You should be able to follow the same pattern as for the other view. The main difference is that you'll need to restrict the view to only librarians. You could do this based on whether the user is a staff member (function decorator: <code>staff_member_required</code>, template variable: <code>user.is_staff</code>) but we recommend that you instead use the <code>can_mark_returned</code> permission and <code>PermissionRequiredMixin</code>, as described in the previous section.</p>
 
 <div class="notecard warning">
-  <h4>Important</h4>
-  <p>Remember not to use your superuser for permissions based testing (permission checks always return true for superusers, even if a permission has not yet been defined!). Instead, create a librarian user, and add the required capability.</p>
+  <p><strong>Warning:</strong> Remember not to use your superuser for permissions based testing (permission checks always return true for superusers, even if a permission has not yet been defined!). Instead, create a librarian user, and add the required capability.</p>
 </div>
 
 <p>When you are finished, your page should look something like the screenshot below.</p>
 
-<p><img alt="All borrowed books, restricted to librarian" src="library_borrowed_all.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="All borrowed books, restricted to librarian" src="library_borrowed_all.png"></p>
 
 <h2 id="Summary">Summary</h2>
 
