@@ -57,6 +57,7 @@ The following example shows how to count words in a string using the Spanish lan
 ```js
 const spanishSegmenter = new Intl.Segmenter("es", {granularity: "word"});
 console.log([...spanishSegmenter.segment(text)].filter(segment => segment.isWordLike).length);
+```
 
 ## Specifications
 
