@@ -53,7 +53,7 @@ tags:
   <p><strong>IndexedDB does not use Structured Query Language (<abbr>SQL</abbr>).</strong> It uses queries on an index that produces a cursor, which you use to iterate across the result set. If you are not familiar with NoSQL systems, read the <a href="https://en.wikipedia.org/wiki/NoSQL">Wikipedia article on NoSQL</a>.</p>
  </li>
  <li>
-  <p><a name="origin"><strong>IndexedDB adheres to a same-origin policy</strong></a>. An origin is the domain, application layer protocol, and port of a URL of the document where the script is being executed. Each origin has its own associated set of databases. Every database has a name that identifies it within an origin.</p>
+  <p><strong>IndexedDB adheres to a same-origin policy</strong>. An origin is the domain, application layer protocol, and port of a URL of the document where the script is being executed. Each origin has its own associated set of databases. Every database has a name that identifies it within an origin.</p>
 
   <p>The security boundary imposed on IndexedDB prevents applications from accessing data with a different origin. For example, while an app or a page in <a href="https://www.example.com/app/">http://www.example.com/app/</a> can retrieve data from <a href="https://www.example.com/dir/">http://www.example.com/dir/</a>, because they have the same origin, it cannot retrieve data from <a href="https://www.example.com:8080/dir/">http://www.example.com:8080/dir/</a> (different port) or <a class="link-https" href="https://www.example.com/dir/">https://www.example.com/dir/</a> (different protocol), because they have different origins.</p>
 
