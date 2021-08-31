@@ -104,6 +104,20 @@ Window roles define sub-windows to the main document window, within the same win
 
 Abstract roles are only intended for use by browsers to help organize and streamline a document. They should not be used by developers writing HTML markup. Doing so will not result in any meaningful information being conveyed to assistive technologies or to users.
 
+  - command
+  - composite
+  - input
+  - landmark
+  - range
+  - roletype
+  - section
+  - sectionhead
+  - select
+  - structure
+  - widget
+  - window
+
+<div class="hidden"><!-- we have the pages. We can link to them. If we do, include "They are included here for reference" in the note below-->
   - [command](/en-US/docs/Web/Accessibility/ARIA/Roles/command_role)
   - [composite](/en-US/docs/Web/Accessibility/ARIA/Roles/composite_role)
   - [input](/en-US/docs/Web/Accessibility/ARIA/Roles/input_role)
@@ -116,8 +130,9 @@ Abstract roles are only intended for use by browsers to help organize and stream
   - [structure](/en-US/docs/Web/Accessibility/ARIA/Roles/structure_role)
   - [widget](/en-US/docs/Web/Accessibility/ARIA/Roles/widget_role)
   - [window](/en-US/docs/Web/Accessibility/ARIA/Roles/window_role)
+</div>
 
-  > **Note:** Don't use Abstract roles in your sites and applications. They are for use by browsers, and are included only to ensure a complete reference.
+  > **Note:** Don't use **abstract roles** in your sites and applications. They are for use by browsers. 
 
 
 ## Roles defined on MDN

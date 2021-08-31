@@ -6,6 +6,8 @@ tags:
   - HTML
   - cell
   - table
+  - role
+  - role attribute
 ---
 The `cell` value of the ARIA _role_ attribute identifies an element as being a cell in a tabular container that does not contain column or row header information. To be supported, the cell must be nested in an element with the role of `row`.
 
@@ -61,13 +63,13 @@ A cell can contain a number of property attributes clarifying the cell's positio
 
 #### States and properties
 
-- aria-colspan
+- `aria-colspan`
   - : Similar to the HTML [`<th>`](/en-US/docs/Web/HTML/Element/th) and [`<td>` colspan attribute](/en-US/docs/Web/HTML/Element/td), it defines the number of columns spanned by the cell.
-- aria-rowspan
+- `aria-rowspan`
   - : Similar to the HTML [`<th>`](/en-US/docs/Web/HTML/Element/th) and [`<td>` rowspan attribute](/en-US/docs/Web/HTML/Element/td), it defines the number of rows spanned by the cell.
-- aria-colindex attribute
+- `aria-colindex` attribute
   - : The `aria-colindex` attribute is only needed if columns are hidden from the DOM. The attribute takes as its value an integer between 1 and the total number of columns within the `table`, `grid` or `treegrid`. The `aria-colindex` defines an element's column index or position with respect to the total number of columns within a row. If all the columns are in the DOM, this attribute is not necessary.
-- aria-rowindex attribute
+- `aria-rowindex` attribute
   - : The `aria-rowindex` attribute is only needed if rows are hidden from the DOM, to indicate which row, in the list of total rows, the current cell is in. The attribute, takes as its value an integer between 1 and the total number of rows within the table, grid, or treegrid, indicating the position, or index, of the cell.  For example, a cell in the first row of the first header would likely have aria-rowindex="1" set, and cells in row 47 would have aria-rowindex="47", if aria-rowindex were needed due to not all rows being in the DOM. If the rows that are visible are contiguous, and there are no cells with a `colspan` or `rowspan` greater than one, this property can be added to the parent rows instead of all the rows' cells.
 
 ### Keyboard interactions
