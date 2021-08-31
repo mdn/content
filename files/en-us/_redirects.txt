@@ -8938,6 +8938,7 @@
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB	/en-US/docs/Web/API/indexedDB
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/isSecureContext	/en-US/docs/Web/API/isSecureContext
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/origin	/en-US/docs/Web/API/origin
+/en-US/docs/Web/API/WindowOrWorkerGlobalScope/queueMicrotask	/en-US/docs/Web/API/queueMicrotask
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/rejectionhandled_event	/en-US/docs/Web/API/Window/rejectionhandled_event
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/unhandledrejection_event	/en-US/docs/Web/API/Window/unhandledrejection_event
 /en-US/docs/Web/API/WindowSessionStorage	/en-US/docs/Web/API/Window/sessionStorage

@@ -91808,16 +91808,6 @@
       "Bzbarsky"
     ]
   },
-  "Web/API/WindowOrWorkerGlobalScope/queueMicrotask": {
-    "modified": "2020-10-15T22:21:06.789Z",
-    "contributors": [
-      "Kaiido",
-      "chrisdavidmills",
-      "Sheppy",
-      "zbjornson",
-      "DomenicDenicola"
-    ]
-  },
   "Web/API/WindowOrWorkerGlobalScope/setInterval": {
     "modified": "2020-12-09T23:19:41.310Z",
     "contributors": [
@@ -95320,6 +95310,16 @@
       "Bzbarsky",
       "chrisdavidmills",
       "ziyunfei"
+    ]
+  },
+  "Web/API/queueMicrotask": {
+    "modified": "2020-10-15T22:21:06.789Z",
+    "contributors": [
+      "Kaiido",
+      "chrisdavidmills",
+      "Sheppy",
+      "zbjornson",
+      "DomenicDenicola"
     ]
   },
   "Web/API/window/getDefaultComputedStyle": {
