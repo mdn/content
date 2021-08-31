@@ -158,7 +158,7 @@ Data fetched
   }
 };</pre>
 
-<p>This balances the clauses by having both situations handle the setting of <code>data</code> and firing of the <code>load</code> event within a microtask (using <code>queueMicrotask()</code> in the <code>if</code> clause and using the promises used by {{domxref("WindowOrWorkerGlobalScope.fetch", "fetch()")}} in the <code>else</code> clause).</p>
+<p>This balances the clauses by having both situations handle the setting of <code>data</code> and firing of the <code>load</code> event within a microtask (using <code>queueMicrotask()</code> in the <code>if</code> clause and using the promises used by {{domxref("fetch()")}} in the <code>else</code> clause).</p>
 
 <h4 id="Batching_operations">Batching operations</h4>
 
@@ -185,7 +185,7 @@ let sendMessage = message =&gt; {
 
 <p>If the message we just added to the array is the first one, we enqueue a microtask that will send a batch. The microtask will execute, as always, when the JavaScript execution path reaches the top level, just before running callbacks. That means that any further calls to <code>sendMessage()</code> made in the interim will push their messages onto the message queue, but because of the array length check before adding a microtask, no new microtask is enqueued.</p>
 
-<p>When the microtask runs, then, it has an array of potentially many messages waiting for it. It starts by encoding it as JSON using the {{jsxref("JSON.stringify()")}} method. After that, the array's contents aren't needed anymore, so we empty the <code>messageQueue</code> array. Finally, we use the {{domxref("WindowOrWorkerGlobalScope.fetch", "fetch()")}} method to send the JSON string to the server.</p>
+<p>When the microtask runs, then, it has an array of potentially many messages waiting for it. It starts by encoding it as JSON using the {{jsxref("JSON.stringify()")}} method. After that, the array's contents aren't needed anymore, so we empty the <code>messageQueue</code> array. Finally, we use the {{domxref("fetch()")}} method to send the JSON string to the server.</p>
 
 <p>This lets every call to <code>sendMessage()</code> made during the same iteration of the event loop add their messages to the same <code>fetch()</code> operation, without potentially having other tasks such as timeouts or the like delay the transmission.</p>
 

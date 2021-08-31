@@ -428,7 +428,7 @@
         "/docs/Web/API/Fetch_API/Cross-global_fetch_usage"
       ],
       "interfaces": ["Headers", "Request", "Response"],
-      "methods": ["WindowOrWorkerGlobalScope.fetch()"],
+      "methods": ["fetch()"],
       "properties": [],
       "events": []
     },
@@ -1335,7 +1335,7 @@
         "WritableStreamDefaultController",
         "WritableStreamDefaultWriter"
       ],
-      "methods": ["WindowOrWorkerGlobalScope.fetch()"],
+      "methods": ["fetch()"],
       "properties": ["Body.body"],
       "events": []
     },
