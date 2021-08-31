@@ -33,7 +33,7 @@ browser-compat: api.CacheStorage
 <p>You can access <code>CacheStorage</code> through the global {{domxref("WindowOrWorkerGlobalScope.caches", "caches")}} property.</p>
 
 <div class="notecard note">
-  <p><strong>Note:</strong> CacheStorage always rejects with a <code>SecurityError</code> on untrusted origins (i.e. those that aren't using HTTPS, although this definition will likely become more complex in the future.) When testing on Firefox, you can get around this by checking the <strong>Enable Service Workers over HTTP (when toolbox is open)</strong> option in the Firefox Devtools options/gear menu.</p>
+  <p><strong>Note:</strong> <code>CacheStorage</code> always rejects with a <code>SecurityError</code> on untrusted origins (i.e. those that aren't using HTTPS, although this definition will likely become more complex in the future.) When testing on Firefox, you can get around this by checking the <strong>Enable Service Workers over HTTP (when toolbox is open)</strong> option in the Firefox Devtools options/gear menu. Furthermore, because <code>CacheStorage</code> requires file-system access, it may be unavailable in private mode in Firefox.</p>
 </div>
 
 <div class="notecard note">
@@ -187,4 +187,5 @@ try {
  <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</a></li>
  <li>{{domxref("Cache")}}</li>
  <li>{{domxref("WindowOrWorkerGlobalScope.caches")}}</li>
+ <li><a href="/en-US/docs/Web/API/Web_Storage_API#private_browsing_incognito_modes">Private Browsing / Incognito modes</a></li>
 </ul>
