@@ -111,22 +111,6 @@ function openRequestedPopup() {
 <p>To open a <em>new</em> window on every call of <code>window.open()</code>, use the
   special value <code>_blank</code> for <code><var>windowName</var></code>.</p>
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The use of <code>window.open()</code> to
-    reopen an existing window with name <code><var>windowName</var></code> is not valid for all browsers and more with variable conditions.
-    <s>Firefox (50.0.1) functions as described: from the same domain+port reopen with same
-      name will access the previously created window</s>. Google Chrome (55.0.2883.87 m )
-    on the other hand will do it only from the same parent (as if the window was created
-    dependent, which is the "opener"). This is a wide limitation and generates
-    unbelievable complexity of development. Firefox (51.) gets the handle but cannot run
-    any <code>Element.focus()</code> while Chrome can run <code>focus()</code> from opener
-    to child but not between siblings nor, reverse, from child to opener. This function is
-    the lonely key to get back the handle on a window if the developer has access only to
-    its name (the name can be saved with cookies or local storage but not the window
-    object handle). For now 10/01/2017 the differencies of behavior found recently have
-    not still been tested for others Browsers.</p>
-</div>
-
 <h2 id="Window_features">Window features</h2>
 
 <p><code><var>windowFeatures</var></code> is an optional string containing a
