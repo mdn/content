@@ -253,11 +253,12 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <h4 id="Controlling_which_fields_are_displayed_and_laid_out">Controlling which fields are displayed and laid out</h4>
 
-<p>Update your <code>AuthorAdmin</code> class to add the <code>fields</code> line, as shown below (in bold):</p>
+<p>Update your <code>AuthorAdmin</code> class to add the <code>fields</code> line, as shown below:</p>
 
 <pre class="brush: python">class AuthorAdmin(admin.ModelAdmin):
     list_display = ('last_name', 'first_name', 'date_of_birth', 'date_of_death')
-<strong>    fields = ['first_name', 'last_name', ('date_of_birth', 'date_of_death')]</strong>
+
+    fields = ['first_name', 'last_name', ('date_of_birth', 'date_of_death')]
 </pre>
 
 <p>The <code>fields</code> attribute lists just those fields that are to be displayed on the form, in order. Fields are displayed vertically by default, but will display horizontally if you further group them in a tuple (as shown in the "date" fields above).</p>
@@ -274,20 +275,20 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <p>You can add "sections" to group related model information within the detail form, using the <a href="https://docs.djangoproject.com/en/3.1/ref/contrib/admin/#django.contrib.admin.ModelAdmin.fieldsets">fieldsets</a> attribute.</p>
 
-<p>In the <code>BookInstance</code> model we have information related to what the book is (i.e. <code>name</code>, <code>imprint</code>, and <code>id</code>) and when it will be available (<code>status</code>, <code>due_back</code>). We can add these in different sections by adding the text in bold to our <code>BookInstanceAdmin</code> class. </p>
+<p>In the <code>BookInstance</code> model we have information related to what the book is (i.e. <code>name</code>, <code>imprint</code>, and <code>id</code>) and when it will be available (<code>status</code>, <code>due_back</code>). We can add these to our <code>BookInstanceAdmin</code> class as shown below, using the <code>fieldsets</code> property.</p>
 
 <pre class="brush: python">@admin.register(BookInstance)
 class BookInstanceAdmin(admin.ModelAdmin):
     list_filter = ('status', 'due_back')
 
-<strong>    fieldsets = (
+    fieldsets = (
         (None, {
             'fields': ('book', 'imprint', 'id')
         }),
         ('Availability', {
             'fields': ('status', 'due_back')
         }),
-    )</strong></pre>
+    )</pre>
 
 <p>Each section has its own title (or <code>None</code>, if you don't want a title) and an associated tuple of fields in a dictionary — the format is complicated to describe, but fairly easy to understand if you look at the code fragment immediately above.</p>
 
@@ -299,15 +300,16 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <p>Sometimes it can make sense to be able to add associated records at the same time. For example, it may make sense to have both the book information and information about the specific copies you've got on the same detail page.</p>
 
-<p>You can do this by declaring <a href="https://docs.djangoproject.com/en/3.1/ref/contrib/admin/#django.contrib.admin.ModelAdmin.inlines">inlines</a>, of type <a href="https://docs.djangoproject.com/en/3.1/ref/contrib/admin/#django.contrib.admin.TabularInline">TabularInline</a> (horizontal layout) or <a href="https://docs.djangoproject.com/en/3.1/ref/contrib/admin/#django.contrib.admin.StackedInline">StackedInline</a> (vertical layout, just like the default model layout). You can add the <code>BookInstance</code> information inline to our <code>Book</code> detail by adding the lines below in bold near your <code>BookAdmin</code>:</p>
+<p>You can do this by declaring <a href="https://docs.djangoproject.com/en/3.1/ref/contrib/admin/#django.contrib.admin.ModelAdmin.inlines">inlines</a>, of type <a href="https://docs.djangoproject.com/en/3.1/ref/contrib/admin/#django.contrib.admin.TabularInline">TabularInline</a> (horizontal layout) or <a href="https://docs.djangoproject.com/en/3.1/ref/contrib/admin/#django.contrib.admin.StackedInline">StackedInline</a> (vertical layout, just like the default model layout). You can add the <code>BookInstance</code> information inline to our <code>Book</code> detail by specifiying <code>inlines</code> in your <code>BookAdmin</code>:</p>
 
-<pre class="brush: python"><strong>class BooksInstanceInline(admin.TabularInline):
-    model = BookInstance</strong>
+<pre class="brush: python">class BooksInstanceInline(admin.TabularInline):
+    model = BookInstance
 
 @admin.register(Book)
 class BookAdmin(admin.ModelAdmin):
     list_display = ('title', 'author', 'display_genre')
-<strong>    inlines = [BooksInstanceInline]</strong>
+
+    inlines = [BooksInstanceInline]
 </pre>
 
 <p>Now navigate to a view for a <code>Book</code> in your website — at the bottom you should now see the book instances relating to this book (immediately below the book's genre fields):</p>
@@ -317,7 +319,7 @@ class BookAdmin(admin.ModelAdmin):
 <p>In this case all we've done is declare our tabular inline class, which just adds all fields from the <em>inlined</em> model. You can specify all sorts of additional information for the layout, including the fields to display, their order, whether they are read only or not, etc. (see <a href="https://docs.djangoproject.com/en/3.1/ref/contrib/admin/#django.contrib.admin.TabularInline">TabularInline</a> for more information). </p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> There are some painful limits in this functionality! In the screenshot above we have three existing book instances, followed by three placeholders for new book instances (which look very similar!). It would be better to have NO spare book instances by default and just add them with the <strong>Add another Book instance</strong> link, or to be able to just list the <code>BookInstance</code>s as non-readable links from here. The first option can be done by setting the <code>extra</code> attribute to <code>0</code> in <code>BooksInstanceInline</code> model, try it by yourself.</p>
+  <p><strong>Note:</strong> There are some painful limits in this functionality! In the screenshot above we have three existing book instances, followed by three placeholders for new book instances (which look very similar!). It would be better to have NO spare book instances by default and just add them with the <strong>Add another Book instance</strong> link, or to be able to just list the <code>BookInstance</code>s as non-readable links from here. The first option can be done by setting the <code>extra</code> attribute to <code>0</code> in <code>BooksInstanceInline</code> model, try it by yourself.</p>
 </div>
 
 <h2 id="Challenge_yourself">Challenge yourself</h2>

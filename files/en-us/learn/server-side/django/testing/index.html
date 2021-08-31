@@ -833,7 +833,7 @@ class RenewBookInstancesViewTest(TestCase):
         self.assertTemplateUsed(response, 'catalog/book_renew_librarian.html')
 </pre>
 
-<p>Add the next test method, as shown below. This checks that the initial date for the form is three weeks in the future. Note how we are able to access the value of the initial value of the form field (shown in bold).</p>
+<p>Add the next test method, as shown below. This checks that the initial date for the form is three weeks in the future. Note how we are able to access the value of the initial value of the form field (<code>response.context['form'].initial['renewal_date'])</code>.</p>
 
 <pre class="brush: python">    def test_form_renewal_date_initially_has_date_three_weeks_in_future(self):
         login = self.client.login(username='testuser2', password='2HJ1vRV0Z&amp;3iD')

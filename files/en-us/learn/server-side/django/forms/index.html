@@ -265,14 +265,15 @@ def renew_book_librarian(request, pk):
  <li><code><a href="https://docs.python.org/3/library/datetime.html">datetime</a></code>: A Python library for manipulating dates and times.</li>
 </ul>
 
-<p>In the view, we first use the <code>pk</code> argument in <code>get_object_or_404()</code> to get the current <code>BookInstance</code> (if this does not exist, the view will immediately exit and the page will display a "not found" error). If this is <em>not</em> a <code>POST</code> request (handled by the <code>else</code> clause) then we create the default form passing in an <code>initial</code> value for the <code>renewal_date</code> field (as shown in bold below, this is 3 weeks from the current date). </p>
+<p>In the view, we first use the <code>pk</code> argument in <code>get_object_or_404()</code> to get the current <code>BookInstance</code> (if this does not exist, the view will immediately exit and the page will display a "not found" error).
+If this is <em>not</em> a <code>POST</code> request (handled by the <code>else</code> clause) then we create the default form passing in an <code>initial</code> value for the <code>renewal_date</code> field, 3 weeks from the current date. </p>
 
 <pre class="brush: python">    book_instance = get_object_or_404(BookInstance, pk=pk)
 
     # If this is a GET (or any other method) create the default form
     else:
-        proposed_renewal_date = datetime.date.today() + datetime.timedelta(<strong>weeks=3</strong>)
-        <strong>form = RenewBookForm(initial={'renewal_date': proposed_renewal_date})</strong>
+        proposed_renewal_date = datetime.date.today() + datetime.timedelta(weeks=3)
+        form = RenewBookForm(initial={'renewal_date': proposed_renewal_date})
 
     context = {
         'form': form,
@@ -283,7 +284,8 @@ def renew_book_librarian(request, pk):
 
 <p>After creating the form, we call <code>render()</code> to create the HTML page, specifying the template and a context that contains our form. In this case, the context also contains our <code>BookInstance</code>, which we'll use in the template to provide information about the book we're renewing.</p>
 
-<p>However, if this is a <code>POST</code> request, then we create our <code>form</code> object and populate it with data from the request. This process is called "binding" and allows us to validate the form. We then check if the form is valid, which runs all the validation code on all of the fields — including both the generic code to check that our date field is actually a valid date and our specific form's <code>clean_renewal_date()</code> function to check the date is in the right range. </p>
+<p>However, if this is a <code>POST</code> request, then we create our <code>form</code> object and populate it with data from the request. This process is called "binding" and allows us to validate the form.
+We then check if the form is valid, which runs all the validation code on all of the fields — including both the generic code to check that our date field is actually a valid date and our specific form's <code>clean_renewal_date()</code> function to check the date is in the right range. </p>
 
 <pre class="brush: python">    book_instance = get_object_or_404(BookInstance, pk=pk)
 
@@ -291,7 +293,7 @@ def renew_book_librarian(request, pk):
     if request.method == 'POST':
 
         # Create a form instance and populate it with data from the request (binding):
-<strong>        form = RenewBookForm(request.POST)</strong>
+        form = RenewBookForm(request.POST)
 
         # Check if the form is valid:
         if form.is_valid():
@@ -323,17 +325,17 @@ def renew_book_librarian(request, pk):
 
 <p>The final view is therefore as shown below. Please copy this into the bottom of <strong>locallibrary/catalog/views.py</strong>.</p>
 
-<pre class="brush: python"><strong>import datetime
+<pre class="brush: python">import datetime
 
-from django.contrib.auth.decorators import login_required, permission_required</strong>
+from django.contrib.auth.decorators import login_required, permission_required
 from django.shortcuts import get_object_or_404
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 
 from catalog.forms import RenewBookForm
 
-<strong>@login_required
-@permission_required('catalog.can_mark_returned', raise_exception=True)</strong>
+@login_required
+@permission_required('catalog.can_mark_returned', raise_exception=True)
 def renew_book_librarian(request, pk):
     """View function for renewing a specific BookInstance by librarian."""
     book_instance = get_object_or_404(BookInstance, pk=pk)
@@ -410,14 +412,14 @@ def renew_book_librarian(request, pk):
   <p><strong>Note:</strong> It is perhaps not obvious because we only have one field, but, by default, every field is defined in its own table row. This same rendering is provided if you reference the template variable <code>\{{ form.as_table }}</code>.</p>
 </div>
 
-<p>If you were to enter an invalid date, you'd additionally get a list of the errors rendered on the page (shown in bold below).</p>
+<p>If you were to enter an invalid date, you'd additionally get a list of the errors rendered on the page (see <code>errorlist</code> below).</p>
 
 <pre class="brush: html">&lt;tr&gt;
   &lt;th&gt;&lt;label for="id_renewal_date"&gt;Renewal date:&lt;/label&gt;&lt;/th&gt;
     &lt;td&gt;
-<strong>      &lt;ul class="errorlist"&gt;
+      &lt;ul class="errorlist"&gt;
         &lt;li&gt;Invalid date - renewal in past&lt;/li&gt;
-      &lt;/ul&gt;</strong>
+      &lt;/ul&gt;
       &lt;input id="id_renewal_date" name="renewal_date" type="text" value="2015-11-08" required&gt;
       &lt;br&gt;
       &lt;span class="helptext"&gt;Enter date between now and 4 weeks (default 3 weeks).&lt;/span&gt;
@@ -478,9 +480,9 @@ def renew_book_librarian(request, pk):
 from catalog.models import BookInstance
 
 class RenewBookModelForm(ModelForm):
-<strong>    class Meta:
+    class Meta:
         model = BookInstance
-        fields = ['due_back']</strong>
+        fields = ['due_back']
 </pre>
 
 <div class="notecard note">
