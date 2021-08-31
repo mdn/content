@@ -91822,20 +91822,6 @@
       "Bzbarsky"
     ]
   },
-  "Web/API/WindowOrWorkerGlobalScope/indexedDB": {
-    "modified": "2020-10-15T21:25:18.475Z",
-    "contributors": [
-      "sideshowbarker",
-      "mfluehr",
-      "fscholz",
-      "jpmedley",
-      "nmve",
-      "arronei",
-      "chrisdavidmills",
-      "libbymc",
-      "teoli"
-    ]
-  },
   "Web/API/WindowOrWorkerGlobalScope/isSecureContext": {
     "modified": "2020-10-15T21:51:32.759Z",
     "contributors": [
@@ -95273,6 +95259,20 @@
     "modified": "2019-01-17T03:16:44.967Z",
     "contributors": [
       "mattwojo"
+    ]
+  },
+  "Web/API/indexedDB": {
+    "modified": "2020-10-15T21:25:18.475Z",
+    "contributors": [
+      "sideshowbarker",
+      "mfluehr",
+      "fscholz",
+      "jpmedley",
+      "nmve",
+      "arronei",
+      "chrisdavidmills",
+      "libbymc",
+      "teoli"
     ]
   },
   "Web/API/msCaching": {

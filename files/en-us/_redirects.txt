@@ -7758,8 +7758,8 @@
 /en-US/docs/Web/API/IDBDatabase.onversionchange	/en-US/docs/Web/API/IDBDatabase/onversionchange
 /en-US/docs/Web/API/IDBDatabase.transaction	/en-US/docs/Web/API/IDBDatabase/transaction
 /en-US/docs/Web/API/IDBDatabase.version	/en-US/docs/Web/API/IDBDatabase/version
-/en-US/docs/Web/API/IDBEnvironment.indexedDB	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB
-/en-US/docs/Web/API/IDBEnvironment/indexedDB	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB
+/en-US/docs/Web/API/IDBEnvironment.indexedDB	/en-US/docs/Web/API/indexedDB
+/en-US/docs/Web/API/IDBEnvironment/indexedDB	/en-US/docs/Web/API/indexedDB
 /en-US/docs/Web/API/IDBFactory.cmp	/en-US/docs/Web/API/IDBFactory/cmp
 /en-US/docs/Web/API/IDBFactory.deleteDatabase	/en-US/docs/Web/API/IDBFactory/deleteDatabase
 /en-US/docs/Web/API/IDBFactory.open	/en-US/docs/Web/API/IDBFactory/open
@@ -7854,7 +7854,6 @@
 /en-US/docs/Web/API/ImageData.width	/en-US/docs/Web/API/ImageData/width
 /en-US/docs/Web/API/Index	/en-US/docs/Web/API
 /en-US/docs/Web/API/IndexSync	/en-US/docs/Web/API/IDBIndexSync
-/en-US/docs/Web/API/IndexedDB	/en-US/docs/Web/API/IndexedDB_API
 /en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology
 /en-US/docs/Web/API/IndexedDB_API/Cursor	/en-US/docs/Web/API/IDBCursor
 /en-US/docs/Web/API/IndexedDB_API/DatabaseException	/en-US/docs/Web/API/IDBDatabaseException
@@ -8869,7 +8868,7 @@
 /en-US/docs/Web/API/Window/convertPointFromNodeToPage	/en-US/docs/Web/API/Window/webkitConvertPointFromNodeToPage
 /en-US/docs/Web/API/Window/convertPointFromPageToNode	/en-US/docs/Web/API/Window/webkitConvertPointFromPageToNode
 /en-US/docs/Web/API/Window/fetch	/en-US/docs/Web/API/fetch
-/en-US/docs/Web/API/Window/indexedDB	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB
+/en-US/docs/Web/API/Window/indexedDB	/en-US/docs/Web/API/indexedDB
 /en-US/docs/Web/API/Window/mozRequestAnimationFrame	/en-US/docs/Web/API/window/requestAnimationFrame
 /en-US/docs/Web/API/Window/onabort	/en-US/docs/Web/API/GlobalEventHandlers/onabort
 /en-US/docs/Web/API/Window/onafterprint	/en-US/docs/Web/API/WindowEventHandlers/onafterprint
@@ -8936,6 +8935,7 @@
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap	/en-US/docs/Web/API/createImageBitmap
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated	/en-US/docs/Web/API/crossOriginIsolated
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch	/en-US/docs/Web/API/fetch
+/en-US/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB	/en-US/docs/Web/API/indexedDB
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/rejectionhandled_event	/en-US/docs/Web/API/Window/rejectionhandled_event
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/unhandledrejection_event	/en-US/docs/Web/API/Window/unhandledrejection_event
 /en-US/docs/Web/API/WindowSessionStorage	/en-US/docs/Web/API/Window/sessionStorage
@@ -8980,7 +8980,7 @@
 /en-US/docs/Web/API/WorkerGlobalScope/clearTimeout	/en-US/docs/Web/API/clearTimeout
 /en-US/docs/Web/API/WorkerGlobalScope/close	/en-US/docs/Web/API/DedicatedWorkerGlobalScope/close
 /en-US/docs/Web/API/WorkerGlobalScope/fetch	/en-US/docs/Web/API/fetch
-/en-US/docs/Web/API/WorkerGlobalScope/indexedDB	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB
+/en-US/docs/Web/API/WorkerGlobalScope/indexedDB	/en-US/docs/Web/API/indexedDB
 /en-US/docs/Web/API/WorkerGlobalScope/onclose	/en-US/docs/Web/API/DedicatedWorkerGlobalScope/close
 /en-US/docs/Web/API/WorkerGlobalScope/requestFileSystemSync	/en-US/docs/Web/API/LocalFileSystemSync/requestFileSystemSync
 /en-US/docs/Web/API/WorkerGlobalScope/setInterval	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval

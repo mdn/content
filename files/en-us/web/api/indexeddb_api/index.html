@@ -44,7 +44,7 @@ tags:
 
 <h2 id="Interfaces">Interfaces</h2>
 
-<p>To get access to a database, call <a href="/en-US/docs/Web/API/IDBFactory/open"><code>open()</code></a> on the <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB"><code>indexedDB</code></a> attribute of a <a href="/en-US/docs/Web/API/Window">window</a> object. This method returns an {{domxref("IDBRequest")}} object; asynchronous operations communicate to the calling application by firing events on {{domxref("IDBRequest")}} objects.</p>
+<p>To get access to a database, call <a href="/en-US/docs/Web/API/IDBFactory/open"><code>open()</code></a> on the <a href="/en-US/docs/Web/API/indexedDB"><code>indexedDB</code></a> attribute of a <a href="/en-US/docs/Web/API/Window">window</a> object. This method returns an {{domxref("IDBRequest")}} object; asynchronous operations communicate to the calling application by firing events on {{domxref("IDBRequest")}} objects.</p>
 
 <h3 id="Connecting_to_a_database">Connecting to a database</h3>
 
@@ -52,7 +52,7 @@ tags:
  <dt>{{domxref("IDBEnvironment")}}</dt>
  <dd>Provides access to IndexedDB functionality. It is implemented by the {{domxref("window")}} and {{domxref("worker")}} objects. This interface isn't part of the 2.0 specification.</dd>
  <dt>{{domxref("IDBFactory")}}</dt>
- <dd>Provides access to a database. This is the interface implemented by the global object {{domxref("WindowOrWorkerGlobalScope/indexedDB", "indexedDB")}} and is therefore the entry point for the API.</dd>
+ <dd>Provides access to a database. This is the interface implemented by the global object {{domxref("indexedDB")}} and is therefore the entry point for the API.</dd>
  <dt>{{domxref("IDBOpenDBRequest")}}</dt>
  <dd>Represents a request to open a database.</dd>
  <dt>{{domxref("IDBDatabase")}}</dt>
@@ -149,5 +149,5 @@ tags:
  <li><a href="https://www.npmjs.com/package/@sifrr/storage">sifrr-storage:</a> A small (~2kB) promise based library for client side key-value storage. Works with IndexedDB, localStorage, WebSQL, Cookies. Can automatically use supported storage available based on priority.</li>
  <li><a href="https://github.com/google/lovefield">lovefield</a>: <span class="mr-2 text-gray-dark">Lovefield is a relational database for web apps. Written in JavaScript, works cross-browser. Provides SQL-like APIs that are fast, safe, and easy to use.</span></li>
  <li><a href="https://github.com/hyoo-ru/mam_mol/tree/master/db">$mol_db</a>: Tiny (~1.3kB) TypeScript facade with promise-based api and automatic migrations.</li>
-  
+
 </ul>
