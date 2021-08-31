@@ -1,28 +1,27 @@
 ---
-title: WindowOrWorkerGlobalScope.btoa()
-slug: Web/API/WindowOrWorkerGlobalScope/btoa
+title: btoa()
+slug: Web/API/btoa
 tags:
-- API
-- HTML DOM
-- Method
-- Reference
-- Web
-- WindowOrWorkerGlobalScope
-- btoa
-- data
-- strings
-browser-compat: api.WindowOrWorkerGlobalScope.btoa
+  - API
+  - HTML DOM
+  - Method
+  - Reference
+  - Web
+  - btoa
+  - data
+  - strings
+browser-compat: api.btoa
 ---
 <p>{{APIRef("HTML DOM")}}</p>
 
-<p>The <code><strong>WindowOrWorkerGlobalScope.btoa()</strong></code> method creates a
+<p>The <code><strong>btoa()</strong></code> method creates a
   {{glossary("Base64")}}-encoded ASCII string from a <a
     href="/en-US/docs/Web/API/DOMString/Binary">binary string</a> (i.e., a
   {{jsxref("String")}} object in which each character in the string is treated as a byte
   of binary data).</p>
 
 <p>You can use this method to encode data which may otherwise cause communication
-  problems, transmit it, then use the {{domxref("WindowOrWorkerGlobalScope.atob",
+  problems, transmit it, then use the {{domxref("atob",
   "atob()")}} method to decode the data again. For example, you can encode control
   characters such as ASCII values 0 through 31.</p>
 
@@ -145,5 +144,5 @@ console.log(original);                // ☸☹☺☻☼☾☿
 <ul>
   <li><a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs"><code>data</code> URIs</a>
   </li>
-  <li>{{domxref("WindowOrWorkerGlobalScope.atob","atob()")}}</li>
+  <li>{{domxref("atob","atob()")}}</li>
 </ul>

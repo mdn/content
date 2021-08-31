@@ -44,13 +44,13 @@ tags:
 
 <h2 id="Interfaces">Interfaces</h2>
 
-<p>To get access to a database, call <a href="/en-US/docs/Web/API/IDBFactory/open"><code>open()</code></a> on the <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB"><code>indexedDB</code></a> attribute of a <a href="/en-US/docs/Web/API/Window">window</a> object. This method returns an {{domxref("IDBRequest")}} object; asynchronous operations communicate to the calling application by firing events on {{domxref("IDBRequest")}} objects.</p>
+<p>To get access to a database, call <a href="/en-US/docs/Web/API/IDBFactory/open"><code>open()</code></a> on the <a href="/en-US/docs/Web/API/indexedDB"><code>indexedDB</code></a> attribute of a <a href="/en-US/docs/Web/API/Window">window</a> object. This method returns an {{domxref("IDBRequest")}} object; asynchronous operations communicate to the calling application by firing events on {{domxref("IDBRequest")}} objects.</p>
 
 <h3 id="Connecting_to_a_database">Connecting to a database</h3>
 
 <dl>
  <dt>{{domxref("IDBFactory")}}</dt>
- <dd>Provides access to a database. This is the interface implemented by the global object {{domxref("WindowOrWorkerGlobalScope/indexedDB", "indexedDB")}} and is therefore the entry point for the API.</dd>
+ <dd>Provides access to a database. This is the interface implemented by the global object {{domxref("indexedDB")}} and is therefore the entry point for the API.</dd>
  <dt>{{domxref("IDBOpenDBRequest")}}</dt>
  <dd>Represents a request to open a database.</dd>
  <dt>{{domxref("IDBDatabase")}}</dt>

@@ -140,7 +140,7 @@ let recordingTimeMS = 5000;
 }
 </pre>
 
-<p>The <code>wait()</code> function returns a new {{jsxref("Promise")}} which resolves once the specified number of milliseconds have elapsed. It works by using an <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow function</a> which calls {{domxref("WindowOrWorkerGlobalScope.setTimeout")}}, specifying the promise's resolution handler as the timeout handler function. That lets us use promise syntax when using timeouts, which can be very handy when chaining promises, as we'll see later.</p>
+<p>The <code>wait()</code> function returns a new {{jsxref("Promise")}} which resolves once the specified number of milliseconds have elapsed. It works by using an <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow function</a> which calls {{domxref("setTimeout()")}}, specifying the promise's resolution handler as the timeout handler function. That lets us use promise syntax when using timeouts, which can be very handy when chaining promises, as we'll see later.</p>
 
 <h3 id="Starting_media_recording">Starting media recording</h3>
 

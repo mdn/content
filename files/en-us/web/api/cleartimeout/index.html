@@ -1,20 +1,18 @@
 ---
-title: WindowOrWorkerGlobalScope.clearTimeout()
-slug: Web/API/WindowOrWorkerGlobalScope/clearTimeout
+title: clearTimeout()
+slug: Web/API/clearTimeout
 tags:
-- API
-- HTML DOM
-- Method
-- Reference
-- WindowOrWorkerGlobalScope
-- clearTimeout
-browser-compat: api.WindowOrWorkerGlobalScope.clearTimeout
+  - API
+  - HTML DOM
+  - Method
+  - Reference
+  - clearTimeout
+browser-compat: api.clearTimeout
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p>The <strong><code>clearTimeout()</code></strong> method of the
-  {{domxref("WindowOrWorkerGlobalScope")}} mixin cancels a timeout previously established
-  by calling {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}}.</p>
+<p>The global <strong><code>clearTimeout()</code></strong> method cancels a timeout previously established
+  by calling {{domxref("setTimeout()")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -30,10 +28,10 @@ browser-compat: api.WindowOrWorkerGlobalScope.clearTimeout
 </dl>
 
 <p>It's worth noting that the pool of IDs used by
-  {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}} and
-  {{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}} are shared, which
+  {{domxref("setTimeout()")}} and
+  {{domxref("setInterval()")}} are shared, which
   means you can technically use <code>clearTimeout()</code> and
-  {{domxref("WindowOrWorkerGlobalScope.clearInterval", "clearInterval()")}}
+  {{domxref("clearInterval", "clearInterval()")}}
   interchangeably. However, for clarity, you should avoid doing so.</p>
 
 <h2 id="Example">Example</h2>
@@ -81,9 +79,9 @@ window.onclick = function() { alarm.setup(); };
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li>{{domxref("WindowOrWorkerGlobalScope.setTimeout()")}}</li>
-  <li>{{domxref("WindowOrWorkerGlobalScope.setInterval()")}}</li>
-  <li>{{domxref("WindowOrWorkerGlobalScope.clearInterval()")}}</li>
+  <li>{{domxref("setTimeout()")}}</li>
+  <li>{{domxref("setInterval()")}}</li>
+  <li>{{domxref("clearInterval()")}}</li>
   <li>{{domxref("Window.requestAnimationFrame()")}}</li>
   <li><a href="/en-US/docs/JavaScript/Timers/Daemons"><em>Daemons</em> management</a></li>
 </ul>

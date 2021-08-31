@@ -1,6 +1,6 @@
 ---
-title: WindowOrWorkerGlobalScope.fetch()
-slug: Web/API/WindowOrWorkerGlobalScope/fetch
+title: fetch()
+slug: Web/API/fetch
 tags:
   - API
   - Experimental
@@ -9,14 +9,12 @@ tags:
   - GlobalFetch
   - Method
   - Reference
-  - WindowOrWorkerGlobalScope
   - request
-browser-compat: api.WindowOrWorkerGlobalScope.fetch
+browser-compat: api.fetch
 ---
 <p>{{APIRef("Fetch API")}}</p>
 
-<p>The <code><strong>fetch()</strong></code> method of the
-    {{domxref("WindowOrWorkerGlobalScope")}} mixin starts the process of fetching a
+<p>The global <code><strong>fetch()</strong></code> method starts the process of fetching a
     resource from the network, returning a promise which is fulfilled once the response is
     available.</p>
 
@@ -29,9 +27,9 @@ browser-compat: api.WindowOrWorkerGlobalScope.fetch
   {{domxref("WorkerGlobalScope")}}, which means that the <code>fetch()</code> method is
   available in pretty much any context in which you might want to fetch resources.</p>
 
-<p>A {{domxref("WindowOrWorkerGlobalScope.fetch","fetch()")}} promise only rejects when a
+<p>A {{domxref("fetch()")}} promise only rejects when a
   network error is encountered (which is usually when there’s a permissions issue or
-  similar). A {{domxref("WindowOrWorkerGlobalScope.fetch","fetch()")}} promise <em>does
+  similar). A {{domxref("fetch()")}} promise <em>does
     not</em> reject on HTTP errors (<code>404</code>, etc.). Instead, a
   <code>then()</code> handler must check the {{domxref("Response.ok")}} and/or
   {{domxref("Response.status")}} properties.</p>

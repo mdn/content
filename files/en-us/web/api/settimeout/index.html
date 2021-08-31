@@ -1,6 +1,6 @@
 ---
-title: WindowOrWorkerGlobalScope.setTimeout()
-slug: Web/API/WindowOrWorkerGlobalScope/setTimeout
+title: setTimeout()
+slug: Web/API/setTimeout
 tags:
   - API
   - HTML DOM
@@ -11,15 +11,13 @@ tags:
   - NeedsMarkupWork
   - Reference
   - Timers
-  - WindowOrWorkerGlobalScope
   - setTimeout
   - Polyfill
-browser-compat: api.WindowOrWorkerGlobalScope.setTimeout
+browser-compat: api.setTimeout
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p>The <strong><code>setTimeout()</code></strong> method of the
-  {{domxref("WindowOrWorkerGlobalScope")}} {{Glossary("mixin")}} sets a timer which executes a function or specified
+<p>The global <strong><code>setTimeout()</code></strong> method sets a timer which executes a function or specified
   piece of code once the timer expires.</p>
 
 <h2 id="Syntax">Syntax</h2>
@@ -54,7 +52,7 @@ var <var>timeoutID</var> = setTimeout(<var>code</var>[, <var>delay</var>]);
 
 <p>The returned <code><var>timeoutID</var></code> is a positive integer value which
   identifies the timer created by the call to <code>setTimeout()</code>. This value can be
-  passed to {{domxref("WindowOrWorkerGlobalScope.clearTimeout","clearTimeout()")}} to
+  passed to {{domxref("clearTimeout","clearTimeout()")}} to
   cancel the timeout.</p>
 
 <p>It is guaranteed that a <code><var>timeoutID</var></code> value will never be reused by a subsequent call to
@@ -64,10 +62,10 @@ var <var>timeoutID</var> = setTimeout(<var>code</var>[, <var>delay</var>]);
 <h2>Description</h2>
 
 <p>Timeouts are cancelled using
-  {{domxref("WindowOrWorkerGlobalScope.clearTimeout()","clearTimeout()")}}.</p>
+  {{domxref("clearTimeout()")}}.</p>
 
 <p>To call a function repeatedly (e.g., every <em>N</em> milliseconds), consider using
-  {{domxref("WindowOrWorkerGlobalScope.setInterval()","setInterval()")}}.</p>
+  {{domxref("setInterval()")}}.</p>
 
 <h3 id="The_this_problem">The "this" problem</h3>
 
@@ -345,7 +343,7 @@ function clearMessage() {
 <p>{{EmbedLiveSample('setting_and_clearing_timeouts')}}</p>
 
 <p>See also the <a
-    href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout#example"><code>clearTimeout()</code>
+    href="/en-US/docs/Web/API/clearTimeout#example"><code>clearTimeout()</code>
     example</a>.</p>
 
 <h2 id="Specifications">Specifications</h2>
@@ -360,8 +358,8 @@ function clearMessage() {
 
 <ul>
   <li>A polyfill of <code>setTimeout</code> which allows passing arguments to the callback is available in <a href="https://github.com/zloirock/core-js#settimeout-and-setinterval"><code>core-js</code></a></li>
-  <li>{{domxref("WindowOrWorkerGlobalScope.clearTimeout")}}</li>
-  <li>{{domxref("WindowOrWorkerGlobalScope.setInterval")}}</li>
+  <li>{{domxref("clearTimeout")}}</li>
+  <li>{{domxref("setInterval()")}}</li>
   <li>{{domxref("window.requestAnimationFrame")}}</li>
-  <li>{{domxref("WindowOrWorkerGlobalScope.queueMicrotask")}}</li>
+  <li>{{domxref("queueMicrotask()")}}</li>
 </ul>
