@@ -8942,6 +8942,7 @@
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/rejectionhandled_event	/en-US/docs/Web/API/Window/rejectionhandled_event
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval	/en-US/docs/Web/API/setInterval
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout	/en-US/docs/Web/API/setTimeout
+/en-US/docs/Web/API/WindowOrWorkerGlobalScope/structuredClone	/en-US/docs/Web/API/structuredClone
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/unhandledrejection_event	/en-US/docs/Web/API/Window/unhandledrejection_event
 /en-US/docs/Web/API/WindowSessionStorage	/en-US/docs/Web/API/Window/sessionStorage
 /en-US/docs/Web/API/WindowSessionStorage.sessionStorage	/en-US/docs/Web/API/Window/sessionStorage
