@@ -22,8 +22,9 @@ The **`Intl.Segmenter`** object enables language-sensitive text segmentation.
 
 ## Instance methods
 
-- {{jsxref("Intl.Segmenter/segment", "Intl.Segmenter.prototype.segment()")}}
-  - : Getter function that segments a string according to the locale and granularity of this {{jsxref("Global_Objects/Intl/Segmenter", "Intl.Segmenter")}} object and turns it into a new {{jsxref('Intl.Segmenter/Segments','iterable Segments instance','','nomono')}}.
+- {{jsxref("Intl/Segmenter/segment", "Intl.Segmenter.prototype.segment()")}}
+  - : Returns a new {{jsxref('Intl/Segmenter/Segments','iterable Segments instance','','nomono')}}
+    representing the segments of a string according to the locale and granularity of this {{jsxref("Global_Objects/Intl/Segmenter", "Intl.Segmenter")}} instance.
 - {{jsxref("Intl.Segmenter/resolvedOptions", "Intl.Segmenter.prototype.resolvedOptions()")}}
   - : Returns a new object with properties reflecting the locale and granularity options computed during initialization of this {{jsxref("Global_Objects/Intl/Segmenter", "Intl.Segmenter")}} object.
 
