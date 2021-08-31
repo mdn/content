@@ -42,11 +42,12 @@ tags:
 
 <h3 id="URL_mapping">URL mapping</h3>
 
-<p>Open <strong>/catalog/urls.py</strong> and copy in the line shown in bold below. As for the index page, this <code>path()</code> function defines a pattern to match against the URL (<strong>'books/'</strong>), a view function that will be called if the URL matches (<code>views.BookListView.as_view()</code>), and a name for this particular mapping.</p>
+<p>Open <strong>/catalog/urls.py</strong> and copy in the line setting the path for <code>'books/'</code>, as shown below.
+Just as for the index page, this <code>path()</code> function defines a pattern to match against the URL (<strong>'books/'</strong>), a view function that will be called if the URL matches (<code>views.BookListView.as_view()</code>), and a name for this particular mapping.</p>
 
 <pre class="brush: python">urlpatterns = [
     path('', views.index, name='index'),
-    path<strong>('books/', views.BookListView.as_view(), name='books'),</strong>
+    path('books/', views.BookListView.as_view(), name='books'),
 ]</pre>
 
 <p>As discussed in the previous tutorial the URL must already have matched <code>/catalog</code>, so the view will actually be called for the URL: <code>/catalog/books/</code>.</p>
@@ -199,12 +200,13 @@ class BookListView(generic.ListView):
 
 <h3 id="URL_mapping_2">URL mapping</h3>
 
-<p>Open <strong>/catalog/urls.py</strong> and add the '<strong>book-detail</strong>' URL mapper shown in bold below. This <code>path()</code> function defines a pattern, associated generic class-based detail view, and a name.</p>
+<p>Open <strong>/catalog/urls.py</strong> and add the path named '<strong>book-detail</strong>' shown below.
+This <code>path()</code> function defines a pattern, associated generic class-based detail view, and a name.</p>
 
 <pre class="brush: python">urlpatterns = [
     path('', views.index, name='index'),
-    path('books/', views.BookListView.as_view(), name='books'),
-<strong>    path('book/&lt;int:pk&gt;', views.BookDetailView.as_view(), name='book-detail'),</strong>
+    path('books/', views.BookListView.as_view(), name='books'),
+    path('book/&lt;int:pk&gt;', views.BookDetailView.as_view(), name='book-detail'),
 ]</pre>
 
 <p>For the <em>book-detail</em> path the URL pattern uses a special syntax to capture the specific id of the book that we want to see. The syntax is very simple: angle brackets define the part of the URL to be captured, enclosing the name of the variable that the view can use to access the captured data. For example, <strong>&lt;something&gt;</strong> , will capture the marked pattern and pass the value to the view as a variable "something". You can optionally precede the variable name with a <a href="https://docs.djangoproject.com/en/3.1/topics/http/urls/#path-converters">converter specification</a> that defines the type of data (int, str, slug, uuid, path).</p>
@@ -216,8 +218,7 @@ class BookListView(generic.ListView):
 </div>
 
 <div class="notecard warning">
-  <h4>Important</h4>
-  <p>The generic class-based detail view <em>expects</em> to be passed a parameter named <strong>pk</strong>. If you're writing your own function view you can use whatever parameter name you like, or indeed pass the information in an unnamed argument.</p>
+  <p><strong>Warning</strong> The generic class-based detail view <em>expects</em> to be passed a parameter named <strong>pk</strong>. If you're writing your own function view you can use whatever parameter name you like, or indeed pass the information in an unnamed argument.</p>
 </div>
 
 <h4 id="Advanced_path_matchingregular_expression_primer">Advanced path matching/regular expression primer</h4>

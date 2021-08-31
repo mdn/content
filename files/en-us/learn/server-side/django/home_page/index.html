@@ -377,8 +377,7 @@ return render(request, 'index.html', context=context)</pre>
  <li>The LocalLibrary <a href="#the_locallibrary_base_template">base template</a> includes a <code>title</code> block. Override this block in the <a href="#the_index_template">index template</a> and create a new title for the page.
 
   <div class="notecard note">
-    <h4>Hint</h4>
-      <p>The section <a href="#extending_templates">Extending templates</a> explains how to create blocks and extend a block in another template.</p>
+    <p><strong>Note</strong> The section <a href="#extending_templates">Extending templates</a> explains how to create blocks and extend a block in another template.</p>
   </div>
  </li>
  <li>Modify the <a href="#view_(function-based)">view</a> to generate counts for <em>genres</em> and <em>books</em> that contain a particular word (case insensitive), and pass the results to the <code>context.</code> You accomplish this in a similar way to creating and using <code>num_books</code> and <code>num_instances_available</code>. Then update the <a href="#the_index_template">index template</a> to include these variables.<br>

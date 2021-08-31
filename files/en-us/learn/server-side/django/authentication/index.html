@@ -692,8 +692,7 @@ def my_view(request):
 <p>You should be able to follow the same pattern as for the other view. The main difference is that you'll need to restrict the view to only librarians. You could do this based on whether the user is a staff member (function decorator: <code>staff_member_required</code>, template variable: <code>user.is_staff</code>) but we recommend that you instead use the <code>can_mark_returned</code> permission and <code>PermissionRequiredMixin</code>, as described in the previous section.</p>
 
 <div class="notecard warning">
-  <h4>Important</h4>
-  <p>Remember not to use your superuser for permissions based testing (permission checks always return true for superusers, even if a permission has not yet been defined!). Instead, create a librarian user, and add the required capability.</p>
+  <p><strong>Warning</strong> Remember not to use your superuser for permissions based testing (permission checks always return true for superusers, even if a permission has not yet been defined!). Instead, create a librarian user, and add the required capability.</p>
 </div>
 
 <p>When you are finished, your page should look something like the screenshot below.</p>
