@@ -48,14 +48,35 @@ var <var>downHandler</var> = <var>target</var>.onpointerdown;
 
 <h2 id="Example">Example</h2>
 
+<h3>Responding to pointer down events</h3>
+
 <p>This example demonstrates how to watch for and act upon <code>pointerdown</code> events
   using <code>onpointerdown</code>. You could also use <code>addEventListener()</code>, of
   course.</p>
 
-<h4 id="JavaScript">JavaScript</h4>
+<h4 id="HTML">HTML</h4>
 
-<p>First, let's look at the JavaScript code that handles the <code>pointerdown</code>
-  event.</p>
+<pre class="brush: html">&lt;div id="target"&gt;
+    Tap me, click me, or touch me!
+&lt;/div&gt;</pre>
+
+<h4 id="CSS">CSS</h4>
+
+<p>The CSS sets up the appearance of the target, and doesn't affect its functionality at  all.</p>
+
+<pre class="brush: css">#target {
+  width: 400px;
+  height: 30px;
+  text-align: center;
+  font: 16px "Open Sans", "Helvetica", sans-serif;
+  color: white;
+  background-color: blue;
+  border: 2px solid darkblue;
+  cursor: pointer;
+  user-select: none;
+}</pre>
+
+<h4 id="JavaScript">JavaScript</h4>
 
 <pre class="brush: js">var targetBox = document.getElementById("target");
 
@@ -105,7 +126,7 @@ function handleUp(evt) {
   evt.preventDefault();
 }</pre>
 
-<p>This code's job is to just restore the original text into the target box after the
+<p>This code restores the original text into the target box after the
   user's interaction with the element ends (for example, when they release the mouse
   button, or when they lift the stylus or finger from the screen).</p>
 
@@ -113,48 +134,12 @@ function handleUp(evt) {
   is called to ensure that the <code>mouseup</code> event isn't triggered unnecessarily.
 </p>
 
-<details>
-  <summary>
-    <h4 id="HTML">HTML</h4>
-  </summary>
-
-  <p>The HTML is extremely simple:</p>
-
-  <pre class="brush: html">&lt;div id="target"&gt;
-  Tap me, click me, or touch me!
-&lt;/div&gt;</pre>
-</details>
-
-<details>
-  <summary>
-    <h4 id="CSS">CSS</h4>
-  </summary>
-
-  <p>The CSS sets up the appearance of the target, and doesn't affect its functionality at
-    all.</p>
-
-  <pre class="brush: css">#target {
-  width: 400px;
-  height: 30px;
-  text-align: center;
-  font: 16px "Open Sans", "Helvetica", sans-serif;
-  color: white;
-  background-color: blue;
-  border: 2px solid darkblue;
-  cursor: pointer;
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-}</pre>
-</details>
-
 <h4 id="Result">Result</h4>
 
 <p>The resulting output is shown below. Try tapping, clicking, or touching the box and see
   what happens. For full effect, try it with a variety of pointer types.</p>
 
-<p>{{EmbedLiveSample("Example", 450, 50)}}</p>
+<p>{{EmbedLiveSample("Responding_to_pointer_down_events", 450, 50)}}</p>
 
 <h2 id="Specifications">Specifications</h2>
 
