@@ -10,6 +10,8 @@ tags:
 ---
 The `comment` [landmark role](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles) semantically denotes a comment/reaction to some content on the page, or to a previous comment.
 
+> **Note:** The comment role is proposed in WAI-ARIA 1.3 ([Most recent ARIA draft](https://w3c.github.io/aria/)), which is still being drafted.
+
 ## Examples
 
 In the following example we have a document section that has been commented. The commented section is marked up using `<span role="mark">`.
@@ -57,13 +59,13 @@ Nested comments are also possible with ARIA annotations — nest the comments in
 <div role="comment" id="thread-1" data-author="chris">
   <h3>Chris said</h3>
   <p class="comment-text">I really think this moment could use more cowbell.</p>
-  <p><time datetime="2019-03-30T19:29">March 30 2019, 19:29</time></p>
+  <p><time datetime="2021-03-30T19:29">March 30 2021, 19:29</time></p>
 
   <div role="comment" data-author="marcus">
     <h3>Marcus replied</h3>
     <p class="comment-text">I don't know about that.
       I think the cowbell could distract from the solo.</p>
-    <p><time datetime="2019-03-30T21:02">March 30 2019, 21:02</time></p>
+    <p><time datetime="2021-03-30T21:02">March 30 2021, 21:02</time></p>
   </div>
 </div>
 ```
