@@ -22,7 +22,7 @@ The challenge and response flow works like this:
 2. A client that wants to authenticate itself with the server can then do so by including an {{HTTPHeader("Authorization")}} request header with the credentials.
 3. Usually a client will present a password prompt to the user and will then issue the request including the correct `Authorization` header.
 
-![A sequence diagram illustrating HTTP messages between a client and a server lifeline.](httpauth.png "Sequence Diagram of Client-server HTTP Authentication")
+![A sequence diagram illustrating HTTP messages between a client and a server lifeline.](http-auth-sequence-diagram.png "Sequence Diagram of Client-server HTTP Authentication")
 
 In the case of a "Basic" authentication like shown in the figure, the exchange **must** happen over an HTTPS (TLS) connection to be secure.
 
