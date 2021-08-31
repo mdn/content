@@ -4070,7 +4070,6 @@
 /en-US/docs/IndexedDB/IDBDatabase	/en-US/docs/Web/API/IDBDatabase
 /en-US/docs/IndexedDB/IDBDatabaseException	/en-US/docs/Web/API/IDBDatabaseException
 /en-US/docs/IndexedDB/IDBDatabaseSync	/en-US/docs/Web/API/IDBDatabaseSync
-/en-US/docs/IndexedDB/IDBEnvironment	/en-US/docs/Web/API/IDBEnvironment
 /en-US/docs/IndexedDB/IDBEnvironmentSync	/en-US/docs/Web/API/IDBEnvironmentSync
 /en-US/docs/IndexedDB/IDBFactory	/en-US/docs/Web/API/IDBFactory
 /en-US/docs/IndexedDB/IDBFactorySync	/en-US/docs/Web/API/IDBFactorySync

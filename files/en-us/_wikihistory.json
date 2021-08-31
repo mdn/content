@@ -55783,26 +55783,6 @@
       "jswisher"
     ]
   },
-  "Web/API/IDBEnvironment": {
-    "modified": "2020-10-15T21:10:19.583Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "arronei",
-      "chrisdavidmills",
-      "libbymc",
-      "Brettz9",
-      "pdm",
-      "amaneight",
-      "teoli",
-      "ethertank",
-      "wbamberg",
-      "scottrowe",
-      "sicking",
-      "grendel",
-      "jswisher"
-    ]
-  },
   "Web/API/IDBEnvironmentSync": {
     "modified": "2019-03-24T00:10:38.611Z",
     "contributors": [
