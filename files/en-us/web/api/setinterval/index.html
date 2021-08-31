@@ -66,7 +66,7 @@ var <em>intervalID</em> = setInterval(function[, delay]);
   {{domxref("clearInterval()")}} to cancel the interval.</p>
 
 <p>It may be helpful to be aware that <code>setInterval()</code> and
-  {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}} share the same pool
+  {{domxref("setTimeout()")}} share the same pool
   of IDs, and that <code>clearInterval()</code> and
   {{domxref("clearTimeout", "clearTimeout()")}} can technically
   be used interchangeably. For clarity, however, you should try to always match them to
@@ -700,7 +700,7 @@ MiniDaemon.prototype.start = function (bReverse) {
   {{domxref("clearInterval()")}}.</p>
 
 <p>If you wish to have your function called <em>once</em> after the specified delay, use
-  {{domxref("WindowOrWorkerGlobalScope.setTimeout()")}}.</p>
+  {{domxref("setTimeout()")}}.</p>
 
 <h3 id="Delay_restrictions">Delay restrictions</h3>
 
@@ -716,7 +716,7 @@ MiniDaemon.prototype.start = function (bReverse) {
   circumstances, although these should not be common. Note also that the actual amount of
   time that elapses between calls to the callback may be longer than the given
   <code>delay</code>; see
-  {{SectionOnPage("/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout", "Reasons for
+  {{SectionOnPage("/en-US/docs/Web/API/setTimeout", "Reasons for
   delays longer than specified")}} for examples.</p>
 
 <h3 id="Ensure_that_execution_duration_is_shorter_than_interval_frequency">Ensure that
@@ -724,7 +724,7 @@ MiniDaemon.prototype.start = function (bReverse) {
 
 <p>If there is a possibility that your logic could take longer to execute than the
   interval time, it is recommended that you recursively call a named function using
-  {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}}. For example, if
+  {{domxref("setTimeout()")}}. For example, if
   using <code>setInterval()</code> to poll a remote server every 5 seconds, network
   latency, an unresponsive server, and a host of other issues could prevent the request
   from completing in its allotted time. As such, you may find yourself with queued up XHR
@@ -759,7 +759,7 @@ MiniDaemon.prototype.start = function (bReverse) {
 
 <ul>
   <li>A polyfill of <code>setInterval</code> which allows passing arguments to the callback is available in <a href="https://github.com/zloirock/core-js#settimeout-and-setinterval"><code>core-js</code></a></li>
-  <li>{{domxref("WindowOrWorkerGlobalScope.setTimeout")}}</li>
+  <li>{{domxref("setTimeout")}}</li>
   <li>{{domxref("clearTimeout")}}</li>
   <li>{{domxref("clearInterval")}}</li>
   <li>{{domxref("window.requestAnimationFrame")}}</li>

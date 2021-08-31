@@ -38,7 +38,7 @@ tags:
 <ul>
 	<li>A new JavaScript program or subprogram is executed (such as from a console, or by running the code in a {{HTMLElement("script")}} element) directly.</li>
 	<li>An event fires, adding the event's callback function to the task queue.</li>
-	<li>A timeout or interval created with {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}} or {{domxref("setInterval()")}} is reached, causing the corresponding callback to be added to the task queue.</li>
+	<li>A timeout or interval created with {{domxref("setTimeout()")}} or {{domxref("setInterval()")}} is reached, causing the corresponding callback to be added to the task queue.</li>
 </ul>
 
 <p>The event loop driving your code handles these tasks one after another, in the order in which they were enqueued. Only tasks which were <em>already in the task queue</em> when the event loop pass began will be executed during the current iteration. The rest will have to wait until the following iteration.</p>

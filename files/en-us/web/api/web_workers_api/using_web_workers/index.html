@@ -132,7 +132,7 @@ importScripts('foo.js');                 /* imports just "foo.js" */
 importScripts('foo.js', 'bar.js');       /* imports two scripts */
 importScripts('//example.com/hello.js'); /* You can import scripts from other origins */</pre>
 
-<p>The browser loads each listed script and executes it. Any global objects from each script may then be used by the worker. If the script can't be loaded, <code>NETWORK_ERROR</code> is thrown, and subsequent code will not be executed. Previously executed code (including code deferred using {{domxref("WindowOrWorkerGlobalScope.setTimeout")}}) will still be functional though. Function declarations <strong>after</strong> the <code>importScripts()</code> method are also kept, since these are always evaluated before the rest of the code.</p>
+<p>The browser loads each listed script and executes it. Any global objects from each script may then be used by the worker. If the script can't be loaded, <code>NETWORK_ERROR</code> is thrown, and subsequent code will not be executed. Previously executed code (including code deferred using {{domxref("setTimeout()")}}) will still be functional though. Function declarations <strong>after</strong> the <code>importScripts()</code> method are also kept, since these are always evaluated before the rest of the code.</p>
 
 <div class="note"><p><strong>Note:</strong> Scripts may be downloaded in any order, but will be executed in the order in which you pass the filenames into <code>importScripts()</code> . This is done synchronously; <code>importScripts()</code> does not return until all the scripts have been loaded and executed.</p></div>
 
@@ -724,7 +724,7 @@ onmessage = function(event) {
  <li>{{domxref("Navigator")}}</li>
  <li>{{domxref("XMLHttpRequest")}}</li>
  <li>{{jsxref("Global_Objects/Array", "Array")}}, {{jsxref("Global_Objects/Date", "Date")}}, {{jsxref("Global_Objects/Math", "Math")}}, and {{jsxref("Global_Objects/String", "String")}}</li>
- <li>{{domxref("WindowOrWorkerGlobalScope.setTimeout")}} and {{domxref("setInterval()")}}</li>
+ <li>{{domxref("setTimeout()")}} and {{domxref("setInterval()")}}</li>
 </ul>
 
 <p>The main thing you <em>can't</em> do in a Worker is directly affect the parent page. This includes manipulating the DOM and using that page's objects. You have to do it indirectly, by sending a message back to the main script via {{domxref("DedicatedWorkerGlobalScope.postMessage")}}, then actioning the changes from there.</p>
