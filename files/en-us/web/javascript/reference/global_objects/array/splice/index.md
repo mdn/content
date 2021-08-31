@@ -42,7 +42,7 @@ splice(start, deleteCount, item1, item2, itemN)
     case, the origin `-1`, meaning `-n` is the index of
     the `n`th last element, and is therefore equivalent
     to the index of `array.length - n`.) If
-    `array.length + start` is less than `0`,
+    `start` is `negative infinity`,
     it will begin from index `0`.
 
 - `deleteCount` {{optional_inline}}
