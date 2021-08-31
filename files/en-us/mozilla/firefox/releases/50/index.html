@@ -143,7 +143,7 @@ tags:
 <ul>
  <li>The {{domxref("PannerNode")}} interface now supports the 3D Cartesian space properties for the position ({{domxref("PannerNode.positionX")}}, {{domxref("PannerNode.positionY")}}, and {{domxref("PannerNode.positionZ")}}) and directionality ({{domxref("PannerNode.orientationX")}}, {{domxref("PannerNode.orientationY")}}, {{domxref("PannerNode.orientationZ")}}) of an audio source.</li>
  <li>The interface {{domxref("IIRFilterNode")}}, which implements a general {{interwiki("wikipedia", "infinite impulse response")}} (IIR) filter, has been implemented.</li>
- <li>Throttling in background tabs of timers created by {{domxref("WindowOrWorkerGlobalScope/setInterval", "Window.setInterval()")}} and {{domxref("WindowOrWorkerGlobalScope/setTimeout", "Window.setTimeout()")}} no longer occurs if a <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> {{domxref("AudioContext")}} is actively playing sound. This should help prevent issues with timing-sensitive audio playback (such as music players generating individual notes using timers) in the background ({{bug(1181073)}}).</li>
+ <li>Throttling in background tabs of timers created by {{domxref("setInterval()")}} and {{domxref("WindowOrWorkerGlobalScope/setTimeout", "Window.setTimeout()")}} no longer occurs if a <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> {{domxref("AudioContext")}} is actively playing sound. This should help prevent issues with timing-sensitive audio playback (such as music players generating individual notes using timers) in the background ({{bug(1181073)}}).</li>
 </ul>
 
 <h3 id="AudioVideo">Audio/Video</h3>

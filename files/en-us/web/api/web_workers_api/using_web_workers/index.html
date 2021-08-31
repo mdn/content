@@ -724,7 +724,7 @@ onmessage = function(event) {
  <li>{{domxref("Navigator")}}</li>
  <li>{{domxref("XMLHttpRequest")}}</li>
  <li>{{jsxref("Global_Objects/Array", "Array")}}, {{jsxref("Global_Objects/Date", "Date")}}, {{jsxref("Global_Objects/Math", "Math")}}, and {{jsxref("Global_Objects/String", "String")}}</li>
- <li>{{domxref("WindowOrWorkerGlobalScope.setTimeout")}} and {{domxref("WindowOrWorkerGlobalScope.setInterval")}}</li>
+ <li>{{domxref("WindowOrWorkerGlobalScope.setTimeout")}} and {{domxref("setInterval()")}}</li>
 </ul>
 
 <p>The main thing you <em>can't</em> do in a Worker is directly affect the parent page. This includes manipulating the DOM and using that page's objects. You have to do it indirectly, by sending a message back to the main script via {{domxref("DedicatedWorkerGlobalScope.postMessage")}}, then actioning the changes from there.</p>

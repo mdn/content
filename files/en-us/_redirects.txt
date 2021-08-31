@@ -2285,7 +2285,7 @@
 /en-US/docs/DOM/window.self	/en-US/docs/Web/API/Window/self
 /en-US/docs/DOM/window.setCursor	/en-US/docs/Web/API/Window/setCursor
 /en-US/docs/DOM/window.setImmediate	/en-US/docs/Web/API/Window/setImmediate
-/en-US/docs/DOM/window.setInterval	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval
+/en-US/docs/DOM/window.setInterval	/en-US/docs/Web/API/setInterval
 /en-US/docs/DOM/window.setTimeout	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout
 /en-US/docs/DOM/window.showModalDialog	/en-US/docs/Web/API/Window/showModalDialog
 /en-US/docs/DOM/window.sidebar	/en-US/docs/Web/API/Window/sidebar
@@ -2716,7 +2716,7 @@
 /en-US/docs/DOM:window.scrollbars	/en-US/docs/Web/API/Window/scrollbars
 /en-US/docs/DOM:window.self	/en-US/docs/Web/API/Window/self
 /en-US/docs/DOM:window.setCursor	/en-US/docs/Web/API/Window/setCursor
-/en-US/docs/DOM:window.setInterval	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval
+/en-US/docs/DOM:window.setInterval	/en-US/docs/Web/API/setInterval
 /en-US/docs/DOM:window.setTimeout	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout
 /en-US/docs/DOM:window.showModalDialog	/en-US/docs/Web/API/Window/showModalDialog
 /en-US/docs/DOM:window.sidebar	/en-US/docs/Web/API/Window/sidebar
@@ -3456,7 +3456,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.scrollbars	/en-US/docs/Web/API/Window/scrollbars
 /en-US/docs/Document_Object_Model_(DOM)/window.setCursor	/en-US/docs/Web/API/Window/setCursor
 /en-US/docs/Document_Object_Model_(DOM)/window.setImmediate	/en-US/docs/Web/API/Window/setImmediate
-/en-US/docs/Document_Object_Model_(DOM)/window.setInterval	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval
+/en-US/docs/Document_Object_Model_(DOM)/window.setInterval	/en-US/docs/Web/API/setInterval
 /en-US/docs/Document_Object_Model_(DOM)/window.setTimeout	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout
 /en-US/docs/Document_Object_Model_(DOM)/window.showModalDialog	/en-US/docs/Web/API/Window/showModalDialog
 /en-US/docs/Document_Object_Model_(DOM)/window.sidebar	/en-US/docs/Web/API/Window/sidebar
@@ -8909,7 +8909,7 @@
 /en-US/docs/Web/API/Window/removeEventListener	/en-US/docs/Web/API/EventTarget/removeEventListener
 /en-US/docs/Web/API/Window/resolveLocalFileSystemURL	/en-US/docs/Web/API/LocalFileSystem#resolvelocalfilesystemurl()
 /en-US/docs/Web/API/Window/restore	/en-US/docs/Web/API/Window/moveTo
-/en-US/docs/Web/API/Window/setInterval	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval
+/en-US/docs/Web/API/Window/setInterval	/en-US/docs/Web/API/setInterval
 /en-US/docs/Web/API/Window/setTimeout	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout
 /en-US/docs/Web/API/Window/sidebar/Adding_search_engines_from_Web_pages	/en-US/docs/Web/OpenSearch
 /en-US/docs/Web/API/WindowBase64	/en-US/docs/Web/API/WindowOrWorkerGlobalScope
@@ -8940,17 +8940,18 @@
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/origin	/en-US/docs/Web/API/origin
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/queueMicrotask	/en-US/docs/Web/API/queueMicrotask
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/rejectionhandled_event	/en-US/docs/Web/API/Window/rejectionhandled_event
+/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval	/en-US/docs/Web/API/setInterval
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/unhandledrejection_event	/en-US/docs/Web/API/Window/unhandledrejection_event
 /en-US/docs/Web/API/WindowSessionStorage	/en-US/docs/Web/API/Window/sessionStorage
 /en-US/docs/Web/API/WindowSessionStorage.sessionStorage	/en-US/docs/Web/API/Window/sessionStorage
 /en-US/docs/Web/API/WindowTimers	/en-US/docs/Web/API/WindowOrWorkerGlobalScope
 /en-US/docs/Web/API/WindowTimers.clearInterval	/en-US/docs/Web/API/clearInterval
 /en-US/docs/Web/API/WindowTimers.clearTimeout	/en-US/docs/Web/API/clearTimeout
-/en-US/docs/Web/API/WindowTimers.setInterval	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval
+/en-US/docs/Web/API/WindowTimers.setInterval	/en-US/docs/Web/API/setInterval
 /en-US/docs/Web/API/WindowTimers.setTimeout	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout
 /en-US/docs/Web/API/WindowTimers/clearInterval	/en-US/docs/Web/API/clearInterval
 /en-US/docs/Web/API/WindowTimers/clearTimeout	/en-US/docs/Web/API/clearTimeout
-/en-US/docs/Web/API/WindowTimers/setInterval	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval
+/en-US/docs/Web/API/WindowTimers/setInterval	/en-US/docs/Web/API/setInterval
 /en-US/docs/Web/API/WindowTimers/setTimeout	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout
 /en-US/docs/Web/API/Worker.Worker	/en-US/docs/Web/API/Worker/Worker
 /en-US/docs/Web/API/Worker.Worker()	/en-US/docs/Web/API/Worker/Worker
@@ -8986,7 +8987,7 @@
 /en-US/docs/Web/API/WorkerGlobalScope/indexedDB	/en-US/docs/Web/API/indexedDB
 /en-US/docs/Web/API/WorkerGlobalScope/onclose	/en-US/docs/Web/API/DedicatedWorkerGlobalScope/close
 /en-US/docs/Web/API/WorkerGlobalScope/requestFileSystemSync	/en-US/docs/Web/API/LocalFileSystemSync/requestFileSystemSync
-/en-US/docs/Web/API/WorkerGlobalScope/setInterval	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval
+/en-US/docs/Web/API/WorkerGlobalScope/setInterval	/en-US/docs/Web/API/setInterval
 /en-US/docs/Web/API/WorkerGlobalScope/setTimeout	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout
 /en-US/docs/Web/API/WorkerLocation.hash	/en-US/docs/Web/API/WorkerLocation/hash
 /en-US/docs/Web/API/WorkerNavigator/taintEnabled	/en-US/docs/Web/API/Navigator/taintEnabled
@@ -9546,7 +9547,7 @@
 /en-US/docs/Web/API/window.self	/en-US/docs/Web/API/Window/self
 /en-US/docs/Web/API/window.setCursor	/en-US/docs/Web/API/Window/setCursor
 /en-US/docs/Web/API/window.setImmediate	/en-US/docs/Web/API/Window/setImmediate
-/en-US/docs/Web/API/window.setInterval	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval
+/en-US/docs/Web/API/window.setInterval	/en-US/docs/Web/API/setInterval
 /en-US/docs/Web/API/window.setTimeout	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout
 /en-US/docs/Web/API/window.showModalDialog	/en-US/docs/Web/API/Window/showModalDialog
 /en-US/docs/Web/API/window.sidebar	/en-US/docs/Web/API/Window/sidebar
@@ -11948,7 +11949,7 @@
 /en-US/docs/window.scrollY	/en-US/docs/Web/API/Window/scrollY
 /en-US/docs/window.scrollbars	/en-US/docs/Web/API/Window/scrollbars
 /en-US/docs/window.setCursor	/en-US/docs/Web/API/Window/setCursor
-/en-US/docs/window.setInterval	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval
+/en-US/docs/window.setInterval	/en-US/docs/Web/API/setInterval
 /en-US/docs/window.setTimeout	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout
 /en-US/docs/window.sidebar	/en-US/docs/Web/API/Window/sidebar
 /en-US/docs/window.sizeToContent	/en-US/docs/Web/API/Window/sizeToContent

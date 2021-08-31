@@ -172,7 +172,7 @@ The `'unsafe-eval'` source expression controls several script execution methods 
 - When passing a string literal like to methods like: `window.setTimeout("alert(\"Hello World!\");", 500);`
 
   - {{domxref("WindowOrWorkerGlobalScope.setTimeout")}}
-  - {{domxref("WindowOrWorkerGlobalScope.setInterval")}}
+  - {{domxref("setInterval()")}}
   - {{domxref("window.setImmediate")}}
 
 - `window.execScript()` {{non-standard_inline}} (IE < 11 only)

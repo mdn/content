@@ -67,7 +67,7 @@ var <var>timeoutID</var> = setTimeout(<var>code</var>[, <var>delay</var>]);
   {{domxref("clearTimeout()")}}.</p>
 
 <p>To call a function repeatedly (e.g., every <em>N</em> milliseconds), consider using
-  {{domxref("WindowOrWorkerGlobalScope.setInterval()","setInterval()")}}.</p>
+  {{domxref("setInterval()")}}.</p>
 
 <h3 id="The_this_problem">The "this" problem</h3>
 
@@ -361,7 +361,7 @@ function clearMessage() {
 <ul>
   <li>A polyfill of <code>setTimeout</code> which allows passing arguments to the callback is available in <a href="https://github.com/zloirock/core-js#settimeout-and-setinterval"><code>core-js</code></a></li>
   <li>{{domxref("clearTimeout")}}</li>
-  <li>{{domxref("WindowOrWorkerGlobalScope.setInterval")}}</li>
+  <li>{{domxref("setInterval()")}}</li>
   <li>{{domxref("window.requestAnimationFrame")}}</li>
   <li>{{domxref("queueMicrotask()")}}</li>
 </ul>

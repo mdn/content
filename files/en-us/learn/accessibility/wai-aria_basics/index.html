@@ -212,7 +212,7 @@ tags:
   &lt;/blockquote&gt;
 &lt;/section&gt;</pre>
 
-<p>Our JavaScript loads a JSON file via <code><a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> containing a series of random quotes and their authors. Once that is done, we start up a <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">setInterval()</a></code> loop that loads a new random quote into the quote box every 10 seconds:</p>
+<p>Our JavaScript loads a JSON file via <code><a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> containing a series of random quotes and their authors. Once that is done, we start up a <code><a href="/en-US/docs/Web/API/setInterval">setInterval()</a></code> loop that loads a new random quote into the quote box every 10 seconds:</p>
 
 <pre class="brush: js">let intervalID = window.setInterval(showQuote, 10000);</pre>
 
