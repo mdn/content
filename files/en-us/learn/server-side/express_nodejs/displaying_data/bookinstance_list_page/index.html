@@ -14,7 +14,8 @@ tags:
 
 <p>The <code>BookInstance</code> list controller function needs to get a list of all book instances, populate the associated book information, and then pass the list to the template for rendering.</p>
 
-<p>Open <code>/controllers/bookinstanceController.js</code>. Find the exported <code>bookinstance_list()</code> controller method and replace it with the following code (the changed code is shown in bold).</p>
+<p>Open <code>/controllers/bookinstanceController.js</code>.
+Find the exported <code>bookinstance_list()</code> controller method and replace it with the following code.</p>
 
 <pre class="brush: js">// Display list of all BookInstances.
 exports.bookinstance_list = function(req, res, next) {

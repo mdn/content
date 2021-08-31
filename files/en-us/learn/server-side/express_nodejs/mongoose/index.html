@@ -419,25 +419,29 @@ query.exec(function (err, athletes) {
 
 <p>You can create references from one document/model instance to another using the <code>ObjectId</code> schema field, or from one document to many using an array of <code>ObjectIds</code>. The field stores the id of the related model. If you need the actual content of the associated document, you can use the <code><a href="https://mongoosejs.com/docs/api.html#query_Query-populate">populate()</a></code> method in a query to replace the id with the actual data.</p>
 
-<p>For example, the following schema defines authors and stories. Each author can have multiple stories, which we represent as an array of <code>ObjectId</code>. Each story can have a single author. The "ref" (highlighted in bold below) tells the schema which model can be assigned to this field.</p>
+<p>For example, the following schema defines authors and stories.
+Each author can have multiple stories, which we represent as an array of <code>ObjectId</code>.
+Each story can have a single author.
+The <code>ref</code> property tells the schema which model can be assigned to this field.</p>
 
 <pre class="brush: js">var mongoose = require('mongoose')
   , Schema = mongoose.Schema
 
 var authorSchema = Schema({
   name    : String,
-  stories : [{ type: Schema.Types.ObjectId, <strong>ref</strong>: 'Story' }]
+  stories : [{ type: Schema.Types.ObjectId, ref: 'Story' }]
 });
 
 var storySchema = Schema({
-  author : { type: Schema.Types.ObjectId, <strong>ref</strong>: 'Author' },
+  author : { type: Schema.Types.ObjectId, ref: 'Author' },
   title    : String
 });
 
 var Story  = mongoose.model('Story', storySchema);
 var Author = mongoose.model('Author', authorSchema);</pre>
 
-<p>We can save our references to the related document by assigning the <code>_id</code> value. Below we create an author, then a story, and assign the author id to our story's author field.</p>
+<p>We can save our references to the related document by assigning the <code>_id</code> value.
+Below we create an author, then a story, and assign the author id to our story's author field.</p>
 
 <pre class="brush: js">var bob = new Author({ name: 'Bob Smith' });
 
@@ -485,7 +489,8 @@ bob.save(function (err) {
 
 <h3 id="One_schemamodel_per_file">One schema/model per file</h3>
 
-<p>While you can create schemas and models using any file structure you like, we highly recommend defining each model schema in its own module (file), then exporting the method to create the model. This is shown below:</p>
+<p>While you can create schemas and models using any file structure you like, we highly recommend defining each model schema in its own module (file), then exporting the method to create the model.
+This is shown below:</p>
 
 <pre class="brush: js">// File: ./models/somemodel.js
 
@@ -500,8 +505,8 @@ var SomeModelSchema = new Schema({
   a_date: Date,
 });
 
-<strong>//Export function to create "SomeModel" model class
-module.exports = mongoose.model('SomeModel', SomeModelSchema );</strong></pre>
+//Export function to create "SomeModel" model class
+module.exports = mongoose.model('SomeModel', SomeModelSchema );</pre>
 
 <p>You can then require and use the model immediately in other files. Below we show how you might use it to get all instances of the model.</p>
 
@@ -627,14 +632,15 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));</pre>
 
 <h2 id="Defining_the_LocalLibrary_Schema">Defining the LocalLibrary Schema</h2>
 
-<p>We will define a separate module for each model, as <a href="#one_schemamodel_per_file">discussed above</a>. Start by creating a folder for our models in the project root (<strong>/models</strong>) and then create separate files for each of the models:</p>
+<p>We will define a separate module for each model, as <a href="#one_schemamodel_per_file">discussed above</a>.
+Start by creating a folder for our models in the project root (<strong>/models</strong>) and then create separate files for each of the models:</p>
 
 <pre>/express-locallibrary-tutorial  //the project root
-  <strong>/models</strong>
-    <strong>author.js</strong>
-    <strong>book.js</strong>
-    <strong>bookinstance.js</strong>
-    <strong>genre.js</strong>
+  /models
+    author.js
+    book.js
+    bookinstance.js
+    genre.js
 </pre>
 
 <h3 id="Author_model">Author model</h3>
@@ -697,7 +703,8 @@ module.exports = mongoose.model('Author', AuthorSchema);
 
 <h3 id="Book_model">Book model</h3>
 
-<p>Copy the <code>Book</code> schema code shown below and paste it into your <strong>./models/book.js</strong> file. Most of this is similar to the author model — we've declared a schema with a number of string fields and a virtual for getting the URL of specific book records, and we've exported the model.</p>
+<p>Copy the <code>Book</code> schema code shown below and paste it into your <strong>./models/book.js</strong> file.
+Most of this is similar to the author model — we've declared a schema with a number of string fields and a virtual for getting the URL of specific book records, and we've exported the model.</p>
 
 <pre class="brush: js">var mongoose = require('mongoose');
 
@@ -706,10 +713,10 @@ var Schema = mongoose.Schema;
 var BookSchema = new Schema(
   {
     title: {type: String, required: true},
-    <strong>author: {type: Schema.Types.ObjectId, ref: 'Author', required: true},</strong>
+    author: {type: Schema.Types.ObjectId, ref: 'Author', required: true},
     summary: {type: String, required: true},
     isbn: {type: String, required: true},
-    <strong>genre: [{type: Schema.Types.ObjectId, ref: 'Genre'}]</strong>
+    genre: [{type: Schema.Types.ObjectId, ref: 'Genre'}]
   }
 );
 
@@ -733,7 +740,8 @@ module.exports = mongoose.model('Book', BookSchema);
 
 <h3 id="BookInstance_model">BookInstance model</h3>
 
-<p>Finally, copy the <code>BookInstance</code> schema code shown below and paste it into your <strong>./models/bookinstance.js</strong> file. The <code>BookInstance</code> represents a specific copy of a book that someone might borrow and includes information about whether the copy is available, on what date it is expected back, and "imprint" (or version) details.</p>
+<p>Finally, copy the <code>BookInstance</code> schema code shown below and paste it into your <strong>./models/bookinstance.js</strong> file.
+The <code>BookInstance</code> represents a specific copy of a book that someone might borrow and includes information about whether the copy is available, on what date it is expected back, and "imprint" (or version) details.</p>
 
 <pre class="brush: js">var mongoose = require('mongoose');
 
@@ -743,8 +751,8 @@ var BookInstanceSchema = new Schema(
   {
     book: { type: Schema.Types.ObjectId, ref: 'Book', required: true }, //reference to the associated book
     imprint: {type: String, required: true},
-    status: {type: String, required: true, <strong>enum: ['Available', 'Maintenance', 'Loaned', 'Reserved']</strong>, <strong>default: 'Maintenance'</strong>},
-    due_back: {type: Date, <strong>default: Date.now</strong>}
+    status: {type: String, required: true, enum: ['Available', 'Maintenance', 'Loaned', 'Reserved'], default: 'Maintenance'},
+    due_back: {type: Date, default: Date.now}
   }
 );
 

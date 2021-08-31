@@ -51,7 +51,10 @@ exports.index = function(req, res, next) {
  res.send('NOT IMPLEMENTED: Site Home Page');
 }</pre>
 
-<p>Replace all the code above with the following code fragment. The first thing this does is import (<code>require()</code>) all the models (highlighted in bold). We need to do this because we'll be using them to get our counts of documents. It then imports the <em>async</em> module (which we discussed previously in <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async">Asynchronous flow control using async</a>).</p>
+<p>Replace all the code above with the following code fragment.
+The first thing this does is import (<code>require()</code>) all the models.
+We need to do this because we'll be using them to get our counts of documents.
+It then imports the <em>async</em> module (which we discussed previously in <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async">Asynchronous flow control using async</a>).</p>
 
 <pre class="brush: js">var Book = require('../models/book');
 var Author = require('../models/author');
