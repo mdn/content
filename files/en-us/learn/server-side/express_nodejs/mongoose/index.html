@@ -113,15 +113,13 @@ tags:
 <p>The diagram also shows the relationships between the models, including their <em>multiplicities</em>. The multiplicities are the numbers on the diagram showing the numbers (maximum and minimum) of each model that may be present in the relationship. For example, the connecting line between the boxes shows that <code>Book</code> and a <code>Genre</code> are related. The numbers close to the <code>Book</code> model show that a <code>Genre</code> must have zero or more <code>Book</code>s (as many as you like), while the numbers on the other end of the line next to the <code>Genre</code> show that a book can have zero or more associated <code>Genre</code>s.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>As discussed in our <a href="#mongoose_primer">Mongoose primer</a> below it is often better to have the field that defines the relationship between the documents/models in just <em>one</em> model (you can still find the reverse relationship by searching for the associated <code>_id</code> in the other model). Below we have chosen to define the relationship between <code>Book</code>/<code>Genre</code> and <code>Book</code>/<code>Author</code> in the Book schema, and the relationship between the <code>Book</code>/<code>BookInstance</code> in the <code>BookInstance</code> Schema. This choice was somewhat arbitrary — we could equally well have had the field in the other schema.</p>
+  <p><strong>Note:</strong> As discussed in our <a href="#mongoose_primer">Mongoose primer</a> below it is often better to have the field that defines the relationship between the documents/models in just <em>one</em> model (you can still find the reverse relationship by searching for the associated <code>_id</code> in the other model). Below we have chosen to define the relationship between <code>Book</code>/<code>Genre</code> and <code>Book</code>/<code>Author</code> in the Book schema, and the relationship between the <code>Book</code>/<code>BookInstance</code> in the <code>BookInstance</code> Schema. This choice was somewhat arbitrary — we could equally well have had the field in the other schema.</p>
 </div>
 
 <p><img alt="Mongoose Library Model  with correct cardinality" src="library_website_-_mongoose_express.png"></p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>The next section provides a basic primer explaining how models are defined and used. As you read it, consider how we will construct each of the models in the diagram above.</p>
+  <p><strong>Note:</strong> The next section provides a basic primer explaining how models are defined and used. As you read it, consider how we will construct each of the models in the diagram above.</p>
 </div>
 
 <h2 id="Mongoose_primer">Mongoose primer</h2>
@@ -129,8 +127,7 @@ tags:
 <p>This section provides an overview of how to connect Mongoose to a MongoDB database, how to define a schema and a model, and how to make basic queries. </p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>This primer is heavily influenced by the <a href="https://www.npmjs.com/package/mongoose">Mongoose quick start</a> on <em>npm</em> and the <a href="https://mongoosejs.com/docs/guide.html">official documentation</a>.</p>
+  <p><strong>Note:</strong> This primer is heavily influenced by the <a href="https://www.npmjs.com/package/mongoose">Mongoose quick start</a> on <em>npm</em> and the <a href="https://mongoosejs.com/docs/guide.html">official documentation</a>.</p>
 </div>
 
 <h3 id="Installing_Mongoose_and_MongoDB">Installing Mongoose and MongoDB</h3>
@@ -143,8 +140,7 @@ tags:
 <p>Installing <em>Mongoose</em> adds all its dependencies, including the MongoDB database driver, but it does not install MongoDB itself. If you want to install a MongoDB server then you can <a href="https://www.mongodb.com/download-center">download installers from here</a> for various operating systems and install it locally. You can also use cloud-based MongoDB instances.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>For this tutorial, we'll be using the <a href="https://www.mongodb.com/">MongoDB Atlas</a> cloud-based <em>database as a service</em> free tier to provide the database. This is suitable for development and makes sense for the tutorial because it makes "installation" operating system independent (database-as-a-service is also one approach you might use for your production database).</p>
+  <p><strong>Note:</strong> For this tutorial, we'll be using the <a href="https://www.mongodb.com/">MongoDB Atlas</a> cloud-based <em>database as a service</em> free tier to provide the database. This is suitable for development and makes sense for the tutorial because it makes "installation" operating system independent (database-as-a-service is also one approach you might use for your production database).</p>
 </div>
 
 <h3 id="Connecting_to_MongoDB">Connecting to MongoDB</h3>
@@ -178,8 +174,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));</pre>
 <p>Schemas are then "compiled" into models using the <code>mongoose.model()</code> method. Once you have a model you can use it to find, create, update, and delete objects of the given type.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>Each model maps to a <em>collection</em> of <em>documents</em> in the MongoDB database. The documents will contain the fields/schema types defined in the model <code>Schema</code>.</p>
+  <p><strong>Note:</strong> Each model maps to a <em>collection</em> of <em>documents</em> in the MongoDB database. The documents will contain the fields/schema types defined in the model <code>Schema</code>.</p>
 </div>
 
 <h4 id="Defining_schemas">Defining schemas</h4>
@@ -218,8 +213,7 @@ var SomeModel = mongoose.model('SomeModel', SomeModelSchema );</strong></pre>
 <p>The first argument is the singular name of the collection that will be created for your model (Mongoose will create the database collection for the above model <em>SomeModel</em> above), and the second argument is the schema you want to use in creating the model.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>Once you've defined your model classes you can use them to create, update, or delete records, and run queries to get all records or particular subsets of records. We'll show you how to do this in the <a href="#using_models">Using models</a> section, and when we create our views.</p>
+  <p><strong>Note:</strong> Once you've defined your model classes you can use them to create, update, or delete records, and run queries to get all records or particular subsets of records. We'll show you how to do this in the <a href="#using_models">Using models</a> section, and when we create our views.</p>
 </div>
 
 <h4 id="Schema_types_fields">Schema types (fields)</h4>
@@ -305,8 +299,7 @@ var SomeModel = mongoose.model('SomeModel', SomeModelSchema );</strong></pre>
 <p>Virtual properties are document properties that you can get and set but that do not get persisted to MongoDB. The getters are useful for formatting or combining fields, while setters are useful for de-composing a single value into multiple values for storage. The example in the documentation constructs (and deconstructs) a full name virtual property from a first and last name field, which is easier and cleaner than constructing a full name every time one is used in a template.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>We will use a virtual property in the library to define a unique URL for each model record using a path and the record's <code>_id</code> value.</p>
+  <p><strong>Note:</strong> We will use a virtual property in the library to define a unique URL for each model record using a path and the record's <code>_id</code> value.</p>
 </div>
 
 <p>For more information see <a href="https://mongoosejs.com/docs/guide.html#virtuals">Virtuals</a> (Mongoose documentation).</p>
@@ -373,13 +366,11 @@ Athlete.find({ 'sport': 'Tennis' }, 'name age', function (err, athletes) {
 <p>If you specify a callback, as shown above, the query will execute immediately. The callback will be invoked when the search completes.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>All callbacks in Mongoose use the pattern <code>callback(error, result)</code>. If an error occurs executing the query, the <code>error</code> parameter will contain an error document and <code>result</code> will be null. If the query is successful, the <code>error</code> parameter will be null, and the <code>result</code> will be populated with the results of the query.</p>
+  <p><strong>Note:</strong> All callbacks in Mongoose use the pattern <code>callback(error, result)</code>. If an error occurs executing the query, the <code>error</code> parameter will contain an error document and <code>result</code> will be null. If the query is successful, the <code>error</code> parameter will be null, and the <code>result</code> will be populated with the results of the query.</p>
 </div>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>It is important to remember that not finding any results is <strong>not an error</strong> for a search —but it may be a fail-case in the context of your application. If your application expects a search to find a value you can either check the result in the callback (<code>results==null</code>) or daisy chain the <a href="https://mongoosejs.com/docs/api.html#query_Query-orFail">orFail()</a> method on the query. </p>
+  <p><strong>Note:</strong> It is important to remember that not finding any results is <strong>not an error</strong> for a search —but it may be a fail-case in the context of your application. If your application expects a search to find a value you can either check the result in the callback (<code>results==null</code>) or daisy chain the <a href="https://mongoosejs.com/docs/api.html#query_Query-orFail">orFail()</a> method on the query. </p>
 </div>
 
 <p>If you don't specify a callback then the API will return a variable of type <a href="https://mongoosejs.com/docs/api.html#query-js">Query</a>. You can use this query object to build up your query and then execute it (with a callback) later using the <code>exec()</code> method.</p>
@@ -422,8 +413,7 @@ query.exec(function (err, athletes) {
 </ul>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>There is also a <code><a href="https://mongoosejs.com/docs/api.html#model_Model.count">count()</a></code> method that you can use to get the number of items that match conditions. This is useful if you want to perform a count without actually fetching the records.</p>
+  <p><strong>Note:</strong> There is also a <code><a href="https://mongoosejs.com/docs/api.html#model_Model.count">count()</a></code> method that you can use to get the number of items that match conditions. This is useful if you want to perform a count without actually fetching the records.</p>
 </div>
 
 <p>There is a lot more you can do with queries. For more information see: <a href="https://mongoosejs.com/docs/queries.html">Queries</a> (Mongoose docs).</p>
@@ -481,8 +471,7 @@ bob.save(function (err) {
 });</pre>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>Astute readers will have noted that we added an author to our story, but we didn't do anything to add our story to our author's <code>stories</code> array. How then can we get all stories by a particular author? One way would be to add our story to the stories array, but this would result in us having two places where the information relating authors and stories needs to be maintained.</p>
+  <p><strong>Note:</strong> Astute readers will have noted that we added an author to our story, but we didn't do anything to add our story to our author's <code>stories</code> array. How then can we get all stories by a particular author? One way would be to add our story to the stories array, but this would result in us having two places where the information relating authors and stories needs to be maintained.</p>
 
 <p>A better way is to get the <code>_id</code> of our <em>author</em>, then use <code>find()</code> to search for this in the author field across all stories.</p>
 
@@ -532,8 +521,7 @@ SomeModel.find(callback_function);</pre>
 <p>For this tutorial, we're going to use the <a href="https://www.mongodb.com/cloud/atlas">MongoDB Atlas</a> free cloud-hosted <a href="https://www.mongodb.com/cloud/atlas/pricing">sandbox</a> database. This database tier is not considered suitable for production websites because it has no redundancy, but it is great for development and prototyping. We're using it here because it is free and easy to set up, and because MongoDB Atlas is a popular <em>database as a service</em> vendor that you might reasonably choose for your production database (other popular choices at the time of writing include <a href="https://www.compose.com/">Compose</a>, <a href="https://scalegrid.io/pricing.html">ScaleGrid</a> and <a href="https://www.objectrocket.com/">ObjectRocket</a>).</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>If you prefer you can set up a MongoDb database locally by downloading and installing the <a href="https://www.mongodb.com/download-center/community">appropriate binaries for your system</a>. The rest of the instructions in this article would be similar, except for the database URL you would specify when connecting. Note, however, that the <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/deployment">Express Tutorial Part 7: Deploying to Production</a> tutorial requires some form of remote database, since the free tier of the <a href="https://www.heroku.com/">Heroku</a> service does not provide persistent storage. It is therefore highly recommended to use <a href="https://www.mongodb.com/cloud/atlas">MongoDB Atlas</a>.</p>
+  <p><strong>Note:</strong> If you prefer you can set up a MongoDb database locally by downloading and installing the <a href="https://www.mongodb.com/download-center/community">appropriate binaries for your system</a>. The rest of the instructions in this article would be similar, except for the database URL you would specify when connecting. Note, however, that the <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/deployment">Express Tutorial Part 7: Deploying to Production</a> tutorial requires some form of remote database, since the free tier of the <a href="https://www.heroku.com/">Heroku</a> service does not provide persistent storage. It is therefore highly recommended to use <a href="https://www.mongodb.com/cloud/atlas">MongoDB Atlas</a>.</p>
 </div>
 
 <p>You will first need to <a href="https://www.mongodb.com/cloud/atlas/register">create an account</a> with MongoDB Atlas (this is free, and just requires that you enter basic contact details and acknowledge their terms of service). </p>
@@ -589,14 +577,12 @@ SomeModel.find(callback_function);</pre>
    <li>Click the <strong>Allow Access from Anywhere</strong> button.<br>
     This will open a form with <code>0.0.0.0/0</code> pre-seeded for the IP Address. Click the <strong>Add IP Address</strong> button.
     <div class="notecard note">
-        <h4>Note</h4>
-        <p>It is a best practice to limit the IP addresses that can connect to your database and other resources. Here we allow a connection from anywhere because we don't know where the request will come from after deployment.</p>
+        <p><strong>Note:</strong> It is a best practice to limit the IP addresses that can connect to your database and other resources. Here we allow a connection from anywhere because we don't know where the request will come from after deployment.</p>
     </div>
    </li>
    <li>Enter a username and password and click <strong>Create MongoDB User</strong> button.
     <div class="notecard note">
-      <h4>Note</h4>
-      <p>Avoid using special characters in your MongoDB user password as mongoose may not parse the connection string properly.</p>
+      <p><strong>Note:</strong> Avoid using special characters in your MongoDB user password as mongoose may not parse the connection string properly.</p>
     </div>
    </li>
    <li>If you have completed the 2 previous steps, the button <strong>Choose a connection method </strong>will turn green.</li>
@@ -706,8 +692,7 @@ module.exports = mongoose.model('Author', AuthorSchema);
 <p>We've also declared a <a href="#virtual_properties">virtual</a> for the AuthorSchema named "url" that returns the absolute URL required to get a particular instance of the model — we'll use the property in our templates whenever we need to get a link to a particular author.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>Declaring our URLs as a virtual in the schema is a good idea because then the URL for an item only ever needs to be changed in one place.<br>
+  <p><strong>Note:</strong> Declaring our URLs as a virtual in the schema is a good idea because then the URL for an item only ever needs to be changed in one place.<br>
  At this point, a link using this URL wouldn't work, because we haven't got any routes handling code for individual model instances. We'll set those up in a later article!</p>
 </div>
 
@@ -808,8 +793,7 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);</pre>
  <li>Download (or otherwise create) the file <a href="https://raw.githubusercontent.com/hamishwillee/express-locallibrary-tutorial/master/populatedb.js">populatedb.js</a> inside your <em>express-locallibrary-tutorial</em> directory (in the same level as <code>package.json</code>).
 
   <div class="notecard note">
-    <h4>Note</h4>
-    <p>You don't need to know how <a href="https://raw.githubusercontent.com/hamishwillee/express-locallibrary-tutorial/master/populatedb.js">populatedb.js</a> works; it just adds sample data into the database.</p>
+    <p><strong>Note:</strong> You don't need to know how <a href="https://raw.githubusercontent.com/hamishwillee/express-locallibrary-tutorial/master/populatedb.js">populatedb.js</a> works; it just adds sample data into the database.</p>
   </div>
  </li>
  <li>Enter the following commands in the project root to install the <em>async</em> module that is required by the script (we'll discuss this in later tutorials, )
@@ -818,16 +802,14 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);</pre>
  <li>Run the script using node in your command prompt, passing in the URL of your <em>MongoDB</em> database (the same one you replaced the <em>insert_your_database_url_here</em> placeholder with, inside <code>app.js</code> earlier):
   <pre class="brush: bash">node populatedb &lt;your mongodb url&gt;</pre>
   <div class="notecard note">
-    <h4>Note</h4>
-    <p>On some operating systems/terminals, you may need to wrap the database URL inside double (") or single (') quotation marks.</p>
+    <p><strong>Note:</strong> On some operating systems/terminals, you may need to wrap the database URL inside double (") or single (') quotation marks.</p>
   </div>
  </li>
  <li>The script should run through to completion, displaying items as it creates them in the terminal.</li>
 </ol>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>Go to your database on mongoDB Atlas (in the <em>Collections</em> tab). You should now be able to drill down into individual collections of Books, Authors, Genres and BookInstances, and check out individual documents.</p>
+  <p><strong>Note:</strong> Go to your database on mongoDB Atlas (in the <em>Collections</em> tab). You should now be able to drill down into individual collections of Books, Authors, Genres and BookInstances, and check out individual documents.</p>
 </div>
 
 <h2 id="Summary">Summary</h2>

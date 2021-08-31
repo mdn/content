@@ -111,8 +111,7 @@ tags:
 <p>Django provides a number of tools and approaches to help you with the tasks detailed above. The most fundamental is the <code>Form</code> class, which simplifies both generation of form HTML and data cleaning/validation. In the next section, we describe how forms work using the practical example of a page to allow librarians to renew books.</p>
 
 <div class="notecard note">
-    <h4>Note</h4>
-    <p>Understanding how <code>Form</code> is used will help you when we discuss Django's more "high level" form framework classes.</p>
+  <p><strong>Note:</strong> Understanding how <code>Form</code> is used will help you when we discuss Django's more "high level" form framework classes.</p>
 </div>
 
 <h2 id="Renew-book_form_using_a_Form_and_function_view">Renew-book form using a Form and function view</h2>
@@ -192,8 +191,7 @@ class RenewBookForm(forms.Form):
 <p>The second point is that if a value falls outside our range we raise a <code>ValidationError</code>, specifying the error text that we want to display in the form if an invalid value is entered. The example above also wraps this text in one of <a href="https://docs.djangoproject.com/en/3.1/topics/i18n/translation/">Django's translation functions</a> <code>ugettext_lazy()</code> (imported as <code>_()</code>), which is good practice if you want to translate your site later.</p>
 
 <div class="notecard note">
-    <h4>Note</h4>
-    <p>There are numerous other methods and examples for validating forms in <a href="https://docs.djangoproject.com/en/3.1/ref/forms/validation/">Form and field validation</a> (Django docs). For example, in cases where you have multiple fields that depend on each other, you can override the <a href="https://docs.djangoproject.com/en/3.1/ref/forms/api/#django.forms.Form.clean">Form.clean()</a> function and again raise a <code>ValidationError</code>.</p>
+  <p><strong>Note:</strong> There are numerous other methods and examples for validating forms in <a href="https://docs.djangoproject.com/en/3.1/ref/forms/validation/">Form and field validation</a> (Django docs). For example, in cases where you have multiple fields that depend on each other, you can override the <a href="https://docs.djangoproject.com/en/3.1/ref/forms/api/#django.forms.Form.clean">Form.clean()</a> function and again raise a <code>ValidationError</code>.</p>
 </div>
 
 <p>That's all we need for the form in this example!</p>
@@ -209,8 +207,7 @@ class RenewBookForm(forms.Form):
 <p>The URL configuration will redirect URLs with the format <strong>/catalog/book/<em>&lt;bookinstance_id&gt;</em>/renew/</strong> to the function named <code>renew_book_librarian()</code> in <strong>views.py</strong>, and send the <code>BookInstance</code> id as the parameter named <code>pk</code>. The pattern only matches if <code>pk</code> is a correctly formatted <code>uuid</code>.</p>
 
 <div class="notecard note">
-    <h4>Note</h4>
-    <p>We can name our captured URL data "<code>pk</code>" anything we like, because we have complete control over the view function (we're not using a generic detail view class that expects parameters with a certain name). However, <code>pk</code> short for "primary key", is a reasonable convention to use!</p>
+  <p><strong>Note:</strong> We can name our captured URL data "<code>pk</code>" anything we like, because we have complete control over the view function (we're not using a generic detail view class that expects parameters with a certain name). However, <code>pk</code> short for "primary key", is a reasonable convention to use!</p>
 </div>
 
 <h3 id="View">View</h3>
@@ -395,8 +392,7 @@ def renew_book_librarian(request, pk):
 <p>The form code is relatively simple. First, we declare the <code>form</code> tags, specifying where the form is to be submitted (<code>action</code>) and the <code>method</code> for submitting the data (in this case an "HTTP POST") — if you recall the <a href="#html_forms">HTML Forms</a> overview at the top of the page, an empty <code>action</code> as shown, means that the form data will be posted back to the current URL of the page (which is what we want!). Inside the tags, we define the <code>submit</code> input, which a user can press to submit the data. The <code>{% csrf_token %}</code> added just inside the form tags is part of Django's cross-site forgery protection.</p>
 
 <div class="notecard note">
-    <h4>Note</h4>
-    <p>Add the <code>{% csrf_token %}</code> to every Django template you create that uses <code>POST</code> to submit data. This will reduce the chance of forms being hijacked by malicious users.</p>
+  <p><strong>Note:</strong> Add the <code>{% csrf_token %}</code> to every Django template you create that uses <code>POST</code> to submit data. This will reduce the chance of forms being hijacked by malicious users.</p>
 </div>
 
 <p>All that's left is the <code>\{{ form }}</code> template variable, which we passed to the template in the context dictionary. Perhaps unsurprisingly, when used as shown this provides the default rendering of all the form fields, including their labels, widgets, and help text — the rendering is as shown below:</p>
@@ -412,8 +408,7 @@ def renew_book_librarian(request, pk):
 </pre>
 
 <div class="notecard note">
-    <h4>Note</h4>
-    <p>It is perhaps not obvious because we only have one field, but, by default, every field is defined in its own table row. This same rendering is provided if you reference the template variable <code>\{{ form.as_table }}</code>.</p>
+  <p><strong>Note:</strong> It is perhaps not obvious because we only have one field, but, by default, every field is defined in its own table row. This same rendering is provided if you reference the template variable <code>\{{ form.as_table }}</code>.</p>
 </div>
 
 <p>If you were to enter an invalid date, you'd additionally get a list of the errors rendered on the page (shown in bold below).</p>
@@ -452,8 +447,7 @@ def renew_book_librarian(request, pk):
 <pre class="brush: html">{% if perms.catalog.can_mark_returned %}- &lt;a href="{% url 'renew-book-librarian' bookinst.id %}"&gt;Renew&lt;/a&gt;  {% endif %}</pre>
 
 <div class="notecard note">
-    <h4>Note</h4>
-    <p>Remember that your test login will need to have the permission "<code>catalog.can_mark_returned</code>" in order to access the renew book page (perhaps use your superuser account).</p>
+<p><strong>Note:</strong> Remember that your test login will need to have the permission "<code>catalog.can_mark_returned</code>" in order to access the renew book page (perhaps use your superuser account).</p>
 </div>
 
 <p>You can alternatively manually construct a test URL like this — <code>http://127.0.0.1:8000/catalog/book/<em>&lt;bookinstance_id&gt;</em>/renew/</code> (a valid <code>bookinstance_id</code> can be obtained by navigating to a book detail page in your library, and copying the <code>id</code> field).</p>
@@ -491,15 +485,13 @@ class RenewBookModelForm(ModelForm):
 </pre>
 
 <div class="notecard note">
-    <h4>Note</h4>
-    <p>You can also include all fields in the form using <code>fields = '__all__'</code>, or you can use <code>exclude</code> (instead of <code>fields</code>) to specify the fields <em>not</em> to include from the model).</p>
+  <p><strong>Note:</strong> You can also include all fields in the form using <code>fields = '__all__'</code>, or you can use <code>exclude</code> (instead of <code>fields</code>) to specify the fields <em>not</em> to include from the model).</p>
 
 <p>Neither approach is recommended because new fields added to the model are then automatically included in the form (without the developer necessarily considering possible security implications).</p>
 </div>
 
 <div class="notecard note">
-    <h4>Note</h4>
-    <p>This might not look like all that much simpler than just using a <code>Form</code> (and it isn't in this case, because we just have one field). However, if you have a lot of fields, it can reduce the amount of code quite significantly!</p>
+  <p><strong>Note:</strong> This might not look like all that much simpler than just using a <code>Form</code> (and it isn't in this case, because we just have one field). However, if you have a lot of fields, it can reduce the amount of code quite significantly!</p>
 </div>
 
 <p>The rest of the information comes from the model field definitions (e.g. labels, widgets, help text, error messages). If these aren't quite right, then we can override them in our <code>class Meta</code>, specifying a dictionary containing the field to change and its new value. For example, in this form, we might want a label for our field of "<em>Renewal date</em>" (rather than the default based on the field name: <em>Due Back</em>), and we also want our help text to be specific to this use case. The <code>Meta</code> below shows you how to override these fields, and you can similarly set <code>widgets</code> and <code>error_messages</code> if the defaults aren't sufficient.</p>
@@ -546,8 +538,7 @@ class RenewBookModelForm(ModelForm):
 <p>The form handling algorithm we used in our function view example above represents an extremely common pattern in form editing views. Django abstracts much of this "boilerplate" for you, by creating <a href="https://docs.djangoproject.com/en/3.1/ref/class-based-views/generic-editing/">generic editing views</a> for creating, editing, and deleting views based on models. Not only do these handle the "view" behavior, but they automatically create the form class (a <code>ModelForm</code>) for you from the model.</p>
 
 <div class="notecard note">
-    <h4>Note</h4>
-    <p>In addition to the editing views described here, there is also a <a href="https://docs.djangoproject.com/en/3.1/ref/class-based-views/generic-editing/#formview">FormView</a> class, which lies somewhere between our function view and the other generic views in terms of "flexibility" vs "coding effort". Using <code>FormView</code>, you still need to create your <code>Form</code>, but you don't have to implement all of the standard form-handling patterns. Instead, you just have to provide an implementation of the function that will be called once the submission is known to be valid.</p>
+  <p><strong>Note:</strong> In addition to the editing views described here, there is also a <a href="https://docs.djangoproject.com/en/3.1/ref/class-based-views/generic-editing/#formview">FormView</a> class, which lies somewhere between our function view and the other generic views in terms of "flexibility" vs "coding effort". Using <code>FormView</code>, you still need to create your <code>Form</code>, but you don't have to implement all of the standard form-handling patterns. Instead, you just have to provide an implementation of the function that will be called once the submission is known to be valid.</p>
 </div>
 
 <p>In this section, we're going to use generic editing views to create pages to add functionality to create, edit, and delete <code>Author</code> records from our library — effectively providing a basic reimplementation of parts of the Admin site (this could be useful if you need to offer admin functionality in a more flexible way than can be provided by the admin site).</p>
@@ -633,8 +624,7 @@ class AuthorDelete(DeleteView):
 <p>The author create, update, and delete pages are now ready to test (we won't bother hooking them into the site sidebar in this case, although you can do so if you wish).</p>
 
 <div class="notecard note">
-    <h4>Note</h4>
-    <p>Observant users will have noticed that we didn't do anything to prevent unauthorized users from accessing the pages! We leave that as an exercise for you (hint: you could use the <code>PermissionRequiredMixin</code> and either create a new permission or reuse our <code>can_mark_returned</code> permission).</p>
+    <p><strong>Note:</strong> Observant users will have noticed that we didn't do anything to prevent unauthorized users from accessing the pages! We leave that as an exercise for you (hint: you could use the <code>PermissionRequiredMixin</code> and either create a new permission or reuse our <code>can_mark_returned</code> permission).</p>
 </div>
 
 <h3 id="Testing_the_page_2">Testing the page</h3>

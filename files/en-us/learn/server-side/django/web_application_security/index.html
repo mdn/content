@@ -61,8 +61,7 @@ tags:
   <code>&lt;script&gt;alert('Test alert');&lt;/script&gt;</code>.<br>
   <img alt="Author Form XSS test" src="author_create_form_alert_xss.png" style="border-style: solid; border-width: 1px;">
   <div class="notecard note">
-    <h4>Note</h4>
-    <p>This is a harmless script that, if executed, will display an alert box in your browser. If the alert is displayed when you submit the record then the site is vulnerable to XSS threats.</p>
+    <p><strong>Note:</strong> This is a harmless script that, if executed, will display an alert box in your browser. If the alert is displayed when you submit the record then the site is vulnerable to XSS threats.</p>
   </div>
  </li>
  <li>Press <strong>Submit</strong> to save the record.</li>
@@ -83,8 +82,7 @@ tags:
 <p>CSRF attacks allow a malicious user to execute actions using the credentials of another user without that user’s knowledge or consent. For example consider the case where we have a hacker who wants to create additional authors for our LocalLibrary.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>Obviously our hacker isn't in this for the money! A more ambitious hacker could use the same approach on other sites to perform much more harmful tasks (e.g. transfer money to their own accounts, etc.)</p>
+  <p><strong>Note:</strong> Obviously our hacker isn't in this for the money! A more ambitious hacker could use the same approach on other sites to perform much more harmful tasks (e.g. transfer money to their own accounts, etc.)</p>
 </div>
 
 <p>In order to do this, they might create an HTML file like the one below, which contains an author-creation form (like the one we used in the previous section) that is submitted as soon as the file is loaded. They would then send the file to all the Librarians and suggest that they open the file (it contains some harmless information, honest!). If the file is opened by any logged in librarian, then the form would be submitted with their credentials and a new author would be created.</p>
