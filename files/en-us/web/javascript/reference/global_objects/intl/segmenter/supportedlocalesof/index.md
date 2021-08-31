@@ -13,26 +13,28 @@ Returns an array containing those of the provided locales that are supported wit
 ## Syntax
 
 ```js
-Intl.Segmenter.supportedLocalesOf();
-Intl.Segmenter.supportedLocalesOf(localeArray);
-Intl.Segmenter.supportedLocalesOf(options);
-Intl.Segmenter.supportedLocalesOf(localeArray, options);
+Intl.Segmenter.supportedLocalesOf(locales);
+Intl.Segmenter.supportedLocalesOf(locales, options);
 ```
 
 ### Parameters
 
-- `localeArray` {{ optional_inline }}
-  - : An array of string values, each representing a locale described using [BCP 47](https://datatracker.ietf.org/doc/html/bcp47) language tags (see the [IANA language subtag registry](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry) for a full list).  If no <var>localeArray</var> is supplied, a zero-length array is returned.
-- `options` {{ optional_inline }}
-  - : An object containing the value of `localeMatcher`.  Possible values are:
-    - `best fit` (default)
-      - : Locales are matched using an implementation-dependent algorithm.
-    - `lookup`
-      - : Locales are matched using the algorithm described in [section 3.4 of RFC 4647](https://datatracker.ietf.org/doc/html/rfc4647#section-3.4).
+- `locales`
+  - : A string with a BCP 47 language tag, or an array of such strings. For the general
+    form of the `locales` argument, see the {{jsxref("Intl",
+		"Intl", "#Locale_identification_and_negotiation", 1)}} page.
+- `options` {{optional_inline}}
+  - : An object that may have the following property:
+    - `localeMatcher`
+      - : The locale matching algorithm to use. Possible values are
+        "`lookup`" and "`best fit`"; the default is
+        "`best fit`". For information about this option, see the
+        {{jsxref("Intl", "Intl", "#Locale_negotiation", 1)}} page.
 
 ### Return value
 
-An array containing all locales from <var>localeArray</var> that are supported by the runtime’s {{ jsxref('Intl') }} implementation, in the same order as they appeared in <var>localeArray</code>
+An array of strings representing a subset of the given locale tags that are supported
+in segmentation without having to fall back to the runtime's default locale.
 
 ## Examples
 
