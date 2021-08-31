@@ -12,7 +12,7 @@ The **`Intl.Segmenter`** object enables language-sensitive text segmentation.
 
 ## Constructor
 
-- {{jsxref("Intl.Segmenter/constructor", "Intl.Segmenter()")}}
+- {{jsxref("Intl.Segmenter/segmenter", "Intl.Segmenter()")}}
   - : Creates a new `Intl.Segmenter` object.
 
 ## Static methods

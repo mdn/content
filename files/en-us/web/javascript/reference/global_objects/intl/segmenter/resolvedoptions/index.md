@@ -16,7 +16,7 @@ Returns a new object with properties reflecting the locale and granularity optio
 segmenter.resolvedOptions();
 ```
 
-## Parameters
+### Parameters
 
 None.
 
