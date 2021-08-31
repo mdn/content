@@ -121,13 +121,13 @@ The _name of interface_ extends the following APIs, adding the listed features.
 #### Interface #1
 
 - {{domxref("addition1")}}
-  - : *Description of the feature of Interface#1 that is added to that API by the API you are currently documenting.
+  - : Description of the feature of Interface#1 that is added to that API by the API you are currently documenting.
       One *term and definition for each feature. If this API doesn't extend any other interfaces, you can delete these sections.
 
 #### Interface #2
 
 - {{domxref("addition1")}}
-  - : _Description of the feature of Interface#2 that is added to that API by the API you are currently documenting, etc._
+  - : Description of the feature of Interface#2 that is added to that API by the API you are currently documenting, etc.
 
 ## Examples
 
@@ -151,12 +151,14 @@ And/or include a list of links to useful code samples that live elsewhere:
 
 {{Specifications("path.to.feature.Interface_1")}}
 
+{{Specifications("path.to.feature.Interface_2")}}
 
 ## Browser compatibility
 
 {{Compat("path.to.feature.Interface_1")}}
 
-<!-- {{Compat("path.to.feature.Interface_2")}} -->
+
+{{Compat("path.to.feature.Interface_2")}}
 
 ## See also
 
