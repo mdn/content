@@ -48,7 +48,7 @@ The stylesheet declaration for the body's background color is modified via JavaS
 
 <p>To modify styles to a document using CSS syntax, one can insert rules or insert {{HTMLElement("style")}} tags whose <code>innerHTML</code> property is set to the desired CSS.</p>
 
-<h2 id="Modify_an_element_style">Modify an element's style</h2>
+<h2 id="Modify_an_elements_style">Modify an element's style</h2>
 
 <p>The element {{domxref("HTMLElement.style", "style")}} property (see also the section "DOM Style Object" below) can also be used to get and set the styles on an element. However, this property only returns style attributes that have been set <em>in-line</em> (e.g, <code>&lt;td style="background-color: lightblue"&gt;</code> returns the string "<code>background-color:lightblue</code>", or directly for that element using <code>element.style.propertyName</code>, even though there may be other styles on the element from a stylesheet).</p>
 
@@ -93,7 +93,7 @@ function resetStyle(elemId) {
 &lt;/html&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('Modify_an_element_style') }}</p>
+<p>{{ EmbedLiveSample('Modify_an_elements_style') }}</p>
 
 <p>The {{domxref("window.getComputedStyle", "getComputedStyle()")}} method on the <code>document.defaultView</code> object returns all styles that have actually been computed for an element.</p>
 
