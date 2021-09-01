@@ -385,46 +385,6 @@ tags:
  </tbody>
 </table>
 
-<h3 id="Value_content_none">Value of the <code>content</code> property: none</h3>
-
-<p>The <code>none</code> value of the {{cssxref("content")}} property inhibits the children of the element from being rendered as children of this element, as if the element was empty. (See {{bug(1699964)}} for more details.)</p>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col" style="vertical-align: bottom;">Release channel</th>
-   <th scope="col" style="vertical-align: bottom;">Version added</th>
-   <th scope="col" style="vertical-align: bottom;">Enabled by default?</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">Nightly</th>
-   <td>91</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Developer Edition</th>
-   <td>91</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Beta</th>
-   <td>91</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Release</th>
-   <td>91</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Preference name</th>
-   <th colspan="2"><code>layout.css.element-content-none.enabled</code></th>
-  </tr>
- </tbody>
-</table>
-
 <h3 id="Fit_content_function">The <code>fit-content()</code> function for <code>width</code> and other sizing properties</h3>
 
 <p>The {{cssxref("fit-content()")}} function as it applies to {{cssxref("width")}} and other sizing properties. This function is already well-supported for CSS Grid Layout track sizing. (See {{bug(1312588)}} for more details.)</p>
@@ -589,7 +549,7 @@ tags:
 
 <h2 id="SVG">SVG</h2>
 
-<h3 id="Property_math-style">Presentation attribute: d</h3>
+<h3 id="Presentation_attribute">Presentation attribute: d</h3>
 
 <p>The SVG {{SVGAttr('d')}} attribute, used to define a path to be drawn, is now a <a href="/en-US/docs/Web/SVG/Attribute/Presentation#attr-d">presentation attribute</a>. It can be used as a property in CSS and accepts the values <a href="/en-US/docs/Web/CSS/path()">path()</a> or <code>none</code>. (See {{bug(1340422)}} for more details.)</p>
 
@@ -756,6 +716,48 @@ tags:
   <tr>
    <th scope="row">Preference name</th>
    <th colspan="2"><code>dom.webgpu.enabled</code></th>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="javascript_dom_api">Audio Output API</h3>
+
+<h4 id="">MediaDevices.selectAudioOutput()</h4>
+
+<p>{{domxref("MediaDevices.selectAudioOutput()")}} displays a prompt from which users can select their desired audio output. See {{bug(1699026)}}.</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col" style="vertical-align: bottom;">Release channel</th>
+   <th scope="col" style="vertical-align: bottom;">Version added</th>
+   <th scope="col" style="vertical-align: bottom;">Enabled by default?</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">Nightly</th>
+   <td>88</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Developer Edition</th>
+   <td>88</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Beta</th>
+   <td>88</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Release</th>
+   <td>88</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Preference name</th>
+   <th colspan="2"><code>media.setsinkid.enabled</code></th>
   </tr>
  </tbody>
 </table>
@@ -1209,6 +1211,49 @@ tags:
  </tbody>
 </table>
 
+<h3 id="WebRTC_and_media">WebShare API</h3>
+
+<p>The <a href="/en-US/docs/Web/API/Web_Share_API">Web Share API</a> allows sharing of files, URLs and other data from a site.
+  Note that Firefox implements {{domxref("Navigator.share()")}} but not {{domxref("Navigator.canShare()")}} ({{bug(1666203)}}).</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col" style="vertical-align: bottom;">Release channel</th>
+   <th scope="col" style="vertical-align: bottom;">Version changed</th>
+   <th scope="col" style="vertical-align: bottom;">Enabled by default?</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">Nightly</th>
+   <td>71</td>
+   <td>No (default). Yes (Windows from version 92)</td>
+  </tr>
+  <tr>
+   <th scope="row">Developer Edition</th>
+   <td>71</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Beta</th>
+   <td>71</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Release</th>
+   <td>71</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Preference name</th>
+   <th colspan="2"><code>dom.webshare.enabled</code></th>
+  </tr>
+ </tbody>
+</table>
+
+
+
 <h3 id="WebRTC_and_media">WebRTC and media</h3>
 
 <p>The following experimental features include those found in the <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a>, the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>, the <a href="/en-US/docs/Web/API/Media_Source_Extensions_API">Media Source Extensions API</a>, the <a href="/en-US/docs/Web/API/Encrypted_Media_Extensions_API">Encrypted Media Extensions API</a>, and the <a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a>.</p>
@@ -1254,42 +1299,50 @@ tags:
 </table>
 
 
-<h4 id="AVIF_AV1_Image_File_format_support">AVIF (AV1 Image File format) support</h4>
+<h4 id="AVIF_compliance_strictness">AVIF compliance strictness</h4>
 
-<p>With this feature enabled, Firefox supports the <a href="/en-US/docs/Web/Media/Formats/Image_types#avif">AV1 Image File (AVIF)</a> format. This is a still image file format that leverages the capabilities of the AV1 video compression algorithms to reduce image size. (See {{bug(1443863)}} for more details.)</p>
+<p>The <code>image.avif.compliance_strictness</code> preference can be used to control the <em>strictness</em> appliied when processing <a href="/en-US/docs/Web/Media/Formats/Image_types#avif">AVIF</a> images.
+  This allows Firefox users to display images that render on some other browsers, even if they are not strictly compliant.</p>
+
+<p>Permitted values are:</p>
+<ul>
+  <li><code>0</code>: Accept images with specification violations in both recommendations ("should" language) and requirements ("shall" language), provided they can be safely or unambigiously intepretted.</li>
+  <li><code>1</code> (default): Reject violations of requirements, but allow violations of recommendations.</li>
+  <li><code>2</code>: Strict. Reject any violations in requirements or recommendations.</li>
+</ul>
 
 <table class="standard-table">
  <thead>
   <tr>
    <th scope="col" style="vertical-align: bottom;">Release channel</th>
    <th scope="col" style="vertical-align: bottom;">Version added</th>
-   <th scope="col" style="vertical-align: bottom;">Enabled by default?</th>
+   <th scope="col" style="vertical-align: bottom;">Default value</th>
   </tr>
  </thead>
  <tbody>
   <tr>
    <th scope="row">Nightly</th>
-   <td>77</td>
-   <td>No</td>
+   <td>92</td>
+   <td>1</td>
   </tr>
   <tr>
    <th scope="row">Developer Edition</th>
-   <td>77</td>
-   <td>No</td>
+   <td>92</td>
+   <td>1</td>
   </tr>
   <tr>
    <th scope="row">Beta</th>
-   <td>77</td>
-   <td>No</td>
+   <td>92</td>
+   <td>1</td>
   </tr>
   <tr>
    <th scope="row">Release</th>
-   <td>77</td>
-   <td>No</td>
+   <td>92</td>
+   <td>1</td>
   </tr>
   <tr>
    <th scope="row">Preference name</th>
-   <th colspan="2"><code>image.avif.enabled</code></th>
+   <th colspan="2"><code>image.avif.compliance_strictness</code></th>
   </tr>
  </tbody>
 </table>

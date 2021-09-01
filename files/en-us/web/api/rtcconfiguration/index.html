@@ -86,7 +86,7 @@ browser-compat: api.RTCConfiguration
     Although only one certificate is used by a given connection,
     providing certificates for multiple algorithms may improve the odds of successfully connecting in some circumstances.
     See <a href="/en-US/docs/Web/API/RTCConfiguration/certificates#using_certificates">Using certificates</a> for further information.
-    <div class="note">This configuration option cannot be changed after it is first specified; once the certificates have been set, this property is ignored in future calls to {{domxref("RTCPeerConnection.setConfiguration()")}}.</div>
+    <div class="note"><p><strong>Note:</strong> This configuration option cannot be changed after it is first specified; once the certificates have been set, this property is ignored in future calls to {{domxref("RTCPeerConnection.setConfiguration()")}}.</p></div>
   </dd>
 
   <dt>{{domxref("RTCConfiguration.iceCandidatePoolSize", "iceCandidatePoolSize")}} {{optional_inline}}</dt>
@@ -98,7 +98,7 @@ browser-compat: api.RTCConfiguration
     before you start trying to connect,
     so that they're already available for inspection
     when {{domxref("RTCPeerConnection.setLocalDescription()")}} is called.
-    <div class="note">Changing the size of the ICE candidate pool may trigger the beginning of ICE gathering.</div>
+    <div class="note"><p><strong>Note:</strong> Changing the size of the ICE candidate pool may trigger the beginning of ICE gathering.</p></div>
   </dd>
 
   <dt>{{domxref("RTCConfiguration.iceServers", "iceServers")}} {{optional_inline}}</dt>
@@ -113,23 +113,17 @@ browser-compat: api.RTCConfiguration
 
   <dt>{{domxref("RTCConfiguration.iceTransportPolicy", "iceTransportPolicy")}} {{optional_inline}}</dt>
   <dd>
-    The current ICE transport policy;
+    <p>The current ICE transport policy;
     if the policy isn't specified, <code>all</code> is assumed by default,
     allowing all candidates to be considered.
-    Possible values are:
+    Possible values are:</p>
     <dl>
-      <tr>
-        <td><code>"all"</code></td>
-        <td>All ICE candidates will be considered.</td>
-       </tr>
-       <tr>
-        <td><code>"public" </code>{{deprecated_inline}}</td>
-        <td>Only ICE candidates with public IP addresses will be considered. <em>Removed from the specification's May 13, 2016 working draft.</em></td>
-       </tr>
-       <tr>
-        <td><code>"relay"</code></td>
-        <td>Only ICE candidates whose IP addresses are being relayed, such as those being passed through a STUN or TURN server, will be considered.</td>
-       </tr>
+      <dt><code>"all"</code></dt>
+      <dd>All ICE candidates will be considered.</dd>
+      <dt><code>"public" </code>{{deprecated_inline}}</dt>
+      <dd>Only ICE candidates with public IP addresses will be considered. <em>Removed from the specification's May 13, 2016 working draft.</em></dd>
+      <dt><code>"relay"</code></dt>
+      <dd>Only ICE candidates whose IP addresses are being relayed, such as those being passed through a STUN or TURN server, will be considered.</dd>
     </dl>
   </dd>
 

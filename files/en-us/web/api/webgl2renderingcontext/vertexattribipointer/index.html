@@ -58,7 +58,7 @@ browser-compat: api.WebGL2RenderingContext.vertexAttribIPointer
 
 <h3 id="Linear_Blend_Skinning">Linear Blend Skinning</h3>
 
-<pre class="brush: js, highlight: [9]">//Describe the layout of the buffer:
+<pre class="brush: js">//Describe the layout of the buffer:
 //1. position
 gl.vertexAttribPointer(0, 3, gl.FLOAT, false, 20, 0);
 gl.enableVertexAttribArray(0);
@@ -75,7 +75,7 @@ gl.bindAttribLocation(shaderProgram, 1, "boneWeights");
 gl.bindAttribLocation(shaderProgram, 2, "boneIndices");
 </pre>
 
-<pre class="brush: html, highlight: [8]">&lt;script id="shader-vs" type="x-shader/x-vertex"&gt;#version 300 es
+<pre class="brush: html">&lt;script id="shader-vs" type="x-shader/x-vertex"&gt;#version 300 es
 
 uniform mat4 mvMatrix;
 uniform mat4 bones[120];

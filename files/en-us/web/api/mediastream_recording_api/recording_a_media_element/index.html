@@ -19,15 +19,13 @@ tags:
 <h2 id="Example_of_recording_a_media_element">Example of recording a media element</h2>
 <h3 id="HTML_content">HTML content</h3>
 
-<div class="hidden">
-<pre class="brush: html">&lt;p&gt;Click the "Start" button to begin video recording for a few seconds. You can stop
+<pre class="brush: html hidden">&lt;p&gt;Click the "Start" button to begin video recording for a few seconds. You can stop
    the video by clicking the creatively-named "Stop" button. The "Download"
    button will download the received data (although it's in a raw, unwrapped form
    that isn't very useful).
 &lt;/p&gt;
 &lt;br&gt;
 </pre>
-</div>
 
 <p>Let's start by looking at the key bits of the HTML. There's a little more than this, but it's just informational rather than being part of the core operation of the app.</p>
 
@@ -58,13 +56,11 @@ tags:
 
 <p>Below the playback element is a button for downloading the recorded video.</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;div class="bottom"&gt;
+<pre class="brush: html hidden">&lt;div class="bottom"&gt;
   &lt;pre id="log"&gt;&lt;/pre&gt;
 &lt;/div&gt;</pre>
-<strong>CSS content</strong>
 
-<pre class="brush: css">body {
+<pre class="brush: css hidden">body {
   font: 14px "Open Sans", "Arial", sans-serif;
 }
 
@@ -109,7 +105,6 @@ h2 {
   clear: both;
   padding-top: 10px;
 }</pre>
-</div>
 
 <p>Now let's have a look at the JavaScript code; this is where the majority of the action happens, after all!</p>
 
@@ -145,7 +140,7 @@ let recordingTimeMS = 5000;
 }
 </pre>
 
-<p>The <code>wait()</code> function returns a new {{jsxref("Promise")}} which resolves once the specified number of milliseconds have elapsed. It works by using an <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow function</a> which calls {{domxref("WindowOrWorkerGlobalScope.setTimeout")}}, specifying the promise's resolution handler as the timeout handler function. That lets us use promise syntax when using timeouts, which can be very handy when chaining promises, as we'll see later.</p>
+<p>The <code>wait()</code> function returns a new {{jsxref("Promise")}} which resolves once the specified number of milliseconds have elapsed. It works by using an <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow function</a> which calls {{domxref("setTimeout()")}}, specifying the promise's resolution handler as the timeout handler function. That lets us use promise syntax when using timeouts, which can be very handy when chaining promises, as we'll see later.</p>
 
 <h3 id="Starting_media_recording">Starting media recording</h3>
 

@@ -10,12 +10,10 @@ tags:
   - visualization
   - waveform
 ---
-<div class="summary">
 <p>One of the most interesting features of the Web Audio API is the ability to extract frequency, waveform, and other data from your audio source, which can then be used to create visualizations. This article explains how, and provides a couple of basic use cases.</p>
-</div>
 
 <div class="note">
-<p><strong>Note</strong>: You can find working examples of all the code snippets in our <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> demo.</p>
+<p><strong>Note:</strong> You can find working examples of all the code snippets in our <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> demo.</p>
 </div>
 
 <h2 id="Basic_concepts">Basic concepts</h2>
@@ -34,13 +32,13 @@ analyser.connect(distortion);
 distortion.connect(audioCtx.destination);</pre>
 
 <div class="note">
-<p><strong>Note</strong>: you don't need to connect the analyser's output to another node for it to work, as long as the input is connected to the source, either directly or via another node.</p>
+<p><strong>Note:</strong> you don't need to connect the analyser's output to another node for it to work, as long as the input is connected to the source, either directly or via another node.</p>
 </div>
 
 <p>The analyser node will then capture audio data using a Fast Fourier Transform (fft) in a certain frequency domain, depending on what you specify as the {{ domxref("AnalyserNode.fftSize") }} property value (if no value is specified, the default is 2048.)</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can also specify a minimum and maximum power value for the fft data scaling range, using {{ domxref("AnalyserNode.minDecibels") }} and {{ domxref("AnalyserNode.maxDecibels") }}, and different data averaging constants using {{ domxref("AnalyserNode.smoothingTimeConstant") }}. Read those pages to get more information on how to use them.</p>
+<p><strong>Note:</strong> You can also specify a minimum and maximum power value for the fft data scaling range, using {{ domxref("AnalyserNode.minDecibels") }} and {{ domxref("AnalyserNode.maxDecibels") }}, and different data averaging constants using {{ domxref("AnalyserNode.smoothingTimeConstant") }}. Read those pages to get more information on how to use them.</p>
 </div>
 
 <p>To capture data, you need to use the methods {{ domxref("AnalyserNode.getFloatFrequencyData()") }} and {{ domxref("AnalyserNode.getByteFrequencyData()") }} to capture frequency data, and {{ domxref("AnalyserNode.getByteTimeDomainData()") }} and {{ domxref("AnalyserNode.getFloatTimeDomainData()") }} to capture waveform data.</p>
@@ -185,5 +183,5 @@ var x = 0;</pre>
 <p><img alt="a series of red bars in a bar graph, showing intensity of different frequencies in an audio signal" src="bar-graph.png"></p>
 
 <div class="note">
-<p><strong>Note</strong>: The examples listed in this article have shown usage of {{ domxref("AnalyserNode.getByteFrequencyData()") }} and {{ domxref("AnalyserNode.getByteTimeDomainData()") }}. For working examples showing {{ domxref("AnalyserNode.getFloatFrequencyData()") }} and {{ domxref("AnalyserNode.getFloatTimeDomainData()") }}, refer to our <a href="https://mdn.github.io/voice-change-o-matic-float-data/">Voice-change-O-matic-float-data</a> demo (see the <a href="https://github.com/mdn/voice-change-o-matic-float-data">source code</a> too) — this is exactly the same as the original <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a>, except that it uses Float data, not unsigned byte data.</p>
+<p><strong>Note:</strong> The examples listed in this article have shown usage of {{ domxref("AnalyserNode.getByteFrequencyData()") }} and {{ domxref("AnalyserNode.getByteTimeDomainData()") }}. For working examples showing {{ domxref("AnalyserNode.getFloatFrequencyData()") }} and {{ domxref("AnalyserNode.getFloatTimeDomainData()") }}, refer to our <a href="https://mdn.github.io/voice-change-o-matic-float-data/">Voice-change-O-matic-float-data</a> demo (see the <a href="https://github.com/mdn/voice-change-o-matic-float-data">source code</a> too) — this is exactly the same as the original <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a>, except that it uses Float data, not unsigned byte data.</p>
 </div>

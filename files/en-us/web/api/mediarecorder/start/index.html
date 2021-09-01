@@ -19,9 +19,11 @@ browser-compat: api.MediaRecorder.start
 ---
 <div>{{APIRef("MediaStream Recording")}}</div>
 
-<p><span class="seoSummary">The {{domxref("MediaRecorder")}} method
+<p>The {{domxref("MediaRecorder")}} method
     <code><strong>start()</strong></code>, which is part of the MediaStream Recording API,
-    begins recording media into one or more {{domxref("Blob")}} objects.</span> You can
+    begins recording media into one or more {{domxref("Blob")}} objects.</p>
+
+<p>You can
   record the entire duration of the media into a single <code>Blob</code> (or until you
   call {{domxref("MediaRecorder.requestData", "requestData()")}}), or you can specify the
   number of milliseconds to record at a time. Then, each time that amount of media has
@@ -43,7 +45,7 @@ browser-compat: api.MediaRecorder.start
   <code>MediaRecorder</code>, followed by a {{event("stop")}} event.</p>
 
 <div class="note">
-  <p><strong>Note</strong>: If the browser is unable to start recording or continue
+  <p><strong>Note:</strong> If the browser is unable to start recording or continue
     recording, it will raise a {{domxref("DOMError")}} event, followed by a
     {{domxref("MediaRecorder.dataavailable")}} event containing the <code>Blob</code> it
     has gathered, followed by the {{domxref("MediaRecorder.stop")}} event.</p>

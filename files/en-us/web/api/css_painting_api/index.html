@@ -51,6 +51,8 @@ tags:
 
 <p>To draw directly into an element's background using JavaScript in our CSS, we define a paint worklet using the <code><a href="/en-US/docs/Web/API/PaintWorklet/registerPaint">registerPaint()</a></code> function, tell the document to include the worklet using the paintWorklet addModule() method, then include the image we created using the CSS <code><a href="/en-US/docs/Web/CSS/paint()">paint()</a></code> function.</p>
 
+<h3>Paint worklet</h3>
+
 <p>We create our PaintWorklet called 'hollowHighlights' using the <code><a href="/en-US/docs/Web/API/PaintWorklet/registerPaint">registerPaint()</a></code> function:</p>
 
 <pre class="brush: js">registerPaint('hollowHighlights', class {
@@ -115,10 +117,11 @@ tags:
   }
 });</pre>
 
-<div id="hollowExample">
+<h3>Using the paint worklet</h3>
+
 <p>We then include the paintWorklet:</p>
 
-<pre class="brush: html hidden">&lt;ul&gt;
+<pre class="brush: html">&lt;ul&gt;
     &lt;li&gt;item 1&lt;/li&gt;
     &lt;li&gt;item 2&lt;/li&gt;
     &lt;li&gt;item 3&lt;/li&gt;
@@ -160,10 +163,12 @@ li:nth-of-type(3n+1) {
    --boxColor: hsla(255, 90%, 60%, 1.0);
    background-image: paint(hollowHighlights, stroke, 1px);
 }</pre>
-</div>
+
 <p>We've included a custom property in the selector block defining a boxColor. Custom properties are accessible to the PaintWorklet.</p>
 
-<p>{{EmbedLiveSample("hollowExample", 300, 300)}}</p>
+<h3>Result</h3>
+
+<p>{{EmbedLiveSample("Using_the_paint_worklet", 300, 300)}}</p>
 
 <h2 id="Specifications">Specifications</h2>
 

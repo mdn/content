@@ -13,7 +13,7 @@ browser-compat: api.Element.cut_event
 ---
 <div>{{APIRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>cut</code></strong> event is fired when the user has initiated a "cut" action through the browser's user interface.</span></p>
+<p>The <strong><code>cut</code></strong> event is fired when the user has initiated a "cut" action through the browser's user interface.</p>
 
 <p>If the user attempts a cut action on uneditable content, the <code>cut</code> event still fires but the event object contains no data.</p>
 
@@ -57,10 +57,7 @@ browser-compat: api.Element.cut_event
 <pre class="brush: html">&lt;div class="source" contenteditable="true"&gt;Try cutting text from this box...&lt;/div&gt;
 &lt;div class="target" contenteditable="true"&gt;...and pasting it into this one&lt;/div&gt;</pre>
 
-<div class="hidden">
-<h4 id="CSS">CSS</h4>
-
-<pre class="brush: css">div.source, div.target {
+<pre class="brush: css hidden">div.source, div.target {
     border: 1px solid gray;
     margin: .5rem;
     padding: .5rem;
@@ -68,7 +65,6 @@ browser-compat: api.Element.cut_event
     background-color: #e9eef1;
 }
 </pre>
-</div>
 
 <h4 id="JS">JS</h4>
 

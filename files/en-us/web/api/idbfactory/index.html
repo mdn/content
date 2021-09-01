@@ -23,7 +23,7 @@ browser-compat: api.IDBFactory
 
 <dl>
  <dt>{{domxref("IDBFactory.open")}}</dt>
- <dd>The current method to request opening a <a href="/en-US/docs/Web/API/IndexedDB_API#gloss_database_connection">connection to a database</a>.</dd>
+ <dd>The current method to request opening a <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#database_connection">connection to a database</a>.</dd>
  <dt>{{domxref("IDBFactory.deleteDatabase")}}</dt>
  <dd>A method to request the deletion of a database.</dd>
  <dt>{{domxref("IDBFactory.cmp")}}</dt>
@@ -36,7 +36,7 @@ browser-compat: api.IDBFactory
 
 <p>In the following code snippet, we make a request to open a database, and include handlers for the success and error cases. For a full working example, see our <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> app (<a href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
 
-<pre class="brush:js;highlight:[10]">// In the following line, you should include the prefixes of implementations you want to test.
+<pre class="brush:js;">// In the following line, you should include the prefixes of implementations you want to test.
 window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
 // DON'T use "var indexedDB = ..." if you're not in a function.
 // Moreover, you may need references to some window.IDB* objects:

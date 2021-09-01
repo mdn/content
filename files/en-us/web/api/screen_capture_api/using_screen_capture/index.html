@@ -18,7 +18,7 @@ tags:
 ---
 <p>{{DefaultAPISidebar("Screen Capture API")}}</p>
 
-<p><span class="seoSummary">In this article, we will examine how to use the Screen Capture API and its {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} method to capture part or all of a screen for streaming, recording, or sharing during a <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> conference session.</span></p>
+<p>In this article, we will examine how to use the Screen Capture API and its {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} method to capture part or all of a screen for streaming, recording, or sharing during a <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> conference session.</p>
 
 <div class="notecard note">
 <p><strong>Note:</strong> It may be useful to note that recent versions of the <a href="https://github.com/webrtcHacks/adapter">WebRTC adapter.js shim</a> include implementations of <code>getDisplayMedia()</code> to enable screen sharing on browsers that support it but do not implement the current standard API. This works with at least Chrome, Edge, and Firefox.</p>
@@ -28,8 +28,7 @@ tags:
 
 <p>Capturing screen contents as a live {{domxref("MediaStream")}} is initiated by calling {{domxref("MediaDevices.getDisplayMedia", "navigator.mediaDevices.getDisplayMedia()")}}, which returns a promise that resolves to a stream containing the live screen contents.</p>
 
-<figure>
-<figcaption><strong><em>Starting screen capture: <code>async</code>/<code>await</code> style</em></strong></figcaption>
+<h3>Starting screen capture: <code>async</code>/<code>await</code> style</h3>
 
 <pre class="brush: js">async function startCapture(displayMediaOptions) {
   let captureStream = null;
@@ -44,8 +43,7 @@ tags:
 
 <p>You can write this code either using an asynchronous function and the <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/await">await</a></code> operator, as shown above, or using the {{jsxref("Promise")}} directly, as seen below.</p>
 
-<figure>
-<figcaption><strong><em>Starting screen capture: <code>Promise</code> style</em></strong>
+<h3>Starting screen capture: <code>Promise</code> style</h3>
 
 <pre class="brush: js">function startCapture(displayMediaOptions) {
  return navigator.mediaDevices.getDisplayMedia(displayMediaOptions)
@@ -56,11 +54,9 @@ tags:
 
 <p>See {{anch("Options and constraints")}}, below, for more on both how to specify the type of surface you want as well as other ways to adjust the resulting stream.</p>
 
-<figure>
-<figcaption><strong><em>Example of a window allowing the user to select a display surface to capture</em></strong></figcaption>
+<h3>Example of a window allowing the user to select a display surface to capture</h3>
 
 <p><a href="Chrome-Screen-Capture-Window.png"><img alt="Screenshot of Chrome's window for picking a source surface" src="chrome-screen-capture-window.png"></a></p>
-</figure>
 
 <p>You can then use the captured stream, <code>captureStream</code>, for anything that accepts a stream as input. The {{anch("Examples", "examples")}} below show a few ways to make use of the stream.</p>
 

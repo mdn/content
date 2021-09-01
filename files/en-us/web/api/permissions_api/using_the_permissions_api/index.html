@@ -10,7 +10,7 @@ tags:
 ---
 <p>{{DefaultAPISidebar("Permissions API")}}{{SeeCompatTable}}</p>
 
-<p class="summary">This article provides a basic guide to using the W3C Permissions API, which provides a programmatic way to query the status of API permissions attributed to the current context.</p>
+<p>This article provides a basic guide to using the W3C Permissions API, which provides a programmatic way to query the status of API permissions attributed to the current context.</p>
 
 <h2 id="The_trouble_with_asking_for_permission...">The trouble with asking for permission...</h2>
 
@@ -105,7 +105,7 @@ function revokePermission() {
 }</pre>
 
 <div class="note">
-<p>The <code>revoke()</code> function has been disabled by default starting in Firefox 51, since its design has been brought into question in the <a href="https://www.w3.org/2011/webappsec/">Web Applications Security Working Group</a>. It can be re-enabled by setting the preference <code>dom.permissions.revoke.enable</code> to <code>true</code>.</p>
+<p><strong>Note:</strong> The <code>revoke()</code> function has been disabled by default starting in Firefox 51, since its design has been brought into question in the <a href="https://www.w3.org/2011/webappsec/">Web Applications Security Working Group</a>. It can be re-enabled by setting the preference <code>dom.permissions.revoke.enable</code> to <code>true</code>.</p>
 </div>
 
 <h3 id="Responding_to_permission_state_changes">Responding to permission state changes</h3>

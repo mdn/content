@@ -30,7 +30,7 @@ tags:
    <td>
     <p>The DOM element on the lefthand side of the call that triggered this event, eg:</p>
 
-    <pre class="eval">
+    <pre class="brush: js">
 <em>element</em>.dispatchEvent(<em>event</em>)
 </pre>
    </td>
@@ -67,16 +67,12 @@ tags:
 <h3 id="Use_of_explicitOriginalTarget_and_originalTarget">Use of <code>explicitOriginalTarget</code> and <code>originalTarget</code></h3>
 
 <div class="notecard note">
-<p><strong>TODO:</strong> Only available in a Mozilla-based browser?</p>
-</div>
-
-<div class="notecard note">
-<p><strong>TODO:</strong> Only suitable for extension-developers?</p>
+<p><strong>Note:</strong> These properties are only available in Mozilla-based browsers.</p>
 </div>
 
 <h3 id="Examples">Examples</h3>
 
-<pre>&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -166,13 +162,9 @@ tags:
  </tbody>
 </table>
 
-<div class="notecard note">
-<p><strong>TODO:</strong> Also needs descriptions for <code>dragenter</code> and <code>dragexit</code> events.</p>
-</div>
-
 <h4 id="Example">Example</h4>
 
-<pre class="brush: xml eval">&lt;hbox id="outer"&gt;
+<pre class="brush: xml">&lt;hbox id="outer"&gt;
   &lt;hbox id="inner"
         onmouseover="dump('mouseover ' + event.relatedTarget.id + ' &gt; ' + event.target.id + '\n');"
         onmouseout="dump('mouseout  ' + event.target.id + ' &gt; ' + event.relatedTarget.id + '\n');"

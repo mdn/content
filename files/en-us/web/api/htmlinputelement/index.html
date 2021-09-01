@@ -77,7 +77,7 @@ browser-compat: api.HTMLInputElement
   <tr>
    <td><code>value</code></td>
    <td><em><code>string</code>:</em> <strong>Returns / Sets</strong> the current value of the control.
-    <p class="note"><strong>Note:</strong> If the user enters a value different from the value expected, this may return an empty string.</p>
+    <p><strong>Note:</strong> If the user enters a value different from the value expected, this may return an empty string.</p>
    </td>
   </tr>
   <tr>
@@ -95,7 +95,7 @@ browser-compat: api.HTMLInputElement
  </tbody>
 </table>
 
-<table class="standard-table" id="Properties_checkbox_radio">
+<table class="standard-table">
  <caption>Properties that apply only to elements of type <code>checkbox</code> or <code>radio</code></caption>
  <tbody>
   <tr>
@@ -107,7 +107,7 @@ browser-compat: api.HTMLInputElement
    <td><em>A boolean value:</em> <strong>Returns / Sets</strong> the default state of a radio button or checkbox as originally specified in HTML that created this object.</td>
   </tr>
   <tr>
-   <td><code id="indeterminate">indeterminate</code></td>
+   <td><code>indeterminate</code></td>
    <td><em>A boolean value:</em> <strong>Returns</strong> whether the checkbox or radio button is in indeterminate state. For checkboxes, the effect is that the appearance of the checkbox is obscured/greyed in some way as to indicate its state is indeterminate (not checked but not unchecked). Does not affect the value of the <code>checked</code> attribute, and clicking the checkbox will set the value to false.</td>
   </tr>
  </tbody>
@@ -135,7 +135,7 @@ browser-compat: api.HTMLInputElement
  </tbody>
 </table>
 
-<table class="standard-table" id="Properties_file">
+<table class="standard-table">
  <caption>Properties that apply only to elements of type <code>file</code></caption>
  <tbody>
   <tr>
@@ -147,7 +147,7 @@ browser-compat: api.HTMLInputElement
    <td><em>A boolean value:</em> Part of the non-standard Directory Upload API; <strong>indicates</strong> whether or not to allow directories and files both to be selected in the file list. Implemented only in Firefox and is hidden behind a preference.</td>
   </tr>
   <tr>
-   <td><code id="files_prop">files</code></td>
+   <td><code>files</code></td>
    <td><strong>Returns/accepts</strong> a {{domxref("FileList")}} object, which contains a list of {{domxref("File")}} objects representing the files selected for upload.</td>
   </tr>
   <tr>
@@ -176,7 +176,7 @@ browser-compat: api.HTMLInputElement
   </tr>
   <tr>
    <td><code>maxLength</code></td>
-   <td><em><code>long</code>:</em> <strong>Returns / Sets</strong> the element's {{ htmlattrxref("maxlength", "input") }} attribute, containing the <u><strong>maximum number of characters</strong></u> (in Unicode code points) that the value can have. (If you set this to a negative number, an exception will be thrown.)</td>
+   <td><em><code>long</code>:</em> <strong>Returns / Sets</strong> the element's {{ htmlattrxref("maxlength", "input") }} attribute, containing the maximum number of characters (in Unicode code points) that the value can have. (If you set this to a negative number, an exception will be thrown.)</td>
   </tr>
   <tr>
    <td><code>min</code></td>
@@ -184,11 +184,11 @@ browser-compat: api.HTMLInputElement
   </tr>
   <tr>
    <td><code>minLength</code></td>
-   <td><em><code>long</code>:</em> <strong>Returns / Sets</strong> the element's {{ htmlattrxref("minlength", "input") }} attribute, containing the <u><strong>minimum number of characters</strong></u> (in Unicode code points) that the value can have. (If you set this to a negative number, an exception will be thrown.)</td>
+   <td><em><code>long</code>:</em> <strong>Returns / Sets</strong> the element's {{ htmlattrxref("minlength", "input") }} attribute, containing the minimum number of characters (in Unicode code points) that the value can have. (If you set this to a negative number, an exception will be thrown.)</td>
   </tr>
   <tr>
    <td><code>pattern</code></td>
-   <td><em><code>string</code>:</em> <strong>Returns / Sets</strong> the element's {{ htmlattrxref("pattern", "input") }} attribute, containing a <u><strong>regular expression</strong></u> that the control's value is checked against. Use the {{htmlattrxref("title","input")}} attribute to describe the pattern to help the user. This attribute applies when the value of the {{htmlattrxref("type","input")}} attribute is <code>text</code>, <code>search</code>, <code>tel</code>, <code>url</code> or <code>email</code>; otherwise it is ignored.</td>
+   <td><em><code>string</code>:</em> <strong>Returns / Sets</strong> the element's {{ htmlattrxref("pattern", "input") }} attribute, containing a regular expression that the control's value is checked against. Use the {{htmlattrxref("title","input")}} attribute to describe the pattern to help the user. This attribute applies when the value of the {{htmlattrxref("type","input")}} attribute is <code>text</code>, <code>search</code>, <code>tel</code>, <code>url</code> or <code>email</code>; otherwise it is ignored.</td>
   </tr>
   <tr>
    <td><code>placeholder</code></td>
@@ -216,7 +216,7 @@ browser-compat: api.HTMLInputElement
   </tr>
   <tr>
    <td><code>size</code></td>
-   <td><em><code>unsigned long</code>:</em> <strong>Returns / Sets</strong> the element's {{ htmlattrxref("size", "input") }} attribute, containing <u><strong>visual size of the control</strong></u>. This value is in pixels unless the value of {{htmlattrxref("type","input")}} is <code>text</code> or <code>password</code>, in which case, it is an integer number of characters. Applies only when {{htmlattrxref("type","input")}} is set to <code>text</code>, <code>search</code>, <code>tel</code>, <code>url</code>, <code>email</code>, or <code>password</code>; otherwise it is ignored.</td>
+   <td><em><code>unsigned long</code>:</em> <strong>Returns / Sets</strong> the element's {{ htmlattrxref("size", "input") }} attribute, containing visual size of the control. This value is in pixels unless the value of {{htmlattrxref("type","input")}} is <code>text</code> or <code>password</code>, in which case, it is an integer number of characters. Applies only when {{htmlattrxref("type","input")}} is set to <code>text</code>, <code>search</code>, <code>tel</code>, <code>url</code>, <code>email</code>, or <code>password</code>; otherwise it is ignored.</td>
   </tr>
  </tbody>
 </table>
@@ -372,6 +372,8 @@ browser-compat: api.HTMLInputElement
  <dt><code><a href="/en-US/docs/Web/API/HTMLInputElement/search_event">search</a></code></dt>
  <dd>Fired when a search is initiated on an {{HTMLElement("input")}} of <code>type="search"</code>.<br>
  Also available via the <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onsearch">onsearch</a></code> event handler property.</dd>
+ <dt>{{domxref("HTMLInputElement/selectionchange_event", "selectionchange")}} event{{experimental_inline}}</dt>
+ <dd>Fires when the text selection in a {{HTMLElement("input")}} element has been changed.</dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>

@@ -15,10 +15,10 @@ browser-compat: api.ResizeObserver
 ---
 <div>{{APIRef("Resize Observer API")}}</div>
 
-<p class="summary">The <strong><code>ResizeObserver</code></strong> interface reports changes to the dimensions of an {{domxref('Element')}}'s content or border box, or the bounding box of an {{domxref('SVGElement')}}.</p>
+<p>The <strong><code>ResizeObserver</code></strong> interface reports changes to the dimensions of an {{domxref('Element')}}'s content or border box, or the bounding box of an {{domxref('SVGElement')}}.</p>
 
 <div class="notecard note">
-<p class="summary"><strong>Note</strong>: The content box is the box in which content can be placed, meaning the border box minus the padding and border width. The border box encompasses the content, padding, and border. See <a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model">The box model</a> for further explanation.</p>
+<p><strong>Note:</strong> The content box is the box in which content can be placed, meaning the border box minus the padding and border width. The border box encompasses the content, padding, and border. See <a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model">The box model</a> for further explanation.</p>
 </div>
 
 <p><code>ResizeObserver</code> avoids infinite callback loops and cyclic dependencies that are often created when resizing via a callback function. It does this by only processing elements deeper in the DOM in subsequent frames. Implementations should, if they follow the specification, invoke resize events before paint and after layout.</p>

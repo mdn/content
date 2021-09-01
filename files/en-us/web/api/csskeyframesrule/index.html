@@ -31,9 +31,9 @@ browser-compat: api.CSSKeyframesRule
 <p><em>Inherits methods from its ancestor {{domxref("CSSRule")}}.</em></p>
 
 <dl>
- <dt id="appendRule">{{domxref("CSSKeyframesRule.appendRule()")}}</dt>
+ <dt>{{domxref("CSSKeyframesRule.appendRule()")}}</dt>
  <dd>Inserts a new keyframe rule into the current CSSKeyframesRule. The parameter is a {{domxref("DOMString")}} containing a keyframe in the same format as an entry of a {{cssxref("@keyframes")}} at-rule. If it contains more than one keyframe rule, a {{domxref("DOMException")}} with a <code>SYNTAX_ERR</code> is thrown.</dd>
- <dt id="deleteRule">{{domxref("CSSKeyframesRule.deleteRule()")}}</dt>
+ <dt>{{domxref("CSSKeyframesRule.deleteRule()")}}</dt>
  <dd>Deletes a keyframe rule from the current CSSKeyframesRule. The parameter is the index of the keyframe to be deleted, expressed as a {{domxref("DOMString")}} resolving as a number between <code>0%</code> and <code>100%</code>.</dd>
  <dt>{{domxref("CSSKeyframesRule.findRule()")}}</dt>
  <dd>Returns a keyframe rule corresponding to the given key. The key is a {{domxref("DOMString")}} containing an index of the keyframe to be returned, resolving to a percentage between <code>0%</code> and <code>100%</code>. If no such keyframe exists, <code>findRule</code> returns <code>null</code>.</dd>

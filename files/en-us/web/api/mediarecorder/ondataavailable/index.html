@@ -49,15 +49,13 @@ browser-compat: api.MediaRecorder.ondataavailable
 </ul>
 
 <div class="note">
-  <p>The {{domxref("Blob")}} containing the media data is available in the
+  <p><strong>Note:</strong> The {{domxref("Blob")}} containing the media data is available in the
     {{event("dataavailable")}} event's <code>data</code> property.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><span class="idlInterface" id="idl-def-IDBRequest"><span class="idlAttribute"><span class="idlInterface" id="idl-def-MediaRecorder"><span class="idlAttribute"><em>MediaRecorder</em>.ondataavailable = function(event) { ... }
-<em>MediaRecorder</em>.addEventListener('dataavailable', function(event) { ... })</span></span></span></span>
-</pre>
+<pre class="brush: js">mediaRecorder.ondataavailable = functionRef;</pre>
 
 <h2 id="Example">Example</h2>
 

@@ -12,7 +12,9 @@ tags:
 ---
 <div>{{DefaultAPISidebar("HTML Drag and Drop API")}}</div>
 
-<p><span class="seoSummary"><strong>HTML Drag and Drop</strong> interfaces enable applications to use drag-and-drop features in browsers.</span> The user may select <em>draggable</em> elements with a mouse, drag those elements to a <em>droppable</em> element, and drop them by releasing the mouse button. A translucent representation of the <em>draggable</em> elements follows the pointer during the drag operation.</p>
+<p><strong>HTML Drag and Drop</strong> interfaces enable applications to use drag-and-drop features in browsers.</p>
+
+<p>The user may select <em>draggable</em> elements with a mouse, drag those elements to a <em>droppable</em> element, and drop them by releasing the mouse button. A translucent representation of the <em>draggable</em> elements follows the pointer during the drag operation.</p>
 
 <p>For web sites, extensions, and XUL applications, you can customize which elements can become <em>draggable</em>, the type of feedback the <em>draggable</em> elements produce, and the <em>droppable</em> elements.</p>
 
@@ -51,11 +53,6 @@ tags:
    <td>…a dragged item enters a valid drop target. (See <a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#droptargets" title="Specifying Drop Targets">Specifying Drop Targets</a>.)</td>
   </tr>
   <tr>
-   <td>{{domxref('Document/dragexit_event', 'dragexit')}}</td>
-   <td>{{domxref('GlobalEventHandlers.ondragleave','ondragexit')}}</td>
-   <td>…an element is no longer the drag operation's immediate selection target.</td>
-  </tr>
-  <tr>
    <td>{{domxref('Document/dragleave_event', 'dragleave')}}</td>
    <td>{{domxref('GlobalEventHandlers.ondragleave','ondragleave')}}</td>
    <td>…a dragged item leaves a valid drop target.</td>
@@ -78,7 +75,7 @@ tags:
  </tbody>
 </table>
 
-<p class="note"><strong>Note:</strong> Neither <code>dragstart</code> nor <code>dragend</code> events are fired when dragging a file into the browser from the OS.</p>
+<p><strong>Note:</strong> Neither <code>dragstart</code> nor <code>dragend</code> events are fired when dragging a file into the browser from the OS.</p>
 
 <h2 id="Interfaces">Interfaces</h2>
 
@@ -96,7 +93,7 @@ tags:
 
 <p>A key difference between the {{domxref("DataTransfer")}} and {{domxref("DataTransferItem")}} interfaces is that the former uses the synchronous {{domxref("DataTransfer.getData","getData()")}} method to access a drag item's data, but the latter instead uses the asynchronous {{domxref("DataTransferItem.getAsString","getAsString()")}} method.</p>
 
-<p class="note"><strong>Note:</strong> {{domxref("DragEvent")}} and {{domxref("DataTransfer")}} are broadly supported on desktop browsers. However, the {{domxref("DataTransferItem")}} and {{domxref("DataTransferItemList")}} interfaces have limited browser support. See {{anch("Interoperability")}} for more information about drag-and-drop interoperability.</p>
+<p><strong>Note:</strong> {{domxref("DragEvent")}} and {{domxref("DataTransfer")}} are broadly supported on desktop browsers. However, the {{domxref("DataTransferItem")}} and {{domxref("DataTransferItemList")}} interfaces have limited browser support. See {{anch("Interoperability")}} for more information about drag-and-drop interoperability.</p>
 
 <h3 id="Gecko-specific_interfaces">Gecko-specific interfaces</h3>
 
@@ -269,7 +266,7 @@ function drop_handler(ev) {
 
 <p>At the end of a drag operation, the {{domxref("Document/dragend_event", "dragend")}} event fires at the <em>source</em> element — the element that was the target of the drag start.</p>
 
-<p>This event fires regardless of whether the drag completed or was canceled. The {{domxref("Document/dragent_event", "dragend")}} event handler can check the value of the {{domxref("DataTransfer.dropEffect","dropEffect")}} property to determine if the drag operation succeeded or not.</p>
+<p>This event fires regardless of whether the drag completed or was canceled. The {{domxref("Document/dragend_event", "dragend")}} event handler can check the value of the {{domxref("DataTransfer.dropEffect","dropEffect")}} property to determine if the drag operation succeeded or not.</p>
 
 <p>For more information about handling the end of a drag operation, see:</p>
 
@@ -315,9 +312,9 @@ function drop_handler(ev) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a class="internal" href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</a></li>
- <li><a class="internal" href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items">Dragging and Dropping Multiple Items</a></li>
- <li><a class="internal" href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</a></li>
+ <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</a></li>
+ <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items">Dragging and Dropping Multiple Items</a></li>
+ <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</a></li>
  <li><a href="https://html.spec.whatwg.org/multipage/interaction.html#dnd">HTML5 Living Standard: Drag and Drop</a></li>
  <li><a href="https://caniuse.com/#search=draganddrop" title="Drag and Drop interoperability data from CanIUse">Drag and Drop interoperability data from CanIUse</a></li>
 </ul>

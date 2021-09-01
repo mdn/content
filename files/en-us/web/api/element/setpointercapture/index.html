@@ -19,13 +19,13 @@ browser-compat: api.Element.setPointerCapture
   {{domxref("Element.releasePointerCapture()")}} or the
   {{domxref("HTMLElement/pointerup_event", "pointerup")}} event is fired).</p>
 
-<div class="note"><strong>Note:</strong> When pointer capture is set,
+<div class="note"><p><strong>Note:</strong> When pointer capture is set,
   {{domxref("HTMLElement/pointerover_event", "pointerover")}},
   {{domxref("HTMLElement/pointerout_event", "pointerout")}},
   {{domxref("HTMLElement/pointerenter_event", "pointerenter")}}, and
   {{domxref("HTMLElement/pointerleave_event", "pointerleave")}} events are only generated
   when crossing the boundary of the capture target. This has the effect of suppressing
-  these events on all other elements.</div>
+  these events on all other elements.</p></div>
 
 <h3 id="Overview_of_pointer_capture">Overview of pointer capture</h3>
 
@@ -65,8 +65,8 @@ browser-compat: api.Element.setPointerCapture
     <tr>
       <td><code>NotFoundError</code></td>
       <td><code><var>pointerId</var></code> does not match any of the active pointers.
-        <div class="note"><strong>Note:</strong> Firefox versions <em>before</em> Firefox
-          82 incorrectly throw <code>InvalidPointerId</code>.</div>
+        <div class="note"><p><strong>Note:</strong> Firefox versions <em>before</em> Firefox
+          82 incorrectly throw <code>InvalidPointerId</code>.</p></div>
       </td>
     </tr>
   </tbody>

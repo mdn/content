@@ -13,13 +13,9 @@ browser-compat: api.KeyboardEvent.key
 ---
 <div>{{APIRef("DOM Events")}}</div>
 
-<p><span class="seoSummary">The {{domxref("KeyboardEvent")}} interface's <code><strong>key</strong></code> read-only property returns the value of the key pressed by the user, taking into consideration the state of modifier keys such as <kbd>Shift</kbd> as well as the keyboard locale and layout.</span> Its value is determined as follows:</p>
+<p>The {{domxref("KeyboardEvent")}} interface's <code><strong>key</strong></code> read-only property returns the value of the key pressed by the user, taking into consideration the state of modifier keys such as <kbd>Shift</kbd> as well as the keyboard locale and layout.</p>
 
-<div class="moreinfo pull-aside">
-<h4 id="Key_values">Key values</h4>
-
-<p>See a full list of <a href="/en-US/docs/Web/API/KeyboardEvent/key/Key_Values">key values</a>.</p>
-</div>
+<p>Its value is determined as follows:</p>
 
 <ul>
  <li>If the pressed key has a printed representation, the returned value is a non-empty Unicode character string containing the printable representation of the key.</li>
@@ -28,6 +24,11 @@ browser-compat: api.KeyboardEvent.key
  <li>Some specialty keyboard keys (such as the extended keys for controlling media on multimedia keyboards) don't generate key codes on Windows; instead, they trigger <code>WM_APPCOMMAND</code> events. These events get mapped to DOM keyboard events, and are listed among the "Virtual key codes" for Windows, even though they aren't actually key codes.</li>
  <li>If the key cannot be identified, the returned value is <code>Unidentified</code>.</li>
 </ul>
+
+
+<div class="notecard callout">
+<p><a href="/en-US/docs/Web/API/KeyboardEvent/key/Key_Values">See a full list of key values</a>.</p>
+</div>
 
 <h2 id="KeyboardEvent_sequence">KeyboardEvent sequence</h2>
 

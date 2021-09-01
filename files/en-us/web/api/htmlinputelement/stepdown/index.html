@@ -12,12 +12,14 @@ browser-compat: api.HTMLInputElement.stepDown
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p><span class="seoSummary">The
+<p>The
     <strong><code>HTMLInputElement.stepDown([n])</code></strong> method decrements the
     value of a numeric type of  {{HTMLElement("input")}} element by the value of the
     <code><a href="/en-US/docs/Web/HTML/Attributes/step">step</a></code> attribute or up
     to <code>n</code> multiples of the step attribute if a number is passed as the
-    parameter. </span> The method, when invoked, decrements the
+    parameter.</p>
+
+<p>The method, when invoked, decrements the
   {{htmlattrxref("value","input")}} by ({{htmlattrxref("step","input")}} * n), where n
   defaults to 1 if not specified, and
   <code><a href="/en-US/docs/Web/HTML/Attributes/step">step</a></code> defaults to the
@@ -29,8 +31,7 @@ browser-compat: api.HTMLInputElement.stepDown
   {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number",
   "number")}}, and {{HTMLElement("input/range", "range")}}.</p>
 
-<p>Given <code
-    class="brush: html">&lt;input id="myTime" type="time" max="17:00" step="900" value="17:00"&gt;</code>,
+<p>Given <code>&lt;input id="myTime" type="time" max="17:00" step="900" value="17:00"&gt;</code>,
   invoking <code>myTime.step(3)</code> will change the value to 16:15, decrementing the
   time by <code>3 * 900</code>, or 45 minutes. <code>myTime.step()</code>, with no
   parameter, would have resulted in <code>16:45</code>, as <code>n</code> defaults to
@@ -90,12 +91,13 @@ browser-compat: api.HTMLInputElement.stepDown
 
 <dl>
   <dt><em><code>stepDecrement</code></em></dt>
-  <dd>The optional  <code><em>stepDecrement</em></code> parameter is a numeric value.  If
-    no parameter is passed, <em>stepDecrement</em> defaults to 1.</dd>
-  <dd>If the value is a float, the value will increment as if
+  <dd>
+    <p>The optional  <code><em>stepDecrement</em></code> parameter is a numeric value.  If no parameter is passed, <em>stepDecrement</em> defaults to 1.</p>
+    <p>If the value is a float, the value will increment as if
     <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor">Math.floor(stepDecrement)</a></code>
     was passed. If the value is negative, the value will be incremented instead of
-    decremented.</dd>
+    decremented.</p>
+  </dd>
 </dl>
 
 <h2 id="Example">Example</h2>

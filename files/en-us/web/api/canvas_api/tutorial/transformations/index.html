@@ -12,7 +12,7 @@ tags:
 ---
 <div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}</div>
 
-<div class="summary">Earlier in this tutorial we've learned about the <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes">canvas grid</a> and the <strong>coordinate space</strong>. Until now, we only used the default grid and changed the size of the overall canvas for our needs. With transformations there are more powerful ways to translate the origin to a different position, rotate the grid and even scale it.</div>
+<p>Earlier in this tutorial we've learned about the <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes">canvas grid</a> and the <strong>coordinate space</strong>. Until now, we only used the default grid and changed the size of the overall canvas for our needs. With transformations there are more powerful ways to translate the origin to a different position, rotate the grid and even scale it.</p>
 
 <h2 id="Saving_and_restoring_state">Saving and restoring state</h2>
 
@@ -39,7 +39,7 @@ tags:
 
 <p>This example tries to illustrate how the stack of drawing states functions by drawing a set of consecutive rectangles.</p>
 
-<pre class="brush: js; highlight:[5,10,15,18]">function draw() {
+<pre class="brush: js;">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   ctx.fillRect(0, 0, 150, 150);   // Draw a rectangle with default settings
@@ -60,11 +60,9 @@ tags:
   ctx.fillRect(60, 60, 30, 30);   // Draw a rectangle with restored settings
 }</pre>
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
 
-<pre class="brush: js">draw();</pre>
-</div>
+<pre class="brush: js hidden">draw();</pre>
 
 <p>The first step is to draw a large rectangle with the default settings. Next we save this state and make changes to the fill color. We then draw the second and smaller blue rectangle and save the state. Again we change some drawing settings and draw the third semi-transparent white rectangle.</p>
 
@@ -82,7 +80,7 @@ tags:
  <dt>{{domxref("CanvasRenderingContext2D.translate", "translate(x, y)")}}</dt>
  <dd>Moves the canvas and its origin on the grid. <code>x</code> indicates the horizontal distance to move, and <code>y</code> indicates how far to move the grid vertically.</dd>
 </dl>
-<img alt="" class="internal" src="canvas_grid_translate.png">
+<img alt="" src="canvas_grid_translate.png">
 <p>It's a good idea to save the canvas state before doing any transformations. In most cases, it is just easier to call the <code>restore</code> method than having to do a reverse translation to return to the original state. Also if you're translating inside a loop and don't save and restore the canvas state, you might end up missing part of your drawing, because it was drawn outside the canvas edge.</p>
 
 <h3 id="A_translate_example">A <code>translate</code> example</h3>
@@ -91,7 +89,7 @@ tags:
 
 <p>In the <code>draw()</code> function, we call the <code>fillRect()</code> function nine times using two <code>for</code> loops. In each loop, the canvas is translated, the rectangle is drawn, and the canvas is returned back to its original state. Note how the call to <code>fillRect()</code> uses the same coordinates each time, relying on <code>translate()</code> to adjust the drawing position.</p>
 
-<pre class="brush: js; highlight:[7]">function draw() {
+<pre class="brush: js;">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   for (var i = 0; i &lt; 3; i++) {
     for (var j = 0; j &lt; 3; j++) {
@@ -105,11 +103,9 @@ tags:
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
 
-<pre class="brush: js">draw();</pre>
-</div>
+<pre class="brush: js hidden">draw();</pre>
 
 <p>{{EmbedLiveSample("A_translate_example", "160", "160", "translate.png")}}</p>
 
@@ -121,7 +117,7 @@ tags:
  <dt>{{domxref("CanvasRenderingContext2D.rotate", "rotate(angle)")}}</dt>
  <dd>Rotates the canvas clockwise around the current origin by the <code>angle</code> number of radians.</dd>
 </dl>
-<img alt="" class="internal" src="canvas_grid_rotate.png">
+<img alt="" src="canvas_grid_rotate.png">
 <p>The rotation center point is always the canvas origin. To change the center point, we will need to move the canvas by using the <code>translate()</code> method.</p>
 
 <h3 id="A_rotate_example">A <code>rotate</code> example</h3>
@@ -129,10 +125,10 @@ tags:
 <p>In this example, we'll use the <code>rotate()</code> method to first rotate a rectangle from the canvas origin and then from the center of the rectangle itself with the help of <code>translate()</code>.</p>
 
 <div class="note">
-<p><strong>Reminder</strong>: Angles are in radians, not degrees. To convert, we are using: <code>radians = (Math.PI/180)*degrees</code>.</p>
+<p><strong>Note:</strong> Angles are in radians, not degrees. To convert, we are using: <code>radians = (Math.PI/180)*degrees</code>.</p>
 </div>
 
-<pre class="brush: js; highlight:[9, 23]">function draw() {
+<pre class="brush: js;">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   // left rectangles, rotate from canvas origin
@@ -165,11 +161,9 @@ tags:
 
 <p>To rotate the rectangle around its own center, we translate the canvas to the center of the rectangle, then rotate the canvas, then translate the canvas back to 0,0, and then draw the rectangle.</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="300" height="200"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="300" height="200"&gt;&lt;/canvas&gt;</pre>
 
-<pre class="brush: js">draw();</pre>
-</div>
+<pre class="brush: js hidden">draw();</pre>
 
 <p>{{EmbedLiveSample("A_rotate_example", "310", "210", "rotate.png")}}</p>
 
@@ -190,7 +184,7 @@ tags:
 
 <p>In this last example, we'll draw shapes with different scaling factors.</p>
 
-<pre class="brush: js; highlight:[6,11]">function draw() {
+<pre class="brush: js;">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   // draw a simple rectangle, but scale it.
@@ -207,11 +201,9 @@ tags:
 
 </pre>
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
 
-<pre class="brush: js">draw();</pre>
-</div>
+<pre class="brush: js hidden">draw();</pre>
 
 <p>{{EmbedLiveSample("A_scale_example", "160", "160", "scale.png")}}</p>
 
@@ -248,7 +240,7 @@ tags:
 
 <h3 id="Example_for_transform_and_setTransform">Example for <code>transform</code> and <code>setTransform</code></h3>
 
-<pre class="brush: js; highlight:[12,15]">function draw() {
+<pre class="brush: js;">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   var sin = Math.sin(Math.PI / 6);
@@ -268,11 +260,9 @@ tags:
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="200" height="250"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="200" height="250"&gt;&lt;/canvas&gt;</pre>
 
-<pre class="brush: js">draw();</pre>
-</div>
+<pre class="brush: js hidden">draw();</pre>
 
 <p>{{EmbedLiveSample("Example_for_transform_and_setTransform", "230", "280", "canvas_transform.png")}}</p>
 

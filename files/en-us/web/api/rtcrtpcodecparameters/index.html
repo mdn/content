@@ -21,7 +21,9 @@ tags:
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">The {{domxref("RTCRtpCodecParameters")}} dictionary, part of the WebRTC API, is used to describe the configuration parameters for a single media {{Glossary("codec")}}.</span> In addition to being the type of the {{domxref("RTCRtpParameters.codecs")}} property, it's used when calling {{domxref("RTCRtpTransceiver.setCodecPreferences()")}} to configure a transceiver's codecs before beginning the offer/answer process to establish a WebRTC peer connection.</p>
+<p>The {{domxref("RTCRtpCodecParameters")}} dictionary, part of the WebRTC API, is used to describe the configuration parameters for a single media {{Glossary("codec")}}.</p>
+
+<p>In addition to being the type of the {{domxref("RTCRtpParameters.codecs")}} property, it's used when calling {{domxref("RTCRtpTransceiver.setCodecPreferences()")}} to configure a transceiver's codecs before beginning the offer/answer process to establish a WebRTC peer connection.</p>
 
 <p>Most of the fields in this property take values which are defined and maintained by the Internet Assigned Numbers Authority (IANA). References to relevant IANA documents are provided in the {{anch("See also", "see also")}} section at the end of this article.</p>
 
@@ -38,7 +40,7 @@ tags:
  <dd>An unsigned short integer indicating the number of channels the codec should support. For example, for audio codecs, a value of 1 specifies monaural sound while 2 indicates stereo.</dd>
  <dt>{{domxref("RTCRtpCodecParameters.sdpFmtpLine", "sdpFmtpLine")}} {{optional_inline}}</dt>
  <dd>A <code>DOMString</code> containing the format-specific parameters field from the <code>"a=fmtp"</code> line in the codec's {{Glossary("SDP")}}, if one is present; see <a href="https://datatracker.ietf.org/doc/html/draft-ietf-rtcweb-jsep-24#section-5.8">section 5.8 of the IETF specification for JSEP</a>.
- <div class="note"><strong>Note:</strong> On an {{domxref("RTCRtpReceiver")}}, the format-specific parameters come from the SDP sent by the remote peer, while for {{domxref("RTCRtpSender")}}, they're provided by the local description.</div>
+ <div class="note"><p><strong>Note:</strong> On an {{domxref("RTCRtpReceiver")}}, the format-specific parameters come from the SDP sent by the remote peer, while for {{domxref("RTCRtpSender")}}, they're provided by the local description.</p></div>
  </dd>
 </dl>
 

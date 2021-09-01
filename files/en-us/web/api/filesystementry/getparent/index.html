@@ -3,21 +3,19 @@ title: FileSystemEntry.getParent()
 slug: Web/API/FileSystemEntry/getParent
 tags:
 - API
-- File System API
 - File and Directory Entry API
 - FileSystemEntry
 - Files
 - Method
-- Non-standard
 - Reference
 - getParent
 browser-compat: api.FileSystemEntry.getParent
 ---
-<p>{{APIRef("File System API")}}{{SeeCompatTable}}</p>
+<p>{{APIRef("File and Directory Entries API")}}</p>
 
-<p><span class="seoSummary">The {{domxref("FileSystemEntry")}} interface's method
+<p>The {{domxref("FileSystemEntry")}} interface's method
     <code><strong>getParent</strong></code><strong><code>()</code></strong> obtains a
-    {{domxref("FileSystemDirectoryEntry")}}.</span></p>
+    {{domxref("FileSystemDirectoryEntry")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -34,7 +32,7 @@ browser-compat: api.FileSystemEntry.getParent
     considered to be the root directory, itself, so be sure to watch for that.</dd>
   <dt><code>errorCallback</code> {{optional_inline}}</dt>
   <dd>An optional callback which is executed if an error occurs. There's a single
-    parameter: a {{domxref("FileError")}} describing what went wrong.</dd>
+    parameter: a {{domxref("DOMException")}} describing what went wrong.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>

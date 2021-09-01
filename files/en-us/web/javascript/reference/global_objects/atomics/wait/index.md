@@ -10,7 +10,7 @@ browser-compat: javascript.builtins.Atomics.wait
 ---
 {{JSRef}}
 
-The static **`Atomics`\*\***`.wait()`\*\*
+The static **`Atomics.wait()`**
 method verifies that a given position in an {{jsxref("Int32Array")}} still contains a
 given value and if so sleeps, awaiting a wakeup or a timeout. It returns a string which
 is either "`ok`", "`not-equal`", or "`timed-out`".

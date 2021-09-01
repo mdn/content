@@ -15,16 +15,16 @@ browser-compat: api.CacheStorage.keys
 ---
 <p>{{APIRef("Service Workers API")}}</p>
 
-<p><span class="seoSummary">The
+<p>The
     <code><strong>keys</strong></code><strong><code>()</code></strong> method of the
     {{domxref("CacheStorage")}} interface returns a {{jsxref("Promise")}} that will
     resolve with an array containing strings corresponding to all of the named
     {{domxref("Cache")}} objects tracked by the {{domxref("CacheStorage")}} object in the
     order they were created. Use this method to iterate over a list of all
-    {{domxref("Cache")}} objects.</span></p>
+    {{domxref("Cache")}} objects.</p>
 
 <p>You can access <code>CacheStorage</code> through the global
-  {{domxref("WindowOrWorkerGlobalScope.caches", "caches")}} property.</p>
+  {{domxref("caches")}} property.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -47,22 +47,22 @@ browser-compat: api.CacheStorage.keys
 <p>In this code snippet we wait for an {{domxref("ServiceWorkerGlobalScope.onactivate",
   "activate")}} event, and then run a
   {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} block that clears up any old,
-  unused caches before a new service worker is activated. Here we have a whitelist
-  containing the names of the caches we want to keep (<code>cacheWhitelist</code>). We
+  unused caches before a new service worker is activated. Here we have an allowlist
+  containing the names of the caches we want to keep (<code>cacheAllowlist</code>). We
   return the keys of the caches in the {{domxref("CacheStorage")}} object using
-  <code>keys()</code>, then check each key to see if it is in the whitelist. If not, we
+  <code>keys()</code>, then check each key to see if it is in the allowlist. If not, we
   delete it using {{domxref("CacheStorage.delete()")}}.</p>
 
 <pre class="brush: js">this.addEventListener('activate', function(event) {
-  var cacheWhitelist = ['v2'];
+  var cacheAllowlist = ['v2'];
 
   event.waitUntil(
     caches.keys().then(function(keyList) {
       return Promise.all(keyList.map(function(key) {
-        if (cacheWhitelist.indexOf(key) === -1) {
+        if (cacheAllowlist.indexOf(key) === -1) {
           return caches.delete(key);
         }
-      });
+      }));
     })
   );
 });</pre>
@@ -81,5 +81,5 @@ browser-compat: api.CacheStorage.keys
   <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service
       Workers</a></li>
   <li>{{domxref("Cache")}}</li>
-  <li>{{domxref("WindowOrWorkerGlobalScope.caches")}}</li>
+  <li>{{domxref("caches")}}</li>
 </ul>

@@ -51,6 +51,7 @@ In MDN, writers will use code fences for example code blocks. They must specify 
   <li><code>php</code></li>
   <li><code>python</code></li>
   <li><code>sql</code></li>
+  <li><code>svg</code></li>
   <li><code>xml</code></li>
   <li><code>wasm</code> (for WebAssembly text format)</li>
 </ul>
@@ -330,23 +331,16 @@ On MDN, this would produce the following HTML:
 
 <h2>Tables</h2>
 
-<p>In GFM (but not CommonMark) there is a syntax for tables: <a href="https://github.github.com/gfm/#tables-extension-">https://github.github.com/gfm/#tables-extension-</a>. We will make use of this but the GFM syntax only supports a subset of the features available in HTML.</p>
-
-<p>So the general principle here is: authors should use the GFM Markdown syntax when they can, and fall back to raw HTML when they have to.</p>
-
-<p>The main limitations of GFM table syntax are:</p>
+<p>In GFM (but not CommonMark) there is a syntax for tables: <a href="https://github.github.com/gfm/#tables-extension-">https://github.github.com/gfm/#tables-extension-</a>. We will make use of this but:</p>
 
 <ul>
-  <li>GFM tables must have a header row.</li>
-  <li>GFM tables may not have a header column.</li>
-  <li>GFM won't parse GFM block elements in table cells. For example, you can't have a list in a table cell.</li>
-  <li>GFM doesn't support any table elements beyond <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, and <code>&lt;th&gt;</code>, and <code>&lt;td&gt;</code>.</li>
-  <li>GFM doesn't support any table element attributes like <code>colspan</code>, <code>rowspan</code>, or <code>scope</code>.</li>
+  <li>The GFM syntax only supports a subset of the features available in HTML.</li>
+  <li>For some GFM-compatible tables the GFM representation is actually less readable than HTML.</li>
 </ul>
 
-<p>If an author needs to use any of the unsupported features, they should write the table in HTML.</p>
+<p>So the general principle here is: authors should use the GFM Markdown syntax when they can, and fall back to raw HTML when they have to or when HTML is more readable. See "When to use HTML tables" below.</p>
 
-<p>We don't recommend the general use of <code>&lt;caption&gt;</code> elements on tables, since that would also rule out the GFM syntax.</p>
+<h3>GFM table syntax style</h3>
 
 <p>In GFM table syntax, authors can omit leading and trailing pipes for rows. MDN authors must include these pipes, for the sake of readability.</p>
 
@@ -368,9 +362,64 @@ cell 1    | cell 2    | cell 3
 cell 4    | cell 5    | cell 6
 </pre>
 
+<h3>When to use HTML tables</h3>
+
+<p>There are two main circumstances in which authors should use HTML tables rather than GFM syntax: when the table uses features that are not supported in GFM, and when the table would be less readable in GFM.</p>
+
+<h4>Table features that are not supported in GFM</h4>
+
+<p>The main limitations of GFM table syntax are:</p>
+
+<ul>
+  <li>GFM tables must have a header row.</li>
+  <li>GFM tables may not have a header column.</li>
+  <li>GFM won't parse GFM block elements in table cells. For example, you can't have a list in a table cell.</li>
+  <li>GFM doesn't support any table elements beyond <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, and <code>&lt;th&gt;</code>, and <code>&lt;td&gt;</code>.</li>
+  <li>GFM doesn't support any table element attributes like <code>colspan</code>, <code>rowspan</code>, or <code>scope</code>.</li>
+</ul>
+
+<p>If an author needs to use any of the unsupported features, they should write the table in HTML.</p>
+
+<p>Note that we don't recommend the general use of <code>&lt;caption&gt;</code> elements on tables, since that would also rule out the GFM syntax.</p>
+
+<h4>GFM table syntax readability issues</h4>
+
+<p>Even when a table could be written in GFM it is sometimes better to use HTML, because GFM uses an "ASCII art" approach to tables that is not readable when there are many columns or when cell contents are long. For example, consider this table:</p>
+
+<pre class="brush: html">
+  &lt;table&gt;
+    &lt;tr&gt;
+      &lt;th&gt;A heading 1&lt;/th&gt;
+      &lt;th&gt;A heading 2&lt;/th&gt;
+      &lt;th&gt;A heading 3&lt;/th&gt;
+      &lt;th&gt;A heading 4&lt;/th&gt;
+      &lt;th&gt;A heading 5&lt;/th&gt;
+      &lt;th&gt;A heading 6&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Something shortish&lt;/td&gt;
+      &lt;td&gt;Something much longer that really goes into a lot of detail about something, so much so that the table formatting starts to look bad in GFM format.&lt;/td&gt;
+      &lt;td&gt;Something shortish&lt;/td&gt;
+      &lt;td&gt;Another cell  with lots of text in it, that also really goes into a lot of detail about something, so much so that the table formatting starts to look bad in GFM format.&lt;/td&gt;
+      &lt;td&gt;Something shortish&lt;/td&gt;
+      &lt;td&gt;Something shortish&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+
+<p>In GFM this will look like:</p>
+
+<pre>
+  | A heading 1        | A heading 2                                                                                                                                         | A heading 3        | A heading 4                                                                                                                                                              | A heading 5        | A heading 6        |
+  | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------ | ------------------ |
+  | Something shortish | Something much longer that really goes into a lot of detail about something, so much so that the table formatting starts to look bad in GFM format. | Something shortish | Another cell with lots of text in it, that also really goes into a lot of detail about something, so much so that the table formatting starts to look bad in GFM format. | Something shortish | Something shortish |
+</pre>
+
+<p>In a case like this it would be better to use HTML.</p>
+
 <h3>Discussion reference</h3>
 
-<p>This issue was resolved in <a href="https://github.com/mdn/content/issues/4325">https://github.com/mdn/content/issues/4325</a>.</p>
+<p>This issue was resolved in <a href="https://github.com/mdn/content/issues/4325">https://github.com/mdn/content/issues/4325</a> and <a href="https://github.com/mdn/content/issues/7342">https://github.com/mdn/content/issues/7342</a>.</p>
 
 <h2>Superscript and subscript</h2>
 

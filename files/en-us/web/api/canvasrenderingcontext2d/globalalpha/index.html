@@ -17,7 +17,7 @@ browser-compat: api.CanvasRenderingContext2D.globalAlpha
   to shapes and images before they are drawn onto the canvas.</p>
 
 <div class="note">
-  <p>See also the chapter <a
+  <p><strong>Note:</strong> See also the chapter <a
       href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying
       styles and color</a> in the <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas
       Tutorial</a>.</p>
@@ -52,7 +52,7 @@ browser-compat: api.CanvasRenderingContext2D.globalAlpha
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js; highlight[4]">const canvas = document.getElementById('canvas');
+<pre class="brush: js;">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.globalAlpha = 0.5;
@@ -80,10 +80,7 @@ ctx.fillRect(50, 50, 100, 100);
   increased. If we were to increase the step count (and thus draw more circles), the
   background would eventually disappear completely from the center of the image.</p>
 
-<div class="hidden">
-  <pre
-    class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
-</div>
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
 
 <pre class="brush: js">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');

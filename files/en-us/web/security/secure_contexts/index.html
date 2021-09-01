@@ -23,7 +23,7 @@ tags:
 
 <p>For example, even for a document delivered over TLS within an {{HTMLElement("iframe")}}, its context is <strong>not</strong> considered secure if it has an ancestor that was not also delivered over TLS.</p>
 
-<p>However, it’s important to note that if a non-secure context causes a new window to be created (with or without specifying <a href="/en-US/docs/Web/API/Window/open#noopener">noopener</a>), then the fact that the opener was insecure has no effect on whether the new window is considered secure. That’s because the determination of whether or not a particular document is in a secure context is based only on considering it within the top-level browsing context with which it is associated — and not whether a non-secure context happened to be used to create it.</p>
+<p>However, it’s important to note that if a non-secure context causes a new window to be created (with or without specifying <a href="/en-US/docs/Web/API/Window/open">noopener</a>), then the fact that the opener was insecure has no effect on whether the new window is considered secure. That’s because the determination of whether or not a particular document is in a secure context is based only on considering it within the top-level browsing context with which it is associated — and not whether a non-secure context happened to be used to create it.</p>
 
 <p>Locally-delivered resources such as those with <em>http://127.0.0.1</em> URLs, <em>http://localhost</em> and  <em>http://*.localhost</em> URLs (e.g. <em>http://dev.whatever.localhost/</em>), and <em>file://</em> URLs are also considered to have been delivered securely.</p>
 
@@ -40,7 +40,7 @@ tags:
 
 <h2 id="Feature_detection">Feature detection</h2>
 
-<p>Pages can use feature detection to check whether they are in a secure context or not by using the {{domxref("WindowOrWorkerGlobalScope.isSecureContext", "isSecureContext")}} boolean, which is exposed on the global scope.</p>
+<p>Pages can use feature detection to check whether they are in a secure context or not by using the {{domxref("isSecureContext")}} boolean, which is exposed on the global scope.</p>
 
 <pre class="brush: js">if (window.isSecureContext) {
   // Page is a secure context so service workers are now available
@@ -70,7 +70,7 @@ tags:
 
 <ul>
  <li><a href="/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts">Platform features restricted to secure contexts</a> — a list of the features available only in secure contexts</li>
- <li>{{domxref("Window.isSecureContext")}}</li>
+ <li>{{domxref("isSecureContext")}}</li>
  <li><a href="https://permission.site">https://permission.site</a> — A site that allows you to check what API permission checks your browser employs, over HTTP and HTTPS</li>
  <li><a href="/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security">Strict-Transport-Security</a> HTTP header</li>
 </ul>

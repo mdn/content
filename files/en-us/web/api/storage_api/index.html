@@ -60,7 +60,7 @@ tags:
 <p>If the site or app has the <strong><code>"persistent-storage"</code></strong> feature permission, it can use the {{domxref("StorageManager.persist()")}} method to request that its box be made persistent. It's also possible for the user agent to decide to make the site's storage unit persistent due to usage characteristics or other metrics. The <code>"persistent-storage"</code> feature's permission-related flags, algorithms, and types are all set to the standard defaults for a permission, except that the <strong>permission state</strong> must be the same across the entire origin, and that if the permission state isn't <code>"granted"</code> (meaning that for whatever reason, access to the persistent storage feature was denied), the origin's site storage unit's box mode is always <code>"best-effort"</code>.</p>
 
 <div class="note">
-<p><strong>Note</strong>: See <a href="/en-US/docs/Web/API/Permissions_API/Using_the_Permissions_API">Using the Permissions API</a> for further details about obtaining and managing permissions.</p>
+<p><strong>Note:</strong> See <a href="/en-US/docs/Web/API/Permissions_API/Using_the_Permissions_API">Using the Permissions API</a> for further details about obtaining and managing permissions.</p>
 </div>
 
 <p>When clearing site storage units, an origin's box is treated as a single entity; if the user agent needs to clear it and the user approves, the entire data store is cleared rather than providing some means of clearing only data from individual APIs.</p>

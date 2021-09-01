@@ -16,7 +16,7 @@ tags:
 ---
 <div>{{DefaultAPISidebar("Fullscreen API")}}</div>
 
-<p><span class="seoSummary">This article demonstrates how to use the <a href="/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</a> to place a given element into full-screen mode, as well as how to detect when the browser enters or exits full-screen mode.</span></p>
+<p>This article demonstrates how to use the <a href="/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</a> to place a given element into full-screen mode, as well as how to detect when the browser enters or exits full-screen mode.</p>
 
 <h2 id="Activating_full-screen_mode">Activating full-screen mode</h2>
 
@@ -120,10 +120,6 @@ if (elem.requestFullscreen) {
 <p>If fullscreen mode is already active (<code>fullscreenElement</code> is non-<code>null</code>), we call {{DOMxRef("document.exitFullscreen()")}}.</p>
 
 <h2 id="Prefixing">Prefixing</h2>
-
-<div class="blockIndicator geckoVersionNote">
-<p><strong>Note:</strong> Currently, only Firefox 64 and Chrome 71 supports this unprefixed.</p>
-</div>
 
 <p>For the moment not all browsers are implementing the unprefixed version of the API (for vendor agnostic access to the Fullscreen API you can use <a href="https://github.com/rafrex/fscreen">Fscreen</a>). Here is the table summarizing the prefixes and name differences between them:</p>
 

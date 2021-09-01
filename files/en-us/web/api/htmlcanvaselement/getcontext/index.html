@@ -11,10 +11,10 @@ browser-compat: api.HTMLCanvasElement.getContext
 ---
 <div>{{APIRef("Canvas API")}}</div>
 
-<p><span class="seoSummary">The
+<p>The
     <strong><code>HTMLCanvasElement.getContext()</code></strong> method returns a drawing
     context on the canvas, or {{jsxref("null")}} if the context identifier is not
-    supported, or the canvas has already been set to a different context mode.</span></p>
+    supported, or the canvas has already been set to a different context mode.</p>
 
 <p>Later calls to this method on the same canvas element, with the same
   <code>contextType</code> argument, will always return the same drawing context instance
@@ -51,7 +51,7 @@ var <em>ctx</em> = <em>canvas</em>.getContext(<em>contextType</em>, <em>contextA
     </ul>
 
     <div class="note">
-      <p><strong>Note</strong>: The identifier <code>"experimental-webgl"</code> is used
+      <p><strong>Note:</strong> The identifier <code>"experimental-webgl"</code> is used
         in new implementations of WebGL. These implementations have either not reached
         test suite conformance, or the graphics drivers on the platform are not yet
         stable. The <a href="https://www.khronos.org/">Khronos Group</a> certifies WebGL

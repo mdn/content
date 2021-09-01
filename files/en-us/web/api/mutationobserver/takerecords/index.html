@@ -19,12 +19,14 @@ browser-compat: api.MutationObserver.takeRecords
 ---
 <div>{{APIRef("DOM WHATWG")}}</div>
 
-<p><span class="seoSummary">The {{domxref("MutationObserver")}} method
+<p>The {{domxref("MutationObserver")}} method
     <code><strong>takeRecords()</strong></code> returns a list of all matching DOM changes
     that have been detected but not yet processed by the observer's callback function,
-    leaving the mutation queue empty.</span> The most common use case for this is to
+    leaving the mutation queue empty.</p>
+
+<p>The most common use case for this is to
   immediately fetch all pending mutation records immediately prior to disconnecting the
-  observer, so that any pending mutations can be processed when stopping down the
+  observer, so that any pending mutations can be processed when shutting down the
   observer.</p>
 
 <h2 id="Syntax">Syntax</h2>
@@ -53,7 +55,7 @@ browser-compat: api.MutationObserver.takeRecords
   {{domxref("MutationRecord")}}s by calling <code>takeRecords()</code> just before
   disconnecting the observer.</p>
 
-<pre class="brush: js; highlight:[12-18]">const targetNode = document.querySelector("#someElement");
+<pre class="brush: js;">const targetNode = document.querySelector("#someElement");
 const observerOptions = {
   childList: true,
   attributes: true

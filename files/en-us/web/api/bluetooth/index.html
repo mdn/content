@@ -17,21 +17,6 @@ browser-compat: api.Bluetooth
   {{jsxref("Promise")}} to a {{domxref("BluetoothDevice")}} object with the specified
   options.</p>
 
-<h2 id="Interface">Interface</h2>
-
-<pre class="brush: js">interface Bluetooth : EventTarget {
-  Promise&lt;boolean&gt; getAvailability();
-  attribute EventHandler onavailabilitychanged;
-  [SameObject]
-  readonly attribute BluetoothDevice? referringDevice;
-  Promise&lt;sequence&lt;BluetoothDevice&gt;&gt; getDevices();
-  Promise&lt;BluetoothDevice&gt; requestDevice(optional RequestDeviceOptions options = {});
-};
-Bluetooth includes BluetoothDeviceEventHandlers;
-Bluetooth includes CharacteristicEventHandlers;
-Bluetooth includes ServiceEventHandlers;
-</pre>
-
 <h2 id="Properties">Properties</h2>
 
 <p><em>Inherits properties from its parent {{domxref("EventTarget")}}.</em></p>

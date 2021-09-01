@@ -19,8 +19,11 @@ tags:
 
 <h2 id="computedStyleMap">computedStyleMap()</h2>
 
-<div id="example1">
 <p>With the CSS Typed OM API, we can access all the CSS properties and values — including custom properties — that are impacting an element. Let's see how this works by creating our first example, which explores {{domxref('Element.computedStyleMap()', 'computedStyleMap()')}}.</p>
+
+<h3>Getting all the properties and values</h3>
+
+<h4>HTML</h4>
 
 <p>We start with some HTML: a paragraph with a link, as well as a definition list to which we will add all the CSS Property / Value pairs.</p>
 
@@ -28,6 +31,8 @@ tags:
    &lt;a href="https://example.com"&gt;Link&lt;/a&gt;
 &lt;/p&gt;
 &lt;dl id="regurgitation"&gt;&lt;/dl&gt;</pre>
+
+<h4>JavaScript</h4>
 
 <p>We add JavaScript to grab our unstyled link and return back a definition list of all the default CSS property values impacting the link using <code>computedStyleMap()</code>.</p>
 
@@ -55,18 +60,18 @@ for (const [prop, val] of defaultComputedStyles) {
 
 <p>The <code>computedStyleMap()</code> method returns a {{domxref('StylePropertyMapReadOnly')}} object containing the <code><a href="/en-US/docs/Web/API/StylePropertyMapReadOnly/size">size</a></code> property, which indicates how many properties are in the map. We iterate through the style map, creating a <code><a href="/en-US/docs/Web/HTML/Element/dt">&lt;dt&gt;</a></code> and <code><a href="/en-US/docs/Web/HTML/Element/dd">&lt;dd&gt;</a></code> for each property and value respectively.</p>
 
+<h4>Result</h4>
+
 <p>In <a href="/en-US/docs/Web/API/Element/computedStyleMap#browser_compatibility">browsers that support <code>computedStyleMap()</code></a>, you'll see a list of all the CSS properties and values. In other browsers, you'll just see a link.</p>
 
-<p>{{EmbedLiveSample("example1", 120, 300)}}</p>
+<p>{{EmbedLiveSample("Getting_all_the_properties_and_values", 120, 300)}}</p>
 
 <p>Did you realize how many default CSS properties a link had? Update the JavaScript on line 2 to select the {{htmlelement("p")}} rather than the {{htmlelement("a")}}. You'll notice a difference in the <code><a href="/en-US/docs/Web/CSS/margin-top">margin-top</a></code> and <code><a href="/en-US/docs/Web/CSS/margin-bottom">margin-bottom</a></code> default computed values.</p>
-</div>
 
 <h3 id=".get_method_custom_properties">.get() method / custom properties</h3>
 
 <p>Let's update our example to only retrieve a few properties and values. Let's start by adding some CSS to our example, including a custom property and an inheritable property:</p>
 
-<div id="example2">
 <pre class="brush: css">p {
   font-weight: bold;
 }
@@ -78,12 +83,10 @@ a {
 
 <p>Instead of getting <em>all</em> the properties, we create an array of properties of interest and use the {{domxref('StylePropertyMapReadOnly.get()')}} method to get each of their values:</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;p&gt;
+<pre class="brush: html hidden">&lt;p&gt;
    &lt;a href="https://example.com"&gt;Link&lt;/a&gt;
 &lt;/p&gt;
 &lt;dl id="regurgitation"&gt;&lt;/dl&gt;</pre>
-</div>
 
 <pre class="brush: js">// get the element
 const myElement = document.querySelector('a');
@@ -110,8 +113,7 @@ for ( let i = 0; i &lt; ofInterest.length; i++ ) {
 }
 </pre>
 
-<p>{{EmbedLiveSample("example2", 120, 300)}}</p>
-</div>
+<p>{{EmbedLiveSample(".get_method_custom_properties", 120, 300)}}</p>
 
 <p>We included {{cssxref('border-left-color')}} to demonstrate that, had we included all the properties, every value that defaults to <code><a href="/en-US/docs/Web/CSS/color_value">currentcolor</a></code> (including {{cssxref('caret-color')}}, {{cssxref('outline-color')}}, {{cssxref('text-decoration-color')}}, {{cssxref('column-rule-color')}}, etc.) would return <code>rgb(255, 0, 0)</code>. The link has inherited <code>font-weight: bold;</code> from the paragraph's styles, listing it as <code>font-weight: 700</code>. Custom properties, like our <code>--color: red</code> , are properties. As such, they are accessible via <code>get()</code>.</p>
 
@@ -186,7 +188,7 @@ for ( let i = 0; i &lt; ofInterest.length; i++ ) {
 
 <p>For those of you using a non-supporting browser, the above output should looks something like this:</p>
 
-<table id="regurgitation">
+<table>
  <thead>
   <tr>
    <th>Property</th>
@@ -272,9 +274,8 @@ for ( let i = 0; i &lt; ofInterest.length; i++ ) {
 
 <p>As noted above, <code>StylePropertyMapReadOnly.get('--customProperty')</code> returns a {{domxref('CSSUnparsedValue')}}. We can parse <code>CSSUnparsedValue</code> object instances with the inherited {{domxref('CSSStyleValue.parse()')}} and {{domxref('CSSStyleValue.parseAll()')}} methods.</p>
 
-<p>Let's examine a CSS example with several custom properties, transforms, <code>calc()</code>s, and other features. We'll take a look at that their types are by employing short JavaScript snippets outputting to {{domxref('console.log()')}}:</p>
+<p>Let's examine a CSS example with several custom properties, transforms, <code>calc()</code>s, and other features. We'll take a look at what their types are by employing short JavaScript snippets outputting to {{domxref('console.log()')}}:</p>
 
-<div id="example3">
 <pre class="brush: css">:root {
     --mainColor: hsl(198, 43%, 42%);
     --black: hsl(0, 0%, 16%);
@@ -341,13 +342,6 @@ console.log( parsedUnit );
 console.log( parsedUnit.unit );
 console.log( parsedUnit.value );
 </pre>
-</div>
-
-<p class="hidden">For this example to work, the example must be closed out here.</p>
-
-<p>{{EmbedLiveSample("example3", 120, 300)}}</p>
-
-<p>We've created a blue button with a magic wand background image.</p>
 
 <p>We grab our <code>StylePropertyMapReadOnly</code> with the following JavaScript:</p>
 
