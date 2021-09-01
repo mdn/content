@@ -74,7 +74,7 @@ tags:
 <h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
 
 <ul>
-  <li>Support for <code>cookieStoreId</code> is added to {{WebExtAPIRef('downloads.download')}}, {{WebExtAPIRef('downloads.DownloadQuery')}}, and {{WebExtAPIRef('downloads.DownloadItem')}}. The addition to the two types provides support in {{WebExtAPIRef('downloads.search')}} and {{WebExtAPIRef('downloads.erase')}}. Web extensions using <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities">contextual identities</a> can now use the appropriate cookie store when performing downloads. ({{bug(1669566)}})</li>
+  <li>Support for <code>cookieStoreId</code> is added to {{WebExtAPIRef('downloads.download')}}, {{WebExtAPIRef('downloads.DownloadQuery')}}, and {{WebExtAPIRef('downloads.DownloadItem')}}. The addition to the types {{WebExtAPIRef('downloads.DownloadQuery')}} and {{WebExtAPIRef('downloads.DownloadItem')}} provides support in {{WebExtAPIRef('downloads.search')}} and {{WebExtAPIRef('downloads.erase')}}. Web extensions can now associate downloads with specific cookie stores, such as container tabs (<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities">contextual identities</a>). ({{bug(1669566)}})</li>
 </ul>
 
 <h4 id="removals_webext">Removals</h4>

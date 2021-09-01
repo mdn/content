@@ -17,10 +17,13 @@ browser-compat: webextensions.api.downloads.download
 
 <p>The <strong><code>download()</code></strong> function of the {{WebExtAPIRef("downloads")}} API downloads a file, given its URL and other optional preferences.</p>
 
+<p>If the URL uses the HTTP or HTTPS protocol, the request includes all the relevant cookies, that is, those cookies set for the URL's hostname, secure flag, path, and so on. The default cookies, the cookies from the normal browsing session, are used unless:</p>
 <ul>
- <li>If the specified <code>url</code> uses the HTTP or HTTPS protocol, then the request will include all cookies currently set for its hostname.</li>
- <li>If both <code>filename</code> and <code>saveAs</code> are specified, then the Save As dialog will be displayed, pre-populated with the specified <code>filename</code>.</li>
+    <li>the <code>incognito</code> option is used, then the private browsing cookies are used.</li>
+    <li>the <code>cookieStoreId</code> option is used, then the cookies from the specified store are used.</li>
 </ul>
+
+<p>If both <code>filename</code> and <code>saveAs</code> are specified, the Save As dialog is displayed, populated with the <code>filename</code>.</p>
 
 <p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
 
