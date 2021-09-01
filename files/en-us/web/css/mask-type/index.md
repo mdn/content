@@ -55,12 +55,13 @@ The `mask-type` property is specified as one of the keyword values listed below.
 
 ```html
 <div class="redsquare">
-   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0">
-   <defs>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0">
+    <defs>
       <mask id="m" maskContentUnits="objectBoundingBox" style="mask-type:alpha">
-         <rect x=".1" y=".1" width=".8" height=".8" fill="red" fill-opacity=".7"/>
+        <rect x=".1" y=".1" width=".8" height=".8" fill="red" fill-opacity=".7" />
       </mask>
-   </defs>
+    </defs>
+  </svg>
 </div>
 ```
 
@@ -86,13 +87,13 @@ The `mask-type` property is specified as one of the keyword values listed below.
 
 ```html
 <div class="redsquare">
-   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0">
-      <defs>
-         <mask id="m" maskContentUnits="objectBoundingBox" style="mask-type:luminance">
-            <rect x=".1" y=".1" width=".8" height=".8"fill="red" fill-opacity=".7"/>
-         </mask>
-      </defs>
-   </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0">
+    <defs>
+      <mask id="m" maskContentUnits="objectBoundingBox" style="mask-type:luminance">
+        <rect x=".1" y=".1" width=".8" height=".8" fill="red" fill-opacity=".7" />
+      </mask>
+    </defs>
+  </svg>
 </div>
 ```
 
