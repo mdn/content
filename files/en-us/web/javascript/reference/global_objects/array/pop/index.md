@@ -97,7 +97,7 @@ const collection = {
         // obj.length will be decremented automatically
         // every time an element is removed.
         
-        // returning what pop returns, that is
+        // Returning what pop returns; that is
         // the removed element.
         return [].pop.call(this);
     }
