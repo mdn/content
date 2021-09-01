@@ -78,15 +78,9 @@ console.log(popped); // 'sturgeon'
 
 ### Using an object in an array-like fashion
 
-As mentioned, `push` and `pop` are intentionally generic and we can use that to
-our advantage. We can use `Array.prototype.push` and `Array.prototype.pop` methods
-on an object. It works fine as this example shows.
+`push` and `pop` are intentionally generic, and we can use that to our advantage — as the following example shows.
 
-Note that we don't create an array to store a collection of objects. Instead, we store
-the collection on the object itself and use `call` on
-`Array.prototype.push` and `Array.prototype.pop` to trick these methods into
-thinking we are dealing with an array and it just works, thanks to the way
-JavaScript allows us to establish the execution context in any way we want.
+Note that in this example, we don't create an array to store a collection of objects. Instead, we store the collection on the object itself and use `call` on `Array.prototype.push` and `Array.prototype.pop` to trick those methods into thinking we’re dealing with an array.
 
 ```js
 const collection = {
