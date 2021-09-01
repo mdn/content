@@ -14,7 +14,7 @@ The [`checkbox` role](https://www.w3.org/TR/wai-aria-1.1/#checkbox) is for check
 <label id="chk1-label">Remember my preferences</label>
 ```
 
-The first rule of ARIA is if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding ARIA. Instead use the native [HTML checkbox](/en-US/docs/Web/HTML/Element/input/checkbox) of [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox), which natively provides all the functionality required:
+> **Note:** The first rule of ARIA is if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding ARIA. Instead use the native [HTML checkbox](/en-US/docs/Web/HTML/Element/input/checkbox) of [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox) (with an associated [`<label>`](/en-US/docs/Web/HTML/Element/input/label)), which natively provides all the functionality required:
 
 ```html
 <input type="checkbox" id="chk1-label">
