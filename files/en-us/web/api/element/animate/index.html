@@ -17,9 +17,10 @@ browser-compat: api.Element.animate
   element, then plays the animation. It returns the created {{domxref("Animation")}}
   object instance.</p>
 
-<div class="notecard note">
+<div class="note">
   <p><strong>Note:</strong> Elements can have multiple animations applied to them. You can get a list of the
-    animations that affect an element by calling {{domxref("Element.getAnimations()")}}.  </p>
+    animations that affect an element by calling {{domxref("Element.getAnimations()")}}.
+  </p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -36,8 +37,9 @@ browser-compat: api.Element.animate
         href="/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats">Keyframe Formats </a>for more details.</p>
   </dd>
   <dt><code>options</code></dt>
-  <dd>Either an <strong>integer representing the animation's duration</strong> (in milliseconds), <strong>or</strong> an Object containing one or more timing properties: </dd>
-  <dd>
+  <dd><p>Either an <strong>integer representing the animation's duration</strong> (in
+    milliseconds), <strong>or</strong> an Object containing one or more timing
+    properties:</p>
     <dl>
       <dt><code>id {{optional_inline}}</code></dt>
       <dd>A property unique to <code>animate()</code>: a <a

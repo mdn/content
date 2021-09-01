@@ -38,7 +38,7 @@ browser-compat: api.IDBDatabase.onversionchange
   creates a new object store; it also includes <code>onerror</code> and <code>onabort</code> functions to handle non-success cases, and
   an onversionchange function to notify when a database structure change has occurred.</p>
 
-<pre class="brush: js;highlight:[28,29,30,31,32]">request.onupgradeneeded = function(event) {
+<pre class="brush: js;">request.onupgradeneeded = function(event) {
   var db = event.target.result;
 
   db.onerror = function(event) {

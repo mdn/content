@@ -39,7 +39,7 @@ browser-compat: webextensions.match_patterns.scheme
    <td>Only "http" and "https" and in some browsers also <a href="/en-US/docs/Web/API/WebSockets_API">"ws" and "wss"</a>.</td>
   </tr>
   <tr>
-   <td>One of <code>http</code>, <code>https</code>, <code>ws</code>, <code>wss</code>, <code>ftp</code>, <code>ftps</code>, <code>data</code>, <code>file</code>, or <code>(chrome-)extension</code>.</td>
+   <td>One of <code>http</code>, <code>https</code>, <code>ws</code>, <code>wss</code>, <code>ftp</code>, <code>data</code>, <code>file</code>, or <code>(chrome-)extension</code>.</td>
    <td>Only the given scheme.</td>
   </tr>
  </tbody>
@@ -123,11 +123,12 @@ browser-compat: webextensions.match_patterns.scheme
     <p><code>wss://ws.example.com/stuff/</code></p>
 
     <p><code>ftp://files.somewhere.org/</code></p>
-
-    <p><code>ftps://files.somewhere.org/</code></p>
    </td>
    <td>
     <p><code>resource://a/b/c/</code><br>
+     (unsupported scheme)</p>
+
+    <p><code>ftps://files.somewhere.org/</code><br>
      (unsupported scheme)</p>
    </td>
   </tr>
@@ -148,9 +149,6 @@ browser-compat: webextensions.match_patterns.scheme
    </td>
    <td>
     <p><code>ftp://ftp.example.org/</code><br>
-     (unmatched scheme)</p>
-
-    <p><code>ftps://ftp.example.org/</code><br>
      (unmatched scheme)</p>
 
     <p><code>file:///a/</code><br>

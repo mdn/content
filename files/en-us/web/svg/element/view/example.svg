@@ -1,0 +1,10 @@
+<svg viewBox="0 0 300 100" width="300" height="100" xmlns="http://www.w3.org/2000/svg">
+    <view id="one" viewBox="0 0 100 100" />
+    <circle cx="50" cy="50" r="40" fill="red" />
+
+    <view id="two" viewBox="100 0 100 100" />
+    <circle cx="150" cy="50" r="40" fill="green" />
+
+    <view id="three" viewBox="200 0 100 100" />
+    <circle cx="250" cy="50" r="40" fill="blue" />
+</svg>

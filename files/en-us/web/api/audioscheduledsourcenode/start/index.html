@@ -18,14 +18,16 @@ browser-compat: api.AudioScheduledSourceNode.start
 ---
 <p>{{APIRef("Web Audio API")}}</p>
 
-<p><span class="seoSummary">The <code>start()</code> method on
+<p>The <code>start()</code> method on
     {{domxref("AudioScheduledSourceNode")}} schedules a sound to begin playback at the
     specified time. If no time is specified, then the sound begins playing
-    immediately.</span></p>
+    immediately.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><em>AudioScheduledSourceNode</em>.start([<em>when</em> [, offset [, duration]]]);
+<pre class="brush: js">
+start()
+start(when)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -37,14 +39,6 @@ browser-compat: api.AudioScheduledSourceNode.start
     using for its {{domxref("BaseAudioContext/currentTime", "currentTime")}} attribute. A
     value of 0 (or omitting the <code>when</code> parameter entirely) causes the sound to
     start playback immediately.</dd>
-  <dt><code>offset</code> {{optional_inline}}</dt>
-  <dd>A floating-point number indicating the offset, in seconds, into the audio buffer
-    where playback should begin. If 0 is passed then the playback will start from the
-    beginning.</dd>
-  <dt><code>duration</code> {{optional_inline}}</dt>
-  <dd>A floating-point number indicating the duration, in seconds, to be played. If no
-    value is passed then the duration will be equal to the length of the audio buffer
-    minus the offset value</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>

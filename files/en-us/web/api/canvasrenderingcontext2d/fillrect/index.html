@@ -11,10 +11,10 @@ browser-compat: api.CanvasRenderingContext2D.fillRect
 ---
 <div>{{APIRef}}</div>
 
-<p><span class="seoSummary">The
+<p>The
     <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.fillRect()</code></strong>
     method of the Canvas 2D API draws a rectangle that is filled according to the current
-    {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}.</span></p>
+    {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}.</p>
 
 <p>This method draws directly to the canvas without modifying the current path, so any
   subsequent {{domxref("CanvasRenderingContext2D.fill()", "fill()")}} or
@@ -62,7 +62,7 @@ browser-compat: api.CanvasRenderingContext2D.fillRect
 <p>The rectangle's top-left corner is at (20, 10). It has a width of 150 and a height of
   100.</p>
 
-<pre class="brush: js; highlight:[4]">const canvas = document.getElementById('canvas');
+<pre class="brush: js;">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 ctx.fillStyle = 'green';
 ctx.fillRect(20, 10, 150, 100);
@@ -79,7 +79,7 @@ ctx.fillRect(20, 10, 150, 100);
   the dimensions of the rectangle are set to equal the {{HtmlElement("canvas")}} element's
   <code>width</code> and <code>height</code> attributes.</p>
 
-<pre class="brush: js; highlight:[3]">const canvas = document.getElementById('canvas');
+<pre class="brush: js;">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 ctx.fillRect(0, 0, canvas.width, canvas.height);</pre>
 

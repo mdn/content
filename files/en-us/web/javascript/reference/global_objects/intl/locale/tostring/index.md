@@ -34,13 +34,13 @@ The _locale_'s Unicode locale identifier string.
 
 ## Description
 
-The `locale` object is a JavaScript representation of a concept
+The `Locale` object is a JavaScript representation of a concept
 Unicode locale identifier. Information about a particular locale (language, script,
 calendar type, etc.) can be encoded in a locale identifier string. To make it easier
-to work with these locale identifiers, the `locale` object was
+to work with these locale identifiers, the `Locale` object was
 introduced to JavaScript. Calling the `toString` method on a Locale object
 will return the identifier string for that particular Locale. The
-`toString` method allows `locale` instances to be
+`toString` method allows `Locale` instances to be
 provided as an argument to existing `Intl` constructors, serialized in
 JSON, or any other context where an exact string representation is useful.
 

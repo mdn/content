@@ -12,7 +12,9 @@ tags:
 ---
 <div>{{DefaultAPISidebar("Media Capture and Streams")}}</div>
 
-<p><span class="seoSummary">The <strong>Media Capture and Streams</strong> API, often called the <strong>Media Streams API</strong> or <strong>MediaStream API</strong>, is an API related to <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> which provides support for streaming audio and video data.</span> It provides the interfaces and methods for working with the streams and their constituent tracks, the constraints associated with data formats, the success and error callbacks when using the data asynchronously, and the events that are fired during the process.</p>
+<p>The <strong>Media Capture and Streams</strong> API, often called the <strong>Media Streams API</strong> or <strong>MediaStream API</strong>, is an API related to <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> which provides support for streaming audio and video data.</p>
+
+<p>It provides the interfaces and methods for working with the streams and their constituent tracks, the constraints associated with data formats, the success and error callbacks when using the data asynchronously, and the events that are fired during the process.</p>
 
 <h2 id="Concepts_and_usage">Concepts and usage</h2>
 
@@ -28,7 +30,6 @@ tags:
 
 <p>In these reference articles, you'll find the fundamental information you'll need to know about each of the interfaces that make up the Media Capture and Streams API.</p>
 
-<div class="index">
 <ul>
  <li>{{domxref("BlobEvent")}}</li>
  <li>{{domxref("CanvasCaptureMediaStreamTrack")}}</li>
@@ -50,13 +51,11 @@ tags:
  <li>{{domxref("OverconstrainedError")}}</li>
  <li>{{domxref("URL")}}</li>
 </ul>
-</div>
 
 <p>Early versions of the Media Capture and Streams API specification included separate <code>AudioStreamTrack</code> and <code>VideoStreamTrack</code> interfaces—each based upon {{domxref("MediaStreamTrack")}}—which represented streams of those types. These no longer exist, and you should update any existing code to instead use <code>MediaStreamTrack</code> directly.</p>
 
 <h2 id="Events">Events</h2>
 
-<div class="index">
 <ul>
  <li>{{event("addtrack")}}</li>
  <li>{{event("ended")}}</li>
@@ -66,7 +65,6 @@ tags:
  <li>{{event("started")}}</li>
  <li>{{event("unmuted")}}</li>
 </ul>
-</div>
 
 <h2 id="Guides_and_tutorials">Guides and tutorials</h2>
 

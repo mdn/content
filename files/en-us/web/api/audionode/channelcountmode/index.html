@@ -12,7 +12,7 @@ browser-compat: api.AudioNode.channelCountMode
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
-<p><span class="seoSummary">The <code>channelCountMode</code> property of the {{ domxref("AudioNode") }} interface represents an enumerated value describing the way channels must be matched between the node's inputs and outputs.</span></p>
+<p>The <code>channelCountMode</code> property of the {{ domxref("AudioNode") }} interface represents an enumerated value describing the way channels must be matched between the node's inputs and outputs.</p>
 
 <p>The possible values of <code>channelCountMode</code> and their meanings are:</p>
 
@@ -44,12 +44,12 @@ browser-compat: api.AudioNode.channelCountMode
 </table>
 
 <div class="note">
-<p>In older versions of the spec, the default for a {{domxref("ChannelSplitterNode")}} was max. </p>
+<p><strong>Note:</strong> In older versions of the spec, the default for a {{domxref("ChannelSplitterNode")}} was max. </p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js;highlight[11]">var oscillator = audioCtx.createOscillator();
+<pre class="brush: js;">var oscillator = audioCtx.createOscillator();
 oscillator.channelCountMode = 'explicit';</pre>
 
 <h3 id="Value">Value</h3>
@@ -58,7 +58,7 @@ oscillator.channelCountMode = 'explicit';</pre>
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js;highlight[11]">var AudioContext = window.AudioContext || window.webkitAudioContext;
+<pre class="brush: js;">var AudioContext = window.AudioContext || window.webkitAudioContext;
 
 var audioCtx = new AudioContext();
 

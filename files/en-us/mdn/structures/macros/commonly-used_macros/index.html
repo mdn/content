@@ -151,6 +151,7 @@ tags:
 <ul>
  <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/EmbedLiveSample.ejs">EmbedLiveSample</a></code> lets you embed the output of a code sample on a page, as described in <a href="/en-US/docs/MDN/Structures/Live_samples">Live samples</a>.</li>
  <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/LiveSampleLink.ejs">LiveSampleLink</a></code> creates a link to a page containing the output of a code sample on a page, as described in <a href="/en-US/docs/MDN/Structures/Live_samples">Live samples</a>.</li>
+ <li>{{TemplateLink("EmbedGHLiveSample")}} allows to embed live samples from GitHub pages. You can get more information at <a href="/en-US/docs/MDN/Structures/Code_examples#github_live_samples">GitHub live samples</a>.</li>
 </ul>
 
 <h2 id="Sidebar_generation">Sidebar generation</h2>
@@ -236,7 +237,7 @@ tags:
  <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/SeeCompatTable.ejs">SeeCompatTable</a></code> should be used on pages that document <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental">experimental features</a>. Example: <code>\{{SeeCompatTable}}</code> {{SeeCompatTable}}</li>
  <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/deprecated_header.ejs">deprecated_header</a></code>: <code>\{{Deprecated_Header}}</code> {{Deprecated_Header}}</li>
 
- <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/secureContext_header.ejs">secureContext_header</a></code>: <code>\{{SecureContext_Header}}</code> {{SecureContext_Header}}</li>
+ <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/secureContext_header.ejs">secureContext_header</a></code>. Should be used on main pages like interface pages, API overview pages, and API entry points (e.g. <code>navigator.xyz</code>) but usually not on sub-pages like method and property pages. Example: <code>\{{SecureContext_Header}}</code> {{SecureContext_Header}}</li>
 </ul>
 
 <h3 id="Indicating_that_a_feature_is_available_in_web_workers">Indicating that a feature is available in web workers</h3>

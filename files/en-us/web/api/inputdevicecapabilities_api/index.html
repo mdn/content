@@ -9,7 +9,7 @@ tags:
 ---
 <p>{{DefaultAPISidebar("InputDeviceCapabilities API")}}{{SeeCompatTable}}</p>
 
-<p class="summary">The InputDeviceCapabilities API provides details about the underlying sources of input events. The API attempts to describe how the device behaves rather than what it is. For example, the first version of the API indicates whether a device fires touch events rather than whether it is a touch screen.</p>
+<p>The InputDeviceCapabilities API provides details about the underlying sources of input events. The API attempts to describe how the device behaves rather than what it is. For example, the first version of the API indicates whether a device fires touch events rather than whether it is a touch screen.</p>
 
 <h2 id="Input_device_capabilities_concepts_and_usage">Input device capabilities concepts and usage</h2>
 
@@ -17,7 +17,7 @@ tags:
 
 <p>The InputDeviceCapabilities API addresses this problem by abstracting the capabilities of input devices. For example, let's say we have a web page that implements both a <code>touchstart</code> and a <code>mousedown</code> event. We can assume that if the touchstart event is triggered that the user's device has a touch interface.  What about when the mousedown event is triggered? It would be useful to know if a <code>touchstart</code> event were also triggered so that we don't take the same action twice. We can do this by checking the sourceCapabilities property of the {{domxref("UIEvent")}}.</p>
 
-<pre class="brush: js" id="example_1">myButton.addEventListener('mousedown', function(e) {
+<pre class="brush: js">myButton.addEventListener('mousedown', function(e) {
   // Touch event case handled above, don't change the style again on tap.
   if (!e.sourceCapabilities.firesTouchEvents)
     myButton.classList.add("pressed");

@@ -15,10 +15,12 @@ browser-compat: api.PaymentRequest.canMakePayment
 ---
 <p>{{securecontext_header}}{{APIRef("Payment Request API")}}</p>
 
-<p><span class="seoSummary">The {{domxref("PaymentRequest")}} method
+<p>The {{domxref("PaymentRequest")}} method
     <code><strong>canMakePayment()</strong></code> determines whether or not the request
     is configured in a way that is compatible with at least one payment method supported
-    by the {{Glossary("user agent")}}.</span> You can call this before calling
+    by the {{Glossary("user agent")}}.</p>
+
+<p>You can call this before calling
   {{domxref("PaymentRequest.show", "show()")}} to provide a streamlined user experience
   when the user's browser can't handle any of the payment methods you accept.</p>
 

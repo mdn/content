@@ -18,7 +18,7 @@ browser-compat: api.ServiceWorkerGlobalScope
 
 <p>Once successfully registered, a service worker can and will be terminated when idle to conserve memory and processor power. An active service worker is automatically restarted to respond to events, such as {{domxref("ServiceWorkerGlobalScope.onfetch")}} or {{domxref("ServiceWorkerGlobalScope.onmessage")}}.</p>
 
-<p>Additionally, synchronous requests are not allowed from within a service worker — only asynchronous requests, like those initiated via the {{domxref("GlobalFetch.fetch", "fetch()")}} method, can be used.</p>
+<p>Additionally, synchronous requests are not allowed from within a service worker — only asynchronous requests, like those initiated via the {{domxref("fetch()")}} method, can be used.</p>
 
 <p>This interface inherits from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}, and therefore implements properties from {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}, and {{domxref("WindowEventHandlers")}}.</p>
 
@@ -45,7 +45,7 @@ browser-compat: api.ServiceWorkerGlobalScope
  <dd>Occurs when an item is removed from the {{domxref("ContentIndex", "Content Index")}}.<br>
  Also available via the {{domxref("ServiceWorkerGlobalScope.oncontentdelete")}} property.</dd>
  <dt><code>fetch</code></dt>
- <dd>Occurs when a {{domxref("GlobalFetch.fetch", "fetch()")}} is called.<br>
+ <dd>Occurs when a {{domxref("fetch()")}} is called.<br>
  Also available via the {{domxref("ServiceWorkerGlobalScope.onfetch")}} property.</dd>
  <dt>{{domxref("ServiceWorkerGlobalScope/install_event", "install")}}</dt>
  <dd>Occurs when a {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.installing")}} worker.<br>
@@ -83,7 +83,7 @@ browser-compat: api.ServiceWorkerGlobalScope
 <p><code>ServiceWorkerGlobalScope</code> implements {{domxref("WorkerGlobalScope")}} — which implements {{domxref("WindowOrWorkerGlobalScope")}}. Therefore it also has the following property available to it:</p>
 
 <dl>
- <dt>{{domxref("GlobalFetch.fetch()")}}</dt>
+ <dt>{{domxref("fetch()")}}</dt>
  <dd>Starts the process of fetching a resource. This returns a promise that resolves to the {{domxref("Response")}} object representing the response to your request. This algorithm is the entry point for the fetch handling handed to the service worker context.</dd>
 </dl>
 
@@ -91,7 +91,7 @@ browser-compat: api.ServiceWorkerGlobalScope
 
 <p>This code snippet is from the <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js">service worker prefetch sample</a> (see <a href="https://googlechrome.github.io/samples/service-worker/prefetch/">prefetch example live</a>.) The {{domxref("ServiceWorkerGlobalScope.onfetch")}} event handler listens for the <code>fetch</code> event. When fired, the code returns a promise that resolves to the first matching request in the {{domxref("Cache")}} object. If no match is found, the code fetches a response from the network.</p>
 
-<p>The code also handles exceptions thrown from the {{domxref("GlobalFetch.fetch", "fetch()")}} operation. Note that an HTTP error response (e.g., 404) will not trigger an exception. It will return a normal response object that has the appropriate error code set.</p>
+<p>The code also handles exceptions thrown from the {{domxref("fetch()")}} operation. Note that an HTTP error response (e.g., 404) will not trigger an exception. It will return a normal response object that has the appropriate error code set.</p>
 
 <pre class="brush: js">self.addEventListener('fetch', function(event) {
   console.log('Handling fetch event for', event.request.url);

@@ -13,7 +13,7 @@ browser-compat: api.WritableStream.abort
 ---
 <div>{{SeeCompatTable}}{{APIRef("Streams")}}</div>
 
-<p class="summary">The <strong><code>abort()</code></strong> method of the
+<p>The <strong><code>abort()</code></strong> method of the
   {{domxref("WritableStream")}} interface aborts the stream, signaling that the producer
   can no longer successfully write to the stream and it is to be immediately moved to an
   error state, with any queued writes discarded.</p>
@@ -45,7 +45,7 @@ browser-compat: api.WritableStream.abort
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js line-numbers  language-js">const writableStream = new WritableStream({
+<pre class="brush: js ">const writableStream = new WritableStream({
   write(chunk) {
     ...
   },

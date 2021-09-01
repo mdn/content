@@ -238,36 +238,6 @@ _(In addition to all the string-related functions shown above, this also adds:)_
 
 As shown, objects modified this way now look very much like ordinary objects.
 
-## Polyfill
-
-This polyfill covers the main use case, which is creating a new object for which the
-prototype has been chosen but doesn't take the second argument into account.
-
-Note that while the setting of `null` as `[[Prototype]]` is
-supported in the real ES5 `Object.create`, this polyfill cannot support it
-due to a limitation inherent in versions of ECMAScript lower than 5.
-
-```js
- if (typeof Object.create !== "function") {
-    Object.create = function (proto, propertiesObject) {
-        if (typeof proto !== 'object' && typeof proto !== 'function') {
-            throw new TypeError('Object prototype may only be an Object: ' + proto);
-        } else if (proto === null) {
-            throw new Error("This browser's implementation of Object.create is a shim and doesn't support 'null' as the first argument.");
-        }
-
-        if (typeof propertiesObject != 'undefined') {
-            throw new Error("This browser's implementation of Object.create is a shim and doesn't support a second argument.");
-        }
-
-        function F() {}
-        F.prototype = proto;
-
-        return new F();
-    };
-}
-```
-
 ## Examples
 
 ### Classical inheritance with `Object.create()`
@@ -308,33 +278,6 @@ console.log('Is rect an instance of Rectangle?', rect instanceof Rectangle); // 
 console.log('Is rect an instance of Shape?', rect instanceof Shape); // true
 rect.move(1, 1); // Outputs, 'Shape moved.'
 ```
-
-If you wish to inherit from multiple objects, then mixins are a possibility.
-
-```js
-function MyClass() {
-  SuperClass.call(this);
-  OtherSuperClass.call(this);
-}
-
-// inherit one class
-MyClass.prototype = Object.create(SuperClass.prototype);
-// mixin another
-Object.assign(Object.getPrototypeOf(MyClass.prototype), OtherSuperClass.prototype);
-// re-assign constructor
-MyClass.prototype.constructor = MyClass;
-
-MyClass.prototype.myMethod = function() {
-  // do something
-};
-```
-
-{{jsxref("Object.assign()")}} copies properties from the OtherSuperClass prototype to
-the MyClass prototype, making them available to all instances of MyClass.
-`Object.assign()` was introduced with ES2015 and [can
-be polyfilled](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#polyfill). If support for older browsers is necessary,
-[`jQuery.extend()`](https://api.jquery.com/jQuery.extend/) or
-[`_.assign()`](https://lodash.com/docs/#assign) can be used.
 
 ### Using propertiesObject argument with Object.create()
 

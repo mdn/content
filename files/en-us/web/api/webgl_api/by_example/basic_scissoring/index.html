@@ -13,15 +13,11 @@ tags:
 ---
 <p>{{PreviousNext("Learn/WebGL/By_example/Color_masking","Learn/WebGL/By_example/Canvas_size_and_WebGL")}}</p>
 
-<div id="basic-scissoring">
-<div class="summary">
-<p><span class="seoSummary">In this example, we see how to draw simple rectangles and squares using WebGL scissoring operations.</span> Scissoring establishes a clipping region outside which drawing will not occur.</p>
-</div>
+<p>In this example, we see how to draw simple rectangles and squares using WebGL scissoring operations. Scissoring establishes a clipping region outside which drawing will not occur.</p>
 
-<p>{{EmbedLiveSample("basic-scissoring-source",660,425)}}</p>
+<h2 id="Clearing_the_drawing_buffer_when_scissoring_applies">Clearing the drawing buffer when scissoring applies</h2>
 
-<div id="basic-scissoring-intro">
-<h3 id="Clearing_the_drawing_buffer_when_scissoring_applies">Clearing the drawing buffer when scissoring applies</h3>
+<p>{{EmbedLiveSample("Clearing_the_drawing_buffer_when_scissoring_applies",660,425)}}</p>
 
 <p>This is a simple demonstration of a rendering with {{domxref("WebGLRenderingContext.scissor","scissor()")}}.</p>
 
@@ -34,9 +30,7 @@ tags:
 <p>Here we see another example of the distinction between fragments and pixels. Scissoring is a distinct stage in the {{Glossary("WebGL")}}/{{Glossary("OpenGL")}} graphics pipeline (it occurs after color clearing, but before color masking). Before the actual pixels are updated, fragments must go through the scissor test. If the fragments pass the scissor test, they continue down the graphics pipeline, and the corresponding pixels are updated on the screen. If they fail the test, they are immediately discarded, no further processing occurs, and pixels are not updated. Because only fragments within the specified rectangular area successfully pass the scissor test, only pixels inside that area are updated, and we get a rectangle on the screen.</p>
 
 <p>The scissoring stage of the pipeline is disabled by default. We enable it here using the {{domxref("WebGLRenderingContext.enable","enable()")}} method (you will also use <code>enable()</code> to activate many other features of WebGL; hence, the use of the<code> SCISSOR_TEST</code> constant as an argument in this case). This again demonstrates the typical order of commands in {{Glossary("WebGL")}}. We first tweak WebGL state. In this case, enabling the scissor test and establishing a rectangular mask. Only when the WebGL state has been satisfactorily tweaked, we execute the drawing command (in this case, <code>clear()</code>) that starts the processing of fragments down the graphics pipeline.</p>
-</div>
 
-<div id="basic-scissoring-source">
 <pre class="brush: html">&lt;p&gt;Result of scissoring.&lt;/p&gt;
 &lt;canvas&gt;Your browser does not seem to support
     HTML5 canvas.&lt;/canvas&gt;
@@ -56,7 +50,7 @@ canvas {
 }
 </pre>
 
-<pre class="brush: js" id="livesample-js">window.addEventListener("load", function setupWebGL (evt) {
+<pre class="brush: js">window.addEventListener("load", function setupWebGL (evt) {
   "use strict"
   window.removeEventListener(evt.type, setupWebGL, false);
   var paragraph = document.querySelector("p");
@@ -90,7 +84,5 @@ canvas {
 </pre>
 
 <p>The source code of this example is also available on <a href="https://github.com/idofilin/webgl-by-example/tree/master/basic-scissoring">GitHub</a>.</p>
-</div>
-</div>
 
 <p>{{PreviousNext("Learn/WebGL/By_example/Color_masking","Learn/WebGL/By_example/Canvas_size_and_WebGL")}}</p>

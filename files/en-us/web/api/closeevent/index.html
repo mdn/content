@@ -28,7 +28,7 @@ browser-compat: api.CloseEvent
 <dl>
  <dt>{{domxref("CloseEvent.code")}} {{readOnlyInline}}</dt>
  <dd>Returns an <code>unsigned short</code> containing the close code sent by the server. The following values are permitted status codes. The following definitions are sourced from the IANA website [<a href="https://www.iana.org/assignments/websocket/websocket.xml#close-code-number">Ref</a>]. Note that the 1xxx codes are only WebSocket-internal and not for the same meaning by the transported data (like when the application-layer protocol is invalid). The only permitted codes to be specified in Firefox are 1000 and 3000 to 4999 [<a href="https://searchfox.org/mozilla-central/rev/bf81d741ff5dd11bb364ef21306da599032fd479/dom/websocket/WebSocket.cpp#2533">Source</a>, <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1467107">Bug</a>].
- <table class="standard-table" id="Status_codes">
+ <table class="standard-table">
   <tbody>
    <tr>
     <td class="header">Status code</td>

@@ -13,7 +13,7 @@ browser-compat: api.FileSystemDirectoryHandle.entries
 <div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 </div>
 
-<p class="summary">The <strong><code>entries()</code></strong> method of the
+<p>The <strong><code>entries()</code></strong> method of the
   {{domxref("FileSystemDirectoryHandle")}} interface returns an array of a given object's
   own enumerable property <code>[key, value]</code> pairs, in the same order as that
   provided by a {{jsxref('for...in')}} loop (the difference being that a for-in loop
@@ -34,7 +34,13 @@ browser-compat: api.FileSystemDirectoryHandle.entries
 
 <h2 id="Examples">Examples</h2>
 
-<p>Todo</p>
+<pre class="brush: js">
+const dirHandle = await window.showDirectoryPicker()
+
+for await (const [key, value] of dirHandle.entries()) {
+    console.log({ key, value })
+}
+</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

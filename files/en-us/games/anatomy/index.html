@@ -207,7 +207,7 @@ main(); // Start the cycle</pre>
 <p>One common technique is to update the simulation at a constant frequency and then draw as much (or as little) of the actual frames as possible. The update method can continue looping without care about what the user sees. The draw method can view the last update and when it happened. Since draw knows when it represents, and the simulation time for the last update, it can predict a plausible frame to draw for the user. It does not matter whether this is more frequent than the official update loop (or even less frequent). The update method sets checkpoints and, as frequently as the system allows, the render method draws instants of time around them. There are many ways to separate the update method in web standards:</p>
 
 <ul>
- <li>Draw on <code>requestAnimationFrame</code> and update on a {{ domxref("WindowOrWorkerGlobalScope/setInterval") }} or {{ domxref("WindowOrWorkerGlobalScope/setTimeout") }}.
+ <li>Draw on <code>requestAnimationFrame</code> and update on a {{ domxref("setInterval()") }} or {{ domxref("setTimeout()") }}.
 
   <ul>
    <li>This uses processor time even when unfocused or minimized, hogs the main thread, and is probably an artifact of traditional game loops (but it is simple.)</li>
@@ -304,7 +304,7 @@ main(); // Start the cycle</pre>
   main(performance.now()); // Start the cycle
 })();</pre>
 
-<p>Another alternative is to do certain things less often. If a portion of your update loop is difficult to compute but insensitive to time, you might consider scaling back its frequency and, ideally, spreading it out into chunks throughout that lengthened period. An implicit example of this is found over at The Artillery Blog for Artillery Games, where they <a href="http://blog.artillery.com/2012/10/browser-garbage-collection-and-framerate.html">adjust their rate of garbage generation</a> to optimize garbage collection. Obviously, cleaning up resources is not time sensitive (especially if tidying is more disruptive than the garbage itself).</p>
+<p>Another alternative is to do certain things less often. If a portion of your update loop is difficult to compute but insensitive to time, you might consider scaling back its frequency and, ideally, spreading it out into chunks throughout that lengthened period. An implicit example of this was found over at The Artillery Blog for Artillery Games, where they <a href="https://web.archive.org/web/20161021030645/http://blog.artillery.com/2012/10/browser-garbage-collection-and-framerate.html">adjust their rate of garbage generation</a> to optimize garbage collection. Obviously, cleaning up resources is not time sensitive (especially if tidying is more disruptive than the garbage itself).</p>
 
 <p>This may also apply to some of your own tasks. Those are good candidates to throttle when available resources become a concern.</p>
 

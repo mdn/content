@@ -98,7 +98,7 @@ browser-compat: api.Navigator.requestMediaKeySystemAccess
 
 <p>For example:</p>
 
-<pre class="example-bad brush: js highlight[5,8]">let clearKeyOptions = [
+<pre class="example-bad brush: js">let clearKeyOptions = [
   {
     initDataTypes: ['keyids', 'webm'],
     audioCapabilities: [
@@ -119,7 +119,7 @@ navigator.requestMediaKeySystemAccess('org.w3.clearkey', clearKeyOptions)
   warning to console, because <code>"codecs"</code> is not included in the
   <code>contentType</code> strings. This could be corrected as follows:</p>
 
-<pre class="example-good brush: js highlight[5-6,9-10]">let clearKeyOptions = [
+<pre class="example-good brush: js">let clearKeyOptions = [
   {
     initDataTypes: ['keyids', 'webm'],
     audioCapabilities: [

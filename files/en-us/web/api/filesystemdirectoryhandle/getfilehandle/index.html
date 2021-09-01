@@ -12,7 +12,7 @@ browser-compat: api.FileSystemDirectoryHandle.getFileHandle
 <div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 </div>
 
-<p class="summary">The <strong><code>getFileHandle()</code></strong> method of the
+<p>The <strong><code>getFileHandle()</code></strong> method of the
   {{domxref("FileSystemDirectoryHandle")}} interface returns a
   {{domxref('FileSystemFileHandle')}} for a file with the specified name, within the
   directory the method is called.</p>
@@ -30,6 +30,7 @@ browser-compat: api.FileSystemDirectoryHandle.getFileHandle
     the file you wish to retrieve.</dd>
   <dt><em>options</em> {{optional_inline}}</dt>
   <dd>
+    <p>An object with the following properties:</p>
     <ul>
       <li><code>create</code>: A {{jsxref('Boolean')}}. Default <code>false</code>. When
         set to <code>true</code> if the file is not found, one with the specified name

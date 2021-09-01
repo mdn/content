@@ -5,15 +5,14 @@ tags:
   - API
   - Beginner
   - File
-  - File System API
   - File and Directory Entries API
   - Guide
   - Introduction
-  - Non-standard
+browser-compat: api.FileSystem
 ---
-<div>{{DefaultAPISidebar("File System API")}}{{Non-standard_header}}</div>
+<div>{{DefaultAPISidebar("File and Directory Entries API")}}</div>
 
-<p><span class="seoSummary">The <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</a> simulates a local file system that web apps can navigate around. You can develop apps that can read, write, and create files and directories in a sandboxed, virtual file system.</span></p>
+<p>The <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</a> simulates a local file system that web apps can navigate around. You can develop apps that can read, write, and create files and directories in a sandboxed, virtual file system.</p>
 
 <p>The File and Directory Entries API interacts with other related APIs. It was built on the File Writer API, which, in turn, was built on File API. Each of the APIs adds different functionality. These APIs are a giant evolutionary leap for web apps, which can now cache and process large amounts of data. </p>
 
@@ -187,46 +186,23 @@ tags:
 <p>This section defines and explains terms used in the File and Directory Entries API.</p>
 
 <dl>
- <dt><a name="gloss_blob">blob</a></dt>
+ <dt>blob</dt>
  <dd>Stands for binary large object. A blob is a set of binary data that is stored as a single object. It is a general-purpose way to reference binary data in web applications. A blob can be an image or an audio file.</dd>
- <dt><a name="gloss_Blob">Blob</a></dt>
+ <dt>Blob</dt>
  <dd>Blob—with a capital B—is a data structure that is immutable, which means that binary data referenced by a Blob cannot be modified directly. This makes Blobs act predictably when they are passed to asynchronous APIs.</dd>
- <dt><a name="gloss_persistent_storage">persistent storage</a></dt>
+ <dt>persistent storage</dt>
  <dd>Persistent storage is storage that stays in the browser unless the user expunges it or the app deletes it. </dd>
- <dt><a name="gloss_temporary_storage">temporary storage</a></dt>
+ <dt>temporary storage</dt>
  <dd>Transient storage is available to any web app. It is automatic and does not need to be requested, but the browser can delete the storage without warning.</dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('File System API')}}</td>
-   <td>{{Spec2('File System API')}}</td>
-   <td>Draft of proposed API</td>
-  </tr>
- </tbody>
-</table>
-
-<p>This API has no official W3C or WHATWG specification.</p>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<h3 id="FileSystem"><code>FileSystem</code></h3>
-
-<p>{{Compat("api.FileSystem", 0)}}</p>
-
-<h3 id="FileSystemSync_property"><code>FileSystemSync</code> property</h3>
-
-<p>{{Compat("api.FileSystemSync", 0)}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

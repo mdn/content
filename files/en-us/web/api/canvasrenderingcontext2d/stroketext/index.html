@@ -31,7 +31,7 @@ browser-compat: api.CanvasRenderingContext2D.strokeText
   on it.</p>
 
 <div class="notecard note">
-  <p>Use the {{domxref('CanvasRenderingContext2D.fillText()', 'fillText()')}} method to
+  <p><strong>Note:</strong> Use the {{domxref('CanvasRenderingContext2D.fillText()', 'fillText()')}} method to
     fill the text characters rather than having just their outlines drawn.</p>
 </div>
 
@@ -86,7 +86,7 @@ browser-compat: api.CanvasRenderingContext2D.strokeText
 
 <p>The JavaScript code for this example follows.</p>
 
-<pre class="brush: js; highlight:[5]">const canvas = document.getElementById('canvas');
+<pre class="brush: js;">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.font = '50px serif';
@@ -116,7 +116,7 @@ ctx.strokeText('Hello world', 50, 90);
 
 <h4 id="JavaScript_2">JavaScript</h4>
 
-<pre class="brush: js; highlight:[5]">const canvas = document.getElementById('canvas');
+<pre class="brush: js;">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.font = '50px serif';

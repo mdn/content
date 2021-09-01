@@ -60,7 +60,7 @@ browser-compat: api.HTMLScriptElement.referrerPolicy
 </dl>
 
 <div class="notecard note">
-  <p><strong>Note</strong>: An empty string value (<code>""</code>) is both the default
+  <p><strong>Note:</strong> An empty string value (<code>""</code>) is both the default
     value, and a fallback value if <code>referrerpolicy</code> is not supported. If
     <code>referrerpolicy</code> is not explicitly specified on the
     <code>&lt;script&gt;</code> element, it will adopt a higher-level referrer policy,
@@ -71,7 +71,7 @@ browser-compat: api.HTMLScriptElement.referrerPolicy
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js;highlight:[3]">var scriptElem = document.createElement("script");
+<pre class="brush: js;">var scriptElem = document.createElement("script");
 scriptElem.src = "/";
 scriptElem.referrerPolicy = "unsafe-url";
 document.body.appendChild(scriptElem);

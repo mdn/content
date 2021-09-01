@@ -38,7 +38,7 @@ browser-compat: api.CanvasRenderingContext2D.fillText
   {{domxref("CanvasRenderingContext2D.direction","direction")}} properties.</p>
 
 <div class="notecard note">
-  <p>To draw the outlines of the characters in a string, call the context's
+  <p><strong>Note:</strong> To draw the outlines of the characters in a string, call the context's
     {{domxref("CanvasRenderingContext2D.strokeText", "strokeText()")}} method.</p>
 </div>
 
@@ -94,7 +94,7 @@ browser-compat: api.CanvasRenderingContext2D.fillText
 
 <p>The JavaScript code for this example follows.</p>
 
-<pre class="brush: js; highlight:[5]">const canvas = document.getElementById('canvas');
+<pre class="brush: js;">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.font = '50px serif';
@@ -124,7 +124,7 @@ ctx.fillText('Hello world', 50, 90);
 
 <h4 id="JavaScript_2">JavaScript</h4>
 
-<pre class="brush: js; highlight:[5]">const canvas = document.getElementById('canvas');
+<pre class="brush: js;">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.font = '50px serif';

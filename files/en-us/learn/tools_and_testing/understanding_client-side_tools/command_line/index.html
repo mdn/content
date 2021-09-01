@@ -261,9 +261,9 @@ cd src</pre>
 
 <h2 id="A_slightly_more_complex_example">A slightly more complex example</h2>
 
-<p>Let’s go through something a bit more complicated. We will first try to fetch the contents of MDN's "fetch" page using the <code>curl</code> command (which can be used to request content from URLs), from <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">https://developer.mozilla.org/en-US/docs/Web/API/fetch</a>.</p>
+<p>Let’s go through something a bit more complicated. We will first try to fetch the contents of MDN's "fetch" page using the <code>curl</code> command (which can be used to request content from URLs), from <a href="/en-US/docs/Web/API/fetch">https://developer.mozilla.org/en-US/docs/Web/API/fetch</a>.</p>
 
-<p>However, this URL is the old location of the page. If you enter it in a new browser tab, you’ll (eventually) get redirected to <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch</a>.</p>
+<p>However, this URL is the old location of the page. If you enter it in a new browser tab, you’ll (eventually) get redirected to <a href="/en-US/docs/Web/API/fetch">https://developer.mozilla.org/en-US/docs/Web/API/fetch</a>.</p>
 
 <p>Therefore, if you use curl to request https://developer.mozilla.org/docs/Web/API/fetch, you won’t get an output. Try it now:</p>
 
@@ -282,7 +282,7 @@ cd src</pre>
 <pre class="brush: bash">location: /en-US/docs/Web/API/fetch
 location: /en-US/docs/Web/API/GlobalFetch/GlobalFetch.fetch()
 location: /en-US/docs/Web/API/GlobalFetch/fetch
-location: /en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch</pre>
+location: /en-US/docs/Web/API/fetch</pre>
 
 <p>Although contrived, we could take this result a little further and transform the <code>location:</code> line contents, adding the base origin to the start of each one so that we get complete URLs printed out. For that, we'll add <code>awk</code> to the mix (which is a programming language akin to JavaScript or Ruby or Python, just a lot older!).</p>
 
@@ -295,7 +295,7 @@ location: /en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch</pre>
 <pre class="brush: bash">https://developer.mozilla.org/en-US/docs/Web/API/fetch
 https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/GlobalFetch.fetch()
 https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch
-https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch</pre>
+https://developer.mozilla.org/en-US/docs/Web/API/fetch</pre>
 
 <p>By combining these commands we've customised the output to show the full URLs that the Mozilla server is redirecting through when we request the <code>/docs/Web/API/fetch</code> URL.<br>
  Getting to know your system will prove useful in years to come — learn how these single serving tools work and how they can become part of your arsenal to solve niche problems.</p>

@@ -15,16 +15,16 @@ browser-compat: api.Navigator.battery
 ---
 <div>{{ApiRef("Battery API")}}{{deprecated_header}}</div>
 
-<p><span class="seoSummary">The <strong><code>battery</code></strong> read-only property
+<p>The <strong><code>battery</code></strong> read-only property
     returns a {{DOMxRef("BatteryManager")}} which provides information about the system's
     battery charge level and whether the device is charging and exposes events that fire
     when these parameters change. This interface was introduced in early drafts of the <a
       href="/en-US/docs/Web/API/Battery_Status_API">Battery Status API</a> and but has
     been replaced with {{JSxRef("Promise")}}-based
-    {{DOMxRef("Navigator.getBattery","Navigator.getBattery()")}}.</span></p>
+    {{DOMxRef("Navigator.getBattery","Navigator.getBattery()")}}.</p>
 
 <div class="note">
-  <p>The <code>battery</code> property has been removed in favor of the standard
+  <p><strong>Note:</strong> The <code>battery</code> property has been removed in favor of the standard
     {{DOMxRef("Navigator.getBattery","Navigator.getBattery()")}} method, which returns a
     battery {{JSxRef("Promise")}}.</p>
 </div>

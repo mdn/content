@@ -12,9 +12,9 @@ browser-compat: api.CrashReportBody
 ---
 <div>{{SeeCompatTable}}{{APIRef("Reporting API")}}</div>
 
-<p class="summary">The <code>CrashReportBody</code> interface of the <a href="/en-US/docs/Web/API/Reporting_API">Reporting API</a> represents the body of a crash report (the return value of its {{domxref("Report.body")}} property).</p>
+<p>The <code>CrashReportBody</code> interface of the <a href="/en-US/docs/Web/API/Reporting_API">Reporting API</a> represents the body of a crash report (the return value of its {{domxref("Report.body")}} property).</p>
 
-<p class="summary">A crash report is generated when a document becomes unusable due to the browser (or one of its processes) crashing. For security reasons, no details of the crash are communicated in the body except for a general crash reason.</p>
+<p>A crash report is generated when a document becomes unusable due to the browser (or one of its processes) crashing. For security reasons, no details of the crash are communicated in the body except for a general crash reason.</p>
 
 <h2 id="Properties">Properties</h2>
 
@@ -45,7 +45,7 @@ browser-compat: api.CrashReportBody
 }</pre>
 
 <div class="notecard note">
-<p><strong>Note</strong>: Crash reports are always delivered to the endpoint group named <code>default</code>; there is currently no way to override this. If you want to receive other kinds of reports, but not crash reports, make sure to use a different name for the endpoint group that you choose for those reports. </p>
+<p><strong>Note:</strong> Crash reports are always delivered to the endpoint group named <code>default</code>; there is currently no way to override this. If you want to receive other kinds of reports, but not crash reports, make sure to use a different name for the endpoint group that you choose for those reports. </p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>

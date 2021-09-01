@@ -73,7 +73,7 @@ objectStore1.put("1", "key");
  <dt>{{domxref("IDBTransaction.abort()")}}</dt>
  <dd>Rolls back all the changes to objects in the database associated with this transaction. If this transaction has been aborted or completed, this method fires an error event.</dd>
  <dt>{{domxref("IDBTransaction.objectStore()")}}</dt>
- <dd>Returns an {{domxref("IDBObjectStore")}} object representing an <span class="internalDFN">object store</span> that is part of the <span class="internalDFN">scope</span> of this <span class="internalDFN">transaction</span>.</dd>
+ <dd>Returns an {{domxref("IDBObjectStore")}} object representing an object store that is part of the scope of this transaction.</dd>
  <dt>{{domxref("IDBTransaction.commit()")}}</dt>
  <dd>For an active transaction, commits the transaction. Note that this doesn't normally <em>have</em> to be called — a transaction will automatically commit when all outstanding requests have been satisfied and no new requests have been made. <code>commit()</code> can be used to start the commit process without waiting for events from outstanding requests to be dispatched.</dd>
 </dl>
@@ -99,7 +99,7 @@ objectStore1.put("1", "key");
 <div>{{Deprecated_Header}}</div>
 
 <div class="warning">
-<p>These constants are no longer available — they were removed in Gecko 25. You should use the string constants directly instead. ({{ bug(888598) }})</p>
+<p><strong>Warning:</strong> These constants are no longer available — they were removed in Gecko 25. You should use the string constants directly instead. ({{ bug(888598) }})</p>
 </div>
 
 

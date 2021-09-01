@@ -17,12 +17,14 @@ browser-compat: api.MediaTrackSupportedConstraints.frameRate
 ---
 <div>{{APIRef("Media Capture and Streams")}}</div>
 
-<p><span class="seoSummary">The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
+<p>The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
     <strong><code>frameRate</code></strong> property is a read-only Boolean value which is
     present (and set to <code>true</code>) in the object returned by
     {{domxref("MediaDevices.getSupportedConstraints()")}} if and only if the
     {{Glossary("user agent")}} supports the {{domxref("MediaTrackConstraints.frameRate",
-    "frameRate")}} constraint.</span> If the constraint isn't supported, it's not included
+    "frameRate")}} constraint.</p>
+
+<p>If the constraint isn't supported, it's not included
   in the list, so this value will never be <code>false</code>.</p>
 
 <p>The <code>frameRate</code> constraint can be used to establish acceptable upper and
@@ -44,7 +46,7 @@ browser-compat: api.MediaTrackSupportedConstraints.frameRate
   allow specifying limits on the frame rate for video tracks.</p>
 
 <div class="note">
-  <p>If this property is present, its value is always <code>true</code>.</p>
+  <p><strong>Note:</strong> If this property is present, its value is always <code>true</code>.</p>
 </div>
 
 <h2 id="Example">Example</h2>

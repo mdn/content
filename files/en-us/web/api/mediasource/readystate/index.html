@@ -46,7 +46,7 @@ browser-compat: api.MediaSource.readyState
     the source</a> for further investigation.)</p>
 
 <pre
-  class="brush: js  language-js">if ('MediaSource' in window &amp;&amp; MediaSource.isTypeSupported(mimeCodec)) {
+  class="brush: js ">if ('MediaSource' in window &amp;&amp; MediaSource.isTypeSupported(mimeCodec)) {
   var mediaSource = new MediaSource;
   //console.log(mediaSource.readyState); // closed
   video.src = URL.createObjectURL(mediaSource);

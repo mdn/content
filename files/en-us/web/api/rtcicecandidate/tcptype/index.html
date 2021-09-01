@@ -9,6 +9,7 @@ tags:
 - RTCIceCandidate
 - Read-only
 - Reference
+- Property
 - SDP
 - WebRTC
 - WebRTC API
@@ -17,15 +18,10 @@ browser-compat: api.RTCIceCandidate.tcpType
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">The <strong>{{domxref("RTCIceCandidate")}}</strong>
-    interface's read-only <strong><code>tcpType</code></strong> property is included on
-    TCP candidates to provide additional details about the candidate type.</span></p>
+<p>The <strong>{{domxref("RTCIceCandidate")}}</strong> interface's read-only <strong><code>tcpType</code></strong> property is included on TCP candidates to provide additional details about the candidate type.</p>
 
-<p>The <code>tcpType</code> field's value is set when the
-  {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate()")}} constructor is used.
-  You can't directly set its value; instead, its value is automatically extracted from the
-  {{domxref("RTCIceCandidateInit.candidate", "candidate")}} a-line, if it's formatted
-  properly.</p>
+<p>The <code>tcpType</code> field's value is set from the <code>candidateInfo</code> options object passed to the {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate()")}} constructor.
+  You can't specify the value of <code>tcpType</code> directly in the options object, but its value is automatically extracted from the object's <code>candidate</code> a-line, if it's formatted properly.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -33,11 +29,11 @@ browser-compat: api.RTCIceCandidate.tcpType
 
 <h3 id="Value">Value</h3>
 
-<p>A {{domxref("DOMString")}} whose value is one of those defined by the {{domxref("RTCIceTcpCandidateType")}} enumerated type.</p>
+<p>If the {{domxref("RTCIceCandidate.protocol","protocol")}} is "tcp", <code>tcpType</code> has one of the following values:</p>
 
   <dl>
     <dt><code>"active"</code></dt>
-    <dd>The transport will try to open an outbound connection but won't receive inoming connection requests.</dd>
+    <dd>The transport will try to open an outbound connection but won't receive incoming connection requests.</dd>
     <dt><code>"passive"</code></dt>
     <dd>The transport will receive incoming connection requests but won't try to open an outbound connection.</dd>
     <dt><code>"so"</code></dt>
@@ -49,8 +45,7 @@ browser-compat: api.RTCIceCandidate.tcpType
 <h2 id="Example">Example</h2>
 
 <p>In this example, the candidate's {{domxref("RTCIceCandidate.protocol", "protocol")}}
-  and <code>tcpType</code> are used to adjust the user interface for simultaneous-open TCP
-  candidates.</p>
+  and <code>tcpType</code> are used to adjust the user interface for simultaneous-open TCP candidates.</p>
 
 <pre class="brush: js">if (candidate.protocol == "tcp" &amp;&amp; candidate.tcpType == "so") {
     adjustForSimultaneousOpen(candidate);
@@ -69,8 +64,7 @@ browser-compat: api.RTCIceCandidate.tcpType
 
 <ul>
   <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API/Protocols">Introduction to WebRTC
-      protocols</a></li>
+  <li><a href="/en-US/docs/Web/API/WebRTC_API/Protocols">Introduction to WebRTC protocols</a></li>
   <li><a href="/en-US/docs/Web/API/WebRTC_API/Connectivity">WebRTC connectivity</a></li>
   <li>{{domxref("RTCIceCandidate.protocol")}}</li>
   <li>{{domxref("RTCIceCandidate.type")}}</li>

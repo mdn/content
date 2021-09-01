@@ -12,7 +12,7 @@ browser-compat: api.CSSImportRule.href
 ---
 <p>{{APIRef("CSSOM")}}</p>
 
-<p class="summary">The read-only <strong><code>href</code></strong> property of the
+<p>The read-only <strong><code>href</code></strong> property of the
 	{{domxref("CSSImportRule")}} interface returns the URL specified by the
 	{{cssxref("@import")}} <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a>.</p>
 
@@ -36,7 +36,7 @@ browser-compat: api.CSSImportRule.href
 
 <pre class="brush:css">@import url("style.css") screen;</pre>
 
-<pre class="brush:javascript">let myRules = document.styleSheets[0].cssRules;
+<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
 console.log(myRules[0].href); //returns style.css</pre>
 
 <h2 id="Specifications">Specifications</h2>

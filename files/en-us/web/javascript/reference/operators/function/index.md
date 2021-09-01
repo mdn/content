@@ -136,7 +136,7 @@ button.addEventListener('click', function(event) {
 })
 ```
 
-### Using an immediately executed function expression
+### Using an Immediately Invoked Function Expression (IIFE)
 
 An anonymous function is created and called:
 

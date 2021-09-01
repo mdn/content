@@ -50,7 +50,7 @@ browser-compat: api.IIRFilterNode
 <p>However, if you need to create an odd-ordered IIR filter, you'll need to use <code>IIRFilterNode</code>. You may also find this interface useful if you don't need automation, or for other reasons.</p>
 
 <div class="note">
-<p>Once the node has been created, you can't change its coefficients.</p>
+<p><strong>Note:</strong> Once the node has been created, you can't change its coefficients.</p>
 </div>
 
 <p><code>IIRFilterNode</code>s have a tail-time reference; they continue to output non-silent audio with zero input. As an IIR filter, the non-zero input continues forever, but this can be limited after some finite time in practice, when the output has approached zero closely enough. The actual time that takes depends on the filter coefficients provided.</p>
@@ -77,9 +77,9 @@ browser-compat: api.IIRFilterNode
 
 <h2 id="Examples">Examples</h2>
 
-<p>You can find a simple IIR filter demo live <a href="https://codepen.io/Rumyra/pen/oPxvYB/">on Codepen</a>. Also see the <a href="https://github.com/mdn/webaudio-examples/tree/master/iirfilter-node">source code on GitHub</a>. It includes some different coefficient values for different lowpass frequencies — you can change the value of the <span class="pl-s1"><code><span class="pl-c1">filterNumber</span></code> constant to a value between 0 and 3 to check out the different available effects.</span></p>
+<p>You can find a simple IIR filter demo live <a href="https://codepen.io/Rumyra/pen/oPxvYB/">on Codepen</a>. Also see the <a href="https://github.com/mdn/webaudio-examples/tree/master/iirfilter-node">source code on GitHub</a>. It includes some different coefficient values for different lowpass frequencies — you can change the value of the <code>filterNumber</code> constant to a value between 0 and 3 to check out the different available effects.</p>
 
-<p><span class="pl-s1">Also see our <a href="/en-US/docs/Web/API/Web_Audio_API/Using_IIR_filters">Using IIR filters</a> guide for a full explanation.</span></p>
+<p>Also see our <a href="/en-US/docs/Web/API/Web_Audio_API/Using_IIR_filters">Using IIR filters</a> guide for a full explanation.</p>
 
 <h2 id="Specifications">Specifications</h2>
 

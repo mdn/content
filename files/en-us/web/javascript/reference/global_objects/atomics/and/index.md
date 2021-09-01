@@ -10,7 +10,7 @@ browser-compat: javascript.builtins.Atomics.and
 ---
 {{JSRef}}
 
-The static **`Atomics`\*\***`.and()`\*\*
+The static **`Atomics.and()`**
 method computes a bitwise AND with a given value at a given position in the array, and
 returns the old value at that position. This atomic operation guarantees that no other
 write happens until the modified value is written back.

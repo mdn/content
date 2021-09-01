@@ -27,7 +27,7 @@ browser-compat: api.Gamepad.displayId
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">var myDisplayId = gamepadInstance.displayId;</pre>
+<pre class="brush: js">const displayId = gamepadInstance.displayId;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -35,7 +35,7 @@ browser-compat: api.Gamepad.displayId
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js line-numbers language-js">window.addEventListener("gamepadconnected", function(e) {
+<pre class="brush: js">window.addEventListener("gamepadconnected", function(e) {
   if(!e.gamepad.displayId) {
     console.log('Gamepad connected');
   } else {

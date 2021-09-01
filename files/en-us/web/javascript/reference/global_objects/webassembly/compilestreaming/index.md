@@ -55,7 +55,7 @@ demo on GitHub, and [view
 it live](https://mdn.github.io/webassembly-examples/js-api-examples/compile-streaming.html) also) directly streams a .wasm module from an underlying source then
 compiles it to a {{jsxref("WebAssembly.Module")}} object. Because the
 `compileStreaming()`  function accepts a promise for a [`Response`](/en-US/docs/Web/API/Response "The Response interface of the Fetch API represents the response to a request.")
-object, you can directly pass it a [`WindowOrWorkerGlobalScope.fetch()`](/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch "The fetch() method of the WindowOrWorkerGlobalScope mixin starts the process of fetching a resource from the network, returning a promise which is fulfilled once the response is available.")
+object, you can directly pass it a [`fetch()`](/en-US/docs/Web/API/fetch)
 call, and it will pass the response into the function when it fulfills.
 
 ```js

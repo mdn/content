@@ -15,7 +15,7 @@ tags:
 ---
 <div>{{DefaultAPISidebar("Web Audio API")}}</div>
 
-<p class="summary" id="webaudioapibasics"><span class="seoSummary">Let's take a look at getting started with the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>. We'll briefly look at some concepts, then study a simple boombox example that allows us to load an audio track, play and pause it, and change its volume and stereo panning.</span></p>
+<p>Let's take a look at getting started with the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>. We'll briefly look at some concepts, then study a simple boombox example that allows us to load an audio track, play and pause it, and change its volume and stereo panning.</p>
 
 <p>The Web Audio API does not replace the {{HTMLElement("audio")}} media element, but rather complements it, just like {{HTMLElement("canvas")}} coexists alongside the {{HTMLElement("img")}} element. Your use case will determine what tools you use to implement audio. If you want to control playback of an audio track, the <code>&lt;audio&gt;</code> media element provides a better, quicker solution than the Web Audio API. If you want to carry out more complex audio processing, as well as playback, the Web Audio API provides much more power and control.</p>
 
@@ -56,7 +56,7 @@ const audioContext = new AudioContext();
 <p>So what's going on when we do this? A {{domxref("BaseAudioContext")}} is created for us automatically and extended to an online audio context. We'll want this because we're looking to play live sound.</p>
 
 <div class="note">
-<p><strong>Note</strong>: If you just want to process audio data, for instance, buffer and stream it but not play it, you might want to look into creating an {{domxref("OfflineAudioContext")}}.</p>
+<p><strong>Note:</strong> If you just want to process audio data, for instance, buffer and stream it but not play it, you might want to look into creating an {{domxref("OfflineAudioContext")}}.</p>
 </div>
 
 <h2 id="Loading_sound">Loading sound</h2>
@@ -67,7 +67,7 @@ const audioContext = new AudioContext();
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: If the sound file you're loading is held on a different domain you will need to use the <code>crossorigin</code> attribute; see <a href="/en-US/docs/Web/HTTP/CORS">Cross Origin Resource Sharing (CORS)</a> for more information.</p>
+<p><strong>Note:</strong> If the sound file you're loading is held on a different domain you will need to use the <code>crossorigin</code> attribute; see <a href="/en-US/docs/Web/HTTP/CORS">Cross Origin Resource Sharing (CORS)</a> for more information.</p>
 </div>
 
 <p>To use all the nice things we get with the Web Audio API, we need to grab the source from this element and <em>pipe</em> it into the context we have created. Lucky for us there's a method that allows us to do just that — {{domxref("AudioContext.createMediaElementSource")}}:</p>
@@ -80,14 +80,14 @@ const track = audioContext.createMediaElementSource(audioElement);
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: The <code>&lt;audio&gt;</code> element above is represented in the DOM by an object of type {{domxref("HTMLMediaElement")}}, which comes with its own set of functionality. All of this has stayed intact; we are merely allowing the sound to be available to the Web Audio API.</p>
+<p><strong>Note:</strong> The <code>&lt;audio&gt;</code> element above is represented in the DOM by an object of type {{domxref("HTMLMediaElement")}}, which comes with its own set of functionality. All of this has stayed intact; we are merely allowing the sound to be available to the Web Audio API.</p>
 </div>
 
 <h2 id="Controlling_sound">Controlling sound</h2>
 
 <p>When playing sound on the web, it's important to allow the user to control it. Depending on the use case, there's a myriad of options, but we'll provide functionality to play/pause the sound, alter the track's volume, and pan it from left to right.</p>
 
-<p>Controlling sound programmatically from JavaScript code is covered by browsers' autoplay support policies, as such is likely to be blocked without permission being granted by the user (or a whitelist). Autoplay policies typically require either explicit permission or a user engagement with the page before scripts can trigger audio to play.</p>
+<p>Controlling sound programmatically from JavaScript code is covered by browsers' autoplay support policies, as such is likely to be blocked without permission being granted by the user (or a allowlist). Autoplay policies typically require either explicit permission or a user engagement with the page before scripts can trigger audio to play.</p>
 
 <p>These special requirements are in place essentially because unexpected sounds can be annoying and intrusive, and can cause accessibility problems. You can learn more about this in our article <a href="/en-US/docs/Web/Media/Autoplay_guide">Autoplay guide for media and Web Audio APIs</a>.</p>
 
@@ -166,7 +166,7 @@ playButton.addEventListener('click', function() {
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: Range inputs are a really handy input type for updating values on audio nodes. You can specify a range's values and use them directly with the audio node's parameters.</p>
+<p><strong>Note:</strong> Range inputs are a really handy input type for updating values on audio nodes. You can specify a range's values and use them directly with the audio node's parameters.</p>
 </div>
 
 <p>So let's grab this input's value and update the gain value when the input node has its value changed by the user:</p>
@@ -179,7 +179,7 @@ volumeControl.addEventListener('input', function() {
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: The values of node objects (e.g. <code>GainNode.gain</code>) are not simple values; they are actually objects of type {{domxref("AudioParam")}} — these called parameters. This is why we have to set <code>GainNode.gain</code>'s <code>value</code> property, rather than just setting the value on <code>gain</code> directly. This enables them to be much more flexible, allowing for passing the parameter a specific set of values to change between over a set period of time, for example.</p>
+<p><strong>Note:</strong> The values of node objects (e.g. <code>GainNode.gain</code>) are not simple values; they are actually objects of type {{domxref("AudioParam")}} — these called parameters. This is why we have to set <code>GainNode.gain</code>'s <code>value</code> property, rather than just setting the value on <code>gain</code> directly. This enables them to be much more flexible, allowing for passing the parameter a specific set of values to change between over a set period of time, for example.</p>
 </div>
 
 <p>Great, now the user can update the track's volume! The gain node is the perfect node to use if you want to add mute functionality.</p>
@@ -190,7 +190,7 @@ volumeControl.addEventListener('input', function() {
 
 <p>There's a {{domxref("StereoPannerNode")}} node, which changes the balance of the sound between the left and right speakers, if the user has stereo capabilities.</p>
 
-<p><strong>Note</strong>: The <code>StereoPannerNode</code> is for simple cases in which you just want stereo panning from left to right. There is also a {{domxref("PannerNode")}}, which allows for a great deal of control over 3D space, or sound <em>spatialisation</em>, for creating more complex effects. This is used in games and 3D apps to create birds flying overhead, or sound coming from behind the user for instance.</p>
+<p><strong>Note:</strong> The <code>StereoPannerNode</code> is for simple cases in which you just want stereo panning from left to right. There is also a {{domxref("PannerNode")}}, which allows for a great deal of control over 3D space, or sound <em>spatialisation</em>, for creating more complex effects. This is used in games and 3D apps to create birds flying overhead, or sound coming from behind the user for instance.</p>
 
 <p>To visualise it, we will be making our audio graph look like this:</p>
 
@@ -203,7 +203,7 @@ const panner = new StereoPannerNode(audioContext, pannerOptions);
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: The constructor method of creating nodes is not supported by all browsers at this time. The older factory methods are supported more widely.</p>
+<p><strong>Note:</strong> The constructor method of creating nodes is not supported by all browsers at this time. The older factory methods are supported more widely.</p>
 </div>
 
 <p>Here our values range from -1 (far left) and 1 (far right). Again let's use a range type input to vary this parameter:</p>

@@ -36,7 +36,7 @@ browser-compat: api.EffectTiming.fill
     fill modes section below</a> for approaches that are simpler and more performant.</p>
 
 <div class="note">
-  <p>{{domxref("Element.animate()")}}, and {{domxref("KeyframeEffect.KeyframeEffect",
+  <p><strong>Note:</strong> {{domxref("Element.animate()")}}, and {{domxref("KeyframeEffect.KeyframeEffect",
     "KeyframeEffect()")}} accept an object of timing properties including
     <code>fill.</code> The value of <code>fill</code> corresponds directly
     to {{domxref("EffectTiming.fill", "fill")}} in {{domxref("EffectTiming")}} objects
@@ -117,10 +117,7 @@ browser-compat: api.EffectTiming.fill
 &lt;/div&gt;
 </pre>
 
-<div class="hidden">
-  <h4 id="CSS_content">CSS content</h4>
-
-  <pre class="brush: css">.main {
+<pre class="brush: css hidden">.main {
   width: 300px;
   height:300px;
   border: 1px solid black;
@@ -149,7 +146,6 @@ browser-compat: api.EffectTiming.fill
   color: white;
   font: bold 2em "Lucida Grande", "Open Sans", sans-serif;
 }</pre>
-</div>
 
 <p>While there's other CSS involved in this example, the part that really matters for our
   purposes is the CSS that styles the <code>"box"</code> element that we'll be animating.

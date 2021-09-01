@@ -17,7 +17,7 @@ tags:
 <p>{{AvailableInWorkers}}</p>
 
 <div class="note">
-<p><strong>Note</strong>: IndexedDB API is powerful, but may seem too complicated for simple cases. If you'd prefer a simple API, try libraries in <a href="#see_also">See also</a> section that make IndexedDB more programmer-friendly.</p>
+<p><strong>Note:</strong> IndexedDB API is powerful, but may seem too complicated for simple cases. If you'd prefer a simple API, try libraries in <a href="#see_also">See also</a> section that make IndexedDB more programmer-friendly.</p>
 </div>
 
 <h2 id="Key_concepts_and_usage">Key concepts and usage</h2>
@@ -31,7 +31,7 @@ tags:
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: Like most web storage solutions, IndexedDB follows a <a href="https://www.w3.org/Security/wiki/Same_Origin_Policy">same-origin policy</a>. So while you can access stored data within a domain, you cannot access data across different domains.</p>
+<p><strong>Note:</strong> Like most web storage solutions, IndexedDB follows a <a href="https://www.w3.org/Security/wiki/Same_Origin_Policy">same-origin policy</a>. So while you can access stored data within a domain, you cannot access data across different domains.</p>
 </div>
 
 <h3 id="Synchronous_and_asynchronous">Synchronous and asynchronous</h3>
@@ -44,15 +44,13 @@ tags:
 
 <h2 id="Interfaces">Interfaces</h2>
 
-<p>To get access to a database, call <a href="/en-US/docs/Web/API/IDBFactory/open"><code>open()</code></a> on the <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB"><code>indexedDB</code></a> attribute of a <a href="/en-US/docs/Web/API/Window">window</a> object. This method returns an {{domxref("IDBRequest")}} object; asynchronous operations communicate to the calling application by firing events on {{domxref("IDBRequest")}} objects.</p>
+<p>To get access to a database, call <a href="/en-US/docs/Web/API/IDBFactory/open"><code>open()</code></a> on the <a href="/en-US/docs/Web/API/indexedDB"><code>indexedDB</code></a> attribute of a <a href="/en-US/docs/Web/API/Window">window</a> object. This method returns an {{domxref("IDBRequest")}} object; asynchronous operations communicate to the calling application by firing events on {{domxref("IDBRequest")}} objects.</p>
 
 <h3 id="Connecting_to_a_database">Connecting to a database</h3>
 
 <dl>
- <dt>{{domxref("IDBEnvironment")}}</dt>
- <dd>Provides access to IndexedDB functionality. It is implemented by the {{domxref("window")}} and {{domxref("worker")}} objects. This interface isn't part of the 2.0 specification.</dd>
  <dt>{{domxref("IDBFactory")}}</dt>
- <dd>Provides access to a database. This is the interface implemented by the global object {{domxref("WindowOrWorkerGlobalScope/indexedDB", "indexedDB")}} and is therefore the entry point for the API.</dd>
+ <dd>Provides access to a database. This is the interface implemented by the global object {{domxref("indexedDB")}} and is therefore the entry point for the API.</dd>
  <dt>{{domxref("IDBOpenDBRequest")}}</dt>
  <dd>Represents a request to open a database.</dd>
  <dt>{{domxref("IDBDatabase")}}</dt>
@@ -123,25 +121,16 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("IndexedDB 2")}}</td>
-   <td>{{Spec2("IndexedDB 2")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://w3c.github.io/IndexedDB/">Indexed Database API</a></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="See_also">See also</h2>
@@ -156,7 +145,7 @@ tags:
  <li><a href="https://www.npmjs.com/package/idb">idb</a>: A tiny (~1.15k) library that mostly mirrors the IndexedDB API, but with small improvements that make a big difference to usability.</li>
  <li><a href="https://www.npmjs.com/package/idb-keyval">idb-keyval</a>: A super-simple-small (~600B) promise-based keyval store implemented with IndexedDB</li>
  <li><a href="https://www.npmjs.com/package/@sifrr/storage">sifrr-storage:</a> A small (~2kB) promise based library for client side key-value storage. Works with IndexedDB, localStorage, WebSQL, Cookies. Can automatically use supported storage available based on priority.</li>
- <li><a href="https://github.com/google/lovefield">lovefield</a>: <span class="mr-2 text-gray-dark">Lovefield is a relational database for web apps. Written in JavaScript, works cross-browser. Provides SQL-like APIs that are fast, safe, and easy to use.</span></li>
+ <li><a href="https://github.com/google/lovefield">lovefield</a>: Lovefield is a relational database for web apps. Written in JavaScript, works cross-browser. Provides SQL-like APIs that are fast, safe, and easy to use.</li>
  <li><a href="https://github.com/hyoo-ru/mam_mol/tree/master/db">$mol_db</a>: Tiny (~1.3kB) TypeScript facade with promise-based api and automatic migrations.</li>
-  
+
 </ul>
