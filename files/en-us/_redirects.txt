@@ -551,6 +551,7 @@
 /en-US/docs/CSS/Specificity	/en-US/docs/Web/CSS/Specificity
 /en-US/docs/CSS/Syntax	/en-US/docs/Web/CSS/Syntax
 /en-US/docs/CSS/Text-overflow_TEST	/en-US/docs/Web/CSS/text-overflow
+/en-US/docs/CSS/Tools	/en-US/docs/Web/CSS/Tools
 /en-US/docs/CSS/Tutorial/Using_CSS_flexible_boxes	/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 /en-US/docs/CSS/Tutorials	/en-US/docs/Web/CSS/Tutorials
 /en-US/docs/CSS/Tutorials/Using_CSS_animations	/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations
@@ -10017,7 +10018,6 @@
 /en-US/docs/Web/CSS/Selector_lists	/en-US/docs/Web/CSS/Selector_list
 /en-US/docs/Web/CSS/Selectors	/en-US/docs/Web/CSS/CSS_Selectors
 /en-US/docs/Web/CSS/Text-overflow_TEST	/en-US/docs/Web/CSS/text-overflow
-/en-US/docs/Web/CSS/Tools	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/Tools/Border-image_generator	/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator
 /en-US/docs/Web/CSS/Tools/Border-radius_generator	/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator
 /en-US/docs/Web/CSS/Tools/Box-shadow_generator	/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
