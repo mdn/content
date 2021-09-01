@@ -39,8 +39,8 @@ browser-compat: api.PublicKeyCredentialCreationOptions.pubKeyCredParams
   <dd>A numeric identifier for the algorithm to be used to generate the key pair. The
     links between identifier and algorithms are defined in <a
       href="https://www.iana.org/assignments/cose/cose.xhtml#algorithms">this IANA
-      registry</a> (e.g. <code>-7</code> indicates the elliptic curve algorithm ECDSA with
-    SHA-256).</dd>
+    registry</a>. Targetting ES256 (<code>-7</code>) and RS256 (<code>-257</code>) provides
+    coverage for the vast majority of authenticators.</dd>
 </dl>
 
 <p>Though those elements are sorted by preference (the first element being the most
