@@ -21,7 +21,7 @@ browser-compat: api.Navigator.canShare
   <li>Files are specified but the implementation does not support file sharing.</li>
   <li>Sharing the specified data would be considered a "hostile share" by the user-agent.</li>
 </ul>
-  
+
 <p>The Web Share API is gated by the <a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy/web-share">web-share</a> permission policy.
     The <strong><code>canShare()</code></strong> method will return <code>false</code> if the permission is supported but has not been granted.</p>
 
@@ -58,7 +58,7 @@ navigator.canShare(data)</pre>
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="sending_the_mdn_url">Sending the MDN URL</h3>
+<h3 id="Sending_the_MDN_URL">Sending the MDN URL</h3>
 
 <p>The example uses <code>navigator.canShare()</code> to check whether <code>navigator.share()</code> can share the specified data.</p>
 
@@ -92,7 +92,7 @@ else if (navigator.canShare(shareData)) {
 
 <p>The box below should state whether <code>navigator.canShare()</code> is supported on this browser, and if so, whether or not we can use <code>navigator.share()</code> to share the specified data:</p>
 
-<p>{{EmbedLiveSample('sending_the_mdn_url')}}</p>
+<p>{{EmbedLiveSample('Sending_the_MDN_URL')}}</p>
 
 
 <h3>Feature checking example</h3>
