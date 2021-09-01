@@ -105,7 +105,7 @@ try {
   // Catch any other errors.
 }</pre>
 
-<p>Once the payment flow has been triggered using {{domxref("PaymentRequest.show()")}} and the promise resolves successfully, the {{domxref("PaymentResponse")}} object available inside the fulfilled promise (<code>instrumentResponse</code> above) will have a {{domxref("details","PaymentResponse.details")}} property that will contain response details. This has to conform to the structure defined by the {{domxref("BasicCardResponse")}} dictionary, and may look something like this:</p>
+<p>Once the payment flow has been triggered using {{domxref("PaymentRequest.show()")}} and the promise resolves successfully, the {{domxref("PaymentResponse")}} object available inside the fulfilled promise (<code>instrumentResponse</code> above) will have a {{domxref("PaymentResponse.details", "details")}} property that will contain response details. This has to conform to the structure defined by the {{domxref("BasicCardResponse")}} dictionary, and may look something like this:</p>
 
 <pre class="brush: js">{
   "cardNumber' : '9999999999999999",
