@@ -648,7 +648,7 @@ function invite(evt) {
 <p>Here, we apply our <code>closeVideoCall()</code> function when the ICE connection state changes to <code>"closed"</code> or <code>"failed"</code>. This handles shutting down our end of the connection so that we're ready start or accept a call once again.</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> We don't watch the <code>disconnected</code> signaling state here as it can indicate temporary issues and may go back to a <code>connected</code> state after some time. Watching it would close the video call on any temporary network issue.</p>
+<p><strong>Note:</strong> We don't watch the <code>disconnected</code> signaling state here as it can indicate temporary issues and may go back to a <code>connected</code> state after some time. Watching it would close the video call on any temporary network issue.</p>
 </div>
 
 <h5 id="ICE_signaling_state">ICE signaling state</h5>

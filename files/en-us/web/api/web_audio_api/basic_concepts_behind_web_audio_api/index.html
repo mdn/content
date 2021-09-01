@@ -84,7 +84,7 @@ tags:
 var buffer = context.createBuffer(2, 22050, 44100);</pre>
 
 <div class="note">
-<p><strong>Note:</strong> In <a href="https://en.wikipedia.org/wiki/Digital_audio" title="Digital audio">digital audio</a>, <strong>44,100 <a href="https://en.wikipedia.org/wiki/Hertz">Hz</a></strong> (alternately represented as <strong>44.1 kHz</strong>) is a common <a href="https://en.wikipedia.org/wiki/Sampling_frequency" title="Sampling frequency">sampling frequency</a>. Why 44.1kHz? <br>
+<p><strong>Note:</strong> In <a href="https://en.wikipedia.org/wiki/Digital_audio" title="Digital audio">digital audio</a>, <strong>44,100 <a href="https://en.wikipedia.org/wiki/Hertz">Hz</a></strong> (alternately represented as <strong>44.1 kHz</strong>) is a common <a href="https://en.wikipedia.org/wiki/Sampling_frequency" title="Sampling frequency">sampling frequency</a>. Why 44.1kHz? <br>
  <br>
  Firstly, because the <a href="https://en.wikipedia.org/wiki/Hearing_range" title="Hearing range">hearing range</a> of human ears is roughly 20 Hz to 20,000 Hz. Via the <a href="https://en.wikipedia.org/wiki/Nyquist%E2%80%93Shannon_sampling_theorem" title="Nyquist–Shannon sampling theorem">Nyquist–Shannon sampling theorem</a>, the sampling frequency must be greater than twice the maximum frequency one wishes to reproduce. Therefore, the sampling rate has to be greater than 40 kHz.<br>
  <br>
@@ -99,7 +99,7 @@ var buffer = context.createBuffer(1, 22050, 22050);</pre>
 <p>If you use this call, you will get a mono buffer with just one channel), that when played back on an AudioContext running at 44100Hz, will be automatically <em>resampled</em> to 44100Hz (and therefore yield 44100 frames), and last for 1.0 second: 44100 frames/44100Hz = 1 second.</p>
 
 <div class="note">
-<p><strong>Note:</strong> audio resampling is very similar to image resizing. Say you've got a 16 x 16 image, but you want it to fill a 32x32 area. You resize (or resample) it. The result has less quality (it can be blurry or edgy, depending on the resizing algorithm), but it works, with the resized image taking up less space. Resampled audio is exactly the same: you save space, but in practice you will be unable to properly reproduce high frequency content, or treble sound.</p>
+<p><strong>Note:</strong> Audio resampling is very similar to image resizing. Say you've got a 16 x 16 image, but you want it to fill a 32x32 area. You resize (or resample) it. The result has less quality (it can be blurry or edgy, depending on the resizing algorithm), but it works, with the resized image taking up less space. Resampled audio is exactly the same: you save space, but in practice you will be unable to properly reproduce high frequency content, or treble sound.</p>
 </div>
 
 <h3 id="Planar_versus_interleaved_buffers">Planar versus interleaved buffers</h3>
