@@ -31,9 +31,9 @@ tags:
 
 <p><code><a href="/en-US/docs/DOM/window.navigator.onLine">navigator.onLine</a></code> is a property that maintains a <code>true</code>/<code>false</code> value (<code>true</code> for online, <code>false</code> for offline).</p>
 
-<p>This property is updated whenever the user switches into "Offline Mode" (File → Work Offline in Firefox). Additionally, this property should update whenever a browser is no longer capable of connecting to the network. According to the specification:</p>
+<p>This property is updated whenever the user switches into "Offline Mode" (File → Work Offline in Firefox). Additionally, this property should update whenever a browser is no longer capable of connecting to the network. According to the <a href="https://www.whatwg.org/specs/web-apps/current-work/#offline">specification</a>:</p>
 
-<blockquote cite="https://www.whatwg.org/specs/web-apps/current-work/#offline">The <code>navigator.onLine</code> attribute must return false if the user agent will not contact the network when the user follows links or when a script requests a remote page (or knows that such an attempt would fail)...</blockquote>
+<blockquote>The <code>navigator.onLine</code> attribute must return false if the user agent will not contact the network when the user follows links or when a script requests a remote page (or knows that such an attempt would fail)...</blockquote>
 
 <p>Firefox 2 updates this property when switching to/from the browser's Offline mode.  <a href="/en-US/Firefox/Releases/41#Miscellaneous">Firefox 41</a> updates this property also when the OS reports a change in network connectivity on Windows, Linux, and OS X.</p>
 
