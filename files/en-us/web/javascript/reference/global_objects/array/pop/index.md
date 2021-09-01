@@ -89,7 +89,7 @@ const collection = {
         // obj.length will be incremented automatically
         // every time an element is added.
         
-        // returning what push returns, that is
+        // Returning what push returns; that is
         // the new value of length property.
         return [].push.call(this, ...elements);
     },
