@@ -29,7 +29,7 @@ browser-compat: api.MutationObserverInit.characterData
   interfaces.</p>
 
 <div class="notecard note">
-  <p>Note that this doesn't monitor content of an {{domxref("HTMLElement")}}, even if it
+  <p><strong>Note:</strong> This doesn't monitor content of an {{domxref("HTMLElement")}}, even if it
     only contains text inside, as it only monitors text nodes themselves. So either pass
     directly a text node to the {{domxref("MutationObserver.observe", "observe()")}}
     method or you need to also set <code>subtree: true</code>.</p>

@@ -34,30 +34,30 @@ browser-compat: api.IDBDatabase.transaction
 
 <dl>
   <dt><code>storeNames</code></dt>
-  <dd>The names of object stores that are in the scope of the new transaction, declared as
+  <dd>
+    <p>The names of object stores that are in the scope of the new transaction, declared as
     an array of strings. Specify only the object stores that you need to access.<br>
     If you need to access only one object store, you can specify its name as a string.
-    Therefore the following lines are equivalent:</dd>
-  <dd>
+    Therefore the following lines are equivalent:</p>
     <pre class="brush: js">var transaction = db.transaction(['my-store-name']);
 var transaction = db.transaction('my-store-name');</pre>
-  </dd>
-  <dd>If you need to access all object stores in the database, you can use the property
-    {{domxref("IDBDatabase.objectStoreNames")}}:
+    <p>If you need to access all object stores in the database, you can use the property
+    {{domxref("IDBDatabase.objectStoreNames")}}:</p>
     <pre
       class="brush: js">var transaction = db.transaction(db.objectStoreNames);</pre>
+    <p>Passing an empty array will throw an exception.</p>
   </dd>
-  <dd>Passing an empty array will throw an exception.</dd>
   <dt><code>mode</code> {{optional_inline}}</dt>
-  <dd>The types of access that can be performed in the transaction. Transactions are
+  <dd>
+    <p>The types of access that can be performed in the transaction. Transactions are
     opened in one of three modes: <code>readonly</code>, <code>readwrite</code> and
     <code>readwriteflush</code> (non-standard, Firefox-only.) <code>versionchange</code>
     mode can't be specified here. If you don't provide the parameter, the default access
     mode is <code>readonly</code>. To avoid slowing things down, don't open a
     <code>readwrite</code> transaction unless you actually need to write into the
-    database.</dd>
-  <dd>If you need to open the object store in <code>readwrite</code> mode to change data,
-    you would use the following:
+    database.</p>
+    <p>If you need to open the object store in <code>readwrite</code> mode to change data,
+    you would use the following:</p>
     <pre
       class="brush:js;">var transaction = db.transaction('my-store-name', "readwrite");</pre>
 

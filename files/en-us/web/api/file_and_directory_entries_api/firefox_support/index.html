@@ -5,7 +5,6 @@ tags:
   - API
   - Chrome
   - Compatibility
-  - File System API
   - File and Directory Entries API
   - Files
   - Firefox
@@ -15,7 +14,7 @@ tags:
   - google
   - google chrome
 ---
-<div>{{DefaultAPISidebar("File System API")}}{{Non-standard_header}}</div>
+<div>{{DefaultAPISidebar("File and Directory Entries API")}}</div>
 
 <p>The original File System API was created to let browsers implement support for accessing a sandboxed virtual file system on the user's storage device. Work to standardize the specification was abandoned back in 2012, but by that point, Google Chrome included its own implementation of the API. Over time, a number of popular sites and Web applications came to use it, often without providing any means of falling back to standard APIs or even checking to be sure the API is available before using it. Mozilla instead opted to implement other APIs which can be used to solve many of the same problems, such as <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a>; see the blog post <a href="https://hacks.mozilla.org/2012/07/why-no-filesystem-api-in-firefox/">Why no FileSystem API in Firefox?</a> for more insights.</p>
 
@@ -86,13 +85,9 @@ var FileSystemEntry = window.FileSystemEntry || window.Entry;
  <li>Content scripts can't create file systems or initiate access to a file system. There are only two ways to get access to file system entries at this time:
   <ul>
    <li>The {{HTMLElement("input")}} element, using the {{domxref("HTMLInputElement.webkitEntries")}} property to access an array of {{domxref("FileSystemEntry")}} objects describing file system entries you can then read.</li>
-   <li>Using drag and drop by calling the {{domxref("DataTransferItem.getAsEntry()")}} method, which lets you get a {{domxref("FileSystemFileEntry")}} or {{domxref("FileSystemDirectoryEntry")}} for files dropped on a drop zone.</li>
+   <li>Using drag and drop by calling the {{domxref("DataTransferItem.webkitGetAsEntry")}} method, which lets you get a {{domxref("FileSystemFileEntry")}} or {{domxref("FileSystemDirectoryEntry")}} for files dropped on a drop zone.</li>
   </ul>
  </li>
- <li>You can't use the <code><a href="/en-US/docs/Web/API/LocalFileSystem#requestfilesystem">LocalFileSystem.requestFileSystem()</a></code> method to get access to a specified local file system.</li>
- <li>The <code><a href="/en-US/docs/Web/API/LocalFileSystem#resolvelocalfilesystemurl">LocalFileSystem.resolveLocalFileSystemURL()</a></code> method isn't implemented.</li>
- <li>Only the asynchronous versions of the interfaces are implemented. Any interfaces with names that end in "<code>Sync"</code> aren't available.</li>
- <li>Firefox only supports reading from files in the file system. You can't write to them. In particular, the {{domxref("FileSystemFileEntry.createWriter()")}} method, used to create a {{domxref("FileWriter")}} to handle writing to a file, is not implemented and will just return an error.</li>
  <li>Firefox doesn't support the <code>"filesystem:"</code> URL scheme.</li>
 </ul>
 
@@ -101,6 +96,6 @@ var FileSystemEntry = window.FileSystemEntry || window.Entry;
 <ul>
  <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</a></li>
  <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">Introduction to the File and Directory Entries API</a></li>
- <li>Latest but still early specification for the <a href="https://wicg.github.io/entries-api/">File and Directory Entries API</a>.</li>
+ <li><a href="https://wicg.github.io/entries-api/">File and Directory Entries API</a> specification</li>
  <li>Original specification for the <a href="https://dev.w3.org/2009/dap/file-system/file-dir-sys.html">File API: Directories and System</a> (often called the "FileSystem API"); Google Chrome was the only browser to implement this <strong>abandoned</strong> API.</li>
 </ul>

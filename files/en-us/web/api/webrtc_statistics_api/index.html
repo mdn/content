@@ -19,7 +19,7 @@ tags:
 
 <h2 id="Collecting_statistics">Collecting statistics</h2>
 
-<p>You can collect statistics at various levels throughout the WebRTC hierarchy of objects. Most broadly, you can call {{domxref("RTCPeerConnection.getStats", "getStats()")}} on an {{domxref("RTCPeerConnection")}} to get statistics for the connection overall. In this example, a new {{domxref("RTCPeerConnection")}} is created, and then {{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}} is used to set the function <code>getConnectionStats()</code> to be called every second.</p>
+<p>You can collect statistics at various levels throughout the WebRTC hierarchy of objects. Most broadly, you can call {{domxref("RTCPeerConnection.getStats", "getStats()")}} on an {{domxref("RTCPeerConnection")}} to get statistics for the connection overall. In this example, a new {{domxref("RTCPeerConnection")}} is created, and then {{domxref( "setInterval()")}} is used to set the function <code>getConnectionStats()</code> to be called every second.</p>
 
 <p>That function, in turn, uses {{domxref("RTCPeerConnection.getStats", "getStats()")}} to obtain statistics for the connection and to make use of that data.</p>
 
@@ -72,7 +72,7 @@ function getConnectionStats() {
    <th scope="row"><code>candidate-pair</code></th>
    <td>Statistics describing the change from one {{domxref("RTCIceTransport")}} to another, such as during an <a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart">ICE restart</a>.</td>
    <td>
-    <ul class="directory-tree">
+    <ul>
      <li>{{domxref("RTCIceCandidatePairStats")}}
       <ul>
        <li>{{domxref("RTCStats")}}</li>
@@ -85,7 +85,7 @@ function getConnectionStats() {
    <th scope="row"><code>certificate</code></th>
    <td>Statistics about a certificate being used by an {{domxref("RTCIceTransport")}}.</td>
    <td>
-    <ul class="directory-tree">
+    <ul>
      <li>{{domxref("RTCCertificateStats")}}
       <ul>
        <li>{{domxref("RTCStats")}}</li>
@@ -104,7 +104,7 @@ function getConnectionStats() {
    <th scope="row"><code>csrc</code></th>
    <td>Statistics for a single contributing source (CSRC) that contributed to one of the connection's inbound RTP streams.</td>
    <td>
-    <ul class="directory-tree">
+    <ul>
      <li>{{domxref("RTCRtpContributingSourceStats")}}
       <ul>
        <li>{{domxref("RTCStats")}}</li>
@@ -117,7 +117,7 @@ function getConnectionStats() {
    <th scope="row"><code>data-channel</code></th>
    <td>Statistics related to one {{domxref("RTCDataChannel")}} on the connection.</td>
    <td>
-    <ul class="directory-tree">
+    <ul>
      <li>{{domxref("RTCDataChannelStats")}}
       <ul>
        <li>{{domxref("RTCStats")}}</li>
@@ -130,7 +130,7 @@ function getConnectionStats() {
    <th scope="row"><code>ice-server</code></th>
    <td>Statistics about the connection to an {{Glossary("ICE")}} server ({{Glossary("STUN")}} or {{Glossary("TURN")}}.</td>
    <td>
-    <ul class="directory-tree">
+    <ul>
      <li>{{domxref("RTCIceServerStats")}}
       <ul>
        <li>{{domxref("RTCStats")}}</li>
@@ -143,7 +143,7 @@ function getConnectionStats() {
    <th scope="row"><code>inbound-rtp</code></th>
    <td>Statistics describing the state of one of the connection's inbound data streams.</td>
    <td>
-    <ul class="directory-tree">
+    <ul>
      <li>{{domxref("RTCInboundRtpStreamStats")}}
       <ul>
        <li>{{domxref("RTCReceivedRtpStreamStats")}}
@@ -164,7 +164,7 @@ function getConnectionStats() {
    <th scope="row"><code>local-candidate</code></th>
    <td>Statistics about a local ICE candidate associated with the connection's {{domxref("RTCIceTransport")}}s.</td>
    <td>
-    <ul class="directory-tree">
+    <ul>
      <li>{{domxref("RTCIceCandidateStats")}}
       <ul>
        <li>{{domxref("RTCStats")}}</li>
@@ -177,7 +177,7 @@ function getConnectionStats() {
    <th scope="row"><code>media-source</code></th>
    <td>Statistics about the media produced by the {{domxref("MediaStreamTrack")}} attached to an RTP sender. The dictionary this key maps to depends on the track's {{domxref("MediaStreamTrack.kind", "kind")}}.</td>
    <td>
-    <ul class="directory-tree">
+    <ul>
      <li>{{domxref("RTCAudioSourceStats")}} <em>or</em> {{domxref("RTCVideoSourceStats")}}
       <ul>
        <li>{{domxref("RTCMediaSourceStats")}}
@@ -194,7 +194,7 @@ function getConnectionStats() {
    <th scope="row"><code>outbound-rtp</code></th>
    <td>Statistics describing the state of one of the outbound data streams on this connection.</td>
    <td>
-    <ul class="directory-tree">
+    <ul>
      <li>{{domxref("RTCOutboundRtpStreamStats")}}
       <ul>
        <li>{{domxref("RTCSentRtpStreamStats")}}
@@ -215,7 +215,7 @@ function getConnectionStats() {
    <th scope="row"><code>peer-connection</code></th>
    <td>Statistics describing the state of the {{domxref("RTCPeerConnection")}}.</td>
    <td>
-    <ul class="directory-tree">
+    <ul>
      <li>{{domxref("RTCPeerConnectionStats")}}
       <ul>
        <li>{{domxref("RTCStats")}}</li>
@@ -228,7 +228,7 @@ function getConnectionStats() {
    <th scope="row"><code>receiver</code></th>
    <td>Statistics related to a specific {{domxref("RTCRtpReceiver")}} and the media associated with that receiver. The specific type of object representing the statistics depends on the media <code>kind</code>.</td>
    <td>
-    <ul class="directory-tree">
+    <ul>
      <li>{{domxref("RTCAudioReceiverStats")}} <em>or</em> {{domxref("RTCVideoReceiverStats")}}
       <ul>
        <li>{{domxref("RTCAudioHandlerStats")}} <em>or</em> {{domxref("RTCVideoHandlerStats")}}
@@ -249,7 +249,7 @@ function getConnectionStats() {
    <th scope="row"><code>remote-candidate</code></th>
    <td>Statistics about a remote ICE candidate associated with the connection's {{domxref("RTCIceTransport")}}s.</td>
    <td>
-    <ul class="directory-tree">
+    <ul>
      <li>{{domxref("RTCIceCandidateStats")}}
       <ul>
        <li>{{domxref("RTCStats")}}</li>
@@ -262,7 +262,7 @@ function getConnectionStats() {
    <th scope="row"><code>remote-inbound-rtp</code></th>
    <td>Statistics describing the state of the inbound data stream from the perspective of the remote peer.</td>
    <td>
-    <ul class="directory-tree">
+    <ul>
      <li>{{domxref("RTCRemoteInboundRtpStreamStats")}}
       <ul>
        <li>{{domxref("RTCReceivedRtpStreamStats")}}
@@ -283,7 +283,7 @@ function getConnectionStats() {
    <th scope="row"><code>remote-outbound-rtp</code></th>
    <td>Statistics describing the state of the outbound data stream from the perpsective of the remote peer.</td>
    <td>
-    <ul class="directory-tree">
+    <ul>
      <li>{{domxref("RTCRemoteOutboundRtpStreamStats")}}
       <ul>
        <li>{{domxref("RTCSentRtpStreamStats")}}
@@ -304,7 +304,7 @@ function getConnectionStats() {
    <th scope="row"><code>sctp-transport</code></th>
    <td>Statistics about an {{domxref("RTCSctpTransport")}}.</td>
    <td>
-    <ul class="directory-tree">
+    <ul>
      <li>{{domxref("RTCSctpTransportStats")}}
       <ul>
        <li>{{domxref("RTCStats")}}</li>
@@ -317,7 +317,7 @@ function getConnectionStats() {
    <th scope="row"><code>sender</code></th>
    <td>Statistics related to a specific {{domxref("RTCRtpSender")}} and the media associated with that sender. The type of object representing this statistic depends on the <code>kind</code> of the media.</td>
    <td>
-    <ul class="directory-tree">
+    <ul>
      <li>{{domxref("RTCAudioSenderStats")}} <em>or</em> {{domxref("RTCVideoSenderStats")}}
       <ul>
        <li>{{domxref("RTCAudioHandlerStats")}} <em>or</em> {{domxref("RTCVideoHandlerStats")}}
@@ -338,7 +338,7 @@ function getConnectionStats() {
    <th scope="row"><code>stream</code> {{deprecated_inline}}</th>
    <td>Statistics about a particular media {{domxref("MediaStream")}}. This has been obsoleted since the transition to WebRTC being track-based rather than stream-based.</td>
    <td>
-    <ul class="directory-tree">
+    <ul>
      <li>{{domxref("RTCMediaStreamStats")}}
       <ul>
        <li>{{domxref("RTCStats")}}</li>
@@ -357,7 +357,7 @@ function getConnectionStats() {
     </div>
    </td>
    <td>
-    <ul class="directory-tree">
+    <ul>
      <li>{{domxref("RTCSenderVideoTrackAttachmentStats")}} <em>or </em>{{domxref("RTCSenderAudioTrackAttachmentStats")}} <em>or</em> {{domxref("RTCReceiverVideoTrackAttachmentStats")}} <em>or</em> {{domxref("RTCReceiverAudioTrackAttachmentStats")}}
       <ul>
        <li>{{domxref("RTCMediaHandlerStats")}}
@@ -374,7 +374,7 @@ function getConnectionStats() {
    <th scope="row"><code>transceiver</code></th>
    <td>Statistics related to a specific {{domxref("RTCRtpTransceiver")}}.</td>
    <td>
-    <ul class="directory-tree">
+    <ul>
      <li>{{domxref("RTCRtpTransceiverStats")}}
       <ul>
        <li>{{domxref("RTCStats")}}</li>
@@ -387,7 +387,7 @@ function getConnectionStats() {
    <th scope="row"><code>transport</code></th>
    <td>Statistics about a transport used by the connection.</td>
    <td>
-    <ul class="directory-tree">
+    <ul>
      <li>{{domxref("RTCTransportStats")}}
       <ul>
        <li>{{domxref("RTCStats")}}</li>

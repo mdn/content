@@ -220,7 +220,7 @@ However, if you add that `process.on` listener but don't also have code within i
 
 A {{jsxref("Promise")}} can be created from scratch using its constructor. This should be needed only to wrap old APIs.
 
-In an ideal world, all asynchronous functions would already return promises. Unfortunately, some APIs still expect success and/or failure callbacks to be passed in the old way. The most obvious example is the [`setTimeout()`](/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout) function:
+In an ideal world, all asynchronous functions would already return promises. Unfortunately, some APIs still expect success and/or failure callbacks to be passed in the old way. The most obvious example is the [`setTimeout()`](/en-US/docs/Web/API/setTimeout) function:
 
 ```js
 setTimeout(() => saySomething("10 seconds passed"), 10*1000);
@@ -305,7 +305,7 @@ console.log(1); // 1, 2, 3, 4
 
 #### Task queues vs microtasks
 
-Promise callbacks are handled as a [Microtask](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) whereas [`setTimeout()`](/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout) callbacks are handled as Task queues.
+Promise callbacks are handled as a [Microtask](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) whereas [`setTimeout()`](/en-US/docs/Web/API/setTimeout) callbacks are handled as Task queues.
 
 ```js
 const promise = new Promise(function(resolve, reject) {
@@ -394,7 +394,7 @@ Using [`async`/`await`](/en-US/docs/Web/JavaScript/Reference/Statements/async_fu
 
 If you run into situations in which you have promises and tasks (such as events or callbacks) which are firing in unpredictable orders, it's possible you may benefit from using a microtask to check status or balance out your promises when promises are created conditionally.
 
-If you think microtasks may help solve this problem, see the [microtask guide](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) to learn more about how to use [`queueMicrotask()`](/en-US/docs/Web/API/WindowOrWorkerGlobalScope/queueMicrotask "The queueMicrotask() method, which is exposed on the Window or Worker interface, queues a microtask to be executed at a safe time prior to control returning to the browser's event loop.") to enqueue a function as a microtask.
+If you think microtasks may help solve this problem, see the [microtask guide](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) to learn more about how to use [`queueMicrotask()`](/en-US/docs/Web/API/queueMicrotask "The queueMicrotask() method, which is exposed on the Window or Worker interface, queues a microtask to be executed at a safe time prior to control returning to the browser's event loop.") to enqueue a function as a microtask.
 
 ## See also
 

@@ -34,8 +34,10 @@ tags:
 <h3 id="JavaScript">JavaScript</h3>
 
 <ul>
-  <li>Access to audio output devices, like speakers and headphones, is now protected by the <a href="speaker-selection"></a> feature policy ({{bug(1577199)}}).</li>
+  <li>Access to audio output devices, like speakers and headphones, is now protected by the <a href="speaker-selection">speaker-selection</a> feature policy ({{bug(1577199)}}).</li>
+  <li>{{jsxref("Object.hasOwn()")}} can be used to test whether a property was defined on an object or inherited ({{bug(1721149)}}).</li>
 </ul>
+
 
 <h4 id="removals_js">Removals</h4>
 
@@ -58,6 +60,10 @@ tags:
 </ul>
 
 <h4 id="DOM">DOM</h4>
+
+<ul>
+  <li>You can now monitor for changes to text selections in {{HTMLElement("input")}} or {{HTMLElement("textarea")}} by listening for <code>selectionchange</code> events in {{domxref("HTMLInputElement.selectionchange_event", "HTMLInputElement")}} and {{domxref("HTMLTextAreaElement/selectionchange_event", "HTMLTextAreaElement")}}, respectively ({{bug(1648944)}}).</li>
+</ul>
 
 <h4 id="Media_WebRTC_and_Web_Audio">Media, WebRTC, and Web Audio</h4>
 

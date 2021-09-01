@@ -36,8 +36,7 @@ browser-compat: api.Document.cookie
 
 <h3 id="Write_a_new_cookie">Write a new cookie</h3>
 
-<pre class="brush: js"
-	id="new-cookie_syntax"><var>document</var>.cookie = <var>newCookie</var>;</pre>
+<pre class="brush: js"><var>document</var>.cookie = <var>newCookie</var>;</pre>
 
 <p>In the code above, <code>newCookie</code> is a string of form
 	<code><var>key</var>=<var>value</var></code>. Note that you can only set/update a
@@ -47,7 +46,7 @@ browser-compat: api.Document.cookie
 	<li>Any of the following cookie attribute values can optionally follow the key-value
 		pair, specifying the cookie to set/update, and preceded by a semi-colon separator:
 		<ul>
-			<li id="new-cookie_path">
+			<li>
 				<div><code>;path=<var>path</var></code> (e.g., '<code>/</code>',
 					'<code>/mydir</code>') If not specified, defaults to the current path
 					of the current document location.</div>
@@ -57,7 +56,7 @@ browser-compat: api.Document.cookie
 					instead of as if they were delimiters surrounding the actual path
 					string. This has been fixed.</p></div>
 			</li>
-			<li id="new-cookie_domain"><code>;domain=<var>domain</var></code> (e.g.,
+			<li><code>;domain=<var>domain</var></code> (e.g.,
 				'<code>example.com</code>' or '<code>subdomain.example.com</code>'). If
 				not specified, this defaults to the host portion of the current document
 				location. Contrary to earlier specifications, leading dots in domain names
@@ -67,15 +66,15 @@ browser-compat: api.Document.cookie
 					the domain of the JavaScript origin. Setting cookies to foreign
 					domains will be silently ignored.</p></div>
 			</li>
-			<li id="new-cookie_max-age">
+			<li>
 				<code>;max-age=<var>max-age-in-seconds</var></code> (e.g.,
 				<code>60*60*24*365</code> or 31536000 for a year)</li>
-			<li id="new-cookie_expires">
+			<li>
 				<code>;expires=<var>date-in-GMTString-format</var></code> If neither
 				<code>expires</code> nor <code>max-age</code> specified it will expire at
 				the end of session.
 				<div class="warning">
-					<p>When user privacy is a concern, it's important that any web app
+					<p><strong>Warning:</strong> When user privacy is a concern, it's important that any web app
 						implementation invalidate cookie data after a certain timeout
 						instead of relying on the browser to do it. Many browsers let
 						users specify that cookies should never expire, which is not
@@ -87,10 +86,10 @@ browser-compat: api.Document.cookie
 						value.</li>
 				</ul>
 			</li>
-			<li id="new-cookie_secure"><code>;secure</code> Cookie to only be transmitted
+			<li><code>;secure</code> Cookie to only be transmitted
 				over secure protocol as https. Before Chrome 52, this flag could appear
 				with cookies from http domains.</li>
-			<li id="new-cookie_samesite"><code>;samesite</code> <a
+			<li><code>;samesite</code> <a
 					href="/en-US/docs/Web/HTTP/Cookies#samesite_cookies">SameSite</a>
 				prevents the browser from sending this cookie along with cross-site
 				requests. Possible values are <code>lax</code>,
@@ -126,10 +125,10 @@ browser-compat: api.Document.cookie
 				attribute must always be the origin.</li>
 		</ul>
 
-		<div class="note">The dash is considered part of the prefix.</div>
+		<div class="note"><p><strong>Note:</strong> The dash is considered part of the prefix.</p></div>
 
-		<div class="note">These flags are only settable with the <code>secure</code>
-			attribute.</div>
+		<div class="note"><p><strong>Note:</strong> These flags are only settable with the <code>secure</code>
+			attribute.</p></div>
 	</li>
 </ul>
 

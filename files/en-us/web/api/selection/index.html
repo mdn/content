@@ -156,7 +156,7 @@ var range  = selObj.getRangeAt(0);</pre>
  <dd>An editable element (e.g., an HTML element with {{htmlattrxref("contenteditable")}} set, or the HTML child of a document that has {{DOMxRef("Document.designMode", "designMode")}} enabled).</dd>
  <dt>focus of a selection</dt>
  <dd>The <dfn>focus</dfn> of a selection is the end point of the selection. When making a selection with a mouse, the focus is where in the document the mouse button is released. As the user changes the selection using the mouse or the keyboard, the focus is the end of the selection that moves.
- <div class="note">This is not the same as the focused <em>element</em> of the document, as returned by {{DOMxRef("document.activeElement")}}.</div>
+ <div class="note"><p><strong>Note:</strong> This is not the same as the focused <em>element</em> of the document, as returned by {{DOMxRef("document.activeElement")}}.</p></div>
  </dd>
  <dt>range</dt>
  <dd>A <dfn>range</dfn> is a contiguous part of a document. A range can contain entire nodes as well as portions of nodes (such as a portion of a text node). A user will normally only select a single range at a time, but it's possible for a user to select multiple ranges (e.g., by using the <kbd>Control</kbd> key). A range can be retrieved from a selection as a {{DOMxRef("range")}} object. Range objects can also be created via the DOM and programmatically added or removed from a selection.</dd>
@@ -169,14 +169,6 @@ var range  = selObj.getRangeAt(0);</pre>
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <p>{{Compat}}</p>
-
-<h3 id="Gecko_notes">Gecko notes</h3>
-
-<ul>
- <li>Gecko/Firefox provide additional features, available to chrome (internal and add-on) code only. These are defined in {{Interface("nsISelectionPrivate")}}.</li>
- <li>Mozilla source code: {{Source("dom/webidl/Selection.webidl")}}</li>
- <li>{{DOMxRef("Selection.selectionLanguageChange()")}}{{deprecated_inline}} used to be exposed to the web content until Firefox 29</li>
-</ul>
 
 <h2 id="See_also">See also</h2>
 

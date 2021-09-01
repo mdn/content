@@ -13,22 +13,18 @@ tags:
 ---
 <p>{{PreviousNext("Learn/WebGL/By_example/Scissor_animation","Learn/WebGL/By_example/Hello_GLSL")}}</p>
 
-<div id="raining-rectangles">
 <p>A simple WebGL game that demonstrates clearing with solid colors, scissoring, animation, and user interaction.</p>
 
-<p>{{EmbedLiveSample("raining-rectangles-source",660,425)}}</p>
+<h2 id="Animation_and_user_interaction_with_scissoring">Animation and user interaction with scissoring</h2>
 
-<div>
-<h3 id="Animation_and_user_interaction_with_scissoring">Animation and user interaction with scissoring</h3>
+<p>{{EmbedLiveSample("Animation_and_user_interaction_with_scissoring",660,425)}}</p>
 
 <p>This is a simple game. The objective: try to catch as many of the raining rectangles as you can by clicking on them. In this example, we use an object-oriented approach for the displayed rectangles, which helps to keep the state of the rectangle (its position, color, and so on) organized in one place, and the overall code more compact and reusable.</p>
 
 <p>This example combines clearing the drawing buffer with solid colors and scissoring operations. It is a preview of a full graphical application that manipulates various phases of the {{Glossary("WebGL")}} graphics pipeline and state machine.</p>
 
 <p>In addition, the example demonstrates how to integrate the WebGL function calls within a game loop. The game loop is responsible for drawing the animation frames, and keeping the animation responsive to user input. Here, the game loop is implemented using timeouts.</p>
-</div>
 
-<div id="raining-rectangles-source">
 <pre class="brush: html hidden">&lt;p&gt;You caught
 &lt;strong&gt;0&lt;/strong&gt;.
   You missed
@@ -62,7 +58,7 @@ button {
 <pre class="brush: js hidden">;(function(){
 </pre>
 
-<pre class="brush: js" id="livesample-js">"use strict"
+<pre class="brush: js">"use strict"
 window.addEventListener("load", setupAnimation, false);
 var gl,
   timer,
@@ -173,7 +169,5 @@ function Rectangle () {
 </pre>
 
 <p>The source code of this example is also available on <a href="https://github.com/idofilin/webgl-by-example/tree/master/raining-rectangles">GitHub</a>.</p>
-</div>
-</div>
 
 <p>{{PreviousNext("Learn/WebGL/By_example/Scissor_animation","Learn/WebGL/By_example/Hello_GLSL")}}</p>

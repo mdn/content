@@ -48,17 +48,19 @@ browser-compat: api.AudioWorkletGlobalScope.registerProcessor
 <dl>
   <dt><code>NotSupportedError</code></dt>
   <dd>
+    <p>Thrown under the following conditions:</p>
     <ul>
-      <li>The <em>name</em> is an empty string, or</li>
-      <li>a constructor under the given <em>name</em> is already registered. Registering
+      <li>The <em>name</em> is an empty string.</li>
+      <li>A constructor under the given <em>name</em> is already registered. Registering
         the same name twice is not allowed.</li>
     </ul>
   </dd>
   <dt><code>TypeError</code></dt>
   <dd>
+    <p>Thrown under the following conditions:</p>
     <ul>
-      <li>The <em>processorCtor</em> is not a callable constructor, or</li>
-      <li>the {{domxref("AudioWorkletProcessor.parameterDescriptors",
+      <li>The <em>processorCtor</em> is not a callable constructor.</li>
+      <li>The {{domxref("AudioWorkletProcessor.parameterDescriptors",
         "parameterDescriptors")}} property of the constructor exists and doesn't return an
         array of {{domxref("AudioParamDescriptor")}}-based objects.</li>
     </ul>

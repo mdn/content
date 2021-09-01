@@ -75,7 +75,7 @@ var request = window.indexedDB.open("MyTestDatabase", 3);
 <p>The second parameter to the open method is the version of the database. The version of the database determines the database schema — the object stores in the database and their structure. If the database doesn't already exist, it is created by the <code>open</code> operation, then an <code>onupgradeneeded</code> event is triggered and you create the database schema in the handler for this event. If the database does exist but you are specifying an upgraded version number, an <code>onupgradeneeded</code> event is triggered straight away, allowing you to provide an updated schema in its handler. More on this later in <a href="#updating_the_version_of_the_database">Updating the version of the database</a> below, and the {{ domxref("IDBFactory.open") }} reference page. </p>
 
 <div class="warning">
-<p><strong>Important</strong>: The version number is an <code>unsigned long long</code> number, which means that it can be a very big integer. It also means that you can't use a float, otherwise it will be converted to the closest lower integer and the transaction may not start, nor the <code>upgradeneeded</code> event trigger. So for example, don't use 2.4 as a version number:<br>
+<p><strong>Warning:</strong> The version number is an <code>unsigned long long</code> number, which means that it can be a very big integer. It also means that you can't use a float, otherwise it will be converted to the closest lower integer and the transaction may not start, nor the <code>upgradeneeded</code> event trigger. So for example, don't use 2.4 as a version number:<br>
  <code>var request = indexedDB.open("MyTestDatabase", 2.4); // don't do this, as the version will be rounded to 2</code></p>
 </div>
 
@@ -123,7 +123,7 @@ request.onsuccess = function(event) {
 
 <h3 id="Creating_or_updating_the_version_of_the_database">Creating or updating the version of the database</h3>
 
-<p><a name="Updating_the_version_of_the_database"></a>When you create a new database or increase the version number of an existing database (by specifying a higher version number than you did previously, when {{ anch("Opening a database") }}), the <code>onupgradeneeded</code> event will be triggered and an <a href="/en-US/docs/Web/API/IDBVersionChangeEvent">IDBVersionChangeEvent</a> object will be passed to any <code>onversionchange</code> event handler set up on <code>request.result</code> (i.e., <code>db</code> in the example). In the handler for the <code>upgradeneeded</code> event, you should create the object stores needed for this version of the database:</p>
+<p>When you create a new database or increase the version number of an existing database (by specifying a higher version number than you did previously, when {{ anch("Opening a database") }}), the <code>onupgradeneeded</code> event will be triggered and an <a href="/en-US/docs/Web/API/IDBVersionChangeEvent">IDBVersionChangeEvent</a> object will be passed to any <code>onversionchange</code> event handler set up on <code>request.result</code> (i.e., <code>db</code> in the example). In the handler for the <code>upgradeneeded</code> event, you should create the object stores needed for this version of the database:</p>
 
 <pre class="brush:js;">// This event is only implemented in recent browsers
 request.onupgradeneeded = function(event) {
@@ -142,7 +142,7 @@ request.onupgradeneeded = function(event) {
 
 <h3 id="Structuring_the_database">Structuring the database</h3>
 
-<p>Now to structure the database. IndexedDB uses object stores rather than tables, and a single database can contain any number of object stores. Whenever a value is stored in an object store, it is associated with a key. There are several different ways that a key can be supplied depending on whether the object store uses a <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_keypath">key path</a> or a <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_keygenerator">key generator</a>.</p>
+<p>Now to structure the database. IndexedDB uses object stores rather than tables, and a single database can contain any number of object stores. Whenever a value is stored in an object store, it is associated with a key. There are several different ways that a key can be supplied depending on whether the object store uses a <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path">key path</a> or a <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_generator">key generator</a>.</p>
 
 <p>The following table shows the different ways the keys are supplied:</p>
 
@@ -283,7 +283,7 @@ request.onupgradeneeded = function (event) {
 
 <ul>
  <li>When defining the scope, specify only the object stores you need. This way, you can run multiple transactions with non-overlapping scopes concurrently.</li>
- <li>Only specify a <code>readwrite</code> transaction mode when necessary. You can concurrently run multiple <code>readonly</code> transactions with overlapping scopes, but you can have only one <code>readwrite</code> transaction for an object store. To learn more, see the definition for <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_transaction">transaction</a> in the <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology">IndexedDB key characteristics and basic terminology</a> article.</li>
+ <li>Only specify a <code>readwrite</code> transaction mode when necessary. You can concurrently run multiple <code>readonly</code> transactions with overlapping scopes, but you can have only one <code>readwrite</code> transaction for an object store. To learn more, see the definition for <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#transaction">transaction</a> in the <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology">IndexedDB key characteristics and basic terminology</a> article.</li>
 </ul>
 
 <h3 id="Adding_data_to_the_database">Adding data to the database</h3>
@@ -360,7 +360,7 @@ request.onsuccess = function(event) {
 
 <ul>
  <li>When defining the <a href="#scope">scope</a>, specify only the object stores you need. This way, you can run multiple transactions with non-overlapping scopes concurrently.</li>
- <li>Only specify a readwrite transaction mode when necessary. You can concurrently run multiple readonly transactions with overlapping scopes, but you can have only one readwrite transaction for an object store. To learn more, see the definition for <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_transaction">transaction</a> in the <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology">IndexedDB key characteristics and basic terminology</a> article.</li>
+ <li>Only specify a readwrite transaction mode when necessary. You can concurrently run multiple readonly transactions with overlapping scopes, but you can have only one readwrite transaction for an object store. To learn more, see the definition for <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#transaction">transaction</a> in the <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology">IndexedDB key characteristics and basic terminology</a> article.</li>
 </ul>
 
 <h3 id="Updating_an_entry_in_the_database">Updating an entry in the database</h3>

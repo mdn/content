@@ -45,7 +45,7 @@ See {{Cssxref(":nth-last-child")}} for a more detailed explanation of its syntax
   <span>This is another span.</span>
   <em>This is emphasized.</em>
   <span>Wow, this span gets limed!!!</span>
-  <strike>This is struck through.</strike>
+  <del>This is struck through.</del>
   <span>Here is one last span.</span>
 </div>
 ```

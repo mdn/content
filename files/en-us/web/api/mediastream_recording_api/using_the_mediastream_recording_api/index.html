@@ -45,7 +45,7 @@ tags:
 
 <p>However, we wanted to make the third area (which contains the recorded samples you can play back) take up whatever space is left, regardless of the device height. Flexbox could be the answer here, but it's a bit overkill for such a simple layout. Instead, the problem was solved by making the third container's height equal to 100% of the parent height, minus the heights and padding of the other two:</p>
 
-<pre class="brush: css highlight[4]">.sound-clips {
+<pre class="brush: css">.sound-clips {
   box-shadow: inset 0 3px 4px rgba(0,0,0,0.7);
   background-color: rgba(0,0,0,0.1);
   height: calc(100% - 240px - 0.7rem);

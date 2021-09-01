@@ -122,7 +122,7 @@ before browsers' main rendering machinery kicks in. This ensures they are availa
 
 <h2 id="CORS-enabled_fetches">CORS-enabled fetches</h2>
 
-<p>When preloading resources that are fetched with <a href="/en-US/docs/Web/HTTP/CORS">CORS</a> enabled (e.g. <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a></code>, <code><a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> or <a href="/en-US/docs/Web/CSS/@font-face">fonts</a>), special care needs to be taken to setting the {{htmlattrxref("crossorigin","link")}} attribute on your <code><a href="/en-US/docs/Web/HTML/Element/link">&lt;link&gt;</a></code> element. The attribute needs to be set to match the resource's CORS and credentials mode, even when the fetch is not cross-origin.</p>
+<p>When preloading resources that are fetched with <a href="/en-US/docs/Web/HTTP/CORS">CORS</a> enabled (e.g. <code><a href="/en-US/docs/Web/API/fetch">fetch()</a></code>, <code><a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> or <a href="/en-US/docs/Web/CSS/@font-face">fonts</a>), special care needs to be taken to setting the {{htmlattrxref("crossorigin","link")}} attribute on your <code><a href="/en-US/docs/Web/HTML/Element/link">&lt;link&gt;</a></code> element. The attribute needs to be set to match the resource's CORS and credentials mode, even when the fetch is not cross-origin.</p>
 
 <p>As mentioned above, one interesting case where this applies is font files. Because of various reasons, these have to be fetched using anonymous-mode CORS (see <a href="https://drafts.csswg.org/css-fonts/#font-fetching-requirements">Font fetching requirements</a>).</p>
 

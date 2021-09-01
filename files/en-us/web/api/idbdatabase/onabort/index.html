@@ -31,7 +31,7 @@ browser-compat: api.IDBDatabase.onabort
   creates a new object store; it also includes <code>onerror</code> and
   <code>onabort</code> functions to handle non-success cases.</p>
 
-<pre class="brush: js;highlight:[8,9,10]">DBOpenRequest.onupgradeneeded = function(event) {
+<pre class="brush: js;">DBOpenRequest.onupgradeneeded = function(event) {
   var db = event.target.result;
 
   db.onerror = function() {

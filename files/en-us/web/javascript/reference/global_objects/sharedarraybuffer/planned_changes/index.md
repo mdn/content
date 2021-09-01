@@ -17,7 +17,7 @@ There is standardization work ongoing that enables developers to create [`Shared
 
 > **Note:** Starting with Firefox 79, the features described in this document are enabled by default.
 >
-> Chrome intends to implement similar restrictions.
+> Chrome started enforcing these restrictions starting with Chrome 92 on desktop and Chrome 88 on Android.
 
 ## New HTTP header bonanza
 
@@ -41,7 +41,7 @@ As a result of this newly required environment, there are a couple API implicati
 - The `Atomics` object is always available.
 - `SharedArrayBuffer` objects are in principle always available, but unfortunately the constructor on the global object is hidden, unless the two headers mentioned above are set, for compatibility with web content. There is hope that this restriction can be removed in the future. [`WebAssembly.Memory`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory) can still be used to get an instance.
 - Unless the two headers mentioned above are set, the various `postMessage()` APIs will throw for `SharedArrayBuffer` objects. If they are set, `postMessage()` on `Window` objects and dedicated workers will function and allow for memory sharing.
-- To avoid having to check whether `postMessage()` throws, [`self.crossOriginIsolated`](/en-US/docs/Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated) is being standardized (a getter that returns a boolean; `true` if the headers are set), available in window and worker contexts.
+- To avoid having to check whether `postMessage()` throws, [`self.crossOriginIsolated`](/en-US/docs/Web/API/crossOriginIsolated) is being standardized (a getter that returns a boolean; `true` if the headers are set), available in window and worker contexts.
 
 ## WebAssembly Shared Memory
 
@@ -55,4 +55,5 @@ The WebAssembly Threads proposal also defines a new set of [atomic](https://gith
 - `Cross-Origin-Opener-Policy`: [whatwg/html issue #3740](https://github.com/whatwg/html/issues/3740), [draft specification](https://gist.github.com/annevk/6f2dd8c79c77123f39797f6bdac43f3e).
 - `Cross-Origin-Embedder-Policy`: [whatwg/html issue #4175](https://github.com/whatwg/html/issues/4175), [draft specification](https://mikewest.github.io/corpp/).
 - `Cross-Origin-Resource-Policy`: [standardized in Fetch](https://fetch.spec.whatwg.org/#cross-origin-resource-policy-header), new `cross-origin` value is part of the `Cross-Origin-Embedder-Policy` effort.
-- `postMessage()` changes and [`self.crossOriginIsolated`](/en-US/docs/Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated): [whatwg/html issue #4732](https://github.com/whatwg/html/issues/4732), [whatwg/html issue #4872](https://github.com/whatwg/html/issues/4872), [draft specification](https://github.com/whatwg/html/pull/4734).
+- `postMessage()` changes and [`self.crossOriginIsolated`](/en-US/docs/Web/API/crossOriginIsolated): [whatwg/html issue #4732](https://github.com/whatwg/html/issues/4732), [whatwg/html issue #4872](https://github.com/whatwg/html/issues/4872), [draft specification](https://github.com/whatwg/html/pull/4734).
+- [SharedArrayBuffer updates in Android Chrome 88 and Desktop Chrome 92](https://developer.chrome.com/blog/enabling-shared-array-buffer/)

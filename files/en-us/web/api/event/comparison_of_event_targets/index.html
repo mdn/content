@@ -30,7 +30,7 @@ tags:
    <td>
     <p>The DOM element on the lefthand side of the call that triggered this event, eg:</p>
 
-    <pre class="eval">
+    <pre class="brush: js">
 <em>element</em>.dispatchEvent(<em>event</em>)
 </pre>
    </td>
@@ -72,7 +72,7 @@ tags:
 
 <h3 id="Examples">Examples</h3>
 
-<pre>&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -162,13 +162,9 @@ tags:
  </tbody>
 </table>
 
-<div class="notecard note">
-<p><strong>Note:</strong> TODO: Also needs descriptions for <code>dragenter</code> event.</p>
-</div>
-
 <h4 id="Example">Example</h4>
 
-<pre class="brush: xml eval">&lt;hbox id="outer"&gt;
+<pre class="brush: xml">&lt;hbox id="outer"&gt;
   &lt;hbox id="inner"
         onmouseover="dump('mouseover ' + event.relatedTarget.id + ' &gt; ' + event.target.id + '\n');"
         onmouseout="dump('mouseout  ' + event.target.id + ' &gt; ' + event.relatedTarget.id + '\n');"

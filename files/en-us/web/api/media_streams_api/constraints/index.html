@@ -97,7 +97,7 @@ if (!supports["width"] || !supports["height"] || !supports["frameRate"] || !supp
 <p>Here, after ensuring that the constrainable properties for which matches must be found are supported (<code>width</code>, <code>height</code>, <code>frameRate</code>, and <code>facingMode</code>), we set up constraints which request a width no smaller than 640 and no larger than 1920 (but preferably 1920), a height no smaller than 400 (but ideally 1080), an aspect ratio of 16:9 (1.777777778), and a frame rate no greater than 30 frames per second. In addition, the only acceptable input device is a camera facing the user (a "selfie cam"). If the <code>width</code>, <code>height</code>, <code>frameRate</code>, or <code>facingMode</code> constraints can't be met, the promise returned by <code>applyConstraints()</code> will be rejected.</p>
 
 <div class="note">
-<p>Constraints which are specified using any or all of <code>max</code>, <code>min</code>, or <code>exact</code> are always treated as mandatory. If any constraint which uses one or more of those can't be met when calling <code>applyConstraints()</code>, the promise will be rejected.</p>
+<p><strong>Note:</strong> Constraints which are specified using any or all of <code>max</code>, <code>min</code>, or <code>exact</code> are always treated as mandatory. If any constraint which uses one or more of those can't be met when calling <code>applyConstraints()</code>, the promise will be rejected.</p>
 </div>
 
 <h3 id="Advanced_constraints">Advanced constraints</h3>
@@ -134,7 +134,7 @@ if (!supports["width"] || !supports["height"] || !supports["frameRate"] || !supp
 <p>In this example, constraints are applied at <code>getUserMedia()</code> time, asking for an ideal set of options with fallbacks for the video.</p>
 
 <div class="note">
-<p>You can specify one or more media input device IDs to establish restrictions on which input sources are allowed. To collect a list of the available devices, you can call {{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}}, then for each device which meets the desired criteria, add its <code>deviceId</code> to the <code>MediaConstraints</code> object that eventually gets passed into <code>getUserMedia()</code>.</p>
+<p><strong>Note:</strong> You can specify one or more media input device IDs to establish restrictions on which input sources are allowed. To collect a list of the available devices, you can call {{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}}, then for each device which meets the desired criteria, add its <code>deviceId</code> to the <code>MediaConstraints</code> object that eventually gets passed into <code>getUserMedia()</code>.</p>
 </div>
 
 <p>You can also change the constraints of an existing {{domxref("MediaStreamTrack")}} on the fly, by calling the track's {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}} method, passing into it an object representing the constraints you wish to apply to the track:</p>
@@ -495,7 +495,7 @@ audioConstraintEditor.addEventListener("keydown", keyDownHandler, false);
 <p>The last significant piece of the puzzle: code that displays, for the user's reference, a list of the constrainable properties which their browser supports. Each property is a link to its documentation on MDN for the user's convenience. See the {{SectionOnPage("/en-US/docs/Web/API/MediaDevices/getSupportedConstraints", "Example")}} for details on how this code works.</p>
 
 <div class="note">
-<p>Of course, there may be non-standard properties in this list, in which case you probably will find that the documentation link doesn't help much.</p>
+<p><strong>Note:</strong> Of course, there may be non-standard properties in this list, in which case you probably will find that the documentation link doesn't help much.</p>
 </div>
 
 <pre class="brush: js">let supportedConstraints = navigator.mediaDevices.getSupportedConstraints();

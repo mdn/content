@@ -15,7 +15,7 @@ browser-compat: api.AudioBuffer.getChannelData
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js;highlight[22]">var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
+<pre class="brush: js;">var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
 var nowBuffering = myArrayBuffer.getChannelData(channel);</pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -33,7 +33,7 @@ var nowBuffering = myArrayBuffer.getChannelData(channel);</pre>
 
 <p>In the following example we create a two second buffer, fill it with white noise, and then play it via an {{ domxref("AudioBufferSourceNode") }}. The comments should clearly explain what is going on. You can also <a href="https://mdn.github.io/webaudio-examples/audio-buffer/">run the code live</a>, or <a href="https://github.com/mdn/webaudio-examples">view the source</a>.</p>
 
-<pre class="brush: js;highlight[21]">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+<pre class="brush: js;">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var button = document.querySelector('button');
 var pre = document.querySelector('pre');
 var myScript = document.querySelector('script');

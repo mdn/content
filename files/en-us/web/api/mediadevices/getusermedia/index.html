@@ -110,7 +110,7 @@ browser-compat: api.MediaDevices.getUserMedia
   video: { width: 1280, height: 720 }
 }</pre>
 
-    <p id="successCallback">The browser will try to honour this, but may return other
+    <p>The browser will try to honour this, but may return other
       resolutions if an exact match is not available, or the user overrides it.</p>
 
     <p>To <em>require</em> a capability, use the keywords <code>min</code>,
@@ -207,8 +207,8 @@ browser-compat: api.MediaDevices.getUserMedia
     globally. On browsers that support managing media permissions with <a
       href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a>, this error is
     returned if Feature Policy is not configured to allow access to the input source(s).
-    <div class="note">Older versions of the specification used <code>SecurityError</code>
-      for this instead; <code>SecurityError</code> has taken on a new meaning.</div>
+    <div class="note"><p><strong>Note:</strong> Older versions of the specification used <code>SecurityError</code>
+      for this instead; <code>SecurityError</code> has taken on a new meaning.</p></div>
   </dd>
   <dt><code>NotFoundError</code></dt>
   <dd>No media tracks of the type specified were found that satisfy the given constraints.
@@ -223,9 +223,9 @@ browser-compat: api.MediaDevices.getUserMedia
     <code>constraint</code> property whose string value is the name of a constraint which
     was impossible to meet, and a <code>message</code> property containing a
     human-readable string explaining the problem.
-    <div class="note">Because this error can occur even when the user has not yet granted
+    <div class="note"><p><strong>Note:</strong> Because this error can occur even when the user has not yet granted
       permission to use the underlying device, it can potentially be used as a
-      fingerprinting surface.</div>
+      fingerprinting surface.</p></div>
   </dd>
   <dt><code>SecurityError</code></dt>
   <dd>User media support is disabled on the {{domxref("Document")}} on which

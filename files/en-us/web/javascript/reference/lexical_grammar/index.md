@@ -55,7 +55,7 @@ Comments are used to add hints, notes, suggestions, or warnings to JavaScript co
 
 JavaScript has two long-standing ways to add comments to code.
 
-The first way is the `//` comment**;** this makes all text following it on the same line into a comment. For example:
+The first way is the `//` comment; this makes all text following it on the same line into a comment. For example:
 
 ```js
 function comment() {
@@ -343,7 +343,7 @@ For octal `BigInt` numbers, always use zero followed by the letter "o" (uppercas
 0o755n
 ```
 
-For more information about `BigInt`, see also [JavaScript data structures](/en-US/docs/Web/JavaScript/Data_structures#BigInt_type).
+For more information about `BigInt`, see also [JavaScript data structures](/en-US/docs/Web/JavaScript/Data_structures#bigint_type).
 
 #### Numeric separators
 
@@ -507,7 +507,7 @@ The ECMAScript specification mentions [three rules of semicolon insertion](https
 
 2\. A semicolon is inserted at the end, when the end of the input stream of tokens is detected and the parser is unable to parse the single input stream as a complete program.
 
-Here `++` is not treated as a [postfix operator](/en-US/docs/Web/JavaScript/Reference/Operators#Increment) applying to variable `b`, because a line terminator occurs between `b` and `++`.
+Here `++` is not treated as a [postfix operator](/en-US/docs/Web/JavaScript/Reference/Operators#increment) applying to variable `b`, because a line terminator occurs between `b` and `++`.
 
 ```js
 a = b
@@ -545,8 +545,8 @@ a + b;
 ## See also
 
 - [Lexical grammar in the ECMAScript specification](https://tc39.es/ecma262/#sec-ecmascript-language-lexical-grammar)
-- [Jeff Walden: Binary and octal numbers](http://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/)
-- [Mathias Bynens: JavaScript character escape sequences](http://mathiasbynens.be/notes/javascript-escapes)
+- [Jeff Walden: Binary and octal numbers](https://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/)
+- [Mathias Bynens: JavaScript character escape sequences](https://mathiasbynens.be/notes/javascript-escapes)
 - {{jsxref("Boolean")}}
 - {{jsxref("Number")}}
 - {{jsxref("RegExp")}}

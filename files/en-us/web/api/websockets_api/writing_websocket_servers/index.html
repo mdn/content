@@ -230,7 +230,7 @@ Sec-WebSocket-Protocol: wamp
 </pre>
 
 <div class="warning">
-<p>The server can't send more than one <code>Sec-Websocket-Protocol</code> header.<br> If the server doesn't want to use any subprotocol, <em><strong>it shouldn't send any <code>Sec-WebSocket-Protocol</code> header</strong></em>. Sending a blank header is incorrect. The client may close the connection if it doesn't get the subprotocol it wants.</p>
+<p><strong>Warning:</strong> The server can't send more than one <code>Sec-Websocket-Protocol</code> header.<br> If the server doesn't want to use any subprotocol, <em><strong>it shouldn't send any <code>Sec-WebSocket-Protocol</code> header</strong></em>. Sending a blank header is incorrect. The client may close the connection if it doesn't get the subprotocol it wants.</p>
 </div>
 
 <p>If you want your server to obey certain subprotocols, then naturally you'll need extra code on the server. Let's imagine we're using a subprotocol <code>json</code>. In this subprotocol, all data is passed as <a href="https://en.wikipedia.org/wiki/JSON">JSON</a>. If the client solicits this protocol and the server wants to use it, the server needs to have a JSON parser. Practically speaking, this will be part of a library, but the server needs to pass the data around.</p>

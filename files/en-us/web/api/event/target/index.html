@@ -60,22 +60,6 @@ ul.addEventListener('click', hide, false);
 
 <p>{{Compat}}</p>
 
-<h3 id="Compatibility_notes">Compatibility notes</h3>
-
-<p>On IE 6–8, the event model is different. Event listeners are attached with the
-  non-standard {{domxref('EventTarget.attachEvent()')}} method.</p>
-
-<p>In this model, the event object has a {{domxref('Event.srcElement')}} property (instead
-  of the <code>target</code> property) and it has the same semantics as
-  <code>Event.target</code>.</p>
-
-<pre class="brush: js">function hide(evt) {
-  // Support IE6-8
-  var target = evt.target || evt.srcElement;
-  target.style.visibility = 'hidden';
-}
-</pre>
-
 <h2 id="See_also">See also</h2>
 
 <ul>

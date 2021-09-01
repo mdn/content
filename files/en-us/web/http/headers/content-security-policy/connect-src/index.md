@@ -19,7 +19,7 @@ The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
 loaded using script interfaces. The APIs that are restricted are:
 
 - {{HTMLElement("a")}} {{htmlattrxref("ping", "a")}},
-- {{domxref("WindowOrWorkerGlobalScope.fetch")}},
+- {{domxref("fetch()")}},
 - {{domxref("XMLHttpRequest")}},
 - {{domxref("WebSocket")}},
 - {{domxref("EventSource")}}, and
@@ -107,7 +107,7 @@ The following connections are blocked and won't load:
 
 - {{HTTPHeader("Content-Security-Policy")}}
 - {{HTMLElement("a")}} {{htmlattrxref("ping", "a")}}
-- {{domxref("WindowOrWorkerGlobalScope.fetch")}}
+- {{domxref("fetch()")}}
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("WebSocket")}}
 - {{domxref("EventSource")}}

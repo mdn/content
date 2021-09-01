@@ -26,8 +26,8 @@ browser-compat: api.Window.requestIdleCallback
   schedule another callback to take place no sooner than the next pass through the event
   loop.</p>
 
-<div class="note">A <code>timeout</code> option is strongly recommended for required work,
-  as otherwise it's possible multiple seconds will elapse before the callback is fired.
+<div class="note"><p><strong>Note:</strong> A <code>timeout</code> option is strongly recommended for required work,
+  as otherwise it's possible multiple seconds will elapse before the callback is fired.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -79,8 +79,8 @@ window.requestIdleCallback(callback, options);</pre>
 <ul>
   <li>{{domxref("window.cancelIdleCallback()")}}</li>
   <li>{{domxref("IdleDeadline")}}</li>
-  <li>{{domxref("WindowOrWorkerGlobalScope.setTimeout")}}</li>
-  <li>{{domxref("WindowOrWorkerGlobalScope.setInterval")}}</li>
+  <li>{{domxref("setTimeout()")}}</li>
+  <li>{{domxref("setInterval()")}}</li>
   <li>{{domxref("window.requestAnimationFrame")}}</li>
   <li><a href="https://github.com/behnammodi/polyfill/blob/master/window.polyfill.js">A polyfill</a></li>
 </ul>

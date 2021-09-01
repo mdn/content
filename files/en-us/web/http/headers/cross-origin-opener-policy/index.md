@@ -60,7 +60,7 @@ Cross-Origin-Embedder-Policy: require-corp
 
 See also the {{HTTPHeader("Cross-Origin-Embedder-Policy")}} header which you'll need to set as well.
 
-To check if cross-origin isolation has been successful, you can test against the [`crossOriginIsolated`](/en-US/docs/Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated) property available to window and worker contexts:
+To check if cross-origin isolation has been successful, you can test against the [`crossOriginIsolated`](/en-US/docs/Web/API/crossOriginIsolated) property available to window and worker contexts:
 
 ```js
 if (crossOriginIsolated) {

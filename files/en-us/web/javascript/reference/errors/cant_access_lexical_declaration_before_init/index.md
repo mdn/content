@@ -19,7 +19,7 @@ declarations are accessed before they are defined.
 ## Message
 
 ```js
-ReferenceError: Use before delaration (Edge)
+ReferenceError: Cannot access 'X' before initialization (Edge)
 ReferenceError: can't access lexical declaration `X' before initialization (Firefox)
 ReferenceError: 'x' is not defined (Chrome)
 ```
@@ -40,32 +40,31 @@ declarations are accessed before they are defined.
 
 ### Invalid cases
 
-In this case, the variable "foo" is redeclared in the block statement using
-`let`.
+In this case, the variable "foo" is accessed, even before it is declared which throws an reference error ( because variables declared using `let/const` are not [hoisted](/en-US/docs/Glossary/Hoisting) ).
 
 ```js example-bad
 function test() {
-  let foo = 33;
-  if (true) {
-    let foo = (foo + 55);
-    // ReferenceError: can't access lexical
-    // declaration `foo' before initialization
-  }
+
+  // Accessing the variable foo before it's declared 
+
+  console.log(foo);     // ReferenceError: can't access lexical
+  let foo = 33;         // 'foo' is declared here using the 'let' keyword
+   
 }
 test();
 ```
 
 ### Valid cases
 
-To change "foo" inside the if statement, you need to remove the `let` that
-causes the redeclaration.
+In the following example, we correctly declare a variable using the `let` keyword before accessing it, so we encounter no error. And in contrast, notice how we are accessing the `bar` variable even before it is declared — without encountering any error. That's because of the [hoisted](/en-US/docs/Glossary/Hoisting) nature of `var` variables.
 
 ```js example-good
 function test(){
+
+   // Declaring variable foo
    let foo = 33;
-   if (true) {
-      foo = (foo + 55);
-   }
+   console.log(foo, bar);    // 33 undefined
+   var bar = 12;
 }
 test();
 ```

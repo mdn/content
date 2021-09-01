@@ -40,7 +40,7 @@ browser-compat: api.TextTrack
 
 <h2 id="Events">Events</h2>
 
-<dl id="event_handler_property_definitions">
+<dl>
 	<dt><code><a href="/en-US/docs/Web/API/TextTrack/cuechange_event">cuechange</a></code></dt>
 	<dd>Fired when cues are entered and exited. A given text cue appears when the cue is entered and disappears when the cue is exited.<br>
 	Also available via the <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/oncuechange">oncuechange</a></code> property.</dd>
@@ -48,20 +48,17 @@ browser-compat: api.TextTrack
 
 <h2 id="methods">Methods</h2>
 
-<p class="methods also_inherits"><em>This interface also inherits methods from {{domxref("EventTarget")}}.</em></p>
+<p><em>This interface also inherits methods from {{domxref("EventTarget")}}.</em></p>
 
 <div class="notecard note">
 <p><strong>Note:</strong> The {{domxref("TextTrackCue")}} interface is an abstract class used as the parent for other cue interfaces such as {{domxref("VTTCue")}}. Therefore, when adding or removing a cue you will be passing in one of the cue types that inherit from <code>TextTrackCue</code>.</p>
 </div>
 
-<dl id="method_definitions">
+<dl>
 	<dt>{{domxref("TextTrack.addCue()")}}</dt>
 	<dd>Adds a cue (specified as a {{domxref("TextTrackCue")}} object) to the track's list of cues.</dd>
 	<dt>{{domxref("TextTrack.removeCue()")}}</dt>
 	<dd>Removes a cue (specified as a {{domxref("TextTrackCue")}} object) from the track's list of cues.</dd>
-</dl>
-
-<dl id="method_definitions_obsolete">
 </dl>
 
 <h2 id="Example">Example</h2>

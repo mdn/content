@@ -98,7 +98,7 @@ browser-compat: api.SubtleCrypto.deriveBits
   <dd>Raised if the <em>length</em> parameter of the <code>deriveBits()</code> call is null, and also in some cases if the <em>length</em> parameter is not a multiple of 8.</dd>
   <dt>{{exception("InvalidAccessError")}}</dt>
   <dd>Raised when the base key is not a key for the requested derivation algorithm or if
-    the <a href="/en-US/docs/Web/API/CryptoKey#usages"><code>usages</code></a> value of that key doesn't contain
+    the <a href="/en-US/docs/Web/API/CryptoKey"><code>CryptoKey.usages</code></a> value of that key doesn't contain
     <code>deriveKey</code>.</dd>
   <dt>{{exception("NotSupported")}}</dt>
   <dd>Raised when trying to use an algorithm that is either unknown or isn't suitable for

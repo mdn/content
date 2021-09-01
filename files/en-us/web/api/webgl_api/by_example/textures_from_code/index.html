@@ -17,13 +17,12 @@ tags:
 
 <p>This WebGL example provides a simple demonstration of procedural texturing with fragment shaders. That is, using code to generate textures for use in shading WebGL objects.</p>
 
-<p>{{EmbedLiveSample("textures-from-code-source",660,425)}}</p>
+<h2 id="Drawing_textures_with_code">Drawing textures with code</h2>
 
-<h3 id="Drawing_textures_with_code">Drawing textures with code</h3>
+<p>{{EmbedLiveSample("Drawing_textures_with_code",660,425)}}</p>
 
 <p>Texturing a point sprite with calculations done per-pixel in the fragment shader.</p>
 
-<div id="textures-from-code-source">
 <pre class="brush: html hidden">&lt;p&gt;Texture from code. Simple demonstration
     of procedural texturing&lt;/p&gt;
 </pre>
@@ -82,7 +81,7 @@ void main() {
 <pre class="brush: js hidden">;(function(){
 </pre>
 
-<pre class="brush: js" id="livesample-js">"use strict"
+<pre class="brush: js">"use strict"
 window.addEventListener("load", setupWebGL, false);
 var gl,
   program;
@@ -163,6 +162,5 @@ if (program)
 </pre>
 
 <p>The source code of this example is also available on <a href="https://github.com/idofilin/webgl-by-example/tree/master/textures-from-code">GitHub</a>.</p>
-</div>
 
 <p>{{PreviousNext("Learn/WebGL/By_example/Hello_vertex_attributes","Learn/WebGL/By_example/Video_textures")}}</p>

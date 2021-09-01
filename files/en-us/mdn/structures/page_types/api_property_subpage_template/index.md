@@ -19,7 +19,7 @@ browser-compat: path.to.feature.NameOfTheProperty
 >
 > The frontmatter at the top of the page is used to define "page metadata".
 > The values should be updated appropriately for the particular property.
-> 
+>
 > ```
 > ---
 > title: NameOfTheParentInterface.NameOfTheProperty
@@ -84,10 +84,6 @@ browser-compat: path.to.feature.NameOfTheProperty
 The summary paragraph — start by naming the property, saying what interface it is part of, and saying what it does.
 This should ideally be 1 or 2 short sentences.
 You could copy most of this from the property's summary on the corresponding API reference page. Include whether it is read-only or not.
-
-## Syntax
-
-Fill in a syntax box, according to the guidance in our [syntax sections](/en-US/docs/MDN/Structures/Syntax_sections) article.
 
 ### Value
 

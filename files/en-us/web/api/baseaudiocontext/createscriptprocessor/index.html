@@ -29,17 +29,17 @@ browser-compat: api.BaseAudioContext.createScriptProcessor
 
 <dl>
   <dt><code>bufferSize</code></dt>
-  <dd>The buffer size in units of sample-frames. If specified, the bufferSize must be one
+  <dd><p>The buffer size in units of sample-frames. If specified, the bufferSize must be one
     of the following values: 256, 512, 1024, 2048, 4096, 8192, 16384. If it's not passed
     in, or if the value is 0, then the implementation will choose the best buffer size for
     the given environment, which will be a constant power of 2 throughout the lifetime of
-    the node.</dd>
-  <dd>This value controls how frequently the <code>audioprocess</code> event is dispatched
+    the node.</p>
+  <p>This value controls how frequently the <code>audioprocess</code> event is dispatched
     and how many sample-frames need to be processed each call. Lower values for
     <code>bufferSize</code> will result in a lower (better) latency. Higher values will be
     necessary to avoid audio breakup and glitches. It is recommended for authors to not
     specify this buffer size and allow the implementation to pick a good buffer size to
-    balance between latency and audio quality.</dd>
+    balance between latency and audio quality.</p></dd>
   <dt><code>numberOfInputChannels</code></dt>
   <dd>Integer specifying the number of channels for this node's input, defaults to 2.
     Values of up to 32 are supported.</dd>
@@ -49,7 +49,7 @@ browser-compat: api.BaseAudioContext.createScriptProcessor
 </dl>
 
 <div class="warning">
-  <p><strong>Important</strong>: Webkit currently (version 31) requires that a valid
+  <p><strong>Warning:</strong> Webkit currently (version 31) requires that a valid
     <code>bufferSize</code> be passed when calling this method.</p>
 </div>
 

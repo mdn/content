@@ -3,18 +3,16 @@ title: FileSystemEntry.isDirectory
 slug: Web/API/FileSystemEntry/isDirectory
 tags:
 - API
-- File System API
 - File and Directory Entries API
 - FileSystemEntry
 - Files
-- Non-standard
 - Offline
 - Property
 - Reference
 - isDirectory
 browser-compat: api.FileSystemEntry.isDirectory
 ---
-<p>{{APIRef("File System API")}}{{SeeCompatTable}}</p>
+<p>{{APIRef("File and Directory Entries API")}}</p>
 
 <p>The read-only <strong><code>isDirectory</code></strong>
     property of the {{domxref("FileSystemEntry")}} interface is <code>true</code> if the
@@ -25,7 +23,7 @@ browser-compat: api.FileSystemEntry.isDirectory
   entry is a file.</p>
 
 <div class="warning">
-  <p>You should not assume that any entry which isn't a directory is a file or vice-versa.
+  <p><strong>Warning:</strong> You should not assume that any entry which isn't a directory is a file or vice-versa.
     There are other types of file descriptors on many operating systems. Be sure to use
     both <code>isDirectory</code> and <code>isFile</code> as needed to ensure that the
     entry is something you know how to work with.</p>
