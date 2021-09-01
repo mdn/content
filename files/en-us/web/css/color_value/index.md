@@ -1187,7 +1187,7 @@ This example shows the many ways in which a single color can be created with the
 
     /* Functional syntax with floats value */
     rgb(255, 0, 153.6, 1)
-    rgb(1e2, .5e1, .5e0, +.25e2%)
+    rgb(2.55e2, 0e0, 1.53e2, 1e2%)
 
 ### RGB transparency variations
 
@@ -1208,8 +1208,8 @@ This example shows the many ways in which a single color can be created with the
     rgba(51 170 51 / 40%)    /*  40% opaque green */
 
     /* Functional syntax with floats value */
-    rgba(255, 0, 153.6, 1)
-    rgba(1e2, .5e1, .5e0, +.25e2%)
+    rgba(51, 170, 51.6, 1)
+    rgba(5.1e1, 1.7e2, 5.1e1, 1e2%)
 
 ### HSL syntax variations
 
