@@ -54,7 +54,7 @@ browser-compat: api.XMLHttpRequest.XMLHttpRequest
 
 <dl>
   <dt><code>objParameters</code></dt>
-  <dd>There are two flags you can set:
+  <dd>One flag you can set:
     <dl>
       <dt><code>mozAnon</code></dt>
       <dd>Boolean: Setting this flag to <code>true</code> will cause the browser not to
@@ -64,13 +64,6 @@ browser-compat: api.XMLHttpRequest.XMLHttpRequest
           credentials</a> when fetching resources. Most important, this means that
         {{Glossary("Cookie", "cookies")}} will not be sent unless explicitly added using
         setRequestHeader.</dd>
-      <dt><code>mozSystem</code></dt>
-      <dd>Boolean: Setting this flag to <code>true</code> allows making cross-site
-        connections without requiring the server to opt-in using {{Glossary("CORS")}}.
-        <em>Requires setting <code>mozAnon: true</code>, i.e. this can't be combined with
-          sending cookies or other user credentials. This only works in privileged
-          (reviewed) apps ({{Bug("692677")}}); it does not work on arbitrary webpages
-          loaded in Firefox</em></dd>
     </dl>
   </dd>
 </dl>
