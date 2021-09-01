@@ -101,7 +101,7 @@ div { background-color: yellow; font-weight: bold; font-size: 130%; }
 
 #### Result
 
-{{EmbedLiveSample('Setting_background_opacity', '640', '105')}}
+{{EmbedLiveSample('Setting_opacity', '640', '105')}}
 
 ### Setting opacity on hover
 
