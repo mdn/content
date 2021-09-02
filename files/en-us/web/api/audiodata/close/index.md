@@ -11,7 +11,7 @@ browser-compat: api.AudioData.close
 ---
 {{DefaultAPISidebar("WebCodecs API")}}
 
-The **`close`** method of the {{domxref("AudioData")}} interface clears all state and releases the reference to the media resource.
+The **`close()`** method of the {{domxref("AudioData")}} interface clears all states and releases the reference to the media resource.
 
 ## Syntax
 
