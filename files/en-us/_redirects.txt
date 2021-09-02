@@ -2744,7 +2744,7 @@
 /en-US/docs/DOM_improvements_in_Firefox_3	/en-US/docs/Mozilla/Firefox/Releases/3/DOM_improvements
 /en-US/docs/DataTypeSet	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browsingData/DataTypeSet
 /en-US/docs/Deer_Park	/en-US/docs/Mozilla/Firefox/Releases/1.5
-/en-US/docs/Demos_of_open_web_technologies	/en-US/docs/Web/Demos_of_open_web_technologies
+/en-US/docs/Demos_of_open_web_technologies	/en-US/docs/Web/Demos
 /en-US/docs/Detecting_device_orientation	/en-US/docs/Web/Events/Detecting_device_orientation
 /en-US/docs/Determining_the_dimensions_of_elements	/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements
 /en-US/docs/DeviceAcceleration	/en-US/docs/Web/API/DeviceMotionEventAcceleration
@@ -5897,7 +5897,7 @@
 /en-US/docs/Online_Offline_Events	/en-US/docs/Web/API/Navigator/Online_and_offline_events
 /en-US/docs/Online_and_offline_events	/en-US/docs/Web/API/Navigator/Online_and_offline_events
 /en-US/docs/OpenWebApps	/en-US/docs/Web/Progressive_web_apps
-/en-US/docs/OpenWebDemos	/en-US/docs/Web/Demos_of_open_web_technologies
+/en-US/docs/OpenWebDemos	/en-US/docs/Web/Demos
 /en-US/docs/Optimizing_Your_Pages_for_Speculative_Parsing	/en-US/docs/Glossary/speculative_parsing
 /en-US/docs/Other_JavaScript_tools	/en-US/docs/Tools
 /en-US/docs/PHP	/en-US/docs/Glossary/PHP
@@ -10185,6 +10185,7 @@
 /en-US/docs/Web/CSS_Typed_OM	/en-US/docs/Web/API/CSS_Typed_OM_API
 /en-US/docs/Web/CSS_Typed_OM_API	/en-US/docs/Web/API/CSS_Typed_OM_API
 /en-US/docs/Web/CSS_Typed_Object_Model_API	/en-US/docs/Web/API/CSS_Typed_OM_API
+/en-US/docs/Web/Demos_of_open_web_technologies	/en-US/docs/Web/Demos
 /en-US/docs/Web/Events/Activate	/en-US/docs/Web/API/Element/DOMActivate_event
 /en-US/docs/Web/Events/DOMContentLoaded	/en-US/docs/Web/API/Window/DOMContentLoaded_event
 /en-US/docs/Web/Events/DOMMouseScroll	/en-US/docs/Web/API/Element/DOMMouseScroll_event
