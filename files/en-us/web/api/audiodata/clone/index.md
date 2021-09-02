@@ -34,10 +34,10 @@ The cloned {{domxref("AudioData")}} object.
 
 ## Examples
 
-The following example clones a copy of `AudioData` as `AudioData2`.
+The following example clones a copy of `AudioData` as `audioData2`.
 
 ```js
-let AudioData2 = AudioData.clone();
+let audioData2 = AudioData.clone();
 ```
 
 ## Specifications
