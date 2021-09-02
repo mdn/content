@@ -303,7 +303,7 @@ The properties and elements returned from this match are as follows:
 - {{jsxref("Array.prototype.copyWithin()")}}
   - : Copies a sequence of array elements within the array.
 - {{jsxref("Array.prototype.entries()")}}
-  - : Returns a new `Array Iterator` object that contains the key/value pairs for each index in the array.
+  - : Returns a new _array iterator_ object that contains the key/value pairs for each index in the array.
 - {{jsxref("Array.prototype.every()")}}
   - : Returns `true` if every element in this array satisfies the testing function.
 - {{jsxref("Array.prototype.fill()")}}
@@ -327,7 +327,7 @@ The properties and elements returned from this match are as follows:
 - {{jsxref("Array.prototype.join()")}}
   - : Joins all elements of an array into a string.
 - {{jsxref("Array.prototype.keys()")}}
-  - : Returns a new `Array Iterator` that contains the keys for each index in the array.
+  - : Returns a new Array Iterator that contains the keys for each index in the array.
 - {{jsxref("Array.prototype.lastIndexOf()")}}
   - : Returns the last (greatest) index of an element within the array equal to an element, or `-1` if none is found.
 - {{jsxref("Array.prototype.map()")}}
@@ -359,9 +359,9 @@ The properties and elements returned from this match are as follows:
 - {{jsxref("Array.prototype.unshift()")}}
   - : Adds one or more elements to the front of an array, and returns the new `length` of the array.
 - {{jsxref("Array.prototype.values()")}}
-  - : Returns a new `Array Iterator` object that contains the values for each index in the array.
+  - : Returns a new _array iterator_ object that contains the values for each index in the array.
 - {{jsxref("Array.prototype.@@iterator()", "Array.prototype[@@iterator]()")}}
-  - : Returns a new `Array Iterator` object that contains the values for each index in the array.
+  - : Returns a new _array iterator_ object that contains the values for each index in the array.
 
 ## Examples
 
