@@ -94,6 +94,6 @@ The [CSS layout cookbook](/en-US/docs/Web/CSS/Layout_cookbook) aims to bring tog
 
 ## See also
 
-- [CSS demos](/en-US/docs/Web/Demos_of_open_web_technologies#css): Get a creative boost by exploring examples of the latest CSS technologies in action.
+- [CSS demos](/en-US/docs/Web/Demos#css): Get a creative boost by exploring examples of the latest CSS technologies in action.
 - Web languages to which CSS is often applied: [HTML](/en-US/docs/Web/HTML), [SVG](/en-US/docs/Web/SVG), [MathML](/en-US/docs/Web/MathML), {{Glossary("XHTML")}}, and [XML](/en-US/docs/Web/XML/XML_introduction).
 - [Stack Overflow questions about CSS](https://stackoverflow.com/questions/tagged/css)
