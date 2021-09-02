@@ -14,7 +14,7 @@ browser-compat: api.Animation.finished
 ---
 <p>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</p>
 
-<p>The <code><strong>Animation</strong></code><strong><code>.finished</code></strong> read-only property of the <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> returns a {{jsxref("Promise")}} which resolves once the animation has finished playing.</p>
+<p>The <strong><code>Animation.finished</code></strong> read-only property of the <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> returns a {{jsxref("Promise")}} which resolves once the animation has finished playing.</p>
 
 <div class="note">
 <p><strong>Note:</strong> Every time the animation leaves the <code>finished</code> play state (that is, when it starts playing again), a new <code>Promise</code> is created for this property. The new <code>Promise</code> will resolve once the new animation sequence has completed.</p>
