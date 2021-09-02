@@ -71,8 +71,8 @@ The `mask-type` property is specified as one of the keyword values listed below.
     height: 100px;
     width: 100px;
     background-color: gray;
-    border: solid 1px #000;
-    mask: url(#m);
+    border: solid 1px black;
+    mask: url("#m");
 }
 ```
 
@@ -102,8 +102,8 @@ The `mask-type` property is specified as one of the keyword values listed below.
     height: 100px;
     width: 100px;
     background-color: gray;
-    border: solid 1px #000;
-    mask: url(#m)
+    border: solid 1px black;
+    mask: url("#m");
 }
 ```
 
