@@ -17,7 +17,7 @@ browser-compat: api.XRLightEstimate.primaryLightDirection
 
 The _read-only_ **`primaryLightDirection`** property of the {{DOMxRef("XRLightEstimate")}} interface returns a {{domxref("DOMPointReadOnly")}} representing the direction to the primary light source from the `probeSpace` of an {{domxref("XRLightProbe")}}.
 
-### Value
+## Value
 
 A {{domxref("DOMPointReadOnly")}} object. If no estimated values from the user's environment are available, the point will be `{ x: 0.0, y: 1.0, z: 0.0, w: 0.0 }`, representing a light shining straight down from above.
 

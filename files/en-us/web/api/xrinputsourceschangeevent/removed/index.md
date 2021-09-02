@@ -28,13 +28,7 @@ browser-compat: api.XRInputSourcesChangeEvent.removed
 The read-only {{domxref("XRInputSourcesChangeEvent")}} property {{domxref("XRInputSourcesChangeEvent.removed", "removed")}} is an array of
 zero or more {{domxref("XRInputSource")}} objects representing the input sources that have been removed from the {{domxref("XRSession")}}.
 
-## Syntax
-
-```js
-removedInputs = xrInputSourcesChangeEvent.removed;
-```
-
-### Value
+## Value
 
 An {{jsxref("Array")}} of zero or more {{domxref("XRInputSource")}} objects, each representing one input device removed from the XR system.
 

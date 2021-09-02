@@ -30,13 +30,7 @@ with {{domxref("XRViewport.width", "width")}} and the origin point given by
 {{domxref("XRViewport.x", "x")}} and {{domxref("XRViewport.y", "y")}}, this defines the
 area within which rendered content will be drawn.
 
-## Syntax
-
-```js
-height = xrViewport.height;
-```
-
-### Value
+## Value
 
 The viewport's height in pixels.
 

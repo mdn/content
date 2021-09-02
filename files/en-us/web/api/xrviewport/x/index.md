@@ -34,13 +34,7 @@ viewport's {{domxref("XRViewport.y", "y")}} property identifies the `y`
 component of the origin, and its is given by the {{domxref("XRViewPort.width",
   "width")}} and {{domxref("XRViewport.height", "height")}} properties.
 
-## Syntax
-
-```js
-x = xrViewport.x;
-```
-
-### Value
+## Value
 
 The offset from the left edge of the rendering surface to the left edge of the
 viewport, in pixels.

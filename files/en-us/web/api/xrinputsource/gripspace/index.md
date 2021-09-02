@@ -20,13 +20,7 @@ browser-compat: api.XRInputSource.gripSpace
 
 The read-only {{domxref("XRInputSource")}} property **`gripSpace`** returns an {{domxref("XRSpace")}} whose native origin tracks the pose used to render virtual objects so they appear to be held in (or part of) the user's hand. For example, if a user were holding a virtual straight rod, the native origin of this `XRSpace` would be located at the approximate center of mass of the user's fist.
 
-## Syntax
-
-```js
-var xrSpace = xrInputSource.gripSpace;
-```
-
-### Value
+## Value
 
 An {{domxref("XRSpace")}} object representing the position and orientation of the input
 device in virtual space, suitable for rendering an image of the device into the scene.

@@ -17,13 +17,7 @@ The `angularVelocity` read-only property of the
 the angular velocity in radians per second relative to the base
 {{DOMxRef("XRSpace")}}.
 
-## Syntax
-
-```js
-let radiansPerSecond = xrPose.angularVelocity;
-```
-
-### Value
+## Value
 
 A {{DOMxRef("DOMPointReadOnly")}} describing the angular velocity in radians
 per second relative to the base {{DOMxRef("XRSpace")}}. Returns {{jsxref("null")}}
