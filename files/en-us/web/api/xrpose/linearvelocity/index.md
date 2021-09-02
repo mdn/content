@@ -17,13 +17,7 @@ The `linearVelocity` read-only property of the
 the linear velocity in meters per second relative to the base
 {{DOMxRef("XRSpace")}}.
 
-## Syntax
-
-```js
-let metersPerSecond = xrPose.linearVelocity;
-```
-
-### Value
+## Value
 
 A {{DOMxRef("DOMPointReadOnly")}} describing the linear velocity in meters
 per second relative to the base {{DOMxRef("XRSpace")}}. Returns {{jsxref("null")}}

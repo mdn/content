@@ -27,13 +27,7 @@ The read-only {{domxref("XRInputSource")}} property **`profiles`** returns an ar
 > **Note:** The `profiles` list is always empty when the WebXR
 > session is in inline mode.
 
-## Syntax
-
-```js
-let profileList = xrInputSource.profiles;
-```
-
-### Value
+## Value
 
 An array of {{domxref("DOMString")}} objects, each describing one configuration profile
 for the input device represented by the `XRInputSource` object. Each input

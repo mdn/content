@@ -27,13 +27,7 @@ Keyboards, gamepads, and mice are _not_ considered WebXR input sources.
 
 > **Note:** Traditional gamepad controllers are supported using the [Gamepad API](/en-US/docs/Web/API/Gamepad_API).
 
-## Syntax
-
-```js
-inputSources = xrSession.inputSources;
-```
-
-### Value
+## Value
 
 An {{domxref("XRInputSourceArray")}} object listing all of the currently-connected
 input controllers which are linked specifically to the XR device currently in use. The

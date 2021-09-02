@@ -26,13 +26,7 @@ property {{domxref("XRInputSourcesChangeEvent.added", "added")}} is a list of ze
 more input sources, each identified using an {{domxref("XRInputSource")}} object,
 which have been newly made available for use.
 
-## Syntax
-
-```js
-let addedInputs = xrInputSourcesChangeEvent.added;
-```
-
-### Value
+## Value
 
 An {{jsxref("Array")}} of zero or more {{domxref("XRInputSource")}} objects, each
 representing one input device added to the XR system.

@@ -27,13 +27,7 @@ The read-only {{domxref("XRInputSource")}} property
 **`handedness`** indicates which of the user's hands the WebXR
 input source is associated with, or if it's not associated with a hand at all.
 
-## Syntax
-
-```js
-xrInputSource.handedness;
-```
-
-### Value
+## Value
 
 A string indicating whether the input controller is held in one of
 the user's hands, and if it is, which hand. The value is one of the following:

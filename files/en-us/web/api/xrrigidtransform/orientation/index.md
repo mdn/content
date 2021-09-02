@@ -30,13 +30,7 @@ specifying the rotational component of the transform represented by the object.
 If you specify a quaternion whose length is not exactly 1.0 meters, it will be
 normalized for you.
 
-## Syntax
-
-```js
-let orientation = xrRigidTransform.orientation;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMPointReadOnly")}} object which contains a unit quaternion providing the
 orientation component of the transform. As a unit quaternion, the length of the returned

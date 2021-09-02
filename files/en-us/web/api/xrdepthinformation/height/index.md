@@ -17,7 +17,7 @@ browser-compat: api.XRDepthInformation.height
 
 The *read-only* **`height`** property of the {{DOMxRef("XRDepthInformation")}} interface contains the height of the depth buffer (number of rows).
 
-### Value
+## Value
 
 An unsigned long integer.
 

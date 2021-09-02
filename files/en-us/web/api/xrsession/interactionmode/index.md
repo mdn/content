@@ -22,13 +22,7 @@ browser-compat: api.XRSession.interactionMode
 The {{domxref("XRSession")}} interface's *read-only* **`interactionMode`** property
 describes the best space (according to the user agent) for the application to draw an interactive UI for the current session.
 
-## Syntax
-
-```js
-xrSession.interactionMode;
-```
-
-### Value
+## Value
 
 A string describing the best space (according to the user agent) for the application to draw an interactive UI
 for the current session.

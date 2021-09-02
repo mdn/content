@@ -26,13 +26,7 @@ in the device.
 This property is read-only; however, you can indirectly change its
 value using  {{domxref("XRSession.updateRenderState")}}.
 
-## Syntax
-
-```js
-var xrWebGLLayer = xrRenderState.baseLayer;
-```
-
-### Value
+## Value
 
 A {{domxref("XRWebGLLayer")}} object which is used as the source of the world's
 contents when rendering each frame of the scene.

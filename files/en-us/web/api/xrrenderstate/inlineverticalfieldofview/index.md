@@ -18,13 +18,7 @@ property of the {{DOMxRef("XRRenderState")}} interface returns the default verti
 field of view for `"inline"` sessions and `null` for all immersive
 sessions.
 
-## Syntax
-
-```js
-var inlineVerticalFieldOfView = xrRenderState.inlineVerticalFieldOfView;
-```
-
-### Value
+## Value
 
 A {{JSxRef("Number")}} for `"inline"` sessions, which represents the default
 field of view, and `null` for immersive sessions.
