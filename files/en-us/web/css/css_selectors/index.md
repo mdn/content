@@ -40,7 +40,7 @@ tags:
 ## Grouping selectors
 
 - [Selector list](/en-US/docs/Web/CSS/Selector_list)
-  - : The `,` is a grouping method, it selects all the matching nodes.
+  - : The `,` selector is a grouping method that selects all the matching nodes.
     **Syntax:** `A, B`
     **Example:** `div, span` will match both {{HTMLElement("span")}} and {{HTMLElement("div")}} elements.
 
