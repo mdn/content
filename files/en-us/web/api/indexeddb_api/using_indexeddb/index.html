@@ -123,7 +123,7 @@ request.onsuccess = function(event) {
 
 <h3 id="Creating_or_updating_the_version_of_the_database">Creating or updating the version of the database</h3>
 
-<p><a name="Updating_the_version_of_the_database"></a>When you create a new database or increase the version number of an existing database (by specifying a higher version number than you did previously, when {{ anch("Opening a database") }}), the <code>onupgradeneeded</code> event will be triggered and an <a href="/en-US/docs/Web/API/IDBVersionChangeEvent">IDBVersionChangeEvent</a> object will be passed to any <code>onversionchange</code> event handler set up on <code>request.result</code> (i.e., <code>db</code> in the example). In the handler for the <code>upgradeneeded</code> event, you should create the object stores needed for this version of the database:</p>
+<p>When you create a new database or increase the version number of an existing database (by specifying a higher version number than you did previously, when {{ anch("Opening a database") }}), the <code>onupgradeneeded</code> event will be triggered and an <a href="/en-US/docs/Web/API/IDBVersionChangeEvent">IDBVersionChangeEvent</a> object will be passed to any <code>onversionchange</code> event handler set up on <code>request.result</code> (i.e., <code>db</code> in the example). In the handler for the <code>upgradeneeded</code> event, you should create the object stores needed for this version of the database:</p>
 
 <pre class="brush:js;">// This event is only implemented in recent browsers
 request.onupgradeneeded = function(event) {
@@ -626,7 +626,7 @@ function useDatabase(db) {
 <p>{{domxref("IDBIndex")}} has also had new properties added to it to specify if it has a locale specified, and what it is: <code>locale</code> (returns the locale if any, or null if none is specified) and <code>isAutoLocale</code> (returns <code>true</code> if the index was created with an auto locale, meaning that the platform's default locale is used, <code>false</code> otherwise.)</p>
 
 <div class="note">
-<p><strong>Note:</strong> This feature is currently hidden behind a flag — to enable it and experiment, go to <a>about:config</a> and enable <code>dom.indexedDB.experimental</code>.</p>
+<p><strong>Note:</strong> This feature is currently hidden behind a flag — to enable it and experiment, go to <code>about:config</code> and enable <code>dom.indexedDB.experimental</code>.</p>
 </div>
 
 <h2 id="Full_IndexedDB_example">Full IndexedDB example</h2>
@@ -1307,7 +1307,7 @@ input {
 <p>{{ LiveSampleLink('Full_IndexedDB_example', "Test the online live demo") }}</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> <code>window.indexedDB.open()</code> is asynchronous; the method will finish running long before the <code>success</code> event is fired. This means that a function (e.g. <code>openDb()</code>) that calls <code>open()</code> and <code>onsuccess</code> will return before the <code>onsuccess</code> handler has run. This issue is also true of other request methods such as <code>transaction()</code> and <code>get()</code>.</p>
+<p><strong>Note:</strong> <code>window.indexedDB.open()</code> is asynchronous; the method will finish running long before the <code>success</code> event is fired. This means that a function (e.g. <code>openDb()</code>) that calls <code>open()</code> and <code>onsuccess</code> will return before the <code>onsuccess</code> handler has run. This issue is also true of other request methods such as <code>transaction()</code> and <code>get()</code>.</p>
 </div>
 
 <h2 id="See_also">See also</h2>

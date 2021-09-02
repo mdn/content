@@ -98,7 +98,7 @@ tags:
 <p>You’ll notice a few differences here from how equivalent values are represented in CSS:</p>
 
 <ul>
- <li>For one, the duration is in milliseconds as opposed to seconds — 3000 not 3s. Like {{domxref("WindowOrWorkerGlobalScope.setTimeout")}} and {{domxref("Window.requestAnimationFrame()")}}, the Web Animations API only takes milliseconds.</li>
+ <li>For one, the duration is in milliseconds as opposed to seconds — 3000 not 3s. Like {{domxref("setTimeout()")}} and {{domxref("Window.requestAnimationFrame()")}}, the Web Animations API only takes milliseconds.</li>
  <li>The other thing you’ll notice is that it’s <code>iterations</code>, not <code>iteration-count</code>.</li>
 </ul>
 
@@ -319,7 +319,7 @@ drinking.pause();</pre>
 </pre>
 
 <div class="note">
-<p><strong>Note:</strong> <code>getAnimations()</code> and <code>effect</code> are not shipping in all browsers as of this writing, but the polyfill does support them today.</p>
+<p><strong>Note:</strong> <code>getAnimations()</code> and <code>effect</code> are not shipping in all browsers as of this writing, but the polyfill does support them today.</p>
 </div>
 
 <h2 id="Callbacks_and_promises">Callbacks and promises</h2>

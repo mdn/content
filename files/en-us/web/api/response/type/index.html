@@ -24,7 +24,7 @@ browser-compat: api.Response.type
 </ul>
 
 <div class="note">
-<p><strong>Note:</strong> An "error" Response never really gets exposed to script: such a response to a {{domxref("WindowOrWorkerGlobalScope/fetch","fetch()")}} would reject the promise.</p>
+<p><strong>Note:</strong> An "error" Response never really gets exposed to script: such a response to a {{domxref("fetch()")}} would reject the promise.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -37,7 +37,7 @@ browser-compat: api.Response.type
 
 <h2 id="Example">Example</h2>
 
-<p>In our <a href="https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-response">Fetch Response example</a> (see <a href="https://mdn.github.io/fetch-examples/fetch-response/">Fetch Response live</a>) we create a new {{domxref("Request")}} object using the {{domxref("Request.Request","Request()")}} constructor, passing it a JPG path. We then fetch this request using {{domxref("WindowOrWorkerGlobalScope/fetch","fetch()")}}, extract a blob from the response using {{domxref("Response.blob")}}, create an object URL out of it using {{domxref("URL.createObjectURL")}}, and display this in an {{htmlelement("img")}}.</p>
+<p>In our <a href="https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-response">Fetch Response example</a> (see <a href="https://mdn.github.io/fetch-examples/fetch-response/">Fetch Response live</a>) we create a new {{domxref("Request")}} object using the {{domxref("Request.Request","Request()")}} constructor, passing it a JPG path. We then fetch this request using {{domxref("fetch()")}}, extract a blob from the response using {{domxref("Response.blob")}}, create an object URL out of it using {{domxref("URL.createObjectURL")}}, and display this in an {{htmlelement("img")}}.</p>
 
 <p>Note that at the top of the <code>fetch()</code> block we log the response <code>type</code> to the console.</p>
 

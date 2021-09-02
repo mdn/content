@@ -31,13 +31,13 @@ The following examples demonstrate how some of the Box Alignment Properties are 
 
 In this example using Grid Layout, there is extra space in the grid container after laying out the fixed width tracks on the inline (main) axis. This space is distributed using {{cssxref("justify-content")}}. On the block (cross) axis the alignment of the items inside their grid areas is controlled with {{cssxref("align-items")}}. The first item overrides the `align-items` value set on the group by setting {{cssxref("align-self")}} to `center`.
 
-{{EmbedGHLiveSample("css-examples/box-alignment/overview/grid-align-items.html", '100%', 500)}}
+{{EmbedGHLiveSample("css-examples/box-alignment/overview/grid-align-items.html", '100%', 700)}}
 
 ### Flexbox Alignment Example
 
 In this example, three flex items are aligned on the main axis using `justify-content` and on the Cross Axis using `align-items`. The first item overrides the `align-items` set on the group by setting `align-self` to `center`.
 
-{{EmbedGHLiveSample("css-examples/box-alignment/overview/flex-align-items.html", '100%', 500)}}
+{{EmbedGHLiveSample("css-examples/box-alignment/overview/flex-align-items.html", '100%', 700)}}
 
 ## Key concepts and terminology
 
@@ -162,17 +162,11 @@ The `gap` property is a shorthand for `row-gap` and `column-gap`, which allows u
 
 In the below example, a grid layout uses the `gap` shorthand to set a `10px` gap between row tracks, and a `2em` gap between column tracks.
 
-{{EmbedGHLiveSample("css-examples/box-alignment/overview/grid-gap.html", '100%', 500)}}
+{{EmbedGHLiveSample("css-examples/box-alignment/overview/grid-gap.html", '100%', 700)}}
 
-In this example I am using the {{cssxref("gap")}} property in addition to {{cssxref("gap")}}. The gap properties were originally prefixed with `grid-` in the Grid Layout specification and some browsers only support these prefixed versions.
+> **Note:** The early grid implementation included `-gap` properties prefixed with `grid-`. All browsers now support the unprefixed properties, though you may see the following legacy properties in examples and tutorials: {{cssxref("row-gap")}}, {{cssxref("column-gap")}}, and {{cssxref("gap")}}. The prefixed versions will be maintained as an alias of the unprefixed ones.
 
-- {{cssxref("row-gap")}}
-- {{cssxref("column-gap")}}
-- {{cssxref("gap")}}
-
-The prefixed versions will be maintained as an alias of the unprefixed ones, however you can always double up in the way that you would with vendor prefixes, adding the `grid-gap` property and then the `gap` property with the same values.
-
-Also, be aware that other things may increase the visual gap displayed, for example using the space distribution keywords or adding margins to items.
+Be aware that other things may increase the visual gap displayed, for example using the space distribution keywords or adding margins to items.
 
 ## Pages detailing individual alignment properties
 

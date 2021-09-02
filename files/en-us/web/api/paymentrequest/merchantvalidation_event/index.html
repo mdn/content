@@ -46,7 +46,7 @@ browser-compat: api.PaymentRequest.merchantvalidation_event
 
 <h2 id="Examples">Examples</h2>
 
-<p>In this example, an event handler is established for the <code>merchantvalidation</code> event. It uses the {{domxref("WindowOrWorkerGlobalScope.fetch", "fetch()")}} to send a request to its own server with an argument of the payment method's validation URL, obtained from the event's {{domxref("MerchantValidationEvent.validationURL", "validationURL")}} property. The merchant server should access the validation URL in accordance with the payment method documention. Typically, a client should not access the validation URL.</p>
+<p>In this example, an event handler is established for the <code>merchantvalidation</code> event. It uses the {{domxref("fetch()")}} to send a request to its own server with an argument of the payment method's validation URL, obtained from the event's {{domxref("MerchantValidationEvent.validationURL", "validationURL")}} property. The merchant server should access the validation URL in accordance with the payment method documention. Typically, a client should not access the validation URL.</p>
 
 <pre class="brush: js">request.addEventListener("merchantvalidation", event =&gt; {
   event.complete(async () =&gt; {

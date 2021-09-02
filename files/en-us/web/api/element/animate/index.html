@@ -25,8 +25,7 @@ browser-compat: api.Element.animate
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js">var <em>animation</em> = element.animate(<em>keyframes</em>, <em>options</em>); </pre>
+<pre class="brush: js">animate(keyframes, options)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -35,14 +34,12 @@ browser-compat: api.Element.animate
   <dd>
     <p>Either an array of keyframe objects, <strong>or</strong> a keyframe object whose
       properties are arrays of values to iterate over. See <a
-        href="/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats">Keyframe
-        Formats </a>for more details.</p>
+        href="/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats">Keyframe Formats </a>for more details.</p>
   </dd>
   <dt><code>options</code></dt>
-  <dd>Either an <strong>integer representing the animation's duration</strong> (in
+  <dd><p>Either an <strong>integer representing the animation's duration</strong> (in
     milliseconds), <strong>or</strong> an Object containing one or more timing
-    properties: </dd>
-  <dd>
+    properties:</p>
     <dl>
       <dt><code>id {{optional_inline}}</code></dt>
       <dd>A property unique to <code>animate()</code>: a <a
@@ -50,8 +47,26 @@ browser-compat: api.Element.animate
           title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String."><code>DOMString</code></a>
         with which to reference the animation.</dd>
     </dl>
-    {{Page("/en-US/docs/Web/API/Web_Animations_API/Animation_timing_properties",
-    "Properties")}}
+
+    <dl>
+      <dt>{{domxref("EffectTiming.delay", "delay")}} {{optional_inline}}</dt>
+      <dd>The number of milliseconds to delay the start of the animation. Defaults to 0.</dd>
+      <dt>{{domxref("EffectTiming.direction", "direction")}} {{optional_inline}}</dt>
+      <dd>Whether the animation runs forwards (<code>normal</code>), backwards (<code>reverse</code>), switches direction after each iteration (<code>alternate</code>), or runs backwards and switches direction after each iteration (<code>alternate-reverse</code>). Defaults to <code>"normal"</code>.</dd>
+      <dt>{{domxref("EffectTiming.duration", "duration")}} {{optional_inline}}</dt>
+      <dd>The number of milliseconds each iteration of the animation takes to complete. Defaults to 0. Although this is technically optional, keep in mind that your animation will not run if this value is 0.</dd>
+      <dt>{{domxref("EffectTiming.easing", "easing")}} {{optional_inline}}</dt>
+      <dd>The rate of the animation's change over time. Accepts the pre-defined values <code>"linear"</code>, <code>"ease"</code>, <code>"ease-in"</code>, <code>"ease-out"</code>, and <code>"ease-in-out"</code>, or a custom <code>"cubic-bezier"</code> value like <code>"cubic-bezier(0.42, 0, 0.58, 1)"</code>. Defaults to <code>"linear"</code>.</dd>
+      <dt>{{domxref("EffectTiming.endDelay", "endDelay")}} {{optional_inline}}</dt>
+      <dd>The number of milliseconds to delay after the end of an animation. This is primarily of use when sequencing animations based on the end time of another animation. Defaults to 0. </dd>
+      <dt>{{domxref("EffectTiming.fill", "fill")}} {{optional_inline}}</dt>
+      <dd>Dictates whether the animation's effects should be reflected by the element(s) prior to playing (<code>"backwards"</code>), retained after the animation has completed playing (<code>"forwards"</code>), or <code>both</code>. Defaults to <code>"none"</code>.</dd>
+      <dt>{{domxref("EffectTiming.iterationStart", "iterationStart")}} {{optional_inline}}</dt>
+      <dd>Describes at what point in the iteration the animation should start. 0.5 would indicate starting halfway through the first iteration for example, and with this value set, an animation with 2 iterations would end halfway through a third iteration. Defaults to 0.0.</dd>
+      <dt>{{domxref("EffectTiming.iterations", "iterations")}} {{optional_inline}}</dt>
+      <dd>The number of times the animation should repeat. Defaults to <code>1</code>, and can also take a value of {{jsxref("Infinity")}} to make it repeat for as long as the element exists.</dd>
+     </dl>
+
   </dd>
 </dl>
 

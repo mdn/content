@@ -9,13 +9,17 @@ browser-compat: api.PresentationRequest.reconnect
 ---
 <p>When the <code><dfn>reconnect</dfn>(presentationId)</code> method is called on a <code>PresentationRequest</code> <var>presentationRequest</var>, the <a href="https://www.w3.org/TR/presentation-api/#dfn-user-agents">user agent</a> <em>MUST</em> run the following steps to <dfn>reconnect to a presentation</dfn>:</p>
 
-<dl>
- <dt>Input</dt>
- <dd><var>presentationRequest</var>, the <a href="https://www.w3.org/TR/presentation-api/#idl-def-presentationrequest"><code>PresentationRequest</code></a> object that <code><a href="https://www.w3.org/TR/presentation-api/#dom-presentationrequest-reconnect">reconnect()</a></code> was called on.</dd>
- <dd><var>presentationId</var>, a valid <a href="https://www.w3.org/TR/presentation-api/#dfn-presentation-identifier">presentation identifier</a></dd>
- <dt>Output</dt>
- <dd><var>P</var>, a <a href="https://www.w3.org/TR/presentation-api/#dfn-promise">Promise</a></dd>
-</dl>
+<h2>Input</h2>
+
+<ul>
+ <li><var>presentationRequest</var>, the <a href="https://www.w3.org/TR/presentation-api/#idl-def-presentationrequest"><code>PresentationRequest</code></a> object that <code><a href="https://www.w3.org/TR/presentation-api/#dom-presentationrequest-reconnect">reconnect()</a></code> was called on.</li>
+ <li><var>presentationId</var>, a valid <a href="https://www.w3.org/TR/presentation-api/#dfn-presentation-identifier">presentation identifier</a></li>
+</ul>
+
+<h2>Output</h2>
+ <p><var>P</var>, a <a href="https://www.w3.org/TR/presentation-api/#dfn-promise">Promise</a>.</p>
+
+<h2>Algorithm</h2>
 
 <ol>
  <li>Using the document's <a href="https://www.w3.org/TR/presentation-api/#dfn-settings-object">settings object</a> run the <a href="https://www.w3.org/TR/presentation-api/#dfn-prohibits-mixed-security-contexts-algorithm">prohibits mixed security contexts algorithm</a>.</li>

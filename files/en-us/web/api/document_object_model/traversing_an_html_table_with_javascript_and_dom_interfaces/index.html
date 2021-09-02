@@ -19,7 +19,7 @@ tags:
 <p><strong>Note:</strong> The DOM methods presented here are part of the Document Object Model (Core) level 1 specification. DOM level 1 includes both methods for generic document access and manipulation (DOM 1 Core) as well as methods specific to HTML documents (DOM 1 HTML).</p>
 </div>
 
-<h2 id="Overview_of_Sample1.html">Example: Creating an HTML table dynamically (<code>Sample1.html</code>)</h2>
+<h2>Example: Creating an HTML table dynamically</h2>
 
 <h3 id="HTML">HTML</h3>
 
@@ -63,7 +63,7 @@ tags:
   tbl.setAttribute("border", "2");
 }</pre>
 
-<p>{{ EmbedLiveSample('Overview_of_Sample1.html') }}</p>
+<p>{{ EmbedLiveSample('Example_Creating_an_HTML_table_dynamically') }}</p>
 
 <p>Note the order in which we created the elements and the text node:</p>
 
@@ -116,7 +116,7 @@ tags:
 
 <p>You can build this table and its internal child elements by using just a few DOM methods. Remember to keep in mind the tree model for the structures you are planning to create; this will make it easier to write the necessary code. In the <code>&lt;table&gt;</code> tree of Figure 1 the element <code>&lt;table&gt;</code> has one child: the element <code>&lt;tbody&gt;</code>. <code>&lt;tbody&gt;</code> has two children. Each <code>&lt;tbody&gt;</code>'s child (<code>&lt;tr&gt;</code>) has two children (<code>&lt;td&gt;</code>). Finally, each <code>&lt;td&gt;</code> has one child: a text node.</p>
 
-<h2 id="Setting_background_of_a_paragraph">Example: Setting the background color of a paragraph</h2>
+<h2 id="Example_Setting_the_background_color_of_a_paragraph">Example: Setting the background color of a paragraph</h2>
 
 <p><code>getElementsByTagName(tagNameValue)</code> is a method available in any DOM {{domxref("Element")}} or the root {{domxref("Document")}} element. When called, it returns an array with all of the element's descendants matching the tag name. The first element of the list is located at position <code>[0]</code> in the array.</p>
 
@@ -143,7 +143,7 @@ tags:
   myP.style.background = "rgb(255,0,0)";
 }</pre>
 
-<p>{{ EmbedLiveSample('Setting_background_of_a_paragraph') }}</p>
+<p>{{ EmbedLiveSample('Example_Setting_the_background_color_of_a_paragraph') }}</p>
 
 <p>In this example, we set the <code>myP</code> variable to the DOM object for the second <code>p</code> element inside the body:</p>
 

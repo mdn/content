@@ -96,7 +96,7 @@ browser-compat: api.Window
  <dd>Gets the height of the content area of the browser window including, if rendered, the horizontal scrollbar.</dd>
  <dt>{{domxref("Window.innerWidth")}} {{readOnlyInline}}</dt>
  <dd>Gets the width of the content area of the browser window including, if rendered, the vertical scrollbar.</dd>
- <dt>{{domxref("Window.isSecureContext")}} {{experimental_inline}} {{readOnlyInline}}</dt>
+ <dt>{{domxref("isSecureContext")}} {{experimental_inline}} {{readOnlyInline}}</dt>
  <dd>Indicates whether a context is capable of using features that require secure contexts.</dd>
  <dt>{{domxref("Window.length")}} {{readOnlyInline}}</dt>
  <dd>Returns the number of frames in the window. See also {{domxref("window.frames")}}.</dd>
@@ -177,11 +177,11 @@ browser-compat: api.Window
 <h3 id="Properties_implemented_from_elsewhere">Properties implemented from elsewhere</h3>
 
 <dl>
- <dt>{{domxref("WindowOrWorkerGlobalScope.caches")}} {{readOnlyinline}}</dt>
+ <dt>{{domxref("caches")}} {{readOnlyinline}}</dt>
  <dd>Returns the {{domxref("CacheStorage")}} object associated with the current context. This object enables functionality such as storing assets for offline use, and generating custom responses to requests.</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.indexedDB")}} {{readonlyInline}}</dt>
+ <dt>{{domxref("indexedDB")}} {{readonlyInline}}</dt>
  <dd>Provides a mechanism for applications to asynchronously access capabilities of indexed databases; returns an {{domxref("IDBFactory")}} object.</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.isSecureContext")}} {{readOnlyinline}}</dt>
+ <dt>{{domxref("isSecureContext")}} {{readOnlyinline}}</dt>
  <dd>Returns a boolean indicating whether the current context is secure (<code>true</code>) or not (<code>false</code>).</dd>
  <dt>{{domxref("WindowOrWorkerGlobalScope.origin")}} {{readOnlyinline}}</dt>
  <dd>Returns the global object's origin, serialized as a string. (This does not yet appear to be implemented in any browser.)</dd>
@@ -300,23 +300,23 @@ browser-compat: api.Window
  <dd>Register an event handler to a specific event type on the window.</dd>
  <dt>{{domxref("EventTarget.dispatchEvent()")}}</dt>
  <dd>Used to trigger an event.</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.atob()")}}</dt>
+ <dt>{{domxref("atob", "atob()")}}</dt>
  <dd>Decodes a string of data which has been encoded using base-64 encoding.</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.btoa()")}}</dt>
+ <dt>{{domxref("btoa", "btoa()")}}</dt>
  <dd>Creates a base-64 encoded ASCII string from a string of binary data.</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.clearInterval()")}}</dt>
- <dd>Cancels the repeated execution set using {{domxref("WindowOrWorkerGlobalScope.setInterval()")}}.</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.clearTimeout()")}}</dt>
- <dd>Cancels the delayed execution set using {{domxref("WindowOrWorkerGlobalScope.setTimeout()")}}.</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.createImageBitmap()")}}</dt>
+ <dt>{{domxref("clearInterval()")}}</dt>
+ <dd>Cancels the repeated execution set using {{domxref("setInterval()")}}.</dd>
+ <dt>{{domxref("clearTimeout()")}}</dt>
+ <dd>Cancels the delayed execution set using {{domxref("setTimeout()")}}.</dd>
+ <dt>{{domxref("createImageBitmap()")}}</dt>
  <dd>Accepts a variety of different image sources, and returns a {{jsxref("Promise")}} which resolves to an {{domxref("ImageBitmap")}}. Optionally the source is cropped to the rectangle of pixels originating at <em>(sx, sy)</em> with width sw, and height sh.</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.fetch()")}}</dt>
+ <dt>{{domxref("fetch()")}}</dt>
  <dd>Starts the process of fetching a resource from the network.</dd>
  <dt>{{domxref("EventTarget.removeEventListener")}}</dt>
  <dd>Removes an event listener from the window.</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.setInterval()")}}</dt>
+ <dt>{{domxref("setInterval()")}}</dt>
  <dd>Schedules a function to execute every time a given number of milliseconds elapses.</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.setTimeout()")}}</dt>
+ <dt>{{domxref("setTimeout()")}}</dt>
  <dd>Schedules a function to execute in a given amount of time.</dd>
 </dl>
 

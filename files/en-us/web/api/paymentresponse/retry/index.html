@@ -100,9 +100,6 @@ browser-compat: api.PaymentResponse.retry
 
 <h2 id="Examples">Examples</h2>
 
-<p><u><strong>try { await paymentRequest.retry(errorFields); } catch (DOMException err) {
-      ... }</strong></u></p>
-
 <pre class="brush: js">async function doPaymentRequest() {
   const request = new PaymentRequest(methodData, details, options);
   const response = await request.show();
