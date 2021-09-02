@@ -54,26 +54,25 @@ The `mask-type` property is specified as one of the keyword values listed below.
 #### HTML
 
 ```html
-<div class="redsquare">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0">
-    <defs>
-      <mask id="m" maskContentUnits="objectBoundingBox" style="mask-type:alpha">
-        <rect x=".1" y=".1" width=".8" height=".8" fill="red" fill-opacity=".7" />
-      </mask>
-    </defs>
-  </svg>
-</div>
+<div class="graysquare"></div>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0">
+  <defs>
+    <mask id="m" maskContentUnits="objectBoundingBox" style="mask-type:alpha">
+      <rect x=".1" y=".1" width=".8" height=".8" fill="red" fill-opacity=".7"/>
+    </mask>
+  </defs>
+</svg>
 ```
 
 #### CSS
 
 ```css
-.redsquare {
-  height: 100px;
-  width: 100px;
-  background-color: rgb(128, 128, 128);
-  border: solid 1px black;
-  mask: url("#m");
+.graysquare {
+    height: 100px;
+    width: 100px;
+    background-color: gray;
+    border: solid 1px #000;
+    mask: url(#m);
 }
 ```
 
@@ -86,26 +85,25 @@ The `mask-type` property is specified as one of the keyword values listed below.
 #### HTML
 
 ```html
-<div class="redsquare">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0">
-    <defs>
-      <mask id="m" maskContentUnits="objectBoundingBox" style="mask-type:luminance">
-        <rect x=".1" y=".1" width=".8" height=".8" fill="red" fill-opacity=".7" />
-      </mask>
-    </defs>
-  </svg>
-</div>
+<div class="graysquare"></div>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0">
+  <defs>
+    <mask id="m" maskContentUnits="objectBoundingBox" style="mask-type:luminance">
+      <rect x=".1" y=".1" width=".8" height=".8" fill="red" fill-opacity=".7"/>
+    </mask>
+  </defs>
+</svg>
 ```
 
 #### CSS
 
 ```css
-.redsquare {
-  height: 100px;
-  width: 100px;
-  background-color: rgb(128, 128, 128);
-  border: solid 1px black;
-  mask: url("#m");
+.graysquare {
+    height: 100px;
+    width: 100px;
+    background-color: gray;
+    border: solid 1px #000;
+    mask: url(#m)
 }
 ```
 
