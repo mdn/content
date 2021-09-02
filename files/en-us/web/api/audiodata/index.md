@@ -57,7 +57,7 @@ In a planar format, the audio samples from the different channels are laid out i
 - {{domxref("AudioData.clone()")}}
   - : Creates a new `AudioData` object with reference to the same media resource as the original.
 - {{domxref("AudioData.close()")}}
-  - : Clears all state and releases the reference to the media resource.
+  - : Clears all states and releases the reference to the media resource.
 
 ## Specifications
 
