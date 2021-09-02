@@ -23,6 +23,9 @@ browser-compat: api.HTMLMediaElement.defaultPlaybackRate
 
 <p>A double. 1.0 is "normal speed," values lower than 1.0 make the media play slower than normal, higher values make it play faster. The value 0.0 is invalid and throws a <code>NOT_SUPPORTED_ERR</code> exception.</p>
 
+<p>The user agent will throw a <code>NotSupportedError</code> exception if the specified value is not supported.</p>
+
+
 <h2 id="Example">Example</h2>
 
 <pre class="brush: js">var obj = document.createElement('video');
