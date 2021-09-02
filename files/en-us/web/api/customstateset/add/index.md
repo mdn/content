@@ -11,7 +11,7 @@ browser-compat: api.CustomStateSet.add
 ---
 {{DefaultAPISidebar("DOM")}}
 
-The **`add`** method of the {{domxref("CustomStateSet")}} interface runs the {{jsxref("Set.add()")}} method, after checking that the value is in the correct format.
+The **`add`** method of the {{domxref("CustomStateSet")}} interface adds an item to the `CustomStateSet`, after checking that the value is in the correct format.
 
 ## Syntax
 
@@ -30,7 +30,7 @@ Undefined.
 
 ### Exceptions
 
-- `{{domxref("DOMException")}} `SyntaxError`
+- {{domxref("DOMException")}} `SyntaxError`
   - : Thrown if the string is not a `<dashed-ident>`.
 
 ## Examples
