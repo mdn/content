@@ -40,7 +40,7 @@ some(function callbackFn(element, index, array) { ... }, thisArg)
 
 ### Parameters
 
-- `callback`
+- `callbackFn`
 
   - : A function to test for each element, taking three arguments:
 
