@@ -25,7 +25,7 @@ See [transitioning to strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_m
 
 ## Invoking strict mode
 
-Strict mode applies to _entire scripts_ or to _individual functions_. It doesn't apply to block statements enclosed in `{}` braces; attempting to apply it to such contexts does nothing. `eval` code, `Function` code, event handler attributes, strings passed to [`WindowTimers.setTimeout()`](/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout "The documentation about this has not yet been written; please consider contributing!"), and related functions are entire scripts, and invoking strict mode in them works as expected.
+Strict mode applies to _entire scripts_ or to _individual functions_. It doesn't apply to block statements enclosed in `{}` braces; attempting to apply it to such contexts does nothing. `eval` code, `Function` code, event handler attributes, strings passed to [`setTimeout()`](/en-US/docs/Web/API/setTimeout), and related functions are entire scripts, and invoking strict mode in them works as expected.
 
 ### Strict mode for scripts
 

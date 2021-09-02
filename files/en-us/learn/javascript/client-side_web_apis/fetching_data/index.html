@@ -198,7 +198,7 @@ request.send();</pre>
 
 <h4 id="So_what_is_going_on_in_the_Fetch_code">So what is going on in the Fetch code?</h4>
 
-<p>First of all, we invoke the {{domxref("WorkerOrWindowGlobalScope.fetch()","fetch()")}} method, passing it the URL of the resource we want to fetch. This is the modern equivalent of {{domxref("XMLHttpRequest.open","request.open()")}} in XHR, plus you don't need any equivalent to <code>.send()</code>.</p>
+<p>First of all, we invoke the {{domxref("fetch()")}} method, passing it the URL of the resource we want to fetch. This is the modern equivalent of {{domxref("XMLHttpRequest.open","request.open()")}} in XHR, plus you don't need any equivalent to <code>.send()</code>.</p>
 
 <p>After that, you can see the {{jsxref("Promise.then",".then()")}} method chained onto the end of <code>fetch()</code> — this method is a part of {{jsxref("Promise","Promises")}}, a modern JavaScript feature for performing asynchronous operations. <code>fetch()</code> returns a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promise</a>, which resolves to the response sent back from the server — we use <code>.then()</code> to run some follow-up code after the promise resolves, which is the function we've defined inside it. This is the equivalent of the <code>onload</code> event handler in the XHR version.</p>
 

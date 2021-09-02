@@ -12,7 +12,7 @@ browser-compat: api.HTMLIFrameElement.referrerPolicy
 <div>{{APIRef}}</div>
 
 <p>The
-  <code><strong>HTMLIFrameElement</strong></code><strong><code>.referrerPolicy</code></strong>
+  <strong><code>HTMLIFrameElement.referrerPolicy</code></strong>
   property reflects the HTML {{htmlattrxref("referrerpolicy","iframe")}} attribute of the
   {{HTMLElement("iframe")}} element defining which referrer is sent when fetching the
   resource.</p>
@@ -60,7 +60,7 @@ browser-compat: api.HTMLIFrameElement.referrerPolicy
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js;highlight:[3]">var iframe = document.createElement("iframe");
+<pre class="brush: js;">var iframe = document.createElement("iframe");
 iframe.src = "/";
 iframe.referrerPolicy = "unsafe-url";
 var body = document.getElementsByTagName("body")[0];

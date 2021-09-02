@@ -210,7 +210,7 @@ let refreshIntervalID = 0;</pre>
  <dt><code>adObserver</code></dt>
  <dd>Will hold our {{domxref("IntersectionObserver")}} used to track the intersection between the ads and the <code>&lt;main&gt;</code> element's bounds.</dd>
  <dt><code>refreshIntervalID</code></dt>
- <dd>Used to store the interval ID returned by {{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}}. This interval will be used to trigger our periodic refreshes of the ads' content.</dd>
+ <dd>Used to store the interval ID returned by {{domxref("setInterval()")}}. This interval will be used to trigger our periodic refreshes of the ads' content.</dd>
 </dl>
 
 <h4 id="Setting_up">Setting up</h4>
@@ -304,7 +304,7 @@ function startup() {
 
 <h4 id="Handling_periodic_actions">Handling periodic actions</h4>
 
-<p>Our interval handler, <code>handleRefreshInterval()</code>, is called about once per second courtesy of the call to {{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}} made in the <code>startup()</code> function {{anch("Setting up", "described above")}}. Its main job is to update the timers every second and schedule a redraw to update the timers we'll be drawing within each ad.</p>
+<p>Our interval handler, <code>handleRefreshInterval()</code>, is called about once per second courtesy of the call to {{domxref("setInterval()")}} made in the <code>startup()</code> function {{anch("Setting up", "described above")}}. Its main job is to update the timers every second and schedule a redraw to update the timers we'll be drawing within each ad.</p>
 
 <pre class="brush: js">function handleRefreshInterval() {
   let redrawList = [];

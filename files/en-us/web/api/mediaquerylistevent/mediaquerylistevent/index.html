@@ -17,15 +17,12 @@ browser-compat: api.MediaQueryListEvent.MediaQueryListEvent
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js">var <em>myMqlEvent</em> = <em>new MediaQueryListEvent(init);</em></pre>
+<pre class="brush: js">var <em>myMqlEvent</em> = <em>new MediaQueryListEvent(init);</em></pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-  <dt>
-    <p>init</p>
-  </dt>
+  <dt><code>init</code></dt>
   <dd>
     <p>An init object that defines features of the new object instance. The available
       properties are:</p>
@@ -41,7 +38,7 @@ browser-compat: api.MediaQueryListEvent.MediaQueryListEvent
 <h2 id="Examples">Examples</h2>
 
 <pre
-  class="brush: js line-numbers language-js">var media = '(max-width: 600px)';
+  class="brush: js">var media = '(max-width: 600px)';
 var matches = true;
 
 var myMediaQueryListEvent = new MediaQueryListEvent({media, matches});</pre>

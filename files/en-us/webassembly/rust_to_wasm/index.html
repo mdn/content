@@ -216,6 +216,10 @@ wasm-bindgen = "0.2"</pre>
 
 <p>Serve the root directory of the project with a local web server, (e.g. <code>python3 -m http.server</code>). If you're not sure how to do that, refer to <a href="/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server#running_a_simple_local_http_server">Running a simple local HTTP server</a>.</p>
 
+<div class="notecard note">
+<p><strong>Note:</strong> Make sure to use an up to date web server that supports the <code>application/wasm</code> MIME type. Older web servers might not support it yet.</p>
+</div>
+
 <p>Load <code>index.html</code> from the web server (if you used the python3 example: <a href="http://localhost:8000">http://localhost:8000</a>). An alert box appears on the screen, with <code>Hello, WebAssembly!</code> in it. We've successfully called from JavaScript into Rust, and from Rust into JavaScript.</p>
 
 <h2 id="Making_our_package_available_to_npm">Making our package available to npm</h2>

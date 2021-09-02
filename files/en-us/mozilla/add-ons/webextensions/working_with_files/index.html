@@ -160,7 +160,7 @@ tags:
 
 <p>To add the file or blob you want the native application to process use <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify()</a></code>.</p>
 
-<p>To use this method the extension must request the <code>"nativeMessaging"</code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions"> permission</a> in its <code>manifest.json</code> file. Reciprocally, the native application must grant permission for the extension by including its ID in the <code>"allowed_extensions"</code> field of the app manifest.</p>
+<p>To use this method the extension must request the <code>"nativeMessaging"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> or <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions">optional permission</a> in its <code>manifest.json</code> file. Where optional permission is used, remember to check that permission has being granted and where necessary request permission from the user with the {{WebExtAPIRef("permissions")}} API. Reciprocally, the native application must grant permission for the extension by including its ID in the <code>"allowed_extensions"</code> field of the app manifest.</p>
 
 <p>Example: <a href="https://github.com/mdn/webextensions-examples/tree/master/native-messaging">Native Messaging</a> (illustrates simple messaging only)<br>
  Guides: <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging">Native messaging</a><br>

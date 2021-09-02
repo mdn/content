@@ -37,7 +37,7 @@ tags:
 
 <p><img alt="" src="protocolregister.png"></p>
 
-<div class="note"><p><strong>Note:</strong>The URL template supplied when registering <strong>must</strong> be of the same domain as the webpage attempting to perform the registration or the registration will fail. For example, <code class="plain">http://example.com/homepage.html</code> can register a protocol handler for <code class="plain">http://example.com/handle_mailto/%s</code>, but not for <code class="plain">http://example.<em><strong>org</strong></em>/handle_mailto/%s</code>.</p></div>
+<div class="note"><p><strong>Note:</strong> The URL template supplied when registering <strong>must</strong> be of the same domain as the webpage attempting to perform the registration or the registration will fail. For example, <code>http://example.com/homepage.html</code> can register a protocol handler for <code >http://example.com/handle_mailto/%s</code>, but not for <code>http://example.<em><strong>org</strong></em>/handle_mailto/%s</code>.</p></div>
 
 <p>Registering the same protocol handler more than once will pop up a different notification, indicating that the protocol handler is already registered. Therefore, it is a good idea to guard your call to register the protocol handler with a check to see if it is already registered, such as in the example below.</p>
 
@@ -86,7 +86,7 @@ tags:
 
 <p>Server side code can extract the query string parameters and perform the desired action.</p>
 
-<div class="note"><p><strong>Note:</strong>The server side code is passed the <strong>entire</strong> contents of the <code>href</code>. This means the server side code will have to parse out the protocol from the data.</p></div>
+<div class="note"><p><strong>Note:</strong> The server side code is passed the <strong>entire</strong> contents of the <code>href</code>. This means the server side code will have to parse out the protocol from the data.</p></div>
 
 <h3 id="Example_3">Example</h3>
 

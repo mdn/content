@@ -89,14 +89,14 @@ window.requestFileSystem(window.PERSISTENT, 1024*1024,onInitFs,errorHandler);
  </thead>
  <tbody>
   <tr>
-   <td><a name="const_temporary"><code>TEMPORARY</code></a></td>
+   <td><code>TEMPORARY</code></td>
    <td><code>0</code></td>
    <td>
     <p>Transient storage that can be removed by the browser at its discretion.</p>
    </td>
   </tr>
   <tr>
-   <td><a name="const_persistent"><code>PERSISTENT</code></a></td>
+   <td><code>PERSISTENT</code></td>
    <td><code>1</code></td>
    <td>Storage that stays in the browser unless the user or the app expunges it. The user must grant permission before the app can use this type of storage.</td>
   </tr>
@@ -116,7 +116,7 @@ window.requestFileSystem(window.PERSISTENT, 1024*1024,onInitFs,errorHandler);
   in ErrorCallback errorCallback
 );</pre>
 
-<h5 id="Parameters">Parameters</h5>
+<h4 id="Parameters">Parameters</h4>
 
 <dl>
  <dt>type</dt>
@@ -134,14 +134,11 @@ window.requestFileSystem(window.PERSISTENT, 1024*1024,onInitFs,errorHandler);
  <dd>The error callback that is called when errors happen or when the request to obtain the file system is denied. Its argument is the <code>FileError</code> object.</dd>
 </dl>
 
-<h5 id="Returns">Returns</h5>
+<h4 id="Returns">Returns</h4>
 
-<dl>
- <dt><code>void</code></dt>
- <dd></dd>
-</dl>
+<p>None.</p>
 
-<h5 id="Exceptions">Exceptions</h5>
+<h4 id="Exceptions">Exceptions</h4>
 
 <p>This method can raise an <a href="/en-US/docs/Web/API/FileError">FileError</a> with the following code:</p>
 
@@ -169,7 +166,7 @@ window.requestFileSystem(window.PERSISTENT, 1024*1024,onInitFs,errorHandler);
 );
 </pre>
 
-<h5 id="Parameters_2">Parameters</h5>
+<h4 id="Parameters_2">Parameters</h4>
 
 <dl>
  <dt>url</dt>
@@ -180,14 +177,11 @@ window.requestFileSystem(window.PERSISTENT, 1024*1024,onInitFs,errorHandler);
  <dd>The error callback that is called when errors happen or when the request to obtain the entry object is denied.</dd>
 </dl>
 
-<h5 id="Returns_2">Returns</h5>
+<h4 id="Returns_2">Returns</h4>
 
-<dl>
- <dt><code>void</code></dt>
- <dd></dd>
-</dl>
+<p>None.</p>
 
-<h5 id="Exceptions_2">Exceptions</h5>
+<h4 id="Exceptions_2">Exceptions</h4>
 
 <p>This method can raise an <a href="/en-US/docs/Web/API/FileError">FileError</a> with the following code:</p>
 

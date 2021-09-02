@@ -14,14 +14,14 @@ browser-compat: api.CacheStorage.delete
 ---
 <p>{{APIRef("Service Workers API")}}</p>
 
-<p>The <code><strong>delete</strong></code><strong><code>()</code></strong> method of the
+<p>The <strong><code>delete()</code></strong> method of the
   {{domxref("CacheStorage")}} interface finds the {{domxref("Cache")}} object matching the
   <code>cacheName</code>, and if found, deletes the {{domxref("Cache")}} object and
   returns a {{jsxref("Promise")}} that resolves to <code>true</code>. If no
   {{domxref("Cache")}} object is found, it resolves to <code>false</code>.</p>
 
 <p>You can access <code>CacheStorage</code> through the global
-  {{domxref("WindowOrWorkerGlobalScope.caches", "caches")}} property.</p>
+  {{domxref("caches")}} property.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -80,5 +80,5 @@ browser-compat: api.CacheStorage.delete
   <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service
       Workers</a></li>
   <li>{{domxref("Cache")}}</li>
-  <li>{{domxref("WindowOrWorkerGlobalScope.caches")}}</li>
+  <li>{{domxref("caches")}}</li>
 </ul>

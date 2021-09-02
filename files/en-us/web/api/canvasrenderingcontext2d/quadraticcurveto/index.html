@@ -12,7 +12,7 @@ browser-compat: api.CanvasRenderingContext2D.quadraticCurveTo
 <div>{{APIRef}}</div>
 
 <p>The
-  <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.quadraticCurveTo()</code></strong>
+  <strong><code>CanvasRenderingContext2D.quadraticCurveTo()</code></strong>
   method of the Canvas 2D API adds a quadratic <a
     href="https://en.wikipedia.org/wiki/B%C3%A9zier_curve">Bézier curve</a> to the current
   sub-path. It requires two points: the first one is a control point and the second one is
@@ -51,7 +51,7 @@ browser-compat: api.CanvasRenderingContext2D.quadraticCurveTo
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js; highlight:[7]">const canvas = document.getElementById('canvas');
+<pre class="brush: js;">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Quadratic Bézier curve
@@ -96,7 +96,7 @@ ctx.fill();
 <p>The curve begins at the point specified by <code>moveTo()</code>: (20, 110). The
   control point is placed at (230, 150). The curve ends at (250, 20).</p>
 
-<pre class="brush: js; highlight:[6]">const canvas = document.getElementById('canvas');
+<pre class="brush: js;">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.beginPath();

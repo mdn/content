@@ -274,7 +274,7 @@ gl.bufferData(gl.ARRAY_BUFFER, buffer, gl.STATIC_DRAW);
 <p>Then, we specify the memory layout of the array buffer, either by setting the index
   ourselves:</p>
 
-<pre class="brush: js, highlight:[3, 6, 9]">//Describe the layout of the buffer:
+<pre class="brush: js">//Describe the layout of the buffer:
 //1. position, not normalized
 gl.vertexAttribPointer(0, 3, gl.FLOAT, false, 20, 0);
 gl.enableVertexAttribArray(0);
@@ -297,7 +297,7 @@ gl.linkProgram(shaderProgram);
 <p>Or we can use the index provided by the graphics card instead of setting the index
   ourselves; this avoids the re-linking of the shader program.</p>
 
-<pre class="brush: js, highlight:[2, 6, 10]">const locPosition = gl.getAttribLocation(shaderProgram, 'position');
+<pre class="brush: js">const locPosition = gl.getAttribLocation(shaderProgram, 'position');
 gl.vertexAttribPointer(locPosition, 3, gl.FLOAT, false, 20, 0);
 gl.enableVertexAttribArray(locPosition);
 

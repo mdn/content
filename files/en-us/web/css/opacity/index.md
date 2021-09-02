@@ -46,7 +46,7 @@ opacity: unset;
 
 Using `opacity` with a value other than `1` places the element in a new [stacking context](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context).
 
-If you [do not want to apply opacity to child elements](http://stackoverflow.com/questions/13508877/resetting-the-opacity-of-a-child-elements-maple-browser-samsung-tv-app), use the {{cssxref("background")}} property instead. For example:
+To change the opacity of a background only, use the {{cssxref("background")}} property with a {{cssxref("color_value", "color value")}} that allows for an alpha channel. For example:
 
 ```css
 background: rgba(0, 0, 0, 0.4);
@@ -72,7 +72,9 @@ Color contrast ratio is determined by comparing the luminosity of the opacity-ad
 
 ## Examples
 
-### Setting background opacity
+### Setting opacity
+
+The following example demonstrates how the `opacity` property changes the opacity of the entire element and content, thus making the text very hard to read.
 
 #### HTML
 
@@ -85,7 +87,7 @@ Color contrast ratio is determined by comparing the luminosity of the opacity-ad
 #### CSS
 
 ```css
-div { background-color: yellow; }
+div { background-color: yellow; font-weight: bold; font-size: 130%; }
 .light {
   opacity: 0.2; /* Barely see the text over the background */
 }
@@ -99,16 +101,20 @@ div { background-color: yellow; }
 
 #### Result
 
-{{EmbedLiveSample('Setting_background_opacity', '640', '85')}}
+{{EmbedLiveSample('Setting_opacity', '640', '105')}}
 
 ### Setting opacity on hover
+
+In the following example opacity is changed on hover, so the striped background image on the parent element shows through the image.
 
 #### HTML
 
 ```html
-<img src="//developer.mozilla.org/static/img/opengraph-logo.png"
-  alt="MDN logo" width="128" height="146"
+<div class="wrapper">
+  <img src="//interactive-examples.mdn.mozilla.net/media/dino.svg"
+  alt="MDN Dino" width="128" height="146"
   class="opacity">
+</div>
 ```
 
 #### CSS
@@ -116,20 +122,25 @@ div { background-color: yellow; }
 ```css
 img.opacity {
   opacity: 1;
-  filter: alpha(opacity=100); /* IE8 and lower */
-  zoom: 1; /* Triggers "hasLayout" in IE 7 and lower */
 }
 
 img.opacity:hover {
   opacity: 0.5;
-  filter: alpha(opacity=50);
-  zoom: 1;
+}
+
+.wrapper {
+  width: 200px;
+  height: 160px;
+  background-color: #f03cc3;
+  background-image: linear-gradient(90deg, transparent 50%,
+  rgba(255,255,255,.5) 50%);
+  background-size: 20px 20px;
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample('Setting_opacity_on_hover', '150', '175')}}
+{{EmbedLiveSample('Setting_opacity_on_hover', '150', '200')}}
 
 ## Specifications
 
@@ -138,7 +149,3 @@ img.opacity:hover {
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [Microsoft's filter:alpha(opacity=xx)](https://msdn.microsoft.com/en-us/library/ms532910%28VS.85%29.aspx)

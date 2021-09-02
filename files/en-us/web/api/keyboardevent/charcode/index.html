@@ -17,7 +17,7 @@ browser-compat: api.KeyboardEvent.charCode
   pressed during a {{Event("keypress")}} event.</p>
 
 <div class="notecard warning">
-  <p><strong>Warning:</strong> Do not use this property, as it is deprecated. Instead, get the
+  <p><strong>Warning:</strong> Do not use this property, as it is deprecated. Instead, get the
     Unicode value of the character using the {{domxref("KeyboardEvent.key", "key")}}
     property.</p>
 </div>
@@ -71,10 +71,7 @@ input.addEventListener('keypress', function(e) {
     <code>keyCode</code> or <code>charCode</code>, query the {{
     domxref("KeyboardEvent.which", "which") }} property.</li>
   <li>Characters entered through an IME do not register through <code>keyCode</code> or
-    <code>charCode</code>. <span class="comment">Actually with the Chinese IME I'm using,
-      entering the IME results in a keypress event with keyCode = 229 and no other key
-      events fire until the IME exits (which may happen after multiple characters are
-      inputted). I'm not sure if other IME's work this way.</span></li>
+    <code>charCode</code>.</li>
   <li>For a list of the <code>charCode</code> values associated with particular keys, run
     <a
       href="/en-US/docs/Web/API/Document_Object_Model/Examples#example_7:_displaying_event_object_properties">Example

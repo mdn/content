@@ -49,11 +49,11 @@ browser-compat: api.RTCIceCandidateStats.networkType
 <h2 id="Example">Example</h2>
 
 <p>This example sets up a periodic function using
-  {{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}} that outputs
+  {{domxref("setInterval()")}} that outputs
   statistics reports for candidates that use or would use a cellular data network to a log
   view.</p>
 
-<pre class="brush: js; highlight[4]">window.setInterval(function() {
+<pre class="brush: js;">window.setInterval(function() {
   myPeerConnection.getStats(null).then(stats =&gt; {
     let statsOutput = "";
 

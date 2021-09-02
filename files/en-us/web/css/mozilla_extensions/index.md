@@ -54,14 +54,14 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 ### S–Z
 
 - {{CSSxRef("-moz-stack-sizing")}}
-- {{CSSxRef(":-moz-system-metric(images-in-menus)")}} {{deprecated_inline}}{{gecko_minversion_inline("1.9")}}
-- {{CSSxRef(":-moz-system-metric(mac-graphite-theme)")}} {{deprecated_inline}}{{gecko_minversion_inline("1.9.1")}}
-- {{CSSxRef(":-moz-system-metric(scrollbar-end-backward)")}} {{deprecated_inline}}{{gecko_minversion_inline("1.9")}}
-- {{CSSxRef(":-moz-system-metric(scrollbar-end-forward)")}} {{deprecated_inline}}{{gecko_minversion_inline("1.9")}}
-- {{CSSxRef(":-moz-system-metric(scrollbar-start-backward)")}} {{deprecated_inline}}{{gecko_minversion_inline("1.9")}}
+- {{CSSxRef(":-moz-system-metric(images-in-menus)")}} {{deprecated_inline}}
+- {{CSSxRef(":-moz-system-metric(mac-graphite-theme)")}} {{deprecated_inline}}
+- {{CSSxRef(":-moz-system-metric(scrollbar-end-backward)")}} {{deprecated_inline}}
+- {{CSSxRef(":-moz-system-metric(scrollbar-end-forward)")}} {{deprecated_inline}}
+- {{CSSxRef(":-moz-system-metric(scrollbar-start-backward)")}} {{deprecated_inline}}
 - {{CSSxRef(":-moz-system-metric(scrollbar-start-forward)")}} {{deprecated_inline}}
-- {{CSSxRef(":-moz-system-metric(scrollbar-thumb-proportional)")}} {{deprecated_inline}}{{gecko_minversion_inline("1.9")}}
-- {{CSSxRef(":-moz-system-metric(touch-enabled)")}} {{deprecated_inline}}{{gecko_minversion_inline("1.9.2")}}
+- {{CSSxRef(":-moz-system-metric(scrollbar-thumb-proportional)")}} {{deprecated_inline}}
+- {{CSSxRef(":-moz-system-metric(touch-enabled)")}} {{deprecated_inline}}
 - {{CSSxRef(":-moz-system-metric(windows-default-theme)")}} {{deprecated_inline}}
 - {{CSSxRef("-moz-user-focus")}}
 - {{CSSxRef("-moz-user-input")}}
@@ -244,16 +244,16 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 
 ### {{CSSxRef("background-image")}}
 
-- #### Gradients{{Gecko_minversion_inline("1.9.2")}}
+- #### Gradients
 
   - {{CSSxRef("linear-gradient","-moz-linear-gradient")}} {{Deprecated_Inline}}
   - {{CSSxRef("radial-gradient","-moz-radial-gradient")}} {{Deprecated_Inline}}
 
-- #### Elements{{gecko_minversion_inline("2.0")}}
+- #### Elements
 
   - {{CSSxRef("element","-moz-element")}}
 
-- #### Sub-images{{gecko_minversion_inline("2.0")}}
+- #### Sub-images
 
   - {{CSSxRef("-moz-image-rect")}}
 
@@ -275,8 +275,8 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - `-moz-buttondefault`
 - `-moz-buttonhoverface`
 - `-moz-buttonhovertext`
-- `-moz-default-background-color`{{Gecko_minversion_inline("5.0")}}
-- `-moz-default-color`{{Gecko_minversion_inline("5.0")}}
+- `-moz-default-background-color`
+- `-moz-default-color`
 - `-moz-cellhighlight`
 - `-moz-cellhighlighttext`
 - `-moz-field`
@@ -291,8 +291,8 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - `-moz-mac-accentlightshadow`
 - `-moz-mac-accentregularhighlight`
 - `-moz-mac-accentregularshadow`
-- `-moz-mac-chrome-active`{{Gecko_minversion_inline("1.9.1")}}
-- `-moz-mac-chrome-inactive`{{Gecko_minversion_inline("1.9.1")}}
+- `-moz-mac-chrome-active`
+- `-moz-mac-chrome-inactive`
 - `-moz-mac-focusring`
 - `-moz-mac-menuselect`
 - `-moz-mac-menushadow`
@@ -300,8 +300,8 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - `-moz-menuhover`
 - `-moz-menuhovertext`
 - `-moz-win-communicationstext`
-- `-moz-win-mediatext`{{gecko_minversion_inline(1.9)}}
-- `-moz-nativehyperlinktext`{{Gecko_minversion_inline("1.9.1")}}
+- `-moz-win-mediatext`
+- `-moz-nativehyperlinktext`
 
 ### {{CSSxRef("display")}}
 
@@ -343,11 +343,11 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 
 ### {{CSSxRef("image-rendering")}}
 
-- {{CSSxRef("image-rendering","-moz-crisp-edges")}}{{Gecko_minversion_inline("1.9.2")}}
+- {{CSSxRef("image-rendering","-moz-crisp-edges")}}
 
 ### {{CSSxRef("&lt;length&gt;")}}
 
-- {{CSSxRef("-moz-calc")}}{{gecko_minversion_inline("2.0")}}
+- {{CSSxRef("-moz-calc")}}
 
 ### {{CSSxRef("list-style-type")}}
 
@@ -417,9 +417,9 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - ### A – D
 - {{CSSxRef("::-moz-anonymous-block")}}
 - {{CSSxRef("::-moz-anonymous-positioned-block")}}
-- {{CSSxRef(":-moz-any")}}{{gecko_minversion_inline("2.0")}}
+- {{CSSxRef(":-moz-any")}}
 - {{CSSxRef(":-moz-any-link")}} \[Matches `:link` and `:visited`]
-- {{CSSxRef(":-moz-broken")}}{{gecko_minversion_inline("1.9")}}
+- {{CSSxRef(":-moz-broken")}}
 - {{CSSxRef("::-moz-canvas")}}
 - {{CSSxRef("::-moz-color-swatch")}}
 - {{CSSxRef("::-moz-cell-content")}}
@@ -428,32 +428,32 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - {{CSSxRef(":-moz-first-node")}}
 - {{CSSxRef("::-moz-focus-inner")}}
 - {{CSSxRef("::-moz-focus-outer")}}
-- {{CSSxRef(":-moz-focusring")}}{{gecko_minversion_inline("2.0")}}
-- {{CSSxRef(":-moz-full-screen")}}{{gecko_minversion_inline("9.0")}}
-- {{CSSxRef(":-moz-full-screen-ancestor")}}{{gecko_minversion_inline("10.0")}}
-- {{CSSxRef(":-moz-handler-blocked")}}{{gecko_minversion_inline("1.9.1")}}
-- {{CSSxRef(":-moz-handler-crashed")}}{{gecko_minversion_inline("2.0")}}
-- {{CSSxRef(":-moz-handler-disabled")}}{{gecko_minversion_inline("1.9.1")}}
+- {{CSSxRef(":-moz-focusring")}}
+- {{CSSxRef(":-moz-full-screen")}}
+- {{CSSxRef(":-moz-full-screen-ancestor")}}
+- {{CSSxRef(":-moz-handler-blocked")}}
+- {{CSSxRef(":-moz-handler-crashed")}}
+- {{CSSxRef(":-moz-handler-disabled")}}
 - {{CSSxRef("::-moz-inline-table")}}
 - ### L
 - {{CSSxRef(":-moz-last-node")}}
 - {{CSSxRef(":-moz-list-bullet")}}
 - {{CSSxRef(":-moz-list-number")}}
-- {{CSSxRef(":-moz-loading")}}{{gecko_minversion_inline("1.9")}}
-- {{CSSxRef(":-moz-locale-dir(ltr)")}}{{gecko_minversion_inline("1.9.2")}}
-- {{CSSxRef(":-moz-locale-dir(rtl)")}}{{gecko_minversion_inline("1.9.2")}}
-- {{CSSxRef(":-moz-lwtheme")}}{{gecko_minversion_inline("1.9.2")}}
-- {{CSSxRef(":-moz-lwtheme-brighttext")}}{{gecko_minversion_inline("1.9.2")}}
-- {{CSSxRef(":-moz-lwtheme-darktext")}}{{gecko_minversion_inline("1.9.2")}}
+- {{CSSxRef(":-moz-loading")}}
+- {{CSSxRef(":-moz-locale-dir(ltr)")}}
+- {{CSSxRef(":-moz-locale-dir(rtl)")}}
+- {{CSSxRef(":-moz-lwtheme")}}
+- {{CSSxRef(":-moz-lwtheme-brighttext")}}
+- {{CSSxRef(":-moz-lwtheme-darktext")}}
 - ### N – R
-- {{CSSxRef(":-moz-native-anonymous")}}{{gecko_minversion_inline("36")}}
+- {{CSSxRef(":-moz-native-anonymous")}}
 - {{CSSxRef(":-moz-only-whitespace")}}
 - {{CSSxRef("::-moz-page")}}
 - {{CSSxRef("::-moz-page-sequence")}}
 - {{CSSxRef("::-moz-pagebreak")}}
 - {{CSSxRef("::-moz-pagecontent")}}
-- {{CSSxRef(":-moz-placeholder")}}{{gecko_minversion_inline("1.9")}} {{deprecated_inline}}
-- {{CSSxRef("::-moz-placeholder")}}{{gecko_minversion_inline("19")}} {{deprecated_inline}}
+- {{CSSxRef(":-moz-placeholder")}} {{deprecated_inline}}
+- {{CSSxRef("::-moz-placeholder")}} {{deprecated_inline}}
 - {{CSSxRef("::-moz-progress-bar")}}
 - {{CSSxRef("::-moz-range-progress")}}
 - {{CSSxRef("::-moz-range-thumb")}}
@@ -465,8 +465,8 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - {{CSSxRef("::-moz-scrolled-content")}}
 - {{CSSxRef("::-moz-scrolled-page-sequence")}}
 - {{CSSxRef("::selection","::-moz-selection")}} {{deprecated_inline}}
-- {{CSSxRef(":-moz-submit-invalid")}}{{gecko_minversion_inline("2.0")}}
-- {{CSSxRef(":-moz-suppressed")}}{{gecko_minversion_inline("1.9")}}
+- {{CSSxRef(":-moz-submit-invalid")}}
+- {{CSSxRef(":-moz-suppressed")}}
 - {{CSSxRef("::-moz-svg-foreign-content")}}
 - ### T
 - {{CSSxRef("::-moz-table")}}
@@ -478,7 +478,7 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - {{CSSxRef("::-moz-table-row-group")}}
 - {{CSSxRef(":-moz-tree-cell")}}
 - {{CSSxRef(":-moz-tree-cell-text")}}
-- {{CSSxRef(":-moz-tree-cell-text(hover)")}}{{gecko_minversion_inline("1.9")}}
+- {{CSSxRef(":-moz-tree-cell-text(hover)")}}
 - {{CSSxRef(":-moz-tree-checkbox")}}
 - {{CSSxRef(":-moz-tree-column")}}
 - {{CSSxRef(":-moz-tree-drop-feedback")}}
@@ -487,16 +487,16 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - {{CSSxRef(":-moz-tree-line")}}
 - {{CSSxRef(":-moz-tree-progressmeter")}}
 - {{CSSxRef(":-moz-tree-row")}}
-- {{CSSxRef(":-moz-tree-row(hover)")}}{{gecko_minversion_inline("1.9")}}
+- {{CSSxRef(":-moz-tree-row(hover)")}}
 - {{CSSxRef(":-moz-tree-separator")}}
 - {{CSSxRef(":-moz-tree-twisty")}}
 - ### U – X
-- {{CSSxRef(":-moz-ui-invalid")}}{{gecko_minversion_inline("2.0")}}
-- {{CSSxRef(":-moz-ui-valid")}}{{gecko_minversion_inline("2.0")}}
-- {{CSSxRef(":-moz-user-disabled")}}{{gecko_minversion_inline("1.9")}}
+- {{CSSxRef(":-moz-ui-invalid")}}
+- {{CSSxRef(":-moz-ui-valid")}}
+- {{CSSxRef(":-moz-user-disabled")}}
 - {{CSSxRef("::-moz-viewport")}}
 - {{CSSxRef("::-moz-viewport-scroll")}}
-- {{CSSxRef(":-moz-window-inactive")}}{{gecko_minversion_inline("2.0")}}
+- {{CSSxRef(":-moz-window-inactive")}}
 - {{CSSxRef("::-moz-xul-anonymous-block")}}
 
 ## At-rules
@@ -505,9 +505,9 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 
 ## Media features
 
-- {{CSSxRef("@media/-moz-device-pixel-ratio", "-moz-device-pixel-ratio")}}{{gecko_minversion_inline("2.0")}}
+- {{CSSxRef("@media/-moz-device-pixel-ratio", "-moz-device-pixel-ratio")}}
 - {{CSSxRef("@media/-moz-os-version", "-moz-os-version")}}
-- {{CSSxRef("@media/-moz-touch-enabled", "-moz-touch-enabled")}}{{gecko_minversion_inline("1.9.2")}}
+- {{CSSxRef("@media/-moz-touch-enabled", "-moz-touch-enabled")}}
 - {{CSSxRef("@media/-moz-windows-glass", "-moz-windows-glass")}}
 
 ## Other

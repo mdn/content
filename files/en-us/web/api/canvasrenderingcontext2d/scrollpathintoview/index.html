@@ -13,7 +13,7 @@ browser-compat: api.CanvasRenderingContext2D.scrollPathIntoView
 <div>{{APIRef}} {{SeeCompatTable}}</div>
 
 <p>The
-  <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.scrollPathIntoView()</code></strong>
+  <strong><code>CanvasRenderingContext2D.scrollPathIntoView()</code></strong>
   method of the Canvas 2D API scrolls the current or given path into view. It is similar
   to {{domxref("Element.scrollIntoView()")}}.</p>
 
@@ -43,7 +43,7 @@ void <em>ctx</em>.scrollPathIntoView(<em>path</em>);
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js; highlight:[6]">const canvas = document.getElementById('canvas');
+<pre class="brush: js;">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.beginPath();

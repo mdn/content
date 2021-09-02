@@ -121,7 +121,7 @@ lots of text...<p><a name="bottom">bottom</a>?arg=val
 
 - [Base64 encoding and decoding](/en-US/docs/Glossary/Base64)
 - [Percent encoding](/en-US/docs/Glossary/percent-encoding)
-- {{domxref("WindowOrWorkerGlobalScope/atob","atob()")}}
-- {{domxref("WindowOrWorkerGlobalScope/btoa","btoa()")}}
+- {{domxref("atob","atob()")}}
+- {{domxref("btoa","btoa()")}}
 - [CSS `url()`](/en-US/docs/Web/CSS/url())
 - [URI](/en-US/docs/Glossary/URI)
