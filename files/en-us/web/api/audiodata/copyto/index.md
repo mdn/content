@@ -11,7 +11,7 @@ browser-compat: api.AudioData.copyTo
 ---
 {{DefaultAPISidebar("WebCodecs API")}}
 
-The **`copyTo`** method of the {{domxref("AudioData")}} interface copies a plane of an `AudioData` object to a destination buffer.
+The **`copyTo()`** method of the {{domxref("AudioData")}} interface copies a plane of an `AudioData` object to a destination buffer.
 
 ## Syntax
 
