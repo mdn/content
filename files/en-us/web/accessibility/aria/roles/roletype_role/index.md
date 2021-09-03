@@ -12,7 +12,7 @@ tags:
 
 
 
-The **roletype** roles is the base role from which all other ARIA roles inherit.
+The **`roletype`** roles is the base role from which all other ARIA roles inherit.
 
 ## Description
 
@@ -35,6 +35,9 @@ Do not use.
 
 ## See Also
 
+- [ARIA: `structure` role](/en-US/docs/Web/Accessibility/ARIA/Roles/structure_role)
+- [ARIA: `widget` role](/en-US/docs/Web/Accessibility/ARIA/Roles/widget_role)
+- [ARIA: `window` role](/en-US/docs/Web/Accessibility/ARIA/Roles/window_role)
 - The HTML [`rel`](/en-US/docs/Web/HTML/Attributes/rel) attribute
 
 <section id="Quick_links"><ol><li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li></ol></section>
