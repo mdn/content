@@ -70,7 +70,7 @@ The **`BigInt64Array`** typed array represents an array of 64-bit signed integer
 - {{jsxref("TypedArray.join", "BigInt64Array.prototype.join()")}}
   - : Joins all elements of an array into a string. See also {{jsxref("Array.prototype.join()")}}.
 - {{jsxref("TypedArray.keys", "BigInt64Array.prototype.keys()")}}
-  - : Returns a new Array Iterator that contains the keys for each index in the array. See also {{jsxref("Array.prototype.keys()")}}.
+  - : Returns a new _array iterator_ that contains the keys for each index in the array. See also {{jsxref("Array.prototype.keys()")}}.
 - {{jsxref("TypedArray.lastIndexOf", "BigInt64Array.prototype.lastIndexOf()")}}
   - : Returns the last (greatest) index of an element within the array equal to the specified value, or -1 if none is found. See also {{jsxref("Array.prototype.lastIndexOf()")}}.
 - {{jsxref("TypedArray.map", "BigInt64Array.prototype.map()")}}
