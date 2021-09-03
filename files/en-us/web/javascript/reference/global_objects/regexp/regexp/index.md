@@ -74,6 +74,12 @@ RegExp(pattern[, flags])
       - : Matches only from the index indicated by the `lastIndex` property of
         this regular expression in the target string. Does not attempt to match from any
         later indexes.
+        
+### Exceptions
+
+- If `pattern` cannot be parsed as a valid regular expression, a {{jsxref("SyntaxError")}} is thrown.
+- If `flags` contains repeated characters or any character outside of those allowed, a 
+  {{jsxref("SyntaxError")}} is thrown.
 
 ## Examples
 
