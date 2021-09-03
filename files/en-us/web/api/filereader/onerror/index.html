@@ -11,7 +11,6 @@ function onChange(event) {
   var reader = new FileReader();
   reader.onerror = function(event) {
     alert("Failed to read file!\n\n" + reader.error);
-    reader.abort(); // (...does this do anything useful in an onerror handler?)
   };
 
   reader.readAsText(file);
