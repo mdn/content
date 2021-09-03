@@ -88,7 +88,7 @@ You can also assign a value to a variable For example, `x = 42`. This form creat
 
 ### Evaluating variables
 
-A variable declared using the `var` or `let` statement with no assigned value specified has the value of {{jsxref("undefined")}}.
+A variable declared using the `var` or `let` statement with no assigned value specified has the value of {{jsxref("undefined")}} but if we will do the same using the `const` keyword, it will result in a {{jsxref("SyntaxError")}} because a constant always needs to be initialized.
 
 An attempt to access an undeclared variable results in a {{jsxref("ReferenceError")}} exception being thrown:
 
