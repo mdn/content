@@ -3,6 +3,7 @@ title: 'ARIA: roletype role'
 slug: Web/Accessibility/ARIA/roles/roletype_role
 tags: 
 
+  - roletype
   - Accessibility
   - ARIA
   - roles
@@ -10,9 +11,15 @@ tags:
 ---
 
 
-Note:  roletype role is an bstract role. It is included here for completeness of documentation. It should not be used by web authors.
+
+The **roletype** roles is the base role from which all other ARIA roles inherit.
 
 ## Description
+
+The `roletype` role's properties describe the structural and functional purpose of objects that are assigned this role, or "instances". A role is a concept that can be used to understand and operate instances.
+Note
+
+> **Note:**  The `roletype` role is an abstract role used for the ontology. It is included here for completeness of documentation. It should not be used by web authors.
 
 ## Best Practices
 
@@ -23,10 +30,11 @@ Do not use.
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#roletype role","ARIA: roletype role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#aria_lh_roletype_role","roletype role")}} | {{Spec2('ARIA Authoring Practices')}} |
+
 
 
 ## See Also
 
+- The HTML [`rel`](/en-US/docs/Web/HTML/Attributes/rel) attribute
 
 <section id="Quick_links"><ol><li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li></ol></section>
