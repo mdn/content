@@ -90,12 +90,15 @@ tags:
  <li>The web server <em>must answer</em> every HTTP request, at least with an error message.</li>
 </ul>
 
-<p><a href="/en-US/docs/Web/HTTP/Status/404"><img alt="The MDN 404 page as an example of such error page" src="mdn-404.jpg" style="float: right;"></a>On a web server, the HTTP server is responsible for processing and answering incoming requests.</p>
+<p></a>On a web server, the HTTP server is responsible for processing and answering incoming requests.</p>
 
 <ol>
  <li>Upon receiving a request, an HTTP server first checks if the requested URL matches an existing file.</li>
  <li>If so, the web server sends the file content back to the browser. If not, an application server builds the necessary file.</li>
- <li>If neither process is possible, the web server returns an error message to the browser, most commonly {{HTTPStatus("404", "404 Not Found")}}. The 404 error is so common that some web designers devote considerable time and effort to designing 404 error pages.</li>
+ <li>If neither process is possible, the web server returns an error message to the browser, most commonly {{HTTPStatus("404", "404 Not Found")}}.
+   The 404 error is so common that some web designers devote considerable time and effort to designing 404 error pages.
+   <a href="/en-US/docs/Web/HTTP/Status/404"><img alt="The MDN 404 page as an example of such error page" src="mdn-404.jpg"></a>
+  </li>
 </ol>
 
 <h3 id="Static_vs._dynamic_content">Static vs. dynamic content</h3>

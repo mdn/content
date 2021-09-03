@@ -47,7 +47,7 @@ tags:
 
 <p>Select an element on your page, either by right/ctrl-clicking on it and selecting <em>Inspect</em>, or selecting it from the HTML tree on the left of the DevTools display. Try selecting the element with the class of <code>box1</code>; this is the first element on the page with a bordered box drawn around it.</p>
 
-<p><img alt="The example page for this tutorial with DevTools open." src="inspecting1.png" style="border-style: solid; border-width: 1px;"></p>
+<p><img alt="The example page for this tutorial with DevTools open." src="inspecting1.png"></p>
 
 <p>If you look at the <a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#rules_view">Rules view</a> to the right of your HTML, you should be able to see the CSS properties and values applied to that element. You will see the rules directly applied to class <code>box1</code> and also the CSS that is being inherited by the box from its ancestors, in this case from <code>&lt;body&gt;</code>. This is useful if you are seeing some CSS being applied that you didn't expect. Perhaps it is being inherited from a parent element and you need to add a rule to overwrite it in the context of this element.</p>
 
@@ -69,7 +69,7 @@ tags:
 
 <p><strong>With <code>box1</code> selected, click on the swatch (the small colored circle) that shows the color applied to the border. A color picker will open up and you can try out some different colors; these will update in real time on the page. In a similar fashion, you could change the width or style of the border.</strong></p>
 
-<p><img alt="DevTools Styles Panel with a color picker open." src="inspecting2-color-picker.png" style="border-style: solid; border-width: 1px;"></p>
+<p><img alt="DevTools Styles Panel with a color picker open." src="inspecting2-color-picker.png"></p>
 
 <h2 id="Adding_a_new_property">Adding a new property</h2>
 
@@ -77,7 +77,7 @@ tags:
 
 <p><strong>You can click the closing curly brace in the rule to start entering a new declaration into it, at which point you can start typing the new property and DevTools will show you an autocomplete list of matching properties. After selecting <code>font-size</code>, enter the value you want to try. You can also click the + button to add an additional rule with the same selector, and add your new rules there.</strong></p>
 
-<p><img alt="The DevTools Panel, adding a new property to the rules, with the autocomplete for font- open" src="inspecting3-font-size.png" style="border-style: solid; border-width: 1px;"></p>
+<p><img alt="The DevTools Panel, adding a new property to the rules, with the autocomplete for font- open" src="inspecting3-font-size.png"></p>
 
 <div class="notecard note">
 <p><strong>Note:</strong> There are other useful features in the Rules view too, for example declarations with invalid values are crossed out. You can find out more at <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS">Examine and edit CSS</a>.</p>
@@ -95,7 +95,7 @@ tags:
 
 <p>The element with a class of <code>box2</code> is using <code>border-box</code>, so here the padding and border is subtracted from the size that you have given the element. This means that the space taken up on the page by the box is the exact size that you specified — in our case <code>width: 400px</code>.</p>
 
-<p><img alt="The Layout section of the DevTools" src="inspecting4-box-model.png" style="border-style: solid; border-width: 1px;"></p>
+<p><img alt="The Layout section of the DevTools" src="inspecting4-box-model.png"></p>
 
 <div class="notecard note">
   <p><strong>Note:</strong> Find out more in <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_the_box_model">Examining and Inspecting the Box Model</a>.</p>
@@ -122,7 +122,7 @@ tags:
 
 <p><strong>Inspect the <code>&lt;em&gt;</code> with the class of <code>.special</code> and DevTools will show you that orange is the color that applies, and also that the <code>color</code> property applied to the <code>&lt;em&gt;</code> is crossed out. You can now see that the class selector is overriding the element selector.</strong></p>
 
-<p><img alt="Selecting an em and looking at DevTools to see what is over-riding the color." src="inspecting5-specificity.png" style="border-style: solid; border-width: 1px;"></p>
+<p><img alt="Selecting an em and looking at DevTools to see what is over-riding the color." src="inspecting5-specificity.png"></p>
 
 <h2 id="Find_out_more_about_the_Firefox_DevTools">Find out more about the Firefox DevTools</h2>
 
