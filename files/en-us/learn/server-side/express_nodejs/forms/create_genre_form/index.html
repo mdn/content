@@ -196,7 +196,7 @@ block content
 <div class="notecard note">
 <p><strong>Note:</strong> Our validation uses <code>trim()</code> to ensure that whitespace is not accepted as a genre name. We can also validate that the field is not empty on the client side by adding the value <code>required='true'</code> to the field definition in the form:</p>
 
-<pre class="brush: js">input#name.form-control(type='text', placeholder='Fantasy, Poetry etc.' name='name' value=(undefined===genre ? '' : genre.name), <strong>required='true'</strong> )</pre>
+<pre class="brush: js">input#name.form-control(type='text', placeholder='Fantasy, Poetry etc.' name='name' value=(undefined===genre ? '' : genre.name), required='true' )</pre>
 </div>
 
 <h2 id="Next_steps">Next steps</h2>

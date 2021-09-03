@@ -21,7 +21,7 @@ tags:
 
 <p class="summary">Next we turn our attention to accessibility, providing information on common problems, how to do simple testing, and how to make use of auditing/automation tools for finding accessibility issues.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -122,7 +122,7 @@ This is the second subsection of my content. I think it is more interesting than
 
 <p>You can try this out using our <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html">native-keyboard-accessibility.html</a> example (see the <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html">source code</a>) — open this in a new tab, and try pressing the tab key; after a few presses, you should see the tab focus start to move through the different focusable elements; the focused elements are given a highlighted default style in every browser (it differs slightly between different browsers) so that you can tell what element is focused.</p>
 
-<p><img alt="" src="button-focused-unfocused.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="button-focused-unfocused.png"></p>
 
 <div class="notecard note">
 <p>From Firefox 84 you can also enable an overlay that shows the page tabbing order. For more information see: <a href="/en-US/docs/Tools/Accessibility_inspector#show_web_page_tabbing_order">Accessibility Inspector &gt; Show web page tabbing order</a>.</p>
@@ -232,7 +232,7 @@ a:focus, input:focus, button:focus, select:focus {
 
 <p>There are many instances where a visual design will require that not all content is shown at once. For example, in our <a href="https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html">Tabbed info box example</a> (see <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html">source code</a>) we have three panels of information, but we are <a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning">positioning</a> them on top of one another and providing tabs that can be clicked to show each one (it is also keyboard accessible — you can alternatively use Tab and Enter/Return to select them).</p>
 
-<p><img alt="" src="20191022144107.png" style="display: block; margin: 0px auto; max-width: 450px;"></p>
+<p><img alt="" src="20191022144107.png"></p>
 
 <p>Screen reader users don't care about any of this — they are happy with the content as long as the source order makes sense, and they can get to it all. Absolute positioning (as used in this example) is generally seen as one of the best mechanisms of hiding content for visual effect, because it doesn't stop screen readers from getting to it.</p>
 
@@ -329,7 +329,7 @@ a:focus, input:focus, button:focus, select:focus {
 
 <p>These add an accessibility tab to the browser developer tools. For example, we installed the Firefox version, then used it to audit our <a href="https://mdn.github.io/learning-area/accessibility/html/bad-table.html">bad-table.html</a> example. We got the following results:</p>
 
-<p><img alt="" src="axe-screenshot.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="axe-screenshot.png"></p>
 
 <p>aXe is also installable using <code>npm</code>, and can be integrated with task runners like <a href="https://gruntjs.com/">Grunt</a> and <a href="https://gulpjs.com/">Gulp</a>, automation frameworks like <a href="https://www.seleniumhq.org/">Selenium</a> and <a href="https://cucumber.io/">Cucumber</a>, unit testing frameworks like <a href="https://jasmine.github.io/">Jasmine</a>, and more besides (again, see the <a href="https://www.deque.com/products/axe/">main aXe page</a> for details).</p>
 
@@ -363,7 +363,7 @@ a:focus, input:focus, button:focus, select:focus {
 
 <p>When VO is on, the display will look mostly the same, but you'll see a black box at the bottom left of the screen that contains information on what VO currently has selected. The current selection will also be highlighted, with a black border — this highlight is known as the <strong>VO cursor</strong>.</p>
 
-<p><img alt="" src="voiceover.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="voiceover.png"></p>
 
 <p>To use VO, you will make a lot of use of the "VO modifier" — this is a key or key combination that you need to press in addition to the actual VO keyboard shortcuts to get them to work. Using a modifier like this is common with screenreaders, to enable them to keep their commands from clashing with other commands. In the case of VO, the modifier can either be CapsLock, or Ctrl + Option.</p>
 
