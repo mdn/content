@@ -28,7 +28,7 @@ entries()
 
 ### Return value
 
-A new array iterator object.
+A new _array iterator_ object.
 
 ## Examples
 

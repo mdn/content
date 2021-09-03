@@ -14,7 +14,7 @@ browser-compat: javascript.builtins.TypedArray.values
 ---
 {{JSRef}}
 
-The **`values()`** method returns a new array iterator object
+The **`values()`** method returns a new _array iterator_ object
 that contains the values for each index in the array.
 
 {{EmbedInteractiveExample("pages/js/array-values.html")}}
@@ -27,7 +27,7 @@ values()
 
 ### Return value
 
-A new array iterator object.
+A new _array iterator_ object.
 
 ## Examples
 
