@@ -23,9 +23,12 @@ browser-compat: api.Request.destination
     property of the <strong>{{domxref("Request")}}</strong> interface returns a string
     describing the type of content being requested.</p>
 
-<p>The string must be one of those
-  found in the {{domxref("RequestDestination")}} enumerated type or the empty string,
-  which is the default value.</p>
+<p>The string must be one of the <code>audio</code>, <code>audioworklet</code>, 
+  <code>document</code>, <code>embed</code>, <code>font</code>, <code>frame</code>, 
+  <code>iframe</code>, <code>image</code>, <code>manifest</code>, <code>object</code>, 
+  <code>paintworklet</code>, <code>report</code>, <code>script</code>, <code>sharedworker</code>, 
+  <code>style</code>, <code>track</code>, <code>video</code>, <code>worker</code>
+  or <code>xslt</code> strings, or the empty string, which is the default value.</p>
 
 <p>The <code>destination</code> is used by the {{Glossary("user agent")}} to, for example,
   help determine which set of rules to follow for CORS purposes, or how to navigate any
