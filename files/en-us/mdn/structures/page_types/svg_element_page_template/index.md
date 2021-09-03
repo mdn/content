@@ -111,7 +111,7 @@ This element implements the {{domxref("NameOfSVGDOMElement")}} interface.
 
 Fill in a simple example that nicely shows a typical usage of the element, then perhaps some more complex examples (see our guide on how to add [code examples](/en-US/docs/MDN/Structures/Code_examples) for more information).
 
-```js
+```svg
 my code block
 ```
 
