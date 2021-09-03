@@ -34,7 +34,7 @@ represented by the view.
 ## Syntax
 
 ```js
-let viewport = xrWebGLLayer.getViewport(view);
+getViewport(view);
 ```
 
 ### Parameters
