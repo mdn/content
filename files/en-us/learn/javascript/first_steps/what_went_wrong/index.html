@@ -20,7 +20,7 @@ tags:
 
 <p class="summary">When you built up the "Guess the number" game in the previous article, you may have found that it didn't work. Never fear — this article aims to save you from tearing your hair out over such problems by providing you with some tips on how to find and fix errors in JavaScript programs.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -64,7 +64,7 @@ tags:
 <p>Earlier on in the course we got you to type some simple JavaScript commands into the <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">developer tools JavaScript console</a> (if you can't remember how to open this in your browser, follow the previous link to find out how). What's even more useful is that the console gives you error messages whenever a syntax error exists inside the JavaScript being fed into the browser's JavaScript engine. Now let's go hunting.</p>
 
 <ol>
- <li>Go to the tab that you've got <code>number-game-errors.html</code> open in, and open your JavaScript console. You should see an error message along the following lines: <img alt="" src="not-a-function.png" style="display: block; margin: 0 auto;"></li>
+ <li>Go to the tab that you've got <code>number-game-errors.html</code> open in, and open your JavaScript console. You should see an error message along the following lines: <img alt="" src="not-a-function.png"></li>
  <li>This is a pretty easy error to track down, and the browser gives you several useful bits of information to help you out (the screenshot above is from Firefox, but other browsers provide similar information). From left to right, we've got:
   <ul>
    <li>A red "x" to indicate that this is an error.</li>
@@ -89,7 +89,7 @@ tags:
 
 <ol>
  <li>Save your page and refresh, and you should see the error has gone.</li>
- <li>Now if you try to enter a guess and press the Submit guess button, you'll see ... another error! <img alt="" src="variable-is-null.png" style="display: block; margin: 0 auto;"></li>
+ <li>Now if you try to enter a guess and press the Submit guess button, you'll see ... another error! <img alt="" src="variable-is-null.png"></li>
  <li>This time the error being reported is "TypeError: lowOrHi is null", on line 78.
   <div class="note"><strong>Note</strong>: <code><a href="/en-US/docs/Glossary/Null">Null</a></code> is a special value that means "nothing", or "no value". So <code>lowOrHi</code> has been declared and initialised, but not with any meaningful value — it has no type or value.</div>
 
@@ -108,7 +108,7 @@ tags:
   <p><strong>Note</strong>: <code><a href="/en-US/docs/Web/API/console/log">console.log()</a></code> is a really useful debugging function that prints a value to the console. So it will print the value of <code>lowOrHi</code> to the console as soon as we have tried to set it in line 48.</p>
   </div>
  </li>
- <li>Save and refresh, and you should now see the <code>console.log()</code> result in your console. <img alt="" src="console-log-output.png" style="display: block; margin: 0 auto;"> Sure enough, <code>lowOrHi</code>'s value is <code>null</code> at this point, so there is definitely a problem with line 48.</li>
+ <li>Save and refresh, and you should now see the <code>console.log()</code> result in your console. <img alt="" src="console-log-output.png"> Sure enough, <code>lowOrHi</code>'s value is <code>null</code> at this point, so there is definitely a problem with line 48.</li>
  <li>Let's think about what the problem could be. Line 48 is using a <code><a href="/en-US/docs/Web/API/Document/querySelector">document.querySelector()</a></code> method to get a reference to an element by selecting it with a CSS selector. Looking further up our file, we can find the paragraph in question:
   <pre class="brush: js">&lt;p class="lowOrHi"&gt;&lt;/p&gt;</pre>
  </li>

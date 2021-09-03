@@ -82,7 +82,7 @@ tags:
 
 <p>This vulnerability is present if user input that is passed to an underlying SQL statement can change the meaning of the statement. For example, the following code is intended to list all users with a particular name (<code>userName</code>) that has been supplied from an HTML form:</p>
 
-<pre class="brush: sql">statement = "SELECT * FROM users WHERE name = '" + <strong>userName</strong> + "';"</pre>
+<pre class="brush: sql">statement = "SELECT * FROM users WHERE name = '" + userName + "';"</pre>
 
 <p>If the user specifies a real name, the statement will work as intended. However, a malicious user could completely change the behavior of this SQL statement to the new statement in the following example, by specifying the text in bold for the <code>userName</code>.</p>
 
