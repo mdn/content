@@ -26,7 +26,7 @@ For example, to get the position of a controller relative to the viewer's head, 
 ## Syntax
 
 ```js
-var xrPose = xrFrame.getPose(space, baseSpace);
+getPose(space, baseSpace)
 ```
 
 ### Parameters

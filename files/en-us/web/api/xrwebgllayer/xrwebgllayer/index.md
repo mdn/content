@@ -32,7 +32,8 @@ WebXR device and the WebGL graphics layer used to render the 3D scene.
 ## Syntax
 
 ```js
-let glLayer = new XRWebGLLayer(session, context, layerInit);
+new XRWebGLLayer(session, context)
+new XRWebGLLayer(session, context, layerInit)
 ```
 
 ### Parameters

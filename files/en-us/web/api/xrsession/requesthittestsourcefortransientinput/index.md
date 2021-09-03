@@ -24,7 +24,7 @@ The **`requestHitTestSourceForTransientInput()`** method of the
 ## Syntax
 
 ```js
-requestHitTestSourceForTransientInput(options);
+requestHitTestSourceForTransientInput(options)
 ```
 
 ### Parameters

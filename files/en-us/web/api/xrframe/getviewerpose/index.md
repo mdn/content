@@ -26,7 +26,7 @@ See the {{domxref("XRFrame.getPose", "getPose()")}} method for a way to calcula
 ## Syntax
 
 ```js
-var xrViewerPose = xrFrame.getViewerPose(referenceSpace);
+getViewerPose(referenceSpace)
 ```
 
 ### Parameters

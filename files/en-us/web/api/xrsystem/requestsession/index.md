@@ -30,7 +30,8 @@ inline sessions can be in progress at once.
 ## Syntax
 
 ```js
-navigator.xr.requestSession(mode, options)
+requestSession(mode)
+requestSession(mode, options)
 ```
 
 ### Parameters
