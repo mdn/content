@@ -8,104 +8,129 @@ tags:
   - reference page
 browser-compat: path.to.feature.NameOfTheElement
 ---
-<div>{{FirefoxSidebar}}</div>
+{{MDNSidebar}}
 
-<div class="note">
-<h2 id="Remove_before_publishing">Remove before publishing</h2>
+> **Note:** _Remove this whole explanatory note before publishing_
+>
+> ---
+>
+> **Page front matter:**
+>
+> The frontmatter at the top of the page is used to define "page metadata".
+> The values should be updated appropriately for the particular element.
+> 
+> ```
+> ---
+> title: <NameOfTheElement>
+> slug: Web/SVG/Element/NameOfTheElement
+> tags:
+>   - NameOfTheElement
+>   - SVG
+>   - Element
+>   - Reference
+>   - Experimental
+>   - Deprecated
+>   - Non-standard
+> browser-compat: svg.elements.NameOfTheElement
+> ---
+> ```
+> - **title**
+>   - : Title heading displayed at top of page.
+>       Format as **<**_NameOfTheElement_**>**.
+>       For example, the "[g](/en-US/docs/Web/SVG/Element/g)" element has a _title_ of `<g>`.
+> - **slug**
+>   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`).
+>       This will be formatted like `Web/SVG/Element/NameOfTheElement`.
+> - **tags**
+>   - : Always include the following tags: **SVG**, **Reference**, **Element**,  the _NameOfTheElement_ (e.g. **g**).
+>
+>       Include the following tags as appropriate:
+>       - Relevant category: **SVG Container**, **SVG Animation**, **SVG Light Source**, **SVG Text Content**, **SVG Font**.
+>       - Technology status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete)), **Non-standard** (if it isn't on a standards track).
+>       - Any other tags that represent possible search terms for the element.
+> - **browser-compat**
+>   - : Replace the placeholder value `svg.elements.NameOfTheElement` with the query string for the element in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
+>       The toolchain automatically uses the key to populate the compatibility and specification sections (replacing the `\{{Compat}}` and `\{{Specifications}}` macros).
+>
+>       Note that you may first need to create/update an entry for the element in our [Browser compat data repo](https://github.com/mdn/browser-compat-data), and the entry will need to include specification information.
+>       See our [guide on how to do this](/en-US/docs/MDN/Structures/Compatibility_tables).
+>
+> ---
+>
+> **Top-of-page macros**
+>
+> A number of macro calls appear at the top of the content section (immediately below the page frontmatter).
+> You should update or delete them according to the advice below:
+> - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the technology is [experimental](/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental)).
+>   If the technology you are documenting is not experimental, you should remove this.
+>   If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the [Experimental features in Firefox](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+> - `\{{Deprecated_Header}}` — this generates a **Deprecated** banner that indicates that use of the technology is [discouraged](/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete).
+>   If it isn't, then you can remove the macro call.
+> - `\{{SecureContext_Header}}` — this generates a **Secure context** banner that indicates the technology is only available in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+>   If it isn't, then you can remove the macro call.
+>   If it is, then you should also fill in an entry for it in the [Features restricted to secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts) page.
+> - `\{{SVGRef}}` — this generates the left-hand-side reference sidebar for the element.
+>   The content of the sidebar depends on the tags in the page metadata.
+> - Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
+>
+> _Remember to remove this whole explanatory note before publishing_
 
-<h3 id="Title_and_slug">Title and slug</h3>
+{{SeeCompatTable}}{{deprecated_header}}{{SVGRef}}
 
-<p>An SVG element page should have a <em>title</em> of <em>"&lt;" + Name</em>Of<em>TheElement + "&gt;"</em>. For example, the <a href="/en-US/docs/Web/SVG/Element/g">g</a> element has a <em>title</em> of <em>&lt;g&gt;</em>.</p>
+The summary paragraph — start by naming the element and saying what it does. This should ideally be 1 or 2 short sentences.
 
-<p>The <em>Slug</em> (the last segment at the end of the URL) should be filled in as <em>NameOfTheElement</em>, so <code>g</code>'s slug is <em>g</em>.</p>
+## Usage context
 
-<h3 id="Top_macros">Top macros</h3>
+{{svginfo}}
 
-<p>A number of macro calls appear at the top of the content section. You should update or delete them according to the advice below:</p>
+Note — for the correct information to appear here, you need to fill in an entry for the element in the \\{{svginfo}} macro, if it is not in there already.
 
-<ul>
-	<li>\{{SeeCompatTable}} — this generates a <strong>This is an experimental technology</strong> banner that indicates the technology is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental">experimental</a>). If the technology you are documenting is not experimental, you can remove this. If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the <a href="/en-US/docs/Mozilla/Firefox/Experimental_features">Experimental features in Firefox</a> page.</li>
-	<li>\{{deprecated_header}} — this generates a <strong>Deprecated</strong> banner that indicates the technology is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete">deprecated</a>. If it isn't, then you can remove the macro call.</li>
-	<li>
-	<div>\{{svgref}} — this generates a suitable SVG sidebar, depending on what tags are included on the page.</div>
-	</li>
-</ul>
+## Attributes
 
-<h3 id="Tags">Tags</h3>
+### Global attributes
 
-<p>In an SVG element subpage, you need to include the following tags (see the <em>Tags</em> section at the bottom of the editor UI): <strong>SVG</strong>, <strong>Reference</strong>, <strong>Element</strong>, <em>the name of the Element</em> (e.g. <strong>g</strong>), <strong>SVG container</strong>/<strong>SVG animation/SVG light source</strong>/<strong>SVG text content</strong>/<strong>SVG font</strong> as appropriate, <strong>Experimental</strong> (if the technology is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental">experimental</a>), and <strong>Deprecated</strong> (if it is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete">deprecated</a>).</p>
+- [Conditional processing attributes](/en-US/docs/Web/SVG/Attribute#conditional_processing_attributes)
+- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
+- [Graphical event attributes](/en-US/docs/Web/SVG/Attribute#graphical_event_attributes)
+- [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
+- {{SVGAttr("transform")}}
 
-<h3 id="Browser_compatibility_and_specifications">Browser compatibility and specifications</h3>
+### Specific attributes
 
-<p>To fill in the browser compat data, you first need to fill in an entry for the API into our <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a> — see our <a href="/en-US/docs/MDN/Structures/Compatibility_tables#the_new_way_the_browser_compat_data_repo_and_dynamic_tables">guide on how to do this</a>.</p>
+- Include bulleted
+- list of all the
+- SVG attributes it can take
 
-<p>Once that is done, you can show the compat data for the SVG element with a \{{Compat}} macro call and its specification information with a \{{Specifications}} macro call.</p>
-</div>
+## DOM Interface
 
-<div>{{draft}}{{SeeCompatTable}}{{deprecated_header}}{{svgref}}</div>
+This element implements the {{domxref("NameOfSVGDOMElement")}} interface.
 
-<p>The summary paragraph — start by naming the element and saying what it does. This should ideally be 1 or 2 short sentences.</p>
+## Examples
 
-<h2 id="Usage_context">Usage context</h2>
+Fill in a simple example that nicely shows a typical usage of the element, then perhaps some more complex examples (see our guide on how to add [code examples](/en-US/docs/MDN/Structures/Code_examples) for more information).
 
-<p>{{svginfo}}</p>
+```js
+my code block
+```
 
-<p>Note — for the correct information to appear here, you need to fill in an entry for the element in the \{{svginfo}} macro, if it is not in there already.</p>
+And/or include a list of links to useful code samples that live elsewhere:
 
-<h2 id="Attributes">Attributes</h2>
+- x
+- y
+- z
 
-<h3 id="Global_attributes">Global attributes</h3>
-
-<ul>
-	<li><a href="/en-US/docs/Web/SVG/Attribute#conditional_processing_attributes">Conditional processing attributes</a></li>
-	<li><a href="/en-US/docs/Web/SVG/Attribute#core_attributes">Core attributes</a></li>
-	<li><a href="/en-US/docs/Web/SVG/Attribute#graphical_event_attributes">Graphical event attributes</a></li>
-	<li><a href="/en-US/docs/Web/SVG/Attribute#presentation_attributes">Presentation attributes</a></li>
-	<li>{{SVGAttr("class")}}</li>
-	<li>{{SVGAttr("style")}}</li>
-	<li>{{SVGAttr("transform")}}</li>
-</ul>
-
-<h3 id="Specific_attributes">Specific attributes</h3>
-
-<ul>
-	<li>Include bulleted</li>
-	<li>list of all</li>
-	<li>the SVG attributes</li>
-	<li>It can take</li>
-</ul>
-
-<h2 id="DOM_Interface">DOM Interface</h2>
-
-<p>This element implements the {{domxref("NameOfSVGDOMElement")}} interface.</p>
-
-<h2 id="Examples">Examples</h2>
-
-<p>Fill in a simple example that nicely shows a typical usage of the element, then perhaps some more complex examples (see our guide on how to add <a href="/en-US/docs/MDN/Structures/Code_examples">code examples</a> for more information).</p>
-
-<pre class="brush: js">my code block</pre>
-
-<p>And/or include a list of links to useful code samples that live elsewhere:</p>
-
-<ul>
-	<li>x</li>
-	<li>y</li>
-	<li>z</li>
-</ul>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility_2">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>Include list of</li>
-	<li>other links related to</li>
-	<li>this Element that might</li>
-	<li>be useful</li>
-</ul>
+- Include list of
+- other links related to
+- this Element that might be useful
