@@ -107,7 +107,7 @@ Include a table of the events fired on this type of element, if any.
 
 Fill in a simple example that nicely shows a typical usage of the element, then perhaps some more complex examples (see our guide on how to add [code examples](/en-US/docs/MDN/Structures/Code_examples) for more information).
 
-```js
+```html
 my code block
 ```
 
