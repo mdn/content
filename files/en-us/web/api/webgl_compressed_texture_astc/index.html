@@ -39,14 +39,16 @@ browser-compat: api.WEBGL_compressed_texture_astc
 <p>The compressed texture formats are exposed by 28 constants and can be used in two functions: {{domxref("WebGLRenderingContext.compressedTexImage2D", "compressedTexImage2D()")}} and {{domxref("WebGLRenderingContext.compressedTexSubImage2D", "compressedTexSubImage2D()")}}.</p>
 
 <table class="standard-table">
+ <thead>
+   <tr>
+    <th>Constants</th>
+    <th>Blocks</th>
+    <th>Bits per pixel</th>
+    <th>{{jsxref("ArrayBuffer")}} <code>byteLength</code></th>
+    <th>bytes if height and width are 512</th>
+   </tr>
+ </thead>
  <tbody>
-  <tr>
-   <td>Constants</td>
-   <td>Blocks</td>
-   <td>Bits per pixel</td>
-   <td>{{jsxref("ArrayBuffer")}} <code>byteLength</code></td>
-   <td>bytes if height and width are 512</td>
-  </tr>
   <tr>
    <td><code>ext.COMPRESSED_RGBA_ASTC_4x4_KHR<br>
     ext.COMPRESSED_SRGB8_ALPHA8_ASTC_4x4_KHR</code></td>
