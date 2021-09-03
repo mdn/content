@@ -186,7 +186,7 @@ browser-compat: api.SubtleCrypto.unwrapKey
 <dl>
   <dt>{{exception("InvalidAccessError")}}</dt>
   <dd>Raised when the unwrapping key is not a key for the requested unwrap algorithm or if
-    the {{domxref("CryptoKey.usages")}} value of that key doesn't contain
+    the <code><em>keyUsages</em></code> value of that key doesn't contain
     <code>unwrap</code>.</dd>
   <dt>{{exception("NotSupported")}}</dt>
   <dd>Raised when trying to use an algorithm that is either unknown or isn't suitable for
