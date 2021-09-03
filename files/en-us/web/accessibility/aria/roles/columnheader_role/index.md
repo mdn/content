@@ -21,7 +21,11 @@ An element with *role="columnheader"* nested as a descendant for an element with
 All columnheaders should be nested within a [row](/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role). Every row, in turn, should be nested within a [grid](/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role), [table](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role), or [treegrid](/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role), alternitiely within a [rowgroup](/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role) nested within one of the above.
 
 - `aria-sort`
-  - : Only applied to one column header at a time, if any, the aria-sort attribute indicates if a column is sorted in the three values of `ascending` or `descending` order, or `none` for not sorted.
+  - : Only applied to one column header at a time, if any, the `aria-sort` attribute indicates if a column is sorted in the three values of `ascending` or `descending` order, or `none` for not sorted.
+
+### Keyboard interactions
+
+This role does not support any specific keyboard interaction.
 
 ### Required JavaScript features
 
@@ -88,9 +92,9 @@ Columnheader has the same semantics `<tr scope="col">`.
 - [`treegrid` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role)
 - [`row` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role)
 - [`rowgroup` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role)
-- [`<th>`](/en-US/docs/Web/HTML/Element/th) 
-- [`<table>`](/en-US/docs/Web/HTML/Element/table) 
-- [`<tr>`](/en-US/docs/Web/HTML/Element/tr)
-- [`<td>`](/en-US/docs/Web/HTML/Element/td)  
+- [The `<th>` element](/en-US/docs/Web/HTML/Element/th) 
+- [The `<table>` element](/en-US/docs/Web/HTML/Element/table) 
+- [The `<tr>` element](/en-US/docs/Web/HTML/Element/tr)
+- [The `<td>` element](/en-US/docs/Web/HTML/Element/td)  
 
 <section id="Quick_links"><ol><li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li></ol></section>
