@@ -59,6 +59,10 @@ tags:
 
 <h4 id="removals_webext">Removals</h4>
 
+<ul>
+  <li>Use of the <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/initKeyEvent">KeyboardEvent.initKeyEvent</a></code> to initiate a <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent">KeyboardEvent</a></code> object is now deprecated. We expect to remove <code>initKeyEvent</code> from Firefox in version 96. Extension developers should use a <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/KeyboardEvent">KeyboardEvent</a></code> constructor to initiate a KeyboardEvent object instead.</li>
+</ul> 
+
 <h2 id="Older_versions">Older versions</h2>
 
 <p>{{Firefox_for_developers(92)}}</p>
