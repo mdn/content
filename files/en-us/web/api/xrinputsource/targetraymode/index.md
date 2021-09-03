@@ -36,13 +36,7 @@ A target ray emitted by a hand controller:
 
 The target ray can be anything from a simple line (ideally fading over distance) to an animated effect, such as the science-fiction "phaser" style shown in the screenshot above.
 
-## Syntax
-
-```js
-let rayMode = xrInputSource.targetRayMode;
-```
-
-### Value
+## Value
 
 A string indicating which method to use when generating and presenting the target ray to
 the user. The possible values are:

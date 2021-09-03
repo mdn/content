@@ -26,13 +26,7 @@ property is a string indicating which eye's viewpoint the `XRView` represents: `
 `right`. For views which represent neither eye, such as monoscopic views,
 this property's value is `none`.
 
-## Syntax
-
-```js
-view.eye;
-```
-
-### Value
+## Value
 
 A string that can be one of the following values:
 

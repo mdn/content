@@ -33,13 +33,7 @@ The `emulatedPosition` read-only attribute of the
 {{domxref("XRPose.transform", "transform")}} is directly taken from the XR device, or
 it's simulated or computed based on other sources.
 
-## Syntax
-
-```js
-let emulated = xrPose.emulatedPosition;
-```
-
-### Value
+## Value
 
 A Boolean which is `true` if the pose's position is computed based on
 estimates or is derived from sources other than direct sensor data. If the position is

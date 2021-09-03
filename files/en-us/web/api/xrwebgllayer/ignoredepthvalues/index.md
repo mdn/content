@@ -32,13 +32,7 @@ position of vertices, this property is `false`.
 The value of `ignoreDepthValues` can only be set when the
 {{domxref("XRWebGLLayer")}} is instantiated, by setting the corresponding value in the [constructor's](/en-US/docs/Web/API/XRWebGLLayer/XRWebGLLayer) `layerInit` parameter.
 
-## Syntax
-
-```js
-let ignoringDepthBuffer = xrWebGLLayer.ignoreDepthValues;
-```
-
-### Value
+## Value
 
 A Boolean value which is `true` if the WebGL context's depth buffer is being
 used while computing the locations of points in the 3D world. Otherwise, if this is

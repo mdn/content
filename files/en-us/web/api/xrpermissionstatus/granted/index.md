@@ -28,13 +28,7 @@ identifying one of the WebXR features for which permission has been granted as o
 time at which the Permission API's {{domxref("Permissions.query",
   "navigator.permissions.query()")}} method was called.
 
-## Syntax
-
-```js
-grantedFeatures = xrPermissionStatus.granted;
-```
-
-### Value
+## Value
 
 An array of strings, each identifying a single WebXR feature
 which the app or site has been granted permission to use. Currently, all of these

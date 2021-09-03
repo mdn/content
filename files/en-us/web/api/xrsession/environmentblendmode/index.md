@@ -25,13 +25,7 @@ property identifies if, and to what degree, the computer-generated imagery is ov
 This is used to differentiate between fully-immersive VR sessions and AR sessions which render
 over a pass-through image of the real world, possibly partially transparently.
 
-## Syntax
-
-```js
-xrSession.environmentBlendMode;
-```
-
-### Value
+## Value
 
 A string defining if and how virtual, rendered content is overlaid atop the image of the real world.
 

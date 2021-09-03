@@ -19,13 +19,7 @@ browser-compat: api.XRSession.domOverlayState
 The *read-only* **`domOverlayState`** property of an `immersive-ar`
 {{DOMxRef("XRSession")}} provides information about the DOM overlay, if the feature is enabled.
 
-## Syntax
-
-```js
-session.domOverlayState;
-```
-
-### Value
+## Value
 
 Returns {{jsxref("null")}} if the DOM overlay feature is not supported or not enabled or an object containing information about the dom overlay state with the following properties:
 

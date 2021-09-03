@@ -19,7 +19,7 @@ browser-compat: api.XRSession.depthUsage
 The *read-only* **`depthUsage`** property of an `immersive-ar`
 {{DOMxRef("XRSession")}} describes which depth-sensing usage is used.
 
-### Value
+## Value
 
 This property can return the following values:
 

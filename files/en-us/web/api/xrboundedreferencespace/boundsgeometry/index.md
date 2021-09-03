@@ -38,13 +38,7 @@ or by drawing the shape of their room using their XR input device. Theoretically
 advanced system might use sensors or other detection methods to determine the bounds of
 a dedicated XR room (notice how we carefully don't call it a holodeck?).
 
-## Syntax
-
-```js
-bounds = xrReferenceSpace.boundsGeometry;
-```
-
-### Value
+## Value
 
 The `boundsGeometry` property is an array of {{domxref("DOMPointReadOnly")}}
 objects, each of which defines one vertex in a polygon inside which the viewer is

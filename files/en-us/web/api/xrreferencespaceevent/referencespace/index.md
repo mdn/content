@@ -28,13 +28,7 @@ The read-only {{domxref("XRReferenceSpaceEvent")}} property
 **`referenceSpace`** specifies the reference space which is the
 originator of the event.
 
-## Syntax
-
-```js
-let refSpace = xrReferenceSpaceEvent.referenceSpace;
-```
-
-### Value
+## Value
 
 An {{domxref("XRReferenceSpace")}} indicating the source of the event.
 
