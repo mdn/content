@@ -1,0 +1,50 @@
+---
+title: 'ARIA: widget role'
+slug: Web/Accessibility/ARIA/roles/widget_role
+tags: 
+
+  - widget
+  - Accessibility
+  - ARIA
+  - roles
+  - NeedsContent
+---
+
+
+
+The **`widget`** role, an abstract role, is an interactive component of a graphical user interface (GUI).
+
+## Description
+
+`role="widget"` should not be confused with widgets roles, such as `option`, `menuitem`, and `searchbox`. 
+
+The abstract `widget` role is a superclass role for interactive GUI elements including other abstract roles such as [`command`](/en-US/docs/Web/Accessibility/ARIA/Roles/command_role), [`composite`](/en-US/docs/Web/Accessibility/ARIA/Roles/composite_role), [`input`](/en-US/docs/Web/Accessibility/ARIA/Roles/input_role), [`range`](/en-US/docs/Web/Accessibility/ARIA/Roles/range_role), and [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role) (if focusable), which should not be used by web authors. The abstract `widget` role is a superclass role for grouping roles, including [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role), [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role), [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role) (when not focusable), and [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role), which can and should be used when appropriat.  When the user navigates to one of these non-abstract roles of widget, keyboard events can switch to an application browsing mode, and pass keyboard events through to the browser. 
+
+> **Note:**  The `widget` role is an abstract role used for the ontology. It is included here for completeness of documentation. It should not be used by web authors.
+
+## Best Practices
+
+Do not use.
+
+## Specifications
+
+| Specification                                                                                                                    | Status                                           |
+| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
+| {{SpecName("ARIA","#widget role","ARIA: widget role")}}                                             | {{Spec2('ARIA')}}                         |
+
+
+
+## See Also
+
+- [ARIA: `roletype` role](/en-US/docs/Web/Accessibility/ARIA/Roles/roletype_role)
+
+- [ARIA: `command` role](/en-US/docs/Web/Accessibility/ARIA/Roles/command_role)
+- [ARIA: `composite` role](/en-US/docs/Web/Accessibility/ARIA/Roles/composite_role)
+- [ARIA: `gridcell` role](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
+- [ARIA: `input` role](/en-US/docs/Web/Accessibility/ARIA/Roles/input_role)
+- [ARIA: `range` role](/en-US/docs/Web/Accessibility/ARIA/Roles/range_role)
+- [ARIA: `row` role](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role)
+- [ARIA: `separator` role](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role)
+- [ARIA: `tab` role](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role)
+
+<section id="Quick_links"><ol><li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li></ol></section>
