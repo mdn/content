@@ -41,7 +41,7 @@ flatMap(function callbackFn(currentValue, index, array) { ... }, thisArg)
 
 ### Parameters
 
-- `callback`
+- `callbackFn`
 
   - : Function that produces an element of the new Array, taking three arguments:
 
