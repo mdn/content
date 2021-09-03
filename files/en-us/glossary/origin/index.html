@@ -11,50 +11,45 @@ tags:
 
 <p>Some operations are restricted to same-origin content, and this restriction can be lifted using {{Glossary("CORS")}}.</p>
 
-<h2 id="Examples_of_same_origin">Examples of same origin</h2>
+<h2 id="Examples">Examples</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td style="width: 50%;"><code>http://example.com/app1/index.html</code><br>
-    <code>http://example.com/app2/index.html</code></td>
-   <td style="width: 50%;">same origin because same scheme (<code>http</code>) and hostname (<code>example.com</code>)</td>
-  </tr>
-  <tr>
-   <td style="width: 50%;"><code>http://Example.com:80</code><br>
-    <code>http://example.com</code></td>
-   <td style="width: 50%;">same origin because a server delivers HTTP content through port 80 by default</td>
-  </tr>
- </tbody>
-</table>
+<p>These are same origin because they have the same scheme (<code>http</code>) and hostname (<code>example.com</code>), and the different file path does not matter:</p>
+    <ul>
+      <li><code>http://example.com/app1/index.html</code></li>
+      <li><code>http://example.com/app2/index.html</code></li>
+    </ul>
 
-<h2 id="Examples_of_different_origin">Examples of different origin</h2>
+<p>These are same origin because a server delivers HTTP content through port 80 by default:</p>
+    <ul>
+      <li><code>http://Example.com:80</code></li>
+      <li><code>http://example.com</code></li>
+    </ul>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td style="width: 50%;"><code>http://example.com/app1</code><br>
-    <code>https://example.com/app2</code></td>
-   <td>different schemes</td>
-  </tr>
-  <tr>
-   <td style="width: 50%;"><code>http://example.com</code><br>
-    <code>http://www.example.com</code><br>
-    <code>http://myapp.example.com</code></td>
-   <td style="width: 50%;">different hostnames</td>
-  </tr>
-  <tr>
-   <td style="width: 50%;"><code>http://example.com</code><br>
-    <code>http://example.com:8080</code></td>
-   <td style="width: 50%;">different ports</td>
-  </tr>
- </tbody>
-</table>
+<p>These are not same origin because they use different schemes:</p>
+    <ul>
+      <li><code>http://example.com/app1</code></li>
+      <li><code>https://example.com/app2</code></li>
+    </ul>
+
+<p>These are not same origin because they use different hostnames:</p>
+    <ul>
+      <li><code>http://example.com</code></li>
+      <li><code>http://www.example.com</code></li>
+      <li><code>http://myapp.example.com</code></li>
+    </ul>
+
+<p>These are not same origin because they use different ports:</p>
+    <ul>
+      <li><code>http://example.com</code></li>
+      <li><code>http://example.com:8080</code></li>
+    </ul>
+
 
 <h2 id="See_also">See also</h2>
 
 <ul>
   <li><a href="/en-US/docs/Web/Security/Same-origin_policy">Same-origin policy</a></li>
+  <li>{{Glossary("Site")}}</li>
   <li><a href="https://html.spec.whatwg.org/multipage/origin.html#origin">HTML specification: origin</a></li>
 </ul>
 
