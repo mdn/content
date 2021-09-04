@@ -51,24 +51,13 @@ browser-compat: api.Cache.add
 
 <h3 id="Exceptions">Exceptions</h3>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col"><strong>Exception</strong></th>
-   <th scope="col"><strong>Happens when</strong></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>TypeError</code></td>
-   <td>
+<dl>
+  <dt><code>TypeError</code></dt>
+  <dd>
     <p>The URL scheme is not <code>http</code> or <code>https</code>.</p>
-
     <p>The Response status is not in the 200 range (i.e., not a successful response.) This occurs if the request does not return successfully, but also if the request is a <em>cross-origin no-cors</em> request (in which case the reported status is always 0.)</p>
-   </td>
-  </tr>
- </tbody>
-</table>
+  </dd>
+</dl>
 
 <h2 id="Examples">Examples</h2>
 

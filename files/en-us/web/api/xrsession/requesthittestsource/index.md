@@ -24,7 +24,7 @@ The **`requestHitTestSource()`** method of the
 ## Syntax
 
 ```js
-requestHitTestSource(options);
+requestHitTestSource(options)
 ```
 
 ### Parameters

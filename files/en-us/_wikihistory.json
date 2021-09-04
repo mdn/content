@@ -80828,12 +80828,6 @@
       "mattwojo"
     ]
   },
-  "Web/API/TextRange": {
-    "modified": "2020-02-26T00:53:59.554Z",
-    "contributors": [
-      "MCCF"
-    ]
-  },
   "Web/API/TextTrack": {
     "modified": "2020-10-15T21:51:29.641Z",
     "contributors": [

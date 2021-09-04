@@ -32,7 +32,7 @@ represented by an {{domxref("XRInputSource")}}.
 ## Syntax
 
 ```js
-newInputSourceEvent = new XRInputSourceEvent(type, eventInitDict);
+new XRInputSourceEvent(type, eventInitDict)
 ```
 
 ### Parameters

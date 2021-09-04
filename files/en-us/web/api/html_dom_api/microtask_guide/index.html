@@ -109,35 +109,23 @@ element.getData();
 console.log("Data fetched");
 </pre>
 
-<p>Executing this code twice in a row gives the results shown in the table below:</p>
+<p>Executing this code twice in a row gives the following results.</p>
 
-<table class="standard-table">
-	<caption>Results when data isn't cached (left) vs. when it is found in the cache</caption>
-	<thead>
-		<tr>
-			<th scope="col">Data isn't cached</th>
-			<th scope="col">Data is cached</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>
-			<pre>
+<p>When the data is not cached:</p>
+
+<pre>
 Fetching data
 Data fetched
 Loaded data
 </pre>
-			</td>
-			<td>
-			<pre>
+
+<p>When the data is cached:</p>
+
+<pre>
 Fetching data
 Loaded data
 Data fetched
 </pre>
-			</td>
-		</tr>
-	</tbody>
-</table>
 
 <p>Even worse, sometimes the element's <code>data</code> property will be set and other times it won't be by the time this code finishes running.</p>
 

@@ -44,10 +44,6 @@ tags:
 
 <p>For example, to produce the final webpages you see in the browser, the application server might fill an HTML template with content from a database. Sites like MDN or Wikipedia have thousands of webpages. Typically, these kinds of sites are composed of only a few HTML templates and a giant database, rather than thousands of static HTML documents. This setup makes it easier to maintain and deliver the content.</p>
 
-<h2 id="Active_learning">Active learning</h2>
-
-<p><em>There is no active learning available yet. <a href="/en-US/docs/MDN/Contribute/Getting_started">Please, consider contributing</a>.</em></p>
-
 <h2 id="Deeper_dive">Deeper dive</h2>
 
 <p>To review: to fetch a webpage, your browser sends a request to the web server, which searches for the requested file in its own storage space. Upon finding the file, the server reads it, processes it as-needed, and sends it to the browser. Let's look at those steps in more detail.</p>
@@ -85,7 +81,7 @@ tags:
 <p>HTTP provides clear rules for how a client and server communicate. We'll cover HTTP itself in a <a href="/en-US/docs/Web/HTTP">technical article</a> later. For now, just be aware of these things:</p>
 
 <ul>
- <li>Only <em>clients</em> can make HTTP requests, and then only to <em>servers</em>. Servers can only <em>respond</em> to a <em>client</em>'s HTTP request.</li>
+ <li>Usually only <em>clients</em> make HTTP requests, and only to <em>servers</em>. Servers <em>respond</em> to a <em>client</em>'s HTTP request. A server can also populate data into a client cache, in advance of it being requested, through a mechanism called a server push.</li>
  <li>When requesting a file via HTTP, clients must provide the file's {{Glossary("URL")}}.</li>
  <li>The web server <em>must answer</em> every HTTP request, at least with an error message.</li>
 </ul>

@@ -20,7 +20,7 @@ browser-compat: html.elements.label
 
 <ul>
  <li>The label text is not only visually associated with its corresponding text input; it is programmatically associated with it too. This means that, for example, a screen reader will read out the label when the user is focused on the form input, making it easier for an assistive technology user to understand what data should be entered.</li>
- <li>You can click the associated label to focus/activate the input, as well as the input itself. This increased hit area provides an advantage to anyone trying to activate the input, including those using a touch-screen device.</li>
+ <li>When a user clicks or touches/taps a label, the browser passes the focus to its associated input (the resulting event is also raised for the input). That increased hit area for focusing the input provides an advantage to anyone trying to activate it — including those using a touch-screen device.</li>
 </ul>
 
 <p>To associate the <code>&lt;label&gt;</code> with an <code>&lt;input&gt;</code> element, you need to give the <code>&lt;input&gt;</code> an <code>id</code> attribute. The <code>&lt;label&gt;</code> then needs a <code>for</code> attribute whose value is the same as the input's <code>id</code>.</p>
@@ -32,12 +32,13 @@ browser-compat: html.elements.label
 &lt;/label&gt;
 </pre>
 
-<p id="Usage_notes">Other usage notes:</p>
+<p>The form control that a label is labeling is called the <em>labeled control</em> of the label element. Multiple labels can be associated with the same form control:</p>
 
-<ul>
- <li>The form control that the label is labeling is called the <em>labeled control</em> of the label element. One input can be associated with multiple labels.</li>
- <li>When a <code>&lt;label&gt;</code> is clicked or tapped and it is associated with a form control, the resulting <code>click</code> event is also raised for the associated control.</li>
-</ul>
+<pre class="brush: html">
+&lt;label for="username"&gt;Enter your username:&lt;/label&gt;
+&lt;input id="username"&gt;
+&lt;label for="username"&gt;&lt;a href="/username-forgot"&gt;Forgot your username?&lt;/a&gt;&lt;/label&gt;
+</pre>
 
 <h2 id="Attributes">Attributes</h2>
 
@@ -45,7 +46,13 @@ browser-compat: html.elements.label
 
 <dl>
  <dt>{{htmlattrdef("for")}}</dt>
- <dd>The {{htmlattrxref("id")}} of a <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Form_labelable">labelable</a> form-related element in the same document as the <code>&lt;label&gt;</code> element. The first element in the document with an <code>id</code> matching the value of the <code>for</code> attribute is the <em>labeled control</em> for this label element if it is a <a href="https://html.spec.whatwg.org/multipage/forms.html#category-label">labelable element</a>. If it is not labelable then the <code>for</code> attribute has no effect. If there are other elements that also match the <code>id</code> value, later in the document, they are not considered.
+ <dd>
+ <p>The value of the <code>for</code> attribute must be a single {{htmlattrxref("id")}} for a <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_labelable">labelable</a> form-related element in the same document as the <code>&lt;label&gt;</code> element. So, any given <code>label</code> element can be associated with only one form control.</p>
+
+ <p>The first element in the document with an <code>id</code> attribute matching the value of the <code>for</code> attribute is the <em>labeled control</em> for this <code>label</code> element — if the element with that <code>id</code> is actually a <a href="https://html.spec.whatwg.org/multipage/forms.html#category-label">labelable element</a>. If it is <em>not</em> a labelable element, then the <code>for</code> attribute has no effect. If there are other elements that also match the <code>id</code> value, later in the document, they are not considered.
+
+ <p>Multiple <code>label</code> elements can be given the same value for their <code>for</code> attribute; doing so causes the associated form control (the form control that <code>for</code> value references) to have multiple labels.</p>
+
  <div class="note"><strong>Note</strong>: A <code>&lt;label&gt;</code> element can have both a <code>for</code> attribute and a contained control element, as long as the <code>for</code> attribute points to the contained control element.</div>
  </dd>
 </dl>
@@ -129,7 +136,7 @@ browser-compat: html.elements.label
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">Phrasing content</a>, but no descendant <code>label</code> elements. No <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Form_labelable">labelable</a> elements other than the labeled control are allowed.</td>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">Phrasing content</a>, but no descendant <code>label</code> elements. No <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_labelable">labelable</a> elements other than the labeled control are allowed.</td>
   </tr>
   <tr>
    <th scope="row">Tag omission</th>

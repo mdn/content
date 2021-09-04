@@ -31,7 +31,9 @@ coordinate systems across spaces.
 ## Syntax
 
 ```js
-let xrRigidTransform = new XRRigidTransform(position, orientation);
+new XRRigidTransform()
+new XRRigidTransform(position)
+new XRRigidTransform(position, orientation)
 ```
 
 ### Parameters

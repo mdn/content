@@ -34,7 +34,7 @@ defined using this type.
 ## Syntax
 
 ```js
-let refSpaceEvent = new XRReferenceSpaceEvent(type, eventInitDict);
+new XRReferenceSpaceEvent(type, eventInitDict)
 ```
 
 ### Parameters
