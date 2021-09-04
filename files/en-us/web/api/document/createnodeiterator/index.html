@@ -33,9 +33,9 @@ browser-compat: api.Document.createNodeIterator
     <table class="standard-table">
       <thead>
         <tr>
-          <th class="header" scope="col">Constant</th>
-          <th class="header" scope="col">Numerical value</th>
-          <th class="header" scope="col">Description</th>
+          <th>Constant</th>
+          <th>Numerical value</th>
+          <th>Description</th>
         </tr>
       </thead>
       <tbody>
@@ -47,14 +47,11 @@ browser-compat: api.Document.createNodeIterator
         <tr>
           <td><code>NodeFilter.SHOW_ATTRIBUTE</code> {{deprecated_inline}}</td>
           <td><code>2</code></td>
-          <td>
-            <p>Shows attribute {{ domxref("Attr") }} nodes.</p>
-
-            <p>This is meaningful only when creating a {{ domxref("TreeWalker") }} with an
+          <td>Shows attribute {{ domxref("Attr") }} nodes. This is meaningful only when creating a {{ domxref("TreeWalker") }} with an
               {{ domxref("Attr") }} node as its root. In this case, it means that the
               attribute node will appear in the first position of the iteration or
               traversal. Since attributes are never children of other nodes, they do not
-              appear when traversing over the document tree.</p>
+              appear when traversing over the document tree.
           </td>
         </tr>
         <tr>
