@@ -85,7 +85,7 @@ tags:
 <p>HTTP provides clear rules for how a client and server communicate. We'll cover HTTP itself in a <a href="/en-US/docs/Web/HTTP">technical article</a> later. For now, just be aware of these things:</p>
 
 <ul>
- <li>Only <em>clients</em> can make HTTP requests, and then only to <em>servers</em>. Servers can only <em>respond</em> to a <em>client</em>'s HTTP request.</li>
+ <li>Only <em>clients</em> can make HTTP requests, and then only to <em>servers</em>. Servers can <em>respond</em> to a <em>client</em>'s HTTP request. A server can also populate data into a client cache, in advance of it being requested, through a mechanism called the server push.</li>
  <li>When requesting a file via HTTP, clients must provide the file's {{Glossary("URL")}}.</li>
  <li>The web server <em>must answer</em> every HTTP request, at least with an error message.</li>
 </ul>
