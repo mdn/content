@@ -57,7 +57,7 @@ numbers by zero does not.
 
 Since the very earliest versions of the `isNaN` function specification, its
 behavior for non-numeric arguments has been confusing. When the argument to the
-`isNaN` function is not of type [Number](https://es5.github.com/#x8.5), the value is first coerced to a
+`isNaN` function is not of type [Number](https://es5.github.io/#x8.5), the value is first coerced to a
 Number. The resulting value is then tested to determine whether it is {{jsxref("NaN")}}.
 Thus for non-numbers that when coerced to numeric type result in a valid non-NaN numeric
 value (notably the empty string and boolean primitives, which when coerced give numeric
