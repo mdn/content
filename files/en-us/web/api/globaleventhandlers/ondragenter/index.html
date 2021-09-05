@@ -33,6 +33,7 @@ browser-compat: api.GlobalEventHandlers.ondragenter
 
 <pre class="brush: js">&lt;!DOCTYPE html&gt;
 &lt;html lang=en&gt;
+&lt;head&gt;
 &lt;title&gt;Examples of using the Drag and Drop Global Event Attribute&lt;/title&gt;
 &lt;meta content="width=device-width"&gt;
 &lt;style&gt;
@@ -48,7 +49,6 @@ browser-compat: api.GlobalEventHandlers.ondragenter
     border: 1px solid black;
   }
 &lt;/style&gt;
-&lt;/head&gt;
 &lt;script&gt;
 function dragstart_handler(ev) {
  console.log("dragStart");
@@ -100,6 +100,7 @@ function init() {
  el.ondragend = dragend_handler;
 }
 &lt;/script&gt;
+&lt;/head&gt;
 &lt;body onload="init();"&gt;
 &lt;h1&gt;Examples of &lt;code&gt;ondragenter&lt;/code&gt;, &lt;code&gt;ondragleave&lt;/code&gt;, &lt;code&gt;ondragend&lt;/code&gt;&lt;/h1&gt;
  &lt;div&gt;
