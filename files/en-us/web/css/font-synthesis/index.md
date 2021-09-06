@@ -11,7 +11,7 @@ browser-compat: css.properties.font-synthesis
 ---
 {{CSSRef}}
 
-The **`font-synthesis`** [CSS](/en-US/docs/Web/CSS) property controls which missing typefaces, bold or italic, may be synthesized by the browser.
+The **`font-synthesis`** [CSS](/en-US/docs/Web/CSS) property controls which missing typefaces, bold, italic, or small-caps, may be synthesized by the browser.
 
 {{EmbedInteractiveExample("pages/css/font-synthesis.html")}}
 
@@ -21,7 +21,8 @@ The **`font-synthesis`** [CSS](/en-US/docs/Web/CSS) property controls which miss
 font-synthesis: none;
 font-synthesis: weight;
 font-synthesis: style;
-font-synthesis: weight style;
+font-synthesis: small-caps;
+font-synthesis: weight style small-caps;
 
 /* Global values */
 font-synthesis: inherit;
@@ -33,15 +34,17 @@ font-synthesis: unset;
 ### Values
 
 - `none`
-  - : Indicates that neither bold nor italic typeface may be synthesized.
+  - : Indicates that bold, italic, nor small-caps typeface may be synthesized.
 - `weight`
   - : Indicates that a bold typeface may be synthesized if needed.
 - `style`
   - : Indicates that an italic typeface may be synthesized if needed.
+- `small-caps`
+  - : Indicates that a small-caps typeface may be synthesized if needed.
 
 ## Description
 
-Most standard Western fonts include italic and bold variants, but many novelty fonts do not. Fonts used for Chinese, Japanese, Korean and other logographic scripts tend not to include these variants, and synthesizing them may impede the legibility of the text. In these cases, it may be desirable to switch off the browser's default font-synthesis.
+Most standard Western fonts include italic and bold variants, and some fonts include a small-caps variant. However, many fonts do not. Fonts used for Chinese, Japanese, Korean and other logographic scripts tend not to include these variants, and synthesizing them may impede the legibility of the text. In these cases, it may be desirable to switch off the browser's default font-synthesis.
 
 ## Formal definition
 
@@ -70,7 +73,7 @@ em {
   font-weight: bold;
 }
 .syn {
-  font-synthesis: style weight;
+  font-synthesis: style weight small-caps;
 }
 .no-syn {
   font-synthesis: none;
