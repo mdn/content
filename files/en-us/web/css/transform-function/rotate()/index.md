@@ -32,8 +32,9 @@ rotate(a)
 ### Values
 
 - _a_
-  - : Is an {{ cssxref("&lt;angle&gt;") }} representing the angle of the rotation. A positive angle denotes a clockwise
-    rotation, a negative angle a counter-clockwise one.
+  - : Is an {{ cssxref("&lt;angle&gt;") }} representing the angle of the rotation. The direction of rotation depends on the writing direction. 
+      In a left-to-right context, a positive angle denotes a clockwise rotation, a negative angle a counter-clockwise one. In a right-to-left context, 
+      a positive angle denotes a counter-clockwise rotation, a negative angle a clockwise one.
 
 <table class="standard-table">
   <thead>
