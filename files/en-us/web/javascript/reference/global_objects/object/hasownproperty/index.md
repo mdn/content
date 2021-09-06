@@ -75,7 +75,7 @@ example.prop = 'exists';
 example.hasOwnProperty('prop');   // true - 'prop' has been defined
 
 example.prop = null;
-example.hasOwnProperty('prop');   // true - own property exists wtih value of null
+example.hasOwnProperty('prop');   // true - own property exists with value of null
 
 example.prop = undefined;
 example.hasOwnProperty('prop');   // true - own property exists with value of undefined

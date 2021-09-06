@@ -17,7 +17,7 @@ tags:
 
 <p>In this tutorial we'll set up routes (URL handling code) with "dummy" handler functions for all the resource endpoints that we'll eventually need in the <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">LocalLibrary</a> website. On completion we'll have a modular structure for our route handling code, which we can extend with real handler functions in the following articles. We'll also have a really good understanding of how to create modular routes using Express!</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -203,7 +203,7 @@ app.use('/wiki', wiki);</pre>
 
 <p>Start by creating a folder for our controllers in the project root (<strong>/controllers</strong>) and then create separate controller files/modules for handling each of the models:</p>
 
-<pre>/express-locallibrary-tutorial  //the project root
+<pre class="brush: plain">/express-locallibrary-tutorial  //the project root
   /controllers
     authorController.js
     bookController.js
@@ -414,7 +414,7 @@ exports.book_update_post = function(req, res) {
 <p>The skeleton already has a <strong>./routes</strong> folder containing routes for the <em>index</em> and <em>users</em>.
 Create another route file — <strong>catalog.js</strong> — inside this folder, as shown.</p>
 
-<pre>/express-locallibrary-tutorial //the project root
+<pre class="brush: plain">/express-locallibrary-tutorial //the project root
   /routes
     index.js
     users.js

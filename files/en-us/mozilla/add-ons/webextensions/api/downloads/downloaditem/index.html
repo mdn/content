@@ -30,6 +30,8 @@ browser-compat: webextensions.api.downloads.DownloadItem
  <dd>A <code>number</code> representing the number of bytes received so far from the host during the download; this does not take file compression into consideration.</dd>
  <dt><code>canResume</code></dt>
  <dd>A <code>boolean</code> indicating whether a currently-interrupted (e.g. paused) download can be resumed from the point where it was interrupted (<code>true</code>), or not (<code>false</code>).</dd>
+ <dt><code>cookieStoreId</code>{{optional_inline}}</dt>
+ <dd>The cookie store ID of the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities">contextual identity</a> in which the download took place.</dd>
  <dt><code>danger</code></dt>
  <dd>A string indicating whether this download is thought to be safe or known to be suspicious. Its possible values are defined in the {{WebExtAPIRef('downloads.DangerType')}} type.</dd>
  <dt><code>endTime</code>{{optional_inline}}</dt>

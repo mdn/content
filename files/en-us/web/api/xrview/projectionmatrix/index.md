@@ -31,13 +31,7 @@ expects to see.
 > **Note:** Failure to apply proper perspective, or inconsistencies
 > in perspective, may result in possibly serious user discomfort or distress.
 
-## Syntax
-
-```js
-let projectionMatrix = xrView.projectionMatrix;
-```
-
-### Value
+## Value
 
 A {{jsxref("Float32Array")}} object representing the projection matrix for the view.
 The projection matrix for each eye's view is used to ensure that the correct area of the

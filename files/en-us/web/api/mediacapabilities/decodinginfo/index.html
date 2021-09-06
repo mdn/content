@@ -48,7 +48,7 @@ browser-compat: api.MediaCapabilities.decodingInfo
 const mediaConfig = {
     type : 'file', // or 'media-source'
     audio : {
-        contentType : &quot;audio/ogg&quot;, // valid content type
+        contentType : &quot;audio/ogg; codecs=vorbis&quot;, // valid content type
         channels : 2,     // audio channels used by the track
         bitrate : 132700, // number of bits used to encode 1s of audio
         samplerate : 5200 // number of audio samples making up that 1s.

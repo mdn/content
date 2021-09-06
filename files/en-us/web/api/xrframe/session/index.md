@@ -20,13 +20,7 @@ browser-compat: api.XRFrame.session
 
 An `XRFrame` object's *read-only* **`session`** property returns the {{domxref("XRSession")}} object that generated the frame.
 
-## Syntax
-
-```js
-var xrSession = xrFrame.session;
-```
-
-### Value
+## Value
 
 A {{domxref("XRSession")}} object representing the WebXR session for which
 this `XRFrame` describes the object positions and orientations.

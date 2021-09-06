@@ -19,7 +19,7 @@ tags:
 
 <p class="summary">Styling an HTML table isn't the most glamorous job in the world, but sometimes we all have to do it. This article provides a guide to making HTML tables look good, with some specific table styling techniques highlighted.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -79,7 +79,7 @@ tags:
 
 <p>The table is nicely marked up, easily stylable, and accessible, thanks to features such as {{htmlattrxref("scope","th")}}, {{htmlelement("caption")}}, {{htmlelement("thead")}}, {{htmlelement("tbody")}}, etc. Unfortunately, it doesn't look good when rendered on the screen (see it live at <a href="https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html">punk-bands-unstyled.html</a>):</p>
 
-<p><img alt="" src="table-unstyled.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="table-unstyled.png"></p>
 
 <p>With only the default browser styling it looks cramped, hard to read, and boring. We need to use some CSS to fix this up.</p>
 
@@ -134,14 +134,14 @@ th, td {
  <li>A {{cssxref("table-layout")}} value of <code>fixed</code> is generally a good idea to set on your table, as it makes the table behave a bit more predictably by default. Normally, table columns tend to be sized according to how much content they contain, which produces some strange results. With <code>table-layout: fixed</code>, you can size your columns according to the width of their headings, and then deal with their content as appropriate. This is why we've selected the four different headings with the <code>thead th:nth-child(<em>n</em>)</code> ({{cssxref(":nth-child")}}) selector ("Select the <em>n</em>th child that is a {{htmlelement("th")}} element in a sequence, inside a {{htmlelement("thead")}} element") and given them set percentage widths. The entire column width follows the width of its heading, making for a nice way to size your table columns. Chris Coyier discusses this technique in more detail in <a href="https://css-tricks.com/fixing-tables-long-strings/">Fixed Table Layouts</a>.<br>
   <br>
   We've coupled this with a {{cssxref("width")}} of 100%, meaning that the table will fill any container it is put in, and be nicely responsive (although it would still need some more work to get it looking good on narrow screen widths).</li>
- <li>A {{cssxref("border-collapse")}} value of <code>collapse</code> is standard best practice for any table styling effort. By default, when you set borders on table elements, they will all have spacing between them, as the below image illustrates: <img alt="" src="no-border-collapse.png" style="display: block; margin: 0 auto;"> This doesn't look very nice (although it might be the look you want, who knows?). With <code>border-collapse: collapse;</code> set, the borders collapse down into one, which looks much better: <img alt="" src="border-collapse.png" style="display: block; margin: 0 auto;"></li>
+ <li>A {{cssxref("border-collapse")}} value of <code>collapse</code> is standard best practice for any table styling effort. By default, when you set borders on table elements, they will all have spacing between them, as the below image illustrates: <img alt="" src="no-border-collapse.png"> This doesn't look very nice (although it might be the look you want, who knows?). With <code>border-collapse: collapse;</code> set, the borders collapse down into one, which looks much better: <img alt="" src="border-collapse.png"></li>
  <li>We've put a {{cssxref("border")}} around the whole table, which is needed because we'll be putting some borders round the table header and footer later on — it looks really odd and disjointed when you don't have a border round the whole outside of the table and end up with gaps.</li>
  <li>We've set some {{cssxref("padding")}} on the {{htmlelement("th")}} and {{htmlelement("td")}} elements — this gives the data items some space to breathe, making the table look a lot more legible.</li>
 </ul>
 
 <p>At this point, our table already looks a lot better:</p>
 
-<p><img alt="" src="table-with-spacing.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="table-with-spacing.png"></p>
 
 <h3 id="Some_simple_typography">Some simple typography</h3>
 
@@ -192,7 +192,7 @@ tfoot th {
 
 <p>The result looks a bit neater:</p>
 
-<p><img alt="" src="table-with-typography.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="table-with-typography.png"></p>
 
 <h3 id="Graphics_and_colors">Graphics and colors</h3>
 
@@ -250,7 +250,7 @@ table {
 
 <p>This color explosion results in the following look:</p>
 
-<p><img alt="" src="table-with-color.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="table-with-color.png"></p>
 
 <p>Now, this may be a bit over the top and not to your taste, but the point we are trying to make here is that tables don't have to be boring and academic.</p>
 
@@ -272,7 +272,7 @@ caption {
 
 <p>There is nothing remarkable here, except for the {{cssxref("caption-side")}} property, which has been given a value of <code>bottom</code>. This causes the caption to be positioned on the bottom of the table, which along with the other declarations gives us this final look (see it live at <a href="https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html">punk-bands-complete.html</a>):</p>
 
-<p><img alt="" src="table-with-caption.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="table-with-caption.png"></p>
 
 <h2 id="Table_styling_quick_tips">Table styling quick tips</h2>
 

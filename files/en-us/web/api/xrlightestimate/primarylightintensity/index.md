@@ -17,7 +17,7 @@ browser-compat: api.XRLightEstimate.primaryLightIntensity
 
 The _read-only_ **`primaryLightIntensity`** property of the {{DOMxRef("XRLightEstimate")}} interface returns a {{domxref("DOMPointReadOnly")}} representing the intensity of the primary light source from the `probeSpace` of an {{domxref("XRLightProbe")}}.
 
-### Value
+## Value
 
 A {{domxref("DOMPointReadOnly")}} object where an RGB value is mapped to the `x`, `y`, and `z` values. The `w` value is always `1.0`. If no estimated values from the user's environment are available, the point will be `{x: 0.0, y: 0.0, z: 0.0, w: 1.0}`, representing no illumination.
 

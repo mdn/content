@@ -31,13 +31,7 @@ The {{domxref("XRInputSourceEvent")}} interface's read-only
 lets you handle the event appropriately given the particulars of the user input device
 being manipulated.
 
-## Syntax
-
-```js
-let inputSource = xrInputSourceEvent.inputSource;
-```
-
-### Value
+## Value
 
 An {{domxref("XRInputSource")}} object identifying the source of the user input event.
 This event indicates an action the user has taken using a WebXR input controller, such

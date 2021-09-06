@@ -16,7 +16,7 @@ tags:
 
 <p>Now that you know what Django is for, we'll show you how to set up and test a Django development environment on Windows, Linux (Ubuntu), and macOS — whatever common operating system you are using, this article should give you what you need to be able to start developing Django apps.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -88,7 +88,7 @@ tags:
 
 <h4 id="Which_database">Which database?</h4>
 
-<p>Django supports four main databases (PostgreSQL, MariaDB, MySQL, Oracle, and SQLite), and there are community libraries that provide varying levels of support for other popular SQL and NoSQL databases. We recommend that you select the same database for both production and development (although Django abstracts many of the database differences using its Object-Relational Mapper (ORM), there are still <a href="https://docs.djangoproject.com/en/3.1/ref/databases/">potential issues</a> that are better to avoid).</p>
+<p>Django officially supports the PostgreSQL, MariaDB, MySQL, Oracle, and SQLite databases, and there are community libraries that provide varying levels of support for other popular SQL and NoSQL databases. We recommend that you select the same database for both production and development (although Django abstracts many of the database differences using its Object-Relational Mapper (ORM), there are still <a href="https://docs.djangoproject.com/en/3.1/ref/databases/">potential issues</a> that are better to avoid).</p>
 
 <p>For this article (and most of this module) we will be using the <em>SQLite</em> database, which stores its data in a file. SQLite is intended for use as a lightweight database and can’t support a high level of concurrency. It is, however, an excellent choice for applications that are primarily read-only.</p>
 
@@ -294,7 +294,7 @@ nano .bash_profile # Open the file in the nano text editor, within the terminal
 
 <p>Installing <a href="https://pypi.python.org/pypi/virtualenvwrapper-win">virtualenvwrapper-win</a> is even simpler than setting up <em>virtualenvwrapper</em> because you don't need to configure where the tool stores virtual environment information (there is a default value). All you need to do is run the following command in the command prompt:</p>
 
-<pre><code>pip3 install virtualenvwrapper-win</code></pre>
+<pre class="brush: bash">pip3 install virtualenvwrapper-win</pre>
 
 <p>Now you can create a new virtual environment with the <code>mkvirtualenv</code> command</p>
 
@@ -304,12 +304,12 @@ nano .bash_profile # Open the file in the nano text editor, within the terminal
 
 <p>Now you can create a new virtual environment with the <code>mkvirtualenv</code> command. As this command runs you'll see the environment being set up (what you see is slightly platform-specific). When the command completes the new virtual environment will be active — you can see this because the start of the prompt will be the name of the environment in brackets (below we show this for Ubuntu, but the final line is similar for Windows/macOS).</p>
 
-<pre><code>$ mkvirtualenv my_django_environment
+<pre class="brush: bash">$ mkvirtualenv my_django_environment
 
 Running virtualenv with interpreter /usr/bin/python3
 ...
 virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/t_env7/bin/get_env_details
-(my_django_environment) ubuntu@ubuntu:~$</code>
+(my_django_environment) ubuntu@ubuntu:~$
 </pre>
 
 <p>Now you're inside the virtual environment you can install Django and start developing.</p>

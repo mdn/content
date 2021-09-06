@@ -29,13 +29,7 @@ mode, and the {{domxref("XRWebGLLayer")}} to render into for inline composition.
 While this property is read only, you can call the {{domxref("XRSession")}} method
 {{domxref("XRSession.updateRenderState", "updateRenderState()")}} to make changes.
 
-## Syntax
-
-```js
-var xrRenderState = XRSession.renderState;
-```
-
-### Value
+## Value
 
 An {{DOMxRef("XRRenderState")}} object describing how to render the scene.
 

@@ -26,7 +26,7 @@ requested by calling {{DOMxRef("XRSession.requestAnimationFrame",
 ## Syntax
 
 ```js
-xrSession.cancelAnimationFrame(handle);
+cancelAnimationFrame(handle)
 ```
 
 ### Parameters

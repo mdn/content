@@ -19,7 +19,7 @@ The *read-only* **`rawValueToMeters`** property of the {{DOMxRef("XRDepthInfor
 
 For CPU depth information, see also the {{domxref("XRCPUDepthInformation.getDepthInMeters()")}} method.
 
-### Value
+## Value
 
 A number.
 

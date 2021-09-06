@@ -22,7 +22,7 @@ browser-compat: api.Cache.addAll
     retrieval become keys to the stored response operations. </p>
 
 <div class="note">
-  <p><strong>Note:</strong> <code>addAll()</code> will overwrite any key/value pairs
+  <p><strong>Note:</strong> <code>addAll()</code> will overwrite any key/value pairs
     previously stored in the cache that match the request, but will fail if a
     resulting <code>put()</code> operation would overwrite a previous cache entry stored
     by the same <code>addAll()</code> method.</p>
@@ -49,27 +49,13 @@ browser-compat: api.Cache.addAll
 
 <h3 id="Exceptions">Exceptions</h3>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col"><strong>Exception</strong></th>
-      <th scope="col"><strong>Happens when</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>TypeError</code></td>
-      <td>
-        <p>The URL scheme is not <code>http</code> or <code>https</code>.</p>
-
-        <p>The Response status is not in the 200 range (i.e., not a successful response.)
-          This occurs if the request does not return successfully, but also if the request
-          is a <em>cross-origin no-cors</em> request (in which case the reported status is
-          always 0.)</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<dl>
+  <dt><code>TypeError</code></dt>
+  <dd>
+    <p>The URL scheme is not <code>http</code> or <code>https</code>.</p>
+    <p>The Response status is not in the 200 range (i.e., not a successful response.) This occurs if the request does not return successfully, but also if the request is a <em>cross-origin no-cors</em> request (in which case the reported status is always 0.)</p>
+  </dd>
+</dl>
 
 <h2 id="Examples">Examples</h2>
 

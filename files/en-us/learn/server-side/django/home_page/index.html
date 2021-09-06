@@ -18,7 +18,7 @@ tags:
 
 <p>We're now ready to add the code that displays our first complete page — a home page for the <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> website. The home page will show the number of records we have for each model type and provide sidebar navigation links to our other pages. Along the way we'll gain practical experience in writing basic URL maps and views, getting records from the database, and using templates.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -86,7 +86,7 @@ tags:
 
 <p>The following code snippet from <strong>locallibrary/urls.py </strong>includes the <code>catalog.urls</code> module:</p>
 
-<pre>urlpatterns += [
+<pre class="brush: python">urlpatterns += [
     path('catalog/', include('catalog.urls')),
 ]
 </pre>

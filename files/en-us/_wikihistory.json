@@ -80828,12 +80828,6 @@
       "mattwojo"
     ]
   },
-  "Web/API/TextRange": {
-    "modified": "2020-02-26T00:53:59.554Z",
-    "contributors": [
-      "MCCF"
-    ]
-  },
   "Web/API/TextTrack": {
     "modified": "2020-10-15T21:51:29.641Z",
     "contributors": [
@@ -103885,24 +103879,6 @@
       "peterholthoffman"
     ]
   },
-  "Web/CSS/Tools": {
-    "modified": "2020-07-21T12:47:05.007Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "mfluehr",
-      "evilebottnawi",
-      "zetadisseny",
-      "Sebastianz",
-      "creativenitish",
-      "jeremyckahn",
-      "teoli",
-      "velvel53",
-      "gabriel_ivanica",
-      "Sheppy",
-      "ethertank"
-    ]
-  },
   "Web/CSS/Tutorials": {
     "modified": "2020-04-27T22:31:52.172Z",
     "contributors": [
@@ -116482,7 +116458,7 @@
       "jackarmley"
     ]
   },
-  "Web/Demos_of_open_web_technologies": {
+  "Web/Demos": {
     "modified": "2020-06-23T09:20:53.721Z",
     "contributors": [
       "mrmowji",

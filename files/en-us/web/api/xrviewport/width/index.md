@@ -30,13 +30,7 @@ using this property along with the viewport's {{domxref("XRViewport.height", "he
 and its origin given by its properties {{domxref("XRViewport.x", "x")}} and
 {{domxref("XRViewport.y", "y")}}.
 
-## Syntax
-
-```js
-width = xrViewport.width;
-```
-
-### Value
+## Value
 
 The viewport's width in pixels.
 

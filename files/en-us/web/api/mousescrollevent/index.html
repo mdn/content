@@ -23,23 +23,36 @@ browser-compat: api.MouseScrollEvent
 
 <h2 id="Method_overview">Method overview</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td><code>void <a href="/en-US/docs/XPCOM_Interface_Reference/nsIDOMMouseScrollEvent#initMouseScrollEvent%28%29">initMouseScrollEvent</a>(in DOMString typeArg, in boolean canBubbleArg, in boolean cancelableArg, in nsIDOMAbstractView viewArg, in long detailArg, in long screenXArg, in long screenYArg, in long clientXArg, in long clientYArg, in boolean ctrlKeyArg, in boolean altKeyArg, in boolean shiftKeyArg, in boolean metaKeyArg, in unsigned short buttonArg, in nsIDOMEventTarget relatedTargetArg, in long axis);</code></td>
-  </tr>
- </tbody>
-</table>
+<pre>void initMouseScrollEvent(
+  in DOMString typeArg,
+  in boolean canBubbleArg,
+  in boolean cancelableArg,
+  in nsIDOMAbstractView viewArg,
+  in long detailArg,
+  in long screenXArg,
+  in long screenYArg,
+  in long clientXArg,
+  in long clientYArg,
+  in boolean ctrlKeyArg,
+  in boolean altKeyArg,
+  in boolean shiftKeyArg,
+  in boolean metaKeyArg,
+  in unsigned short buttonArg,
+  in nsIDOMEventTarget relatedTargetArg,
+  in long axis);
+</pre>
 
 <h2 id="Attributes">Attributes</h2>
 
 <table class="standard-table">
+ <thead>
+   <tr>
+     <th>Attribute</th>
+     <th>Type</th>
+     <th>Description</th>
+   </tr>
+ </thead>
  <tbody>
-  <tr>
-   <td class="header">Attribute</td>
-   <td class="header">Type</td>
-   <td class="header">Description</td>
-  </tr>
   <tr>
    <td><code>axis</code> {{ReadOnlyInline}}</td>
    <td><code>long</code></td>
@@ -53,12 +66,14 @@ browser-compat: api.MouseScrollEvent
 <h3 id="Delta_modes">Delta modes</h3>
 
 <table class="standard-table">
+ <thead>
+   <tr>
+     <th>Constant</th>
+     <th>Value</th>
+     <th>Description</th>
+   </tr>
+ </thead>
  <tbody>
-  <tr>
-   <td class="header">Constant</td>
-   <td class="header">Value</td>
-   <td class="header">Description</td>
-  </tr>
   <tr>
    <td><code>HORIZONTAL_AXIS</code></td>
    <td><code>0x01</code></td>

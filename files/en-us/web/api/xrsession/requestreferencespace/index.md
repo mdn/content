@@ -30,7 +30,7 @@ space requested.
 ## Syntax
 
 ```js
-refSpacePromise = xrSession.requestReferenceSpace(referenceSpaceType);
+requestReferenceSpace(referenceSpaceType)
 ```
 
 ### Parameters

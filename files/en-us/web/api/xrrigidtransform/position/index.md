@@ -26,13 +26,7 @@ The read-only {{domxref("XRRigidTransform")}} property
 provides the 3D point, specified in meters, describing the translation component of the
 transform.
 
-## Syntax
-
-```js
-let pos = xrRigidTransform.position;
-```
-
-### Value
+## Value
 
 A read-only {{domxref("DOMPointReadOnly")}} indicating the 3D position component of the
 transform matrix. The units are meters.

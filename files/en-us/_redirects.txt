@@ -551,7 +551,6 @@
 /en-US/docs/CSS/Specificity	/en-US/docs/Web/CSS/Specificity
 /en-US/docs/CSS/Syntax	/en-US/docs/Web/CSS/Syntax
 /en-US/docs/CSS/Text-overflow_TEST	/en-US/docs/Web/CSS/text-overflow
-/en-US/docs/CSS/Tools	/en-US/docs/Web/CSS/Tools
 /en-US/docs/CSS/Tutorial/Using_CSS_flexible_boxes	/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 /en-US/docs/CSS/Tutorials	/en-US/docs/Web/CSS/Tutorials
 /en-US/docs/CSS/Tutorials/Using_CSS_animations	/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations
@@ -2744,7 +2743,7 @@
 /en-US/docs/DOM_improvements_in_Firefox_3	/en-US/docs/Mozilla/Firefox/Releases/3/DOM_improvements
 /en-US/docs/DataTypeSet	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browsingData/DataTypeSet
 /en-US/docs/Deer_Park	/en-US/docs/Mozilla/Firefox/Releases/1.5
-/en-US/docs/Demos_of_open_web_technologies	/en-US/docs/Web/Demos_of_open_web_technologies
+/en-US/docs/Demos_of_open_web_technologies	/en-US/docs/Web/Demos
 /en-US/docs/Detecting_device_orientation	/en-US/docs/Web/Events/Detecting_device_orientation
 /en-US/docs/Determining_the_dimensions_of_elements	/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements
 /en-US/docs/DeviceAcceleration	/en-US/docs/Web/API/DeviceMotionEventAcceleration
@@ -5896,7 +5895,7 @@
 /en-US/docs/Online_Offline_Events	/en-US/docs/Web/API/Navigator/Online_and_offline_events
 /en-US/docs/Online_and_offline_events	/en-US/docs/Web/API/Navigator/Online_and_offline_events
 /en-US/docs/OpenWebApps	/en-US/docs/Web/Progressive_web_apps
-/en-US/docs/OpenWebDemos	/en-US/docs/Web/Demos_of_open_web_technologies
+/en-US/docs/OpenWebDemos	/en-US/docs/Web/Demos
 /en-US/docs/Optimizing_Your_Pages_for_Speculative_Parsing	/en-US/docs/Glossary/speculative_parsing
 /en-US/docs/Other_JavaScript_tools	/en-US/docs/Tools
 /en-US/docs/PHP	/en-US/docs/Glossary/PHP
@@ -10018,6 +10017,7 @@
 /en-US/docs/Web/CSS/Selector_lists	/en-US/docs/Web/CSS/Selector_list
 /en-US/docs/Web/CSS/Selectors	/en-US/docs/Web/CSS/CSS_Selectors
 /en-US/docs/Web/CSS/Text-overflow_TEST	/en-US/docs/Web/CSS/text-overflow
+/en-US/docs/Web/CSS/Tools	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/Tools/Border-image_generator	/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator
 /en-US/docs/Web/CSS/Tools/Border-radius_generator	/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator
 /en-US/docs/Web/CSS/Tools/Box-shadow_generator	/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
@@ -10196,6 +10196,7 @@
 /en-US/docs/Web/CSS_Typed_OM	/en-US/docs/Web/API/CSS_Typed_OM_API
 /en-US/docs/Web/CSS_Typed_OM_API	/en-US/docs/Web/API/CSS_Typed_OM_API
 /en-US/docs/Web/CSS_Typed_Object_Model_API	/en-US/docs/Web/API/CSS_Typed_OM_API
+/en-US/docs/Web/Demos_of_open_web_technologies	/en-US/docs/Web/Demos
 /en-US/docs/Web/Events/Activate	/en-US/docs/Web/API/Element/DOMActivate_event
 /en-US/docs/Web/Events/DOMContentLoaded	/en-US/docs/Web/API/Window/DOMContentLoaded_event
 /en-US/docs/Web/Events/DOMMouseScroll	/en-US/docs/Web/API/Element/DOMMouseScroll_event

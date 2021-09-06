@@ -43,7 +43,7 @@ You can cancel a previously scheduled animation by calling
 ## Syntax
 
 ```js
-requestID = xrSession.requestAnimationFrame(animationFrameCallback);
+requestAnimationFrame(animationFrameCallback)
 ```
 
 ### Parameters

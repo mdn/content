@@ -30,7 +30,7 @@ to use the XR device, the promise is rejected with an appropriate
 ## Syntax
 
 ```js
-xr.isSessionSupported(mode)
+isSessionSupported(mode)
 ```
 
 ### Parameters

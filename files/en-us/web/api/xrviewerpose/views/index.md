@@ -34,13 +34,7 @@ Stereo views require two views to render properly, with the left eye's view havi
 {{domxref("XRView.eye", "eye")}} set to the string `left` and the right eye's
 view a value of `right`.
 
-## Syntax
-
-```js
-let viewList = xrViewerPose.views;
-```
-
-### Value
+## Value
 
 An array of {{domxref("XRView")}} objects, one for each view available as part of the
 scene for the current viewer pose. This array's length may potentially vary over the

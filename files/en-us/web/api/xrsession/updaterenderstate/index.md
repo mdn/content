@@ -30,7 +30,11 @@ rendering of the next frame.
 ## Syntax
 
 ```js
-xrSession.updateRenderState(newState)
+updateRenderState(newState)
+updateRenderState(newState, baseLayer)
+updateRenderState(newState, baseLayer, depthFar)
+updateRenderState(newState, baseLayer, depthFar, depthNear)
+updateRenderState(newState, baseLayer, depthFar, depthNear, inlineVerticalFieldOfView)
 ```
 
 ### Parameters

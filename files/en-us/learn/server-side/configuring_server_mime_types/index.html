@@ -114,11 +114,9 @@ tags:
 </ul>
 
 <p>Regardless of what server system you use, the effect you need to achieve is to set a response header with the name {{httpheader("Content-Type")}}, followed by a colon and space, followed by a MIME type. High-level environments often allow such headers to be set when generating the page. For example, in a PHP environment, you could set the response header for PDF resources like this:
-<pre>
-<code>header('Content-Type: application/pdf')</code>
-</pre>
+<pre class="brush: php">header('Content-Type: application/pdf')</pre>
 
-<p>Trying to instead set it with just <code>header('application/pdf')</code> won’t work .</p>
+<p>Trying to instead set it with just <code>header('application/pdf')</code> won’t work.</p>
 
 <h2 id="Related_Links">Related Links</h2>
 

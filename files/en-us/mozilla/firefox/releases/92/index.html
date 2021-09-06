@@ -43,10 +43,6 @@ tags:
 
 <h3 id="HTTP">HTTP</h3>
 
-<ul>
-  <li>The default HTTP {{HTTPHeader("ACCEPT")}} header for <em>images</em> changed to: <code>image/avif,image/webp,*/*</code> (following addition of support for the <a href="/en-US/docs/Web/Media/Formats/Image_types#avif">AVIF</a> image format). ({{bug(1682995)}}).</li>
-</ul>
-
 <h4 id="removals_http">Removals</h4>
 
 <h3 id="Security">Security</h3>
@@ -74,21 +70,19 @@ tags:
 <h4 id="removals_wasm">Removals</h4>
 
 <h3 id="webdriver_conformance_marionette">WebDriver conformance (Marionette)</h3>
+<ul>
+  <li>Improved support for the <code>webSocketUrl</code> capability, which now returns the WebDriver BiDi websocket URL if <code>true</code> was passed and if BiDi is supported. ({{bug(1692984)}}).</li>
+</ul>
 
 <h4 id="removals_webdriver">Removals</h4>
 
 <h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
 
-<h4 id="removals_webext">Removals</h4>
-
-<h3 id="Other">Other</h3>
-
 <ul>
-  <li>Support for <a href="/en-US/docs/Web/Media/Formats/Image_types#avif">AVIF</a> images is now enabled by default ({{bug(1682995)}}).
-    This format has excellent compression and no patent restrictions ( it was developed by the <a href="http://aomedia.org/">Alliance for Open Media</a>).
-    Firefox can display still images, with colorspace support for both full and limited range colors, and image transforms for mirroring and rotation.
-    The preference <a href="/en-US/docs/Mozilla/Firefox/Experimental_features#avif_compliance_strictness">image.avif.compliance_strictness</a> can be used to adjust the compliance strictness with the specification. Animated images are not supported.</li>
+  <li>Support for <code>cookieStoreId</code> is added to {{WebExtAPIRef('downloads.download')}}, {{WebExtAPIRef('downloads.DownloadQuery')}}, and {{WebExtAPIRef('downloads.DownloadItem')}}. The addition to the types {{WebExtAPIRef('downloads.DownloadQuery')}} and {{WebExtAPIRef('downloads.DownloadItem')}} provides support in {{WebExtAPIRef('downloads.search')}} and {{WebExtAPIRef('downloads.erase')}}. Web extensions can now associate downloads with specific cookie stores, such as container tabs (<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities">contextual identities</a>). ({{bug(1669566)}})</li>
 </ul>
+
+<h4 id="removals_webext">Removals</h4>
 
 <h2 id="Older_versions">Older versions</h2>
 

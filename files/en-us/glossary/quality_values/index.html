@@ -15,7 +15,7 @@ tags:
 
 <p>indicates the order of priority:</p>
 
-<table class="standard-table">
+<table>
 	<thead>
 		<tr>
 			<th scope="col">Value</th>
@@ -40,15 +40,16 @@ tags:
 
 <p>If there is no priority defined for the first two values, the order in the list is irrelevant. Nevertheless, with the same quality, more specific values have priority over less specific ones:</p>
 
-<pre class="brush: plain">text/html;q=0.8,text/*;q=0.8,*/*;q=0.8
-</pre>
+<pre class="brush: plain">text/html;q=0.8,text/*;q=0.8,*/*;q=0.8</pre>
 
-<table class="standard-table">
+<table>
 	<thead>
 		<tr>
 			<th scope="col">Value</th>
 			<th scope="col">Priority</th>
 		</tr>
+	</thead>
+	<tbody>
 		<tr>
 			<td><code>text/html</code></td>
 			<td><code>0.8</code> (but totally specified)</td>
@@ -61,7 +62,7 @@ tags:
 			<td><code>*/*</code></td>
 			<td><code>0.8</code> (not specified)</td>
 		</tr>
-	</thead>
+	</tbody>
 </table>
 
 <p>Some syntax, like the one of {{HTTPHeader("Accept")}}, allow additional specifiers like <code>text/html;level=1</code>. These increase the specificity of the value. Their use is extremely rare.</p>
@@ -78,7 +79,3 @@ tags:
 	<li><a href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a> using q-values in their syntax: {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("TE")}}.</li>
 	<li><a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html">Header field definitions.</a></li>
 </ul>
-
-<div id="gtx-trans" style="position: absolute; left: 212px; top: 1544.6px;">
-<div class="gtx-trans-icon"></div>
-</div>

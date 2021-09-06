@@ -33,13 +33,7 @@ viewport's {{domxref("XRViewport.x", "x")}} property identifies the `x`
 component of the origin, and its is given by the {{domxref("XRViewPort.width",
   "width")}} and {{domxref("XRViewport.height", "height")}} properties.
 
-## Syntax
-
-```js
-y = xrViewport.y;
-```
-
-### Value
+## Value
 
 The offset from the bottom edge of the rendering surface to the bottom edge of the
 viewport, in pixels.

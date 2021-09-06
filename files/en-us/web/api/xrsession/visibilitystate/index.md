@@ -26,13 +26,7 @@ Every time the visibility state changes, a
 {{DOMxRef("XRSession.visibilitychange_event","visibilitychange")}} event is fired on the
 {{DOMxRef("XRSession")}} object.
 
-## Syntax
-
-```js
-visibilityState = xrSession.visibilityState;
-```
-
-### Value
+## Value
 
 A string indicating whether or not the XR content is
 visible to the user and if it is, whether or not it's currently the primary focus.

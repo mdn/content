@@ -28,13 +28,7 @@ The {{domxref("XRInputSourcesChangeEvent")}} property
 {{domxref("XRInputSourcesChangeEvent.session", "session")}} specifies the
 {{domxref("XRSession")}} to which the input source list change event applies.
 
-## Syntax
-
-```js
-let inputsSession = xrInputSourcesChangeEvent.session;
-```
-
-### Value
+## Value
 
 An {{domxref("XRSession")}} indicating the WebXR session to which the input source list
 change applies.
