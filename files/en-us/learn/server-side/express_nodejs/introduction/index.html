@@ -53,7 +53,7 @@ tags:
 <ol>
  <li>Open Terminal (on Windows, open the command line utility)</li>
  <li>Create the folder where you want to save the program, for example, <code>test-node</code> and then enter it by entering the following command into your terminal:
-  <pre>cd test-node</pre>
+  <pre class="brush: bash">cd test-node</pre>
  </li>
  <li>Using your favorite text editor, create a file called <code>hello.js</code> and paste the following code into it:<br>
 
@@ -376,11 +376,11 @@ app.listen(3000);</pre>
 
 <p>Any files in the public directory are served by adding their filename (<em>relative</em> to the base "public" directory) to the base URL. So for example:</p>
 
-<pre><code>http://localhost:3000/images/dog.jpg
+<pre class="brush: plain">http://localhost:3000/images/dog.jpg
 http://localhost:3000/css/style.css
 http://localhost:3000/js/app.js
 http://localhost:3000/about.html
-</code></pre>
+</pre>
 
 <p>You can call <code>static()</code> multiple times to serve multiple directories. If a file cannot be found by one middleware function then it will be passed on to the subsequent middleware (the order that middleware is called is based on your declaration order).</p>
 
@@ -395,9 +395,9 @@ app.use(express.static('media'));
 
 <p>Now, you can load the files that are in the <code>public</code> directory from the <code>/media</code> path prefix.</p>
 
-<pre><code>http://localhost:3000/media/images/dog.jpg
+<pre class="brush: plain">http://localhost:3000/media/images/dog.jpg
 http://localhost:3000/media/video/cat.mp4
-http://localhost:3000/media/cry.mp3</code>
+http://localhost:3000/media/cry.mp3
 </pre>
 
 <div class="notecard note">

@@ -423,10 +423,10 @@ def book_detail_view(request, primary_key):
   Once the detail page exists we can get its URL with either of these two approaches:</p>
   <ul>
     <li>Use the <code>url</code> template tag to reverse the 'author-detail' URL (defined in the URL mapper), passing it the author instance for the book: 
-      <pre>&lt;a href="{% url 'author-detail' book.author.pk %}"&gt;\{{ book.author }}&lt;/a&gt;</pre>
+      <pre class="brush: python">&lt;a href="{% url 'author-detail' book.author.pk %}"&gt;\{{ book.author }}&lt;/a&gt;</pre>
     </li>
     <li>Call the author model's <code>get_absolute_url()</code> method (this performs the same reversing operation):
-      <pre>&lt;a href="\{{ book.author.get_absolute_url }}"&gt;\{{ book.author }}&lt;/a&gt;</pre>
+      <pre class="brush: plain">&lt;a href="\{{ book.author.get_absolute_url }}"&gt;\{{ book.author }}&lt;/a&gt;</pre>
     </li>
   </ul>
   <p>While both methods effectively do the same thing, <code>get_absolute_url()</code> is preferred because it helps you write more consistent and maintainable code (any changes only need to be done in one place: the author model).</p>
@@ -454,7 +454,7 @@ def book_detail_view(request, primary_key):
 
   <p>Beware also that if you don't define an order (on your class-based view or model), you will also see errors from the development server like this one:</p>
 
-  <pre>[29/May/2017 18:37:53] "GET /catalog/books/?page=1 HTTP/1.1" 200 1637
+  <pre class="brush: plain">[29/May/2017 18:37:53] "GET /catalog/books/?page=1 HTTP/1.1" 200 1637
 /foo/local_library/venv/lib/python3.5/site-packages/django/views/generic/list.py:99: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: &lt;QuerySet [&lt;Author: Ortiz, David&gt;, &lt;Author: H. McRaven, William&gt;, &lt;Author: Leigh, Melinda&gt;]&gt;
   allow_empty_first_page=allow_empty_first_page, **kwargs)
 </pre>
@@ -471,7 +471,7 @@ def book_detail_view(request, primary_key):
 
 <p>If you decide to go with a <code>class Meta</code> for the <code>Author</code> model (probably not as flexible as customizing the class-based view, but easy enough), you will end up with something like this:</p>
 
-<pre>class Author(models.Model):
+<pre class="brush: python">class Author(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     date_of_birth = models.DateField(null=True, blank=True)

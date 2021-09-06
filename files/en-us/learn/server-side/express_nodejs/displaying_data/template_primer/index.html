@@ -31,7 +31,7 @@ app.set('view engine', 'pug');</pre>
 <p>If you look in the views directory you will see the .pug files for the project's default views.
 These include the view for the home page (<strong>index.pug</strong>) and base template (<strong>layout.pug</strong>) that we will need to replace with our own content.</p>
 
-<pre>/express-locallibrary-tutorial  //the project root
+<pre class="brush: plain">/express-locallibrary-tutorial  //the project root
   /views
     error.pug
     index.pug
@@ -44,7 +44,7 @@ These include the view for the home page (<strong>index.pug</strong>) and base t
 
 <p>The first thing to notice is that the file maps the structure of a typical HTML file, with the first word in (almost) every line being an HTML element, and indentation being used to indicate nested elements. So for example, the <code>body</code> element is inside an <code>html</code> element, and paragraph elements (<code>p</code>) are within the <code>body</code> element, etc. Non-nested elements (e.g. individual paragraphs) are on separate lines.</p>
 
-<pre class="brush: html">doctype html
+<pre class="brush: plain">doctype html
 html(lang="en")
   head
     title= title
@@ -91,12 +91,12 @@ html(lang="en")
 
 <p>If a tag is followed by the equals sign, the following text is treated as a JavaScript <em>expression</em>. So for example, in the first line below, the content of the <code>h1</code> tag will be <em>variable</em> <code>title</code> (either defined in the file or passed into the template from Express). In the second line the paragraph content is a text string concatenated with the <code>title</code> variable. In both cases the default behavior is to <em>escape</em> the line.</p>
 
-<pre class="brush: html">h1= title
+<pre class="brush: plain">h1= title
 p= 'Evaluated and &lt;em&gt;escaped expression&lt;/em&gt;:' + title</pre>
 
 <p>If there is no equals symbol after the tag then the content is treated as plain text. Within the plain text you can insert escaped and unescaped data using the <code>#{}</code> and<code> !{}</code> syntax respectively, as shown below. You can also add raw HTML within the plain text.</p>
 
-<pre class="brush: html">p This is a line with #[em some emphasis] and #[strong strong text] markup.
+<pre class="brush: plain">p This is a line with #[em some emphasis] and #[strong strong text] markup.
 p This line has an un-escaped string: !{'&lt;em&gt; is emphasised&lt;/em&gt;'}, an escaped string: #{'&lt;em&gt; is not emphasised&lt;/em&gt;'}, and escaped variables: #{title}.</pre>
 
 <div class="notecard note">
@@ -105,19 +105,19 @@ p This line has an un-escaped string: !{'&lt;em&gt; is emphasised&lt;/em&gt;'}, 
 
 <p>You can use the pipe ('<strong>|</strong>') character at the beginning of a line to indicate "<a href="https://pugjs.org/language/plain-text.html" rel="noopener">plain text</a>". For example, the additional text shown below will be displayed on the same line as the preceding anchor, but will not be linked.</p>
 
-<pre class="brush: html">a(href='http://someurl/') Link text
+<pre class="brush: plain">a(href='http://someurl/') Link text
 | Plain text</pre>
 
 <p>Pug allows you to perform conditional operations using <code>if</code>, <code>else</code> , <code>else if</code> and <code>unless</code>—for example:</p>
 
-<pre class="brush: html">if title
+<pre class="brush: plain">if title
   p A variable named "title" exists
 else
   p A variable named "title" does not exist</pre>
 
 <p>You can also perform loop/iteration operations using <code>each-in</code> or <code>while</code> syntax. In the code fragment below we've looped through an array to display a list of variables (note the use of the 'li=' to evaluate the "val" as a variable below. The value you iterate across can also be passed into the template as a variable!</p>
 
-<pre class="brush: html">ul
+<pre class="brush: plain">ul
   each val in [1, 2, 3, 4, 5]
     li= val</pre>
 
@@ -129,7 +129,7 @@ else
 
 <p>For example, the base template <strong>layout.pug</strong> created in our <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website">skeleton project</a> looks like this:</p>
 
-<pre class="brush: html">doctype html
+<pre class="brush: plain">doctype html
 html
   head
     title= title
@@ -141,7 +141,7 @@ html
 
 <p>The default <strong>index.pug</strong> (created for our skeleton project) shows how we override the base template. The <code>extends</code> tag identifies the base template to use, and then we use <code>block <em>section_name</em></code> to indicate the new content of the section that we will override.</p>
 
-<pre class="brush: html">extends layout
+<pre class="brush: plain">extends layout
 
 block content
   h1= title
