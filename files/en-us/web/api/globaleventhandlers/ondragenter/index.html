@@ -111,15 +111,14 @@ function dragend_handler(ev) {
 
  // Set handlers for the source's enter/leave/end/exit events
  var source = document.getElementById("source");
- var target = document.getElementById("target");
- target.ondragenter = dragenter_handler;
- target.ondragleave = dragleave_handler;
- source.ondragend = dragend_handler;
+ el.ondragenter = dragenter_handler;
+ el.ondragleave = dragleave_handler;
+ el.ondragend = dragend_handler;
 </pre>
 
 <h3 id="Result">Result</h3>
 
-<p>{{ EmbedLiveSample('Example', '100', '500') }}</p>
+<p>{{ EmbedLiveSample('Example', '100', '450') }}</p>
 
 <h2 id="Specifications">Specifications</h2>
 
