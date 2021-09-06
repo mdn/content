@@ -33,14 +33,13 @@ browser-compat: api.GlobalEventHandlers.ondragenter
 
 <h3 id="HTML">HTML</h3>
   
-<pre class="brush: html">&lt;div onload="init();"&gt;
+<pre class="brush: html">
 &lt;h1&gt;Examples of &lt;code&gt;ondragenter&lt;/code&gt;, &lt;code&gt;ondragleave&lt;/code&gt;, &lt;code&gt;ondragend&lt;/code&gt;&lt;/h1&gt;
  &lt;div&gt;
    &lt;p id="source" ondragstart="dragstart_handler(event);" draggable="true"&gt;
      Select this element, drag it to the Drop Zone and then release the selection to move the element.&lt;/p&gt;
  &lt;/div&gt;
  &lt;div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);"&gt;Drop Zone&lt;/div&gt;
-&lt;/div&gt;
 &lt;textarea readonly class="event-log"&gt;&lt;/textarea&gt;</pre>
 
 <h3 id="CSS">CSS</h3>
@@ -103,13 +102,11 @@ function dragend_handler(ev) {
  el.style.background = "pink";
 }
 
-function init() {
  // Set handlers for the source's enter/leave/end/exit events
- var el=document.getElementById("source");
+ var el = document.getElementById("source");
  el.ondragenter = dragenter_handler;
  el.ondragleave = dragleave_handler;
  el.ondragend = dragend_handler;
-}
 </pre>
 
 <h3 id="Result">Result</h3>
