@@ -40,34 +40,36 @@ browser-compat: api.GlobalEventHandlers.ondragenter
      Select this element, drag it to the Drop Zone and then release the selection to move the element.&lt;/p&gt;
  &lt;/div&gt;
  &lt;div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);"&gt;Drop Zone&lt;/div&gt;
-&lt;/div&gt;</pre>
+&lt;/div&gt;
+&lt;textarea readonly class="event-log"&gt;&lt;/textarea&gt;</pre>
 
 <h3 id="CSS">CSS</h3>
 
-<pre class="brush: css">div {
-    margin: 0em;
+<pre class="brush: css">div div{
+    margin: 1em;
     padding: 2em;
   }
-  #source {
+#source {
     color: blue;
     border: 1px solid black;
   }
-  #target {
+#target {
     border: 1px solid black;
   }
 </pre>
 
 <h3 id="JS">JavaScript</h3>
 
-<pre class="brush: js">function dragstart_handler(ev) {
- console.log("dragStart");
+<pre class="brush: js">const event_log = document.querySelector(".event-log")
+function dragstart_handler(ev) {
+ event_log.textContent += "dragStart\n";
  // Change the source element's background color to signify drag has started
  ev.currentTarget.style.border = "dashed";
  ev.dataTransfer.setData("text", ev.target.id);
 }
 
 function dragover_handler(ev) {
- console.log("dragOver");
+ event_log.textContent += "dragOver\n";
  // Change the target element's border to signify a drag over event
  // has occurred
  ev.currentTarget.style.background = "lightblue";
@@ -75,29 +77,29 @@ function dragover_handler(ev) {
 }
 
 function drop_handler(ev) {
- console.log("Drop");
+ event_log.textContent += "Drop\n";
  ev.preventDefault();
  var data = ev.dataTransfer.getData("text");
  ev.target.appendChild(document.getElementById(data));
 }
 
 function dragenter_handler(ev) {
- console.log("dragEnter");
+ event_log.textContent += "dragEnter\n";
  // Change the source element's background color for enter events
  ev.currentTarget.style.background = "yellow";
 }
 
 function dragleave_handler(ev) {
- console.log("dragLeave");
+ event_log.textContent += "dragLeave\n";
  // Change the source element's border back to white
  ev.currentTarget.style.background = "white";
 }
 
 function dragend_handler(ev) {
- console.log("dragEnd");
+ event_log.textContent += "dragEnd\n";
  // Change the target element's background color to visually indicate
  // the drag ended.
- var el=document.getElementById("target");
+ var el = document.getElementById("target");
  el.style.background = "pink";
 }
 
@@ -112,7 +114,7 @@ function init() {
 
 <h3 id="Result">Result</h3>
 
-<p>{{ EmbedLiveSample('Example', '100', '300') }}</p>
+<p>{{ EmbedLiveSample('Example', '100', '500') }}</p>
 
 <h2 id="Specifications">Specifications</h2>
 
