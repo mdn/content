@@ -110,7 +110,7 @@ function dragend_handler(ev) {
 }
 
  // Set handlers for the source's enter/leave/end/exit events
- var source = document.getElementById("source");
+ var el = document.getElementById("source");
  el.ondragenter = dragenter_handler;
  el.ondragleave = dragleave_handler;
  el.ondragend = dragend_handler;
