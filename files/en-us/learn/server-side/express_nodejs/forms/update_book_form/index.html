@@ -141,7 +141,7 @@ exports.book_update_post = [
 
 <p>Open <strong>/views/book_form.pug</strong> and update the section where the author form control is set to have the conditional code shown below.</p>
 
-<pre>    div.form-group
+<pre class="brush: plain">    div.form-group
       label(for='author') Author:
       select#author.form-control(type='select' placeholder='Select author' name='author' required='true' )
         - authors.sort(function(a, b) {let textA = a.family_name.toUpperCase(); let textB = b.family_name.toUpperCase(); return (textA &lt; textB) ? -1 : (textA &gt; textB) ? 1 : 0;});
@@ -166,7 +166,7 @@ exports.book_update_post = [
 
 <p>Open the <strong>book_detail.pug</strong> view and make sure there are links for both deleting and updating books at the bottom of the page, as shown below.</p>
 
-<pre class="brush: html">  hr
+<pre class="brush: plain">  hr
   p
     a(href=book.url+'/delete') Delete Book
   p

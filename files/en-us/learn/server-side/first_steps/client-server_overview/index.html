@@ -78,7 +78,7 @@ tags:
 
 <p>Each line of the request contains information about it. The first part is called the <strong>header</strong>, and contains useful information about the request, in the same way that an <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML">HTML head</a> contains useful information about an HTML document (but not the actual content itself, which is in the body):</p>
 
-<pre>GET https://developer.mozilla.org/en-US/search?q=client+server+overview&amp;topic=apps&amp;topic=html&amp;topic=css&amp;topic=js&amp;topic=api&amp;topic=webdev HTTP/1.1
+<pre class="brush: http">GET https://developer.mozilla.org/en-US/search?q=client+server+overview&amp;topic=apps&amp;topic=html&amp;topic=css&amp;topic=js&amp;topic=api&amp;topic=webdev HTTP/1.1
 Host: developer.mozilla.org
 Connection: keep-alive
 Pragma: no-cache
@@ -129,7 +129,7 @@ Cookie: sessionid=6ynxs23n521lu21b1t136rhbv7ezngie; csrftoken=zIPUJsAZv6pcgCBJSC
 
 <p>At the end of the message we see the <strong>body</strong> content — which contains the actual HTML returned by the request.</p>
 
-<pre class="brush: html">HTTP/1.1 200 OK
+<pre class="brush: http">HTTP/1.1 200 OK
 Server: Apache
 X-Backend-Server: developer1.webapp.scl3.mozilla.com
 Vary: Accept,Cookie, Accept-Encoding
@@ -161,7 +161,7 @@ Content-Length: 41823
 
 <p>The text below shows the HTTP request made when a user submits new profile details on this site. The format of the request is almost the same as the <code>GET</code> request example shown previously, though the first line identifies this request as a <code>POST</code>. </p>
 
-<pre class="brush: html">POST https://developer.mozilla.org/en-US/profiles/hamishwillee/edit HTTP/1.1
+<pre class="brush: http">POST https://developer.mozilla.org/en-US/profiles/hamishwillee/edit HTTP/1.1
 Host: developer.mozilla.org
 Connection: keep-alive
 Content-Length: 432
@@ -185,7 +185,7 @@ csrfmiddlewaretoken=zIPUJsAZv6pcgCBJSCj1zU6pQZbfMUAT&amp;user-username=hamishwil
 
 <p>The response from the request is shown below. The status code of "<code>302 Found</code>" tells the browser that the post succeeded, and that it must issue a second HTTP request to load the page specified in the <code>Location</code> field. The information is otherwise similar to that for the response to a <code>GET</code> request.</p>
 
-<pre class="brush: html">HTTP/1.1 302 FOUND
+<pre class="brush: http">HTTP/1.1 302 FOUND
 Server: Apache
 X-Backend-Server: developer3.webapp.scl3.mozilla.com
 Vary: Cookie
@@ -286,8 +286,8 @@ urlpatterns = [
     url(r'^junior/$', views.junior),
 ]</pre>
 
-<div class="note">
-<p><strong>Note</strong>: The first parameters in the <code>url()</code> functions may look a bit odd (e.g. <code>r'^junior/$'</code>) because they use a pattern matching technique called "regular expressions" (RegEx, or RE). You don't need to know how regular expressions work at this point, other than that they allow us to match patterns in the URL (rather than the hard coded values above) and use them as parameters in our view functions. As an example, a really simple RegEx might say "match a single uppercase letter, followed by between 4 and 7 lower case letters."</p>
+<div class="notecard note">
+<p><strong>Note:</strong> The first parameters in the <code>url()</code> functions may look a bit odd (e.g. <code>r'^junior/$'</code>) because they use a pattern matching technique called "regular expressions" (RegEx, or RE). You don't need to know how regular expressions work at this point, other than that they allow us to match patterns in the URL (rather than the hard coded values above) and use them as parameters in our view functions. As an example, a really simple RegEx might say "match a single uppercase letter, followed by between 4 and 7 lower case letters."</p>
 </div>
 
 <p>The web framework also makes it easy for a view function to fetch information from the database. The structure of our data is defined in models, which are Python classes that define the fields to be stored in the underlying database. If we have a model named <em>Team</em> with a field of "<em>team_type</em>" then we can use a simple query syntax to get back all teams that have a particular type.</p>

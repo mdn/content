@@ -294,7 +294,7 @@ nano .bash_profile # Open the file in the nano text editor, within the terminal
 
 <p>Installing <a href="https://pypi.python.org/pypi/virtualenvwrapper-win">virtualenvwrapper-win</a> is even simpler than setting up <em>virtualenvwrapper</em> because you don't need to configure where the tool stores virtual environment information (there is a default value). All you need to do is run the following command in the command prompt:</p>
 
-<pre><code>pip3 install virtualenvwrapper-win</code></pre>
+<pre class="brush: bash">pip3 install virtualenvwrapper-win</pre>
 
 <p>Now you can create a new virtual environment with the <code>mkvirtualenv</code> command</p>
 
@@ -304,12 +304,12 @@ nano .bash_profile # Open the file in the nano text editor, within the terminal
 
 <p>Now you can create a new virtual environment with the <code>mkvirtualenv</code> command. As this command runs you'll see the environment being set up (what you see is slightly platform-specific). When the command completes the new virtual environment will be active — you can see this because the start of the prompt will be the name of the environment in brackets (below we show this for Ubuntu, but the final line is similar for Windows/macOS).</p>
 
-<pre><code>$ mkvirtualenv my_django_environment
+<pre class="brush: bash">$ mkvirtualenv my_django_environment
 
 Running virtualenv with interpreter /usr/bin/python3
 ...
 virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/t_env7/bin/get_env_details
-(my_django_environment) ubuntu@ubuntu:~$</code>
+(my_django_environment) ubuntu@ubuntu:~$
 </pre>
 
 <p>Now you're inside the virtual environment you can install Django and start developing.</p>
