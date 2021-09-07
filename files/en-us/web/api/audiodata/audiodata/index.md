@@ -39,7 +39,7 @@ new AudioData(init);
     - `numberOfChannels`
       - : An integer containing the number of channels in this sample.
     - `timestamp`
-      - : A timestamp in microseconds.
+      - : An integer indicating the data's time in microseconds .
     - `data`
       - : A typed array of the audio data for this sample.
 

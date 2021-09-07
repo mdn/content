@@ -11,7 +11,7 @@ browser-compat: api.AudioData.allocationSize
 ---
 {{DefaultAPISidebar("WebCodecs API")}}
 
-The **`allocationSize`** method of the {{domxref("AudioData")}} interface returns the size in bytes required to hold the sample as filtered by options passed into the method.
+The **`allocationSize()`** method of the {{domxref("AudioData")}} interface returns the size in bytes required to hold the current sample as filtered by options passed into the method.
 
 ## Syntax
 
