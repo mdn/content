@@ -29,11 +29,9 @@ The read-only {{domxref("XRInputSource")}} property **`profiles`** returns an ar
 
 ## Value
 
-An array of {{domxref("DOMString")}} objects, each describing one configuration profile
+An array of strings, each describing one configuration profile
 for the input device represented by the `XRInputSource` object. Each input
 profile specifies the preferred visual representation and behavior of the input source.
-
-## Usage notes
 
 ### Input profile names
 
@@ -48,9 +46,39 @@ input source may be configured to use. Each string:
 - Does not provide information about handedness of the device, if applicable
 
 The [WebXR
-Input Profiles Registry](https://github.com/immersive-web/webxr-input-profiles/tree/master/packages/registry) is used by device developers and browser developers to
+Input Profiles Registry](https://github.com/immersive-web/webxr-input-profiles/tree/main/packages/registry) is used by device developers and browser developers to
 attempt to ensure that a given device will report the same profile strings regardless of
 which browser or other {{Glossary("user agent")}} you use.
+
+### Generic input profile names
+
+The following input profile names are generic and can serve as fallbacks that describe the devices in the roughest sense.
+
+- generic-button
+- generic-hand-select-grasp
+- generic-hand-select
+- generic-hand
+- generic-touchpad
+- generic-touchscreen
+- generic-trigger-squeeze-thumbstick
+- generic-trigger-squeeze-touchpad-thumbstick
+- generic-trigger-squeeze-touchpad
+- generic-trigger-squeeze
+- generic-trigger-thumbstick
+- generic-trigger-touchpad-thumbstick
+- generic-trigger-touchpad
+- generic-trigger
+
+## Examples
+
+The list in `profiles` is in order of reverse specificity; that is, the most precise description is first, and the least precise description is last. The first entry in the list is typically indicative of the precise model of the controller, or of a model with which the controller is compatible.
+
+For example, entry 0 in `profiles` for an Oculus Touch controller is `oculus-touch`. The next entry is `generic-trigger-squeeze-thumbstick`, indicating a generic device with a trigger, a squeeze control, and a thumbstick. While the Oculus Touch controller actually has a thumbpad rather than a thumbstick, the overall description is "close enough" that the details within the profile matching the name will let the controller be interpreted usefully.
+
+```js
+inputSource.profiles;
+// ['oculus-touch', 'generic-trigger-squeeze-thumbstick']
+```
 
 ## Specifications
 
@@ -64,5 +92,3 @@ which browser or other {{Glossary("user agent")}} you use.
 
 - [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)
 - [Inputs and input sources](/en-US/docs/Web/API/WebXR_Device_API/Inputs)
-- [Using gamepads in WebXR
-  applications](/en-US/docs/Web/WebXR%20Device%20API/Gamepads)

@@ -66979,25 +66979,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/PaymentDetailsUpdate": {
-    "modified": "2020-10-15T22:05:59.557Z",
-    "contributors": [
-      "sideshowbarker",
-      "Sheppy"
-    ]
-  },
-  "Web/API/PaymentDetailsUpdate/error": {
-    "modified": "2020-10-15T22:11:38.526Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/PaymentDetailsUpdate/shippingAddressErrors": {
-    "modified": "2020-10-15T22:08:58.821Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
   "Web/API/PaymentItem": {
     "modified": "2020-10-15T22:12:04.568Z",
     "contributors": [

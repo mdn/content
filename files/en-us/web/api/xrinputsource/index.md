@@ -27,6 +27,8 @@ The [WebXR Device API's](/en-US/docs/Web/API/WebXR_Device_API) **`XRInputSource`
   - : A {{domxref("Gamepad")}} object describing the state of the buttons and axes on the XR input source, if it is a gamepad or comparable device. If the device isn't a gamepad-like device, this property's value is `null`.
 - {{domxref('XRInputSource.gripSpace', 'gripSpace')}}{{readonlyInline}}
   - : An {{domxref("XRSpace")}} whose origin tracks the pose which is used to render objects which should appear as if they're held in the hand indicated by `handedness`. The orientation of this space indicates the angle at which the hand is gripping the object. Read on in the main article on {{domxref("XRInputSource.gripSpace", "gripSpace")}} for more details on how to use this space.
+- {{domxref('XRInputSource.hand', 'hand')}}{{readonlyInline}}
+  - : An {{domxref("XRHand")}} object providing access to the underlying hand-tracking device.
 - {{domxref('XRInputSource.handedness', 'handedness')}}{{readonlyInline}}
   - : A {{domxref("DOMString")}} that indicates which hand the device represented by this `XRInputSource` is being used in, if any. The value will be `left`, `right`, or `none`.
 - {{domxref('XRInputSource.profiles', 'profiles')}}{{readonlyInline}}
@@ -76,6 +78,5 @@ For more details on the input source's coordinate system, see the article that c
 
 - [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)
 - [Inputs and input sources](/en-US/docs/Web/API/WebXR_Device_API/Inputs)
-- [Using gamepads in WebXR applications](/en-US/docs/Web/WebXR%20Device%20API/Gamepads)
 - {{domxref("XRInputSourceArray")}}
 - {{domxref("XRSpace")}}

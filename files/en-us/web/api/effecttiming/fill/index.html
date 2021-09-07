@@ -2,27 +2,27 @@
 title: EffectTiming.fill
 slug: Web/API/EffectTiming/fill
 tags:
-- API
-- Animation
-- EffectTiming
-- Experimental
-- KeyframeEffect
-- Property
-- Reference
-- Web Animations
-- animate
-- fill
-- web animations api
+  - API
+  - Animation
+  - EffectTiming
+  - Experimental
+  - KeyframeEffect
+  - Property
+  - Reference
+  - Web Animations
+  - animate
+  - fill
+  - web animations api
 browser-compat: api.EffectTiming.fill
 ---
 <div>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</div>
 
 <p>The <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a>'s
-  {{domxref("EffectTiming")}} dictionary's <strong><code>fill</code></strong> property
+  {{domxref("EffectTiming")}} dictionary's <strong><code>fill</code></strong> property
   specifies a <strong>fill mode</strong>, which defines how the element to which the
   animation is applied should look when the animation sequence is not actively running,
   such as before the time specified by
-  {{domxref("AnimationEffectTimingProperties.iterationStart", "iterationStart")}} or after
+  {{domxref("EffectTiming/iterationStart", "iterationStart")}} or after
   animation's end time.</p>
 
 <p>For example, setting fill to <code>"none"</code> means the animation's effects are not
@@ -38,8 +38,8 @@ browser-compat: api.EffectTiming.fill
 <div class="note">
   <p><strong>Note:</strong> {{domxref("Element.animate()")}}, and {{domxref("KeyframeEffect.KeyframeEffect",
     "KeyframeEffect()")}} accept an object of timing properties including
-    <code>fill.</code> The value of <code>fill</code> corresponds directly
-    to {{domxref("EffectTiming.fill", "fill")}} in {{domxref("EffectTiming")}} objects
+    <code>fill.</code> The value of <code>fill</code> corresponds directly
+    to {{domxref("EffectTiming.fill", "fill")}} in {{domxref("EffectTiming")}} objects
     returned by {{domxref("AnimationEffect.getTiming()", "getTiming()")}} in
     {{domxref("AnimationEffect")}} and {{domxref("KeyframeEffect")}}.</p>
 </div>
@@ -61,34 +61,34 @@ browser-compat: api.EffectTiming.fill
   <dt><code>"none"</code></dt>
   <dd>The animation's effects are only visible while the animation is iterating or its
     playhead is positioned over an iteration. The animation's effects are not visible when
-    its {{domxref("Animation.playState", "playState")}} is <code>pending</code> with
-    a {{domxref("AnimationEffectTimingReadOnly.delay", "delay")}}, when its
-    <code>playState</code> is <code>finished</code>, or during its
-    {{domxref("AnimationEffectTimingReadOnly.endDelay", "endDelay")}} or
-     {{domxref("AnimationEffectTimingReadOnly.delay", "delay")}}. In other words, if the
+    its {{domxref("Animation.playState", "playState")}} is <code>pending</code> with
+    a {{domxref("EffectTiming.delay", "delay")}}, when its
+    <code>playState</code> is <code>finished</code>, or during its
+    {{domxref("EffectTiming.endDelay", "endDelay")}} or
+    {{domxref("EffectTiming.delay", "delay")}}. In other words, if the
     animation isn't in its active interval, the affected element is not visible.</dd>
   <dt><code>"forwards"</code></dt>
   <dd>The affected element will continue to be rendered in the state of the final
-    animation framecontinue to be applied to the  after the animation has completed
-    playing, in spite of and during any
-    {{domxref("AnimationEffectTimingReadOnly.endDelay", "endDelay")}} or when its
-    <code>playState</code> is <code>finished</code>.</dd>
+    animation framecontinue to be applied to the after the animation has completed
+    playing, in spite of and during any
+    {{domxref("EffectTiming.endDelay", "endDelay")}} or when its
+    <code>playState</code> is <code>finished</code>.</dd>
   <dt><code>"backwards"</code></dt>
   <dd>The animation's effects should be reflected by the element(s) state prior to
-    playing, in spite of and during any {{domxref("AnimationEffectTimingReadOnly.delay",
-    "delay")}} and <code>pending</code> {{domxref("Animation.playState", "playState")}}.
+    playing, in spite of and during any {{domxref("EffectTiming.delay",
+    "delay")}} and <code>pending</code> {{domxref("Animation.playState", "playState")}}.
   </dd>
   <dt><code>"both"</code></dt>
-  <dd>Combining the effects of <strong>both </strong><code>forwards</code> and
-    <code>backwards</code>: The animation's effects should be reflected by the element(s)
-    state prior to playing and retained after the animation has completed playing, in
-    spite of and during any {{domxref("AnimationEffectTimingReadOnly.endDelay",
-    "endDelay")}}, {{domxref("AnimationEffectTimingReadOnly.delay", "delay")}} and/or
-    <code>pending</code> or <code>finished</code> {{domxref("Animation.playState",
+  <dd>Combining the effects of <strong>both </strong><code>forwards</code> and
+    <code>backwards</code>: The animation's effects should be reflected by the element(s)
+    state prior to playing and retained after the animation has completed playing, in
+    spite of and during any {{domxref("EffectTiming.endDelay",
+    "endDelay")}}, {{domxref("EffectTiming.delay", "delay")}} and/or
+    <code>pending</code> or <code>finished</code> {{domxref("Animation.playState",
     "playState")}}.</dd>
   <dt><code>"auto"</code></dt>
   <dd>If the animation effect the fill mode is being applied to is a keyframe effect
-    ({{domxref("KeyframeEffect")}} or {{domxref("KeyframeEffectReadOnly")}}),
+    ({{domxref("KeyframeEffect")}} or {{domxref("KeyframeEffect")}}),
     <code>"auto"</code> is equivalent to <code>"none"</code>. Otherwise, the result is
     <code>"both"</code>.</dd>
 </dl>
@@ -108,12 +108,12 @@ browser-compat: api.EffectTiming.fill
 </p>
 
 <pre class="brush: html">&lt;div class="main"&gt;
-  &lt;div id="box"&gt;
-    &lt;div id="text"&gt;Look! A box!&lt;/div&gt;
-  &lt;/div&gt;
+  &lt;div id="box"&gt;
+    &lt;div id="text"&gt;Look! A box!&lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="button" id="animateButton"&gt;
-  Animate!
+  Animate!
 &lt;/div&gt;
 </pre>
 
@@ -124,17 +124,17 @@ browser-compat: api.EffectTiming.fill
 }
 
 .button {
-  cursor: pointer;
-  width: 300px;
-  border: 1px solid black;
-  font-size: 16px;
-  text-align: center;
-  margin-top: 0px;
-  padding-top: 2px;
-  padding-bottom: 4px;
-  color: white;
-  background-color: darkgreen;
-  font: 14px "Open Sans", "Arial", sans-serif;
+  cursor: pointer;
+  width: 300px;
+  border: 1px solid black;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 2px;
+  padding-bottom: 4px;
+  color: white;
+  background-color: darkgreen;
+  font: 14px "Open Sans", "Arial", sans-serif;
 }
 
 #text {
@@ -147,7 +147,7 @@ browser-compat: api.EffectTiming.fill
   font: bold 2em "Lucida Grande", "Open Sans", sans-serif;
 }</pre>
 
-<p>While there's other CSS involved in this example, the part that really matters for our
+<p>While there's other CSS involved in this example, the part that really matters for our
   purposes is the CSS that styles the <code>"box"</code> element that we'll be animating.
   That CSS looks like this:</p>
 
@@ -213,10 +213,10 @@ browser-compat: api.EffectTiming.fill
   in its natural, unaltered condition anytime the animation isn't actively running.</p>
 
 <pre class="brush: js">document.getElementById("animateButton").addEventListener("click", event =&gt; {
-  document.getElementById("box").animate(
-    boxRotationKeyframes,
-    boxRotationTiming
-  );
+  document.getElementById("box").animate(
+    boxRotationKeyframes,
+    boxRotationTiming
+  );
 }, false);</pre>
 
 <p>The rest of the code is pretty simple: it adds an event listener to the "Animate"
@@ -239,11 +239,11 @@ browser-compat: api.EffectTiming.fill
 
 <h3 id="Follow_the_White_Rabbit_example">Follow the White Rabbit example</h3>
 
-<p>In the <a href="http://codepen.io/rachelnabors/pen/eJyWzm?editors=0010">Follow the
-    White Rabbit</a> example, the White Rabbit's animation is formed by coupling a
-  <code>KeyframeEffect</code> with an <code>Animation</code> object. The
+<p>In the <a href="https://codepen.io/rachelnabors/pen/eJyWzm?editors=0010">Follow the
+    White Rabbit</a> example, the White Rabbit's animation is formed by coupling a
+  <code>KeyframeEffect</code> with an <code>Animation</code> object. The
   <code>keyframeEffect</code> takes an object of <a
-    href="/en-US/docs/Web/API/Web_Animations_API/Animation_timing_options">timing
+    href="/en-US/docs/Web/API/EffectTiming">timing
     properties</a>, which is where we pass in <code>fill</code>. <code>Forwards</code>
   makes the rabbit retain its last keyframe rather than reverting to its unanimated state:
 </p>
@@ -275,7 +275,7 @@ var rabbitDownAnimation = new Animation(rabbitDownKeyframes, document.timeline);
   <li>The forwards fill of an animation (or backwards fill if the animation is playing in
     reverse) will continue to override any changes to specified style indefinitely which
     can lead to confusing behavior. This is because animations take priority in the <a
-      href="/en-US/docs/Web/CSS/Cascade#Cascading_order">CSS cascade</a> over normal
+      href="/en-US/docs/Web/CSS/Cascade#cascading_order">CSS cascade</a> over normal
     author styles.</li>
   <li>In order to avoid leaking memory when many filling animations overlap, the browser
     is required to remove overlapped animations which can lead to surprising results in
@@ -286,7 +286,7 @@ var rabbitDownAnimation = new Animation(rabbitDownKeyframes, document.timeline);
   final value of the animation effect directly in specified style:</p>
 
 <pre class="brush: js">elem.animate({ transform: 'translateY(100px)' }, 200).finished.then(() =&gt; {
-  elem.style.transform = 'translateY(100px)';
+  elem.style.transform = 'translateY(100px)';
 });
 </pre>
 
@@ -304,15 +304,15 @@ elem.animate({ transform: 'none', offset: 0 }, 200);
   before canceling it.</p>
 
 <pre class="brush: js">elem.addEventListener('click', async evt =&gt; {
-  const animation = elem.animate(
-    { transform: `translate(${evt.clientX}px, ${evt.clientY}px)` },
-    { duration: 800, fill: 'forwards' }
-  );
-  await animation.finished;
-  // commitStyles will record the style up to and including `animation` and
-  // update elem’s specified style with the result.
-  animation.commitStyles();
-  animation.cancel();
+  const animation = elem.animate(
+    { transform: `translate(${evt.clientX}px, ${evt.clientY}px)` },
+    { duration: 800, fill: 'forwards' }
+  );
+  await animation.finished;
+  // commitStyles will record the style up to and including `animation` and
+  // update elem's specified style with the result.
+  animation.commitStyles();
+  animation.cancel();
 });
 </pre>
 
@@ -334,6 +334,6 @@ elem.animate({ transform: 'none', offset: 0 }, 200);
     returned by {{domxref("AnimationEffect.getTiming()", "getTiming()")}} in
     {{domxref("AnimationEffect")}} and {{domxref("KeyframeEffect")}}.</li>
   <li>
-    CSS's <code><a href="/en-US/docs/Web/CSS/animation-fill-mode">animation-fill-mode</a></code>
+    CSS's <code><a href="/en-US/docs/Web/CSS/animation-fill-mode">animation-fill-mode</a></code>
   </li>
 </ul>

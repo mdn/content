@@ -75,7 +75,7 @@ jobs:
           key: dotlocal-${{ runner.os }}-${{ hashFiles('.github/workflows/pr-review-companion.yml') }}
 
       - name: Install Python poetry
-        uses: snok/install-poetry@v1.1.8
+        uses: snok/install-poetry@v1.2
         with:
           virtualenvs-create: true
           virtualenvs-in-project: true
