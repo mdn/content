@@ -100,6 +100,8 @@ following:
   - : Enable the ability to obtain depth information using {{domxref("XRDepthInformation")}} objects.
 - `dom-overlay`
   - : Enable allowing to specify a DOM overlay element that will be displayed to the user.
+- `hand-tracking`
+  - : Enable articulated hand pose information from hand-based input controllers (see {{domxref("XRHand")}} and {{domxref("XRInputSource.hand")}}).
 - `hit-test`
   - : Enable hit testing features for performing hit tests against real world geometry.
 - `light-estimation`
