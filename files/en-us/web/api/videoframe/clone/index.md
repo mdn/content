@@ -11,7 +11,7 @@ browser-compat: api.VideoFrame.clone
 ---
 {{DefaultAPISidebar("Web Codecs API")}}
 
-The **`clone`** method of the {{domxref("VideoFrame")}} interface 
+The **`clone`** method of the {{domxref("VideoFrame")}} interface creates a new `VideoFrame` object with reference to the same media resource as the original.
 
 ## Syntax
 
@@ -21,27 +21,24 @@ VideoFrame.clone()
 
 ### Parameters
 
-
+None.
 
 ### Return Value
 
+The cloned {{domxref("VideoData")}} object.
 
+### Exceptions
+
+- {{domxref("DOMException")}} `InvalidStateError`
+  - : Thrown if the `VideoFrame` object has been {{domxref("Transferable","transfered")}}.
 
 ## Examples
 
-Fill in a simple example that nicely shows a typical usage of the API, then perhaps some more complex examples (see our guide on how to add [code examples](/en-US/docs/MDN/Contribute/Structures/Code_examples) for more information).
-
-This text should be replaced with a brief description of what the example demonstrates.
+The following example clones a copy of `VideoFrame` as `videoFrame2`.
 
 ```js
-my code block
+let videoFrame2 = VideoFrame.clone();
 ```
-
-And/or include a list of links to useful code samples that live elsewhere:
-
-*   x
-*   y
-*   z
 
 ## Specifications
 

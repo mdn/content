@@ -11,11 +11,11 @@ browser-compat: api.VideoFrame.codedWidth
 ---
 {{DefaultAPISidebar("Web Codecs API")}}
 
-The **`codedWidth`**  property of the {{domxref("VideoFrame")}} interface
+The **`codedWidth`**  property of the {{domxref("VideoFrame")}} interface returns the width of the `VideoFrame` in pixels, potentionally including non-visible padding, and prior to considering potential ratio adjustments.
 
 ### Value
 
-
+An integer.
 
 ## Examples
 

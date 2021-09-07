@@ -11,12 +11,11 @@ browser-compat: api.VideoFrame.codedRect
 ---
 {{DefaultAPISidebar("Web Codecs API")}}
 
-The **`codedRect`**  property of the {{domxref("VideoFrame")}} interface
-
+The **`codedRect`**  property of the {{domxref("VideoFrame")}} interface returns a {{domxref("DOMRectReadOnly")}} with the width and height matching {{domxref("VideoFrame.codedWidth")}} and {{domxref("VideoFrame.codedHeight")}}.
 
 ### Value
 
-
+A {{domxref("DOMRectReadOnly")}}.
 
 ## Examples
 

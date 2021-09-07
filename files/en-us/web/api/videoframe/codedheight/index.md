@@ -11,14 +11,11 @@ browser-compat: api.VideoFrame.codedHeight
 ---
 {{DefaultAPISidebar("Web Codecs API")}}
 
-The **`codedHeight`**  property of the {{domxref("VideoFrame")}} interface
-
-## Syntax
-
+The **`codedHeight`**  property of the {{domxref("VideoFrame")}} interface returns the height of the VideoFrame in pixels, potentionally including non-visible padding, and prior to considering potential ratio adjustments.
 
 ### Value
 
-
+An integer.
 
 ## Examples
 
