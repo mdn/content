@@ -17,6 +17,8 @@ browser-compat: css.properties.accent-color
 
 The **`accent-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of the elements {{Glossary("accent")}}. An accent appears in elements such as {{HTMLElement("input")}} of [`type="checkbox"`](/en-US/docs/Web/HTML/Element/input/checkbox), or [`type="radio"`](/en-US/docs/Web/HTML/Element/input/radio).
 
+{{EmbedInteractiveExample("pages/css/accent-color.html")}}
+
 ## Syntax
 
 ```css
