@@ -2,38 +2,26 @@
 title: EffectTiming.direction
 slug: Web/API/EffectTiming/direction
 tags:
-- API
-- Animation
-- EffectTiming
-- Experimental
-- KeyframeEffect
-- Property
-- Reference
-- Web Animations
-- animate
-- direction
-- waapi
-- web animations api
+  - API
+  - Animation
+  - EffectTiming
+  - Experimental
+  - KeyframeEffect
+  - Property
+  - Reference
+  - Web Animations
+  - animate
+  - direction
+  - waapi
+  - web animations api
 browser-compat: api.EffectTiming.direction
 ---
 <div>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</div>
 
-<p>The <strong><code>direction</code></strong> property of the <a
-    href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> dictionary
+<p>The <strong><code>direction</code></strong> property
+  of the <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> dictionary
   {{domxref("EffectTiming")}} indicates an animation's playback direction along its
   timeline, as well as its behavior when it reaches the end of an iteration</p>
-
-<div class="note">
-  <p><strong>Note:</strong> {{domxref("Element.animate()")}},
-    {{domxref("KeyframeEffectReadOnly.KeyframeEffectReadOnly",
-    "KeyframeEffectReadOnly()")}}, and {{domxref("KeyframeEffect.KeyframeEffect",
-    "KeyframeEffect()")}} all accept an object of timing properties including
-    <code>direction.</code> The value of <code>direction</code> corresponds directly
-    to {{domxref("AnimationEffectTimingReadOnly.direction")}} in
-    {{domxref("AnimationEffectReadOnly.timing", "timing")}} objects returned by
-    {{domxref("AnimationEffectReadOnly")}}, {{domxref("KeyframeEffectReadOnly")}}, and
-    {{domxref("KeyframeEffect")}}.</p>
-</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -69,8 +57,8 @@ browser-compat: api.EffectTiming.direction
 
 <h2 id="Examples">Examples</h2>
 
-<p>In the <a href="http://codepen.io/rachelnabors/pen/bEPdQr?editors=0010">Forgotten
-    Key</a> example, Alice waves her arm up and down by passing her an
+<p>In the <a href="https://codepen.io/rachelnabors/pen/bEPdQr?editors=0010">Forgotten
+    Key</a> example, Alice waves her arm up and down by passing her an
   <code>alternate</code> value for her <code>direction</code> property:</p>
 
 <pre class="brush: js">// Get Alice's arm, and wave it up and down
@@ -96,17 +84,10 @@ document.getElementById("alice_arm").animate([
 
 <ul>
   <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
-  <li>{{domxref("Element.animate()")}},
-    {{domxref("KeyframeEffectReadOnly.KeyframeEffectReadOnly",
-    "KeyframeEffectReadOnly()")}}, and {{domxref("KeyframeEffect.KeyframeEffect",
-    "KeyframeEffect()")}} all accept an object of timing properties including this one.
+  <li>{{domxref("Element.animate()")}} and {{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}}
+    both accept an object of timing properties including this one.
   </li>
-  <li>The value of this property corresponds to the one in
-    {{domxref("AnimationEffectTimingReadOnly")}} (which is the
-    {{domxref("AnimationEffectReadOnly.timing", "timing")}} object for
-    {{domxref("AnimationEffectReadOnly")}}, {{domxref("KeyframeEffectReadOnly")}},
-    and {{domxref("KeyframeEffect")}}).</li>
   <li>
-    CSS's <code><a href="/en-US/docs/Web/CSS/animation-direction">animation-direction</a></code>
+    CSS's <code><a href="/en-US/docs/Web/CSS/animation-direction">animation-direction</a></code>
   </li>
 </ul>
