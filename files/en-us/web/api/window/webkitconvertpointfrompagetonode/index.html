@@ -17,14 +17,14 @@ browser-compat: api.Window.convertPointFromPageToNode
 
 <p>{{Non-standard_header}}</p>
 
-<p>Given a {{domxref("Point")}} specified in the page's coordinate system, the
+<p>Given a {{domxref("WebKitPoint")}} specified in the page's coordinate system, the
   {{domxref("Window")}} method <strong><code>convertPointFromPageToNode()</code></strong>
   returns a <code>Point</code> object specifying the same location in the coordinate
   system of the specified DOM {{domxref("Node")}}.</p>
 
 <div class="warning">
   <p><strong>Warning:</strong> Please review the {{anch("Browser compatibility")}} section before using this method,
-    as it's not widely supported (nor is the {{domxref("Point")}} object it uses).</p>
+    as it's not widely supported (nor is the {{domxref("WebKitPoint")}} object it uses).</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -39,7 +39,7 @@ browser-compat: api.Window.convertPointFromPageToNode
   <dd>The {{domxref("Node")}} into whose coordinate system the point is to be converted.
   </dd>
   <dt><code>pagePoint</code></dt>
-  <dd>A {{domxref("Point")}} object specifying a point in the coordinate system of the
+  <dd>A {{domxref("WebKitPoint")}} object specifying a point in the coordinate system of the
     page, which is to be converted into the node's coordinate system.</dd>
 </dl>
 
@@ -62,7 +62,7 @@ browser-compat: api.Window.convertPointFromPageToNode
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li>{{domxref("Window.convertPointFromNodeToPage()")}}</li>
+  <li>{{domxref("Window.webkitConvertPointFromNodeToPage")}}</li>
   <li>Mozilla implementation bug: {{bug(850808)}}</li>
   <li><a
       href="https://msdn.microsoft.com/en-us/library/ie/dn760735(v=vs.85).aspx"><code>webkitConvertPointFromPageToNode</code>
