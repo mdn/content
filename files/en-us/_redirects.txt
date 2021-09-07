@@ -8233,6 +8233,9 @@
 /en-US/docs/Web/API/Path2D.addPath	/en-US/docs/Web/API/Path2D/addPath
 /en-US/docs/Web/API/PaymentAddress/PaymentAddress.country	/en-US/docs/Web/API/PaymentAddress/country
 /en-US/docs/Web/API/PaymentAddress/regionCode	/en-US/docs/Web/API/PaymentAddress
+/en-US/docs/Web/API/PaymentDetailsUpdate	/en-US/docs/Web/API/PaymentRequestUpdateEvent/updateWith
+/en-US/docs/Web/API/PaymentDetailsUpdate/error	/en-US/docs/Web/API/PaymentRequestUpdateEvent/updateWith
+/en-US/docs/Web/API/PaymentDetailsUpdate/shippingAddressErrors	/en-US/docs/Web/API/PaymentRequestUpdateEvent/updateWith
 /en-US/docs/Web/API/PaymentRequest/PaymentRequest.onmerchantvalidation	/en-US/docs/Web/API/PaymentRequest/onmerchantvalidation
 /en-US/docs/Web/API/PaymentRequest/shippingaddresschange	/en-US/docs/Web/API/PaymentRequest/shippingaddresschange_event
 /en-US/docs/Web/API/PaymentRequestEvent/topLevelOrigin	/en-US/docs/Web/API/PaymentRequestEvent/topOrigin
