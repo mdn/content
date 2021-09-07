@@ -116,31 +116,19 @@ objectStore1.put("1", "key");
  <tbody>
   <tr>
    <td><code><a>READ_ONLY</a></code></td>
-   <td>
-    <p>"readonly"</p>
-
-    <p>(0 in Chrome)</p>
-   </td>
+   <td>"readonly" (0 in Chrome)</td>
    <td>
     <p>Allows data to be read but not changed.</p>
    </td>
   </tr>
   <tr>
    <td><code><a>READ_WRITE</a></code></td>
-   <td>
-    <p>"readwrite"</p>
-
-    <p>(1 in Chrome)</p>
-   </td>
+   <td>"readwrite" (1 in Chrome)</td>
    <td>Allows reading and writing of data in existing data stores to be changed.</td>
   </tr>
   <tr>
    <td><code><a>VERSION_CHANGE</a></code></td>
-   <td>
-    <p>"versionchange"</p>
-
-    <p>(2 in Chrome)</p>
-   </td>
+   <td>"versionchange" (2 in Chrome)</td>
    <td>Allows any operation to be performed, including ones that delete and create object stores and indexes. This mode is for updating the version number of transactions that were started using the <a href="/en-US/docs/Web/API/IDBDatabase#setversion"><code>setVersion()</code></a> method of <a href="/en-US/docs/Web/API/IDBDatabase">IDBDatabase</a> objects. Transactions of this mode cannot run concurrently with other transactions. Transactions in this mode are known as "upgrade transactions."</td>
   </tr>
  </tbody>
