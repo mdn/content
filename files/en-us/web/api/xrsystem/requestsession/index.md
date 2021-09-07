@@ -86,11 +86,11 @@ following:
     _required_ options are unsupported.
 - `SecurityError`
   - : Permission to enter the specified XR mode is denied. This can happen for a number
-    of reasons, which are covered in more detail in
-    {{SectionOnPage("/en-US/docs/Web/API/WebXR_Device_API", "Permissions and
-      security")}}.
+    of reasons, which are covered in more detail in [Permissions and security](/en-US/docs/Web/API/WebXR_Device_API/Permissions_and_security).
 
 ## Session features
+
+The following session features and reference spaces can be requested, either as `optionalFeatures` or `requiredFeatures`.
 
 - `anchor`
   - : Enable use of {{domxref("XRAnchor")}} objects.
@@ -119,12 +119,13 @@ following:
 
 ### Security requirements
 
-Each reference space or feature type has minimum safety requirements. By session type, those are:
+Several session features and the various reference spaces have minimum security and privacy requirements, like asking for user consent and/or requiring the {{HTTPHeader("Feature-Policy")}}: [`xr-spatial-tracking`](/en-US/docs/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking) directive to be set. See also [Permissions and security](/en-US/docs/Web/API/WebXR_Device_API/Permissions_and_security) for more details.
 
 | Session feature | User consent requirement            | Feature policy requirement |
 | --------------- | ----------------------------------- | -------------------------- |
 | `bounded-floor` | Always required                     | `xr-spatial-tracking`      |
 | `depth-sensing` | —                                   | `xr-spatial-tracking`      |
+| `hand-tracking` | Always required                     | —                          |
 | `hit-test`      | —                                   | `xr-spatial-tracking`      |
 | `local`         | Always required for inline sessions | `xr-spatial-tracking`      |
 | `local-floor`   | Always required                     | `xr-spatial-tracking`      |
