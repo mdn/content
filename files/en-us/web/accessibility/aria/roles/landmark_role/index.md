@@ -9,24 +9,46 @@ tags:
   - NeedsContent
 ---
 
+A landmark is an important subsection of a page. 
 
-Note:  landmark role is an bstract role. It is included here for completeness of documentation. It should not be used by web authors.
+> **Note:**  The `landmark` role is an abstract role. It is included here for completeness of documentation. It should not be used by web authors.
 
 ## Description
 
+A `landmark` is an abstract role for a section of content that is important enough that users will likely want to be able to navigate to the section easily and have it included in a dynamically generated summary of the page.  Landmarks allow assistive techonologies to navigate and to find content quickly. 
+
+To create a landmark role, define the purpose of the content by using a semantic element such as `<section>`, `<nav>`, or `<main>`, or adding an ARIA role that is a subclass of the `landmark` role such as [`role="banner"`](/en-US/docs/Web/Accessibility/ARIA/Roles/banner_role), [`role="complementary"`](/en-US/docs/Web/Accessibility/ARIA/Roles/complementary_role), or [`role="region"`](/en-US/docs/Web/Accessibility/ARIA/Roles/region_role).  Do not use `role="landmark"`. 
+
+If needed, a brief, descriptive label can provided with a heading element or with `aria-label`.
+
+For screen reader users, adding landmark roles effectively create 'skip links' for screen reader users, but don't replace in page navigation as the landmark roles are not otherwise surfaced.
+
 ## Best Practices
 
-Do not use.
+Do not use `role="landmark"`. Do use HTML and subclass landmark roles.
+
+Landmarks ensure content is in navigable regions. Use [`<main>`] for [`role="main"`], [`<header>`] for [`role="banner"`], [<`nav>`] for [`role="navigation"`],  and [`<footer>`] for [`role="contentinfo"`]. It is also good practice to include the role reduntantly with the associated semantic element. It is not as good practice to use non-semantic elements, such as `<div>`, adding semantics with landmark roles. But do include one or the other or both. Otherwise, your content is no longer as navigable for screen reader users. 
 
 ## Specifications
 
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#landmark role","ARIA: landmark role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#aria_lh_landmark_role","landmark role")}} | {{Spec2('ARIA Authoring Practices')}} |
+| {{SpecName("ARIA","#landmark","ARIA: landmark role")}}                                             | {{Spec2('ARIA')}}                         |
+
 
 
 ## See Also
+
+- [ARIA: `section` role](/en-US/docs/Web/Accessibility/ARIA/Roles/section_role)
+- [ARIA: `banner` role](/en-US/docs/Web/Accessibility/ARIA/Roles/banner_role)
+- [ARIA: `complementary` role](/en-US/docs/Web/Accessibility/ARIA/Roles/complementary_role)
+- [ARIA: `contentinfo` role](/en-US/docs/Web/Accessibility/ARIA/Roles/contentinfo_role)
+- [ARIA: `form` role](/en-US/docs/Web/Accessibility/ARIA/Roles/form_role)
+- [ARIA: `main` role](/en-US/docs/Web/Accessibility/ARIA/Roles/main_role)
+- [ARIA: `navigation` role](/en-US/docs/Web/Accessibility/ARIA/Roles/navigation_role)
+- [ARIA: `region` role](/en-US/docs/Web/Accessibility/ARIA/Roles/region_role)
+- [ARIA: `search` role](/en-US/docs/Web/Accessibility/ARIA/Roles/search_role)
+
 
 
 <section id="Quick_links"><ol><li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li></ol></section>
