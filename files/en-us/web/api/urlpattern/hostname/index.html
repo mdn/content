@@ -1,0 +1,52 @@
+---
+title: URLPattern.hostname
+slug: Web/API/URLPattern/hostname
+tags:
+- API
+- Property
+- Reference
+- URLPattern
+- URLPattern API
+- Experimental
+browser-compat: api.URLPattern.hostname
+---
+
+<div>{{ APIRef("URLPattern API") }} {{SeeCompatTable}}</div>
+
+<p>
+  The <strong><code>hostname</code></strong> property of the
+  {{domxref("URLPattern")}} interface is a {{domxref("USVString")}} containing
+  the pattern used to match the hostname part of a URL.
+</p>
+
+<p>{{AvailableInWorkers}}</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">
+const <em>string</em> = <em>urlpattern</em>.hostname
+</pre>
+
+<h3 id="Value">Value</h3>
+
+<p>A {{domxref("USVString")}}.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<pre class="brush: js">
+const pattern = new URLPattern('https://*.example.org');
+console.log(pattern.hostname); // '*.example.org'</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+{{Specifications}}
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+  <li>The {{domxref("URLPattern")}} interface it belongs to.</li>
+</ul>

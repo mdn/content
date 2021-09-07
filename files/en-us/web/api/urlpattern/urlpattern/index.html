@@ -1,0 +1,113 @@
+---
+title: URLPattern()
+slug: Web/API/URLPattern/URLPattern
+tags:
+- API
+- Constructor
+- Reference
+- URLPattern
+- URLPattern API
+- Polyfill
+- Experimental
+browser-compat: api.URLPattern.URLPattern
+---
+
+<div>{{APIRef("URLPattern API")}} {{SeeCompatTable}}</div>
+
+<p>
+  The <code><strong>URLPattern()</strong></code> constructor returns a newly
+  created {{domxref("URLPattern")}} object representing the url pattern defined
+  by the parameters.
+</p>
+
+<p>
+  If the given pattern or base URL are not valid or syntactically correct, the
+  JavaScript {{jsxref("TypeError")}} exception is thrown.
+</p>
+
+<p>{{AvailableInWorkers}}</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">
+const <var>pattern</var> = new URLPattern(<var>input</var> [, <var>baseURL</var>])
+</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+  <dt>
+    <code><var>input</var></code>
+  </dt>
+  <dd>
+    The pattern that will be used for matching. This can either be a
+    {{domxref("USVString")}}, or a structured object providing patterns for each
+    URL part individually. Omitted parts in the structured object will be
+    treated as wildcards.
+  </dd>
+  <dt>
+    <code><var>baseURL</var></code> {{optional_inline}}
+  </dt>
+  <dd>
+    A {{domxref("USVString")}} representing the base URL to use in cases where
+    <code><var>input</var></code> is a relative pattern. If not specified, it
+    defaults to <code>undefined</code>. If this parameter is provided, and input
+    is an absolute pattern or a structured object, a {{jsxref("TypeError")}} is
+    thrown.
+  </dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<pre class="brush: js">
+// Matching a pathname
+let pattern = new URLPattern("https://example.com/books/:id")
+            = new URLPattern("/books/:id", "https://example.com")
+            = new URLPattern({
+                protocol: "https",
+                hostname: "example.com",
+                pathname: "/books/:id"
+              })
+            = new URLPattern({
+                pathname: "/books/:id"
+                baseURL: "https://example.com"
+              });
+
+// Match the protocol and hostname
+let pattern = new URLPattern({
+                protocol: "http{s}?",
+                hostname: ":subdomain.example.com"
+              });
+
+// Match all possible structured parts
+let pattern = new URLPattern({
+                protocol: "http{s}?",
+                username: ":username",
+                password: ":password",
+                hostname: ":subdomain.example.com",
+                port: ":port(80|443)",
+                pathname: "/:path",
+                search: "*",
+                hash: "*"
+              });
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+{{Specifications}}
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+  <li>
+    A polyfill of <code>URLPattern</code> is available
+    <a href="https://github.com/kenchris/urlpattern-polyfill"
+      ><code>on GitHub</code></a
+    >
+  </li>
+  <li>The interface it belongs to: {{domxref("URLPattern")}}.</li>
+</ul>

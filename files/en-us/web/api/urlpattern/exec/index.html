@@ -1,0 +1,122 @@
+---
+title: URLPattern.exec()
+slug: Web/API/URLPattern/exec
+tags:
+- API
+- Method
+- Reference
+- URLPattern
+- URLPattern API
+- Polyfill
+- Experimental
+browser-compat: api.URLPattern.exec
+---
+
+<div>{{APIRef("URLPattern API")}} {{SeeCompatTable}}</div>
+
+<p>
+  The <strong><code>exec()</code></strong> method of the
+  {{domxref("URLPattern")}} interface takes a URL or object of URL parts, and
+  returns either an object containing the results of matching the URL to the
+  pattern, or <code>null</code> if the URL does not match the pattern.
+</p>
+
+<p>{{AvailableInWorkers}}</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">
+const <em>result</em> = <em>url</em>.exec(input[, baseURL])</pre
+>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+  <dt>
+    <code><var>input</var></code>
+  </dt>
+  <dd>
+    The URL or URL parts that the matcher will match against. This can either be
+    a {{domxref("USVString")}}, or a structured object providing the individual
+    URL parts. Omitted parts in the structured object will be treated as empty
+    strings. If the input can not be parsed, or a relative URL without a base is
+    provided, the method will return <code>null</code>.
+  </dd>
+  <dt>
+    <code><var>baseURL</var></code> {{optional_inline}}
+  </dt>
+  <dd>
+    A {{domxref("USVString")}} representing the base URL to use in cases where
+    <code><var>input</var></code> is a relative URL. If not specified, it
+    defaults to <code>undefined</code>. If this parameter can not be parsed, the
+    method will return <code>null</code>.
+  </dd>
+</dl>
+
+<h3 id="Return_value">Return value</h3>
+
+<p>
+  An {{jsxref("object")}} with an <code>inputs</code> key containing the array
+  of arguments passed into the function, and keys for each of the URL parts
+  containing the matched input, and matched groups for that part.
+</p>
+
+<h2 id="Examples">Examples</h2>
+
+<pre class="brush: js">
+const pattern = new URLPattern('http{s}?://*.example.com/books/:id');
+
+// Absolute URL strings
+console.log(pattern.exec('https://example.com/books/123')); // null
+let match = pattern.exec('https://store.example.com/books/123');
+console.log(match.inputs); // ['https://store.example.com/books/123']
+console.log(match.protocol); // { input: "https", groups: {} }
+console.log(match.username); // { input: "", groups: {} }
+console.log(match.password); // { input: "", groups: {} }
+console.log(match.hostname); // { input: "store.example.com", groups: { "0": "store" } }
+console.log(match.port); // { input: "", groups: {} }
+console.log(match.pathname); // { input: "/books/123", groups: { "1": "123" } }
+console.log(match.search); // { input: "", groups: {} }
+console.log(match.hash); // { input: "", groups: {} }
+
+// Relative URL strings
+pattern.test('/books/123', 'http://store.example.com'); // returns object
+pattern.test('/books/123', 'data:text/plain,hello world!'); // returns object
+pattern.test('/books/123'); // returns null
+
+// Structured objects
+pattern.test({
+	pathname: '/books/123',
+	baseURL: 'http://store.example.com'
+}); // returns object
+pattern.test({
+	protocol: 'https',
+	hostname: 'store.example.com',
+	pathname: '/books/123',
+}); // returns object
+pattern.test({
+	protocol: 'file',
+	hostname: 'store.example.com',
+	pathname: '/books/123',
+}); // returns null
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+{{Specifications}}
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+  <li>
+    A polyfill of <code>URLPattern</code> is available
+    <a href="https://github.com/kenchris/urlpattern-polyfill"
+      ><code>on GitHub</code></a
+    >
+  </li>
+  <li>The {{domxref("URLPattern")}} interface it belongs to.</li>
+</ul>

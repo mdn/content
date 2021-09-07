@@ -1,0 +1,313 @@
+---
+title: URLPattern
+slug: Web/API/URLPattern
+tags:
+- API
+- Interface
+- Reference
+- URLPattern
+- URLPattern API
+- Web
+- Polyfill
+- Experimental
+browser-compat: api.URLPattern
+---
+<p>{{APIRef("URLPattern API")}} {{SeeCompatTable}}</p>
+
+<p>
+  The <strong><code>URLPattern</code></strong> interface can be used to match
+  URLs or parts of URLs against a pattern. The pattern can contain named groups
+  that can be used to extract parts of the matched URL.
+</p>
+
+<p>
+  The pattern syntax is based on the syntax from the popular <a href="https://github.com/pillarjs/path-to-regexp">path-to-regexp</a> library.
+  Patterns can contain:
+  <ul>
+    <li>Literal strings which will be matched exactly.</li>
+    <li>Wildcards (<code>/posts/*</code>) that can be used to match any character.</li>
+    <li>Named groups (<code>/books/:id</code>) which can be used to extract a part of the matched URL.</li>
+    <li>Non-capturing groups (<code>/books{/old}?</code>) which can be used to make parts of a pattern optional or be matched multiple times.</li>
+    <li>{{jsxref("RegExp")}} groups (<code>/books/(^\d)</code>) to do arbitrarially complex regex matches.</li>
+  </ul>
+  Further details about the syntax can be found in the
+  <a href="#pattern_syntax">pattern syntax</a> section below.
+</p>
+
+<p>{{AvailableInWorkers}}</p>
+
+<h2 id="Constructor">Constructor</h2>
+
+<dl>
+  <dt>{{domxref("URLPattern.URLPattern", "new URLPattern()")}}</dt>
+  <dd>
+    Creates and returns a <code>URLPattern</code> object based on the given
+    pattern and base URL.
+  </dd>
+</dl>
+
+<h2 id="Properties">Properties</h2>
+
+<dl>
+  <dt>{{domxref("URLPattern.hash", "hash")}}</dt>
+  <dd>
+    A {{domxref("USVString")}} containing the pattern that is used to match
+    against the <em>hash</em> part of a URL.
+  </dd>
+  <dt>{{domxref("URLPattern.hostname", "hostname")}}</dt>
+  <dd>
+    A {{domxref("USVString")}} containing the pattern that is used to match
+    against the <em>hostname</em> part of a URL.
+  </dd>
+  <dt>{{domxref("URLPattern.password", "password")}}</dt>
+  <dd>
+    A {{domxref("USVString")}} containing the pattern that is used to match
+    against the <em>password</em> part of a URL.
+  </dd>
+  <dt>{{domxref("URLPattern.pathname", "pathname")}}</dt>
+  <dd>
+    A {{domxref("USVString")}} containing the pattern that is used to match
+    against the <em>pathname</em> part of a URL.
+  </dd>
+  <dt>{{domxref("URLPattern.port", "port")}}</dt>
+  <dd>
+    A {{domxref("USVString")}} containing the pattern that is used to match
+    against the <em>port</em> part of a URL.
+  </dd>
+  <dt>{{domxref("URLPattern.protocol", "protocol")}}</dt>
+  <dd>
+    A {{domxref("USVString")}} containing the pattern that is used to match
+    against the <em>protocol</em> part of a URL.
+  </dd>
+  <dt>{{domxref("URLPattern.search", "search")}}</dt>
+  <dd>
+    A {{domxref("USVString")}} containing the pattern that is used to match
+    against the <em>search</em> part of a URL.
+  </dd>
+  <dt>{{domxref("URLPattern.username","username")}}</dt>
+  <dd>
+    A {{domxref("USVString")}} containing the pattern that is used to match
+    against the <em>username</em> part of a URL.
+  </dd>
+</dl>
+
+<h2 id="Methods">Methods</h2>
+
+<dl>
+  <dt>{{domxref("URLPattern.exec", "exec()")}}</dt>
+  <dd>
+    Tries to match the given URL against the pattern. Returns an object with
+    the matched parts of the URL or <code>null</code> if the URL does not match.
+  </dd>
+  <dt>{{domxref("URLPattern.test", "test()")}}</dt>
+  <dd>
+    Tests whether the given URL matches the pattern. Returns <code>true</code>
+    if the URL matches, <code>false</code> otherwise.
+  </dd>
+</dl>
+
+<h2 id="Usage_notes">Usage notes</h2>
+
+<p>
+  The constructor takes an <code>input</code> parameter which can either be a
+  string, or a structured object providing patterns for each URL part
+  individually. Omitted parts in the structured object will be treated as
+  wildcards.
+</p>
+
+<pre class="brush: js">
+// Specify an entire URL pattern as a string
+const pattern = new URLPattern('https://example.com/books/:id');
+console.log(pattern.test('https://example.com/books/123')); // true
+console.log(pattern.test('https://example.com/posters/123')); // false
+console.log(pattern.test('https://mozilla.org/books/123')); // false
+</pre>
+
+<pre class="brush: js">
+// Or specify each part of the URL pattern separately, with omitted parts being
+// treated as wildcards
+const pattern = new URLPattern({ pathname: '/books/:id' });
+console.log(pattern.test('https://example.com/books/123')); // true
+console.log(pattern.test('https://example.com/posters/123')); // false
+console.log(pattern.test('https://mozilla.org/books/123')); // true
+</pre>
+  
+<p>
+  The constructor also accepts a <code>baseURL</code> in the second parameter.
+  If this is specified the pattern can be relative. The <code>baseURL</code>
+  parameter is a regular URL, not a pattern.
+</p>
+
+<pre class="brush: js">
+const pattern = new URLPattern('/books/:id', 'https://example.com');
+console.log(pattern.test('https://example.com/books/123')); // true
+console.log(pattern.test('https://mozilla.org/books/123')); // false
+</pre>
+
+<h2 id="Pattern_syntax">Pattern syntax</h2>
+
+<p>
+  The syntax for patterns is based on the popular
+  <a href="https://github.com/pillarjs/path-to-regexp">path-to-regexp</a>
+  JavaScript library. This syntax is similar to the one used in
+  <a href="https://rubyonrails.org">Ruby on Rails</a>, or JavaScript frameworks
+  like <a href="https://expressjs.com/">Express</a>
+  or <a href="https://next.js">Next.js</a>.
+</p>
+
+<p>
+  Each pattern can contain a combination of fixed text, and groups. The fixed
+  text is a sequence of characters that is matched exactly. Groups match an
+  arbitrary string based on some matching rules. Each URL part has its own
+  default rules that are explained below, but they can be overwritten.
+</p>
+
+<pre class="brush: js">
+// A pattern matching some fixed text
+const pattern = new URLPattern({ pathname: '/books' });
+console.log(pattern.test('https://example.com/books')); // true
+console.log(pattern.exec('https://example.com/books').pathname.groups); // {}
+
+// A pattern matching with a named group
+const pattern = new URLPattern({ pathname: '/books/:id' });
+console.log(pattern.test('https://example.com/books/123')); // true
+console.log(pattern.exec('https://example.com/books/123').pathname.groups); // { id: '123' }
+</pre>
+
+<p>
+  By default, a group matching inside the pathname part of the URL will match
+  all characters but the forward slash (<code>/</code>). In the hostname part,
+  the group will match all characters except the dot (<code>.</code>). In all
+  other parts, the group will match all characters.
+</p>
+
+<p>
+  Instead of using the default match rules for a group, a regex can be specified
+  per group. This regex then defines the matching rules for the group. An
+  example of a regex matcher on a named group, that constrains the group to only
+  match if it contains one or more digits:
+</p>
+
+<pre class="brush: js">
+const pattern = new URLPattern('/books/:id(\\d+)', 'https://example.com');
+console.log(pattern.test('https://example.com/books/123')); // true
+console.log(pattern.test('https://example.com/books/abc')); // false
+console.log(pattern.test('https://example.com/books/')); // false
+</pre>
+  
+  
+<p>
+  Groups can either be named or unnamed. Named groups are specified by prefixing
+  the group name with a colon (<code>:</code>). Regexp groups that are not
+  prefixed by a colon and a name are unnamed. Unamed groups are numerically
+  indexed in the match result based on their order in the pattern.
+</p>
+
+<pre class="brush: js">
+// A named group
+const pattern = new URLPattern('/books/:id(\\d+)', 'https://example.com');
+console.log(pattern.exec('https://example.com/books/123').pathname.groups); // { id: '123' }
+
+// An unnamed group
+const pattern = new URLPattern('/books/(\\d+)', 'https://example.com');
+console.log(pattern.exec('https://example.com/books/123').pathname.groups); // { '0': '123' }
+</pre>
+
+<p>
+  Groups can also have modifiers. These are specified after the group name (or
+  after the regexp if there is one). There are three modifiers: <code>?</code>
+  to make the group optional, <code>+</code> to make the group repeat one or
+  more times, and <code>*</code> to make the group repeat zero or more times.
+</p>
+
+<pre class="brush: js">
+// An optional group
+const pattern = new URLPattern('/books/:id?', 'https://example.com');
+console.log(pattern.test('https://example.com/books/123')); // true
+console.log(pattern.test('https://example.com/books')); // true
+console.log(pattern.test('https://example.com/books/')); // false
+console.log(pattern.test('https://example.com/books/123/456')); // false
+console.log(pattern.test('https://example.com/books/123/456/789')); // false
+
+// A repeating group with a minimum of one
+const pattern = new URLPattern('/books/:id+', 'https://example.com');
+console.log(pattern.test('https://example.com/books/123')); // true
+console.log(pattern.test('https://example.com/books')); // false
+console.log(pattern.test('https://example.com/books/')); // false
+console.log(pattern.test('https://example.com/books/123/456')); // true
+console.log(pattern.test('https://example.com/books/123/456/789')); // true
+
+// A repeating group with a minimum of zero
+const pattern = new URLPattern('/books/:id*', 'https://example.com');
+console.log(pattern.test('https://example.com/books/123')); // true
+console.log(pattern.test('https://example.com/books')); // true
+console.log(pattern.test('https://example.com/books/')); // false
+console.log(pattern.test('https://example.com/books/123/456')); // true
+console.log(pattern.test('https://example.com/books/123/456/789')); // true
+</pre>
+
+<p>
+  Next to capturing groups, there are also non-capturing groups. These are
+  pieces of a pattern that are surrounded by curly braces (<code>{}</code>).
+  These groups are not captured in the match result, but can still have modifiers
+  applied to them. If a non-capturing group does not have a modifier, it is
+  treated as if the items in the group were not surrounded by curly braces.
+</p>
+
+<pre class="brush: js">
+// A non-capturing group with a ? (optional) modifier
+const pattern = new URLPattern('/book{s}?', 'https://example.com');
+console.log(pattern.test('https://example.com/books')); // true
+console.log(pattern.test('https://example.com/book')); // true
+console.log(pattern.exec('https://example.com/books').pathname.groups); // {}
+
+// A non-capturing group without a modifier
+const pattern = new URLPattern('/book{s}', 'https://example.com');
+console.log(pattern.pathname); // /books
+console.log(pattern.test('https://example.com/books')); // true
+console.log(pattern.test('https://example.com/book')); // false
+</pre>
+
+<p>
+  A shorthand for an unamed capturing group that matches all characters zero or
+  more times is provided by the wildcard token (<code>*</code>). This can be
+  can be placed anywhere in the pattern.
+</p>
+
+<pre class="brush: js">
+// A wildcard at the end of a pattern
+const pattern = new URLPattern('/books/', 'https://example.com');
+console.log(pattern.test('https://example.com/books/123')); // true
+console.log(pattern.test('https://example.com/books')); // false
+console.log(pattern.test('https://example.com/books/')); // true
+console.log(pattern.test('https://example.com/books/123/456')); // true
+
+// A wildcard in the middle of a pattern
+const pattern = new URLPattern('/*.png', 'https://example.com');
+console.log(pattern.test('https://example.com/image.png')); // true
+console.log(pattern.test('https://example.com/image.png/123')); // false
+console.log(pattern.test('https://example.com/folder/image.png')); // true
+console.log(pattern.test('https://example.com/.png')); // true
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+{{Specifications}}
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+  <li>
+    A polyfill of <code>URLPattern</code> is available
+    <a href="https://github.com/kenchris/urlpattern-polyfill"
+      ><code>on GitHub</code></a
+    >
+  </li>
+  <li>
+    The pattern syntax used by URLPattern is similar to the syntax used by
+    <a href="https://github.com/pillarjs/path-to-regexp">path-to-regexp</a>
+</ul>
