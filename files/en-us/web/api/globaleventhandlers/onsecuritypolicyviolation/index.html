@@ -1,0 +1,76 @@
+---
+title: GlobalEventHandlers.onsecuritypolicyviolation
+slug: Web/API/GlobalEventHandlers/onsecuritypolicyviolation
+tags:
+- API
+- CSP
+- Event Handler
+- GlobalEventHandlers
+- HTML DOM
+- Property
+- Reference
+browser-compat: api.GlobalEventHandlers.onsecuritypolicyviolation
+---
+<div>{{ApiRef("HTML DOM")}}</div>
+
+<p>The <strong><code>onsecuritypolicyviolation</code></strong> property of the {{domxref("GlobalEventHandlers")}} mixin is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> for processing <a href="/en-US/docs/Web/API/Element/securitypolicyviolation_event">securitypolicyviolation</a> events.</p>
+
+<p>The <code>securitypolicyviolation</code> event fires when there is a <a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy</a> violation.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">onsecuritypolicyviolation = functionRef</pre>
+
+<h3 id="Value">Value</h3>
+
+<dl>
+  <dt><code>functionRef</code></dt>
+  <dd>A function name, or a <a href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function expression</a>. The function receives a {{domxref("SecurityPolicyViolationEvent")}} object as its sole argument.</dd>
+</dl>
+
+<p>Only one <code>onsecuritypolicyviolation</code> handler can be assigned to an object at a time.</p>
+
+<p>For greater flexibility, you can pass a <a href="/en-US/docs/Web/API/Element/securitypolicyviolation_event">securitypolicyviolation</a> event to the {{domxref("EventTarget.addEventListener()")}} method instead.</p>
+
+<h2 id="Example">Example</h2>
+
+<p>This code shows a very simpler top-level handler set on <code>Window</code> that logs a value in the event to a text area (the same approach will work with a <code>Document</code>).
+Note that in this case the <code>Content-Security-Policy</code> value, which is set using a meta tag, allows the <code>'unsafe-inline'</code> script to run, but the image cannot be loaded.</p>
+
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
+  &lt;html lang="en"&gt;
+   &lt;head&gt;
+     &lt;title&gt;Examples CSP error on page load&lt;/title&gt;
+     &lt;meta charset="UTF-8"&gt;
+     &lt;meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline';"&gt;
+     &lt;/head&gt;
+   &lt;script&gt;
+     //Assign function to onsecuritypolicyviolation global handler
+     window.onsecuritypolicyviolation = function(e) {
+       const log_area = document.getElementById("log");
+       log_area.textContent+=e.blockedURI+"\n";
+     };
+   &lt;/script&gt;
+   &lt;body&gt;
+    &lt;h1&gt;Image loading should fail&lt;/h1&gt;
+    &lt;label for="log"&gt;Blocked URI&lt;/label&gt;
+    &lt;textarea id="log" rows="2" cols="50"&gt;&lt;/textarea&gt;
+    &lt;img src="HTTPRevved_fix_typo.png"&gt;
+   &lt;/body&gt;
+  &lt;/html&gt;</pre>
+
+
+<h2 id="Specifications">Specifications</h2>
+
+{{Specifications}}
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+  <li><a href="/en-US/docs/Web/API/Element/securitypolicyviolation_event">Element: <code>securitypolicyviolation</code> event</a></li>
+  <li><a href="/en-US/docs/Web/HTTP/CSP">HTTP > Content Security Policy</a></li>
+</ul>
