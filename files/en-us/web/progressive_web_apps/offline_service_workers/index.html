@@ -178,9 +178,9 @@ self.addEventListener('install', (e) =&gt; {
 
 <pre class="brush: js">self.addEventListener('activate', (e) =&gt; {
   e.waitUntil(caches.keys().then((keyList) =&gt; {
-    Promise.all(keyList.map((key) =&gt; {
+    return Promise.all(keyList.map((key) =&gt; {
       if (key === cacheName) { return; }
-      caches.delete(key);
+      return caches.delete(key);
     }))
   }));
 });</pre>
