@@ -20,7 +20,7 @@ browser-compat: api.AddressErrors
 
 <p>The <strong><code>AddressErrors</code></strong> dictionary is used by the <a href="/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a> to report validation errors in a physical address (typically a billing address or a shipping address). Any members which are present indicate that a validation error occurred for the member of the same name in an address described using {{domxref("PaymentAddress")}}.</p>
 
-<p><code>AddressErrors</code> is the type of the object returned by {{domxref("PaymentDetailsUpdate.shippingAddressErrors", "shippingAddressErrors")}} in the {{domxref("PaymentDetailsUpdate")}} passed into {{domxref("PaymentRequestUpdateEvent.updateWith()")}} by the {{event("shippingaddresschange")}} event handler if a change to the address resulted in a validation error occurring.</p>
+<p><code>AddressErrors</code> is the type of the object returned by <code>shippingAddressErrors</code> in the object passed into {{domxref("PaymentRequestUpdateEvent.updateWith()")}} by the {{event("shippingaddresschange")}} event handler if a change to the address resulted in a validation error occurring.</p>
 
 <p>See the {{anch("Examples", "examples below")}} to see how this works.</p>
 
@@ -102,7 +102,7 @@ browser-compat: api.AddressErrors
 
 <h5 id="Payment_Request_data">Payment Request data</h5>
 
-<p>First, we declare the variables <code>supportedHandlers</code>, which is compatible with {{domxref("PaymentMethodData")}}, and <code>defaultPaymentDetails</code>, which is a {{domxref("PaymentDetailsUpdate")}} object.</p>
+<p>First, we declare the variables <code>supportedHandlers</code>, which is compatible with {{domxref("PaymentMethodData")}}, and <code>defaultPaymentDetails</code>, which is an object containing the properties described in {{domxref("PaymentRequestUpdateEvent.updateWith")}}.</p>
 
 <pre class="brush: js">let supportedHandlers = [
   {
@@ -199,7 +199,7 @@ function process() {
 
 <p>That's done by removing all shipping options currently set on the request, then set up an object named <code>shippingAddressErrors</code> which contains a <code>country</code> property which is an error message describing why the stated country isn't being permitted as a value.</p>
 
-<p>Then a {{domxref("PaymentDetailsUpdate")}} object is created with its {{domxref("PaymentDetailsUpdate.error", "error")}} set to a generic message about address errors and with the reset of the object's values taken from <code>shippingAddressErrors</code>, and, using "<code>...defaultPaymentDetails</code>" as the final entry in the object, the remeainder of the properties' values are taken from <code>defaultPaymentDetails</code>.</p>
+<p>Then an object is created with its <code>error</code> set to a generic message about address errors and with the reset of the object's values taken from <code>shippingAddressErrors</code>, and, using "<code>...defaultPaymentDetails</code>" as the final entry in the object, the remeainder of the properties' values are taken from <code>defaultPaymentDetails</code>.</p>
 
 <p>The final step is to call the event's {{domxref("PaymentRequestUpdateEvent.updateWith", "updateWith()")}} method, passing along the <code>updateDetails</code> object. This lets the Payment Request API know to present the specified error or errors but to allow the user to keep trying to edit the address.</p>
 
