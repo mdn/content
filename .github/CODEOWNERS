@@ -91,7 +91,7 @@
 /.github/     @mdn/core-yari-dev
 /*            @mdn/core-yari-dev
 /*.md         @mdn/core-yari-dev @mdn/core-yari-content
-# These are @peterbe because the auto-merge GHA workflow will assign @peterbe,
+# These are @escattone because the auto-merge GHA workflow will assign @escattone,
 # and if we add another reviewer, the auto-merge will cease to be automatic.
-/package.json @peterbe
-/yarn.lock    @peterbe
+/package.json @escattone
+/yarn.lock    @escattone
