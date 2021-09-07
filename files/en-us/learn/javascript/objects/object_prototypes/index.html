@@ -26,7 +26,7 @@ tags:
 <p class="summary"><strong>Note</strong>: This article covers traditional JavaScript constructors and classes. In the next article, we talk about the modern way of doing things, which provides easier syntax to achieve the same things — see <a href="/en-US/docs/Learn/JavaScript/Objects/Inheritance#ecmascript_2015_classes">ECMAScript 2015 classes</a>.</p>
 </div>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -81,11 +81,11 @@ tags:
 
 <p>If you type "<code>person1.</code>" into your JavaScript console, you should see the browser try to auto-complete this with the member names available on this object:</p>
 
-<p><img alt="" src="object-available-members.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="object-available-members.png"></p>
 
 <p>In this list, you will see the members defined on <code>person1</code>'s constructor — <code>Person()</code> — <code>name</code>, <code>age</code>, <code>gender</code>, <code>interests</code>, <code>bio</code>, and <code>greeting</code>. You will however also see some other members — <code>toString</code>, <code>valueOf</code>, etc — these are defined on <code>person1</code>'s prototype object's prototype object, which is <code>Object.prototype</code>.</p>
 
-<p><img alt="" src="mdn-graphics-person-person-object-2.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="mdn-graphics-person-person-object-2.png"></p>
 
 <p>What happens if you call a method on <code>person1</code>, which is actually defined on <code>Object.prototype</code>? For example:</p>
 

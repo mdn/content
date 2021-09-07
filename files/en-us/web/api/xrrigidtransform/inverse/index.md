@@ -29,13 +29,7 @@ transform. That is, you can always get the inverse of any
 `XRRigidTransform` using its `inverse` property, instead of having
 to explicitly generate it.
 
-## Syntax
-
-```js
-let transformInverse = xrRigidTransform.inverse;
-```
-
-### Value
+## Value
 
 An {{domxref("XRRigidTransform")}} which contains the inverse of the
 `XRRigidTransform` on which it's accessed.

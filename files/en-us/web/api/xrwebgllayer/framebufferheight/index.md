@@ -32,13 +32,7 @@ framebuffer, in pixels.
 You can get the width of the framebuffer using the
 {{domxref("XRWebGLLayer.framebufferWidth", "framebufferWidth")}} property.
 
-## Syntax
-
-```js
-let bufferHeight = xrWebGLLayer.framebufferHeight;
-```
-
-### Value
+## Value
 
 The height in pixels of the XR device's framebuffer. Each of the framebuffer's
 attachments (pixel, depth, color, and/or stencil buffers, for example) are all this many

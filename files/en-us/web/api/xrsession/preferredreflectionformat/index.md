@@ -17,7 +17,7 @@ browser-compat: api.XRSession.preferredReflectionFormat
 
 The _read-only_ **`preferredReflectionFormat`** property of the {{DOMxRef("XRSession")}} interface returns this session's preferred reflection format used for lighting estimation texture data.
 
-### Value
+## Value
 
 A string representing the reflection format. Possible values:
 

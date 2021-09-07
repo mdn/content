@@ -74,10 +74,17 @@ tags:
 <h4 id="removals_wasm">Removals</h4>
 
 <h3 id="webdriver_conformance_marionette">WebDriver conformance (Marionette)</h3>
+<ul>
+  <li>Improved support for the <code>webSocketUrl</code> capability, which now returns the WebDriver BiDi websocket URL if <code>true</code> was passed and if BiDi is supported. ({{bug(1692984)}}).</li>
+</ul>
 
 <h4 id="removals_webdriver">Removals</h4>
 
 <h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
+
+<ul>
+  <li>Support for <code>cookieStoreId</code> is added to {{WebExtAPIRef('downloads.download')}}, {{WebExtAPIRef('downloads.DownloadQuery')}}, and {{WebExtAPIRef('downloads.DownloadItem')}}. The addition to the types {{WebExtAPIRef('downloads.DownloadQuery')}} and {{WebExtAPIRef('downloads.DownloadItem')}} provides support in {{WebExtAPIRef('downloads.search')}} and {{WebExtAPIRef('downloads.erase')}}. Web extensions can now associate downloads with specific cookie stores, such as container tabs (<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities">contextual identities</a>). ({{bug(1669566)}})</li>
+</ul>
 
 <h4 id="removals_webext">Removals</h4>
 

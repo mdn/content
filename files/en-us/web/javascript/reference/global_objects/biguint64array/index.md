@@ -50,7 +50,7 @@ The **`BigUint64Array`** typed array represents an array of 64-bit unsigned inte
 - {{jsxref("TypedArray.copyWithin", "BigUint64Array.prototype.copyWithin()")}}
   - : Copies a sequence of array elements within the array. See also {{jsxref("Array.prototype.copyWithin()")}}.
 - {{jsxref("TypedArray.entries", "BigUint64Array.prototype.entries()")}}
-  - : Returns a new `Array Iterator` object that contains the key/value pairs for each index in the array. See also {{jsxref("Array.prototype.entries()")}}.
+  - : Returns a new _array iterator_ object that contains the key/value pairs for each index in the array. See also {{jsxref("Array.prototype.entries()")}}.
 - {{jsxref("TypedArray.every", "BigUint64Array.prototype.every()")}}
   - : Tests whether all elements in the array pass the test provided by a function. See also {{jsxref("Array.prototype.every()")}}.
 - {{jsxref("TypedArray.fill", "BigUint64Array.prototype.fill()")}}
@@ -70,7 +70,7 @@ The **`BigUint64Array`** typed array represents an array of 64-bit unsigned inte
 - {{jsxref("TypedArray.join", "BigUint64Array.prototype.join()")}}
   - : Joins all elements of an array into a string. See also {{jsxref("Array.prototype.join()")}}.
 - {{jsxref("TypedArray.keys", "BigUint64Array.prototype.keys()")}}
-  - : Returns a new `Array Iterator` that contains the keys for each index in the array. See also {{jsxref("Array.prototype.keys()")}}.
+  - : Returns a new _array iterator_ that contains the keys for each index in the array. See also {{jsxref("Array.prototype.keys()")}}.
 - {{jsxref("TypedArray.lastIndexOf", "BigUint64Array.prototype.lastIndexOf()")}}
   - : Returns the last (greatest) index of an element within the array equal to the specified value, or -1 if none is found. See also {{jsxref("Array.prototype.lastIndexOf()")}}.
 - {{jsxref("TypedArray.map", "BigUint64Array.prototype.map()")}}
@@ -92,13 +92,13 @@ The **`BigUint64Array`** typed array represents an array of 64-bit unsigned inte
 - {{jsxref("TypedArray.subarray", "BigUint64Array.prototype.subarray()")}}
   - : Returns a new `BigUint64Array` from the given start and end element index.
 - {{jsxref("TypedArray.values", "BigUint64Array.prototype.values()")}}
-  - : Returns a new `Array Iterator` object that contains the values for each index in the array. See also {{jsxref("Array.prototype.values()")}}.
+  - : Returns a new _array iterator_ object that contains the values for each index in the array. See also {{jsxref("Array.prototype.values()")}}.
 - {{jsxref("TypedArray.toLocaleString", "BigUint64Array.prototype.toLocaleString()")}}
   - : Returns a localized string representing the array and its elements. See also {{jsxref("Array.prototype.toLocaleString()")}}.
 - {{jsxref("TypedArray.toString", "BigUint64Array.prototype.toString()")}}
   - : Returns a string representing the array and its elements. See also {{jsxref("Array.prototype.toString()")}}.
 - {{jsxref("TypedArray.@@iterator", "BigUint64Array.prototype[@@iterator]()")}}
-  - : Returns a new `Array Iterator` object that contains the values for each index in the array.
+  - : Returns a new _array iterator_ object that contains the values for each index in the array.
 
 ## Examples
 

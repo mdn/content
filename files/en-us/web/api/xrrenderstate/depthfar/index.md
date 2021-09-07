@@ -22,13 +22,7 @@ The **`depthFar`** read-only property of the
 {{domxref("XRRenderState")}} interface returns the distance in meters of the far clip
 plane from the viewer.
 
-## Syntax
-
-```js
-var aDouble = XRRenderState.depthFar;
-```
-
-### Value
+## Value
 
 A {{jsxref("Number")}}.
 

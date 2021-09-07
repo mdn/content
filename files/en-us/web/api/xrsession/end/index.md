@@ -25,7 +25,7 @@ the session has fully shut down.
 ## Syntax
 
 ```js
-xrSession.end();
+end()
 ```
 
 ### Parameters

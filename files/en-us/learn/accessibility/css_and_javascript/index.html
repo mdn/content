@@ -20,7 +20,7 @@ tags:
 
 <p class="summary">CSS and JavaScript, when used properly, also have the potential to allow for accessible web experiences ... or they can significantly harm accessibility if misused. This article outlines some CSS and JavaScript best practices that should be considered to ensure even complex content is as accessible as possible.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -137,9 +137,9 @@ a:active {
 
 <p>The standard link conventions are underlined and a different color (default: blue) in their standard state, another color variation when the link has previously been visited (default: purple), and yet another color when the link is activated (default: red). In addition, the mouse pointer changes to a pointer icon when links are moused over, and the link receives a highlight when focused (e.g. via tabbing) or activated. The following image shows the highlight in both Firefox (a dotted outline) and Chrome (a blue outline):</p>
 
-<p><img alt="" src="focus-highlight-firefox.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="focus-highlight-firefox.png"></p>
 
-<p><img alt="" src="focus-highlight-chrome.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="focus-highlight-chrome.png"></p>
 
 <p>You can be creative with link styles, as long as you keep giving users feedback when they interact with the links. Something should definitely happen when states change, and you shouldn't get rid of the pointer cursor or the outline — both are very important accessibility aids for those using keyboard controls.</p>
 
@@ -182,7 +182,7 @@ a:active {
 
 <p>There are many instances where a visual design will require that not all content is shown at once. For example, in our <a href="https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html">Tabbed info box example</a> (see <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html">source code</a>) we have three panels of information, but we are <a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning">positioning</a> them on top of one another and providing tabs that can be clicked to show each one (it is also keyboard accessible — you can alternatively use Tab and Enter/Return to select them).</p>
 
-<p><img alt="" src="tabbed-info-box.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="tabbed-info-box.png"></p>
 
 <p>Screen reader users don't care about any of this — they are happy with the content as long as the source order makes sense, and they can get to it all. Absolute positioning (as used in this example) is generally seen as one of the best mechanisms of hiding content for visual effect, because it doesn't stop screen readers from getting to it.</p>
 

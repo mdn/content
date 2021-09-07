@@ -28,13 +28,7 @@ The read-only {{domxref("XRSessionEvent")}} interface's
 **`session`** property indicates which
 {{domxref("XRSession")}} the event is about.
 
-## Syntax
-
-```js
-xrSession = xrSessionEvent.session;
-```
-
-### Value
+## Value
 
 An {{domxref("XRSession")}} object indicating which WebXR session the event refers to.
 

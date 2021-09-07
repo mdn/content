@@ -29,7 +29,7 @@ reality session.
 ## Syntax
 
 ```js
-newXRSessionEvent = new XRSessionEvent(type, eventInitDict);
+new XRSessionEvent(type, eventInitDict)
 ```
 
 ### Parameters

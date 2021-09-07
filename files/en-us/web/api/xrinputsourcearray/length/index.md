@@ -28,13 +28,7 @@ The read-only **`length`** property returns an integer value
 indicating the number of items in the input source list represented by
 the {{domxref("XRInputSourceArray")}} object.
 
-## Syntax
-
-```js
-let inputSourceCount = xrInputSourceArray.length;
-```
-
-### Value
+## Value
 
 An integer value indicating the number of {{domxref("XRInputSource")}} objects
 representing WebXR input sources are includled in the array.

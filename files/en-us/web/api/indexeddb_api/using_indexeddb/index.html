@@ -626,7 +626,7 @@ function useDatabase(db) {
 <p>{{domxref("IDBIndex")}} has also had new properties added to it to specify if it has a locale specified, and what it is: <code>locale</code> (returns the locale if any, or null if none is specified) and <code>isAutoLocale</code> (returns <code>true</code> if the index was created with an auto locale, meaning that the platform's default locale is used, <code>false</code> otherwise.)</p>
 
 <div class="note">
-<p><strong>Note:</strong> This feature is currently hidden behind a flag — to enable it and experiment, go to <a>about:config</a> and enable <code>dom.indexedDB.experimental</code>.</p>
+<p><strong>Note:</strong> This feature is currently hidden behind a flag — to enable it and experiment, go to <code>about:config</code> and enable <code>dom.indexedDB.experimental</code>.</p>
 </div>
 
 <h2 id="Full_IndexedDB_example">Full IndexedDB example</h2>
@@ -1307,7 +1307,7 @@ input {
 <p>{{ LiveSampleLink('Full_IndexedDB_example', "Test the online live demo") }}</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> <code>window.indexedDB.open()</code> is asynchronous; the method will finish running long before the <code>success</code> event is fired. This means that a function (e.g. <code>openDb()</code>) that calls <code>open()</code> and <code>onsuccess</code> will return before the <code>onsuccess</code> handler has run. This issue is also true of other request methods such as <code>transaction()</code> and <code>get()</code>.</p>
+<p><strong>Note:</strong> <code>window.indexedDB.open()</code> is asynchronous; the method will finish running long before the <code>success</code> event is fired. This means that a function (e.g. <code>openDb()</code>) that calls <code>open()</code> and <code>onsuccess</code> will return before the <code>onsuccess</code> handler has run. This issue is also true of other request methods such as <code>transaction()</code> and <code>get()</code>.</p>
 </div>
 
 <h2 id="See_also">See also</h2>

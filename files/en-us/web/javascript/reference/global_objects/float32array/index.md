@@ -48,7 +48,7 @@ The **`Float32Array`** typed array represents an array of 32-bit floating point 
 - {{jsxref("TypedArray.copyWithin", "Float32Array.prototype.copyWithin()")}}
   - : Copies a sequence of array elements within the array. See also {{jsxref("Array.prototype.copyWithin()")}}.
 - {{jsxref("TypedArray.entries", "Float32Array.prototype.entries()")}}
-  - : Returns a new `Array Iterator` object that contains the key/value pairs for each index in the array. See also {{jsxref("Array.prototype.entries()")}}.
+  - : Returns a new _array iterator_ object that contains the key/value pairs for each index in the array. See also {{jsxref("Array.prototype.entries()")}}.
 - {{jsxref("TypedArray.every", "Float32Array.prototype.every()")}}
   - : Tests whether all elements in the array pass the test provided by a function. See also {{jsxref("Array.prototype.every()")}}.
 - {{jsxref("TypedArray.fill", "Float32Array.prototype.fill()")}}
@@ -68,7 +68,7 @@ The **`Float32Array`** typed array represents an array of 32-bit floating point 
 - {{jsxref("TypedArray.join", "Float32Array.prototype.join()")}}
   - : Joins all elements of an array into a string. See also {{jsxref("Array.prototype.join()")}}.
 - {{jsxref("TypedArray.keys", "Float32Array.prototype.keys()")}}
-  - : Returns a new `Array Iterator` that contains the keys for each index in the array. See also {{jsxref("Array.prototype.keys()")}}.
+  - : Returns a new _array iterator_ that contains the keys for each index in the array. See also {{jsxref("Array.prototype.keys()")}}.
 - {{jsxref("TypedArray.lastIndexOf", "Float32Array.prototype.lastIndexOf()")}}
   - : Returns the last (greatest) index of an element within the array equal to the specified value, or -1 if none is found. See also {{jsxref("Array.prototype.lastIndexOf()")}}.
 - {{jsxref("TypedArray.map", "Float32Array.prototype.map()")}}
@@ -90,13 +90,13 @@ The **`Float32Array`** typed array represents an array of 32-bit floating point 
 - {{jsxref("TypedArray.subarray", "Float32Array.prototype.subarray()")}}
   - : Returns a new `Float32Array` from the given start and end element index.
 - {{jsxref("TypedArray.values", "Float32Array.prototype.values()")}}
-  - : Returns a new `Array Iterator` object that contains the values for each index in the array. See also {{jsxref("Array.prototype.values()")}}.
+  - : Returns a new _array iterator_ object that contains the values for each index in the array. See also {{jsxref("Array.prototype.values()")}}.
 - {{jsxref("TypedArray.toLocaleString", "Float32Array.prototype.toLocaleString()")}}
   - : Returns a localized string representing the array and its elements. See also {{jsxref("Array.prototype.toLocaleString()")}}.
 - {{jsxref("TypedArray.toString", "Float32Array.prototype.toString()")}}
   - : Returns a string representing the array and its elements. See also {{jsxref("Array.prototype.toString()")}}.
 - {{jsxref("TypedArray.@@iterator", "Float32Array.prototype[@@iterator]()")}}
-  - : Returns a new `Array Iterator` object that contains the values for each index in the array.
+  - : Returns a new _array iterator_ object that contains the values for each index in the array.
 
 ## Examples
 

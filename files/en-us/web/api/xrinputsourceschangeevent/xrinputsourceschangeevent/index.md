@@ -32,7 +32,7 @@ you by the WebXR system.
 ## Syntax
 
 ```js
-newInputSourcesChangeEvent = new XRInputSourcesChangeEvent(type, eventInitDict);
+new XRInputSourcesChangeEvent(type, eventInitDict)
 ```
 
 ### Parameters

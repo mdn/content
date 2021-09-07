@@ -17,7 +17,7 @@ browser-compat: api.XRWebGLDepthInformation.texture
 
 The _read-only_ **`texture`** property of the {{DOMxRef("XRWebGLDepthInformation")}} interface is a {{domxref("WebGLTexture")}} containing depth buffer information as an opaque texture.
 
-### Value
+## Value
 
 A {{domxref("WebGLTexture")}}.
 

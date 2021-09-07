@@ -38,20 +38,11 @@ orientation of the controller device itself. These values, interpreted in the co
 the input source's {{domxref("XRInputSource.targetRayMode", "targetRayMode")}}, can be
 used both to fully interpret the device as an input source.
 
-**<<<--- needs diagram showing targetRaySpace relative to gripSpace and
-world space --->>>**
-
 To obtain an `XRSpace` representing the input controller's position and
 orientation in virtual space, use the {{domxref("XRInputSource.gripSpace",
   "gripSpace")}} property.
 
-## Syntax
-
-```js
-let targetRaySpace = xrInputSource.targetRaySpace;
-```
-
-### Value
+## Value
 
 An {{domxref("XRSpace")}} object—typically an {{domxref("XRReferenceSpace")}} or
 {{domxref("XRBoundedReferenceSpace")}}—which represents the position and orientation of

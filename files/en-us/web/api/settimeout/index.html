@@ -167,7 +167,7 @@ setTimeout(function() {
 <p>There are a number of reasons why a timeout may take longer to fire than anticipated.
   This section describes the most common reasons.</p>
 
-<h4 id="nested_timeouts">Nested timeouts</h4>
+<h4 id="Nested_timeouts">Nested timeouts</h4>
 
 <p>As specified in the <a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#timers">HTML standard</a>,
 browsers will enforce a minimum timeout of 4 milliseconds once a nested call to <code>setTimeout</code> has been scheduled 5 times.</p>
@@ -225,7 +225,7 @@ function logline(now) {
 document.querySelector("#run").addEventListener("click", run);
 </pre>
 
-<p>{{EmbedLiveSample("nested_timeouts", 100, 420)}}</p>
+<p>{{EmbedLiveSample("Nested_timeouts", 100, 420)}}</p>
 
 <h4 id="Timeouts_in_inactive_tabs">Timeouts in inactive tabs</h4>
 
@@ -236,8 +236,8 @@ document.querySelector("#run").addEventListener("click", run);
 <p>The specifics of this are browser-dependent:</p>
 
 <ul>
-  <li>Firefox Desktop and Chrome both have a minimum timout of 1 second for inactive tabs.</li>
-  <li>Firefox for Android has a minimum timout of 15 minutes for inactive tabs and may unload them entirely.</li>
+  <li>Firefox Desktop and Chrome both have a minimum timeout of 1 second for inactive tabs.</li>
+  <li>Firefox for Android has a minimum timeout of 15 minutes for inactive tabs and may unload them entirely.</li>
   <li>Firefox does not throttle inactive tabs if the tab contains an {{domxref("AudioContext")}}.</li>
 </ul>
 
@@ -297,7 +297,7 @@ foo has been called</pre>
 
 <h2 id="Example">Examples</h2>
 
-<h3 id="setting_and_clearing_timeouts">Setting and clearing timeouts</h3>
+<h3 id="Setting_and_clearing_timeouts">Setting and clearing timeouts</h3>
 
 <p>The following example sets up two simple buttons in a web page and hooks them to the
   <code>setTimeout()</code> and <code>clearTimeout()</code> routines. Pressing the first
@@ -340,7 +340,7 @@ function clearMessage() {
 
 <h4 id="Result">Result</h4>
 
-<p>{{EmbedLiveSample('setting_and_clearing_timeouts')}}</p>
+<p>{{EmbedLiveSample('Setting_and_clearing_timeouts')}}</p>
 
 <p>See also the <a
     href="/en-US/docs/Web/API/clearTimeout#example"><code>clearTimeout()</code>

@@ -19,7 +19,7 @@ tags:
 
 <p class="summary">Manually running tests on several browsers and devices, several times per day, can get tedious, and time-consuming. To handle this efficiently, you should become familiar with automation tools. In this article, we look at what is available, how to use task runners, and how to use the basics of commercial browser test automation apps such as LambdaTest, Sauce Labs, BrowserStack, and TestingBot.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -274,7 +274,7 @@ const jshint = require('gulp-jshint');
 
 <p>Once this is all set up, you can run the <code>gulp</code> command inside your project directory, and you should get an output like this:</p>
 
-<p><img alt="" src="gulp-output.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="gulp-output.png"></p>
 
 <p>You can then try out the files output by your automated tasks by looking at them inside the <code>build</code> directory, and loading <code>build/index.html</code> in your web browser.</p>
 
@@ -340,13 +340,13 @@ const jshint = require('gulp-jshint');
 
 <ol>
  <li>To start off with manual testing you need to select the <strong>"Real Time Testing"</strong> tab from the left navigation menu.<br>
-  <img alt="LambdaTest Dashboard" src="lambdatest-dashboard.png" style="border-style: solid; border-width: 2px;"></li>
+  <img alt="LambdaTest Dashboard" src="lambdatest-dashboard.png"></li>
  <li>As you click on the <strong>Real Time Testing</strong> you will be directed to a screen where you can choose the browser configuration, browser version, OS, and screen resolution with which you want to test your website.<br>
-  <img alt="Real Time Testing" src="mark-as-bug-1.png" style="border-style: solid; border-width: 2px;"></li>
+  <img alt="Real Time Testing" src="mark-as-bug-1.png"></li>
  <li>As you click on the Start button, a loading screen will appear, providing you with a VM (Virtual Machine) based on your configurations. Once loaded, you can perform live, interactive cross-browser testing with a website.<br>
-  <a href="https://www.lambdatest.com/support/docs/wp-content/uploads/2019/03/mark-as-bug-2.png"><img alt="Mark as bug" src="mark-as-bug-2.png" style="border-style: solid; border-width: 2px;"></a><br>
+  <a href="https://www.lambdatest.com/support/docs/wp-content/uploads/2019/03/mark-as-bug-2.png"><img alt="Mark as bug" src="mark-as-bug-2.png"></a><br>
   If you notice an issue with the UI, then you can share it with your colleagues by capturing a screenshot of your VM with the screenshot button. You can also record a video of your test session by hitting the recorder button in your test session.</li>
- <li>With the in-built image editor, highlight your screenshot before you push it to your colleagues.<img alt="Highlight a bug" src="mark-as-bug-3.png" style="border-style: solid; border-width: 2px;"></li>
+ <li>With the in-built image editor, highlight your screenshot before you push it to your colleagues.<img alt="Highlight a bug" src="mark-as-bug-3.png"></li>
  <li>
   <p id="Using_the_mark_as_bug_button_you_can_push_bug_to_numerous_third-party_tools_which_are_integrated_with_LambdaTest_such_as_Jira_asana_trello_and_more._That_way_you_can_log_a_bug_directly_from_the_middle_of_your_test_session_on_LambdaTest_to_your_project_management_instance._Check_out_all_LambdaTest_integrations_with_third-party_tools.">Using the mark as bug button you can push bugs to numerous third-party tools such as Jira, Asana, Trello, and more. That way you can log a bug directly from your test session on LambdaTest to your project management instance. Check out all the <a href="https://www.lambdatest.com/integrations">third-party LambdaTest integrations</a>.</p>
  </li>
@@ -373,9 +373,9 @@ const jshint = require('gulp-jshint');
 
 <ol>
  <li>Click <em>Start a new manual session</em>.</li>
- <li>In the next screen, type in the URL of a page you want to test (use <a href="https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html">https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html</a>, for example), then choose a browser/OS combination you want to test by using the different buttons and lists. There is a lot of choice, as you'll see!<img alt="" src="sauce-manual-session.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></li>
+ <li>In the next screen, type in the URL of a page you want to test (use <a href="https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html">https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html</a>, for example), then choose a browser/OS combination you want to test by using the different buttons and lists. There is a lot of choice, as you'll see!<img alt="" src="sauce-manual-session.png"></li>
  <li>When you click Start session, a loading screen will then appear, which spins up a virtual machine running the combination you chose.</li>
- <li>When loading has finished, you can then start to remotely test the web site running in the chosen browser.<img alt="" src="sauce-test-running.png" style="display: block; margin: 0px auto;"></li>
+ <li>When loading has finished, you can then start to remotely test the web site running in the chosen browser.<img alt="" src="sauce-test-running.png"></li>
  <li>From here you can see the layout as it would look in the browser you are testing, move the mouse around and try clicking buttons, etc. The top menu allows you to:
   <ul>
    <li>Stop the session</li>
@@ -463,11 +463,11 @@ myAccount.getAccountDetails(function (err, res) {
 
 <p>The BrowserStack Live dashboard allows you to choose what device and browser you want to test on — Platforms in the left column, devices on the right. When you mouse over or click on each device, you get a choice of browsers available on that device.</p>
 
-<p><img alt="" src="browserstack-test-choices-sized.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="browserstack-test-choices-sized.png"></p>
 
 <p>Clicking on one of those browser icons will load up your choice of platform/device/browser — choose one now, and give it a try.</p>
 
-<p><img alt="" src="browserstack-test-device-sized.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="browserstack-test-device-sized.png"></p>
 
 <div class="note">
 <p><strong>Note</strong>: The blue device icon next to some of the mobile device choices signals that you will be testing on a real device; choices without that icon will be run on an emulator.</p>
@@ -477,7 +477,7 @@ myAccount.getAccountDetails(function (err, res) {
 
 <p>You'll also see a menu that allows you to control the session.</p>
 
-<p><img alt="" src="browserstack-test-menu-sized.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="browserstack-test-menu-sized.png"></p>
 
 <p>The features here are as follows:</p>
 
