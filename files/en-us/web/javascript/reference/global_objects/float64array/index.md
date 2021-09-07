@@ -23,7 +23,7 @@ The **`Float64Array`** typed array represents an array of 64-bit floating point 
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Float64Array.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `8` in the case of an `Float64Array`.
 - {{jsxref("TypedArray.name", "Float64Array.name")}}
-  - : Returns the string value of the constructor name. In the case of the `Float64Array` type: "Float64Array".
+  - : Returns the string value of the constructor name. In the case of the `Float64Array` type: "`Float64Array`".
 
 ## Static methods
 
@@ -54,23 +54,23 @@ The **`Float64Array`** typed array represents an array of 64-bit floating point 
 - {{jsxref("TypedArray.fill", "Float64Array.prototype.fill()")}}
   - : Fills all the elements of an array from a start index to an end index with a static value. See also {{jsxref("Array.prototype.fill()")}}.
 - {{jsxref("TypedArray.filter", "Float64Array.prototype.filter()")}}
-  - : Creates a new array with all of the elements of this array for which the provided filtering function returns true. See also {{jsxref("Array.prototype.filter()")}}.
+  - : Creates a new array with all of the elements of this array for which the provided filtering function returns `true`. See also {{jsxref("Array.prototype.filter()")}}.
 - {{jsxref("TypedArray.find", "Float64Array.prototype.find()")}}
   - : Returns the found value in the array, if an element in the array satisfies the provided testing function or `undefined` if not found. See also {{jsxref("Array.prototype.find()")}}.
 - {{jsxref("TypedArray.findIndex", "Float64Array.prototype.findIndex()")}}
-  - : Returns the found index in the array, if an element in the array satisfies the provided testing function or -1 if not found. See also {{jsxref("Array.prototype.findIndex()")}}.
+  - : Returns the found index in the array, if an element in the array satisfies the provided testing function or `-1` if not found. See also {{jsxref("Array.prototype.findIndex()")}}.
 - {{jsxref("TypedArray.forEach", "Float64Array.prototype.forEach()")}}
   - : Calls a function for each element in the array. See also {{jsxref("Array.prototype.forEach()")}}.
 - {{jsxref("TypedArray.includes", "Float64Array.prototype.includes()")}}
   - : Determines whether a typed array includes a certain element, returning `true` or `false` as appropriate. See also {{jsxref("Array.prototype.includes()")}}.
 - {{jsxref("TypedArray.indexOf", "Float64Array.prototype.indexOf()")}}
-  - : Returns the first (least) index of an element within the array equal to the specified value, or -1 if none is found. See also {{jsxref("Array.prototype.indexOf()")}}.
+  - : Returns the first (least) index of an element within the array equal to the specified value, or `-1` if none is found. See also {{jsxref("Array.prototype.indexOf()")}}.
 - {{jsxref("TypedArray.join", "Float64Array.prototype.join()")}}
   - : Joins all elements of an array into a string. See also {{jsxref("Array.prototype.join()")}}.
 - {{jsxref("TypedArray.keys", "Float64Array.prototype.keys()")}}
   - : Returns a new _array iterator_ that contains the keys for each index in the array. See also {{jsxref("Array.prototype.keys()")}}.
 - {{jsxref("TypedArray.lastIndexOf", "Float64Array.prototype.lastIndexOf()")}}
-  - : Returns the last (greatest) index of an element within the array equal to the specified value, or -1 if none is found. See also {{jsxref("Array.prototype.lastIndexOf()")}}.
+  - : Returns the last (greatest) index of an element within the array equal to the specified value, or `-1` if none is found. See also {{jsxref("Array.prototype.lastIndexOf()")}}.
 - {{jsxref("TypedArray.map", "Float64Array.prototype.map()")}}
   - : Creates a new array with the results of calling a provided function on every element in this array. See also {{jsxref("Array.prototype.map()")}}.
 - {{jsxref("TypedArray.reduce", "Float64Array.prototype.reduce()")}}
@@ -84,7 +84,7 @@ The **`Float64Array`** typed array represents an array of 64-bit floating point 
 - {{jsxref("TypedArray.slice", "Float64Array.prototype.slice()")}}
   - : Extracts a section of an array and returns a new array. See also {{jsxref("Array.prototype.slice()")}}.
 - {{jsxref("TypedArray.some", "Float64Array.prototype.some()")}}
-  - : Returns true if at least one element in this array satisfies the provided testing function. See also {{jsxref("Array.prototype.some()")}}.
+  - : Returns `true` if at least one element in this array satisfies the provided testing function. See also {{jsxref("Array.prototype.some()")}}.
 - {{jsxref("TypedArray.sort", "Float64Array.prototype.sort()")}}
   - : Sorts the elements of an array in place and returns the array. See also {{jsxref("Array.prototype.sort()")}}.
 - {{jsxref("TypedArray.subarray", "Float64Array.prototype.subarray()")}}

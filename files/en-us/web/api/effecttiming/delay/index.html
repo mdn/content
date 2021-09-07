@@ -2,37 +2,25 @@
 title: EffectTiming.delay
 slug: Web/API/EffectTiming/delay
 tags:
-- API
-- Animation
-- EffectTiming
-- Experimental
-- KeyframeEffect
-- Property
-- Reference
-- Web Animations
-- animate
-- delay
-- waapi
-- web animations api
+  - API
+  - Animation
+  - EffectTiming
+  - Experimental
+  - KeyframeEffect
+  - Property
+  - Reference
+  - Web Animations
+  - animate
+  - delay
+  - waapi
+  - web animations api
 browser-compat: api.EffectTiming.delay
 ---
 <div>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</div>
 
-<p>The {{domxref("EffectTiming")}} dictionary's
-  <strong><code>delay</code></strong> property in the <a
-    href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> represents the
-  number of milliseconds to delay the start of the animation.</p>
-
-<div class="note">
-  <p><strong>Note:</strong> {{domxref("Element.animate()")}},
-    {{domxref("KeyframeEffectReadOnly.KeyframeEffectReadOnly",
-    "KeyframeEffectReadOnly()")}}, and {{domxref("KeyframeEffect.KeyframeEffect",
-    "KeyframeEffect()")}} all accept an object of timing properties including
-    <code>delay</code>. The value of <code>delay</code> corresponds directly
-    to {{domxref("EffectTiming.delay")}} in {{domxref("AnimationEffectReadOnly.timing",
-    "timing")}} objects returned by {{domxref("AnimationEffectReadOnly")}},
-    {{domxref("KeyframeEffectReadOnly")}}, and {{domxref("KeyframeEffect")}}.</p>
-</div>
+<p>The {{domxref("EffectTiming")}} dictionary's <strong><code>delay</code></strong> property
+  in the <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a>
+  represents the number of milliseconds to delay the start of the animation.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -47,30 +35,30 @@ browser-compat: api.EffectTiming.delay
 
 <p>A number specifying the delay, in milliseconds, from the start of the animation's play
   cycle to the beginning of its <strong>active interval</strong> (the time index at which
-  actual animation begins). Defaults to 0.</p>
+  actual animation begins). Defaults to 0.</p>
 
 <h2 id="Examples">Examples</h2>
 
-<p>In the <a href="http://codepen.io/rachelnabors/pen/EPJdJx?editors=0010">Pool of
-    Tears</a> example, each tear is passed a random delay via its timing object:</p>
+<p>In the <a href="https://codepen.io/rachelnabors/pen/EPJdJx?editors=0010">Pool of
+    Tears</a> example, each tear is passed a random delay via its timing object:</p>
 
 <pre><code>// Randomizer function
 var getRandomMsRange = function(min, max) {
-  return Math.random() * (max - min) + min;
+  return Math.random() * (max - min) + min;
 }
 
 // Loop through each tear
 tears.forEach(function(el) {
 
   // Animate each tear
-  el.animate(
-    tearsFalling,
-    {
-      delay: getRandomMsRange(-1000, 1000), // randomized for each tear
-      duration: getRandomMsRange(2000, 6000), // randomized for each tear
-      iterations: Infinity,
-      easing: "cubic-bezier(0.6, 0.04, 0.98, 0.335)"
-    });
+  el.animate(
+    tearsFalling,
+    {
+      delay: getRandomMsRange(-1000, 1000), // randomized for each tear
+      duration: getRandomMsRange(2000, 6000), // randomized for each tear
+      iterations: Infinity,
+      easing: "cubic-bezier(0.6, 0.04, 0.98, 0.335)"
+    });
 });</code></pre>
 
 <h2 id="Specifications">Specifications</h2>
@@ -85,17 +73,11 @@ tears.forEach(function(el) {
 
 <ul>
   <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
-  <li>{{domxref("Element.animate()")}},
-    {{domxref("KeyframeEffectReadOnly.KeyframeEffectReadOnly",
-    "KeyframeEffectReadOnly()")}}, and {{domxref("KeyframeEffect.KeyframeEffect",
-    "KeyframeEffect()")}} all accept an object of timing properties including this one.
+  <li>{{domxref("Element.animate()")}} and {{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}}
+    both accept an object of timing properties including this one.
   </li>
-  <li>The value of this property corresponds to the one in {{domxref("EffectTiming")}}
-    (which is the {{domxref("AnimationEffectReadOnly.timing", "timing")}} object for
-    {{domxref("AnimationEffectReadOnly")}}, {{domxref("KeyframeEffectReadOnly")}},
-    and {{domxref("KeyframeEffect")}}).</li>
   <li>CSS's
     <code><a href="/en-US/docs/Web/CSS/transition-delay">transition-delay</a></code>
-    and <code><a href="/en-US/docs/Web/CSS/animation-delay">animation-delay</a></code>
+    and <code><a href="/en-US/docs/Web/CSS/animation-delay">animation-delay</a></code>
   </li>
 </ul>

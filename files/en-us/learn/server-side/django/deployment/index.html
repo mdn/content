@@ -253,7 +253,7 @@ DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 <ol>
  <li>Copy your Django application into this folder (all the files at the same level as <strong>manage.py</strong> and below, <strong>not</strong> their containing locallibrary folder).</li>
  <li>Open the <strong>.gitignore</strong> file, copy the following lines into the bottom of it, and then save (this file is used to identify files that should not be uploaded to git by default).
-  <pre># Text backup files
+  <pre class="brush: plain"># Text backup files
 *.bak
 
 # Database
@@ -264,7 +264,7 @@ DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 </pre>
  </li>
  <li>Use the <code>status</code> command to check that all files you are about to <code>commit</code> are correct (you want to include source files, not binaries, temporary files etc.). It should look a bit like the listing below.
-  <pre>&gt; git status
+  <pre class="brush: plain">&gt; git status
 On branch main
 Your branch is up-to-date with 'origin/main'.
 Changes to be committed:
@@ -281,7 +281,7 @@ Changes to be committed:
   <pre class="brush: bash">git commit -m "First version of application moved into github"</pre>
  </li>
  <li>At this point, the remote repository has not been changed. Synchronise (<code>push</code>) your local repository to the remote Github repository using the following command:
-  <pre>git push origin main</pre>
+  <pre class="brush: bash">git push origin main</pre>
  </li>
 </ol>
 
@@ -307,7 +307,7 @@ Changes to be committed:
 
 <p>Create the file <code>Procfile</code> (no extension) in the root of your GitHub repository to declare the application's process types and entry points. Copy the following text into it:</p>
 
-<pre>web: gunicorn locallibrary.wsgi --log-file -</pre>
+<pre class="brush: plain">web: gunicorn locallibrary.wsgi --log-file -</pre>
 
 <p>The "<code>web:</code>" tells Heroku that this is a web dyno and can be sent HTTP traffic. The process to start in this dyno is <em>gunicorn</em>, which is a popular web application server that Heroku recommends. We start Gunicorn using the configuration information in the module <code>locallibrary.wsgi</code> (created with our application skeleton: <strong>/locallibrary/wsgi.py</strong>).</p>
 
@@ -338,14 +338,13 @@ Changes to be committed:
 
 <p>Install <em>dj-database-url</em> locally so that it becomes part of our <a href="#requirements">requirements</a> for Heroku to set up on the remote server:</p>
 
-<pre>$ pip3 install dj-database-url
-</pre>
+<pre class="brush: bash">$ pip3 install dj-database-url</pre>
 
 <h5 id="settings.py">settings.py</h5>
 
 <p>Open <strong>/locallibrary/settings.py</strong> and copy the following configuration into the bottom of the file:</p>
 
-<pre># Heroku: Update database configuration from $DATABASE_URL.
+<pre class="brush: plain"># Heroku: Update database configuration from $DATABASE_URL.
 import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)</pre>
@@ -394,7 +393,7 @@ pip3 install psycopg2-binary
 
 <p>Open <strong>/locallibrary/settings.py</strong> and copy the following configuration into the bottom of the file. The <code>BASE_DIR</code> should already have been defined in your file (the <code>STATIC_URL</code> may already have been defined within the file when it was created. While it will cause no harm, you might as well delete the duplicate previous reference).</p>
 
-<pre># Static files (CSS, JavaScript, Images)
+<pre class="brush: python"># Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 # The absolute path to the directory where collectstatic will collect static files for deployment.
@@ -429,7 +428,7 @@ STATIC_URL = '/static/'
 
 <p>To install <em>WhiteNoise</em> into your Django application, open <strong>/locallibrary/settings.py</strong>, find the <code>MIDDLEWARE</code> setting and add the <code>WhiteNoiseMiddleware</code> near the top of the list, just below the <code>SecurityMiddleware</code>:</p>
 
-<pre>MIDDLEWARE = [
+<pre class="brush: python">MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -443,7 +442,7 @@ STATIC_URL = '/static/'
 
 <p>Optionally, you can reduce the size of the static files when they are served (this is more efficient). Just add the following to the bottom of <strong>/locallibrary/settings.py</strong>:</p>
 
-<pre># Simplified static file serving.
+<pre class="brush: python"># Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 </pre>
@@ -457,7 +456,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 <p>After installing all the different dependencies above, your <strong>requirements.txt</strong> file should have <em>at least</em> these items listed (though the version numbers may be different).
 Please delete any other dependencies not listed below, unless you've explicitly added them for this application.</p>
 
-<pre>dj-database-url==0.5.0
+<pre class="brush: plain">dj-database-url==0.5.0
 Django==3.1.2
 gunicorn==20.0.4
 psycopg2-binary==2.8.6
@@ -472,7 +471,7 @@ whitenoise==5.2.0
 
 <p>The <strong>runtime.txt</strong> file, if defined, tells Heroku which programming language to use. Create the file in the root of the repo and add the following text:</p>
 
-<pre>python-3.8.6</pre>
+<pre class="brush: plain">python-3.8.6</pre>
 
 <div class="notecard note">
   <p><strong>Note:</strong> Heroku only supports a small number of <a href="https://devcenter.heroku.com/articles/python-support#supported-python-runtimes">Python runtimes</a> (at time of writing, this includes the one above). Heroku will use a supported runtime irrespective of the value specified in this file.</p>

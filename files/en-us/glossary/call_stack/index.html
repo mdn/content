@@ -38,16 +38,16 @@ greeting();
 <ol>
  <li>Ignore all functions, until it reaches the <code>greeting()</code> function invocation.</li>
  <li>Add the <code>greeting()</code> function to the call stack list.
-  <div class="note">
-  <p>Call stack list:<br>
+  <div class="notecard note">
+  <p><strong>Note:</strong> Call stack list:<br>
    - greeting</p>
   </div>
  </li>
  <li>Execute all lines of code inside the <code>greeting()</code> function.</li>
  <li>Get to the <code>sayHi()</code> function invocation.</li>
  <li>Add the <code>sayHi()</code> function to the call stack list.
-  <div class="note">
-  <p>Call stack list:<br>
+  <div class="notecard note">
+  <p><strong>Note:</strong> Call stack list:<br>
    - sayHi<br>
    - greeting</p>
   </div>
@@ -55,15 +55,15 @@ greeting();
  <li>Execute all lines of code inside the <code>sayHi()</code> function, until reaches its end.</li>
  <li>Return execution to the line that invoked <code>sayHi()</code> and continue executing the rest of the <code>greeting()</code> function.</li>
  <li>Delete the <code>sayHi()</code> function from our call stack list.
-  <div class="note">
-  <p>Call stack list:<br>
+  <div class="notecard note">
+  <p><strong>Note:</strong> Call stack list:<br>
    - greeting</p>
   </div>
  </li>
  <li>When everything inside the <code>greeting()</code> function has been executed, return to its invoking line to continue executing the rest of the JS code.</li>
  <li>Delete the <code>greeting()</code> function from the call stack list.
-  <div class="note">
-  <p>Call stack list:<br>
+  <div class="notecard note">
+  <p><strong>Note:</strong> Call stack list:<br>
    EMPTY</p>
   </div>
  </li>

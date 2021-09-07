@@ -287,7 +287,7 @@ This sets up some of the application error handling and then loads <strong>app.j
 The app routes are stored in separate modules under the <strong>routes/</strong> directory.
 The templates are stored under the /<strong>views</strong> directory.</p>
 
-<pre>/express-locallibrary-tutorial
+<pre class="brush: plain">express-locallibrary-tutorial
     app.js
     /bin
         www
@@ -497,7 +497,7 @@ router.get('/', function(req, res, next) {
 
 <p>The corresponding template for the above route is given below (<strong>index.pug</strong>). We'll talk more about the syntax later. All you need to know for now is that the <code>title</code> variable (with value <code>'Express'</code>) is inserted where specified in the template.</p>
 
-<pre>extends layout
+<pre class="brush: plain">extends layout
 
 block content
   h1= title

@@ -18,22 +18,18 @@ tags:
 <p>There are five targets to consider:</p>
 
 <table class="standard-table">
+ <thead>
+   <tr>
+    <th>Property</th>
+    <th>Defined in</th>
+    <th>Purpose</th>
+   </tr>
+ </thead>
  <tbody>
-  <tr>
-   <th>Property</th>
-   <th>Defined in</th>
-   <th>Purpose</th>
-  </tr>
   <tr>
    <td><code><a href="/en-US/docs/Web/API/Event/target">event.target</a></code></td>
    <td><a href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-interface">DOM Event Interface</a></td>
-   <td>
-    <p>The DOM element on the lefthand side of the call that triggered this event, eg:</p>
-
-    <pre class="brush: js">
-<em>element</em>.dispatchEvent(<em>event</em>)
-</pre>
-   </td>
+   <td>The DOM element on the left hand side of the call that triggered this event.</td>
   </tr>
   <tr>
    <td><code><a href="/en-US/docs/Web/API/Event/currentTarget">event.currentTarget</a></code></td>

@@ -2,38 +2,26 @@
 title: EffectTiming.duration
 slug: Web/API/EffectTiming/duration
 tags:
-- API
-- Animation
-- EffectTiming
-- Experimental
-- KeyframeEffect
-- Property
-- Reference
-- Web Animations
-- animate
-- duration
-- waapi
-- web animations api
+  - API
+  - Animation
+  - EffectTiming
+  - Experimental
+  - KeyframeEffect
+  - Property
+  - Reference
+  - Web Animations
+  - animate
+  - duration
+  - waapi
+  - web animations api
 browser-compat: api.EffectTiming.duration
 ---
 <div>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</div>
 
-<p>The <strong><code>duration</code></strong> property of the dictionary
+<p>The <strong><code>duration</code></strong> property of the dictionary
   {{domxref("EffectTiming")}} in the <a href="/en-US/docs/Web/API/Web_Animations_API">Web
     Animations API</a> specifies the duration in milliseconds that a single iteration
   (from beginning to end) the animation should take to complete.</p>
-
-<div class="note">
-  <p><strong>Note:</strong> {{domxref("Element.animate()")}},
-    {{domxref("KeyframeEffectReadOnly.KeyframeEffectReadOnly",
-    "KeyframeEffectReadOnly()")}}, and {{domxref("KeyframeEffect.KeyframeEffect",
-    "KeyframeEffect()")}} all accept an object of timing properties including
-    <code>duration</code>. The value of <code>duration</code> corresponds directly
-    to {{domxref("AnimationEffectTimingReadOnly.duration")}} in
-    {{domxref("AnimationEffectReadOnly.timing", "timing")}} objects returned by
-    {{domxref("AnimationEffectReadOnly")}}, {{domxref("KeyframeEffectReadOnly")}}, and
-    {{domxref("KeyframeEffect")}}.</p>
-</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -67,8 +55,8 @@ browser-compat: api.EffectTiming.duration
 
 <h2 id="Examples">Examples</h2>
 
-<p>In the <a href="http://codepen.io/rachelnabors/pen/EPJdJx?editors=0010">Pool of
-    Tears</a> example, each tear is passed a random <code>duration</code> via its timing
+<p>In the <a href="https://codepen.io/rachelnabors/pen/EPJdJx?editors=0010">Pool of
+    Tears</a> example, each tear is passed a random <code>duration</code> via its timing
   object:</p>
 
 <pre class="brush: js">// Randomizer function
@@ -102,15 +90,7 @@ tears.forEach(function(el) {
 
 <ul>
   <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
-  <li>{{domxref("Element.animate()")}},
-    {{domxref("KeyframeEffectReadOnly.KeyframeEffectReadOnly",
-    "KeyframeEffectReadOnly()")}}, and {{domxref("KeyframeEffect.KeyframeEffect",
-    "KeyframeEffect()")}} all accept an object of timing properties including this one.
+  <li>{{domxref("Element.animate()")}} and {{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}}
+    both accept an object of timing properties including this one.
   </li>
-  <li>The value of this property corresponds to property of the same name in
-    {{domxref("AnimationEffectReadOnly.timing")}},
-    {{domxref("KeyframeEffectReadOnly.timing")}},
-    and {{domxref("KeyframeEffect.timing")}}).</li>
-  <li>CSS's {{cssxref("transition-duration")}} and {{cssxref("animation-duration")}}
-    properties</li>
 </ul>

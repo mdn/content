@@ -2,13 +2,13 @@
 title: StaticRange()
 slug: Web/API/StaticRange/StaticRange
 tags:
-- API
-- Constructor
-- DOM
-- DOM API
-- Range
-- Reference
-- StaticRange
+  - API
+  - Constructor
+  - DOM
+  - DOM API
+  - Range
+  - Reference
+  - StaticRange
 browser-compat: api.StaticRange.StaticRange
 ---
 <p>{{APIRef("DOM")}}</p>
@@ -31,9 +31,8 @@ browser-compat: api.StaticRange.StaticRange
 <dl>
   <dt><code>rangeSpec</code></dt>
   <dd>
-    <p>The required <code>rangeSpec</code> parameter is an object adhering to the
-      {{domxref("StaticRangeInit")}} dictionary. The four required
-      <code>rangeSpec</code> properties are:</p>
+    <p>The required <code>rangeSpec</code> parameter is an object 
+      containing the four following properties:</p>
 
     <dl>
       <dt><code>startContainer</code></dt>
@@ -64,7 +63,7 @@ browser-compat: api.StaticRange.StaticRange
     <code>startContainer</code> and/or <code>endContainer</code> are a type of node which
     you can't include in a range. Those node types
     are <code>Node.DOCUMENT_TYPE_NODE</code> (representing the {{domxref("DocumentType")}}
-    node derived from the {{Glossary("DTD")}} identified using the <code>doctype</code>
+    node derived from the {{Glossary("Doctype", "DTD")}} identified using the <code>doctype</code>
     preamble in the HTML, for example) and the {{domxref("Attr")}} node describing an
     attribute of an element on the DOM..</dd>
 </dl>
