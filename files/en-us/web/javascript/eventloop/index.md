@@ -38,7 +38,7 @@ function bar(x) {
   return foo(x * y)
 }
 
-console.log(bar(7)) //returns 42
+const baz = bar(7) // 42 is assigned to baz
 ```
 
 Order of operations:
