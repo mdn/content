@@ -38,7 +38,7 @@ function bar(x) {
   return foo(x * y)
 }
 
-const baz = bar(7) // 42 is assigned to baz
+const baz = bar(7) // assigns 42 to baz
 ```
 
 Order of operations:
