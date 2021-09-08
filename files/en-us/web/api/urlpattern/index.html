@@ -152,6 +152,8 @@ new URLPattern(<var>pattern</var>[, <var>baseURL</var>]);
   or <a href="https://next.js">Next.js</a>.
 </p>
 
+<h3>Fixed text and capture groups</h3>
+
 <p>
   Each pattern can contain a combination of fixed text, and groups. The fixed
   text is a sequence of characters that is matched exactly. Groups match an
@@ -171,6 +173,8 @@ console.log(pattern.test('https://example.com/books/123')); // true
 console.log(pattern.exec('https://example.com/books/123').pathname.groups); // { id: '123' }
 </pre>
 
+<h3>Segment wildcard</h3>
+
 <p>
   By default, a group matching inside the <code>pathname</code> part of the URL
   will match all characters but the forward slash (<code>/</code>). In the
@@ -179,6 +183,8 @@ console.log(pattern.exec('https://example.com/books/123').pathname.groups); // {
   The segment wildcard is non-greedy, meaning that it will match the shortest
   possible string.
 </p>
+
+<h3>Regex matchers</h3>
 
 <p>
   Instead of using the default match rules for a group, a regex can be specified
@@ -194,7 +200,8 @@ console.log(pattern.test('https://example.com/books/abc')); // false
 console.log(pattern.test('https://example.com/books/')); // false
 </pre>
   
-  
+<h3>Unamed and named groups</h3>
+
 <p>
   Groups can either be named or unnamed. Named groups are specified by prefixing
   the group name with a colon (<code>:</code>). Regexp groups that are not
@@ -211,6 +218,8 @@ console.log(pattern.exec('https://example.com/books/123').pathname.groups); // {
 const pattern = new URLPattern('/books/(\\d+)', 'https://example.com');
 console.log(pattern.exec('https://example.com/books/123').pathname.groups); // { '0': '123' }
 </pre>
+
+<h3>Group modifiers</h3>
 
 <p>
   Groups can also have modifiers. These are specified after the group name (or
@@ -245,27 +254,82 @@ console.log(pattern.test('https://example.com/books/123/456')); // true
 console.log(pattern.test('https://example.com/books/123/456/789')); // true
 </pre>
 
+<h3>Sub patterns</h3>
+
 <p>
-  Next to capturing groups, there are also non-capturing groups. These are
-  pieces of a pattern that are surrounded by curly braces (<code>{}</code>).
-  These groups are not captured in the match result, but can still have modifiers
-  applied to them. If a non-capturing group does not have a modifier, it is
-  treated as if the items in the group were not surrounded by curly braces.
+  Patterns can also have sub-patterns. These are pieces of a pattern that are
+  surrounded by curly braces (<code>{}</code>). These sub-patterns are not
+  captured in the match result like capturing groups, but can still have
+  modifiers applied to them, just like groups. If a sub-pattern does not have a
+  modifier, it is treated as if the items in it were just part of the parent
+  pattern. Sub-patterns may not contain other sub-patterns, but may contain any
+  other pattern items (capturing groups, regex, wildcard, fixed text).
 </p>
 
+
 <pre class="brush: js">
-// A non-capturing group with a ? (optional) modifier
+// A sub-patterns group with a ? (optional) modifier
 const pattern = new URLPattern('/book{s}?', 'https://example.com');
 console.log(pattern.test('https://example.com/books')); // true
 console.log(pattern.test('https://example.com/book')); // true
 console.log(pattern.exec('https://example.com/books').pathname.groups); // {}
 
-// A non-capturing group without a modifier
+// A sub-patterns group without a modifier
 const pattern = new URLPattern('/book{s}', 'https://example.com');
 console.log(pattern.pathname); // /books
 console.log(pattern.test('https://example.com/books')); // true
 console.log(pattern.test('https://example.com/book')); // false
+
+// A sub-pattern containing a capturing group
+const pattern = new URLPattern({ pathname: '/blog/:id(\\d+){-:title}?' });
+console.log(pattern.test('https://example.com/blog/123-my-blog')); // true
+console.log(pattern.test('https://example.com/blog/123')); // true
+console.log(pattern.test('https://example.com/blog/my-blog')); // false
 </pre>
+
+<h3>Automatic group prefixing in pathnames</h3>
+
+<p>
+  In patterns that match against the <code>pathname</code> part of a URL,
+  groups get an automatic slash (<code>/</code>) prefix added if the group
+  definition is preceded by a slash (<code>/</code>). This is useful for groups
+  with modifiers, as it allows for repeating groups to work as expected.
+</p>
+
+<p>
+  If you do not want this automatic prefixing, you can disable it by surrounding
+  the group with a sub-pattern (<code>{}</code>). Sub-groups do not have
+  automatic prefixing behavior.
+</p>
+
+<pre class="brush: js">
+// A pattern with an optional group, preceded by a slash
+const pattern = new URLPattern('/books/:id?', 'https://example.com');
+console.log(pattern.test('https://example.com/books/123')); // true
+console.log(pattern.test('https://example.com/books')); // true
+console.log(pattern.test('https://example.com/books/')); // false
+
+// A pattern with a repeating group, preceded by a slash
+const pattern = new URLPattern('/books/:id+', 'https://example.com');
+console.log(pattern.test('https://example.com/books/123')); // true
+console.log(pattern.test('https://example.com/books/123/456')); // true
+console.log(pattern.test('https://example.com/books/123/')); // false
+console.log(pattern.test('https://example.com/books/123/456/')); // false
+
+// Segment prefixing does not occur outside of pathname patterns
+const pattern = new URLPattern({ hash: '/books/:id?' });
+console.log(pattern.test('https://example.com#/books/123')); // true
+console.log(pattern.test('https://example.com#/books')); // false
+console.log(pattern.test('https://example.com#/books/')); // true
+
+// Disabling segment prefixing for a group using a sub-pattern
+const pattern = new URLPattern({ pathname: '/books/{:id}?' });
+console.log(pattern.test('https://example.com/books/123')); // true
+console.log(pattern.test('https://example.com/books')); // false
+console.log(pattern.test('https://example.com/books/')); // true
+</pre>
+
+<h3>Wildcard token</h3>
 
 <p>
   A shorthand for an unamed capturing group that matches all characters zero or
@@ -289,6 +353,8 @@ console.log(pattern.test('https://example.com/image.png/123')); // false
 console.log(pattern.test('https://example.com/folder/image.png')); // true
 console.log(pattern.test('https://example.com/.png')); // true
 </pre>
+
+<h3>Pattern normalization</h3>
 
 <p>
   When a pattern is parsed it is automatically normalized to a canonical form.
