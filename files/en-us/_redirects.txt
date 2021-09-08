@@ -6996,6 +6996,7 @@
 /en-US/docs/Web/API/ByteLengthQueueingStrategy/ByteLengthQueueingStrategy	/en-US/docs/Web/API/ByteLengthQueuingStrategy/ByteLengthQueuingStrategy
 /en-US/docs/Web/API/ByteLengthQueueingStrategy/size	/en-US/docs/Web/API/ByteLengthQueuingStrategy/size
 /en-US/docs/Web/API/ByteLengthQueuingStrategy/ByteLengthQueueingStrategy	/en-US/docs/Web/API/ByteLengthQueuingStrategy/ByteLengthQueuingStrategy
+/en-US/docs/Web/API/ByteString	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
 /en-US/docs/Web/API/CSS.escape	/en-US/docs/Web/API/CSS/escape
 /en-US/docs/Web/API/CSS.supports	/en-US/docs/Web/API/CSS/supports
 /en-US/docs/Web/API/CSSFontLoading_API	/en-US/docs/Web/API/CSS_Font_Loading_API
