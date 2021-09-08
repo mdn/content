@@ -13,7 +13,7 @@ browser-compat: css.properties.line-height-step
 
 {{SeeCompatTable}}
 
-> **Note:** Not supported by default, but can be enabled via the `--enable-blink-features=CSSSnapSize` runtime flag.
+> **Note:** This property is not supported by default, but can be enabled via the `--enable-blink-features=CSSSnapSize` runtime flag.
 
 The **`line-height-step`** CSS property sets the step unit for line box heights. When the property is set, line box heights are rounded up to the closest multiple of the unit.
 
