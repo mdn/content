@@ -176,6 +176,8 @@ console.log(pattern.exec('https://example.com/books/123').pathname.groups); // {
   will match all characters but the forward slash (<code>/</code>). In the
   <code>hostname</code> part, the group will match all characters except the dot
   (<code>.</code>). In all other parts, the group will match all characters.
+  The segment wildcard is non-greedy, meaning that it will match the shortest
+  possible string.
 </p>
 
 <p>
@@ -268,7 +270,8 @@ console.log(pattern.test('https://example.com/book')); // false
 <p>
   A shorthand for an unamed capturing group that matches all characters zero or
   more times is provided by the wildcard token (<code>*</code>). This can be
-  can be placed anywhere in the pattern.
+  can be placed anywhere in the pattern. The wilcard is greedy, meaning that it
+  will match the longest possible string.
 </p>
 
 <pre class="brush: js">
