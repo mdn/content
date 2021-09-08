@@ -19,8 +19,8 @@ browser-compat: api.PasswordCredential.PasswordCredential
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">var myCredential = new PasswordCredential(passwordCredentialData)
-var myCredential = new PasswordCredential(HTMLFormElement)</pre>
+<pre class="brush: js">new PasswordCredential(passwordCredentialData)
+new PasswordCredential(htmlFormElement)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -28,7 +28,7 @@ var myCredential = new PasswordCredential(HTMLFormElement)</pre>
 
 <dl>
   <dt><em>passwordCredentialData</em></dt>
-  <dd>A PasswordCredentialData dictionary containing the following fields:
+  <dd>An object with the following properties:
     <ul>
       <li><code>iconURL</code>: (Optional) the URL of a user's avatar image.</li>
       <li><code>id</code>: The ID of the user signing in.</li>

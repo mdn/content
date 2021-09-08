@@ -20,23 +20,27 @@ browser-compat: api.ImageData.ImageData
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">new ImageData(<em>array</em>, <em>width</em> [, <em>height</em>]);
-new ImageData(<em>width</em>, <em>height</em>);
-</pre>
+<pre class="brush: js">new ImageData(width, height);
+new ImageData(width, height, settings);
+new ImageData(dataArray, width);
+new ImageData(dataArray, width, height);
+new ImageData(dataArray, width, height, settings);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-  <dt><code>array</code> {{optional_inline}}</dt>
-  <dd>A {{jsxref("Uint8ClampedArray")}} containing the underlying pixel representation of
-    the image. If no such array is given, an image with a transparent black rectangle of
-    the specified <code>width</code> and <code>height</code> will be created.</dd>
   <dt><code>width</code></dt>
   <dd>An unsigned long representing the width of the image.</dd>
   <dt><code>height</code></dt>
   <dd>An unsigned long representing the height of the image. This value is optional if an
-    array is given: the height will be inferred from the array's size and the given width.
+    array is given: the height will be inferred from the array's size and the given width.</dd>
+  <dt>settings {{optional_inline}}</dt>
+  <dd>An object with the following values:
+    <dt><code>colorSpace</code></dt>
+    <dd>One of <code>"srgb"</code>, <code>"rec2020"</code>, or <code>"display-p3"</code>.</dd>
   </dd>
+  <dt><code>dataArray</code> {{optional_inline}}</dt>
+  <dd>An array containing the underlying pixel representation of the image, one of {{jsxref("Uint8ClampedArray")}}, {{jsxref("Uint16Array")}}, or {{jsxref("Float32Array")}}. If no such array is given, an image with a transparent black rectangle of the specified <code>width</code> and <code>height</code> will be created.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
