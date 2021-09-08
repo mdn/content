@@ -8,13 +8,17 @@ tags:
   - roles
   - Reference
   - ARIA roles
-  - NeedsContent
+  - ARIA input role
 ---
 
 
-Note:  input role is an bstract role. It is included here for completeness of documentation. It should not be used by web authors.
+The `input` abstract role is a generic type of widget that allows user input.
+
+> **Note:**  The `input` role is an abstract role. It is included here for completeness of documentation. It is  not to be used by web authors.
 
 ## Description
+
+The `input` role is an abstract role. It must not be used by web authors. It is the superclass for input widgets that provide for user input, including [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role), [`radio`](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role), and [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role). For all three, consider using the {{HTMLElement("code")}} element of type  [`checkbox`](en-US/docs/Web/HTML/Element/input/checkbox), [`radio`](en-US/docs/Web/HTML/Element/input/radio) and [`text`](en-US/docs/Web/HTML/Element/input/text), respectively
 
 ## Best Practices
 
@@ -25,10 +29,21 @@ Do not use.
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#input role","ARIA: input role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#aria_lh_input_role","input role")}} | {{Spec2('ARIA Authoring Practices')}} |
+
 
 
 ## See Also
+
+- [ARIA: `widget` role](/en-US/docs/Web/Accessibility/ARIA/Roles/widget_role)
+- [ARIA: `checkbox` role](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
+- [ARIA: `combobox` role](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role)
+- [ARIA: `option` role](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role)
+- [ARIA: `radio` role](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role)
+- [ARIA: `slider` role](/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role)
+- [ARIA: `spinbutton` role](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role)
+- [ARIA: `textbox` role](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role)
+- [HTML: the `input` element](en-US/docs/Web/HTML/Element/input/)
+
 
 
 <section id="Quick_links"><ol><li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li></ol></section>

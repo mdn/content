@@ -14,7 +14,7 @@ tags:
 
 The `command` role defines a widget that performs an action but does not receive input data.
 
-> **Note:**  The `command` role is an bstract role. It is included here for completeness of documentation. It should not be used by web authors.
+> **Note:**  The `command` role is an abstract role. It is included here for completeness of documentation. It should not be used by web authors.
 
 ## Description
 
