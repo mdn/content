@@ -16,8 +16,8 @@ browser-compat: api.URLPattern
 
 <p>
   The <strong><code>URLPattern</code></strong> interface can be used to match
-  URLs or parts of URLs against a pattern. The pattern can contain named groups
-  that can be used to extract parts of the matched URL.
+  URLs or parts of URLs against a pattern. The pattern can contain capturing
+  groups that can be used to extract parts of the matched URL.
 </p>
 
 <p>
@@ -109,40 +109,36 @@ browser-compat: api.URLPattern
 <h2 id="Usage_notes">Usage notes</h2>
 
 <p>
-  The constructor takes an <code>input</code> parameter which can either be a
-  string, or a structured object providing patterns for each URL part
-  individually. Omitted parts in the structured object will be treated as
-  wildcards.
+  The <code>URLPattern</code> constructor has two forms. The constructor either
+  takes a pattern object, or a pattern string and optional baseURL.
 </p>
 
-<pre class="brush: js">
-// Specify an entire URL pattern as a string
-const pattern = new URLPattern('https://example.com/books/:id');
-console.log(pattern.test('https://example.com/books/123')); // true
-console.log(pattern.test('https://example.com/posters/123')); // false
-console.log(pattern.test('https://mozilla.org/books/123')); // false
-</pre>
+<pre class="brush: js">new URLPattern(<var>obj</var>);</pre>
 
-<pre class="brush: js">
-// Or specify each part of the URL pattern separately, with omitted parts being
-// treated as wildcards
-const pattern = new URLPattern({ pathname: '/books/:id' });
-console.log(pattern.test('https://example.com/books/123')); // true
-console.log(pattern.test('https://example.com/posters/123')); // false
-console.log(pattern.test('https://mozilla.org/books/123')); // true
-</pre>
-  
 <p>
-  The constructor also accepts a <code>baseURL</code> in the second parameter.
-  If this is specified the pattern can be relative. The <code>baseURL</code>
-  parameter is a regular URL, not a pattern.
+  This form of the constructor takes an object that describes the URLs you want
+  to match by specifying patterns for each individual URL part. Its members can
+  be any of <code>protocol</code>, <code>username</code>, <code>password</code>,
+  <code>hostname</code>, <code>port</code>, <code>pathname</code>,
+  <code>search</code>, <code>hash</code>, or <code>baseURL</code>. If the
+  baseURL property is provided it will be parsed as a URL and used to populate
+  any other properties that are missing. If the baseURL property is missing,
+  then any other missing properties default to the pattern <code>*</code>
+  wildcard, accepting any input.
 </p>
+  
+<pre class="brush: js">new URLPattern(<var>pattern</var>[, <var>baseURL</var>]);</pre>
 
-<pre class="brush: js">
-const pattern = new URLPattern('/books/:id', 'https://example.com');
-console.log(pattern.test('https://example.com/books/123')); // true
-console.log(pattern.test('https://mozilla.org/books/123')); // false
-</pre>
+<p>
+  This form of the constructor takes a URL string that contains patterns
+  embedded in it. The URL string may be relative if a base URL is provided as
+  the second argument. Note, it may be necessary to escape some characters in
+  the URL string where its ambiguous whether the character is separating
+  different URL components or if it's instead part of a pattern. For example,
+  you must write <code>about\\:blank</code> to indicate that the <code>:</code>
+  is the protocol suffix and not the start of a <code>:blank</code> named group
+  pattern.
+</p>
 
 <h2 id="Pattern_syntax">Pattern syntax</h2>
 
@@ -290,6 +286,481 @@ console.log(pattern.test('https://example.com/folder/image.png')); // true
 console.log(pattern.test('https://example.com/.png')); // true
 </pre>
 
+<p>
+  When a pattern is parsed it is automatically normalized to a canonical form.
+  For example, unicode characters are percent encoded in the pathname property,
+  punycode encoding is used in the hostname, default port numbers are elided,
+  paths like <code>/foo/./bar/</code> are collapsed to just
+  <code>/foo/bar</code>, etc. In addition, there are some pattern
+  representations that parse to the same underlying meaning, like
+  <code>foo</code> and <code>{foo}</code>. Such cases are normalized to the
+  simplest form. In this case <code>{foo}</code> gets changed to
+  <code>foo</code>.
+</p>
+
+<h2 id="Examples">Examples</h2>
+
+<h3>Filter on a specific URL component</h3>
+
+<p>
+  The following example shows how a URLPattern filters a
+  specific URL component. When the <code>URLPattern()</code> constructor is
+  called with a structured object of component patterns any missing components
+  default to the <code>*</code> wildcard value.
+</p>
+
+<pre class="brush: js">
+// Construct a URLPattern that matches a specific domain and its subdomains.
+// All other URL components default to the wildcard `*` pattern.
+const pattern = new URLPattern({
+  hostname: `{*.}?example.com`
+});
+
+// Prints `{*.}?example.com`
+console.log(pattern.hostname);
+
+// All print `*`
+console.log(pattern.protocol);
+console.log(pattern.username);
+console.log(pattern.password);
+console.log(pattern.pathname);
+console.log(pattern.search);
+console.log(pattern.hash);
+
+// Prints `true`
+console.log(pattern.test("https://example.com/foo/bar"));
+
+// Prints `true`
+console.log(pattern.test({ hostname: "cdn.example.com" }));
+
+// Prints `true`
+console.log(pattern.test("custom-protocol://example.com/other/path?q=1"));
+
+// Prints `false` because the hostname component does not match
+console.log(pattern.test("https://cdn-example.com/foo/bar"));
+</pre>
+
+<h3>Construct a URLPattern from a full URL string</h3>
+
+The following example shows how a URLPattern can be constructed from a full
+URL string with patterns embedded. For example, a <code>:</code> can be both
+the URL protocol suffix, like <code>https:</code>, and the beginning of a named
+pattern group, like <code>:foo</code>. If there is no ambiguity between whether
+a character is a part of the URL syntax or part of the pattern syntax then it
+just works.
+
+<pre class="brush: js">
+// Construct a URLPattern that matches URLs to CDN servers loading jpg images.
+// URL components not explicitly specified, like search and hash here, result
+// in the empty string similar to the URL() constructor.
+const pattern = new URLPattern("https://cdn-*.example.com/*.jpg");
+
+// Prints `https`
+console.log(pattern.protocol);
+
+// Prints `cdn-*.example.com`
+console.log(pattern.hostname);
+
+// Prints `/*.jpg`
+console.log(pattern.pathname);
+
+// All print `""`
+console.log(pattern.username);
+console.log(pattern.password);
+console.log(pattern.search);
+console.log(pattern.hash);
+
+// Prints `true`
+console.log(
+    pattern.test("https://cdn-1234.example.com/product/assets/hero.jpg");
+
+// Prints `false` because the search component does not match
+console.log(
+    pattern.test("https://cdn-1234.example.com/product/assets/hero.jpg?q=1");
+</pre>
+
+<h3>Constructing a URLPattern with an ambiguous URL string</h3>
+
+<p>
+  The following example shows how a URLPattern constructed from an ambiguous
+  string will favor treating characters as part of the pattern syntax. In
+  this case the <code>:</code> character could be the protocol component suffix
+  or it could be the prefix for a named group in the pattern. The constructor
+  chooses to treat this as part of the pattern and therefore determines this is
+  a relative pathname pattern. Since there is no base URL the relative pathname
+  cannot be resolved and it throws an error.
+</p>
+
+<pre class="brush: js">
+// Throws because this is interpreted as a single relative pathname pattern
+// with a ":foo" named group and there is no base URL.
+const pattern = new URLPattern("data:foo*");
+</pre>
+
+<h3>Escaping characters to disambiguate URLPattern constructor strings</h3>
+
+<p>
+  The following example shows how an ambiguous constructor string character
+  can be escaped to be treated as a URL separator instead of a pattern
+  character. Here <code>:</code> is escaped as <code>\\:</code>.
+</p>
+
+<pre class="brush: js">
+// Constructs a URLPattern treating the `:` as the protocol suffix.
+const pattern = new URLPattern("data\\:foo*");
+
+// Prints `data`
+console.log(pattern.protocol);
+
+// Prints `foo*`
+console.log(pattern.pathname);
+
+// All print `""`
+console.log(pattern.username);
+console.log(pattern.password);
+console.log(pattern.hostname);
+console.log(pattern.port);
+console.log(pattern.search);
+console.log(pattern.hash);
+
+// Prints `true`
+console.log(pattern.test("data:foobar"));
+</pre>
+
+<h3>Using base URLs for test() and exec()</h3>
+
+<p>
+  The following example shows how input values to <code>test()</code> and
+  <code>exec()</code> can use base URLs.
+</p>
+
+<pre class="brush: js">
+const pattern = new URLPattern({ hostname: "example.com", pathname: "/foo/*" });
+
+// Prints `true` as the hostname based in the dictionary `baseURL` property
+// matches.
+console.log(
+    pattern.test({ pathname: "/foo/bar", baseURL: "https://example.com/baz" }));
+
+// Prints `true` as the hostname in the second argument base URL matches.
+console.log(pattern.test("/foo/bar", "https://example.com/baz"));
+
+// Throws because the second argument cannot be passed with a dictionary input.
+try {
+  pattern.test({ pathname: "/foo/bar" }, "https://example.com/baz");
+} catch (e) {}
+
+// The `exec()` method takes the same arguments as `test()`.
+const result = pattern.exec("/foo/bar", "https://example.com/baz");
+
+// Prints `/foo/bar`
+console.log(result.pathname.input);
+
+// Prints `bar`
+console.log(result.pathname.groups[0]);
+
+// Prints `example.com`
+console.log(result.hostname.input);
+</pre>
+
+<h3>Using base URLs in the URLPattern constructor</h3>
+
+<p>
+  The follow example shows how base URLs can also be used to construct the
+  URLPattern.  It's important to note that the base URL in these cases is
+  treated strictly as a URL and cannot contain any pattern syntax itself.
+</p>
+
+<p>
+  Also, since the base URL provides a value for every component the resulting
+  URLPattern will also have a value for every component; even if it's the
+  empty string.  This means you do not get the "default to wildcard" behavior.  
+</p>
+
+<pre class="brush: js">
+const pattern1 = new URLPattern({ pathname: "/foo/*",
+                                  baseURL: "https://example.com" });
+
+// Prints `https`
+console.log(pattern1.protocol);
+
+// Prints `example.com`
+console.log(pattern1.hostname);
+
+// Prints `/foo/*`
+console.log(pattern1.pathname);
+
+// All print `""`
+console.log(pattern1.username);
+console.log(pattern1.password);
+console.log(pattern1.port);
+console.log(pattern1.search);
+console.log(pattern1.hash);
+
+// Equivalent to pattern1
+const pattern2 = new URLPattern("/foo/*", "https://example.com" });
+
+// Throws because a relative constructor string must have a base URL to resolve
+// against.
+try {
+  const pattern3 = new URLPattern("/foo/*");
+} catch (e) {}
+</pre>
+
+<h3>Accessing matched group values</h3>
+
+<p>
+  The following example shows how input values that match pattern groups can
+  later be accessed from the <code>exec()</code> result object. Unnamed groups
+  are assigned index numbers sequentially.
+</p>
+
+<pre class="brush: js">
+const pattern = new URLPattern({ hostname: "*.example.com" });
+const result = pattern.exec({ hostname: "cdn.example.com" });
+
+// Prints `cdn`
+console.log(result.hostname.groups[0]);
+
+// Prints `cdn.example.com`
+console.log(result.hostname.input);
+
+// Prints `[{ hostname: "cdn.example.com" }]`
+console.log(result.inputs);
+</pre>
+
+<h3>Accessing matched group values using custom names</h3>
+
+<p>
+  The following example shows how groups can be given custom names which can
+  be used to accessed the matched value in the result object.  
+</p>
+
+<pre class="brush: js">
+// Construct a URLPattern using matching groups with custom names.  These
+// names can then be later used to access the matched values in the result
+// object.
+const pattern = new URLPattern({ pathname: "/:product/:user/:action" });
+const result = pattern.exec({ pathname: "/store/wanderview/view" });
+
+// Prints `store`
+console.log(result.pathname.groups.product);
+
+// Prints `wanderview`
+console.log(result.pathname.groups.user);
+
+// Prints `view`
+console.log(result.pathname.groups.action);
+
+// Prints `/store/wanderview/view`
+console.log(result.pathname.input);
+
+// Prints `[{ pathname: "/store/wanderview/view" }]`
+console.log(result.inputs);
+</pre>
+
+<h3>Custom regular expression groups</h3>
+
+<p>
+  The following example shows how a matching group can use a custom regular
+  expression.
+</p>
+
+<pre class="brush: js">
+const pattern = new URLPattern({ pathname: "/(foo|bar)" });
+
+// Prints `true`
+console.log(pattern.test({ pathname: "/foo" }));
+
+// Prints `true`
+console.log(pattern.test({ pathname: "/bar" }));
+
+// Prints `false`
+console.log(pattern.test({ pathname: "/baz" }));
+
+const result = pattern.exec({ pathname: "/foo" });
+
+// Prints `foo`
+console.log(result.pathname.groups[0]);
+</pre>
+
+<h3>Named group with a custom regular expression</h3>
+
+<p>
+  The following example shows how a custom regular expression can be used with a
+  named group.
+</p>
+
+<pre class="brush: js">
+const pattern = new URLPattern({ pathname: "/:type(foo|bar)" });
+const result = pattern.exec({ pathname: "/foo" });
+
+// Prints `foo`
+console.log(result.pathname.groups.type);
+</pre>
+
+<h3>Making matching groups optional</h3>
+
+<p>
+  The following example shows how a matching group can be made optional by
+  placing a <code>?</code> modifier after it. For the pathname component this
+  also causes any preceding <code>/</code> character to be treated as an
+  optional prefix to the group.
+</p>
+
+<pre class="brush: js">
+const pattern = new URLPattern({ pathname: "/product/(index.html)?" });
+
+// Prints `true`
+console.log(pattern.test({ pathname: "/product/index.html" }));
+
+// Prints `true`
+console.log(pattern.test({ pathname: "/product" }));
+
+const pattern2 = new URLPattern({ pathname: "/product/:action?" });
+
+// Prints `true`
+console.log(pattern2.test({ pathname: "/product/view" }));
+
+// Prints `true`
+console.log(pattern2.test({ pathname: "/product" }));
+
+// Wildcards can be made optional as well.  This may not seem to make sense
+// since they already match the empty string, but it also makes the prefix
+// `/` optional in a pathname pattern.
+const pattern3 = new URLPattern({ pathname: "/product/*?" });
+
+// Prints `true`
+console.log(pattern3.test({ pathname: "/product/wanderview/view" }));
+
+// Prints `true`
+console.log(pattern3.test({ pathname: "/product" }));
+
+// Prints `true`
+console.log(pattern3.test({ pathname: "/product/" }));
+</pre>
+
+<h3>Making matching groups repeated</h3>
+
+<p>
+  The following example shows how a matching group can be made repeated by
+  placing a <code>+</code> modifier after it. In the pathname component this
+  also treats the <code>/</code> prefix as special. It is repeated with the
+  group.
+</p>
+
+<pre class="brush: js">
+const pattern = new URLPattern({ pathname: "/product/:action+" });
+const result = pattern.exec({ pathname: "/product/do/some/thing/cool" });
+
+// `do/some/thing/cool`
+result.pathname.groups.action;
+
+// Prints `false`
+console.log(pattern.test({ pathname: "/product" }));
+</pre>
+
+<h3>Making matching groups optional and repeated</h3>
+
+<p>
+  The following example shows how a matching group can be made both optional and
+  repeated. This is done by placing a <code>*</code> modifier after the group.
+  Again, the pathname component treats the <code>/</code> prefix as special. It
+  both becomes optional and is also repeated with the group.
+</p>
+
+<pre class="brush: js">
+const pattern = new URLPattern({ pathname: "/product/:action*" });
+const result = pattern.exec({ pathname: "/product/do/some/thing/cool" });
+
+// Prints `do/some/thing/cool`
+console.log(result.pathname.groups.action);
+
+// Prints `true`
+console.log(pattern.test({ pathname: "/product" }));
+</pre>
+
+<h3>Using a custom prefix or suffix for an optional or repeated modifier</h3>
+
+<p>
+  The following example shows how curly braces can be used to denote a custom
+  prefix and/or suffix to be operated on by a subsequent <code>?</code>,
+  <code>*</code>, or <code>+</code>
+  modifier.
+</p>
+
+<pre class="brush: js">
+const pattern = new URLPattern({ hostname: "{:subdomain.}*example.com" });
+
+// Prints `true`
+console.log(pattern.test({ hostname: "example.com" }));
+
+// Prints `true`
+console.log(pattern.test({ hostname: "foo.bar.example.com" }));
+
+// Prints `false`
+console.log(pattern.test({ hostname: ".example.com" }));
+
+const result = pattern.exec({ hostname: "foo.bar.example.com" });
+
+// Prints `foo.bar`
+console.log(result.hostname.groups.subdomain);
+</pre>
+
+<h3>Making text optional or repeated without a matching group</h3>
+
+<p>
+  The following example shows how curly braces can be used to denote text
+  without a matching group can be made optional or repeated without a
+  matching group.  
+</p>
+
+<pre class="brush: js">
+const pattern = new URLPattern({ pathname: "/product{/}?" });
+
+// Prints `true`
+console.log(pattern.test({ pathname: "/product" }));
+
+// Prints `true`
+console.log(pattern.test({ pathname: "/product/" }));
+
+const result = pattern.exec({ pathname: "/product/" });
+
+// Prints `{}`
+console.log(result.pathname.groups);
+</pre>
+
+<h3>Using multiple components and features at once</h3>
+
+<p>
+  The following example shows how many features can be combined across multiple
+  URL components.
+</p>
+
+<pre class="brush: js">
+const pattern = new URLPattern({
+  protocol: "http{s}?",
+  username: ":user?",
+  password: ":pass?",
+  hostname: "{:subdomain.}*example.com",
+  pathname: "/product/:action*",
+});
+
+const result = pattern.exec("http://foo:bar@sub.example.com/product/view?q=12345");
+
+// Prints `foo`
+console.log(result.username.groups.user);
+
+// Prints `bar`
+console.log(result.password.groups.pass);
+
+// Prints `sub`
+console.log(result.hostname.groups.subdomain);
+
+// Prints `view`
+console.log(result.pathname.groups.action);
+</pre>
+
 <h2 id="Specifications">Specifications</h2>
 
 {{Specifications}}
@@ -303,9 +774,7 @@ console.log(pattern.test('https://example.com/.png')); // true
 <ul>
   <li>
     A polyfill of <code>URLPattern</code> is available
-    <a href="https://github.com/kenchris/urlpattern-polyfill"
-      ><code>on GitHub</code></a
-    >
+    <a href="https://github.com/kenchris/urlpattern-polyfill">on GitHub</a>
   </li>
   <li>
     The pattern syntax used by URLPattern is similar to the syntax used by
