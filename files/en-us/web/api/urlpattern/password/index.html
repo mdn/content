@@ -2,31 +2,25 @@
 title: URLPattern.password
 slug: Web/API/URLPattern/password
 tags:
-- API
-- Property
-- Reference
-- URLPattern
-- URLPattern API
-- Experimental
+  - API
+  - Property
+  - Reference
+  - URLPattern
+  - URLPattern API
+  - Experimental
 browser-compat: api.URLPattern.password
 ---
 
-<div>{{ APIRef("URLPattern API") }} {{SeeCompatTable}}</div>
+<div>{{ APIRef("URLPattern API") }}</div>
 
 <p>
   The <strong><code>password</code></strong> property of the
   {{domxref("URLPattern")}} interface is a {{domxref("USVString")}} containing
-  the pattern used to match the password part of a URL. This value may be differ
+  the pattern used to match the password part of a URL. This value may differ
   from the input to the constructor due to normalization.
 </p>
 
 <p>{{AvailableInWorkers}}</p>
-
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">
-const <em>string</em> = <em>urlpattern</em>.password
-</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -34,9 +28,18 @@ const <em>string</em> = <em>urlpattern</em>.password
 
 <h2 id="Examples">Examples</h2>
 
+<p>
+  The below example creates a {{domxref("URLPattern")}} object with a pattern of
+  <code>correct-horse-battery{-staple}?</code> for the
+  <code>password</code> part. This pattern matches the passwords
+  <code>correct-horse-battery</code> and
+  <code>correct-horse-battery-staple</code>.
+</p>
+
 <pre class="brush: js">
 const pattern = new URLPattern({ password: 'correct-horse-battery{-staple}?' });
-console.log(pattern.password); // 'correct-horse-battery{-staple}?'</pre>
+console.log(pattern.password); // 'correct-horse-battery{-staple}?'
+</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -45,9 +48,3 @@ console.log(pattern.password); // 'correct-horse-battery{-staple}?'</pre>
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
-  <li>The {{domxref("URLPattern")}} interface it belongs to.</li>
-</ul>

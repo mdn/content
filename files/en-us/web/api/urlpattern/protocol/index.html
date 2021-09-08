@@ -2,31 +2,25 @@
 title: URLPattern.protocol
 slug: Web/API/URLPattern/protocol
 tags:
-- API
-- Property
-- Reference
-- URLPattern
-- URLPattern API
-- Experimental
+  - API
+  - Property
+  - Reference
+  - URLPattern
+  - URLPattern API
+  - Experimental
 browser-compat: api.URLPattern.protocol
 ---
 
-<div>{{ APIRef("URLPattern API") }} {{SeeCompatTable}}</div>
+<div>{{ APIRef("URLPattern API") }}</div>
 
 <p>
   The <strong><code>protocol</code></strong> property of the
   {{domxref("URLPattern")}} interface is a {{domxref("USVString")}} containing
-  the pattern used to match the protocol part of a URL. This value may be differ
+  the pattern used to match the protocol part of a URL. This value may differ
   from the input to the constructor due to normalization.
 </p>
 
 <p>{{AvailableInWorkers}}</p>
-
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">
-const <em>string</em> = <em>urlpattern</em>.protocol
-</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -34,9 +28,16 @@ const <em>string</em> = <em>urlpattern</em>.protocol
 
 <h2 id="Examples">Examples</h2>
 
+<p>
+  The below example creates a {{domxref("URLPattern")}} object with a pattern of
+  <code>http{s}?</code> for the <code>protocol</code> part. This pattern matches
+  the <code>http</code> and <code>https</code> protocols.
+</p>
+
 <pre class="brush: js">
 const pattern = new URLPattern({ protocol: "http{s}?"});
-console.log(pattern.protocol); // 'http{s}?'</pre>
+console.log(pattern.protocol); // 'http{s}?'
+</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -45,9 +46,3 @@ console.log(pattern.protocol); // 'http{s}?'</pre>
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
-  <li>The {{domxref("URLPattern")}} interface it belongs to.</li>
-</ul>

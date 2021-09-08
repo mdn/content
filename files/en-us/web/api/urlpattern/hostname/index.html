@@ -2,31 +2,25 @@
 title: URLPattern.hostname
 slug: Web/API/URLPattern/hostname
 tags:
-- API
-- Property
-- Reference
-- URLPattern
-- URLPattern API
-- Experimental
+  - API
+  - Property
+  - Reference
+  - URLPattern
+  - URLPattern API
+  - Experimental
 browser-compat: api.URLPattern.hostname
 ---
 
-<div>{{ APIRef("URLPattern API") }} {{SeeCompatTable}}</div>
+<div>{{ APIRef("URLPattern API") }}</div>
 
 <p>
   The <strong><code>hostname</code></strong> property of the
   {{domxref("URLPattern")}} interface is a {{domxref("USVString")}} containing
-  the pattern used to match the hostname part of a URL. This value may be differ
+  the pattern used to match the hostname part of a URL. This value may differ
   from the input to the constructor due to normalization.
 </p>
 
 <p>{{AvailableInWorkers}}</p>
-
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">
-const <em>string</em> = <em>urlpattern</em>.hostname
-</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -34,9 +28,16 @@ const <em>string</em> = <em>urlpattern</em>.hostname
 
 <h2 id="Examples">Examples</h2>
 
+<p>
+  The below example creates a {{domxref("URLPattern")}} object with a pattern of
+  <code>*.example.org</code> for the <code>hostname</code> part. This pattern
+  matches any hostname that is a direct subdomain of <code>example.org</code>.
+</p>
+
 <pre class="brush: js">
 const pattern = new URLPattern('https://*.example.org');
-console.log(pattern.hostname); // '*.example.org'</pre>
+console.log(pattern.hostname); // '*.example.org'
+</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -45,9 +46,3 @@ console.log(pattern.hostname); // '*.example.org'</pre>
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
-  <li>The {{domxref("URLPattern")}} interface it belongs to.</li>
-</ul>

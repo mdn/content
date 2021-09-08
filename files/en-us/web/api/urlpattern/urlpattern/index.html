@@ -2,27 +2,22 @@
 title: URLPattern()
 slug: Web/API/URLPattern/URLPattern
 tags:
-- API
-- Constructor
-- Reference
-- URLPattern
-- URLPattern API
-- Polyfill
-- Experimental
+  - API
+  - Constructor
+  - Reference
+  - URLPattern
+  - URLPattern API
+  - Polyfill
+  - Experimental
 browser-compat: api.URLPattern.URLPattern
 ---
 
-<div>{{APIRef("URLPattern API")}} {{SeeCompatTable}}</div>
+<div>{{APIRef("URLPattern API")}}</div>
 
 <p>
-  The <code><strong>URLPattern()</strong></code> constructor returns a newly
-  created {{domxref("URLPattern")}} object representing the url pattern defined
-  by the parameters.
-</p>
-
-<p>
-  If the given pattern or base URL are not valid or syntactically correct, the
-  JavaScript {{jsxref("TypeError")}} exception is thrown.
+  The <code><strong>URLPattern()</strong></code> constructor returns a new
+  {{domxref("URLPattern")}} object representing the url pattern defined by the
+  parameters.
 </p>
 
 <p>{{AvailableInWorkers}}</p>
@@ -30,31 +25,44 @@ browser-compat: api.URLPattern.URLPattern
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: js">
-const <var>pattern</var> = new URLPattern(<var>input</var> [, <var>baseURL</var>])
+new URLPattern(input);
+new URLPattern(input, baseURL);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
   <dt>
-    <code><var>input</var></code>
+    <code>input</code>
   </dt>
   <dd>
     The pattern that will be used for matching. This can either be a
-    {{domxref("USVString")}}, or a structured object providing patterns for each
-    URL part individually. Omitted parts in the structured object will be
-    treated as wildcards.
+    {{domxref("USVString")}}, or an object providing patterns for each URL part
+    individually. The object members can be any of <code>protocol</code>,
+    <code>username</code>, <code>password</code>, <code>hostname</code>,
+    <code>port</code>, <code>pathname</code>, <code>search</code>,
+    <code>hash</code>, or <code>baseURL</code>. Omitted parts in the object will
+    be treated as wildcards (<code>*</code>).
   </dd>
   <dt>
-    <code><var>baseURL</var></code> {{optional_inline}}
+    <code>baseURL</code> {{optional_inline}}
   </dt>
   <dd>
     A {{domxref("USVString")}} representing the base URL to use in cases where
-    <code><var>input</var></code> is a relative pattern. If not specified, it
-    defaults to <code>undefined</code>. If this parameter is provided, and input
-    is an absolute pattern or a structured object, a {{jsxref("TypeError")}} is
-    thrown.
+    <code>input</code> is a relative pattern. If not specified, it defaults to
+    <code>undefined</code>.
   </dd>
+</dl>
+
+<h3 id="Exceptions">Exceptions</h3>
+<dl>
+  <dt>{{jsxref("TypeError")}}</dt>
+  <dt>Indicates one of the following:
+    <ul>
+      <li>The given pattern or base URL is not valid or syntactically correct.</li>
+      <li>A <code>baseURL</code> is provided, and input is an absolute pattern or a structured object.</li>
+    </ul>
+  </dt>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -107,5 +115,4 @@ let pattern = new URLPattern({
     A polyfill of <code>URLPattern</code> is available
     <a href="https://github.com/kenchris/urlpattern-polyfill">on GitHub</a>
   </li>
-  <li>The interface it belongs to: {{domxref("URLPattern")}}.</li>
 </ul>

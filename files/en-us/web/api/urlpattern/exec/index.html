@@ -2,23 +2,24 @@
 title: URLPattern.exec()
 slug: Web/API/URLPattern/exec
 tags:
-- API
-- Method
-- Reference
-- URLPattern
-- URLPattern API
-- Polyfill
-- Experimental
+  - API
+  - Method
+  - Reference
+  - URLPattern
+  - URLPattern API
+  - Polyfill
+  - Experimental
 browser-compat: api.URLPattern.exec
 ---
 
-<div>{{APIRef("URLPattern API")}} {{SeeCompatTable}}</div>
+<div>{{APIRef("URLPattern API")}}</div>
 
 <p>
-  The <strong><code>exec()</code></strong> method of the
-  {{domxref("URLPattern")}} interface takes a URL or object of URL parts, and
-  returns either an object containing the results of matching the URL to the
-  pattern, or <code>null</code> if the URL does not match the pattern.
+  The <strong><code>exec()</code></strong
+  > method of the {{domxref("URLPattern")}} interface takes a URL or object of
+  URL parts, and returns either an object containing the results of matching the
+  URL to the pattern, or <code>null</code> if the URL does not match the
+  pattern.
 </p>
 
 <p>{{AvailableInWorkers}}</p>
@@ -26,30 +27,34 @@ browser-compat: api.URLPattern.exec
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: js">
-const <em>result</em> = <em>url</em>.exec(input[, baseURL])</pre
->
+exec(input);
+exec(input, baseURL);
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
   <dt>
-    <code><var>input</var></code>
+    <code>input</code>
   </dt>
   <dd>
     The URL or URL parts that the matcher will match against. This can either be
-    a {{domxref("USVString")}}, or a structured object providing the individual
-    URL parts. Omitted parts in the structured object will be treated as empty
-    strings. If the input can not be parsed, or a relative URL without a base is
-    provided, the method will return <code>null</code>.
+    a {{domxref("USVString")}}, or an object providing the individual URL parts.
+    The object members can be any of <code>protocol</code>,
+    <code>username</code>, <code>password</code>, <code>hostname</code>,
+    <code>port</code>, <code>pathname</code>, <code>search</code>,
+    <code>hash</code>, or <code>baseURL</code>. Omitted parts in the object will
+    be treated as empty strings. If the input cannot be parsed, or a relative
+    URL without a base is provided, the method will return <code>null</code>.
   </dd>
   <dt>
     <code><var>baseURL</var></code> {{optional_inline}}
   </dt>
   <dd>
     A {{domxref("USVString")}} representing the base URL to use in cases where
-    <code><var>input</var></code> is a relative URL. If not specified, it
-    defaults to <code>undefined</code>. If this parameter can not be parsed, the
-    method will return <code>null</code>.
+    <code>input</code> is a relative URL. If not specified, it defaults to
+    <code>undefined</code>. If this parameter cannot be parsed, the method will
+    return <code>null</code>.
   </dd>
 </dl>
 
@@ -116,5 +121,4 @@ pattern.test({
     A polyfill of <code>URLPattern</code> is available
     <a href="https://github.com/kenchris/urlpattern-polyfill">on GitHub</a>
   </li>
-  <li>The {{domxref("URLPattern")}} interface it belongs to.</li>
 </ul>

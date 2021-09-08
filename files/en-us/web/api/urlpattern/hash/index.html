@@ -2,31 +2,25 @@
 title: URLPattern.hash
 slug: Web/API/URLPattern/hash
 tags:
-- API
-- Property
-- Reference
-- URLPattern
-- URLPattern API
-- Experimental
+  - API
+  - Property
+  - Reference
+  - URLPattern
+  - URLPattern API
+  - Experimental
 browser-compat: api.URLPattern.hash
 ---
 
-<div>{{ APIRef("URLPattern API") }} {{SeeCompatTable}}</div>
+<div>{{ APIRef("URLPattern API") }}</div>
 
 <p>
   The <strong><code>hash</code></strong> property of the
   {{domxref("URLPattern")}} interface is a {{domxref("USVString")}} containing
-  the pattern used to match the fragment part of a URL. This value may be differ
+  the pattern used to match the fragment part of a URL. This value may differ
   from the input to the constructor due to normalization.
 </p>
 
 <p>{{AvailableInWorkers}}</p>
-
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">
-const <em>string</em> = <em>urlpattern</em>.hash
-</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -34,9 +28,17 @@ const <em>string</em> = <em>urlpattern</em>.hash
 
 <h2 id="Examples">Examples</h2>
 
+<p>
+  The below example creates a {{domxref("URLPattern")}} object with a pattern of
+  <code>books/:id</code> for the <code>hash</code> part. This pattern matches
+  any fragment that starts with <code>books/</code> and ends with an arbitrary
+  string identifer.
+</p>
+
 <pre class="brush: js">
 const pattern = new URLPattern('https://example.org#books/:id');
-console.log(pattern.hash); // 'books/:id'</pre>
+console.log(pattern.hash); // 'books/:id'
+</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -45,9 +47,3 @@ console.log(pattern.hash); // 'books/:id'</pre>
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
-  <li>The {{domxref("URLPattern")}} interface it belongs to.</li>
-</ul>
