@@ -78,7 +78,7 @@ The equipment may also include an accelerometer, barometer, or other sensors whi
 - {{DOMxRef("XRViewerPose")}}
 
 ### Input
-
+- {{DOMxRef("XRHand")}}
 - {{DOMxRef("XRInputSource")}}
 - {{DOMxRef("XRInputSourceArray")}}
 - {{domxref("XRInputSourceEvent")}}
