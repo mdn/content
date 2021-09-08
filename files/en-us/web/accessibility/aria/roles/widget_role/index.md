@@ -12,7 +12,7 @@ tags:
 
 
 
-The **`widget`** role, an abstract role, is an interactive component of a graphical user interface (GUI).
+The **`widget`** role, an [abstract role](/en-US/docs/Web/Accessibility/ARIA/Roles/#Abstract_roles), is an interactive component of a graphical user interface (GUI).
 
 ## Description
 

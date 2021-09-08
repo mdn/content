@@ -6,13 +6,19 @@ tags:
   - Accessibility
   - ARIA
   - roles
+  - Composite Role
+  - Abstract Role
+  - Reference
   - NeedsContent
 ---
 
+The `composite` [abstract role](/en-US/docs/Web/Accessibility/ARIA/Roles/#Abstract_roles) indicates a widget that may contain navigable descendants or owned children.
 
-Note:  composite role is an bstract role. It is included here for completeness of documentation. It should not be used by web authors.
+> **Note:**  The `composite` role is an abstract role. It is included here for completeness of documentation. It should not be used by web authors.
 
 ## Description
+
+`Composite` is an abstract role used for the ontology. Don't use this role in content. Instead, use the composite subclasses of [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), [`select`](/en-US/docs/Web/Accessibility/ARIA/Roles/select_role), [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role), and [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role) 
 
 ## Best Practices
 
@@ -23,10 +29,14 @@ Do not use.
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#composite role","ARIA: composite role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#aria_lh_composite_role","composite role")}} | {{Spec2('ARIA Authoring Practices')}} |
 
 
 ## See Also
 
+- [ARIA: `widget` role](/en-US/docs/Web/Accessibility/ARIA/Roles/widget_role)
+- [ARIA: `grid` role](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role)
+- [ARIA: `select` role](/en-US/docs/Web/Accessibility/ARIA/Roles/select_role)
+- [ARIA: `spinbutton` role](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role)
+- [ARIA: `tablist` role](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role)
 
 <section id="Quick_links"><ol><li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li></ol></section>

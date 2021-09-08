@@ -12,7 +12,7 @@ tags:
 
 
 
-The **`roletype`** roles is the base role from which all other ARIA roles inherit.
+The **`roletype`** role, an [abstract role](/en-US/docs/Web/Accessibility/ARIA/Roles/#Abstract_roles), is the base role from which all other ARIA roles inherit.
 
 ## Description
 

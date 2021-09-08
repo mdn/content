@@ -3,7 +3,9 @@ title: 'ARIA: listbox role'
 slug: Web/Accessibility/ARIA/Roles/listbox_role
 tags:
   - ARIA
+  - ARIA role
   - Accessibility
+  - Reference
   - NeedsContent
 ---
 The `listbox` role is used for lists from which a user may select one or more items which are static and, unlike HTML {{HTMLElement('select')}} elements, may contain images.

@@ -3,7 +3,9 @@ title: 'ARIA: textbox role'
 slug: Web/Accessibility/ARIA/Roles/textbox_role
 tags:
   - ARIA
+  - ARIA role
   - Accessibility
+  - Reference
   - NeedsContent
 ---
 The `textbox` role is used to identify an element that allows the input of free-form text. Whenever possible, rather than using this role, use an {{HTMLElement("input")}} element with [type="text"](/en-US/docs/Web/HTML/Element/input/text), for single-line input, or a {{HTMLElement("textarea")}} element for multi-line input.

@@ -6,7 +6,10 @@ tags:
   - Accessibility
   - ARIA
   - roles
-  - NeedsContent
+  - ARIA Role
+  - ARIA command
+  - ARIA widget
+  - Reference
 ---
 
 The `command` role defines a widget that performs an action but does not receive input data.
@@ -26,7 +29,6 @@ Do not use.
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#command role","ARIA: command role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#aria_lh_command_role","command role")}} | {{Spec2('ARIA Authoring Practices')}} |
 
 
 ## See Also

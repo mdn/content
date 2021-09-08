@@ -6,12 +6,16 @@ tags:
   - Accessibility
   - ARIA
   - roles
-  - NeedsContent
+  - landmark
+  - ARIA Role
+  - Abstract Role
+  - ARIA landmark
+  - Reference
 ---
 
 A landmark is an important subsection of a page. 
 
-> **Note:**  The `landmark` role is an abstract role. It is included here for completeness of documentation. It should not be used by web authors.
+> **Note:**  The `landmark` role is an [abstract role](/en-US/docs/Web/Accessibility/ARIA/Roles/#Abstract_roles). It is included here for completeness of documentation. It should not be used by web authors.
 
 ## Description
 
@@ -19,7 +23,7 @@ A `landmark` is an abstract role for a section of content that is important enou
 
 To create a landmark role, define the purpose of the content by using a semantic element such as `<section>`, `<nav>`, or `<main>`, or adding an ARIA role that is a subclass of the `landmark` role such as [`role="banner"`](/en-US/docs/Web/Accessibility/ARIA/Roles/banner_role), [`role="complementary"`](/en-US/docs/Web/Accessibility/ARIA/Roles/complementary_role), or [`role="region"`](/en-US/docs/Web/Accessibility/ARIA/Roles/region_role).  Do not use `role="landmark"`. 
 
-If needed, a brief, descriptive label can provided with a heading element or with `aria-label`.
+A visible label should be provided, referenced with `aria-labelledby`. If necessary, brief, descriptive, label can be provided with `aria-label`.
 
 For screen reader users, adding landmark roles effectively create 'skip links' for screen reader users, but don't replace in page navigation as the landmark roles are not otherwise surfaced.
 
@@ -34,7 +38,6 @@ Landmarks ensure content is in navigable regions. Use [`<main>`] for [`role="mai
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#landmark","ARIA: landmark role")}}                                             | {{Spec2('ARIA')}}                         |
-
 
 
 ## See Also

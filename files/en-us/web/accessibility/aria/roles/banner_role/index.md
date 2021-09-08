@@ -3,7 +3,9 @@ title: 'ARIA: banner role'
 slug: Web/Accessibility/ARIA/Roles/Banner_role
 tags:
   - ARIA
+  - ARIA role
   - Accessibility
+  - Reference
   - NeedsContent
 ---
 

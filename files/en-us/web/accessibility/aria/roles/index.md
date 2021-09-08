@@ -19,90 +19,90 @@ For example, `<ul role="tabpanel">` will be announced as a 'tab panel' by screen
 The states and properties associated with each role are included in the role's pages, listed below.
 
 
-## ARIA Role types
+## ARIA role types
 
 There are 6 categories of ARIA roles:
 
 
-### 1. Document structure roles
-Document Structure roles are used to provide a structural description for a section of content. Most of these roles should no longer be used as browsers now support semantic HTML element with the same meaning. The roles without HTML equivalents, such as presentation, toolbar and tooltip roles, provide information on the document structure to assistive technologies such as screen readers as equivalent native HTML tags are not available. 
+1. ### Document structure roles
+
+    Document Structure roles are used to provide a structural description for a section of content. Most of these roles should no longer be used as browsers now support semantic HTML element with the same meaning. The roles without HTML equivalents, such as presentation, toolbar and tooltip roles, provide information on the document structure to assistive technologies such as screen readers as equivalent native HTML tags are not available. 
 
 
- - [toolbar](/en-US/docs/Web/Accessibility/ARIA/Roles/toolbar_role)
- - [tooltip](/en-US/docs/Web/Accessibility/ARIA/Roles/tooltip_role)
- - [feed](/en-US/docs/Web/Accessibility/ARIA/Roles/feed_role)
- - [math](/en-US/docs/Web/Accessibility/ARIA/Roles/math_role)
- - [presentation](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role)
- - [note](/en-US/docs/Web/Accessibility/ARIA/Roles/note_role)
+      - [toolbar](/en-US/docs/Web/Accessibility/ARIA/Roles/toolbar_role)
+      - [tooltip](/en-US/docs/Web/Accessibility/ARIA/Roles/tooltip_role)
+      - [feed](/en-US/docs/Web/Accessibility/ARIA/Roles/feed_role)
+      - [math](/en-US/docs/Web/Accessibility/ARIA/Roles/math_role)
+      - [presentation](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role)
+      - [note](/en-US/docs/Web/Accessibility/ARIA/Roles/note_role)
 
-Avoid using [application](/en-US/docs/Web/Accessibility/ARIA/Roles/Application_Role),  [article](/en-US/docs/Web/Accessibility/ARIA/Roles/Article_Role) ,  [cell](/en-US/docs/Web/Accessibility/ARIA/Roles/Cell_Role) ,  [columnheader](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role) ,  [definition](/en-US/docs/Web/Accessibility/ARIA/Roles/definition_role),  [directory](/en-US/docs/Web/Accessibility/ARIA/Roles/directory_role),  [document](/en-US/docs/Web/Accessibility/ARIA/Roles/Document_Role),  [figure](/en-US/docs/Web/Accessibility/ARIA/Roles/Figure_Role),  [group](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role),  [heading](/en-US/docs/Web/Accessibility/ARIA/Roles/heading_role),  [img](/en-US/docs/Web/Accessibility/ARIA/Roles/Role_Img),  [list](/en-US/docs/Web/Accessibility/ARIA/Roles/List_role),  [listitem](/en-US/docs/Web/Accessibility/ARIA/Roles/Listitem_role),  [none](/en-US/docs/Web/Accessibility/ARIA/Roles/none_role),  [row](/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role),  [rowgroup](/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role),  [rowheader](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role),  [separator](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role),  [table](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role), and [term](/en-US/docs/Web/Accessibility/ARIA/Roles/term_role).  These are included for completeness, but in most cases are rarely, if ever, useful. For most, semantic equivalents are available and supported. 
-
-
-### 2. Widget roles
-
-The various widget role are used to define common interactive patterns. Similar to the document structure roles, some of these roles duplicate the semantics of native HTML elements that are well supported, and should not be used. The difference between the two lists is that, generally, the widget roles require JavaScript interaction and the document structure roles don't necessarily. 
+    Avoid using [application](/en-US/docs/Web/Accessibility/ARIA/Roles/Application_Role),  [article](/en-US/docs/Web/Accessibility/ARIA/Roles/Article_Role) ,  [cell](/en-US/docs/Web/Accessibility/ARIA/Roles/Cell_Role) ,  [columnheader](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role) ,  [definition](/en-US/docs/Web/Accessibility/ARIA/Roles/definition_role),  [directory](/en-US/docs/Web/Accessibility/ARIA/Roles/directory_role),  [document](/en-US/docs/Web/Accessibility/ARIA/Roles/Document_Role),  [figure](/en-US/docs/Web/Accessibility/ARIA/Roles/Figure_Role),  [group](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role),  [heading](/en-US/docs/Web/Accessibility/ARIA/Roles/heading_role),  [img](/en-US/docs/Web/Accessibility/ARIA/Roles/Role_Img),  [list](/en-US/docs/Web/Accessibility/ARIA/Roles/List_role),  [listitem](/en-US/docs/Web/Accessibility/ARIA/Roles/Listitem_role),  [none](/en-US/docs/Web/Accessibility/ARIA/Roles/none_role),  [row](/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role),  [rowgroup](/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role),  [rowheader](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role),  [separator](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role),  [table](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role), and [term](/en-US/docs/Web/Accessibility/ARIA/Roles/term_role).  These are included for completeness, but in most cases are rarely, if ever, useful. For most, semantic equivalents are available and supported. 
 
 
- - [scrollbar](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role)
- - [searchbox](/en-US/docs/Web/Accessibility/ARIA/Roles/searchbox_role)
- - [separator](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role) (when focusable)
- - [slider](/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role)
- - [spinbutton](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role)
- - [switch](/en-US/docs/Web/Accessibility/ARIA/Roles/Switch_role)
- - [tab](/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_Role)
- - [tabpanel](/en-US/docs/Web/Accessibility/ARIA/Roles/Tabpanel_Role)
- - [treeitem](/en-US/docs/Web/Accessibility/ARIA/Roles/treeitem_role)
-
-Avoid using  [button](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role),  [checkbox](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role),  [gridcell](/en-US/docs/Web/Accessibility/ARIA/Roles/Gridcell_role),  [link](/en-US/docs/Web/Accessibility/ARIA/Roles/link_role),  [menuitem](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role),  [menuitemcheckbox](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role),  [menuitemradio](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role),  [option](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role),  [progressbar](/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role),  [radio](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role), and [textbox](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role), which we've  included for completeness. For most, semantic equivalents with accessible interactivity are available and supported. See the individual role documention for more information.
-
-#### Composite widget roles
-
- - [combobox](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role)
- - [menu](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role)
- - [menubar](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role)
- - [tablist](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role)
- - [tree](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role)
- - [treegrid](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role)
-
-Avoid using [grid](/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role), [listbox](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role), and [radiogroup](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role), which we've included for completeness. See the individual role documention for more information.
-
-Note that there is also a widget role (`role="widget"`), which is an abstract role and not in the widget role category.
+2. ### Widget roles
+  The various widget role are used to define common interactive patterns. Similar to the document structure roles, some of these roles duplicate the semantics of native HTML elements that are well supported, and should not be used. The difference between the two lists is that, generally, the widget roles require JavaScript interaction and the document structure roles don't necessarily. 
 
 
+  - [scrollbar](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role)
+  - [searchbox](/en-US/docs/Web/Accessibility/ARIA/Roles/searchbox_role)
+  - [separator](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role) (when focusable)
+  - [slider](/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role)
+  - [spinbutton](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role)
+  - [switch](/en-US/docs/Web/Accessibility/ARIA/Roles/Switch_role)
+  - [tab](/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_Role)
+  - [tabpanel](/en-US/docs/Web/Accessibility/ARIA/Roles/Tabpanel_Role)
+  - [treeitem](/en-US/docs/Web/Accessibility/ARIA/Roles/treeitem_role)
+
+  Avoid using  [button](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role),  [checkbox](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role),  [gridcell](/en-US/docs/Web/Accessibility/ARIA/Roles/Gridcell_role),  [link](/en-US/docs/Web/Accessibility/ARIA/Roles/link_role),  [menuitem](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role),  [menuitemcheckbox](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role),  [menuitemradio](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role),  [option](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role),  [progressbar](/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role),  [radio](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role), and [textbox](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role), which we've  included for completeness. For most, semantic equivalents with accessible interactivity are available and supported. See the individual role documention for more information.
+
+  #### Composite widget roles
+
+  - [combobox](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role)
+  - [menu](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role)
+  - [menubar](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role)
+  - [tablist](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role)
+  - [tree](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role)
+  - [treegrid](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role)
+
+  Avoid using [grid](/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role), [listbox](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role), and [radiogroup](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role), which we've included for completeness. See the individual role documention for more information.
+
+  Note that there is also a widget role (`role="widget"`), which is an abstract role and not in the widget role category.
 
 
-### 3. Landmark roles
+3. ### Landmark roles
 
- - [banner](/en-US/docs/Web/Accessibility/ARIA/Roles/Banner_role)
- - [complementary](/en-US/docs/Web/Accessibility/ARIA/Roles/Complementary_role)
- - [contentinfo](/en-US/docs/Web/Accessibility/ARIA/Roles/Contentinfo_role)
- - [form](/en-US/docs/Web/Accessibility/ARIA/Roles/Form_Role)
- - [main](/en-US/docs/Web/Accessibility/ARIA/Roles/Main_role)
- - [navigation](/en-US/docs/Web/Accessibility/ARIA/Roles/Navigation_Role)
- - [region](/en-US/docs/Web/Accessibility/ARIA/Roles/Region_role)
- - [search](/en-US/docs/Web/Accessibility/ARIA/Roles/Search_role)
-
-### 4. Live Region Roles
-
-Live Region roles are used define elements with content that will be dynamically changed. Sited users can see dynamic changes when they are visually noticeable. These roles help low vision and blind users know if content has been updated. Assistive technologies, like screen readers, can be made to announce dynamic content changes:
-
- - [alert](/en-US/docs/Web/Accessibility/ARIA/Roles/Alert_Role)
- - [log](/en-US/docs/Web/Accessibility/ARIA/Roles/log_role)
- - [marquee](/en-US/docs/Web/Accessibility/ARIA/Roles/Marquee_Role)
- - [status](/en-US/docs/Web/Accessibility/ARIA/Roles/status_role)
- - [timer](/en-US/docs/Web/Accessibility/ARIA/Roles/timer_role)
+  - [banner](/en-US/docs/Web/Accessibility/ARIA/Roles/Banner_role)
+  - [complementary](/en-US/docs/Web/Accessibility/ARIA/Roles/Complementary_role)
+  - [contentinfo](/en-US/docs/Web/Accessibility/ARIA/Roles/Contentinfo_role)
+  - [form](/en-US/docs/Web/Accessibility/ARIA/Roles/Form_Role)
+  - [main](/en-US/docs/Web/Accessibility/ARIA/Roles/Main_role)
+  - [navigation](/en-US/docs/Web/Accessibility/ARIA/Roles/Navigation_Role)
+  - [region](/en-US/docs/Web/Accessibility/ARIA/Roles/Region_role)
+  - [search](/en-US/docs/Web/Accessibility/ARIA/Roles/Search_role)
 
 
-### 5. Window Roles
+4. ### Live region roles
 
-Window roles define sub-windows to the main document window, within the same window, such as pop up modal dialogs: 
+  Live Region roles are used define elements with content that will be dynamically changed. Sited users can see dynamic changes when they are visually noticeable. These roles help low vision and blind users know if content has been updated. Assistive technologies, like screen readers, can be made to announce dynamic content changes:
 
- - [alertdialog](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role)
- - [dialog](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role)
+  - [alert](/en-US/docs/Web/Accessibility/ARIA/Roles/Alert_Role)
+  - [log](/en-US/docs/Web/Accessibility/ARIA/Roles/log_role)
+  - [marquee](/en-US/docs/Web/Accessibility/ARIA/Roles/Marquee_Role)
+  - [status](/en-US/docs/Web/Accessibility/ARIA/Roles/status_role)
+  - [timer](/en-US/docs/Web/Accessibility/ARIA/Roles/timer_role)
 
- ### 6. Abstract Roles
 
-Abstract roles are only intended for use by browsers to help organize and streamline a document. They should not be used by developers writing HTML markup. Doing so will not result in any meaningful information being conveyed to assistive technologies or to users.
+5.  ### Window roles
+
+  Window roles define sub-windows to the main document window, within the same window, such as pop up modal dialogs: 
+
+  - [alertdialog](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role)
+  - [dialog](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role)
+
+
+6. ###  Abstract roles
+
+  Abstract roles are only intended for use by browsers to help organize and streamline a document. They should not be used by developers writing HTML markup. Doing so will not result in any meaningful information being conveyed to assistive technologies or to users.
 
   - command
   - composite
@@ -117,22 +117,23 @@ Abstract roles are only intended for use by browsers to help organize and stream
   - widget
   - window
 
-<div class="hidden"><!-- we have the pages. We can link to them. If we do, include "They are included here for reference" in the note below-->
-  - [command](/en-US/docs/Web/Accessibility/ARIA/Roles/command_role)
-  - [composite](/en-US/docs/Web/Accessibility/ARIA/Roles/composite_role)
-  - [input](/en-US/docs/Web/Accessibility/ARIA/Roles/input_role)
-  - [landmark](/en-US/docs/Web/Accessibility/ARIA/Roles/landmark_role)
-  - [range](/en-US/docs/Web/Accessibility/ARIA/Roles/range_role)
-  - [roletype](/en-US/docs/Web/Accessibility/ARIA/Roles/roletype_role)
-  - [section](/en-US/docs/Web/Accessibility/ARIA/Roles/section_role)
-  - [sectionhead](/en-US/docs/Web/Accessibility/ARIA/Roles/sectionhead_role)
-  - [select](/en-US/docs/Web/Accessibility/ARIA/Roles/select_role)
-  - [structure](/en-US/docs/Web/Accessibility/ARIA/Roles/structure_role)
-  - [widget](/en-US/docs/Web/Accessibility/ARIA/Roles/widget_role)
-  - [window](/en-US/docs/Web/Accessibility/ARIA/Roles/window_role)
-</div>
-
   > **Note:** Don't use **abstract roles** in your sites and applications. They are for use by browsers. 
+
+  <div class="hidden"><!-- we have the pages. We can link to them. If we do, include "They are included here for reference" in the note below-->
+    - [command](/en-US/docs/Web/Accessibility/ARIA/Roles/command_role)
+    - [composite](/en-US/docs/Web/Accessibility/ARIA/Roles/composite_role)
+    - [input](/en-US/docs/Web/Accessibility/ARIA/Roles/input_role)
+    - [landmark](/en-US/docs/Web/Accessibility/ARIA/Roles/landmark_role)
+    - [range](/en-US/docs/Web/Accessibility/ARIA/Roles/range_role)
+    - [roletype](/en-US/docs/Web/Accessibility/ARIA/Roles/roletype_role)
+    - [section](/en-US/docs/Web/Accessibility/ARIA/Roles/section_role)
+    - [sectionhead](/en-US/docs/Web/Accessibility/ARIA/Roles/sectionhead_role)
+    - [select](/en-US/docs/Web/Accessibility/ARIA/Roles/select_role)
+    - [structure](/en-US/docs/Web/Accessibility/ARIA/Roles/structure_role)
+    - [widget](/en-US/docs/Web/Accessibility/ARIA/Roles/widget_role)
+    - [window](/en-US/docs/Web/Accessibility/ARIA/Roles/window_role)
+  </div>
+
 
 
 ## Roles defined on MDN
