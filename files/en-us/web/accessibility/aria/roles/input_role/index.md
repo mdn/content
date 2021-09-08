@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: input role'
-slug: Web/Accessibility/ARIA/roles/input_role
+slug: Web/Accessibility/ARIA/roles/inp
 tags: 
 
   - Accessibility
@@ -14,11 +14,11 @@ tags:
 
 The `input` abstract role is a generic type of widget that allows user input.
 
-> **Note:**  The `input` role is an abstract role. It is included here for completeness of documentation. It is  not to be used by web authors.
+> **Note:**  The `input` role is an [abstract role](/en-US/docs/Web/Accessibility/ARIA/Roles/#Abstract_roles). It is included here for completeness of documentation. It is  not to be used by web authors.
 
 ## Description
 
-The `input` role is an abstract role. It must not be used by web authors. It is the superclass for input widgets that provide for user input, including [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role), [`radio`](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role), and [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role). For all three, consider using the {{HTMLElement("code")}} element of type  [`checkbox`](en-US/docs/Web/HTML/Element/input/checkbox), [`radio`](en-US/docs/Web/HTML/Element/input/radio) and [`text`](en-US/docs/Web/HTML/Element/input/text), respectively
+The `input` role is an abstract role. It must not be used by web authors. It is the superclass for input widgets that provide for user input, including [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role), [`radio`](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role), and [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role). For all three, consider using the {{HTMLElement("code")}} element of type  [`checkbox`](en-US/docs/Web/HTML/Element/input/checkbox), [`radio`](en-US/docs/Web/HTML/Element/input/radio) and [`text`](en-US/docs/Web/HTML/Element/input/text), respectively.
 
 ## Best Practices
 

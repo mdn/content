@@ -8,13 +8,17 @@ tags:
   - roles
   - Reference
   - ARIA roles
-  - NeedsContent
+  - Abstract role
 ---
 
 
-Note:  range role is an bstract role. It is included here for completeness of documentation. It should not be used by web authors.
+The `range` abstract role is a generic type of structure role representing a range of values.
+
+> **Note:**  The `range` role is an [abstract role](/en-US/docs/Web/Accessibility/ARIA/Roles/#Abstract_roles). It is included here for completeness of documentation. It is  not to be used by web authors.
 
 ## Description
+
+The `range` role is an abstract role. It must not be used by web authors. It is the superclass for structural roles for elements that accept a value within a range of values, including the [`meter`](/en-US/docs/Web/Accessibility/ARIA/Roles/meter_role) role, [`slider` ](/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role) and [`progressbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role). For these three, consider using the {{HTMLElement("meter")}} element, the  {{HTMLElement("progress")}} element, and the {{HTMLElement("input")}} element with  [`type="range"`](en-US/docs/Web/HTML/Element/input/text), respectively.
 
 ## Best Practices
 
@@ -25,10 +29,20 @@ Do not use.
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#range role","ARIA: range role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#aria_lh_range_role","range role")}} | {{Spec2('ARIA Authoring Practices')}} |
+
 
 
 ## See Also
+
+- [ARIA: `structure` role](/en-US/docs/Web/Accessibility/ARIA/Roles/structure_role)
+- [ARIA: `meter` role](/en-US/docs/Web/Accessibility/ARIA/Roles/meter_role)
+- [ARIA: `progressbar` role](/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role)
+- [ARIA: `scrollbar` role](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role)
+- [ARIA: `slider` role](/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role)
+- [ARIA: `spinbutton` role](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role)
+- {{HTMLElement("input")}}
+- {{HTMLElement("meter")}}
+- {{HTMLElement("progress")}}
 
 
 <section id="Quick_links"><ol><li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li></ol></section>
