@@ -104,35 +104,23 @@ There are 6 categories of ARIA roles:
 
   Abstract roles are only intended for use by browsers to help organize and streamline a document. They should not be used by developers writing HTML markup. Doing so will not result in any meaningful information being conveyed to assistive technologies or to users.
 
-  - command
-  - composite
-  - input
-  - landmark
-  - range
-  - roletype
-  - section
-  - sectionhead
-  - select
-  - structure
-  - widget
-  - window
+  > **Note:** Don't use **abstract roles**. They are included for reference only. 
 
-  > **Note:** Don't use **abstract roles** in your sites and applications. They are for use by browsers. 
+  - [command](/en-US/docs/Web/Accessibility/ARIA/Roles/command_role)
+  - [composite](/en-US/docs/Web/Accessibility/ARIA/Roles/composite_role)
+  - [input](/en-US/docs/Web/Accessibility/ARIA/Roles/input_role)
+  - [landmark](/en-US/docs/Web/Accessibility/ARIA/Roles/landmark_role)
+  - [range](/en-US/docs/Web/Accessibility/ARIA/Roles/range_role)
+  - [roletype](/en-US/docs/Web/Accessibility/ARIA/Roles/roletype_role)
+  - [section](/en-US/docs/Web/Accessibility/ARIA/Roles/section_role)
+  - [sectionhead](/en-US/docs/Web/Accessibility/ARIA/Roles/sectionhead_role)
+  - [select](/en-US/docs/Web/Accessibility/ARIA/Roles/select_role)
+  - [structure](/en-US/docs/Web/Accessibility/ARIA/Roles/structure_role)
+  - [widget](/en-US/docs/Web/Accessibility/ARIA/Roles/widget_role)
+  - [window](/en-US/docs/Web/Accessibility/ARIA/Roles/window_role)
 
-  <div class="hidden"><!-- we have the pages. We can link to them. If we do, include "They are included here for reference" in the note below-->
-    - [command](/en-US/docs/Web/Accessibility/ARIA/Roles/command_role)
-    - [composite](/en-US/docs/Web/Accessibility/ARIA/Roles/composite_role)
-    - [input](/en-US/docs/Web/Accessibility/ARIA/Roles/input_role)
-    - [landmark](/en-US/docs/Web/Accessibility/ARIA/Roles/landmark_role)
-    - [range](/en-US/docs/Web/Accessibility/ARIA/Roles/range_role)
-    - [roletype](/en-US/docs/Web/Accessibility/ARIA/Roles/roletype_role)
-    - [section](/en-US/docs/Web/Accessibility/ARIA/Roles/section_role)
-    - [sectionhead](/en-US/docs/Web/Accessibility/ARIA/Roles/sectionhead_role)
-    - [select](/en-US/docs/Web/Accessibility/ARIA/Roles/select_role)
-    - [structure](/en-US/docs/Web/Accessibility/ARIA/Roles/structure_role)
-    - [widget](/en-US/docs/Web/Accessibility/ARIA/Roles/widget_role)
-    - [window](/en-US/docs/Web/Accessibility/ARIA/Roles/window_role)
-  </div>
+
+  > **Warning:** Don't use abstract roles in your sites and applications. They are for use by browsers. 
 
 
 
