@@ -33,7 +33,7 @@ tags:
 
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#rowheader role","ARIA: rowheader role")}}                                             | {{Spec2('ARIA')}}                         |
+| {{SpecName("ARIA","#rowheader","ARIA: rowheader role")}}                                             | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices","#aria_lh_rowheader_role","rowheader role")}} | {{Spec2('ARIA Authoring Practices')}} |
 
 

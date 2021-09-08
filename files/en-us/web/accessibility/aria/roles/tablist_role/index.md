@@ -33,7 +33,7 @@ tags:
 
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#tablist role","ARIA: tablist role")}}                                             | {{Spec2('ARIA')}}                         |
+| {{SpecName("ARIA","#tablist","ARIA: tablist role")}}                                             | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices","#aria_lh_tablist_role","tablist role")}} | {{Spec2('ARIA Authoring Practices')}} |
 
 

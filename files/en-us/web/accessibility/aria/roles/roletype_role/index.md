@@ -31,7 +31,7 @@ Do not use.
 
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#roletype role","ARIA: roletype role")}}                                             | {{Spec2('ARIA')}}                         |
+| {{SpecName("ARIA","#roletype","ARIA: roletype role")}}                                             | {{Spec2('ARIA')}}                         |
 
 
 

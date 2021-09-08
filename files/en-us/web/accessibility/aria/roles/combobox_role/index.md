@@ -81,7 +81,7 @@ A combobox is an input that controls another element, such as a listbox or grid,
 
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#combobox role","ARIA: combobox role")}}                                             | {{Spec2('ARIA')}}                         |
+| {{SpecName("ARIA","#combobox","ARIA: combobox role")}}                                             | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices","#aria_lh_combobox_role","combobox role")}} | {{Spec2('ARIA Authoring Practices')}} |
 
 ## See also

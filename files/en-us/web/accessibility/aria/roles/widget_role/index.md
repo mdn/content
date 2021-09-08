@@ -34,7 +34,7 @@ Do not use.
 
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#widget role","ARIA: widget role")}}                                             | {{Spec2('ARIA')}}                         |
+| {{SpecName("ARIA","#widget","ARIA: widget role")}}                                             | {{Spec2('ARIA')}}                         |
 
 
 

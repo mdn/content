@@ -33,7 +33,7 @@ tags:
 
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#tree role","ARIA: tree role")}}                                             | {{Spec2('ARIA')}}                         |
+| {{SpecName("ARIA","#tree","ARIA: tree role")}}                                             | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices","#aria_lh_tree_role","tree role")}} | {{Spec2('ARIA Authoring Practices')}} |
 
 

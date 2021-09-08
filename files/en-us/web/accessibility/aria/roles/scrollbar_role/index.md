@@ -33,7 +33,7 @@ tags:
 
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#scrollbar role","ARIA: scrollbar role")}}                                             | {{Spec2('ARIA')}}                         |
+| {{SpecName("ARIA","#scrollbar","ARIA: scrollbar role")}}                                             | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices","#aria_lh_scrollbar_role","scrollbar role")}} | {{Spec2('ARIA Authoring Practices')}} |
 
 

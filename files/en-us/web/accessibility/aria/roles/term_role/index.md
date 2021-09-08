@@ -33,7 +33,7 @@ tags:
 
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#term role","ARIA: term role")}}                                             | {{Spec2('ARIA')}}                         |
+| {{SpecName("ARIA","#term","ARIA: term role")}}                                             | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices","#aria_lh_term_role","term role")}} | {{Spec2('ARIA Authoring Practices')}} |
 
 

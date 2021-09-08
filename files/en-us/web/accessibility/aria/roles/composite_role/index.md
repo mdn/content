@@ -28,7 +28,7 @@ Do not use.
 
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#composite role","ARIA: composite role")}}                                             | {{Spec2('ARIA')}}                         |
+| {{SpecName("ARIA","#composite","ARIA: composite role")}}                                             | {{Spec2('ARIA')}}                         |
 
 
 ## See Also

@@ -33,7 +33,7 @@ tags:
 
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#marquee role","ARIA: marquee role")}}                                             | {{Spec2('ARIA')}}                         |
+| {{SpecName("ARIA","#marquee","ARIA: marquee role")}}                                             | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices","#aria_lh_marquee_role","marquee role")}} | {{Spec2('ARIA Authoring Practices')}} |
 
 

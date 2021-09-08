@@ -33,7 +33,7 @@ tags:
 
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#menuitemcheckbox role","ARIA: menuitemcheckbox role")}}                                             | {{Spec2('ARIA')}}                         |
+| {{SpecName("ARIA","#menuitemcheckbox","ARIA: menuitemcheckbox role")}}                                             | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices","#aria_lh_menuitemcheckbox_role","menuitemcheckbox role")}} | {{Spec2('ARIA Authoring Practices')}} |
 
 

@@ -33,7 +33,7 @@ tags:
 
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#menubar role","ARIA: menubar role")}}                                             | {{Spec2('ARIA')}}                         |
+| {{SpecName("ARIA","#menubar","ARIA: menubar role")}}                                             | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices","#aria_lh_menubar_role","menubar role")}} | {{Spec2('ARIA Authoring Practices')}} |
 
 

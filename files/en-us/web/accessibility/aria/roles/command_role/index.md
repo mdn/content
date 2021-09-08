@@ -28,7 +28,7 @@ Do not use.
 
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#command role","ARIA: command role")}}                                             | {{Spec2('ARIA')}}                         |
+| {{SpecName("ARIA","#command","ARIA: command role")}}                                             | {{Spec2('ARIA')}}                         |
 
 
 ## See Also

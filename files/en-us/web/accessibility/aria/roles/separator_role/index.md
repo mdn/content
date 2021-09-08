@@ -33,7 +33,7 @@ tags:
 
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#separator role","ARIA: separator role")}}                                             | {{Spec2('ARIA')}}                         |
+| {{SpecName("ARIA","#separator","ARIA: separator role")}}                                             | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices","#aria_lh_separator_role","separator role")}} | {{Spec2('ARIA Authoring Practices')}} |
 
 

@@ -33,7 +33,7 @@ tags:
 
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#option role","ARIA: option role")}}                                             | {{Spec2('ARIA')}}                         |
+| {{SpecName("ARIA","#option","ARIA: option role")}}                                             | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices","#aria_lh_option_role","option role")}} | {{Spec2('ARIA Authoring Practices')}} |
 
 

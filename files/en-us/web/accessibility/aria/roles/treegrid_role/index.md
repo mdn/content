@@ -33,7 +33,7 @@ tags:
 
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#treegrid role","ARIA: treegrid role")}}                                             | {{Spec2('ARIA')}}                         |
+| {{SpecName("ARIA","#treegrid","ARIA: treegrid role")}}                                             | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices","#aria_lh_treegrid_role","treegrid role")}} | {{Spec2('ARIA Authoring Practices')}} |
 
 

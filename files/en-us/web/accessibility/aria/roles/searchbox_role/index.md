@@ -33,7 +33,7 @@ tags:
 
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#searchbox role","ARIA: searchbox role")}}                                             | {{Spec2('ARIA')}}                         |
+| {{SpecName("ARIA","#searchbox","ARIA: searchbox role")}}                                             | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices","#aria_lh_searchbox_role","searchbox role")}} | {{Spec2('ARIA Authoring Practices')}} |
 
 

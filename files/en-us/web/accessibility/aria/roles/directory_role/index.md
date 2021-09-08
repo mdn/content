@@ -33,7 +33,7 @@ tags:
 
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#directory role","ARIA: directory role")}}                                             | {{Spec2('ARIA')}}                         |
+| {{SpecName("ARIA","#directory","ARIA: directory role")}}                                             | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices","#aria_lh_directory_role","directory role")}} | {{Spec2('ARIA Authoring Practices')}} |
 
 
