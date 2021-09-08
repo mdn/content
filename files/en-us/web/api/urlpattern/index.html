@@ -383,26 +383,26 @@ console.log(pattern.test('https://example.com/.png')); // true
 // Construct a URLPattern that matches a specific domain and its subdomains.
 // All other URL components default to the wildcard `*` pattern.
 const pattern = new URLPattern({
-  hostname: "{*.}?example.com"
+  hostname: '{*.}?example.com'
 });
 
-console.log(pattern.hostname); // "{*.}?example.com"
+console.log(pattern.hostname); // '{*.}?example.com'
 
-console.log(pattern.protocol); // "*"
-console.log(pattern.username); // "*"
-console.log(pattern.password); // "*"
-console.log(pattern.pathname); // "*"
-console.log(pattern.search); // "*"
-console.log(pattern.hash); // "*"
+console.log(pattern.protocol); // '*'
+console.log(pattern.username); // '*'
+console.log(pattern.password); // '*'
+console.log(pattern.pathname); // '*'
+console.log(pattern.search); // '*'
+console.log(pattern.hash); // '*'
 
-console.log(pattern.test("https://example.com/foo/bar")); // true
+console.log(pattern.test('https://example.com/foo/bar')); // true
 
-console.log(pattern.test({ hostname: "cdn.example.com" })); // true
+console.log(pattern.test({ hostname: 'cdn.example.com' })); // true
 
-console.log(pattern.test("custom-protocol://example.com/other/path?q=1")); // true
+console.log(pattern.test('custom-protocol://example.com/other/path?q=1')); // true
 
 // Prints `false` because the hostname component does not match
-console.log(pattern.test("https://cdn-example.com/foo/bar"));
+console.log(pattern.test('https://cdn-example.com/foo/bar'));
 </pre>
 
 <h3>Construct a URLPattern from a full URL string</h3>
@@ -420,18 +420,18 @@ console.log(pattern.test("https://cdn-example.com/foo/bar"));
 // Construct a URLPattern that matches URLs to CDN servers loading jpg images.
 // URL components not explicitly specified, like search and hash here, result
 // in the empty string similar to the URL() constructor.
-const pattern = new URLPattern("https://cdn-*.example.com/*.jpg");
+const pattern = new URLPattern('https://cdn-*.example.com/*.jpg');
 
-console.log(pattern.protocol); // "https"
+console.log(pattern.protocol); // 'https'
 
-console.log(pattern.hostname); // "cdn-*.example.com"
+console.log(pattern.hostname); // 'cdn-*.example.com'
 
-console.log(pattern.pathname); // "/*.jpg"
+console.log(pattern.pathname); // '/*.jpg'
 
-console.log(pattern.username); // ""
-console.log(pattern.password); // ""
-console.log(pattern.search); // ""
-console.log(pattern.hash); // ""
+console.log(pattern.username); // ''
+console.log(pattern.password); // ''
+console.log(pattern.search); // ''
+console.log(pattern.hash); // ''
 
 // Prints `true`
 console.log(
@@ -470,18 +470,18 @@ const pattern = new URLPattern("data:foo*");
 
 <pre class="brush: js">
 // Constructs a URLPattern treating the `:` as the protocol suffix.
-const pattern = new URLPattern("data\\:foo*");
+const pattern = new URLPattern('data\\:foo*');
 
-console.log(pattern.protocol); // "data"
+console.log(pattern.protocol); // 'data'
 
-console.log(pattern.pathname); // "foo*"
+console.log(pattern.pathname); // 'foo*'
 
-console.log(pattern.username); // ""
-console.log(pattern.password); // ""
-console.log(pattern.hostname); // ""
-console.log(pattern.port); // ""
-console.log(pattern.search); // ""
-console.log(pattern.hash); // ""
+console.log(pattern.username); // ''
+console.log(pattern.password); // ''
+console.log(pattern.hostname); // ''
+console.log(pattern.port); // ''
+console.log(pattern.search); // ''
+console.log(pattern.hash); // ''
 
 console.log(pattern.test("data:foobar")); // true
 </pre>
@@ -494,29 +494,29 @@ console.log(pattern.test("data:foobar")); // true
 </p>
 
 <pre class="brush: js">
-const pattern = new URLPattern({ hostname: "example.com", pathname: "/foo/*" });
+const pattern = new URLPattern({ hostname: 'example.com', pathname: '/foo/*' });
 
 // Prints `true` as the hostname based in the dictionary `baseURL` property
 // matches.
 console.log(
-    pattern.test({ pathname: "/foo/bar", baseURL: "https://example.com/baz" }));
+    pattern.test({ pathname: '/foo/bar', baseURL: 'https://example.com/baz' }));
 
 // Prints `true` as the hostname in the second argument base URL matches.
-console.log(pattern.test("/foo/bar", "https://example.com/baz"));
+console.log(pattern.test('/foo/bar', 'https://example.com/baz'));
 
 // Throws because the second argument cannot be passed with a dictionary input.
 try {
-  pattern.test({ pathname: "/foo/bar" }, "https://example.com/baz");
+  pattern.test({ pathname: '/foo/bar' }, 'https://example.com/baz');
 } catch (e) {}
 
 // The `exec()` method takes the same arguments as `test()`.
-const result = pattern.exec("/foo/bar", "https://example.com/baz");
+const result = pattern.exec("/fo'/bar', 'https://example.com/baz');
 
-console.log(result.pathname.input); // "/foo/bar"
+console.log(result.pathname.input); // '/foo/bar'
 
-console.log(result.pathname.groups[0]); // "bar"
+console.log(result.pathname.groups[0]); // 'bar'
 
-console.log(result.hostname.input); // "example.com"
+console.log(result.hostname.input); // 'example.com'
 </pre>
 
 <h3>Using base URLs in the URLPattern constructor</h3>
@@ -536,26 +536,26 @@ console.log(result.hostname.input); // "example.com"
 </p>
 
 <pre class="brush: js">
-const pattern1 = new URLPattern({ pathname: "/foo/*",
-                                  baseURL: "https://example.com" });
+const pattern1 = new URLPattern({ pathname: '/foo/*',
+                                  baseURL: 'https://example.com' });
 
-console.log(pattern1.protocol); // "https"
-console.log(pattern1.hostname); // "example.com"
-console.log(pattern1.pathname); // "/foo/*"
+console.log(pattern1.protocol); // 'https'
+console.log(pattern1.hostname); // 'example.com'
+console.log(pattern1.pathname); // '/foo/*'
 
-console.log(pattern1.username); // ""
-console.log(pattern1.password); // ""
-console.log(pattern1.port); // ""
-console.log(pattern1.search); // ""
-console.log(pattern1.hash); // ""
+console.log(pattern1.username); // ''
+console.log(pattern1.password); // ''
+console.log(pattern1.port); // ''
+console.log(pattern1.search); // ''
+console.log(pattern1.hash); // ''
 
 // Equivalent to pattern1
-const pattern2 = new URLPattern("/foo/*", "https://example.com" });
+const pattern2 = new URLPattern('/foo/*', 'https://example.com' });
 
 // Throws because a relative constructor string must have a base URL to resolve
 // against.
 try {
-  const pattern3 = new URLPattern("/foo/*");
+  const pattern3 = new URLPattern('/foo/*');
 } catch (e) {}
 </pre>
 
@@ -568,14 +568,14 @@ try {
 </p>
 
 <pre class="brush: js">
-const pattern = new URLPattern({ hostname: "*.example.com" });
-const result = pattern.exec({ hostname: "cdn.example.com" });
+const pattern = new URLPattern({ hostname: '*.example.com' });
+const result = pattern.exec({ hostname: 'cdn.example.com' });
 
-console.log(result.hostname.groups[0]); // "cdn"
+console.log(result.hostname.groups[0]); // 'cdn'
 
-console.log(result.hostname.input); // "cdn.example.com"
+console.log(result.hostname.input); // 'cdn.example.com'
 
-console.log(result.inputs); // [{ hostname: "cdn.example.com" }]
+console.log(result.inputs); // [{ hostname: 'cdn.example.com' }]
 </pre>
 
 <h3>Accessing matched group values using custom names</h3>
@@ -589,16 +589,16 @@ console.log(result.inputs); // [{ hostname: "cdn.example.com" }]
 // Construct a URLPattern using matching groups with custom names.  These
 // names can then be later used to access the matched values in the result
 // object.
-const pattern = new URLPattern({ pathname: "/:product/:user/:action" });
-const result = pattern.exec({ pathname: "/store/wanderview/view" });
+const pattern = new URLPattern({ pathname: '/:product/:user/:action' });
+const result = pattern.exec({ pathname: '/store/wanderview/view' });
 
-console.log(result.pathname.groups.product); // "store"
-console.log(result.pathname.groups.user); // "wanderview"
-console.log(result.pathname.groups.action); // "view"
+console.log(result.pathname.groups.product); // 'store'
+console.log(result.pathname.groups.user); // 'wanderview'
+console.log(result.pathname.groups.action); // 'view'
 
-console.log(result.pathname.input); // "/store/wanderview/view"
+console.log(result.pathname.input); // '/store/wanderview/view'
 
-console.log(result.inputs); // [{ pathname: "/store/wanderview/view" }]
+console.log(result.inputs); // [{ pathname: '/store/wanderview/view' }]
 </pre>
 
 <h3>Custom regular expression groups</h3>
@@ -609,15 +609,15 @@ console.log(result.inputs); // [{ pathname: "/store/wanderview/view" }]
 </p>
 
 <pre class="brush: js">
-const pattern = new URLPattern({ pathname: "/(foo|bar)" });
+const pattern = new URLPattern({ pathname: '/(foo|bar)' });
 
-console.log(pattern.test({ pathname: "/foo" })); // true
-console.log(pattern.test({ pathname: "/bar" })); // true
-console.log(pattern.test({ pathname: "/baz" })); // false
+console.log(pattern.test({ pathname: '/foo' })); // true
+console.log(pattern.test({ pathname: '/bar' })); // true
+console.log(pattern.test({ pathname: '/baz' })); // false
 
-const result = pattern.exec({ pathname: "/foo" });
+const result = pattern.exec({ pathname: '/foo' });
 
-console.log(result.pathname.groups[0]); // "foo"
+console.log(result.pathname.groups[0]); // 'foo'
 </pre>
 
 <h3>Named group with a custom regular expression</h3>
@@ -628,10 +628,10 @@ console.log(result.pathname.groups[0]); // "foo"
 </p>
 
 <pre class="brush: js">
-const pattern = new URLPattern({ pathname: "/:type(foo|bar)" });
-const result = pattern.exec({ pathname: "/foo" });
+const pattern = new URLPattern({ pathname: '/:type(foo|bar)' });
+const result = pattern.exec({ pathname: '/foo' });
 
-console.log(result.pathname.groups.type); // "foo"
+console.log(result.pathname.groups.type); // 'foo'
 </pre>
 
 <h3>Making matching groups optional</h3>
@@ -644,24 +644,24 @@ console.log(result.pathname.groups.type); // "foo"
 </p>
 
 <pre class="brush: js">
-const pattern = new URLPattern({ pathname: "/product/(index.html)?" });
+const pattern = new URLPattern({ pathname: '/product/(index.html)?' });
 
-console.log(pattern.test({ pathname: "/product/index.html" })); // true
-console.log(pattern.test({ pathname: "/product" })); // true
+console.log(pattern.test({ pathname: '/product/index.html' })); // true
+console.log(pattern.test({ pathname: '/product' })); // true
 
-const pattern2 = new URLPattern({ pathname: "/product/:action?" });
+const pattern2 = new URLPattern({ pathname: '/product/:action?' });
 
-console.log(pattern2.test({ pathname: "/product/view" })); // true
-console.log(pattern2.test({ pathname: "/product" })); // true
+console.log(pattern2.test({ pathname: '/product/view' })); // true
+console.log(pattern2.test({ pathname: '/product' })); // true
 
 // Wildcards can be made optional as well.  This may not seem to make sense
 // since they already match the empty string, but it also makes the prefix
 // `/` optional in a pathname pattern.
-const pattern3 = new URLPattern({ pathname: "/product/*?" });
+const pattern3 = new URLPattern({ pathname: '/product/*?' });
 
-console.log(pattern3.test({ pathname: "/product/wanderview/view" })); // true
-console.log(pattern3.test({ pathname: "/product" })); // true
-console.log(pattern3.test({ pathname: "/product/" })); // true
+console.log(pattern3.test({ pathname: '/product/wanderview/view' })); // true
+console.log(pattern3.test({ pathname: '/product' })); // true
+console.log(pattern3.test({ pathname: '/product/' })); // true
 </pre>
 
 <h3>Making matching groups repeated</h3>
@@ -674,12 +674,12 @@ console.log(pattern3.test({ pathname: "/product/" })); // true
 </p>
 
 <pre class="brush: js">
-const pattern = new URLPattern({ pathname: "/product/:action+" });
-const result = pattern.exec({ pathname: "/product/do/some/thing/cool" });
+const pattern = new URLPattern({ pathname: '/product/:action+' });
+const result = pattern.exec({ pathname: '/product/do/some/thing/cool' });
 
-result.pathname.groups.action; // "do/some/thing/cool"
+result.pathname.groups.action; // 'do/some/thing/cool'
 
-console.log(pattern.test({ pathname: "/product" })); // false
+console.log(pattern.test({ pathname: '/product' })); // false
 </pre>
 
 <h3>Making matching groups optional and repeated</h3>
@@ -692,12 +692,12 @@ console.log(pattern.test({ pathname: "/product" })); // false
 </p>
 
 <pre class="brush: js">
-const pattern = new URLPattern({ pathname: "/product/:action*" });
-const result = pattern.exec({ pathname: "/product/do/some/thing/cool" });
+const pattern = new URLPattern({ pathname: '/product/:action*' });
+const result = pattern.exec({ pathname: '/product/do/some/thing/cool' });
 
-console.log(result.pathname.groups.action); // "do/some/thing/cool"
+console.log(result.pathname.groups.action); // 'do/some/thing/cool'
 
-console.log(pattern.test({ pathname: "/product" })); // true
+console.log(pattern.test({ pathname: '/product' })); // true
 </pre>
 
 <h3>Using a custom prefix or suffix for an optional or repeated modifier</h3>
@@ -710,15 +710,15 @@ console.log(pattern.test({ pathname: "/product" })); // true
 </p>
 
 <pre class="brush: js">
-const pattern = new URLPattern({ hostname: "{:subdomain.}*example.com" });
+const pattern = new URLPattern({ hostname: '{:subdomain.}*example.com' });
 
-console.log(pattern.test({ hostname: "example.com" })); // true
-console.log(pattern.test({ hostname: "foo.bar.example.com" })); // true
-console.log(pattern.test({ hostname: ".example.com" })); // false
+console.log(pattern.test({ hostname: 'example.com' })); // true
+console.log(pattern.test({ hostname: 'foo.bar.example.com' })); // true
+console.log(pattern.test({ hostname: '.example.com' })); // false
 
-const result = pattern.exec({ hostname: "foo.bar.example.com" });
+const result = pattern.exec({ hostname: 'foo.bar.example.com' });
 
-console.log(result.hostname.groups.subdomain); // "foo.bar"
+console.log(result.hostname.groups.subdomain); // 'foo.bar'
 </pre>
 
 <h3>Making text optional or repeated without a matching group</h3>
@@ -730,12 +730,12 @@ console.log(result.hostname.groups.subdomain); // "foo.bar"
 </p>
 
 <pre class="brush: js">
-const pattern = new URLPattern({ pathname: "/product{/}?" });
+const pattern = new URLPattern({ pathname: '/product{/}?' });
 
-console.log(pattern.test({ pathname: "/product" })); // true
-console.log(pattern.test({ pathname: "/product/" })); // true
+console.log(pattern.test({ pathname: '/product' })); // true
+console.log(pattern.test({ pathname: '/product/' })); // true
 
-const result = pattern.exec({ pathname: "/product/" });
+const result = pattern.exec({ pathname: '/product/' });
 
 console.log(result.pathname.groups); // {}
 </pre>
@@ -749,19 +749,19 @@ console.log(result.pathname.groups); // {}
 
 <pre class="brush: js">
 const pattern = new URLPattern({
-  protocol: "http{s}?",
-  username: ":user?",
-  password: ":pass?",
-  hostname: "{:subdomain.}*example.com",
-  pathname: "/product/:action*",
+  protocol: 'http{s}?',
+  username: ':user?',
+  password: ':pass?',
+  hostname: '{:subdomain.}*example.com',
+  pathname: '/product/:action*',
 });
 
-const result = pattern.exec("http://foo:bar@sub.example.com/product/view?q=12345");
+const result = pattern.exec('http://foo:bar@sub.example.com/product/view?q=12345');
 
-console.log(result.username.groups.user); // "foo"
-console.log(result.password.groups.pass); // "bar"
-console.log(result.hostname.groups.subdomain); // "sub"
-console.log(result.pathname.groups.action); // "view"
+console.log(result.username.groups.user); // 'foo'
+console.log(result.password.groups.pass); // 'bar'
+console.log(result.hostname.groups.subdomain); // 'sub'
+console.log(result.pathname.groups.action); // 'view'
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
