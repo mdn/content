@@ -8343,6 +8343,11 @@
 /en-US/docs/Web/API/RTCDataChannelEvent.channel	/en-US/docs/Web/API/RTCDataChannelEvent/channel
 /en-US/docs/Web/API/RTCIceCandidate/RTCIceCandidate.address	/en-US/docs/Web/API/RTCIceCandidate/address
 /en-US/docs/Web/API/RTCIceCandidate/ip	/en-US/docs/Web/API/RTCIceCandidate/address
+/en-US/docs/Web/API/RTCIceCandidateInit	/en-US/docs/Web/API/RTCIceCandidate/RTCIceCandidate
+/en-US/docs/Web/API/RTCIceCandidateInit/candidate	/en-US/docs/Web/API/RTCIceCandidate/candidate
+/en-US/docs/Web/API/RTCIceCandidateInit/sdpMLineIndex	/en-US/docs/Web/API/RTCIceCandidate/sdpMLineIndex
+/en-US/docs/Web/API/RTCIceCandidateInit/sdpMid	/en-US/docs/Web/API/RTCIceCandidate/sdpMid
+/en-US/docs/Web/API/RTCIceCandidateInit/usernameFragment	/en-US/docs/Web/API/RTCIceCandidate/usernameFragment
 /en-US/docs/Web/API/RTCIceCandidatePairStats/bytesReceieved	/en-US/docs/Web/API/RTCIceCandidatePairStats/bytesReceived
 /en-US/docs/Web/API/RTCIceCandidatePairStats/circuitBreakerTriggerCoun	/en-US/docs/Web/API/RTCIceCandidatePairStats/circuitBreakerTriggerCount
 /en-US/docs/Web/API/RTCIceCandidatePairStats/contentRequestsSent	/en-US/docs/Web/API/RTCIceCandidatePairStats/consentRequestsSent
