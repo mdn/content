@@ -9,43 +9,39 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.states
 ---
-<div>{{DefaultAPISidebar("")}}</div>
+<div>{{DefaultAPISidebar("DOM")}}</div>
 
-<p>The <strong><code>states</code></strong> property of the {{domxref("ElementInternals")}} interface  </p>
+<p class="summary">The <strong><code>states</code></strong> read-only property of the {{domxref("ElementInternals")}} interface returns a {{domxref("CustomStateSet")}} representing the possible states of the custom element.</p>
+
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">let astates = ElementInternals.states;
-// Remove this one if the property is read only.
-ElementInternals.states = a;
-</pre>
+<pre class="brush: js">let states = ElementInternals.states;</pre>
 
 <h3>Value</h3>
-<p></p>
+<p>A {{domxref("CustomStateSet")}} which is a {{jsxref("Set")}} of strings.</p>
 
 <h2 id="Examples">Examples</h2>
 
-<p>Fill in a simple example that nicely shows a typical usage of the API, then perhaps some more complex examples (see our guide on how to add <a href="/en-US/docs/MDN/Contribute/Structures/Code_examples">code examples</a> for more information).</p>
-
-<p>This text should be replaced with a brief description of what the example demonstrates.</p>
+<p>The following function adds and removes the state <code>--checked</code> to a <code>CustomStateSet</code>, then prints to the console <code>true</code> or <code>false</code> as the custom checkbox is checked or unchecked.</p>
 
 <pre class="brush: js">
-my code block</pre>
+set checked(flag) {
+  if (flag) {
+    this._internals.states.add('--checked');
+  } else {
+    this._internals.states.delete('--checked');
+  }
 
-<p>And/or include a list of links to useful code samples that live elsewhere:</p>
-
-<ul>
-	<li>x</li>
-	<li>y</li>
-	<li>z</li>
-</ul>
+  console.log(this._internals.states.has('--checked'));
+}
+</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
 <p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
 
 <p>{{Compat}}</p>
 
