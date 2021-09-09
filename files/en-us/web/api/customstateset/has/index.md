@@ -11,7 +11,7 @@ browser-compat: api.CustomStateSet.has
 ---
 {{DefaultAPISidebar("DOM")}}
 
-The **`has`** method of the {{domxref("CustomStateSet")}} interface returns a {{jsxref("Boolean")}} asserting whether an element is present with the given value.
+The **`has()`** method of the {{domxref("CustomStateSet")}} interface returns a {{jsxref("Boolean")}} asserting whether an element is present with the given value.
 
 ## Syntax
 

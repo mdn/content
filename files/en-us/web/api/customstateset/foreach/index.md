@@ -11,7 +11,7 @@ browser-compat: api.CustomStateSet.forEach
 ---
 {{DefaultAPISidebar("DOM")}}
 
-The **`forEach`** method of the {{domxref("CustomStateSet")}} interface executes a provided function for each value in the `CustomStateSet` object.
+The **`forEach()`** method of the {{domxref("CustomStateSet")}} interface executes a provided function for each value in the `CustomStateSet` object.
 
 ## Syntax
 

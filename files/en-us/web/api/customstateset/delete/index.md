@@ -11,7 +11,7 @@ browser-compat: api.CustomStateSet.delete
 ---
 {{DefaultAPISidebar("DOM")}}
 
-The **`delete`** method of the {{domxref("CustomStateSet")}} interface deletes a single value from the `CustomStateSet`.
+The **`delete()`** method of the {{domxref("CustomStateSet")}} interface deletes a single value from the `CustomStateSet`.
 
 ## Syntax
 

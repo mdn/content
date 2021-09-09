@@ -11,7 +11,7 @@ browser-compat: api.CustomStateSet.clear
 ---
 {{DefaultAPISidebar("DOM")}}
 
-The **`clear`** method of the {{domxref("CustomStateSet")}} interface removes all elements from the `CustomStateSet` object.
+The **`clear()`** method of the {{domxref("CustomStateSet")}} interface removes all elements from the `CustomStateSet` object.
 
 ## Syntax
 
