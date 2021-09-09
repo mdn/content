@@ -16,7 +16,7 @@ The **`VideoFrame`** interface of the {{domxref('Web Codecs API','','',' ')}} re
 
 A `VideoFrame` object can be created or accessed in a number of ways. The {{domxref("MediaStreamTrackProcessor")}} breaks a media track into individual `VideoFrame` objects.
 
-A `VideoFrame` is a {{domxref("CanvasImageSource")}} and has a constructor that accepts a `CanvasImageSource`, this means that a frame can be created from an image or video element.
+A `VideoFrame` is a {{domxref("CanvasImageSource")}} and has a constructor that accepts a `CanvasImageSource`. This means that a frame can be created from an image or video element.
 
 A second constructor enables the creation of a `VideoFrame` from its binary pixel representation in a {{domxref("BufferSource")}}.
 
@@ -33,9 +33,9 @@ Created frames may then turned into a media track, for example with the {{domxre
 - {{domxref("VideoFrame.format")}}{{ReadOnlyInline}}
   - : Returns the pixel format of the `VideoFrame`.
 - {{domxref("VideoFrame.codedWidth")}}{{ReadOnlyInline}}
-  - : Returns the width of the `VideoFrame` in pixels, potentionally including non-visible padding, and prior to considering potential ratio adjustments.
+  - : Returns the width of the `VideoFrame` in pixels, potentially including non-visible padding, and prior to considering potential ratio adjustments.
 - {{domxref("VideoFrame.codedHeight")}}{{ReadOnlyInline}}
-  - : Returns the height of the `VideoFrame` in pixels, potentionally including non-visible padding, and prior to considering potential ratio adjustments.
+  - : Returns the height of the `VideoFrame` in pixels, potentially including non-visible padding, and prior to considering potential ratio adjustments.
 - {{domxref("VideoFrame.codedRect")}}{{ReadOnlyInline}}
   - : Returns a {{domxref("DOMRectReadOnly")}} with the width and height matching `codedWidth` and `codedHeight`.
 - {{domxref("VideoFrame.visibleRect")}}{{ReadOnlyInline}}

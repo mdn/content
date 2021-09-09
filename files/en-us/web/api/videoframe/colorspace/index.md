@@ -11,7 +11,7 @@ browser-compat: api.VideoFrame.colorSpace
 ---
 {{DefaultAPISidebar("Web Codecs API")}}
 
-The **`colorSpace`**  property of the {{domxref("VideoFrame")}} interface returns a {{domxref("VideoColorSpace")}} object representing the color space of the video.
+The **`colorSpace`** property of the {{domxref("VideoFrame")}} interface returns a {{domxref("VideoColorSpace")}} object representing the color space of the video.
 
 ### Value
 

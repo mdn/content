@@ -43,7 +43,7 @@ The second type of constructor (see above) creates a new {{domxref("VideoFrame")
 - `init`
   - : A dictionary object containing the following:
     - `format`
-      - : A string representing the video pixel format. One of the following string, which are fully described on thate page for the {{domxref("VideoFrame.format","format")}} property:
+      - : A string representing the video pixel format. One of the following strings, which are fully described on the page for the {{domxref("VideoFrame.format","format")}} property:
         - `"I420"`
         - `"I420A"`
         - `"I422"`

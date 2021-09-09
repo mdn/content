@@ -11,7 +11,7 @@ browser-compat: api.VideoFrame.allocationSize
 ---
 {{DefaultAPISidebar("Web Codecs API")}}
 
-The **`allocationSize`** method of the {{domxref("VideoFrame")}} interface returns the number of bytes required to hold the video as filtered by options passed into the method.
+The **`allocationSize()`** method of the {{domxref("VideoFrame")}} interface returns the number of bytes required to hold the video as filtered by options passed into the method.
 
 ## Syntax
 
@@ -25,7 +25,7 @@ VideoFrame.allocationSize(options);
 - `options`{{Optional_Inline}}
   - : An object containing the following:
     - `rect`{{Optional_Inline}}
-      - : The rectangle of pixels to copy from the `VideoFrame`, if unspecified the {{domxref("VideoFrame.visibleRect","visibleRect")}} will be used. This is in the format of a dictionary object containing:
+      - : The rectangle of pixels to copy from the `VideoFrame`. If unspecified the {{domxref("VideoFrame.visibleRect","visibleRect")}} will be used. This is in the format of a dictionary object containing:
           - `x`: The x-coordinate.
           - `y`: The y-coordinate.
           - `width`: The width of the frame.
@@ -41,7 +41,7 @@ An integer containing the number of bytes needed to hold the frame as specified 
 
 ## Examples
 
-In the following example the `allocationSize` is returned for the rectangle at top left with dimensions of 800x600.
+In the following example the `allocationSize` is returned for the rectangle at top left with dimensions of 800 by 600.
 
 ```js
 const videoRect = {

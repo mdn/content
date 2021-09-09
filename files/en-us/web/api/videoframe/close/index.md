@@ -11,7 +11,7 @@ browser-compat: api.VideoFrame.close
 ---
 {{DefaultAPISidebar("Web Codecs API")}}
 
-The **`close`** method of the {{domxref("VideoFrame")}} interface clears all states and releases the reference to the media resource.
+The **`close()`** method of the {{domxref("VideoFrame")}} interface clears all states and releases the reference to the media resource.
 
 ## Syntax
 

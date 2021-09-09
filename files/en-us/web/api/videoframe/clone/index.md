@@ -11,7 +11,7 @@ browser-compat: api.VideoFrame.clone
 ---
 {{DefaultAPISidebar("Web Codecs API")}}
 
-The **`clone`** method of the {{domxref("VideoFrame")}} interface creates a new `VideoFrame` object with reference to the same media resource as the original.
+The **`clone()`** method of the {{domxref("VideoFrame")}} interface creates a new `VideoFrame` object with reference to the same media resource as the original.
 
 ## Syntax
 
@@ -30,7 +30,7 @@ The cloned {{domxref("VideoData")}} object.
 ### Exceptions
 
 - {{domxref("DOMException")}} `InvalidStateError`
-  - : Thrown if the `VideoFrame` object has been {{domxref("Transferable","transfered")}}.
+  - : Thrown if the `VideoFrame` object has been {{domxref("Transferable","transfered", "", "true")}}.
 
 ## Examples
 
