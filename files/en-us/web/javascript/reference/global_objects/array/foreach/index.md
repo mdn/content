@@ -175,7 +175,7 @@ if (!Array.prototype['forEach']) {
     var len = O.length >>> 0;
 
     // 4. If isCallable(callback) is false, throw a TypeError exception.
-    // See: https://es5.github.com/#x9.11
+    // See: https://es5.github.io/#x9.11
     if (typeof callback !== "function") { throw new TypeError(callback + ' is not a function'); }
 
     // 5. If thisArg was supplied, let T be thisArg; else let

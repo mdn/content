@@ -83,7 +83,7 @@ browser-compat: api.PublicKeyCredential.response
   ]
 };
 
-navigator.credentials.create({  publickey: options })
+navigator.credentials.create({  publicKey: options })
   .then(function (pubKeyCredential) {
     var response = pubKeyCredential.response;
     var clientExtResults = pubKeyCredential.getClientExtensionResults();

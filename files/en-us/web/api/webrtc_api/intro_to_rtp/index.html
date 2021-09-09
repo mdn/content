@@ -15,7 +15,7 @@ tags:
 ---
 <div>{{APIRef("WebRTC")}}{{draft}}</div>
 
-<p><span class="seoSummary">The <strong>Real-time Transport Protocol</strong> (<strong>RTP</strong>), defined in {{RFC(3550)}}, is an IETF standard protocol to enable real-time connectivity for exchanging data that needs real-time priority. This article provides an overview of what RTP is and how it functions in the context of WebRTC.</span></p>
+<p>The <strong>Real-time Transport Protocol</strong> (<strong>RTP</strong>), defined in {{RFC(3550)}}, is an IETF standard protocol to enable real-time connectivity for exchanging data that needs real-time priority. This article provides an overview of what RTP is and how it functions in the context of WebRTC.</p>
 
 <div class="note">
 <p><strong>Note:</strong> WebRTC actually uses <strong>SRTP</strong> (Secure Real-time Transport Protocol) to ensure that the exchanged data is secure and authenticated as appropriate.</p>
@@ -46,11 +46,6 @@ tags:
 <h3 id="Things_RTP_doesn't_do">Things RTP doesn't do</h3>
 
 <p>RTP itself doesn't provide every possible feature, which is why other protocols are also used by WebRTC. Some of the more noteworthy things RTP doesn't include:</p>
-
-<div class="notecard note">
-  <h4>Editor's note</h4>
-  <p> we should add information about where these deficiencies are compensated for, if they are at all.</p>
-</div>
 
 <ul>
  <li>RTP does <em>not</em> guarantee <strong>{{interwiki("wikipedia", "quality-of-service")}}</strong> (<strong>QoS</strong>).</li>

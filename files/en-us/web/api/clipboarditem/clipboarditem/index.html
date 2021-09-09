@@ -15,10 +15,10 @@ browser-compat: api.ClipboardItem.ClipboardItem
 ---
 <div>{{DefaultAPISidebar("Clipboard API")}}</div>
 
-<p class="summary"><span class="seoSummary">The <code><strong>ClipboardItem()</strong></code> constructor of the {{domxref("Clipboard API")}} creates a new {{domxref("ClipboardItem")}} object which represents data to be stored or retrieved via the {{domxref("Clipboard API")}}, that is {{domxref("clipboard.write()")}} and {{domxref("clipboard.read()")}} respectively.</span></p>
+<p>The <code><strong>ClipboardItem()</strong></code> constructor of the {{domxref("Clipboard API")}} creates a new {{domxref("ClipboardItem")}} object which represents data to be stored or retrieved via the {{domxref("Clipboard API")}}, that is {{domxref("clipboard.write()")}} and {{domxref("clipboard.read()")}} respectively.</p>
 
 <div class="notecard note">
-  <p><strong>Note</strong>: Image format support varies by browser. See the browser compatibility table for the {{domxref("Clipboard")}} interface.</p>
+  <p><strong>Note:</strong> Image format support varies by browser. See the browser compatibility table for the {{domxref("Clipboard")}} interface.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -40,7 +40,7 @@ browser-compat: api.ClipboardItem.ClipboardItem
 </dl>
 
 <div class="notecard note">
-  <p><strong>Note</strong>: You can also work with text via the {{domxref("Clipboard.readText()")}} and {{domxref("Clipboard.writeText()")}} methods of the {{domxref("Clipboard")}}
+  <p><strong>Note:</strong> You can also work with text via the {{domxref("Clipboard.readText()")}} and {{domxref("Clipboard.writeText()")}} methods of the {{domxref("Clipboard")}}
     interface.</p>
 </div>
 
@@ -49,7 +49,7 @@ browser-compat: api.ClipboardItem.ClipboardItem
 <p>The below example requests a png image using the {{domxref("Fetch API")}}, and in turn, the {{domxref("Response.blob()", "responses' blob()")}} method, to create a new {{domxref("ClipboardItem")}}. This item is then written to the clipboard, using the {{domxref("Clipboard.write()")}} method.</p>
 
 <div class="note">
-  <p><strong>Note</strong>: You can only pass in one clipboard item at a time.</p>
+  <p><strong>Note:</strong> You can only pass in one clipboard item at a time.</p>
 </div>
 
 <pre class="brush: js">async function writeClipImg() {

@@ -29,9 +29,9 @@ browser-compat: api.WebGLRenderingContext.getActiveUniform
   <dd>A {{domxref("WebGLProgram")}} specifying the WebGL shader program from which to
     obtain the uniform variable's information.</dd>
   <dt><code>index</code></dt>
-  <dd>A {{domxref("GLuint")}} specifying the index of the uniform attribute to get. This
+  <dd>A {{domxref("WebGL_API/Types", "GLuint")}} specifying the index of the uniform attribute to get. This
     value is an index 0 to N - 1 as returned
-    by {{domxref("WebGLRenderingContext.getProgramParameter",
+    by {{domxref("WebGLRenderingContext.getProgramParameter",
     "gl.getProgramParameter(program, gl.ACTIVE_UNIFORMS)")}}.</dd>
 </dl>
 
@@ -116,7 +116,7 @@ browser-compat: api.WebGLRenderingContext.getActiveUniform
   <li>Uniform blocks: one entry for each member. If the uniform block has an instance
     name, the block name is prefixed. E.g. <code>uniform Block { float foo; };</code> will
     result in <code>foo</code>, and <code>uniform Block { float bar; } e;</code> will
-    result in <code>Block.bar</code>.</li>
+    result in <code>e.bar</code>.</li>
 </ul>
 
 <p>The <code>size</code> attribute of the return value corresponds to the length of the

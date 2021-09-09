@@ -15,7 +15,7 @@ browser-compat: api.EXT_disjoint_timer_query
 <p>WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also <a href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</a> in the <a href="/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</a>.</p>
 
 <div class="note">
-<p><strong>Availability:</strong> This extension should be available in {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} contexts only. {{domxref("EXT_disjoint_timer_query_webgl2")}} is available in {{domxref("WebGL2RenderingContext", "WebGL 2", "", 1)}} contexts .</p>
+<p><strong>Note:</strong> This extension should be available in {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} contexts only. {{domxref("EXT_disjoint_timer_query_webgl2")}} is available in {{domxref("WebGL2RenderingContext", "WebGL 2", "", 1)}} contexts .</p>
 
 <p>In WebGL 2, the {{domxref("getQueryObject")}} was renamed to {{domxref("getQueryParameter")}}.<br>
  In WebGL 2, other queries (such as occlusion queries and primitive queries) are possible using {{domxref("WebGLQuery")}} objects.</p>
@@ -36,19 +36,19 @@ browser-compat: api.EXT_disjoint_timer_query
 
 <dl>
  <dt><code>ext.QUERY_COUNTER_BITS_EXT</code></dt>
- <dd>A {{domxref("GLint")}} indicating the number of bits used to hold the query result for the given target.</dd>
+ <dd>A {{domxref("WebGL_API/Types", "GLint")}} indicating the number of bits used to hold the query result for the given target.</dd>
  <dt><code>ext.CURRENT_QUERY_EXT</code></dt>
  <dd>A {{domxref("WebGLQuery")}} object, which is the currently active query for the given target.</dd>
  <dt><code>ext.QUERY_RESULT_EXT</code></dt>
- <dd>A {{domxref("GLuint64EXT")}} containing the query result.</dd>
+ <dd>A {{domxref("WebGL_API/Types", "GLuint64EXT")}} containing the query result.</dd>
  <dt><code>ext.QUERY_RESULT_AVAILABLE_EXT</code></dt>
- <dd>A {{domxref("GLboolean")}} indicating whether or not a query result is available.</dd>
+ <dd>A {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether or not a query result is available.</dd>
  <dt><code>ext.TIME_ELAPSED_EXT</code></dt>
  <dd>Elapsed time (in nanoseconds).</dd>
  <dt><code>ext.TIMESTAMP_EXT</code></dt>
  <dd>The current time.</dd>
  <dt><code>ext.GPU_DISJOINT_EXT</code></dt>
- <dd>A {{domxref("GLboolean")}} indicating whether or not the GPU performed any disjoint operation.</dd>
+ <dd>A {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether or not the GPU performed any disjoint operation.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>

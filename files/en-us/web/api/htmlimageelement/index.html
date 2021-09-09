@@ -16,7 +16,7 @@ browser-compat: api.HTMLImageElement
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p><span class="seoSummary">The <strong><code>HTMLImageElement</code></strong> interface represents an HTML {{HTMLElement("img")}} element, providing the properties and methods used to manipulate image elements.</span></p>
+<p>The <strong><code>HTMLImageElement</code></strong> interface represents an HTML {{HTMLElement("img")}} element, providing the properties and methods used to manipulate image elements.</p>
 
 <p>{{InheritanceDiagram(600, 120)}}</p>
 
@@ -35,7 +35,7 @@ browser-compat: api.HTMLImageElement
  <dt>{{domxref("HTMLImageElement.alt")}}</dt>
  <dd>A {{domxref("DOMString")}} that reflects the {{htmlattrxref("alt", "img")}} HTML attribute, thus indicating the alternate fallback content to be displayed if the image has not been loaded.</dd>
  <dt>{{domxref("HTMLImageElement.complete")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref("Boolean")}} that is <code>true</code> if the browser has finished fetching the image, whether successful or not. That means this value is also <code>true</code> if the image has no {{domxref("HTMLImageElement.src", "src")}} value indicating an image to load.</dd>
+ <dd>Returns a boolean value that is <code>true</code> if the browser has finished fetching the image, whether successful or not. That means this value is also <code>true</code> if the image has no {{domxref("HTMLImageElement.src", "src")}} value indicating an image to load.</dd>
  <dt>{{domxref("HTMLImageElement.crossOrigin")}}</dt>
  <dd>A {{domxref("DOMString")}} specifying the CORS setting for this image element. See <a href="/en-US/docs/Web/HTML/Attributes/crossorigin">CORS settings attributes</a> for further details. This may be <code>null</code> if CORS is not used.</dd>
  <dt>{{domxref("HTMLImageElement.currentSrc")}} {{readonlyInline}}</dt>
@@ -45,7 +45,7 @@ browser-compat: api.HTMLImageElement
  <dt>{{domxref("HTMLImageElement.height")}}</dt>
  <dd>An integer value that reflects the {{htmlattrxref("height", "img")}} HTML attribute, indicating the rendered height of the image in CSS pixels.</dd>
  <dt>{{domxref("HTMLImageElement.isMap")}}</dt>
- <dd>A {{domxref("Boolean")}} that reflects the {{htmlattrxref("ismap", "img")}} HTML attribute, indicating that the image is part of a server-side image map. This is different from a client-side image map, specified using an <code>&lt;img&gt;</code> element and a corresponding {{HTMLElement("map")}} which contains {{HTMLElement("area")}} elements indicating the clickable areas in the image. The image <em>must</em> be contained within an {{HTMLElement("a")}} element; see the <code>ismap</code> page for details.</dd>
+ <dd>A boolean value that reflects the {{htmlattrxref("ismap", "img")}} HTML attribute, indicating that the image is part of a server-side image map. This is different from a client-side image map, specified using an <code>&lt;img&gt;</code> element and a corresponding {{HTMLElement("map")}} which contains {{HTMLElement("area")}} elements indicating the clickable areas in the image. The image <em>must</em> be contained within an {{HTMLElement("a")}} element; see the <code>ismap</code> page for details.</dd>
  <dt>{{domxref("HTMLImageElement.loading")}}</dt>
  <dd>A {{domxref("DOMString")}} providing a hint to the browser used to optimize loading the document by determining whether to load the image immediately (<code>eager</code>) or on an as-needed basis (<code>lazy</code>).</dd>
  <dt>{{domxref("HTMLImageElement.naturalHeight")}} {{readonlyInline}}</dt>
@@ -81,8 +81,6 @@ browser-compat: api.HTMLImageElement
  <dd>An integer value which specifies the amount of space (in pixels) to leave empty on the left and right sides of the image.</dd>
  <dt>{{domxref("HTMLImageElement.longDesc")}} {{deprecated_inline}}</dt>
  <dd>A {{domxref("USVString")}} specifying the URL at which a long description of the image's contents may be found. This is used to turn the image into a hyperlink automatically. Modern HTML should instead place an <code>&lt;img&gt;</code> inside an {{HTMLElement("a")}} element defining the hyperlink.</dd>
- <dt>{{domxref("HTMLImageElement.lowsrc")}} {{deprecated_inline}}</dt>
- <dd>A {{domxref("USVString")}} specifying the URL of a low-quality (but faster to load) version of the same image. This was once used by browsers under constrained network conditions or on slow devices.</dd>
  <dt>{{domxref("HTMLImageElement.name")}} {{deprecated_inline}}</dt>
  <dd>A {{domxref("DOMString")}} representing the name of the element.</dd>
  <dt>{{domxref("HTMLImageElement.vspace")}} {{deprecated_inline}}</dt>

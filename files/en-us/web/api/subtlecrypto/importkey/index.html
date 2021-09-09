@@ -79,7 +79,7 @@ browser-compat: api.SubtleCrypto.importKey
         string <code>HKDF</code>.</li>
     </ul>
   </li>
-  <li><code><em>extractable</em></code> is a {{jsxref("Boolean")}} indicating whether it
+  <li><code><em>extractable</em></code> is a boolean value indicating whether it
     will be possible to export the key using {{domxref("SubtleCrypto.exportKey()")}} or
     {{domxref("SubtleCrypto.wrapKey()")}}.</li>
   <li><code><em>keyUsages</em></code> is an {{jsxref("Array")}} indicating what can be
@@ -181,7 +181,7 @@ ml2FIkoovZh/8yeTKmjUMb804g6OmjUc9vVojCRV0YdaSmYkkJMJbLg=
 
 <ul>
   <li>base64-decode the part between header and footer, using
-    <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/atob">window.atob()</a></code>.
+    <code><a href="/en-US/docs/Web/API/atob">window.atob()</a></code>.
   </li>
   <li>convert the resulting string into an
     <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code>.
@@ -228,7 +228,7 @@ gQIDAQAB
 
 <ul>
   <li>base64-decode the part between header and footer, using
-    <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/atob">window.atob()</a></code>.
+    <code><a href="/en-US/docs/Web/API/atob">window.atob()</a></code>.
   </li>
   <li>convert the resulting string into an
     <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code>.
@@ -261,7 +261,7 @@ gQIDAQAB
 <h2 id="Examples">Examples</h2>
 
 <div class="notecard note">
-  <p><strong>Note</strong>: You can <a
+  <p><strong>Note:</strong> You can <a
       href="https://mdn.github.io/dom-examples/web-crypto/import-key/index.html">try the
       working examples</a> on GitHub.</p>
 </div>

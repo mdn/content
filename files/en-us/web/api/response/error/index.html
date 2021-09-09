@@ -18,15 +18,15 @@ browser-compat: api.Response.error
 </p>
 
 <div class="note">
-  <p><strong>Note</strong>: This is mainly relevant to <a
+  <p><strong>Note:</strong> This is mainly relevant to <a
       href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorkers</a>; the error method is
     used to return an error if you so wish it. An error response has its
     {{domxref("Response.type","type")}} set to <code>error</code>.</p>
 </div>
 
 <div class="note">
-  <p><strong>Note</strong>: An "error" <code>Response</code> never really gets exposed to
-    script: such a response to a {{domxref("WindowOrWorkerGlobalScope/fetch","fetch()")}} would reject
+  <p><strong>Note:</strong> An "error" <code>Response</code> never really gets exposed to
+    script: such a response to a {{domxref("fetch()")}} would reject
     the promise.</p>
 </div>
 

@@ -95,11 +95,15 @@ by `find` are set _before_ the first invocation of
 
 - `callbackFn` will not visit any elements added to the array
   after the call to `find` begins.
+- Elements which are assigned to indexes already visited, or to indexes 
+  outside the range, will not be visited by `callbackFn`.
 - If an existing, yet-unvisited element of the array is changed by
   `callbackFn`, its value passed to the
   `callbackFn` will be the value at the time `find`
   visits that element's index.
 - Elements that are {{jsxref("Operators/delete", "deleted")}} are still visited.
+
+**Warning:** Concurrent modification of the kind described in the previous paragraph frequently leads to hard-to-understand code and is generally to be avoided (except in special cases).
 
 ## Examples
 

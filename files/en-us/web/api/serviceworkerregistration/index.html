@@ -19,7 +19,7 @@ browser-compat: api.ServiceWorkerRegistration
 <p>The lifetime of a service worker registration is beyond that of the <code>ServiceWorkerRegistration</code> objects that represent them within the lifetime of their corresponding service worker clients. The browser maintains a persistent list of active <code>ServiceWorkerRegistration</code> objects.</p>
 
 <div class="note">
-<p><strong>Note</strong>: This feature is available in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
+<p><strong>Note:</strong> This feature is available in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
 </div>
 
 <h2 id="Properties">Properties</h2>
@@ -72,6 +72,8 @@ browser-compat: api.ServiceWorkerRegistration
  <dd>Checks the server for an updated version of the service worker without consulting caches.</dd>
  <dt>{{domxref("ServiceWorkerRegistration.unregister()")}}</dt>
  <dd>Unregisters the service worker registration and returns a {{jsxref("Promise")}}. The service worker will finish any ongoing operations before it is unregistered.</dd>
+ <dt>{{domxref("ServiceWorkerRegistration.updateViaCache")}}</dt>
+ <dd>Updates the service worker registration. The extent of the update depends on the cache mode, which was set by {{domxref('ServiceWorkerContainer.register')}}.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>

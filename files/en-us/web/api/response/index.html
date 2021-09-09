@@ -13,9 +13,9 @@ browser-compat: api.Response
 ---
 <div>{{APIRef("Fetch API")}}</div>
 
-<p><span class="seoSummary">The <strong><code>Response</code></strong> interface of the <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> represents the response to a request.</span></p>
+<p>The <strong><code>Response</code></strong> interface of the <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> represents the response to a request.</p>
 
-<p>You can create a new <code>Response</code> object using the {{domxref("Response.Response()")}} constructor, but you are more likely to encounter a <code>Response</code> object being returned as the result of another API operation—for example, a service worker {{domxref("Fetchevent.respondWith")}}, or a simple {{domxref("WindowOrWorkerGlobalScope.fetch()")}}.</p>
+<p>You can create a new <code>Response</code> object using the {{domxref("Response.Response()")}} constructor, but you are more likely to encounter a <code>Response</code> object being returned as the result of another API operation—for example, a service worker {{domxref("Fetchevent.respondWith")}}, or a simple {{domxref("fetch()")}}.</p>
 
 <h2 id="Constructor">Constructor</h2>
 
@@ -30,7 +30,7 @@ browser-compat: api.Response
  <dt>{{domxref("Response.body")}} {{readonlyInline}}</dt>
  <dd>A {{domxref("ReadableStream")}} of the body contents.</dd>
  <dt>{{domxref("Response.bodyUsed")}} {{readonlyInline}}</dt>
- <dd>Stores a {{domxref("Boolean")}} that declares whether the body has been used in a response yet.</dd>
+ <dd>Stores a boolean value that declares whether the body has been used in a response yet.</dd>
  <dt>{{domxref("Response.headers")}} {{readonlyinline}}</dt>
  <dd>The {{domxref("Headers")}} object associated with the response.</dd>
  <dt>{{domxref("Response.ok")}} {{readonlyinline}}</dt>
@@ -42,7 +42,7 @@ browser-compat: api.Response
  <dt>{{domxref("Response.statusText")}} {{readonlyinline}}</dt>
  <dd>The status message corresponding to the status code. (e.g., <code>OK</code> for <code>200</code>).</dd>
  <dt>{{domxref("Response.trailers")}}</dt>
- <dd>A {{domxref("Promise")}} resolving to a {{domxref("Headers")}} object, associated with the response with {{domxref("Response.headers")}} for values of the HTTP {{HTTPHeader("Trailer")}} header.</dd>
+ <dd>A {{jsxref("Promise")}} resolving to a {{domxref("Headers")}} object, associated with the response with {{domxref("Response.headers")}} for values of the HTTP {{HTTPHeader("Trailer")}} header.</dd>
  <dt>{{domxref("Response.type")}} {{readonlyinline}}</dt>
  <dd>The type of the response (e.g., <code>basic</code>, <code>cors</code>).</dd>
  <dt>{{domxref("Response.url")}} {{readonlyinline}}</dt>
@@ -53,7 +53,7 @@ browser-compat: api.Response
 
 <dl>
  <dt>{{domxref("Response.arrayBuffer()")}}</dt>
- <dd>Returns a promise that resolves with an {{domxref("ArrayBuffer")}} representation of the response body.</dd>
+ <dd>Returns a promise that resolves with an {{jsxref("ArrayBuffer")}} representation of the response body.</dd>
  <dt>{{domxref("Response.blob()")}}</dt>
  <dd>Returns a promise that resolves with a {{domxref("Blob")}} representation of the response body.</dd>
  <dt>{{domxref("Response.clone()")}}</dt>

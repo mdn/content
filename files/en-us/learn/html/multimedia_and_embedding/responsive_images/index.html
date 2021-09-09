@@ -45,7 +45,7 @@ tags:
 
 <p>Let's examine a typical scenario. A typical website may contain a header image and some content images below the header. The header image will likely span the whole of the width of the header, and the content image will fit somewhere inside the content column. Here's a simple example:</p>
 
-<p><img alt="Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center." src="picture-element-wide.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center." src="picture-element-wide.png"></p>
 
 <p>This works well on a wide screen device, such as a laptop or desktop (you can <a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html">see the example live</a> and find the <a href="https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/not-responsive.html">source code</a> on Github.) We won't discuss the CSS much in this lesson, except to say that:</p>
 
@@ -57,7 +57,7 @@ tags:
 
 <p>However, issues arise when you start to view the site on a narrow screen device. The header below looks ok, but it's starting to take up a lot of the screen height for a mobile device. And at this size, it is difficult to see the people within the first content image.</p>
 
-<p><img alt="Our example site as viewed on a narrow screen; the first image has shrunk to the point where it is hard to make out the detail on it." src="non-responsive-narrow.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="Our example site as viewed on a narrow screen; the first image has shrunk to the point where it is hard to make out the detail on it." src="non-responsive-narrow.png"></p>
 
 <p>An improvement would be to display a cropped version of the image which displays the important details of the image when the site is viewed on a narrow screen. A second cropped image could be displayed for a medium-width screen device, like a tablet. The general problem whereby you want to serve different cropped images in that way, for various layouts, is commonly known as the <strong>art direction problem</strong>.</p>
 
@@ -155,7 +155,7 @@ tags:
      alt="Elva dressed as a fairy"&gt;
 </pre>
 
-<p><img alt="A picture of a little girl dressed up as a fairy, with an old camera film effect applied to the image" src="resolution-example.png" style="display: block; margin: 0px auto;">In this example, the following CSS is applied to the image so that it will have a width of 320 pixels on the screen (also called CSS pixels):</p>
+<p><img alt="A picture of a little girl dressed up as a fairy, with an old camera film effect applied to the image" src="resolution-example.png">In this example, the following CSS is applied to the image so that it will have a width of 320 pixels on the screen (also called CSS pixels):</p>
 
 <pre class="brush: css">img {
   width: 320px;
@@ -188,7 +188,7 @@ tags:
 
 <p>This code allows us to display a suitable image on both wide screen and narrow screen displays, as shown below:</p>
 
-<p><img alt="Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center." src="picture-element-wide.png" style="display: block; margin: 0px auto;"><img alt="Our example site as viewed on a narrow screen with the picture element used to switch the first image to a portrait close up of the detail, making it a lot more useful on a narrow screen" src="picture-element-narrow.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center." src="picture-element-wide.png"><img alt="Our example site as viewed on a narrow screen with the picture element used to switch the first image to a portrait close up of the detail, making it a lot more useful on a narrow screen" src="picture-element-narrow.png"></p>
 
 <div class="note">
 <p><strong>Note</strong>: You should use the <code>media</code> attribute only in art direction scenarios; when you do use <code>media</code>, don't also offer media conditions within the <code>sizes</code> attribute.</p>

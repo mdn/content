@@ -56,7 +56,7 @@ tags:
  <em><code>hostType {String}</code></em> - The position the toolbox will be placed. One of <code>bottom</code>, <code>side</code>, <code>window</code>, <code>custom</code>. See {{anch("HostType")}} for details.<br>
  <em><code>hostOptions {Object}</code></em> - An options object passed to the selected host. See {{anch("HostType")}} for details.</dd>
  <dd><strong>Return value:</strong><br>
- A {{domxref("Promise")}} that is fulfilled with the {{anch("Toolbox")}} instance once it has been initialized and the selected tool is loaded.</dd>
+ A {{jsxref("Promise")}} that is fulfilled with the {{anch("Toolbox")}} instance once it has been initialized and the selected tool is loaded.</dd>
  <dt id="getToolbox(target)"><code>getToolbox(target)</code></dt>
  <dd>Fetch the {{anch("Toolbox")}} object for the given target.<br>
  <br>
@@ -71,7 +71,7 @@ tags:
  <em><code>target {Target}</code></em> - The target of the toolbox that should be closed.<br>
  <br>
  <strong>Return value:</strong><br>
- A {{domxref("Promise")}} that is fulfilled once the toolbox has been destroyed.</dd>
+ A {{jsxref("Promise")}} that is fulfilled once the toolbox has been destroyed.</dd>
  <dt id="getDefaultTools()"><code>getDefaultTools()</code></dt>
  <dd>Returns an {{jsxref("Array")}} of {{anch("ToolDefinition")}} objects for the built-in tools.</dd>
  <dt id="getAdditionalTools()"><code>getAdditionalTools()</code></dt>
@@ -176,13 +176,13 @@ tags:
  <strong>Return value:</strong><br>
  The {{anch("ToolPanel")}} object if the tool with the given <code>toolId</code> is active, otherwise <code>undefined</code>.</dd>
  <dt id="getPanelWhenReady(toolId)"><code>getPanelWhenReady(toolId)</code></dt>
- <dd>Similar to <code>getPanel()</code> but waits for the tool to load first. If the tool is not already loaded or currently loading the returned {{domxref("Promise")}} won't be fulfilled until something triggers the tool to load.<br>
+ <dd>Similar to <code>getPanel()</code> but waits for the tool to load first. If the tool is not already loaded or currently loading the returned {{jsxref("Promise")}} won't be fulfilled until something triggers the tool to load.<br>
  <br>
  <strong>Parameters:</strong><br>
  <code><em>toolId {String} - </em></code>The tool identifier.<br>
  <br>
  <strong>Return value:</strong><br>
- A {{domxref("Promise")}} that is fulfilled with the {{anch("ToolPanel")}} object once the tool has finished loading.</dd>
+ A {{jsxref("Promise")}} that is fulfilled with the {{anch("ToolPanel")}} object once the tool has finished loading.</dd>
  <dt id="getToolPanels()"><code>getToolPanels()</code></dt>
  <dd>Returns a <code>toolId → {{anch("ToolPanel")}}</code> {{jsxref("Map")}} for currently loaded tools.</dd>
  <dt id="getNotificationBox()"><code>getNotificationBox()</code></dt>
@@ -194,7 +194,7 @@ tags:
  <code><em>toolId {String} - </em></code>The tool identifier.<br>
  <br>
  <strong>Return value:</strong><br>
- A {{domxref("Promise")}} that is fulfilled with the {{anch("ToolPanel")}} object of the loaded panel once the tool has loaded.<br>
+ A {{jsxref("Promise")}} that is fulfilled with the {{anch("ToolPanel")}} object of the loaded panel once the tool has loaded.<br>
   </dd>
  <dt id="selectTool(toolId)"><code>selectTool(toolId)</code></dt>
  <dd>Selects the tool with the given <code>toolId</code>.<br>
@@ -203,17 +203,17 @@ tags:
  <code><em>toolId {String} - </em></code>The tool identifier.<br>
  <br>
  <strong>Return value:</strong><br>
- A {{domxref("Promise")}} that is fulfilled with the {{anch("ToolPanel")}} object of the selected panel once the tool has loaded and activated.</dd>
+ A {{jsxref("Promise")}} that is fulfilled with the {{anch("ToolPanel")}} object of the selected panel once the tool has loaded and activated.</dd>
  <dt id="selectNextTool()"><code>selectNextTool()</code></dt>
  <dd>Selects the next tool in the <code>Toolbox</code>.<br>
  <br>
  <strong>Return value:</strong><br>
- A {{domxref("Promise")}} that is fulfilled with the {{anch("ToolPanel")}} object of the selected panel.</dd>
+ A {{jsxref("Promise")}} that is fulfilled with the {{anch("ToolPanel")}} object of the selected panel.</dd>
  <dt id="selectPreviousTool()"><code>selectPreviousTool()</code></dt>
  <dd>Selects the previous tool in the <code>Toolbox</code>.<br>
  <br>
  <strong>Return value:</strong><br>
- A {{domxref("Promise")}} that is fulfilled with the {{anch("ToolPanel")}} object of the selected panel.</dd>
+ A {{jsxref("Promise")}} that is fulfilled with the {{anch("ToolPanel")}} object of the selected panel.</dd>
  <dt id="highlightTool(toolId)"><code>highlightTool(toolId)</code></dt>
  <dd>Highlights the tab for the given tool.<br>
  <br>
@@ -228,14 +228,14 @@ tags:
  <dd>Opens the split Console to the bottom of the toolbox.<br>
  <br>
  <strong>Return value:</strong><br>
- A {{domxref("Promise")}} that is fulfilled once the Console has loaded.</dd>
+ A {{jsxref("Promise")}} that is fulfilled once the Console has loaded.</dd>
  <dt id="closeSplitConsole()"><code>closeSplitConsole()</code></dt>
  <dd>Closes the split console.</dd>
  <dt id="toggleSplitConsole()"><code>toggleSplitConsole()</code></dt>
  <dd>Toggles the state of the split console.<br>
  <br>
  <strong>Return value:</strong><br>
- A {{domxref("Promise")}} that is fulfilled once the operation has finished.</dd>
+ A {{jsxref("Promise")}} that is fulfilled once the operation has finished.</dd>
  <dt id="switchHost(hostType)"><code>switchHost(hostType)</code></dt>
  <dd>Switches the location of the toolbox<br>
  <br>
@@ -243,7 +243,7 @@ tags:
  <code><em>hostType {Toolbox.HostType} - </em></code>The type of the new host.<br>
  <br>
  <strong>Return value:</strong><br>
- A {{domxref("Promise")}} that is fulfilled once the new host is ready.<br>
+ A {{jsxref("Promise")}} that is fulfilled once the new host is ready.<br>
   </dd>
  <dt id="reloadTarget(force)"><code>reloadTarget(force)</code></dt>
  <dd>Reloads the current target of the toolbox.<br>
@@ -265,7 +265,7 @@ tags:
  <dd>Closes the toolbox.<br>
  <br>
  <strong>Return value:</strong><br>
- A {{domxref("Promise")}} that is resolved once the <code>Toolbox</code> is destroyed.</dd>
+ A {{jsxref("Promise")}} that is resolved once the <code>Toolbox</code> is destroyed.</dd>
 </dl>
 
 <h4 id="Events_2">Events</h4>
@@ -404,16 +404,16 @@ gDevTools.registerTool(def);
 
 <dl>
  <dt id="open()"><code>open()</code></dt>
- <dd><strong>Optional</strong>. A method that can be used to perform asynchronous initialization. If the method returns a {{domxref("Promise")}}, many operations (e.g. {{anch("showToolbox(target_toolId_hostType_hostOptions)", "gDevTools.showToolbox()")}} or <code>toolbox.selectTool()</code>) and events (e.g. {{anch("toolbox-ready(toolbox)", "toolbox-ready")}}) are delayed until the promise has been fulfilled.<br>
+ <dd><strong>Optional</strong>. A method that can be used to perform asynchronous initialization. If the method returns a {{jsxref("Promise")}}, many operations (e.g. {{anch("showToolbox(target_toolId_hostType_hostOptions)", "gDevTools.showToolbox()")}} or <code>toolbox.selectTool()</code>) and events (e.g. {{anch("toolbox-ready(toolbox)", "toolbox-ready")}}) are delayed until the promise has been fulfilled.<br>
  <br>
  <strong>Return value:</strong><br>
- The method should return a {{domxref("Promise")}} that is resolved with the <code>ToolPanel</code> object once it's ready to be used.</dd>
+ The method should return a {{jsxref("Promise")}} that is resolved with the <code>ToolPanel</code> object once it's ready to be used.</dd>
  <dt id="destroy()_2"><code>destroy()</code></dt>
  <dd>
- <p>A method that is called when the toolbox is closed or the tool is unregistered. If the tool needs to perform asynchronous operations during destruction the method should return a {{domxref("Promise")}} that is resolved once the process is complete.</p>
+ <p>A method that is called when the toolbox is closed or the tool is unregistered. If the tool needs to perform asynchronous operations during destruction the method should return a {{jsxref("Promise")}} that is resolved once the process is complete.</p>
 
  <p><strong>Return value:</strong><br>
-  A {{domxref("Promise")}} if the function performs asynchronous operations, otherwise <code>undefined</code>.</p>
+  A {{jsxref("Promise")}} if the function performs asynchronous operations, otherwise <code>undefined</code>.</p>
  </dd>
 </dl>
 
@@ -485,7 +485,7 @@ MyPanel.prototype = {
  <dd>Adds a listener for the event that is removed after it has been emitted once.<br>
  <br>
  <strong>Return value:</strong><br>
- A {{domxref("Promise")}} that is fulfilled with the first extra argument for the event when then event is emitted. If the event contains multiple payload arguments, the rest are discarded and can only be received by providing the listener function to this method.</dd>
+ A {{jsxref("Promise")}} that is fulfilled with the first extra argument for the event when then event is emitted. If the event contains multiple payload arguments, the rest are discarded and can only be received by providing the listener function to this method.</dd>
 </dl>
 
 <h4 id="Examples">Examples</h4>

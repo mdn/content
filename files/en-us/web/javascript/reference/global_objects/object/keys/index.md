@@ -134,11 +134,9 @@ if (!Object.keys) {
 }
 ```
 
-Please note that the above code includes non-enumerable keys in IE7 (and maybe IE8),
-when passing in an object from a different window.
+Please note that the above code includes non-enumerable keys in IE7 (and maybe IE8), when passing in an object from a different window.
 
-For a simple Browser Polyfill, see [Javascript
-\- Object.keys Browser Compatibility](http://tokenposts.blogspot.com.au/2012/04/javascript-objectkeys-browser.html).
+For a simple Browser Polyfill, see [Javascript \- Object.keys Browser Compatibility](https://tokenposts.blogspot.com.au/2012/04/javascript-objectkeys-browser.html).
 
 ## Specifications
 

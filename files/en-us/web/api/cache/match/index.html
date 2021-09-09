@@ -15,11 +15,11 @@ browser-compat: api.Cache.match
 ---
 <p>{{APIRef("Service Workers API")}}</p>
 
-<p><span class="seoSummary">The <strong><code>match()</code></strong> method of the
+<p>The <strong><code>match()</code></strong> method of the
     {{domxref("Cache")}} interface returns a {{jsxref("Promise")}} that resolves to the
     {{domxref("Response")}} associated with the first matching request in the
     {{domxref("Cache")}} object. If no match is found, the {{jsxref("Promise")}} resolves
-    to {{jsxref("undefined")}}.</span></p>
+    to {{jsxref("undefined")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -38,16 +38,16 @@ browser-compat: api.Cache.match
   <dd>An object that sets options for the <code>match</code> operation. The available
     options are:
     <ul>
-      <li><code>ignoreSearch</code>: A {{jsxref("Boolean")}} that specifies whether to
+      <li><code>ignoreSearch</code>: A boolean value that specifies whether to
         ignore the query string in the URL.  For example, if set to
         <code>true</code> the <code>?value=bar</code> part of
         <code>http://foo.com/?value=bar</code> would be ignored when performing a match.
         It defaults to <code>false</code>.</li>
-      <li><code>ignoreMethod</code>: A {{jsxref("Boolean")}} that, when set to
+      <li><code>ignoreMethod</code>: A boolean value that, when set to
         <code>true</code>, prevents matching operations from validating the
         {{domxref("Request")}} <code>http</code> method (normally only <code>GET</code>
         and <code>HEAD</code> are allowed.) It defaults to <code>false</code>.</li>
-      <li><code>ignoreVary</code>: A {{jsxref("Boolean")}} that when set to
+      <li><code>ignoreVary</code>: A boolean value that when set to
         <code>true</code> tells the matching operation not to perform <code>VARY</code>
         header matching — i.e. if the URL matches you will get a match regardless of
         whether the {{domxref("Response")}} object has a <code>VARY</code> header. It
@@ -62,7 +62,7 @@ browser-compat: api.Cache.match
   the request or to {{jsxref("undefined")}} if no match is found.</p>
 
 <div class="note">
-  <p><strong>Note</strong>: <code>Cache.match()</code> is basically identical to
+  <p><strong>Note:</strong> <code>Cache.match()</code> is basically identical to
     {{domxref("Cache.matchAll()")}}, except that rather than resolving with an array of
     all matching responses, it resolves with the first matching response only (that is,
     <code><var>response</var>[0]</code>).</p>
@@ -118,5 +118,5 @@ browser-compat: api.Cache.match
   <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service
       Workers</a></li>
   <li>{{domxref("Cache")}}</li>
-  <li>{{domxref("WindowOrWorkerGlobalScope/caches", "WorkerGlobalScope.caches")}}</li>
+  <li>{{domxref("caches")}}</li>
 </ul>

@@ -21,7 +21,7 @@ tags:
 
 <p class="summary">This tutorial looks at the traditional methods JavaScript has available for running code asynchronously after a set time period has elapsed, or at a regular interval (e.g. a set number of times per second), discusses what they are useful for, and considers their inherent issues.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -41,9 +41,9 @@ tags:
 <p>These functions are:</p>
 
 <dl>
- <dt><code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout()</a></code></dt>
+ <dt><code><a href="/en-US/docs/Web/API/setTimeout">setTimeout()</a></code></dt>
  <dd>Execute a specified block of code once after a specified time has elapsed.</dd>
- <dt><code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">setInterval()</a></code></dt>
+ <dt><code><a href="/en-US/docs/Web/API/setInterval">setInterval()</a></code></dt>
  <dd>Execute a specified block of code repeatedly with a fixed time delay between each call.</dd>
  <dt><code><a href="/en-US/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame()</a></code></dt>
  <dd>The modern version of <code>setInterval()</code>. Executes a specified block of code before the browser next repaints the display, allowing an animation to be run at a suitable framerate regardless of the environment it is being run in.</dd>
@@ -57,7 +57,7 @@ tags:
 
 <h2 id="setTimeout">setTimeout()</h2>
 
-<p>As we said before, <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout()</a></code> executes a particular block of code once after a specified time has elapsed. It takes the following parameters:</p>
+<p>As we said before, <code><a href="/en-US/docs/Web/API/setTimeout">setTimeout()</a></code> executes a particular block of code once after a specified time has elapsed. It takes the following parameters:</p>
 
 <ul>
  <li>A function to run, or a reference to a function defined elsewhere.</li>
@@ -111,7 +111,7 @@ let myGreeting = setTimeout(sayHi, 2000);</pre>
 
 <h3 id="Clearing_timeouts">Clearing timeouts</h3>
 
-<p>Finally, if a timeout has been created, you can cancel it before the specified time has elapsed by calling <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout">clearTimeout()</a></code>, passing it the identifier of the <code>setTimeout()</code> call as a parameter. So to cancel our above timeout, you'd do this:</p>
+<p>Finally, if a timeout has been created, you can cancel it before the specified time has elapsed by calling <code><a href="/en-US/docs/Web/API/clearTimeout">clearTimeout()</a></code>, passing it the identifier of the <code>setTimeout()</code> call as a parameter. So to cancel our above timeout, you'd do this:</p>
 
 <pre class="brush: js">clearTimeout(myGreeting);</pre>
 
@@ -123,7 +123,7 @@ let myGreeting = setTimeout(sayHi, 2000);</pre>
 
 <p><code>setTimeout()</code> works perfectly when you need to run code once after a set period of time. But what happens when you need to run the code over and over again—for example, in the case of an animation?</p>
 
-<p>This is where <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">setInterval()</a></code> comes in. This works in a very similar way to <code>setTimeout()</code>, except that the function you pass as the first parameter is executed repeatedly at no less than the number of milliseconds given by the second parameter apart, rather than once. You can also pass any parameters required by the function being executed as subsequent parameters of the <code>setInterval()</code> call.</p>
+<p>This is where <code><a href="/en-US/docs/Web/API/setInterval">setInterval()</a></code> comes in. This works in a very similar way to <code>setTimeout()</code>, except that the function you pass as the first parameter is executed repeatedly at no less than the number of milliseconds given by the second parameter apart, rather than once. You can also pass any parameters required by the function being executed as subsequent parameters of the <code>setInterval()</code> call.</p>
 
 <p>Let's look at an example. The following function creates a new <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date()</a></code> object, extracts a time string out of it using <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString">toLocaleTimeString()</a></code>, and then displays it in the UI. It then runs the function once per second using <code>setInterval()</code>, creating the effect of a digital clock that updates once per second (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/setinterval-clock.html">see this live</a>, and also <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/setinterval-clock.html">see the source</a>):</p>
 
@@ -139,7 +139,7 @@ const createClock = setInterval(displayTime, 1000);</pre>
 
 <h3 id="Clearing_intervals">Clearing intervals</h3>
 
-<p><code>setInterval()</code> keeps running a task forever, unless you do something about it. You'll probably want a way to stop such tasks, otherwise you may end up getting errors when the browser can't complete any further versions of the task, or if the animation being handled by the task has finished. You can do this the same way you stop timeouts — by passing the identifier returned by the <code>setInterval()</code> call to the <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval">clearInterval()</a></code> function:</p>
+<p><code>setInterval()</code> keeps running a task forever, unless you do something about it. You'll probably want a way to stop such tasks, otherwise you may end up getting errors when the browser can't complete any further versions of the task, or if the animation being handled by the task has finished. You can do this the same way you stop timeouts — by passing the identifier returned by the <code>setInterval()</code> call to the <code><a href="/en-US/docs/Web/API/clearInterval">clearInterval()</a></code> function:</p>
 
 <pre class="brush: js">const myInterval = setInterval(myFunction, 2000);
 
@@ -533,7 +533,7 @@ const result = document.querySelector('.result');</pre>
   rotateCount = (timestamp - startTime) / 3;
 
   rotateCount %= 360;
-  
+
   spinner.style.transform = 'rotate(' + rotateCount + 'deg)';
   rAF = requestAnimationFrame(draw);
 }</pre>

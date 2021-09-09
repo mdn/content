@@ -15,12 +15,12 @@ browser-compat: api.FormData.FormData
 <p>The <code><strong>FormData()</strong></code> constructor creates a new {{domxref("FormData")}} object.</p>
 
 <div class="note">
-<p><strong>Note</strong>: This feature is available in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
+<p><strong>Note:</strong> This feature is available in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">var formData = new FormData(form)</pre>
+<pre class="brush: js">new FormData(form)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -31,7 +31,7 @@ browser-compat: api.FormData.FormData
 
 <h2 id="Example">Example</h2>
 
-<p>The following line creates an empty <code>FormData</code> object:</p>
+<p>The following line creates an empty {{domxref("FormData")}} object:</p>
 
 <pre class="brush: js">var formData = new FormData(); // Currently empty</pre>
 
@@ -60,7 +60,7 @@ browser-compat: api.FormData.FormData
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: Only successful form controls are included in a FormData object, i.e. those with a name, not disabled and checked (radio buttons and checkboxes) or selected (one or more options within a select).</p>
+<p><strong>Note:</strong> Only successful form controls are included in a FormData object, i.e. those with a name, not disabled and checked (radio buttons and checkboxes) or selected (one or more options within a select).</p>
 </div>
 
 <pre class="brush: js">let myForm = document.getElementById('myForm');

@@ -37,17 +37,17 @@ browser-compat: api.AuthenticatorAttestationResponse.attestationObject
 
 <dl>
   <dt><code>authData</code></dt>
-  <dd>The same as {{domxref("AuthenticatorAssertionResponse.authenticatorData")}}. Note
+  <dd><p>The same as {{domxref("AuthenticatorAssertionResponse.authenticatorData")}}. Note
     that in {{domxref("AuthenticatorAssertionResponse")}}, the
     <code>authenticatorData</code> is exposed as a property in a JavaScript object while
     in {{domxref("AuthenticatorAttestationResponse")}}, the <code>authenticatorData</code>
-    is a property in a <a href="https://datatracker.ietf.org/doc/html/rfc7049">CBOR</a> map.</dd>
-  <dd>The same {{domxref("AuthenticatorAssertionResponse.authenticatorData")}} field is
+    is a property in a <a href="https://datatracker.ietf.org/doc/html/rfc7049">CBOR</a> map.</p>
+  <p>The same {{domxref("AuthenticatorAssertionResponse.authenticatorData")}} field is
     used by both <code>AuthenticatorAttestationResponse</code> and by
     <code>AuthenticatorAssertionResponse</code>. When used in attestation, it contains an
     optional field, <code>attestedCredentialData</code>. This field is not included when
     used in the <code>AuthenticatorAssertionResponse</code>. The attestedCredentialData
-    field contains the <code>credentialId</code> and <code>credentialPublicKey</code>.
+    field contains the <code>credentialId</code> and <code>credentialPublicKey</code>.</p>
   </dd>
   <dt><code>fmt</code></dt>
   <dd>A text string that indicates the format of the attStmt. The <a

@@ -21,12 +21,10 @@ browser-compat: api.Event.initEvent
   before it is dispatched, using {{ domxref("EventTarget.dispatchEvent()") }}. Once
   dispatched, it doesn't do anything anymore.</p>
 
-<div class="note">
   <p><strong>Do not use this method anymore as it is deprecated.</strong></p>
 
   <p>Instead use specific event constructors, like {{domxref("Event.Event", "Event()")}}.
     The page on <a href="/en-US/docs/Web/Events/Creating_and_triggering_events">Creating and triggering events</a> gives more information about the way to use these.</p>
-</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -37,11 +35,11 @@ browser-compat: api.Event.initEvent
   <dt><em><code>type</code></em></dt>
   <dd>Is a {{domxref("DOMString")}} defining the type of event.</dd>
   <dt><em><code>bubbles</code></em></dt>
-  <dd>Is a {{jsxref("Boolean")}} deciding whether the event should bubble up through the
+  <dd>Is a boolean value deciding whether the event should bubble up through the
     event chain or not. Once set, the read-only property {{ domxref("Event.bubbles") }}
     will give its value.</dd>
   <dt><em><code>cancelable</code></em></dt>
-  <dd>Is a {{jsxref("Boolean")}} defining whether the event can be canceled. Once set, the
+  <dd>Is a boolean value defining whether the event can be canceled. Once set, the
     read-only property {{ domxref("Event.cancelable") }} will give its value.</dd>
 </dl>
 

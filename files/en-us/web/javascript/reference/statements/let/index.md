@@ -29,7 +29,7 @@ let name1 [= value1] [, name2 [= value2]] [, ..., nameN [= valueN];
 - `nameN`
   - : The names of the variable or variables to declare. Each must be a legal JavaScript
     identifier.
-- ` value``N ` {{optional_inline}}
+- `valueN` {{optional_inline}}
   - : For each variable declared, you may optionally specify its initial value to any
     legal JavaScript expression.
 

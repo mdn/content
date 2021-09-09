@@ -10,7 +10,7 @@ tags:
 ---
 <p>{{DefaultAPISidebar("CSSOM")}}</p>
 
-<p class="summary">The CSS Object Model (CSSOM), part of the DOM, exposes specific interfaces allowing manipulation of a wide amount of information regarding CSS. Initially defined in the <em>DOM Level 2 Style</em> recommendation, these interfaces forms now a specification, <em>CSS Object Model (CSSOM)</em> which aims at superseding it.</p>
+<p>The CSS Object Model (CSSOM), part of the DOM, exposes specific interfaces allowing manipulation of a wide amount of information regarding CSS. Initially defined in the <em>DOM Level 2 Style</em> recommendation, these interfaces forms now a specification, <em>CSS Object Model (CSSOM)</em> which aims at superseding it.</p>
 
 <p>In many cases, and where possible, it really is best practice to dynamically manipulate classes via the {{ domxref("element.className", "className") }} property since the ultimate appearance of all of the styling hooks can be controlled in a single stylesheet. One's JavaScript code also becomes cleaner since instead of being dedicated to styling details, it can focus on the overall semantics of each section it is creating or manipulating, leaving the precise style details to the stylesheet. However, there are cases where actually obtaining or manipulating the rules can be useful (whether for whole stylesheets or individual elements), and that is described in further detail below. Note also that, as with individual element's DOM styles, when speaking of manipulating the stylesheets, this is not actually manipulating the physical document(s), but merely the internal representation of the document.</p>
 
@@ -48,7 +48,7 @@ The stylesheet declaration for the body's background color is modified via JavaS
 
 <p>To modify styles to a document using CSS syntax, one can insert rules or insert {{HTMLElement("style")}} tags whose <code>innerHTML</code> property is set to the desired CSS.</p>
 
-<h2 id="Modify_an_element_style">Modify an element's style</h2>
+<h2 id="Modify_an_elements_style">Modify an element's style</h2>
 
 <p>The element {{domxref("HTMLElement.style", "style")}} property (see also the section "DOM Style Object" below) can also be used to get and set the styles on an element. However, this property only returns style attributes that have been set <em>in-line</em> (e.g, <code>&lt;td style="background-color: lightblue"&gt;</code> returns the string "<code>background-color:lightblue</code>", or directly for that element using <code>element.style.propertyName</code>, even though there may be other styles on the element from a stylesheet).</p>
 
@@ -56,7 +56,6 @@ The stylesheet declaration for the body's background color is modified via JavaS
 
 <p>To change a particular element's style, you can adapt the following example for the element(s) you want to style.</p>
 
-<div id="Example2">
 <pre class="brush: html">&lt;html&gt;
 &lt;head&gt;
 &lt;title&gt;simple style example&lt;/title&gt;
@@ -93,9 +92,8 @@ function resetStyle(elemId) {
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Example2') }}</p>
+<p>{{ EmbedLiveSample('Modify_an_elements_style') }}</p>
 
 <p>The {{domxref("window.getComputedStyle", "getComputedStyle()")}} method on the <code>document.defaultView</code> object returns all styles that have actually been computed for an element.</p>
 
@@ -103,9 +101,10 @@ function resetStyle(elemId) {
 
 <p>The <code>style</code> object represents an individual style statement. The style object is accessed from the <code>document</code> or from the elements to which that style is applied. It represents the <em>in-line</em> styles on a particular element.</p>
 
+<h3>Setting style properties</h3>
+
 <p>More important than the two properties noted here is the use of the <code>style</code> object to set individual style properties on an element:</p>
 
-<div id="DOM_Style_Object_code_sample">
 <pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
  &lt;head&gt;
@@ -128,9 +127,8 @@ function resetStyle(elemId) {
  &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('DOM_Style_Object_code_sample') }}</p>
+<p>{{ EmbedLiveSample('Setting_style_properties') }}</p>
 
 <p>The <strong>media</strong> and <strong>type</strong> of the style may or may not be given.</p>
 

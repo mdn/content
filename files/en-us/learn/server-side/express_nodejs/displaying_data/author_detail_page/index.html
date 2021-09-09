@@ -22,9 +22,9 @@ var Book = require('../models/book');</pre>
 <p>Find the exported <code>author_detail()</code> controller method and replace it with the following code.</p>
 
 <pre class="brush: js">// Display detail page for a specific Author.
-exports.author_detail = function(req, res, <strong>next</strong>) {
+exports.author_detail = function(req, res, next) {
 
-<strong>    async.parallel({
+    async.parallel({
         author: function(callback) {
             Author.findById(req.params.id)
               .exec(callback)
@@ -42,7 +42,7 @@ exports.author_detail = function(req, res, <strong>next</strong>) {
         }
         // Successful, so render.
         res.render('author_detail', { title: 'Author Detail', author: results.author, author_books: results.authors_books } );
-    });</strong>
+    });
 
 };
 </pre>
@@ -57,7 +57,7 @@ exports.author_detail = function(req, res, <strong>next</strong>) {
 
 block content
 
-<strong>  h1 Author: #{author.name}</strong>
+  h1 Author: #{author.name}
   p #{author.date_of_birth} - #{author.date_of_death}
 
   div(style='margin-left:20px;margin-top:20px')
@@ -80,9 +80,9 @@ block content
 
 <p>Run the application and open your browser to <a href="http://localhost:3000/">http://localhost:3000/</a>. Select the <em>All Authors</em> link, then select one of the authors. If everything is set up correctly, your site should look something like the following screenshot.</p>
 
-<p><img alt="Author Detail Page - Express Local Library site" src="locallibary_express_author_detail.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="Author Detail Page - Express Local Library site" src="locallibary_express_author_detail.png"></p>
 
-<div class="note">
+<div class="notecard note">
 <p><strong>Note:</strong> The appearance of the author <em>lifespan</em> dates is ugly! We'll address that in the final challenge in this article.</p>
 </div>
 

@@ -4,17 +4,14 @@ slug: Web/API/FileSystemFlags
 tags:
   - API
   - Dictionary
-  - Experimental
-  - File System API
   - File and Directory Entries API
   - FileSystemFlags
   - Files
   - Interface
-  - Non-standard
   - Reference
 browser-compat: api.FileSystemFlags
 ---
-<p>{{APIRef("File System API")}}{{SeeCompatTable}}</p>
+<p>{{APIRef("File and Directory Entries API")}}</p>
 
 <p>The <strong><code>FileSystemFlags</code></strong> dictionary defines a set of values which are used when specifying option flags when calling certain methods in the <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</a>. Methods which accept an options parameter of this type may specify zero or more of these flags as fields in an object, like this:</p>
 
@@ -24,7 +21,7 @@ browser-compat: api.FileSystemFlags
 <p>Here, we see that the <code>create</code> property is provided, with a value of <code>true</code>, indicating that the directory should be created if it's not already there.</p>
 
 <div class="note">
-<p>Note that these option flags currently don't have any useful meaning when used in the scope of Web content, where security precautions prevent the creation of new files or the replacement of existing ones.</p>
+<p><strong>Note:</strong> These option flags currently don't have any useful meaning when used in the scope of Web content, where security precautions prevent the creation of new files or the replacement of existing ones.</p>
 </div>
 
 <h2 id="Properties">Properties</h2>

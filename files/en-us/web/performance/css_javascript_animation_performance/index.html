@@ -25,7 +25,7 @@ tags:
 
 <h2 id="requestAnimationFrame">requestAnimationFrame</h2>
 
-<p>The {{domxref("Window.requestAnimationFrame","requestAnimationFrame()")}} API provides an efficient way to make animations in JavaScript. The callback function of the method is called by the browser before the next repaint on each frame. Compared to {{domxref("WindowOrWorkerGlobalScope/setTimeout","setTimeout()")}}/{{domxref("WindowOrWorkerGlobalScope/setInterval","setInterval()")}}, which need a specific delay parameter, <code>requestAnimationFrame()</code> is much more efficient. Developers can create an animation by changing an element's style each time the loop is called (or updating the Canvas draw, or whatever.)</p>
+<p>The {{domxref("Window.requestAnimationFrame","requestAnimationFrame()")}} API provides an efficient way to make animations in JavaScript. The callback function of the method is called by the browser before the next repaint on each frame. Compared to {{domxref("setTimeout()")}}/{{domxref("setInterval()")}}, which need a specific delay parameter, <code>requestAnimationFrame()</code> is much more efficient. Developers can create an animation by changing an element's style each time the loop is called (or updating the Canvas draw, or whatever.)</p>
 
 <div class="note">
 <p><strong>Note</strong>: Like CSS transitions and animations, <code>requestAnimationFrame()</code> pauses when the current tab is pushed into the background.</p>

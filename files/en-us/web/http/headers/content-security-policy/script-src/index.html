@@ -70,7 +70,10 @@ Content-Security-Policy: script-src &lt;source&gt; &lt;source&gt;;
   <dt><code>'unsafe-eval'</code></dt>
   <dd>Allows the use of <code>eval()</code> and similar methods for creating code from strings. You must include the single quotes.</dd>
   <dt id="unsafe-hashes"><code>'unsafe-hashes'</code></dt>
-  <dd>Allows enabling specific inline <a href="/en-US/docs/Web/Guide/Events/Event_handlers">event handlers</a>. If you only need to allow inline event handlers and not inline {{HTMLElement("script")}} elements or <code>javascript:</code> URLs, this is a safer method than using the <code>unsafe-inline</code> expression.</dd>
+  <dd>
+  <p>Allows enabling specific inline <a href="/en-US/docs/Web/Guide/Events/Event_handlers">event handlers</a>. If you only need to allow inline event handlers and not inline {{HTMLElement("script")}} elements or <code>javascript:</code> URLs, this is a safer method than using the <code>unsafe-inline</code> expression.</p>
+  <p>For every inline event-handler attribute in the document, you must generate a hash (base64 value) from the value of the attribute (that is, the complete code in attribute’s value), using a particular hash algorithm (e.g., <code>sha256</code>, <code>sha384</code> or <code>sha512</code>), and then add a <code>&lt;hash-algorithm&gt;-&lt;base64-value&gt;</code> source expression for that hash to the value of the <code>script-src</code> directive.</p>
+  </dd>
   <dt><code>'unsafe-inline'</code></dt>
   <dd>Allows the use of inline resources, such as inline {{HTMLElement("script")}} elements, <code>javascript:</code> URLs, and inline event handlers. The single quotes are required.</dd>
   <dt><code>'none'</code></dt>
@@ -190,7 +193,27 @@ Content-Security-Policy: script-src &lt;source&gt; &lt;source&gt;;
 
 <h2 id="Specifications">Specifications</h2>
 
-{{Specifications}}
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{specName("CSP 3.0", "#directive-script-src", "script-src")}}</td>
+   <td>{{Spec2('CSP 3.0')}}</td>
+   <td>No changes.</td>
+  </tr>
+  <tr>
+   <td>{{specName("CSP 1.1", "#directive-script-src", "script-src")}}</td>
+   <td>{{Spec2('CSP 1.1')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

@@ -14,7 +14,9 @@ tags:
 ---
 <div>{{APIRef("Media Capabilities API")}}</div>
 
-<p><span class="seoSummary">The <a href="/en-US/docs/Web/API/Media_Capabilities_API">Media Capabilities API</a> provides several key features to help you better decide how to handle media, but also to determine how well media is being handled, in real time.</span> These features include:</p>
+<p>The <a href="/en-US/docs/Web/API/Media_Capabilities_API">Media Capabilities API</a> provides several key features to help you better decide how to handle media, but also to determine how well media is being handled, in real time.</p>
+
+<p>These features include:</p>
 
 <ul>
  <li>The ability to query the browser to determine its ability to encode or decode media given a specified set of encoding parameters. These parameters may include the codecs, resolutions, bit rates, frame rates, and other such details. With the Media Capabilities API, you can determine not just if the browser can support a given format, but whether or not it can do so efficiently and smoothly. In short, this API replaces—and improves upon—the {{domxref("MediaSource")}} method {{domxref("MediaSource.isTypeSupported", "isTypeSupported()")}} or the {{domxref("HTMLMediaElement")}} method {{domxref("HTMLMediaElement.canPlayType","canPlayType()")}}.</li>
@@ -23,7 +25,7 @@ tags:
 </ul>
 
 <div class="notecard note">
-<p><strong>Note:</strong> The display capabilities functionality mentioned in the third point above have not yet appeared in any browser. They will be a useful feature of the API once available, but there is a high probability of the display capabilities functionality changing a great deal before browser implementations arrive.</p>
+<p><strong>Note:</strong> The display capabilities functionality mentioned in the third point above have not yet appeared in any browser. They will be a useful feature of the API once available, but there is a high probability of the display capabilities functionality changing a great deal before browser implementations arrive.</p>
 </div>
 
 <h2 id="The_MediaCapabilities_interface">The MediaCapabilities interface</h2>
@@ -83,7 +85,7 @@ tags:
 
 <p>Now that we've created a video decoding configuration we can pass it as a paramater of the {{domxref("MediaCapabilities.decodingInfo", "decodingInfo()")}} method to determine if a video matching this configuration would be decodable and if the playback would be smooth and power efficient.</p>
 
-<pre class="brush: js language-js">var promise = navigator.mediaCapabilities.decodingInfo(videoConfiguration);</pre>
+<pre class="brush: js">var promise = navigator.mediaCapabilities.decodingInfo(videoConfiguration);</pre>
 
 <p>The <code>decodingInfo()</code> and {{domxref("MediaCapabilities.encodingInfo", "encodingInfo()")}} methods both return promises. Once the promises state is fulfilled, you can access the {{domxref("MediaCapabilitiesInfo")}} interface's <code>supported</code>, <code>smooth</code>, and <code>powerEfficient</code> properties.</p>
 
@@ -91,7 +93,7 @@ tags:
 
 <p>Instead of the assigning the promise to a variable, we can output the values returned by the promise to the console:</p>
 
-<pre class="brush: js language-js">navigator.mediaCapabilities.decodingInfo(videoConfiguration).then(result =&gt; {
+<pre class="brush: js">navigator.mediaCapabilities.decodingInfo(videoConfiguration).then(result =&gt; {
   console.log('This configuration is ' +
     (result.supported ? '' : 'not ') + 'supported, ' +
     (result.smooth ? '' : 'not ') + 'smooth, and ' +

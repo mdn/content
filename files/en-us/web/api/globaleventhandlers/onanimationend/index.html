@@ -25,17 +25,15 @@ browser-compat: api.GlobalEventHandlers.onanimationend
   {{domxref("GlobalEventHandlers")}} mixin is the <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> for
   processing {{event("animationend")}} events.</p>
 
-<p>The <code>animationend</code> event fires when a <a
-    href="/en-US/docs/Web/CSS/CSS_Animations">CSS animation</a> reaches the end of its
-  active period (which is calculated as
+<p>The <code>animationend</code> event fires when a <a href="/en-US/docs/Web/CSS/CSS_Animations">CSS animation</a>
+  reaches the end of its active period (which is calculated as
   <code>{{cssxref("animation-duration")}} * {{cssxref("animation-iteration-count")}}) + {{cssxref("animation-delay")}}</code>).
 </p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: js">var <em>animEndHandler</em> = <em>target</em>.onanimationend;
-
-<em>target</em>.onanimationend = <em>{{jsxref("Function")}}</em>
+<em>target</em>.onanimationend = <em>Function</em>
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -49,7 +47,7 @@ browser-compat: api.GlobalEventHandlers.onanimationend
 
 <h2 id="Example">Example</h2>
 
-<p>{{Page("/en-US/docs/Web/API/GlobalEventHandlers/onanimationstart", "Example")}}</p>
+<p>See <a href="/en-US/docs/Web/API/GlobalEventHandlers/onanimationstart#example"><code>GlobalEventHandlers.onanimationstart</code></a> for example code.</p>
 
 <h2 id="Specifications">Specifications</h2>
 

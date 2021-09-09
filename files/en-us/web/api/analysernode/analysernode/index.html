@@ -13,11 +13,11 @@ browser-compat: api.AnalyserNode.AnalyserNode
 ---
 <p>{{APIRef("'Web Audio API'")}}</p>
 
-<p class="summary">The <strong><code>AnalyserNode()</code></strong> constructor of the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> creates a new {{domxref("AnalyserNode")}} object instance.</p>
+<p>The <strong><code>AnalyserNode()</code></strong> constructor of the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> creates a new {{domxref("AnalyserNode")}} object instance.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">var <var>analyserNode</var> = new AnalyserNode(<var>context</var>, ?<var>options</var>);</pre>
+<pre class="brush: js">var <var>analyserNode</var> = new AnalyserNode(<var>context</var>, <var>options</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -28,15 +28,16 @@ browser-compat: api.AnalyserNode.AnalyserNode
  <dd>A reference to an {{domxref("AudioContext")}} or {{domxref("OfflineAudioContext")}}.</dd>
  <dt><em>options</em> {{optional_inline}}</dt>
  <dd>
- <ul>
-  <li><strong><code>fftSize</code></strong>: The desired initial size of the <a href="https://en.wikipedia.org/wiki/Fast_Fourier_transform">FFT</a> for <a href="https://en.wikipedia.org/wiki/Frequency_domain">frequency-domain</a> analysis. <br>
-   The default is <code>2048</code>.</li>
-  <li><strong><code>maxDecibels</code></strong>: The desired initial maximum power in <a href="https://en.wikipedia.org/wiki/Decibel">dB</a> for FFT analysis.<br>
-   The default is <code>-30</code>.</li>
-  <li><strong><code>minDecibels</code></strong>: The desired initial minimum power in dB for FFT analysis.<br>
-   The default is <code>-100</code>.</li>
-  <li><strong><code>smoothingTimeConstant</code></strong>: The desired initial smoothing constant for the FFT analysis. The default is <code>0.8</code>.</li>
- </ul>
+   <p>An object with the following properties, all optional:</p>
+   <ul>
+    <li><strong><code>fftSize</code></strong>: The desired initial size of the <a href="https://en.wikipedia.org/wiki/Fast_Fourier_transform">FFT</a> for <a href="https://en.wikipedia.org/wiki/Frequency_domain">frequency-domain</a> analysis. <br>
+     The default is <code>2048</code>.</li>
+    <li><strong><code>maxDecibels</code></strong>: The desired initial maximum power in <a href="https://en.wikipedia.org/wiki/Decibel">dB</a> for FFT analysis.<br>
+     The default is <code>-30</code>.</li>
+    <li><strong><code>minDecibels</code></strong>: The desired initial minimum power in dB for FFT analysis.<br>
+     The default is <code>-100</code>.</li>
+    <li><strong><code>smoothingTimeConstant</code></strong>: The desired initial smoothing constant for the FFT analysis. The default is <code>0.8</code>.</li>
+   </ul>
  </dd>
 </dl>
 

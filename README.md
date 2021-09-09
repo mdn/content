@@ -79,15 +79,20 @@ If you choose an option other than the GitHub UI, you want to install
 
 These are some important things to keep in mind about the MDN content.
 
+- **A document's main content is written in an `index.html` or an `index.md`
+file** -- We're currently in the process of converting our content from HTML
+into Markdown. Pages that are in HTML have their content in a file called
+"index.html". Pages that are in Markdown  have their content in a file called
+"index.md".
 - **Documents are folders** --  Documents are always
 represented by a folder (e.g., [`files/en-us/web/javascript`](files/en-us/web/javascript)),
 and that folder will contain the content of that specific document as an
-`index.html` file (e.g., [`files/en-us/web/javascript/index.html`](files/en-us/web/javascript/index.html)).
+`index.html` or `index.md` file (e.g., [`files/en-us/web/javascript/index.md`](files/en-us/web/javascript/index.md)).
 - **Documents are hierarchical** - A document folder may contain other folders,
-where those folders would represent child documents (e.g., [`files/en-us/web/javascript/closures/index.html`](files/en-us/web/javascript/closures/index.html)).
+where those folders would represent child documents (e.g., [`files/en-us/web/javascript/closures/index.md`](files/en-us/web/javascript/closures/index.md)).
 - **Document folders may contain image files** -- A document folder may also
 contain image files, which are referenced within that document's
-`index.html` file.
+`index.html` or `index.md` file.
 - **All redirects are specified in a single file** -- All of the redirects
 are specified within [`files/en-us/_redirects.txt`](files/en-us/_redirects.txt),
 one redirect per line. Each line specifies a `from` and `to` URI
@@ -95,15 +100,15 @@ separated by whitespace. When you move a document, you'll need to add a
 redirect to this file specifying that its old URI now redirects to its new URI.
 Both of these tasks are done using the `yarn content move` tool — see
 [Moving one or more documents](#moving-one-or-more-documents).
-**Don't edit the `_redirects.txt` file manually!**
-If both an `index.html` file and a redirect exist for a document, the
+- **Don't edit the `_redirects.txt` file manually!**
+If both an `index.html` or `index.md` file and a redirect exist for a document, the
 document takes precedence and the redirect is ignored.
-- **A document's `index.html` starts with "front-matter"** -- Each
-document's `index.html` file must begin with some [YAML](https://en.wikipedia.org/wiki/YAML)
+- **A document's `index.html` or `index.md` starts with "front-matter"** -- Each
+document's `index.html` or `index.md` file must begin with some [YAML](https://en.wikipedia.org/wiki/YAML)
 called front-matter that defines some important information about the
 document: `title`, `slug`, and [`tags`](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Tag)
 (if any). Here's an example that shows the front-matter from the
-[JavaScript landing page](files/en-us/web/javascript/index.html):
+[JavaScript landing page](files/en-us/web/javascript/index.md):
 
     ```yaml
     ---
@@ -124,7 +129,7 @@ If you just want to make a simple change to a single file, like fixing a typo,
 the GitHub UI is the simplest way to do that. For example, if you've found
 a typo within the [JavaScript landing page](https://developer.mozilla.org/en-US/docs/Web/JavaScript),
 you can sign into GitHub, go to <https://github.com/mdn/content>,
-navigate to the source file `files/en-us/web/javascript/index.html`,
+navigate to the source file `files/en-us/web/javascript/index.md`,
 and then click on the edit (pencil) button.
 
 > **Tip:** Click the **Source on GitHub** link in the footer of any MDN page
@@ -146,6 +151,13 @@ If you're not certain of the changes that you want to make, get in touch
 with us first!
 You can [chat with us](https://chat.mozilla.org/#/room/#mdn:mozilla.org) or
 [file an issue](https://github.com/mdn/content/issues).
+
+You may be asked to further edit files in your pull request.
+To open a file for editing, select the *Files changed* tab on the PR,
+scroll down to the section for the file you want to edit, and then select
+the "three dots" icon (at the top right of the section).
+Choose **Edit file** from the popup menu to start editing the file.
+After editing, your changes will result in a new commit.
 
 ### More substantial changes
 
@@ -212,7 +224,7 @@ and use it to make a pull request.
 
 1. Next, you'll want to start the local preview service, so you can see
 the changes you'll make as they would look in production. Once started,
-this local preview service is available at `http://localhost:5000`
+this local preview service is available at `http://localhost:5000/`
 within your browser.
 
     ```sh
@@ -222,55 +234,39 @@ within your browser.
     yarn start
     ```
 
-    When you preview a page you can press a button to open its associated
-    document's `index.html` file in your preferred editor. For this to work,
-    you need to set an environment variable called `EDITOR` before starting
-    the preview server. For example, if you prefer VS Code as your editor,
-    you'll want to do something like this:
+1. When browsing a page locally, you can press the **Open in your editor**
+   button to edit the associated `index.html` or `index.md` file.
 
-    ```sh
-    export EDITOR=code
-    yarn start
-    ```
+   To specify VS Code as your preferred editor, create a file named `.env` in
+   the root of your local `content` directory that contains the following line:
 
-    Note, this is how you do it on terminals with `bash` (macOS and Linux). You
-    have to do it differently on Windows.
+   ```sh
+   EDITOR=code
+   ```
 
-    Now, when you're previewing a page and press the `Edit in your editor`
-    button, it will open the same as running:
+   You can create the file from a terminal using `bash` or PowerShell with the
+   command `echo 'EDITOR=code' >> .env`.
 
-    ```sh
-    code files/en-us/.../index.html
-    ```
+   `EDITOR` is an environment variable. You can set it to any editor you like
+   using the normal mechanism for your operating system/shell (i.e. you don't
+   have to use the `.env` file or VS Code).
 
-    Instead of having to type `export EDITOR=code` every time prior to
-    `yarn start`, you can instead store this setting in your personal `.env` file
-    (this goes inside the root of your local `content` directory). If the `.env`
-    file doesn't already exist, you can create one and include the above setting
-    in it. Alternatively, running the following line will add the setting to the
-    `.env` file automatically, creating the file if it doesn't already exist:
-
-    ```sh
-    echo 'EDITOR=code' >> .env
-    ```
-
-    Now, it should be set like that even after you've closed and started a new
-    terminal window.
-
-1. Make your desired changes to one or more `index.html` files using
-your preferred code editor. **When thinking about your desired changes, it's
-important to keep the following in mind:**
+1. Make your desired changes to one or more `index.html` or `index.md` files
+using your preferred code editor. **When thinking about your desired changes,
+it's important to keep the following in mind:**
     - **Make sure you've read the
     [MDN guidelines](https://developer.mozilla.org/en-US/docs/MDN/Guidelines),
     including the
     [Writing style guide](https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Writing_style_guide).**
+    - **If you're editing a Markdown file, see the
+    [guide to writing Markdown for MDN](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Markdown_in_MDN).**
     - **Large chunks of work can be difficult to review, so try to group your
     changes into the smallest logical chunks that make sense, and create a
     separate pull request for each logical chunk.**
 
 1. Once you've made and saved your changes, open a browser, and navigate
 to the page(s) you've changed. For example, if you changed
-`files/en-us/web/javascript/index.html`, open
+`files/en-us/web/javascript/index.md`, open
 `http://localhost:5000/en-us/docs/web/javascript` in your browser.
 
 1. You might have noticed that at the top of each page that you preview,
@@ -294,7 +290,8 @@ and then push the branch to your fork. Remember, the default name that
     git push -u origin my-work
     ```
 
-1. You're now ready to create a [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+1. You're now ready to create a
+[pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
 1. Once you've created your pull request, sit back, relax, and wait for
 a review.
@@ -327,9 +324,10 @@ resolving them. You can do this by merging the `main` branch into your
 branch (`git pull mdn main`), and then pushing the updated branch to
 your fork (`git push`).
 
-1. Once you've created your pull request, never use `git rebase` on your
-branch if you need to make changes. Any changes should be made as
-additional commits.
+1. An alternative strategy is `git rebase` of `main` on your branch.
+This will rewrite the git history and might confuse reviewers as notifications
+from GitHub lead to nowhere. Your changes are replayed on top of the current
+main branch at that point in time.
 
 1. Each pull request should contain a single logical change, or related set
 of changes that make sense to submit together. If a pull request becomes
@@ -344,36 +342,47 @@ for each logical set of changes that belong together.
 improvement, or formatting/structural change), please describe why you're
 making the change and anything else we need to know about it.
    - If the pull request is simple (it is really clear what has been
-     changed and why, and the change is obviously a good thing), you can do
-     this in your pull request's description.
+   changed and why, and the change is obviously a good thing), you can do
+   this in your pull request's description.
    - If the pull request is complex (the changes and the reasoning behind
-     them need a bit more explanation), then the requestor should file an
-     issue describing the intended change first, and seek discussion/approval
-     as needed. When the time is right to submit the PR, they should
-     reference the issue (or an existing issue that describes the motivation
-     for the change) in the PR. You can reference an existing issue
-     using `#` followed by the issue's ID, for example `#1234`.
+   them need a bit more explanation), then the requestor should file an
+   issue describing the intended change first, and seek discussion/approval
+   as needed. When the time is right to submit the PR, they should
+   reference the issue (or an existing issue that describes the motivation
+   for the change) in the PR. You can reference an existing issue
+   using `#` followed by the issue's ID, for example `#1234`.
+   - Pull requests should not contain large amounts of grammar updates.
+   Seemingly insignificant changes can change the meaning of technical
+   content, so these need a careful review. Keep in mind that MDN contains
+   technical documentation; you should not report merely basic improvements
+   in the grammar but only cases where the grammar is incorrect.
 
 1. Do not re-open a pull request that a reviewer has closed.
 
 ### Adding a new document
 
 Adding a new document is relatively straightforward, especially if you can
-start by copying the `index.html` of a similar document. There are only a
-few things to keep in mind:
+start by copying the `index.html` or `index.md` of a similar document.
+There are only a few things to keep in mind:
 
-- Remember that a document is represented by an `index.html` file within its
-  own folder.
+- Documents can be authored in either Markdown or HTML. However, we're converting
+  the site to Markdown one section at a time, and don't want to mix authoring
+  formats within a section. At this point we have only converted the JavaScript
+  documentation. So if you are adding a new document under
+  `files/en-us/web/javascript`, make it a Markdown file. Otherwise make it an
+  HTML file.
+- Remember that a document is represented by an `index.html` or `index.md` file
+  within its own folder.
 - Determine where in the document hierarchy your document belongs. For
   example, if you're
   creating a new CSS document for a new property `foo`, you'll want to create
   a new folder
   `files/en-us/web/css/foo/` and its `files/en-us/web/css/foo/index.html` file.
-- Remember that a document's `index.html` file must start with front-matter
-  that defines the `title`, `slug`, and
+- Remember that a document's `index.html` or `index.md` file must start with
+  front-matter that defines the `title`, `slug`, and
   [`tags`](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Tag)
   (if any) for the document. You might find it helpful to refer
-  to the front-matter within a similar document's `index.html`.
+  to the front-matter within a similar document's `index.html` or `index.md`.
 
 As we outlined above, the step-by-step process in general would be:
 
@@ -389,7 +398,8 @@ As we outlined above, the step-by-step process in general would be:
     git checkout -b my-add
     ```
 
-1. Create one or more new document folders, each with their own `index.html` file.
+1. Create one or more new document folders, each with their own `index.html`
+or `index.md` file.
 
 1. Add and commit your new files, as well as push your new branch to your fork:
 
@@ -548,7 +558,8 @@ pushing your branch to your fork:
 
 Adding an image to a document is easy as well. All you need to do is add
 your image file within the document's folder, and then reference the image
-from within the document's `index.html` file using an `<img>` element.
+from within the document's `index.html` or `index.md` file, using an `<img>`
+or [the equivalent Markdown syntax](https://github.github.com/gfm/#images).
 It's as easy as that. Let's walk through an example:
 
 1. You should be getting used to this by now, as we've done it several

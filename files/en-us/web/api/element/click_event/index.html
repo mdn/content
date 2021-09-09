@@ -18,7 +18,7 @@ browser-compat: api.Element.click_event
 ---
 <div>{{APIRef}}</div>
 
-<p><span class="seoSummary">An element receives a <code><strong>click</strong></code> event when a pointing device button (such as a mouse's primary mouse button) is both pressed and released while the pointer is located inside the element.</span></p>
+<p>An element receives a <code><strong>click</strong></code> event when a pointing device button (such as a mouse's primary mouse button) is both pressed and released while the pointer is located inside the element.</p>
 
 <table class="properties">
  <tbody>
@@ -67,7 +67,7 @@ browser-compat: api.Element.click_event
 
 <h3 id="Safari_Mobile">Safari Mobile</h3>
 
-<p>Safari Mobile 7.0+ (and likely earlier versions too) <a href="https://bugs.webkit.org/show_bug.cgi?id=153887">suffers from a bug</a> where <code>click</code> events aren't fired on elements that aren't typically interactive (e.g. {{HTMLElement("div")}}) and which also don't have event listeners directly attached to the elements themselves (i.e. <a href="http://davidwalsh.name/event-delegate">event delegation</a> is being used). See <a href="https://jsfiddle.net/cvrhulu/k9t0sdnf/show/">this live example</a> for a demonstration. See also <a href="https://developer.apple.com/library/safari/documentation/appleapplications/reference/safariwebcontent/HandlingEvents/HandlingEvents.html#//apple_ref/doc/uid/TP40006511-SW6">Safari's docs on making elements clickable</a> and the <a href="https://developer.apple.com/library/safari/documentation/appleapplications/reference/safariwebcontent/HandlingEvents/HandlingEvents.html#//apple_ref/doc/uid/TP40006511-SW7">definition of "clickable element"</a>.</p>
+<p>Safari Mobile 7.0+ (and likely earlier versions too) <a href="https://bugs.webkit.org/show_bug.cgi?id=153887">suffers from a bug</a> where <code>click</code> events aren't fired on elements that aren't typically interactive (e.g. {{HTMLElement("div")}}) and which also don't have event listeners directly attached to the elements themselves (i.e. <a href="https://davidwalsh.name/event-delegate">event delegation</a> is being used). See <a href="https://jsfiddle.net/cvrhulu/k9t0sdnf/show/">this live example</a> for a demonstration. See also <a href="https://developer.apple.com/library/safari/documentation/appleapplications/reference/safariwebcontent/HandlingEvents/HandlingEvents.html#//apple_ref/doc/uid/TP40006511-SW6">Safari's docs on making elements clickable</a> and the <a href="https://developer.apple.com/library/safari/documentation/appleapplications/reference/safariwebcontent/HandlingEvents/HandlingEvents.html#//apple_ref/doc/uid/TP40006511-SW7">definition of "clickable element"</a>.</p>
 
 <p>Known workarounds for this bug:</p>
 

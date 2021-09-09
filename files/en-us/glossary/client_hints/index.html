@@ -14,7 +14,7 @@ tags:
 
 <h2 id="Overview">Overview</h2>
 
-<p>A server must announce that it supports client hints, using the {{HTTPHeader("Accept-CH")}} header to specify the hints that it is interested in recieving.
+<p>A server must announce that it supports client hints, using the {{HTTPHeader("Accept-CH")}} header to specify the hints that it is interested in receiving.
   When a client that supports client hints receives the <code>Accept-CH</code> header it can append client hint headers that match the advertised field-values to subsequent requests.</p>
 
 <p>For example, following <code>Accept-CH</code> in a response below, the client could append {{HTTPHeader("Width")}} and {{HTTPHeader("Downlink")}} headers to all subsequent requests.</p>
@@ -22,8 +22,7 @@ tags:
 <pre class="brush: http">Accept-CH: Width, Downlink</pre>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>Client hints can also be specified in HTML using the {{HTMLElement("meta")}} element with the <code><a href="/en-US/docs/Web/HTML/Element/meta#attr-http-equiv">http-equiv</a></code> attribute.</p>
+  <p><strong>Note:</strong> Client hints can also be specified in HTML using the {{HTMLElement("meta")}} element with the <code><a href="/en-US/docs/Web/HTML/Element/meta#attr-http-equiv">http-equiv</a></code> attribute.</p>
   <pre>&lt;meta http-equiv="Accept-CH" content="Width, Viewport-Width, Downlink"&gt;</pre>
 </div>
 

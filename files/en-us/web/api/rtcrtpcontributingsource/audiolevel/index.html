@@ -15,10 +15,11 @@ browser-compat: api.RTCRtpContributingSource.audioLevel
 ---
 <div>{{APIRef("WebRTC API")}}</div>
 
-<p><span class="seoSummary">The read-only <strong><code>audioLevel</code></strong>
+<p>The read-only <strong><code>audioLevel</code></strong>
     property of the {{domxref("RTCRtpContributingSource")}} dictionary contains the audio
-    level contained in the last RTP packet played from the described source.</span>
-  audioLevel will be the level value defined in [RFC6465] if the RFC 6465 header extension
+    level contained in the last RTP packet played from the described source.</p>
+
+<p><code>audioLevel</code> will be the level value defined in [RFC6465] if the RFC 6465 header extension
   is present, and otherwise null.</p>
 
 <h2 id="Syntax">Syntax</h2>
@@ -44,7 +45,7 @@ browser-compat: api.RTCRtpContributingSource.audioLevel
   from the values defined in the specifications corresponding to each type of source.</p>
 
 <div class="note">
-  <p><code>audioLevel</code> may be absent from <code>RTCRtpContributingSource</code>
+  <p><strong>Note:</strong> <code>audioLevel</code> may be absent from <code>RTCRtpContributingSource</code>
     objects, which indicates that no volume level was provided by the source; however, it
     is <em>required</em> and always available on all
     <code>RTCRtpSynchronizationSource</code> objects.</p>

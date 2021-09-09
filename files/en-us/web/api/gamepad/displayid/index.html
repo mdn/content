@@ -20,14 +20,14 @@ browser-compat: api.Gamepad.displayId
 
 <p>A Gamepad is considered to be associated with a {{domxref("VRDisplay")}} if it reports a pose that is in the same space as the {{domxref("VRDisplay.pose")}}.</p>
 
-<div class="notepad note">
+<div class="notecard note">
   <p><strong>Note:</strong> This property was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/#gamepad-getvrdisplays-attribute">WebVR API</a>. It has been superseded by the <a href="https://immersive-web.github.io/webxr-gamepads-module/">WebXR Gamepads Module</a>.</p>
   <p>There is no direct replacement for this property. The {{domxref("Gamepad")}} object associated with an {{domxref("XRInputSource")}} can be obtained using the {{domxref("XRInputSource.gamepad")}} property.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">var myDisplayId = gamepadInstance.displayId;</pre>
+<pre class="brush: js">const displayId = gamepadInstance.displayId;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -35,7 +35,7 @@ browser-compat: api.Gamepad.displayId
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js line-numbers language-js">window.addEventListener("gamepadconnected", function(e) {
+<pre class="brush: js">window.addEventListener("gamepadconnected", function(e) {
   if(!e.gamepad.displayId) {
     console.log('Gamepad connected');
   } else {
@@ -47,7 +47,7 @@ browser-compat: api.Gamepad.displayId
 <h2 id="Specifications">Specifications</h2>
 
 <p>This property was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/#gamepad-getvrdisplays-attribute">WebVR API</a> that has been superseded by the <a href="https://immersive-web.github.io/webxr-gamepads-module/">WebXR Gamepads Module</a>. It is no longer on track to becoming a standard.</p>
-<p>Until all browsers have implemented the new <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Fundamentals">WebXR APIs</a>, it is recommended to rely on frameworks, like <a href="https://aframe.io/">A-Frame</a>, <a href="https://www.babylonjs.com/">Babylon.js</a>, or <a href="https://threejs.org/">Three.js</a>, or a <a href="https://github.com/immersive-web/webxr-polyfill">polyfill</a>, to develop WebXR applications that will work across all browsers <a href="https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/">[1]</a>.</p>
+<p>Until all browsers have implemented the new <a href="/en-US/docs/Web/API/WebXR_Device_API/Fundamentals">WebXR APIs</a>, it is recommended to rely on frameworks, like <a href="https://aframe.io/">A-Frame</a>, <a href="https://www.babylonjs.com/">Babylon.js</a>, or <a href="https://threejs.org/">Three.js</a>, or a <a href="https://github.com/immersive-web/webxr-polyfill">polyfill</a>, to develop WebXR applications that will work across all browsers <a href="https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/">[1]</a>.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

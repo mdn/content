@@ -13,7 +13,7 @@ browser-compat: javascript.statements.for_of
 {{jsSidebar("Statements")}}
 
 The **`for...of` statement** creates a loop iterating over [iterable
-objects](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol), including: built-in {{jsxref("String")}}, {{jsxref("Array")}}, array-like
+objects](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol), including: built-in {{jsxref("String")}}, {{jsxref("Array")}}, array-like
 objects (e.g., {{jsxref("Functions/arguments", "arguments")}}
 or {{domxref("NodeList")}}), {{jsxref("TypedArray")}}, {{jsxref("Map")}},
 {{jsxref("Set")}}, and user-defined iterables. It invokes a custom iteration hook with
@@ -38,7 +38,7 @@ for (variable of iterable) {
 
 ## Examples
 
-### Iterating over an {{jsxref("Array")}}
+### Iterating over an `Array`
 
 ```js
 const iterable = [10, 20, 30];
@@ -66,7 +66,7 @@ for (let value of iterable) {
 // 31
 ```
 
-### Iterating over a {{jsxref("String")}}
+### Iterating over a `String`
 
 ```js
 const iterable = 'boo';
@@ -79,7 +79,7 @@ for (const value of iterable) {
 // "o"
 ```
 
-### Iterating over a {{jsxref("TypedArray")}}
+### Iterating over a `TypedArray`
 
 ```js
 const iterable = new Uint8Array([0x00, 0xff]);
@@ -91,7 +91,7 @@ for (const value of iterable) {
 // 255
 ```
 
-### Iterating over a {{jsxref("Map")}}
+### Iterating over a `Map`
 
 ```js
 const iterable = new Map([['a', 1], ['b', 2], ['c', 3]]);
@@ -111,7 +111,7 @@ for (const [key, value] of iterable) {
 // 3
 ```
 
-### Iterating over a {{jsxref("Set")}}
+### Iterating over a `Set`
 
 ```js
 const iterable = new Set([1, 1, 2, 2, 3, 3]);
@@ -261,7 +261,7 @@ The {{jsxref("Statements/for...in", "for...in")}} statement iterates over the [e
 properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) of an object, in an arbitrary order.
 
 The `for...of` statement iterates over values that the [iterable
-object](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#Iterables) defines to be iterated over.
+object](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#iterables) defines to be iterated over.
 
 The following example shows the difference between a `for...of` loop and a
 `for...in` loop when used with an {{jsxref("Array")}}.
@@ -300,8 +300,8 @@ iterable.foo = 'hello';
 
 Every object will inherit the `objCustom` property and every object that is
 an {{jsxref("Array")}} will inherit the `arrCustom` property since these
-properties have been added to {{jsxref("Object.prototype")}} and
-{{jsxref("Array.prototype")}}, respectively. The object `iterable` inherits
+properties have been added to {{jsxref("Object", "Object.prototype")}} and
+{{jsxref("Array", "Array.prototype")}}, respectively. The object `iterable` inherits
 the properties `objCustom` and `arrCustom` because of [inheritance and
 the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
@@ -345,7 +345,7 @@ for (const i of iterable) {
 
 This loop iterates and logs **values** that `iterable`, as an
 [iterable
-object](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#Iterables), defines to be iterated over. The object's **elements**
+object](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#iterables), defines to be iterated over. The object's **elements**
 `3`, `5`, `7` are shown, but none of the object's
 **properties**.
 

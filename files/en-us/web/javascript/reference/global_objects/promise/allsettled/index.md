@@ -36,7 +36,7 @@ Promise.allSettled(iterable);
 ### Parameters
 
 - `iterable`
-  - : An [iterable](/en-US/docs/Web/JavaScript/Guide/iterable) object, such as
+  - : An [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) object, such as
     an {{jsxref("Array")}}, in which each member is a `Promise`.
 
 ### Return value
@@ -60,6 +60,7 @@ reflects what value each promise was fulfilled (or rejected) with.
 
 ### Using Promise.allSettled
 
+#### {{JSxRef("Promise.then", "Promise.prototype.then()")}}
 ```js
 Promise.allSettled([
   Promise.resolve(33),
@@ -68,6 +69,24 @@ Promise.allSettled([
   Promise.reject(new Error('an error'))
 ])
 .then(values => console.log(values));
+
+// [
+//   {status: "fulfilled", value: 33},
+//   {status: "fulfilled", value: 66},
+//   {status: "fulfilled", value: 99},
+//   {status: "rejected",  reason: Error: an error}
+// ]
+```
+
+#### {{jsxref("Operators/await", "await")}}
+```js
+const values = await Promise.allSettled([
+  Promise.resolve(33),
+  new Promise(resolve => setTimeout(() => resolve(66), 0)),
+  99,
+  Promise.reject(new Error('an error'))
+])
+console.log(values)
 
 // [
 //   {status: "fulfilled", value: 33},

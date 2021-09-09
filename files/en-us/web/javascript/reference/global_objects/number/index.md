@@ -11,13 +11,13 @@ browser-compat: javascript.builtins.Number
 ---
 {{JSRef}}**`Number`** is a [primitive wrapper object](/en-US/docs/Glossary/Primitive#primitive_wrapper_objects_in_javascript) used to represent and manipulate numbers like `37` or `-9.25`.
 
-The **`Number`** constructor contains constants and methods for working with numbers. Values of other types can be converted to numbers using the **`Number()` function**.
+The `Number` constructor contains constants and methods for working with numbers. Values of other types can be converted to numbers using the `Number()` function.
 
-The JavaScript **Number** type is a [double-precision 64-bit binary format IEEE 754](https://en.wikipedia.org/wiki/Floating-point_arithmetic) value, like `double` in Java or C#. This means it can represent fractional values, but there are some limits to what it can store. A Number only keeps about 17 decimal places of precision; arithmetic is subject to [rounding](https://en.wikipedia.org/wiki/Floating-point_arithmetic#Representable_numbers,_conversion_and_rounding). The largest value a Number can hold is about 1.8E308. Numbers beyond that are replaced with the special Number constant {{jsxref("Infinity")}}.
+The JavaScript `Number` type is a [double-precision 64-bit binary format IEEE 754](https://en.wikipedia.org/wiki/Floating-point_arithmetic) value, like `double` in Java or C#. This means it can represent fractional values, but there are some limits to what it can store. A `Number` only keeps about 17 decimal places of precision; arithmetic is subject to [rounding](https://en.wikipedia.org/wiki/Floating-point_arithmetic#Representable_numbers,_conversion_and_rounding). The largest value a `Number` can hold is about 1.8E308. Values higher than that are replaced with the special `Number` constant {{jsxref("Infinity")}}.
 
-A number literal like `37` in JavaScript code is a floating-point value, not an integer. There is no separate integer type in common everyday use. (JavaScript now has a {{jsxref("BigInt")}} type, but it was not designed to replace Number for everyday uses. `37` is still a Number, not a BigInt.)
+A number literal like `37` in JavaScript code is a floating-point value, not an integer. There is no separate integer type in common everyday use. (JavaScript now has a {{jsxref("BigInt")}} type, but it was not designed to replace Number for everyday uses. `37` is still a `Number`, not a BigInt.)
 
-Number may also be expressed in literal forms like `0b101`, `0o13`, `0x0A`. Learn more on numeric [lexical grammar here](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_literals).
+`Number` may also be expressed in literal forms like `0b101`, `0o13`, `0x0A`. Learn more on numeric [lexical grammar here](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_literals).
 
 ## Description
 
@@ -141,7 +141,7 @@ This logs `819199440000`.
 
 ```js
 Number('123')     // 123
-Number('123') === 123 /// true
+Number('123') === 123 // true
 Number('12.3')    // 12.3
 Number('12.00')   // 12
 Number('123e-1')  // 12.3
@@ -152,7 +152,7 @@ Number('0b11')    // 3
 Number('0o11')    // 9
 Number('foo')     // NaN
 Number('100a')    // NaN
-Number('-Infinity') //-Infinity
+Number('-Infinity') // -Infinity
 ```
 
 ## Specifications

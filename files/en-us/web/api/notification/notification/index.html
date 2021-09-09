@@ -2,12 +2,12 @@
 title: Notification()
 slug: Web/API/Notification/Notification
 tags:
-- API
-- Constructor
-- Notification
-- Notifications
-- Notifications API
-- Reference
+  - API
+  - Constructor
+  - Notification
+  - Notifications
+  - Notifications API
+  - Reference
 browser-compat: api.Notification.Notification
 ---
 <p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
@@ -17,7 +17,7 @@ browser-compat: api.Notification.Notification
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js syntaxbox">var <var>notification</var> = new Notification(<var>title</var>, <var>options</var>);</pre>
+<pre class="brush: js">var <var>notification</var> = new Notification(<var>title</var>, <var>options</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -35,9 +35,9 @@ browser-compat: api.Notification.Notification
         and <code>rtl</code> (although most browsers seem to ignore these settings.)</li>
       <li><code>lang</code>: The notification's language, as specified using a
         {{domxref("DOMString")}} representing a <a
-          href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt">BCP 47 language tag</a>. See
+          href="https://www.rfc-editor.org/rfc/bcp/bcp47.txt">BCP 47 language tag</a>. See
         the Sitepoint <a
-          href="http://www.sitepoint.com/web-foundations/iso-2-letter-language-codes/">ISO
+          href="https://www.sitepoint.com/web-foundations/iso-2-letter-language-codes/">ISO
           2 letter language codes</a> page for a simple reference.</li>
       <li><code>badge</code>: A {{domxref("USVString")}} containing the URL of the image
         used to represent the notification when there isn't enough space to display the
@@ -53,10 +53,10 @@ browser-compat: api.Notification.Notification
       <li><code>data</code>: Arbitrary data that you want associated with the
         notification. This can be of any data type.</li>
       <li><code>vibrate</code>: A <a
-          href="/en-US/docs/Web/Guide/API/Vibration#Vibration_patterns">vibration
+          href="/en-US/docs/Web/API/Vibration_API#vibration_patterns">vibration
           pattern</a> for the device's vibration hardware to emit with the notification.
       </li>
-      <li><code>renotify</code>: A {{domxref("Boolean")}} specifying whether the user
+      <li><code>renotify</code>: A boolean value specifying whether the user
         should be notified after a new notification replaces an old one. The default is
         <code>false</code>, which means they won't be notified.</li>
       <li><code>requireInteraction</code>: Indicates that a notification should remain
@@ -68,7 +68,7 @@ browser-compat: api.Notification.Notification
         the context of the notification itself. The action's name is sent to the service
         worker notification handler to let it know the action was selected by the user.
       </li>
-      <li><code>silent</code>: A {{domxref("Boolean")}} specifying whether the
+      <li><code>silent</code>: A boolean value specifying whether the
         notification is silent (no sounds or vibrations issued), regardless of the device
         settings. The default is <code>false</code>, which means it won't be silent.</li>
     </ul>

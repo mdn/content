@@ -32,12 +32,12 @@ browser-compat: api.History
 
 <dl>
  <dt>{{domxref("History.back","back()")}}</dt>
- <dd>This asynchronous method goes to the previous page in session history, the same action as when the user clicks the browser's <kbd>Back</kbd> button. Equivalent to <code>history.go(-1)</code>.
- <div class="note">Calling this method to go back beyond the first page in the session history has no effect and doesn't raise an exception.</div>
+ <dd><p>This asynchronous method goes to the previous page in session history, the same action as when the user clicks the browser's <kbd>Back</kbd> button. Equivalent to <code>history.go(-1)</code>.</p>
+ <p>Calling this method to go back beyond the first page in the session history has no effect and doesn't raise an exception.</p>
  </dd>
  <dt>{{domxref("History.forward","forward()")}}</dt>
- <dd>This asynchronous method goes to the next page in session history, the same action as when the user clicks the browser's <kbd>Forward</kbd> button; this is equivalent to <code>history.go(1)</code>.
- <div class="note">Calling this method to go forward beyond the most recent page in the session history has no effect and doesn't raise an exception.</div>
+ <dd><p>This asynchronous method goes to the next page in session history, the same action as when the user clicks the browser's <kbd>Forward</kbd> button; this is equivalent to <code>history.go(1)</code>.</p>
+ <p>Calling this method to go forward beyond the most recent page in the session history has no effect and doesn't raise an exception.</p>
  </dd>
  <dt>{{domxref("History.go","go()")}}</dt>
  <dd>Asynchronously loads a page from the session history, identified by its relative location to the current page, for example <code>-1</code> for the previous page or <code>1</code> for the next page. If you specify an out-of-bounds value (for instance, specifying <code>-1</code> when there are no previously-visited pages in the session history), this method silently has no effect. Calling <code>go()</code> without parameters or a value of <code>0</code> reloads the current page. Internet Explorer lets you specify a string, instead of an integer, to go to a specific URL in the history list.</dd>

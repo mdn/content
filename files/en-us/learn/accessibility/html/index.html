@@ -24,7 +24,7 @@ tags:
 
 <p class="summary">A great deal of web content can be made accessible just by making sure the correct Hypertext Markup Language elements are used for the correct purpose at all times. This article looks in detail at how HTML can be used to ensure maximum accessibility.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -265,7 +265,7 @@ This is the second subsection of my content. I think is more interesting than th
 
 <p>One key aspect of the accessibility of UI controls is that by default, browsers allow them to be manipulated by the keyboard. You can try this out using our <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html">native-keyboard-accessibility.html</a> example (see the <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html">source code</a>). Open this in a new tab, and try pressing the tab key; after a few presses, you should see the tab focus start to move through the different focusable elements. The focused elements are given a highlighted default style in every browser (it differs slightly between different browsers) so that you can tell what element is focused.</p>
 
-<p><img alt="" src="button-focused-unfocused.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="button-focused-unfocused.png"></p>
 
 <div class="notecard note">
 <p>From Firefox 84 you can also enable an overlay that shows the page tabbing order. For more information see: <a href="/en-US/docs/Tools/Accessibility_inspector#show_web_page_tabbing_order">Accessibility Inspector &gt; Show web page tabbing order</a>.</p>
@@ -358,7 +358,7 @@ This is the second subsection of my content. I think is more interesting than th
 
 <p>You should make sure that your button and link text labels are understandable and distinctive. Don't just use "Click here" for your labels, as screen reader users sometimes get up a list of buttons and form controls. The following screenshot shows our controls being listed by VoiceOver on Mac.</p>
 
-<p><img alt="" src="voiceover-formcontrols.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="voiceover-formcontrols.png"></p>
 
 <p>Make sure your labels make sense out of context, read on their own, as well as in the context of the paragraph they are in. For example, the following shows an example of good link text:</p>
 
@@ -387,7 +387,7 @@ This is the second subsection of my content. I think is more interesting than th
 
 <p>With code like this, the label will be clearly associated with the input; the description will be more like "Fill in your name: edit text."</p>
 
-<p><img alt="" src="voiceover-good-form-label.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="voiceover-good-form-label.png"></p>
 
 <p>As an added bonus, in most browsers associating a label with a form input means that you can click the label to select or activate the form element. This gives the input a bigger hit area, making it easier to select.</p>
 
@@ -477,7 +477,7 @@ This is the second subsection of my content. I think is more interesting than th
 
 <p>If you do want to provide extra contextual information, you should put it in the text surrounding the image, or inside a <code>title</code> attribute, as shown above. In this case, most screen readers will read out the alt text, the title attribute, and the filename. In addition, browsers display title text as tooltips when moused over.</p>
 
-<p><img alt="" src="title-attribute.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="title-attribute.png"></p>
 
 <p>Let's have another quick look at the fourth method:</p>
 
@@ -517,7 +517,7 @@ This is the second subsection of my content. I think is more interesting than th
 
 <p>There may be times where an image is included in a page's design, but its primary purpose is for visual decoration. You'll notice in the code example above that the image's <code>alt</code> attribute is empty — this is to make screen readers recognize the image, but not attempt to describe the image (instead they'd just say "image", or similar).</p>
 
-<p>The reason to use an empty <code>alt</code> instead of not including it is because many screen readers announce the whole image URL if no <code>alt</code> is provided. In the above example, the image is acting as a visual decoration to the heading it's associated with. In cases like this, and in cases where an image is only decoration and has no content value, you should include an empty <code>alt</code> in your <code>img</code> elements. Another alternative is to use the aria role attribute role="presentation" as this also stops screen readers from reading out alternative text.</p>
+<p>The reason to use an empty <code>alt</code> instead of not including it is because many screen readers announce the whole image URL if no <code>alt</code> is provided. In the above example, the image is acting as a visual decoration to the heading it's associated with. In cases like this, and in cases where an image is only decoration and has no content value, you should include an empty <code>alt</code> in your <code>img</code> elements. Another alternative is to use the aria <code><a href="/en-US/docs/Web/accessibility/ARIA/roles">role</a></code> attribute <code><a href="/en-US/docs/Web/accessibility/ARIA/roles/presentation_role">role="presentation"</a></code> as this also stops screen readers from reading out alternative text.</p>
 
 <div class="note">
 <p><strong>Note</strong>: if possible you should use CSS to display images that are only decorative.</p>

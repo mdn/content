@@ -21,31 +21,20 @@ foo     = 'bar'; // foo is now a string
 foo     = true;  // foo is now a boolean
 ```
 
-## Data and Structure types
+## JavaScript types
 
-The latest ECMAScript standard defines nine types:
+The set of types in the JavaScript language consists of [_primitive values_](#primitive_values) and [_objects_](#objects).
 
-- Six **Data Types** that are [primitives](/en-US/docs/Glossary/Primitive), checked by [typeof](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) operator:
+- [Primitive values](#primitive_values) (immutable datum represented directly at the lowest level of the language)
+  - [Boolean type](#boolean_type)
+  - [Null type](#null_type)
+  - [Undefined type](#undefined_type)
+  - [Number type](#number_type)
+  - [BigInt type](#bigint_type)
+  - [String type](#string_type)
+  - [Symbol type](#symbol_type)
 
-  - [undefined](/en-US/docs/Glossary/undefined) : `typeof instance === "undefined"`
-  - [Boolean](/en-US/docs/Glossary/Boolean) : `typeof instance === "boolean"`
-  - [Number](/en-US/docs/Glossary/Number) : `typeof instance === "number"`
-  - [String](/en-US/docs/Glossary/String) : `typeof instance === "string"`
-  - [BigInt](/en-US/docs/Glossary/BigInt) : `typeof instance === "bigint"`
-  - [Symbol](/en-US/docs/Glossary/Symbol) : `typeof instance === "symbol"`
-
-- **Structural** **Types**:
-
-  - [Object](/en-US/docs/Glossary/Object) : `typeof instance === "object"`. Special non-data but **Structural** **type** for any [constructed](/en-US/docs/Learn/JavaScript/Objects#the_constructor) object instance also used as data structures: new {{jsxref("Object")}}, new {{jsxref("Array")}}, new {{jsxref("Map")}}, new {{jsxref("Set")}}, new {{jsxref("WeakMap")}}, new {{jsxref("WeakSet")}}, new {{jsxref("Date")}} and almost everything made with [new keyword](/en-US/docs/Web/JavaScript/Reference/Operators/new);
-  - [Function](/en-US/docs/Glossary/Function) : a non-data structure, though it also answers for `typeof` operator: `typeof instance === "function"`. This is merely a special shorthand for Functions, though every Function constructor is derived from Object constructor.
-
-- **Structural Root** Primitive:
-
-  - **[null](/en-US/docs/Glossary/Null)** : `typeof instance === "object"`. Special [primitive](/en-US/docs/Glossary/Primitive) type having additional usage for its value: if object is not inherited, then `null` is shown;
-
-Keep in mind the only valuable purpose of `typeof` operator usage is checking the Data Type. If we wish to check any Structural Type derived from Object it is pointless to use `typeof` for that, as we will always receive `"object"`. The proper way to check what sort of Object we are using is the {{jsxref("Operators/instanceof", "instanceof")}} keyword. But even in that case there might be misconceptions.
-
-As we can see the meaning of every primitive type is obvious except of undefined and null which are almost the same. This happens as the concept of Time is strictly connected with the purpose of algorithms. We can purport something that does not yet exist or does not exist anymore: **undefined**. But when we wish to be able to represent something that exists being empty, we have to invent another keyword. And that is what **null** stands for: the beginning of structural meaning.
+- [Objects](#objects) (collections of properties)
 
 ## Primitive values
 
@@ -77,7 +66,7 @@ To check for the largest available value or smallest available value within {{js
 
 The number type has only one integer with two representations: `0` is represented as both `-0` and `+0`. (`0` is an alias for `+0`.)
 
-In the praxis, this has almost no impact. For example, `+0 === -0` is `true`. However, you are able to notice this when you divide by zero:
+In practice, this has almost no impact. For example, `+0 === -0` is `true`. However, you are able to notice this when you divide by zero:
 
 ```js
 > 42 / +0
@@ -94,11 +83,11 @@ It may be necessary to use such techniques in very constrained environments, lik
 
 ### BigInt type
 
-The {{jsxref("BigInt")}} type is a numeric primitive in JavaScript that can represent integers with arbitrary precision. With `BigInt`s, you can safely store and operate on large integers even beyond the safe integer limit for `Number`s.
+The BigInt type is a numeric primitive in JavaScript that can represent integers with arbitrary precision. With BigInts, you can safely store and operate on large integers even beyond the safe integer limit for Numbers.
 
-A `BigInt` is created by appending `n` to the end of an integer or by calling the constructor.
+A BigInt is created by appending `n` to the end of an integer or by calling the constructor.
 
-You can obtain the safest value that can be incremented with `Number`s by using the constant {{jsxref("Number.MAX_SAFE_INTEGER")}}. With the introduction of `BigInt`s, you can operate with numbers beyond the {{jsxref("Number.MAX_SAFE_INTEGER")}}.
+You can obtain the largest safe value that can be incremented with Numbers by using the constant {{jsxref("Number.MAX_SAFE_INTEGER")}}. With the introduction of BigInts, you can operate with numbers beyond the {{jsxref("Number.MAX_SAFE_INTEGER")}}.
 
 This example demonstrates, where incrementing the {{jsxref("Number.MAX_SAFE_INTEGER")}} returns the expected result:
 
@@ -109,15 +98,15 @@ This example demonstrates, where incrementing the {{jsxref("Number.MAX_SAFE_INTE
 9007199254740993n
 ```
 
-You can use the operators `+`, `*`, `-`, `**`, and `%` with `BigInt`s—just like with `Number`s. A `BigInt` is not strictly equal to a `Number`, but it is loosely so.
+You can use the operators `+`, `*`, `-`, `**`, and `%` with BigInts—just like with Numbers. A BigInt is not strictly equal to a Number, but it is loosely so.
 
-A `BigInt` behaves like a `Number` in cases where it is converted to `Boolean`: `if`, `||`, `&&`, `Boolean`, `!`.
+A BigInt behaves like a Number in cases where it is converted to boolean: `if`, `||`, `&&`, `Boolean`, `!`.
 
-`BigInt`s cannot be operated on interchangeably with `Number`s. Instead a {{jsxref("TypeError")}} will be thrown.
+`BigInt`s cannot be operated on interchangeably with Numbers. Instead a {{jsxref("TypeError")}} will be thrown.
 
 ### String type
 
-JavaScript's {{jsxref("String")}} type is used to represent textual data. It is a set of "elements" of 16-bit unsigned integer values. Each element in the String occupies a position in the String. The first element is at index `0`, the next at index `1`, and so on. The length of a String is the number of elements in it.
+JavaScript's String type is used to represent textual data. It is a set of "elements" of 16-bit unsigned integer values. Each element in the String occupies a position in the String. The first element is at index `0`, the next at index `1`, and so on. The length of a String is the number of elements in it.
 
 Unlike some programming languages (such as C), JavaScript strings are immutable. This means that once a string is created, it is not possible to modify it.
 
@@ -132,7 +121,7 @@ It can be tempting to use strings to represent complex data. Doing this comes wi
 
 - It is easy to build complex strings with concatenation.
 - Strings are easy to debug (what you see printed is always what is in the string).
-- Strings are the common denominator of a lot of APIs ([input fields](/en-US/docs/Web/API/HTMLInputElement), [local storage](/en-US/docs/Storage) values, [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest "Use XMLHttpRequest (XHR) objects to interact with servers. You can retrieve data from a URL without having to do a full page refresh. This enables a Web page to update just part of a page without disrupting what the user is doing.") responses when using `responseText`, etc.) and it can be tempting to only work with strings.
+- Strings are the common denominator of a lot of APIs ([input fields](/en-US/docs/Web/API/HTMLInputElement), [local storage](/en-US/docs/Web/API/Web_Storage_API) values, [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest "Use XMLHttpRequest (XHR) objects to interact with servers. You can retrieve data from a URL without having to do a full page refresh. This enables a Web page to update just part of a page without disrupting what the user is doing.") responses when using `responseText`, etc.) and it can be tempting to only work with strings.
 
 With conventions, it is possible to represent any data structure in a string. This does not make it a good idea. For instance, with a separator, one could emulate a list (while a JavaScript array would be more suitable). Unfortunately, when the separator is used in one of the "list" elements, then, the list is broken. An escape character can be chosen, etc. All of this requires conventions and creates an unnecessary maintenance burden.
 
@@ -150,11 +139,11 @@ In computer science, an object is a value in memory which is possibly referenced
 
 ### Properties
 
-In JavaScript, objects can be seen as a collection of properties. With the [object literal syntax](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#object_literals), a limited set of properties are initialized; then properties can be added and removed. Property values can be values of any type, including other objects, which enables building complex data structures. Properties are identified using _key_ values. A _key_ value is either a String or a Symbol value.
+In JavaScript, objects can be seen as a collection of properties. With the [object literal syntax](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#object_literals), a limited set of properties are initialized; then properties can be added and removed. Property values can be values of any type, including other objects, which enables building complex data structures. Properties are identified using _key_ values. A _key_ value is either a {{Glossary("String", "String value")}} or a {{Glossary("Symbol", "Symbol value")}}.
 
-There are two types of object properties which have certain attributes: The _data_ property and the _accessor_ property.
+There are two types of object properties: The [_data_ property](#data_property) and the [_accessor_ property](#accessor_property).
 
-> **Note:** Each property has corresponding *attributes.* Attributes are used internally by the JavaScript engine, so you cannot directly access them. That's why attributes are listed in double square brackets, rather than single.
+> **Note:** Each property has corresponding *attributes*. Attributes are used internally by the JavaScript engine, so you cannot directly access them. That's why attributes are listed in double square brackets, rather than single.
 >
 > See {{jsxref("Object.defineProperty()")}} to learn more.
 
@@ -196,7 +185,7 @@ Associates a key with a value, and has the following attributes:
         <p>
           If <code>true</code>, the property will be enumerated in
           <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in"
-            >for...in</a
+             ><code>for...in</code></a
           >
           loops.<br />See also
           <a
@@ -228,18 +217,22 @@ Associates a key with a value, and has the following attributes:
 
 #### Accessor property
 
-Associates a key with one of two accessor functions (`get` and `set`) to retrieve or store a value, and has the following attributes:
+Associates a key with one of two accessor functions (`get` and `set`) to retrieve or store a value.
+
+> **Note:** It’s important to recognize it’s accessor _property_ — not accessor _method_. We can give a JavaScipt object class-like accessors by using a function as a value — but that doesn't make the object a class.
+
+An accessor property has the following attributes:
 
 | Attribute        | Type                           | Description                                                                                                                                                                                                              | Default value |
 | ---------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------- |
 | [[Get]]          | Function object or `undefined` | The function is called with an empty argument list and retrieves the property value whenever a get access to the value is performed. See also [`get`](/en-US/docs/Web/JavaScript/Reference/Functions/get).               | `undefined`   |
 | [[Set]]          | Function object or `undefined` | The function is called with an argument that contains the assigned value and is executed whenever a specified property is attempted to be changed. See also [`set`](/en-US/docs/Web/JavaScript/Reference/Functions/set). | `undefined`   |
-| [[Enumerable]]   | Boolean                        | If `true`, the property will be enumerated in [for...in](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops.                                                                                                | `false`       |
+| [[Enumerable]]   | Boolean                        | If `true`, the property will be enumerated in [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops.                                                                                                | `false`       |
 | [[Configurable]] | Boolean                        | If `false`, the property can't be deleted and can't be changed to a data property.                                                                                                                                       | `false`       |
 
 ### "Normal" objects, and functions
 
-A JavaScript object is a mapping between _keys_ and _values_. Keys are strings (or {{jsxref("Symbol")}}s), and _values_ can be anything. This makes objects a natural fit for [hashmaps](https://en.wikipedia.org/wiki/Hash_table).
+A JavaScript object is a mapping between _keys_ and _values_. Keys are strings (or Symbols), and _values_ can be anything. This makes objects a natural fit for [hashmaps](https://en.wikipedia.org/wiki/Hash_table).
 
 Functions are regular objects with the additional capability of being _callable_.
 
@@ -251,7 +244,7 @@ When representing dates, the best choice is to use the built-in [`Date` utility]
 
 [Arrays](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) are regular objects for which there is a particular relationship between integer-keyed properties and the `length` property.
 
-Additionally, arrays inherit from `Array.prototype`, which provides to them a handful of convenient methods to manipulate arrays. For example, [`indexOf`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) (searching a value in the array) or [`push`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) (adding an element to the array), and so on. This makes Arrays a perfect candidate to represent lists or sets.
+Additionally, arrays inherit from `Array.prototype`, which provides to them a handful of convenient methods to manipulate arrays. For example, [`indexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) (searching a value in the array) or [`push()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) (adding an element to the array), and so on. This makes Arrays a perfect candidate to represent lists or sets.
 
 [Typed Arrays](/en-US/docs/Web/JavaScript/Typed_arrays) are new to JavaScript with ECMAScript 2015, and present an array-like view of an underlying binary data buffer. The following table helps determine the equivalent C data types:
 

@@ -14,11 +14,17 @@ browser-compat: api.BaseAudioContext.createConstantSource
 ---
 <p>{{APIRef("Web Audio API")}}</p>
 
-<p><span class="seoSummary">The <strong><code>createConstantSource()</code></strong>
+<p>The <strong><code>createConstantSource()</code></strong>
     property of the {{domxref("BaseAudioContext")}} interface creates a
     {{domxref("ConstantSourceNode")}} object, which is an audio source that continuously
     outputs a monaural (one-channel) sound signal whose samples all have the same
-    value.</span></p>
+    value.</p>
+
+<div class="notecard note">
+  <p><strong>Note:</strong> The {{domxref("ConstantSourceNode.ConstantSourceNode", "ConstantSourceNode()")}}
+    constructor is the recommended way to create a {{domxref("ConstantSourceNode")}}; see
+    <a href="/en-US/docs/Web/API/AudioNode#creating_an_audionode">Creating an AudioNode</a>.</p>
+</div>
 
 <h2 id="Syntax">Syntax</h2>
 

@@ -61,7 +61,7 @@ Values of zero are all considered to be equal, regardless of sign. (That is,
 but `false` is _not_ considered to be the same as `0`.
 
 > **Note:** Technically speaking, `includes()` uses the
-> [`sameValueZero`](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#Same-value-zero_equality)
+> [`sameValueZero`](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality)
 > algorithm to determine whether the given element is found.
 
 ## Examples
@@ -91,8 +91,8 @@ arr.includes('c', 100)  // false
 
 If `fromIndex` is negative, the computed index is calculated to
 be used as a position in the array at which to begin searching for
-`searchElement`. If the computed index is less or equal than
-`-1 * arr.length`, the entire array will be searched.
+`searchElement`. If the computed index is less than or equal to
+`0`, the entire array will be searched.
 
 ```js
 // array length is 3

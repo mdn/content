@@ -2,18 +2,18 @@
 title: WritableStream.abort()
 slug: Web/API/WritableStream/abort
 tags:
-- API
-- Experimental
-- Method
-- Reference
-- Streams
-- WritableStream
-- abort
+  - API
+  - Experimental
+  - Method
+  - Reference
+  - Streams
+  - WritableStream
+  - abort
 browser-compat: api.WritableStream.abort
 ---
-<div>{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}</div>
+<div>{{SeeCompatTable}}{{APIRef("Streams")}}</div>
 
-<p class="summary">The <strong><code>abort()</code></strong> method of the
+<p>The <strong><code>abort()</code></strong> method of the
   {{domxref("WritableStream")}} interface aborts the stream, signaling that the producer
   can no longer successfully write to the stream and it is to be immediately moved to an
   error state, with any queued writes discarded.</p>
@@ -45,23 +45,23 @@ browser-compat: api.WritableStream.abort
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">const</span> writableStream <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">WritableStream</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
-  <span class="function token">write</span><span class="punctuation token">(</span>chunk<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+<pre class="brush: js ">const writableStream = new WritableStream({
+  write(chunk) {
     ...
-  <span class="punctuation token">}</span><span class="punctuation token">,</span>
-  <span class="function token">close</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="keyword token">...</span>
-  <span class="punctuation token">}</span><span class="punctuation token">,</span>
-  <span class="function token">abort</span><span class="punctuation token">(</span>err<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+  },
+  close() {
     ...
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span><span class="punctuation token">,</span> queuingStrategy<span class="punctuation token">)</span><span class="punctuation token">;</span>
+  },
+  abort(err) {
+    ...
+  }
+}, queuingStrategy);
 
 ...
 
 // abort the stream later on, when required
 writableStream.abort();
-</code>
+
 </pre>
 
 <h2 id="Specifications">Specifications</h2>

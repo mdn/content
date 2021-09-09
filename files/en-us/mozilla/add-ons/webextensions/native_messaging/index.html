@@ -12,9 +12,9 @@ tags:
 
 <p>Native messaging also enables extensions to access resources that are not accessible through WebExtension APIs (e.g, particular hardwares).</p>
 
-<p>The native application is not installed or managed by the browser. The native application is installed, using the underlying operating system's installation machinery. Create a JSON file called the "host manifest" or "app manifest". Install the JSON file in a defined location. The app manifest fill will describe how the browser can connect to the native application.</p>
+<p>The native application is not installed or managed by the browser. The native application is installed, using the underlying operating system's installation machinery. Create a JSON file called the "host manifest" or "app manifest". Install the JSON file in a defined location. The app manifest file will describe how the browser can connect to the native application.</p>
 
-<p>The extension must request the <code>"nativeMessaging"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> in the <code>manifest.json</code> file. Also, the native application must grant permission for the extension by including the ID in the <code>"allowed_extensions"</code> field of the app manifest.</p>
+<p>The extension must request the <code>"nativeMessaging"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> or <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions">optional permission</a> in the <code>manifest.json</code> file. Also, the native application must grant permission for the extension by including the ID in the <code>"allowed_extensions"</code> field of the app manifest.</p>
 
 <p>After installing, the extension can exchange JSON messages with the native application. Use a set of functions in the {{WebExtAPIRef("runtime")}} API. On the native app side, messages are received using standard input (<code>stdin</code>) and sent using standard output (<code>stdout</code>).</p>
 
@@ -36,7 +36,7 @@ tags:
 <p>Extension communicating with a native application:</p>
 
 <ul>
- <li>Set the <code>"nativeMessaging"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a></code> file.</li>
+ <li>Set the <code>"nativeMessaging"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> or <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions">optional permission</a> in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a></code> file.</li>
  <li>Specify your add-on ID explicitly. Use the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">browser_specific_settings</a></code> manifest key. (The app's manifest will identify the set of extensions that allow connecting to the IDs).</li>
 </ul>
 
@@ -74,6 +74,10 @@ tags:
 <div class="notecard note">
 <p><strong>Note:</strong> Chrome does not support the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">browser_specific_settings</a> key. You will need to use another manifest without this key to install an equivalent WebExtension on Chrome. See <a href="#chrome_incompatibilities">Chrome incompatibilities below</a>.</p>
 </div>
+
+<div class="notecard note">
+<p><strong>Note:</strong> When using optional permission, check that permission has been granted and, where necessary, request permission from the user with the {{WebExtAPIRef("permissions")}} API before communicating with the native application.</p>
+</div> 
 
 <h3 id="App_manifest">App manifest</h3>
 
@@ -454,7 +458,7 @@ while True:
 <pre>"TypeError: browser.runtime.connectNative is not a function"</pre>
 
 <ul>
- <li>Check that the extension has the <code>"nativeMessaging"</code> permission</li>
+ <li>Check that the extension has the <code>"nativeMessaging"</code> permission.</li>
 </ul>
 
 <pre>"[object Object]       NativeMessaging.jsm:218"</pre>

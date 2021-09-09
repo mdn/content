@@ -10,7 +10,7 @@ browser-compat: api.MIDIMessageEvent.MIDIMessageEvent
 ---
 <p>{{securecontext_header}}{{APIRef("Web MIDI API")}}</p>
 
-<p class="summary">The <strong><code>MIDIMessageEvent()</code></strong> constructor creates a new {{domxref("MIDIMessageEvent")}} object. Typically this constructor is not used as events are created when a {{domxref("MIDIInput")}} finishes receiving one or more MIDI messages.</p>
+<p>The <strong><code>MIDIMessageEvent()</code></strong> constructor creates a new {{domxref("MIDIMessageEvent")}} object. Typically this constructor is not used as events are created when a {{domxref("MIDIInput")}} finishes receiving one or more MIDI messages.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -28,13 +28,13 @@ new MIDIMessageEvent(type, MIDIMessageEventInit);</pre>
       <dt><code>port</code></dt>
       <dd>The {{domxref("MIDIPort")}} instance representing the port that has connected or disconnected.</dd>
       <dt><code>bubbles</code> {{optional_inline}}</dt>
-      <dd>A {{jsxref("Boolean")}} indicating whether the event bubbles. The default is
+      <dd>A boolean value indicating whether the event bubbles. The default is
         <code>false</code>.</dd>
       <dt><code>cancelable</code> {{optional_inline}}</dt>
-      <dd>A {{jsxref("Boolean")}} indicating whether the event can be cancelled. The
+      <dd>A boolean value indicating whether the event can be cancelled. The
         default is <code>false</code>.</dd>
       <dt><code>composed</code> {{optional_inline}}</dt>
-      <dd>A {{jsxref("Boolean")}} indicating whether the event will trigger listeners
+      <dd>A boolean value indicating whether the event will trigger listeners
         outside of a shadow root (see {{domxref("Event.composed")}} for details). The
         default is <code>false</code>.</dd>
     </dl>

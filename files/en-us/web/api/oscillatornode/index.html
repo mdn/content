@@ -15,8 +15,6 @@ browser-compat: api.OscillatorNode
 
 <p>The <strong><code>OscillatorNode</code></strong> interface represents a periodic waveform, such as a sine wave. It is an {{domxref("AudioScheduledSourceNode")}} audio-processing module that causes a specified frequency of a given wave to be created—in effect, a constant tone.</p>
 
-<p>An <code>OscillatorNode</code> is created using the {{domxref("BaseAudioContext.createOscillator()")}} method. It always has exactly one output and no inputs. Its basic property defaults (see {{domxref("AudioNode")}} for definitions) are:</p>
-
 <table class="properties">
  <tbody>
   <tr>
@@ -46,7 +44,7 @@ browser-compat: api.OscillatorNode
 
 <dl>
  <dt>{{domxref("OscillatorNode.OscillatorNode", "OscillatorNode()")}}</dt>
- <dd>Creates a new instance of an <code>OscillatorNode</code> object, optionally providing an object specifying default values for the node's {{anch("properties")}}.  If the default values are acceptable, you can call the {{domxref("BaseAudioContext.createOscillator()")}} factory method.</dd>
+ <dd>Creates a new instance of an <code>OscillatorNode</code> object, optionally providing an object specifying default values for the node's {{anch("properties")}}.  As an alternative, you can use the {{domxref("BaseAudioContext.createOscillator()")}} factory method; see <a href="/en-US/docs/Web/API/AudioNode#creating_an_audionode">Creating an AudioNode</a>.</dd>
 </dl>
 
 <h2 id="Properties">Properties</h2>

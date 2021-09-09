@@ -15,10 +15,10 @@ browser-compat: api.CredentialsContainer.store
 
 <p>The <strong><code>store()</code></strong> method of the
     {{domxref("CredentialsContainer")}} stores a set of credentials for the user inside a
-    {{domxref("Credential")}} instance, returning this in a {{domxref("Promise")}}.</p>
+    {{domxref("Credential")}} instance, returning this in a {{jsxref("Promise")}}.</p>
 
 <div class="note">
-  <p>This method is restricted to top-level contexts. Calls to it within an
+  <p><strong>Note:</strong> This method is restricted to top-level contexts. Calls to it within an
     <code>&lt;iframe&gt;</code> element will resolve without effect.</p>
 </div>
 
@@ -36,7 +36,7 @@ browser-compat: api.CredentialsContainer.store
 
 <h3 id="Returns">Returns</h3>
 
-<p>A {{domxref("Promise")}}, resolving to the passed {{domxref("Credential")}} instance.
+<p>A {{jsxref("Promise")}} that resolves to <code>undefined</code>.
 </p>
 
 <h2 id="Example">Example</h2>

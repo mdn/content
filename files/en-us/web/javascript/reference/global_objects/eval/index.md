@@ -74,7 +74,7 @@ eval(expression.toString());            // returns 4
 
 If you use the `eval` function _indirectly,_ by invoking it via a
 reference other than `eval`, [as of ECMAScript
-5](http://www.ecma-international.org/ecma-262/5.1/#sec-10.4.2) it works in the global scope rather than the local scope. This means, for
+5](https://www.ecma-international.org/ecma-262/5.1/#sec-10.4.2) it works in the global scope rather than the local scope. This means, for
 instance, that function declarations create global functions, and that the code being
 evaluated doesn't have access to local variables within the scope where it's being
 called.
@@ -190,8 +190,7 @@ let's analyze the benefits of the above efficient method:
   be minified.
 - Function call overhead is minimal, making the far smaller code size well worth the
   benefit
-- `Function()` more easily allows your code to utilize the performance
-  buttering `"use strict";`
+- `Function()` more easily allows your code to benefit from the possible performance improvements provided by `"use strict";`
 - The code does not use `eval()`, making it orders of magnitude faster than
   otherwise.
 

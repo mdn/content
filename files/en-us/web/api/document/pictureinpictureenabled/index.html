@@ -15,10 +15,12 @@ browser-compat: api.Document.pictureInPictureEnabled
 ---
 <div>{{APIRef("Picture-in-Picture API")}}</div>
 
-<p><span class="seoSummary">The read-only
+<p>The read-only
     <code><strong>pictureInPictureEnabled</strong></code> property of the
     {{domxref("Document")}} interface indicates whether or not picture-in-picture mode is
-    available.</span> Picture-in-Picture mode is available by default unless specified
+    available.</p>
+
+<p>Picture-in-Picture mode is available by default unless specified
   otherwise by a <a
     href="/en-US/docs/Web/HTTP/Headers/Feature-Policy/picture-in-picture">Feature-Policy</a>.
 </p>
@@ -33,7 +35,7 @@ browser-compat: api.Document.pictureInPictureEnabled
 
 <h3 id="Value">Value</h3>
 
-<p>A {{domxref("Boolean")}} value, which is <code>true</code> if a video can enter
+<p>A boolean value, which is <code>true</code> if a video can enter
   picture-in-picture and be displayed in a floating window by calling
   {{domxref("HTMLVideoElement.requestFullscreen()")}}. If picture-in-picture mode isn't
   available, this value is <code>false</code>.</p>

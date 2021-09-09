@@ -13,9 +13,11 @@ browser-compat: api.Event.cancelable
 ---
 <div>{{ ApiRef("DOM") }}</div>
 
-<p><span class="seoSummary">The <strong><dfn><code>cancelable</code></dfn></strong>
+<p>The <strong><dfn><code>cancelable</code></dfn></strong>
     read-only property of the {{domxref("Event")}} interface indicates whether the event
-    can be canceled, and therefore prevented as if the event never happened.</span> If the
+    can be canceled, and therefore prevented as if the event never happened.</p>
+
+<p>If the
   event is <em>not</em> cancelable, then its <code>cancelable</code> property will be
   <code>false</code> and the event listener cannot stop the event from occurring.</p>
 
@@ -40,7 +42,7 @@ browser-compat: api.Event.cancelable
 
 <h3 id="Value">Value</h3>
 
-<p>The result is a {{domxref("Boolean")}}, which is <code>true</code> if the event can be
+<p>The result is a boolean value, which is <code>true</code> if the event can be
   canceled.</p>
 
 <h2 id="Example">Example</h2>

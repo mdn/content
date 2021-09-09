@@ -18,7 +18,7 @@ browser-compat: api.RTCPeerConnection.canTrickleIceCandidates
 <div>{{APIRef("WebRTC")}}</div>
 
 <p>The read-only <strong>{{domxref("RTCPeerConnection")}}</strong> property <code><strong>canTrickleIceCandidates</strong></code>
-   returns a {{jsxref("Boolean")}} which indicates whether or not the remote peer can accept
+   returns a boolean value which indicates whether or not the remote peer can accept
    <a href="https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-trickle-ice">trickled ICE candidates</a>.</p>
 
 <p><strong>ICE trickling</strong> is the process of continuing to send candidates after
@@ -41,7 +41,7 @@ browser-compat: api.RTCPeerConnection.canTrickleIceCandidates
 
 <h3 id="Value">Value</h3>
 
-<p>A {{jsxref("Boolean")}} that is <code>true</code> if the remote peer can accept
+<p>A boolean value that is <code>true</code> if the remote peer can accept
     trickled ICE candidates and <code>false</code> if it cannot. If no remote peer has
     been established, this value is <code>null</code>.</p>
 

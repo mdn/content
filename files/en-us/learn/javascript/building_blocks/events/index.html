@@ -18,7 +18,7 @@ tags:
 
 <p class="summary">Events are actions or occurrences that happen in the system you are programming, which the system tells you about so you can respond to them in some way if desired. For example, if the user selects a button on a webpage, you might want to respond to that action by displaying an information box. In this article, we discuss some important concepts surrounding events, and look at how they work in browsers. This won't be an exhaustive study; just what you need to know at this stage.</p>
 
-<table class="learn-box standard-table">
+<table class="learn-box">
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -35,7 +35,7 @@ tags:
 
 <p>As mentioned above, <strong>events</strong> are actions or occurrences that happen in the system you are programming — the system produces (or "fires") a signal of some kind when an event occurs, and provides a mechanism by which an action can be automatically taken (that is, some code running) when the event occurs. For example, in an airport, when the runway is clear for take off, a signal is communicated to the pilot. As a result, the plane can safely takeoff.</p>
 
-<p><img alt="" src="mdn-mozilla-events-runway.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="Image displaying signal for plane to take-off" src="mdn-mozilla-events-runway.png"></p>
 
 <p>In the case of the Web, events are fired inside the browser window, and tend to be attached to a specific item that resides in it — this might be a single element, set of elements, the HTML document loaded in the current tab, or the entire browser window. There are many different types of events that can occur. For example:</p>
 
@@ -64,9 +64,7 @@ tags:
 
 <pre class="brush: html">&lt;button&gt;Change color&lt;/button&gt;</pre>
 
-<div class="hidden">
-<pre class="brush: css">button { margin: 10px };</pre>
-</div>
+<pre class="brush: css hidden">button { margin: 10px };</pre>
 
 <p>The JavaScript looks like so:</p>
 
@@ -95,7 +93,7 @@ btn.onclick = function() {
 
 <p>For example, <a href="/en-US/docs/Learn/Server-side/Express_Nodejs">Node.js</a> is a very popular JavaScript runtime that enables developers to use JavaScript to build network and server-side applications. The <a href="https://nodejs.org/docs/latest-v12.x/api/events.html">Node.js event model</a> relies on listeners to listen for events and emitters to emit events periodically — it doesn't sound that different, but the code is quite different, making use of functions like <code>on()</code> to register an event listener, and <code>once()</code> to register an event listener that unregisters after it has run once. The <a href="https://nodejs.org/docs/latest-v12.x/api/http.html#http_event_connect">HTTP connect event docs</a> provide a good example.</p>
 
-<p>You can also use JavaScript to build cross-browser add-ons — browser functionality enhancements — using a technology called <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a>. The event model is similar to the web events model, but a bit different — event listeners properties are camel-cased (such as <code>onMessage</code> rather than <code>onmessage</code>), and need to be combined with the <code>addListener</code> function. See the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#examples"><code>runtime.onMessage</code> page</a> for an example.</p>
+<p>You can also use JavaScript to build cross-browser add-ons — browser functionality enhancements — using a technology called <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a>. The event model is similar to the web events model, but a bit different — event listeners properties are camel-cased (such as <code>onMessage</code> rather than <code>onmessage</code>), and need to be combined with the <code>addListener</code> function. See the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#examples"><code>runtime.onMessage</code></a> page for an example.</p>
 
 <p>You don't need to understand anything about other such environments at this stage in your learning; we just wanted to make it clear that events can differ in different programming environments.</p>
 
@@ -242,25 +240,27 @@ myElement.addEventListener('click', functionB);</pre>
 
 <h3 id="What_mechanism_should_I_use">What mechanism should I use?</h3>
 
-<p>Of the three mechanisms, you shouldn't use the HTML event handler attributes — these are outdated, and bad practice, as mentioned above.</p>
-
-<p>The other two are relatively interchangeable, at least for simple uses:</p>
+<p>There are only two methods you should consider for handling events:</p>
 
 <ul>
- <li>Event handler properties have less power and options, but better cross-browser compatibility (being supported as far back as Internet Explorer 8). You should probably start with these as you begin learning.</li>
- <li>DOM Level 2 Events (<code>addEventListener()</code>, etc.) are more powerful, but can also become complex and are less well supported (supported as far back as Internet Explorer 9). You should also experiment with these, and try to use them where possible.</li>
+ <li><a href="/en-US/docs/Web/Events/Event_handlers#using_onevent_properties">Event handler properties</a> have less power and options, but are easier to use. So as you begin learning, you might want to start with these.</li>
+ <li><a href="/en-US/docs/Web/Events/Event_handlers#eventtarget.addeventlistener"><code>addEventListener()</code></a> is more complex, but also more powerful. So after you’ve begun learning, you should try to use it where possible.</li>
 </ul>
 
-<p>The main advantages of the third mechanism are that you can remove event handler code if needed, using <code>removeEventListener()</code>, and you can add multiple listeners of the same type to elements if required. For example, you can call <code>addEventListener('click', function() { ... })</code> on an element multiple times, with different functions specified in the second argument. This is impossible with event handler properties because any subsequent attempts to set a property will overwrite earlier ones, e.g.:</p>
+<p>The main advantages of <code>addEventListener()</code> are that:</p>
+
+<ul>
+ <li>You can remove event-handler code if needed, using <code>removeEventListener()</code>.</li>
+ <li>You can add multiple listeners of the same type to elements, if required.</li>
+</ul>
+
+<p>For example, you can call <code>addEventListener('click', function() { ... })</code> on an element multiple times, with different functions specified in the second argument. This is impossible with event handler properties because any subsequent attempts to set a property will overwrite earlier ones, e.g.:</p>
 
 <pre class="brush: js">element.onclick = function1;
 element.onclick = function2;
 etc.</pre>
 
-<div class="notecard note">
-  <h4>Note</h4>
-  <p>If you are called on to support browsers older than Internet Explorer 8, you may run into difficulties, as such ancient browsers use different event models from newer browsers. But never fear, most JavaScript libraries (for example <code>jQuery</code>) have built-in functions that abstract away cross-browser differences. Don't worry about this too much at this stage in your learning journey.</p>
-</div>
+<p>You should never use the HTML event handler attributes — those are outdated, and using them is bad practice.</p>
 
 <h2 id="Other_event_concepts">Other event concepts</h2>
 
@@ -374,12 +374,10 @@ for (let i = 0; i &lt; divs.length; i++) {
 &lt;/form&gt;
 &lt;p&gt;&lt;/p&gt;</pre>
 
-<div class="hidden">
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   margin-bottom: 10px;
 }
 </pre>
-</div>
 
 <p>Now some JavaScript — here we implement a very simple check inside an <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onsubmit">onsubmit</a></code> event handler (the submit event is fired on a form when it is submitted) that tests whether the text fields are empty. If they are, we call the <code><a href="/en-US/docs/Web/API/Event/preventDefault">preventDefault()</a></code> function on the event object — which stops the form submission — and then display an error message in the paragraph below our form to tell the user what's wrong:</p>
 

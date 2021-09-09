@@ -10,7 +10,7 @@ browser-compat: javascript.builtins.Atomics.notify
 ---
 {{JSRef}}
 
-The static **`Atomics`\*\***`.notify()`\*\*
+The static **`Atomics.notify()`**
 method notifies up some agents that are sleeping in the wait queue.
 
 > **Note:** This operation works with a shared {{jsxref("Int32Array")}}

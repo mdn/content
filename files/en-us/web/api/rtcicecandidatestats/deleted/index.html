@@ -12,10 +12,11 @@ tags:
 - deleted
 browser-compat: api.RTCIceCandidateStats.deleted
 ---
-<p>{{APIRef("WebRTC")}}<br>
-  <span class="seoSummary">The {{domxref("RTCIceCandidateStats")}} dictionary's
+<div>{{APIRef("WebRTC")}}</div>
+
+<p>The {{domxref("RTCIceCandidateStats")}} dictionary's
     <code><strong>deleted</strong></code> property indicates whether or not the candidate
-    has been deleted or released.</span>
+    has been deleted or released.
 </p>
 
 <h2 id="Syntax">Syntax</h2>
@@ -48,7 +49,7 @@ browser-compat: api.RTCIceCandidateStats.deleted
 
 <h2 id="Example">Example</h2>
 
-<p>In this example, {{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}}
+<p>In this example, {{domxref("setInterval()")}}
   is used to set up a function that runs periodically to display the latest statistics for
   candidates. Only candidates which have not been deleted are included in the output.</p>
 

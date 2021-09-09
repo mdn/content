@@ -7,6 +7,15 @@
 name: PR Test
 
 on:
+  # The reason for building once it's pushed to `main`, too, is an
+  # optimization. This way, when workflow is built on the `main` branch
+  # anything that's stored in the cache (e.g. node_modules) can be
+  # re-used by consecutive PRs in other branches.
+  # See https://docs.github.com/en/actions/guides/caching-dependencies-to-speed-up-workflows#restrictions-for-accessing-a-cache
+  # and https://github.community/t/how-come-the-actions-cache-is-failing-so-much-often/196279/3
+  push:
+    branches:
+      - main
   pull_request:
 
 jobs:
@@ -17,7 +26,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@v2.3.0
+        uses: actions/setup-node@v2.4.0
         with:
           node-version: "12"
 
@@ -27,7 +36,7 @@ jobs:
         with:
           path: |
             node_modules
-          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-${{ hashFiles('yarn.lock') }}-${{ hashFiles('.github/workflows/pr-test.yml') }}
 
       - name: Install all yarn packages
         if: steps.cached-node_modules.outputs.cache-hit != 'true'
@@ -55,7 +64,7 @@ jobs:
           # Now, this gets used by the `git diff ...` inside get-diff-action.
           git config --global core.quotePath false
 
-      - uses: technote-space/get-diff-action@v4.2
+      - uses: technote-space/get-diff-action@v5.0.1
         id: git_diff_content
         with:
           PATTERNS: files/**/*.+(html|md)
@@ -142,7 +151,7 @@ jobs:
           name: build
           path: build/
 
-      - uses: technote-space/get-diff-action@v4.2
+      - uses: technote-space/get-diff-action@v5.0.1
         with:
           PATTERNS: files/**/*.+(png|jpeg|jpg|gif|svg|webp)
           ABSOLUTE: true
@@ -156,7 +165,7 @@ jobs:
           export CONTENT_ROOT=$(pwd)/files
           yarn filecheck ${{ env.GIT_DIFF_FILES }}
 
-      - uses: technote-space/get-diff-action@v4.2
+      - uses: technote-space/get-diff-action@v5.0.1
         id: git_diff_redirects
         with:
           PATTERNS: files/**/_redirects.txt

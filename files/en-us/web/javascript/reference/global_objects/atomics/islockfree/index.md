@@ -11,7 +11,7 @@ browser-compat: javascript.builtins.Atomics.isLockFree
 {{JSRef}}
 
 The static
-**`Atomics`\*\***`.isLockFree()`\*\*
+**`Atomics.isLockFree()`**
 method is used to determine whether the `Atomics` methods use locks
 or atomic hardware operations when applied to typed arrays with the given element
 byte size.
@@ -33,7 +33,7 @@ Atomics.isLockFree(size)
 
 ### Return value
 
-A {{jsxref("Boolean")}} indicating whether the operation is lock free.
+A `true` or `false` value indicating whether the operation is lock free.
 
 ## Examples
 

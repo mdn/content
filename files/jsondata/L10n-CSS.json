@@ -1,0 +1,81 @@
+{
+  "css_ref_title": {
+    "en-US": "CSS Reference",
+    "fr": "Référence CSS",
+    "de": "CSS Referenz",
+    "ja": "CSS リファレンス",
+    "zh-CN": "CSS 参考",
+    "es": "Referencia CSS",
+    "pl": "Dokumentacja CSS",
+    "pt-PT": "Referência CSS",
+    "ru": "CSS документация",
+    "it": "Riferimento CSS"
+  },
+  "at_rules": {
+    "en-US": "At-Rules",
+    "fr": "Règles @",
+    "de": "At-Regeln",
+    "ja": "アット規則",
+    "ru": "@-правила",
+    "it": "Regole @"
+  },
+  "types": {
+    "en-US": "Data types",
+    "fr": "Types de donnée",
+    "de": "Datentypen",
+    "ja": "データ型",
+    "ru": "Типы данных",
+    "it": "Tipi di dato"
+  },
+  "missing": {
+    "en-US": "Value not found in DB!",
+    "fr": "Valeur introuvable dans la base de données",
+    "de": "Wert nicht in der DB gefunden!",
+    "ja": "DB に値が見つかりません！",
+    "ru": "Значение не найдено в базе данных!",
+    "it": "Valore non trovato all'interno della base di dati"
+  },
+  "info_in_preview_not_available": {
+    "en-US": "CSS info in preview not available",
+    "de": "CSS-Info in der Vorschau nicht verfügbar",
+    "fr": "CSS-Info n'est pas disponible en aperçu",
+    "ja": "プレビューでは CSS info は利用できません",
+    "ru": "CSS info недоступно в предпросмотре",
+    "it": "Informazione CSS non disponibile nell'anteprima"
+  },
+  "tag_selectors": {
+    "en-US": "Selectors",
+    "fr": "Sélecteur",
+    "ja": "セレクター",
+    "ru": "Селекторы",
+    "it": "Selettori"
+  },
+  "Basic Selectors": {
+    "en-US": "Basic Selectors",
+    "fr": "Sélecteurs simples",
+    "ja": "基本セレクター",
+    "ru": "Базовые селекторы",
+    "it": "Selettori di base"
+  },
+  "Combinators": {
+    "en-US": "Combinators",
+    "fr": "Combinateurs",
+    "ja": "結合子",
+    "ru": "Комбинаторы",
+    "it": "Combinatori"
+  },
+  "Pseudo-classes": {
+    "en-US": "Pseudo-classes",
+    "fr": "Pseudo-classes",
+    "ja": "擬似クラス",
+    "ru": "Псевдоклассы",
+    "it": "Pseudo-classi"
+  },
+  "Pseudo-elements": {
+    "en-US": "Pseudo-elements",
+    "fr": "Pseudo-éléments",
+    "ja": "擬似要素",
+    "ru": "Псевдоэлементы",
+    "it": "Pseudo-elementi"
+  }
+}

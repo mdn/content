@@ -31,18 +31,18 @@ JavaScript objects are dynamic "bags" of properties (referred to as **own proper
 Here is what happens when trying to access a property:
 
 ```js
-// Let's create an object o from function f with its own properties a and b:
-let f = function () {
+// Let's create an object o from function F with its own properties a and b:
+let F = function () {
    this.a = 1;
    this.b = 2;
 }
-let o = new f(); // {a: 1, b: 2}
+let o = new F(); // {a: 1, b: 2}
 
-// add properties in f function's prototype
-f.prototype.b = 3;
-f.prototype.c = 4;
+// add properties in F function's prototype
+F.prototype.b = 3;
+F.prototype.c = 4;
 
-// do not set the prototype f.prototype = {b:3,c:4}; this will break the prototype chain
+// do not set the prototype F.prototype = {b:3,c:4}; this will break the prototype chain
 // o.[[Prototype]] has properties b and c.
 // o.[[Prototype]].[[Prototype]] is Object.prototype.
 // Finally, o.[[Prototype]].[[Prototype]].[[Prototype]] is null.

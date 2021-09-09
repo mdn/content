@@ -13,16 +13,18 @@ browser-compat: api.BaseAudioContext.createChannelSplitter
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
-<div>
-  <p>The <code>createChannelSplitter()</code> method of the {{ domxref("BaseAudioContext")
-    }} Interface is used to create a {{domxref("ChannelSplitterNode")}}, which is used to
-    access the individual channels of an audio stream and process them separately.</p>
+<p>The <code>createChannelSplitter()</code> method of the {{domxref("BaseAudioContext")}} Interface is used to create a {{domxref("ChannelSplitterNode")}},
+  which is used to access the individual channels of an audio stream and process them separately.</p>
+
+<div class="notecard note">
+  <p><strong>Note:</strong> The {{domxref("ChannelSplitterNode.ChannelSplitterNode", "ChannelSplitterNode()")}} 
+    constructor is the recommended way to create a {{domxref("ChannelSplitterNode")}}; see
+    <a href="/en-US/docs/Web/API/AudioNode#creating_an_audionode">Creating an AudioNode</a>.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js">baseAudioContext.createChannelSplitter(<em>numberOfOutputs</em>);</pre>
+<pre class="brush: js">createChannelSplitter(<em>numberOfOutputs</em>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -44,7 +46,7 @@ browser-compat: api.BaseAudioContext.createChannelSplitter
   method, which allow you to specify the index of the channel to connect from and the
   index of the channel to connect to.</p>
 
-<pre class="brush: js;highlight[5,12,17]">var ac = new AudioContext();
+<pre class="brush: js;">var ac = new AudioContext();
 ac.decodeAudioData(someStereoBuffer, function(data) {
  var source = ac.createBufferSource();
  source.buffer = data;

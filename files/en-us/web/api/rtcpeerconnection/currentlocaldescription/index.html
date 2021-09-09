@@ -32,7 +32,7 @@ browser-compat: api.RTCPeerConnection.currentLocalDescription
   descriptions")}}.</p>
 
 <div class="note">
-  <p>Unlike {{domxref("RTCPeerConnection.localDescription")}}, this value represents the
+  <p><strong>Note:</strong> Unlike {{domxref("RTCPeerConnection.localDescription")}}, this value represents the
     actual current state of the local end of the connection; <code>localDescription</code>
     may specify a description which the connection is currently in the process of
     switching over to.</p>
@@ -76,7 +76,7 @@ else {
 <p>{{Compat}}</p>
 
 <div class="note">
-  <p>The addition of <code>currentLocalDescription</code> and
+  <p><strong>Note:</strong> The addition of <code>currentLocalDescription</code> and
     {{domxref("RTCPeerConnection.pendingLocalDescription", "pendingLocalDescription")}} to
     the WebRTC spec is relatively recent. In browsers which don't support them, just use
     {{domxref("RTCPeerConnection.localDescription", "localDescription")}}.</p>

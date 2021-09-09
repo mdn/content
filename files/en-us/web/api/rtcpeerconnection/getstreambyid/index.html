@@ -19,7 +19,7 @@ browser-compat: api.RTCPeerConnection.getStreamById
   stream matches, it returns <code>null</code>.</p>
 
 <div class="warning">
-  <p>This property has been replaced with the
+  <p><strong>Warning:</strong> This property has been replaced with the
     {{domxref("RTCPeerConnection.getLocalStreams")}} and
     {{domxref("RTCPeerConnection.getRemoteStreams")}} properties. If you have code that
     uses <code>stream</code>, you will need to update, since browsers have begun to remove
@@ -28,8 +28,7 @@ browser-compat: api.RTCPeerConnection.getStreamById
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><code>var <em>mediaStream</em> = <em>pc</em>.getStream(id);
-</code></pre>
+<pre class="brush: js">var mediaStream = pc.getStream(id);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -77,5 +76,5 @@ RTCPeerConnection.prototype.getStreamById = function(id) {
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
+  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
 </ul>

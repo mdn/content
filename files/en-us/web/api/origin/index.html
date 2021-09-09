@@ -1,0 +1,48 @@
+---
+title: origin
+slug: Web/API/origin
+tags:
+  - API
+  - HTML DOM
+  - Property
+  - Reference
+  - Web
+  - Window
+  - Worker
+  - origin
+browser-compat: api.origin
+---
+<p>{{APIRef()}}{{SeeCompatTable}}</p>
+
+<p>The global <code><strong>origin</strong></code> read-only property returns the origin of the global
+  scope, serialized as a string.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">var <em>myOrigin</em> = self.origin; // or just origin
+</pre>
+
+<h3 id="Value">Value</h3>
+
+<p>A {{domxref("USVString")}}.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>Executed from inside a worker script, the following snippet will log the worker's
+  global scope's origin to the console each time it receives a message</p>
+
+<pre class="brush: js">onmessage = function() {
+  console.log(self.origin);
+};</pre>
+
+<p>If the origin is not a scheme/host/port tuple (say you are trying to run it locally,
+  i.e. via <code>file://</code> URL), <code>origin</code> will return the string
+  <code>"null"</code>.</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+{{Specifications}}
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

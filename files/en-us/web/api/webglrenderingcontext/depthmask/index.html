@@ -24,7 +24,7 @@ browser-compat: api.WebGLRenderingContext.depthMask
 
 <dl>
   <dt><code>flag</code></dt>
-  <dd>A {{domxref("GLboolean")}} specifying whether or not writing into the depth buffer
+  <dd>A {{domxref("WebGL_API/Types", "GLboolean")}} specifying whether or not writing into the depth buffer
     is enabled. Default value: <code>true</code>, meaning that writing is enabled.</dd>
 </dl>
 
@@ -38,7 +38,7 @@ browser-compat: api.WebGLRenderingContext.depthMask
 </pre>
 
 <p>To get the current depth mask, query the <code>DEPTH_WRITEMASK</code> constant which
-  returns a {{jsxref("Boolean")}}.</p>
+  returns a boolean value.</p>
 
 <pre class="brush: js">gl.getParameter(gl.DEPTH_WRITEMASK);
 // false

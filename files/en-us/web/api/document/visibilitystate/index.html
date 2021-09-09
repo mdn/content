@@ -13,10 +13,12 @@ browser-compat: api.Document.visibilityState
 ---
 <p>{{ ApiRef("DOM") }}</p>
 
-<p><span class="seoSummary">The <strong><code>Document.visibilityState</code></strong>
+<p>The <strong><code>Document.visibilityState</code></strong>
     read-only property returns the visibility of the {{domxref('document')}}, that is in
     which context this element is now visible. It is useful to know if the document is in
-    the background or an invisible tab, or only loaded for pre-rendering.</span> Possible
+    the background or an invisible tab, or only loaded for pre-rendering.</p>
+
+<p>Possible
   values are:</p>
 
 <dl>
@@ -49,7 +51,7 @@ browser-compat: api.Document.visibilityState
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js line-numbers language-js">document.addEventListener("visibilitychange", function() {
+<pre class="brush: js">document.addEventListener("visibilitychange", function() {
   console.log( document.visibilityState );
   // Modify behavior...
 })</pre>

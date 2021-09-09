@@ -11,10 +11,10 @@ browser-compat: api.CanvasRenderingContext2D.arc
 ---
 <div>{{APIRef}}</div>
 
-<p><span class="seoSummary">The
-    <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.arc()</code></strong>
+<p>The
+    <strong><code>CanvasRenderingContext2D.arc()</code></strong>
     method of the <a href="/en-US/docs/Web/API/CanvasRenderingContext2D">Canvas 2D API
-    </a>adds a circular arc to the current sub-path.</span></p>
+    </a>adds a circular arc to the current sub-path.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -41,7 +41,7 @@ browser-compat: api.CanvasRenderingContext2D.arc
   <dt><code>endAngle</code></dt>
   <dd>The angle at which the arc ends in radians, measured from the positive x-axis.</dd>
   <dt><code>counterclockwise</code> {{optional_inline}}</dt>
-  <dd>An optional {{jsxref("Boolean")}}. If <code>true</code>, draws the arc
+  <dd>An optional boolean value. If <code>true</code>, draws the arc
     counter-clockwise between the start and end angles. The default is <code>false</code>
     (clockwise).</dd>
 </dl>
@@ -63,7 +63,7 @@ browser-compat: api.CanvasRenderingContext2D.arc
   make a full circle, the arc begins at an angle of 0 radians (0<strong>°</strong>), and
   ends at an angle of 2π radians (360<strong>°</strong>).</p>
 
-<pre class="brush: js; highlight:[5]">const canvas = document.querySelector('canvas');
+<pre class="brush: js;">const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.beginPath();
@@ -79,14 +79,8 @@ ctx.stroke();
 
 <p>This example draws various shapes to show what is possible with <code>arc()</code>.</p>
 
-<div class="hidden">
-  <h4 id="HTML_2">HTML</h4>
-
-  <pre class="brush: html">&lt;canvas width="150" height="200"&gt;&lt;/canvas&gt;
+<pre class="brush: html hidden">&lt;canvas width="150" height="200"&gt;&lt;/canvas&gt;
 </pre>
-
-  <h4 id="JavaScript_2">JavaScript</h4>
-</div>
 
 <pre class="brush: js">const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');

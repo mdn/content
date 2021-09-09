@@ -22,17 +22,19 @@ browser-compat: api.StorageEstimate.quota
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><em>quota</em> = <em>StorageEstimate</em>.quota;
-</pre>
+<pre class="brush: js"><em>quota</em> = <em>StorageEstimate</em>.quota;</pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A numeric value specifying an approximation of the total amount of storage space
-  available for use by the application.</p>
+<p>A numeric value specifying an approximation of the total amount of storage space available for use by the application.</p>
+
+<div class="note">
+  <p><strong>Note:</strong> User agents might not report the actual storage space for privacy reasons. Chrome, for instance, always reports 60% of the actual disk size.</p>
+</div>
 
 <h2 id="Example">Example</h2>
 
-<p>{{page("/en-US/docs/Web/API/StorageManager/estimate", "Example")}}</p>
+<p>See <a href="/en-US/docs/Web/API/StorageManager/estimate#example"><code>StorageManager.estimate</code></a> for example code.</p>
 
 <h2 id="Specifications">Specifications</h2>
 

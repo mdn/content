@@ -178,11 +178,11 @@ self.addEventListener('install', (e) =&gt; {
 
 <pre class="brush: js">self.addEventListener('activate', (e) =&gt; {
   e.waitUntil(caches.keys().then((keyList) =&gt; {
-    Promise.all(keyList.map((key) =&gt; {
+    return Promise.all(keyList.map((key) =&gt; {
       if (key === cacheName) { return; }
-      caches.delete(key);
+      return caches.delete(key);
     }))
-  })());
+  }));
 });</pre>
 
 <p>This ensures we have only the files we need in the cache, so we don't leave any garbage behind; the <a href="/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria">available cache space in the browser is limited</a>, so it is a good idea to clean up after ourselves.</p>

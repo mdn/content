@@ -17,7 +17,7 @@ tags:
 
 <p>While working through this lesson may seem less immediately relevant and a little more academic than some other parts of the course, an understanding of these things will save you much pain later on! We encourage you to work through this section carefully and check that you understand the concepts before moving on.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -46,7 +46,7 @@ tags:
 
 <p>In the below example, we have two rules that could apply to the <code>h1</code>. The <code>h1</code> ends up being colored blue — these rules have an identical selector and therefore carry the same specificity, so the last one in the source order wins.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/cascade/cascade-simple.html", '100%', 400)}}</p>
+<p>{{EmbedGHLiveSample("css-examples/learn/cascade/cascade-simple.html", '100%', 500)}}</p>
 
 <h3 id="Specificity">Specificity</h3>
 
@@ -59,7 +59,7 @@ tags:
 
 <p>Example time! Below we again have two rules that could apply to the <code>h1</code>. The below <code>h1</code> ends up being colored red — the class selector gives its rule a higher specificity, and so it will be applied even though the rule with the element selector appears further down in the source order.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/cascade/specificity-simple.html", '100%', 500)}}</p>
+<p>{{EmbedGHLiveSample("css-examples/learn/cascade/specificity-simple.html", '100%', 600)}}</p>
 
 <p>We'll explain specificity scoring and other such things later on.</p>
 
@@ -69,12 +69,12 @@ tags:
 
 <p>For example, if you set a <code>color</code> and <code>font-family</code> on an element, every element inside it will also be styled with that color and font, unless you've applied different color and font values directly to them.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/cascade/inheritance-simple.html", '100%', 550)}}</p>
+<p>{{EmbedGHLiveSample("css-examples/learn/cascade/inheritance-simple.html", '100%', 650)}}</p>
 
 <p>Some properties do not inherit — for example, if you set a {{cssxref("width")}} of 50% on an element, all of its descendants do not get a width of 50% of their parent's width. If this was the case, CSS would be very frustrating to use!</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: On MDN CSS property reference pages you can find a technical information box called Formal definition, which lists a number of data points about that property, including whether it is inherited or not. See the <a href="/en-US/docs/Web/CSS/color#formal_definition">color property Formal definition section</a>, for example.</p>
+  <p><strong>Note:</strong> On MDN CSS property reference pages you can find a technical information box called Formal definition, which lists a number of data points about that property, including whether it is inherited or not. See the <a href="/en-US/docs/Web/CSS/color#formal_definition">color property Formal definition section</a>, for example.</p>
 </div>
 
 <h2 id="Understanding_how_the_concepts_work_together">Understanding how the concepts work together</h2>
@@ -91,7 +91,7 @@ tags:
 
 <p>The color has applied to the direct children, but also the indirect children — the immediate child <code>&lt;li&gt;</code>s, and those inside the first nested list. We have then added a class- <code>special</code> to the second nested list and applied a different color to it. This then inherits down through its children.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/cascade/inheritance.html", '100%', 700)}}</p>
+<p>{{EmbedGHLiveSample("css-examples/learn/cascade/inheritance.html", '100%', 1100)}}</p>
 
 <p>Things like widths (as mentioned above), margins, padding, and borders do not inherit. If a border were to be inherited by the children of our list, every single list and list item would gain a border — probably not an effect we would ever want!</p>
 
@@ -108,14 +108,12 @@ tags:
  <dd>Sets the property value applied to a selected element to the <a href="/en-US/docs/Web/CSS/initial_value">initial value</a> of that property.</dd>
  <dt>{{cssxref("unset")}}</dt>
  <dd>Resets the property to its natural value, which means that if the property is naturally inherited it acts like <code>inherit</code>, otherwise it acts like <code>initial</code>.</dd>
+ <dt>{{cssxref("revert")}}</dt>
+ <dd>Acts like {{cssxref("unset")}} in many cases, however will revert the property to the browser's default styling rather than the defaults applied to that property.</dd>
 </dl>
 
 <div class="notecard note">
-<p><strong>Note</strong>: There is also a newer value, {{cssxref("revert")}}, which has limited browser support.</p>
-</div>
-
-<div class="notecard note">
-<p><strong>Note</strong>: See {{SectionOnPage("/en-US/docs/Web/CSS/Cascade", "Origin of CSS declarations")}} for more information on each of these and how they work.</p>
+  <p><strong>Note:</strong> See {{SectionOnPage("/en-US/docs/Web/CSS/Cascade", "Origin of CSS declarations")}} for more information on each of these and how they work.</p>
 </div>
 
 <p>We can look at a list of links and explore how universal values work. The live example below allows you to play with the CSS and see what happens when you make changes. Playing with code really is the best way to get to grips with HTML and CSS.</p>
@@ -124,11 +122,11 @@ tags:
 
 <ol>
  <li>The second list item has the class <code>my-class-1</code> applied. This sets the color of the <code>&lt;a&gt;</code> element nested inside to inherit. If you remove the rule how does it change the color of the link?</li>
- <li>Do you understand why the third and fourth links are the color that they are? Check the description of the values above if not.</li>
+ <li>Do you understand why the third and fourth links are the color that they are? The third link is set to <code>initial</code>, which means it uses the initial value of the property (in this case black) and not the browser default for links, which is blue. The fourth is set to <code>unset</code> which means that the link text uses the color of the parent element, green.</li>
  <li>Which of the links will change color if you define a new color for the <code>&lt;a&gt;</code> element — for example <code>a { color: red; }</code>?</li>
 </ol>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/cascade/keywords.html", '100%', 700)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/cascade/keywords.html", '100%', 800)}} </p>
 
 <h3 id="Resetting_all_property_values">Resetting all property values</h3>
 
@@ -136,7 +134,7 @@ tags:
 
 <p>In the below example we have two blockquotes. The first has styling applied to the blockquote element itself, the second has a class applied to the blockquote which sets the value of <code>all</code> to <code>unset</code>.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/cascade/all.html", '100%', 700)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/cascade/all.html", '100%', 800)}} </p>
 
 <p>Try setting the value of <code>all</code> to some of the other available values and observe what the difference is.</p>
 
@@ -168,7 +166,7 @@ tags:
 
 <p>This behavior helps avoid repetition in your CSS. A common practice is to define generic styles for the basic elements, and then create classes for those which are different. For example, in the stylesheet below we have defined generic styles for level 2 headings, and then created some classes which change only some of the properties and values. The values defined initially are applied to all headings, then the more specific values are applied to the headings with the classes.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/cascade/mixing-rules.html", '100%', 700)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/cascade/mixing-rules.html", '100%', 1000)}} </p>
 
 <p>Let's now have a look at how the browser will calculate specificity. We already know that an element selector has low specificity and can be overwritten by a class. Essentially a value in points is awarded to different types of selectors, and adding these up gives you the weight of that particular selector, which can then be assessed against other potential matches.</p>
 
@@ -181,8 +179,8 @@ tags:
  <li><strong>Ones</strong>: Score one in this column for each element selector or pseudo-element contained inside the overall selector.</li>
 </ol>
 
-<div class="note">
-<p><strong>Note</strong>: The universal selector (<code>*</code>), combinators (<code>+</code>, <code>&gt;</code>, <code>~</code>, ' '), and negation pseudo-class (<code>:not</code>) have no effect on specificity.</p>
+<div class="notecard note">
+  <p><strong>Note:</strong> The universal selector (<code>*</code>), combinators (<code>+</code>, <code>&gt;</code>, <code>~</code>, ' '), and negation pseudo-class (<code>:not</code>) have no effect on specificity.</p>
 </div>
 
 <p>The following table shows a few isolated examples to get you in the mood. Try going through these, and making sure you understand why they have the specificity that we have given them. We've not covered selectors in detail yet, but you can find details of each selector on the MDN <a href="/en-US/docs/Web/CSS/CSS_Selectors">selectors reference</a>.</p>
@@ -244,7 +242,7 @@ tags:
 
 <p>Before we move on, let's look at an example in action.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/cascade/specificity-boxes.html", '100%', 700)}}</p>
+<p>{{EmbedGHLiveSample("css-examples/learn/cascade/specificity-boxes.html", '100%', 800)}}</p>
 
 <p>So what's going on here? First of all, we are only interested in the first seven rules of this example, and as you'll notice, we have included their specificity values in a comment before each one.</p>
 
@@ -254,8 +252,8 @@ tags:
  <li>Selectors 5–7 are competing over the styling of the link's border when hovered. Selector six clearly loses to five with a specificity of 23 vs. 24 — it has one fewer element selectors in the chain. Selector seven, however, beats both five and six — it has the same number of sub-selectors in the chain as five, but an element has been swapped out for a class selector. So the winning specificity is 33 vs. 23 and 24.</li>
 </ul>
 
-<div class="note">
-<p><strong>Note</strong>: This has only been an approximate example for ease of understanding. In actuality, each selector type has its own level of specificity that cannot be overwritten by selectors with a lower specificity level. For example, a <em>million</em> <strong>class</strong> selectors combined would not be able to overwrite the rules of <em>one</em> <strong>id</strong> selector.</p>
+<div class="notecard note">
+  <p><strong>Note:</strong> This has only been an approximate example for ease of understanding. In actuality, each selector type has its own level of specificity that cannot be overwritten by selectors with a lower specificity level. For example, a <em>million</em> <strong>class</strong> selectors combined would not be able to overwrite the rules of <em>one</em> <strong>id</strong> selector.</p>
 
 <p>A more accurate way to evaluate specificity would be to score the specificity levels individually starting from highest and moving on to lowest when necessary. Only when there is a tie between selector scores within a specificity level do you need to evaluate the next level down; otherwise, you can disregard the lower specificity level selectors since they can never overwrite the higher specificity levels.</p>
 </div>
@@ -266,7 +264,7 @@ tags:
 
 <p>Take a look at this example where we have two paragraphs, one of which has an ID.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/cascade/important.html", '100%', 700)}}</p>
+<p>{{EmbedGHLiveSample("css-examples/learn/cascade/important.html", '100%', 800)}}</p>
 
 <p>Let's walk through this to see what's happening — try removing some of the properties to see what happens if you are finding it hard to understand:</p>
 
@@ -277,8 +275,8 @@ tags:
  <li>The 2nd element <em>does</em> get the red background color, but no border. Why? Because of the <code>!important</code> declaration in the second rule — including this after <code>border: none</code> means that this declaration will win over the border value in the previous rule, even though the ID has higher specificity.</li>
 </ol>
 
-<div class="note">
-<p><strong>Note</strong>: The only way to override this <code>!important</code> declaration would be to include another <code>!important</code> declaration on a declaration with the <em>same specificity</em> later in the source order, or one with higher specificity.</p>
+<div class="notecard note">
+  <p><strong>Note:</strong> The only way to override this <code>!important</code> declaration would be to include another <code>!important</code> declaration on a declaration with the <em>same specificity</em> later in the source order, or one with higher specificity.</p>
 </div>
 
 <p>It is useful to know that <code>!important</code> exists so that you know what it is when you come across it in other people's code. <strong>However, we strongly recommend that you never use it unless you absolutely have to.</strong> <code>!important</code> changes the way the cascade normally works, so it can make debugging CSS problems really hard to work out, especially in a large stylesheet.</p>
@@ -320,7 +318,7 @@ tags:
 <h2 id="In_this_module">In this module</h2>
 
 <ol>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">Cascade and inheritance</a></li>
+ <li><strong>Cascade and inheritance</strong></li>
  <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors">CSS selectors</a>
   <ul>
    <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors">Type, class, and ID selectors</a></li>

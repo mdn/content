@@ -48,7 +48,7 @@ tags:
 
 <pre class="brush: xml">&lt;IfModule mod_setenvif.c&gt;
   &lt;IfModule mod_headers.c&gt;
-    &lt;FilesMatch "\.(bmp|cur|gif|ico|jpe?g|png|svgz?|webp|avifs?)$"&gt;
+    &lt;FilesMatch "\.(avifs?|bmp|cur|gif|ico|jpe?g|jxl|a?png|svgz?|webp)$"&gt;
       SetEnvIf Origin ":" IS_CORS
       Header set Access-Control-Allow-Origin "*" env=IS_CORS
     &lt;/FilesMatch&gt;

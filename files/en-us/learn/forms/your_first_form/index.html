@@ -16,7 +16,7 @@ tags:
 
 <p class="summary">The first article in our series provides you with your very first experience of creating a web form, including designing a simple form, implementing it using the right HTML form controls and other HTML elements, adding some very simple styling via CSS, and describing how data is sent to a server. We'll expand on each of these subtopics in more detail later on in the module.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -50,7 +50,7 @@ tags:
 
 <p>In this article, we'll build a simple contact form. Let's make a rough sketch.</p>
 
-<p><img alt="The form to build, roughly sketch" src="form-sketch-low.jpg" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="The form to build, roughly sketch" src="form-sketch-low.jpg"></p>
 
 <p>Our form will contain three text fields and one button. We are asking the user for their name, their e-mail and the message they want to send. Hitting the button will send their data to a web server.</p>
 
@@ -60,7 +60,7 @@ tags:
 
 <p>Before you go any further, make a local copy of our <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html">simple HTML template</a> — you'll enter your form HTML into here.</p>
 
-<h3 id="The_HTMLelementform_element">The {{HTMLelement("form")}} element</h3>
+<h3 id="The_HTMLelementform_element">The <code>&lt;form&gt;</code> element</h3>
 
 <p>All forms start with a {{HTMLelement("form")}} element, like this:</p>
 
@@ -81,7 +81,7 @@ tags:
 
 <p>For now, add the above {{htmlelement("form")}} element into your HTML {{htmlelement("body")}}.</p>
 
-<h3 id="The_HTMLelementlabel_HTMLelementinput_and_HTMLelementtextarea_elements">The {{HTMLelement("label")}}, {{HTMLelement("input")}}, and {{HTMLelement("textarea")}} elements</h3>
+<h3 id="The_HTMLelementlabel_HTMLelementinput_and_HTMLelementtextarea_elements">The <code>&lt;label&gt;</code>, <code>&lt;input&gt;</code>, and <code>&lt;textarea&gt;</code> elements</h3>
 
 <p>Our contact form is not complex: the data entry portion contains three text fields, each with a corresponding {{HTMLelement("label")}}:</p>
 
@@ -133,7 +133,7 @@ tags:
 by default this element is filled with this text
 &lt;/textarea&gt;</pre>
 
-<h3 id="The_HTMLelementbutton_element">The {{HTMLelement("button")}} element</h3>
+<h3 id="The_HTMLelementbutton_element">The <code>&lt;button&gt;</code> element</h3>
 
 <p>The markup for our form is almost complete; we just need to add a button to allow the user to send, or "submit", their data once they have filled out the form. This is done by using the {{HTMLelement("button")}} element; add the following just above the closing <code>&lt;/ul&gt;</code> tag:</p>
 

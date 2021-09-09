@@ -112,26 +112,25 @@ browser-compat: api.MouseEvent
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html">&lt;p&gt;&lt;label&gt;&lt;input type="checkbox" id="checkbox"&gt; Checked&lt;/label&gt;
-&lt;p&gt;&lt;button id="button"&gt;Click me&lt;/button&gt;</pre>
+<pre class="brush: html">&lt;p&gt;&lt;label&gt;&lt;input type="checkbox" id="checkbox"&gt; Checked&lt;/label&gt;&lt;/p&gt;
+&lt;p&gt;&lt;button id="button"&gt;Click me to send a MouseEvent to the checkbox&lt;/button&gt;&lt;/p&gt;
+</pre>
 
 <h3 id="JavaScript">JavaScript</h3>
 
 <pre class="brush: js">function simulateClick() {
-  var evt = new MouseEvent("click", {
+// Get the element to send a click event
+const cb = document.getElementById("checkbox");
+
+// Create a synthetic click MouseEvent
+  let evt = new MouseEvent("click", {
     bubbles: true,
     cancelable: true,
     view: window
   });
-  var cb = document.getElementById("checkbox"); //element to click on
-  var canceled = !cb.dispatchEvent(evt);
-  if(canceled) {
-    // A handler called preventDefault
-    alert("canceled");
-  } else {
-    // None of the handlers called preventDefault
-    alert("not canceled");
-  }
+  
+// Send the event to the checkbox element
+cb.dispatchEvent(evt);
 }
 document.getElementById("button").addEventListener('click', simulateClick);</pre>
 

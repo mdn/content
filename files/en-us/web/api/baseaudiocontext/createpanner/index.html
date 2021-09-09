@@ -22,6 +22,12 @@ browser-compat: api.BaseAudioContext.createPanner
   attribute), which represents the position and orientation of the person listening to the
   audio.</p>
 
+<div class="notecard note">
+  <p><strong>Note:</strong> The {{domxref("PannerNode.PannerNode", "PannerNode()")}}
+    constructor is the recommended way to create a {{domxref("PannerNode")}}; see
+    <a href="/en-US/docs/Web/API/AudioNode#creating_an_audionode">Creating an AudioNode</a>.</p>
+</div>
+
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: js">createPanner();</pre>
@@ -140,8 +146,7 @@ function positionPanner() {
 }</pre>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>In terms of working out what position values to apply to the
+  <p><strong>Note:</strong> In terms of working out what position values to apply to the
     listener and panner, to make the sound appropriate to what the visuals are doing on
     screen, there is quite a bit of math involved, but you will soon get used to it with a
     bit of experimentation.</p>

@@ -11,7 +11,7 @@ browser-compat: api.AnalyserNode.getFloatTimeDomainData
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
-<p>The <strong><code>getFloatTimeDomainData()</code></strong> method of the {{ domxref("AnalyserNode") }} Interface copies the current waveform, or time-domain, data into a {{domxref("Float32Array")}} array passed into it.</p>
+<p>The <strong><code>getFloatTimeDomainData()</code></strong> method of the {{ domxref("AnalyserNode") }} Interface copies the current waveform, or time-domain, data into a {{jsxref("Float32Array")}} array passed into it.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -26,7 +26,7 @@ analyser.getFloatTimeDomainData(dataArray); // fill the Float32Array with data r
 
 <dl>
  <dt><code>array</code></dt>
- <dd>The {{domxref("Float32Array")}} that the time domain data will be copied to.<br>
+ <dd>The {{jsxref("Float32Array")}} that the time domain data will be copied to.<br>
  If the array has fewer elements than the {{domxref("AnalyserNode.frequencyBinCount")}}, excess elements are dropped. If it has more elements than needed, excess elements are ignored.</dd>
 </dl>
 
@@ -86,7 +86,7 @@ draw();</pre>
 
 <dl>
  <dt>array</dt>
- <dd>The {{domxref("Float32Array")}} that the time domain data will be copied to.</dd>
+ <dd>The {{jsxref("Float32Array")}} that the time domain data will be copied to.</dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>

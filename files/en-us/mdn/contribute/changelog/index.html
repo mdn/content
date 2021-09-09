@@ -10,6 +10,32 @@ tags:
 
 <p>This document provides a record of MDN content processes, constructs, and best practices that have changed, and when they changed. It is useful to allow regular contributors to check in and see what has changed about the process of creating content for MDN.</p>
 
+<h2 id="july_2021">July 2021</h2>
+
+<h3>Updates to CSS style guide for Markdown</h3>
+
+<p>Multiple updates to the <a href="/en-US/docs/MDN/Guidelines/CSS_style_guide">CSS style guide</a> to reflect the move towards Markdown, and encourage authors to write HTML in a Markdown-compatible way.</p>
+
+<ul>
+  <li>
+    <p><a href="/en-US/docs/MDN/Guidelines/CSS_style_guide#.note.notecard">Note</a> and <a href="/en-US/docs/MDN/Guidelines/CSS_style_guide#.notecard.warning">warning</a> boxes no longer have a separate <code>&lt;h4&gt;</code> heading for the title (e.g. <code>&lt;h4&gt;Warning&lt;/h4&gt;</code> ). Instead, the first paragraph begins with title text, as shown: <code>&lt;strong&gt;Note:&lt;/strong&gt; </code> and <code>&lt;strong&gt;Warning:&lt;/strong&gt; </code>. Note that a space character is required after the closing <code>&lt;/strong&gt;</code> tag/before the content).</p>
+
+    <p>See our <a href="/en-US/docs/MDN/Guidelines/CSS_style_guide#.note.notecard">Guide to classes and styles used in MDN content</a> guide for further information and syntax guides.</p>
+  </li>
+  <li>
+    <p>The <code>seoSummary</code> class should no longer be used.</p>
+  </li>
+  <li>
+    <p>The <code>standard-table</code> class should no longer be used. The styling provided by this class is now applied to tables by default (see <a href="https://github.com/mdn/mdn-minimalist/issues/680">https://github.com/mdn/mdn-minimalist/issues/680</a>).</p>
+  </li>
+  <li>
+    <p>The {{HTMLElement("details")}} element should no longer be used.</p>
+  </li>
+  <li>
+    <p>The <a href="/en-US/docs/MDN/Guidelines/CSS_style_guide#.hidden"><code>hidden</code></a>, <a href="/en-US/docs/MDN/Guidelines/CSS_style_guide#.example-good"><code>example-good</code></a>, and <a href="/en-US/docs/MDN/Guidelines/CSS_style_guide#.example-bad"><code>example-bad</code></a> classes used to be primarily for code blocks but could be used on other elements. Now they can only be used on code blocks.</p>
+  </li>
+</ul>
+
 <h2 id="february_2021">February 2021</h2>
 
 <h3 id="multiline_javascript_and_api_syntax_blocks">Multiline JavaScript and API syntax blocks</h3>

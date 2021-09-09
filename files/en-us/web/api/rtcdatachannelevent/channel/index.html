@@ -2,7 +2,6 @@
 title: RTCDataChannelEvent.channel
 slug: Web/API/RTCDataChannelEvent/channel
 tags:
-- Experimental
 - Property
 - RTCDataChannelEvent
 - Read-only
@@ -11,10 +10,9 @@ tags:
 - channel
 browser-compat: api.RTCDataChannelEvent.channel
 ---
-<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
+<p>{{APIRef("WebRTC")}}</p>
 
-<p>The read-only property
-  <code><strong>RTCDataChannelEvent</strong></code><strong><code>.channel</code></strong>
+<p>The read-only property <code><strong>RTCDataChannelEvent.channel</code></strong>
   returns the {{domxref("RTCDataChannel")}} associated with the event.</p>
 
 <h2 id="Syntax">Syntax</h2>
@@ -29,15 +27,15 @@ browser-compat: api.RTCDataChannelEvent.channel
 
 <h2 id="Example">Example</h2>
 
-<p>The first line of code in the {{event("datachannel")}} event handler shown below takes
+<p>The first line of code in the {{DOMxRef("RTCPeerConnection.datachannel_event", "datachannel")}} event handler shown below takes
   the channel from the event object and saves it locally for use by the code handling data
   traffic.</p>
 
 <pre class="brush: js">pc.ondatachannel = function(event) {
-  inboundDataChannel = event.channel;
-  inboundDataChannel.onmessage = handleIncomingMessage;
-  inboundDataChannel.onopen = handleChannelOpen;
-  inboundDataChannel.onclose = handleChannelClose;
+  inboundDataChannel = event.channel;
+  inboundDataChannel.onmessage = handleIncomingMessage;
+  inboundDataChannel.onopen = handleChannelOpen;
+  inboundDataChannel.onclose = handleChannelClose;
 }
 </pre>
 
@@ -52,7 +50,7 @@ browser-compat: api.RTCDataChannelEvent.channel
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li>{{event("datachannel")}}</li>
+  <li>{{DOMxRef("RTCPeerConnection.datachannel_event", "datachannel")}}</li>
   <li>{{domxref("RTCDataChannel")}}</li>
   <li>{{domxref("RTCPeerConnection.ondatachannel")}}</li>
   <li><a href="/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample">A simple

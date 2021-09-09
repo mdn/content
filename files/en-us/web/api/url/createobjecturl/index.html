@@ -15,9 +15,11 @@ browser-compat: api.URL.createObjectURL
 ---
 <div>{{APIRef("URL API")}}</div>
 
-<p><span class="seoSummary">The <strong><code>URL.createObjectURL()</code></strong> static
+<p>The <strong><code>URL.createObjectURL()</code></strong> static
     method creates a {{domxref("DOMString")}} containing a URL representing the object
-    given in the parameter.</span> The URL lifetime is tied to the {{domxref("document")}}
+    given in the parameter.</p>
+
+<p>The URL lifetime is tied to the {{domxref("document")}}
   in the window on which it was created. The new object URL represents the specified
   {{domxref("File")}} object or {{domxref("Blob")}} object.</p>
 
@@ -76,7 +78,7 @@ browser-compat: api.URL.createObjectURL
   support for doing this.</p>
 
 <div class="warning">
-  <p><strong>Important:</strong> If you still have code that relies on
+  <p><strong>Warning:</strong> If you still have code that relies on
     {{domxref("URL.createObjectURL", "createObjectURL()")}} to attach streams to media
     elements, you need to update your code to set {{domxref("HTMLMediaElement.srcObject",
     "srcObject")}} to the <code>MediaStream</code> directly.</p>

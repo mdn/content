@@ -22,8 +22,7 @@ browser-compat: api.CustomEvent.initCustomEvent
   dispatched, it doesn't do anything anymore.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p><strong>Do not use this method anymore, as it is deprecated.</strong></p>
+  <p><strong>Note:</strong> <strong>Do not use this method anymore, as it is deprecated.</strong></p>
 
   <p>Rather than using the feature, instead use specific event constructors, like {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}.
 	The page on <a href="/en-US/docs/Web/Events/Creating_and_triggering_events">Creating and triggering events</a> gives more information about the way to use those.</p>
@@ -40,10 +39,10 @@ browser-compat: api.CustomEvent.initCustomEvent
   <dt><code><em>type</em></code></dt>
   <dd>Is a {{domxref("DOMString")}} containing the name of the event.</dd>
   <dt><em><code>canBubble</code></em></dt>
-  <dd>Is a {{jsxref("Boolean")}} indicating whether the event bubbles up through the DOM
+  <dd>Is a boolean value indicating whether the event bubbles up through the DOM
     or not.</dd>
   <dt><code><em>cancelable</em></code></dt>
-  <dd>Is a {{jsxref("Boolean")}} indicating whether the event is cancelable.</dd>
+  <dd>Is a boolean value indicating whether the event is cancelable.</dd>
   <dt><em><code>detail</code></em></dt>
   <dd>The data passed when initializing the event.</dd>
 </dl>

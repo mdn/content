@@ -16,24 +16,20 @@ tags:
 - XR
 browser-compat: api.Navigator.xr
 ---
-<div>{{APIRef("WebXR Device API")}}</div>
+<div>{{APIRef("WebXR Device API")}} {{SecureContext_Header}}</div>
 
 <p>The read-only <code><strong>xr</strong></code> property
 provided by the {{domxref("Navigator")}}  interface returns an {{domxref("XRSystem")}} object
 which can be used to access the <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a>.</p>
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">const <var>xr</var> = navigator.xr</pre>
-
-<h3 id="Value">Value</h3>
+<h2 id="Value">Value</h2>
 
 <p>The {{domxref("XRSystem")}} object used to interface with the <a
     href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a> in the current
   context. This can be used to present augmented and/or virtual reality imagery to the
   user.</p>
 
-<h2 id="Usage_notes">Usage notes</h2>
+<h2 id="Example">Example</h2>
 
 <p>Each {{domxref("Window")}} has its own instance of {{domxref("Navigator")}}, which can
   be accessed as {{domxref("Window.navigator","window.navigator")}} or as
@@ -65,5 +61,5 @@ which can be used to access the <a href="/en-US/docs/Web/API/WebXR_Device_API">W
 <ul>
   <li><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a>: 2D and 3D accelerated
     graphics for the web</li>
-  <li><a href="/en-US/docs/Web/API/Canvas_API">Canvas API</a>: Easy 2D graphics API</li>
+  <li><a href="/en-US/docs/Web/API/Canvas_API">Canvas API</a>: 2D graphics API</li>
 </ul>

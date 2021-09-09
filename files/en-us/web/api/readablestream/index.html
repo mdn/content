@@ -17,7 +17,7 @@ browser-compat: api.ReadableStream
 ---
 <p>{{APIRef("Streams")}}</p>
 
-<p><span class="seoSummary">The <code>ReadableStream</code> interface of the <a href="/en-US/docs/Web/API/Streams_API">Streams API</a> represents a readable stream of byte data. The <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> offers a concrete instance of a <code>ReadableStream</code> through the {{domxref("Response.body", "body")}} property of a {{domxref("Response")}} object.</span></p>
+<p>The <code>ReadableStream</code> interface of the <a href="/en-US/docs/Web/API/Streams_API">Streams API</a> represents a readable stream of byte data. The <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> offers a concrete instance of a <code>ReadableStream</code> through the {{domxref("Response.body", "body")}} property of a {{domxref("Response")}} object.</p>
 
 <h2 id="Constructor">Constructor</h2>
 
@@ -30,7 +30,7 @@ browser-compat: api.ReadableStream
 
 <dl>
 	<dt>{{domxref("ReadableStream.locked")}} {{readonlyInline}}</dt>
-	<dd>The <code>locked</code> getter returns whether or not the readable stream is <a href="https://streams.spec.whatwg.org/#locked-to-a-reader" id="ref-for-locked-to-a-reader②">locked to a reader</a>.</dd>
+	<dd>The <code>locked</code> getter returns whether or not the readable stream is <a href="https://streams.spec.whatwg.org/#locked-to-a-reader">locked to a reader</a>.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
@@ -45,7 +45,7 @@ browser-compat: api.ReadableStream
 	<dt>{{domxref("ReadableStream.pipeTo()")}}</dt>
 	<dd>Pipes the current ReadableStream to a given {{domxref("WritableStream")}} and returns a {{jsxref("Promise")}} that fulfills when the piping process completes successfully, or rejects if any errors were encountered.</dd>
 	<dt>{{domxref("ReadableStream.tee()")}}</dt>
-	<dd>The <code>tee</code> method <a href="https://streams.spec.whatwg.org/#tee-a-readable-stream" id="ref-for-tee-a-readable-stream②">tees</a> this readable stream, returning a two-element array containing the two resulting branches as new {{domxref("ReadableStream")}} instances. Each of those streams receives the same incoming data.</dd>
+	<dd>The <code>tee</code> method <a href="https://streams.spec.whatwg.org/#tee-a-readable-stream">tees</a> this readable stream, returning a two-element array containing the two resulting branches as new {{domxref("ReadableStream")}} instances. Each of those streams receives the same incoming data.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -54,7 +54,7 @@ browser-compat: api.ReadableStream
 
 <p>In the following example, an artificial {{domxref("Response")}} is created to stream HTML fragments fetched from another resource to the browser.</p>
 
-<p>It demonstrates the usage of a {{domxref("ReadableStream")}} in combination with a {{domxref("Uint8Array")}}.</p>
+<p>It demonstrates the usage of a {{domxref("ReadableStream")}} in combination with a {{jsxref("Uint8Array")}}.</p>
 
 <pre class="brush: js">fetch('https://www.example.org')
 .then(response => response.body)

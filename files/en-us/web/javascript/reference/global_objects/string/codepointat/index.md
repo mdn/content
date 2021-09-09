@@ -43,10 +43,18 @@ A decimal number representing the code point value of the character at the given
 ### Using codePointAt()
 
 ```js
-'ABC'.codePointAt(1)           // 66
-'\uD800\uDC00'.codePointAt(0)  // 65536
+'ABC'.codePointAt(0)                        // 65
+'ABC'.codePointAt(0).toString(16)           // 41
 
-'XYZ'.codePointAt(42)          // undefined
+'😍'.codePointAt(0)                         // 128525
+'\ud83d\ude0d'.codePointAt(0)               // 128525
+'\ud83d\ude0d'.codePointAt(0).toString(16)  // 1f60d
+
+'😍'.codePointAt(1)                         // 56845
+'\ud83d\ude0d'.codePointAt(1)               // 56845
+'\ud83d\ude0d'.codePointAt(1).toString(16)  // de0d
+
+'ABC'.codePointAt(42)                       // undefined
 ```
 
 ### Looping with codePointAt()
@@ -54,7 +62,7 @@ A decimal number representing the code point value of the character at the given
 Because indexing to a `pos` whose element is a UTF-16 low surrogate, returns _only_ the low surrogate,
 it's better not to index directly into a UTF-16 string.
 
-Instead, use a [`for...of`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement) statement
+Instead, use a [`for...of`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement) statement
 or an Array's [`forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) method
 (or anything which correctly iterates UTF-16 surrogates) to iterate the string, using `codePointAt(0)` to get the code point of each element.
 

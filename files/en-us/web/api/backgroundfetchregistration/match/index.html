@@ -11,7 +11,7 @@ browser-compat: api.BackgroundFetchRegistration.match
 ---
 <div>{{DefaultAPISidebar("Background Fetch API")}}</div>
 
-<p class="summary">The <strong><code>match()</code></strong> method of the {{domxref("BackgroundFetchRegistration")}} interface returns the first matching {{domxref("BackgroundFetchRecord")}}.</p>
+<p>The <strong><code>match()</code></strong> method of the {{domxref("BackgroundFetchRegistration")}} interface returns the first matching {{domxref("BackgroundFetchRecord")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -28,17 +28,17 @@ browser-compat: api.BackgroundFetchRegistration.match
     options are:
     <dl>
       <dt><code>ignoreSearch</code></dt>
-      <dd>A {{jsxref("Boolean")}} that specifies whether to
+      <dd>A boolean value that specifies whether to
         ignore the query string in the URL. For example, if set to
         <code>true</code> the <code>?value=bar</code> part of
         <code>http://foo.com/?value=bar</code> would be ignored when performing a match.
         It defaults to <code>false</code>.</dd>
       <dt><code>ignoreMethod</code></dt>
-      <dd>A {{jsxref("Boolean")}}. When <code>true</code>,
+      <dd>A boolean value. When <code>true</code>,
         prevents matching operations from validating the {{domxref("Request")}} <code>http</code> method.
         If <code>false</code> (the default) only <code>GET</code> and <code>HEAD</code> are allowed.</dd>
       <dt><code>ignoreVary</code></dt>
-      <dd>A {{jsxref("Boolean")}}. When <code>true</code> indicates that the <a href="/en-US/docs/Web/HTTP/Headers/Vary"><code>VARY</code></a>
+      <dd>A boolean value. When <code>true</code> indicates that the <a href="/en-US/docs/Web/HTTP/Headers/Vary"><code>VARY</code></a>
         header should be ignored.
         It defaults to <code>false</code>.</dd>
     </dl>
@@ -51,7 +51,7 @@ browser-compat: api.BackgroundFetchRegistration.match
   the request or {{jsxref("undefined")}} if no match is found.</p>
 
 <div class="notecard note">
-  <p><strong>Note</strong>: <code>BackgroundFetchRegistration.match()</code> is basically identical to
+  <p><strong>Note:</strong> <code>BackgroundFetchRegistration.match()</code> is basically identical to
     {{domxref("BackgroundFetchRegistration.matchAll()")}}, except that rather than resolving with an array of
     all matching records, it resolves with the first matching record only.</p>
 </div>

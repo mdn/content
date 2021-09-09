@@ -17,7 +17,7 @@ tags:
 
 <p class="summary">Grid systems are a very common feature used in CSS layouts, and before CSS Grid Layout they tended to be implemented using floats or other layout features. You imagine your layout as a set number of columns (e.g. 4, 6, or 12), and then fit your content columns inside these imaginary columns. In this article we'll explore how these older methods work, in order that you understand how they were used if you work on an older project.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -174,7 +174,7 @@ div:nth-of-type(2) {
 
 <p>The aim is to turn this into a demonstration grid of two rows on a twelve column grid — the top row demonstrating the size of the individual columns, the second row some different sized areas on the grid.</p>
 
-<p><img alt="" src="simple-grid-finished.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="simple-grid-finished.png"></p>
 
 <p>In the {{htmlelement("style")}} element, add the following code, which gives the wrapper container a width of 980 pixels, with padding on the right hand side of 20 pixels. This leaves us with 960 pixels for our total column/gutter widths — in this case, the padding is subtracted from the total content width because we have set {{cssxref("box-sizing")}} to <code>border-box</code> on all elements on the site (see <a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model#changing_the_box_model_completely">Changing the box model completely</a> for more explanation).</p>
 
@@ -404,7 +404,7 @@ body {
 
 <p>Try loading and refreshing to see the difference, or check out our <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid-offset.html">fluid-grid-offset.html</a> example (see it <a href="https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-offset.html">running live</a> also). The finished example should look like this:</p>
 
-<p><img alt="" src="offset-grid-finished.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="offset-grid-finished.png"></p>
 
 <div class="note">
 <p><strong>Note</strong>: As an extra exercise, can you implement an <code>offset-by-two</code> class?</p>
@@ -454,7 +454,7 @@ body {
 
 <p>On the top line we get twelve neat boxes on the grid and they grow and shrink equally as we change the viewport width. On the next line, however, we only have four items and these also grow and shrink from that 60px basis. With only four of them they can grow a lot more than the items in the row above, the result being that they all occupy the same width on the second row.</p>
 
-<p><img alt="" src="flexbox-grid-incomplete.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="flexbox-grid-incomplete.png"></p>
 
 <p>To fix this we still need to include our <code>span</code> classes to provide a width that will replace the value used by <code>flex-basis</code> for that element.</p>
 

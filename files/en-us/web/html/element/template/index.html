@@ -152,7 +152,7 @@ table td {
 const template = document.getElementById("template");
 
 function clickHandler(event) {
-  alert("Clicked a div");
+  event.target.append(" — Clicked this div");
 }
 
 const firstClone = template.content.cloneNode(true);

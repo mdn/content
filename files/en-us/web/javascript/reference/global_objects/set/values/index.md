@@ -12,7 +12,7 @@ browser-compat: javascript.builtins.Set.values
 ---
 {{JSRef}}
 
-The **`values()`** method returns a new iterator object that
+The **`values()`** method returns a new [Iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) object that
 contains the values for each element in the `Set` object in insertion order.
 
 > **Note:** The **`keys()`** method is an alias

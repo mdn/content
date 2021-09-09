@@ -19,31 +19,22 @@ expression](/en-US/docs/Web/JavaScript/Reference/Operators/function), but is lim
 **Differences & Limitations:**
 
 - Does not have its own bindings to
-  [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) or
-  [`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super),
-  and should not be used as
-  [`methods`](/en-US/docs/Glossary/Method).
-- Does not have
-  [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments),
-  or
-  [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) keywords.
+  [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) or [`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super),
+  and should not be used as [`methods`](/en-US/docs/Glossary/Method).
+- Does not have [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) keyword.
 - Not suitable for
   [`call`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call),
   [`apply`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)
   and [`bind`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)
   methods, which generally rely on establishing a [scope](/en-US/docs/Glossary/Scope).
-- Can not be used as
-  [constructors](/en-US/docs/Glossary/constructor).
-- Can not use
-  [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield),
-  within its body.
+- Can not be used as [constructors](/en-US/docs/Glossary/Constructor).
+- Can not use [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield), within its body.
 
 {{EmbedInteractiveExample("pages/js/functions-arrow.html")}}
 
 ### Comparing traditional functions to arrow functions
 
-Let's decompose a "traditional function" down to the simplest "arrow function"
-step-by-step:
+Let's decompose a "traditional function" down to the simplest "arrow function" step-by-step:
 
 > **Note:** Each step along the way is a valid "arrow function".
 
@@ -67,8 +58,7 @@ function (a){
 a => a + 100;
 ```
 
-> **Note:** As shown above, the { braces } and ( parentheses ) and "return" are optional, but
-> may be required.
+> **Note:** As shown above, the { braces } and ( parentheses ) and "return" are required in some cases.
 
 For example, if you have **multiple arguments** or **no
 arguments**, you'll need to re-introduce parentheses around the arguments:
@@ -172,7 +162,7 @@ params => ({foo: "a"}) // returning the object {foo: "a"}
 ```
 
 [Rest
-parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Rest_parameters) are supported:
+parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) are supported:
 
 ```js
 (a, b, ...r) => expression
@@ -338,8 +328,13 @@ obj.doSomethingLater(); // console prints "NaN", because the property "count" is
 ```js
 var obj = {
     count : 10,
-    doSomethingLater : function(){ // of course, arrow functions are not suited for methods
-        setTimeout( () => { // since the arrow function was created within the "obj", it assumes the object's "this"
+    doSomethingLater : function(){
+        // The traditional function binds "this" to the "obj" context.
+        setTimeout( () => {
+            // Since the arrow function doesn't have its own binding and
+            // setTimeout (as a function call) doesn't create a binding
+            // itself, the "obj" context of the traditional function will
+            // be used within.
             this.count++;
             console.log(this.count);
         }, 300);

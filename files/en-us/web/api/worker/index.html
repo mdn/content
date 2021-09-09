@@ -14,7 +14,9 @@ browser-compat: api.Worker
 ---
 <div>{{APIRef("Web Workers API")}}</div>
 
-<p><span class="seoSummary">The <strong><code>Worker</code></strong> interface of the <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers API</a> represents a background task that can be created via script, which can send messages back to its creator.</span> Creating a worker is done by calling the <code>Worker("path/to/worker/script")</code> constructor.</p>
+<p>The <strong><code>Worker</code></strong> interface of the <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers API</a> represents a background task that can be created via script, which can send messages back to its creator.</p>
+
+<p>Creating a worker is done by calling the <code>Worker("path/to/worker/script")</code> constructor.</p>
 
 <p>Workers may themselves spawn new workers, as long as those workers are hosted at the same <a href="/en-US/docs/Web/Security/Same-origin_policy">origin</a> as the parent page. (Note: <a href="https://bugs.webkit.org/show_bug.cgi?id=22723">nested workers are not yet implemented in WebKit</a>).</p>
 
@@ -97,12 +99,12 @@ first.onchange = function() {
 
 <h3 id="Cross-origin_worker_error_behavior">Cross-origin worker error behavior</h3>
 
-<p>In early versions of the spec, loading a cross-origin worker script threw a <code>SecurityError</code>. Nowadays, an {{event("error")}} event is thrown instead. Find out how to deal with this in <em><a href="https://www.fxsitecompat.com/en-CA/docs/2016/loading-cross-origin-worker-now-fires-error-event-instead-of-throwing-worker-in-sandboxed-iframe-no-longer-allowed/">Loading cross-origin worker now fires error event instead of throwing; worker in sandboxed iframe no longer allowed</a></em>.</p>
+<p>In early versions of the spec, loading a cross-origin worker script threw a <code>SecurityError</code>. Nowadays, an {{event("error")}} event is thrown instead.</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a class="internal" href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using Web Workers</a></li>
+ <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using Web Workers</a></li>
  <li><a href="/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">Functions and classes available to Web Workers</a></li>
  <li>Other kind of workers: {{domxref("SharedWorker")}} and <a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker</a>.</li>
 </ul>

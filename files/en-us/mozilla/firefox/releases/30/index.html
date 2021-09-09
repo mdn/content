@@ -48,7 +48,6 @@ tags:
  <li>The method {{domxref("Navigator.requestWakeLock()")}} and the non-standard {{domxref("MozWakeLock")}} are no longer available from the Web on Desktop ({{bug(963366)}}).</li>
  <li>The <code>DOM_VK_ENTER</code> constant has been removed from {{domxref("KeyboardEvent")}} ({{bug(969247)}}).</li>
  <li>Web components' {{domxref("Document.register")}} has been adapted to follow the behavior described in the latest version of the specification ({{bug(856140)}}).</li>
- <li>Basic support for Hit regions on canvas has been added: the methods {{domxref("CanvasRenderingContext2D.addHitRegion()")}} and {{domxref("CanvasRenderingContext2D.removeHitRegion()")}} have been added. These are disabled by default; to activate them set the preference <code>canvas.hitregions.enabled</code> to <code>true</code>. ({{bug(966591)}})</li>
  <li>The non-standard, and deprecated since Firefox 15, {{domxref("Blob.mozSlice")}} is no longer supported ({{bug(961804)}}).</li>
  <li>The non-standard {{domxref("ArchiveReader")}} and {{domxref("ArchiveRequest")}} are no longer exposed to the Web ({{bug(968883)}}).</li>
  <li><a href="https://dxr.mozilla.org/mozilla-central/source/dom/webidl/">WebIDL constructors</a> cannot be called as functions anymore. They need to be preceded by the keyword <code>new</code>. ({{bug(916644)}})</li>
@@ -81,12 +80,6 @@ tags:
 
 <ul>
  <li>The interface <code>nsIDOMWindowUtils</code> now supports the Boolean attribute <code>audioMuted</code> and <code>audioVolume</code>, a float in the range <code>[0.0</code> ,  <code>1.0]</code>, allowing to control the sound produced by a window (that is any tab or iframe). There is no UI for this, but is available to add-ons. ({{bug(923247)}})</li>
-</ul>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="https://www.fxsitecompat.com/en-US/versions/30/">Site Compatibility for Firefox 30</a></li>
 </ul>
 
 <h3 id="Older_versions">Older versions</h3>

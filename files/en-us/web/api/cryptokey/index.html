@@ -36,7 +36,7 @@ browser-compat: api.CryptoKey
  </dd>
  <dt><code>CryptoKey.extractable</code></dt>
  <dd>
- <p>{{jsxref("Boolean")}} indicating whether or not the key may be extracted using <a href="/en-US/docs/Web/API/SubtleCrypto/exportKey" title="The SubtleCrypto.exportKey() method exports a key: that is, it takes as input a CryptoKey object and gives you the key in an external, portable format."><code>SubtleCrypto.exportKey()</code></a> or <a href="/en-US/docs/Web/API/SubtleCrypto/wrapKey" title='The SubtleCrypto.wrapKey() method "wraps" a key. This means that it exports the key in an external, portable format, then encrypts the exported key. Wrapping a key helps protect it in untrusted environments, such as an otherwise unprotected data store or in transmission over an unprotected network.'><code>SubtleCrypto.wrapKey()</code></a>.</p>
+ <p>A boolean value indicating whether or not the key may be extracted using <a href="/en-US/docs/Web/API/SubtleCrypto/exportKey" title="The SubtleCrypto.exportKey() method exports a key: that is, it takes as input a CryptoKey object and gives you the key in an external, portable format."><code>SubtleCrypto.exportKey()</code></a> or <a href="/en-US/docs/Web/API/SubtleCrypto/wrapKey" title='The SubtleCrypto.wrapKey() method "wraps" a key. This means that it exports the key in an external, portable format, then encrypts the exported key. Wrapping a key helps protect it in untrusted environments, such as an otherwise unprotected data store or in transmission over an unprotected network.'><code>SubtleCrypto.wrapKey()</code></a>.</p>
 
  <ul>
   <li><code>true</code>: The key may be extracted.</li>
@@ -54,7 +54,7 @@ browser-compat: api.CryptoKey
   <li><code><a href="/en-US/docs/Web/API/HmacKeyGenParams">HmacKeyGenParams</a></code> if the algorithm is HMAC.</li>
  </ul>
  </dd>
- <dt id="usages"><code>CryptoKey.usages</code></dt>
+ <dt><code>CryptoKey.usages</code></dt>
  <dd>
  <p>An {{jsxref("Array")}} of strings, indicating what can be done with the key. Possible values for array elements are:</p>
 

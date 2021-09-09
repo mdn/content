@@ -14,7 +14,7 @@ browser-compat: api.HTMLFormElement
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p><span class="seoSummary">The <code><strong>HTMLFormElement</strong></code> interface represents a {{HTMLElement("form")}} element in the DOM. It allows access to—and, in some cases, modification of—aspects of the form, as well as access to its component elements.</span></p>
+<p>The <code><strong>HTMLFormElement</strong></code> interface represents a {{HTMLElement("form")}} element in the DOM. It allows access to—and, in some cases, modification of—aspects of the form, as well as access to its component elements.</p>
 
 <p>{{InheritanceDiagram(600,120)}}</p>
 
@@ -42,7 +42,7 @@ browser-compat: api.HTMLFormElement
  <dt>{{domxref("HTMLFormElement.autocomplete")}}</dt>
  <dd>A {{domxref("DOMString")}} reflecting the value of the form's {{ htmlattrxref("autocomplete", "form") }} HTML attribute, indicating whether the controls in this form can have their values automatically populated by the browser.</dd>
  <dt>{{domxref("HTMLFormElement.noValidate")}}</dt>
- <dd>A {{jsxref("Boolean")}} reflecting the value of the form's {{ htmlattrxref("novalidate", "form") }} HTML attribute, indicating whether the form should not be validated.</dd>
+ <dd>A boolean value reflecting the value of the form's {{ htmlattrxref("novalidate", "form") }} HTML attribute, indicating whether the form should not be validated.</dd>
 </dl>
 
 <p>Named inputs are added to their owner form instance as properties, and can overwrite native properties if they share the same name (e.g. a form with an input named <code>action</code> will have its <code>action</code> property return that input instead of the form's {{ htmlattrxref("action", "form") }} HTML attribute).</p>
@@ -53,9 +53,9 @@ browser-compat: api.HTMLFormElement
 
 <dl>
  <dt>{{domxref("HTMLFormElement.checkValidity", "checkValidity()")}}</dt>
- <dd>Returns <code>true</code> if the element's child controls are subject to <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a> and satisfy those constraints; returns <code>false</code> if some controls do not satisfy their constraints. Fires an event named {{domxref("HTMLInputElement/invalid_event", "invalid")}} at any control that does not satisfy its constraints; such controls are considered invalid if the event is not canceled. It is up to the programmer to decide how to respond to <code>false</code>.</dd>
+ <dd>Returns <code>true</code> if the element's child controls are subject to <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a> and satisfy those constraints; returns <code>false</code> if some controls do not satisfy their constraints. Fires an event named {{domxref("HTMLInputElement/invalid_event", "invalid")}} at any control that does not satisfy its constraints; such controls are considered invalid if the event is not canceled. It is up to the programmer to decide how to respond to <code>false</code>.</dd>
  <dt>{{domxref("HTMLFormElement.reportValidity", "reportValidity()")}}</dt>
- <dd>Returns <code>true</code> if the element's child controls satisfy their <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">validation constraints</a>. When <code>false</code> is returned, cancelable {{domxref("HTMLInputElement/invalid_event", "invalid")}} events are fired for each invalid child and validation problems are reported to the user.</dd>
+ <dd>Returns <code>true</code> if the element's child controls satisfy their <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">validation constraints</a>. When <code>false</code> is returned, cancelable {{domxref("HTMLInputElement/invalid_event", "invalid")}} events are fired for each invalid child and validation problems are reported to the user.</dd>
  <dt>{{domxref("HTMLFormElement.requestSubmit", "requestSubmit()")}}</dt>
  <dd>Requests that the form be submitted using the specified submit button and its corresponding configuration.</dd>
  <dt>{{domxref("HTMLFormElement.reset", "reset()")}}</dt>
@@ -101,7 +101,7 @@ browser-compat: api.HTMLFormElement
  <dt><code>document.forms[<var>id</var>]</code></dt>
  <dd>Returns the form whose ID is <code><var>id</var></code>.</dd>
  <dt><code>document.forms[<var>name</var>]</code></dt>
- <dd>Returns the form whose {{domxref("Element.name", "name")}} attribute's value is <code><var>name</var></code>.</dd>
+ <dd>Returns the form whose <code>name</code> attribute's value is <code><var>name</var></code>.</dd>
 </dl>
 
 <h3 id="Accessing_the_forms_elements">Accessing the form's elements</h3>

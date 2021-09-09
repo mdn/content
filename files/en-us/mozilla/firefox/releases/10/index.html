@@ -111,7 +111,7 @@ tags:
  <li>When the proper MIME type is passed, <code>image/svg+xml</code>, <a href="/en-US/docs/Web/API/DOMParser#parsing_a_svg_document">the <code>DOMParser</code> now creates a <code>SVGDocument</code></a> when given a string with SVG.</li>
  <li>In the past, when {{ domxref("element.setAttribute()") }} parsed integers, it would report an error if the integer included any non-numeric characters (for example "42foo"). Now it correctly truncates this as the number 42, in accordance with the specification.</li>
  <li>The ESC key no longer incorrectly results in the {{ domxref("GlobalEventHandlers/onkeydown") }} handler incorrectly getting called.</li>
- <li>The {{ domxref("NameList") }} interface is no longer implemented; it previously had an implementation with no way to actually get access to one.</li>
+  <li>The <code>NameList</code> interface is no longer implemented; it previously had an implementation with no way to actually get access to one.</li>
  <li>The {{ domxref("document.createProcessingInstruction()") }} method now works on HTML documents as well as XML documents. {{ domxref("ProcessingInstruction") }} nodes are still only supported on XML documents, but since nodes can be moved among documents, it's helpful to be able to create them on HTML documents as well.</li>
  <li>The {{ domxref("XMLHttpRequest") }} <code>responseType</code> "<code>moz-json</code>" <a href="/en-US/docs/Mozilla/Firefox/Releases/9#dom">introduced in Firefox 9</a> has been updated to the latest draft of the specification and has been unprefixed. See {{ bug("707142#c13") }}</li>
 </ul>

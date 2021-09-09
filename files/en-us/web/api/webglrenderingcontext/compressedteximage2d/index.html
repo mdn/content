@@ -13,8 +13,8 @@ browser-compat: api.WebGLRenderingContext.compressedTexImage2D
 ---
 <div>{{APIRef("WebGL")}}</div>
 
-<p>The <strong><code>WebGLRenderingContext.compressedTexImage2D()</code></strong> 
-  and <strong><code>WebGL2RenderingContext.compressedTexImage3D()</code></strong> methods
+<p>The <strong><code>WebGLRenderingContext.compressedTexImage2D()</code></strong>
+  and <strong><code>WebGL2RenderingContext.compressedTexImage3D()</code></strong> methods
   of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API </a>specify a two- or
   three-dimensional texture image in a compressed format.</p>
 
@@ -43,7 +43,7 @@ void <var>gl</var>.compressedTexImage3D(<var>target</var>, <var>level</var>, <va
 
 <dl>
   <dt><code>target</code></dt>
-  <dd>A {{domxref("GLenum")}} specifying the binding point (target) of the active texture.
+  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target) of the active texture.
     Possible values for <code>compressedTexImage2D</code>:
     <ul>
       <li><code>gl.TEXTURE_2D</code>: A two-dimensional texture.</li>
@@ -68,10 +68,10 @@ void <var>gl</var>.compressedTexImage3D(<var>target</var>, <var>level</var>, <va
     </ul>
   </dd>
   <dt><code>level</code></dt>
-  <dd>A {{domxref("GLint")}} specifying the level of detail. Level 0 is the base image
+  <dd>A {{domxref("WebGL_API/Types", "GLint")}} specifying the level of detail. Level 0 is the base image
     level and level <em>n</em> is the <em>n</em>th mipmap reduction level.</dd>
   <dt><code>internalformat</code></dt>
-  <dd>A {{domxref("GLenum")}} specifying the compressed image format. Compressed image
+  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the compressed image format. Compressed image
     formats must be enabled by <a
       href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">WebGL extensions</a> before
     using this method. All values are possible for <code>compressedTexImage2D</code>. See
@@ -120,13 +120,6 @@ void <var>gl</var>.compressedTexImage3D(<var>target</var>, <var>level</var>, <va
       <li>When using the {{domxref("WEBGL_compressed_texture_etc1")}} extension:
         <ul>
           <li><code>ext.COMPRESSED_RGB_ETC1_WEBGL</code></li>
-        </ul>
-      </li>
-      <li>When using the {{domxref("WEBGL_compressed_texture_atc")}} extension:
-        <ul>
-          <li><code>ext.COMPRESSED_RGB_ATC_WEBGL</code></li>
-          <li><code>ext.COMPRESSED_RGBA_ATC_EXPLICIT_ALPHA_WEBGL</code></li>
-          <li><code>ext.COMPRESSED_RGBA_ATC_INTERPOLATED_ALPHA_WEBGL</code></li>
         </ul>
       </li>
       <li>When using the {{domxref("WEBGL_compressed_texture_astc")}} extension:
@@ -178,19 +171,19 @@ void <var>gl</var>.compressedTexImage3D(<var>target</var>, <var>level</var>, <va
     </ul>
   </dd>
   <dt><code>width</code></dt>
-  <dd>A {{domxref("GLsizei")}} specifying the width of the texture.</dd>
+  <dd>A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the width of the texture.</dd>
   <dt><code>height</code></dt>
-  <dd>A {{domxref("GLsizei")}} specifying the height of the texture.</dd>
+  <dd>A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the height of the texture.</dd>
   <dt><code>depth</code></dt>
-  <dd>A {{domxref("GLsizei")}} specifying the depth of the texture/the number of textures
+  <dd>A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the depth of the texture/the number of textures
     in a <code>TEXTURE_2D_ARRAY</code>.</dd>
   <dt><code>border</code></dt>
-  <dd>A {{domxref("GLint")}} specifying the width of the border. Must be 0.</dd>
+  <dd>A {{domxref("WebGL_API/Types", "GLint")}} specifying the width of the border. Must be 0.</dd>
   <dt><code>imageSize</code></dt>
-  <dd>A {{domxref("GLsizei")}} specifying the number of bytes to read from the buffer
+  <dd>A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the number of bytes to read from the buffer
     bound to <code>gl.PIXEL_UNPACK_BUFFER</code>.</dd>
   <dt><code>offset</code></dt>
-  <dd>A {{domxref("GLintptr")}} specifying the offset in bytes from which to read from the
+  <dd>A {{domxref("WebGL_API/Types", "GLintptr")}} specifying the offset in bytes from which to read from the
     buffer bound to <code>gl.PIXEL_UNPACK_BUFFER</code>.</dd>
   <dt><code>pixels</code></dt>
   <dd>An {{domxref("ArrayBufferView")}} that will be used as a data store for the
@@ -241,7 +234,6 @@ gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
   <li>{{domxref("WEBGL_compressed_texture_etc")}}</li>
   <li>{{domxref("WEBGL_compressed_texture_pvrtc")}}</li>
   <li>{{domxref("WEBGL_compressed_texture_etc1")}}</li>
-  <li>{{domxref("WEBGL_compressed_texture_atc")}}</li>
   <li>{{domxref("WEBGL_compressed_texture_astc")}}</li>
   <li>{{domxref("EXT_texture_compression_bptc")}}</li>
   <li>{{domxref("EXT_texture_compression_rgtc")}}</li>

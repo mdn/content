@@ -9,7 +9,7 @@ tags:
   - Media Source Extensions
   - adaptive
 ---
-<p class="summary">When working with Media Source Extensions, it is likely that you need to condition your assets before you can stream them. This article takes you through the requirements and shows you a toolchain you can use to encode your assets appropriately.</p>
+<p>When working with Media Source Extensions, it is likely that you need to condition your assets before you can stream them. This article takes you through the requirements and shows you a toolchain you can use to encode your assets appropriately.</p>
 
 <h2 id="Getting_started">Getting started</h2>
 
@@ -42,7 +42,7 @@ tags:
 <p>Sample media should be placed in the Bento4 <code>utils</code> directory and worked here.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: The prebuilt ffmpeg does not include libfdk_aac due to licensing reasons. Bento4 uses this by default, so you need to compile ffmpeg if necessary. If you don't need it, add <code>--audio-codec=aac</code> to the <code>mp4-dash-encode.py</code> command line.</p>
+<p><strong>Note:</strong> The prebuilt ffmpeg does not include libfdk_aac due to licensing reasons. Bento4 uses this by default, so you need to compile ffmpeg if necessary. If you don't need it, add <code>--audio-codec=aac</code> to the <code>mp4-dash-encode.py</code> command line.</p>
 </div>
 
 <h3 id="Container_and_Codec_Support">Container and Codec Support</h3>
@@ -72,7 +72,7 @@ bunny.mp4         trailer_1080p.mov</pre>
 <p>To check whether an MP4 file is a proper MP4 stream, you can again use the <a href="https://nickdesaulniers.github.io/mp4info/">mp4info</a> utility to list the atoms of an MP4.</p>
 
 <div class="note">
-<p><strong>Note</strong>: The fragmented version is slightly larger than the original, due to additional metadata spread throughout the file. This is usually a file size increase of 1 percent or less.</p>
+<p><strong>Note:</strong> The fragmented version is slightly larger than the original, due to additional metadata spread throughout the file. This is usually a file size increase of 1 percent or less.</p>
 </div>
 
 <h3 id="Fragmenting">Fragmenting</h3>
@@ -135,11 +135,11 @@ output
 8 directories, 1 file</pre>
 
 <div class="notecard note">
-<p><strong>Note</strong>: <code>mp4-dash-encode.py</code> does not display ffmpeg error messages. You can see it by specifying the <code>-d</code> option.</p>
+<p><strong>Note:</strong> <code>mp4-dash-encode.py</code> does not display ffmpeg error messages. You can see it by specifying the <code>-d</code> option.</p>
 </div>
 
 <div class="notecard note">
-<p><strong>Note</strong>: If <code>"Invalid duration specification for force_key_frames: 'expr:eq(mod(n"</code> is displayed as an error message, modify <code>mp4-dash-encode.py</code> and remove two <code>"'"</code> from <code>"-force_key_frames 'expr:eq(mod(n,%d),0)'"</code>.</p>
+<p><strong>Note:</strong> If <code>"Invalid duration specification for force_key_frames: 'expr:eq(mod(n"</code> is displayed as an error message, modify <code>mp4-dash-encode.py</code> and remove two <code>"'"</code> from <code>"-force_key_frames 'expr:eq(mod(n,%d),0)'"</code>.</p>
 </div>
 
 <h2 id="Summary">Summary</h2>

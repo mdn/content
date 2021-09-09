@@ -100,12 +100,14 @@ determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/
 `callbackFn`, if invoked, may do so).
 
 The range of elements processed by `map` is set before the first invocation
-of `callbackFn`. Elements which are appended to the array after the
-call to `map` begins will not be visited by `callbackFn`.
+of `callbackFn`. Elements which are assigned to indexes already visited, or to indexes 
+outside the range, will not be visited by `callbackFn`.
 If existing elements of the array are changed after the call to `map`, their
 value will be the value at the time `callbackFn` visits them.
 Elements that are deleted after the call to `map` begins and before being
 visited are not visited.
+
+**Warning:** Concurrent modification of the kind described in the previous paragraph frequently leads to hard-to-understand code and is generally to be avoided (except in special cases).
 
 Due to the algorithm defined in the specification, if the array which `map`
 was called upon is sparse, resulting array will also be sparse keeping same indices

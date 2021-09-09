@@ -64,7 +64,7 @@ One can assign the `constructor` property for any value except `null` and `undef
 
 ```js
 let val = null;
-val.constructor = 1; //TypeError: var is null
+val.constructor = 1; //TypeError: val is null
 
 val = 'abc';
 val.constructor = Number; //val.constructor === String

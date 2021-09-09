@@ -18,7 +18,7 @@ browser-compat: api.MediaTrackConstraints.deviceId
 <div>{{APIRef("Media Capture and Streams")}}</div>
 
 <p>The {{domxref("MediaTrackConstraints")}} dictionary's
-  <code><strong>deviceId</strong></code> property is a {{domxref("ConstrainDOMString")}}
+  <code><strong>deviceId</strong></code> property is a <a href="/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString"><code>ConstrainDOMString</code></a>
   describing the requested or mandatory constraints placed upon the value of the
   {{domxref("MediaTrackSettings.deviceId", "deviceId")}} constrainable property.</p>
 
@@ -40,7 +40,7 @@ browser-compat: api.MediaTrackConstraints.deviceId
 
 <h3 id="Value">Value</h3>
 
-<p>An object based on {{domxref("ConstrainDOMString")}} specifying one or more acceptable,
+<p>An object based on <a href="/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString"><code>ConstrainDOMString</code></a> specifying one or more acceptable,
   ideal, and/or exact (mandatory) device IDs which are acceptable as the source of media
   content.</p>
 
@@ -58,7 +58,7 @@ browser-compat: api.MediaTrackConstraints.deviceId
   "getUserMedia()")}}.</p>
 
 <div class="note">
-  <p>An exception to the rule that device IDs are the same across browsing sessions:
+  <p><strong>Note:</strong> An exception to the rule that device IDs are the same across browsing sessions:
     private browsing mode will use a different ID, and will change it each browsing
     session.</p>
 </div>

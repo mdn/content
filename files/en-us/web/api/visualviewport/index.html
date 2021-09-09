@@ -3,7 +3,6 @@ title: VisualViewport
 slug: Web/API/VisualViewport
 tags:
   - API
-  - Experimental
   - Interface
   - Reference
   - Visual Viewport API
@@ -11,14 +10,14 @@ tags:
   - viewport
 browser-compat: api.VisualViewport
 ---
-<p>{{SeeCompatTable}}{{APIRef("Visual Viewport")}}</p>
+<p>{{APIRef("Visual Viewport")}}</p>
 
 <p>The <strong><code>VisualViewport</code></strong> interface of the <a href="/en-US/docs/Web/API/Visual_Viewport_API">Visual Viewport API</a> represents the visual viewport for a given window. For a page containing iframes, each iframe, as well as the containing page, will have a unique window object. Each window on a page will have a unique <code>VisualViewport</code> representing the properties associated with that window.</p>
 
 <p>You can get a window's visual viewport using {{domxref("Window.visualViewport")}}.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Only the top-level window has a visual viewport that's distinct from the layout viewport. Therefore, it's generally only the <code>VisualViewport</code> object of the top-level window that's useful. For an {{htmlelement("iframe")}}, visual viewport metrics like {{domxref("VisualViewport.width")}} always correspond to layout viewport metrics like {{domxref("Element.clientWidth", "document.documentElement.clientWidth")}}.</p>
+<p><strong>Note:</strong> Only the top-level window has a visual viewport that's distinct from the layout viewport. Therefore, it's generally only the <code>VisualViewport</code> object of the top-level window that's useful. For an {{htmlelement("iframe")}}, visual viewport metrics like {{domxref("VisualViewport.width")}} always correspond to layout viewport metrics like {{domxref("Element.clientWidth", "document.documentElement.clientWidth")}}.</p>
 </div>
 
 <h2 id="Properties">Properties</h2>
@@ -100,7 +99,7 @@ window.visualViewport.addEventListener('scroll', viewportHandler);
 window.visualViewport.addEventListener('resize', viewportHandler);</pre>
 
 <div class="notecard note">
-<p><strong>Note</strong>: This technique should be used with care; emulating <code>position: device-fixed</code> in this way can result in the fixed element flickering during scrolling.</p>
+<p><strong>Note:</strong> This technique should be used with care; emulating <code>position: device-fixed</code> in this way can result in the fixed element flickering during scrolling.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>

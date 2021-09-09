@@ -18,15 +18,14 @@ browser-compat: api.SVGGraphicsElement.getBBox
   geometry attributes on all the elements contained in the target element).</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p><code>getBBox()</code> must return the actual bounding box at
+  <p><strong>Note:</strong> <code>getBBox()</code> must return the actual bounding box at
     the time the method was called—even in case the element has not yet been rendered. It
     also does not account for any transformation applied to the element or its parents.
   </p>
 </div>
 
 <div class="notecard note">
-  <p><code>getBBox</code> returns different values than
+  <p><strong>Note:</strong> <code>getBBox</code> returns different values than
     {{domxref("Element.getBoundingClientRect()", "getBoundingClientRect()")}}, as the
     latter returns value relative to the viewport</p>
 </div>

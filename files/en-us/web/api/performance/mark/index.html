@@ -14,7 +14,7 @@ browser-compat: api.Performance.mark
   {{domxref("DOMHighResTimeStamp","timestamp")}} in the browser's <em>performance entry
     buffer</em> with the given name.</p>
 
-<p>The application defined timestamp can be retrieved by one of the
+<p>The application defined timestamp can also be retrieved by one of the
   {{domxref("Performance")}} interface's <code>getEntries*()</code> methods
   ({{domxref("Performance.getEntries","getEntries()")}},
   {{domxref("Performance.getEntriesByName","getEntriesByName()")}} or
@@ -43,8 +43,8 @@ browser-compat: api.Performance.mark
 <h3 id="Return_value">Return value</h3>
 
 <dl>
-  <dt>void</dt>
-  <dd></dd>
+  <dt>entry</dt>
+  <dd>The {{domxref("PerformanceMark")}} entry that was created.</dd>
 </dl>
 
 <h2 id="Example">Example</h2>

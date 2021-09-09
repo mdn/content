@@ -16,7 +16,7 @@ tags:
 
 <p>There are two JavaScript events that handle orientation information. The first one is the {{domxref("DeviceOrientationEvent")}}, which is sent when the accelerometer detects a change to the orientation of the device. By receiving and processing the data reported by these orientation events, it's possible to interactively respond to rotation and elevation changes caused by the user moving the device.</p>
 
-<p>The second event is the {{domxref("DeviceMotionEvent")}}, which is sent when a change in acceleration was added. It is different from the {{domxref("DeviceOrientationEvent")}} because it is listening for changes in acceleration as opposed to orientation. Sensors that are commonly capable of detecting {{domxref("DeviceMotionEvent")}} include sensors in laptops to protect moving storage devices. {{domxref("DeviceOrientationEvent")}} is more commonly found in mobile devices.</p>
+<p>The second event is the {{domxref("DeviceMotionEvent")}}, which is sent when a change in acceleration was added. It is different from the {{domxref("DeviceOrientationEvent")}} because it is listening for changes in acceleration as opposed to orientation. Sensors that are commonly capable of detecting {{domxref("DeviceMotionEvent")}} include sensors in laptops to protect moving storage devices. {{domxref("DeviceOrientationEvent")}} is more commonly found in mobile devices.</p>
 
 <h2 id="Processing_orientation_events">Processing orientation events</h2>
 
@@ -60,7 +60,7 @@ tags:
 <ul>
  <li>The {{domxref("DeviceOrientationEvent.alpha")}} value represents the motion of the device around the z axis, represented in degrees with values ranging from 0 (inclusive) to 360 (exclusive).</li>
  <li>The {{domxref("DeviceOrientationEvent.beta")}} value represents the motion of the device around the x axis, represented in degrees with values ranging from -180 (inclusive) to 180 (exclusive). This represents a front to back motion of the device.</li>
- <li>The {{domxref("DeviceOrientationEvent.gamma")}} value represents the motion of the device around the y axis, represented in degrees with values ranging from -90 (inclusive) to 90 (exclusive). This represents a left to right motion of the device.</li>
+ <li>The {{domxref("DeviceOrientationEvent.gamma")}} value represents the motion of the device around the y axis, represented in degrees with values ranging from -90 (inclusive) to 90 (exclusive). This represents a left to right motion of the device.</li>
 </ul>
 
 <h3 id="Orientation_example">Orientation example</h3>
@@ -76,7 +76,7 @@ tags:
 &lt;pre class="output"&gt;&lt;/pre&gt;
 </pre>
 
-<p>This garden is 200 pixel wide (Yes, it's a tiny one), and the ball is in the center:</p>
+<p>This garden is 200 pixel wide (yes, it's a tiny one), and the ball is in the center:</p>
 
 <pre class="brush: css">.garden {
   position: relative;

@@ -17,7 +17,7 @@ browser-compat: api.Element.mouseenter_event
 ---
 <div>{{APIRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>mouseenter</code></strong> event is fired at an {{domxref("Element")}} when a pointing device (usually a mouse) is initially moved so that its hotspot is within the element at which the event was fired.</span></p>
+<p>The <strong><code>mouseenter</code></strong> event is fired at an {{domxref("Element")}} when a pointing device (usually a mouse) is initially moved so that its hotspot is within the element at which the event was fired.</p>
 
 <table class="properties">
  <tbody>
@@ -46,15 +46,15 @@ browser-compat: api.Element.mouseenter_event
 
 <h4>Behavior of <code>mouseenter</code> events:</h4>
 
-<img class="default internal" src="mouseenter.png">
+<img src="mouseenter.png">
 One <code>mouseenter</code> event is sent to each element of the hierarchy when entering them. Here 4 events are sent to the four elements of the hierarchy when the pointer reaches the text.
 
 <h4>Behavior of <code>mouseover</code> events:</h4>
 
-<img class="default internal" src="mouseover.png">
+<img src="mouseover.png">
 A single <code>mouseover</code> event is sent to the deepest element of the DOM tree, then it bubbles up the hierarchy until it is canceled by a handler or reaches the root.</div>
 
-<p>With deep hierarchies, the number of <code>mouseenter</code> events sent can be quite huge and cause significant performance problems. In such cases, it is better to listen for <code>mouseover</code> events.</p>
+<p>With deep hierarchies, the number of <code>mouseover</code> events sent can be quite huge and cause significant performance problems. In such cases, it is better to listen for <code>mouseenter</code> events.</p>
 
 <p>Combined with the corresponding <code>mouseleave</code> (which is fired at the element when the mouse exits its content area), the <code>mouseenter</code> event acts in a very similar way to the CSS {{cssxref(':hover')}} pseudo-class.</p>
 

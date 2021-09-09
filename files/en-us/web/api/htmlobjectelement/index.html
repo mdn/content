@@ -40,7 +40,7 @@ browser-compat: api.HTMLObjectElement
  <dt>{{domxref("HTMLObjectElement.data")}}</dt>
  <dd>Returns a {{domxref("DOMString")}} that reflects the {{htmlattrxref("data", "object")}} HTML attribute, specifying the address of a resource's data.</dd>
  <dt>{{domxref("HTMLObjectElement.declare")}} {{deprecated_inline}}</dt>
- <dd>Is a {{jsxref("Boolean")}} that reflects the {{htmlattrxref("declare", "object")}} HTML attribute, indicating that this is a declaration, not an instantiation, of the object.</dd>
+ <dd>Is a boolean value that reflects the {{htmlattrxref("declare", "object")}} HTML attribute, indicating that this is a declaration, not an instantiation, of the object.</dd>
  <dt>{{domxref("HTMLObjectElement.form")}} {{readonlyInline}}</dt>
  <dd>Returns a {{domxref("HTMLFormElement")}} representing the object element's form owner, or null if there isn't one.</dd>
  <dt>{{domxref("HTMLObjectElement.height")}}</dt>
@@ -64,7 +64,7 @@ browser-compat: api.HTMLObjectElement
  <dt>{{domxref("HTMLObjectElement.width")}}</dt>
  <dd>Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("width", "object")}} HTML attribute, specifying the displayed width of the resource in CSS pixels.</dd>
  <dt>{{domxref("HTMLObjectElement.willValidate")}} {{readonlyInline}}</dt>
- <dd>Returns a {{jsxref("Boolean")}} that indicates whether the element is a candidate for constraint validation. Always <code>false</code> for <code>HTMLObjectElement</code> objects.</dd>
+ <dd>Returns a boolean value that indicates whether the element is a candidate for constraint validation. Always <code>false</code> for <code>HTMLObjectElement</code> objects.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
@@ -73,7 +73,7 @@ browser-compat: api.HTMLObjectElement
 
 <dl>
  <dt>{{domxref("HTMLObjectElement.checkValidity()")}}</dt>
- <dd>Returns a {{jsxref("Boolean")}} that always is <code>true</code>, because <code>object</code> objects are never candidates for constraint validation.</dd>
+ <dd>Returns a boolean value that always is <code>true</code>, because <code>object</code> objects are never candidates for constraint validation.</dd>
  <dt>{{domxref("HTMLObjectElement.setCustomValidity()")}}</dt>
  <dd>Sets a custom validity message for the element. If this message is not the empty string, then the element is suffering from a custom validity error, and does not validate.</dd>
 </dl>

@@ -16,7 +16,7 @@ tags:
 
 <p>In the early days of web design, pages were built to target a particular screen size. If the user had a larger or smaller screen than the designer expected, results ranged from unwanted scrollbars to overly long line lengths, and poor use of space. As more diverse screen sizes became available, the concept of <em>responsive web design</em> (RWD) appeared, a set of practices that allows web pages to alter their layout and appearance to suit different screen widths, resolutions, etc. It is an idea that changed the way we design for a multi-device web, and in this article, we'll help you understand the main techniques you need to know to master it.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -40,7 +40,7 @@ tags:
 
 <p>These two approaches tended to result in a website that looked its best on the screen of the person designing the site! The liquid site resulted in a squashed design on smaller screens (as seen below) and unreadably long line lengths on larger ones.</p>
 
-<img alt="A layout with two columns squashed into a mobile size viewport." src="mdn-rwd-liquid.png" style="display: block;">
+<img alt="A layout with two columns squashed into a mobile size viewport." src="mdn-rwd-liquid.png">
 
 <div class="notecard note">
 <p><strong>Note</strong>: See this simple liquid layout: <a href="https://mdn.github.io/css-examples/learn/rwd/liquid-width.html">example</a>, <a href="https://github.com/mdn/css-examples/blob/master/learn/rwd/liquid-width.html">source code</a>. When viewing the example, drag your browser window in and out to see how this looks at different sizes.</p>
@@ -48,7 +48,7 @@ tags:
 
 <p>The fixed-width site risked a horizontal scrollbar on screens smaller than the site width (as seen below), and lots of white space at the edges of the design on larger screens.</p>
 
-<img alt="A layout with a horizontal scrollbar in a mobile viewport." src="mdn-rwd-fixed.png" style="display: block;">
+<img alt="A layout with a horizontal scrollbar in a mobile viewport." src="mdn-rwd-fixed.png">
 
 <div class="notecard note">
 <p><strong>Note</strong>: See this simple fixed-width layout: <a href="https://mdn.github.io/css-examples/learn/rwd/fixed-width.html">example</a>, <a href="https://github.com/mdn/css-examples/blob/master/learn/rwd/fixed-width.html">source code</a>. Again, observe the result as you change the browser window size.</p>
@@ -123,11 +123,11 @@ tags:
 
 <p>The following example demonstrates a simple responsive design using Media Queries and a flexible grid. On narrow screens the layout displays the boxes stacked on top of one another:</p>
 
-<img alt="A mobile view of the layout with boxes stacked on top of each other vertically." src="mdn-rwd-mobile.png" style="display: block;">
+<img alt="A mobile view of the layout with boxes stacked on top of each other vertically." src="mdn-rwd-mobile.png">
 
 <p>On wider screens they move to two columns:</p>
 
-<img alt="A desktop view of a layout with two columns." src="mdn-rwd-desktop.png" style="display: block;">
+<img alt="A desktop view of a layout with two columns." src="mdn-rwd-desktop.png">
 
 <div class="notecard note">
 <p><strong>Note</strong>: You can find the <a href="https://mdn.github.io/css-examples/learn/rwd/float-based-rwd.html">live example</a> and <a href="https://github.com/mdn/css-examples/blob/master/learn/rwd/float-based-rwd.html">source code</a> for this example on GitHub.</p>
@@ -228,11 +228,11 @@ h1 {
 
 <p>On mobile the heading is smaller:</p>
 
-<img alt="A stacked layout with a small heading size." src="mdn-rwd-font-mobile.png" style="display: block;">
+<img alt="A stacked layout with a small heading size." src="mdn-rwd-font-mobile.png">
 
 <p>On desktop, however, we see the larger heading size:</p>
 
-<img alt="A two column layout with a large heading." src="mdn-rwd-font-desktop.png" style="display: block;">
+<img alt="A two column layout with a large heading." src="mdn-rwd-font-desktop.png">
 
 <div class="notecard note">
 <p><strong>Note</strong>: See this example in action: <a href="https://mdn.github.io/css-examples/learn/rwd/type-rwd.html">example</a>, <a href="https://github.com/mdn/css-examples/blob/master/learn/rwd/type-rwd.html">source code</a>.</p>

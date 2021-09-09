@@ -16,7 +16,7 @@ tags:
 
 <h2 id="API_reference_syntax">API reference syntax</h2>
 
-<p>Syntax sections for API reference pages are written manually, and may differ slightly based on feature being documented.
+<p>Syntax sections for API reference pages are written manually, and may differ slightly based on the feature being documented.
   The section starts with a heading (typically {{HTMLElement("H2")}}) named "Syntax", and must be included at the top of the reference page (just below the introductory material).
   Below the heading is a code block showing the feature's exact syntax, styled using the <code>brush: [markup-language]</code> class.</p>
 
@@ -99,7 +99,7 @@ new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds);
 
 <h5 id="Concise_syntax_blocks">Concise syntax blocks</h5>
 
-<p>The aim is to make the syntax block as pure and unambiguous as definition of the feature's syntax as possible — don't include any irrelevant syntax. For example, you may see this syntax form used to describe promises in many places on the site:</p>
+<p>The aim is to make the syntax block as pure and unambiguous a definition of the feature's syntax as possible — don't include any irrelevant syntax. For example, you may see this syntax form used to describe promises in many places on the site:</p>
 
 <pre class="brush: js">caches.match(request, options).then(function(response) {
   // Do something with the response
@@ -157,7 +157,7 @@ unshift(element0, element1, ... , elementN)
 
 <h4 id="Exceptions_section">Exceptions section</h4>
 
-<p>Finally, include an "Exceptions" subsection, which explains what exceptions can be thrown if a problem is encountered when invoking the constructor/method. This could be because a parameter name has been misspelled or it has been given a value of the wrong datatype, because there is problem with the environment it is being invoked in (e.g. trying to run a secure context-only feature in a non-secure context), or some other reason.</p>
+<p>Finally, include an "Exceptions" subsection, which explains what exceptions can be thrown if a problem is encountered when invoking the constructor/method. This could be because a parameter name has been misspelled or it has been given a value of the wrong datatype, because there is a problem with the environment it is being invoked in (e.g. trying to run a secure context-only feature in a non-secure context), or some other reason.</p>
 
 <p>Determining what exceptions are thrown by a method can require a good perusal of the specification. Looking through the spec's step-by-step explanation of how a feature operates will generally provide a solid list of the exceptions and the situations that cause them to be thrown.</p>
 
@@ -170,20 +170,9 @@ unshift(element0, element1, ... , elementN)
 
 <h3 id="Properties">Properties</h3>
 
-<h4 id="Syntax_block_2">Syntax block</h4>
-
-<p>Start with a syntax block, like this (see {{DOMxRef("IntersectionObserver.root")}}):</p>
-
-<pre class="brush: js">var root = observer.root;</pre>
-
-<p>For a non-read-only property, it is a good idea to include two lines, which show getting and setting the property (see {{DOMxRef("AudioParam.value")}}):</p>
-
-<pre class="brush: js">gain = gainNode.gain.value;
-gainNode.gain.value = 0;</pre>
-
 <h4 id="Value_section">Value section</h4>
 
-<p>Below the syntax block you need to include a "Value" subsection, which contains a explanation of the property's value — both its data type and what its purpose is.</p>
+<p>Properties contain no syntax section. Instead, add a "Value" section containing an explanation of the property's value. Describe its data type and what its purpose is.</p>
 
 <h4 id="Exceptions_section_2">Exceptions section</h4>
 
@@ -199,11 +188,11 @@ gainNode.gain.value = 0;</pre>
 
 <pre class="brush: js">window.onvrdisplaypresentchange = functionRef;</pre>
 
-<p>And that's it — event handler properties are always settable, and always contain a function, therefore no more information is needed.</p>
+<p>And that's it — event handler properties are always settable, and always contain a function; therefore no more information is needed.</p>
 
 <h2 id="JavaScript_reference_syntax">JavaScript reference syntax</h2>
 
-<p>JavaScript built-in object reference pages follow the same basic rules as API reference pages, e.g. for methods and properties. There are a few differences that you might observe:</p>
+<p>JavaScript built-in object reference pages follow the same basic rules as API reference pages; e.g. for methods and properties. There are a few differences that you might observe:</p>
 
 <ul>
  <li>For built-in objects with a single constructor, the constructor syntax is often included on the object landing page. See {{JSxRef("Date")}} for example. You'll notice that static methods (those that exist on the <code>Date</code> object itself) are listed under "Methods", whereas instance methods are listed under "Date.prototype methods".</li>
@@ -233,7 +222,7 @@ gainNode.gain.value = 0;</pre>
 
 <h4 id="Formal_syntax2">Formal syntax</h4>
 
-<p>the last section, "Formal syntax", is automatically generated from the data included in the <a href="https://github.com/mdn/data">MDN data repo</a>'s CSS directory. You just need to include a <code>CSSSyntax</code> macro call below the title, and it will take care of the rest.</p>
+<p>The last section, "Formal syntax", is automatically generated from the data included in the <a href="https://github.com/mdn/data">MDN data repo</a>'s CSS directory. You just need to include a <code>CSSSyntax</code> macro call below the title, and it will take care of the rest.</p>
 
 <p>The only complication arises from making sure the data you need is present. The <a href="https://github.com/mdn/data/blob/master/css/properties.json">properties.json</a> file needs to contain an entry for the property you are documenting, and the <a href="https://github.com/mdn/data/blob/master/css/types.json">types.json</a> file needs to contain an entry for all of the value types used in the property's value.</p>
 

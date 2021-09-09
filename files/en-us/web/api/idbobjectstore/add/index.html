@@ -23,7 +23,7 @@ browser-compat: api.IDBObjectStore.add
   transaction may still fail after the success event fires. In other words, the success
   event is only triggered when the transaction has been successfully queued.</p>
 
-<p>The add method is an<span class="database"> <em>insert only</em> </span>method. If a
+<p>The add method is an <em>insert only</em> method. If a
   record already exists in the object store with the <code>key</code> parameter as its
   key, then an error <code>ConstrainError</code> event is fired on the returned request
   object. For updating existing records, you should use the
@@ -100,7 +100,7 @@ var <em>request</em> = objectStore.add(<em>value</em>, <em>key</em>);
          </td>
     </tr>
     <tr>
-      <td><code class="idl">ConstraintError</code></td>
+      <td><code>ConstraintError</code></td>
       <td>An insert operation failed because the primary key constraint was violated (due
         to an already existing record with the same primary key value).</td>
     </tr>

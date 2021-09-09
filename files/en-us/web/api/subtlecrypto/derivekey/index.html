@@ -78,7 +78,7 @@ browser-compat: api.SubtleCrypto.deriveKey
         object.</li>
     </ul>
   </li>
-  <li><code><em>extractable</em></code> is a {{jsxref("Boolean")}} indicating whether it
+  <li><code><em>extractable</em></code> is a boolean value indicating whether it
     will be possible to export  the key using {{domxref("SubtleCrypto.exportKey()")}} or
     {{domxref("SubtleCrypto.wrapKey()")}}.</li>
   <li><code><em>keyUsages</em></code>  is an {{jsxref("Array")}} indicating what can be
@@ -95,11 +95,11 @@ browser-compat: api.SubtleCrypto.deriveKey
         "verify")}} signatures.</li>
       <li><code>deriveKey</code>: The key may be used in
         {{domxref("SubtleCrypto.deriveKey()", "deriving a new key")}}.</li>
-      <li><code>"deriveBits"</code>: The key may be used in
+      <li><code>deriveBits</code>: The key may be used in
         {{domxref("SubtleCrypto.deriveBits()", "deriving bits")}}.</li>
-      <li><code>"wrapKey"</code>: The key may be used to
+      <li><code>wrapKey</code>: The key may be used to
         {{domxref("SubtleCrypto.wrapKey()", "wrap a key")}}.</li>
-      <li><code>"unwrapKey"</code>: The key may be used to
+      <li><code>unwrapKey</code>: The key may be used to
         {{domxref("SubtleCrypto.unwrapKey()", "unwrap a key")}}.</li>
     </ul>
   </li>
@@ -118,9 +118,8 @@ browser-compat: api.SubtleCrypto.deriveKey
 
 <ul>
   <li>{{exception("InvalidAccessError")}}</li>
-  <li>Raised when the master key is not a key for the requested derivation algorithm or if
-    the {{domxref("CryptoKey.usages")}} value of that key doesn't contain
-    <code>deriveKey</code>.</li>
+  <li>Raised when the master key is not a key for the requested derivation algorithm 
+    or if the <em>keyUsages</em> value of that key doesn't contain <code>deriveKey</code>.</li>
   <li>{{exception("NotSupported")}}</li>
   <li>Raised when trying to use an algorithm that is either unknown or isn't suitable for
     derivation, or if the algorithm requested for the derived key doesn't define a key
@@ -169,7 +168,7 @@ browser-compat: api.SubtleCrypto.deriveKey
 <h2 id="Examples">Examples</h2>
 
 <div class="notecard note">
-  <p><strong>Note</strong>: You can <a
+  <p><strong>Note:</strong> You can <a
       href="https://mdn.github.io/dom-examples/web-crypto/derive-key/index.html">try the
       working examples</a> on GitHub.</p>
 </div>

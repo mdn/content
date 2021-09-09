@@ -10,7 +10,7 @@ browser-compat: api.WakeLockSentinel.released
 ---
 <div>{{draft}}{{DefaultAPISidebar("Screen Wake Lock API")}}</div>
 
-<p class="summary">The read-only <strong><code>released</code></strong> property of the
+<p>The read-only <strong><code>released</code></strong> property of the
 	{{domxref("WakeLockSentinel")}} interface returns a boolean that indicates whether
 	a {{domxref("WakeLockSentinel")}} has been released yet.</p>
 
@@ -21,7 +21,7 @@ browser-compat: api.WakeLockSentinel.released
 
 <h3 id="Value">Value</h3>
 
-<p>A {{jsxref("Boolean")}}. Its value is <code>false</code> until the
+<p>A boolean value, that is <code>false</code> until the
 	{{domxref("WakeLockSentinel")}} has been released (either through a call to
 	{{domxref("WakeLockSentinel.release()")}} or because the lock has been released
 	automatically) and the {{domxref("WakeLockSentinel.onrelease")}} event has been

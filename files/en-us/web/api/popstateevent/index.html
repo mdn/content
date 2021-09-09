@@ -7,7 +7,7 @@ tags:
   - Reference
 browser-compat: api.PopStateEvent
 ---
-<p id="Summary">{{APIRef("HTML DOM")}}</p>
+<div>{{APIRef("HTML DOM")}}</div>
 
 <p><code><strong>PopStateEvent</strong></code> is an event handler for the
   {{Event("popstate")}} event on the window.</p>
@@ -20,7 +20,7 @@ browser-compat: api.PopStateEvent
 </p>
 
 <div class="note">
-  <p><strong>Note</strong>: Just calling <code>history.pushState()</code> or
+  <p><strong>Note:</strong> Just calling <code>history.pushState()</code> or
     <code>history.replaceState()</code> won't trigger a <code>popstate</code> event. The
     <code>popstate</code> event is only triggered by doing a browser action such as a
     clicking on the back button (or calling <code>history.back()</code> in JavaScript).
@@ -29,7 +29,7 @@ browser-compat: api.PopStateEvent
 </div>
 
 <div class="note">
-  <p><strong>Note</strong>: Browsers used to handle the <code>popstate</code> event
+  <p><strong>Note:</strong> Browsers used to handle the <code>popstate</code> event
     differently on page load, but now they behave the same. Firefox never emitted a
     popstate event on page load. Chrome did until version 34, while Safari did until
     version 10.0.</p>

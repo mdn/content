@@ -41,7 +41,7 @@ flatMap(function callbackFn(currentValue, index, array) { ... }, thisArg)
 
 ### Parameters
 
-- `callback`
+- `callbackFn`
 
   - : Function that produces an element of the new Array, taking three arguments:
 
@@ -53,7 +53,7 @@ flatMap(function callbackFn(currentValue, index, array) { ... }, thisArg)
       - : The array `map` was called upon.
 
 - `thisArg`{{optional_inline}}
-  - : Value to use as `this` when executing `callback`.
+  - : Value to use as `this` when executing `callbackFn`.
 
 ### Return value
 

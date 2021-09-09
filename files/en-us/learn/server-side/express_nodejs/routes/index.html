@@ -15,9 +15,9 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs")}}</div>
 
-<p class="summary">In this tutorial we'll set up routes (URL handling code) with "dummy" handler functions for all the resource endpoints that we'll eventually need in the <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">LocalLibrary</a> website. On completion we'll have a modular structure for our route handling code, which we can extend with real handler functions in the following articles. We'll also have a really good understanding of how to create modular routes using Express!</p>
+<p>In this tutorial we'll set up routes (URL handling code) with "dummy" handler functions for all the resource endpoints that we'll eventually need in the <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">LocalLibrary</a> website. On completion we'll have a modular structure for our route handling code, which we can extend with real handler functions in the following articles. We'll also have a really good understanding of how to create modular routes using Express!</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -56,7 +56,7 @@ tags:
 
 <p>There are several ways to create routes. For this tutorial we're going to use the <code><a href="https://expressjs.com/en/guide/routing.html#express-router">express.Router</a></code> middleware as it allows us to group the route handlers for a particular part of a site together and access them using a common route-prefix. We'll keep all our library-related routes in a "catalog" module, and, if we add routes for handling user accounts or other functions, we can keep them grouped separately.</p>
 
-<div class="note">
+<div class="notecard note">
 <p><strong>Note:</strong> We discussed Express application routes briefly in our <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction#creating_route_handlers">Express Introduction &gt; Creating route handlers</a>. Other than providing better support for modularization (as discussed in the first subsection below), using <em>Router</em> is very similar to defining routes directly on the <em>Express application object</em>.</p>
 </div>
 
@@ -87,8 +87,8 @@ module.exports = router;
 
 </pre>
 
-<div class="note">
-<p><strong>Note:</strong> Above we are defining our route handler callbacks directly in the router functions. In the LocalLibrary we'll define these callbacks in a separate controller module.</p>
+<div class="notecard note">
+  <p><strong>Note:</strong> Above we are defining our route handler callbacks directly in the router functions. In the LocalLibrary we'll define these callbacks in a separate controller module.</p>
 </div>
 
 <p>To use the router module in our main app file we first <code>require()</code> the route module (<strong>wiki.js</strong>). We then call <code>use()</code> on the <em>Express</em> application to add the Router to the middleware handling path, specifying a URL path of 'wiki'.</p>
@@ -110,7 +110,7 @@ app.use('/wiki', wiki);</pre>
 
 <p>The callback takes three arguments (usually named as shown: <code>req</code>, <code>res</code>, <code>next</code>), that will contain the HTTP Request object, HTTP response, and the <em>next</em> function in the middleware chain.</p>
 
-<div class="note">
+<div class="notecard note">
 <p><strong>Note:</strong> Router functions are <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction#using_middleware">Express middleware</a>, which means that they must either complete (respond to) the request or call the <code>next</code> function in the chain. In the case above we complete the request using <code>send()</code>, so the <code>next</code> argument is not used (and we choose not to specify it).</p>
 
 <p>The  router function above takes a single callback, but you can specify as many callback arguments as you want, or an array of callback functions. Each function is part of the middleware chain, and will be called in the order it is added to the chain (unless a preceding function completes the request).</p>
@@ -149,7 +149,7 @@ app.use('/wiki', wiki);</pre>
   ...
 })</pre>
 
-<div class="note">
+<div class="notecard note">
 <p><strong>Note:</strong> Most of our routes for the LocalLibrary will use strings and not regular expressions. We'll also use route parameters as discussed in the next section.</p>
 </div>
 
@@ -168,7 +168,7 @@ app.use('/wiki', wiki);</pre>
 
 <p>The names of route parameters must be made up of “word characters” (A-Z, a-z, 0-9, and _).</p>
 
-<div class="note">
+<div class="notecard note">
 <p><strong>Note:</strong> The URL <em>/book/create</em> will be matched by a route like <code>/book/:bookId</code> (which will extract a "bookId" value of '<code>create</code>'). The first route that matches an incoming URL will be used, so if you want to process <code>/book/create</code> URLs separately, their route handler must be defined before your <code>/book/:bookId</code> route.</p>
 </div>
 
@@ -191,8 +191,8 @@ app.use('/wiki', wiki);</pre>
 
 <p>By contrast the other URLs are used to act on a specific document/model instance—these encode the identity of the item in the URL (shown as <code><em>&lt;id&gt;</em></code> above). We'll use path parameters to extract the encoded information and pass it to the route handler (and in a later article we'll use this to dynamically determine what information to get from the database). By encoding the information in our URL we only need one route for every resource of a particular type (e.g. one route to handle the display of every single book item).</p>
 
-<div class="note">
-<p><strong>Note</strong>: Express allows you to construct your URLs any way you like — you can encode information in the body of the URL as shown above or use URL <code>GET</code> parameters (e.g. <code>/book/?id=6</code>). Whichever approach you use, the URLs should be kept clean, logical and readable (<a href="https://www.w3.org/Provider/Style/URI">check out the W3C advice here</a>).</p>
+<div class="notecard note">
+<p><strong>Note:</strong> Express allows you to construct your URLs any way you like — you can encode information in the body of the URL as shown above or use URL <code>GET</code> parameters (e.g. <code>/book/?id=6</code>). Whichever approach you use, the URLs should be kept clean, logical and readable (<a href="https://www.w3.org/Provider/Style/URI">check out the W3C advice here</a>).</p>
 </div>
 
 <p>Next we create our route handler callback functions and route code for all the above URLs.</p>
@@ -203,12 +203,12 @@ app.use('/wiki', wiki);</pre>
 
 <p>Start by creating a folder for our controllers in the project root (<strong>/controllers</strong>) and then create separate controller files/modules for handling each of the models:</p>
 
-<pre>/express-locallibrary-tutorial  //the project root
-  <strong>/controllers</strong>
-    <strong>authorController.js</strong>
-    <strong>bookController.js</strong>
-    <strong>bookinstanceController.js</strong>
-    <strong>genreController.js</strong></pre>
+<pre class="brush: plain">/express-locallibrary-tutorial  //the project root
+  /controllers
+    authorController.js
+    bookController.js
+    bookinstanceController.js
+    genreController.js</pre>
 
 <h3 id="Author_controller">Author controller</h3>
 
@@ -357,13 +357,14 @@ exports.genre_update_post = function(req, res) {
 
 <h4 id="Book_controller">Book controller</h4>
 
-<p>Open the <strong>/controllers/bookController.js</strong> file and copy in the following code. This follows the same pattern as the other controller modules, but additionally has an <code>index()</code> function for displaying the site welcome page:</p>
+<p>Open the <strong>/controllers/bookController.js</strong> file and copy in the following code.
+This follows the same pattern as the other controller modules, but additionally has an <code>index()</code> function for displaying the site welcome page:</p>
 
 <pre class="brush: js">var Book = require('../models/book');
 
-<strong>exports.index = function(req, res) {
+exports.index = function(req, res) {
     res.send('NOT IMPLEMENTED: Site Home Page');
-};</strong>
+};
 
 // Display list of all books.
 exports.book_list = function(req, res) {
@@ -410,19 +411,20 @@ exports.book_update_post = function(req, res) {
 
 <p>Next we create <em>routes</em> for all the URLs <a href="#local_libary_routes">needed by the LocalLibrary website</a>, which will call the controller functions we defined in the previous section.</p>
 
-<p>The skeleton already has a <strong>./routes</strong> folder containing routes for the <em>index</em> and <em>users</em>. Create another route file — <strong>catalog.js</strong> — inside this folder, as shown.</p>
+<p>The skeleton already has a <strong>./routes</strong> folder containing routes for the <em>index</em> and <em>users</em>.
+Create another route file — <strong>catalog.js</strong> — inside this folder, as shown.</p>
 
-<pre>/express-locallibrary-tutorial //the project root
+<pre class="brush: plain">/express-locallibrary-tutorial //the project root
   /routes
     index.js
     users.js
-    <strong>catalog.js</strong></pre>
+    catalog.js</pre>
 
 <p>Open <strong>/routes/catalog.js</strong> and copy in the code below:</p>
 
-<pre class="brush: js"><strong>var express = require('express');
+<pre class="brush: js">var express = require('express');
 var router = express.Router();
-</strong>
+
 // Require controller modules.
 var book_controller = require('../controllers/bookController');
 var author_controller = require('../controllers/authorController');
@@ -536,7 +538,7 @@ router.get('/bookinstance/:id', book_instance_controller.bookinstance_detail);
 // GET request for list of all BookInstance.
 router.get('/bookinstances', book_instance_controller.bookinstance_list);
 
-<strong>module.exports = router;</strong>
+module.exports = router;
 </pre>
 
 <p>The module requires Express and then uses it to create a <code>Router</code> object. The routes are all set up on the router, which is then exported.</p>
@@ -556,7 +558,7 @@ router.get('/', function(req, res) {
   res.redirect('/catalog');
 });</pre>
 
-<div class="note">
+<div class="notecard note">
 <p><strong>Note:</strong> This is our first use of the <a href="https://expressjs.com/en/4x/api.html#res.redirect">redirect()</a> response method. This redirects to the specified page, by default sending HTTP status code "302 Found". You can change the status code returned if needed, and supply either absolute or relative paths.</p>
 </div>
 
@@ -576,7 +578,7 @@ var usersRouter = require('./routes/users');
 app.use('/users', usersRouter);
 <strong>app.use('/catalog', catalogRouter);  // Add catalog routes to middleware chain.</strong></pre>
 
-<div class="note">
+<div class="notecard note">
 <p><strong>Note:</strong> We have added our catalog module at a path <code>'/catalog'</code>. This is prepended to all of the paths defined in the catalog module. So for example, to access a list of books, the URL will be: <code>/catalog/books/</code>.</p>
 </div>
 

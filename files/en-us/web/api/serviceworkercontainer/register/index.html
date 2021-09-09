@@ -14,10 +14,9 @@ browser-compat: api.ServiceWorkerContainer.register
 ---
 <div>{{APIRef("Service Workers API")}}</div>
 
-<p><span class="seoSummary">The <strong><code>register()</code></strong> method of the
+<p>The <strong><code>register()</code></strong> method of the
     {{domxref("ServiceWorkerContainer")}} interface creates or updates a
-    {{domxref("ServiceWorkerRegistration")}} for the given <code>scriptURL</code>.</span>
-</p>
+    {{domxref("ServiceWorkerRegistration")}} for the given <code>scriptURL</code>.</p>
 
 <p>If successful, a service worker registration ties the provided script URL to a
   <em>scope</em>, which is subsequently used for navigation matching. You can call this
@@ -51,6 +50,24 @@ browser-compat: api.ServiceWorkerContainer.register
         registration is set to the directory where the service worker script is located.
         See the <a href="#examples">Examples</a> section for more information on how it
         works.</li>
+      <li><code>type</code>: A {{domxref("DOMString")}}
+        specifying the type of worker to create. Valid values are:
+        <ul>
+          <li><code>'classic'</code>: The loaded service worker is in a standard script. This is the default.</li>
+          <li><code>module</code>: The loaded service worker is in an
+          <a href="/en-US/docs/Web/JavaScript/Guide/Modules">ES module</a>
+          and the import statement is available on
+            worker contexts.
+          </li>
+        </ul>
+      </li>
+      <li><code>updateViaCache</code>: A string indicating how much of a service worker's resources will be updated when a call is made to {{domxref('ServiceWorkerRegistration.updateViaCache')}}. Valid values are:
+      <ul>
+        <li><code>'all'</code>: The service worker script and all of its imports will be updated.</li>
+        <li><code>'imports'</code>: Only imports referenced by the service worker script will be updated. This is the default.</li>
+        <li><code>'none'</code>: Neither the service worker, nor its imports will be updated.</li>
+      </ul>
+      </li>
     </ul>
   </dd>
 </dl>
@@ -123,8 +140,7 @@ browser-compat: api.ServiceWorkerContainer.register
 }</pre>
 
 <p>However, Servers can remove this restriction by setting a <a
-    href="https://w3c.github.io/ServiceWorker/#service-worker-allowed"
-    id="ref-for-service-worker-allowed">Service-Worker-Allowed</a> header on the service
+    href="https://w3c.github.io/ServiceWorker/#service-worker-allowed">Service-Worker-Allowed</a> header on the service
   worker script, and then you can specify a max scope for that service worker above the
   service worker's location.</p>
 

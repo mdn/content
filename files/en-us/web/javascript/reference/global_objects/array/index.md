@@ -303,7 +303,7 @@ The properties and elements returned from this match are as follows:
 - {{jsxref("Array.prototype.copyWithin()")}}
   - : Copies a sequence of array elements within the array.
 - {{jsxref("Array.prototype.entries()")}}
-  - : Returns a new `Array Iterator` object that contains the key/value pairs for each index in the array.
+  - : Returns a new _array iterator_ object that contains the key/value pairs for each index in the array.
 - {{jsxref("Array.prototype.every()")}}
   - : Returns `true` if every element in this array satisfies the testing function.
 - {{jsxref("Array.prototype.fill()")}}
@@ -314,6 +314,10 @@ The properties and elements returned from this match are as follows:
   - : Returns the found `element` in the array, if some element in the array satisfies the testing function, or `undefined` if not found.
 - {{jsxref("Array.prototype.findIndex()")}}
   - : Returns the found index in the array, if an element in the array satisfies the testing function, or `-1` if not found.
+- {{jsxref("Array.prototype.flat()")}}
+  - : Returns a new array with all sub-array elements concatenated into it recursively up to the specified depth. 
+- {{jsxref("Array.prototype.flatMap()")}}
+  - : Returns a new array formed by applying a given callback function to each element of the array, and then flattening the result by one level.
 - {{jsxref("Array.prototype.forEach()")}}
   - : Calls a function for each element in the array.
 - {{jsxref("Array.prototype.includes()")}}
@@ -323,7 +327,7 @@ The properties and elements returned from this match are as follows:
 - {{jsxref("Array.prototype.join()")}}
   - : Joins all elements of an array into a string.
 - {{jsxref("Array.prototype.keys()")}}
-  - : Returns a new `Array Iterator` that contains the keys for each index in the array.
+  - : Returns a new _array iterator_ that contains the keys for each index in the array.
 - {{jsxref("Array.prototype.lastIndexOf()")}}
   - : Returns the last (greatest) index of an element within the array equal to an element, or `-1` if none is found.
 - {{jsxref("Array.prototype.map()")}}
@@ -335,7 +339,7 @@ The properties and elements returned from this match are as follows:
 - {{jsxref("Array.prototype.reduce()")}}
   - : Apply a function against an accumulator and each value of the array (from left-to-right) as to reduce it to a single value.
 - {{jsxref("Array.prototype.reduceRight()")}}
-  - : Apply a function against an accumulator> and each value of the array (from right-to-left) as to reduce it to a single value.
+  - : Apply a function against an accumulator and each value of the array (from right-to-left) as to reduce it to a single value.
 - {{jsxref("Array.prototype.reverse()")}}
   - : Reverses the order of the elements of an array _in place_. (First becomes the last, last becomes first.)
 - {{jsxref("Array.prototype.shift()")}}
@@ -355,9 +359,9 @@ The properties and elements returned from this match are as follows:
 - {{jsxref("Array.prototype.unshift()")}}
   - : Adds one or more elements to the front of an array, and returns the new `length` of the array.
 - {{jsxref("Array.prototype.values()")}}
-  - : Returns a new `Array Iterator` object that contains the values for each index in the array.
+  - : Returns a new _array iterator_ object that contains the values for each index in the array.
 - {{jsxref("Array.prototype.@@iterator()", "Array.prototype[@@iterator]()")}}
-  - : Returns a new `Array Iterator` object that contains the values for each index in the array.
+  - : Returns a new _array iterator_ object that contains the values for each index in the array.
 
 ## Examples
 

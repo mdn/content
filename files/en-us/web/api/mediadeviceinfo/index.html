@@ -17,7 +17,9 @@ browser-compat: api.MediaDeviceInfo
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">The <strong><code>MediaDeviceInfo</code></strong> interface contains information that describes a single media input or output device.</span> The list of devices obtained by calling {{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}} is an array of <code>MediaDeviceInfo</code> objects, one per media device.</p>
+<p>The <strong><code>MediaDeviceInfo</code></strong> interface contains information that describes a single media input or output device.</p>
+
+<p>The list of devices obtained by calling {{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}} is an array of <code>MediaDeviceInfo</code> objects, one per media device.</p>
 
 <h2 id="Properties">Properties</h2>
 
@@ -33,7 +35,7 @@ browser-compat: api.MediaDeviceInfo
 </dl>
 
 <div class="note">
-<p>For security reasons, the <code>label</code> field is always blank unless an active media stream exists <em>or</em> the user has granted persistent permission for media device access. The set of device labels could otherwise be used as part of a fingerprinting mechanism to identify a user.</p>
+<p><strong>Note:</strong> For security reasons, the <code>label</code> field is always blank unless an active media stream exists <em>or</em> the user has granted persistent permission for media device access. The set of device labels could otherwise be used as part of a fingerprinting mechanism to identify a user.</p>
 </div>
 
 <h2 id="Methods">Methods</h2>

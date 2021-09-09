@@ -21,7 +21,7 @@ tags:
 
 <p class="summary">In any programming language, the code needs to make decisions and carry out actions accordingly depending on different inputs. For example, in a game, if the player's number of lives is 0, then it's game over. In a weather app, if it is being looked at in the morning, show a sunrise graphic; show stars and a moon if it is nighttime. In this article, we'll explore how so-called conditional statements work in JavaScript.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -40,7 +40,7 @@ tags:
 
 <p>Conditional statements allow us to represent such decision making in JavaScript, from the choice that must be made (for example, "one cookie or two"), to the resulting outcome of those choices (perhaps the outcome of "ate one cookie" might be "still felt hungry", and the outcome of "ate two cookies" might be "felt full, but mom scolded me for eating all the cookies".)</p>
 
-<p><img alt="" src="cookie-choice-small.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="cookie-choice-small.png"></p>
 
 <h2 id="if...else_statements">if...else statements</h2>
 
@@ -257,7 +257,7 @@ if (shoppingDone) { // don't need to explicitly specify '=== true'
 
 <p>In this case the condition inside <code>if(...)</code>  will always evaluate to true since 7 (or any other non-zero value) always evaluates to <code>true</code>. This condition is actually saying "if x equals 5, or 7 is true — which it always is". This is logically not what we want! To make this work you've got to specify a complete test either side of each OR operator:</p>
 
-<pre class="brush: js">if (x === 5 || x === 7 || x === 10 ||x === 20) {
+<pre class="brush: js">if (x === 5 || x === 7 || x === 10 || x === 20) {
   // run my code
 }</pre>
 

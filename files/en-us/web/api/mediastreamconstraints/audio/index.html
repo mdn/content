@@ -39,8 +39,8 @@ browser-compat: api.MediaStreamConstraints.audio
 </p>
 
 <dl>
-  <dt>{{jsxref("Boolean")}}</dt>
-  <dd>If a Boolean value is specified, it indicates whether or not an audio track should
+  <dt>A boolean value</dt>
+  <dd>If specified, it indicates whether or not an audio track should
     be included in the returned stream; if it's <code>true</code>, an audio track is
     included; if no audio source is available or if permission is not given to use the
     audio source, the call to <code>getUserMedia()</code> will fail. If
@@ -64,19 +64,14 @@ browser-compat: api.MediaStreamConstraints.audio
   <code>audio</code> property. This tells <code>getUserMedia()</code> that we require an
   audio track, but we don't care about any specifics beyond that.</p>
 
-<div class="hidden">
-  <h4 id="HTML_content">HTML content</h4>
-
-  <pre class="brush: html">&lt;p&gt;Click the start button below to begin the demonstration.&lt;/p&gt;
+<pre class="brush: html hidden">&lt;p&gt;Click the start button below to begin the demonstration.&lt;/p&gt;
 &lt;div id="startButton" class="button"&gt;
-  Start
+  Start
 &lt;/div&gt;
 &lt;audio id="audio" autoplay controls&gt;&lt;/audio&gt;&lt;br&gt;
 &lt;div id="log"&gt;&lt;/div&gt;</pre>
 
-  <h4 id="CSS_content">CSS content</h4>
-
-  <pre class="brush: css">body {
+<pre class="brush: css hidden">body {
   font: 14px "Open Sans", "Arial", sans-serif;
 }
 
@@ -98,16 +93,13 @@ audio {
   background-color: darkgreen;
 }</pre>
 
-  <h4 id="JavaScript_content">JavaScript content</h4>
-
-  <pre class="brush: js">let audioElement = document.getElementById("audio");
+<pre class="brush: js hidden">let audioElement = document.getElementById("audio");
 let logElement = document.getElementById("log");
 
 function log(msg) {
  logElement.innerHTML += msg + "&lt;br&gt;";
 }
 </pre>
-</div>
 
 <pre class="brush: js">document.getElementById("startButton").addEventListener("click", function() {
   navigator.mediaDevices.getUserMedia({
@@ -130,19 +122,14 @@ function log(msg) {
 <p>Now let's look at a similar example that uses a set of constraints based on the
   {{domxref("MediaTrackConstraints")}} dictionary:</p>
 
-<div class="hidden">
-  <h4 id="HTML_content_2">HTML content</h4>
-
-  <pre class="brush: html">&lt;p&gt;Click the start button below to begin the demonstration.&lt;/p&gt;
+<pre class="brush: html hidden">&lt;p&gt;Click the start button below to begin the demonstration.&lt;/p&gt;
 &lt;div id="startButton" class="button"&gt;
-  Start
+  Start
 &lt;/div&gt;
 &lt;audio id="audio" autoplay controls&gt;&lt;/audio&gt;&lt;br&gt;
 &lt;div id="log"&gt;&lt;/div&gt;</pre>
 
-  <h4 id="CSS_content_2">CSS content</h4>
-
-  <pre class="brush: css">body {
+<pre class="brush: css hidden">body {
   font: 14px "Open Sans", "Arial", sans-serif;
 }
 
@@ -164,23 +151,20 @@ audio {
   background-color: darkgreen;
 }</pre>
 
-  <h4 id="JavaScript_content_2">JavaScript content</h4>
-
-  <pre class="brush: js">let audioElement = document.getElementById("audio");
+<pre class="brush: js hidden">let audioElement = document.getElementById("audio");
 let logElement = document.getElementById("log");
 
 function log(msg) {
  logElement.innerHTML += msg + "&lt;br&gt;";
 }
 </pre>
-</div>
 
 <pre class="brush: js">document.getElementById("startButton").addEventListener("click", function() {
   navigator.mediaDevices.getUserMedia({
     audio: {
       sampleSize: 8,
-      echoCancellation: true
-    }
+      echoCancellation: true
+    }
   }).then(stream =&gt; audioElement.srcObject = stream)
     .catch(err =&gt; log(err.name + ": " + err.message));
 }, false);</pre>

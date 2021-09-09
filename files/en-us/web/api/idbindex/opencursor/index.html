@@ -17,7 +17,7 @@ browser-compat: api.IDBIndex.openCursor
 <div>
   <p>The <strong><code>openCursor()</code></strong> method of the {{domxref("IDBIndex")}}
     interface returns an {{domxref("IDBRequest")}} object, and, in a separate thread,
-    creates a <a href="/en-US/docs/Web/API/IndexedDB_API#gloss_cursor">cursor</a> over the specified key
+    creates a <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#cursor">cursor</a> over the specified key
     range.</p>
 </div>
 
@@ -74,9 +74,7 @@ var <em>request</em> = <em>myIndex</em>.openCursor(range, direction);</pre>
     </tr>
     <tr>
       <td><code>DataError</code></td>
-      <td>
-        <p>The key or key range provided contains an invalid key.</p>
-      </td>
+      <td>The key or key range provided contains an invalid key.</td>
     </tr>
     <tr>
       <td><code>InvalidStateError</code></td>

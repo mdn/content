@@ -18,10 +18,12 @@ browser-compat: api.MediaSource.isTypeSupported
 ---
 <div>{{APIRef("Media Source Extensions")}}</div>
 
-<p><span class="seoSummary">The
+<p>The
     <code><strong>MediaSource.isTypeSupported()</strong></code> static method returns a
-    {{jsxref("Boolean")}} value which is <code>true</code> if the given MIME type is
-    <em>likely</em> to be supported by the current {{Glossary("user agent")}}.</span> That
+    boolean value which is <code>true</code> if the given MIME type is
+    <em>likely</em> to be supported by the current {{Glossary("user agent")}}.</p>
+
+<p>That
   is, if it can successfully create {{domxref("SourceBuffer")}} objects for that MIME
   type. If the returned value is <code>false</code>, then the user agent is certain that
   it <em>cannot</em> access media of the specified format.</p>
@@ -42,7 +44,7 @@ browser-compat: api.MediaSource.isTypeSupported
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{jsxref("Boolean")}} which is <code>true</code> if the browser feels that it can
+<p>A boolean value which is <code>true</code> if the browser feels that it can
   <em>probably</em> play media of the specified type. This is <em>not</em> a guarantee,
   however, and your code must be prepared for the possibility that the media will not play
   correctly if at all. A value of <code>false</code> is a guarantee that media of the
@@ -62,7 +64,7 @@ browser-compat: api.MediaSource.isTypeSupported
     the source</a> for further investigation.)</p>
 
 <pre
-  class="brush: js  language-js">var assetURL = 'frag_bunny.mp4';
+  class="brush: js ">var assetURL = 'frag_bunny.mp4';
 // Need to be specific for Blink regarding codecs
 // ./mp4info frag_bunny.mp4 | grep Codec
 var mimeCodec = 'video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;';

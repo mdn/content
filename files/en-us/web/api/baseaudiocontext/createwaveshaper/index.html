@@ -19,6 +19,12 @@ browser-compat: api.BaseAudioContext.createWaveShaper
     distortion. It is used to apply distortion effects to your audio.</p>
 </div>
 
+<div class="notecard note">
+  <p><strong>Note:</strong> The {{domxref("WaveShaperNode.WaveShaperNode", "WaveShaperNode()")}}
+    constructor is the recommended way to create a {{domxref("WaveShaperNode")}}; see
+    <a href="/en-US/docs/Web/API/AudioNode#creating_an_audionode">Creating an AudioNode</a>.</p>
+</div>
+
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: js">baseAudioCtx.createWaveShaper();</pre>
@@ -37,7 +43,7 @@ browser-compat: api.BaseAudioContext.createWaveShaper
     app.js</a> for relevant code).</p>
 
 <div class="note">
-  <p><strong>Note</strong>: Sigmoid functions are commonly used for distortion curves
+  <p><strong>Note:</strong> Sigmoid functions are commonly used for distortion curves
     because of their natural properties. Their S-shape, for instance, helps create a
     smoother sounding result. We found the below distortion curve code on <a
       href="http://stackoverflow.com/questions/22312841/waveshaper-node-in-webaudio-how-to-emulate-distortion">Stack

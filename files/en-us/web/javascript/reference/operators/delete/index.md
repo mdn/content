@@ -145,7 +145,7 @@ In strict mode, this would have raised an exception.
 
 When in strict mode, if `delete` is used on a direct reference to a
 variable, a function argument or a function name, it will throw a
-{{jsxref("SyntaxError")}}**.** Therefore, to avoid syntax errors in
+{{jsxref("SyntaxError")}}. Therefore, to avoid syntax errors in
 strict mode, you must use the `delete` operator in the form of
 `delete object.property` or `delete object['property']`.
 

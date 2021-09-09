@@ -11,7 +11,7 @@ browser-compat: api.AnalyserNode.getByteFrequencyData
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
-<p>The <strong><code>getByteFrequencyData()</code></strong> method of the {{ domxref("AnalyserNode") }} interface copies the current frequency data into a {{domxref("Uint8Array")}} (unsigned byte array) passed into it.</p>
+<p>The <strong><code>getByteFrequencyData()</code></strong> method of the {{ domxref("AnalyserNode") }} interface copies the current frequency data into a {{jsxref("Uint8Array")}} (unsigned byte array) passed into it.</p>
 
 <p>The frequency data is composed of integers on a scale from 0 to 255.</p>
 
@@ -32,7 +32,7 @@ void <em>analyser</em>.getByteFrequencyData(dataArray); // fill the Uint8Array w
 
 <dl>
  <dt><code>array</code></dt>
- <dd>The {{domxref("Uint8Array")}} that the frequency domain data will be copied to. For any sample which is silent, the value is <code>-<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity">Infinity</a></code>.<br>
+ <dd>The {{jsxref("Uint8Array")}} that the frequency domain data will be copied to. For any sample which is silent, the value is <code>-<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity">Infinity</a></code>.<br>
  If the array has fewer elements than the {{domxref("AnalyserNode.frequencyBinCount")}}, excess elements are dropped. If it has more elements than needed, excess elements are ignored.</dd>
 </dl>
 
@@ -84,7 +84,7 @@ draw();</pre>
 
 <dl>
  <dt>array</dt>
- <dd>The {{domxref("Uint8Array")}} that the frequency domain data will be copied to.</dd>
+ <dd>The {{jsxref("Uint8Array")}} that the frequency domain data will be copied to.</dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>

@@ -14,14 +14,16 @@ browser-compat: api.EventSource
 ---
 <div>{{APIRef("Server Sent Events")}}</div>
 
-<p><span class="seoSummary">The <strong><code>EventSource</code></strong> interface is web content's interface to <a href="/en-US/docs/Web/API/Server-sent_events">server-sent events</a>. An <code>EventSource</code> instance opens a persistent connection to an <a href="/en-US/docs/Web/HTTP">HTTP</a> server, which sends <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">events</a> in <code>text/event-stream</code> format.</span> The connection remains open until closed by calling {{domxref("EventSource.close()")}}.</p>
+<p>The <strong><code>EventSource</code></strong> interface is web content's interface to <a href="/en-US/docs/Web/API/Server-sent_events">server-sent events</a>.</p>
+
+<p>An <code>EventSource</code> instance opens a persistent connection to an <a href="/en-US/docs/Web/HTTP">HTTP</a> server, which sends <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">events</a> in <code>text/event-stream</code> format. The connection remains open until closed by calling {{domxref("EventSource.close()")}}.</p>
 
 <p>Once the connection is opened, incoming messages from the server are delivered to your code in the form of events. If there is an event field in the incoming message, the triggered event is the same as the event field value. If no event field is present, then a generic {{event("message")}} event is fired.</p>
 
 <p>Unlike <a href="/en-US/docs/Web/API/WebSockets_API">WebSockets</a>, server-sent events are unidirectional; that is, data messages are delivered in one direction, from the server to the client (such as a user's web browser). That makes them an excellent choice when there's no need to send data from the client to the server in message form. For example, <code>EventSource</code> is a useful approach for handling things like social media status updates, news feeds, or delivering data into a <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage">client-side storage</a> mechanism like <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a> or <a href="/en-US/docs/Web/API/Web_Storage_API">web storage</a>.</p>
 
 <div class="notecard warning">
-<p>When <strong>not used over HTTP/2</strong>, SSE suffers from a limitation to the maximum number of open connections, which can be specially painful when opening various tabs as the limit is <em>per browser</em> and set to a very low number (6). The issue has been marked as "Won't fix" in <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=275955" rel="noreferrer">Chrome</a> and <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=906896" rel="noreferrer">Firefox</a>. This limit is per browser + domain, so that means that you can open 6 SSE connections across all of the tabs to <code>www.example1.com</code> and another 6 SSE connections to <code>www.example2.com.</code> (from <a href="https://stackoverflow.com/a/5326159/1905229">Stackoverflow</a>). When using HTTP/2, the maximum number of simultaneous <em>HTTP streams</em> is negotiated between the server and the client (defaults to 100).</p>
+<p><strong>Warning:</strong> When <strong>not used over HTTP/2</strong>, SSE suffers from a limitation to the maximum number of open connections, which can be specially painful when opening various tabs as the limit is <em>per browser</em> and set to a very low number (6). The issue has been marked as "Won't fix" in <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=275955" rel="noreferrer">Chrome</a> and <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=906896" rel="noreferrer">Firefox</a>. This limit is per browser + domain, so that means that you can open 6 SSE connections across all of the tabs to <code>www.example1.com</code> and another 6 SSE connections to <code>www.example2.com.</code> (from <a href="https://stackoverflow.com/a/5326159/1905229">Stackoverflow</a>). When using HTTP/2, the maximum number of simultaneous <em>HTTP streams</em> is negotiated between the server and the client (defaults to 100).</p>
 </div>
 
 <h2 id="Constructor">Constructor</h2>
@@ -41,7 +43,7 @@ browser-compat: api.EventSource
  <dt>{{domxref("EventSource.url")}} {{readonlyinline}}</dt>
  <dd>A {{domxref("DOMString")}} representing the URL of the source.</dd>
  <dt>{{domxref("EventSource.withCredentials")}} {{readonlyinline}}</dt>
- <dd>A {{domxref("Boolean")}} indicating whether the <code>EventSource</code> object was instantiated with cross-origin (<a href="/en-US/docs/Web/HTTP/CORS">CORS</a>) credentials set (<code>true</code>), or not (<code>false</code>, the default).</dd>
+ <dd>A boolean value indicating whether the <code>EventSource</code> object was instantiated with cross-origin (<a href="/en-US/docs/Web/HTTP/CORS">CORS</a>) credentials set (<code>true</code>), or not (<code>false</code>, the default).</dd>
 </dl>
 
 <h3 id="Event_handlers">Event handlers</h3>
@@ -94,7 +96,7 @@ evtSource.onmessage = function(e) {
 <p>Each received event causes our <code>EventSource</code> object's <code>onmessage</code> event handler to be run. It, in turn, creates a new {{HTMLElement("li")}} element and writes the message's data into it, then appends the new element to the list element already in the document.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can find a full example on GitHub — see <a href="https://github.com/mdn/dom-examples/tree/master/server-sent-events">Simple SSE demo using PHP.</a></p>
+<p><strong>Note:</strong> You can find a full example on GitHub — see <a href="https://github.com/mdn/dom-examples/tree/master/server-sent-events">Simple SSE demo using PHP.</a></p>
 </div>
 
 <p>To listen to named events, you'll require a listener for each type of event sent.</p>

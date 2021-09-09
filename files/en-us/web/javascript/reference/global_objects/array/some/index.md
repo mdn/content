@@ -40,7 +40,7 @@ some(function callbackFn(element, index, array) { ... }, thisArg)
 
 ### Parameters
 
-- `callback`
+- `callbackFn`
 
   - : A function to test for each element, taking three arguments:
 
@@ -83,12 +83,12 @@ determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/
 `some()` does not mutate the array on which it is called.
 
 The range of elements processed by `some()` is set before the first
-invocation of `callbackFn`. Elements appended to the array after the
-call to `some()` begins will not be visited by
-`callbackFn`. If an existing, unvisited element of the array is
+invocation of `callbackFn`. Elements which are assigned to indexes already visited, or to indexes outside the range, will not be visited by `callbackFn`. If an existing, unvisited element of the array is
 changed by `callbackFn`, its value passed to the visiting
 `callbackFn` will be the value at the time that `some()`
 visits that element's index. Elements that are deleted are not visited.
+
+**Warning:** Concurrent modification of the kind described in the previous paragraph frequently leads to hard-to-understand code and is generally to be avoided (except in special cases).
 
 > **Note:** Calling this method on an empty array returns
 > `false` for any condition!

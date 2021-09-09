@@ -79,7 +79,7 @@ tags:
 
 <ul>
  <li>UI-parts related items in the <code>windowFeatures</code> parameter of {{domxref("window.open()")}} can no longer control the visibility of each UI part separately, but become a condition for whether to open a popup or not ({{bug(1507375)}}).</li>
- <li>Attempts to navigate to an unknown protocol using methods such as <code><a href="/en-US/docs/Web/API/Location/href">location.href</a></code> or <code><a href="/en-US/docs/Web/HTML/Element/meta">&lt;meta http-equiv="refresh"&gt;</a></code> are now blocked (see {{bug(1528305)}}; also see <a href="https://www.fxsitecompat.dev/en-CA/docs/2020/navigation-to-unknown-protocol-will-be-blocked/">Navigation to unknown protocol will be blocked</a> for more information).</li>
+ <li>Attempts to navigate to an unknown protocol using methods such as <code><a href="/en-US/docs/Web/API/Location/href">location.href</a></code> or <code><a href="/en-US/docs/Web/HTML/Element/meta">&lt;meta http-equiv="refresh"&gt;</a></code> are now blocked (see {{bug(1528305)}}.</li>
  <li>The {{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}} constructor now accepts a {{domxref("Document")}} object as its <code>root</code>, as well as an {{domxref("Element")}} object ({{bug(1623623)}}). This lets you explicitly use a window's entire content area as the intersection bounds.</li>
  <li>The <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> now supports the <code>audioworklet</code> {{domxref("Request.destination", "destination")}} for requests. This causes received data to be dispatched to an {{domxref("AudioWorklet")}} ({{bug(1402784)}}).</li>
 </ul>
@@ -107,12 +107,6 @@ tags:
 <h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
 
 <p><em>No changes.</em></p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="https://www.fxsitecompat.com/en-CA/versions/76/">Site compatibility for Firefox 76</a></li>
-</ul>
 
 <h2 id="Older_versions">Older versions</h2>
 

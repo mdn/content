@@ -25,8 +25,8 @@ while (condition)
 
 - `condition`
   - : An expression evaluated before each pass through the loop. If this condition
-    evaluates to true, `statement` is executed. When condition
-    evaluates to false, execution continues with the statement after the
+    [evaluates to true](/en-US/docs/Glossary/Truthy), `statement` is executed. When condition
+    [evaluates to false](/en-US/docs/Glossary/Falsy), execution continues with the statement after the
     `while` loop.
 - `statement`
 

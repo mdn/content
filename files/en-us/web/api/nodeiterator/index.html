@@ -8,9 +8,9 @@ browser-compat: api.NodeIterator
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><span class="seoSummary">The <strong><code>NodeIterator</code></strong> interface
+<p>The <strong><code>NodeIterator</code></strong> interface
 		represents an iterator over the members of a list of the nodes in a subtree of the
-		DOM. The nodes will be returned in document order.</span></p>
+		DOM. The nodes will be returned in document order.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -127,7 +127,7 @@ browser-compat: api.NodeIterator
 	<dd>Returns a {{domxref("NodeFilter")}} used to select the relevant nodes.</dd>
 	<dt>{{domxref("NodeIterator.expandEntityReferences")}} {{readonlyInline}}
 		{{deprecated_inline}}</dt>
-	<dd>Is a {{domxref("Boolean")}} indicating if, when discarding an
+	<dd>Is a boolean value indicating if, when discarding an
 		{{domxref("EntityReference")}} its whole sub-tree must be discarded at the same
 		time.</dd>
 	<dt>{{domxref("NodeIterator.referenceNode")}} {{readonlyInline}}
@@ -135,7 +135,7 @@ browser-compat: api.NodeIterator
 	<dd>Returns the {{domxref("Node")}} to which the iterator is anchored.</dd>
 	<dt>{{domxref("NodeIterator.pointerBeforeReferenceNode")}} {{readonlyInline}} {{
 		experimental_inline() }}</dt>
-	<dd>Returns a {{domxref("Boolean")}} flag that indicates whether the
+	<dd>Returns a boolean flag that indicates whether the
 		{{domxref("NodeIterator")}} is anchored before, the flag being <code>true</code>,
 		or after, the flag being <code>false</code>, the anchor node.</dd>
 </dl>

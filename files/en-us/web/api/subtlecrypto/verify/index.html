@@ -17,7 +17,7 @@ browser-compat: api.SubtleCrypto.verify
 
 <p>It takes as its arguments a {{glossary("key")}} to verify the signature with, some
   algorithm-specific parameters, the signature, and the original signed data. It returns a
-  {{jsxref("Promise")}} which will be fulfilled with a {{jsxref("Boolean")}} value
+  {{jsxref("Promise")}} which will be fulfilled with a boolean value
   indicating whether the signature is valid.</p>
 
 <h2 id="Syntax">Syntax</h2>
@@ -60,7 +60,7 @@ browser-compat: api.SubtleCrypto.verify
 
 <ul>
   <li><code><em>result</em></code> is a {{jsxref("Promise")}} that fulfills with a
-    {{jsxref("Boolean")}}: <code>true</code> if the signature is valid, <code>false</code>
+    boolean value: <code>true</code> if the signature is valid, <code>false</code>
     otherwise.</li>
 </ul>
 
@@ -84,7 +84,7 @@ browser-compat: api.SubtleCrypto.verify
 <h2 id="Examples">Examples</h2>
 
 <div class="notecard note">
-  <p><strong>Note</strong>: You can <a
+  <p><strong>Note:</strong> You can <a
       href="https://mdn.github.io/dom-examples/web-crypto/sign-verify/index.html">try the
       working examples</a> out on GitHub.</p>
 </div>

@@ -8,10 +8,9 @@ tags:
   - TextDecoderStream
 browser-compat: api.TextDecoderStream.TextDecoderStream
 ---
-
 <p>{{APIRef("Encoding API")}}</p>
 
-<p class="summary">The <strong><code>TextDecoderStream()</code></strong> constructor creates a new {{domxref("TextDecoderStream")}} object which is used to convert a stream of text in a binary encoding into strings.</p>
+<p>The <strong><code>TextDecoderStream()</code></strong> constructor creates a new {{domxref("TextDecoderStream")}} object which is used to convert a stream of text in a binary encoding into strings.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -26,13 +25,13 @@ browser-compat: api.TextDecoderStream.TextDecoderStream
   <dd>A <code>TextDecoderOptions</code> dictionary with the property:
   <dl>
     <dt><code>fatal</code></dt>
-    <dd>A {{domxref("boolean")}} indicating the error mode. If true then a {{domxref("DOMException")}} will be thrown if the decoder encounters an error. Defaults to <code>false</code>.</dd>
+    <dd>A boolean value indicating the error mode. If true then a {{domxref("DOMException")}} will be thrown if the decoder encounters an error. Defaults to <code>false</code>.</dd>
   </dl>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
-<p>The following example demonstrates how to decode binary data retrieved from a {{jsxref("fetch")}} call. The data will be interpreted as UTF-8, as no <code>label</code> has been passed.</p>
+<p>The following example demonstrates how to decode binary data retrieved from a {{domxref("fetch()")}} call. The data will be interpreted as UTF-8, as no <code>label</code> has been passed.</p>
 
 <pre class="brush: js">const response = await fetch("https://example.com");
 const stream = response.body.pipeThrough(new TextDecoderStream());</pre>

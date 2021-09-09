@@ -3,29 +3,27 @@ title: FileSystemEntry.isFile
 slug: Web/API/FileSystemEntry/isFile
 tags:
 - API
-- File System API
 - File and Directory Entries API
 - FileSystemEntry
 - Files
-- Non-standard
 - Offline
 - Property
 - Reference
 - isFile
 browser-compat: api.FileSystemEntry.isFile
 ---
-<p>{{APIRef("File System API")}}{{SeeCompatTable}}</p>
+<p>{{APIRef("File and Directory Entries API")}}</p>
 
-<p><span class="seoSummary">The read-only <strong><code>isFile</code></strong> property of
+<p>The read-only <strong><code>isFile</code></strong> property of
     the {{domxref("FileSystemEntry")}} interface is <code>true</code> if the entry
     represents a file (meaning it's a {{domxref("FileSystemFileEntry")}}) and
-    <code>false</code> if it's not.</span></p>
+    <code>false</code> if it's not.</p>
 
 <p>You can also use {{domxref("FileSystemEntry.isDirectory", "isDirectory")}} to determine
   if the entry is a directory.</p>
 
 <div class="warning">
-  <p>You should not assume that any entry which isn't a file is a directory or vice-versa.
+  <p><strong>Warning:</strong> You should not assume that any entry which isn't a file is a directory or vice-versa.
     There are other types of file descriptors on many operating systems. Be sure to use
     both <code>isDirectory</code> and <code>isFile</code> as needed to ensure that the
     entry is something you know how to work with.</p>

@@ -96,14 +96,15 @@ it will be used as the `this` inside each invocation of the
 used.
 
 The range of elements processed by `findIndex()` is set before the first
-invocation of `callbackFn`. `callbackFn` will
+invocation of `callbackFn`. Elements which are assigned to indexes already visited, or to indexes 
+outside the range, will not be visited by `callbackFn`. `callbackFn` will
 not process the elements appended to the array after the call to
 `findIndex()` begins. If an existing, unvisited element of the array is
 changed by `callbackFn`, its value passed to the
 `callbackFn` will be the value at the time `findIndex()`
-visits the element's index.
+visits the element's index.Elements that are {{jsxref("Operators/delete", "deleted")}} are still visited.
 
-Elements that are {{jsxref("Operators/delete", "deleted")}} are still visited.
+**Warning:** Concurrent modification of the kind described in the previous paragraph frequently leads to hard-to-understand code and is generally to be avoided (except in special cases).
 
 ## Examples
 

@@ -34,9 +34,9 @@ browser-compat: api.MediaKeySession
 
 <dl>
  <dt>{{domxref("MediaKeySession.onkeystatuseschange")}}</dt>
- <dd>Sets the {{domxref('EventHandler')}} called when there has been a change in the keys in a session or their statuses.</dd>
+ <dd>Sets the event handler called when there has been a change in the keys in a session or their statuses.</dd>
  <dt>{{domxref("MediaKeySession.onmessage")}}</dt>
- <dd>Sets the {{domxref('EventHandler')}} called when the content decryption module has generated a message for the session.</dd>
+ <dd>Sets the event handler called when the content decryption module has generated a message for the session.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
@@ -44,7 +44,7 @@ browser-compat: api.MediaKeySession
 <dl>
  <dt>{{domxref("MediaKeySession.close()")}}</dt>
  <dd>
- <p class="p1">Returns a {{jsxref("Promise")}} after notifying the current media session is no longer needed and that the CDM should release any resources associated with this object and close it.</p>
+ <p>Returns a {{jsxref("Promise")}} after notifying the current media session is no longer needed and that the CDM should release any resources associated with this object and close it.</p>
  </dd>
  <dt>{{domxref("MediaKeySession.generateRequest()")}}</dt>
  <dd>Returns a {{jsxref("Promise")}} after generating a media request based on initialization data.</dd>

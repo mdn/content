@@ -35,7 +35,7 @@ Unlike many other global objects, `Math` is not a constructor. All properties an
 - {{jsxref("Math.LOG10E")}}
   - : Base-10 logarithm of `E`; approximately `0.434`.
 - {{jsxref("Math.PI")}}
-  - : Ratio of the a circle's circumference to its diameter; approximately `3.14159`.
+  - : Ratio of a circle's circumference to its diameter; approximately `3.14159`.
 - {{jsxref("Math.SQRT1_2")}}
   - : Square root of ½; approximately `0.707`.
 - {{jsxref("Math.SQRT2")}}

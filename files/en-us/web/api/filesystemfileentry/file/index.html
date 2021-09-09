@@ -4,19 +4,17 @@ slug: Web/API/FileSystemFileEntry/file
 tags:
 - API
 - File
-- File System API
 - File and Directory Entries API
 - FileSystemFileEntry
 - Files
 - Method
-- Non-standard
 - Reference
 browser-compat: api.FileSystemFileEntry.file
 ---
-<p>{{APIRef("File System API")}}{{SeeCompatTable}}</p>
+<p>{{APIRef("File and Directory Entries API")}}</p>
 
 <p>The {{domxref("FileSystemFileEntry")}} interface's method
-  <code><strong>file</strong></code><strong><code>()</code></strong> returns a
+  <strong><code>file()</code></strong> returns a
   {{domxref("File")}} object which can be used to read data from the file represented by
   the directory entry.</p>
 
@@ -35,13 +33,8 @@ browser-compat: api.FileSystemFileEntry.file
   <dt><code>errorCallback</code> {{optional_inline}}</dt>
   <dd>If provided, this must be a method which is called when an error occurs while trying
     to create the {{domxref("File")}}. This callback receives as input a
-    {{domxref("FileError")}} object describing the error.</dd>
+    {{domxref("DOMException")}} object describing the error.</dd>
 </dl>
-
-<div class="note">
-  <p>Editor's note: We need to find out what kinds of errors can occur and document them.
-  </p>
-</div>
 
 <h3 id="Return_value">Return value</h3>
 

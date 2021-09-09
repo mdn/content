@@ -30,7 +30,7 @@ browser-compat: api.CredentialsContainer.get
   {{domxref("PasswordCredential")}}.[[CollectFromCredentialStore]] is called.</p>
 
 <div class="note">
-  <p>This method is restricted to top-level contexts. Calls to it within an
+  <p><strong>Note:</strong> This method is restricted to top-level contexts. Calls to it within an
     <code>&lt;iframe&gt;</code> element will resolve without effect.</p>
 </div>
 
@@ -47,7 +47,7 @@ browser-compat: api.CredentialsContainer.get
     to have, and options for interacting with the user. It can contain the following
     properties:
     <ul>
-      <li><code>password</code>: a {{jsxref("Boolean")}} indicating that returned
+      <li><code>password</code>: a boolean value indicating that returned
         {{domxref("Credential")}} instances should include user (as opposed to federated)
         credentials.</li>
       <li><code>federated</code>: A {{domxref("FederatedCredentialRequestOptions")}}
@@ -67,7 +67,7 @@ browser-compat: api.CredentialsContainer.get
       <li><code>mediation</code>: A {{jsxref("String")}} indicating whether the user will
         be required to log on for every visit to the website. Valid values are
         <code>"silent"</code>, <code>"optional"</code>, or <code>"required"</code>.</li>
-      <li><code>unmediated</code>: {{deprecated_inline}} A {{jsxref("Boolean")}}
+      <li><code>unmediated</code>: {{deprecated_inline}} A boolean value
         indicating the returned {{domxref("Credential")}} instance should not require user
         mediation.</li>
       <li><code>signal</code>: An instance of {{domxref("AbortSignal")}} that can indicate

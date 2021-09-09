@@ -11,7 +11,9 @@ browser-compat: api.Notification
 ---
 <p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
 
-<p><span class="seoSummary">The <code>Notification</code> interface of the <a href="/en-US/docs/Web/API/Notifications_API">Notifications API</a> is used to configure and display desktop notifications to the user.</span> These notifications' appearance and specific functionality vary across platforms but generally they provide a way to asynchronously provide information to the user.</p>
+<p>The <code>Notification</code> interface of the <a href="/en-US/docs/Web/API/Notifications_API">Notifications API</a> is used to configure and display desktop notifications to the user.</p>
+
+<p>These notifications' appearance and specific functionality vary across platforms but generally they provide a way to asynchronously provide information to the user.</p>
 
 <h2 id="Constructor">Constructor</h2>
 
@@ -36,7 +38,7 @@ browser-compat: api.Notification
  </ul>
  </dd>
  <dt>{{domxref("Notification.maxActions")}} {{readonlyinline}}</dt>
- <dd></dd>
+ <dd>The maximum number of actions supported by the device and the User Agent.</dd>
 </dl>
 
 <h3 id="Instance_properties">Instance properties</h3>
@@ -65,7 +67,7 @@ browser-compat: api.Notification
  <dt>{{domxref("Notification.renotify")}} {{readonlyinline}}</dt>
  <dd>Specifies whether the user should be notified after a new notification replaces an old one.</dd>
  <dt>{{domxref("Notification.requireInteraction")}} {{readonlyinline}}</dt>
- <dd>A {{jsxref("Boolean")}} indicating that a notification should remain active until the user clicks or dismisses it, rather than closing automatically.</dd>
+ <dd>A boolean value indicating that a notification should remain active until the user clicks or dismisses it, rather than closing automatically.</dd>
  <dt>{{domxref("Notification.silent")}} {{readonlyinline}}</dt>
  <dd>Specifies whether the notification should be silent — i.e., no sounds or vibrations should be issued, regardless of the device settings.</dd>
  <dt>{{domxref("Notification.timestamp")}} {{readonlyinline}}</dt>
@@ -84,7 +86,7 @@ browser-compat: api.Notification
  <dt>{{domxref("Notification.onclose")}}</dt>
  <dd>A handler for the {{domxref("HTMLDialogElement/close_event", "close")}} event. It is triggered when the user closes the notification.</dd>
  <dt>{{domxref("Notification.onerror")}}</dt>
- <dd>A handler for the {{domxref("HTMLElement/error_event", "error")}} event. It is triggered each time the notification encounters an error.</dd>
+ <dd>A handler for the {{domxref("Element/error_event", "error")}} event. It is triggered each time the notification encounters an error.</dd>
  <dt>{{domxref("Notification.onshow")}}</dt>
  <dd>A handler for the {{domxref("Element/show_event", "show")}} event. It is triggered when the notification is displayed.</dd>
 </dl>
@@ -102,7 +104,7 @@ browser-compat: api.Notification
 
 <h3 id="Instance_methods">Instance methods</h3>
 
-<p>These properties are available only on an instance of the <code>Notification</code> object or through its <a href="/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain"><code>prototype</code></a>. The <code>Notification</code> object also inherits from the {{domxref("EventTarget")}} interface.</p>
+<p>These properties are available only on an instance of the <code>Notification</code> object or through its <a href="/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain"><code>prototype</code></a>. The <code>Notification</code> object also inherits from the {{domxref("EventTarget")}} interface.</p>
 
 <dl>
  <dt>{{domxref("Notification.close()")}}</dt>
@@ -146,7 +148,7 @@ browser-compat: api.Notification
 <p>We no longer show a live sample on this page, as Chrome and Firefox no longer allow notification permissions to be requested from cross-origin {{htmlelement("iframe")}}s, with other browsers to follow. To see a example in action, check out our <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do list example</a> (also see <a href="https://mdn.github.io/to-do-notifications/">the app running live</a>.)</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: In the above example we spawn notifications in response to a user gesture (clicking a button). This is not only best practice — you should not be spamming users with notifications they didn't agree to — but going forward browsers will explicitly disallow notifications not triggered in response to a user gesture. Firefox is already doing this from version 72, for example.</p>
+<p><strong>Note:</strong> In the above example we spawn notifications in response to a user gesture (clicking a button). This is not only best practice — you should not be spamming users with notifications they didn't agree to — but going forward browsers will explicitly disallow notifications not triggered in response to a user gesture. Firefox is already doing this from version 72, for example.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>

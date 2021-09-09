@@ -6,7 +6,6 @@ tags:
   - Debugging
   - Interface
   - Reference
-
   - web console
 browser-compat: api.console
 ---
@@ -47,19 +46,19 @@ browser-compat: api.console
  <dt>{{domxref("console.dirxml()")}}</dt>
  <dd>Displays an XML/HTML Element representation of the specified object if possible or the JavaScript Object view if it is not possible.</dd>
  <dt>{{domxref("console.error()")}}</dt>
- <dd>Outputs an error message. You may use <a href="/en-US/docs/Web/API/console#using_string_substitutions">string substitution</a> and additional arguments with this method.</dd>
+ <dd>Outputs an error message. You may use <a href="#using_string_substitutions">string substitution</a> and additional arguments with this method.</dd>
  <dt>{{domxref("console.exception()")}} {{Non-standard_inline}} {{deprecated_inline}}</dt>
  <dd>An alias for <code>error()</code>.</dd>
  <dt>{{domxref("console.group()")}}</dt>
- <dd>Creates a new inline <a href="/en-US/docs/Web/API/console#using_groups_in_the_console">group</a>, indenting all following output by another level. To move back out a level, call <code>groupEnd()</code>.</dd>
+ <dd>Creates a new inline <a href="#using_groups_in_the_console">group</a>, indenting all following output by another level. To move back out a level, call <code>groupEnd()</code>.</dd>
  <dt>{{domxref("console.groupCollapsed()")}}</dt>
- <dd>Creates a new inline <a href="/en-US/docs/Web/API/console#using_groups_in_the_console">group</a>, indenting all following output by another level. However, unlike <code>group()</code> this starts with the inline group collapsed requiring the use of a disclosure button to expand it. To move back out a level, call <code>groupEnd()</code>.</dd>
+ <dd>Creates a new inline <a href="#using_groups_in_the_console">group</a>, indenting all following output by another level. However, unlike <code>group()</code> this starts with the inline group collapsed requiring the use of a disclosure button to expand it. To move back out a level, call <code>groupEnd()</code>.</dd>
  <dt>{{domxref("console.groupEnd()")}}</dt>
- <dd>Exits the current inline <a href="/en-US/docs/Web/API/console#using_groups_in_the_console">group</a>.</dd>
+ <dd>Exits the current inline <a href="#using_groups_in_the_console">group</a>.</dd>
  <dt>{{domxref("console.info()")}}</dt>
- <dd>Informative logging of information. You may use <a href="/en-US/docs/Web/API/console#using_string_substitutions">string substitution</a> and additional arguments with this method.</dd>
+ <dd>Informative logging of information. You may use <a href="#using_string_substitutions">string substitution</a> and additional arguments with this method.</dd>
  <dt>{{domxref("console.log()")}}</dt>
- <dd>For general output of logging information. You may use <a href="/en-US/docs/Web/API/console#using_string_substitutions">string substitution</a> and additional arguments with this method.</dd>
+ <dd>For general output of logging information. You may use <a href="#using_string_substitutions">string substitution</a> and additional arguments with this method.</dd>
  <dt>{{domxref("console.profile()")}} {{Non-standard_inline}}</dt>
  <dd>Starts the browser's built-in profiler (for example, the <a href="/en-US/docs/Tools/Performance">Firefox performance tool</a>). You can specify an optional name for the profile.</dd>
  <dt>{{domxref("console.profileEnd()")}} {{Non-standard_inline}}</dt>
@@ -67,17 +66,17 @@ browser-compat: api.console
  <dt>{{domxref("console.table()")}}</dt>
  <dd>Displays tabular data as a table.</dd>
  <dt>{{domxref("console.time()")}}</dt>
- <dd>Starts a <a href="/en-US/docs/Web/API/console#timers">timer</a> with a name specified as an input parameter. Up to 10,000 simultaneous timers can run on a given page.</dd>
+ <dd>Starts a <a href="#timers">timer</a> with a name specified as an input parameter. Up to 10,000 simultaneous timers can run on a given page.</dd>
  <dt>{{domxref("console.timeEnd()")}}</dt>
- <dd>Stops the specified <a href="/en-US/docs/Web/API/console#timers">timer</a> and logs the elapsed time in milliseconds since it started.</dd>
+ <dd>Stops the specified <a href="#timers">timer</a> and logs the elapsed time in milliseconds since it started.</dd>
  <dt>{{domxref("console.timeLog()")}}</dt>
- <dd>Logs the value of the specified <a href="/en-US/docs/Web/API/console#timers">timer</a> to the console.</dd>
+ <dd>Logs the value of the specified <a href="#timers">timer</a> to the console.</dd>
  <dt>{{domxref("console.timeStamp()")}} {{Non-standard_inline}}</dt>
  <dd>Adds a marker to the browser's <a href="https://developer.chrome.com/devtools/docs/timeline">Timeline</a> or <a href="/en-US/docs/Tools/Performance/Waterfall">Waterfall</a> tool.</dd>
  <dt>{{domxref("console.trace()")}}</dt>
- <dd>Outputs a <a href="/en-US/docs/Web/API/console#stack_traces">stack trace</a>.</dd>
+ <dd>Outputs a <a href="#stack_traces">stack trace</a>.</dd>
  <dt>{{domxref("console.warn()")}}</dt>
- <dd>Outputs a warning message. You may use <a href="/en-US/docs/Web/API/console#using_string_substitutions">string substitution</a> and additional arguments with this method.</dd>
+ <dd>Outputs a warning message. You may use <a href="#using_string_substitutions">string substitution</a> and additional arguments with this method.</dd>
 </dl>
 
 <h2 id="Usage">Examples</h2>
@@ -129,7 +128,7 @@ console.info("My first car was a", car, ". The object is:", someObject);</pre>
 </dl>
 
 <div class="note">
-<p><strong>Note</strong>: Precision formatting doesn't work in Chrome</p>
+<p><strong>Note:</strong> Precision formatting doesn't work in Chrome</p>
 </div>
 
 <p>Each of these pulls the next argument after the format string off the parameter list. For example:</p>
@@ -186,7 +185,7 @@ console.info("My first car was a", car, ". The object is:", someObject);</pre>
 </ul>
 
 <div class="notecard note">
-<p><strong>Note</strong>: The console message behaves like an inline element by default. To see the effects of <code>padding</code>, <code>margin</code>, etc. you should set it to for example <code>display: inline-block</code>.</p>
+<p><strong>Note:</strong> The console message behaves like an inline element by default. To see the effects of <code>padding</code>, <code>margin</code>, etc. you should set it to for example <code>display: inline-block</code>.</p>
 </div>
 
 <h3 id="Using_groups_in_the_console">Using groups in the console</h3>
@@ -226,11 +225,11 @@ console.timeEnd("answer time");
 
 <p>Will log the time needed by the user to dismiss the alert box, log the time to the console, wait for the user to dismiss the second alert, and then log the ending time to the console:</p>
 
-<p><img class="default internal" src="console-timelog.png"></p>
+<p><img src="console-timelog.png"></p>
 
 <p>Notice that the timer's name is displayed both when the timer is started and when it's stopped.</p>
 
-<p class="note"><strong>Note:</strong> It's important to note that if you're using this to log the timing for network traffic, the timer will report the total time for the transaction, while the time listed in the network panel is just the amount of time required for the header. If you have response body logging enabled, the time listed for the response header and body combined should match what you see in the console output.</p>
+<p><strong>Note:</strong> It's important to note that if you're using this to log the timing for network traffic, the timer will report the total time for the transaction, while the time listed in the network panel is just the amount of time required for the header. If you have response body logging enabled, the time listed for the response header and body combined should match what you see in the console output.</p>
 
 <h3 id="Stack_traces">Stack traces</h3>
 

@@ -18,7 +18,7 @@ browser-compat: api.VRDisplay
 
 <p>The <strong><code>VRDisplay</code></strong> interface of the <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> represents any VR device supported by this API. It includes generic information such as device IDs and descriptions, as well as methods for starting to present a VR scene, retrieving eye parameters and display capabilities, and other important functionality.</p>
 
-<div class="notepad note">
+<div class="notecard note">
   <p><strong>Note:</strong> This interface was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</a>. It has been superseded by the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>.</p>
 </div>
 
@@ -40,9 +40,9 @@ browser-compat: api.VRDisplay
  <dt>{{domxref("VRDisplay.hardwareUnitId")}} {{deprecated_inline}}</dt>
  <dd>Returns a {{domxref("DOMString")}} defining the shared ID of the display, and any other devices that are part of that hardware set (e.g. controllers). This is no longer needed, and has been removed from the spec. Displays now use {{domxref("VRDisplay.displayId")}}, and corresponsing controllers will now return the same ID under {{domxref("Gamepad.displayId")}}.</dd>
  <dt>{{domxref("VRDisplay.isConnected")}} {{readonlyInline}} {{deprecated_inline}}</dt>
- <dd>Returns a {{domxref("Boolean")}} indicating whether the <code>VRDisplay</code> is connected to the computer.</dd>
+ <dd>Returns a boolean value indicating whether the <code>VRDisplay</code> is connected to the computer.</dd>
  <dt>{{domxref("VRDisplay.isPresenting")}} {{readonlyInline}} {{deprecated_inline}}</dt>
- <dd>Returns a {{domxref("Boolean")}} indicating whether the <code>VRDisplay</code> is currently having content presented through it.</dd>
+ <dd>Returns a boolean value indicating whether the <code>VRDisplay</code> is currently having content presented through it.</dd>
  <dt>{{domxref("VRDisplay.stageParameters")}} {{readonlyInline}} {{deprecated_inline}}</dt>
  <dd>Returns a {{domxref("VRStageParameters")}} object containing room-scale parameters, if the <code>VRDisplay</code> is capable of supporting room-scale experiences.</dd>
 </dl>
@@ -96,7 +96,7 @@ browser-compat: api.VRDisplay
 <h2 id="Specifications">Specifications</h2>
 
 <p>This interface was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/#interface-vrdisplay">WebVR API</a> that has been superseded by the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>. It is no longer on track to becoming a standard.</p>
-<p>Until all browsers have implemented the new <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Fundamentals">WebXR APIs</a>, it is recommended to rely on frameworks, like <a href="https://aframe.io/">A-Frame</a>, <a href="https://www.babylonjs.com/">Babylon.js</a>, or <a href="https://threejs.org/">Three.js</a>, or a <a href="https://github.com/immersive-web/webxr-polyfill">polyfill</a>, to develop WebXR applications that will work across all browsers <a href="https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/">[1]</a>.</p>
+<p>Until all browsers have implemented the new <a href="/en-US/docs/Web/API/WebXR_Device_API/Fundamentals">WebXR APIs</a>, it is recommended to rely on frameworks, like <a href="https://aframe.io/">A-Frame</a>, <a href="https://www.babylonjs.com/">Babylon.js</a>, or <a href="https://threejs.org/">Three.js</a>, or a <a href="https://github.com/immersive-web/webxr-polyfill">polyfill</a>, to develop WebXR applications that will work across all browsers <a href="https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/">[1]</a>.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

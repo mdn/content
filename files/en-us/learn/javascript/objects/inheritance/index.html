@@ -26,7 +26,7 @@ tags:
 
 <p class="summary">With most of the gory details of OOJS now explained, this article shows how to create "child" object classes (constructors) that inherit features from their "parent" classes. In addition, we present some advice on when and where you might use OOJS, and look at how classes are dealt with in modern ECMAScript syntax.</p>
 
-<table class="learn-box standard-table">
+<table>
 	<tbody>
 		<tr>
 			<th scope="row">Prerequisites:</th>
@@ -268,7 +268,7 @@ leia.farewell();
 
 <h3 id="Inheritance_with_class_syntax">Inheritance with class syntax</h3>
 
-<p>Above we created a class to represent a person. They have a series of attributes that are common to all people; in this section we'll create our specialized <code>Teacher</code> class, making it inherit from <code>Person</code> using modern class syntax. This is called creating a subclass or subclassing.</p>
+<p>Above we created a class to represent a person. They have a series of properties that are common to all people; in this section we'll create our specialized <code>Teacher</code> class, making it inherit from <code>Person</code> using modern class syntax. This is called creating a subclass or subclassing.</p>
 
 <p>To create a subclass we use the <a href="/en-US/docs/Web/JavaScript/Reference/Classes/extends">extends keyword</a> to tell JavaScript the class we want to base our class on,</p>
 
@@ -347,7 +347,7 @@ snape.subject; // Dark arts
 
 <h2 id="Getters_and_Setters">Getters and Setters</h2>
 
-<p>There may be times when we want to change the values of an attribute in the classes we create or we don't know what the final value of an attribute will be. Using the <code>Teacher</code> example, we may not know what subject the teacher will teach before we create them, or their subject may change between terms.</p>
+<p>There may be times when we want to change the values of properties in the classes we create, or times when we don't know what the final value of a particular property will be. Using the <code>Teacher</code> example, we may not know what subject the teacher will teach before we create them, or their subject may change between terms.</p>
 
 <p>We can handle such situations with getters and setters.</p>
 

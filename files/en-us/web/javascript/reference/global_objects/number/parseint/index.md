@@ -42,7 +42,7 @@ Number.parseInt(string, radix)
 An integer parsed from the given `string`.
 
 If the `radix` is smaller than `2` or bigger than
-`36`, and the first non-whitespace character cannot be converted to a number,
+`36`, or the first non-whitespace character cannot be converted to a number,
 {{jsxref("NaN")}} is returned.
 
 ## Polyfill

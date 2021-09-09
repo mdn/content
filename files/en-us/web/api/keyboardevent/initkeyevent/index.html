@@ -19,14 +19,14 @@ tags:
   <code>initKeyEvent()</code> must be called to set the event before it is <a
     href="/en-US/docs/Web/API/EventTarget/dispatchEvent">dispatched</a>.</p>
 
-<div class="note">
-  <p><strong>Do not use this method anymore, use the
+<div class="warning">
+  <p><strong>Warning:</strong> Do not use this method. Use the
       {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} constructor
-      instead.</strong><br>
+      instead.<br>
     <br>
     This method is based on the key events spec in the <a class="external"
     href="https://www.w3.org/TR/1999/WD-DOM-Level-2-19990923/events.html">early versions
-    of DOM 2 Events</a>, later removed from that spec.Favor the modern constructor structure as
+    of DOM 2 Events</a>, later removed from that spec. Prefer the modern constructor structure as
     the only cross-browser way of building events.
   </p>
 </div>
@@ -44,24 +44,24 @@ tags:
   <dt><em><code>type</code></em></dt>
   <dd>Is a {{domxref("DOMString")}} representing the type of event.</dd>
   <dt><em><code>bubbles</code></em></dt>
-  <dd>Is a {{jsxref("Boolean")}} indicating whether the event should bubble up through the
+  <dd>Is a boolean value indicating whether the event should bubble up through the
     event chain or not (see <a href="/en-US/docs/Web/API/Event/bubbles">bubbles</a>).</dd>
   <dt><em><code>cancelable</code></em></dt>
-  <dd>Is a {{jsxref("Boolean")}} i indicating whether the event can be canceled (see <a
+  <dd>Is a boolean value indicating whether the event can be canceled (see <a
       href="/en-US/docs/Web/API/Event/cancelable">cancelable</a>).</dd>
   <dt><em><code>viewArg</code></em></dt>
   <dd>Specifies the {{domxref("UIEvent.view")}}; this value may be <code>null</code>.</dd>
   <dt><em><code>ctrlKeyArg</code></em></dt>
-  <dd>Is a {{jsxref("Boolean")}} that is <code>true</code> if the virtual key to be
+  <dd>Is a boolean value that is <code>true</code> if the virtual key to be
     generated is a combination of keys containing the <kbd>Ctrl</kbd> key.</dd>
   <dt><em><code>altKeyArg</code></em></dt>
-  <dd>Is a {{jsxref("Boolean")}} that is <code>true</code> if the virtual key to be
+  <dd>Is a boolean value that is <code>true</code> if the virtual key to be
     generated is a combination of keys containing the <kbd>Alt</kbd> key.</dd>
   <dt><em><code>shiftKeyArg</code></em></dt>
-  <dd>A {{jsxref("Boolean")}} that is <code>true</code> if the virtual key to be generated
+  <dd>A boolean value that is <code>true</code> if the virtual key to be generated
     is a combination of keys containing the <kbd>Shift</kbd> key.</dd>
   <dt><em><code>metaKeyArg</code></em></dt>
-  <dd>Is a {{jsxref("Boolean")}} that is <code>true</code> if the virtual key to be
+  <dd>Is a boolean value that is <code>true</code> if the virtual key to be
     generated is a combination of keys containing the <kbd>Meta</kbd> key.</dd>
   <dt><em><code>keyCodeArg</code></em></dt>
   <dd>Is a <code>unsigned long</code> representing the virtual key code value of the key

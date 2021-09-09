@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Containerless_media">Containerless media</h2>
 
-<p>WebRTC uses bare {{domxref("MediaStreamTrack")}} objects for each track being shared from one peer to another, without a container or even a {{domxref("MediaStream")}} associated with the tracks. Which codecs can be within those tracks is not mandated by the WebRTC specification. However, {{RFC(7742)}} specifies that all WebRTC-compatible browsers must support <a href="/en-US/docs/Web/Media/Formats/Video_codecs#vp8">VP8</a> and <a href="/en-US/docs/Web/Media/Formats/Video_codecs#avc_(h.264)">H.264</a>'s Constrained Baseline profile for video, and {{RFC(7874)}} specifies that browsers must support at least the <a href="/en-US/docs/Web/Media/Formats/Audio_codecs#opus">Opus</a> codec as well as <a href="/en-US/docs/Web/Media/Formats/Audio_codecs#G.711">G.711</a>'s PCMA and PCMU formats.</p>
+<p>WebRTC uses bare {{domxref("MediaStreamTrack")}} objects for each track being shared from one peer to another, without a container or even a {{domxref("MediaStream")}} associated with the tracks. Which codecs can be within those tracks is not mandated by the WebRTC specification. However, {{RFC(7742)}} specifies that all WebRTC-compatible browsers must support <a href="/en-US/docs/Web/Media/Formats/Video_codecs#vp8">VP8</a> and <a href="/en-US/docs/Web/Media/Formats/Video_codecs#avc_(h.264)">H.264</a>'s Constrained Baseline profile for video, and {{RFC(7874)}} specifies that browsers must support at least the <a href="/en-US/docs/Web/Media/Formats/Audio_codecs#opus">Opus</a> codec as well as <a href="/en-US/docs/Web/Media/Formats/Audio_codecs#g.711">G.711</a>'s PCMA and PCMU formats.</p>
 
 <p>These two RFCs also lay out options that must be supported for each codec, as well as specific user comfort features such as echo cancelation. This guide reviews the codecs that browsers are required to implement as well as other codecs that some or all browsers support for WebRTC.</p>
 
@@ -100,7 +100,7 @@ tags:
 
 <p>The network payload format for sharing VP8 using {{Glossary("RTP")}} (such as when using WebRTC) is described in {{RFC(7741, "RTP Payload Format for VP8 Video")}}.</p>
 
-<h3 id="AVC_H.264"><a id="AVC">AVC / H.264</a></h3>
+<h3 id="AVC">AVC / H.264</h3>
 
 <p>Support for AVC's Constrained Baseline (CB) profile is required in all fully-compliant WebRTC implementations. CB is a subset of the main profile, and is specifically designed for low-complexity, low-delay applications such as mobile video and videoconferencing, as well as for platforms with lower performing video processing capabilities.</p>
 
@@ -177,11 +177,11 @@ tags:
    <td>Chrome, Edge, Firefox, Safari</td>
   </tr>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Media/Formats/Audio_codecs#G.711">G.711 PCM (A-law)</a></th>
+   <th scope="row"><a href="/en-US/docs/Web/Media/Formats/Audio_codecs#g.711">G.711 PCM (A-law)</a></th>
    <td>Chrome, Firefox, Safari</td>
   </tr>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Media/Formats/Audio_codecs#G.711">G.711 PCM (µ-law)</a></th>
+   <th scope="row"><a href="/en-US/docs/Web/Media/Formats/Audio_codecs#g.711">G.711 PCM (µ-law)</a></th>
    <td>Chrome, Firefox, Safari</td>
   </tr>
  </tbody>

@@ -40,7 +40,7 @@ tags:
 
 <p>For now, let's imagine that the web is a road. On one end of the road is the client, which is like your house. On the other end of the road is the server, which is a shop you want to buy something from.</p>
 
-<p><img alt="" src="road.jpg" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="road.jpg"></p>
 
 <p>In addition to the client and the server, we also need to say hello to:</p>
 
@@ -70,16 +70,13 @@ tags:
 
 <h2 id="Order_in_which_component_files_are_parsed">Order in which component files are parsed</h2>
 
-<p>Once the client’s request is approved, the server first sends back the HTML (index) file — index.html is commonly named as such, as it is the first file of a website to be parsed by the server.</p>
-
-<p>The HTML file can reference <a href="/en-US/docs/Learn/CSS">CSS</a> and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a>, either in external files via <code>&lt;link&gt;</code> and <code>&lt;script&gt;</code> elements respectively, or embedded in the HTML page via <code>&lt;style&gt;</code> and <code>&lt;script&gt;</code> elements.</p>
-
-<p>From a server standpoint it is important to know the order in which these files are parsed when the response is sent back:</p>
+<p>When browsers send requests to servers for HTML files, those HTML files often contain {{htmlelement("link")}} elements referencing external <a href="/en-US/docs/Learn/CSS">CSS</a> stylesheets and {{htmlelement("script")}} elements referencing external <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> scripts. It’s important to know the order in which those files are <a href="/en-US/docs/Web/Performance/How_browsers_work#parsing">parsed by the browser</a> as the browser loads the page:</p>
 
 <ul>
-  <li>The HTML file is parsed first and, by looking inside that file, the server recognises which CSS and JavaScript files are referenced.</li>
-  <li>After the HTML has been parsed and a DOM tree structure has been generated from it, the linked CSS is then parsed, and styles are applied to the appropriate parts of the DOM tree. At this point, the visual representation of the page is painted to the screen, and the user sees the page.</li>
-  <li>The JavaScript usually gets parsed and applied to the page after the HTML and CSS.</li>
+  <li>The browser parses the HTML file first, and that leads to the browser recognizing any <code>&lt;link&gt;</code>-element references to external CSS stylesheets and any <code>&lt;script&gt;</code>-element references to scripts.</li>
+  <li>As the browser parses the HTML, it sends requests back to the server for any CSS files it has found from <code>&lt;link&gt;</code> elements, and any JavaScript files it has found from <code>&lt;script&gt;</code> elements, and from those, then parses the CSS and JavaScript.</li>
+  <li>The browser generates an in-memory <a href="/en-US/docs/Web/API/Document_Object_Model">DOM</a> tree from the parsed HTML, generates an in-memory <a href="/en-US/docs/Glossary/CSSOM">CSSOM</a> structure from the parsed CSS, and <a href="/en-US/docs/Web/Performance/How_browsers_work#javascript_compilation">complies and executes</a> the parsed JavaScript</a>.</li>
+  <li>As the browser builds the DOM tree and applies the styles from the CSSOM tree and executes the JavaScript, a visual representation of the page is painted to the screen, and the user sees the page content and can begin to interact with it.</li>
 </ul>
 
 <h2 id="DNS_explained">DNS explained</h2>
@@ -107,7 +104,7 @@ tags:
 
 <h2 id="Credit">Credit</h2>
 
-<p>Street photo: <a href="https://www.flickr.com/photos/kdigga/9110990882/in/photolist-cXrKFs-c1j6hQ-mKrPUT-oRTUK4-7jSQQq-eT7daG-cZEZrh-5xT9L6-bUnkip-9jAbvr-5hVkHn-pMfobT-dm8JuZ-gjwYYM-pREaSM-822JRW-5hhMf9-9RVQNn-bnDMSZ-pL2z3y-k7FRM4-pzd8Y7-822upY-8bFN4Y-kedD87-pzaATg-nrF8ft-5anP2x-mpVky9-ceKc9W-dG75mD-pY62sp-gZmXVZ-7vVJL9-h7r9AQ-gagPYh-jvo5aM-J32rC-ibP2zY-a4JBcH-ndxM5Y-iFHsde-dtJ15p-8nYRgp-93uCB1-o6N5Bh-nBPUny-dNJ66P-9XWmVP-efXhxJ">Street composing</a>, by <a href="https://www.flickr.com/photos/kdigga/">Kevin D</a>.</p>
+<p>Street photo: <a href="https://www.pinterest.com/pin/400538960580676851/">Street composing</a>, by <a href="https://www.pinterest.com/kevindigga/">kevin digga</a>.</p>
 
 <p>{{PreviousMenu("Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}</p>
 
@@ -121,5 +118,5 @@ tags:
 	<li id="CSS_basics"><a href="/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics">CSS basics</a></li>
 	<li id="JavaScript_basics"><a href="/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics">JavaScript basics</a></li>
 	<li id="Publishing_your_website"><a href="/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website">Publishing your website</a></li>
-	<li id="How_the_web_works"><a href="/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works">How the web works</a></li>
+	<li>How the web works</li>
 </ul>

@@ -24,6 +24,8 @@ browser-compat: webextensions.api.downloads.DownloadQuery
 <p>Values of this type are objects. They contain the following properties:</p>
 
 <dl class="reference-values">
+ <dt><code>cookieStoreId</code>{{optional_inline}}</dt>
+ <dd>The cookie store ID of the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities">contextual identity</a> in which the download took place.</dd>
  <dt><code>query</code>{{optional_inline}}</dt>
  <dd>An <code>array</code> of <code>string</code>s. Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} whose <code>filename</code> or <code>url</code> contains all of the given strings. You can also include terms beginning with a dash (-) — these terms <strong>must not</strong> be contained in the item's <code>filename</code> or <code>url</code> for it to be included.</dd>
  <dt><code>startedBefore</code>{{optional_inline}}</dt>

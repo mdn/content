@@ -11,8 +11,10 @@ browser-compat: api.Document.getElementsByTagName
 <div>{{APIRef("DOM")}}</div>
 
 <p>The <strong><code>getElementsByTagName</code></strong> method of
-  {{domxref("Document")}} interface <span class="seoSummary">returns an
-    {{domxref("HTMLCollection")}} of elements with the given tag name.</span> The complete
+  {{domxref("Document")}} interface returns an
+    {{domxref("HTMLCollection")}} of elements with the given tag name.</p>
+
+<p>The complete
   document is searched, including the root node. The returned <code>HTMLCollection</code>
   is live, meaning that it updates itself automatically to stay in sync with the DOM tree
   without having to call <code>document.getElementsByTagName()</code> again.</p>
@@ -29,10 +31,10 @@ browser-compat: api.Document.getElementsByTagName
     string "*" represents all elements.</li>
 </ul>
 
-<div class="note"><a href="https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html">The
+<div class="note"><p><strong>Note:</strong> <a href="https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html">The
     latest W3C specification</a> says <var>elements</var> is an
   <code>HTMLCollection</code>; however, this method returns a {{domxref("NodeList")}} in
-  WebKit browsers. See {{bug(14869)}} for details.</div>
+  WebKit browsers. See {{bug(14869)}} for details.</p></div>
 
 <h2 id="Example">Example</h2>
 

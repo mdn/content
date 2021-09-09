@@ -18,10 +18,12 @@ browser-compat: api.HTMLImageElement.srcset
 ---
 <p>{{APIRef("HTML DOM")}}</p>
 
-<p><span class="seoSummary">The {{domxref("HTMLImageElement")}} property
+<p>The {{domxref("HTMLImageElement")}} property
     <code><strong>srcset</strong></code> is a string which identifies one or more
     <strong>image candidate strings</strong>, separated using commas (<code>,</code>) each
-    specifying image resources to use under given circumstances.</span> Each image
+    specifying image resources to use under given circumstances.</p>
+
+<p>Each image
   candidate string contains an image URL and an optional width or pixel density descriptor
   that indicates the conditions under which that candidate should be used instead of the
   image specified by the {{domxref("HTMLImageElement.src", "src")}} property.</p>
@@ -113,9 +115,9 @@ let <em>srcset</em> = <em>htmlImageElement</em>.srcset;
   displays while the 400-pixel version should be used for 2x displays.</p>
 
 <pre class="brush: html">&lt;div class="box"&gt;
-  &lt;img src="/files/16797/clock-demo-200px.png"
+  &lt;img src="/en-us/web/html/element/img/clock-demo-200px.png"
        alt="Clock"
-       srcset="/files/16864/clock-demo-200px.png 1x, /files/16797/clock-demo-400px.png 2x"&gt;
+       srcset="/en-us/web/html/element/img/clock-demo-200px.png 1x, /en-us/web/html/element/img/clock-demo-400px.png"&gt;
 &lt;/div&gt;
 </pre>
 

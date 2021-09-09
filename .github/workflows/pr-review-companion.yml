@@ -21,7 +21,7 @@ jobs:
 
     steps:
       - name: 'Download artifact'
-        uses: actions/github-script@v4.0.2
+        uses: actions/github-script@v4.1
         with:
           script: |
             var artifacts = await github.actions.listWorkflowRunArtifacts({
@@ -67,8 +67,15 @@ jobs:
         with:
           python-version: "3.8"
 
+      # See https://www.peterbe.com/plog/install-python-poetry-github-actions-faster
+      - name: Load cached ~/.local
+        uses: actions/cache@v2.1.6
+        with:
+          path: ~/.local
+          key: dotlocal-${{ runner.os }}-${{ hashFiles('.github/workflows/pr-review-companion.yml') }}
+
       - name: Install Python poetry
-        uses: snok/install-poetry@v1.1.6
+        uses: snok/install-poetry@v1.2
         with:
           virtualenvs-create: true
           virtualenvs-in-project: true

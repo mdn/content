@@ -17,7 +17,7 @@ browser-compat: api.Performance.measure
   measuring between two marks, there is a <em>start mark</em> and <em>end mark</em>,
   respectively. The named timestamp is referred to as a <em>measure</em>.</p>
 
-<p>The <code>measure</code> can be retrieved by one of the {{domxref("Performance")}}
+<p>The <code>measure</code> can also be retrieved by one of the {{domxref("Performance")}}
   interfaces: ({{domxref("Performance.getEntries","getEntries()")}},
   {{domxref("Performance.getEntriesByName","getEntriesByName()")}} or
   {{domxref("Performance.getEntriesByType","getEntriesByType()")}}).</p>
@@ -65,8 +65,8 @@ browser-compat: api.Performance.measure
 <h3 id="Return_value">Return value</h3>
 
 <dl>
-  <dt>void</dt>
-  <dd></dd>
+  <dt>entry</dt>
+  <dd>The {{domxref("PerformanceMeasure")}} entry that was created.</dd>
 </dl>
 
 <h2 id="Example">Example</h2>

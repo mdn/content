@@ -42,7 +42,7 @@ browser-compat: api.Element.scroll_event
 
 <h3 id="Scroll_event_throttling">Scroll event throttling</h3>
 
-<p>Since <code>scroll</code> events can fire at a high rate, the event handler shouldn't execute computationally expensive operations such as DOM modifications. Instead, it is recommended to throttle the event using {{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame()")}}, {{DOMxRef("WindowOrWorkerGlobalScope.setTimeout()", "setTimeout()")}}, or a {{DOMxRef("CustomEvent")}}, as follows.</p>
+<p>Since <code>scroll</code> events can fire at a high rate, the event handler shouldn't execute computationally expensive operations such as DOM modifications. Instead, it is recommended to throttle the event using {{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame()")}}, {{DOMxRef("setTimeout()")}}, or a {{DOMxRef("CustomEvent")}}, as follows.</p>
 
 <p>Note, however, that input events and animation frames are fired at about the same rate, and therefore the optimization below is often unnecessary. This example optimizes the <code>scroll</code> event for <code>requestAnimationFrame</code>.</p>
 
@@ -69,7 +69,7 @@ window.addEventListener('scroll', function(e) {
 });</pre>
 
 <div class="notecard note">
-<p><strong>Note</strong>: You can find more examples on the {{domxref("Document/resize_event", "resize")}} event page.</p>
+<p><strong>Note:</strong> You can find more examples on the {{domxref("Document/resize_event", "resize")}} event page.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>

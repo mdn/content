@@ -253,6 +253,10 @@ Found ab. Next match starts at 9
 >
 > Also, be sure that the global flag ("`g`") is set, or it will also cause
 > an infinite loop.
+> 
+> In addition, when matching zero-length characters (e.g. `/^/gm`),
+> increase its {{jsxref("RegExp.lastIndex", "lastIndex")}} each time to avoid
+> an infinite loop.
 
 ### Using exec() with RegExp literals
 
