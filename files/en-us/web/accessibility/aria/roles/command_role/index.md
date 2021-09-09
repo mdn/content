@@ -18,7 +18,7 @@ The `command` role defines a widget that performs an action but does not receive
 
 ## Description
 
-A command is form of widget that performs an action but does not receive input data.
+A command is form of widget that performs an action but does not receive input data. It is a superclass for the widget roles [`button`](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role), [`link`](/en-US/docs/Web/Accessibility/ARIA/Roles/link_role), and [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role)
 
 ## Best Practices
 

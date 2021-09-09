@@ -16,12 +16,12 @@ tags:
 
 The **`roletype`** role, an [abstract role](/en-US/docs/Web/Accessibility/ARIA/Roles/#Abstract_roles), is the base role from which all other ARIA roles inherit.
 
+> **Note:**  The `roletype` role is an abstract role used for the ontology. It is included here for completeness of documentation. It should not be used by web authors.
+
 ## Description
 
 The `roletype` role's properties describe the structural and functional purpose of objects that are assigned this role, or "instances". A role is a concept that can be used to understand and operate instances.
 Note
-
-> **Note:**  The `roletype` role is an abstract role used for the ontology. It is included here for completeness of documentation. It should not be used by web authors.
 
 ## Best Practices
 
