@@ -10,6 +10,7 @@ tags:
   - PushMessageData
   - Reference
   - Service Workers
+browser-compat: api.PushMessageData
 ---
 <p>{{APIRef("Push API")}}{{SeeCompatTable()}}</p>
 
@@ -27,7 +28,7 @@ tags:
 
 <dl>
  <dt>{{domxref("PushMessageData.arrayBuffer()")}}</dt>
- <dd>Extracts the data as an {{domxref("ArrayBuffer")}} object.</dd>
+ <dd>Extracts the data as an {{jsxref("ArrayBuffer")}} object.</dd>
  <dt>{{domxref("PushMessageData.blob()")}}</dt>
  <dd>Extracts the data as a {{domxref("Blob")}} object.</dd>
  <dt>{{domxref("PushMessageData.json()")}}</dt>
@@ -38,7 +39,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">self.addEventListener('push', function(event) {
+<pre class="brush: js">self.addEventListener('push', function(event) {
   var obj = event.data.json();
 
   if(obj.action === 'subscribe' || obj.action === 'unsubscribe') {
@@ -51,21 +52,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Push API', '#pushmessagedata-interface', 'PushMessageData')}}</td>
-   <td>{{Spec2('Push API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.PushMessageData")}}</p>
+<p>{{Compat}}</p>

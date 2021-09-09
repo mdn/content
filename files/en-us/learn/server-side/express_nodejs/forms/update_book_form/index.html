@@ -8,13 +8,13 @@ tags:
   - part 6
   - server-side
 ---
-<p class="summary">This final subarticle shows how to define a page to update <code>Book</code> objects. Form handling when updating a book is much like that for creating a book, except that you must populate the form in the <code>GET</code> route with values from the database.</p>
+<p>This final subarticle shows how to define a page to update <code>Book</code> objects. Form handling when updating a book is much like that for creating a book, except that you must populate the form in the <code>GET</code> route with values from the database.</p>
 
-<h2 class="highlight-spanned" id="Controller—get_route"><span class="highlight-span">Controller—get route</span></h2>
+<h2 id="Controller—get_route">Controller—get route</h2>
 
 <p>Open <strong>/controllers/bookController.js</strong>. Find the exported <code>book_update_get()</code> controller method and replace it with the following code.</p>
 
-<pre class="brush: js line-numbers language-js">// Display book update form on GET.
+<pre class="brush: js">// Display book update form on GET.
 exports.book_update_get = function(req, res, next) {
 
     // Get book, authors and genres for form.
@@ -53,17 +53,17 @@ exports.book_update_get = function(req, res, next) {
 
 <p>When the operations complete it checks for any errors in the find operation, and also whether any books were found.</p>
 
-<div class="note">
+<div class="notecard note">
 <p><strong>Note:</strong> Not finding any book results is <strong>not an error</strong> for a search — but it is for this application because we know there must be a matching book record! The code above compares for (<code>results==null</code>) in the callback, but it could equally well have daisy chained the method <a href="https://mongoosejs.com/docs/api.html#query_Query-orFail">orFail()</a> to the query. </p>
 </div>
 
 <p>We then mark the currently selected genres as checked and then render the <strong>book_form.pug</strong> view, passing variables for <code>title</code>, book, all <code>authors</code>, and all <code>genres</code>.</p>
 
-<h2 class="highlight-spanned" id="Controller—post_route"><span class="highlight-span">Controller—post route</span></h2>
+<h2 id="Controller—post_route">Controller—post route</h2>
 
 <p>Find the exported <code>book_update_post()</code> controller method, and replace it with the following code.</p>
 
-<pre class="brush: js line-numbers language-js">// Handle book update on POST.
+<pre class="brush: js">// Handle book update on POST.
 exports.book_update_post = [
 
     // Convert the genre to an array
@@ -137,11 +137,11 @@ exports.book_update_post = [
 
 <p>This is very similar to the post route used when creating a Book. First we validate and sanitize the book data from the form and use it to create a new <code>Book</code> object (setting its <code>_id</code> value to the id of the object to update). If there are errors when we validate the data then we re-render the form, additionally displaying the data entered by the user, the errors, and lists of genres and authors. If there are no errors then we call <code>Book.findByIdAndUpdate()</code> to update the <code>Book</code> document, and then redirect to its detail page.</p>
 
-<h2 class="highlight-spanned" id="View"><span class="highlight-span">View</span></h2>
+<h2 id="View">View</h2>
 
 <p>Open <strong>/views/book_form.pug</strong> and update the section where the author form control is set to have the conditional code shown below.</p>
 
-<pre class="line-numbers language-html">    div.form-group
+<pre class="brush: plain">    div.form-group
       label(for='author') Author:
       select#author.form-control(type='select' placeholder='Select author' name='author' required='true' )
         - authors.sort(function(a, b) {let textA = a.family_name.toUpperCase(); let textB = b.family_name.toUpperCase(); return (textA &lt; textB) ? -1 : (textA &gt; textB) ? 1 : 0;});
@@ -158,15 +158,15 @@ exports.book_update_post = [
           else
             option(value=author._id) #{author.name}</pre>
 
-<div class="note">
-<p><strong>Note</strong>: This code change is required so that the book_form can be used for both creating and updating book objects (without this, there is an error on the <code>GET</code> route when creating a form).</p>
+<div class="notecard note">
+  <p><strong>Note:</strong> This code change is required so that the book_form can be used for both creating and updating book objects (without this, there is an error on the <code>GET</code> route when creating a form).</p>
 </div>
 
-<h2 class="highlight-spanned" id="Add_an_update_button"><span class="highlight-span">Add an update button</span></h2>
+<h2 id="Add_an_update_button">Add an update button</h2>
 
 <p>Open the <strong>book_detail.pug</strong> view and make sure there are links for both deleting and updating books at the bottom of the page, as shown below.</p>
 
-<pre class="brush: html line-numbers language-html">  hr
+<pre class="brush: plain">  hr
   p
     a(href=book.url+'/delete') Delete Book
   p
@@ -174,15 +174,15 @@ exports.book_update_post = [
 
 <p>You should now be able to update books from the <em>Book detail</em> page.</p>
 
-<h2 class="highlight-spanned" id="What_does_it_look_like"><span class="highlight-span">What does it look like?</span></h2>
+<h2 id="What_does_it_look_like">What does it look like?</h2>
 
-<p>Run the application, open your browser to <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>, select the <em>All books</em> link, then select a particular book. Finally select the <em>Update Book</em> link.</p>
+<p>Run the application, open your browser to <a href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>, select the <em>All books</em> link, then select a particular book. Finally select the <em>Update Book</em> link.</p>
 
 <p>The form should look just like the <em>Create book</em> page, only with a title of 'Update book', and pre-populated with record values.</p>
 
-<p><img alt="" src="locallibary_express_book_update_noerrors.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="locallibary_express_book_update_noerrors.png"></p>
 
-<div class="note">
+<div class="notecard note">
 <p><strong>Note:</strong> The other pages for updating objects can be implemented in much the same way. We've left that as a challenge.</p>
 </div>
 

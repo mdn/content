@@ -10,6 +10,7 @@ tags:
   - WebExtensions
   - show
   - tabs
+browser-compat: webextensions.api.tabs.show
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -39,7 +40,7 @@ tags:
 
 <p>Show a single tab:</p>
 
-<pre class="notranslate brush: js">function onShown() {
+<pre class="brush: js">function onShown() {
   console.log(`Shown`);
 }
 
@@ -51,7 +52,7 @@ browser.tabs.show(2).then(onShown, onError);</pre>
 
 <p>Show multiple tabs:</p>
 
-<pre class="notranslate brush: js">function onShown() {
+<pre class="brush: js">function onShown() {
   console.log(`Shown`);
 }
 
@@ -65,4 +66,4 @@ browser.tabs.show([15, 14, 1]).then(onShown, onError);</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("webextensions.api.tabs.show")}}</p>
+<p>{{Compat}}</p>

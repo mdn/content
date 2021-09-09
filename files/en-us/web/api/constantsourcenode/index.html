@@ -9,6 +9,7 @@ tags:
   - Media
   - Reference
   - Web Audio API
+browser-compat: api.ConstantSourceNode
 ---
 <div>{{APIRef("Web Audio API")}}</div>
 
@@ -33,7 +34,7 @@ tags:
 
 <dl>
  <dt>{{domxref("ConstantSourceNode.ConstantSourceNode", "ConstantSourceNode()")}}</dt>
- <dd>Creates and returns a new <code>ConstantSourceNode</code> instance, optionally specifying an object which establishes initial values for the object's properties. You can also create a <code>ConstantSourceNode</code> whose properties are initialized to their default values by calling {{domxref("BaseAudioContext/createConstantSource", "AudioContext.createConstantSource()")}}.</dd>
+ <dd>Creates and returns a new <code>ConstantSourceNode</code> instance, optionally specifying an object which establishes initial values for the object's properties. As an alternative, you can use the {{domxref("BaseAudioContext.createConstantSource()")}} factory method; see <a href="/en-US/docs/Web/API/AudioNode#creating_an_audionode">Creating an AudioNode</a>.</dd>
 </dl>
 
 <h2 id="Properties">Properties</h2>
@@ -50,7 +51,7 @@ tags:
 <p><em>Inherits event handlers from its parent interface, {{domxref("AudioScheduledSourceNode")}}.</em></p>
 
 <div class="note">
-<p>Some browsers' implementations of this event handler are part of the  {{domxref("AudioScheduledSourceNode")}} interface.</p>
+<p><strong>Note:</strong> Some browsers' implementations of this event handler are part of the  {{domxref("AudioScheduledSourceNode")}} interface.</p>
 </div>
 
 <dl>
@@ -63,7 +64,7 @@ tags:
 <p><em>Inherits methods from its parent interface, {{domxref("AudioScheduledSourceNode")}}.</em></p>
 
 <div class="note">
-<p>Some browsers' implementations of these methods are part of the {{domxref("AudioScheduledSourceNode")}} interface.</p>
+<p><strong>Note:</strong> Some browsers' implementations of these methods are part of the {{domxref("AudioScheduledSourceNode")}} interface.</p>
 </div>
 
 <dl>
@@ -99,24 +100,11 @@ gainNode3.connect(context.destination);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#ConstantSourceNode', 'ConstantSourceNode')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ConstantSourceNode")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

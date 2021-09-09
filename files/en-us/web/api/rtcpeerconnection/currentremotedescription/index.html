@@ -2,17 +2,18 @@
 title: RTCPeerConnection.currentRemoteDescription
 slug: Web/API/RTCPeerConnection/currentRemoteDescription
 tags:
-- API
-- Media
-- Property
-- RTCPeerConnection
-- Read-only
-- Reference
-- SDP
-- WebRTC
-- currentRemoteDescription
+  - API
+  - Media
+  - Property
+  - RTCPeerConnection
+  - Read-only
+  - Reference
+  - SDP
+  - WebRTC
+  - currentRemoteDescription
+browser-compat: api.RTCPeerConnection.currentRemoteDescription
 ---
-<p>{{WebRTCSidebar}}</p>
+<p>{{APIRef("WebRTC")}}</p>
 
 <p>The read-only property
   <code><strong>RTCPeerConnection.currentRemoteDescription</strong></code> returns an
@@ -31,7 +32,7 @@ tags:
   descriptions")}}.</p>
 
 <div class="note">
-  <p>Unlike {{domxref("RTCPeerConnection.remoteDescription")}}, this value represents the
+  <p><strong>Note:</strong> Unlike {{domxref("RTCPeerConnection.remoteDescription")}}, this value represents the
     actual current state of the local end of the connection;
     <code>remoteDescription</code> may specify a description which the connection is
     currently in the process of switching over to.</p>
@@ -40,7 +41,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><em>sessionDescription</em> = <em>RTCPeerConnection</em>.currentRemoteDescription;</pre>
+  class="brush: js"><em>sessionDescription</em> = <em>RTCPeerConnection</em>.currentRemoteDescription;</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -68,27 +69,11 @@ else {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('WebRTC 1.0', '#dom-peerconnection-currentremotedesc',
-        'RTCPeerConnection.currentRemoteDescription') }}</td>
-      <td>{{ Spec2('WebRTC 1.0') }}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCPeerConnection.currentRemoteDescription")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

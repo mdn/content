@@ -10,18 +10,16 @@ tags:
 - copy
 - getTypes
 - paste
+browser-compat: api.ClipboardItem.getType
 ---
-<div>{{draft}}{{DefaultAPISidebar("Clipboard API")}}</div>
+<div>{{DefaultAPISidebar("Clipboard API")}}</div>
 
-<p class="summary"><span class="seoSummary">The <strong><code>getType()</code></strong>
-    method of the {{domxref("ClipboardItem")}} interface returns a {{jsxref("Promise")}}
-    that resolves with a {{domxref("Blob")}} of the requested  {{Glossary("MIME type")}}
-    or an error if the MIME type is not found.</span></p>
+<p>The <strong><code>getType()</code></strong> method of the {{domxref("ClipboardItem")}} interface returns a {{jsxref("Promise")}} that resolves with a {{domxref("Blob")}} of the requested  {{Glossary("MIME type")}} or an error if the MIME type is not found.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>blob</em> = <em>clipboardItem</em>.getType(type);</pre>
+  class="brush: js">var <var>blob</var> = <var>clipboardItem</var>.getType(type);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -32,7 +30,7 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{domxref("Promise")}} that resolves with a {{domxref("Blob")}} object.</p>
+<p>A {{jsxref("Promise")}} that resolves with a {{domxref("Blob")}} object.</p>
 
 <h3 id="Exceptions">Exceptions</h3>
 
@@ -51,7 +49,7 @@ tags:
   {{domxref("ClipboardItem.types")}} property to set the <code>getType()</code> argument
   and return the corresponding blob object.</p>
 
-<pre class="brush: js notranslate">async function getClipboardContents() {
+<pre class="brush: js">async function getClipboardContents() {
   try {
     const clipboardItems = await navigator.clipboard.read();
 
@@ -72,24 +70,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Clipboard API','#clipboarditem','ClipboardItem')}}</td>
-      <td>{{Spec2('Clipboard API')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ClipboardItem.getType")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -10,6 +10,7 @@ tags:
   - WebExtensions
   - hide
   - tabs
+browser-compat: webextensions.api.tabs.hide
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -56,7 +57,7 @@ tags:
 
 <p>Hide a single tab:</p>
 
-<pre class="notranslate brush: js">function onHidden() {
+<pre class="brush: js">function onHidden() {
   console.log(`Hidden`);
 }
 
@@ -68,7 +69,7 @@ browser.tabs.hide(2).then(onHidden, onError);</pre>
 
 <p>Hide multiple tabs:</p>
 
-<pre class="notranslate brush: js">function onHidden() {
+<pre class="brush: js">function onHidden() {
   console.log(`Hidden`);
 }
 
@@ -82,4 +83,4 @@ browser.tabs.hide([15, 14, 1]).then(onHidden, onError);</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("webextensions.api.tabs.hide")}}</p>
+<p>{{Compat}}</p>

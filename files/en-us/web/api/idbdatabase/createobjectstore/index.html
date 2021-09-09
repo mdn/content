@@ -2,13 +2,14 @@
 title: IDBDatabase.createObjectStore()
 slug: Web/API/IDBDatabase/createObjectStore
 tags:
-- API
-- Database
-- IDBDatabase
-- IndexedDB
-- Method
-- Reference
-- Storage
+  - API
+  - Database
+  - IDBDatabase
+  - IndexedDB
+  - Method
+  - Reference
+  - Storage
+browser-compat: api.IDBDatabase.createObjectStore
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
@@ -24,14 +25,14 @@ tags:
   to every object, and every object should have that property.</p>
 
 <p>This method can be called <em>only</em> within a <a
-    href="/en-US/docs/IndexedDB/IDBTransaction#VERSION_CHANGE"><code>versionchange</code></a>
+    href="/en-US/docs/Web/API/IDBTransaction#version_change"><code>versionchange</code></a>
   transaction.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>IDBDatabase</em>.createObjectStore(<em>name</em>);
+<pre class="brush: js"><em>IDBDatabase</em>.createObjectStore(<em>name</em>);
 <em>IDBDatabase</em>.createObjectStore(<em>name</em>, <em>options</em>);
 </pre>
 
@@ -46,7 +47,7 @@ tags:
     <p>An options object whose attributes are optional parameters to the method. It
       includes the following properties:</p>
 
-    <table class="standard-table">
+    <table class="no-markdown">
       <thead>
         <tr>
           <th scope="col">Attribute</th>
@@ -57,16 +58,16 @@ tags:
         <tr>
           <td><code>keyPath</code></td>
           <td>The <a
-              href="/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_keypath">key
+              href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path">key
               path</a> to be used by the new object store. If empty or not specified, the
             object store is created without a key path and uses <a
-              href="/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_outofline_key">out-of-line
+              href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#out-of-line_key">out-of-line
               keys</a>. You can also pass in an array as a <code>keyPath</code>.</td>
         </tr>
         <tr>
           <td><code>autoIncrement</code></td>
           <td>If <code>true</code>, the object store has a <a
-              href="/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_keygenerator">key
+              href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_generator">key
               generator</a>. Defaults to <code>false</code>.</td>
         </tr>
       </tbody>
@@ -85,7 +86,7 @@ tags:
 <p>This method may raise a {{domxref("DOMException")}} with a {{domxref("DOMError")}} of
   one of the following types:</p>
 
-<table class="standard-table">
+<table class="no-markdown">
   <thead>
     <tr>
       <th scope="col">Exception</th>
@@ -113,7 +114,7 @@ tags:
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/IndexedDB/IDBDatabaseException#NON_TRANSIENT_ERR">InvalidAccessError</a></code>
+        <code><a href="/en-US/docs/Web/API/IDBDatabaseException#non_transient_err">InvalidAccessError</a></code>
       </td>
       <td>If <code>autoIncrement</code> is set to true and <code>keyPath</code> is either
         an empty string or an array containing an empty string.</td>
@@ -123,7 +124,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js;highlight:[18]">// Let us open our database
+<pre class="brush: js;">// Let us open our database
 var request = window.indexedDB.open("toDoList", 4);
 
 // This handler is called when a new version of the database
@@ -158,31 +159,11 @@ request.onupgradeneeded = function(event) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('IndexedDB', '#dom-idbdatabase-createobjectstore',
-        'createObjectStore()')}}</td>
-      <td>{{Spec2('IndexedDB')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("IndexedDB 2", "#dom-idbdatabase-createobjectstore",
-        "createObjectStore()")}}</td>
-      <td>{{Spec2("IndexedDB 2")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBDatabase.createObjectStore")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

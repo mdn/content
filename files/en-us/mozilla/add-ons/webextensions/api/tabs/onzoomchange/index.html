@@ -11,6 +11,7 @@ tags:
   - WebExtensions
   - onZoomChange
   - tabs
+browser-compat: webextensions.api.tabs.onZoomChange
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -69,7 +70,7 @@ browser.tabs.onZoomChange.hasListener(listener)
 
 <p>Listen for zoom events and log the info:</p>
 
-<pre class="notranslate brush: js">function handleZoomed(zoomChangeInfo) {
+<pre class="brush: js">function handleZoomed(zoomChangeInfo) {
   console.log("Tab: " + zoomChangeInfo.tabId + " zoomed");
   console.log("Old zoom: " + zoomChangeInfo.oldZoomFactor);
   console.log("New zoom: " + zoomChangeInfo.newZoomFactor);
@@ -81,7 +82,7 @@ browser.tabs.onZoomChange.addListener(handleZoomed);</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("webextensions.api.tabs.onZoomChange")}}</p>
+<p>{{Compat}}</p>
 
 <div class="note"><strong>Acknowledgements</strong>
 

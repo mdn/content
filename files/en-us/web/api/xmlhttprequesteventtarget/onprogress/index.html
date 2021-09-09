@@ -8,6 +8,7 @@ tags:
   - Web
   - XHR
   - XMLHttpRequestEventTarget
+browser-compat: api.XMLHttpRequestEventTarget.onprogress
 ---
 <p>{{APIRef("XMLHttpRequest")}}</p>
 
@@ -15,7 +16,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>XMLHttpRequest</em>.onprogress = <em>callback</em>;</pre>
+<pre class="brush: js"><em>XMLHttpRequest</em>.onprogress = <em>callback</em>;</pre>
 
 <h3 id="Values">Values</h3>
 
@@ -30,14 +31,14 @@ tags:
  <li><em><code>event.total</code></em>  the total amount of data to be transferred.</li>
 </ul>
 
-<pre class="brush: js notranslate">XMLHttpRequest.onprogress = function (event) {
+<pre class="brush: js">XMLHttpRequest.onprogress = function (event) {
   event.loaded;
   event.total;
 };</pre>
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js notranslate">var xmlhttp = new XMLHttpRequest(),
+<pre class="brush: js">var xmlhttp = new XMLHttpRequest(),
   method = 'GET',
   url = 'https://developer.mozilla.org/';
 
@@ -50,21 +51,8 @@ xmlhttp.send();
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest', '#handler-xhr-onload')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td>WHATWG living standard</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.XMLHttpRequestEventTarget.onprogress")}}</p>
+<p>{{Compat}}</p>

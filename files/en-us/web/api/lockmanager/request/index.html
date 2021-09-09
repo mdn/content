@@ -2,21 +2,22 @@
 title: LockManager.request()
 slug: Web/API/LockManager/request
 tags:
-- API
-- Experimental
-- LockManager
-- Method
-- Reference
-- Web Locks API
-- request()
+  - API
+  - Experimental
+  - LockManager
+  - Method
+  - Reference
+  - Web Locks API
+  - request()
+browser-compat: api.LockManager.request
 ---
 <p>{{APIRef("Web Locks")}}{{SeeCompatTable}}</p>
 
-<p><span class="seoSummary">The <strong><code>request()</code></strong> method of the
+<p>The <strong><code>request()</code></strong> method of the
     {{domxref("LockManager")}} interface requests a {{domxref('Lock')}} object with
     parameters specifying its name and characteristics. The requested <code>Lock</code> is
     passed to a callback, while the function itself returns a {{jsxref('Promise')}} that
-    resolves with {{jsxref('undefined')}}.</span></p>
+    resolves with {{jsxref('undefined')}}.</p>
 
 <p>The <code>mode</code> property of the <code>options</code> parameter may be either
   <code>"exclusive"</code> or <code>"shared"</code>.</p>
@@ -34,14 +35,14 @@ tags:
 <p>This shared/exclusive lock pattern is common in database transaction architecture, for
   example to allow multiple simultaneous readers (each requests a <code>"shared"</code>
   lock) but only one writer (a single <code>"exclusive"</code> lock). This is known as the
-  readers-writer pattern. In the <a href="/docs/Web/API/IndexedDB_API">IndexedDB API</a>,
+  readers-writer pattern. In the <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a>,
   this is exposed as <code>"readonly"</code> and <code>"readwrite"</code> transactions
   which have the same semantics.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">LockManager.request(var promise = <var>name</var>[, <var>{options}</var>], <var>callback</var>)</pre>
+  class="brush: js">LockManager.request(var promise = <var>name</var>[, <var>{options}</var>], <var>callback</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -156,21 +157,8 @@ try {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Web Locks','#dom-lockmanager-request','request()')}}</td>
-      <td>{{Spec2('Web Locks')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.LockManager.request")}}</p>
+<p>{{Compat}}</p>

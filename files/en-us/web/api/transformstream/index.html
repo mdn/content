@@ -3,10 +3,11 @@ title: TransformStream
 slug: Web/API/TransformStream
 tags:
   - Streams API
+browser-compat: api.TransformStream
 ---
 <p>{{APIRef("Streams")}}</p>
 
-<p><span class="seoSummary">The <code>TransformStream</code> interface of the <a href="/en-US/docs/Web/API/Streams_API">Streams API</a> represents a set of transformable data.</span></p>
+<p>The <code>TransformStream</code> interface of the <a href="/en-US/docs/Web/API/Streams_API">Streams API</a> represents a set of transformable data.</p>
 
 <h2 id="Constructor">Constructor</h2>
 
@@ -32,9 +33,9 @@ tags:
 
 <h3 id="Anything-to-uint8array_stream">Anything-to-uint8array stream</h3>
 
-<p>In the following example, a transform stream passes through all chunks it receives as {{domxref("Uint8Array")}} values.</p>
+<p>In the following example, a transform stream passes through all chunks it receives as {{jsxref("Uint8Array")}} values.</p>
 
-<pre class="brush: js notranslate">const transformContent = {
+<pre class="brush: js">const transformContent = {
   start() {}, // required.
   async transform(chunk, controller) {
     chunk = await chunk
@@ -74,7 +75,7 @@ class AnyToU8Stream extends TransformStream {
 
 <p>Note that this is deprecated by the native constructors. This is intended as a polyfill for unsupported platforms.</p>
 
-<pre class="brush: js notranslate">const tes = {
+<pre class="brush: js">const tes = {
   start(){this.encoder = new TextEncoder()},
   transform(chunk, controller) {
     controller.enqueue(this.encoder.encode(chunk))
@@ -95,7 +96,7 @@ class JSTextEncoderStream extends TransformStream {
 
 <p>Similarly, <code>TextDecoderStream</code> can be written as such:</p>
 
-<pre class="brush: js notranslate">const tds = {
+<pre class="brush: js">const tds = {
   start(){
     this.decoder = new TextDecoder(this.encoding, this.options)
   },
@@ -122,7 +123,7 @@ class JSTextDecoderStream extends TransformStream {
 
 <p>This is a useful one, where multiple streams can be conjoined. Examples include building a PWA with progressive loading and progressive streaming.</p>
 
-<pre class="brush: js notranslate">let responses = [ /* conjoined response tree */ ]
+<pre class="brush: js">let responses = [ /* conjoined response tree */ ]
 let {readable, writable} = new TransformStream
 
 responses.reduce(
@@ -135,27 +136,15 @@ responses.reduce(
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Streams','#ts-class','TransformStream')}}</td>
-   <td>{{Spec2('Streams')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.TransformStream")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li><a href="https://whatwg-stream-visualizer.glitch.me/">WHATWG Stream Visualiser</a>, for a basic visualisation of readable, writable, and transform streams.</li>
+ <li><a href="https://web.dev/streams/">Streams—The Definitive Guide</a></li>
 </ul>

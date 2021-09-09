@@ -11,6 +11,7 @@ tags:
   - Storage
   - WebExtensions
   - onChanged
+browser-compat: webextensions.api.storage.onChanged
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -18,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="notranslate brush: js">browser.storage.onChanged.addListener(<var>callback</var>)
+<pre class="brush: js">browser.storage.onChanged.addListener(<var>callback</var>)
 browser.storage.onChanged.removeListener(<var>listener</var>)
 browser.storage.onChanged.hasListener(<var>listener</var>)
 </pre>
@@ -54,11 +55,11 @@ browser.storage.onChanged.hasListener(<var>listener</var>)
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("webextensions.api.storage.onChanged")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="notranslate brush: js">/*
+<pre class="brush: js">/*
 Log the storage area that changed,
 then for each item changed,
 log its old value and its new value.

@@ -2,11 +2,12 @@
 title: MediaStream.id
 slug: Web/API/MediaStream/id
 tags:
-- MediaStream
-- Property
-- Read-only
-- Reference
-- Web
+  - MediaStream
+  - Property
+  - Read-only
+  - Reference
+  - Web
+browser-compat: api.MediaStream.id
 ---
 <p>{{APIRef("WebRTC")}}</p>
 
@@ -16,39 +17,25 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>id</em> = <em>mediaStream</em>.id;
+<pre class="brush: js">var <em>id</em> = <em>mediaStream</em>.id;
 </pre>
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js"><code class="language-html">var p = navigator.mediaDevices.getUserMedia({ audio: true, video: true });
+<pre class="brush: js">var p = navigator.mediaDevices.getUserMedia({ audio: true, video: true });
 
 p.then(function(stream) {
    console.log(stream.id);
 })
-</code></pre>
+</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('Media Capture', '#dom-mediastream-id', 'MediaStream.id')}}
-			</td>
-			<td>{{Spec2('Media Capture')}}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MediaStream.id")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

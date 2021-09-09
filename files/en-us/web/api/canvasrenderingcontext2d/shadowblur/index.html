@@ -7,11 +7,12 @@ tags:
 - CanvasRenderingContext2D
 - Property
 - Reference
+browser-compat: api.CanvasRenderingContext2D.shadowBlur
 ---
 <div>{{APIRef}}</div>
 
 <p>The
-  <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.shadowBlur</code></strong>
+  <strong><code>CanvasRenderingContext2D.shadowBlur</code></strong>
   property of the Canvas 2D API specifies the amount of blur applied to shadows. The
   default is <code>0</code> (no blur).</p>
 
@@ -26,7 +27,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>ctx</em>.shadowBlur = <em>level</em>;
+<pre class="brush: js"><em>ctx</em>.shadowBlur = <em>level</em>;
 </pre>
 
 <dl>
@@ -52,7 +53,7 @@ tags:
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js; highlight:[6]">const canvas = document.getElementById('canvas');
+<pre class="brush: js;">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Shadow
@@ -70,25 +71,11 @@ ctx.fillRect(20, 20, 150, 100);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-shadowblur",
-        "CanvasRenderingContext2D.shadowBlur")}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CanvasRenderingContext2D.shadowBlur")}}</p>
+<p>{{Compat}}</p>
 
 <h3 id="WebKitBlink-specific_notes">WebKit/Blink-specific notes</h3>
 

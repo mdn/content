@@ -7,6 +7,7 @@ tags:
 - Reference
 - URL API
 - URLSearchParams
+browser-compat: api.URLSearchParams.entries
 ---
 <p>{{APIRef("URL API")}}</p>
 
@@ -20,7 +21,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">searchParams.entries();</pre>
+<pre class="brush: js">searchParams.entries();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -32,7 +33,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js;highlight:[5]">// Create a test URLSearchParams object
+<pre class="brush: js;">// Create a test URLSearchParams object
 var searchParams = new URLSearchParams("key1=value1&amp;key2=value2");
 
 // Display the key/value pairs
@@ -48,27 +49,11 @@ key2, value2</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('URL', '#interface-urlsearchparams', "entries() (see
-        \"iterable\")")}}</td>
-      <td>{{Spec2('URL')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.URLSearchParams.entries")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

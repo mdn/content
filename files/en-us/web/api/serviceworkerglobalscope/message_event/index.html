@@ -7,13 +7,12 @@ tags:
   - Service worker API
   - ServiceWorkerGlobalScope
   - message
+browser-compat: api.ServiceWorkerGlobalScope.message_event
 ---
 <div>{{APIRef}}</div>
 
-<div>
 <p>The <code><strong>message</strong></code> event of the {{domxref("ServiceWorkerGlobalScope")}} interface occurs when incoming messages are received. Controlled pages can use the {{domxref("ServiceWorker.postMessage()")}} method to send messages to service workers.<br>
  The service worker can optionally send a response back via the {{domxref("Client.postMessage()")}}, corresponding to the controlled page.</p>
-</div>
 
 <table class="properties">
  <tbody>
@@ -68,22 +67,11 @@ addEventListener('message', event =&gt; {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#eventdef-serviceworkerglobalscope-message', 'message')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ServiceWorkerGlobalScope.message_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

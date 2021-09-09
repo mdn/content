@@ -16,6 +16,7 @@ tags:
 - WebRTC Device API
 - capabilities
 - getCapabilities
+browser-compat: api.RTCRtpSender.getCapabilities
 ---
 <p>{{DefaultAPISidebar("WebRTC")}}</p>
 
@@ -30,7 +31,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">let <em>rtpCapabilities</em> = RTCRtpSender.getCapabilities(<em>kind</em>);</pre>
+  class="brush: js">let <em>rtpCapabilities</em> = RTCRtpSender.getCapabilities(<em>kind</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -53,7 +54,7 @@ tags:
 <p>As a static function, this is always called using the form:</p>
 
 <pre
-  class="brush: js notranslate">capabilities = RTCRtpSender.getCapabilities("audio");</pre>
+  class="brush: js">capabilities = RTCRtpSender.getCapabilities("audio");</pre>
 
 <p>The returned set of capabilities is the most optimistic possible list. It is entirely
   possible that certain combinations of options may fail to work when you actually try to
@@ -76,12 +77,12 @@ tags:
   sending H.264 video on an {{domxref("RTCRtpSender")}}.</p>
 
 <div class="notecard note">
-  <p>Since <code>RTCRtpSender.getCapabilities()</code> actually only indicates
+  <p><strong>Note:</strong> Since <code>RTCRtpSender.getCapabilities()</code> actually only indicates
     <em>probable</em> support, H.264 support might still fail even after getting a
     positive response from this function.</p>
 </div>
 
-<pre class="brush: js notranslate">function canSendH264() {
+<pre class="brush: js">function canSendH264() {
   let capabilities = RTCRtpSender.getCapabilities("video");
 
   capabilities.codecs.forEach((codec) =&gt; {
@@ -95,22 +96,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName("WebRTC 1.0", "#dom-rtcrtpsender-getcapabilities",
-        "RTCRtpSender.getCapabilities()")}}</td>
-      <td>{{Spec2("WebRTC 1.0")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCRtpSender.getCapabilities")}}</p>
+<p>{{Compat}}</p>

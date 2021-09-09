@@ -13,13 +13,16 @@ tags:
 - Video
 - load
 - reset
+browser-compat: api.HTMLMediaElement.load
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p><span class="seoSummary">The {{domxref("HTMLMediaElement")}} method
+<p>The {{domxref("HTMLMediaElement")}} method
     <code><strong>load()</strong></code> resets the media element to its initial state and
     begins the process of selecting a media source and loading the media in preparation
-    for playback to begin at the beginning.</span> The amount of media data that is
+    for playback to begin at the beginning.</p>
+
+<p>The amount of media data that is
   prefetched is determined by the value of the element's {{htmlattrxref("preload",
   "video")}} attribute.</p>
 
@@ -32,7 +35,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>mediaElement</em>.load();</pre>
+<pre class="brush: js"><em>mediaElement</em>.load();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -54,7 +57,7 @@ tags:
 
 <p>The process of aborting any ongoing activities will cause any outstanding
   {{jsxref("Promise")}}s returned by {{domxref("HTMLMediaElement.play", "play()")}} being
-  resolved or rejected as appropriate based on their status before the loading of new
+ fulfilled or rejected as appropriate based on their status before the loading of new
   media can begin. Pending play promises are aborted with an <code>"AbortError"</code>
   {{domxref("DOMException")}}.</p>
 
@@ -85,29 +88,8 @@ mediaElem.load();
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', "media.html#dom-media-load",
-        "HTMLMediaElement.load()")}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML5 W3C',
-        "semantics-embedded-content.html#dom-htmlmediaelement-load",
-        "HTMLMediaElement.load()")}}</td>
-      <td>{{Spec2('HTML5 W3C')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLMediaElement.load")}}</p>
+<p>{{Compat}}</p>

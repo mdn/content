@@ -13,6 +13,7 @@ tags:
 - Reference
 - Translate
 - matrix
+browser-compat: api.DOMMatrixReadOnly.translate
 ---
 <p>{{APIRef("Geometry Interfaces")}}{{SeeCompatTable}}</p>
 
@@ -25,25 +26,22 @@ tags:
 <p>The <code>translate()</code> method accepts two or three values.</p>
 
 <pre
-  class="brush: js notranslate">DOMMatrix.translate(<em>translateX</em>, <em>translateY</em>[, <em>translateZ]</em>)</pre>
+  class="brush: js">DOMMatrix.translate(<em>translateX</em>, <em>translateY</em>[, <em>translateZ]</em>)</pre>
 
-<h3 class="highlight-spanned" id="Parameters"><span
-    class="highlight-span">Parameters</span></h3>
+<h3>Parameters</h3>
 
 <dl>
   <dt>translateX</dt>
   <dd>A number representing the abscissa (x-coordinate) of the translating vector.</dd>
   <dt>translateY</dt>
   <dd>A number representing the ordinate (y-coordinate) of the translating vector.</dd>
-  <dt>translateZ <span class="inlineIndicator optional optionalInline">Optional</span>
-  </dt>
+  <dt>translateZ {{optional_inline}}</dt>
   <dd>A number representing the z component of the translating vector.  If not supplied,
     this defaults to 0.  If this is anything other than 0, the resulting matrix will be
     3D.</dd>
 </dl>
 
-<h3 class="highlight-spanned" id="Return_value"><span class="highlight-span">Return
-    value</span></h3>
+<h3>Return value</h3>
 
 <p>Returns a <a href="/en-US/docs/Web/API/DOMMatrix"
     title="The DOMMatrix interface represents 4x4 matrices, suitable for 2D and 3D operations."><code>DOMMatrix</code></a>
@@ -74,27 +72,13 @@ document.querySelector('#transformed').setAttribute('transform', matrix.toString
 </pre>
 
 <p>{{ EmbedLiveSample('Examples', '250', '250',
-  'https://mdn.mozillademos.org/files/16525/Screen_Shot_2019-02-19_at_11.20.40.png',
+  'screen_shot_2019-02-19_at_11.20.40.png',
   'Web/API/DOMMatrixReadOnly/translate') }}</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{ SpecName('Geometry Interfaces', '#dom-dommatrixreadonly-translate',
-        'DOMMatrixReadOnly.translate()') }}</td>
-      <td>{{ Spec2('Geometry Interfaces') }}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.DOMMatrixReadOnly.translate")}}</p>
+<p>{{Compat}}</p>

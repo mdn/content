@@ -14,11 +14,13 @@ tags:
   - bufferedamountlow
   - data
   - events
+  - Event
   - rtc
+browser-compat: api.RTCDataChannel.bufferedamountlow_event
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">A <strong><code>bufferedamountlow</code></strong> event is sent to an {{domxref("RTCDataChannel")}} when the number of bytes currently in the outbound data transfer buffer falls below the threshold specified in {{domxref("RTCDataChannel.bufferedAmountLowThreshold", "bufferedAmountLowThreshold")}}.</span> <code>bufferedamountlow</code> events aren't sent if <code>bufferedAmountLowThreshold</code> is 0.</p>
+<p>A <strong><code>bufferedamountlow</code></strong> event is sent to an {{domxref("RTCDataChannel")}} when the number of bytes currently in the outbound data transfer buffer falls below the threshold specified in {{domxref("RTCDataChannel.bufferedAmountLowThreshold", "bufferedAmountLowThreshold")}}. <code>bufferedamountlow</code> events aren't sent if <code>bufferedAmountLowThreshold</code> is 0.</p>
 
 <table class="properties">
  <tbody>
@@ -71,24 +73,11 @@ pc.addEventListener("bufferedamountlow", ev =&gt; {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{ SpecName('WebRTC 1.0', '#event-datachannel-bufferedamountlow', 'bufferedamountlow') }}</td>
-   <td>{{Spec2('WebRTC 1.0')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCDataChannel.bufferedamountlow_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

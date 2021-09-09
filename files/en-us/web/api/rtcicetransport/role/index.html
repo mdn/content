@@ -17,13 +17,14 @@ tags:
 - WebRTC
 - WebRTC API
 - rtc
+browser-compat: api.RTCIceTransport.role
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">The read-only <strong>{{domxref("RTCIceTransport")}}</strong>
+<p>The read-only <strong>{{domxref("RTCIceTransport")}}</strong>
     property <code><strong>role</strong></code> indicates which {{Glossary("ICE")}} role
     the transport is fulfilling: that of the controlling agent, or the agent that is being
-    controlled.</span></p>
+    controlled.</p>
 
 <p>You can learn more about ICE roles in
   {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Choosing a candidate
@@ -31,7 +32,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>iceRole</em> = <em>RTCIceTransport</em>.role;
+<pre class="brush: js"><em>iceRole</em> = <em>RTCIceTransport</em>.role;
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -44,22 +45,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebRTC 1.0', '#dom-icetransport-role', 'RTCIceTransport.role')}}
-      </td>
-      <td>{{Spec2('WebRTC 1.0')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCIceTransport.role")}}</p>
+<p>{{Compat}}</p>

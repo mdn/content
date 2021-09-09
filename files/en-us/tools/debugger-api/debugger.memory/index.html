@@ -97,7 +97,7 @@ slug: Tools/Debugger-API/Debugger.Memory
   <dd>
   <p>The <code>collections</code> property’s value is an array. Because SpiderMonkey’s collector is incremental, a full collection cycle may consist of multiple discrete collection slices with the JS mutator running interleaved. For each collection slice that occurred, there is an entry in the <code>collections</code> array with the following form:</p>
 
-  <pre class="language-js notranslate"><code>
+  <pre class="language-js"><code>
 {
   "startTimestamp":<em>timestamp</em>,
   "endTimestamp":<em>timestamp</em>,

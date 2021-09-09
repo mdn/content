@@ -15,19 +15,21 @@ tags:
 - WebRTC API
 - nackCount
 - stream
+browser-compat: api.RTCInboundRtpStreamStats.nackCount
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">The <strong><code>nackCount</code></strong> property of the
+<p>The <strong><code>nackCount</code></strong> property of the
     {{domxref("RTCInboundRtpStreamStats")}} dictionary is a numeric value indicating the
-    number of times the receiver sent a <strong>NACK</strong> packet to the sender.</span>
-  A NACK (Negative ACKnowledgement, also called "Generic NACK") packet tells the sender
+    number of times the receiver sent a <strong>NACK</strong> packet to the sender.</p>
+
+<p>A NACK (Negative ACKnowledgement, also called "Generic NACK") packet tells the sender
   that one or more of the {{Glossary("RTP")}} packets it sent were lost in transport.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>nackCount</em> = <em>rtcInboundRtpStreamStats</em>.nackCount;</pre>
+  class="brush: js">var <em>nackCount</em> = <em>rtcInboundRtpStreamStats</em>.nackCount;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -36,23 +38,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebRTC Statistics Identifiers',
-        '#dom-rtcinboundrtpstreamstats-nackcount', 'RTCInboundRtpStreamStats.nackCount')}}
-      </td>
-      <td>{{Spec2('WebRTC Statistics Identifiers')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCInboundRtpStreamStats.nackCount")}}</p>
+<p>{{Compat}}</p>

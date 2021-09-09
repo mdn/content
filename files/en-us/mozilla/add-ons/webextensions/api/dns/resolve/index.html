@@ -10,6 +10,7 @@ tags:
   - Reference
   - WebExtensions
   - resolve
+browser-compat: webextensions.api.dns.resolve
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -39,7 +40,7 @@ tags:
   <li><code>"canonical_name"</code>: The canonical name of the specified host will be queried.</li>
   <li><code>"disable_ipv4"</code>: Only IPv6 addresses will be returned.</li>
   <li><code>"disable_ipv6"</code>: Only IPv4 addresses will be returned.</li>
-  <li><code>"disable_trr"</code>: Do not use the Trusted Recursive Resolver (TRR) for resolving the host name. A TRR enables resolving of host names using a dedicated <a href="https://tools.ietf.org/html/draft-ietf-doh-dns-over-https-02">DNS-over-HTTPS</a> server.</li>
+  <li><code>"disable_trr"</code>: Do not use the Trusted Recursive Resolver (TRR) for resolving the host name. A TRR enables resolving of host names using a dedicated <a href="https://datatracker.ietf.org/doc/html/draft-ietf-doh-dns-over-https-02">DNS-over-HTTPS</a> server.</li>
   <li><code>"offline"</code>: Only literals and cached entries will be returned.</li>
   <li><code>"priority_low"</code>: The request is given lower priority. If "priority_medium" is also given, the query is given medium priority.</li>
   <li><code>"priority_medium"</code>: The request is given medium priority. If "priority_low" is also given, the query is given medium priority.</li>
@@ -63,13 +64,11 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("webextensions.api.dns.resolve")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="notranslate brush: js">function resolved(record) {
+<pre class="brush: js">function resolved(record) {
   console.log(record.addresses);
 }
 
@@ -81,7 +80,7 @@ resolving.then(resolved);
 
 <p>Bypass the cache, and ask for the canonical name:</p>
 
-<pre class="notranslate brush: js">function resolved(record) {
+<pre class="brush: js">function resolved(record) {
   console.log(record.canonicalName);
   console.log(record.addresses);
 }

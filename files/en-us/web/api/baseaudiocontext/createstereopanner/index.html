@@ -10,21 +10,26 @@ tags:
   - Reference
   - Web Audio API
   - createStereoPanner
+browser-compat: api.BaseAudioContext.createStereoPanner
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
-<div>
-  <p>The <code>createStereoPanner()</code> method of the {{ domxref("BaseAudioContext") }}
-    interface creates a {{ domxref("StereoPannerNode") }}, which can be used to apply
-    stereo panning to an audio source. It positions an incoming audio stream in a stereo
-    image using a low-cost <a class="external external-icon"
-      href="https://webaudio.github.io/web-audio-api/#equal-power">equal-power</a> panning
-    algorithm.</p>
+<p>The <code>createStereoPanner()</code> method of the {{ domxref("BaseAudioContext") }}
+  interface creates a {{ domxref("StereoPannerNode") }}, which can be used to apply
+  stereo panning to an audio source. It positions an incoming audio stream in a stereo
+  image using a low-cost <a class="external external-icon"
+    href="https://webaudio.github.io/web-audio-api/#equal-power">equal-power</a> panning
+  algorithm.</p>
+
+<div class="notecard note">
+  <p><strong>Note:</strong> The {{domxref("StereoPannerNode.StereoPannerNode", "StereoPannerNode()")}}
+    constructor is the recommended way to create a {{domxref("StereoPannerNode")}}; see
+    <a href="/en-US/docs/Web/API/AudioNode#creating_an_audionode">Creating an AudioNode</a>.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">baseAudioContext.createStereoPanner();</pre>
+<pre class="brush: js">baseAudioContext.createStereoPanner();</pre>
 
 <h3 id="Description">Returns</h3>
 
@@ -78,30 +83,11 @@ panNode.connect(audioCtx.destination);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Web Audio API', '#dom-baseaudiocontext-createstereopanner',
-        'createStereoPanner()')}}</td>
-      <td>{{Spec2('Web Audio API')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-  <div>
-
-    <p>{{Compat("api.BaseAudioContext.createStereoPanner")}}</p>
-  </div>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

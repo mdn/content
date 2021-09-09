@@ -7,12 +7,13 @@ tags:
 - Reference
 - URL
 - URL API
+browser-compat: api.URL.hash
 ---
 <div>{{ APIRef("URL API") }}</div>
 
-<p><span class="seoSummary">The <strong><code>hash</code></strong> property of the
+<p>The <strong><code>hash</code></strong> property of the
     {{domxref("URL")}} interface is a {{domxref("USVString")}} containing a
-    <code>'#'</code> followed by the fragment identifier of the URL.</span></p>
+    <code>'#'</code> followed by the fragment identifier of the URL.</p>
 
 <p>The fragment is not <a
     href="/en-US/docs/Glossary/percent-encoding">percent-decoded</a>. If the URL does not
@@ -23,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">const <em>string</em> = <em>url</em>.hash
+<pre class="brush: js">const <em>string</em> = <em>url</em>.hash
 <em>url</em>.hash = <em>newHash</em>
 </pre>
 
@@ -38,24 +39,11 @@ console.log(url.hash); // Logs: '#Examples'</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('URL', '#dom-url-hash', 'URL.hash')}}</td>
-      <td>{{Spec2('URL')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.URL.hash")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

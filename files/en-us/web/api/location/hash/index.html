@@ -6,13 +6,14 @@ tags:
 - Location
 - Property
 - Reference
+browser-compat: api.Location.hash
 ---
 <div>{{ APIRef("Location") }}</div>
 
-<p><span class="seoSummary">The <strong><code>hash</code></strong> property of the
+<p>The <strong><code>hash</code></strong> property of the
     {{domxref("Location")}} interface returns a {{domxref("USVString")}} containing a
     <code>'#'</code> followed by the fragment identifier of the URL — the ID on the page
-    that the URL is trying to target.</span></p>
+    that the URL is trying to target.</p>
 
 <p>The fragment is not <a
     href="/en-US/docs/Glossary/percent-encoding">percent-decoded</a>. If the URL does not
@@ -20,13 +21,13 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>string</em> = <em>object</em>.hash;
+<pre class="brush: js"><em>string</em> = <em>object</em>.hash;
 <em>object</em>.hash = <em>string</em>;
 </pre>
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: html notranslate">&lt;a id="myAnchor" href="/en-US/docs/Location.href#Examples"&gt;Examples&lt;/a&gt;
+<pre class="brush: html">&lt;a id="myAnchor" href="/en-US/docs/Location.href#Examples"&gt;Examples&lt;/a&gt;
 &lt;script&gt;
   var anchor = document.getElementById("myAnchor");
   console.log(anchor.hash); // Returns '#Examples'
@@ -34,21 +35,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', '#dom-location-hash', 'hash')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Location.hash")}}</p>
+<p>{{Compat}}</p>

@@ -9,11 +9,13 @@ tags:
 - Interface
 - Property
 - Read-only
+- Deprecated
+browser-compat: api.Document.origin
 ---
 <div>{{APIRef("DOM")}}{{deprecated_header}}</div>
 
 <div class="notecard note">
-  <p>Use <code>self.origin</code> instead.</p>
+  <p><strong>Note:</strong> Use <code>self.origin</code> instead.</p>
 </div>
 
 <p>The <strong><code>Document.origin</code></strong> read-only property returns the
@@ -23,11 +25,11 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <var>origin</var> = <var>document</var>.origin;</pre>
+  class="brush: js">var <var>origin</var> = <var>document</var>.origin;</pre>
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">var origin = document.origin;
+<pre class="brush: js">var origin = document.origin;
 // On this page, returns:'https://developer.mozilla.org'
 
 var origin = document.origin;
@@ -39,7 +41,7 @@ var origin = document.origin;
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("api.Document.origin")}}</div>
+<div>{{Compat}}</div>
 
 <h2 id="See_also">See also</h2>
 

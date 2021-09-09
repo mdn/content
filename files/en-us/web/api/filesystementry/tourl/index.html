@@ -11,19 +11,21 @@ tags:
 - Non-standard
 - Reference
 - toURL
+- Deprecated
+browser-compat: api.FileSystemEntry.toURL
 ---
 <p>{{APIRef("File System API")}}{{deprecated_header}}</p>
 
-<p><span class="seoSummary">The {{domxref("FileSystemEntry")}} interface's method
-    <code><strong>toURL</strong></code><strong><code>()</code></strong> creates and
+<p>The {{domxref("FileSystemEntry")}} interface's method
+    <strong><code>toURL()</code></strong> creates and
     returns a string containing a URL which can be used to identify the file system entry.
     This is done by exposing a new URL scheme—<code>filesystem:</code>—that can be used as
-    the value of <code>src</code> and <code>href</code> attributes.</span></p>
+    the value of <code>src</code> and <code>href</code> attributes.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><em>FileSystemEntry</em>.toURL([<em>mimeType</em>]);</pre>
+  class="brush: js"><em>FileSystemEntry</em>.toURL([<em>mimeType</em>]);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -66,7 +68,7 @@ document.body.appendChild(img);</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.FileSystemEntry.toURL")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -18,23 +18,23 @@ tags:
 
 <ul>
  <li><a href="#seconds.fraction">Seconds.fraction</a>: Specifying simple second values. This is the simplest approach to take; we've already seen this used earlier in the article series.</li>
- <li><a href="#hh:mm:ss.fraction">HH:MM:SS.fraction</a>: Specifying more complex times in the format <code>HH:MM:SS</code>. This is similar to only using Seconds, and is one of the most common time expressions in IMSC files.</li>
+ <li><a href="#hhmmss.fraction">HH:MM:SS.fraction</a>: Specifying more complex times in the format <code>HH:MM:SS</code>. This is similar to only using Seconds, and is one of the most common time expressions in IMSC files.</li>
  <li><a href="#frames">Frames</a>: Specifying start and end times in terms of numbers of frames rather than seconds. This is the other most common time expression used in IMSC files. The advantage to this approach is that the frame number directly corresponds to the frame number in the video file.</li>
 </ul>
 
-<h3 id="Seconds.fraction_2"><a id="Seconds.fraction">Seconds.fraction</a></h3>
+<h3 id="Seconds.fraction">Seconds.fraction</h3>
 
 <pre class="brush: xml">&lt;p begin="1s" end="2s"&gt;Hello, I am Mork from Ork&lt;/p&gt;</pre>
 
 <p>This method for describing the <code>begin</code> and <code>end</code> values in the IMSC document is very simple — you just include a number with "s" (seconds) appended. It does not require the user to declare the frame rate of the corresponding media. These values must be mapped to the video frame that the text is synchronized with. Fractional values will always round up to the nearest video frame.</p>
 
-<h3 id="HHMMSS.fraction"><a id="HH:MM:SS.fraction">HH:MM:SS.fraction</a></h3>
+<h3 id="HHMMSS.fraction">HH:MM:SS.fraction</h3>
 
 <pre class="brush: xml">&lt;p begin="00:00:01.00" end="00:00:02.00"&gt;Hello, I am Mork from Ork&lt;/p&gt;</pre>
 
 <p>This method for describing the begin and end values in the IMSC document is essentially the same as using seconds, except for the fact that you are expressing those values as hours, minutes, and seconds. This allows you to easily set longer, more precise times.</p>
 
-<h3 id="Frames_2"><a id="Frames">Frames</a></h3>
+<h3 id="Frames">Frames</h3>
 
 <pre class="brush: xml">&lt;tt xmlns="http://www.w3.org/ns/ttml"
   xml:lang="en"

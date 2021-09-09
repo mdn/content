@@ -12,13 +12,16 @@ tags:
 - Reference
 - onmerchantvalidation
 - payment
+browser-compat: api.PaymentRequest.onmerchantvalidation
 ---
 <p>{{deprecated_header}}{{non-standard_header}}{{securecontext_header}}</p>
 
-<p><span class="seoSummary">The {{domxref("PaymentRequest")}} event handler
+<p>The {{domxref("PaymentRequest")}} event handler
     <code><strong>onmerchantvalidation</strong></code> is invoked when the
-    {{event("merchantvalidation")}}</span> is fired, indicating that the payment handler
-  (e.g., Apple Pay) requires the merchant to validate themselves. This is usually the
+    {{event("merchantvalidation")}} is fired, indicating that the payment handler
+  (e.g., Apple Pay) requires the merchant to validate themselves.</p>
+
+<p>This is usually the
   first event to be fired, and the user won't be able to proceed with a payment until the
   merchant validate themselves.</p>
 
@@ -28,7 +31,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><em>paymentRequest</em>.onmerchantvalidation = <em>eventHandlerFunction</em>;</pre>
+  class="brush: js"><em>paymentRequest</em>.onmerchantvalidation = <em>eventHandlerFunction</em>;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -42,7 +45,7 @@ tags:
 <p>An example merchant validation handler for the {{domxref("PaymentRequest")}} object
   <code>request</code> looks like this:</p>
 
-<pre class="brush: js notranslate">request.onmerchantvalidation = ev =&gt; {
+<pre class="brush: js">request.onmerchantvalidation = ev =&gt; {
   ev.complete(async () =&gt; {
     const merchantServerUrl = window.location.origin +
         '/validation?url=' + encodeURIComponent(ev.validationURL);
@@ -59,4 +62,4 @@ const response = await request.show();</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.PaymentRequest.onmerchantvalidation")}}</p>
+<p>{{Compat}}</p>

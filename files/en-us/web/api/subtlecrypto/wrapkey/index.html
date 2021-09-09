@@ -2,13 +2,13 @@
 title: SubtleCrypto.wrapKey()
 slug: Web/API/SubtleCrypto/wrapKey
 tags:
-- API
-- Method
-- Reference
-- Référence(2)
-- SubtleCrypto
-- Web Crypto API
-- wrapKey
+  - API
+  - Method
+  - Reference
+  - SubtleCrypto
+  - Web Crypto API
+  - wrapKey
+browser-compat: api.SubtleCrypto.wrapKey
 ---
 <p>{{APIRef("Web Crypto API")}}{{SecureContext_header}}</p>
 
@@ -18,13 +18,9 @@ tags:
   environments, such as inside an otherwise unprotected data store or in transmission over
   an unprotected network.</p>
 
-<p>As with
-  <code><a href="/en-US/docs/Web/API/SubtleCrypto/exportKey">SubtleCrypto.exportKey()</a></code>,
-  you specify an <a
-    href="/en-US/docs/Web/API/SubtleCrypto/importKey#Supported_formats">export format</a>
-  for the key. To export a key, it must have <a
-    href="/en-US/docs/Web/API/CryptoKey/extractable"
-    title="The CryptoKey.extractable read-only property that indicates if the raw material key can be extracted, for example for archiving it."><code>CryptoKey.extractable</code></a>
+<p>As with {{DOMxRef("SubtleCrypto.exportKey()")}},
+  you specify an <a href="/en-US/docs/Web/API/SubtleCrypto/importKey#supported_formats">export format</a>
+  for the key. To export a key, it must have {{DOMxRef("CryptoKey.extractable")}}
   set to <code>true</code>.</p>
 
 <p>But because <code>wrapKey()</code> also encrypts the key to be imported, you also need
@@ -37,12 +33,12 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">const <em>result</em> = <em>crypto</em><code>.subtle.wrapKey(
-    <em>format</em>,
-    <em>key</em>,
-    <em>wrappingKey</em>,
-    <em>wrapAlgo</em>
-)</code>;
+<pre class="brush: js">const result = crypto.subtle.wrapKey(
+    format,
+    key,
+    wrappingKey,
+    wrapAlgo
+);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -53,15 +49,15 @@ tags:
 
     <ul>
       <li><code>raw</code>: <a
-          href="/en-US/docs/Web/API/SubtleCrypto/importKey#Raw">Raw</a> format.</li>
+          href="/en-US/docs/Web/API/SubtleCrypto/importKey#raw">Raw</a> format.</li>
       <li><code>pkcs8</code>: <a
-          href="/en-US/docs/Web/API/SubtleCrypto/importKey#PKCS_8">PKCS #8</a> format.
+          href="/en-US/docs/Web/API/SubtleCrypto/importKey#pkcs_8">PKCS #8</a> format.
       </li>
       <li><code>spki</code>: <a
-          href="/en-US/docs/Web/API/SubtleCrypto/importKey#SubjectPublicKeyInfo">SubjectPublicKeyInfo</a>
+          href="/en-US/docs/Web/API/SubtleCrypto/importKey#subjectpublickeyinfo">SubjectPublicKeyInfo</a>
         format.</li>
       <li><code>jwk</code>: <a
-          href="/en-US/docs/Web/API/SubtleCrypto/importKey#JSON_Web_Key">JSON Web Key</a>
+          href="/en-US/docs/Web/API/SubtleCrypto/importKey#json_web_key">JSON Web Key</a>
         format.</li>
     </ul>
   </li>
@@ -69,26 +65,26 @@ tags:
   <li><code><em>wrappingkey</em></code> is the {{domxref("CryptoKey")}} used to encrypt
     the exported key. The key must have the <code>wrapKey</code> usage set.</li>
   <li><code><em>wrapAlgo</em></code> is an object specifying the <a
-      href="/en-US/docs/Web/API/SubtleCrypto/encrypt#Supported_algorithms">algorithm</a>
+      href="/en-US/docs/Web/API/SubtleCrypto/encrypt#supported_algorithms">algorithm</a>
     to be used to encrypt the exported key, and any required extra parameters:
     <ul>
-      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#RSA-OAEP">RSA-OAEP</a>,
+      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep">RSA-OAEP</a>,
         pass an <a href="/en-US/docs/Web/API/RsaOaepParams"
           title="This dictionary represents the object that should be passed as the algorithm parameter into SubtleCrypto.encrypt(), SubtleCrypto.decrypt(), SubtleCrypto.wrapKey(), or SubtleCrypto.unwrapKey(),  when using the RSA_OAEP algorithm."><code>RsaOaepParams</code></a>
         object.</li>
-      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#AES-CTR">AES-CTR</a>,
+      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr">AES-CTR</a>,
         pass an <a href="/en-US/docs/Web/API/AesCtrParams"
           title="This dictionary represents the object that should be passed as the algorithm parameter into SubtleCrypto.encrypt(), SubtleCrypto.decrypt(), SubtleCrypto.wrapKey(), or SubtleCrypto.unwrapKey(),  when using the AES-CTR algorithm."><code>AesCtrParams</code></a>
         object.</li>
-      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#AES-CBC">AES-CBC</a>,
+      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc">AES-CBC</a>,
         pass an <a href="/en-US/docs/Web/API/AesCbcParams"
           title="This dictionary represents the object that should be passed as the algorithm parameter into SubtleCrypto.encrypt(), SubtleCrypto.decrypt(), SubtleCrypto.wrapKey(), or SubtleCrypto.unwrapKey(), when using the AES-CBC algorithm."><code>AesCbcParams</code></a>
         object.</li>
-      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#AES-GCM">AES-GCM</a>,
+      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm">AES-GCM</a>,
         pass an <a href="/en-US/docs/Web/API/AesGcmParams"
           title="This dictionary represents the object that should be passed as the algorithm parameter into SubtleCrypto.encrypt(), SubtleCrypto.decrypt(), SubtleCrypto.wrapKey(), or SubtleCrypto.unwrapKey(),  when using the AES-GCM algorithm."><code>AesGcmParams</code></a>
         object.</li>
-      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/wrapKey#AES-KW">AES-KW</a>,
+      <li>To use <a href="#aes-kw">AES-KW</a>,
         pass the string <code>"AES-KW"</code>, or an object of the form
         <code>{ "name": "AES-KW }</code>.</li>
     </ul>
@@ -122,7 +118,7 @@ tags:
 
 <h2 id="Supported_algorithms">Supported algorithms</h2>
 
-<p>All <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#Supported_algorithms">algorithms
+<p>All <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#supported_algorithms">algorithms
     that are usable for encryption</a> are also usable for key wrapping, as long as the
   key has the "wrapKey" usage set. For key wrapping you have the additional option of
   AES-KW.</p>
@@ -135,12 +131,12 @@ tags:
   not require an initialization vector. To use AES-KW, the input must be a multiple of 64
   bits.</p>
 
-<p>AES-KW is specified in <a href="https://tools.ietf.org/html/rfc3394">RFC 3394</a>.</p>
+<p>AES-KW is specified in <a href="https://datatracker.ietf.org/doc/html/rfc3394">RFC 3394</a>.</p>
 
 <h2 id="Examples">Examples</h2>
 
 <div class="notecard note">
-  <p><strong>Note</strong>: You can <a
+  <p><strong>Note:</strong> You can <a
       href="https://mdn.github.io/dom-examples/web-crypto/wrap-key/index.html">try the
       working examples</a> out on GitHub.</p>
 </div>
@@ -504,25 +500,11 @@ window.crypto.subtle.generateKey(
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{ SpecName('Web Crypto API', '#dfn-SubtleCrypto-method-wrapKey',
-        'SubtleCrypto.wrapKey()') }}</td>
-      <td>{{ Spec2('Web Crypto API') }}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SubtleCrypto.wrapKey")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -530,12 +512,12 @@ window.crypto.subtle.generateKey(
   <li>
     <code><a href="/en-US/docs/Web/API/SubtleCrypto/exportKey">SubtleCrypto.exportKey()</a></code>
   </li>
-  <li><a class="external external-icon" href="https://tools.ietf.org/html/rfc5208"
+  <li><a class="external external-icon" href="https://datatracker.ietf.org/doc/html/rfc5208"
       rel="noopener">PKCS #8 format</a>.</li>
   <li><a class="external external-icon"
-      href="https://tools.ietf.org/html/rfc5280#section-4.1"
+      href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.1"
       rel="noopener">SubjectPublicKeyInfo format</a>.</li>
-  <li><a class="external external-icon" href="https://tools.ietf.org/html/rfc7517"
+  <li><a class="external external-icon" href="https://datatracker.ietf.org/doc/html/rfc7517"
       rel="noopener">JSON Web Key format</a>.</li>
-  <li><a href="https://tools.ietf.org/html/rfc3394">AES-KW specification</a>.</li>
+  <li><a href="https://datatracker.ietf.org/doc/html/rfc3394">AES-KW specification</a>.</li>
 </ul>

@@ -130,7 +130,7 @@ tags:
  <li>RC4 is now considered as insecure and all UI indicators will react as such; SSLv3 has been disabled by default in Firefox 34, but the UI has been changed to help the user better understand what is happening ({{bug(1093595)}}).</li>
  <li>Also, RC4 is no longer offered in the initial handshake of TLS ({{bug(1088915)}}).</li>
  <li>The <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#form-action"><code>form-action</code></a> directive of CSP 1.1 is now supported ({{bug(529697)}}).</li>
- <li>In the preferences of Firefox, The <a href="/en-US/docs/Web/Security/Do_not_track_field_guide">Do not track </a>selection widget is again an on/off switch ({{bug(1071747)}}).</li>
+ <li>In the preferences of Firefox, The <a href="/en-US/docs/Web/HTTP/Headers/DNT">Do not track </a>selection widget is again an on/off switch ({{bug(1071747)}}).</li>
 </ul>
 
 <h2 id="Changes_for_add-on_and_Mozilla_developers">Changes for add-on and Mozilla developers</h2>
@@ -166,7 +166,7 @@ tags:
 
 <dl>
  <dt><code>TYPE_FETCH</code></dt>
- <dd>Indicates a content load request initiated by the {{domxref("WindowOrWorkerGlobalScope/fetch", "GlobalFetch.fetch()")}} method.</dd>
+ <dd>Indicates a content load request initiated by the {{domxref("fetch()")}} method.</dd>
  <dt><code>TYPE_IMAGESET</code></dt>
  <dd>Indicates a request to load an {{HTMLElement("img")}} (with the {{htmlattrxref("srcset", "img")}} attribute or {{HTMLElement("picture")}} element.</dd>
 </dl>
@@ -179,12 +179,6 @@ tags:
 
 <ul>
  <li>Firefox <code>-remote</code> <a href="/en-US/docs/Mozilla/Command_Line_Options">command line option</a> has been removed ({{bug(1080319)}}).</li>
-</ul>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="https://www.fxsitecompat.com/en-US/versions/36/">Site Compatibility for Firefox 36</a></li>
 </ul>
 
 <h2 id="Older_versions">Older versions</h2>

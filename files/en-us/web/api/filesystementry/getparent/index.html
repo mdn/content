@@ -3,25 +3,24 @@ title: FileSystemEntry.getParent()
 slug: Web/API/FileSystemEntry/getParent
 tags:
 - API
-- File System API
 - File and Directory Entry API
 - FileSystemEntry
 - Files
 - Method
-- Non-standard
 - Reference
 - getParent
+browser-compat: api.FileSystemEntry.getParent
 ---
-<p>{{APIRef("File System API")}}{{SeeCompatTable}}</p>
+<p>{{APIRef("File and Directory Entries API")}}</p>
 
-<p><span class="seoSummary">The {{domxref("FileSystemEntry")}} interface's method
-    <code><strong>getParent</strong></code><strong><code>()</code></strong> obtains a
-    {{domxref("FileSystemDirectoryEntry")}}.</span></p>
+<p>The {{domxref("FileSystemEntry")}} interface's method
+    <strong><code>getParent()</code></strong> obtains a
+    {{domxref("FileSystemDirectoryEntry")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><em>FileSystemEntry</em>.getParent(<em>successCallback</em>[, <em>errorCallback</em>]);</pre>
+  class="brush: js"><em>FileSystemEntry</em>.getParent(<em>successCallback</em>[, <em>errorCallback</em>]);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -33,7 +32,7 @@ tags:
     considered to be the root directory, itself, so be sure to watch for that.</dd>
   <dt><code>errorCallback</code> {{optional_inline}}</dt>
   <dd>An optional callback which is executed if an error occurs. There's a single
-    parameter: a {{domxref("FileError")}} describing what went wrong.</dd>
+    parameter: a {{domxref("DOMException")}} describing what went wrong.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -87,27 +86,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('File System API', '#dom-filesystementry-getparent', 'getParent()')
-        }}</td>
-      <td>{{ Spec2('File System API') }}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.FileSystemEntry.getParent")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

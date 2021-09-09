@@ -10,16 +10,19 @@ tags:
 - Property
 - Reference
 - hidden
+browser-compat: api.HTMLElement.hidden
 ---
 <div>
   <div>{{ APIRef("HTML DOM") }}</div>
 </div>
 
-<p><span class="seoSummary">The {{domxref("HTMLElement")}} property
-    <strong><code>hidden</code></strong> is a {{jsxref("Boolean")}} which is
+<p>The {{domxref("HTMLElement")}} property
+    <strong><code>hidden</code></strong> is a boolean value which is
     <code>true</code> if the element is hidden; otherwise the value is <code>false</code>.
     This is quite different from using the CSS property {{cssxref("display")}} to control
-    the visibility of an element.</span> The <code>hidden</code> property applies to all
+    the visibility of an element.</p>
+
+<p>The <code>hidden</code> property applies to all
   presentation modes and should not be used to hide content that is meant to be directly
   accessible to the user.</p>
 
@@ -40,12 +43,12 @@ tags:
 </ul>
 
 <div class="note">
-  <p>Elements that are not <code>hidden</code> must not link to elements which are.</p>
+  <p><strong>Note:</strong> Elements that are not <code>hidden</code> must not link to elements which are.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>isHidden</em> = <em>HTMLElement</em>.hidden;
+<pre class="brush: js"><em>isHidden</em> = <em>HTMLElement</em>.hidden;
 
 <em>HTMLElement</em>.hidden = true | false;</pre>
 
@@ -61,7 +64,7 @@ tags:
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js notranslate">document.getElementById("okButton")
+<pre class="brush: js">document.getElementById("okButton")
         .addEventListener("click", function() {
   document.getElementById("welcome").hidden = true;
   document.getElementById("awesome").hidden = false;
@@ -77,7 +80,7 @@ tags:
 
 <h4 id="The_welcome_panel">The welcome panel</h4>
 
-<pre class="brush: html notranslate">&lt;div id="welcome" class="panel"&gt;
+<pre class="brush: html">&lt;div id="welcome" class="panel"&gt;
   &lt;h1&gt;Welcome to Foobar.com!&lt;/h1&gt;
   &lt;p&gt;By clicking "OK" you agree to be awesome every day!&lt;/p&gt;
   &lt;button class="button" id="okButton"&gt;OK&lt;/button&gt;
@@ -92,7 +95,7 @@ tags:
   the two panels by changing their respective values for <code>hidden</code>. The
   follow-up panel looks like this in HTML:</p>
 
-<pre class="brush: html notranslate">&lt;div id="awesome" class="panel" hidden&gt;
+<pre class="brush: html">&lt;div id="awesome" class="panel" hidden&gt;
   &lt;h1&gt;Thanks!&lt;/h1&gt;
   &lt;p&gt;Thank you &lt;strong&gt;so&lt;/strong&gt; much for agreeing to be
   awesome today! Now get out there and do awesome things
@@ -103,7 +106,7 @@ tags:
 
 <p>The content is styled using the CSS below.</p>
 
-<pre class="brush: css notranslate">.panel {
+<pre class="brush: css">.panel {
   font: 16px "Open Sans", Helvetica, Arial, sans-serif;
   border: 1px solid #22d;
   padding: 12px;
@@ -127,37 +130,11 @@ h1 {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', "interaction.html#dom-hidden", "HTMLElement.hidden")}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML5.1', "editing.html#the-hidden-attribute",
-        "HTMLElement.hidden")}}</td>
-      <td>{{Spec2('HTML5.1')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML5 W3C', "editing.html#the-hidden-attribute",
-        "HTMLElement.hidden")}}</td>
-      <td>{{Spec2('HTML5 W3C')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLElement.hidden")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

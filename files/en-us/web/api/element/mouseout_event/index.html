@@ -11,10 +11,13 @@ tags:
   - mouse
   - mouseout
   - move
+browser-compat: api.Element.mouseout_event
 ---
 <div>{{APIRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>mouseout</code></strong> event is fired at an {{domxref("Element")}} when a pointing device (usually a mouse) is used to move the cursor so that it is no longer contained within the element or one of its children.</span> <code>mouseout</code> is also delivered to an element if the cursor enters a child element, because the child element obscures the visible area of the element.</p>
+<p>The <strong><code>mouseout</code></strong> event is fired at an {{domxref("Element")}} when a pointing device (usually a mouse) is used to move the cursor so that it is no longer contained within the element or one of its children.</p>
+
+<p><code>mouseout</code> is also delivered to an element if the cursor enters a child element, because the child element obscures the visible area of the element.</p>
 
 <table class="properties">
  <tbody>
@@ -49,7 +52,7 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;ul id="test"&gt;
+<pre class="brush: html">&lt;ul id="test"&gt;
   &lt;li&gt;item 1&lt;/li&gt;
   &lt;li&gt;item 2&lt;/li&gt;
   &lt;li&gt;item 3&lt;/li&gt;
@@ -58,7 +61,7 @@ tags:
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">let test = document.getElementById("test");
+<pre class="brush: js">let test = document.getElementById("test");
 
 // Briefly make the list purple when the mouse moves off the
 // &lt;ul&gt; element
@@ -89,28 +92,11 @@ test.addEventListener("mouseout", function( event ) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('UI Events', '#event-type-mouseout', 'mouseout')}}</td>
-   <td>{{Spec2('UI Events')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Events', '#event-type-mouseout', 'mouseout')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Element.mouseout_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

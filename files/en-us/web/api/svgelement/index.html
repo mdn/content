@@ -9,6 +9,7 @@ tags:
   - SVG
   - SVG DOM
   - SVGElement
+browser-compat: api.SVGElement
 ---
 <div>{{APIRef("SVG")}}</div>
 
@@ -18,22 +19,30 @@ tags:
 
 <h2 id="Properties">Properties</h2>
 
-<p><em>Also inherits properties from: {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("Element")}}, {{DOMxRef("ElementCSSInlineStyle")}}, {{DOMxRef("GlobalEventHandlers")}}, {{DOMxRef("HTMLOrForeignElement")}}, {{DOMxRef("SVGElementInstance")}}</em></p>
+<p><em>Also inherits properties from: {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("Element")}}, {{DOMxRef("GlobalEventHandlers")}}, {{DOMxRef("SVGElementInstance")}}</em></p>
 
 <dl>
+	<dt>{{DOMxRef("SVGElement.attributeStyleMap")}}{{ReadOnlyInline}}</dt>
+	<dd>A {{DOMxRef("StylePropertyMap")}} representing the declarations of the element's {{SVGAttr("style")}} attribute.</dd>
 	<dt>{{DOMxRef("SVGElement.dataset")}}{{ReadOnlyInline}}</dt>
 	<dd>A {{DOMxRef("DOMStringMap")}} object which provides a list of key/value pairs of named data attributes which correspond to <a href="/en-US/docs/Web/Guide/HTML/Using_data_attributes">custom data attributes</a> attached to the element. These can also be defined in SVG using attributes of the form {{SVGAttr("data-*")}}, where <code>*</code> is the key name for the pair. This works just like HTML's {{DOMxRef("HTMLElement.dataset")}} property and HTML's {{HTMLAttrxRef("data-*")}} global attribute.</dd>
 	<dt>{{DOMxRef("SVGElement.className")}} {{Deprecated_Inline}}{{ReadOnlyInline}}</dt>
 	<dd>An {{DOMxRef("SVGAnimatedString")}} that reflects the value of the {{SVGAttr("class")}} attribute on the given element, or the empty string if <code>class</code> is not present. This attribute is deprecated and may be removed in a future version of this specification. Authors are advised to use {{DOMxRef("Element.classList")}} instead.</dd>
-	<dt>{{DOMxRef("SVGElement.ownerSVGElement")}}{{ReadOnlyInline}}</dt>
+	<dt>{{DOMxRef("SVGElement.nonce")}}</dt>
+  <dd>Returns the cryptographic number used once that is used by Content Security Policy to determine whether a given fetch will be allowed to proceed.</dd>
+  <dt>{{DOMxRef("SVGElement.ownerSVGElement")}}{{ReadOnlyInline}}</dt>
 	<dd>An {{DOMxRef("SVGSVGElement")}} referring to the nearest ancestor {{SVGElement("svg")}} element. <code>null</code> if the given element is the outermost <code>&lt;svg&gt;</code> element.</dd>
-	<dt>{{DOMxRef("SVGElement.viewportElement")}}{{ReadOnlyInline}}</dt>
+	<dt>{{DOMxRef("SVGElement.style")}}</dt>
+	<dd>A {{DOMxRef("CSSStyleDeclaration")}} representing the declarations of the element's {{SVGAttr("style")}} attribute.</dd>
+	<dt>{{DOMxRef("SVGElement.tabIndex")}}</dt>
+  <dd>The position of the element in the tabbing order.</dd>
+  <dt>{{DOMxRef("SVGElement.viewportElement")}}{{ReadOnlyInline}}</dt>
 	<dd>The {{DOMxRef("SVGElement")}}, which established the current viewport. Often, the nearest ancestor {{SVGElement("svg")}} element. <code>null</code> if the given element is the outermost <code>&lt;svg&gt;</code> element.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
 
-<p><em>This interface has no methods, but inherits methods from: {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("Element")}}, {{DOMxRef("ElementCSSInlineStyle")}}, {{DOMxRef("GlobalEventHandlers")}}, {{DOMxRef("HTMLOrForeignElement")}}, {{DOMxRef("SVGElementInstance")}}</em></p>
+<p><em>This interface has no methods, but inherits methods from: {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("Element")}}, {{DOMxRef("GlobalEventHandlers")}}, {{DOMxRef("SVGElementInstance")}}</em></p>
 
 <h2 id="Events">Events</h2>
 
@@ -62,29 +71,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName("SVG2", "types.html#InterfaceSVGElement", "SVGElement")}}</td>
-			<td>{{Spec2("SVG2")}}</td>
-			<td>Adds the {{DOMxRef("SVGElement.dataset", "dataset")}} property.</td>
-		</tr>
-		<tr>
-			<td>{{SpecName("SVG1.1", "types.html#InterfaceSVGElement", "SVGElement")}}</td>
-			<td>{{Spec2("SVG1.1")}}</td>
-			<td>Initial definition</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SVGElement")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

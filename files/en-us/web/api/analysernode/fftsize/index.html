@@ -8,14 +8,15 @@ tags:
   - Reference
   - Web Audio API
   - fftSize
+browser-compat: api.AnalyserNode.fftSize
 ---
 <div>{{APIRef("Web Audio API")}}</div>
 
-<p class="summary">The <strong><code>fftSize</code></strong> property of the {{domxref("AnalyserNode")}} interface is an unsigned long value and represents the window size in samples that is used when performing a <a href="https://en.wikipedia.org/wiki/Fast_Fourier_transform">Fast Fourier Transform</a> (FFT) to get frequency domain data.</p>
+<p>The <strong><code>fftSize</code></strong> property of the {{domxref("AnalyserNode")}} interface is an unsigned long value and represents the window size in samples that is used when performing a <a href="https://en.wikipedia.org/wiki/Fast_Fourier_transform">Fast Fourier Transform</a> (FFT) to get frequency domain data.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>curValue</em> = <em>analyserNode</em>.fftSize;
+<pre class="brush: js">var <em>curValue</em> = <em>analyserNode</em>.fftSize;
 <em>analyserNode</em>.fftSize = <em>newValue</em>;
 </pre>
 
@@ -25,13 +26,13 @@ tags:
 
 <p>Must be a power of 2 between <math><semantics><msup><mn>2</mn><mn>5</mn></msup><annotation encoding="TeX">2^5</annotation></semantics></math> and <math><semantics><msup><mn>2</mn><mn>15</mn></msup><annotation encoding="TeX">2^15</annotation></semantics></math>, so one of: <code>32</code>, <code>64</code>, <code>128</code>, <code>256</code>, <code>512</code>, <code>1024</code>, <code>2048</code>, <code>4096</code>, <code>8192</code>, <code>16384</code>, and <code>32768</code>. Defaults to <code>2048</code>.</p>
 
-<p class="note"><strong>Note</strong>: If its value is not a power of 2, or it is outside the specified range, a {{domxref("DOMException")}} with the name <code>IndexSizeError</code> is thrown.</p>
+<p><strong>Note</strong>: If its value is not a power of 2, or it is outside the specified range, a {{domxref("DOMException")}} with the name <code>IndexSizeError</code> is thrown.</p>
 
 <h2 id="Example">Example</h2>
 
 <p>The following example shows basic usage of an {{domxref("AudioContext")}} to create an <code>AnalyserNode</code>, then {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} and {{htmlelement("canvas")}} to collect time domain data repeatedly and draw an "oscilloscope style" output of the current audio input. For more complete applied examples/information, check out our <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> demo (see <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js lines 128–205</a> for relevant code).</p>
 
-<pre class="brush: js notranslate">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+<pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var analyser = audioCtx.createAnalyser();
 
   ...
@@ -82,24 +83,11 @@ function draw() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#dom-analysernode-fftsize', 'fftSize')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.AnalyserNode.fftSize")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

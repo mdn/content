@@ -48,11 +48,11 @@ block content
     else
       li There are no authors.</pre>
 
-<p>Run the application and open your browser to <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>. Then select the <em>All authors</em> link. If everything is set up correctly, the page should look something like the following screenshot.</p>
+<p>Run the application and open your browser to <a href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>. Then select the <em>All authors</em> link. If everything is set up correctly, the page should look something like the following screenshot.</p>
 
-<p><img alt="Author List Page - Express Local Library site" src="locallibary_express_author_list.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="Author List Page - Express Local Library site" src="locallibary_express_author_list.png"></p>
 
-<div class="note">
+<div class="notecard note">
 <p><strong>Note:</strong> The appearance of the author <em>lifespan</em> dates is ugly! You can improve this using the <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment">same approach</a> as we used for the <code>BookInstance</code> list (adding the virtual property for the lifespan to the <code>Author</code> model).<br>
  <br>
  However, as the author may not be dead or may have missing birth/death data, in this case we need to ignore missing dates or references to nonexistent properties. One way to deal with this is to return either a formatted date, or a blank string, depending on whether the property is defined. For example:</p>
@@ -64,7 +64,7 @@ block content
 
 <p>In this section you should implement your own genre list page. The page should display a list of all genres in the database, with each genre linked to its associated detail page. A screenshot of the expected result is shown below.</p>
 
-<p><img alt="Genre List - Express Local Library site" src="locallibary_express_genre_list.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="Genre List - Express Local Library site" src="locallibary_express_genre_list.png"></p>
 
 <p>The genre list controller function needs to get a list of all <code>Genre</code> instances, and then pass these to the template for rendering.</p>
 

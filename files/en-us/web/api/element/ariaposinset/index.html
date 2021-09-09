@@ -1,0 +1,45 @@
+---
+title: Element.ariaPosInSet
+slug: Web/API/Element/ariaPosInSet
+tags:
+  - API
+  - Property
+  - Reference
+  - ariaPosInSet
+  - AriaAttributes
+  - AriaMixin
+  - Element
+browser-compat: api.Element.ariaPosInSet
+---
+<div>{{DefaultAPISidebar("DOM")}}</div>
+
+<p>The <strong><code>ariaPosInSet</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <code>aria-posinset</code> attribute, which defines an element's number or position in the current set of listitems or treeitems.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox notranslate">var <var>ariaPosInSet</var> = element.ariaPosInSet;
+<var>element</var>.ariaPosInSet = <var>ariaPosInSet</var></pre>
+
+<h3>Value</h3>
+<p>A {{domxref("DOMString")}} containing an integer.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In this example the <code>aria-posinset</code> attribute on the element with an ID of <code>article2</code> is set to "2". Using <code>ariaPosInSet</code> we update the value to "3".</p>
+
+<pre class="brush: html">&lt;article id="article1" aria-posinset="1"&gt; ... &lt;/article&gt;
+&lt;article id="article2" aria-posinset="2"&gt; ... &lt;/article&gt;
+</pre>
+
+<pre class="brush: js">let el = document.getElementById('article2');
+console.log(el.ariaPosInSet); // "2"
+el.ariaPosInSet = "3"
+console.log(el.ariaPosInSet); // "3"</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+{{Specifications}}
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

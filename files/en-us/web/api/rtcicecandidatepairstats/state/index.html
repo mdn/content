@@ -2,32 +2,33 @@
 title: RTCIceCandidatePairStats.state
 slug: Web/API/RTCIceCandidatePairStats/state
 tags:
-- API
-- Candidate
-- CandidatePair
-- Check List
-- ICE
-- Pair
-- Property
-- RTCIceCandidatePair
-- RTCIceCandidatePairStats
-- Reference
-- Statistics
-- Stats
-- WebRTC
-- WebRTC API
-- state
+  - API
+  - Candidate
+  - CandidatePair
+  - Check List
+  - ICE
+  - Pair
+  - Property
+  - RTCIceCandidatePair
+  - RTCIceCandidatePairStats
+  - Reference
+  - Statistics
+  - Stats
+  - WebRTC
+  - WebRTC API
+  - state
+browser-compat: api.RTCIceCandidatePairStats.state
 ---
 <p>{{APIRef("WebRTC")}}</p>
 
-<p><span class="seoSummary">The <code><strong>state</strong></code> property in an
+<p>The <code><strong>state</strong></code> property in an
     {{domxref("RTCIceCandidatePairStats")}} object indicates the state of the check list
-    of which the candidate pair is a member.</span></p>
+    of which the candidate pair is a member.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><em>state</em> = <em>rtcIceCandidatePairStats</em>.state;</pre>
+  class="brush: js"><em>state</em> = <em>rtcIceCandidatePairStats</em>.state;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -42,8 +43,7 @@ tags:
 
 <p><img
     alt="A diagram showing how ICE candidate pairs change state as the check list is analyed"
-    src="https://mdn.mozillademos.org/files/16570/ice-check-list-states.svg"
-    style="height: 321px; width: 561px;"></p>
+    src="ice-check-list-states.svg"></p>
 
 <p>When a candidate pair is added to the check list, it begins in the <code>frozen</code>
   state. As soon as there are no checks ongoing which block the pair from being analyzed,
@@ -61,24 +61,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('WebRTC Statistics Identifiers',
-        '#dom-rtcicecandidatepairstats-state', 'RTCIceCandidatePairStats.state') }}</td>
-      <td>{{ Spec2('WebRTC Statistics Identifiers') }}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCIceCandidatePairStats.state")}}</p>
+<p>{{Compat}}</p>

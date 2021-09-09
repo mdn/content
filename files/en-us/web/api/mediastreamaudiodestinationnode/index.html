@@ -7,11 +7,12 @@ tags:
   - MediaStreamAudioDestinationNode
   - Reference
   - Web Audio API
+browser-compat: api.MediaStreamAudioDestinationNode
 ---
 <p>{{APIRef("Web Audio API")}}</p>
 
 <div>
-<p>The <code>MediaStreamAudioDestinationNode</code> interface represents an audio destination consisting of a <a href="/en-US/docs/WebRTC">WebRTC</a> {{domxref("MediaStream")}} with a single <code>AudioMediaStreamTrack</code>, which can be used in a similar way to a <code>MediaStream</code> obtained from {{ domxref("Navigator.getUserMedia()") }}.</p>
+<p>The <code>MediaStreamAudioDestinationNode</code> interface represents an audio destination consisting of a <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> {{domxref("MediaStream")}} with a single <code>AudioMediaStreamTrack</code>, which can be used in a similar way to a <code>MediaStream</code> obtained from {{ domxref("Navigator.getUserMedia()") }}.</p>
 
 <p>It is an {{domxref("AudioNode")}} that acts as an audio destination, created using the {{domxref("AudioContext.createMediaStreamDestination()")}} method.</p>
 </div>
@@ -54,7 +55,7 @@ tags:
 
 <dl>
  <dt>{{domxref("MediaStreamAudioDestinationNode.stream")}}</dt>
- <dd>A {{domxref("MediaStream")}} containing a single {{domxref("MediaStreamTrack")}} whose {{domxref("MediaStreamTrack.kind", "kind")}} is <code>audio</code> and with the same number of channels as the node. You can use this property to get a stream out of the audio graph and feed it into another construct, such as a <a href="/en-US/docs/Web/API/MediaRecorder_API">Media Recorder</a>.</dd>
+ <dd>A {{domxref("MediaStream")}} containing a single {{domxref("MediaStreamTrack")}} whose {{domxref("MediaStreamTrack.kind", "kind")}} is <code>audio</code> and with the same number of channels as the node. You can use this property to get a stream out of the audio graph and feed it into another construct, such as a <a href="/en-US/docs/Web/API/MediaStream_Recording_API">Media Recorder</a>.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
@@ -63,31 +64,18 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>{{page("/en-US/docs/Web/API/AudioContext.createMediaStreamDestination","Examples")}}</p>
+<p>See <a href="/en-US/docs/Web/API/AudioContext.createMediaStreamDestination#examples"><code>AudioContext.createMediaStreamDestination()</code></a> for example code that creates a <code>MediaStreamAudioDestinationNode</code> and uses it as a source for audio to be recorded.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#mediastreamaudiodestinationnode', 'MediaStreamAudioDestinationNode')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MediaStreamAudioDestinationNode")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+ <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
 </ul>

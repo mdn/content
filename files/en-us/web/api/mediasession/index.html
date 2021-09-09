@@ -10,10 +10,11 @@ tags:
   - MediaSession
   - Reference
   - Video
+browser-compat: api.MediaSession
 ---
 <p>{{SeeCompatTable}}{{APIRef("Media Session API")}}</p>
 
-<p><span class="seoSummary">The <strong><code>MediaSession</code></strong> interface of the <a href="/en-US/docs/Web/API/Media_Session_API">Media Session API</a> allows a web page to provide custom behaviors for standard media playback interactions, and to report metadata that can be sent by the user agent to the device or operating system for presentation in standardized user interface elements.</span></p>
+<p>The <strong><code>MediaSession</code></strong> interface of the <a href="/en-US/docs/Web/API/Media_Session_API">Media Session API</a> allows a web page to provide custom behaviors for standard media playback interactions, and to report metadata that can be sent by the user agent to the device or operating system for presentation in standardized user interface elements.</p>
 
 <p>For example, a smartphone might have a standard panel in its lock screen that provides controls for media playback and information display. A browser on the device can use <code>MediaSession</code> to make browser playback controllable from that standard/global user interface.</p>
 
@@ -39,7 +40,7 @@ tags:
 
 <p>The following example creates a new media session and assigns action handlers to it:</p>
 
-<pre class="brush: js notranslate">if ('mediaSession' in navigator) {
+<pre class="brush: js">if ('mediaSession' in navigator) {
   navigator.mediaSession.metadata = new MediaMetadata({
     title: 'Unforgettable',
     artist: 'Nat King Cole',
@@ -67,7 +68,7 @@ tags:
 
 <p>The following example sets up two functions for playing and pausing, then uses them as callbacks with the relevant action handlers.</p>
 
-<pre class="brush: js notranslate">const actionHandlers = [
+<pre class="brush: js">const actionHandlers = [
   // play
   [
     'play',
@@ -103,25 +104,8 @@ for (const [action, handler] of actionHandlers) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Media Session','#the-mediasession-interface','MediaSession')}}</td>
-   <td>{{Spec2('Media Session')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("api.MediaSession")}}</p>
+<p>{{Compat}}</p>

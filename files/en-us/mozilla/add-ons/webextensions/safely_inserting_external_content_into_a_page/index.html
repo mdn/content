@@ -27,7 +27,7 @@ tags:
 
 <p>A lightweight approach to inserting strings into a page is to use the native DOM manipulation methods: <a href="/en-US/docs/Web/API/Document/createElement"><code>document.createElement</code></a>, <a href="/en-US/docs/Web/API/Element/setAttribute"><code>Element.setAttribute</code></a>, and <a href="/en-US/docs/Web/API/Node/textContent"><code>Node.textContent</code></a>. The safe approach is to create the nodes separately and assign their content using textContent:</p>
 
-<pre class="notranslate brush: js example-good">var data = JSON.parse(responseText);
+<pre class="brush: js example-good">var data = JSON.parse(responseText);
 var div = document.createElement("div");
 div.className = data.className;
 div.textContent = "Your favorite color is now " + data.color;
@@ -37,7 +37,7 @@ addonElement.appendChild(div);</pre>
 
 <p>However, beware, you can use native methods that aren’t safe. Take the following code:</p>
 
-<pre class="notranslate brush: js example-bad">var data = JSON.parse(responseText);
+<pre class="brush: js example-bad">var data = JSON.parse(responseText);
 addonElement.innerHTML = "&lt;div class='" + data.className + "'&gt;" +
                          "Your favorite color is now " + data.color +
                          "&lt;/div&gt;";</pre>
@@ -48,7 +48,7 @@ addonElement.innerHTML = "&lt;div class='" + data.className + "'&gt;" +
 
 <p>When using jQuery, functions such as <code>attr()</code> and <code>text()</code> escape content as it’s added to a DOM. So, the “favorite color” example from above, implemented in jQuery, would look like this:</p>
 
-<pre class="notranslate brush: js example-good">var node = $("&lt;/div&gt;");
+<pre class="brush: js example-good">var node = $("&lt;/div&gt;");
 node.addClass(data.className);
 node.text("Your favorite color is now " + data.color); </pre>
 
@@ -71,13 +71,13 @@ node.text("Your favorite color is now " + data.color); </pre>
 
 <p>Then, in myinjectionscript.js you can read the external HTML, sanitize it, and add it to a page’s DOM:</p>
 
-<pre class="notranslate brush: js">var elem = document.createElement("div");
+<pre class="brush: js">var elem = document.createElement("div");
 var cleanHTML = DOMPurify.sanitize(externalHTML);
 elem.innerHTML = cleanHTML;</pre>
 
 <p>You can use any method to add the sanitized HTML to your DOM, for example jQuery’s <code>.html()</code> function. Remember though that the <code>SAFE_FOR_JQUERY</code> flag needs to be used in this case:</p>
 
-<pre class="notranslate brush: js">var elem = $("&lt;div/&gt;");
+<pre class="brush: js">var elem = $("&lt;div/&gt;");
 var cleanHTML = DOMPurify.sanitize(externalHTML, { SAFE_FOR_JQUERY: true });
 elem.html(cleanHTML);</pre>
 
@@ -85,7 +85,7 @@ elem.html(cleanHTML);</pre>
 
 <p>Another common pattern is to create a local HTML template for a page and use remote values to fill in the blanks. While this approach is generally acceptable, care should be taken to avoid use of constructs that would allow the insertion of executable code. This can happen when the templating engine uses constructs that insert raw HTML into the document. If the variable used to insert raw HTML is of a remote source, it is subject to the same security risk mentioned in the introduction.</p>
 
-<p>For example, when using <a href="https://mustache.github.io/">mustache templates</a> you must use the double mustache, <code>\{{variable}}</code>, which escapes any HTML. Use of the triple mustache, <code>\{\{{variable}}}</code>, must be avoided as this injects a raw HTML string and could add executable code to your template. <a href="http://handlebarsjs.com/">Handlebars</a> works in a similar way, with variables in double handlebars, <code>\{{variable}}</code>, being escaped. Whereas, variables in triple handlebars are left raw and must be avoided. Also, if you create a Handlebars helper using <code>Handlebars.SafeString</code> use <code>Handlebars.escapeExpression()</code> to escape any dynamic parameters passed to the helper. This is a requirement because the resulting variable from <code>Handlebars.SafeString</code> is considered safe and it isn’t escaped when inserted with double handlebars.</p>
+<p>For example, when using <a href="https://mustache.github.io/">mustache templates</a> you must use the double mustache, <code>\{{variable}}</code>, which escapes any HTML. Use of the triple mustache, <code>\{\{{variable}}}</code>, must be avoided as this injects a raw HTML string and could add executable code to your template. <a href="https://handlebarsjs.com/">Handlebars</a> works in a similar way, with variables in double handlebars, <code>\{{variable}}</code>, being escaped. Whereas, variables in triple handlebars are left raw and must be avoided. Also, if you create a Handlebars helper using <code>Handlebars.SafeString</code> use <code>Handlebars.escapeExpression()</code> to escape any dynamic parameters passed to the helper. This is a requirement because the resulting variable from <code>Handlebars.SafeString</code> is considered safe and it isn’t escaped when inserted with double handlebars.</p>
 
 <p>There are similar constructs in other templating systems that need to be approached with the same level of care.</p>
 

@@ -9,12 +9,15 @@ tags:
 - URL
 - URL API
 - origin
+browser-compat: api.URL.origin
 ---
 <div>{{APIRef("URL API")}}</div>
 
-<p><span class="seoSummary">The <strong><code>origin</code></strong> read-only property of
+<p>The <strong><code>origin</code></strong> read-only property of
     the {{domxref("URL")}} interface returns a {{domxref("USVString")}} containing the
-    Unicode serialization of the origin of the represented URL.</span> The exact structure
+    Unicode serialization of the origin of the represented URL.</p>
+
+<p>The exact structure
   varies depending on the type of URL:</p>
 
 <ul>
@@ -32,7 +35,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">const <em>originString</em> = <em>url</em>.origin
+<pre class="brush: js">const <em>originString</em> = <em>url</em>.origin
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -41,30 +44,17 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">const url = new URL("blob:https://mozilla.org:443/")
+<pre class="brush: js">const url = new URL("blob:https://mozilla.org:443/")
 console.log(url.origin); // Logs 'https://mozilla.org'
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('URL', '#dom-url-origin', 'URL.origin')}}</td>
-      <td>{{Spec2('URL')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.URL.origin")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

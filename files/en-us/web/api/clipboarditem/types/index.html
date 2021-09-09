@@ -13,18 +13,19 @@ tags:
 - Types
 - copy
 - paste
+browser-compat: api.ClipboardItem.types
 ---
-<div>{{draft}}{{DefaultAPISidebar("Clipboard API")}}</div>
+<div>{{DefaultAPISidebar("Clipboard API")}}</div>
 
-<p class="summary"><span class="seoSummary">The read-only
+<p>The read-only
     <strong><code>types</code></strong> property of the {{domxref("ClipboardItem")}}
     interface returns an {{jsxref("Array")}} of {{Glossary("MIME type", 'MIME types')}}
-    available within the {{domxref("ClipboardItem")}}</span></p>
+    available within the {{domxref("ClipboardItem")}}</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>types</em> = <em>clipboardItem</em>.types;</pre>
+  class="brush: js">var <var>types</var> = <var>clipboardItem</var>.types;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -38,7 +39,7 @@ tags:
   to return the {{domxref("Blob")}} object. If no clipboards contents is found for the
   specified type, an error is returned.</p>
 
-<pre class="brush: js notranslate">async function getClipboardContents() {
+<pre class="brush: js">async function getClipboardContents() {
   try {
     const clipboardItems = await navigator.clipboard.read();
 
@@ -59,24 +60,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Clipboard API','#clipboarditem','ClipboardItem')}}</td>
-      <td>{{Spec2('Clipboard API')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ClipboardItem.types")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

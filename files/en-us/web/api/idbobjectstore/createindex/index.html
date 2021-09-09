@@ -2,14 +2,15 @@
 title: IDBObjectStore.createIndex()
 slug: Web/API/IDBObjectStore/createIndex
 tags:
-- API
-- Database
-- IDBObjectStore
-- IndexedDB
-- Method
-- Reference
-- Storage
-- createIndex
+  - API
+  - Database
+  - IDBObjectStore
+  - IndexedDB
+  - Method
+  - Reference
+  - Storage
+  - createIndex
+browser-compat: api.IDBObjectStore.createIndex
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
@@ -33,7 +34,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>myIDBIndex</em> = <em>objectStore</em>.createIndex(<em>indexName</em>, <em>keyPath</em>);
+<pre class="brush: js">var <em>myIDBIndex</em> = <em>objectStore</em>.createIndex(<em>indexName</em>, <em>keyPath</em>);
 var <em>myIDBIndex</em> = <em>objectStore</em>.createIndex(<em>indexName</em>, <em>keyPath</em>, <em>objectParameters</em>);
 </pre>
 
@@ -76,7 +77,7 @@ var <em>myIDBIndex</em> = <em>objectStore</em>.createIndex(<em>indexName</em>, <
             <p>Currently Firefox-only (43+), this allows you to specify a locale for the
               index. Any sorting operations performed on the data via key ranges will then
               obey sorting rules of that locale (see <a
-                href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#Locale-aware_sorting">locale-aware
+                href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#locale-aware_sorting">locale-aware
                 sorting</a>.) You can specify its value in one of three ways:</p>
 
             <ul>
@@ -96,13 +97,11 @@ var <em>myIDBIndex</em> = <em>objectStore</em>.createIndex(<em>indexName</em>, <
 
 <h3 id="Return_value">Return value</h3>
 
-<p><span style="line-height: 1.5;">An {{domxref("IDBIndex")}} object: the newly created
-    index.</span></p>
+<p>An {{domxref("IDBIndex")}} object: the newly created index.</p>
 
-<h3 id="Exceptions"><span style="line-height: 1.5;">Exceptions</span></h3>
+<h3 id="Exceptions">Exceptions</h3>
 
-<p><span style="line-height: 1.5;">This method may raise a {{domxref("DOMException")}} of
-    one of the following types:</span></p>
+<p>This method may raise a {{domxref("DOMException")}} of one of the following types:</p>
 
 <table class="standard-table">
   <thead>
@@ -210,31 +209,11 @@ DBOpenRequest.onupgradeneeded = function(event) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('IndexedDB', '#dom-idbobjectstore-createindex', 'createIndex()')}}
-      </td>
-      <td>{{Spec2('IndexedDB')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("IndexedDB 2", "#dom-idbobjectstore-createindex", "createIndex()")}}
-      </td>
-      <td>{{Spec2("IndexedDB 2")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBObjectStore.createIndex")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

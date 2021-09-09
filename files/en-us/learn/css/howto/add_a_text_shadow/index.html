@@ -1,0 +1,36 @@
+---
+title: How to add a shadow to text
+slug: Learn/CSS/Howto/Add_a_text_shadow
+tags:
+  - Basic
+  - Beginner
+  - CSS
+  - CSS:Getting_Started
+  - Guide
+  - Web
+---
+<p>{{LearnSidebar}}</p>
+
+<p class="summary">In this guide you can find out how to add a shadow to any text on your page.</p>
+
+<h2>Adding shadows to text</h2>
+
+<p>In our <a href="/en-US/docs/Learn/CSS/Howto/Add_a_shadow">guide to adding a shadow to boxes</a>, you can find out how to add a shadow to any element on your page. However, that technique only adds shadows to the element's surrounding box. To add a drop shadow to the text inside the box you need a different CSS property &mdash; {{cssxref("text-shadow")}}.</p>
+
+<p>The <code>text-shadow</code> property takes a number of values:</p>
+
+<ul>
+  <li>The offset on the x-axis</li>
+  <li>The offset on the y-axis</li>
+  <li>A blur radius</li>
+  <li>A color</li>
+</ul>
+
+<p>In the example below we have set the x-axis offset to 2px, the y-axis offset to 4px, the blur radius to 4px, and the color to a semi-transparent blue. Play with the different values to see how they change the shadow.</p>
+
+<p>{{EmbedGHLiveSample("css-examples/howto/text-shadow.html", '100%', 500)}}</p>
+
+<div class="notecard note">
+  <h3>Note</h3>
+  <p>It can be quite easy to make text hard to read with text shadows. Make sure that the choices you make still leave your text readable and provide enough <a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast">color contrast</a> for visitors who have difficulty with low-contrast text.</p>
+</div>

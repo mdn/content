@@ -9,21 +9,22 @@ tags:
 - CSSStyleSheet
 - Layout
 - Object Model
-- Obsolete
 - Property
 - Read-only
 - Reference
 - Style
 - StyleSheet
 - legacy
+- Deprecated
+browser-compat: api.CSSStyleSheet.rules
 ---
 <p>{{APIRef("CSSOM")}}{{deprecated_header}}</p>
 
-<p><span class="seoSummary"><code><strong>rules</strong></code> is a <em>deprecated</em>
+<p><code><strong>rules</strong></code> is a <em>deprecated</em>
     <em>legacy property</em> of the {{domxref("CSSStyleSheet")}} interface. Functionally
     identical to the preferred {{domxref("CSSStyleSheet.cssRules", "cssRules")}} property,
     it provides access to a live-updating list of the CSS rules comprising the
-    stylesheet.</span></p>
+    stylesheet.</p>
 
 <div class="notecard note">
   <p><strong>Note:</strong> As a legacy property, you not use <code>rules</code> and
@@ -36,7 +37,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>rules</em> = <em>cssStyleSheet</em>.rules;</pre>
+  class="brush: js">var <em>rules</em> = <em>cssStyleSheet</em>.rules;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -46,24 +47,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th>Specification</th>
-      <th>Status</th>
-      <th>Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName("CSSOM", "#dom-cssstylesheet-rules", 'CSSStyleSheet.rules')}}</td>
-      <td>{{Spec2("CSSOM")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CSSStyleSheet.rules")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

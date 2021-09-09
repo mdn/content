@@ -7,6 +7,7 @@ tags:
   - Interface
   - Reference
   - Web Audio API
+browser-compat: api.AudioNode
 ---
 <div>{{APIRef("Web Audio API")}}</div>
 
@@ -23,13 +24,13 @@ tags:
 
 <p>{{InheritanceDiagram}}</p>
 
-<p class="note"><strong>Note</strong>: An <code>AudioNode</code> can be target of events, therefore it implements the {{domxref("EventTarget")}} interface.</p>
+<p><strong>Note</strong>: An <code>AudioNode</code> can be target of events, therefore it implements the {{domxref("EventTarget")}} interface.</p>
 
 <h2 id="Description">Description</h2>
 
 <h3 id="The_audio_routing_graph">The audio routing graph</h3>
 
-<p><img alt="AudioNodes participating in an AudioContext create a audio routing graph." src="webaudiobasics.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="AudioNodes participating in an AudioContext create a audio routing graph." src="webaudiobasics.png"></p>
 
 <p>Each <code>AudioNode</code> has inputs and outputs, and multiple audio nodes are connected to build a <em>processing graph</em>. This graph is contained in an {{domxref("AudioContext")}}, and each audio node can only belong to one audio context.</p>
 
@@ -45,7 +46,7 @@ tags:
 
 <p>There are two ways to create an <code>AudioNode</code>: via the <em>constructor</em> and via the <em>factory method</em>.</p>
 
-<pre class="brush: js; notranslate">// constructor
+<pre class="brush: js;">// constructor
 const analyserNode = new AnalyserNode(audioCtx, {
   fftSize: 2048,
   maxDecibels: -25,
@@ -67,8 +68,6 @@ analyserNode.smoothingTimeConstant = 0.5;</pre>
  <li>You can <a href="https://github.com/WebAudio/web-audio-api/issues/251">sub-class an audio node</a>. While the actual processing is done internally by the browser and cannot be altered, you could write a wrapper around an audio node to provide custom properties and methods.</li>
  <li>Slightly better performance: In both Chrome and Firefox, the factory methods call the constructors internally.</li>
 </ul>
-
-<p>Keep in mind that Microsoft Edge does not yet appear to support the constructors; it will throw a "Function expected" error when you use the constructors.</p>
 
 <p><em>Brief history:</em> The first version of the Web Audio spec only defined the factory methods. After a <a href="https://github.com/WebAudio/web-audio-api/issues/250">design review in October 2013</a>, it was decided to add constructors because they have numerous benefits over factory methods. The constructors were added to the spec from August to October 2016. Factory methods continue to be included in the spec and are not deprecated.</p>
 
@@ -103,9 +102,9 @@ analyserNode.smoothingTimeConstant = 0.5;</pre>
 
 <h2 id="Example">Example</h2>
 
-<p>This simple snippet of code shows the creation of some audio nodes, and how the <code>AudioNode</code> properties and methods can be used. You can find examples of such usage on any of the examples linked to on the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> landing page (for example <a href="https://github.com/mdn/violent-theremin">Violent Theremin</a>.)<span class="p"> </span></p>
+<p>This simple snippet of code shows the creation of some audio nodes, and how the <code>AudioNode</code> properties and methods can be used. You can find examples of such usage on any of the examples linked to on the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> landing page (for example <a href="https://github.com/mdn/violent-theremin">Violent Theremin</a>).</p>
 
-<pre class="brush: js; notranslate">const audioCtx = new AudioContext();
+<pre class="brush: js;">const audioCtx = new AudioContext();
 
 const oscillator = new OscillatorNode(audioCtx);
 const gainNode = new GainNode(audioCtx);
@@ -119,24 +118,11 @@ oscillator.channelCount;</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#audionode', 'AudioNode')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.AudioNode")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -13,10 +13,13 @@ tags:
 ---
 <div>{{WebGLSidebar}}</div>
 
-<div id="live-sample">
 <p>In this WebGL example, we create a canvas and within it render a rotating square using WebGL. The coordinate system we use to represent our scene is the same as the canvas's coordinate system. That is, (0, 0) is at the top-left corner and the bottom-right corner is at (600, 460).</p>
 
-<h2 id="Vertex_shader">Vertex shader</h2>
+<h2 id="A_rotating_square_example">A rotating square example</h2>
+
+<p>Let's follow the different steps to get our rotating square.</p>
+
+<h3 id="Vertex_shader">Vertex shader</h3>
 
 <p>First, let's take a look at the vertex shader. Its job, as always, is to convert the coordinates we're using for our scene into clipspace coordinates (that is, the system by which (0, 0) is at the center of the context and each axis extends from -1.0 to 1.0 regardless of the actual size of the context).</p>
 
@@ -38,7 +41,7 @@ tags:
   }
 &lt;/script&gt;</pre>
 
-<p>The main program shares with us the attribute <code>aVertexPosition</code>, which is the position of the vertex in whatever coordinate system it's using. We need to convert these values so that both components of the position are in the range -1.0 to 1.0. This can be done easily enough by multiplying by a scaling factor that's based on the context's aspect ratio. We'll see that computation shortly.</p>
+<p>The main program shares with us the attribute <code>aVertexPosition</code>, which is the position of the vertex in whatever coordinate system it's using. We need to convert these values so that both components of the position are in the range -1.0 to 1.0. This can be done easily enough by multiplying by a scaling factor that's based on the context's aspect ratio. We'll see that computation shortly.</p>
 
 <p>We're also rotating the shape, and we can do that here, by applying a transform. We'll do that first. The rotated position of the vertex is computed by applying the rotation vector, found in the uniform <code>uRotationVector</code>, that's been computed by the JavaScript code.</p>
 
@@ -46,7 +49,7 @@ tags:
 
 <p>The standard WebGL global <code>gl_Position</code> is then set to the transformed and rotated vertex's position.</p>
 
-<h2 id="Fragment_shader">Fragment shader</h2>
+<h3 id="Fragment_shader">Fragment shader</h3>
 
 <p>Next comes the fragment shader. Its role is to return the color of each pixel in the shape being rendered. Since we're drawing a solid, untextured object with no lighting applied, this is exceptionally simple:</p>
 
@@ -64,15 +67,13 @@ tags:
 
 <p>This starts by specifying the precision of the <code>float</code> type, as required. Then we set the global <code>gl_FragColor</code> to the value of the uniform <code>uGlobalColor</code>, which is set by the JavaScript code to the color being used to draw the square.</p>
 
-<h2 id="HTML">HTML</h2>
+<h3 id="HTML">HTML</h3>
 
 <p>The HTML consists solely of the {{HTMLElement("canvas")}} that we'll obtain a WebGL context on.</p>
 
 <pre class="brush: html">&lt;canvas id="glcanvas" width="600" height="460"&gt;
   Oh no! Your browser doesn't support canvas!
 &lt;/canvas&gt;</pre>
-
-<h2 id="JavaScript">JavaScript</h2>
 
 <h3 id="Globals_and_initialization">Globals and initialization</h3>
 
@@ -147,16 +148,15 @@ function startup() {
   vertexCount = vertexArray.length/vertexNumComponents;
 
   currentAngle = 0.0;
-  rotationRate = 6;
 
   animateScene();
 }</pre>
 
 <p>After getting the WebGL context, <code>gl</code>, we need to begin by building the shader program. Here, we're using code designed to let us add multiple shaders to our program quite easily. The array <code>shaderSet</code> contains a list of objects, each describing one shader function to be compiled into the program. Each function has a type (one of <code>gl.VERTEX_SHADER</code> or <code>gl.FRAGMENT_SHADER</code>) and an ID (the ID of the {{HTMLElement("script")}} element containing the shader's code).</p>
 
-<p>The shader set is passed into the function <code>buildShaderProgram()</code>, which returns the compiled and linked shader program.  We'll look at how this works next.</p>
+<p>The shader set is passed into the function <code>buildShaderProgram()</code>, which returns the compiled and linked shader program. We'll look at how this works next.</p>
 
-<p>Once the shader program is built, we compute the aspect ratio of our context by dividing its width by its height. Then we set the current rotation vector for the animation to <code>[0, 1]</code>, and the scaling vector to <code>[1.0, aspectRatio]</code>. The scaling vector, as we saw in the vertex shader, is used to scale the coordinates to fit the -1.0 to 1.0 range.</p>
+<p>Once the shader program is built, we compute the aspect ratio of our context by dividing its width by its height. Then we set the current rotation vector for the animation to <code>[0, 1]</code>, and the scaling vector to <code>[1.0, aspectRatio]</code>. The scaling vector, as we saw in the vertex shader, is used to scale the coordinates to fit the -1.0 to 1.0 range.</p>
 
 <p>The array of vertices is created next, as a {{jsxref("Float32Array")}} with six coordinates (three 2D vertices) per triangle to be drawn, for a total of 12 values.</p>
 
@@ -171,8 +171,6 @@ function startup() {
 <p>Finally, <code>animateScene()</code> is called to render the first frame and schedule the rendering of the next frame of the animation.</p>
 
 <h3 id="Compiling_and_linking_the_shader_program">Compiling and linking the shader program</h3>
-
-<h4 id="Constructing_and_linking_the_program">Constructing and linking the program</h4>
 
 <p>The <code>buildShaderProgram()</code> function accepts as input an array of objects describing a set of shader functions to be compiled and linked into the shader program and returns the shader program after it's been built and linked.</p>
 
@@ -201,8 +199,8 @@ function startup() {
 
 <p>Then, for each shader in the specified list of shaders, we call a <code>compileShader()</code> function to compile it, passing into it the ID and type of the shader function to build. Each of those objects includes, as mentioned before, the ID of the <code>&lt;script&gt;</code> element the shader code is found in and the type of shader it is. The compiled shader is attached to the shader program by passing it into {{domxref("WebGLRenderingContext.attachShader", "gl.attachShader()")}}.</p>
 
-<div class="note">
-<p>We could go a step farther here, actually, and look at the value of the <code>&lt;script&gt;</code> element's <code>type</code> attribute to determine the shader type.</p>
+<div class="notecard note">
+<p><strong>Note:</strong> We could go a step farther here, actually, and look at the value of the <code>&lt;script&gt;</code> element's <code>type</code> attribute to determine the shader type.</p>
 </div>
 
 <p>Once all of the shaders are compiled, the program is linked using {{domxref("WebGLRenderingContext.linkProgram", "gl.linkProgram()")}}.</p>
@@ -211,7 +209,7 @@ function startup() {
 
 <p>Finally, the compiled program is returned to the caller.</p>
 
-<h4 id="Compiling_an_individual_shader">Compiling an individual shader</h4>
+<h3 id="Compiling_an_individual_shader">Compiling an individual shader</h3>
 
 <p>The <code>compileShader()</code> function, below, is called by <code>buildShaderProgram()</code> to compile a single shader.</p>
 
@@ -291,11 +289,11 @@ function startup() {
 
 <p>{{domxref("WebGLRenderingContext.useProgram", "useProgram()")}} is called to activate the GLSL shading program we established previously. Then we obtain the locations of each of the uniforms used to share information between the JavaScript code and the shaders (with {{domxref("WebGLRenderingContext.getUniformLocation", "getUniformLocation()")}}).</p>
 
-<p>The uniform named <code>uScalingFactor</code> is set to the <code>currentScale</code> value previously computed; this, as you may recall, is the value used to adjust the coordinate system based on the aspect ratio of the context. This is done using {{domxref("WebGLRenderingContext.uniform2fv", "uniform2fv()")}} (since this is a 2-value floating-point vector).</p>
+<p>The uniform named <code>uScalingFactor</code> is set to the <code>currentScale</code> value previously computed; this, as you may recall, is the value used to adjust the coordinate system based on the aspect ratio of the context. This is done using {{domxref("WebGLRenderingContext/uniform", "uniform2fv()")}} (since this is a 2-value floating-point vector).</p>
 
 <p><code>uRotationVector</code> is set to the current rotation vector (<code>currentRotation)</code>, also using <code>uniform2fv()</code>.</p>
 
-<p><code>uGlobalColor</code> is set using {{domxref("WebGLRenderingContext.uniform4fv", "uniform4fv()")}} to the color we wish to use when drawing the square. This is a 4-component floating-point vector (one component each for red, green, blue, and alpha).</p>
+<p><code>uGlobalColor</code> is set using {{domxref("WebGLRenderingContext/uniform", "uniform4fv()")}} to the color we wish to use when drawing the square. This is a 4-component floating-point vector (one component each for red, green, blue, and alpha).</p>
 
 <p>Now that that's all out of the way, we can set up the vertex buffer and draw our shape, first, the buffer of vertexes that will be used to draw the triangles of the shape is set by calling {{domxref("WebGLRenderingContext.bindBuffer", "bindBuffer()")}}. Then the vertex position attribute's index is obtained from the shader program by calling {{domxref("WebGLRenderingContext.getAttribLocation", "getAttribLocation()")}}.</p>
 
@@ -310,11 +308,11 @@ function startup() {
 <p>Our <code>requestAnimationFrame()</code> callback receives as input a single parameter, <code>currentTime</code>, which specifies the time at which the frame drawing began. We use that and the saved time at which the last frame was drawn, <code>previousTime</code>, along with the number of degrees per second the square should rotate (<code>degreesPerSecond</code>) to calculate the new value of <code>currentAngle</code>. Then the value of <code>previousTime</code> is updated and we call <code>animateScene()</code> to draw the next frame (and in turn schedule the next frame to be drawn, ad infinitum).</p>
 </div>
 
-<h2 id="Result">Result</h2>
+<h3 id="Result">Result</h3>
 
 <p>This is a pretty simple example, since it's just drawing one simple object, but the concepts used here extend to much more complex animations.</p>
 
-<p>{{EmbedLiveSample("live-sample", 660, 500)}}</p>
+<p>{{EmbedLiveSample("A_rotating_square_example", 660, 500)}}</p>
 
 <h2 id="See_also">See also</h2>
 

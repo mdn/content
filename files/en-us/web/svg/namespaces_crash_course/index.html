@@ -84,7 +84,7 @@ tags:
 
 <p>Namespaces affect not only markup, but also scripting. If you write scripts for namespaced XML such as SVG, read on.</p>
 
-<p>The <a class="external" href="https://www.w3.org/TR/REC-DOM-Level-1/">DOM Level 1</a> recommendation was created before the <a class="external" href="https://www.w3.org/TR/REC-xml-names/">original Namespaces in XML</a> recommendation was released; therefore, DOM1 isn't namespace aware. This causes problems for namespaced XML such as SVG. To resolve these problems, <a class="external" href="https://www.w3.org/TR/DOM-Level-2-Core/">DOM Level 2 Core</a> added namespace aware equivalents of all the applicable DOM Level 1 methods. When scripting SVG, it is important to use the <a class="external" href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#Namespaces-Considerations">namespace aware methods</a>. The table below lists the DOM1 methods that shouldn't be used in SVG, along with their equivalent DOM2 counterparts that should be used instead.</p>
+<p>The <a href="https://www.w3.org/TR/REC-DOM-Level-1/">DOM Level 1</a> recommendation was created before the <a href="https://www.w3.org/TR/REC-xml-names/">original Namespaces in XML</a> recommendation was released; therefore, DOM1 isn't namespace aware. This causes problems for namespaced XML such as SVG. To resolve these problems, <a href="https://www.w3.org/TR/DOM-Level-2-Core/">DOM Level 2 Core</a> added namespace aware equivalents of all the applicable DOM Level 1 methods. When scripting SVG, it is important to use the <a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#Namespaces-Considerations">namespace aware methods</a>. The table below lists the DOM1 methods that shouldn't be used in SVG, along with their equivalent DOM2 counterparts that should be used instead.</p>
 
 <table class="fullwidth-table">
  <tbody>
@@ -93,57 +93,57 @@ tags:
    <th>DOM2 (use these instead!)</th>
   </tr>
   <tr>
-   <td><a class="external" href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-createAttribute">createAttribute</a></td>
-   <td><a class="external" href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-DocCrAttrNS">createAttributeNS</a></td>
+   <td><a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-createAttribute">createAttribute</a></td>
+   <td><a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-DocCrAttrNS">createAttributeNS</a></td>
   </tr>
   <tr>
-   <td><a class="external" href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-createElement">createElement</a></td>
-   <td><a class="external" href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-DocCrElNS">createElementNS</a></td>
+   <td><a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-createElement">createElement</a></td>
+   <td><a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-DocCrElNS">createElementNS</a></td>
   </tr>
   <tr>
-   <td><a class="external" href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getAttributeNode">getAttributeNode</a></td>
-   <td><a class="external" href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElGetAtNodeNS">getAttributeNodeNS</a></td>
+   <td><a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getAttributeNode">getAttributeNode</a></td>
+   <td><a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElGetAtNodeNS">getAttributeNodeNS</a></td>
   </tr>
   <tr>
-   <td><a class="external" href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getAttribute">getAttribute</a></td>
-   <td><a class="external" href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElGetAttrNS">getAttributeNS</a></td>
+   <td><a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getAttribute">getAttribute</a></td>
+   <td><a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElGetAttrNS">getAttributeNS</a></td>
   </tr>
   <tr>
-   <td><a class="external" href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getElementsByTagName">getElementsByTagName</a></td>
-   <td><a class="external" href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-getElBTNNS">getElementsByTagNameNS</a> (also <a class="external" href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-A6C90942">added to Element</a>)</td>
+   <td><a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getElementsByTagName">getElementsByTagName</a></td>
+   <td><a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-getElBTNNS">getElementsByTagNameNS</a> (also <a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-A6C90942">added to Element</a>)</td>
   </tr>
   <tr>
-   <td><a class="external" href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getNamedItem">getNamedItem</a></td>
-   <td><a class="external" href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-getNamedItemNS">getNamedItemNS</a></td>
+   <td><a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getNamedItem">getNamedItem</a></td>
+   <td><a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-getNamedItemNS">getNamedItemNS</a></td>
   </tr>
   <tr>
-   <td><a class="external" href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#">hasAttribute</a></td>
-   <td><a class="external" href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElHasAttrNS">hasAttributeNS</a></td>
+   <td><a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#">hasAttribute</a></td>
+   <td><a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElHasAttrNS">hasAttributeNS</a></td>
   </tr>
   <tr>
-   <td><a class="external" href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeAttribute">removeAttribute</a></td>
-   <td><a class="external" href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElRemAtNS">removeAttributeNS</a></td>
+   <td><a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeAttribute">removeAttribute</a></td>
+   <td><a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElRemAtNS">removeAttributeNS</a></td>
   </tr>
   <tr>
-   <td><a class="external" href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeNamedItem">removeNamedItem</a></td>
-   <td><a class="external" href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-removeNamedItemNS">removeNamedItemNS</a></td>
+   <td><a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeNamedItem">removeNamedItem</a></td>
+   <td><a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-removeNamedItemNS">removeNamedItemNS</a></td>
   </tr>
   <tr>
-   <td><a class="external" href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setAttribute">setAttribute</a></td>
-   <td><a class="external" href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAttrNS">setAttributeNS</a></td>
+   <td><a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setAttribute">setAttribute</a></td>
+   <td><a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAttrNS">setAttributeNS</a></td>
   </tr>
   <tr>
-   <td><a class="external" href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setAttributeNode">setAttributeNode</a></td>
-   <td><a class="external" href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAtNodeNS">setAttributeNodeNS</a></td>
+   <td><a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setAttributeNode">setAttributeNode</a></td>
+   <td><a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAtNodeNS">setAttributeNodeNS</a></td>
   </tr>
   <tr>
-   <td><a class="external" href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setNamedItem">setNamedItem</a></td>
-   <td><a class="external" href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-setNamedItemNS">setNamedItemNS</a></td>
+   <td><a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setNamedItem">setNamedItem</a></td>
+   <td><a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-setNamedItemNS">setNamedItemNS</a></td>
   </tr>
  </tbody>
 </table>
 
-<p>The first parameter for all the DOM2 namespace aware methods must be the namespace name (also known as the namespace URI) of the element or parameter in question. For SVG <strong>elements</strong> this is <code>http://www.w3.org/2000/svg</code>. However, note carefully: the <a class="external" href="https://www.w3.org/TR/xml-names11/#defaulting">Namespaces in XML 1.1</a> recommendation states that the namespace name for parameters without a prefix does not have a value. In other words, although the parameters belong to the namespace of the element, you do not use the tag's namespace name. Instead, <strong>you must use null as the namespace name for unqualified (prefixless) parameters</strong>. So, to create an SVG <code>rect</code> <em>element</em> using <code>document.createElementNS()</code>, you must write:</p>
+<p>The first parameter for all the DOM2 namespace aware methods must be the namespace name (also known as the namespace URI) of the element or parameter in question. For SVG <strong>elements</strong> this is <code>http://www.w3.org/2000/svg</code>. However, note carefully: the <a href="https://www.w3.org/TR/xml-names11/#defaulting">Namespaces in XML 1.1</a> recommendation states that the namespace name for parameters without a prefix does not have a value. In other words, although the parameters belong to the namespace of the element, you do not use the tag's namespace name. Instead, <strong>you must use null as the namespace name for unqualified (prefixless) parameters</strong>. So, to create an SVG <code>rect</code> <em>element</em> using <code>document.createElementNS()</code>, you must write:</p>
 
 <pre><code class="language-javascript">document.createElementNS('http://www.w3.org/2000/svg', 'rect');</code></pre>
 

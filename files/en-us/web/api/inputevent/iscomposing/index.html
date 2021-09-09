@@ -7,17 +7,18 @@ tags:
 - Property
 - Read-only
 - Reference
+browser-compat: api.InputEvent.isComposing
 ---
 <div>{{APIRef("DOM Events")}}</div>
 
 <p>The <code><strong>InputEvent.isComposing</strong></code> read-only property returns a
-  {{jsxref("Boolean")}} value indicating if the event is fired after
+  boolean value indicating if the event is fired after
   {{event("compositionstart")}} and before {{event("compositionend")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>bool</em> = <em>event</em>.isComposing;</pre>
+  class="brush: js">var <em>bool</em> = <em>event</em>.isComposing;</pre>
 
 <h2 id="Example">Example</h2>
 
@@ -27,27 +28,11 @@ console.log(inputEvent.isComposing); // return false
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table" style="height: 49px; width: 1000px;">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('DOM3
-        Events','#widl-InputEvent-isComposing','InputEvent.isComposing')}}</td>
-      <td>{{Spec2('DOM3 Events')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.InputEvent.isComposing")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

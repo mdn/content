@@ -1,0 +1,101 @@
+---
+title: SerialPort
+slug: Web/API/SerialPort
+tags:
+  - API
+  - Interface
+  - Reference
+  - SerialPort
+browser-compat: api.SerialPort
+---
+<div>{{securecontext_header}}{{DefaultAPISidebar("Serial API")}}</div>
+
+<h2>Description</h2>
+
+<p>The <code>SerialPort</code> interface of the {{domxref("Web_Serial_API", "Web Serial API")}} provides access to a serial port on the host device.</p>
+
+<h2>Constructor</h2>
+
+<p>Instances of this interface may be obtained by calling methods of the {{domxref("Serial")}} interface, therefore it has no constructor of its own.
+
+<h2 id="Properties">Properties</h2>
+
+<dl>
+  <dt>{{domxref("SerialPort.readable")}}{{readonlyInline}}</dt>
+  <dd>Returns a {{domxref("ReadableStream")}} for receiving data from the device connected to the port.</dd>
+  <dt>{{domxref("SerialPort.writable")}}{{readonlyInline}}</dt>
+  <dd>Returns a {{domxref("WritableStream")}} for sending data to the device connected to the port.</dd>
+</dl>
+
+<h3 id="Event_handlers">Event handlers</h3>
+
+<dl>
+  <dt>{{domxref("SerialPort.onconnect")}}</dt>
+  <dd>An event handler called when the port has connected to the device.</dd>
+  <dt>{{domxref("SerialPort.ondisconnect")}}</dt>
+  <dd>An event handler called when the port has disconnected from the device.</dd>
+</dl>
+
+<h2 id="Methods">Methods</h2>
+
+<dl>
+  <dt>{{domxref("SerialPort.getInfo()")}}</dt>
+  <dd>Returns a {{jsxref("Promise")}} that resolves with an object containing properties of the port.</dd>
+  <dt>{{domxref("SerialPort.open()")}}</dt>
+  <dd>Returns a {{jsxref("Promise")}} that resolves when the port is opened. By default the port is opened with 8 data bits, 1 stop bit and no parity checking.</dd>
+  <dt>{{domxref("SerialPort.setSignals()")}}</dt>
+  <dd>Sets control signals on the port and returns a {{jsxref("Promise")}} that resolves when they are set.</dd>
+  <dt>{{domxref("SerialPort.getSignals()")}}</dt>
+  <dd>Returns a {{jsxref("Promise")}} that resolves with an object containing the current state of the port's control signals.</dd>
+  <dt>{{domxref("SerialPort.close()")}}</dt>
+  <dd>Returns a {{jsxref("Promise")}} that resolves when the port closes.</dd>
+</dl>
+
+<h2>Examples</h2>
+
+<h3>Opening a port</h3>
+
+<p>Before communicating on a serial port it must be opened. Opening the port allows the site to specify the necessary parameters that control how data is transmitted and received. Developers should check the documentation for the device they are connecting to for the appropriate parameters.</p>
+
+<pre class="brush: js notranslate">await port.open({ baudRate: /* pick your baud rate */ });</pre>
+
+<p>Once the <code>Promise</code> returned by <code>open()</code> resolves the <code>readable</code> and <code>writable</code> attributes can be accessed to get the {{domxref("ReadableStream")}} and {{domxref("WritableStream")}} instances for receiving data from and sending data to the connected device.</p>
+
+<h3>Reading data from a port</h3>
+
+<p>The following example shows how to read data from a port. The outer loop handles non-fatal errors, creating a new reader until a fatal error is encountered and <code>readable</code> becomes <code>null</code>.</p>
+
+<pre class="brush: js notranslate">while (port.readable) {
+  const reader = port.readable.getReader();
+  try {
+    while (true) {
+      const { value, done } = await reader.read();
+      if (done) {
+        // |reader| has been canceled.
+        break;
+      }
+      // Do something with |value|...
+    }
+  } catch (error) {
+    // Handle |error|...
+  } finally {
+    reader.releaseLock();
+  }
+}</pre>
+
+<h3>Writing data to a port</h3>
+
+<p>The following example shows how to write a string to a port. A {{domxref("TextEncoder")}} converts the string to a <code>Uint8Array</code> before transmission.</p>
+
+<pre class="brush: js notranslate">const encoder = new TextEncoder();
+const writer = port.writable.getWriter();
+await writer.write(encoder.encode(&quot;PING&quot;));
+writer.releaseLock();</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+{{Specifications}}
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

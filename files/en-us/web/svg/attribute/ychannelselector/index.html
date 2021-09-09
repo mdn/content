@@ -5,12 +5,17 @@ tags:
   - Filters
   - SVG
   - SVG Attribute
+browser-compat: svg.elements.feDisplacementMap.yChannelSelector
 ---
 <div>{{SVGRef}}</div>
 
 <p>The <strong><code>yChannelSelector</code></strong> attribute indicates which color channel from {{SVGAttr("in2")}} to use to displace the pixels in {{SVGAttr("in")}} along the y-axis.</p>
 
-<p>Only one element is using this attribute: {{SVGElement("feDisplacementMap")}}</p>
+<p>You can use this attribute with the following SVG elements:</p>
+
+<ul>
+  <li>{{SVGElement("feDisplacementMap")}}</li>
+</ul>
 
 <div id="topExample">
 <div class="hidden">
@@ -21,13 +26,13 @@ tags:
 
 <pre class="brush: html; highlight[6,12]">&lt;svg viewBox="0 0 440 160" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;filter id="displacementFilter"&gt;
-    &lt;feImage xlink:href="https://mdn.mozillademos.org/files/12668/MDN.svg"
+    &lt;feImage xlink:href="mdn.svg"
         x="0" y="0" width="100%" height="100%" result="abc"/&gt;
     &lt;feDisplacementMap in2="abc" in="SourceGraphic"
         scale="30" yChannelSelector="R"/&gt;
   &lt;/filter&gt;
   &lt;filter id="displacementFilter2"&gt;
-    &lt;feImage xlink:href="https://mdn.mozillademos.org/files/12668/MDN.svg"
+    &lt;feImage xlink:href="mdn.svg"
         x="0" y="0" width="100%" height="100%" result="abc"/&gt;
     &lt;feDisplacementMap in2="abc" in="SourceGraphic"
         scale="30" yChannelSelector="B"/&gt;
@@ -98,4 +103,4 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("svg.elements.feDisplacementMap.yChannelSelector")}}</p>
+<p>{{Compat}}</p>

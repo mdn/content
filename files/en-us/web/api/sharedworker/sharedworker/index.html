@@ -2,11 +2,12 @@
 title: SharedWorker()
 slug: Web/API/SharedWorker/SharedWorker
 tags:
-- API
-- Constructor
-- Reference
-- SharedWorker
-- Web Workers
+  - API
+  - Constructor
+  - Reference
+  - SharedWorker
+  - Web Workers
+browser-compat: api.SharedWorker.SharedWorker
 ---
 <div>{{APIRef("Web Workers API")}}</div>
 
@@ -16,7 +17,7 @@ tags:
     policy</a>.</p>
 
 <div class="note">
-  <p><strong>Note</strong>: there is disagreement among browser manufacturers about
+  <p><strong>Note:</strong> there is disagreement among browser manufacturers about
     whether a data URI is of the same origin or not. Although Gecko 10.0
     {{geckoRelease("10.0")}} and later accept data URIs, that's not the case in all other
     browsers.</p>
@@ -24,7 +25,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var myWorker = new SharedWorker(<em>aURL</em>, <em>name</em>);
+<pre class="brush: js">var myWorker = new SharedWorker(<em>aURL</em>, <em>name</em>);
 var myWorker = new SharedWorker(<em>aURL</em>, <em>options</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -69,7 +70,7 @@ var myWorker = new SharedWorker(<em>aURL</em>, <em>options</em>);</pre>
   <li>A <code>NetworkError</code> is raised if the MIME type of the worker script is
     incorrect. It should <em>always</em> be <code>text/javascript</code> (for historical
     reasons <a
-      href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#JavaScript_types">other
+      href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#javascript_types">other
       JavaScript MIME types</a> may be accepted).</li>
   <li>A <code>SyntaxError</code> is raised if <em>aURL</em> cannot be parsed.</li>
 </ul>
@@ -79,7 +80,7 @@ var myWorker = new SharedWorker(<em>aURL</em>, <em>options</em>);</pre>
 <p>The following code snippet shows creation of a {{domxref("SharedWorker")}} object using
   the <code>SharedWorker()</code> constructor and subsequent usage of the object:</p>
 
-<pre class="brush: js notranslate">var myWorker = new SharedWorker('worker.js');
+<pre class="brush: js">var myWorker = new SharedWorker('worker.js');
 
 myWorker.port.start();
 
@@ -105,24 +106,11 @@ myWorker.port.onmessage = function(e) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', "#dom-sharedworker", "SharedWorker()")}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SharedWorker.SharedWorker")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

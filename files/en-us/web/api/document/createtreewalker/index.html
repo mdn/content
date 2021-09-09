@@ -7,6 +7,7 @@ tags:
 - DOM Reference
 - Document
 - Method
+browser-compat: api.Document.createTreeWalker
 ---
 <div>{{ApiRef("Document")}}</div>
 
@@ -15,7 +16,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>document</em>.createTreeWalker(<em>root</em>[, <em>whatToShow</em>[, <em>filter</em>[, <em>entityReferenceExpansion</em>]]]);
+<pre class="brush: js"><em>document</em>.createTreeWalker(<em>root</em>[, <em>whatToShow</em>[, <em>filter</em>[, <em>expandEntityReferences</em>]]]);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -31,12 +32,14 @@ tags:
     It is a convenient way of filtering for certain types of node. It defaults to
     <code>0xFFFFFFFF</code> representing the <code>SHOW_ALL</code> constant.
     <table class="standard-table">
-      <tbody>
+      <thead>
         <tr>
-          <td class="header">Constant</td>
-          <td class="header">Numerical value</td>
-          <td class="header">Description</td>
+          <th>Constant</th>
+          <th>Numerical value</th>
+          <th>Description</th>
         </tr>
+      </thead>
+      <tbody>
         <tr>
           <td><code>NodeFilter.SHOW_ALL</code></td>
           <td><code>-1</code> (that is the max value of <code>unsigned long</code>)</td>
@@ -84,25 +87,17 @@ tags:
         <tr>
           <td><code>NodeFilter.SHOW_ENTITY</code> {{deprecated_inline}}</td>
           <td><code>32</code></td>
-          <td>Shows {{domxref("Entity")}} nodes. This is meaningful only when creating a
-            {{domxref("TreeWalker")}} with an {{domxref("Entity")}} node as its root; in
-            this case, it means that the {{domxref("Entity")}} node will appear in the
-            first position of the traversal. Since entities are not part of the document
-            tree, they do not appear when traversing over the document tree.</td>
+          <td>Legacy, no more usable.</td>
         </tr>
         <tr>
           <td><code>NodeFilter.SHOW_ENTITY_REFERENCE</code> {{deprecated_inline}}</td>
           <td><code>16</code></td>
-          <td>Shows {{domxref("EntityReference")}} nodes.</td>
+          <td>Legacy, no more usable.</td>
         </tr>
         <tr>
           <td><code>NodeFilter.SHOW_NOTATION</code> {{deprecated_inline}}</td>
           <td><code>2048</code></td>
-          <td>Shows {{domxref("Notation")}} nodes. This is meaningful only when creating a
-            {{domxref("TreeWalker")}} with a {{domxref("Notation")}} node as its root; in
-            this case, it means that the {{domxref("Notation")}} node will appear in the
-            first position of the traversal. Since entities are not part of the document
-            tree, they do not appear when traversing over the document tree.</td>
+          <td>Legacy, no more usable.</td>
         </tr>
         <tr>
           <td><code>NodeFilter.SHOW_PROCESSING_INSTRUCTION</code></td>
@@ -122,9 +117,9 @@ tags:
     <code>acceptNode</code>, which is called by the {{domxref("TreeWalker")}} to determine
     whether or not to accept a node that has passed the <code>whatToShow</code> check.
   </dd>
-  <dt><code>entityReferenceExpansion</code> {{optional_inline}} {{obsolete_inline}}</dt>
-  <dd>A {{domxref("Boolean")}} flag indicating if when discarding an
-    {{domxref("EntityReference")}} its whole sub-tree must be discarded at the same time.
+  <dt><code>expandEntityReferences</code> {{optional_inline}} {{deprecated_inline}}</dt>
+  <dd>A boolean flag indicating if when discarding an
+    entity reference its whole sub-tree must be discarded at the same time.
   </dd>
 </dl>
 
@@ -134,13 +129,14 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>The following example goes through all nodes in the body, reduces the set of nodes to
-  elements, passes through as acceptable each node (it could reduce the set in the
-  <code>acceptNode()</code> method instead), and then makes use of tree walker iterator
+<p>The following example goes through all nodes in the body,
+  filters out any non nodes that aren't elements (with the `NodeFilter.SHOW_ELEMENT` value),
+  marks each remaining node as acceptable (The <code>acceptNode()</code> method could make
+  a different decision.), and then makes use of tree walker iterator
   that is created to advance through the nodes (now all elements) and push them into an
   array.</p>
 
-<pre class="brush: js notranslate">var treeWalker = document.createTreeWalker(
+<pre class="brush: js">var treeWalker = document.createTreeWalker(
   document.body,
   NodeFilter.SHOW_ELEMENT,
   { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
@@ -158,33 +154,11 @@ while(currentNode) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('DOM WHATWG', '#dom-document-createtreewalker',
-        'Document.createTreeWalker')}}</td>
-      <td>{{Spec2('DOM WHATWG')}}</td>
-      <td>Removed the <code>expandEntityReferences</code> parameter. Made the
-        <code>whatToShow</code> and <code>filter</code> parameters optionals.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('DOM2 Traversal_Range',
-        'traversal.html#NodeIteratorFactory-createTreeWalker',
-        'Document.createTreeWalker')}}</td>
-      <td>{{Spec2('DOM2 Traversal_Range')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Document.createTreeWalker")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

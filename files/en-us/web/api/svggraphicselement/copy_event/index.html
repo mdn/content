@@ -7,10 +7,11 @@ tags:
   - Reference
   - SVG
   - SVG OM
+browser-compat: api.SVGGraphicsElement.copy_event
 ---
 <p>{{APIRef}}</p>
 
-<p><span class="seoSummary">The <strong><code>copy</code></strong> event fires on {{domxref("SVGGraphicsElement", "SVGGraphicsElements")}} when the user initiates a copy action through the browser's user interface.</span></p>
+<p>The <strong><code>copy</code></strong> event fires on {{domxref("SVGGraphicsElement", "SVGGraphicsElements")}} when the user initiates a copy action through the browser's user interface.</p>
 
 <table class="properties">
  <tbody>
@@ -39,7 +40,7 @@ tags:
 
 <p>However, the handler cannot <em>read</em> the clipboard data.</p>
 
-<p>It's possible to construct and dispatch a <a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">synthetic</a> <code>copy</code> event, but this will not affect the system clipboard.</p>
+<p>It's possible to construct and dispatch a <a href="/en-US/docs/Web/Events/Creating_and_triggering_events">synthetic</a> <code>copy</code> event, but this will not affect the system clipboard.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -66,7 +67,7 @@ tags:
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js; highlight[1]">document.getElementsByTagName("text")[0].addEventListener("copy", evt =&gt; {
+<pre class="brush: js;">document.getElementsByTagName("text")[0].addEventListener("copy", evt =&gt; {
   evt.clipboardData.setData('text/plain', document.getSelection().toString().toUpperCase());
   evt.preventDefault();
 });</pre>
@@ -77,29 +78,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG2", "types.html#SVGDOMDependencies")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Definition that the clipboard events apply to SVG elements.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Clipboard API', '#clipboard-event-copy')}}</td>
-   <td>{{Spec2('Clipboard API')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SVGGraphicsElement.copy_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

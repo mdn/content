@@ -9,6 +9,7 @@ tags:
 - Web Components
 - custom elements
 - define
+browser-compat: api.CustomElementRegistry.define
 ---
 <p>{{APIRef("CustomElementRegistry")}}</p>
 
@@ -26,7 +27,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">customElements.define(<em>name</em>, <em>constructor</em>, <em>options</em>);
+<pre class="brush: js">customElements.define(<em>name</em>, <em>constructor</em>, <em>options</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -52,7 +53,7 @@ tags:
 
 <h3 id="Exceptions">Exceptions</h3>
 
-<table class="standard-table">
+<table class="no-markdown">
   <thead>
     <tr>
       <th scope="col">Exception</th>
@@ -83,7 +84,7 @@ tags:
 </table>
 
 <div class="note">
-  <p><strong>Note</strong>: You'll often get <code>NotSupportedError</code>s thrown that
+  <p><strong>Note:</strong> You'll often get <code>NotSupportedError</code>s thrown that
     seem like <code>define()</code> is failing, but instead it is likely a problem with
     {{domxref("Element.attachShadow()")}}.</p>
 </div>
@@ -180,7 +181,7 @@ customElements.define('popup-info', PopUpInfo);
                                     numbers on the back of your card."&gt;</pre>
 
 <div class="note">
-  <p><strong>Note</strong>: Constructors for autonomous custom elements must extend
+  <p><strong>Note:</strong> Constructors for autonomous custom elements must extend
     {{domxref("HTMLElement")}}.</p>
 </div>
 
@@ -232,25 +233,26 @@ customElements.define('word-count', WordCount, { extends: 'p' });</pre>
 
 <pre class="brush: html">&lt;p is="word-count"&gt;&lt;/p&gt;</pre>
 
+<h3>Creating an element which disables the ability to attach a shadow root</h3>
+
+<p>If the class used for the element contains the static property <code>disabledFeatures</code> returning the string `shadow` this will cause {{domxref("Element.attachShadow()")}} to return a {{domxref("DOMException")}} <code>NotSupportedError</code>.</p>
+
+<pre class="brush: js">class PopUpInfo extends HTMLElement {
+  static get disabledFeatures() { return ['shadow']; }
+
+  constructor() {
+    super();
+
+    var shadow = this.attachShadow({mode: 'open'});
+    // this will cause an error to be thrown when the element is defined.
+  }
+}
+  </pre>
+
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName("HTML WHATWG",
-        "custom-elements.html#dom-customelementregistry-define",
-        "customElements.define()")}}</td>
-      <td>{{Spec2("HTML WHATWG")}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CustomElementRegistry.define")}}</p>
+<p>{{Compat}}</p>

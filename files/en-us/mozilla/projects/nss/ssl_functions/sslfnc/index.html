@@ -4,11 +4,11 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
 ---
 <div class="note">
 <ul>
- <li>This page is part of the <a href="/en-US/docs/NSS/SSL_functions/OLD_SSL_Reference">SSL Reference</a> that we are migrating into the format described in the <a href="/en-US/docs/Project:MDC_style_guide">MDN Style Guide</a>. If you are inclined to help with this migration, your help would be very much appreciated.</li>
+ <li>This page is part of the <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/OLD_SSL_Reference">SSL Reference</a> that we are migrating into the format described in the <a href="/en-US/docs/MDN/Guidelines">MDN Style Guide</a>. If you are inclined to help with this migration, your help would be very much appreciated.</li>
 </ul>
 
 <ul>
- <li>Upgraded documentation may be found in the <a href="/NSS_reference">Current NSS Reference</a>
+ <li>Upgraded documentation may be found in the <a href="/en-US/docs/Mozilla/Projects/NSS/Reference">Current NSS Reference</a>
  </li>
 </ul>
 </div>
@@ -18,21 +18,24 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
 <hr>
 <p><a id="1022819"> </a></p>
 
-<h2 id="Chapter_4_SSL_Functions">Chapter 4<br>
- <a id="1047959"> SSL Functions</a></h2>
+<a id="1047959"></a>
+<h2 id="Chapter_4_SSL_Functions">Chapter 4 SSL Functions</h2>
 
 <p><a id="1047960"> This chapter describes the core SSL functions.</a></p>
 
-<p><a id="1047964"> </a><a href="#1022864">SSL Initialization Functions</a><br>
- <a href="#1098841">SSL Export Policy Functions</a><br>
- <a href="#1163855">SSL Configuration Functions</a><br>
- <a href="#1127321">SSL Communication Functions</a><br>
- <a href="#1127893">SSL Functions Used by Callbacks</a><br>
- <a href="#1061582">SSL Handshake Functions</a><br>
- <a href="#1095840">NSS Shutdown Function</a><br>
- <a href="#1198429">Deprecated Functions</a></p>
+<ul>
+  <li><a href="#ssl_initialization_functions">SSL Initialization Functions</a></li>
+  <li><a href="#ssl_export_policy_functions">SSL Export Policy Functions</a></li>
+  <li><a href="#ssl_configuration_functions">SSL Configuration Functions</a></li>
+  <li><a href="#ssl_communication_functions">SSL Communication Functions</a></li>
+  <li><a href="#ssl_functions_used_by_callbacks">SSL Functions Used by Callbacks</a></li>
+  <li><a href="#ssl_handshake_functions">SSL Handshake Functions</a></li>
+  <li><a href="#nss_shutdown_function">NSS Shutdown Function</a></li>
+  <li><a href="#deprecated_functions">Deprecated Functions</a></li>
+</ul>
 
-<h2 id="SSL_Initialization_Functions"><a id="1022864"> SSL Initialization Functions </a></h2>
+<a id="1022864"></a>
+<h2 id="SSL_Initialization_Functions">SSL Initialization Functions</h2>
 
 <p><a id="1090069"> This section describes the initialization functions that are specific to SSL. For a complete list of NSS initialization functions, see </a><a href="sslintro.html#1027662">Initialization</a>.</p>
 
@@ -50,11 +53,13 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
  <a href="#1142625"><code>SSL_ConfigMPServerSIDCache</code></a><br>
  <a href="#1162055"><code>SSL_InheritMPServerSIDCache</code></a></p>
 
-<h4 id="NSS_Init"> <a id="1067601"> NSS_Init </a></h4>
+<a id="1067601"></a>
+<h4 id="NSS_Init">NSS_Init</h4>
 
 <p><a id="1067602"> Sets up configuration files and performs other tasks required to run Network Security Services. Database files are opened read-only.</a></p>
 
-<h5 id="Syntax"> <a id="1067603"> Syntax </a></h5>
+<a id="1067603"></a>
+<h5 id="Syntax">Syntax</h5>
 
 <pre><a id="1067604">#include "nss.h" </a></pre>
 
@@ -77,7 +82,8 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
  </tbody>
 </table>
 
-<h5 id="Returns"> <a id="1067613"> Returns </a></h5>
+<a id="1067613"></a>
+<h5 id="Returns">Returns</h5>
 
 <p><a id="1067614"> The function returns one of these value<var>s</var>:</a></p>
 
@@ -86,7 +92,8 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
  <li><a id="1067618"> If unsuccessful, <code>SECFailure</code>. Use </a><code><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError">PR_GetError</a></code> to retrieve the error code.</li>
 </ul>
 
-<h5 id="Description"> <a id="1067619"> Description </a></h5>
+<a id="1067619"></a>
+<h5 id="Description">Description</h5>
 
 <p><a id="1067620"> <code>NSS_Init</code> opens the <code>cert</code><em>N</em><code>.db</code>, <code>key</code><em>N</em><code>.db</code>, and <code>secmod.db</code> files (where<em>N</em> is a numeric digit) in the specified directory. <code>NSS_Init</code> is<em>not</em> idempotent, so call it only once. </a></p>
 
@@ -101,17 +108,20 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
  <li><a id="1107952"> </a><a href="#1104647"><code>SSL_CipherPolicySet</code></a> sets policy flags for individual cipher suites, one at a time. This may be helpful if you have an export license that permits more or fewer capabilities than those allowed by the other export policy functions.</li>
 </ul>
 
-<h4 id="NSS_InitReadWrite"> <a id="1237143"> NSS_InitReadWrite </a></h4>
+<a id="1237143"></a>
+<h4 id="NSS_InitReadWrite">NSS_InitReadWrite</h4>
 
 <p><a id="1236522"> Sets up configuration files and performs other tasks required to run Network Security Services. Unlike </a><a href="#1067601"><code>NSS_Init</code></a>, <code>NSS_InitReadWrite</code> provides both read and write access to database files.</p>
 
-<h5 id="Syntax_2"> <a id="1236523"> Syntax </a></h5>
+<a id="1236523"></a>
+<h5 id="Syntax_2">Syntax</h5>
 
 <pre><a id="1236524">#include "nss.h" </a></pre>
 
 <pre><a id="1236525">SECStatus NSS_InitReadWrite(char *configdir);</a></pre>
 
-<h5 id="Parameter_2"> <a id="1236526"> Parameter </a></h5>
+<a id="1236526"></a>
+<h5 id="Parameter_2">Parameter</h5>
 
 <p><a id="1236532"> This function has the following parameter:</a></p>
 
@@ -128,7 +138,8 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
  </tbody>
 </table>
 
-<h5 id="Returns_2"> <a id="1236533"> Returns </a></h5>
+<a id="1236533"></a>
+<h5 id="Returns_2">Returns</h5>
 
 <p><a id="1236534"> The function returns one of these value<var>s</var>:</a></p>
 
@@ -137,7 +148,8 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
  <li><a id="1236538"> If unsuccessful, <code>SECFailure</code>. Use </a><code><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError">PR_GetError</a></code> to retrieve the error code.</li>
 </ul>
 
-<h5 id="Description_2"> <a id="1236539"> Description </a></h5>
+<a id="1236539"></a>
+<h5 id="Description_2">Description</h5>
 
 <p><a id="1236540"> <code>NSS_InitReadWrite</code> opens the <code>cert</code><em>N</em><code>.db</code>, <code>key</code><em>N</em><code>.db</code>, and <code>secmod.db</code> files (where<em>N</em> is a numeric digit) with both read and write permission in the specified directory. <code>NSS_InitReadWrite</code> is<em>not</em> idempotent, so call it only once.</a></p>
 
@@ -147,17 +159,20 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
 
 <p><a id="1236544"> The policy flags for all cipher suites are turned off by default, disallowing all cipher suites. Therefore, an application cannot use NSS to perform any cryptographic operations until after it enables appropriate cipher suites by calling one of the </a><a href="#1098841">SSL Export Policy Functions</a>.</p>
 
-<h4 id="NSS_NoDB_Init"> <a id="1234224"> NSS_NoDB_Init </a></h4>
+<a id="1234224"></a>
+<h4 id="NSS_NoDB_Init">NSS_NoDB_Init</h4>
 
 <p><a id="1235873"> Performs tasks required to run Network Security Services without setting up configuration files. <strong>Important:</strong> This NSS function is not intended for use with SSL, which requires that the certificate and key database files be opened. </a></p>
 
-<h5 id="Syntax_3"> <a id="1234275"> Syntax </a></h5>
+<a id="1234275"></a>
+<h5 id="Syntax_3">Syntax</h5>
 
 <pre><a id="1234276">#include "nss.h" </a></pre>
 
 <pre><a id="1234277">SECStatus NSS_NoDB_Init(char *reserved);</a></pre>
 
-<h5 id="Parameter_3"> <a id="1234278"> Parameter </a></h5>
+<a id="1234278"></a>
+<h5 id="Parameter_3">Parameter</h5>
 
 <p><a id="1234284"> This function has the following parameter:</a></p>
 
@@ -174,7 +189,8 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
  </tbody>
 </table>
 
-<h5 id="Returns_3"> <a id="1234285"> Returns </a></h5>
+<a id="1234285"></a>
+<h5 id="Returns_3">Returns</h5>
 
 <p><a id="1234286"> The function returns one of these value<var>s</var>:</a></p>
 
@@ -183,7 +199,8 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
  <li><a id="1234290"> If unsuccessful, <code>SECFailure</code>. Use </a><code><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError">PR_GetError</a></code> to retrieve the error code.</li>
 </ul>
 
-<h5 id="Description_3"> <a id="1234291"> Description </a></h5>
+<a id="1234291"></a>
+<h5 id="Description_3">Description</h5>
 
 <p><a id="1234292"> <code>NSS_NoDB_Init</code> opens only the temporary database and the internal PKCS #112 module. Unlike </a><code><a href="#1067601">NSS_Init</a></code>, <code>NSS_NoDB_Init</code> allows applications that do not have access to storage for databases to run raw crypto, hashing, and certificate functions.</p>
 
@@ -193,19 +210,22 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
 
 <p><a id="1234296"> The policy flags for all cipher suites are turned off by default, disallowing all cipher suites. Therefore, an application cannot use NSS to perform any cryptographic operations until after it enables appropriate cipher suites by calling one of the </a><a href="#1098841">SSL Export Policy Functions</a>.</p>
 
-<h4 id="SSL_OptionSetDefault"> <a id="1068466"> SSL_OptionSetDefault </a></h4>
+<a id="1068466"></a>
+<h4 id="SSL_OptionSetDefault">SSL_OptionSetDefault</h4>
 
 <p><a id="1068467"> Changes the default value of a specified SSL option for all subsequently opened sockets as long as the current application program is running.</a></p>
 
 <p><a id="1206352"> <code>SSL_OptionSetDefault</code> replaces the deprecated function </a><a href="#1206365"><code>SSL_EnableDefault</code></a>.</p>
 
-<h5 id="Syntax_4"> <a id="1068468"> Syntax </a></h5>
+<a id="1068468"></a>
+<h5 id="Syntax_4">Syntax</h5>
 
 <pre><a id="1206331">#include "ssl.h"</a></pre>
 
 <pre><a id="1068470">SECStatus SSL_OptionSetDefault(PRInt32 option, PRBool on);</a></pre>
 
-<h5 id="Parameters"> <a id="1202769"> Parameters </a></h5>
+<a id="1202769"></a>
+<h5 id="Parameters">Parameters</h5>
 
 <p><a id="1202798"> This function has the following parameters:</a></p>
 
@@ -266,7 +286,8 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
  </tbody>
 </table>
 
-<h5 id="Returns_4"> <a id="1202799"> Returns </a></h5>
+<a id="1202799"></a>
+<h5 id="Returns_4">Returns</h5>
 
 <p><a id="1068491"> The function returns one of these values:</a></p>
 
@@ -306,19 +327,22 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
 
 <p><a id="1187737"> Note that SSL3 and TLS share the same set of cipher suites. When both SSL3 and TLS are enabled, all SSL3/TLS ciphersuites that are enabled are enabled for both SSL3 and TLS.</a></p>
 
-<h4 id="SSL_OptionGetDefault"> <a id="1204897"> SSL_OptionGetDefault </a></h4>
+<a id="1204897"></a>
+<h4 id="SSL_OptionGetDefault">SSL_OptionGetDefault</h4>
 
 <p><a id="1204924"> Gets the value of a specified SSL default option. </a></p>
 
 <p><a id="1204944"> <code>SSL_OptionGetDefault</code> is the complementary function for </a><a href="#1068466"><code>SSL_OptionSetDefault</code></a>.</p>
 
-<h5 id="Syntax_5"> <a id="1205850"> Syntax </a></h5>
+<a id="1205850"></a>
+<h5 id="Syntax_5">Syntax</h5>
 
 <pre><a id="1212408">#include "ssl.h"</a></pre>
 
 <pre><a id="1205880">SECStatus SSL_OptionGetDefault(PRInt32 option, PRBool *on)</a></pre>
 
-<h5 id="Parameters_2"> <a id="1206048"> Parameters </a></h5>
+<a id="1206048"></a>
+<h5 id="Parameters_2">Parameters</h5>
 
 <p><a id="1206097"> This function has the parameters listed below. </a></p>
 
@@ -343,7 +367,8 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
  </tbody>
 </table>
 
-<h5 id="Returns_5"> <a id="1206098"> Returns </a></h5>
+<a id="1206098"></a>
+<h5 id="Returns_5">Returns</h5>
 
 <p><a id="1206099"> The function returns one of these value<var>s</var>:</a></p>
 
@@ -352,15 +377,18 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
  <li><a id="1206103"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain error code.</li>
 </ul>
 
-<h5 id="Description_5"> <a id="1206069"> Description </a></h5>
+<a id="1206069"></a>
+<h5 id="Description_5">Description</h5>
 
 <p><a id="1209533"> <code>SSL_CipherPrefGetDefault</code> gets the application default preference for the specified SSL2, SSL3, or TLS cipher A cipher suite is used only if the policy allows it and the preference for it is set to <code>PR_TRUE</code>. </a></p>
 
-<h4 id="SSL_CipherPrefSetDefault"> <a id="1084747"> SSL_CipherPrefSetDefault </a></h4>
+<a id="1084747"></a>
+<h4 id="SSL_CipherPrefSetDefault">SSL_CipherPrefSetDefault</h4>
 
 <p><a id="1084748"> Enables or disables SSL2 or SSL3 cipher suites (subject to which cipher suites are permitted or disallowed by previous calls to one or more of the </a><a href="#1098841">SSL Export Policy Functions</a>). This function must be called once for each cipher you want to enable or disable by default.</p>
 
-<h5 id="Syntax_6"> <a id="1084749"> Syntax </a></h5>
+<a id="1084749"></a>
+<h5 id="Syntax_6">Syntax</h5>
 
 <pre><a id="1212417">#include "ssl.h"</a></pre>
 
@@ -466,7 +494,8 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
 
 <pre><a id="1208150">SECStatus SSL_CipherPrefSetDefault(PRInt32 cipher, PRBool *enabled);</a></pre>
 
-<h5 id="Parameters_4"> <a id="1208233"> Parameters </a></h5>
+<a id="1208233"></a>
+<h5 id="Parameters_4">Parameters</h5>
 
 <p><a id="1208251"> This function has the parameters listed below. </a></p>
 
@@ -491,7 +520,8 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
  </tbody>
 </table>
 
-<h5 id="Returns_7"> <a id="1208252"> Returns </a></h5>
+<a id="1208252"></a>
+<h5 id="Returns_7">Returns</h5>
 
 <p><a id="1208253"> The function returns one of these value<var>s</var>:</a></p>
 
@@ -508,7 +538,8 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
 
 <p><a id="1138602"> Empties the SSL client session ID cache.</a></p>
 
-<h5 id="Syntax_8"> <a id="1138603"> Syntax </a></h5>
+<a id="1138603"></a>
+<h5 id="Syntax_8">Syntax</h5>
 
 <pre><a id="1220816">#include "ssl.h"</a></pre>
 
@@ -598,7 +629,8 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
 
 <p><a id="1085416"> Passing a <code>NULL</code> value or a value that is out of range for any of the parameters causes the server default value to be used in the server cache. The values that you pass affect only the server cache, not the client cache. </a></p>
 
-<h3 id="Initializing_Multi-Processing_with_a_Shared_SSL_Server_Cache"> <a id="1154189"> Initializing Multi-Processing with a Shared SSL Server Cache </a></h3>
+<a id="1154189"></a>
+<h3 id="Initializing_Multi-Processing_with_a_Shared_SSL_Server_Cache">Initializing Multi-Processing with a Shared SSL Server Cache</h3>
 
 <p><a id="1154193"> To start a multi-processing application, the initial parent process calls </a><a href="#1142625"><code>SSL_ConfigMPServerSIDCache</code></a>, and then creates child processes, by one of these methods:</p>
 
@@ -621,7 +653,8 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
 
 <p><a id="1160413"> In either case, the child must call </a><a href="#1162055"><code>SSL_InheritMPServerSIDCache</code></a> to complete the inheritance of the shared cache FDs/handles.</p>
 
-<h4 id="SSL_ConfigMPServerSIDCache"> <a id="1142625"> SSL_ConfigMPServerSIDCache </a></h4>
+<a id="1142625"></a>
+<h4 id="SSL_ConfigMPServerSIDCache">SSL_ConfigMPServerSIDCache</h4>
 
 <p><a id="1142626"> Sets up parameters for and opens the server session cache for a multi-process application.</a></p>
 
@@ -750,7 +783,8 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
 
 <p><a id="1163090"> When this function returns <code>SECSuccess</code>, the server cache is ready to be used by the SSL code.</a></p>
 
-<h2 id="SSL_Export_Policy_Functions"><a id="1098841"> SSL Export Policy Functions </a></h2>
+<a id="1098841"></a>
+<h2 id="SSL_Export_Policy_Functions">SSL Export Policy Functions</h2>
 
 <p><a id="1163748"> The SSL export policy functions determine which cipher suites are<em>permitted</em> for use in an SSL session. They do not determine which cipher suites are actually<em>enabled</em>--that is, turned on and ready to use. To enable or disable a permitted cipher suite, use </a><a href="#1084747"><code>SSL_CipherPrefSetDefault</code></a>; but bear in mind that <a href="#1084747"><code>SSL_CipherPrefSetDefault</code></a> can't enable any cipher suite that is not explicitly permitted as a result of a call to one of the export policy functions.</p>
 
@@ -1051,14 +1085,16 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
 
 <p><a id="1214743"> See the description above for </a><a href="#1104647"><code>SSL_CipherPolicySet</code></a>.</p>
 
-<h2 id="SSL_Configuration_Functions"><a id="1163855"> SSL Configuration Functions </a></h2>
+<a id="1163855"></a>
+<h2 id="SSL_Configuration_Functions">SSL Configuration Functions</h2>
 
 <p><a id="1090054"> SSL configuration involves several NSPR functions in addition to the SSL functions listed here. For a complete list of configuration functions, see </a><a href="sslintro.html#1027742">Configuration</a>.</p>
 
 <p><a id="1090814"> </a><a href="#1090577">SSL Configuration</a><br>
  <a href="#1089578">Callback Configuration</a></p>
 
-<h3 id="SSL_Configuration"> <a id="1090577"> SSL Configuration </a></h3>
+<a id="1090577"></a>
+<h3 id="SSL_Configuration">SSL Configuration</h3>
 
 <p><a id="1090637"> </a><a href="#1085950"><code>SSL_ImportFD</code></a><br>
  <a href="#1086543"><code>SSL_OptionSet</code></a><br>
@@ -1621,7 +1657,8 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
 
 <p><a id="1148228"> You can obtain the PIN argument by calling </a><a href="#1123385"><code>SSL_RevealPinArg</code></a>.</p>
 
-<h3 id="Callback_Configuration"> <a id="1089578"> Callback Configuration </a></h3>
+<a id="1089578"></a>
+<h3 id="Callback_Configuration">Callback Configuration</h3>
 
 <p><a id="1089579"> At the beginning of an SSL application, it is often necessary to set up callback functions for the SSL API to use when it needs to call the application. These functions are used to request authentication information from the application or to inform the application when a handshake is completed.</a></p>
 
@@ -2230,7 +2267,8 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
 
 <h5 id="See_Also_4"> <a id="1127310"> See Also </a></h5>
 
-<h2 id="SSL_Communication_Functions"><a id="1127321"> SSL Communication Functions </a></h2>
+<a id="1127321"></a>
+<h2 id="SSL_Communication_Functions">SSL Communication Functions</h2>
 
 <p><a id="1090925"> Most communication functions are described in the </a><a href="../../../../../nspr/reference/html/index.html">NSPR Reference</a>. For a complete list of communication functions used by SSL-enabled applications, see <a href="sslintro.html#1027816">Communication</a>.</p>
 
@@ -2548,7 +2586,8 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
 
 <p><a id="1128636"> For information about configuring the session cache for a server, see </a><a href="#1143851"><code>SSL_ConfigServerSessionIDCache</code></a>.</p>
 
-<h2 id="SSL_Functions_Used_by_Callbacks"><a id="1127893"> SSL Functions Used by Callbacks </a></h2>
+<a id="1127893"></a>
+<h2 id="SSL_Functions_Used_by_Callbacks">SSL Functions Used by Callbacks</h2>
 
 <p><a id="1133491"> </a><a href="#1096168"><code>SSL_PeerCertificate</code></a><br>
  <a href="#1081175"><code>SSL_RevealURL</code></a><br>
@@ -2676,7 +2715,8 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
 
 <p><a id="1081702"> The <code>SSL_RevealPinArg</code> function is used by callback functions to obtain the PIN argument that NSS passes to certain functions. The PIN argument points to memory allocated by the application. The application is responsible for managing the memory referred to by this pointer. For more information about this argument, see </a><a href="#1088040"><code>SSL_SetPKCS11PinArg</code></a>.</p>
 
-<h2 id="SSL_Handshake_Functions"><a id="1061582"> SSL Handshake Functions </a></h2>
+<a id="1061582"></a>
+<h2 id="SSL_Handshake_Functions">SSL Handshake Functions</h2>
 
 <p><a id="1133419"> </a><a href="#1133431"><code>SSL_ForceHandshake</code></a><br>
  <a href="#1232052"><code>SSL_ReHandshake</code></a><br>
@@ -2845,7 +2885,8 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
 
 <p><a id="1177661"> When an application imports a socket into SSL after the TCP connection on that socket has already been established, it must call <code>SSL_ResetHandshake</code> to determine whether SSL should behave like an SSL client or an SSL server. Note that this step would not be necessary if the socket weren't already connected. For an SSL socket that is configured before it is connected, SSL figures this out when the application calls </a><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Connect"><code>PR_Connect</code></a> or <a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Accept"><code>PR_Accept</code></a>. If the socket is already connected before SSL gets involved, you must provide this extra hint.</p>
 
-<h2 id="NSS_Shutdown_Function"><a id="1095840"> NSS Shutdown Function </a></h2>
+<a id="1095840"></a>
+<h2 id="NSS_Shutdown_Function">NSS Shutdown Function</h2>
 
 <h4 id="NSS_Shutdown"> <a id="1061858"> NSS_Shutdown </a></h4>
 
@@ -2861,7 +2902,8 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
 
 <p>Note that if any reference to an NSS object is leaked (for example, if an SSL client application doesn't call <a href="#1138601"> <code>SSL_ClearSessionCache</code></a> first), <code>NSS_Shutdown</code> fails with the error code <code>SEC_ERROR_BUSY</code>.</p>
 
-<h2 id="Deprecated_Functions"><a id="1198429"> Deprecated Functions </a></h2>
+<a id="1198429"></a>
+<h2 id="Deprecated_Functions">Deprecated Functions</h2>
 
 <p><a id="1222599"> The following functions have been replaced with newer versions but are still supported:</a></p>
 

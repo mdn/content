@@ -1,0 +1,42 @@
+---
+title: HTMLAreaElement.toString()
+slug: Web/API/HTMLAreaElement/toString
+tags:
+  - API
+  - HTMLAreaElement
+  - Method
+  - Stringifier
+browser-compat: api.HTMLAreaElement.toString
+---
+<p>{{ApiRef("URL API")}}</p>
+
+<p>The <strong><code>HTMLAreaElement.toString()</code></strong> stringifier
+  method returns a {{domxref("USVString")}} containing the whole URL. It is a read-only
+  version of {{domxref("HTMLAreaElement.href")}}.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js"><em>area</em>.toString();</pre>
+
+<h2 id="Examples">Examples</h2>
+
+<h3>Calling toString on an area element</h3>
+
+<pre class="brush: js">// An &lt;area id="myArea" href="/en-US/docs/HTMLAreaElement"&gt; element is in the document
+const area = document.getElementById("myArea");
+area.toString(); // returns 'https://developer.mozilla.org/en-US/docs/HTMLAreaElement'
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+{{Specifications}}
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+  <li>The {{domxref("HTMLAreaElement")}} interface it belongs to.</li>
+</ul>

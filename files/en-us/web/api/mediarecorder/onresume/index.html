@@ -2,20 +2,21 @@
 title: MediaRecorder.onresume
 slug: Web/API/MediaRecorder/onresume
 tags:
-- API
-- Audio
-- Media Capture
-- Media Recorder API
-- MediaRecorder
-- Property
-- Reference
-- Video
-- onresume
+  - API
+  - Audio
+  - Media Capture
+  - Media Recorder API
+  - MediaRecorder
+  - Property
+  - Reference
+  - Video
+  - onresume
+browser-compat: api.MediaRecorder.onresume
 ---
 <p>{{APIRef("Media Recorder API")}}</p>
 
 <p>The <strong><code>MediaRecorder.onresume </code></strong>event handler (part of the <a
-    href="/en-US/docs/Web/API/MediaRecorder_API">MediaRecorder API</a>) handles the
+    href="/en-US/docs/Web/API/MediaStream_Recording_API">MediaRecorder API</a>) handles the
   <code>resume</code> event, allowing you to run code in response to the media recording
   being resumed after pausing.</p>
 
@@ -24,7 +25,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">MediaRecorder.onresume = function(event) { ... }
+<pre class="brush: js">MediaRecorder.onresume = function(event) { ... }
 MediaRecorder.addEventListener('resume', function(event) { ... })
 </pre>
 
@@ -60,30 +61,16 @@ MediaRecorder.addEventListener('resume', function(event) { ... })
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName("MediaStream Recording", "#dom-mediarecorder-onresume",
-        "MediaRecorder.onresume")}}</td>
-      <td>{{Spec2("MediaStream Recording")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MediaRecorder.onresume")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API">Using
+  <li><a href="/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using
       the MediaRecorder API</a></li>
   <li><a href="https://mdn.github.io/web-dictaphone/">Web Dictaphone</a>: MediaRecorder +
     getUserMedia + Web Audio API visualization demo, by <a

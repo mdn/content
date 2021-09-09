@@ -11,6 +11,7 @@ tags:
   - WebExtensions
   - onClicked
   - pageAction
+browser-compat: webextensions.api.pageAction.onClicked
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -61,15 +62,13 @@ browser.pageAction.onClicked.hasListener(listener)
 
 	<h2 id="Browser_compatibility">Browser compatibility</h2>
 
-	<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-	<p>{{Compat("webextensions.api.pageAction.onClicked")}}</p>
+	<p>{{Compat}}</p>
 
 	<h2 id="Examples">Examples</h2>
 
 	<p>When the user clicks the page action, hide it, and navigate the active tab to "<a href="https://giphy.com/explore/cat">https://giphy.com/explore/cat</a>":</p>
 
-	<pre class="notranslate brush: js">var CATGIFS = "https://giphy.com/explore/cat";
+	<pre class="brush: js">var CATGIFS = "https://giphy.com/explore/cat";
 
 browser.pageAction.onClicked.addListener((tab) =&gt; {
   browser.pageAction.hide(tab.id);

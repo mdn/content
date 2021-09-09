@@ -9,14 +9,15 @@ tags:
   - TextTrackCueList
   - WebVTT
   - Media
+browser-compat: api.TextTrackCueList.getCueById
 ---
 <div>{{APIRef("WebVTT")}}</div>
 
-<p class="summary">The <strong><code>getCueById()</code></strong> method of the {{domxref("TextTrackCueList")}} interface returns the first {{domxref("VTTCue")}} in the list represented by the <code>TextTrackCueList</code> object whose identifier matches the value of <code>id</code>.</p>
+<p>The <strong><code>getCueById()</code></strong> method of the {{domxref("TextTrackCueList")}} interface returns the first {{domxref("VTTCue")}} in the list represented by the <code>TextTrackCueList</code> object whose identifier matches the value of <code>id</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <var>cue</var> = <var>TextTrackCueList</var>.getCueById(<var>id</var>);</pre>
+<pre class="syntaxbox">var <var>cue</var> = <var>TextTrackCueList</var>.getCueById(<var>id</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -51,23 +52,8 @@ video.onplay = function () {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-    <td>{{ SpecName('HTML WHATWG', '#dom-texttrackcuelist-length', 'TextTrackCueList.length') }}</td>
-    <td>{{ Spec2('HTML WHATWG') }}</td>
-    <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
-
-<p>{{Compat("api.TextTrackCueList.getCueById")}}</p>
+<p>{{Compat}}</p>

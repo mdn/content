@@ -8,13 +8,14 @@ tags:
 - Method
 - Reference
 - getElementsByClassName
+browser-compat: api.Element.getElementsByClassName
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><span class="seoSummary">The {{domxref("Element")}} method
+<p>The {{domxref("Element")}} method
     <code><strong>getElementsByClassName()</strong></code> returns a live
     {{domxref("HTMLCollection")}} which contains every descendant element which has the
-    specified class name or names.</span></p>
+    specified class name or names.</p>
 
 <p>The method {{domxref("Document.getElementsByClassName", "getElementsByClassName()")}}
   on the {{domxref("Document")}} interface works essentially the same way, except it acts
@@ -23,7 +24,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var>var <em>elements</em></var> = <em>element</em>.getElementsByClassName(<em>names</em>);</pre>
+  class="brush: js"><var>var <em>elements</em></var> = <em>element</em>.getElementsByClassName(<em>names</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -51,7 +52,7 @@ tags:
   immediately removed from the collection.</p>
 
 <div class="note">
-  <p>In <a href="/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode">quirks mode</a>, the
+  <p><strong>Note:</strong> In <a href="/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode">quirks mode</a>, the
     class names are compared in a case-insensitive fashion. Otherwise, they're case
     sensitive.</p>
 </div>
@@ -63,30 +64,30 @@ tags:
 <p>To look for elements that include among their classes a single specified class, we just
   provide that class name when calling <code>getElementsByClassName()</code>:</p>
 
-<pre class="brush: js notranslate">element.getElementsByClassName('test');</pre>
+<pre class="brush: js">element.getElementsByClassName('test');</pre>
 
 <p>This example finds all elements that have a class of <code>test</code>, which are also
   a descendant of the element that has the <code>id</code> of <code>main</code>:</p>
 
 <pre
-  class="brush: js notranslate">document.getElementById('main').getElementsByClassName('test');</pre>
+  class="brush: js">document.getElementById('main').getElementsByClassName('test');</pre>
 
 <h3 id="Matching_multiple_classes">Matching multiple classes</h3>
 
 <p>To find elements whose class lists include both the <code>red</code> and
   <code>test</code> classes:</p>
 
-<pre class="brush: js notranslate">element.getElementsByClassName('red test');</pre>
+<pre class="brush: js">element.getElementsByClassName('red test');</pre>
 
 <h3 id="Examining_the_results">Examining the results</h3>
 
 <p>You can use either the {{domxref("HTMLCollection.item", "item()")}} method on the
   returned <code>HTMLCollection</code> or standard array syntax to examine individual
-  elements in the collection. However <u><strong>the following code will not
-      work</strong></u> as one might expect because <code>"matches"</code> will change as
+  elements in the collection. However, the following code will not
+      work as one might expect because <code>"matches"</code> will change as
   soon as any <code>"colorbox"</code> class is removed.</p>
 
-<pre class="brush: js notranslate">var matches = element.getElementsByClassName('colorbox');
+<pre class="brush: js">var matches = element.getElementsByClassName('colorbox');
 
 for (var i=0; i&lt;matches.length; i++) {
   matches[i].classList.remove('colorbox');
@@ -96,7 +97,7 @@ for (var i=0; i&lt;matches.length; i++) {
 
 <p>Instead, use another method, such as:</p>
 
-<pre class="brush: js notranslate">var matches = element.getElementsByClassName('colorbox');
+<pre class="brush: js">var matches = element.getElementsByClassName('colorbox');
 
 while (matches.length &gt; 0) {
   matches.item(0).classList.add('hueframe');
@@ -116,29 +117,15 @@ while (matches.length &gt; 0) {
   method's <code>this</code> value. Here we'll find all {{HTMLElement("div")}} elements
   that have a class of <code>test</code>:</p>
 
-<pre class="brush: js notranslate">var testElements = document.getElementsByClassName('test');
+<pre class="brush: js">var testElements = document.getElementsByClassName('test');
 var testDivs = Array.prototype.filter.call(testElements, function(testElement) {
   return testElement.nodeName === 'DIV';
 });</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('DOM WHATWG', '#dom-element-getelementsbyclassname',
-        'Element.getElementsByClassName()')}}</td>
-      <td>{{Spec2('DOM WHATWG')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Element.getElementsByClassName")}}</p>
+<p>{{Compat}}</p>

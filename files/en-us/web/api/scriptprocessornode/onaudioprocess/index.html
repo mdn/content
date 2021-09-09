@@ -5,19 +5,19 @@ tags:
   - API
   - Property
   - Reference
-  - Référence(2)
   - ScriptProcessorNode
   - Web Audio API
   - onaudioprocess
+browser-compat: api.ScriptProcessorNode.onaudioprocess
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+<p>{{APIRef("Web Audio API")}}{{deprecated_header}}</p>
+
+<p>The <code>onaudioprocess</code> event handler of the {{domxref("ScriptProcessorNode")}} interface represents the <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> to be called for the <code>audioprocess</code> event that is dispatched to <code>ScriptProcessorNode</code> node types. An event of type {{domxref("AudioProcessingEvent")}} will be dispatched to the event handler.</p>
 
 <div class="note">
-<p><strong>Note</strong>: As of the August 29 2014 Web Audio API spec publication, this feature has been marked as deprecated, and is soon to be replaced by <a href="/en-US/docs/Web/API/Web_Audio_API#Audio_Workers">Audio Workers</a>.</p>
+  <p><strong>Note:</strong> This feature was replaced by <a href="/en-US/docs/Web/API/AudioWorklet">AudioWorklets</a> and the {{domxref("AudioWorkletNode")}} interface.</p>
 </div>
 
-<div>
-<p>The <code>onaudioprocess</code> event handler of the {{domxref("ScriptProcessorNode")}} interface represents the {{domxref("EventHandler")}} to be called for the <code>audioprocess</code> event that is dispatched to <code>ScriptProcessorNode</code> node types. An event of type {{domxref("AudioProcessingEvent")}} will be dispatched to the event handler.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -28,28 +28,17 @@ scriptNode.onaudioprocess = function() { ... }</pre>
 
 <h2 id="Example">Example</h2>
 
-<p>{{page("/en-US/docs/Web/API/AudioContext.createScriptProcessor","Example")}}</p>
+<p>See <a href="/en-US/docs/Web/API/BaseAudioContext/createScriptProcessor#example"><code>BaseAudioContext.createScriptProcessor()</code></a> for example code.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-ScriptProcessorNode-onaudioprocess', 'onaudioprocess')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+<p>Since the August 29 2014 <a href="https://www.w3.org/TR/webaudio/#ScriptProcessorNode">Web Audio API specification</a> publication, this feature has been deprecated. It is no longer on track to become a standard.</p>
+
+<p>It was replaced by <a href="/en-US/docs/Web/API/AudioWorklet">AudioWorklets</a> and the {{domxref("AudioWorkletNode")}} interface.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ScriptProcessorNode.onaudioprocess")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

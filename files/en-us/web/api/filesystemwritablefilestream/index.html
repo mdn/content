@@ -8,10 +8,11 @@ tags:
   - Interface
   - stream
   - write file
+browser-compat: api.FileSystemWritableFileStream
 ---
 <div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}</div>
 
-<p class="summary">The <strong><code>FileSystemWritableFileStream</code></strong> interface of the {{domxref('File System Access API')}} is a {{domxref('WritableStream')}} object with additional convenience methods, which operates on a single file on disk. The interface is accessed through the {{domxref('FileSystemFileHandle.createWritable()')}} method.</p>
+<p>The <strong><code>FileSystemWritableFileStream</code></strong> interface of the {{domxref('File System Access API')}} is a {{domxref('WritableStream')}} object with additional convenience methods, which operates on a single file on disk. The interface is accessed through the {{domxref('FileSystemFileHandle.createWritable()')}} method.</p>
 
 <h2 id="Properties">Properties</h2>
 
@@ -36,7 +37,7 @@ tags:
 
 <p>A user defined {{domxref('Blob')}} is then written to the stream which is subsequently closed.</p>
 
-<pre class="brush: js notranslate">async function saveFile() {
+<pre class="brush: js">async function saveFile() {
 
   // create a new handle
   const newHandle = await window.showSaveFilePicker();
@@ -54,7 +55,7 @@ tags:
 
 <p>The following show different examples of options that can be passed into the <code>write()</code> method.</p>
 
-<pre class="brush: js notranslate">// just pass in the data (no options)
+<pre class="brush: js">// just pass in the data (no options)
 writableStream.write(data)
 
 // writes the data to the stream from the determined position
@@ -69,28 +70,15 @@ writableStream.write({ type: "truncate", size: size })
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('File System Access API','#api-filesystemwritablefilestream','FileSystemWritableFileStream')}}</td>
-   <td>{{Spec2('File System Access API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.FileSystemWritableFileStream")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/docs/Web/API/File_System_Access_API">File System Access API</a></li>
+ <li><a href="/en-US/docs/Web/API/File_System_Access_API">File System Access API</a></li>
  <li><a href="https://web.dev/file-system-access/">The File System Access API: simplifying access to local files</a></li>
 </ul>

@@ -15,14 +15,15 @@ tags:
 - WebRTC API
 - getRemoteCandidates
 - rtc
+browser-compat: api.RTCIceTransport.getRemoteCandidates
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">The <strong>{{domxref("RTCIceTransport")}}</strong> method
+<p>The <strong>{{domxref("RTCIceTransport")}}</strong> method
     <code><strong>getRemoteCandidates()</strong></code> returns an array which contains
     one {{domxref("RTCIceCandidate")}} for each of the candidates that have been received
     from the remote peer so far during the current {{Glossary("ICE")}} gathering
-    session.</span></p>
+    session.</p>
 
 <p>Each time your signaling code calls {{domxref("RTCPeerConnection.addIceCandidate()")}}
   to add a received candidate to the ICE session, the ICE agent places it in the list
@@ -31,7 +32,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><em>remoteCandidates</em> = <em>RTCIceTransport</em>.getRemoteCandidates();</pre>
+  class="brush: js"><em>remoteCandidates</em> = <em>RTCIceTransport</em>.getRemoteCandidates();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -62,22 +63,8 @@ remoteCandidates.forEach(function(candidate, index)) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebRTC 1.0', '#dom-rtcicetransport-getremotecandidates',
-        'RTCIceCandidate.getRemoteCandidates()')}}</td>
-      <td>{{Spec2('WebRTC 1.0')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCIceTransport.getRemoteCandidates")}}</p>
+<p>{{Compat}}</p>

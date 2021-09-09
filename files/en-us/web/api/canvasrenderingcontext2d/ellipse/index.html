@@ -7,22 +7,23 @@ tags:
 - CanvasRenderingContext2D
 - Method
 - Reference
+browser-compat: api.CanvasRenderingContext2D.ellipse
 ---
 <div>{{APIRef}}</div>
 
 <p>The
-  <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.ellipse()</code></strong>
+  <strong><code>CanvasRenderingContext2D.ellipse()</code></strong>
   method of the Canvas 2D API adds an elliptical arc to the current sub-path.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">void <em>ctx</em>.ellipse(<em>x</em>, <em>y</em>, <em>radiusX</em>, <em>radiusY</em>, <em>rotation</em>, <em>startAngle</em>, <em>endAngle</em> [, <em>anticlockwise</em>]);
+<pre class="brush: js">void <em>ctx</em>.ellipse(<em>x</em>, <em>y</em>, <em>radiusX</em>, <em>radiusY</em>, <em>rotation</em>, <em>startAngle</em>, <em>endAngle</em> [, <em>counterclockwise</em>]);
 </pre>
 
 <p>The <code>ellipse()</code> method creates an elliptical arc centered at
   <code>(x, y)</code> with the radii <code>radiusX</code> and <code>radiusY</code>. The
   path starts at <code>startAngle</code> and ends at <code>endAngle</code>, and travels in
-  the direction given by <code>anticlockwise</code> (defaulting to clockwise).</p>
+  the direction given by <code>counterclockwise</code> (defaulting to clockwise).</p>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -43,9 +44,9 @@ tags:
   <dt><code>endAngle</code></dt>
   <dd>The angle at which the ellipse ends, measured clockwise from the positive x-axis and
     expressed in radians.</dd>
-  <dt><code>anticlockwise</code> {{optional_inline}}</dt>
-  <dd>An optional {{jsxref("Boolean")}} which, if <code>true</code>, draws the ellipse
-    anticlockwise (counter-clockwise). The default value is <code>false</code>
+  <dt><code>counterclockwise</code> {{optional_inline}}</dt>
+  <dd>An optional boolean value which, if <code>true</code>, draws the ellipse
+    counterclockwise (anticlockwise). The default value is <code>false</code>
     (clockwise).</dd>
 </dl>
 
@@ -64,7 +65,7 @@ tags:
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js; highlight:[6]">const canvas = document.getElementById('canvas');
+<pre class="brush: js;">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Draw the ellipse
@@ -95,7 +96,7 @@ ctx.stroke();
 
 <h4 id="JavaScript_2">JavaScript</h4>
 
-<pre class="brush: js; highlight:[6,11,16]">const canvas = document.getElementById('canvas');
+<pre class="brush: js;">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.fillStyle = 'red';
@@ -120,25 +121,11 @@ ctx.fill();
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-ellipse",
-        "CanvasRenderingContext2D.ellipse")}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CanvasRenderingContext2D.ellipse")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

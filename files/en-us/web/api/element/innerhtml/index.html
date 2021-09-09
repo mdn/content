@@ -2,35 +2,36 @@
 title: Element.innerHTML
 slug: Web/API/Element/innerHTML
 tags:
-- API
-- DOM
-- DOM Parsing
-- Element
-- Parsing HTML
-- Property
-- Reference
-- innerHTML
+  - API
+  - DOM
+  - DOM Parsing
+  - Element
+  - Parsing HTML
+  - Property
+  - Reference
+  - innerHTML
+browser-compat: api.Element.innerHTML
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><span class="seoSummary">The {{domxref("Element")}} property
+<p>The {{domxref("Element")}} property
     <strong><code>innerHTML</code></strong> gets or sets the HTML or XML markup contained
-    within the element.</span></p>
+    within the element.</p>
 
-<div class="note"><strong>Note:</strong> If a {{HTMLElement("div")}},
+<div class="note"><p><strong>Note:</strong> If a {{HTMLElement("div")}},
   {{HTMLElement("span")}}, or {{HTMLElement("noembed")}} node has a child text node that
   includes the characters <code>(&amp;)</code>, <code>(&lt;)</code>, or
   <code>(&gt;)</code>, <code>innerHTML</code> returns these characters as the HTML
   entities <code>"&amp;amp;"</code>, <code>"&amp;lt;"</code> and <code>"&amp;gt;"</code>
   respectively. Use {{domxref("Node.textContent")}} to get a raw copy of these text nodes'
-  contents.</div>
+  contents.</p></div>
 
 <p>To insert the HTML into the document rather than replace the contents of an element,
   use the method {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">const <var>content</var> = <var>element</var>.innerHTML;
+<pre class="brush: js">const <var>content</var> = <var>element</var>.innerHTML;
 
 <var>element</var>.innerHTML = <var>htmlString</var>;
 </pre>
@@ -152,8 +153,7 @@ el.innerHTML = name; // shows the alert</pre>
       href="https://wiki.mozilla.org/Add-ons/Reviewers/Guide/Reviewing#Step_2:_Automatic_validation">if
       you use <code>innerHTML</code></a> in a <a
       href="/en-US/docs/Mozilla/Add-ons/WebExtensions">browser extension</a> and submit
-    the extension to <a href="https://addons.mozilla.org/">addons.mozilla.org</a>, it will
-    not pass the automated review process.</p>
+    the extension to <a href="https://addons.mozilla.org/">addons.mozilla.org</a>, it may be rejected in the review process. Please see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page">Safely inserting external content into a page</a> for alternative methods.</p>
 </div>
 
 <h2 id="Example">Example</h2>
@@ -241,32 +241,16 @@ boxElem.addEventListener("mouseleave", logEvent);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('DOM Parsing', '#dom-innerhtml-innerhtml', 'Element.innerHTML')}}
-      </td>
-      <td>{{Spec2('DOM Parsing')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Element.innerHTML")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li>{{domxref("Node.textContent")}} and {{domxref("Node.innerText")}}</li>
+  <li>{{domxref("Node.textContent")}} and {{domxref("HTMLElement.innerText")}}</li>
   <li>{{domxref("Element.insertAdjacentHTML()")}}</li>
   <li>{{domxref("Element.outerHTML")}}</li>
   <li>Parsing HTML into a DOM tree: {{domxref("DOMParser")}}</li>

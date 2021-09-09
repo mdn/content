@@ -2,27 +2,28 @@
 title: RTCPeerConnection.generateCertificate() static function
 slug: Web/API/RTCPeerConnection/generateCertificate
 tags:
-- API
-- Media
-- Method
-- RTCPeerConnection
-- Reference
-- Security
-- Static Method
-- WebRTC
-- WebRTC API
-- generateCertificate
+  - API
+  - Media
+  - RTCPeerConnection
+  - Reference
+  - Security
+  - Static Method
+  - Method
+  - WebRTC
+  - WebRTC API
+  - generateCertificate
+browser-compat: api.RTCPeerConnection.generateCertificate
 ---
 <p>{{APIRef("WebRTC")}}</p>
 
-<p>The static  <strong><code>RTCPeerConnection.generateCertificate()</code></strong>
+<p>The static <strong><code>RTCPeerConnection.generateCertificate()</code></strong>
   function creates an X.509 certificate and corresponding private key, returning a promise
   that resolves with the new {{domxref("RTCCertificate")}} once it's generated.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">let <em>certPromise</em> = RTCPeerConnection.generateCertificate(<em>keygenAlgorithm</em>)</pre>
+  class="brush: js">let <em>certPromise</em> = RTCPeerConnection.generateCertificate(<em>keygenAlgorithm</em>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -34,7 +35,7 @@ tags:
 </dl>
 
 <div class="note">
-  <p><code>RTCPeerConnection.generateCertificate()</code> is a static method, so it is
+  <p><strong>Note:</strong> <code>RTCPeerConnection.generateCertificate()</code> is a static method, so it is
     always called on the <code>RTCPeerConnection</code> interface itself, not an instance
     thereof.</p>
 </div>
@@ -72,17 +73,17 @@ tags:
 
 <h4 id="RSASSA-PKCS1-v1_5">RSASSA-PKCS1-v1_5</h4>
 
-<pre class="brush: js notranslate">let stdRSACertificate = {
-  name: "RSASSA-PKCS10-v1_5",
+<pre class="brush: js">let stdRSACertificate = {
+  name: "RSASSA-PKCS1-v1_5",
   modulusLength: 2048,
-  publicExponent: new UInt8Array([1, 0, 1]),
+  publicExponent: new Uint8Array([1, 0, 1]),
   hash: "SHA-256"
 };
 </pre>
 
 <h4 id="ECDSA">ECDSA</h4>
 
-<pre class="brush: js notranslate">let stdECDSACertificate = {
+<pre class="brush: js">let stdECDSACertificate = {
   name: "ECDSA",
   namedCurve: "P-256"
 };
@@ -102,7 +103,7 @@ tags:
 <p>This example requests a new RSASSA-PKCS1-v1_5 certificate using a SHA-256 hash and a
   modulus length of 2048.</p>
 
-<pre class="brush: js notranslate">RTCPeerConnection.generateCertificate({
+<pre class="brush: js">RTCPeerConnection.generateCertificate({
     name: 'RSASSA-PKCS1-v1_5',
     hash: 'SHA-256',
     modulusLength: 2048,
@@ -117,30 +118,16 @@ tags:
     href="https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm">ECDSA</a>
   certificate.</p>
 
-<pre class="brush: js notranslate">RTCPeerConnection.generateCertificate("ECDSA");
+<pre class="brush: js">RTCPeerConnection.generateCertificate("ECDSA");
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebRTC 1.0', '#dom-rtcpeerconnection-generatecertificate',
-        'RTCPeerConnection.generateCertificate()')}}</td>
-      <td>{{Spec2('WebRTC 1.0')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCPeerConnection.generateCertificate")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

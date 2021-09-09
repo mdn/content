@@ -11,9 +11,9 @@ tags:
 ---
 <div>{{AddonSidebar}}</div>
 
-<p>The <code>clipboard</code> API enables an extension to copy items to the system clipboard. Currently the API only supports copying images, but it's intended to support copying text and HTML in the future.</p>
+<p>The WebExtension <code>clipboard</code> API (which is different from the <a href="/en-US/docs/Web/API/Clipboard_API">standard Clipboard API</a>) enables an extension to copy items to the system clipboard. Currently the WebExtension <code>clipboard</code> API only supports copying images, but it's intended to support copying text and HTML in the future.</p>
 
-<p>This WebExtension API exists primarily because the standard web clipboard API <a href="https://w3c.github.io/clipboard-apis/#writing-to-clipboard">doesn't support writing images to the clipboard</a>. This API may be deprecated once the Clipboard API's support for non-text clipboard contents has entered general use.</p>
+<p>The WebExtension <code>clipboard</code> API exists primarily because the standard Clipboard API <a href="https://w3c.github.io/clipboard-apis/#writing-to-clipboard">doesn't support writing images to the clipboard</a>. The WebExtension <code>clipboard</code> API may be deprecated once the standard Clipboard API's support for non-text clipboard contents has entered general use.</p>
 
 <p>Reading from the clipboard is not supported by this API, because the clipboard can already be read using the standard web platform APIs. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard#reading_from_the_clipboard">Interacting with the clipboard</a>.</p>
 

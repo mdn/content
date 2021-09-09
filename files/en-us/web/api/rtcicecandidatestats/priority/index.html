@@ -1,13 +1,15 @@
 ---
 title: RTCIceCandidateStats.priority
 slug: Web/API/RTCIceCandidateStats/priority
+browser-compat: api.RTCIceCandidateStats.priority
 ---
 <p>{{APIRef("WebRTC")}}</p>
 
-<p><span class="seoSummary">The {{domxref("RTCIceCandidateStats")}} dictionary's
+<p>The {{domxref("RTCIceCandidateStats")}} dictionary's
         <strong><code>priority</code></strong> property is a positive integer value
-        indicating the priority (or desirability) of the described candidate.</span>
-    During {{Glossary("ICE")}} negotiation while setting up a WebRTC peer connection, the
+        indicating the priority (or desirability) of the described candidate.</p>
+
+<p>During {{Glossary("ICE")}} negotiation while setting up a WebRTC peer connection, the
     priority values reported to the remote peer by a {{Glossary("user agent")}} are used
     to determine which candidates are considered "more desirable". The higher the value,
     the more desirable the candidate is.</p>
@@ -15,7 +17,7 @@ slug: Web/API/RTCIceCandidateStats/priority
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-    class="brush: js notranslate"><em>priority</em> = <em>rtcIceCandidateStats</em>.priority;</pre>
+    class="brush: js"><em>priority</em> = <em>rtcIceCandidateStats</em>.priority;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -88,27 +90,11 @@ slug: Web/API/RTCIceCandidateStats/priority
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-    <thead>
-        <tr>
-            <th scope="col">Specification</th>
-            <th scope="col">Status</th>
-            <th scope="col">Comment</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>{{ SpecName('WebRTC Statistics Identifiers',
-                '#dom-rtcicecandidatestats-port', 'RTCIceCandidateStats.port') }}</td>
-            <td>{{ Spec2('WebRTC Statistics Identifiers') }}</td>
-            <td>Initial specification.</td>
-        </tr>
-    </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCIceCandidateStats.priority")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -10,15 +10,15 @@ tags:
 ---
 <p>{{WebRTCSidebar}}</p>
 
-<p>The {{domxref("RTCDataChannel")}} interface is a feature of the <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a> which lets you open a channel between two peers over which you may send and receive arbitrary data. The API is intentionally similar to the <a href="/en-US/docs/Web/API/WebSocket_API">WebSocket API</a>, so that the same programming model can be used for each.</p>
+<p>The {{domxref("RTCDataChannel")}} interface is a feature of the <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a> which lets you open a channel between two peers over which you may send and receive arbitrary data. The API is intentionally similar to the <a href="/en-US/docs/Web/API/WebSockets_API">WebSocket API</a>, so that the same programming model can be used for each.</p>
 
 <p>In this example, we will open an {{domxref("RTCDataChannel")}} connection linking two elements on the same page. While that's obviously a contrived scenario, it's useful for demonstrating the flow of connecting two peers. We'll cover the mechanics of accomplishing the connection and transmitting and receiving data, but we will save the bits about locating and linking to a remote computer for another example.</p>
 
 <h2 id="The_HTML">The HTML</h2>
 
-<p>First, let's take a quick look at the <a class="external" href="https://github.com/mdn/samples-server/tree/master/s/webrtc-simple-datachannel/index.html" rel="noopener">HTML that's needed</a>. There's nothing incredibly complicated here. First, we have a couple of buttons for establishing and closing the connection:</p>
+<p>First, let's take a quick look at the <a href="https://github.com/mdn/samples-server/tree/master/s/webrtc-simple-datachannel/index.html" rel="noopener">HTML that's needed</a>. There's nothing incredibly complicated here. First, we have a couple of buttons for establishing and closing the connection:</p>
 
-<pre class="brush: html notranslate">&lt;button id="connectButton" name="connectButton" class="buttonleft"&gt;
+<pre class="brush: html">&lt;button id="connectButton" name="connectButton" class="buttonleft"&gt;
   Connect
 &lt;/button&gt;
 &lt;button id="disconnectButton" name="disconnectButton" class="buttonright" disabled&gt;
@@ -27,7 +27,7 @@ tags:
 
 <p>Then there's a box which contains the text input box into which the user can type a message to transmit, with a button to send the entered text. This {{HTMLElement("div")}} will be the first peer in the channel.</p>
 
-<pre class="brush: html notranslate">  &lt;div class="messagebox"&gt;
+<pre class="brush: html">  &lt;div class="messagebox"&gt;
     &lt;label for="message"&gt;Enter a message:
       &lt;input type="text" name="message" id="message" placeholder="Message text"
               inputmode="latin" size=60 maxlength=120 disabled&gt;
@@ -39,21 +39,21 @@ tags:
 
 <p>Finally, there's the little box into which we'll insert the messages. This {{HTMLElement("div")}} block will be the second peer.</p>
 
-<pre class="brush: html notranslate">&lt;div class="messagebox" id="receivebox"&gt;
+<pre class="brush: html">&lt;div class="messagebox" id="receivebox"&gt;
   &lt;p&gt;Messages received:&lt;/p&gt;
 &lt;/div&gt;</pre>
 
 <h2 id="The_JavaScript_code">The JavaScript code</h2>
 
-<p>While you can just <a class="external" href="https://github.com/mdn/samples-server/tree/master/s/webrtc-simple-datachannel/main.js" rel="noopener">look at the code itself on GitHub</a>, below we'll review the parts of the code that do the heavy lifting.</p>
+<p>While you can just <a href="https://github.com/mdn/samples-server/tree/master/s/webrtc-simple-datachannel/main.js" rel="noopener">look at the code itself on GitHub</a>, below we'll review the parts of the code that do the heavy lifting.</p>
 
-<p>The WebRTC API makes heavy use of {{jsxref("Promise")}}s. They make it very easy to chain the steps of the connection process together; if you haven't already read up on this functionality of <a href="/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla">ECMAScript 2015</a>, you should read up on them. Similarly, this example uses <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow functions</a> to simplify syntax.</p>
+<p>The WebRTC API makes heavy use of {{jsxref("Promise")}}s. They make it very easy to chain the steps of the connection process together; if you haven't already read up on this functionality of <a href="/en-US/docs/Archive/Web/JavaScript/New_in_JavaScript/ECMAScript_2015_support_in_Mozilla">ECMAScript 2015</a>, you should read up on them. Similarly, this example uses <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow functions</a> to simplify syntax.</p>
 
 <h3 id="Starting_up">Starting up</h3>
 
-<p>When the script is run, we set up an {{event("load")}} event listener, so that once the page is fully loaded, our <code>startup()</code> function is called.</p>
+<p>When the script is run, we set up a {{event("load")}} event listener, so that once the page is fully loaded, our <code>startup()</code> function is called.</p>
 
-<pre class="brush: js notranslate">function startup() {
+<pre class="brush: js">function startup() {
   connectButton = document.getElementById('connectButton');
   disconnectButton = document.getElementById('disconnectButton');
   sendButton = document.getElementById('sendButton');
@@ -79,7 +79,7 @@ tags:
 
 <h4 id="Set_up_the_local_peer">Set up the local peer</h4>
 
-<pre class="brush: js notranslate">localConnection = new RTCPeerConnection();
+<pre class="brush: js">localConnection = new RTCPeerConnection();
 
 sendChannel = localConnection.createDataChannel("sendChannel");
 sendChannel.onopen = handleSendChannelStatusChange;
@@ -92,7 +92,7 @@ sendChannel.onclose = handleSendChannelStatusChange;
 
 <h4 id="Set_up_the_remote_peer">Set up the remote peer</h4>
 
-<pre class="brush: js notranslate">remoteConnection = new RTCPeerConnection();
+<pre class="brush: js">remoteConnection = new RTCPeerConnection();
 remoteConnection.ondatachannel = receiveChannelCallback;</pre>
 
 <p>The remote end is set up similarly, except that we don't need to explicitly create an {{domxref("RTCDataChannel")}} ourselves, since we're going to be connected through the channel established above. Instead, we set up a {{event("datachannel")}} event handler; this will be called when the data channel is opened; this handler will receive an <code>RTCDataChannel</code> object; you'll see this below.</p>
@@ -105,7 +105,7 @@ remoteConnection.ondatachannel = receiveChannelCallback;</pre>
 <p><strong>Note:</strong> In a real-world scenario in which the two peers aren't running in the same context, the process is a bit more involved; each side provides, one at a time, a suggested way to connect (for example, UDP, UDP with a relay, TCP, etc.) by calling {{domxref("RTCPeerConnection.addIceCandidate()")}}, and they go back and forth until agreement is reached. But here, we just accept the first offer on each side, since there's no actual networking involved.</p>
 </div>
 
-<pre class="brush: js notranslate">    localConnection.onicecandidate = e =&gt; !e.candidate
+<pre class="brush: js">    localConnection.onicecandidate = e =&gt; !e.candidate
         || remoteConnection.addIceCandidate(e.candidate)
         .catch(handleAddCandidateError);
 
@@ -119,7 +119,7 @@ remoteConnection.ondatachannel = receiveChannelCallback;</pre>
 
 <p>The last thing we need to do in order to begin connecting our peers is to create a connection offer.</p>
 
-<pre class="brush: js notranslate">    localConnection.createOffer()
+<pre class="brush: js">    localConnection.createOffer()
     .then(offer =&gt; localConnection.setLocalDescription(offer))
     .then(() =&gt; remoteConnection.setRemoteDescription(localConnection.localDescription))
     .then(() =&gt; remoteConnection.createAnswer())
@@ -147,7 +147,7 @@ remoteConnection.ondatachannel = receiveChannelCallback;</pre>
 
 <p>As each side of the peer-to-peer connection is successfully linked up, the corresponding {{domxref("RTCPeerConnection")}}'s {{event("icecandidate")}} event is fired. These handlers can do whatever's needed, but in this example, all we need to do is update the user interface:</p>
 
-<pre class="brush: js notranslate">  function handleLocalAddCandidateSuccess() {
+<pre class="brush: js">  function handleLocalAddCandidateSuccess() {
     connectButton.disabled = true;
   }
 
@@ -161,7 +161,7 @@ remoteConnection.ondatachannel = receiveChannelCallback;</pre>
 
 <p>Once the {{domxref("RTCPeerConnection")}} is open, the {{event("datachannel")}} event is sent to the remote to complete the process of opening the data channel; this invokes our <code>receiveChannelCallback()</code> method, which looks like this:</p>
 
-<pre class="brush: js notranslate">  function receiveChannelCallback(event) {
+<pre class="brush: js">  function receiveChannelCallback(event) {
     receiveChannel = event.channel;
     receiveChannel.onmessage = handleReceiveMessage;
     receiveChannel.onopen = handleReceiveChannelStatusChange;
@@ -176,7 +176,7 @@ remoteConnection.ondatachannel = receiveChannelCallback;</pre>
 
 <p>When the local peer experiences an open or close event, the <code>handleSendChannelStatusChange()</code> method is called:</p>
 
-<pre class="brush: js notranslate">  function handleSendChannelStatusChange(event) {
+<pre class="brush: js">  function handleSendChannelStatusChange(event) {
     if (sendChannel) {
       var state = sendChannel.readyState;
 
@@ -201,7 +201,7 @@ remoteConnection.ondatachannel = receiveChannelCallback;</pre>
 
 <p>Our example's remote peer, on the other hand, ignores the status change events, except for logging the event to the console:</p>
 
-<pre class="brush: js notranslate">  function handleReceiveChannelStatusChange(event) {
+<pre class="brush: js">  function handleReceiveChannelStatusChange(event) {
     if (receiveChannel) {
       console.log("Receive channel's status has changed to " +
                   receiveChannel.readyState);
@@ -214,7 +214,7 @@ remoteConnection.ondatachannel = receiveChannelCallback;</pre>
 
 <p>When the user presses the "Send" button, the sendMessage() method we've established as the handler for the button's {{event("click")}} event is called. That method is simple enough:</p>
 
-<pre class="brush: js notranslate">  function sendMessage() {
+<pre class="brush: js">  function sendMessage() {
     var message = messageInputBox.value;
     sendChannel.send(message);
 
@@ -228,7 +228,7 @@ remoteConnection.ondatachannel = receiveChannelCallback;</pre>
 
 <p>When a "message" event occurs on the remote channel, our <code>handleReceiveMessage()</code> method is called as the event handler.</p>
 
-<pre class="brush: js notranslate">  function handleReceiveMessage(event) {
+<pre class="brush: js">  function handleReceiveMessage(event) {
     var el = document.createElement("p");
     var txtNode = document.createTextNode(event.data);
 
@@ -242,7 +242,7 @@ remoteConnection.ondatachannel = receiveChannelCallback;</pre>
 
 <p>When the user clicks the "Disconnect" button, the <code>disconnectPeers()</code> method previously set as that button's handler is called.</p>
 
-<pre class="brush: js notranslate">  function disconnectPeers() {
+<pre class="brush: js">  function disconnectPeers() {
 
     // Close the RTCDataChannels if they're open.
 

@@ -2,17 +2,18 @@
 title: GlobalEventHandlers.onkeyup
 slug: Web/API/GlobalEventHandlers/onkeyup
 tags:
-- API
-- Event Handler
-- GlobalEventHandlers
-- HTML DOM
-- Property
-- Reference
+  - API
+  - Event Handler
+  - GlobalEventHandlers
+  - HTML DOM
+  - Property
+  - Reference
+browser-compat: api.GlobalEventHandlers.onkeyup
 ---
 <div>{{ApiRef("HTML DOM")}}</div>
 
 <p>The <code><strong>onkeyup</strong></code> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is an {{domxref("EventHandler")}} that
+  {{domxref("GlobalEventHandlers")}} mixin is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> that
   processes {{event("keyup")}} events.</p>
 
 <p>The <code>keyup</code> event fires when the user releases a key that was previously
@@ -21,7 +22,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><em>target</em>.onkeyup = <em>functionRef</em>;</pre>
+  class="brush: js"><em>target</em>.onkeyup = <em>functionRef</em>;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -57,43 +58,28 @@ function logKey(e) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onkeyup','onkeyup')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.GlobalEventHandlers.onkeyup")}}</p>
+<p>{{Compat}}</p>
 
 <h3 id="Compatibility_notes">Compatibility notes</h3>
 
-<p>Since Firefox 65, the <code><a href="/en-US/docs/Web/Events/keyup">keyup</a></code> and
-  <code><a href="/en-US/docs/Web/Events/keydown">keydown</a></code> events are now fired
+<p>Since Firefox 65, the <code><a href="/en-US/docs/Web/API/Document/keyup_event">keyup</a></code> and
+  <code><a href="/en-US/docs/Web/API/Document/keydown_event">keydown</a></code> events are now fired
   during IME composition, to improve cross-browser compatibility for CJKT users
-  ({{bug(354358)}}, also see <a
-    href="https://www.fxsitecompat.com/en-CA/docs/2018/keydown-and-keyup-events-are-now-fired-during-ime-composition/">keydown
-    and keyup events are now fired during IME composition</a> for more useful details). To
+  ({{bug(354358)}}. To
   ignore all <code>keyup</code> events that are part of composition, do something like
   this (229 is a special value set for a <code>keyCode</code> relating to an even that has
   been processed by an IME):</p>
 
-<pre class="brush: js"><code>eventTarget.addEventListener("keyup", event =&gt; {
+<pre class="brush: js">eventTarget.addEventListener(&quot;keyup&quot;, event =&gt; {
   if (event.isComposing || event.keyCode === 229) {
     return;
   }
   // do something
-});</code></pre>
+});</pre>
 
 <h2 id="See_also">See also</h2>
 

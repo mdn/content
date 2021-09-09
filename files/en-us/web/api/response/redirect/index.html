@@ -2,13 +2,14 @@
 title: Response.redirect()
 slug: Web/API/Response/redirect
 tags:
-- API
-- Experimental
-- Fetch
-- Method
-- Redirect
-- Reference
-- Response
+  - API
+  - Experimental
+  - Fetch
+  - Method
+  - Redirect
+  - Reference
+  - Response
+browser-compat: api.Response.redirect
 ---
 <div>{{APIRef("Fetch")}}</div>
 
@@ -17,8 +18,8 @@ tags:
 </p>
 
 <div class="note">
-  <p><strong>Note</strong>: This is mainly relevant to the <a
-      href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a>. A controlling
+  <p><strong>Note:</strong> This is mainly relevant to the <a
+      href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a>. A controlling
     service worker could intercept a page's request and redirect it as desired. This will
     actually lead to a real redirect if a service worker sends it upstream.</p>
 </div>
@@ -26,7 +27,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>response</em> = Response.redirect(<em>url</em>, <em>status</em>);</pre>
+  class="brush: js">var <em>response</em> = Response.redirect(<em>url</em>, <em>status</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -68,30 +69,17 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Fetch','#dom-response-redirect','redirect()')}}</td>
-      <td>{{Spec2('Fetch')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Response.redirect")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
-  <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a>
+  <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
+  <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a>
   </li>
   <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
 </ul>

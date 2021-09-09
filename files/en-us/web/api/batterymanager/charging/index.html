@@ -7,7 +7,7 @@ tags:
 - NeedsMarkupWork
 - Property
 - Reference
-- Référence(2)
+browser-compat: api.BatteryManager.charging
 ---
 <div>{{deprecated_header}}</div>
 
@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>charging</em> = battery.charging</pre>
+<pre class="brush: js">var <em>charging</em> = battery.charging</pre>
 
 <p>On return, <code>charging</code> indicates whether or not the
   <code><em>battery</em></code>, which is a {{domxref("BatteryManager")}} object, is
@@ -34,7 +34,7 @@ tags:
 
 <h3 id="JavaScript_Content">JavaScript Content</h3>
 
-<pre class="brush: js; highlight:[3]">navigator.getBattery().then(function(battery) {
+<pre class="brush: js;">navigator.getBattery().then(function(battery) {
 
     var charging = battery.charging;
 
@@ -45,26 +45,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("Battery API")}}</td>
-      <td>{{Spec2("Battery API")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.BatteryManager.charging")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

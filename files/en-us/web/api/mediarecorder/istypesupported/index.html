@@ -12,18 +12,19 @@ tags:
 - Reference
 - Video
 - canRecordMimeType
+browser-compat: api.MediaRecorder.isTypeSupported
 ---
 <p>{{APIRef("MediaStream Recording")}}</p>
 
-<p><span class="seoSummary">The
+<p>The
     <strong><code>MediaRecorder.isTypeSupported()</code></strong> static method returns a
     Boolean which is <code>true</code> if the MIME type specified is one the user agent
-    should be able to successfully record.</span></p>
+    should be able to successfully record.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>canRecord</em> = MediaRecorder.isTypeSupported(<em>mimeType</em>)</pre>
+  class="brush: js">var <em>canRecord</em> = MediaRecorder.isTypeSupported(<em>mimeType</em>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -57,25 +58,11 @@ for (var i in types) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('MediaStream Recording', '#dom-mediarecorder-istypesupported',
-        'isTypeSupported()')}}</td>
-      <td>{{Spec2('MediaStream Recording')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MediaRecorder.isTypeSupported")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -137,7 +137,7 @@ to this project. If you would like to help with MDN content reviews,
 
 Note that changes to any content areas not explicitly listed below will be
 handled by the [@core-yari-content](https://github.com/orgs/mdn/teams/core-yari-content)
-team, which currently consists of [@chrisdavidmills](https://github.com/chrisdavidmills/).
+team, which currently consists of [@Rumyra](https://github.com/Rumyra/).
 
 * [Web accessibility content](https://github.com/mdn/content/tree/main/files/en-us/web/accessibility):
   * [@ericwbailey](https://github.com/ericwbailey)
@@ -150,7 +150,7 @@ team, which currently consists of [@chrisdavidmills](https://github.com/chrisdav
 * [MDN meta docs](https://github.com/mdn/content/tree/main/files/en-us/mdn)
   — the [@yari-content-mdn](https://github.com/orgs/mdn/teams/yari-content-mdn)
   team, which consists of:
-  * [@chrisdavidmills](https://github.com/chrisdavidmills/)
+  * [@Rumyra](https://github.com/Rumyra/)
   * [@Elchi3](https://github.com/Elchi3)
 * [Firefox Developer Tools content](https://github.com/mdn/content/tree/main/files/en-us/tools):
   * [@hamishwillee](https://github.com/hamishwillee)
@@ -167,16 +167,19 @@ team, which currently consists of [@chrisdavidmills](https://github.com/chrisdav
   team, which consists of:
   * [@hamishwillee](https://github.com/hamishwillee)
   * [@Elchi3](https://github.com/Elchi3)
+  * [@mirunacurtean](https://github.com/mirunacurtean)
 * [CSS reference content](https://github.com/mdn/content/tree/main/files/en-us/web/css)
   — the [@yari-content-css](https://github.com/orgs/mdn/teams/yari-content-css)
   team, which conists of:
   * [@rachelandrew](https://github.com/rachelandrew)
   * [@ericwbailey](https://github.com/ericwbailey)
+  * [@mirunacurtean](https://github.com/mirunacurtean)
 * [HTML reference content](https://github.com/mdn/content/tree/main/files/en-us/web/html)
   — the [@yari-content-html](https://github.com/orgs/mdn/teams/yari-content-html)
   team, which consists of:
   * [@rachelandrew](https://github.com/rachelandrew)
   * [@ericwbailey](https://github.com/ericwbailey)
+  * [@mirunacurtean](https://github.com/mirunacurtean)
 * [JavaScript reference content](https://github.com/mdn/content/tree/main/files/en-us/web/javascript)
   — the [@yari-content-javascript](https://github.com/orgs/mdn/teams/yari-content-javascript)
   team, which consists of:

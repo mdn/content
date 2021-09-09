@@ -6,6 +6,7 @@ tags:
   - Extensions
   - Keyboard Shortcuts
   - WebExtensions
+browser-compat: webextensions.manifest.commands
 ---
 <div>{{AddonSidebar}}</div>
 
@@ -92,7 +93,7 @@ tags:
 
 <p>You could then listen for the <code>"toggle-feature"</code> command with code like this:</p>
 
-<pre class="notranslate brush: js no-line-numbers">browser.commands.onCommand.addListener(function (command) {
+<pre class="brush: js no-line-numbers">browser.commands.onCommand.addListener(function (command) {
   if (command === "toggle-feature") {
     console.log("Toggling the feature!");
   }
@@ -110,7 +111,7 @@ tags:
 
 <p>For example, this JSON defines a key combination that clicks the extension's browser action:</p>
 
-<pre class="notranslate brush: js no-line-numbers">"commands": {
+<pre class="brush: js no-line-numbers">"commands": {
   "_execute_browser_action": {
     "suggested_key": {
       "default": "Ctrl+Shift+Y"
@@ -194,6 +195,4 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("webextensions.manifest.commands")}}</p>
+<p>{{Compat}}</p>

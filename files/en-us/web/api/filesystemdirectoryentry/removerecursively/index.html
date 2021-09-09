@@ -9,14 +9,15 @@ tags:
 - Files
 - Method
 - Non-standard
-- Obsolete
 - Reference
 - removeRecursively
+- Deprecated
+browser-compat: api.FileSystemDirectoryEntry.removeRecursively
 ---
 <p>{{APIRef("File System API")}}{{deprecated_header}}{{SeeCompatTable}}</p>
 
 <p>The {{domxref("FileSystemDirectoryEntry")}} interface's method
-  <code><strong>removeRecursively</strong></code><strong><code>()</code></strong> removes
+  <strong><code>removeRecursively()</code></strong> removes
   the directory as well as all of its content, hierarchically iterating over its entire
   subtree of descendant files and directories.</p>
 
@@ -26,7 +27,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><em>FileSystemDirectoryEntry</em>.removeRecursively(<em>successCallback</em>[, <em>errorCallback</em>]);</pre>
+  class="brush: js"><em>FileSystemDirectoryEntry</em>.removeRecursively(<em>successCallback</em>[, <em>errorCallback</em>]);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -74,7 +75,7 @@ tags:
 </dl>
 
 <div class="note">
-  <p>If you try to delete a directory which contains one or more files that can't be
+  <p><strong>Note:</strong> If you try to delete a directory which contains one or more files that can't be
     removed, or if an error occurs while deletion of a number of files is underway, some
     files may not be deleted. You should provide an <code>errorCallback</code> to watch
     for and handle this, perhaps by trying again.</p>
@@ -90,7 +91,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.FileSystemDirectoryEntry.removeRecursively")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

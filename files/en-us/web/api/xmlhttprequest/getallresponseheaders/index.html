@@ -13,13 +13,16 @@ tags:
 - XHR
 - XMLHttpRequest
 - getAllResponseHeaders
+browser-compat: api.XMLHttpRequest.getAllResponseHeaders
 ---
 <div>{{APIRef('XMLHttpRequest')}}</div>
 
-<p><span class="seoSummary">The {{domxref("XMLHttpRequest")}} method
+<p>The {{domxref("XMLHttpRequest")}} method
     <code><strong>getAllResponseHeaders()</strong></code> returns all the response
     headers, separated by {{Glossary('CRLF')}}, as a string, or returns <code>null</code>
-    if no response has been received.</span> If a network error happened, an empty string
+    if no response has been received.</p>
+
+<p>If a network error happened, an empty string
   is returned.</p>
 
 <div class="note">
@@ -30,7 +33,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var headers = <var>XMLHttpRequest</var>.getAllResponseHeaders();</pre>
+  class="brush: js">var headers = <var>XMLHttpRequest</var>.getAllResponseHeaders();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -38,7 +41,7 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{domxref("ByteString")}} representing all of the response's headers (except those
+<p>A {{jsxref("String")}} representing all of the response's headers (except those
   whose field name is <code>Set-Cookie</code> or <code>Set-Cookie2</code>) separated by
   {{Glossary('CRLF')}}, or <code>null</code> if no response has been received. If a
   network error happened, an empty string is returned.</p>
@@ -62,7 +65,7 @@ x-xss-protection: 1; mode=block\r\n</span></pre>
 </p>
 
 <div class="notecard note">
-  <p><strong>Note</strong>: In modern browsers, the header names are returned in all lower
+  <p><strong>Note:</strong> In modern browsers, the header names are returned in all lower
     case, as per the latest spec.</p>
 </div>
 
@@ -108,27 +111,11 @@ request.onreadystatechange = function() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('XMLHttpRequest', '#the-getallresponseheaders()-method',
-        'getAllResponseHeaders()')}}</td>
-      <td>{{Spec2('XMLHttpRequest')}}</td>
-      <td>WHATWG living standard</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("api.XMLHttpRequest.getAllResponseHeaders")}}</div>
+<div>{{Compat}}</div>
 
 <h2 id="See_also">See also</h2>
 

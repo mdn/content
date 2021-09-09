@@ -9,10 +9,11 @@ tags:
   - Reference
   - Web Audio API
   - detune
+browser-compat: api.AudioBufferSourceNode.detune
 ---
 <div>{{APIRef("Web Audio API")}}</div>
 
-<p class="summary">The <strong><code>detune</code></strong> property of the
+<p>The <strong><code>detune</code></strong> property of the
   {{domxref("AudioBufferSourceNode")}} interface is a <a
     href="/en-US/docs/Web/API/AudioParam#k-rate">k-rate</a> {{domxref("AudioParam")}}
   representing detuning of oscillation in <a
@@ -23,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>source</em> = <em>audioCtx</em>.createBufferSource();
+<pre class="brush: js">var <em>source</em> = <em>audioCtx</em>.createBufferSource();
 <em>source</em>.detune.value = 100; // value in cents</pre>
 
 <div class="note">
@@ -39,7 +40,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js;highlight[18]">const audioCtx = new AudioContext();
+<pre class="brush: js;">const audioCtx = new AudioContext();
 
 const channelCount = 2;
 const frameCount = audioCtx.sampleRate * 2.0; // 2 seconds
@@ -62,29 +63,15 @@ source.start();
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Web Audio API', '#dom-audiobuffersourcenode-detune', 'detune')}}
-      </td>
-      <td>{{Spec2('Web Audio API')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.AudioBufferSourceNode.detune")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
-  </li>
-</ul>
+  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+  <li><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
+ </ul>

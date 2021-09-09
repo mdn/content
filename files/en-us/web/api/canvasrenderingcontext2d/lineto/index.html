@@ -7,6 +7,7 @@ tags:
 - CanvasRenderingContext2D
 - Method
 - Reference
+browser-compat: api.CanvasRenderingContext2D.lineTo
 ---
 <div>{{APIRef}}</div>
 
@@ -22,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>ctx</em>.lineTo(<em>x</em>, <em>y</em>);
+<pre class="brush: js"><em>ctx</em>.lineTo(<em>x</em>, <em>y</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -53,7 +54,7 @@ tags:
 
 <p>The line begins at (30, 50) and ends at (150, 100).</p>
 
-<pre class="brush: js; highlight:[6]">const canvas = document.getElementById('canvas');
+<pre class="brush: js;">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.beginPath();       // Start a new path
@@ -95,25 +96,11 @@ ctx.stroke();</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-lineto",
-        "CanvasRenderingContext2D.lineTo")}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CanvasRenderingContext2D.lineTo")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -25,7 +25,7 @@ tags:
 <ul>
  <li><a href="http://www.alcatelonetouch.com/global-en/products/smartphones/one_touch_fire.html">Alcatel OneTouch Fire</a></li>
  <li><a href="http://www.samsung.com/us/mobile/cell-phones/GT-I9020FSTTMB">Samsung Nexus S</a></li>
- <li><a href="http://www.lg.com/uk/mobile-phones/lg-E960-nexus-4-by-lg">LG Nexus 4</a> - <a href="https://developer.mozilla.org/en-US/Apps/Build/Performance/Performance_fundamentals/Power/Nexus_4_Harness">special instructions for assembling the harness</a></li>
+ <li><a href="http://www.lg.com/uk/mobile-phones/lg-E960-nexus-4-by-lg">LG Nexus 4</a> - <a href="/en-US/docs/Web/Performance/Fundamentals/Power/Nexus_4_Harness">special instructions for assembling the harness</a></li>
  <li><a href="http://shop.geeksphone.com/en/phones/1-keon.html">Geeksphone Keon</a></li>
  <li>Huawei Ascend Y3000II</li>
  <li>ZTE Open</li>
@@ -55,15 +55,15 @@ $ sudo python ./setup.py install</pre>
 
 <p>Next you need to set up your hardware. Pull the battery from your FxOS device and place it in the 3D printed battery harness:</p>
 
-<p><img alt="" src="https://wiki.mozilla.org/images/thumb/9/91/Battery_in_harness.jpg/448px-Battery_in_harness.jpg" style="height: 600px; width: 448px;"></p>
+<p><img alt="" src="448px-battery_in_harness.jpg"></p>
 
 <p>Then put the battery harness into your device:</p>
 
-<p><img alt="" src="https://wiki.mozilla.org/images/thumb/c/c8/Harness_in_device.jpg/448px-Harness_in_device.jpg" style="height: 600px; width: 448px;"></p>
+<p><img alt="" src="448px-harness_in_device.jpg"></p>
 
 <p>And then plug in your ammeter:</p>
 
-<p><img alt="Yocto Ammeter" src="https://wiki.mozilla.org/images/thumb/a/a6/Ammeter_connected.jpg/448px-Ammeter_connected.jpg" style="height: 600px; width: 448px;"><img alt="" src="https://mdn.mozillademos.org/files/6881/mozilla_ammeter.png" style="height: 600px; width: 448px;"></p>
+<p><img alt="Yocto Ammeter" src="448px-ammeter_connected.jpg"><img alt="" src="mozilla_ammeter.png"></p>
 
 <p>Now you're ready to start the FxOS Powertool! and begin collecting data.</p>
 
@@ -98,19 +98,19 @@ optional arguments:
 
 <p>You should see the Tk GUI start up and the title of your first test appear in the title bar of the app:</p>
 
-<p><a href="https://wiki.mozilla.org/images/b/b2/Powertool_launch.png"><img alt="Powertool Launch" src="https://wiki.mozilla.org/images/thumb/b/b2/Powertool_launch.png/691px-Powertool_launch.png" style="height: 599px; width: 691px;"></a></p>
+<p><a href="https://wiki.mozilla.org/images/b/b2/Powertool_launch.png"><img alt="Powertool Launch" src="691px-powertool_launch.png"></a></p>
 
 <p>The FxOS Powertool! uses keyboard shortcuts for controlling the collection of data and navigating through the tests. Now that the GUI is open, you can start/stop collecting data for the currently selected test by hitting the spacebar. When you hit the spacebar the first time, data collection will begin. To stop data collection, just hit the spacebar again. Each data collection run will be recorded as a row of data in the output files. Below is a screenshot of a data run:</p>
 
 <p><br>
- <a href="https://wiki.mozilla.org/images/c/c9/Powertool_test_one.png"><img alt="Powertool Test One Data Run" src="https://wiki.mozilla.org/images/thumb/c/c9/Powertool_test_one.png/691px-Powertool_test_one.png" style="height: 599px; width: 691px;"></a></p>
+ <a href="https://wiki.mozilla.org/images/c/c9/Powertool_test_one.png"><img alt="Powertool Test One Data Run" src="691px-powertool_test_one.png"></a></p>
 
 <p>You may repeat data runs for a given test as many times as you like. You may even navigate to another test or tests, and do data runs for those tests, then come back to a previous test and continue doing data runs. The FxOS Powertool! will not lose any data and it will do the right thing and aggregate the data runs for each test into the correct data files for each test. Navigating between tests is done using the 'L' and 'H' keys on the keyboard. 'L' moves to the next test in the list. 'H' moves to the previous test. Below is a screenshot of a two test data run:</p>
 
-<p><a href="https://wiki.mozilla.org/images/6/6d/Powertool_test_two.png"><img alt="Powertool Test Two Data Run" src="https://wiki.mozilla.org/images/thumb/6/6d/Powertool_test_two.png/691px-Powertool_test_two.png" style="height: 599px; width: 691px;"></a></p>
+<p><a href="https://wiki.mozilla.org/images/6/6d/Powertool_test_two.png"><img alt="Powertool Test Two Data Run" src="691px-powertool_test_two.png"></a></p>
 
 <p>After you have collected all of the data for your tests, the data files are written to disk when you quit the application. You can quit by either clicking on the close window button in the title bar or hitting the 'Q' button on the keyboard. In our example, we chose to have the data written out in CSV format by giving it "mytests.csv" as the --out parameter value.  With CSV, the application will create a directory named "mytests" and then write out a CSV file for each test with all of the data gathered for the test. Below is a screenshot of the "My first test" CSV file open in a spreadsheet application:</p>
 
-<p><a href="https://wiki.mozilla.org/images/6/61/Powertool_csv.png"><img alt="CSV File Open in a Spreadsheet Application" src="https://wiki.mozilla.org/images/thumb/6/61/Powertool_csv.png/800px-Powertool_csv.png" style="height: 500px; width: 800px;"></a></p>
+<p><a href="https://wiki.mozilla.org/images/6/61/Powertool_csv.png"><img alt="CSV File Open in a Spreadsheet Application" src="800px-powertool_csv.png"></a></p>
 
 <p>As you can see, the FxOS Powertool! will do some very basic statistical calculations for you.  Along with the raw data for each data run, it will calculate the minimum value, maximum value, mean, and standard deviation for all of the data collected for the test.</p>

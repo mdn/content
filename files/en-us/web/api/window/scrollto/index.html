@@ -7,6 +7,7 @@ tags:
 - Method
 - NeedsMarkupWork
 - Reference
+browser-compat: api.Window.scrollTo
 ---
 <p>{{APIRef}}</p>
 
@@ -15,7 +16,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">window.scrollTo(<var>x-coord</var>, <var>y-coord</var>)
+<pre class="brush: js">window.scrollTo(<var>x-coord</var>, <var>y-coord</var>)
 window.scrollTo(<var>options</var>)
 </pre>
 
@@ -36,12 +37,12 @@ window.scrollTo(<var>options</var>)
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush:js notranslate">window.scrollTo(0, 1000);
+<pre class="brush:js">window.scrollTo(0, 1000);
 </pre>
 
 <p>Using <code><var>options</var></code>:</p>
 
-<pre class="brush: js notranslate">window.scrollTo({
+<pre class="brush: js">window.scrollTo({
   top: 100,
   left: 100,
   behavior: 'smooth'
@@ -58,23 +59,8 @@ window.scrollTo(<var>options</var>)
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('CSSOM View', '#dom-window-scroll', 'window.scroll()') }}</td>
-      <td>{{ Spec2('CSSOM View') }}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Window.scrollTo")}}</p>
+<p>{{Compat}}</p>

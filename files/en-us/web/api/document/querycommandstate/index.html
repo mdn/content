@@ -5,6 +5,8 @@ tags:
   - API
   - DOM
   - Reference
+  - Deprecated
+browser-compat: api.Document.queryCommandState
 ---
 <div>{{ApiRef("DOM")}}{{deprecated_header}}</div>
 
@@ -12,7 +14,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">queryCommandState(String <var>command</var>)
+<pre class="brush: js">queryCommandState(String <var>command</var>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -21,19 +23,19 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p><code>queryCommandState()</code> can return a {{jsxref("Boolean")}} value or <code>null</code> if the state is unknown.</p>
+<p><code>queryCommandState()</code> can return a boolean value or <code>null</code> if the state is unknown.</p>
 
 <h2 id="Example">Example</h2>
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;div contenteditable="true"&gt;Select a part of this text!&lt;/div&gt;
+<pre class="brush: html">&lt;div contenteditable="true"&gt;Select a part of this text!&lt;/div&gt;
 &lt;button onclick="makeBold();"&gt;Test the state of the 'bold' command&lt;/button&gt;
 </pre>
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js notranslate">function makeBold() {
+<pre class="brush: js">function makeBold() {
   var state = document.queryCommandState("bold");
   switch (state) {
     case true:
@@ -55,32 +57,17 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a href="https://w3c.github.io/editing/execCommand.html#querycommandstate()">execCommand</a></td>
-   <td></td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+<p>This feature is not part of any current specification. It is no longer on track to become a standard.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Document.queryCommandState")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li>{{domxref("HTMLElement.contentEditable")}}</li>
  <li>{{domxref("document.designMode")}}</li>
- <li><a href="/en-US/docs/Rich-Text_Editing_in_Mozilla">Rich-Text Editing in Mozilla</a></li>
+ <li><a href="/en-US/docs/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla">Rich-Text Editing in Mozilla</a></li>
  <li>Browser bugs related to <code>queryCommandState()</code>: <a href="https://github.com/guardian/scribe/blob/master/BROWSERINCONSISTENCIES.md#documentquerycommandstate">Scribe's "Browser Inconsistencies" documentation</a></li>
 </ul>

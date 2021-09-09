@@ -2,35 +2,36 @@
 title: WindowEventHandlers.onhashchange
 slug: Web/API/WindowEventHandlers/onhashchange
 tags:
-- Event Handler
-- HTML-DOM
-- Hash
-- Property
-- Reference
-- URL & Hash
-- WindowEventHandlers
+  - Event Handler
+  - HTML-DOM
+  - Hash
+  - Property
+  - Reference
+  - URL & Hash
+  - WindowEventHandlers
+browser-compat: api.WindowEventHandlers.onhashchange
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
 <p>The <code><strong>WindowEventHandlers.onhashchange</strong></code> property of the
-  {{domxref("WindowEventHandlers")}} mixin is the {{domxref("EventHandler")}} for
+  {{domxref("WindowEventHandlers")}} mixin is the <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> for
   processing
   <code><a href="/en-US/docs/Web/API/Window/hashchange_event">hashchange</a></code>
   events.</p>
 
 <p>The <code>hashchange</code> event fires when a window's hash changes (see
-  {{domxref("Window.location")}} and {{domxref("HTMLHyperlinkElementUtils.hash")}}).</p>
+  {{domxref("Window.location")}} and {{domxref("HTMLAnchorElement.hash")}}).</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <p><strong>Using an event handler:</strong></p>
 
-<pre class="brush: js notranslate">window.onhashchange = funcRef;
+<pre class="brush: js">window.onhashchange = funcRef;
 </pre>
 
 <p><strong>Using an HTML event handler:</strong></p>
 
-<pre class="brush: js notranslate">&lt;body onhashchange="funcRef();"&gt;
+<pre class="brush: js">&lt;body onhashchange="funcRef();"&gt;
 </pre>
 
 <p><strong>Using an event listener:</strong></p>
@@ -38,7 +39,7 @@ tags:
 <p>To add an event listener, use {{domxref("EventTarget.addEventListener()",
   "addEventListener()")}}:</p>
 
-<pre class="brush: js notranslate">window.addEventListener("hashchange", funcRef, false);
+<pre class="brush: js">window.addEventListener("hashchange", funcRef, false);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -92,12 +93,14 @@ window.addEventListener('hashchange', hashHandler, false);
 <p>The dispatched <code>hashchange</code> event has the following properties:</p>
 
 <table class="standard-table">
-  <tbody>
+  <thead>
     <tr>
-      <td class="header">Field</td>
-      <td class="header">Type</td>
-      <td class="header">Description</td>
+      <th>Field</th>
+      <th>Type</th>
+      <th>Description</th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <td><code>newURL</code></td>
       <td><code>DOMString</code></td>
@@ -127,47 +130,22 @@ if (!window.HashChangeEvent)(function(){
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', '#handler-window-onhashchange', 'onhashchange')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML5.1', '#windoweventhandlers', 'GlobalEventHandlers')}}</td>
-      <td>{{Spec2('HTML5.1')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("HTML5 W3C", "#windoweventhandlers", "GlobalEventHandlers")}}</td>
-      <td>{{Spec2('HTML5 W3C')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.WindowEventHandlers.onhashchange")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
   <li><code><a href="/en-US/docs/Web/API/Window/hashchange_event">hashchange</a></code>
     event</li>
-  <li><a href="/en-US/docs/DOM/Manipulating_the_browser_history"
+  <li><a href="/en-US/docs/Web/API/History_API"
       title="DOM/Manipulating the browser history">Manipulating the browser history</a>
   </li>
-  <li><a href="/en-US/docs/DOM/window.history"><code>history.pushState()</code> and
+  <li><a href="/en-US/docs/Web/API/Window/history"><code>history.pushState()</code> and
       <code>history.replaceState()</code></a> methods</li>
   <li>{{domxref("WindowEventHandlers.onpopstate")}}</li>
-  <li>{{domxref("HTMLHyperlinkElementUtils.hash")}}</li>
+  <li>{{domxref("HTMLAnchorElement.hash")}}</li>
 </ul>

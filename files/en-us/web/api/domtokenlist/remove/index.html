@@ -8,6 +8,7 @@ tags:
 - Method
 - Reference
 - remove
+browser-compat: api.DOMTokenList.remove
 ---
 <p>{{APIRef("DOM")}}</p>
 
@@ -17,7 +18,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var>tokenList</var>.remove(<var>token1</var>[, <var>token2</var>[, ...<var>tokenN</var>]]);</pre>
+  class="brush: js"><var>tokenList</var>.remove(<var>token1</var>[, <var>token2</var>[, ...<var>tokenN</var>]]);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -40,12 +41,12 @@ tags:
 
 <p>First, the HTML:</p>
 
-<pre class="brush: html notranslate">&lt;div id="ab" class="a b c"&gt;&lt;/div&gt;
+<pre class="brush: html">&lt;div id="ab" class="a b c"&gt;&lt;/div&gt;
 &lt;div id="a" class="a b c"&gt;&lt;/div&gt;</pre>
 
 <p>Now the JavaScript:</p>
 
-<pre class="brush: js notranslate">let span = document.getElementById("ab");
+<pre class="brush: js">let span = document.getElementById("ab");
 let classes = span.classList;
 classes.remove("c");
 span.textContent = classes;
@@ -54,7 +55,7 @@ span.textContent = classes;
 <p>To remove multiple classes at once, you can supply multiple tokens. The order you
   supply the tokens doesn't have to match the order they appear in the list:</p>
 
-<pre class="brush: js notranslate">let span2 = document.getElementById("a")
+<pre class="brush: js">let span2 = document.getElementById("a")
 let classes2 = span2.classList;
 
 classes2.remove("c", "b");
@@ -67,23 +68,8 @@ span2.textContent = classes2;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('DOM WHATWG','#dom-domtokenlist-remove','remove()')}}</td>
-      <td>{{Spec2('DOM WHATWG')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.DOMTokenList.remove")}}</p>
+<p>{{Compat}}</p>

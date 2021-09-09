@@ -11,6 +11,7 @@ tags:
   - WebExtensions
   - onConnectExternal
   - runtime
+browser-compat: webextensions.api.runtime.onConnectExternal
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -56,15 +57,13 @@ browser.runtime.onConnectExternal.hasListener(listener)
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("webextensions.api.runtime.onConnectExternal")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Examples">Examples</h2>
 
 <p>In this example the extension Hansel connects to the extension Gretel:</p>
 
-<pre class="notranslate brush: js">console.log("connecting to Gretel");
+<pre class="brush: js">console.log("connecting to Gretel");
 var myPort = browser.runtime.connect(
   "gretel@mozilla.org"
 );
@@ -79,7 +78,7 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 
 <p>Gretel listens for the connection and checks that the sender is really Hansel:</p>
 
-<pre class="notranslate brush: js">var portFromHansel;
+<pre class="brush: js">var portFromHansel;
 
 browser.runtime.onConnectExternal.addListener((port) =&gt; {
   console.log(port);

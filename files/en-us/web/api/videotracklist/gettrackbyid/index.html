@@ -1,5 +1,5 @@
 ---
-title: getTrackById
+title: VideoTrackList.getTrackById()
 slug: Web/API/VideoTrackList/getTrackById
 tags:
 - API
@@ -15,19 +15,22 @@ tags:
 - getTrackById
 - id
 - track
+browser-compat: api.VideoTrackList.getTrackById
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p><span class="seoSummary">The <strong>{{domxref("VideoTrackList")}}</strong> method
+<p>The <strong>{{domxref("VideoTrackList")}}</strong> method
     <strong><code>getTrackById()</code></strong> returns the first
     {{domxref("VideoTrack")}} object from the track list whose {{domxref("VideoTrack.id",
-    "id")}} matches the specified string.</span> This lets you find a specified track if
+    "id")}} matches the specified string.</p>
+
+<p>This lets you find a specified track if
   you know its ID string.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>theTrack</em> = <em>VideoTrackList</em>.getTrackById(<em>id</em>);</pre>
+  class="brush: js">var <em>theTrack</em> = <em>VideoTrackList</em>.getTrackById(<em>id</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -49,24 +52,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', '#dom-videotracklist-gettrackbyid',
-        'VideoTrackList.getTrackById()')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.VideoTrackList.getTrackById")}}</p>
+<p>{{Compat}}</p>

@@ -12,14 +12,14 @@ tags:
 ---
 <div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Contact Picker API")}}</div>
 
-<p class="summary">The Contact Picker API allows users to select entries from their contact list and share limited details of the selected entries with a website or application.</p>
+<p>The Contact Picker API allows users to select entries from their contact list and share limited details of the selected entries with a website or application.</p>
 
 <div class="notecard note">
 <p><strong>Note:</strong> This API is <em>not available</em> in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a> (not exposed via {{domxref("WorkerNavigator")}}).</p>
 </div>
 
 <div class="note">
-<p>The Contact Picker API should not be confused with the deprecated <a href="/docs/Archive/B2G_OS/API/Contacts_API">Contact API</a>.</p>
+<p><strong>Note:</strong> The Contact Picker API should not be confused with the deprecated <a href="/docs/Archive/B2G_OS/API/Contacts_API">Contact API</a>.</p>
 </div>
 
 <h2 id="Contact_Picker_API_Concepts_and_Usage">Contact Picker API Concepts and Usage</h2>
@@ -47,14 +47,14 @@ tags:
 
 <p>The following code checks whether the Contact Picker API is supported.</p>
 
-<pre class="brush: js notranslate">const supported = 'contacts' in navigator;
+<pre class="brush: js">const supported = 'contacts' in navigator;
 </pre>
 
 <h3 id="Checking_for_Supported_Properties">Checking for Supported Properties</h3>
 
 <p>The following asynchronous function uses the <code>getProperties()</code> method to check for supported properties.</p>
 
-<pre class="brush: js notranslate">async function checkProperties() {
+<pre class="brush: js">async function checkProperties() {
   const supportedProperties = await navigator.contacts.getProperties();
   if (supportedProperties.includes('name')) {
     // run code for name support
@@ -80,7 +80,7 @@ tags:
 
 <p>An asynchronous function is then defined which uses the <code>select()</code> method to present the user with a contact picker interface and handle the chosen results.</p>
 
-<pre class="brush: js notranslate">const props = ['name', 'email', 'tel', 'address', 'icon'];
+<pre class="brush: js">const props = ['name', 'email', 'tel', 'address', 'icon'];
 const opts = {multiple: true};
 
 async function getContacts() {
@@ -96,20 +96,7 @@ async function getContacts() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Contact Picker API')}}</td>
-   <td>{{Spec2('Contact Picker API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications("api.ContactsManager")}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

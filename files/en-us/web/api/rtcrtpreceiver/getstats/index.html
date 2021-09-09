@@ -2,16 +2,17 @@
 title: RTCRtpReceiver.getStats()
 slug: Web/API/RTCRtpReceiver/getStats
 tags:
-- API
-- Media
-- Method
-- RTCRtpReceiver
-- Reference
-- WebRTC
-- WebRTC API
-- WebRTC Statistics
-- WebRTC Statistics API
-- getStats
+  - API
+  - Media
+  - Method
+  - RTCRtpReceiver
+  - Reference
+  - WebRTC
+  - WebRTC API
+  - WebRTC Statistics
+  - WebRTC Statistics API
+  - getStats
+browser-compat: api.RTCRtpReceiver.getStats
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
@@ -23,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>promise</em> = <em>RTCRtpReceiver</em>.getStats();
+<pre class="brush: js">var <em>promise</em> = <em>RTCRtpReceiver</em>.getStats();
 </pre>
 
 <h3 id="Return_value">Return value</h3>
@@ -38,7 +39,7 @@ tags:
 <h2 id="Example">Example</h2>
 
 <p>This simple example obtains the statistics for an <code>RTCRtpReceiver</code> and
-  updates an element's {{domxref("Node.innerText", "innerText")}} to display the number of
+  updates an element's {{domxref("HTMLElement/innerText", "innerText")}} to display the number of
   packets lost.</p>
 
 <pre class="brush: js">receiver.getStats().then(function(stats) {
@@ -49,28 +50,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table" style="height: 49px; width: 1000px;">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('WebRTC 1.0',
-        '#widl-RTCRtpReceiver-getStats-Promise-RTCStatsReport',
-        'RTCRtpReceiver.getStats()') }}</td>
-      <td>{{ Spec2('WebRTC 1.0') }}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCRtpReceiver.getStats")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

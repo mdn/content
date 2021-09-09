@@ -2,24 +2,25 @@
 title: MouseEvent.pageX
 slug: Web/API/MouseEvent/pageX
 tags:
-- API
-- CSSOM View
-- DOM
-- Mouse Events
-- MouseEvent
-- Property
-- Read-only
-- Reference
-- UI Events
-- events
-- pageX
+  - API
+  - CSSOM View
+  - DOM
+  - Mouse Events
+  - MouseEvent
+  - Property
+  - Read-only
+  - Reference
+  - UI Events
+  - events
+  - pageX
+browser-compat: api.MouseEvent.pageX
 ---
 <div>{{APIRef("CSSOM View")}}</div>
 
-<p><span class="seoSummary">The <code><strong>pageX</strong></code> read-only property of
+<p>The <code><strong>pageX</strong></code> read-only property of
     the {{domxref("MouseEvent")}} interface returns the X (horizontal) coordinate (in
     pixels) at which the mouse was clicked, relative to the left edge of the entire
-    document.</span> This includes any portion of the document not currently visible.</p>
+    document. This includes any portion of the document not currently visible.</p>
 
 <p>Being based on the edge of the document as it is, this property takes into account any
   horizontal scrolling of the page. For example, if the page is scrolled such that 200
@@ -38,7 +39,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>pageX</em> = <em>MouseEvent</em>.pageX;</pre>
+  class="brush: js">var <em>pageX</em> = <em>MouseEvent</em>.pageX;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -56,18 +57,46 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<div class="moreinfo pull-aside">
-  <h4 id="More_examples">More examples</h4>
-  You can also see an example that demonstrates <a
-    href="/en-US/docs/Web/CSS/CSSOM_View/Coordinate_systems#Example">how to access the
-    mouse position</a> information in every available coordinate system.
-</div>
+<h3>Showing the mouse position relative to page origin</h3>
 
 <p>Let's take a look at a simple example that shows you the mouse's position relative to
   the page's origin. Since this example is presented in an {{HTMLElement("iframe")}}, that
   top-left corner is the top-left corner of the frame, not the browser window.</p>
 
-<h3 id="JavaScript">JavaScript</h3>
+<h4 id="HTML">HTML</h4>
+
+<pre class="brush: html">&lt;div class="box"&gt;
+  &lt;p&gt;
+    Move the mouse around in this box to watch its coordinates change.
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;code&gt;pageX&lt;/code&gt;: &lt;span id="x"&gt;n/a&lt;/span&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;code&gt;pageY&lt;/code&gt;: &lt;span id="y"&gt;n/a&lt;/span&gt;
+  &lt;/p&gt;
+&lt;/div&gt;</pre>
+
+<p>The HTML is simple; the box we'll be watching for mouse events on is given the class
+  <code>"box"</code>. It has two <code>&lt;span&gt;</code> elements, one with the ID
+  <code>"x"</code> and one with the ID <code>"y"</code>. Those will be updated each time
+  an event occurs to contain the latest mouse coordinates relative to the page.</p>
+
+<h4 id="CSS">CSS</h4>
+
+<p>The CSS used for this example is shown below.</p>
+
+<pre class="brush: css">.box {
+  width: 400px;
+  height: 250px;
+  border: 2px solid darkblue;
+  background-color: blue;
+  color: white;
+  font: 16px "Zilla", "Open Sans", "Helvetica", "Arial", sans-serif;
+}</pre>
+
+
+<h4 id="JavaScript">JavaScript</h4>
 
 <pre class="brush: js">var box = document.querySelector(".box");
 var pageX = document.getElementById("x");
@@ -91,69 +120,21 @@ box.addEventListener("mouseleave", updateDisplay, false);</pre>
   elements meant to contain the X and Y coordinates with the values of <code>pageX</code>
   and {{domxref("MouseEvent.pageY", "pageY")}}.</p>
 
-<h3 id="HTML">HTML</h3>
-
-<pre class="brush: html">&lt;div class="box"&gt;
-  &lt;p&gt;
-    Move the mouse around in this box to watch its coordinates change.
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;code&gt;pageX&lt;/code&gt;: &lt;span id="x"&gt;n/a&lt;/span&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;code&gt;pageY&lt;/code&gt;: &lt;span id="y"&gt;n/a&lt;/span&gt;
-  &lt;/p&gt;
-&lt;/div&gt;</pre>
-
-<p>The HTML is simple; the box we'll be watching for mouse events on is given the class
-  <code>"box"</code>. It has two <code>&lt;span&gt;</code> elements, one with the ID
-  <code>"x"</code> and one with the ID <code>"y"</code>. Those will be updated each time
-  an event occurs to contain the latest mouse coordinates relative to the page.</p>
-
-<details open>
-  <summary>
-    <h3 id="CSS">CSS</h3>
-  </summary>
-
-  <p>The CSS used for this example is shown below.</p>
-
-  <pre class="brush: css">.box {
-  width: 400px;
-  height: 250px;
-  border: 2px solid darkblue;
-  background-color: blue;
-  color: white;
-  font: 16px "Zilla", "Open Sans", "Helvetica", "Arial", sans-serif;
-}</pre>
-</details>
-
-<h3 id="Result">Result</h3>
+<h4 id="Result">Result</h4>
 
 <p>Try this out here:</p>
 
-<p>{{EmbedLiveSample("Example", 500, 300)}}</p>
+<p>{{EmbedLiveSample("Showing_the_mouse_position_relative_to_page_origin", 500, 300)}}</p>
+
+<h3 id="More_examples">More examples</h3>
+
+<p>You can also see an example that demonstrates <a
+    href="/en-US/docs/Web/CSS/CSSOM_View/Coordinate_systems#example">how to access the
+    mouse position</a> information in every available coordinate system.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th>Specification</th>
-      <th>Status</th>
-      <th>Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('CSSOM View', '#dom-mouseevent-pagex', 'pageX')}}</td>
-      <td>{{Spec2('CSSOM View')}}</td>
-      <td>Redefined from <code>long</code> to <code>double</code>.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('Touch Events', '#widl-Touch-pageX', 'pageX')}}</td>
-      <td>{{Spec2('TouchEvents')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <p>Prior to being added to the CSSOM View specification, <code>pageX</code> and
   <code>pageY</code> were available on the {{domxref("UIEvent")}} interface in a limited
@@ -161,7 +142,7 @@ box.addEventListener("mouseleave", updateDisplay, false);</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MouseEvent.pageX")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

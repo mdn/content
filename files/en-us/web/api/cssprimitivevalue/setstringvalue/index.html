@@ -7,18 +7,30 @@ tags:
   - Method
   - NeedsExample
   - setStringValue
+  - Deprecated
+browser-compat: api.CSSPrimitiveValue.setStringValue
 ---
-<div>{{APIRef("DOM")}}</div>
+<div>{{APIRef("CSSOM")}}{{deprecated_header}}</div>
 
 <p>The <code><strong>setStringValue()</strong></code> method of the
   {{domxref("CSSPrimitiveValue")}} interface is used to set a string value. If the
   property attached to this value can't accept the specified unit or the string value, the
   value will be unchanged and a {{domxref("DOMException")}} will be raised.</p>
 
+<div class="notecard note">
+  <p><strong>Note:</strong> This method was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
+  not implement it.</p>
+  <p>To achieve your purpose, you can use:</p>
+  <ul>
+    <li>the untyped <a href="/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model</a>, widely supported, or</li>
+    <li>the modern <a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model API</a>, less supported and considered experimental.</li>
+  </ul>
+</div>
+
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var>cssPrimitiveValue</var>.setStringValue(<var>stringType</var>, <var>stringValue</var>);</pre>
+  class="brush: js"><var>cssPrimitiveValue</var>.setStringValue(<var>stringType</var>, <var>stringValue</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -26,12 +38,14 @@ tags:
   <dt>stringType</dt>
   <dd>An <code>unsigned short</code> representing the type of the value. Possible values
     are:
-    <table class="standard-table">
-      <tbody>
+    <table>
+      <thead>
         <tr>
-          <td class="header">Constant</td>
-          <td class="header">Description</td>
+          <th>Constant</th>
+          <th>Description</th>
         </tr>
+      </thead>
+      <tbody>
         <tr>
           <td><code>CSS_ATTR</code></td>
           <td>The value is an {{cssxref("attr()")}} function.</td>
@@ -61,7 +75,7 @@ tags:
 
 <h3 id="Exceptions">Exceptions</h3>
 
-<table class="standard-table">
+<table class="no-markdown">
   <thead>
     <tr>
       <th scope="col"><strong>Type</strong></th>
@@ -81,22 +95,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('DOM2 Style', 'css.html#CSS-CSSPrimitiveValue-setStringValue',
-        'CSSPrimitiveValue.setStringValue')}}</td>
-      <td>{{Spec2('DOM2 Style')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+<p>This feature was originally defined in the <a href="https://www.w3.org/TR/DOM-Level-2-Style">DOM Style Level 2</a> specification, but has been dropped from any
+  standardization effort since then.</p>
+
+<p>It has been superseded by a modern, but incompatible, <a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model API</a> that is now on the standard track.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CSSPrimitiveValue.setStringValue")}}</p>
+<p>{{Compat}}</p>

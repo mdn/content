@@ -10,6 +10,7 @@ tags:
   - WebExtensions
   - print
   - tabs
+browser-compat: webextensions.api.tabs.print
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -32,7 +33,7 @@ tags:
 
 <p>In this example a background script listens for a click on a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2">browser action</a>, then tries to print the currently active tab:</p>
 
-<pre class="notranslate brush: js">browser.browserAction.onClicked.addListener(() =&gt; {
+<pre class="brush: js">browser.browserAction.onClicked.addListener(() =&gt; {
   browser.tabs.print();
 });
 </pre>
@@ -41,4 +42,4 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("webextensions.api.tabs.print")}}</p>
+<p>{{Compat}}</p>

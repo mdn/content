@@ -10,13 +10,14 @@ tags:
   - Reference
   - Storage
   - openCursor
+browser-compat: api.IDBIndex.openCursor
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
 <div>
   <p>The <strong><code>openCursor()</code></strong> method of the {{domxref("IDBIndex")}}
     interface returns an {{domxref("IDBRequest")}} object, and, in a separate thread,
-    creates a <a href="/en-US/docs/Web/API/IndexedDB_API#gloss_cursor">cursor</a> over the specified key
+    creates a <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#cursor">cursor</a> over the specified key
     range.</p>
 </div>
 
@@ -29,7 +30,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>request</em> = <em>myIndex</em>.openCursor();
+<pre class="brush: js">var <em>request</em> = <em>myIndex</em>.openCursor();
 var <em>request</em> = <em>myIndex</em>.openCursor(range);
 var <em>request</em> = <em>myIndex</em>.openCursor(range, direction);</pre>
 
@@ -73,9 +74,7 @@ var <em>request</em> = <em>myIndex</em>.openCursor(range, direction);</pre>
     </tr>
     <tr>
       <td><code>DataError</code></td>
-      <td>
-        <p>The key or key range provided contains an invalid key.</p>
-      </td>
+      <td>The key or key range provided contains an invalid key.</td>
     </tr>
     <tr>
       <td><code>InvalidStateError</code></td>
@@ -128,29 +127,11 @@ var <em>request</em> = <em>myIndex</em>.openCursor(range, direction);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('IndexedDB', '#dom-idbindex-opencursor', 'openCursor()')}}</td>
-      <td>{{Spec2('IndexedDB')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("IndexedDB 2", "#dom-idbindex-opencursor", "openCursor()")}}</td>
-      <td>{{Spec2("IndexedDB 2")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBIndex.openCursor")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

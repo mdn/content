@@ -14,21 +14,24 @@ tags:
 - WebExtensions
 - openOrClosedShadowRoot
 - shadow dom
+browser-compat: api.Element.openOrClosedShadowRoot
 ---
-<div>{{APIRef("Shadow DOM")}}{{Draft}}{{non-standard_header}}
-  <div class="note"><strong>Note:</strong> This API is available only to <a
-      href="/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a>.</div>
-</div>
+<div>{{APIRef("Shadow DOM")}}{{Draft}}{{non-standard_header}}</div>
 
-<p><span class="seoSummary">The <code>Element.openOrCloseShadowRoot</code> read-only
+<div class="note"><p><strong>Note:</strong> This API is available only to <a
+      href="/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a>.</p></div>
+
+<p>The <code>Element.openOrCloseShadowRoot</code> read-only
     property represents the shadow root hosted by the element, regardless if its
     {{DOMxRef("ShadowRoot.mode", "mode")}} is <code>open</code> or
-    <code>closed</code>.</span> Use {{DOMxRef("Element.attachShadow()")}} to add a shadow
+    <code>closed</code>.</p>
+
+<p>Use {{DOMxRef("Element.attachShadow()")}} to add a shadow
   root to an existing element.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>shadowroot = element</em>.shadowRoot;
+<pre class="brush: js">var <em>shadowroot = element</em>.openOrCloseShadowRoot;
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -44,7 +47,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Element.openOrClosedShadowRoot")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

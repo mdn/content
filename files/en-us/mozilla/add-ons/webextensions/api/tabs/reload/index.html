@@ -11,6 +11,7 @@ tags:
   - WebExtensions
   - reload
   - tabs
+browser-compat: webextensions.api.tabs.reload
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -48,15 +49,15 @@ tags:
 
 <p>Reload the active tab of the current window:</p>
 
-<pre class="notranslate brush: js">browser.tabs.reload();</pre>
+<pre class="brush: js">browser.tabs.reload();</pre>
 
 <p>Reload the active tab of the current window, bypassing the cache:</p>
 
-<pre class="notranslate brush: js">browser.tabs.reload({bypassCache: true});</pre>
+<pre class="brush: js">browser.tabs.reload({bypassCache: true});</pre>
 
 <p>Reload the tab whose ID is 2, bypassing the cache and calling a callback when done:</p>
 
-<pre class="notranslate brush: js">function onReloaded() {
+<pre class="brush: js">function onReloaded() {
   console.log(`Reloaded`);
 }
 
@@ -71,7 +72,7 @@ reloading.then(onReloaded, onError);</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("webextensions.api.tabs.reload")}}</p>
+<p>{{Compat}}</p>
 
 <div class="note"><strong>Acknowledgements</strong>
 

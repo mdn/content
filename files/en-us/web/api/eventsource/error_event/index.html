@@ -7,6 +7,7 @@ tags:
   - Event
   - EventSource
   - Reference
+browser-compat: api.EventSource.error_event
 ---
 <p>{{APIRef}}</p>
 
@@ -35,7 +36,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">var evtSource = new EventSource('sse.php');
+<pre class="brush: js">var evtSource = new EventSource('sse.php');
 
 // addEventListener version
 evtSource.addEventListener('error', (e) =&gt; {
@@ -49,27 +50,16 @@ evtSource.onerror = (e) =&gt; {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "indices.html#event-error", "error event")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.EventSource.error_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/en/Server-sent_events/Using_server-sent_events">Using server-sent events</a></li>
+ <li><a href="/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events">Using server-sent events</a></li>
  <li><code><a href="/en-US/docs/Web/API/EventSource/open_event">open</a></code></li>
  <li><code><a href="/en-US/docs/Web/API/EventSource/message_event">message</a></code></li>
 </ul>

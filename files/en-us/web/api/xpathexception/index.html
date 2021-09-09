@@ -8,8 +8,9 @@ tags:
   - Exception
   - Reference
   - XPath
+browser-compat: api.XPathException
 ---
-<p>{{APIRef("DOM XPath")}}</p>
+<p>{{APIRef("DOM XPath")}}{{Deprecated_Header}}</p>
 
 <p>In the <a href="/en-US/docs/Web/XPath">DOM XPath API</a> the <code><strong>XPathException</strong></code> interface represents exception conditions that can be encountered while performing XPath operations.</p>
 
@@ -22,7 +23,7 @@ tags:
 
 <h2 id="Constants">Constants</h2>
 
-<table class="standard-table">
+<table class="no-markdown">
  <thead>
   <tr>
    <th scope="col">Constant</th>
@@ -32,12 +33,12 @@ tags:
  </thead>
  <tbody>
   <tr>
-   <td><code><a name="INVALID_EXPRESSION_ERR">INVALID_EXPRESSION_ERR</a></code></td>
+   <td><code>INVALID_EXPRESSION_ERR</code></td>
    <td><code>51</code></td>
    <td>If the expression has a syntax error or otherwise is not a legal expression according to the rules of the specific {{domxref("XPathEvaluator")}} or contains specialized extension functions or variables not supported by this implementation.</td>
   </tr>
   <tr>
-   <td><code><a name="TYPE_ERR">TYPE_ERR</a></code></td>
+   <td><code>TYPE_ERR</code></td>
    <td><code>52</code></td>
    <td>If the expression cannot be converted to return the specified type.</td>
   </tr>
@@ -46,24 +47,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM3 XPath", "xpath.html#XPathException", "XPathException")}}</td>
-   <td>{{Spec2("DOM3 XPath")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.XPathException")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

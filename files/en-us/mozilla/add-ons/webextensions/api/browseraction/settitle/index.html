@@ -10,6 +10,7 @@ tags:
   - WebExtensions
   - browserAction
   - setTitle
+browser-compat: webextensions.api.browserAction.setTitle
 ---
 <div>{{AddonSidebar}}</div>
 
@@ -61,13 +62,13 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("webextensions.api.browserAction.setTitle", 10)}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Examples">Examples</h2>
 
 <p>This code switches the title between "this" and "that" each time the user clicks the browser action:</p>
 
-<pre class="notranslate brush: js">function toggleTitle(title) {
+<pre class="brush: js">function toggleTitle(title) {
   if (title == "this") {
     browser.browserAction.setTitle({title: "that"});
   } else {

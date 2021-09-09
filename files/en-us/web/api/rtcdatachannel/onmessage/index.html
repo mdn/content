@@ -2,30 +2,30 @@
 title: RTCDataChannel.onmessage
 slug: Web/API/RTCDataChannel/onmessage
 tags:
-- Event Handler
-- Experimental
-- Property
-- RTCDataChannel
-- Reference
-- WebRTC
-- onmessage
+  - Event Handler
+  - Property
+  - RTCDataChannel
+  - Reference
+  - WebRTC
+  - onmessage
+browser-compat: api.RTCDataChannel.onmessage
 ---
-<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
+<p>{{APIRef("WebRTC")}}</p>
 
 <p>The <code><strong>RTCDataChannel.onmessage</strong></code> property stores an
-  {{domxref("EventHandler")}} which specifies a function to be called when the
-  {{event("message")}} event is fired on the channel. This event is represented by the
+  <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> which specifies a function to be called when the
+  {{DOMxRef("RTCDataChannel.message_event", "message")}} event is fired on the channel. This event is represented by the
   {{domxref("MessageEvent")}} interface. This event is sent to the channel when a message
   is received from the other peer.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><em>RTCDataChannel</em>.onmessage = <em>function</em>;</pre>
+  class="brush: js"><em>RTCDataChannel</em>.onmessage = <em>function</em>;</pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A function which the browser will call to handle the {{event("message")}} event. The
+<p>A function which the browser will call to handle the {{DOMxRef("RTCDataChannel.message_event", "message")}} event. The
   function receives as its sole input parameter a {{domxref("MessageEvent")}} object
   describing the event.</p>
 
@@ -50,27 +50,11 @@ dc.onmessage = function(event) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('WebRTC 1.0', '#dom-rtcdatachannel-onmessage',
-        'RTCDataChannel.onmessage') }}</td>
-      <td>{{ Spec2('WebRTC 1.0') }}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCDataChannel.onmessage")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -78,5 +62,5 @@ dc.onmessage = function(event) {
   <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
   <li>{{domxref("RTCPeerConnection")}}</li>
   <li>{{domxref("RTCDataChannel")}}</li>
-  <li>The {{event("message")}} event and its type, {{domxref("MessageEvent")}}.</li>
+  <li>The {{DOMxRef("RTCDataChannel.message_event", "message")}} event and its type, {{domxref("MessageEvent")}}.</li>
 </ul>

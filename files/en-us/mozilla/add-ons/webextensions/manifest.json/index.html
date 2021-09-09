@@ -7,6 +7,7 @@ tags:
   - Overview
   - WebExtensions
   - manifest.json
+browser-compat: webextensions.manifest
 ---
 <p>{{AddonSidebar}}</p>
 
@@ -38,7 +39,7 @@ tags:
 
 <p>You can access your extension's manifest from the extension's JavaScript using the {{WebExtAPIRef("runtime.getManifest()")}} function:</p>
 
-<pre class="notranslate brush: js no-line-numbers">browser.runtime.getManifest().version;</pre>
+<pre class="brush: js no-line-numbers">browser.runtime.getManifest().version;</pre>
 
 <h2 id="Example">Example</h2>
 
@@ -128,7 +129,7 @@ tags:
 
 <p>For a full overview of all manifest keys and their sub-keys, see the<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json"> full <code>manifest.json</code> browser compatibility table</a>.</p>
 
-<p>{{Compat("webextensions.manifest")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

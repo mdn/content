@@ -9,6 +9,7 @@ tags:
   - Reference
   - Web Audio API
   - speedOfSound
+browser-compat: api.AudioListener.speedOfSound
 ---
 <div>{{ APIRef("Web Audio API") }}{{deprecated_header}}</div>
 
@@ -22,13 +23,13 @@ tags:
   {{domxref("PannerNode.setVelocity")}}.)</p>
 
 <div class="note">
-  <p><strong>Note</strong>: Bear in mind that no propagation delay is automatically
+  <p><strong>Note:</strong> Bear in mind that no propagation delay is automatically
     applied to a sound far from the listener.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>audioCtx</em> = new AudioContext();
+<pre class="brush: js">var <em>audioCtx</em> = new AudioContext();
 var <em>myListener</em> = <em>audioCtx</em>.listener;
 <em>myListener</em>.speedOfSound = 343.3;
 </pre>
@@ -39,11 +40,11 @@ var <em>myListener</em> = <em>audioCtx</em>.listener;
 
 <h2 id="Example">Example</h2>
 
-<p>{{page("/en-US/docs/Web/API/AudioContext.createPanner","Example")}}</p>
+<p>See <a href="/en-US/docs/Web/API/BaseAudioContext/createPanner#example"><code>BaseAudioContext.createPanner()</code></a> for example code.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.AudioListener.speedOfSound")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

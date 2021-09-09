@@ -8,6 +8,7 @@ tags:
   - HTML Microdata
   - Microdata
   - Reference
+browser-compat: html.global_attributes.itemscope
 ---
 <div>{{HTMLSidebar("Global_attributes")}}</div>
 
@@ -25,7 +26,7 @@ tags:
 
 <p>The following example specifies the <code>itemscope</code> attribute. The example specifies the <code>itemtype</code> as "http://schema.org/Movie", and specifies three related <code>itemprop</code> attributes.</p>
 
-<pre class="brush:html notranslate">&lt;div itemscope itemtype="http://schema.org/Movie"&gt;
+<pre class="brush:html">&lt;div itemscope itemtype="http://schema.org/Movie"&gt;
   &lt;h1 itemprop="name"&gt;Avatar&lt;/h1&gt;
   &lt;span&gt;Director: &lt;span itemprop="director"&gt;James Cameron&lt;/span&gt; (born August 16, 1954)&lt;/span&gt;
   &lt;span itemprop="genre"&gt;Science fiction&lt;/span&gt;
@@ -80,7 +81,7 @@ tags:
 
 <p>There are four <code>itemscope</code> attributes in the following example. Each <code>itemscope</code> attribute sets the scope of its corresponding <code>itemtype</code> attribute. The <code>itemtype</code>s, <code>Recipe</code>, <code>AggregateRating</code>, and <code>NutritionInformation</code> in the following example are part of the <a href="www.schema.org">schema.org</a> structured data for a recipe, as specified by the first <code>itemtype</code>, http://schema.org/Recipe.</p>
 
-<pre class="brush: html notranslate">&lt;div itemscope itemtype="http://schema.org/Recipe"&gt;
+<pre class="brush: html">&lt;div itemscope itemtype="http://schema.org/Recipe"&gt;
   &lt;h2 itemprop="name"&gt;Grandma's Holiday Apple Pie&lt;/h2&gt;
   &lt;img itemprop="image" src="https://c1.staticflickr.com/1/30/42759561_8631e2f905_n.jpg" width="50" height="50" /&gt;
   &lt;p&gt;
@@ -240,27 +241,16 @@ tags:
 </table>
 
 <div class="note">
-<p><strong>Note</strong>: A handy tool for extracting microdata structures from HTML is Google's <a href="https://developers.google.com/structured-data/testing-tool/">Structured Data Testing Tool</a>. Try it on the HTML shown above.</p>
+<p><strong>Note</strong>: A handy tool for extracting microdata structures from HTML is Google's <a href="https://search.google.com/test/rich-results">Rich Results Testing Tool</a>. Try it on the HTML shown above.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "microdata.html#attr-itemscope", "itemscope")}}</td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("html.global_attributes.itemscope")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

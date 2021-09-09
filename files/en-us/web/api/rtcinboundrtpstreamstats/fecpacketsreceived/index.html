@@ -1,20 +1,23 @@
 ---
 title: RTCInboundRtpStreamStats.fecPacketsReceived
 slug: Web/API/RTCInboundRtpStreamStats/fecPacketsReceived
+browser-compat: api.RTCInboundRtpStreamStats.fecPacketsReceived
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">The <strong><code>fecPacketsReceived</code></strong> property
+<p>The <strong><code>fecPacketsReceived</code></strong> property
         of the {{domxref("RTCInboundRtpStreamStats")}} dictionary indicates how many
         Forward Error Correction (FEC) packets have been received by this RTP receiver
-        from the remote peer.</span> An FEC packet provides parity information which can
+        from the remote peer.</p>
+
+<p>An FEC packet provides parity information which can
     be used to attempt to reconstruct RTP data packets which have been corrupted in
     transit.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-    class="brush: js notranslate">var <em>fecPacketsReceived</em> = <em>rtcInboundRtpStreamStats</em>.fecPacketsReceived;</pre>
+    class="brush: js">var <em>fecPacketsReceived</em> = <em>rtcInboundRtpStreamStats</em>.fecPacketsReceived;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -45,26 +48,11 @@ slug: Web/API/RTCInboundRtpStreamStats/fecPacketsReceived
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-    <tbody>
-        <tr>
-            <th scope="col">Specification</th>
-            <th scope="col">Status</th>
-            <th scope="col">Comment</th>
-        </tr>
-        <tr>
-            <td>{{SpecName('WebRTC Statistics Identifiers',
-                '#dom-rtcinboundrtpstreamstats-fecpacketsreceived',
-                'RTCInboundRtpStreamStats.fecPacketsReceived')}}</td>
-            <td>{{Spec2('WebRTC Statistics Identifiers')}}</td>
-            <td>Initial definition.</td>
-        </tr>
-    </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCInboundRtpStreamStats.fecPacketsReceived")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

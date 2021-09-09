@@ -11,6 +11,7 @@ tags:
   - WebExtensions
   - downloads
   - showDefaultFolder
+browser-compat: webextensions.api.downloads.showDefaultFolder
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -27,15 +28,13 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("webextensions.api.downloads.showDefaultFolder")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Examples">Examples</h2>
 
 <p>The following snippet contains a show button, which when clicked invokes <code>showDefaultFolder()</code> to open the default downloads folder in the platform's file manager:</p>
 
-<pre class="notranslate brush: js">var showBtn = document.querySelector('.show');
+<pre class="brush: js">var showBtn = document.querySelector('.show');
 
 showBtn.onclick = function() {
   browser.downloads.showDefaultFolder();

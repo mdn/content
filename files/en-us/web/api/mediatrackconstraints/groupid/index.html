@@ -13,11 +13,12 @@ tags:
 - WebRTC
 - getusermedia
 - groupId
+browser-compat: api.MediaTrackConstraints.groupId
 ---
 <div>{{APIRef("Media Capture and Streams")}}</div>
 
 <p>The {{domxref("MediaTrackConstraints")}} dictionary's
-  <code><strong>groupId</strong></code> property is a {{domxref("ConstrainDOMString")}}
+  <code><strong>groupId</strong></code> property is a <a href="/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString"><code>ConstrainDOMString</code></a>
   describing the requested or mandatory constraints placed upon the value of the
   {{domxref("MediaTrackSettings.groupId", "groupId")}} constrainable property.</p>
 
@@ -28,14 +29,14 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>constraintsObject</em> = { groupId: <em>constraint</em> };
+<pre class="brush: js">var <em>constraintsObject</em> = { groupId: <em>constraint</em> };
 
 <em>constraintsObject</em>.groupId = <em>constraint</em>;
 </pre>
 
 <h3 id="Value">Value</h3>
 
-<p>An object based on {{domxref("ConstrainDOMString")}} specifying one or more acceptable,
+<p>An object based on <a href="/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString"><code>ConstrainDOMString</code></a> specifying one or more acceptable,
   ideal, and/or exact (mandatory) group IDs which are acceptable as the source of media
   content.</p>
 
@@ -65,27 +66,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('Media Capture', '#dom-mediatrackconstraintset-groupid', 'groupId')
-        }}</td>
-      <td>{{ Spec2('Media Capture') }}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MediaTrackConstraints.groupId")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

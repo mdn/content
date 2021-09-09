@@ -11,19 +11,20 @@ tags:
 - WebRTC
 - WebRTC API
 - getParameters()
+browser-compat: api.RTCRtpSender.getParameters
 ---
 <p>{{DefaultAPISidebar("WebRTC")}}</p>
 
-<p><span class="seoSummary">The <strong><code>getParameters()</code></strong> method of
+<p>The <strong><code>getParameters()</code></strong> method of
     the {{domxref("RTCRtpSender")}} interface returns an
     {{domxref("RTCRtpSendParameters")}} object describing the current configuration for
     the encoding and transmission of media on the sender's {{domxref("RTCRtpSender.track",
-    "track")}}.</span></p>
+    "track")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>rtpSendParameters</em> = <em>rtpSender</em>.getParameters()</pre>
+  class="brush: js">var <em>rtpSendParameters</em> = <em>rtpSender</em>.getParameters()</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -41,7 +42,7 @@ tags:
   {{domxref("RTCRtpSender.setParameters", "setParameters()")}} are always handled in the
   correct order, avoiding inadvertently overwriting parameters with older parameters.</p>
 
-<pre class="brush: js notranslate">function getSenderTransactionID(sender) {
+<pre class="brush: js">function getSenderTransactionID(sender) {
   let parameters = sender.getParameters();
 
   return parameters.transactionId;
@@ -49,22 +50,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebRTC 1.0','#dom-rtcrtpsender-getparameters','getParameters()')}}
-      </td>
-      <td>{{Spec2('WebRTC 1.0')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCRtpSender.getParameters")}}</p>
+<p>{{Compat}}</p>

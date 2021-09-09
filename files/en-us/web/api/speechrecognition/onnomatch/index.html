@@ -11,6 +11,7 @@ tags:
 - onnomatch
 - recognition
 - speech
+browser-compat: api.SpeechRecognition.onnomatch
 ---
 <div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
 
@@ -25,14 +26,14 @@ tags:
   {{domxref("SpeechRecognitionAlternative.confidence","confidence")}} threshold.</p>
 
 <div class="note">
-  <p><strong>Note</strong>: The <code>onnomatch</code> handler does not yet work properly
+  <p><strong>Note:</strong> The <code>onnomatch</code> handler does not yet work properly
     in Firefox — the speech recognition system always returns a positive match, and then
     guesses at what item in the grammar it found. This is being worked on.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">mySpeechRecognition.onnomatch = function() { ... };
+<pre class="brush: js">mySpeechRecognition.onnomatch = function() { ... };
 </pre>
 
 <h2 id="Examples">Examples</h2>
@@ -46,25 +47,11 @@ recognition.onnomatch = function() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Web Speech API', '#dom-speechrecognition-onnomatch', 'onnomatch')}}
-      </td>
-      <td>{{Spec2('Web Speech API')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SpeechRecognition.onnomatch")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

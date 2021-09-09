@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="262" height="172"><defs><pattern id="a" patternUnits="userSpaceOnUse" x="133.5" y="359" width="70" height="80" patternTransform="rotate(45) scale(.21)"><path d="M0 10h70v2H0v-2zm0 20h70v2H0v-2zm0 20h70v2H0v-2zm0 20h70v2H0v-2z"/></pattern></defs><path d="M133.5 359h217v13h-217v-13z" fill="url(#a)" transform="translate(-110 -201)"/><path d="M23.5 158h217v13h-217v-13z" stroke="#000" fill="none"/><g stroke="#000" stroke-width="2"><path d="M132.5 158.5V41.3" stroke-dasharray="6,4" fill="none"/><path d="m136.1 41.3-3.6-9.6-3.6 9.6z"/></g><g stroke="#FBC801" stroke-width="2"><path d="m11.5 15.5 112.415 133.961" fill="none"/><path d="m121.157 151.775 8.929 5.04-3.414-9.668z" fill="#FBC801"/></g><g stroke="#FB8501" stroke-width="2"><path d="M131.5 158.5 243.915 24.539" fill="none"/><path d="m246.672 26.853 3.414-9.668-8.929 5.04z" fill="#FB8501"/></g><path d="M131.5 76.5a82.001 82.001 0 0 1 52.694 19.172M61.5 76.5a107.818 107.818 0 0 1 70-25.815" stroke="#000" stroke-dasharray="2,2" fill="none"/><text transform="translate(113.777 110.5)">
+        <tspan x="-5.777" y="4.5" font-family="TimesNewRomanPSMT" font-size="16">Θ</tspan>
+      </text><text transform="translate(122.223 116)">
+        <tspan x="-2.223" y="4.5" font-family="TimesNewRomanPSMT" font-size="16">i</tspan>
+      </text><text transform="translate(143.723 110.5)">
+        <tspan x="-5.777" y="4.5" font-family="TimesNewRomanPSMT" font-size="16">Θ</tspan>
+      </text><text transform="translate(151.609 116)">
+        <tspan x="-2.664" y="4.5" font-family="TimesNewRomanPSMT" font-size="16">r</tspan>
+      </text><text transform="translate(14.33 45.5)">
+      <tspan x="-3.33" y="6" font-family="TimesNewRomanPSMT" font-size="20">I</tspan>
+    </text><text transform="translate(247.17 45.5)">
+      <tspan x="-6.67" y="6" font-family="TimesNewRomanPSMT" font-size="20">R</tspan>
+    </text><text transform="translate(132 12)">
+      <tspan x="-7.222" y="6" font-family="TimesNewRomanPSMT" font-size="20">N</tspan>
+    </text></svg>

@@ -8,17 +8,18 @@ tags:
 - History API
 - Property
 - Reference
+browser-compat: api.History.state
 ---
 <div>{{APIRef("History API")}}</div>
 
-<p><span class="seoSummary">The <strong><code>History.state</code></strong> property
-    returns a value representing the state at the top of the history stack.</span> This is
+<p>The <strong><code>History.state</code></strong> property
+    returns a value representing the state at the top of the history stack. This is
   a way to look at the state without having to wait for a {{event("popstate")}} event.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">const <em>currentState</em> = history.state</pre>
+  class="brush: js">const <em>currentState</em> = history.state</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -40,38 +41,20 @@ console.log(`History.state before pushState: ${history.state}`);
 history.pushState({name: 'Example'}, "pushState example", 'page3.html');
 
 // Now state has a value.
-console.log(`History.state after pushState: ${history.state}`);</pre>
+console.log('History.state after pushState: ', history.state);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName("HTML WHATWG", "#dom-history-state", "History.state")}}</td>
-      <td>{{Spec2("HTML WHATWG")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("HTML5 W3C", "browsers.html#dom-history-state", "History.state")}}
-      </td>
-      <td>{{Spec2("HTML5 W3C")}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.History.state")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with
-      the History API</a></li>
+  <li><a href="/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with the History API</a></li>
+  <li><a href="/en-US/docs/Web/API/History/pushState"><code>History.pushState()</code></a></li>
+  <li><a href="/en-US/docs/Web/API/History/replaceState"><code>History.replaceState()</code></a></li>
 </ul>

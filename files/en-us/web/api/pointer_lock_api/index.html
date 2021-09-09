@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{DefaultAPISidebar("Pointer Lock API")}}</div>
 
-<p><span class="seoSummary">The <strong>Pointer Lock API</strong> (formerly called <em>Mouse Lock API</em>) provides input methods based on the movement of the mouse over time (i.e., deltas), not just the absolute position of the mouse cursor in the viewport. It gives you access to raw mouse movement, locks the target of mouse events to a single element, eliminates limits on how far mouse movement can go in a single direction, and removes the cursor from view.</span> It is ideal for first person 3D games, for example.</p>
+<p>The <strong>Pointer Lock API</strong> (formerly called <em>Mouse Lock API</em>) provides input methods based on the movement of the mouse over time (i.e., deltas), not just the absolute position of the mouse cursor in the viewport. It gives you access to raw mouse movement, locks the target of mouse events to a single element, eliminates limits on how far mouse movement can go in a single direction, and removes the cursor from view. It is ideal for first person 3D games, for example.</p>
 
 <p>More than that, the API is useful for any applications that require significant mouse input to control movements, rotate objects, and change entries, for example allowing users to control the viewing angle by moving the mouse around without any button clicking. The buttons are then freed up for other actions. Other examples include apps for viewing maps or satellite imagery.</p>
 
@@ -34,7 +34,7 @@ tags:
 
 <h3 id="requestPointerLock">requestPointerLock()</h3>
 
-<p>The Pointer lock API, similar to the <a href="/en-US/docs/Web/Guide/API/DOM/Using_full_screen_mode">Fullscreen API</a>, extends DOM elements by adding a new method, {{domxref("Element.requestPointerLock","requestPointerLock()")}}. As it has recently unprefixed, you would currently declare it something like this, for example if you wanted to request pointer lock on a <code>canvas</code> element:</p>
+<p>The Pointer lock API, similar to the <a href="/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</a>, extends DOM elements by adding a new method, {{domxref("Element.requestPointerLock","requestPointerLock()")}}. As it has recently unprefixed, you would currently declare it something like this, for example if you wanted to request pointer lock on a <code>canvas</code> element:</p>
 
 <pre class="brush: js">canvas.requestPointerLock = canvas.requestPointerLock ||
                             canvas.mozRequestPointerLock;
@@ -43,7 +43,7 @@ canvas.requestPointerLock()
 </pre>
 
 <div class="note">
-<p>If a user has exited pointer lock via the <a href="https://w3c.github.io/pointerlock/#dfn-default-unlock-gesture">default unlock gesture</a>, or pointer lock has not previously been entered for this document, an event generated as a result of an <a href="https://w3c.github.io/pointerlock/#dfn-engagement-gesture">engagement gesture</a> must be received by the document before <a href="https://w3c.github.io/pointerlock/#dom-element-requestpointerlock"><code>requestPointerLock</code></a> will succeed. (from <a href="https://w3c.github.io/pointerlock/#extensions-to-the-element-interface">https://w3c.github.io/pointerlock/#extensions-to-the-element-interface</a>)</p>
+<p><strong>Note:</strong> If a user has exited pointer lock via the <a href="https://w3c.github.io/pointerlock/#dfn-default-unlock-gesture">default unlock gesture</a>, or pointer lock has not previously been entered for this document, an event generated as a result of an <a href="https://w3c.github.io/pointerlock/#dfn-engagement-gesture">engagement gesture</a> must be received by the document before <a href="https://w3c.github.io/pointerlock/#dom-element-requestpointerlock"><code>requestPointerLock</code></a> will succeed. (from <a href="https://w3c.github.io/pointerlock/#extensions-to-the-element-interface">https://w3c.github.io/pointerlock/#extensions-to-the-element-interface</a>)</p>
 </div>
 
 <h3 id="pointerLockElement_and_exitPointerLock">pointerLockElement and exitPointerLock()</h3>
@@ -96,13 +96,13 @@ function lockChangeAlert() {
 <p>When there is an error caused by calling {{domxref("Element.requestPointerLock","requestPointerLock()")}} or {{domxref("Document.exitPointerLock","exitPointerLock()")}}, the {{event("pointerlockerror")}} event is dispatched to the <code>document</code>. This is a simple event and contains no extra data.</p>
 
 <pre class="brush: js">document.addEventListener('pointerlockerror', lockError, false);
-document.addEventListener('mozpointerlock<span style="font-size: 1rem;">error</span><span style="font-size: 1rem;">', lockError, false);</span>
+document.addEventListener('mozpointerlockerror', lockError, false);</span>
 
 function lockError(e) {
   alert("Pointer lock failed");
 }</pre>
 
-<div class="note"><strong>Note</strong>: until Firefox 50 the above events were prefixed with <code>moz</code> in Firefox.</div>
+<div class="note"><p><strong>Note:</strong> until Firefox 50 the above events were prefixed with <code>moz</code> in Firefox.</p></div>
 
 <h2 id="Extensions_to_mouse_events">Extensions to mouse events</h2>
 
@@ -122,7 +122,7 @@ function lockError(e) {
 
 <p>We've written a <a href="https://mdn.github.io/dom-examples/pointer-lock/">simple pointer lock demo</a> to show you how to use it to set up a simple control system (<a href="https://github.com/mdn/dom-examples/tree/master/pointer-lock">see source code</a>). The demo looks like this:</p>
 
-<p><img alt="A red circle on top of a black background." src="https://mdn.mozillademos.org/files/7953/pointer-lock.png" style="display: block; height: 362px; margin: 0px auto; width: 640px;"></p>
+<p><img alt="A red circle on top of a black background." src="pointer-lock.png"></p>
 
 <p>This demo uses JavaScript to draw a ball on top of an {{ htmlelement("canvas") }} element. When you click the canvas, pointer lock is then used to remove the mouse pointer and allow you to move the ball directly using the mouse. Let's see how this works.</p>
 
@@ -216,20 +216,12 @@ function updatePosition(e) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
   <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
+   <th>Specification</th>
   </tr>
- </thead>
- <tbody>
   <tr>
-   <td>{{SpecName('Pointer Lock')}}</td>
-   <td>{{Spec2('Pointer Lock')}}</td>
-   <td>Initial specification.</td>
+   <td><a href="https://w3c.github.io/pointerlock/">Pointer Lock</a></td>
   </tr>
- </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

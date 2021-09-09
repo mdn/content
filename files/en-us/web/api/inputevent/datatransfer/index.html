@@ -11,6 +11,7 @@ tags:
 - Property
 - Reference
 - events
+browser-compat: api.InputEvent.dataTransfer
 ---
 <p>{{APIRef("DOM Events")}}</p>
 
@@ -22,7 +23,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>dataTransfer</em> = <em>inputEvent</em>.dataTransfer</pre>
+  class="brush: js">var <em>dataTransfer</em> = <em>inputEvent</em>.dataTransfer</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -39,7 +40,7 @@ tags:
 
 <p>Try copying and pasting some of the content provided to see the effects.</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;&lt;span style="font-weight: bold; color: blue"&gt;Whoa, bold blue text!&lt;/span&gt;&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;&lt;span style="font-weight: bold; color: blue"&gt;Whoa, bold blue text!&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span style="font-style: italic; color: red"&gt;Exciting: italic red text!&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Boring normal text ;-(&lt;/p&gt;
 
@@ -49,7 +50,7 @@ tags:
 
 &lt;p class="result"&gt;&lt;/p&gt;</pre>
 
-<pre class="brush: js notranslate">var editable = document.querySelector('p[contenteditable]');
+<pre class="brush: js">var editable = document.querySelector('p[contenteditable]');
 var result = document.querySelector('.result')
 var dataTransferObj;
 
@@ -61,21 +62,8 @@ editable.addEventListener('input', (e) =&gt; {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('InputEvents2','#dom-inputevent-datatransfer','dataTransfer')}}</td>
-      <td>{{Spec2('InputEvents2')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.InputEvent.dataTransfer")}}</p>
+<p>{{Compat}}</p>

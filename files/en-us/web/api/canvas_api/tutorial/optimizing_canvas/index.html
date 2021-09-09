@@ -9,11 +9,9 @@ tags:
   - HTML5
   - Tutorial
 ---
-<div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility", "Web/API/Canvas_API/Tutorial/Finale")}}</div>
+<div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas", "Web/API/Canvas_API/Tutorial/Finale")}}</div>
 
-<div class="summary">
-<p>The {{HTMLElement("canvas")}} element is one of the most widely used tools for rendering 2D graphics on the web. However, when websites and apps push the Canvas API to its limits, performance begins to suffer. <span class="seoSummary">This article provides suggestions for optimizing your use of the canvas element to ensure that your graphics perform well.</span></p>
-</div>
+<p>The {{HTMLElement("canvas")}} element is one of the most widely used tools for rendering 2D graphics on the web. However, when websites and apps push the Canvas API to its limits, performance begins to suffer. This article provides suggestions for optimizing your use of the canvas element to ensure that your graphics perform well.</p>
 
 <h2 id="Performance_tips">Performance tips</h2>
 
@@ -103,7 +101,7 @@ stage.style.transform = 'scale(' + scaleToFit + ')';
  <li>Avoid the {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}} property whenever possible.</li>
  <li>Avoid <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text">text rendering</a> whenever possible.</li>
  <li>Try different ways to clear the canvas ({{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}} vs. {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} vs. resizing the canvas).</li>
- <li>With animations, use {{domxref("window.requestAnimationFrame()")}} instead of {{domxref("WindowOrWorkerGlobalScope/setInterval", "window.setInterval()")}} .</li>
+ <li>With animations, use {{domxref("window.requestAnimationFrame()")}} instead of {{domxref("setInterval()")}} .</li>
  <li>Be careful with heavy physics libraries.</li>
 </ul>
 
@@ -114,4 +112,4 @@ stage.style.transform = 'scale(' + scaleToFit + ')';
  <li><a href="https://hacks.mozilla.org/2013/05/optimizing-your-javascript-game-for-firefox-os/">Optimizing your JavaScript game for Firefox OS – Mozilla Hacks</a></li>
 </ul>
 
-<p>{{PreviousNext("Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility", "Web/API/Canvas_API/Tutorial/Finale")}}</p>
+<p>{{PreviousNext("Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas", "Web/API/Canvas_API/Tutorial/Finale")}}</p>

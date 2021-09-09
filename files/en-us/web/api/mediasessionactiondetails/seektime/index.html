@@ -18,14 +18,15 @@ tags:
 - reverse
 - seek
 - seekTime
+browser-compat: api.MediaSessionActionDetails.seekTime
 ---
 <p>{{APIRef("Media Session API")}}</p>
 
-<p><span class="seoSummary">The {{domxref("MediaSessionActionDetails")}}
+<p>The {{domxref("MediaSessionActionDetails")}}
     dictionary's <code><strong>seekTime</strong></code> property is always included when a
     <code><a href="/en-US/docs/Web/API/MediaSessionActionDetails#seekto">seekto</a></code>
     action is sent to the action handler callback. Its value is the absolute time, in
-    seconds, to move the current play position to.</span></p>
+    seconds, to move the current play position to.</p>
 
 <p>To change the time by an offset rather than moving to an absolute time, the
   <code><a href="/en-US/docs/Web/API/MediaSessionActionDetails#seekforward">seekforward</a></code>
@@ -35,7 +36,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">let <em>mediaSessionActionDetails</em> = { seekTime: <em>absTimeInSeconds</em> };
+<pre class="brush: js">let <em>mediaSessionActionDetails</em> = { seekTime: <em>absTimeInSeconds</em> };
 
 let <em>absTime</em> = <em>mediaSessionActionDetails</em>.seekTime;
 </pre>
@@ -59,26 +60,11 @@ let <em>absTime</em> = <em>mediaSessionActionDetails</em>.seekTime;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Media
-        Session','#dom-mediasessionactiondetails-seektime','MediaSessionActionDetails.seekTime')}}
-      </td>
-      <td>{{Spec2('Media Session')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MediaSessionActionDetails.seekTime")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

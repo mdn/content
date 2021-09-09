@@ -16,6 +16,7 @@ tags:
 - WebRTC API
 - WebRTC API Reference
 - setStreams
+browser-compat: api.RTCRtpSender.setStreams
 ---
 <p>{{DefaultAPISidebar("WebRTC API")}}</p>
 
@@ -25,7 +26,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">rtcRtpSender.setStreams(<em>mediaStream</em>);
+<pre class="brush: js">rtcRtpSender.setStreams(<em>mediaStream</em>);
 rtcRtpSender.setStreams([<em>mediaStream...</em>]);
 </pre>
 
@@ -66,7 +67,7 @@ rtcRtpSender.setStreams([<em>mediaStream...</em>]);
 <p>This example adds all of an {{domxref("RTCPeerConnection")}}'s tracks to the specified
   stream.</p>
 
-<pre class="brush: js notranslate">function addTracksToStream(stream) {
+<pre class="brush: js">function addTracksToStream(stream) {
   let senders = pc.getSenders();
 
   senders.forEach((sender) =&gt; {
@@ -86,22 +87,8 @@ rtcRtpSender.setStreams([<em>mediaStream...</em>]);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName("WebRTC 1.0", "#dom-rtcrtpsender-setstreams",
-        "RTCRtpSender.setStreams()")}}</td>
-      <td>{{Spec2("WebRTC 1.0")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCRtpSender.setStreams")}}</p>
+<p>{{Compat}}</p>

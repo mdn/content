@@ -18,14 +18,17 @@ tags:
 - display
 - displaySurface
 - screen
+browser-compat: api.MediaTrackConstraints.displaySurface
 ---
 <div>{{APIRef("Media Capture and Streams")}}</div>
 
-<p><span class="seoSummary">The {{domxref("MediaTrackConstraints")}} dictionary's
+<p>The {{domxref("MediaTrackConstraints")}} dictionary's
     <strong><code>displaySurface</code></strong> property is a
-    {{domxref("ConstrainDOMString")}} describing the requested or mandatory constraints
+    <a href="/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString"><code>ConstrainDOMString</code></a> describing the requested or mandatory constraints
     placed upon the value of the {{domxref("MediaTrackSettings.displaySurface",
-    "displaySurface")}} constrainable property.</span> This is used to specify the type or
+    "displaySurface")}} constrainable property.</p>
+
+<p>This is used to specify the type or
   types of display surfaces which {{domxref("MediaDevices.getDisplayMedia",
   "getDisplayMedia()")}} will let the user select among for sharing purposes.</p>
 
@@ -36,14 +39,14 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>constraintsObject</em> = { displaySurface: <em>constraint</em> };
+<pre class="brush: js">var <em>constraintsObject</em> = { displaySurface: <em>constraint</em> };
 
 <em>constraintsObject</em>.displaySurface = <em>constraint</em>;
 </pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A {{domxref("ConstrainDOMString")}} which specifies the type of display surface that's
+<p>A <a href="/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString"><code>ConstrainDOMString</code></a> which specifies the type of display surface that's
   being captured. This value <em>does not</em> affect the list of display sources in the
   browser's user interface.</p>
 
@@ -89,27 +92,11 @@ if (displaySurface === "monitor" || displaySurface ==="application") {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('Screen Capture', '#dom-mediatrackconstraintset-displaysurface',
-        'MediaTrackConstraints.displaySurface') }}</td>
-      <td>{{ Spec2('Screen Capture API') }}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MediaTrackConstraints.displaySurface")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

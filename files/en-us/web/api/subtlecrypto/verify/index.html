@@ -2,13 +2,13 @@
 title: SubtleCrypto.verify()
 slug: Web/API/SubtleCrypto/verify
 tags:
-- API
-- Method
-- Reference
-- Référence(2)
-- SubtleCrypto
-- Web Crypto API
-- verify
+  - API
+  - Method
+  - Reference
+  - SubtleCrypto
+  - Web Crypto API
+  - verify
+browser-compat: api.SubtleCrypto.verify
 ---
 <p>{{APIRef("Web Crypto API")}}{{SecureContext_header}}</p>
 
@@ -17,12 +17,12 @@ tags:
 
 <p>It takes as its arguments a {{glossary("key")}} to verify the signature with, some
   algorithm-specific parameters, the signature, and the original signed data. It returns a
-  {{jsxref("Promise")}} which will be fulfilled with a {{jsxref("Boolean")}} value
+  {{jsxref("Promise")}} which will be fulfilled with a boolean value
   indicating whether the signature is valid.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">const <em>result</em> = <em>crypto</em><code>.subtle.verify(<em>algorithm</em>, <em>key</em>, <em>signature</em>, <em>data</em>)</code>;
+<pre class="brush: js">const result = crypto.subtle.verify(algorithm, key, signature, data);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -35,14 +35,14 @@ tags:
 
     <ul>
       <li>To use <a
-          href="/en-US/docs/Web/API/SubtleCrypto/sign#RSASSA-PKCS1-v1_5">RSASSA-PKCS1-v1_5</a>,
+          href="/en-US/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5">RSASSA-PKCS1-v1_5</a>,
         pass the string <code>"RSASSA-PKCS1-v1_5"</code> or an object of the form
         <code>{ "name": "RSASSA-PKCS1-v1_5" }</code>.</li>
-      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/sign#RSA-PSS">RSA-PSS</a>, pass
+      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/sign#rsa-pss">RSA-PSS</a>, pass
         an {{domxref("RsaPssParams")}} object.</li>
-      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/sign#ECDSA">ECDSA</a>, pass an
+      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/sign#ecdsa">ECDSA</a>, pass an
         {{domxref("EcdsaParams")}} object.</li>
-      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/sign#HMAC">HMAC</a>, pass the
+      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/sign#hmac">HMAC</a>, pass the
         string <code>"HMAC"</code> or an object of the form
         <code>{ "name": "HMAC" }</code>.</li>
     </ul>
@@ -60,7 +60,7 @@ tags:
 
 <ul>
   <li><code><em>result</em></code> is a {{jsxref("Promise")}} that fulfills with a
-    {{jsxref("Boolean")}}: <code>true</code> if the signature is valid, <code>false</code>
+    boolean value: <code>true</code> if the signature is valid, <code>false</code>
     otherwise.</li>
 </ul>
 
@@ -78,13 +78,13 @@ tags:
 <h2 id="Supported_algorithms">Supported algorithms</h2>
 
 <p>The <code>verify()</code> method supports the same algorithms as the
-  <code><a href="/en-US/docs/Web/API/SubtleCrypto/sign#Supported_algorithms">sign()</a></code>
+  <code><a href="/en-US/docs/Web/API/SubtleCrypto/sign#supported_algorithms">sign()</a></code>
   method.</p>
 
 <h2 id="Examples">Examples</h2>
 
 <div class="notecard note">
-  <p><strong>Note</strong>: You can <a
+  <p><strong>Note:</strong> You can <a
       href="https://mdn.github.io/dom-examples/web-crypto/sign-verify/index.html">try the
       working examples</a> out on GitHub.</p>
 </div>
@@ -245,33 +245,19 @@ async function verifyMessage(key) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{ SpecName('Web Crypto API', '#dfn-SubtleCrypto-method-verify',
-        'SubtleCrypto.verify()') }}</td>
-      <td>{{ Spec2('Web Crypto API') }}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SubtleCrypto.verify")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
   <li>{{domxref("SubtleCrypto.sign()")}}.</li>
-  <li><a href="https://tools.ietf.org/html/rfc3447">RFC 3447</a> specifies
+  <li><a href="https://datatracker.ietf.org/doc/html/rfc3447">RFC 3447</a> specifies
     RSASSA-PKCS1-v1_5.</li>
-  <li><a href="https://tools.ietf.org/html/rfc3447">RFC 3447</a> specifies RSA-PSS.</li>
+  <li><a href="https://datatracker.ietf.org/doc/html/rfc3447">RFC 3447</a> specifies RSA-PSS.</li>
   <li><a
       href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf">FIPS-186</a> specifies
     ECDSA.</li>

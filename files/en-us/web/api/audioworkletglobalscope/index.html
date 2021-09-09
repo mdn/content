@@ -14,10 +14,13 @@ tags:
   - global
   - scope
   - sound
+browser-compat: api.AudioWorkletGlobalScope
 ---
 <p>{{APIRef("Web Audio API")}}</p>
 
-<p><span class="seoSummary">The <strong><code>AudioWorkletGlobalScope</code></strong> interface of the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> represents a global execution context for user-supplied code, which defines custom {{domxref("AudioWorkletProcessor")}}-derived classes.</span> Each {{domxref("BaseAudioContext")}} has a single {{domxref("AudioWorklet")}} available under the {{domxref("BaseAudioContext.audioWorklet", "audioWorklet")}} property, which runs its code in a single <code>AudioWorkletGlobalScope</code>.</p>
+<p>The <strong><code>AudioWorkletGlobalScope</code></strong> interface of the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> represents a global execution context for user-supplied code, which defines custom {{domxref("AudioWorkletProcessor")}}-derived classes.</p>
+
+<p>Each {{domxref("BaseAudioContext")}} has a single {{domxref("AudioWorklet")}} available under the {{domxref("BaseAudioContext.audioWorklet", "audioWorklet")}} property, which runs its code in a single <code>AudioWorkletGlobalScope</code>.</p>
 
 <p>As the global execution context is shared across the current <code>BaseAudioContext</code>, it's possible to define any other variables and perform any actions allowed in worklets — apart from defining <code>AudioWorkletProcessor</code>-derived classes.</p>
 
@@ -45,7 +48,7 @@ tags:
 
 <p>First we need to define the processor, and register it. Note that this should be done in a separate file.</p>
 
-<pre class="brush: js notranslate">// test-processor.js
+<pre class="brush: js">// test-processor.js
 class TestProcessor extends AudioWorkletProcessor {
   constructor () {
     super()
@@ -76,7 +79,7 @@ registerProcessor('test-processor', TestProcessor)
 
 <p>Next, in our main scripts file we'll load the processor, create an instance of <code>AudioWorkletNode</code> — passing the name of the processor to it — and connect the node to an audio graph. We should see the output of <code>console.log</code> calls in the console:</p>
 
-<pre class="brush: js notranslate">const audioContext = new AudioContext()
+<pre class="brush: js">const audioContext = new AudioContext()
 await audioContext.audioWorklet.addModule('test-processor.js')
 const testNode = new AudioWorkletNode(audioContext, 'test-processor')
 testNode.connect(audioContext.destination)
@@ -84,24 +87,11 @@ testNode.connect(audioContext.destination)
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#audioworkletglobalscope', 'AudioWorkletGlobalScope')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.AudioWorkletGlobalScope")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -6,13 +6,13 @@ tags:
   - AnalyserNode
   - Property
   - Reference
-  - Référence(2)
   - Web Audio API
   - minDecibels
+browser-compat: api.AnalyserNode.minDecibels
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
-<p class="summary">The <strong><code>minDecibels</code></strong> property of the {{ domxref("AnalyserNode") }} interface is a double value representing the minimum power value in the scaling range for the FFT analysis data, for conversion to unsigned byte/float values — basically, this specifies the minimum value for the range of results when using <code>getFloatFrequencyData()</code> or <code>getByteFrequencyData()</code>.</p>
+<p>The <strong><code>minDecibels</code></strong> property of the {{ domxref("AnalyserNode") }} interface is a double value representing the minimum power value in the scaling range for the FFT analysis data, for conversion to unsigned byte values — basically, this specifies the minimum value for the range of results when using <code>getByteFrequencyData()</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -24,10 +24,10 @@ tags:
 
 <p>A double, representing the minimum <a href="https://en.wikipedia.org/wiki/Decibel" title="Decibel on Wikipedia">decibel</a> value for scaling the FFT analysis data, where <code>0</code> dB is the loudest possible sound, <code>-10</code> dB is a 10th of that, etc. The default value is <code>-100</code> dB.</p>
 
-<p>When getting data from <code>getFloatFrequencyData()</code> or <code>getByteFrequencyData()</code>, any frequencies with an amplitude of <code>minDecibels</code> or lower will be returned as <code>0.0</code> or <code>0</code>, respectively.</p>
+<p>When getting data from <code>getByteFrequencyData()</code>, any frequencies with an amplitude of <code>minDecibels</code> or lower will be returned as <code>0</code>.</p>
 
 <div class="note">
-<p><strong>Note</strong>: If a value greater than <code>AnalyserNode.maxDecibels</code> is set, an <code>INDEX_SIZE_ERR</code> exception is thrown.</p>
+<p><strong>Note:</strong> If a value greater than <code>AnalyserNode.maxDecibels</code> is set, an <code>INDEX_SIZE_ERR</code> exception is thrown.</p>
 </div>
 
 <h2 id="Example">Example</h2>
@@ -74,24 +74,11 @@ draw();</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#dom-analysernode-mindecibels', 'minDecibels')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.AnalyserNode.minDecibels")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

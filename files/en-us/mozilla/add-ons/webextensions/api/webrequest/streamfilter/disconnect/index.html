@@ -8,6 +8,7 @@ tags:
   - StreamFilter.disconnect
   - WebExtensions
   - webRequest
+browser-compat: webextensions.api.webRequest.StreamFilter.disconnect
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -36,15 +37,13 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("webextensions.api.webRequest.StreamFilter.disconnect", 10)}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Examples">Examples</h2>
 
 <p>This example will prepend "preface text" to the response body. It then disconnects, so the original response body will load normally:</p>
 
-<pre class="notranslate brush: js">function listener(details) {
+<pre class="brush: js">function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
 
   filter.onstart = event =&gt; {

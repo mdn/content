@@ -15,13 +15,16 @@ tags:
 - UX
 - Video
 - metadata
+browser-compat: api.Navigator.mediaSession
 ---
 <p>{{APIRef}}</p>
 
-<p><span class="seoSummary">The read-only {{domxref("Navigator")}} property
+<p>The read-only {{domxref("Navigator")}} property
     <code><strong>mediaSession</strong></code> returns a {{domxref("MediaSession")}}
     object that can be used to share with the browser metadata and other information about
-    the current playback state of media being handled by a document.</span> This
+    the current playback state of media being handled by a document.</p>
+
+<p>This
   information may, in turn, be shared with the device and/or operating system in order to
   a device's standard media control user experience to describe and control the playback
   of the media.</p>
@@ -36,7 +39,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">let <em>mediaSession</em> = navigator.mediaSession;</pre>
+  class="brush: js">let <em>mediaSession</em> = navigator.mediaSession;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -64,29 +67,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Media
-        Session','#dom-navigator-mediasession','navigator.mediaSession')}}</td>
-      <td>{{Spec2('Media Session')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table on this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
-
-<p>{{Compat("api.Navigator.mediaSession")}}</p>
+<p>{{Compat}}</p>

@@ -10,10 +10,15 @@ tags:
   - VRFrameData
   - Virtual Reality
   - WebVR
+browser-compat: api.VRFrameData
 ---
-<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
+<div>{{APIRef("WebVR API")}}{{Deprecated_Header}}</div>
 
 <p>The <strong><code>VRFrameData</code></strong> interface of the <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> represents all the information needed to render a single frame of a VR scene; constructed by {{domxref("VRDisplay.getFrameData()")}}.</p>
+
+<div class="notecard note">
+  <p><strong>Note:</strong> This interface was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</a>. It has been superseded by the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>.</p>
+</div>
 
 <h2 id="Constructor">Constructor</h2>
 
@@ -26,43 +31,31 @@ tags:
 
 <dl>
  <dt>{{domxref("VRFrameData.leftProjectionMatrix")}} {{readonlyInline}}</dt>
- <dd>A {{domxref("Float32Array")}} representing a 4x4 matrix that describes the projection to be used for the left eye’s rendering.</dd>
+ <dd>A {{jsxref("Float32Array")}} representing a 4x4 matrix that describes the projection to be used for the left eye’s rendering.</dd>
  <dt>{{domxref("VRFrameData.leftViewMatrix")}} {{readonlyInline}}</dt>
- <dd>A {{domxref("Float32Array")}} representing a 4x4 matrix that describes the view transform to be used for the left eye’s rendering.</dd>
+ <dd>A {{jsxref("Float32Array")}} representing a 4x4 matrix that describes the view transform to be used for the left eye’s rendering.</dd>
  <dt>{{domxref("VRFrameData.pose")}} {{readonlyInline}}</dt>
  <dd>The {{domxref("VRPose")}} of the {{domxref("VRDisplay")}} at the current {{domxref("VRFrameData.timestamp")}}.</dd>
  <dt>{{domxref("VRFrameData.rightProjectionMatrix")}} {{readonlyInline}}</dt>
- <dd>A {{domxref("Float32Array")}} representing a 4x4 matrix that describes the projection to be used for the right eye’s rendering.</dd>
+ <dd>A {{jsxref("Float32Array")}} representing a 4x4 matrix that describes the projection to be used for the right eye’s rendering.</dd>
  <dt>{{domxref("VRFrameData.rightViewMatrix")}} {{readonlyInline}}</dt>
- <dd>A {{domxref("Float32Array")}} representing a 4x4 matrix that describes the view transform to be used for the right eye’s rendering.</dd>
+ <dd>A {{jsxref("Float32Array")}} representing a 4x4 matrix that describes the view transform to be used for the right eye’s rendering.</dd>
  <dt>{{domxref("VRFrameData.timestamp")}} {{readonlyInline}}</dt>
  <dd>A constantly increasing timestamp value representing the time a frame update occurred.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
-<p>{{page("/Web/API/VRDisplay/getFrameData", "Examples")}}</p>
+<p>See <a href="/en-US/docs/Web/API/VRDisplay/getFrameData#examples"><code>VRDisplay.getFrameData()</code></a> for example code.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebVR 1.1', '#interface-vrdisplayevent', 'VRDisplayEvent')}}</td>
-   <td>{{Spec2('WebVR 1.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+<p>This interface was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</a> that has been superseded by the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>. It is no longer on track to becoming a standard.</p>
+<p>Until all browsers have implemented the new <a href="/en-US/docs/Web/API/WebXR_Device_API/Fundamentals">WebXR APIs</a>, it is recommended to rely on frameworks, like <a href="https://aframe.io/">A-Frame</a>, <a href="https://www.babylonjs.com/">Babylon.js</a>, or <a href="https://threejs.org/">Three.js</a>, or a <a href="https://github.com/immersive-web/webxr-polyfill">polyfill</a>, to develop WebXR applications that will work across all browsers <a href="https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/">[1]</a>.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.VRFrameData")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

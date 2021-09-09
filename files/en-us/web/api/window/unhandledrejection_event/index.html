@@ -15,10 +15,13 @@ tags:
   - events
   - global scope
   - unhandledrejection
+browser-compat: api.Window.unhandledrejection_event
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p><span class="seoSummary">The <strong><code>unhandledrejection</code></strong> event is sent to the global scope of a script when a JavaScript {{jsxref("Promise")}} that has no rejection handler is rejected; typically, this is the {{domxref("window")}}, but may also be a {{domxref("Worker")}}.</span> This is useful for debugging and for providing fallback error handling for unexpected situations.</p>
+<p>The <strong><code>unhandledrejection</code></strong> event is sent to the global scope of a script when a JavaScript {{jsxref("Promise")}} that has no rejection handler is rejected; typically, this is the {{domxref("window")}}, but may also be a {{domxref("Worker")}}.</p>
+
+<p>This is useful for debugging and for providing fallback error handling for unexpected situations.</p>
 
 <table class="properties">
  <tbody>
@@ -60,14 +63,14 @@ tags:
 
 <p>This example logs information about the unhandled promise rejection to the console.</p>
 
-<pre class="brush: js notranslate">window.addEventListener("unhandledrejection", event =&gt; {
+<pre class="brush: js">window.addEventListener("unhandledrejection", event =&gt; {
   console.warn(`UNHANDLED PROMISE REJECTION: ${event.reason}`);
 });
 </pre>
 
 <p>You can also use the {{domxref("WindowEventHandlers.onunhandledrejection", "onunhandledrejection")}} event handler property to set up the event listener:</p>
 
-<pre class="brush: js notranslate">window.onunhandledrejection = event =&gt; {
+<pre class="brush: js">window.onunhandledrejection = event =&gt; {
   console.warn(`UNHANDLED PROMISE REJECTION: ${event.reason}`);
 };
 </pre>
@@ -76,7 +79,7 @@ tags:
 
 <p>Many environments (such as {{Glossary("Node.js")}}) report unhandled promise rejections to the console by default. You can prevent that from happening by adding a handler for <code>unhandledrejection</code> events that—in addition to any other tasks you wish to perform—calls {{domxref("Event.preventDefault()", "preventDefault()")}} to cancel the event, preventing it from bubbling up to be handled by the runtime's logging code. This works because <code>unhandledrejection</code> is cancelable.</p>
 
-<pre class="brush: js notranslate">window.addEventListener('unhandledrejection', function (event) {
+<pre class="brush: js">window.addEventListener('unhandledrejection', function (event) {
   // ...your code here to handle the unhandled rejection...
 
   // Prevent the default handling (such as outputting the
@@ -88,34 +91,17 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#unhandled-promise-rejections', 'unhandledrejection')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Window.unhandledrejection_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li>{{SectionOnPage("/en-US/docs/Web/JavaScript/Guide/Using_promises", "Promise rejection events")}}</li>
- <li>{{domxref("WindowEventHandlers.onunhandledrejection", "onunhandledrejection")}} event handler property<sup><a href="#seealso-footnote-1">1</a></sup></li>
+ <li>{{domxref("WindowEventHandlers.onunhandledrejection", "onunhandledrejection")}} event handler property </li>
  <li>{{domxref("Window/rejectionhandled_event", "rejectionhandled")}} event</li>
  <li>{{jsxref("Promise")}}</li>
 </ul>
-
-<p><a id="seealso-footnote-1">[1]</a> The corresponding event handler property is defined on the {{domxref("WindowEventHandlers")}} mixin, which is available on both the {{domxref("Window")}} interface and all types of {{domxref("Worker")}} interfaces.</p>

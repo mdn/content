@@ -10,6 +10,7 @@ tags:
 - Reference
 - Storage
 - delete
+browser-compat: api.IDBCursor.delete
 ---
 <div>{{APIRef("IndexedDB")}}</div>
 
@@ -27,7 +28,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>myIDBCursor</em>.delete();</pre>
+<pre class="brush: js"><em>myIDBCursor</em>.delete();</pre>
 
 <h3 id="Returns">Returns</h3>
 
@@ -38,7 +39,7 @@ tags:
 
 <p>This method may raise a {{domxref("DOMException")}} of one of the following types:</p>
 
-<table class="standard-table">
+<table class="no-markdown">
   <thead>
     <tr>
       <th scope="col">Exception</th>
@@ -76,7 +77,7 @@ tags:
     example</a> (<a href="https://mdn.github.io/IDBcursor-example/">view example
     live</a>.)</p>
 
-<pre class="brush: js notranslate">function deleteResult() {
+<pre class="brush: js">function deleteResult() {
   list.textContent = '';
   const transaction = db.transaction(['rushAlbumList'], 'readwrite');
   const objectStore = transaction.objectStore('rushAlbumList');
@@ -103,29 +104,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('IndexedDB', '#dom-idbcursor-delete', 'delete()')}}</td>
-      <td>{{Spec2('IndexedDB')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("IndexedDB 2", "#dom-idbcursor-delete", "delete()")}}</td>
-      <td>{{Spec2("IndexedDB 2")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBCursor.delete")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

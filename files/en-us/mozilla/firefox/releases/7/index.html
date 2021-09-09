@@ -23,7 +23,7 @@ tags:
 <h4 id="Canvas">Canvas</h4>
 
 <ul>
- <li>As part of the <a class="external" href="http://blog.mozilla.com/joe/2011/04/26/introducing-the-azure-project/">Azure project</a> the Direct2D Azure Backend <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=651858">has been implemented</a> and will significantly improve the performance of the 2D canvas.</li>
+ <li>As part of the <a class="external" href="https://blog.mozilla.com/joe/2011/04/26/introducing-the-azure-project/">Azure project</a> the Direct2D Azure Backend <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=651858">has been implemented</a> and will significantly improve the performance of the 2D canvas.</li>
  <li>Specifying invalid values when calling <code>setTransform()</code>, <code>bezierCurveTo()</code>, or <code>arcTo()</code> no longer throws an exception; these calls are now correctly silently ignored.</li>
  <li>The <a href="/en-US/docs/Web/API/CanvasRenderingContext2D#ispointinpath()"><code>isPointInPath()</code></a> method now correctly considers the transformation matrix when comparing the specified point to the current path.</li>
  <li>Calling <code>strokeRect()</code> with a zero width and height now correctly does nothing.</li>
@@ -32,7 +32,7 @@ tags:
  <li><code>toDataURL()</code> method now accepts a second argument to control JPEG quality.</li>
  <li>Support for the non-standard <code>globalCompositeOperation</code> operations <code>clear</code> and <code>over</code> has been removed.</li>
  <li><a href="/en-US/docs/Canvas_tutorial/Applying_styles_and_colors#Shadows">Shadows</a> are now only drawn for <code>source-over</code> compositing operations.</li>
- <li>You can now configure the fill rule used by canvas by setting the <code>mozFillRule </code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D#attributes">attribute</a> on the context.</li>
+ <li>You can now configure the fill rule used by canvas by setting the <code>mozFillRule</code> <a href="/en-US/docs/Web/API/CanvasRenderingContext2D#attributes">attribute</a> on the context.</li>
  <li>Support for the experimental <code>mozDash</code>, <code>mozDashOffset</code>, <code>mozCurrentTransform</code> and <code>mozCurrentTransformInverse</code> attributes has been added.</li>
  <li>Support for the non-standard methods <code>mozDrawText()</code>, <code>mozMeasureText()</code>, <code>mozPathText()</code> and <code>mozTextAlongPath()</code> has been removed.</li>
 </ul>
@@ -50,7 +50,7 @@ tags:
  <li>XLink href has been restored and the MathML3 <code>href</code> attribute is now supported. Developers are encouraged to move to the latter syntax.</li>
  <li>Support for the <code>voffset</code> attribute on {{ MathMLElement("mpadded") }} elements has been added and behavior of <code>lspace</code> attribute has been fixed.</li>
  <li>The top-level {{ MathMLElement("math") }} element now accepts any attributes of the {{ MathMLElement("mstyle") }} element.</li>
- <li>Support for <a class="external" href="http://www.ctan.org/tex-archive/fonts/Asana-Math/">Asana Math</a> fonts has been added.</li>
+ <li>Support for <a class="external" href="https://www.ctan.org/tex-archive/fonts/Asana-Math/">Asana Math</a> fonts has been added.</li>
  <li>The <code>medium</code> line thickness of fraction bars in {{ MathMLElement("mfrac") }} elements has been corrected to match the default thickness.</li>
  <li><a href="/en-US/docs/Web/MathML/Attribute/Values#constants_(namedspaces)">Names for negative spaces</a> are now supported.</li>
 </ul>
@@ -82,7 +82,7 @@ tags:
 
 <ul>
  <li>The <code>network.websocket.max-connections</code> preference is used to determine the maximum number of WebSocket connections that can be open at a time. The default value is 200.</li>
- <li>The underlying WebSocket protocol version 8 (as specified by <a class="external" href="https://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-10">IETF draft 10</a>) is used now instead of the version 7 protocol used by Firefox 6.</li>
+ <li>The underlying WebSocket protocol version 8 (as specified by <a class="external" href="https://datatracker.ietf.org/doc/html/draft-ietf-hybi-thewebsocketprotocol-10">IETF draft 10</a>) is used now instead of the version 7 protocol used by Firefox 6.</li>
  <li>The WebSocket API is now available on Firefox Mobile.</li>
 </ul>
 
@@ -92,7 +92,6 @@ tags:
  <li>Message logged with <code>console.log</code> while the <a href="/en-US/docs/Tools/Web_Console" title="Using the Web Console">web console</a> isn't open are still logged, although they aren't displayed when the web console is opened.</li>
 </ul>
 
-<div class="changelog">
 <h3 id="Web_timing">Web timing</h3>
 
 <ul>
@@ -102,9 +101,8 @@ tags:
 <h3 id="XML">XML</h3>
 
 <ul>
- <li>In addition to the previously supported <code>text/xsl</code>, XSLT stylesheets can now use the official internet media (MIME) type <code>application/xslt+xml</code> (in the <a class="external" href="https://www.w3.org/TR/xml-stylesheet/">stylesheet processing instruction</a> or the <a class="external" href="https://tools.ietf.org/html/rfc5988">HTTP Link header field</a>).</li>
+ <li>In addition to the previously supported <code>text/xsl</code>, XSLT stylesheets can now use the official internet media (MIME) type <code>application/xslt+xml</code> (in the <a class="external" href="https://www.w3.org/TR/xml-stylesheet/">stylesheet processing instruction</a> or the <a class="external" href="https://datatracker.ietf.org/doc/html/rfc5988">HTTP Link header field</a>).</li>
 </ul>
-</div>
 
 <h2 id="Changes_for_Mozilla_and_add-on_developers">Changes for Mozilla and add-on developers</h2>
 
@@ -161,7 +159,7 @@ tags:
 <h3 id="Interface_changes">Interface changes</h3>
 
 <ul>
- <li>{{ interface("nsISocketTransport") }} now offers a new connection flag: <code>DISABLE_IPV6</code>; this causes a socket to only attempt to connect to IPv4 addresses, ignoring any available IPv6 addresses. In addition, {{ interface("nsIDNSService") }} now offers a new resolve flag: <code>RESOLVE_DISABLE_IPV6</code>; this causes domain name resolution to only consider IPv4 hosts, ignoring any available IPv6 addresses. These changes are used to implement the <a class="external" href="https://tools.ietf.org/html/draft-wing-http-new-tech-00">"happy eyeballs" strategy</a> for improving response time when attempting to connect on hosts that support both IPv4 and IPv6 (especially those that have broken IPv6 connectivity).</li>
+ <li>{{ interface("nsISocketTransport") }} now offers a new connection flag: <code>DISABLE_IPV6</code>; this causes a socket to only attempt to connect to IPv4 addresses, ignoring any available IPv6 addresses. In addition, {{ interface("nsIDNSService") }} now offers a new resolve flag: <code>RESOLVE_DISABLE_IPV6</code>; this causes domain name resolution to only consider IPv4 hosts, ignoring any available IPv6 addresses. These changes are used to implement the <a class="external" href="https://datatracker.ietf.org/doc/html/draft-wing-http-new-tech-00">"happy eyeballs" strategy</a> for improving response time when attempting to connect on hosts that support both IPv4 and IPv6 (especially those that have broken IPv6 connectivity).</li>
  <li>{{ interface("inIDOMUtils") }} has two new methods, {{ ifmethod("inIDOMUtils","getChildrenForNode") }} which returns a list of child nodes of a node and {{ ifmethod("inIDOMUtils","getUsedFontFaces") }} which returns a list of font faces used in a range.</li>
  <li>The <code>nsIMarkupDocumentViewer_MOZILLA_2_0_BRANCH</code> interface has been merged into the {{ interface("nsIMarkupDocumentViewer") }} interface.</li>
  <li>The <code>nsIDOMWindow2</code> interface has been merged into the {{ interface("nsIDOMWindow") }} interface.</li>

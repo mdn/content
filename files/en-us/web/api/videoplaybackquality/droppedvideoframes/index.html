@@ -16,18 +16,20 @@ tags:
 - Video
 - VideoPlaybackQuality
 - droppedVideoFrames
+browser-compat: api.VideoPlaybackQuality.droppedVideoFrames
 ---
-<p>{{APIRef("HTML DOM")}}<br>
-  <span class="seoSummary">The read-only <code><strong>droppedVideoFrames</strong></code>
+<div>{{APIRef("HTML DOM")}}</div>
+
+<p>The read-only <code><strong>droppedVideoFrames</strong></code>
     property of the {{domxref("VideoPlaybackQuality")}} interface returns the number of
     video frames which have been dropped rather than being displayed since the last time
-    the media was loaded into the {{domxref("HTMLVideoElement")}}.</span>
+    the media was loaded into the {{domxref("HTMLVideoElement")}}.
 </p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><em>value</em> = <em>videoPlaybackQuality</em>.droppedVideoFrames;</pre>
+  class="brush: js"><em>value</em> = <em>videoPlaybackQuality</em>.droppedVideoFrames;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -57,25 +59,11 @@ percentElem.innerText = Math.trunc(dropPercent).toString(10);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Media Playback Quality', '#videoplaybackquality-interface',
-        'VideoPlaybackQuality.droppedVideoFrames')}}</td>
-      <td>{{Spec2('Media Playback Quality')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.VideoPlaybackQuality.droppedVideoFrames")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

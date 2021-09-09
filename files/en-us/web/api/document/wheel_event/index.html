@@ -7,6 +7,7 @@ tags:
   - Event
   - Reference
   - wheel
+browser-compat: api.Document.wheel_event
 ---
 <div>{{APIRef}}</div>
 
@@ -45,9 +46,9 @@ tags:
 
 <p>This example shows how to scale an element using the mouse (or other pointing device) wheel.</p>
 
-<pre class="brush: html notranslate">&lt;div&gt;Scale me with your mouse wheel.&lt;/div&gt;</pre>
+<pre class="brush: html">&lt;div&gt;Scale me with your mouse wheel.&lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   min-height: 100vh;
   margin: 0;
   display: flex;
@@ -62,7 +63,7 @@ div {
   padding: 5px;
 }</pre>
 
-<pre class="brush: js notranslate">function zoom(event) {
+<pre class="brush: js">function zoom(event) {
   event.preventDefault();
 
   if (event.deltaY &lt; 0) {
@@ -91,28 +92,15 @@ document.onwheel = zoom;</pre>
 
 <p>The event handler can also be set up using the <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> method:</p>
 
-<pre class="brush: js notranslate">document.addEventListener('wheel', zoom);</pre>
+<pre class="brush: js">document.addEventListener('wheel', zoom);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('UI Events','#event-type-wheel','wheel')}}</td>
-   <td>{{Spec2('UI Events')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Document.wheel_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

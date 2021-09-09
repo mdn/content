@@ -7,26 +7,26 @@ tags:
 - Files
 - Method
 - Reference
+browser-compat: api.FileReader.readAsText
 ---
 <div>{{APIRef("File API")}}</div>
 
 <p>The <strong><code>readAsText()</code></strong> method is used to read the contents of
   the specified {{domxref("Blob")}} or {{domxref("File")}}. When the read operation is
   complete, the {{domxref("FileReader.readyState","readyState")}} is changed to
-  <code>DONE</code>, the {{event("loadend")}} event is triggered, and the
+  <code>DONE</code>, the {{domxref("FileReader/loadend_event", "loadend")}} event is triggered, and the
   {{domxref("FileReader.result","result")}} property contains the contents of the file as
   a text string.</p>
 
 <div class="notecard note">
-  <p><strong>Newer API available</strong><br>
-    The {{domxref("Blob.text()")}} method is a newer promise-based API to read a file as
+  <p><strong>Note:</strong> The {{domxref("Blob.text()")}} method is a newer promise-based API to read a file as
     text.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><em>instanceOfFileReader</em>.readAsText(blob[, encoding]);</pre>
+  class="brush: js"><em>instanceOfFileReader</em>.readAsText(blob[, encoding]);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -40,26 +40,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("File API", "#readAsDataText", "readAsText()")}}</td>
-      <td>{{Spec2("File API")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.FileReader.readAsText")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -10,6 +10,7 @@ tags:
   - WebExtensions
   - filterResponseData
   - webRequest
+browser-compat: webextensions.api.webRequest.filterResponseData
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -41,7 +42,7 @@ tags:
 
 <p>This example, taken from the <a href="https://github.com/mdn/webextensions-examples/tree/master/http-response">http-response</a> example extension, creates a filter in {{WebExtAPIRef("webRequest.onBeforeRequest")}} and uses it, to modify the first chunk of the response:</p>
 
-<pre class="notranslate brush: js">function listener(details) {
+<pre class="brush: js">function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
   let decoder = new TextDecoder("utf-8");
   let encoder = new TextEncoder();
@@ -73,6 +74,4 @@ browser.webRequest.onBeforeRequest.addListener(
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("webextensions.api.webRequest.filterResponseData", 10)}}</p>
+<p>{{Compat}}</p>

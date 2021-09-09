@@ -7,6 +7,7 @@ tags:
 - Method
 - Progress Events
 - ProgressEvent
+browser-compat: api.ProgressEvent.initProgressEvent
 ---
 <div>{{apiref("DOM Events")}} {{deprecated_header}}{{non-standard_header}}</div>
 
@@ -25,7 +26,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Progress.initProgressEvent(<var>typeArg</var>, <var>canBubbleArg</var>, <var>cancelableArg</var>, <var>lengthComputable</var>, <var>loaded</var>, <var>total</var>);
+<pre class="brush: js">Progress.initProgressEvent(<var>typeArg</var>, <var>canBubbleArg</var>, <var>cancelableArg</var>, <var>lengthComputable</var>, <var>loaded</var>, <var>total</var>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -70,13 +71,13 @@ tags:
     </table>
   </dd>
   <dt><em>canBubbleArg</em></dt>
-  <dd>Is a {{domxref("Boolean")}} flag indicating if the event can bubble
+  <dd>Is a boolean flag indicating if the event can bubble
     (<code>true</code>) or not (<code>false)</code>.</dd>
   <dt><em>cancelableArg</em></dt>
-  <dd>Is a {{domxref("Boolean")}} flag indicating if the event associated action can be
+  <dd>Is a boolean flag indicating if the event associated action can be
     avoided (<code>true</code>) or not (<code>false)</code>.</dd>
   <dt><em>lengthComputable</em></dt>
-  <dd>Is a {{domxref("Boolean")}} flag indicating if the total work to be done, and the
+  <dd>Is a boolean flag indicating if the total work to be done, and the
     amount of work already done, by the underlying process is calculable. In other words,
     it tells if the progress is measurable or not.</dd>
   <dt><em>loaded</em></dt>
@@ -97,7 +98,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ProgressEvent.initProgressEvent")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

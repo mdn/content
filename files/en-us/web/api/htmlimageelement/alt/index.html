@@ -2,24 +2,27 @@
 title: HTMLImageElement.alt
 slug: Web/API/HTMLImageElement/alt
 tags:
-- API
-- Element
-- HTML
-- HTML DOM
-- HTMLImageElement
-- Image
-- Property
-- Reference
-- Text
-- alt
-- alternate
-- fallback
+  - API
+  - Element
+  - HTML
+  - HTML DOM
+  - HTMLImageElement
+  - Image
+  - Property
+  - Reference
+  - Text
+  - alt
+  - alternate
+  - fallback
+browser-compat: api.HTMLImageElement.alt
 ---
 <p>{{APIRef("HTML DOM")}}</p>
 
-<p><span class="seoSummary">The {{domxref("HTMLImageElement")}} property
+<p>The {{domxref("HTMLImageElement")}} property
     <code><strong>alt</strong></code> provides fallback (alternate) text to display when
-    the image specified by the {{HTMLElement("img")}} element is not loaded.</span> This
+    the image specified by the {{HTMLElement("img")}} element is not loaded.</p>
+
+<p>This
   may be the case because of an error, because the user has disabled the loading of
   images, or because the image hasn't finished loading yet.</p>
 
@@ -40,7 +43,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>htmlImageElement</em>.alt = <em>altText</em>;
+<pre class="brush: js"><em>htmlImageElement</em>.alt = <em>altText</em>;
 let <em>altText</em> = <em>htmlImageElement</em>.alt;</pre>
 
 <h3 id="Value">Value</h3>
@@ -101,16 +104,7 @@ let <em>altText</em> = <em>htmlImageElement</em>.alt;</pre>
 <h4 id="CSS">CSS</h4>
 
 <p>The CSS for this example sets up the styles for the layout as shown in the result
-  below. They're not crucial to the concept shown in the HTML above, but you may expand
-  the view below if you wish to read the CSS used.</p>
-
-<details>
-  <summary>View the CSS</summary>
-
-  <div class="hidden note"><strong>Editors:</strong> If you change the CSS
-    below, please be sure to close the details box using the toggle at the top of the CSS
-    view before saving. Otherwise, readers will find it open by default, which is not the
-    intent here.</div>
+  below.</p>
 
   <pre class="brush: css">body {
   margin: 0;
@@ -154,7 +148,6 @@ p {
   padding-left: 2em;
   padding-right: 1em;
 }</pre>
-</details>
 
 <h4 id="Result">Result</h4>
 
@@ -184,9 +177,9 @@ p {
 <p>When an image contains information presented as a diagram, chart, graph, or map,
   the <code>alt</code> text should provide the same information, at least in summary form.
   This is true whether the /me image is in a bitmapped format such as <a
-    href="/en-US/docs/Web/Media/Formats/Image_types#PNG">PNG</a> or <a
-    href="/en-US/docs/Web/Media/Formats/Image_types#JPEG">JPEG</a> or in a vector format
-  like <a href="/en-US/docs/Web/Media/Formats/Image_types#SVG">SVG</a>.</p>
+    href="/en-US/docs/Web/Media/Formats/Image_types#png">PNG</a> or <a
+    href="/en-US/docs/Web/Media/Formats/Image_types#jpeg">JPEG</a> or in a vector format
+  like <a href="/en-US/docs/Web/Media/Formats/Image_types#svg">SVG</a>.</p>
 
 <ul>
   <li>For a map, the <code>alt</code> text could be directions to the place indicated by
@@ -198,7 +191,7 @@ p {
 
 <p>Keep in mind that any text included in diagrams and charts presented in
   {{Glossary("SVG")}} format may be read by screen readers. This may impact the decisions
-  you make shen writing the <code>alt</code> text for the diagram.</p>
+  you make when writing the <code>alt</code> text for the diagram.</p>
 
 <h3 id="Icons_or_logos">Icons or logos</h3>
 
@@ -222,7 +215,7 @@ p {
 <h4 id="HTML_2">HTML</h4>
 
 <p>The HTML below creates a snippet of content from a site using the described icon. Note
-  the use of the <code>alt</code> attribute on the {{HTMLElement("&lt;img&gt;")}},
+  the use of the <code>alt</code> attribute on the {{HTMLElement("img")}},
   providing a good substitution string to use in case the image doesn't load.</p>
 
 <pre class="brush: html">&lt;div class="container"&gt;
@@ -277,23 +270,8 @@ p {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', '#dom-img-alt', 'HTMLImageElement.alt')}}</td>
-      <td>{{Spec2('HTML DOM')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLImageElement.alt")}}</p>
+<p>{{Compat}}</p>

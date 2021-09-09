@@ -7,6 +7,7 @@ tags:
 - Reference
 - WebGL
 - WebGL2
+browser-compat: api.WebGL2RenderingContext.vertexAttribI4i
 ---
 <div>{{APIRef("WebGL")}}</div>
 
@@ -16,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">void <var>gl</var>.vertexAttribI4i(<var>index</var>, <var>v0</var>, <var>v1</var>, <var>v2</var>, <var>v3</var>);
+<pre class="brush: js">void <var>gl</var>.vertexAttribI4i(<var>index</var>, <var>v0</var>, <var>v1</var>, <var>v2</var>, <var>v3</var>);
 void <var>gl</var>.vertexAttribI4ui(<var>index</var>, <var>v0</var>, <var>v1</var>, <var>v2</var>, <var>v3</var>);
 
 void <var>gl</var>.vertexAttribI4iv(<var>index</var>, <var>value</var>);
@@ -27,14 +28,14 @@ void <var>gl</var>.vertexAttribI4uiv(<var>index</var>, <var>value</var>);
 
 <dl>
   <dt><code>index</code></dt>
-  <dd>A {{domxref("GLuint")}} specifying the position of the vertex attribute to be
+  <dd>A {{domxref("WebGL_API/Types", "GLuint")}} specifying the position of the vertex attribute to be
     modified.</dd>
   <dt><code>v0, v1, v2, v3</code></dt>
   <dd>An integer {{jsxref("Number")}} for the vertex attribute value.</dd>
   <dt><code>value</code></dt>
   <dd>
-    <p>A {{jsxref("Uint32Array")}}/{{jsxref("Int32Array")}} or sequences of
-      {{domxref("GLuint")}}/ {{domxref("GLint")}} for integer vector vertex attribute
+    <p>A {{jsxref("Uint32Array")}}/{{jsxref("Int32Array")}} or sequences of
+      {{domxref("WebGL_API/Types", "GLuint")}}/ {{domxref("WebGL_API/Types", "GLint")}} for integer vector vertex attribute
       values.</p>
   </dd>
 </dl>
@@ -49,34 +50,11 @@ void <var>gl</var>.vertexAttribI4uiv(<var>index</var>, <var>value</var>);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebGL2', "#3.7.8", "vertexAttribI")}}</td>
-      <td>{{Spec2('WebGL2')}}</td>
-      <td>Initial definition for WebGL.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('OpenGL ES 3.0', "glVertexAttrib.xhtml", "glVertexAttribI")}}</td>
-      <td>{{Spec2('OpenGL ES 3.0')}}</td>
-      <td>Man page of the (similar) OpenGL API.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
-
-<p>{{Compat("api.WebGL2RenderingContext.vertexAttribI4i")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

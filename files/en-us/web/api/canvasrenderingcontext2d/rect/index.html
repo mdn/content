@@ -7,11 +7,12 @@ tags:
 - CanvasRenderingContext2D
 - Method
 - Reference
+browser-compat: api.CanvasRenderingContext2D.rect
 ---
 <div>{{APIRef}}</div>
 
 <p>The
-  <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.rect()</code></strong>
+  <strong><code>CanvasRenderingContext2D.rect()</code></strong>
   method of the Canvas 2D API adds a rectangle to the current path.</p>
 
 <p>Like other methods that modify the current path, this method does not directly render
@@ -27,7 +28,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">void <em>ctx</em>.rect(<em>x</em>, <em>y</em>, <em>width</em>, <em>height</em>);
+<pre class="brush: js">void <em>ctx</em>.rect(<em>x</em>, <em>y</em>, <em>width</em>, <em>height</em>);
 </pre>
 
 <p>The <code>rect()</code> method creates a rectangular path whose starting point is at
@@ -65,7 +66,7 @@ tags:
 <p>The rectangle's corner is located at (10, 20). It has a width of 150 and a height of
   100.</p>
 
-<pre class="brush: js; highlight:[3]">const canvas = document.getElementById('canvas');
+<pre class="brush: js;">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 ctx.rect(10, 20, 150, 100);
 ctx.fill();
@@ -77,25 +78,11 @@ ctx.fill();
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-rect",
-        "CanvasRenderingContext2D.rect")}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CanvasRenderingContext2D.rect")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

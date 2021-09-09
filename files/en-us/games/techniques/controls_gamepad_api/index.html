@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{GamesSidebar}}</div>
 
-<p class="summary">This article looks at implementing an effective, cross-browser control system for web games using the Gamepad API, allowing you to control your web games using console game controllers. It features a case study game — Hungry Fridge, created by <a href="http://enclavegames.com/">Enclave Games</a>.</p>
+<p class="summary">This article looks at implementing an effective, cross-browser control system for web games using the Gamepad API, allowing you to control your web games using console game controllers. It features a case study game — Hungry Fridge, created by <a href="https://enclavegames.com/">Enclave Games</a>.</p>
 
 <h2 id="Controls_for_web_games">Controls for web games</h2>
 
@@ -29,7 +29,7 @@ tags:
 
 <h2 id="Case_Study_Hungry_Fridge">Case Study: Hungry Fridge</h2>
 
-<p>The <a href="https://github.com/blog/1674-github-game-off-ii">GitHub Game Off II</a> competition ran in November 2013 and <a href="http://enclavegames.com/">Enclave Games</a> decided to take part in it. The theme for the competition was "change", so they submitted a game where you have to feed the Hungry Fridge by tapping the healthy food (apples, carrots, lettuces) and avoid the "bad" food (beer, burgers, pizza.) A countdown changes the type of food the Fridge wants to eat every few seconds, so you have to be careful and act quickly.</p>
+<p>The <a href="https://github.com/blog/1674-github-game-off-ii">GitHub Game Off II</a> competition ran in November 2013 and <a href="https://enclavegames.com/">Enclave Games</a> decided to take part in it. The theme for the competition was "change", so they submitted a game where you have to feed the Hungry Fridge by tapping the healthy food (apples, carrots, lettuces) and avoid the "bad" food (beer, burgers, pizza.) A countdown changes the type of food the Fridge wants to eat every few seconds, so you have to be careful and act quickly.</p>
 
 <p>The second, hidden "change" implementation is the ability to transform the static Fridge into a full-blown moving, shooting and eating machine. When you connect the controller, the game significantly changes (Hungry Fridge turns into the Super Turbo Hungry Fridge) and you're able to control the armored fridge using the Gamepad API. You have to shoot down the food, but once again you also have to find the type of food the Fridge wants to eat at each point, or else you'll lose energy.</p>
 
@@ -49,7 +49,7 @@ tags:
 
 <p>There are two important events to use along with the Gamepad API — <code>gamepadconnected</code> and <code>gamepaddisconnected</code>. The first one is fired when the browser detects the connection of a new gamepad while the second one is fired when a gamepad is disconnected (either physically by the user or due to inactivity.) In the demo, the <code>gamepadAPI</code> object is used to store everything related to the API:</p>
 
-<pre class="brush: js notranslate">var gamepadAPI = {
+<pre class="brush: js">var gamepadAPI = {
   controller: {},
   turbo: false,
   connect: function() {},
@@ -64,7 +64,7 @@ tags:
 
 <p>The <code>buttons</code> array contains the Xbox 360 button layout:</p>
 
-<pre class="brush: js notranslate">buttons: [
+<pre class="brush: js">buttons: [
   'DPad-Up','DPad-Down','DPad-Left','DPad-Right',
   'Start','Back','Axis-Left','Axis-Right',
   'LB','RB','Power','A','B','X','Y',
@@ -72,14 +72,14 @@ tags:
 
 <p>This can be different for other types of gamepads like the PS3 controller (or a no-name, generic one), so you have to be careful and not just assume the button you're expecting will be the same button you'll actually get. Next, we set up two event listeners to get the data:</p>
 
-<pre class="brush: js notranslate">window.addEventListener("gamepadconnected", gamepadAPI.connect);
+<pre class="brush: js">window.addEventListener("gamepadconnected", gamepadAPI.connect);
 window.addEventListener("gamepaddisconnected", gamepadAPI.disconnect);</pre>
 
 <p>Due to security policy, you have to interact with the controller first while the page is visible for the event to fire. If the API worked without any interaction from the user it could be used to fingerprint them without their knowledge.</p>
 
 <p>Both functions are fairly simple:</p>
 
-<pre class="brush: js notranslate">connect: function(evt) {
+<pre class="brush: js">connect: function(evt) {
   gamepadAPI.controller = evt.gamepad;
   gamepadAPI.turbo = true;
   console.log('Gamepad connected.');
@@ -87,7 +87,7 @@ window.addEventListener("gamepaddisconnected", gamepadAPI.disconnect);</pre>
 
 <p>The <code>connect()</code> function takes the event as a parameter and assigns the <code>gamepad</code> object to the <code>gamepadAPI.controller</code> variable. We are using only one gamepad for this game, so it's a single object instead of an array of gamepads. We then set the <code>turbo</code> property to <code>true</code>. (We could use the <code>gamepad.connected</code> boolean for this purpose, but we wanted to have a separate variable for turning on Turbo mode without needing to have a gamepad connected, for reasons explained above.)</p>
 
-<pre class="brush: js notranslate">disconnect: function(evt) {
+<pre class="brush: js">disconnect: function(evt) {
   gamepadAPI.turbo = false;
   delete gamepadAPI.controller;
   console.log('Gamepad disconnected.');
@@ -114,7 +114,7 @@ window.addEventListener("gamepaddisconnected", gamepadAPI.disconnect);</pre>
 
 <p>Beside <code>connect()</code> and <code>disconnect()</code>, there are two more methods in the <code>gamepadAPI</code> object: <code>update()</code> and <code>buttonPressed()</code>. <code>update()</code> is executed on every frame inside the game loop, to update the actual status of the gamepad object regularly:</p>
 
-<pre class="brush: js notranslate">update: function() {
+<pre class="brush: js">update: function() {
   // clear the buttons cache
   gamepadAPI.buttonsCache = [];
   // move the buttons status from the previous frame to the cache
@@ -155,7 +155,7 @@ window.addEventListener("gamepaddisconnected", gamepadAPI.disconnect);</pre>
 
 <p>The <code>buttonPressed()</code> method is also placed in the main game loop to listen for button presses. It takes two parameters — the button we want to listen to and the (optional) way to tell the game that holding the button is accepted. Without it you'd have to release the button and press it again to have the desired effect.</p>
 
-<pre class="brush: js notranslate">buttonPressed: function(button, hold) {
+<pre class="brush: js">buttonPressed: function(button, hold) {
   var newPress = false;
   // loop through pressed buttons
   for(var i=0,s=gamepadAPI.buttonsStatus.length; i&lt;s; i++) {
@@ -180,7 +180,7 @@ window.addEventListener("gamepaddisconnected", gamepadAPI.disconnect);</pre>
 
 <p>There are two types of action to consider for a button: a single press and a hold. The <code>newPress</code> boolean variable will indicate whether there's a new press of a button or not. Next, we loop through the array of pressed buttons — if the given button is the same as the one we're looking for, the <code>newPress</code> variable is set to <code>true</code>. To check if the press is a new one, so the player is not holding the key, we loop through the cached states of the buttons from the previous frame of the game loop. If we find it there it means that the button is being held, so there's no new press. In the end the <code>newPress</code> variable is returned. The <code>buttonPressed</code> function is used in the update loop of the game like this:</p>
 
-<pre class="brush: js notranslate">if(gamepadAPI.turbo) {
+<pre class="brush: js">if(gamepadAPI.turbo) {
   if(gamepadAPI.buttonPressed('A','hold')) {
     this.turbo_fire();
   }
@@ -197,7 +197,7 @@ window.addEventListener("gamepaddisconnected", gamepadAPI.disconnect);</pre>
 
 <p>Gamepads can get dusty from lying around inactive, meaning that checking for exact -1 or 1 values can be a problem. For this reason, it can be good to set a threshold for the value of the axis to take effect. For example, the Fridge tank will turn right only when the <code>X</code> value is bigger than <code>0.5</code>:</p>
 
-<pre class="brush: js notranslate">if(gamepadAPI.axesStatus[0].x &gt; 0.5) {
+<pre class="brush: js">if(gamepadAPI.axesStatus[0].x &gt; 0.5) {
   this.player.angle += 3;
   this.turret.angle += 3;
 }</pre>
@@ -216,7 +216,7 @@ window.addEventListener("gamepaddisconnected", gamepadAPI.disconnect);</pre>
 
 <p>The mapping type is now an enumerable object instead of a string:</p>
 
-<pre class="brush: js notranslate">enum GamepadMappingType {
+<pre class="brush: js">enum GamepadMappingType {
     "",
     "standard"
 };</pre>
@@ -229,4 +229,4 @@ window.addEventListener("gamepaddisconnected", gamepadAPI.disconnect);</pre>
 
 <h2 id="Summary">Summary</h2>
 
-<p>The Gamepad API is very easy to develop with. Now it's easier than ever to deliver a console-like experience to the browser without the need for any plugins. You can play the full version of the <a href="http://enclavegames.com/games/hungry-fridge/">Hungry Fridge</a> game directly in your browser, install it from the <a href="https://marketplace.firefox.com/app/hungry-fridge">Firefox Marketplace</a> or check the source code of the demo along with all the other resources on the <a href="https://end3r.github.io/Gamepad-API-Content-Kit/">Gamepad API Content Kit</a><a href="https://github.com/EnclaveGames/Hungry-Fridge">.</a></p>
+<p>The Gamepad API is very easy to develop with. Now it's easier than ever to deliver a console-like experience to the browser without the need for any plugins. You can play the full version of the <a href="https://enclavegames.com/games/hungry-fridge/">Hungry Fridge</a> game directly in your browser, install it from the <a href="https://marketplace.firefox.com/app/hungry-fridge">Firefox Marketplace</a> or check the source code of the demo along with all the other resources on the <a href="https://end3r.github.io/Gamepad-API-Content-Kit/">Gamepad API Content Kit</a><a href="https://github.com/EnclaveGames/Hungry-Fridge">.</a></p>

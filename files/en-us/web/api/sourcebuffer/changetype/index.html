@@ -13,13 +13,14 @@ tags:
 - SourceBuffer
 - Video
 - changeType
+browser-compat: api.SourceBuffer.changeType
 ---
 <div>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}{{Non-standard_Header}}</div>
 
-<p><span class="seoSummary">The <code><strong>changeType()</strong></code> method of the
+<p>The <code><strong>changeType()</strong></code> method of the
     {{domxref("SourceBuffer")}} interface sets the MIME type that future calls to
     {{domxref("SourceBuffer.appendBuffer", "appendBuffer()")}} should expect the new media
-    data to conform to.</span> This makes it possible to change codecs or container type
+    data to conform to. This makes it possible to change codecs or container type
   mid-stream.</p>
 
 <p>One scenario in which this is helpful is to support adapting the media source to
@@ -29,7 +30,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><em>sourceBuffer</em>.changeType(<em>type</em>);</pre>
+  class="brush: js"><em>sourceBuffer</em>.changeType(<em>type</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -69,7 +70,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SourceBuffer.changeType")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

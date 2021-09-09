@@ -2,12 +2,13 @@
 title: XPathResult.resultType
 slug: Web/API/XPathResult/resultType
 tags:
-- API
-- DOM XPath API
-- Property
-- Reference
-- XPath
-- XPathResult
+  - API
+  - DOM XPath API
+  - Property
+  - Reference
+  - XPath
+  - XPathResult
+browser-compat: api.XPathResult.resultType
 ---
 <div>{{APIRef("DOM XPath")}}</div>
 
@@ -19,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <var>resultType</var> = <var>result</var>.resultType;
+<pre class="brush: js">var <var>resultType</var> = <var>result</var>.resultType;
 </pre>
 
 <h3 id="Return_Value">Return value</h3>
@@ -29,12 +30,12 @@ tags:
 
 <h2 id="Constants">Constants</h2>
 
-<table class="standard-table">
+<table class="no-markdown">
   <thead>
     <tr>
-      <td class="header">Result Type Defined Constant</td>
-      <td class="header">Value</td>
-      <td class="header">Description</td>
+      <th>Result Type Defined Constant</th>
+      <th>Value</th>
+      <th>Description</th>
     </tr>
   </thead>
   <tbody>
@@ -116,11 +117,11 @@ tags:
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js">var xpath = "//div";
+<pre class="brush: js">var xpath = &quot;//div&quot;;
 var result = document.evaluate(xpath, document, null, XPathResult.ANY_TYPE, null);
-document.querySelector("output").textContent =
-  result.resultType &gt;= XPathResult.<code>UNORDERED_NODE_ITERATOR_TYPE &amp;&amp;
-  </code>result.resultType &lt;= XPathResult.<code>FIRST_ORDERED_NODE_TYPE</code>;
+document.querySelector(&quot;output&quot;).textContent =
+  result.resultType &gt;= XPathResult.UNORDERED_NODE_ITERATOR_TYPE &amp;&amp;
+  result.resultType &lt;= XPathResult.FIRST_ORDERED_NODE_TYPE;
 </pre>
 
 <h3 id="Result">Result</h3>
@@ -129,22 +130,8 @@ document.querySelector("output").textContent =
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName("DOM3 XPath", "xpath.html#XPathResult-resultType",
-        "XPathResult.resultType")}}</td>
-      <td>{{Spec2("DOM3 XPath")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.XPathResult.resultType")}}</p>
+<p>{{Compat}}</p>

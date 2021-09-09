@@ -9,10 +9,11 @@ tags:
 - Service Worker
 - Web Periodic Background Synchronization API
 - periodic sync
+browser-compat: api.PeriodicSyncEvent.tag
 ---
 <div>{{draft}}{{DefaultAPISidebar("Periodic Background Sync")}}</div>
 
-<p class="summary">The <strong><code>tag</code></strong> read-only property of the
+<p>The <strong><code>tag</code></strong> read-only property of the
   {{domxref("PeriodicSyncEvent")}} interface returns the developer-defined identifier for
   the {{domxref('PeriodicSyncEvent')}}. This is specified when calling the
   {{domxref('PeriodicSyncManager.register()')}} method of the
@@ -21,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">const <var>tag</var> = PeriodicSyncEvent.tag;</pre>
+<pre class="brush: js">const <var>tag</var> = PeriodicSyncEvent.tag;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -32,31 +33,18 @@ tags:
 <p>The following example demonstrates listening for a periodic sync event in the service
   worker, and accessing the <code>tag</code> property.</p>
 
-<pre class="brush: js notranslate">self.addEventListener('periodicsync', event =&gt; {
+<pre class="brush: js">self.addEventListener('periodicsync', event =&gt; {
   console.log(event.tag); // logs the events tag
 });
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Periodic Background Sync','#dom-periodicsyncevent-tag','tag')}}</td>
-      <td>{{Spec2('Periodic Background Sync')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.PeriodicSyncEvent.tag")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

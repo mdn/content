@@ -13,10 +13,13 @@ tags:
   - Video
   - WebRTC
   - WebRTC API
+browser-compat: api.MediaDeviceInfo
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">The <strong><code>MediaDeviceInfo</code></strong> interface contains information that describes a single media input or output device.</span> The list of devices obtained by calling {{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}} is an array of <code>MediaDeviceInfo</code> objects, one per media device.</p>
+<p>The <strong><code>MediaDeviceInfo</code></strong> interface contains information that describes a single media input or output device.</p>
+
+<p>The list of devices obtained by calling {{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}} is an array of <code>MediaDeviceInfo</code> objects, one per media device.</p>
 
 <h2 id="Properties">Properties</h2>
 
@@ -32,7 +35,7 @@ tags:
 </dl>
 
 <div class="note">
-<p>For security reasons, the <code>label</code> field is always blank unless an active media stream exists <em>or</em> the user has granted persistent permission for media device access. The set of device labels could otherwise be used as part of a fingerprinting mechanism to identify a user.</p>
+<p><strong>Note:</strong> For security reasons, the <code>label</code> field is always blank unless an active media stream exists <em>or</em> the user has granted persistent permission for media device access. The set of device labels could otherwise be used as part of a fingerprinting mechanism to identify a user.</p>
 </div>
 
 <h2 id="Methods">Methods</h2>
@@ -43,7 +46,7 @@ tags:
 
 <p>Here's an example that uses {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}} to get a list of devices.</p>
 
-<pre class="brush:js notranslate">if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
+<pre class="brush:js">if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
   console.log("enumerateDevices() not supported.");
   return;
 }
@@ -64,37 +67,24 @@ navigator.mediaDevices.enumerateDevices()
 
 <p>This might produce:</p>
 
-<pre class="brush: bash notranslate">videoinput: id = csO9c0YpAf274OuCPUA53CNE0YHlIr2yXCi+SqfBZZ8=
+<pre class="brush: bash">videoinput: id = csO9c0YpAf274OuCPUA53CNE0YHlIr2yXCi+SqfBZZ8=
 audioinput: id = RKxXByjnabbADGQNNZqLVLdmXlS0YkETYCIbg+XxnvM=
 audioinput: id = r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=</pre>
 
 <p>or if one or more media streams are active, or if persistent permissions have been granted:</p>
 
-<pre class="brush: bash notranslate">videoinput: FaceTime HD Camera (Built-in) id=csO9c0YpAf274OuCPUA53CNE0YHlIr2yXCi+SqfBZZ8=
+<pre class="brush: bash">videoinput: FaceTime HD Camera (Built-in) id=csO9c0YpAf274OuCPUA53CNE0YHlIr2yXCi+SqfBZZ8=
 audioinput: default (Built-in Microphone) id=RKxXByjnabbADGQNNZqLVLdmXlS0YkETYCIbg+XxnvM=
 audioinput: Built-in Microphone id=r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Capture', '#dom-mediadeviceinfo', 'MediaDevicesInfo')}}</td>
-   <td>{{Spec2('Media Capture')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MediaDeviceInfo")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

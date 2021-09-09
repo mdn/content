@@ -14,6 +14,7 @@ tags:
   - Stats
   - WebRTC
   - WebRTC API
+browser-compat: api.RTCIceCandidateStats
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
@@ -27,7 +28,7 @@ tags:
  <dt>{{domxref("RTCIceCandidateStats.address", "address")}} {{optional_inline}}</dt>
  <dd>A string containing the address of the candidate. This value may be an IPv4 address, an IPv6 address, or a fully-qualified domain name. This property was previously named <code>ip</code> and only accepted IP addresses.</dd>
  <dt>{{domxref("RTCIceCandidateStats.candidateType", "candidateType")}} {{optional_inline}}</dt>
- <dd>A string matching one of the values in the {{domxref("RTCIceCandidateType")}} enumerated type, indicating what kind of candidate the object provides statistics for.</dd>
+ <dd>A string matching one of the values in <a href="/en-US/docs/Web/API/RTCIceCandidate/type#Values"><code>RTCIceCandidate.type</code></a>, indicating what kind of candidate the object provides statistics for.</dd>
  <dt>{{domxref("RTCIceCandidateStats.deleted", "deleted")}} {{optional_inline}}</dt>
  <dd>A Boolean value indicating whether or not the candidate has been released or deleted; the default value is <code>false</code>. For local candidates, it's value is <code>true</code> if the candidate has been deleted or released. For host candidates, <code>true</code> means that any network resources (usually a network socket) associated with the candidate have already been released. For {{Glossary("TURN")}} candidates, the TURN allocation is no longer active for deleted candidates. This property is not present for remote candidates.</dd>
  <dt>{{domxref("RTCIceCandidateStats.networkType", "networkType")}} {{optional_inline}}</dt>
@@ -79,23 +80,8 @@ if (rtcStats &amp;&amp; rtcStats.type === "local-candidate") {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('WebRTC Statistics Identifiers', '#icecandidate-dict*', 'RTCIceCandidateStats') }}</td>
-   <td>{{ Spec2('WebRTC Statistics Identifiers') }}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCIceCandidateStats")}}</p>
+<p>{{Compat}}</p>

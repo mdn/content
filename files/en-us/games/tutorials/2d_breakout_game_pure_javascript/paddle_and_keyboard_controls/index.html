@@ -25,13 +25,13 @@ tags:
 
 <p>So, we need a paddle to hit the ball. Let's define a few variables for that. Add the following variables near the top of your code, beside your other variables:</p>
 
-<pre class="brush: js notranslate">var paddleHeight = 10;
+<pre class="brush: js">var paddleHeight = 10;
 var paddleWidth = 75;
 var paddleX = (canvas.width-paddleWidth) / 2;</pre>
 
 <p>Here we're defining the height and width of the paddle and its starting point on the <code>x</code> axis for use in calculations further on down the code. Let's create a function that will draw the paddle on the screen. Add the following just below your <code>drawBall()</code> function:</p>
 
-<pre class="brush: js notranslate">function drawPaddle() {
+<pre class="brush: js">function drawPaddle() {
     ctx.beginPath();
     ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
     ctx.fillStyle = "#0095DD";
@@ -52,17 +52,17 @@ var paddleX = (canvas.width-paddleWidth) / 2;</pre>
 
 <p>Pressed buttons can be defined and initialized with boolean variables like in the example. Add these lines somewhere near the rest of your variables:</p>
 
-<pre class="brush: js notranslate">var rightPressed = false;
+<pre class="brush: js">var rightPressed = false;
 var leftPressed = false;</pre>
 
 <p>The default value for both is <code>false</code> because at the beginning the control buttons are not pressed. To listen for key presses, we will set up two event listeners. Add the following lines just above the <code>setInterval()</code> line at the bottom of your JavaScript:</p>
 
-<pre class="brush: js notranslate">document.addEventListener("keydown", keyDownHandler, false);
+<pre class="brush: js">document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);</pre>
 
 <p>When the <code>keydown</code> event is fired on any of the keys on your keyboard (when they are pressed), the <code>keyDownHandler()</code> function will be executed. The same pattern is true for the second listener: <code>keyup</code> events will fire the <code>keyUpHandler()</code> function (when the keys stop being pressed). Add these to your code now, below the <code>addEventListener()</code> lines:</p>
 
-<pre class="brush: js notranslate">function keyDownHandler(e) {
+<pre class="brush: js">function keyDownHandler(e) {
     if(e.key == "Right" || e.key == "ArrowRight") {
         rightPressed = true;
     }
@@ -88,7 +88,7 @@ function keyUpHandler(e) {
 
 <p>We've now set up the variables for storing the info about the pressed keys, event listeners, and relevant functions. Next we'll get into the code to use all of the things we just set up and to move the paddle on the screen. Inside the <code>draw()</code> function, we will check if the left or right cursor keys are pressed when each frame is rendered. Our code might look like this:</p>
 
-<pre class="brush: js notranslate">if(rightPressed) {
+<pre class="brush: js">if(rightPressed) {
     paddleX += 7;
 }
 else if(leftPressed) {
@@ -97,7 +97,7 @@ else if(leftPressed) {
 
 <p>If the left cursor is pressed, the paddle will move seven pixels to the left, and if the right cursor is pressed, the paddle will move seven pixels to the right. This currently works, but the paddle disappears off the edge of the canvas if we hold either key for too long. We could improve that and move the paddle only within the boundaries of the canvas by changing the code like this:</p>
 
-<pre class="brush: js notranslate">if(rightPressed) {
+<pre class="brush: js">if(rightPressed) {
     paddleX += 7;
     if (paddleX + paddleWidth &gt; canvas.width){
         paddleX = canvas.width - paddleWidth;
@@ -116,7 +116,7 @@ else if(leftPressed) {
 
 <p>The only thing left to do now is call the <code>drawPaddle()</code> function from within the <code>draw()</code> function, to actually print it on the screen. Add the following line inside your <code>draw()</code> function, just below the line that calls <code>drawBall()</code>:</p>
 
-<pre class="brush: js notranslate">drawPaddle();
+<pre class="brush: js">drawPaddle();
 </pre>
 
 <h2 id="Compare_your_code">Compare your code</h2>

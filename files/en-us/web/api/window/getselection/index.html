@@ -2,13 +2,14 @@
 title: Window.getSelection()
 slug: Web/API/Window/getSelection
 tags:
-- API
-- HTML DOM
-- Method
-- Reference
-- Selection
-- Selection API
-- Window
+  - API
+  - HTML DOM
+  - Method
+  - Reference
+  - Selection
+  - Selection API
+  - Window
+browser-compat: api.Window.getSelection
 ---
 <div>{{ ApiRef() }}</div>
 
@@ -19,7 +20,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><em>selection</em> = <em>window</em>.getSelection();</pre>
+  class="brush: js"><em>selection</em> = <em>window</em>.getSelection();</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -65,7 +66,7 @@ tags:
   <code>Selection</code> object as a string, call its <code>toString()</code> method
   directly:</p>
 
-<pre class="brush:js;gutter:false;">var selectedText = selObj.toString();</pre>
+<pre class="brush: js">var selectedText = selObj.toString();</pre>
 
 <ul>
   <li><code>selObj</code> is a <code>Selection</code> object.</li>
@@ -88,32 +89,16 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("Selection API", "#extensions-to-window-interface",
-        "Window.getSelection()")}}</td>
-      <td>{{Spec2("Selection API")}}</td>
-      <td>New spec.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Window.getSelection")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/API/Selection_API">Selection API</a></li>
+  <li><a href="/en-US/docs/Web/API/Selection">Selection API</a></li>
   <li>{{domxref("Selection")}}</li>
   <li>{{domxref("Range")}}</li>
   <li>{{domxref("Document.getSelection()")}}</li>

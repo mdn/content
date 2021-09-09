@@ -10,6 +10,7 @@ tags:
   - Reference
   - WebExtensions
   - setImageData
+browser-compat: webextensions.api.clipboard.setImageData
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -48,15 +49,13 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("webextensions.api.clipboard.setImageData", 10)}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Examples">Examples</h2>
 
 <p>Copy a remote image:</p>
 
-<pre class="notranslate brush: js" id="ct-71"><span class="quote">// requires:
+<pre class="brush: js" id="ct-71"><span class="quote">// requires:
 // * the host permission for "<a href="https://cdn.mdn.mozilla.net/" rel="nofollow">https://cdn.mdn.mozilla.net/</a>*"
 // * the API permission "clipboardWrite"
 
@@ -66,7 +65,7 @@ fetch('<a href="https://cdn.mdn.mozilla.net/static/img/favicon144.png" rel="nofo
 
 <p><span class="quote">Copy an image that was bundled with the extension:</span></p>
 
-<pre class="notranslate brush: js" id="ct-70">// requires <span class="quote">the API permission </span>"clipboardWrite"
+<pre class="brush: js" id="ct-70">// requires <span class="quote">the API permission </span>"clipboardWrite"
 
 fetch(browser.runtime.getURL('image.png'))
 .then(response =&gt; response.arrayBuffer())

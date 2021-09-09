@@ -24,7 +24,7 @@ tags:
 
 <p>We can change the ball's velocity depending on the exact spot it hits the paddle, by modifying the <code>x</code> velocity each time the <code>ballHitPaddle()</code> function is run using a line along the lines of the below. Add this new line to your code now, and try it out.</p>
 
-<pre class="brush: js notranslate">function ballHitPaddle(ball, paddle) {
+<pre class="brush: js">function ballHitPaddle(ball, paddle) {
     ball.animations.play('wobble');
     ball.body.velocity.x = -1*5*(paddle.x-ball.x);
 }</pre>
@@ -53,7 +53,7 @@ tags:
  <li>Create levels with different brick layouts.</li>
 </ul>
 
-<p>Be sure to check the ever growing list of <a href="http://examples.phaser.io/">examples</a> and the <a href="http://docs.phaser.io/">official documentation</a>, and visit the <a href="http://www.html5gamedevs.com/forum/14-phaser/">HTML5 Gamedevs forums</a> if you ever need any help.</p>
+<p>Be sure to check the ever growing list of <a href="https://examples.phaser.io/">examples</a> and the <a href="http://docs.phaser.io/">official documentation</a>, and visit the <a href="https://www.html5gamedevs.com/forum/14-phaser/">HTML5 Gamedevs forums</a> if you ever need any help.</p>
 
 <p>You could also go back to <a href="/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser">this tutorial series' index page</a>.</p>
 

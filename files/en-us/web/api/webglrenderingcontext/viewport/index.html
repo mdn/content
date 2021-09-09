@@ -7,6 +7,7 @@ tags:
 - Reference
 - WebGL
 - WebGLRenderingContext
+browser-compat: api.WebGLRenderingContext.viewport
 ---
 <div>{{APIRef("WebGL")}}</div>
 
@@ -17,23 +18,23 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var><em>void gl</em>.viewport</var><var>(x, y, width, height);</var>
+<pre class="brush: js"><var><em>void gl</em>.viewport</var><var>(x, y, width, height);</var>
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
   <dt><code>x</code></dt>
-  <dd>A {{domxref("GLint")}} specifying the horizontal coordinate for the lower left
+  <dd>A {{domxref("WebGL_API/Types", "GLint")}} specifying the horizontal coordinate for the lower left
     corner of the viewport origin. Default value: 0.</dd>
   <dt><code>y</code></dt>
-  <dd>A {{domxref("GLint")}} specifying the vertical coordinate for the lower left corner
+  <dd>A {{domxref("WebGL_API/Types", "GLint")}} specifying the vertical coordinate for the lower left corner
     of the viewport origin. Default value: 0.</dd>
   <dt>width</dt>
-  <dd>A non-negative {{domxref("Glsizei")}} specifying the width of the viewport. Default
+  <dd>A non-negative {{domxref("WebGL_API/Types", "GLsizei")}} specifying the width of the viewport. Default
     value: width of the canvas.</dd>
   <dt>height</dt>
-  <dd>A non-negative {{domxref("Glsizei")}} specifying the height of the viewport. Default
+  <dd>A non-negative {{domxref("WebGL_API/Types", "GLsizei")}} specifying the height of the viewport. Default
     value: height of the canvas.</dd>
 </dl>
 
@@ -71,34 +72,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebGL', "#5.14.4", "viewport")}}</td>
-      <td>{{Spec2('WebGL')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('OpenGL ES 2.0', "glViewport.xml", "glViewport")}}</td>
-      <td>{{Spec2('OpenGL ES 2.0')}}</td>
-      <td>Man page of the OpenGL API.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
-
-<p>{{Compat("api.WebGLRenderingContext.viewport")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

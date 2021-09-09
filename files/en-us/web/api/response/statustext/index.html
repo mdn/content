@@ -2,13 +2,14 @@
 title: Response.statusText
 slug: Web/API/Response/statusText
 tags:
-- API
-- Experimental
-- Fetch
-- Property
-- Reference
-- Response
-- statusText
+  - API
+  - Experimental
+  - Fetch
+  - Property
+  - Reference
+  - Response
+  - statusText
+browser-compat: api.Response.statusText
 ---
 <div>{{APIRef("Fetch")}}</div>
 
@@ -19,11 +20,11 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-	class="brush: js notranslate">var <var>myStatusText</var> = <var>response</var>.statusText;</pre>
+	class="brush: js">var <var>myStatusText</var> = <var>response</var>.statusText;</pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A {{domxref("ByteString")}}.</p>
+<p>A {{jsxref("String")}}.</p>
 
 <p>The default value is "". Note that HTTP/2 <a
 		href="https://fetch.spec.whatwg.org/#concept-response-status-message">does not
@@ -37,8 +38,8 @@ tags:
 		href="https://mdn.github.io/fetch-examples/fetch-response/">Fetch Response
 		live</a>) we create a new {{domxref("Request")}} object using the
 	{{domxref("Request.Request","Request()")}} constructor, passing it a JPG path. We then
-	fetch this request using {{domxref("GlobalFetch.fetch","fetch()")}}, extract a blob
-	from the response using {{domxref("Body.blob")}}, create an object URL out of it using
+	fetch this request using {{domxref("fetch()")}}, extract a blob
+	from the response using {{domxref("Response.blob")}}, create an object URL out of it using
 	{{domxref("URL.createObjectURL")}}, and display this in an {{htmlelement("img")}}.</p>
 
 <p>Note that at the top of the <code>fetch()</code> block we log the response
@@ -58,30 +59,17 @@ fetch(myRequest).then(function(response) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('Fetch','#dom-response-statustext','statusText')}}</td>
-			<td>{{Spec2('Fetch')}}</td>
-			<td>Initial definition</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Response.statusText")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
-	<li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a>
+	<li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
+	<li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a>
 	</li>
 	<li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
 </ul>

@@ -2,19 +2,20 @@
 title: ServiceWorkerMessageEvent.source
 slug: Web/API/ServiceWorkerMessageEvent/source
 tags:
-- API
-- Deprecated
-- Experimental
-- Property
-- Reference
-- Service Workers
-- ServiceWorkerMessageEvent
-- source
+  - API
+  - Deprecated
+  - Experimental
+  - Property
+  - Reference
+  - Service Workers
+  - ServiceWorkerMessageEvent
+  - source
+browser-compat: api.ServiceWorkerMessageEvent.source
 ---
 <p>{{APIRef("Service Workers API")}}{{deprecated_header}}</p>
 
 <div class="warning">
-  <p><strong>Important</strong>: In modern browsers, this property has been deprecated.
+  <p><strong>Warning:</strong> In modern browsers, this property has been deprecated.
     Service worker messages will now use the {{domxref("MessageEvent")}} interface, for
     consistency with other web messaging features.</p>
 </div>
@@ -27,7 +28,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var mySource = ServiceWorkerMessageEventInstance.source;</pre>
+  class="brush: js">var mySource = ServiceWorkerMessageEventInstance.source;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -56,12 +57,12 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ServiceWorkerMessageEvent.source")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service
+  <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service
       Workers</a></li>
   <li><a class="external external-icon" href="https://github.com/mdn/sw-test">Service
       workers basic code example</a></li>

@@ -85,7 +85,7 @@ tags:
 <h3 id="InterfacesAPIsDOM">Interfaces/APIs/DOM</h3>
 
 <ul>
- <li>The Fetch API {{domxref("WindowOrWorkerGlobalScope/fetch", "fetch()")}} method has been implemented ({{bug(1039846)}}).</li>
+ <li>The Fetch API {{domxref("fetch()")}} method has been implemented ({{bug(1039846)}}).</li>
  <li>{{domxref("BroadcastChannel")}} API has been implemented and is available in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a> ({{bug(966439)}} and {{bug(1121420)}}).</li>
  <li>The Console API is now available in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</li>
  <li>{{domxref("CanvasRenderingContext2D.clearHitRegions()")}} has been implemented ({{bug(1119527)}}).</li>
@@ -94,7 +94,7 @@ tags:
  <li>{{domxref("KeyboardEvent.code")}} now supports special keys on Sun keyboards on Linux, Android, and Firefox OS. ({{bug(1020139)}})</li>
  <li>The {{domxref("TextEncoder.TextEncoder", "TextEncoder()")}} constructor has been changed to match the spec: when an invalid parameter is passed, the {{exception("RangeError")}} exception is now raised, rather than the erroneous {{exception("TypeError")}} ({{bug(1125766)}}).</li>
  <li>The User Timing API, adding {{domxref("Performance.mark()")}}, {{domxref("Performance.clearMarks()")}}, {{domxref("Performance.measure()")}}, and {{domxref("Performance.clearMeasures()")}} has been implemented ({{bug(782751)}}).</li>
- <li>The prefixed version of {{domxref("WindowOrWorkerGlobalScope/indexedDB", "indexedDB")}}, <code>mozIndexedDB</code> has been removed ({{bug(975699)}}).</li>
+ <li>The prefixed version of {{domxref("indexedDB")}}, <code>mozIndexedDB</code> has been removed ({{bug(975699)}}).</li>
  <li>The {{event("DOMContentLoaded")}} event is no longer cancelable ({{bug(1134559)}}).</li>
  <li>You can now use <a href="/en-US/docs/Web/API/WebSockets_API">WebSockets</a> in <a href="/en-US/docs/Web/API/Web_Workers_API">Workers</a> ({{bug(504553)}}).</li>
  <li>The {{domxref("XMLHttpRequest.responseType")}} and {{domxref("XMLHttpRequest.withCredentials")}} properties can now be set before calling {{domxref("XMLHttpRequest.open()")}} ({{bug(707484)}}).</li>
@@ -170,12 +170,6 @@ tags:
  <li><code>"@mozilla.org/network/atomic-file-output-stream;1"</code> and <code>"@mozilla.org/network/safe-file-output-stream;1"</code> now throw an exception if <code>PR_APPEND</code> is passed without <code>PR_TRUNCATE</code> ({{bug(1117580)}}).</li>
  <li>{{ interface("nsICompositionStringSynthesizer") }} and {{ifmethod("nsIDOMWindowUtils", "sendCompositionEvent")}} have been removed. Instead, use {{ interface("nsITextInputProcessor") }}. ({{bug(917322)}})</li>
  <li><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils#sendKeyEvent%28%29">nsIDOMWindowUtils.sendKeyEvent()</a></code> is now deprecated. Instead, use {{ interface("nsITextInputProcessor") }} ({{bug(1119609)}}).</li>
-</ul>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="https://www.fxsitecompat.com/en-US/versions/38/">Site Compatibility for Firefox 38</a></li>
 </ul>
 
 <h2 id="Older_versions">Older versions</h2>

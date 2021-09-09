@@ -21,7 +21,7 @@ tags:
 <p>To make the web site installable, it needs the following things in place:</p>
 
 <ul>
- <li>A web manifest, with the <a href="/en-US/Apps/Progressive/Add_to_home_screen#Manifest">correct fields filled in</a></li>
+ <li>A web manifest, with the <a href="/en-US/docs/Web/Progressive_web_apps/Add_to_home_screen#manifest">correct fields filled in</a></li>
  <li>The web site to be served from a secure (HTTPS) domain</li>
  <li>An icon to represent the app on the device</li>
  <li>A <a href="/en-US/docs/Web/API/Service_Worker_API">service worker</a> registered, to allow the app to work offline (this is required only by Chrome for Android currently)</li>
@@ -39,7 +39,7 @@ tags:
 
 <p>The <code>js13kpwa.webmanifest</code> file of the<a href="https://mdn.github.io/pwa-examples/js13kpwa/"> js13kPWA</a> web app is included in the {{HTMLElement("head")}} block of the <code>index.html</code> file using the following line of code:</p>
 
-<pre class="brush: html notranslate">&lt;link rel="manifest" href="js13kpwa.webmanifest"&gt;</pre>
+<pre class="brush: html">&lt;link rel="manifest" href="js13kpwa.webmanifest"&gt;</pre>
 
 <div class="note">
 <p>There are a few common kinds of manifest file that have been used in the past: <code>manifest.webapp</code> was popular in Firefox OS app manifests, and many use <code>manifest.json</code> for web manifests as the contents are organized in a JSON structure. However, the <code>.webmanifest</code> file format is explicitly mentioned in the <a href="https://w3c.github.io/manifest/">W3C manifest specification</a>, so that's what we'll use here.</p>
@@ -47,7 +47,7 @@ tags:
 
 <p>The content of the file looks like this:</p>
 
-<pre class="brush: json notranslate">{
+<pre class="brush: json">{
   "name": "js13kGames Progressive Web App",
   "short_name": "js13kPWA",
   "description": "Progressive Web App that lists games submitted to the A-Frame category in the js13kGames 2017 competition.",
@@ -92,19 +92,19 @@ tags:
 
 <p>When the user visits the PWA with a supporting mobile browser, it should display a notification (such as a banner or dialog box) indicating that it's possible to install the app as a PWA.</p>
 
-<p><img alt="Add to Home screen popup of js13kPWA." src="https://mdn.mozillademos.org/files/15928/js13kpwa-icon.png" style="border-style: solid; border-width: 1px; display: block; height: 640px; margin: 0px auto; width: 360px;"></p>
+<p><img alt="Add to Home screen popup of js13kPWA." src="js13kpwa-icon.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>After the user indicates they wish to proceed with installation, the install banner is shown. That banner is automatically created by the browser, based on the information from the manifest file. For instance, the prompt includes the app's name and icon.</p>
 
-<p><img alt="Install banner of js13kPWA." src="https://mdn.mozillademos.org/files/15927/js13kpwa-banner.png" style="border-style: solid; border-width: 1px; display: block; height: 640px; margin: 0px auto; width: 360px;"></p>
+<p><img alt="Install banner of js13kPWA." src="js13kpwa-banner.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>If the user clicks the button, there is a final step showing what the app will look like, and letting the user choose if they definitely want to add the app.</p>
 
-<p><img alt="Add to Home screen popup of js13kPWA." src="https://mdn.mozillademos.org/files/15926/js13kpwa-add.png" style="border-style: solid; border-width: 1px; display: block; height: 640px; margin: 0px auto; width: 360px;"></p>
+<p><img alt="Add to Home screen popup of js13kPWA." src="js13kpwa-add.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>When confirmed, the app will be installed on the home screen.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15834/js13kpwa-installed.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="js13kpwa-installed.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>Now the user can launch and use the web app just like any other application on their device. Depending on the device and operating system, the web app's icon may be badged with a small icon that indicates that it's a web app. In the screen shot above, for example, the app has a tiny Firefox icon, indicating that it's a web app that uses the Firefox runtime.</p>
 
@@ -112,7 +112,7 @@ tags:
 
 <p>In some browsers, a splash screen is also generated from the information in the manifest, which is shown when the PWA is launched and while it's being loaded started up.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15835/js13kpwa-splash.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="js13kpwa-splash.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>The icon and the theme and background colors are used to create this screen.</p>
 
@@ -120,7 +120,7 @@ tags:
 
 <p>In this article, we learned about how we can make PWAs installable with a properly-configured web manifest, and how the user can then install the PWA with the "add to home screen" feature of their browser.</p>
 
-<p>For more information on a2hs, be sure to read our <a href="/en-US/docs/Web/Apps/Progressive/Add_to_home_screen">Add to Home screen guide</a>. Browser support is currently limited to Firefox for Android 58+, Mobile Chrome and Android Webview 31+, and Opera for Android 32+, but this should improve in the near future.</p>
+<p>For more information on a2hs, be sure to read our <a href="/en-US/docs/Web/Progressive_web_apps/Add_to_home_screen">Add to Home screen guide</a>. Browser support is currently limited to Firefox for Android 58+, Mobile Chrome and Android Webview 31+, and Opera for Android 32+, but this should improve in the near future.</p>
 
 <p>Now let's move to the last piece of the PWA puzzle: using push notifications to share announcements with the user, and to help the user re-engage with your app.</p>
 

@@ -2,21 +2,24 @@
 title: URL.createObjectURL()
 slug: Web/API/URL/createObjectURL
 tags:
-- API
-- Blob
-- DOM
-- File
-- Method
-- Object URL
-- URL
-- URL API
-- createObjectURL
+  - API
+  - Blob
+  - DOM
+  - File
+  - Method
+  - Object URL
+  - URL
+  - URL API
+  - createObjectURL
+browser-compat: api.URL.createObjectURL
 ---
 <div>{{APIRef("URL API")}}</div>
 
-<p><span class="seoSummary">The <strong><code>URL.createObjectURL()</code></strong> static
+<p>The <strong><code>URL.createObjectURL()</code></strong> static
     method creates a {{domxref("DOMString")}} containing a URL representing the object
-    given in the parameter.</span> The URL lifetime is tied to the {{domxref("document")}}
+    given in the parameter.</p>
+
+<p>The URL lifetime is tied to the {{domxref("document")}}
   in the window on which it was created. The new object URL represents the specified
   {{domxref("File")}} object or {{domxref("Blob")}} object.</p>
 
@@ -33,7 +36,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">const <em>objectURL</em> = URL.createObjectURL(<em>object</em>)
+<pre class="brush: js">const <em>objectURL</em> = URL.createObjectURL(<em>object</em>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -52,7 +55,7 @@ tags:
 <h2 id="Examples">Examples</h2>
 
 <p>See <a
-    href="/en-US/docs/Web/API/File/Using_files_from_web_applications#Example_Using_object_URLs_to_display_images">Using
+    href="/en-US/docs/Web/API/File/Using_files_from_web_applications#example_using_object_urls_to_display_images">Using
     object URLs to display images</a>.</p>
 
 <h2 id="Usage_notes">Usage notes</h2>
@@ -75,7 +78,7 @@ tags:
   support for doing this.</p>
 
 <div class="warning">
-  <p><strong>Important:</strong> If you still have code that relies on
+  <p><strong>Warning:</strong> If you still have code that relies on
     {{domxref("URL.createObjectURL", "createObjectURL()")}} to attach streams to media
     elements, you need to update your code to set {{domxref("HTMLMediaElement.srcObject",
     "srcObject")}} to the <code>MediaStream</code> directly.</p>
@@ -83,34 +86,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('File API', '#dfn-createObjectURL', 'createObjectURL()')}}</td>
-      <td>{{Spec2('File API')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('Media Source Extensions', '#dom-url-createobjecturl', 'URL')}}</td>
-      <td>{{Spec2('Media Source Extensions')}}</td>
-      <td>
-        <p>MediaSource extension.</p>
-
-        <p>Older versions of this specification used <code>createObjectURL()</code> for
-          {{domxref("MediaStream")}} objects; this is no longer supported.</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.URL.createObjectURL")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -118,7 +98,7 @@ tags:
   <li><a href="/en-US/docs/Web/API/File/Using_files_from_web_applications"
       title="Using files from web applications">Using files from web applications</a></li>
   <li><a
-      href="/en-US/docs/Web/API/File/Using_files_from_web_applications#Example_Using_object_URLs_to_display_images">Using
+      href="/en-US/docs/Web/API/File/Using_files_from_web_applications#example_using_object_urls_to_display_images">Using
       object URLs to display images</a></li>
   <li>{{domxref("URL.revokeObjectURL()")}}</li>
   <li>{{domxref("HTMLMediaElement.srcObject")}}</li>

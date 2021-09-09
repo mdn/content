@@ -11,6 +11,7 @@ tags:
   - WebExtensions
   - onHeadersReceived
   - webRequest
+browser-compat: webextensions.api.webRequest.onHeadersReceived
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -185,15 +186,13 @@ browser.webRequest.onHeadersReceived.hasListener(listener)
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("webextensions.api.webRequest.onHeadersReceived", 10)}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Examples">Examples</h2>
 
 <p>This code sets an extra cookie when requesting a resource from the target URL:</p>
 
-<pre class="notranslate brush: js">var targetPage = "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
+<pre class="brush: js">var targetPage = "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
 
 // Add the new header to the original array,
 // and return it.
@@ -216,7 +215,7 @@ browser.webRequest.onHeadersReceived.addListener(
 
 <p>This code does the same thing the previous example, except that the listener is asynchronous, returning a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> which is resolved with the new headers:</p>
 
-<pre class="notranslate brush: js">var targetPage = "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
+<pre class="brush: js">var targetPage = "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
 
 // Return a Promise that sets a timer.
 // When the timer fires, resolve the promise with

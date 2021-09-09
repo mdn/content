@@ -2,22 +2,23 @@
 title: DOMTokenList.supports()
 slug: Web/API/DOMTokenList/supports
 tags:
-- API
-- DOM
-- Method
-- Reference
+  - API
+  - DOM
+  - Method
+  - Reference
+browser-compat: api.DOMTokenList.supports
 ---
 <p>{{APIRef("DOM")}}{{SeeCompatTable}}</p>
 
-<p><span class="seoSummary">The <strong><code>supports()</code></strong> method of the
+<p>The <strong><code>supports()</code></strong> method of the
     {{domxref("DOMTokenList")}} interface returns <code>true</code> if a
     given <code><var>token</var></code> is in the associated attribute's supported tokens.
-    This method is intended to support feature detection.</span></p>
+    This method is intended to support feature detection.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">let <var>trueOrFalse</var> = <var>element</var>.supports(<var>token</var>)</pre>
+  class="brush: js">let <var>trueOrFalse</var> = <var>element</var>.supports(<var>token</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -28,11 +29,11 @@ tags:
 
 <h3 id="Returns">Returns</h3>
 
-<p>A {{jsxref("Boolean")}} indicating whether the token was found.</p>
+<p>A boolean value indicating whether the token was found.</p>
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js"><code>let iframe = document.getElementById('display');
+<pre class="brush: js">let iframe = document.getElementById('display');
 
 if (iframe.sandbox.supports('an-upcoming-feature')) {
   // support code for mystery future feature
@@ -45,27 +46,12 @@ if (iframe.sandbox.supports('allow-scripts')) {
   //
   // (NOTE: This feature is well-supported; this is just an example!)
   //
-}</code></pre>
+}</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Credential Management')}}</td>
-      <td>{{Spec2('Credential Management')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.DOMTokenList.supports")}}</p>
+<p>{{Compat}}</p>

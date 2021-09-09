@@ -9,6 +9,7 @@ tags:
   - addTrack
   - addTrack Event
   - events
+browser-compat: api.TextTrackList.addTrack_event
 ---
 <div>{{APIRef}}</div>
 
@@ -39,7 +40,7 @@ tags:
 
 <p>Using <code>addEventListener()</code>:</p>
 
-<pre class="brush: js notranslate">const mediaElement = document.querySelector('video, audio');
+<pre class="brush: js">const mediaElement = document.querySelector('video, audio');
 
 mediaElement.textTracks.addEventListener('addtrack', (event) =&gt; {
   console.log(`Text track: ${event.track.label} added`);
@@ -47,7 +48,7 @@ mediaElement.textTracks.addEventListener('addtrack', (event) =&gt; {
 
 <p>Using the <code>onaddtrack</code> event handler property:</p>
 
-<pre class="brush: js notranslate">const mediaElement = document.querySelector('video, audio');
+<pre class="brush: js">const mediaElement = document.querySelector('video, audio');
 
 mediaElement.textTracks.onaddtrack = (event) =&gt; {
   console.log(`Text track: ${event.track.label} added`);
@@ -55,22 +56,11 @@ mediaElement.textTracks.onaddtrack = (event) =&gt; {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'media.html#event-media-addtrack', 'addtrack')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.TextTrackList.addTrack_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -80,5 +70,5 @@ mediaElement.textTracks.onaddtrack = (event) =&gt; {
  <li>This event on <code><a href="/en-US/docs/Web/API/AudioTrackList">AudioTrackList</a></code> targets: <code><a href="/en-US/docs/Web/API/AudioTrackList/addtrack_event">addtrack</a></code></li>
  <li>This event on <code><a href="/en-US/docs/Web/API/MediaStream">MediaStream</a></code> targets: <code><a href="/en-US/docs/Web/API/MediaStream/addtrack_event">addtrack</a></code></li>
  <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Streams API</a></li>
- <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
+ <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
 </ul>

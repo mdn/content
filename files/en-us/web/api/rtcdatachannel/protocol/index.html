@@ -2,24 +2,23 @@
 title: RTCDataChannel.protocol
 slug: Web/API/RTCDataChannel/protocol
 tags:
-- Experimental
-- NeedsExample
-- Property
-- Protocol
-- RTCDataChannel
-- Read-only
-- Reference
-- WebRTC
+  - Property
+  - Protocol
+  - RTCDataChannel
+  - Read-only
+  - Reference
+  - WebRTC
+browser-compat: api.RTCDataChannel.protocol
 ---
-<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
+<p>{{APIRef("WebRTC")}}</p>
 
 <p>The read-only <code>RTCDataChannel</code> property
-  <code><strong>protocol</strong></code> returns a {{Domxref("DOMString")}} containing the
+  <code><strong>protocol</strong></code> returns a string containing the
   name of the subprotocol in use. If no protocol was specified when the data channel was
-  created, then this property's value is "" (the empty string).</p>
+  created, then this property's value is the empty string (<code>""</code>).</p>
 
 <div class="note">
-  <p>The permitted values of this property are defined by the Web site or app using the
+  <p><strong>Note:</strong> The permitted values of this property are defined by the Web site or app using the
     data channel.</p>
 </div>
 
@@ -29,7 +28,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>subProtocol</em> = <em>aDataChannel</em>.protocol;
+<pre class="brush: js">var <em>subProtocol</em> = <em>aDataChannel</em>.protocol;
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -57,32 +56,16 @@ function handleChannelMessage(dataChannel, msg) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('WebRTC 1.0', '#dom-datachannel-protocol',
-        'RTCDataChannel.protocol') }}</td>
-      <td>{{ Spec2('WebRTC 1.0') }}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCDataChannel.protocol")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
+  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
   <li>{{domxref("RTCDataChannel")}}</li>
   <li>{{domxref("RTCPeerConnection.createDataChannel()")}}</li>
 </ul>

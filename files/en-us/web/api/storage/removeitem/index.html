@@ -7,6 +7,7 @@ tags:
 - Reference
 - Storage
 - Web Storage
+browser-compat: api.Storage.removeItem
 ---
 <div>{{APIRef("Web Storage API")}}</div>
 
@@ -22,7 +23,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var>storage</var>.removeItem(<var>keyName</var>);</pre>
+  class="brush: js"><var>storage</var>.removeItem(<var>keyName</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -40,7 +41,7 @@ tags:
 <p>The following function creates three data items inside local storage, then removes the
   <code>image</code> data item.</p>
 
-<pre class="brush: js notranslate">function populateStorage() {
+<pre class="brush: js">function populateStorage() {
   localStorage.setItem('bgcolor', 'red');
   localStorage.setItem('font', 'Helvetica');
   localStorage.setItem('image', 'myCat.png');
@@ -50,42 +51,26 @@ tags:
 
 <p>We can do the same for the session storage.</p>
 
-<pre class="brush: js notranslate">function populateStorage() {
-  <code>sessionStorage</code>.setItem('bgcolor', 'red');
-  <code>sessionStorage</code>.setItem('font', 'Helvetica');
-  <code>sessionStorage</code>.setItem('image', 'myCat.png');
+<pre class="brush: js">function populateStorage() {
+  sessionStorage.setItem('bgcolor', 'red');
+  sessionStorage.setItem('font', 'Helvetica');
+  sessionStorage.setItem('image', 'myCat.png');
 
-  <code>sessionStorage</code>.removeItem('image');
+  sessionStorage.removeItem('image');
 }</pre>
 
 <div class="note">
-  <p><strong>Note</strong>: To see this used within a real world example, see our <a
+  <p><strong>Note:</strong> To see this used within a real world example, see our <a
       href="https://mdn.github.io/dom-examples/web-storage/">Web Storage Demo</a>.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', 'webstorage.html#dom-storage-removeitem',
-        'Storage.removeItem')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Storage.removeItem")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

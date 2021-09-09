@@ -14,12 +14,15 @@ tags:
 - XHR Header
 - XMLHttpRequest
 - getResponseHeader
+browser-compat: api.XMLHttpRequest.getResponseHeader
 ---
 <div>{{APIRef('XMLHttpRequest')}}</div>
 
-<p><span class="seoSummary">The {{DOMxRef("XMLHttpRequest")}} method
+<p>The {{DOMxRef("XMLHttpRequest")}} method
     <strong><code>getResponseHeader()</code></strong> returns the string containing the
-    text of a particular header's value.</span> If there are multiple response headers
+    text of a particular header's value.</p>
+
+<p>If there are multiple response headers
   with the same name, then their values are returned as a single concatenated string,
   where each value is separated from the previous one by a pair of comma and space. The
   <code>getResponseHeader()</code> method returns the value as a UTF byte sequence.</p>
@@ -35,19 +38,19 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <var>myHeader</var> = <var>XMLHttpRequest</var>.getResponseHeader(<var>headerName</var>);</pre>
+  class="brush: js">var <var>myHeader</var> = <var>XMLHttpRequest</var>.getResponseHeader(<var>headerName</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
   <dt><var>headerName</var></dt>
-  <dd>A {{DOMxRef("ByteString")}} indicating the name of the header you want to return the
+  <dd>A {{jsxref("String")}} indicating the name of the header you want to return the
     text value of.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{DOMxRef("ByteString")}} representing the header's text value, or <code>null</code>
+<p>A {{jsxref("String")}} representing the header's text value, or <code>null</code>
   if either the response has not yet been received or the header doesn't exist in the
   response.</p>
 
@@ -75,27 +78,11 @@ client.onreadystatechange = function() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("XMLHttpRequest", "#dom-xmlhttprequest-getresponseheader",
-        "getResponseHeader()")}}</td>
-      <td>{{Spec2("XMLHttpRequest")}}</td>
-      <td>WHATWG living standard</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("api.XMLHttpRequest.getResponseHeader")}}</div>
+<div>{{Compat}}</div>
 
 <h2 id="See_also">See also</h2>
 

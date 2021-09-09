@@ -11,17 +11,18 @@ tags:
 - Reference
 - Service Workers
 - getKey
+browser-compat: api.PushSubscription.getKey
 ---
 <p>{{SeeCompatTable}}{{APIRef("Push API")}}</p>
 
 <p>The <code>getKey()</code> method of the {{domxref("PushSubscription")}} interface
-  returns an {{domxref("ArrayBuffer")}} representing a client public key, which can then
+  returns an {{jsxref("ArrayBuffer")}} representing a client public key, which can then
   be sent to a server and used in encrypting push message data.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><span class="pl-k">var</span> key <span class="pl-k">=</span> subscription.getKey(<span class="pl-s"><span class="pl-pds">name</span></span>);</pre>
+  class="brush: js">const key = subscription.getKey(name);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -35,16 +36,16 @@ tags:
           curve Diffie–Hellman</a> public key on the P-256 curve (that is, the NIST
         secp256r1 elliptic curve).  The resulting key is an uncompressed point in ANSI
         X9.62 format.</li>
-      <li><code>auth</code>: An authentication secret, as described in<span class="h1"> <a
-            href="https://tools.ietf.org/html/draft-ietf-webpush-encryption-08">Message
-            Encryption for Web Push</a>.</span></li>
+      <li><code>auth</code>: An authentication secret, as described in <a
+            href="https://datatracker.ietf.org/doc/html/draft-ietf-webpush-encryption-08">Message
+            Encryption for Web Push</a>.</li>
     </ul>
   </dd>
 </dl>
 
 <h3 id="Returns">Returns</h3>
 
-<p>An {{domxref("ArrayBuffer")}}.</p>
+<p>An {{jsxref("ArrayBuffer")}}.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -77,22 +78,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Push API')}}</td>
-      <td>{{Spec2('Push API')}}</td>
-      <td>This is the Push API spec, but note that <code>getKey()</code> is not currently
-        specified in here. It is currently Firefox-only experimental.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.PushSubscription.getKey")}}</p>
+<p>{{Compat}}</p>

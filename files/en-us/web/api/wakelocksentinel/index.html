@@ -8,10 +8,11 @@ tags:
   - Screen Wake Lock API
   - Wake Lock
   - screen
+browser-compat: api.WakeLockSentinel
 ---
 <div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}</div>
 
-<p class="summary">The <strong><code>WakeLockSentinel</code></strong> interface of the {{domxref('Screen Wake Lock API')}} provides a handle to the underlying platform wake lock and can be manually released and reacquired. An {{jsxref('Object')}} representing the wake lock is returned via the {{domxref('WakeLock.request()','navigator.wakelock.request()')}} method.</p>
+<p>The <strong><code>WakeLockSentinel</code></strong> interface of the {{domxref('Screen Wake Lock API')}} provides a handle to the underlying platform wake lock and can be manually released and reacquired. An {{jsxref('Object')}} representing the wake lock is returned via the {{domxref('WakeLock.request()','navigator.wakelock.request()')}} method.</p>
 
 <p>An acquired <code>WakeLockSentinel</code> can be released manually via the {{domxref('WakeLockSentinel.release','release()')}} method, or automatically via the platform wake lock. This can happen if the document becomes inactive or looses visibility, if the device is low on power or the user turns on a power save mode. Releasing all <code>WakeLockSentinel</code> instances of a given wake lock type will cause the underlying platform wake lock to be released.</p>
 
@@ -49,7 +50,7 @@ tags:
 
 <p>In this example we create an asynchronous function which requests a <code>WakeLockSentinel</code>. Once acquired we listen for the <code>onrelease</code> event which can be used to give appropriate UI feedback. The sentinel can be acquired or released via appropriate interactions.</p>
 
-<pre class="brush: js notranslate">// create a reference for the wake lock
+<pre class="brush: js">// create a reference for the wake lock
 let wakeLock = null;
 
 // create an async function to request a wake lock
@@ -84,21 +85,8 @@ wakeLockOffButton.addEventListener('click', () =&gt; {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('Screen Wake Lock','#the-wakelocksentinel-interface','WakeLockSentinel')}}</td>
-			<td>{{Spec2('Screen Wake Lock')}}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.WakeLockSentinel")}}</p>
+<p>{{Compat}}</p>

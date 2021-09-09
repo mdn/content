@@ -10,10 +10,11 @@ tags:
   - PeriodicSyncManager
   - Reference
   - ServiceWorker
+browser-compat: api.PeriodicSyncManager
 ---
 <div>{{draft}}{{DefaultAPISidebar("Periodic Background Sync")}}</div>
 
-<p class="summary">The <strong><code>PeriodicSyncManager</code></strong> interface of the {{domxref('Web Periodic Background Synchronization API')}} provides a way to register tasks to be run in a service worker at periodic intervals with network connectivity. These tasks are referred to as periodic background sync requests. Access <code>PeriodicSyncManager</code> through the {{domxref('ServiceWorkerRegistration.periodicSync')}}.</p>
+<p>The <strong><code>PeriodicSyncManager</code></strong> interface of the {{domxref('Web Periodic Background Synchronization API')}} provides a way to register tasks to be run in a service worker at periodic intervals with network connectivity. These tasks are referred to as periodic background sync requests. Access <code>PeriodicSyncManager</code> through the {{domxref('ServiceWorkerRegistration.periodicSync')}}.</p>
 
 <h2 id="Properties">Properties</h2>
 
@@ -38,7 +39,7 @@ tags:
 
 <p>The following asynchronous function registers a periodic background sync at a minimum interval of one day from a browsing context:</p>
 
-<pre class="brush: js notranslate">async function registerPeriodicNewsCheck() {
+<pre class="brush: js">async function registerPeriodicNewsCheck() {
   const registration = await navigator.serviceWorker.ready;
   try {
     await registration.periodicSync.register('get-latest-news', {
@@ -54,7 +55,7 @@ tags:
 
 <p>This code checks to see if a Periodic Background Sync task with a given tag is registered.</p>
 
-<pre class="brush: js notranslate">navigator.serviceWorker.ready.then(registration =&gt; {
+<pre class="brush: js">navigator.serviceWorker.ready.then(registration =&gt; {
   registration.periodicSync.getTags().then(tags =&gt; {
     if (tags.includes('get-latest-news'))
       skipDownloadingLatestNewsOnPageLoad();
@@ -66,31 +67,18 @@ tags:
 
 <p>The following code removes a Periodic Background Sync task to stop articles syncing in the background.</p>
 
-<pre class="brush: js notranslate">navigator.serviceWorker.ready.then(registration =&gt; {
+<pre class="brush: js">navigator.serviceWorker.ready.then(registration =&gt; {
   registration.periodicSync.unregister('get-latest-news');
 });
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Periodic Background Sync','#periodicsyncmanager','PeriodicSyncManager')}}</td>
-   <td>{{Spec2('Periodic Background Sync')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.PeriodicSyncManager")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

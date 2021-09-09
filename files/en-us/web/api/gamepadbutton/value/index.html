@@ -2,14 +2,12 @@
 title: GamepadButton.value
 slug: Web/API/GamepadButton/value
 tags:
-- API
-- Gamepad API
-- Games
-- NeedsBetterSpecLink
-- NeedsMarkupWork
-- Property
-- Reference
-- Référence(2)
+  - API
+  - Gamepad API
+  - Games
+  - Property
+  - Reference
+browser-compat: api.GamepadButton.value
 ---
 <p>{{APIRef("Gamepad API")}}</p>
 
@@ -21,14 +19,9 @@ tags:
 	<code>0.0</code> representing a button that is not pressed, and 1.0 representing a
 	button that is fully pressed.</p>
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre
-	class="brush: js notranslate"><span class="idlInterface" id="idl-def-GamepadButton"><span class="idlAttribute">    readonly    attribute <span class="idlAttrType">double</span>  <span class="idlAttrName">value</span>;</span></span></pre>
-
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js">var gp = navigator.getGamepads()[0];
+<pre class="brush: js">let gp = navigator.getGamepads()[0];
 
 if(gp.buttons[0].value &gt; 0) {
   // respond to analog button being pressed in
@@ -36,30 +29,16 @@ if(gp.buttons[0].value &gt; 0) {
 
 <h2 id="Value">Value</h2>
 
-<p>A {{domxref("double")}}.</p>
+<p>A double.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName("Gamepad", "#dom-gamepadbutton-value", "GamepadButton.value")}}
-			</td>
-			<td>{{Spec2("Gamepad")}}</td>
-			<td>Initial definition</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.GamepadButton.value")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
-<p><a href="/en-US/docs/Web/Guide/API/Gamepad">Using the Gamepad API</a></p>
+<p><a href="/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API">Using the Gamepad API</a></p>

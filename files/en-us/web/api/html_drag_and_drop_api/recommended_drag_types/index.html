@@ -9,9 +9,8 @@ tags:
 
 <p>The HTML Drag and Drop API supports dragging various types of data, including plain text, URLs, HTML code, files, etc. The document describes best practices for common draggable data types.</p>
 
-<div class="overheadIndicator nonStandard nonStandardHeader">
-<p><strong>Caution:</strong><br>
- All methods and properties in this document with a <code>moz</code> prefix, such as <code>mozSetDataAt()</code>, will <strong>only</strong> work with Gecko-based browsers.</p>
+<div class="notecard warning">
+<p><strong>Warning:</strong> All methods and properties in this document with a <code>moz</code> prefix, such as <code>mozSetDataAt()</code>, will <strong>only</strong> work with Gecko-based browsers.</p>
 </div>
 
 <h2 id="text">Dragging Text</h2>
@@ -25,7 +24,7 @@ tags:
 
 <p>It is recommended to always add data of the <code>text/plain</code> type as a fallback for applications or drop targets that do not support other types, unless there is no logical text alternative. Always add this <code>text/plain</code> type last, as it is the least specific and shouldn’t be preferred.</p>
 
-<p class="note">Note: In older code, you may find <code>text/unicode</code> or the <code>Text</code> types. These are equivalent to <code>text/plain</code>, and will store and retrieve plain text data.</p>
+<p>Note: In older code, you may find <code>text/unicode</code> or the <code>Text</code> types. These are equivalent to <code>text/plain</code>, and will store and retrieve plain text data.</p>
 
 <h2 id="link">Dragging Links</h2>
 
@@ -38,12 +37,12 @@ dt.setData("text/plain", "https://www.mozilla.org");
 
 <p>As usual, set the <code>text/plain</code> type last, as a fallback for the <code>text/uri-list</code> type.</p>
 
-<p class="note">Note: the URL type is <code>ur<em><strong>i</strong></em>-list</code> with an <em>I</em>, not an <em>L</em>.</p>
+<p>Note: the URL type is <code>ur<em><strong>i</strong></em>-list</code> with an <em>I</em>, not an <em>L</em>.</p>
 
 <p>To drag multiple links, separate each link inside the <code>text/uri-list</code> data with a CRLF linebreak. Lines that begin with a number sign (<code>#</code>) are comments, and should not be considered URLs. You can use comments to indicate the purpose of a URL, the title associated with a URL, or other data.</p>
 
 <div class="notecard warning">
-<p>The <code>text/plain</code> fallback for multiple links should include all URLs, but no comments.</p>
+<p><strong>Warning:</strong> The <code>text/plain</code> fallback for multiple links should include all URLs, but no comments.</p>
 </div>
 
 <p>For example, this sample <code>text/uri-list</code> data contains two links and a comment:</p>
@@ -56,7 +55,7 @@ http://www.example.com
 <p>When retrieving a dropped link, ensure you handle when multiple links are dragged, including any comments. For convenience, the special type <code>URL</code> may be used to refer to the first valid link within data for the <code>text/uri-list</code> type.</p>
 
 <div class="notecard warning">
-<p>Do not add data with the <code>URL</code> type — attempting to do so will set the value of the <code>text/uri-list</code> type instead.</p>
+<p><strong>Warning:</strong> Do not add data with the <code>URL</code> type — attempting to do so will set the value of the <code>text/uri-list</code> type instead.</p>
 </div>
 
 <pre class="brush: js">var url = event.dataTransfer.getData("URL");
@@ -94,7 +93,7 @@ dt.setData("text/plain", "Hello there, stranger");
 
 <p>If possible, include the file URL of the file using both the <code>text/uri-list</code> and <code>text/plain</code> types. These types should be added afterward so that the more specific <code>application/x-moz-file</code> type has higher priority.</p>
 
-<p>Multiple files will be received during a drop as multiple items in the data transfer. See <a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items" title="Dragging and Dropping Multiple Items">Dragging and Dropping Multiple Items</a> for more details about this.</p>
+<p>Multiple files will be received during a drop as multiple items in the data transfer. See <a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items">Dragging and Dropping Multiple Items</a> for more details about this.</p>
 
 <p>The following example shows how to create an area for receiving dropped files:</p>
 
@@ -220,8 +219,8 @@ dataProvider.prototype = {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a class="internal" href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API" title="HTML Drag and Drop API">HTML Drag and Drop API (Overview)</a></li>
- <li><a class="internal" href="/en-US/docs/Web/Guide/HTML/Drag_operations" title="Drag Operations">Drag Operations</a></li>
- <li><a class="internal" href="/en-US/docs/Web/Guide/HTML/Dragging_and_Dropping_Multiple_Items" title="Dragging and Dropping Multiple Items">Dragging and Dropping Multiple Items</a></li>
- <li><a href="https://html.spec.whatwg.org/multipage/interaction.html#dnd" title="Drag and Drop Standard">HTML5 Living Standard: Drag and Drop</a></li>
+ <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API">HTML Drag and Drop API (Overview)</a></li>
+ <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</a></li>
+ <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items">Dragging and Dropping Multiple Items</a></li>
+ <li><a href="https://html.spec.whatwg.org/multipage/interaction.html#dnd">HTML5 Living Standard: Drag and Drop</a></li>
 </ul>

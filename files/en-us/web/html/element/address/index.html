@@ -11,18 +11,17 @@ tags:
   - Email Address
   - HTML
   - HTML sections
-  - 'HTML:Flow content'
-  - 'HTML:Palpable Content'
+  - HTML:Flow content
+  - HTML:Palpable Content
   - Reference
   - Web
+browser-compat: html.elements.address
 ---
 <div>{{HTMLRef}}</div>
 
-<p id="Summary"><span class="seoSummary">The <strong>HTML <code>&lt;address&gt;</code> element</strong> indicates that the enclosed HTML provides contact information for a person or people, or for an organization.</span></p>
+<p id="Summary">The <strong><code>&lt;address&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element indicates that the enclosed HTML provides contact information for a person or people, or for an organization.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/address.html", "tabbed-standard")}}</div>
-
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a> and send us a pull request.</div>
 
 <p>The contact information provided by an <code>&lt;address&gt;</code> element's contents can take whatever form is appropriate for the context, and may include any type of contact information that is needed, such as a physical address, URL, email address, phone number, social media handle, geographic coordinates, and so forth. The <code>&lt;address&gt;</code> element should include the name of the person, people, or organization to which the contact information refers.</p>
 
@@ -32,11 +31,11 @@ tags:
  <tbody>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a>, palpable content.</td>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a>, but with no nested <code>&lt;address&gt;</code> element, no heading content ({{HTMLElement("hgroup")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}), no sectioning content ({{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("section")}}, {{HTMLElement("nav")}}), and no {{HTMLElement("header")}} or {{HTMLElement("footer")}} element.</td>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, but with no nested <code>&lt;address&gt;</code> element, no heading content ({{HTMLElement("hgroup")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}), no sectioning content ({{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("section")}}, {{HTMLElement("nav")}}), and no {{HTMLElement("header")}} or {{HTMLElement("footer")}} element.</td>
   </tr>
   <tr>
    <th scope="row">Tag omission</th>
@@ -44,7 +43,7 @@ tags:
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">flow content</a>, but always excluding <code>&lt;address&gt;</code> elements (according to the logical principle of symmetry, if <code>&lt;address&gt;</code> tag, as a parent, can not have nested <code>&lt;address&gt;</code> element, then the same <code>&lt;address&gt;</code> content can not have <code>&lt;address&gt;</code> tag as its parent).</td>
+   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">flow content</a>, but always excluding <code>&lt;address&gt;</code> elements (according to the logical principle of symmetry, if <code>&lt;address&gt;</code> tag, as a parent, can not have nested <code>&lt;address&gt;</code> element, then the same <code>&lt;address&gt;</code> content can not have <code>&lt;address&gt;</code> tag as its parent).</td>
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>
@@ -77,7 +76,7 @@ tags:
 
 <p>This example demonstrates the use of <code>&lt;address&gt;</code> to demarcate the contact information for an article's author.</p>
 
-<pre class="brush: html notranslate">  &lt;address&gt;
+<pre class="brush: html">  &lt;address&gt;
     You can contact author at &lt;a href="http://www.somedomain.com/contact"&gt;
     www.somedomain.com&lt;/a&gt;.&lt;br&gt;
     If you see any bugs, please &lt;a href="mailto:webmaster@somedomain.com"&gt;
@@ -98,40 +97,15 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'sections.html#the-address-element', '&lt;address&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'grouping-content.html#the-address-element', '&lt;address&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'struct/global.html#h-7.5.6', '&lt;address&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("html.elements.address")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li>Others section-related elements: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("footer")}}, {{HTMLElement("section")}}, {{HTMLElement("header")}};</li>
- <li class="last"><a class="deki-ns current" href="/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines" title="Sections and Outlines of an HTML5 document">Sections and outlines of an HTML5 document</a>.</li>
+ <li class="last"><a class="deki-ns current" href="/en-US/docs/Web/HTML/Element/Heading_Elements" title="Sections and Outlines of an HTML5 document">Sections and outlines of an HTML5 document</a>.</li>
 </ul>

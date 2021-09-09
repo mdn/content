@@ -9,6 +9,7 @@ tags:
   - WebExtensions
   - management
   - setEnabled
+browser-compat: webextensions.api.management.setEnabled
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -45,15 +46,13 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("webextensions.api.management.setEnabled")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Examples">Examples</h2>
 
 <p>Toggle enable/disable for the add-on whose ID is "my-add-on":</p>
 
-<pre class="notranslate brush: js">var id = "my-add-on";
+<pre class="brush: js">var id = "my-add-on";
 
 function toggleEnabled(id) {
   var getting = browser.management.get(id);

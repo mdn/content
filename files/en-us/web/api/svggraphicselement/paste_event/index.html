@@ -7,10 +7,11 @@ tags:
   - Reference
   - SVG
   - SVG OM
+browser-compat: api.SVGGraphicsElement.paste_event
 ---
 <div>{{APIRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>paste</code></strong> event is fired on an {{domxref("SVGGraphicsElement")}} when the user has initiated a "paste" action through the browser's user interface.</span></p>
+<p>The <strong><code>paste</code></strong> event is fired on an {{domxref("SVGGraphicsElement")}} when the user has initiated a "paste" action through the browser's user interface.</p>
 
 <table class="properties">
  <tbody>
@@ -39,7 +40,7 @@ tags:
 
 <p>To override the default behavior (for example to insert some different data or a transformation of the clipboard contents) an event handler must cancel the default action using {{domxref("Event/preventDefault", "event.preventDefault()")}}, and then insert its desired data manually.</p>
 
-<p>It's possible to construct and dispatch a <a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">synthetic</a> <code>paste</code> event, but this will not affect the document's contents.</p>
+<p>It's possible to construct and dispatch a <a href="/en-US/docs/Web/Events/Creating_and_triggering_events">synthetic</a> <code>paste</code> event, but this will not affect the document's contents.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -76,31 +77,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "types.html#SVGDOMDependencies")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Definition that the clipboard events apply to SVG elements.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("Clipboard API", "#clipboard-event-paste")}}</td>
-   <td>{{Spec2("Clipboard API")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SVGGraphicsElement.paste_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

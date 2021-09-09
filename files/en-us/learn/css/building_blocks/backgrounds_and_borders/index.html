@@ -15,7 +15,7 @@ tags:
 
 <p>In this lesson, we will take a look at some of the creative things you can do with CSS backgrounds and borders. From adding gradients, background images, and rounded corners, backgrounds and borders are the answer to a lot of styling questions in CSS.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -32,10 +32,10 @@ tags:
 
 <p>The CSS {{cssxref("background")}} property is a shorthand for a number of background longhand properties that we will meet in this lesson. If you discover a complex background property in a stylesheet, it might seem a little hard to understand as so many values can be passed in at once.</p>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   background: linear-gradient(105deg, rgba(255,255,255,.2) 39%, rgba(51,56,57,1) 96%) center center / 400px 200px no-repeat,
   url(big-star.png) center no-repeat, rebeccapurple;
-} 
+}
 </pre>
 
 <p>We'll return to how the shorthand works later in the tutorial, but first let's have a look at the different things you can do with backgrounds in CSS, by looking at the individual background properties.</p>
@@ -48,15 +48,15 @@ tags:
 
 <p><strong>Play around with these, using any available <a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a> value.</strong></p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/color.html", '100%', 800)}}</p>
+<p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/color.html", '100%', 600)}}</p>
 
 <h3 id="Background_images">Background images</h3>
 
-<p>The {{cssxref("background-image")}} property enables the display of an image in the background of an element. In the example below, we have two boxes — one has a background image which is larger than the box, the other has a small image of a star.</p>
+<p>The {{cssxref("background-image")}} property enables the display of an image in the background of an element. In the example below, we have two boxes — one has a background image which is larger than the box (<a href="https://mdn.github.io/css-examples/learn/backgrounds-borders/balloons.jpg">balloons.jpg</a>), the other has a small image of a single star (<a href="https://mdn.github.io/css-examples/learn/backgrounds-borders/star.png">star.png</a>).</p>
 
-<p>This example demonstrates two things about background images. By default, the large image is not scaled down to fit the box, so we only see a small corner of it, whereas the small image is tiled to fill the box. In this case, the actual image is just a single star.</p>
+<p>This example demonstrates two things about background images. By default, the large image is not scaled down to fit the box, so we only see a small corner of it, whereas the small image is tiled to fill the box.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/background-image.html", '100%', 800)}}</p>
+<p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/background-image.html", '100%', 600)}}</p>
 
 <p><strong>If you specify a background color in addition to a background image then the image displays on top of the color. Try adding a <code>background-color</code> property to the example above to see that in action.</strong></p>
 
@@ -73,11 +73,11 @@ tags:
 
 <p><strong>Try these values out in the example below. We have set the value to <code>no-repeat</code> so you will only see one star. Try out the different values — <code>repeat-x</code> and <code>repeat-y</code> — to see what their effects are.</strong></p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/repeat.html", '100%', 800)}}</p>
+<p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/repeat.html", '100%', 600)}}</p>
 
 <h4 id="Sizing_the_background_image">Sizing the background image</h4>
 
-<p>In the example above, we have a large image that has ended up being cropped as it is larger than the element it is a background of. In this case we could use the {{cssxref("background-size")}} property, which can take <a href="/en-US/docs/Web/CSS/length">length</a> or <a href="/en-US/docs/Web/CSS/percentage">percentage</a> values, to size the image to fit inside the background.</p>
+<p>The <em>balloons.jpg</em> image used in the initial background images example, is a large image that was cropped due to being larger than the element it is a background of. In this case we could use the {{cssxref("background-size")}} property, which can take <a href="/en-US/docs/Web/CSS/length">length</a> or <a href="/en-US/docs/Web/CSS/percentage">percentage</a> values, to size the image to fit inside the background.</p>
 
 <p>You can also use keywords:</p>
 
@@ -86,7 +86,7 @@ tags:
  <li><code>contain</code> — the browser will make the image the right size to fit inside the box. In this case, you may end up with gaps on either side or on the top and bottom of the image, if the aspect ratio of the image is different from that of the box.</li>
 </ul>
 
-<p>In the example below I have used the larger image from the example above and used length units to size it inside the box. You can see this has distorted the image.</p>
+<p>In the example below I have used the <em>balloons.jpg</em> image along with length units to size it inside the box. You can see this has distorted the image.</p>
 
 <p>Try the following.</p>
 
@@ -110,25 +110,25 @@ tags:
 
 <p>You can use keywords such as <code>top</code> and <code>right</code> (look up the others on the {{cssxref("background-position")}} page):</p>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   background-image: url(star.png);
   background-repeat: no-repeat;
   background-position: top center;
-} 
+}
 </pre>
 
 <p>And <a href="/en-US/docs/Web/CSS/length">Lengths</a>, and <a href="/en-US/docs/Web/CSS/percentage">percentages</a>:</p>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   background-image: url(star.png);
   background-repeat: no-repeat;
   background-position: 20px 10%;
-} 
+}
 </pre>
 
 <p>You can also mix keyword values with lengths or percentages, in which case the first value must refer to the horizontal position or offset and the second vertical. For example:</p>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   background-image: url(star.png);
   background-repeat: no-repeat;
   background-position: 20px top;
@@ -136,7 +136,7 @@ tags:
 
 <p>Finally, you can also use a 4-value syntax in order to indicate a distance from certain edges of the box — the length unit, in this case, is an offset from the value that precedes it. So in the CSS below we are positioning the background 20px from the top and 10px from the right:</p>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   background-image: url(star.png);
   background-repeat: no-repeat;
   background-position: top 20px right 10px;
@@ -144,7 +144,7 @@ tags:
 
 <p><strong>Use the example below to play around with these values and move the star around inside the box.</strong></p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/position.html", '100%', 800)}}</p>
+<p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/position.html", '100%', 600)}}</p>
 
 <div class="notecard note">
 <p><strong>Note</strong>: <code>background-position</code> is a shorthand for {{cssxref("background-position-x")}} and {{cssxref("background-position-y")}}, which allow you to set the different axis position values individually.</p>
@@ -158,7 +158,7 @@ tags:
 
 <p>Try some different gradients in the example below. In the two boxes respectively, we have a linear gradient that is stretched over the whole box, and a radial gradient with a set size, which therefore repeats.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/gradients.html", '100%', 800)}}</p>
+<p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/gradients.html", '100%', 600)}}</p>
 
 <h3 id="Multiple_background_images">Multiple background images</h3>
 
@@ -172,7 +172,7 @@ tags:
 
 <p>The other <code>background-*</code> properties can also have comma-separated values in the same way as <code>background-image</code>:</p>
 
-<pre class="brush: css notranslate">background-image: url(image1.png), url(image2.png), url(image3.png), url(image4.png);
+<pre class="brush: css">background-image: url(image1.png), url(image2.png), url(image3.png), url(image4.png);
 background-repeat: no-repeat, repeat-x, repeat;
 background-position: 10px 20px,  top right;</pre>
 
@@ -180,16 +180,16 @@ background-position: 10px 20px,  top right;</pre>
 
 <p><strong>Let's play. In the example below I have included two images. To demonstrate the stacking order, try switching which background image comes first in the list. Or play with the other properties to change the position, size, or repeat values.</strong></p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/multiple-background-image.html", '100%', 800)}}</p>
+<p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/multiple-background-image.html", '100%', 600)}}</p>
 
 <h3 id="Background_attachment">Background attachment</h3>
 
 <p>Another option we have available for backgrounds is specifying how they scroll when the content scrolls. This is controlled using the {{cssxref("background-attachment")}} property, which can take the following values:</p>
 
 <ul>
- <li><code>scroll</code>: It causes the element's background to scroll when the page is scrolled. If the element content is scrolled, the background does not move. In effect, the background is fixed to the same position on the page, so it scrolls as the page scrolls.</li>
- <li><code>fixed</code>: It causes an element's background to be fixed to the viewport so that it doesn't scroll when the page or element content is scrolled. It will always remain in the same position on the screen.</li>
- <li><code>local</code>: This value was added later on (it is only supported in Internet Explorer 9+, whereas the others are supported in IE4+) because the <code>scroll</code> value is rather confusing and doesn't really do what you want in many cases. The <code>local</code> value fixes the background to the element it is set on, so when you scroll the element, the background scrolls with it.</li>
+ <li><code>scroll</code>: causes the element's background to scroll when the page is scrolled. If the element content is scrolled, the background does not move. In effect, the background is fixed to the same position on the page, so it scrolls as the page scrolls.</li>
+ <li><code>fixed</code>: causes an element's background to be fixed to the viewport so that it doesn't scroll when the page or element content is scrolled. It will always remain in the same position on the screen.</li>
+ <li><code>local</code>: fixes the background to the element it is set on, so when you scroll the element, the background scrolls with it.</li>
 </ul>
 
 <p>The {{cssxref("background-attachment")}} property only has an effect when there is content to scroll, so we've made a demo to demonstrate the differences between the three values — have a look at <a href="https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html">background-attachment.html</a> (also <a href="https://github.com/mdn/learning-area/tree/master/css/styling-boxes/backgrounds">see the source code</a> here).</p>
@@ -209,13 +209,13 @@ background-position: 10px 20px,  top right;</pre>
 
 <p>Take a look at the MDN page for {{cssxref("background")}} to see all of the considerations.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/background.html", '100%', 800)}}</p>
+<p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/background.html", '100%', 600)}}</p>
 
 <h3 id="Accessibility_considerations_with_backgrounds">Accessibility considerations with backgrounds</h3>
 
-<p>When placing text on top of a background image or color, you should take care that you have enough contrast for the text to be legible for your visitors. If specifying an image, and text will be placed on top of that image, you should also specify a <code>background-color</code> that will allow the text to be legible if the image does not load.</p>
+<p>When placing text on top of a background image or color, you should take care that you have enough contrast for the text to be legible for your visitors. If specifying an image, and if text will be placed on top of that image, you should also specify a <code>background-color</code> that will allow the text to be legible if the image does not load.</p>
 
-<p>Screen readers cannot parse background images, therefore they should be purely decoration; any important content should be part of the HTML page and not contained in a background.</p>
+<p>Screen readers cannot parse background images; therefore, they should be purely decoration. Any important content should be part of the HTML page and not contained in a background.</p>
 
 <h2 id="Borders">Borders</h2>
 
@@ -223,19 +223,19 @@ background-position: 10px 20px,  top right;</pre>
 
 <p>We can set a border for all four sides of a box with {{cssxref("border")}}:</p>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   border: 1px solid black;
 } </pre>
 
 <p>Or we can target one edge of the box, for example:</p>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   border-top: 1px solid black;
 } </pre>
 
 <p>The individual properties for these shorthands would be:</p>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   border-width: 1px;
   border-style: solid;
   border-color: black;
@@ -243,14 +243,15 @@ background-position: 10px 20px,  top right;</pre>
 
 <p>And for the longhands:</p>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   border-top-width: 1px;
   border-top-style: solid;
   border-top-color: black;
 } </pre>
 
 <div class="notecard note">
-<p><strong>Note</strong>: These top, right, bottom, and left border properties also have mapped <em>logical</em> properties that relate to the writing mode of the document (e.g. left-to-right or right-to-left text, or top-to-bottom). We'll be exploring these in the next lesson, which covers <a href="/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">handling different text directions</a>.</p>
+  <h4>Note:</h4>
+  <p>These top, right, bottom, and left border properties also have mapped <em>logical</em> properties that relate to the writing mode of the document (e.g. left-to-right or right-to-left text, or top-to-bottom). We'll be exploring these in the next lesson, which covers <a href="/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">handling different text directions</a>.</p>
 </div>
 
 <p><strong>There are a variety of styles that you can use for borders. In the example below we have used a different border style for the four sides of my box. Play with the border style, width, and color to see how borders work.</strong></p>
@@ -263,13 +264,13 @@ background-position: 10px 20px,  top right;</pre>
 
 <p>For example, to make all four corners of a box have a 10px radius:</p>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   border-radius: 10px;
 } </pre>
 
 <p>Or to make the top right corner have a horizontal radius of 1em, and a vertical radius of 10%:</p>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   border-top-right-radius: 1em 10%;
 } </pre>
 
@@ -302,7 +303,7 @@ background-position: 10px 20px,  top right;</pre>
   </ul>
  </li>
  <li><a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model">The box model</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">Backgrounds and borders</a></li>
+ <li><strong>Backgrounds and borders</strong></li>
  <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">Handling different text directions</a></li>
  <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content">Overflowing content</a></li>
  <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Values_and_units">Values and units</a></li>

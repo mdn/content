@@ -7,17 +7,18 @@ tags:
 - CanvasRenderingContext2D
 - Method
 - Reference
+browser-compat: api.CanvasRenderingContext2D.isPointInPath
 ---
 <div>{{APIRef}}</div>
 
 <p>The
-  <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.isPointInPath()</code></strong>
+  <strong><code>CanvasRenderingContext2D.isPointInPath()</code></strong>
   method of the Canvas 2D API reports whether or not the specified point is contained in
   the current path.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>ctx</em>.isPointInPath(<em>x</em>, <em>y</em> [, <em>fillRule</em>]);
+<pre class="brush: js"><em>ctx</em>.isPointInPath(<em>x</em>, <em>y</em> [, <em>fillRule</em>]);
 <em>ctx</em>.isPointInPath(<em>path</em>, <em>x</em>, <em>y</em> [, <em>fillRule</em>]);
 </pre>
 
@@ -50,7 +51,7 @@ tags:
 <h3 id="Return_value">Return value</h3>
 
 <dl>
-  <dt>{{jsxref("Boolean")}}</dt>
+  <dt>A boolean value</dt>
   <dd>A Boolean, which is <code>true</code> if the specified point is contained in the
     current or specified path, otherwise <code>false</code>.</dd>
 </dl>
@@ -64,13 +65,13 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
+<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
 &lt;p&gt;In path: &lt;code id="result"&gt;false&lt;/code&gt;&lt;/p&gt;
 </pre>
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js highlight:[7] notranslate">const canvas = document.getElementById('canvas');
+<pre class="brush: js">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const result = document.getElementById('result');
 
@@ -91,12 +92,12 @@ result.innerText = ctx.isPointInPath(30, 70);
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
+<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
 </pre>
 
 <h4 id="JavaScript_2">JavaScript</h4>
 
-<pre class="brush: js notranslate">const canvas = document.getElementById('canvas');
+<pre class="brush: js">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Create circle
@@ -127,25 +128,11 @@ canvas.addEventListener('mousemove', function(event) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-ispointinpath",
-        "CanvasRenderingContext2D.isPointInPath")}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CanvasRenderingContext2D.isPointInPath")}}</p>
+<p>{{Compat}}</p>
 
 <h3 id="Gecko-specific_note">Gecko-specific note</h3>
 

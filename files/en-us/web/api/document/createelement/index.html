@@ -8,14 +8,15 @@ tags:
   - Method
   - Reference
   - createElement
+browser-compat: api.Document.createElement
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><span class="seoSummary">In an <a href="/en-US/docs/Web/HTML">HTML</a> document, the <strong><code>document.createElement()</code></strong> method creates the HTML element specified by <var>tagName</var>, or an {{domxref("HTMLUnknownElement")}} if <var>tagName</var> isn't recognized.</span></p>
+<p>In an <a href="/en-US/docs/Web/HTML">HTML</a> document, the <strong><code>document.createElement()</code></strong> method creates the HTML element specified by <var>tagName</var>, or an {{domxref("HTMLUnknownElement")}} if <var>tagName</var> isn't recognized.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">let <var>element</var> = <var>document</var>.createElement(<var>tagName</var>[, <var>options</var>]);
+<pre class="brush: js">let <var>element</var> = <var>document</var>.createElement(<var>tagName</var>[, <var>options</var>]);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -31,6 +32,10 @@ tags:
 
 <p>The new {{domxref("Element")}}.</p>
 
+<div class="notecard note">
+  <p><strong>Note:</strong> A new {{domxref("HTMLElement", "HTMLElement", "", "1")}} is returned if the document is an {{domxref("HTMLDocument", "HTMLDocument", "", "1")}}, which is the most common case. Otherwise a new {{domxref("Element","Element","","1")}} is returned.</p>
+</div>
+
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Basic_example">Basic example</h3>
@@ -39,7 +44,7 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush:html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush:html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
   &lt;title&gt;||Working with elements||&lt;/title&gt;
@@ -52,7 +57,7 @@ tags:
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush:js notranslate">document.body.onload = addElement;
+<pre class="brush:js">document.body.onload = addElement;
 
 function addElement () {
   // create a new div element
@@ -75,7 +80,7 @@ function addElement () {
 
 <p>The following example snippet is taken from our expanding-list-web-component example (see it live also). In this case, our custom element extends the {{domxref("HTMLUListElement")}}, which represents the {{htmlelement("ul")}} element.</p>
 
-<pre class="brush: js notranslate">// Create a class for the element
+<pre class="brush: js">// Create a class for the element
 class ExpandingList extends HTMLUListElement {
   constructor() {
     // Always call super first in constructor
@@ -91,36 +96,21 @@ customElements.define('expanding-list', ExpandingList, { extends: "ul" });</pre>
 
 <p>If we wanted to create an instance of this element programmatically, we'd use a call along the following lines:</p>
 
-<pre class="brush: js notranslate">let expandingList = document.createElement('ul', { is : 'expanding-list' })</pre>
+<pre class="brush: js">let expandingList = document.createElement('ul', { is : 'expanding-list' })</pre>
 
 <p>The new element will be given an <code><a href="/en-US/docs/Web/HTML/Global_attributes/is">is</a></code> attribute whose value is the custom element's tag name.</p>
 
 <div class="note">
-<p><strong>Note</strong>: For backwards compatibility with previous versions of the <a href="https://www.w3.org/TR/custom-elements/">Custom Elements specification</a>, some browsers will allow you to pass a string here instead of an object, where the string's value is the custom element's tag name.</p>
+<p><strong>Note:</strong> For backwards compatibility with previous versions of the <a href="https://www.w3.org/TR/custom-elements/">Custom Elements specification</a>, some browsers will allow you to pass a string here instead of an object, where the string's value is the custom element's tag name.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', "#dom-document-createelement", "Document.createElement")}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Document.createElement")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

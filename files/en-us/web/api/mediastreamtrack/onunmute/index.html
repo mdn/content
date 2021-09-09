@@ -2,30 +2,31 @@
 title: MediaStreamTrack.onunmute
 slug: Web/API/MediaStreamTrack/onunmute
 tags:
-- API
-- Event Handler
-- Media Capture
-- Media Capture and Streams
-- MediaStreamTrack
-- Property
-- Reference
-- WebRTC
-- onunmute
-- unmute
+  - API
+  - Event Handler
+  - Media Capture
+  - Media Capture and Streams
+  - MediaStreamTrack
+  - Property
+  - Reference
+  - WebRTC
+  - onunmute
+  - unmute
+browser-compat: api.MediaStreamTrack.onunmute
 ---
 <div>{{ APIRef("Media Capture and Streams") }}</div>
 
-<p><span class="seoSummary">{{domxref("MediaStreamTrack")}}'s
+<p>{{domxref("MediaStreamTrack")}}'s
     <code><strong>onunmute</strong></code> event handler is called when the
     {{event("unmute")}} event is received. Such an event is sent when the track is again
-    able to send data.</span></p>
+    able to send data.</p>
 
 <p>When the <code>onunmute</code> event handler is called, the track's
   {{domxref("MediaStreamTrack.muted", "muted")}} flag is <code>false</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>track</em>.onunmute = <em>unmuteHandler</em>;
+<pre class="brush: js"><em>track</em>.onunmute = <em>unmuteHandler</em>;
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -47,27 +48,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table" style="height: 49px; width: 1000px;">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('Media Capture', '#dom-mediastreamtrack-onunmute',
-        'MediaStreamTrack.onunmute') }}</td>
-      <td>{{ Spec2('Media Capture') }}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MediaStreamTrack.onunmute")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -76,5 +61,5 @@ tags:
   <li>{{domxref("MediaStreamTrack.muted")}} to determine if a track is currently muted
   </li>
   <li>{{domxref("MediaStreamTrack.onmute")}}, the event handler for the
-    {{domxref("mute")}} event.</li>
+    {{domxref("MediaStreamTrack.mute_event")}} event.</li>
 </ul>

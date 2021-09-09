@@ -6,18 +6,30 @@ tags:
 - CSSPrimitiveValue
 - Method
 - getFloatValue
+- Deprecated
+browser-compat: api.CSSPrimitiveValue.getFloatValue
 ---
-<div>{{APIRef("DOM")}}</div>
+<div>{{APIRef("CSSOM")}}{{deprecated_header}}</div>
 
 <p>The <code><strong>getFloatValue()</strong></code> method of the
   {{domxref("CSSPrimitiveValue")}} interface is used to get a float value in a specified
   unit. If this CSS value doesn't contain a float value or can't be converted into the
   specified unit, a {{domxref("DOMException")}} is raised.</p>
 
+<div class="notecard note">
+  <p><strong>Note:</strong> This method was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
+  not implement it.</p>
+  <p>To achieve your purpose, you can use:</p>
+  <ul>
+    <li>the untyped <a href="/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model</a>, widely supported, or</li>
+    <li>the modern <a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model API</a>, less supported and considered experimental.</li>
+  </ul>
+</div>
+
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <var>floatValue</var> = <var>cssPrimitiveValue</var>.getFloatValue(unit);</pre>
+  class="brush: js">var <var>floatValue</var> = <var>cssPrimitiveValue</var>.getFloatValue(unit);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -25,12 +37,14 @@ tags:
   <dt>unitType</dt>
   <dd>An <code>unsigned short</code> representing the code for the unit type, in which the
     value should be returned. Valid values are:
-    <table class="standard-table">
-      <tbody>
+    <table>
+      <thead>
         <tr>
-          <td class="header">Constant</td>
-          <td class="header">Description</td>
+          <th>Constant</th>
+          <th>Description</th>
         </tr>
+      </thead>
+      <tbody>
         <tr>
           <td><code>CSS_CM</code></td>
           <td>The value is a {{cssxref("&lt;length&gt;")}} in centimeters.</td>
@@ -115,7 +129,7 @@ tags:
 
 <h3 id="Exceptions">Exceptions</h3>
 
-<table class="standard-table">
+<table class="no-markdown">
   <thead>
     <tr>
       <th scope="col"><strong>Type</strong></th>
@@ -133,28 +147,17 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js; highlight[3]">var cs = window.getComputedStyle(document.body);
+<pre class="brush: js;">var cs = window.getComputedStyle(document.body);
 var cssValue = cs.getPropertyCSSValue("margin-top");
 console.log(cssValue.getFloatValue(CSSPrimitiveValue.CSS_CM));</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('DOM2 Style', 'css.html#CSS-CSSPrimitiveValue-getFloatValue',
-        'CSSPrimitiveValue.getFloatValue')}}</td>
-      <td>{{Spec2('DOM2 Style')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+<p>This feature was originally defined in the <a href="https://www.w3.org/TR/DOM-Level-2-Style">DOM Style Level 2</a> specification, but has been dropped from any
+  standardization effort since then.</p>
+
+<p>It has been superseded by a modern, but incompatible, <a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model API</a> that is now on the standard track.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CSSPrimitiveValue.getFloatValue")}}</p>
+<p>{{Compat}}</p>

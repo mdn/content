@@ -12,16 +12,17 @@ tags:
 - content box
 - observers
 - target
+browser-compat: api.ResizeObserverEntry.target
 ---
 <div>{{APIRef("Resize Observer API")}}</div>
 
-<p class="summary">The <strong><code>target</code></strong> read-only property of the
+<p>The <strong><code>target</code></strong> read-only property of the
   {{domxref("ResizeObserverEntry")}} interface returns a reference to the
   {{domxref('Element')}} or {{domxref('SVGElement')}} that is being observed.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var element = ResizeObserverEntry.target;
+<pre class="brush: js">var element = ResizeObserverEntry.target;
 var svgElement = ResizeObserverEntry.target;
 </pre>
 
@@ -64,21 +65,8 @@ resizeObserver.observe(document.querySelector('div'));</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Resize Observer','#dom-resizeobserverentry-target','target')}}</td>
-      <td>{{Spec2('Resize Observer')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ResizeObserverEntry.target")}}</p>
+<p>{{Compat}}</p>

@@ -15,11 +15,12 @@ tags:
 - Window
 - onanimationcancel
 - web animations api
+browser-compat: api.GlobalEventHandlers.onanimationcancel
 ---
 <div>{{APIRef("CSS3 Animations")}}</div>
 
 <p>The <code><strong>onanimationcancel</strong></code> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is the {{domxref("EventHandler")}} for
+  {{domxref("GlobalEventHandlers")}} mixin is the <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> for
   processing {{event("animationcancel")}} events.</p>
 
 <p>An <code>animationcancel</code> event is sent when a <a
@@ -31,7 +32,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>animCancelHandler</em> = <em>target</em>.onanimationcancel;
+<pre class="brush: js">var <em>animCancelHandler</em> = <em>target</em>.onanimationcancel;
 
 <em>target</em>.onanimationcancel = <em>{{jsxref("Function")}}</em>
 </pre>
@@ -63,8 +64,7 @@ tags:
 
 <h3 id="CSS">CSS</h3>
 
-<div class="hidden">
-  <pre class="brush: css">:root {
+<pre class="brush: css hidden">:root {
   --boxwidth: 50px;
 }
 
@@ -98,7 +98,6 @@ tags:
   font: bold 1.4em "Lucida Grande", "Open Sans", sans-serif;
 }
 </pre>
-</div>
 
 <p>Leaving out some bits of the CSS that don't matter for the discussion here, let's take
   a look at the styles for the box that we're animating. First is the box itself, with all
@@ -203,25 +202,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('CSS3
-        Animations','#eventdef-animationevent-animationcancel','onanimationcancel')}}</td>
-      <td>{{Spec2('CSS3 Animations')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.GlobalEventHandlers.onanimationcancel")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -12,6 +12,7 @@ tags:
 - Reference
 - Video
 - ondataavailable
+browser-compat: api.MediaRecorder.ondataavailable
 ---
 <p>{{APIRef("MediaStream Recording")}}</p>
 
@@ -48,15 +49,13 @@ tags:
 </ul>
 
 <div class="note">
-  <p>The {{domxref("Blob")}} containing the media data is available in the
+  <p><strong>Note:</strong> The {{domxref("Blob")}} containing the media data is available in the
     {{event("dataavailable")}} event's <code>data</code> property.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><span class="idlInterface" id="idl-def-IDBRequest"><span class="idlAttribute"><span class="idlInterface" id="idl-def-MediaRecorder"><span class="idlAttribute"><em>MediaRecorder</em>.ondataavailable = function(event) { ... }
-<em>MediaRecorder</em>.addEventListener('dataavailable', function(event) { ... })</span></span></span></span>
-</pre>
+<pre class="brush: js">mediaRecorder.ondataavailable = functionRef;</pre>
 
 <h2 id="Example">Example</h2>
 
@@ -83,25 +82,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName("MediaStream Recording", "#dom-mediarecorder-ondataavailable",
-        "MediaRecorder.ondataavailable")}}</td>
-      <td>{{Spec2("MediaStream Recording")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MediaRecorder.ondataavailable")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

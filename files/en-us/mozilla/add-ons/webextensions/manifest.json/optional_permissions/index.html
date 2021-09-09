@@ -6,6 +6,7 @@ tags:
   - WebExtensions
   - manifest.json
   - optional_permissions
+browser-compat: webextensions.manifest.optional_permissions
 ---
 <div>{{AddonSidebar}}</div>
 
@@ -22,7 +23,7 @@ tags:
   <tr>
    <th scope="row">Example</th>
    <td>
-    <pre class="brush: json no-line-numbers notranslate">
+    <pre class="brush: json no-line-numbers">
 "optional_permissions": [
   "*://developer.mozilla.org/*",
   "webRequest"
@@ -69,6 +70,7 @@ tags:
  <li><code>history</code></li>
  <li><code>idle</code></li>
  <li><code>management</code></li>
+ <li><code>nativeMessaging</code></li>
  <li><code>notifications</code></li>
  <li><code>pageCapture</code></li>
  <li><code>privacy</code></li>
@@ -87,20 +89,18 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: json no-line-numbers notranslate"> "optional_permissions": ["*://developer.mozilla.org/*"]</pre>
+<pre class="brush: json no-line-numbers"> "optional_permissions": ["*://developer.mozilla.org/*"]</pre>
 
 <p>Enable the extension to ask for privileged access to pages under developer.mozilla.org.</p>
 
-<pre class="brush: json no-line-numbers notranslate">  "optional_permissions": ["tabs"]</pre>
+<pre class="brush: json no-line-numbers">  "optional_permissions": ["tabs"]</pre>
 
 <p>Enable the extension to ask for access to the privileged pieces of the <code>tabs</code> API.</p>
 
-<pre class="brush: json no-line-numbers notranslate">  "optional_permissions": ["*://developer.mozilla.org/*", "tabs"]</pre>
+<pre class="brush: json no-line-numbers">  "optional_permissions": ["*://developer.mozilla.org/*", "tabs"]</pre>
 
 <p>Enable the extension to ask for both of the above permissions.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("webextensions.manifest.optional_permissions")}}</p>
+<p>{{Compat}}</p>

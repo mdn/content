@@ -8,12 +8,13 @@ tags:
   - Interface
   - Reference
   - Video
+browser-compat: api.HTMLVideoElement
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
 <p>The <strong><code>HTMLVideoElement</code></strong> interface provides special properties and methods for manipulating video objects. It also inherits properties and methods of {{domxref("HTMLMediaElement")}} and {{domxref("HTMLElement")}}.</p>
 
-<p>The list of <a href="/en-US/docs/Web/HTML/Supported_media_formats">supported media formats</a> varies from one browser to the other. You should either provide your video in a single format that all the relevant browsers supports, or provide multiple video sources in enough different formats that all the browsers you need to support are covered.</p>
+<p>The list of <a href="/en-US/docs/Web/Media/Formats">supported media formats</a> varies from one browser to the other. You should either provide your video in a single format that all the relevant browsers supports, or provide multiple video sources in enough different formats that all the browsers you need to support are covered.</p>
 
 <p>{{InheritanceDiagram(600, 140)}}</p>
 
@@ -41,17 +42,17 @@ tags:
 <h3 id="Gecko-specific_properties">Gecko-specific properties</h3>
 
 <dl>
- <dt>{{domxref("HTMLVideoElement.mozParsedFrames")}} {{Non-standard_Inline}}{{ReadOnlyInline}}</dt>
+ <dt>{{domxref("HTMLVideoElement.mozParsedFrames")}} {{Non-standard_Inline}}{{ReadOnlyInline}}{{deprecated_inline}}</dt>
  <dd>Returns an <code>unsigned long</code> with the count of video frames that have been parsed from the media resource.</dd>
- <dt>{{domxref("HTMLVideoElement.mozDecodedFrames")}} {{Non-standard_Inline}}{{ReadOnlyInline}}</dt>
+ <dt>{{domxref("HTMLVideoElement.mozDecodedFrames")}} {{Non-standard_Inline}}{{ReadOnlyInline}} {{deprecated_inline}}</dt>
  <dd>Returns an <code>unsigned long</code> with the count of parsed video frames that have been decoded into images.</dd>
- <dt>{{domxref("HTMLVideoElement.mozPresentedFrames")}} {{Non-standard_Inline}}{{ReadOnlyInline}}</dt>
+ <dt>{{domxref("HTMLVideoElement.mozPresentedFrames")}} {{Non-standard_Inline}}{{ReadOnlyInline}}{{deprecated_inline}}</dt>
  <dd>Returns an <code>unsigned long</code> with the count of decoded frames that have been presented to the rendering pipeline for painting.</dd>
- <dt>{{domxref("HTMLVideoElement.mozPaintedFrames")}} {{Non-standard_Inline}}{{ReadOnlyInline}}</dt>
+ <dt>{{domxref("HTMLVideoElement.mozPaintedFrames")}} {{Non-standard_Inline}}{{ReadOnlyInline}}{{deprecated_inline}}</dt>
  <dd>Returns an <code>unsigned long</code> with the count of presented frames which were painted on the screen.</dd>
- <dt>{{domxref("HTMLVideoElement.mozFrameDelay")}} {{Non-standard_Inline}}{{ReadOnlyInline}}</dt>
+ <dt>{{domxref("HTMLVideoElement.mozFrameDelay")}} {{Non-standard_Inline}}{{ReadOnlyInline}}{{deprecated_inline}}</dt>
  <dd>Returns an <code>double</code> with the time which the last painted video frame was late by, in seconds.</dd>
- <dt>{{domxref("HTMLVideoElement.mozHasAudio")}} {{Non-standard_Inline}}{{ReadOnlyInline}}</dt>
+ <dt>{{domxref("HTMLVideoElement.mozHasAudio")}} {{Non-standard_Inline}}{{ReadOnlyInline}}{{deprecated_inline}}</dt>
  <dd>Returns a {{JSxRef("Boolean","boolean")}} indicating if there is some audio associated with the video.</dd>
 </dl>
 
@@ -96,29 +97,15 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#htmlvideoelement", "HTMLVideoElement")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLVideoElement")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li>HTML element implementing this interface: {{HTMLElement("video")}}.</li>
- <li><a class="external" href="http://people.mozilla.org/~cpearce/paint-stats-demo.html">Demo of video paint statistics</a></li>
- <li><a href="/en-US/docs/Web/HTML/Supported_media_formats">Supported media formats</a></li>
+ <li><a href="/en-US/docs/Web/Media/Formats">Supported media formats</a></li>
 </ul>

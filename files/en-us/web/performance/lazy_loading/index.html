@@ -41,13 +41,13 @@ tags:
 <h3 id="JavaScript">JavaScript</h3>
 
 <p><strong>Script type module</strong><br>
- Any script tag with <code>type="module"</code> is treated like a <a href="/en-US/docs/Web/JavaScript/Guide/Modules">JavaScript module</a> and is deferred by default.</p>
+ Any script tag with <code>type="module"</code> is treated as a <a href="/en-US/docs/Web/JavaScript/Guide/Modules">JavaScript module</a> and is deferred by default.</p>
 
 <h3 id="CSS">CSS</h3>
 
 <p>By default, CSS is treated as a <a href="/en-US/docs/Web/Performance/Critical_rendering_path">render blocking</a> resource, so the browser won't render any processed content until the <a href="/en-US/docs/Web/API/CSS_Object_Model">CSSOM</a> is constructed. CSS must be thin, delivered as quickly as possible, and the usage media types and queries are advised to unblock rendering.</p>
 
-<pre class="brush: html notranslate">&lt;link href="style.css"    rel="stylesheet" media="all"&gt;
+<pre class="brush: html">&lt;link href="style.css"    rel="stylesheet" media="all"&gt;
 &lt;link href="portrait.css" rel="stylesheet" media="orientation:portrait"&gt;
 &lt;link href="print.css"    rel="stylesheet" media="print"&gt;
 </pre>
@@ -69,7 +69,7 @@ tags:
 <p><strong>Loading attribute</strong><br>
  The {{htmlattrxref("loading", "img")}} attribute on an {{HTMLElement("img")}} element (or the {{htmlattrxref("loading", "iframe")}} attribute on an {{HTMLElement("iframe")}}) can be used to instruct the browser to defer loading of images/iframes that are off-screen until the user scrolls near them.</p>
 
-<pre class="brush: html notranslate">&lt;img src="image.jpg" alt="..." loading="lazy"&gt;
+<pre class="brush: html">&lt;img src="image.jpg" alt="..." loading="lazy"&gt;
 &lt;iframe src="video-player.html" title="..." loading="lazy"&gt;&lt;/iframe&gt;</pre>
 
 <p>The <code>load</code> event fires when the eagerly-loaded content has all been loaded; at that time, it's entirely possible (or even likely) that there may be lazily-loaded images that are within the {{Glossary("visual viewport")}} that haven't yet loaded.</p>
@@ -117,4 +117,3 @@ tags:
  <li><a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization#optimizing_loading_and_rendering">Optimizing loading and rendering</a></li>
  <li><a href="https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video">Lazy loading images and video</a></li>
 </ul>
-

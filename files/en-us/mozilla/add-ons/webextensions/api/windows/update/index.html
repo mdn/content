@@ -11,6 +11,7 @@ tags:
   - Update
   - WebExtensions
   - Windows
+browser-compat: webextensions.api.windows.update
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -61,13 +62,13 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("webextensions.api.windows.update")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Examples">Examples</h2>
 
 <p>When the user clicks a browser action's icon, move the window to the top left corner:</p>
 
-<pre class="notranslate brush: js">function onUpdated(windowInfo) {
+<pre class="brush: js">function onUpdated(windowInfo) {
   console.log(`Updated window: ${windowInfo.id}`);
 }
 

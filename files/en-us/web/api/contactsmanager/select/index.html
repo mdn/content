@@ -8,10 +8,11 @@ tags:
 - Method
 - PWA
 - contact picker
+browser-compat: api.ContactsManager.select
 ---
 <div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Contact Picker API")}}</div>
 
-<p class="summary">The <strong><code>select()</code></strong> method of the
+<p>The <strong><code>select()</code></strong> method of the
   {{domxref("ContactsManager")}} interface returns a {{jsxref('Promise')}} which, when
   resolved, presents the user with a contact picker which allows them to select contact(s)
   they wish to share. This method requires a user gesture for the {{jsxref('Promise')}} to
@@ -20,7 +21,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <var>ContactInfo</var> = ContactsManager.select(properties, options);</pre>
+  class="brush: js">var <var>ContactInfo</var> = ContactsManager.select(properties, options);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -71,7 +72,7 @@ tags:
 <p>An asynchronous function is then defined which uses the <code>select()</code> method to
   present the user with a contact picker interface and handle the chosen results.</p>
 
-<pre class="brush: js notranslate">const props = ['name', 'email', 'tel', 'address', 'icon'];
+<pre class="brush: js">const props = ['name', 'email', 'tel', 'address', 'icon'];
 const opts = {multiple: true};
 
 async function getContacts() {
@@ -87,21 +88,8 @@ async function getContacts() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Contact Picker API','#contacts-manager-select','select')}}</td>
-      <td>{{Spec2('Contact Picker API')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ContactsManager.select")}}</p>
+<p>{{Compat}}</p>

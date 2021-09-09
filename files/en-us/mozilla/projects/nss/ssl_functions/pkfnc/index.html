@@ -4,18 +4,19 @@ slug: Mozilla/Projects/NSS/SSL_functions/pkfnc
 ---
 <div class="note">
   <ul>
-    <li>This page is part of the <a href="/en-US/docs/NSS/SSL_functions/OLD_SSL_Reference">SSL Reference</a> that we are migrating into the format described in the <a href="/en-US/docs/Project:MDC_style_guide">MDN Style Guide</a>. If you are inclined to help with this migration, your help would be very much appreciated.</li>
+    <li>This page is part of the <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/OLD_SSL_Reference">SSL Reference</a> that we are migrating into the format described in the <a href="/en-US/docs/MDN/Guidelines">MDN Style Guide</a>. If you are inclined to help with this migration, your help would be very much appreciated.</li>
   </ul>
   <ul>
-    <li>Upgraded documentation may be found in the <a href="/NSS_reference">Current NSS Reference</a>
+    <li>Upgraded documentation may be found in the <a href="/en-US/docs/Mozilla/Projects/NSS/Reference">Current NSS Reference</a>
     </li>
   </ul>
 </div>
 <h1 id="PKCS_11_Functions">PKCS #11 Functions</h1>
 <hr>
 <p><a id="1031576"> </a></p>
-<h2 id="Chapter_7_PKCS_11_Functions">Chapter 7<br>
-  <a id="1027946"> PKCS #11 Functions</a></h2>
+
+<a id="1027946"></a>
+<h2 id="Chapter_7_PKCS_11_Functions">Chapter 7<br> PKCS #11 Functions</h2>
 <p><a id="1034215"> This chapter describes the core PKCS #11 functions that an application needs for communicating with cryptographic modules. In particular, these functions are used for obtaining certificates, keys, and passwords. </a></p>
 <p><a id="1035644"> </a><a href="#1035673"><code>PK11_FindCertFromNickname</code></a><br>
   <a href="#1026891"><code>PK11_FindKeyByAnyCert</code></a><br>
@@ -52,7 +53,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/pkfnc
 <a id="1026877">wincx</a></pre>
       </td>
       <td>
-        <p><a id="1026879"> A pointer to application data for the password callback function. This pointer is set with </a><a href="sslfnc.html#1088040"><code>SSL_SetPKCS11PinArg</code></a> during SSL configuration. To retrieve its current value, use <a href="sslfnc.html#1123385"><code>SSL_RevealPinArg</code></a>.</p>
+        <p><a id="1026879"> A pointer to application data for the password callback function. This pointer is set with </a><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslfnc#1088040"><code>SSL_SetPKCS11PinArg</code></a> during SSL configuration. To retrieve its current value, use <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslfnc#1123385"><code>SSL_RevealPinArg</code></a>.</p>
       </td>
     </tr>
   </tbody>
@@ -94,7 +95,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/pkfnc
 <a id="1026906">wincx</a></pre>
       </td>
       <td>
-        <p><a id="1030392"> A pointer to application data for the password callback function. This pointer is set with </a><a href="sslfnc.html#1088040"><code>SSL_SetPKCS11PinArg</code></a> during SSL configuration. To retrieve its current value, use <a href="sslfnc.html#1123385"><code>SSL_RevealPinArg</code></a>.</p>
+        <p><a id="1030392"> A pointer to application data for the password callback function. This pointer is set with </a><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslfnc#1088040"><code>SSL_SetPKCS11PinArg</code></a> during SSL configuration. To retrieve its current value, use <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslfnc#1123385"><code>SSL_RevealPinArg</code></a>.</p>
       </td>
     </tr>
   </tbody>
@@ -311,6 +312,6 @@ slug: Mozilla/Projects/NSS/SSL_functions/pkfnc
   <li><a id="1036732"> If unsuccessful, returns <code>NULL</code>.</a></li>
 </ul>
 <p><a id="1031767"> Many tokens keep track of the number of attempts to enter a password and do not allow further attempts after a certain point. Therefore, if the <code>retry</code> argument is <code>PR_TRUE</code>, indicating that the password was tried and is wrong, the callback function should return <code>NULL</code> to indicate that it is unsuccessful, rather than attempting to return the same password again. Failing to terminate when the <code>retry</code> argument is <code>PR_TRUE</code> can result in an endless loop.</a></p>
-<p><a id="1036508"> Several functions in the NSS libraries use the password callback function to obtain the password before performing operations that involve the protected information. The third parameter to the password callback function is application-defined and can be used for any purpose. For example, Communicator uses the parameter to pass information about which window is associated with the modal dialog box requesting the password from the user. When NSS libraries call the password callback function, the value they pass in the third parameter is determined by </a><a href="sslfnc.html#1088040"><code>SSL_SetPKCS11PinArg</code></a>.</p>
+<p><a id="1036508"> Several functions in the NSS libraries use the password callback function to obtain the password before performing operations that involve the protected information. The third parameter to the password callback function is application-defined and can be used for any purpose. For example, Communicator uses the parameter to pass information about which window is associated with the modal dialog box requesting the password from the user. When NSS libraries call the password callback function, the value they pass in the third parameter is determined by </a><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslfnc#1088040"><code>SSL_SetPKCS11PinArg</code></a>.</p>
 <h5 id="See_Also"> <a id="1036515"> See Also </a></h5>
-<p><a id="1036523"> For examples of password callback functions, see the samples in the </a><a href="/NSS/NSS_Sample_Code">Samples</a> directory.</p>
+<p><a id="1036523"> For examples of password callback functions, see the samples in the </a><a href="/en-US/docs/Mozilla/Projects/NSS/NSS_Sample_Code">Samples</a> directory.</p>

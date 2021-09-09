@@ -11,13 +11,12 @@ tags:
 - Property
 - Reference
 - Window
+browser-compat: api.SharedWorkerGlobalScope.applicationCache
 ---
 <p>{{Deprecated_Header}}{{Non-standard_Header}}</p>
 
 <div class="notecard warning">
-  <h4 id="Important">Important</h4>
-
-  <p>Application Cache is deprecated as of Firefox 44, and is no longer available in
+  <p><strong>Warning:</strong> Application Cache is deprecated as of Firefox 44, and is no longer available in
     insecure contexts from Firefox 60 onwards ({{bug(1354175)}}, currently Nightly/Beta
     only). Don't use it to offline websites — consider using <a
       href="/en-US/docs/Web/API/Service_Worker_API">service workers</a> instead.</p>
@@ -27,7 +26,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>cache</var> = window.applicationCache
+<pre class="brush: js"><var>cache</var> = window.applicationCache
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -39,7 +38,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SharedWorkerGlobalScope.applicationCache")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

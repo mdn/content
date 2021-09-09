@@ -18,14 +18,14 @@ tags:
 - display
 - displaySurface
 - screen
+browser-compat: api.MediaTrackSupportedConstraints.displaySurface
 ---
 <p>{{APIRef("Media Capture and Streams")}}</p>
 
-<p><span class="seoSummary">The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
+<p>The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
     <strong><code>displaySurface</code></strong> property indicates whether or not the
     {{domxref("MediaTrackConstraints.displaySurface", "displaySurface")}} constraint is
-    supported by the user agent and the device on which the content is being used. </span>
-</p>
+    supported by the user agent and the device on which the content is being used.</p>
 
 <p>The supported constraints list is obtained by calling
   {{domxref("MediaDevices.getSupportedConstraints",
@@ -34,7 +34,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><em>isDisplaySurfaceSupported</em> = <em>supportedConstraints</em>.displaySurface;</pre>
+  class="brush: js"><em>isDisplaySurfaceSupported</em> = <em>supportedConstraints</em>.displaySurface;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -73,26 +73,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Screen Capture',
-        '#dom-mediatracksupportedconstraints-displaysurface',
-        'MediaTrackSupportedConstraints.displaySurface')}}</td>
-      <td>{{Spec2('Screen Capture')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MediaTrackSupportedConstraints.displaySurface")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

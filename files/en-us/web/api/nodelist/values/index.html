@@ -8,6 +8,8 @@ tags:
 - NodeList
 - Reference
 - Web
+- Polyfill
+browser-compat: api.NodeList.values
 ---
 <p>{{APIRef("DOM")}}</p>
 
@@ -17,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">nodeList.values();</pre>
+<pre class="brush: js">nodeList.values();</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -25,7 +27,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js;highlight:[13]">var node = document.createElement("div");
+<pre class="brush: js;">var node = document.createElement("div");
 var kid1 = document.createElement("p");
 var kid2 = document.createTextNode("hey");
 var kid3 = document.createElement("span");
@@ -51,11 +53,12 @@ for(var value of list.values()) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.NodeList.values")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>NodeList.prototype.values</code> is available in <a href="https://github.com/zloirock/core-js#iterable-dom-collections"><code>core-js</code></a></li>
   <li>{{domxref("Node")}}</li>
   <li>{{domxref("NodeList")}}</li>
 </ul>

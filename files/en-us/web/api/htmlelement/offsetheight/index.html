@@ -8,6 +8,7 @@ tags:
 - NeedsNonDHMLImage
 - Property
 - Reference
+browser-compat: api.HTMLElement.offsetHeight
 ---
 <div>{{ APIRef("HTML DOM") }}</div>
 
@@ -26,14 +27,14 @@ tags:
   returned.</p>
 
 <div class="note">
-  <p>This property will round the value to an integer. If you need a fractional value, use
+  <p><strong>Note:</strong> This property will round the value to an integer. If you need a fractional value, use
     {{ domxref("element.getBoundingClientRect()") }}.</p>
 </div>
 
 <h2 id="Syntax_and_values">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>intElemOffsetHeight</em> = <em>element</em>.offsetHeight;</pre>
+  class="brush: js">var <em>intElemOffsetHeight</em> = <em>element</em>.offsetHeight;</pre>
 
 <p><code><em>intElemOffsetHeight</em></code> is a variable storing an integer
   corresponding to the <code>offsetHeight</code> pixel value of the element. The
@@ -52,22 +53,7 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('CSSOM View', '#dom-htmlelement-offsetheight', 'offsetHeight')}}</td>
-      <td>{{Spec2('CSSOM View')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h3 id="Notes">Notes</h3>
 
@@ -78,7 +64,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLElement.offsetHeight")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

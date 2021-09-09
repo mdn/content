@@ -7,6 +7,7 @@ tags:
 - Reference
 - WebGL
 - WebGL2
+browser-compat: api.WebGL2RenderingContext.clearBufferiv
 ---
 <div>{{APIRef("WebGL")}}</div>
 
@@ -16,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">void gl.clearBufferfv(buffer, drawbuffer, values, optional srcOffset);
+<pre class="brush: js">void gl.clearBufferfv(buffer, drawbuffer, values, optional srcOffset);
 void gl.clearBufferiv(buffer, drawbuffer, values, optional srcOffset);
 void gl.clearBufferuiv(buffer, drawbuffer, values, optional srcOffset);
 void gl.clearBufferfi(buffer, drawbuffer, depth, stencil);
@@ -26,7 +27,7 @@ void gl.clearBufferfi(buffer, drawbuffer, depth, stencil);
 
 <dl>
   <dt><code>buffer</code></dt>
-  <dd>A {{domxref("GLenum")}} specifying the buffer to clear. Possible values are:
+  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the buffer to clear. Possible values are:
     <ul>
       <li><code>gl.COLOR</code>: Color buffer.</li>
       <li><code>gl.DEPTH</code>: Depth buffer.</li>
@@ -36,17 +37,17 @@ void gl.clearBufferfi(buffer, drawbuffer, depth, stencil);
     </ul>
   </dd>
   <dt><code>drawBuffer</code></dt>
-  <dd>A {{domxref("GLint")}} specifying the draw buffer to clear.</dd>
+  <dd>A {{domxref("WebGL_API/Types", "GLint")}} specifying the draw buffer to clear.</dd>
   <dt><code>values</code></dt>
-  <dd>An {{jsxref("Array")}} of {{domxref("GLint")}}, {{domxref("GLuint")}}
-    or {{domxref("GLfloat")}} values or<br>
+  <dd>An {{jsxref("Array")}} of {{domxref("WebGL_API/Types", "GLint")}}, {{domxref("WebGL_API/Types", "GLuint")}}
+    or {{domxref("WebGL_API/Types", "GLfloat")}} values or<br>
     an {{jsxref("Int32Array")}}, {{jsxref("Uint32Array")}} or {{jsxref("Float32Array")}}
     specifying the values to clear to.</dd>
   <dt><code>depth</code></dt>
-  <dd>A {{domxref("GLfloat")}} specifying the value to clear a depth render buffer to.
+  <dd>A {{domxref("WebGL_API/Types", "GLfloat")}} specifying the value to clear a depth render buffer to.
   </dd>
   <dt><code>stencil</code></dt>
-  <dd>A {{domxref("GLint")}} specifying the value to clear the stencil render buffer to.
+  <dd>A {{domxref("WebGL_API/Types", "GLint")}} specifying the value to clear the stencil render buffer to.
   </dd>
 </dl>
 
@@ -65,34 +66,11 @@ gl.clearBufferfi(gl.DEPTH_STENCIL, 0, 1.0, 0);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebGL2', "#3.7.11", "clearBuffer[fiuv]()")}}</td>
-      <td>{{Spec2('WebGL2')}}</td>
-      <td>Initial definition for WebGL.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('OpenGL ES 3.0', "glClearBuffer.xhtml", "glClearBuffer")}}</td>
-      <td>{{Spec2('OpenGL ES 3.0')}}</td>
-      <td>Man page of the (similar) OpenGL API.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
-
-<p>{{Compat("api.WebGL2RenderingContext.clearBufferiv")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

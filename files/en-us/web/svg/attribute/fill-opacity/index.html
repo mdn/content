@@ -4,6 +4,7 @@ slug: Web/SVG/Attribute/fill-opacity
 tags:
   - SVG
   - SVG Attribute
+browser-compat: svg.attributes.presentation.fill-opacity
 ---
 <div>{{SVGRef}}</div>
 
@@ -11,14 +12,28 @@ tags:
 
 <p class="note"><strong>Note:</strong> As a presentation attribute <code>fill-opacity</code> can be used as a CSS property.</p>
 
-<p>As a presentation attribute, it can be applied to any element but it has effect only on the following eleven elements: {{SVGElement('altGlyph')}}, {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, and {{SVGElement('tspan')}}</p>
+<p>You can use this attribute with the following SVG elements:</p>
+
+<ul>
+  <li>{{SVGElement('altGlyph')}}</li>
+  <li>{{SVGElement('circle')}}</li>
+  <li>{{SVGElement('ellipse')}}</li>
+  <li>{{SVGElement('path')}}</li>
+  <li>{{SVGElement('polygon')}}</li>
+  <li>{{SVGElement('polyline')}}</li>
+  <li>{{SVGElement('rect')}}</li>
+  <li>{{SVGElement('text')}}</li>
+  <li>{{SVGElement('textPath')}}</li>
+  <li>{{SVGElement('tref')}}</li>
+  <li>{{SVGElement('tspan')}}</li>
+</ul>
 
 <div id="topExample">
 <div class="hidden">
-<pre class="brush: css notranslate">html,body,svg { height:100% }</pre>
+<pre class="brush: css">html,body,svg { height:100% }</pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg"&gt;
+<pre class="brush: html">&lt;svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!-- Default fill opacity: 1 --&gt;
   &lt;circle cx="50" cy="50" r="40" /&gt;
 
@@ -61,7 +76,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("svg.attributes.presentation.fill-opacity")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Specifications">Specifications</h2>
 

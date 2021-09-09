@@ -2,13 +2,13 @@
 title: RTCPeerConnection.setIdentityProvider()
 slug: Web/API/RTCPeerConnection/setIdentityProvider
 tags:
-- Experimental
-- Method
-- RTCPeerConnection
-- Reference
-- WebRTC
+  - Method
+  - RTCPeerConnection
+  - Reference
+  - WebRTC
+browser-compat: api.RTCPeerConnection.setIdentityProvider
 ---
-<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
+<p>{{APIRef("WebRTC")}}</p>
 
 <p>The <code><strong>RTCPeerConnection.setIdentityProvider()</strong></code> method sets
   the Identity Provider (IdP) to the triplet given in parameter: its name, the protocol
@@ -20,8 +20,8 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><code><em>pc</em>.setIdentityProvider(<em>domainname</em> [, <em>protocol</em>] [, <em>username</em>]);
-</code></pre>
+<pre class="brush: js">pc.setIdentityProvider(domainname [, protocol] [, username]);
+</pre>
 
 <p><em>There is no return value for this method.</em></p>
 
@@ -41,37 +41,21 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js">var pc = new PeerConnection();
+<pre class="brush: js">var pc = new RTCPeerConnection();
 
 pc.setIdentityAssertion("developer.mozilla.org");
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table" style="height: 49px; width: 1000px;">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('WebRTC Identity', '#dfn-setidentityprovider',
-        'RTCPeerConnection.setIdentityProvider()') }}</td>
-      <td>{{ Spec2('WebRTC Identity') }}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCPeerConnection.setIdentityProvider")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
+  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
 </ul>

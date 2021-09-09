@@ -7,6 +7,7 @@ tags:
 - Reference
 - WebGL
 - WebGL2
+browser-compat: api.WebGL2RenderingContext.drawArraysInstanced
 ---
 <div>{{APIRef("WebGL")}}</div>
 
@@ -24,13 +25,13 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">void <var>gl</var>.drawArraysInstanced(<var>mode</var>, <var>first</var>, <var>count</var>, <var>instanceCount</var>);</pre>
+  class="brush: js">void <var>gl</var>.drawArraysInstanced(<var>mode</var>, <var>first</var>, <var>count</var>, <var>instanceCount</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
   <dt><code>mode</code></dt>
-  <dd>A {{domxref("GLenum")}} specifying the type primitive to render. Possible values
+  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the type primitive to render. Possible values
     are:
     <ul>
       <li><code>gl.POINTS</code>: Draws a single dot.</li>
@@ -48,12 +49,12 @@ tags:
     </ul>
   </dd>
   <dt>first</dt>
-  <dd>A {{domxref("GLint")}} specifying the starting index in the array of vector points.
+  <dd>A {{domxref("WebGL_API/Types", "GLint")}} specifying the starting index in the array of vector points.
   </dd>
   <dt>count</dt>
-  <dd>A {{domxref("GLsizei")}} specifying the number of indices to be rendered.</dd>
+  <dd>A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the number of indices to be rendered.</dd>
   <dt>instanceCount</dt>
-  <dd>A {{domxref("GLsizei")}} specifying the number of instances of the range of elements
+  <dd>A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the number of instances of the range of elements
     to execute.</dd>
 </dl>
 
@@ -68,35 +69,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebGL2', "#3.7.9", "drawArraysInstanced")}}</td>
-      <td>{{Spec2('WebGL2')}}</td>
-      <td>Initial definition for WebGL.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('OpenGL ES 3.0', "glDrawArraysInstanced.xhtml",
-        "glDrawArraysInstanced")}}</td>
-      <td>{{Spec2('OpenGL ES 3.0')}}</td>
-      <td>Man page of the (similar) OpenGL API.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
-
-<p>{{Compat("api.WebGL2RenderingContext.drawArraysInstanced")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

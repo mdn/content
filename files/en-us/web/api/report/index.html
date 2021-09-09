@@ -8,17 +8,18 @@ tags:
   - Reference
   - Report
   - Reporting API
+browser-compat: api.Report
 ---
 <div>{{SeeCompatTable}}{{APIRef("Reporting API")}}</div>
 
-<p class="summary">The <code>Report</code> interface of the <a href="/en-US/docs/Web/API/Reporting_API">Reporting API</a> represents a single report.</p>
+<p>The <code>Report</code> interface of the <a href="/en-US/docs/Web/API/Reporting_API">Reporting API</a> represents a single report.</p>
 
-<p class="summary">Reports can be accessed in a number of ways:</p>
+<p>Reports can be accessed in a number of ways:</p>
 
 <ul>
- <li class="summary">Via the {{domxref("ReportingObserver.takeRecords()")}} method — this returns all reports in an observer's report queue, and then empties the queue.</li>
- <li class="summary">Via the <code>reports</code> parameter of the callback function passed into the <code><a href="/en-US/docs/Web/API/ReportingObserver/ReportingObserver">ReportingObserver()</a></code> constructor upon creation of a new observer instance. This contains the list of reports currently contained in the observer's report queue.</li>
- <li class="summary">By sending requests to the endpoints defined via the {{httpheader("Report-To")}} HTTP header.</li>
+ <li>Via the {{domxref("ReportingObserver.takeRecords()")}} method — this returns all reports in an observer's report queue, and then empties the queue.</li>
+ <li>Via the <code>reports</code> parameter of the callback function passed into the <code><a href="/en-US/docs/Web/API/ReportingObserver/ReportingObserver">ReportingObserver()</a></code> constructor upon creation of a new observer instance. This contains the list of reports currently contained in the observer's report queue.</li>
+ <li>By sending requests to the endpoints defined via the {{httpheader("Report-To")}} HTTP header.</li>
 </ul>
 
 <h2 id="Properties">Properties</h2>
@@ -59,7 +60,7 @@ let observer = new ReportingObserver(function(reports, observer) {
 
 <p>Because of the event handler we set up inside the <code>ReportingObserver()</code> constructor, we can now click the button to display the report details.</p>
 
-<p><img alt="image of a jolly bearded man with various stats displayed below it about a deprecated feature" src="https://mdn.mozillademos.org/files/16561/reporting_api_example.png" style="border-style: solid; border-width: 1px; display: block; height: 476px; margin: 0px auto; width: 902px;"></p>
+<p><img alt="image of a jolly bearded man with various stats displayed below it about a deprecated feature" src="reporting_api_example.png"></p>
 
 <p>The report details are displayed via the <code>displayReports()</code> fuction, which takes the observer callback's <code>reports</code> parameter as its parameter:</p>
 
@@ -89,24 +90,11 @@ let observer = new ReportingObserver(function(reports, observer) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Reporting API","#dom-report","Report")}}</td>
-   <td>{{Spec2("Reporting API")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Report")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

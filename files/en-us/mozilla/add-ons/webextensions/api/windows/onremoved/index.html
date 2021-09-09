@@ -11,6 +11,7 @@ tags:
   - WebExtensions
   - Windows
   - onRemoved
+browser-compat: webextensions.api.windows.onRemoved
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -52,13 +53,13 @@ browser.windows.onRemoved.hasListener(listener)
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("webextensions.api.windows.onRemoved")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Examples">Examples</h2>
 
 <p>Log the IDs of windows as they are removed.</p>
 
-<pre class="notranslate brush: js">browser.windows.onRemoved.addListener((windowId) =&gt; {
+<pre class="brush: js">browser.windows.onRemoved.addListener((windowId) =&gt; {
   console.log("Closed window: " + windowId);
 });
 </pre>

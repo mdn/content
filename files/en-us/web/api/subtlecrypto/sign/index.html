@@ -2,13 +2,13 @@
 title: SubtleCrypto.sign()
 slug: Web/API/SubtleCrypto/sign
 tags:
-- API
-- Method
-- Reference
-- Référence(2)
-- SubtleCrypto
-- Web Crypto API
-- sign
+  - API
+  - Method
+  - Reference
+  - SubtleCrypto
+  - Web Crypto API
+  - sign
+browser-compat: api.SubtleCrypto.sign
 ---
 <p>{{APIRef("Web Crypto API")}}{{SecureContext_header}}</p>
 
@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">const <em>signature</em> = <em>crypto</em><code>.subtle.sign(<em>algorithm</em>, <em>key</em>, <em>data</em>)</code>;
+<pre class="brush: js">const signature = crypto.subtle.sign(algorithm, key, data);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -77,7 +77,7 @@ tags:
 <p>Three of these algorithms — RSASSA-PKCS1-v1_5, RSA-PSS, and ECDSA — are
   {{Glossary("public-key cryptography", "public-key cryptosystems")}} that use the private
   key for signing and the public key for verification. These systems all use a <a
-    href="/en-US/docs/Web/API/SubtleCrypto/digest#Supported_algorithms">digest
+    href="/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms">digest
     algorithm</a> to hash the message to a short fixed size before signing. The choice of
   digest algorithm is passed into the {{domxref("SubtleCrypto.generateKey()",
   "generateKey()")}} or {{domxref("SubtleCrypto.importKey()", "importKey()")}} functions.
@@ -91,11 +91,11 @@ tags:
 <h3 id="RSASSA-PKCS1-v1_5">RSASSA-PKCS1-v1_5</h3>
 
 <p>The RSASSA-PKCS1-v1_5 algorithm is specified in <a
-    href="https://tools.ietf.org/html/rfc3447">RFC 3447</a>.</p>
+    href="https://datatracker.ietf.org/doc/html/rfc3447">RFC 3447</a>.</p>
 
 <h3 id="RSA-PSS">RSA-PSS</h3>
 
-<p>The RSA-PSS algorithm is specified in <a href="https://tools.ietf.org/html/rfc3447">RFC
+<p>The RSA-PSS algorithm is specified in <a href="https://datatracker.ietf.org/doc/html/rfc3447">RFC
     3447</a>.</p>
 
 <p>It's different from RSASSA-PKCS1-v1_5 in that it incorporates a random salt in the
@@ -109,7 +109,7 @@ tags:
 <p>ECDSA (Elliptic Curve Digital Signature Algorithm) is a variant of the Digital
   Signature Algorithm, specified in <a
     href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf">FIPS-186</a>, that
-  uses Elliptic Curve Cryptography (<a href="https://tools.ietf.org/html/rfc6090">RFC
+  uses Elliptic Curve Cryptography (<a href="https://datatracker.ietf.org/doc/html/rfc6090">RFC
     6090</a>).</p>
 
 <h3 id="HMAC">HMAC</h3>
@@ -128,7 +128,7 @@ tags:
 <h2 id="Examples">Examples</h2>
 
 <div class="notecard note">
-  <p><strong>Note</strong>: You can <a
+  <p><strong>Note:</strong> You can <a
       href="https://mdn.github.io/dom-examples/web-crypto/sign-verify/index.html">try the
       working examples</a> out on GitHub.</p>
 </div>
@@ -244,33 +244,19 @@ let signature = await window.crypto.subtle.sign(
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{ SpecName('Web Crypto API', '#dfn-SubtleCrypto-method-sign',
-        'SubtleCrypto.sign()') }}</td>
-      <td>{{ Spec2('Web Crypto API') }}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SubtleCrypto.sign")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
   <li>{{domxref("SubtleCrypto.verify()")}}.</li>
-  <li><a href="https://tools.ietf.org/html/rfc3447">RFC 3447</a> specifies
+  <li><a href="https://datatracker.ietf.org/doc/html/rfc3447">RFC 3447</a> specifies
     RSASSA-PKCS1-v1_5.</li>
-  <li><a href="https://tools.ietf.org/html/rfc3447">RFC 3447</a> specifies RSA-PSS.</li>
+  <li><a href="https://datatracker.ietf.org/doc/html/rfc3447">RFC 3447</a> specifies RSA-PSS.</li>
   <li><a
       href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf">FIPS-186</a> specifies
     ECDSA.</li>

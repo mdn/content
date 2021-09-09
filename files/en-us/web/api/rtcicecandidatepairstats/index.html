@@ -19,10 +19,11 @@ tags:
   - WebRTC API
   - candidate-pair
   - rtc
+browser-compat: api.RTCIceCandidatePairStats
 ---
 <p>{{APIRef("WebRTC")}}</p>
 
-<p><span class="seoSummary">The WebRTC <code><strong>RTCIceCandidatePairStats</strong></code> dictionary reports statistics which provide insight into the quality and performance of an {{domxref("RTCPeerConnection")}} while connected and configured as described by the specified pair of {{Glossary("ICE")}} candidates.</span></p>
+<p>The WebRTC <code><strong>RTCIceCandidatePairStats</strong></code> dictionary reports statistics which provide insight into the quality and performance of an {{domxref("RTCPeerConnection")}} while connected and configured as described by the specified pair of {{Glossary("ICE")}} candidates.</p>
 
 <p>If a {{domxref("RTCStats")}}-based object's {{domxref("RTCStats.type", "type")}} is <code>candidate-pair</code>, it's an <code>RTCIceCandidatePairStats</code> object.</p>
 
@@ -35,7 +36,7 @@ tags:
  <dd>Provides an informative value representing the available inbound capacity of the network by reporting the total number of bits per second available for all of the candidate pair's incoming {{Glossary("RTP")}} streams. This does not take into account the size of the {{Glossary("IP")}} overhead, nor any other transport layers such as {{Glossary("TCP")}} or {{Glossary("UDP")}}.</dd>
  <dt>{{domxref("RTCIceCandidatePairStats.availableOutgoingBitrate", "availableOutgoingBitrate")}} {{optional_inline}}</dt>
  <dd>Provides an informative value representing the available outbound capacity of the network by reporting the total number of bits per second available for all of the candidate pair's outoing {{Glossary("RTP")}} streams. This does not take into account the size of the {{Glossary("IP")}} overhead, nor any other transport layers such as {{Glossary("TCP")}} or {{Glossary("UDP")}}.</dd>
- <dt>{{domxref("RTCIceCandidatePairStats.bytesReceieved", "bytesReceieved")}} {{optional_inline}}</dt>
+ <dt>{{domxref("RTCIceCandidatePairStats/bytesReceived", "bytesReceived")}} {{optional_inline}}</dt>
  <dd>The total number of payload bytes received (that is, the total number of bytes received minus any headers, padding, or other administrative overhead) on this candidate pair so far.</dd>
  <dt>{{domxref("RTCIceCandidatePairStats.bytesSent", "bytesSent")}} {{optional_inline}}</dt>
  <dd>The total number of payload bytes sent (that is, the total number of bytes sent minus any headers, padding, or other administrative overhead) so far on this candidate pair.</dd>
@@ -92,11 +93,11 @@ tags:
 <p>The following properties have been removed from the specification and should no longer be used. You should update any existing code to avoid using them as soon as is practical. Check the {{anch("Browser compatibility", "compatibility table")}} for details on which browsers support them and in which versions.</p>
 
 <dl>
- <dt>{{domxref("RTCIceCandidatePairStats.priority", "priority")}} {{obsolete_inline}} {{optional_inline}}</dt>
+ <dt>{{domxref("RTCIceCandidatePairStats.priority", "priority")}} {{deprecated_inline}} {{optional_inline}}</dt>
  <dd>An integer value indicating the candidate pair's priority.</dd>
- <dt>{{domxref("RTCIceCandidatePairStats.readable", "readable")}} {{obsolete_inline}} {{optional_inline}}</dt>
+ <dt>{{domxref("RTCIceCandidatePairStats.readable", "readable")}} {{deprecated_inline}} {{optional_inline}}</dt>
  <dd>A Boolean value indicating whether or not data can be sent over the connection described by the candidate pair.</dd>
- <dt>{{domxref("RTCIceCandidatePairStats.writable", "writable")}} {{obsolete_inline}} {{optional_inline}}</dt>
+ <dt>{{domxref("RTCIceCandidatePairStats.writable", "writable")}} {{deprecated_inline}} {{optional_inline}}</dt>
  <dd>A Boolean value indicating whether or not data can be received on the connection described by the candidate pair.</dd>
 </dl>
 
@@ -129,23 +130,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('WebRTC Statistics Identifiers', '#dom-rtcicecandidatepairstats', 'RTCIceCandidatePairStats') }}</td>
-   <td>{{ Spec2('WebRTC Statistics Identifiers') }}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCIceCandidatePairStats")}}</p>
+<p>{{Compat}}</p>

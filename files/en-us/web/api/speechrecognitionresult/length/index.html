@@ -11,12 +11,13 @@ tags:
 - length
 - recognition
 - speech
+browser-compat: api.SpeechRecognitionResult.length
 ---
 <p>{{APIRef("Web Speech API")}}{{ SeeCompatTable() }}</p>
 
 <p>The <code><strong>length</strong></code> read-only property of the
-  {{domxref("SpeechRecognitionResult")}} interface returns <cite>the length of the "array"
-    — the </cite>number of {{domxref("SpeechRecognitionAlternative")}} objects contained
+  {{domxref("SpeechRecognitionResult")}} interface returns the length of the "array"
+    — the number of {{domxref("SpeechRecognitionAlternative")}} objects contained
   in the result (also referred to as "n-best alternatives".)</p>
 
 <p>The number of alternatives contained in the result depends on what the
@@ -26,7 +27,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var myLength = speechRecognitionResultInstance.length;</pre>
+  class="brush: js">var myLength = speechRecognitionResultInstance.length;</pre>
 
 <h3 id="Returns">Returns</h3>
 
@@ -56,25 +57,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Web Speech API', '#dom-speechrecognitionresult-length', 'length')}}
-      </td>
-      <td>{{Spec2('Web Speech API')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SpeechRecognitionResult.length")}}</p>
+<p>{{Compat}}</p>
 
 <h3 id="Firefox_OS_permissions">Firefox OS permissions</h3>
 

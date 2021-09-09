@@ -9,6 +9,7 @@ tags:
   - WebExtensions
   - allowPopupsForUserEvents
   - browserSettings
+browser-compat: webextensions.api.browserSettings.allowPopupsForUserEvents
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -20,7 +21,7 @@ tags:
 
 <p>For example, suppose a web page has code like this:</p>
 
-<pre class="notranslate brush: js">window.addEventListener("click", (e) =&gt; {
+<pre class="brush: js">window.addEventListener("click", (e) =&gt; {
   window.open("https://example.com","myPopup",'height=400,width=400');
 });
 </pre>
@@ -29,15 +30,13 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("webextensions.api.browserSettings.allowPopupsForUserEvents")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Examples">Examples</h2>
 
 <p>Toggle the setting:</p>
 
-<pre class="notranslate brush: js">function toggleAllowPopup() {
+<pre class="brush: js">function toggleAllowPopup() {
 
   function toggle(current) {
     console.log(`Current value: ${current.value}`);

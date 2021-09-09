@@ -11,6 +11,7 @@ tags:
   - Search
   - WebExtensions
   - downloads
+browser-compat: webextensions.api.downloads.search
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -36,9 +37,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("webextensions.api.downloads.search")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -46,7 +45,7 @@ tags:
 
 <h3 id="Get_downloads_matching_query">Get downloads matching "query"</h3>
 
-<pre class="notranslate brush: js">function logDownloads(downloads) {
+<pre class="brush: js">function logDownloads(downloads) {
   for (let download of downloads) {
     console.log(download.id);
     console.log(download.url);
@@ -67,7 +66,7 @@ searching.then(logDownloads, onError);</pre>
 
 <p>To get a specific {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}}, the easiest way is to set only the <code>id</code> field, as seen in the snippet below:</p>
 
-<pre class="notranslate brush: js">function logDownloads(downloads) {
+<pre class="brush: js">function logDownloads(downloads) {
   for (let download of downloads) {
     console.log(download.id);
     console.log(download.url);
@@ -88,7 +87,7 @@ searching.then(logDownloads, onError);
 
 <p>If you want to return all {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}}, set <code>query</code> to an empty object.</p>
 
-<pre class="notranslate brush: js">function logDownloads(downloads) {
+<pre class="brush: js">function logDownloads(downloads) {
   for (let download of downloads) {
     console.log(download.id);
     console.log(download.url);
@@ -106,7 +105,7 @@ searching.then(logDownloads, onError);</pre>
 
 <p>You can get the most recent download by specifying the following search parameters:</p>
 
-<pre class="notranslate brush: js">function logDownloads(downloads) {
+<pre class="brush: js">function logDownloads(downloads) {
   for (let download of downloads) {
     console.log(download.id);
     console.log(download.url);

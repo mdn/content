@@ -14,17 +14,18 @@ tags:
 - Reference
 - interactive
 - useMap
+browser-compat: api.HTMLImageElement.useMap
 ---
 <p>{{APIRef("HTML DOM")}}</p>
 
-<p><span class="seoSummary">The <code><strong>useMap</strong></code> property on the
+<p>The <code><strong>useMap</strong></code> property on the
     {{domxref("HTMLImageElement")}} interface reflects the value of the
     {{Glossary("HTML")}} {{htmlattrxref("usemap", "img")}} attribute, which is a string
-    providing the name of the client-side image map to apply to the image.</span></p>
+    providing the name of the client-side image map to apply to the image.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>htmlImageElement</em>.useMap = <em>imageMapAnchor</em>;
+<pre class="brush: js"><em>htmlImageElement</em>.useMap = <em>imageMapAnchor</em>;
 let <em>imageMapAnchor</em> = <em>htmlImageElement</em>.useMap;
 </pre>
 
@@ -47,7 +48,7 @@ let <em>imageMapAnchor</em> = <em>htmlImageElement</em>.useMap;
 
 <p>Consider a <code>&lt;map&gt;</code> that looks like this:</p>
 
-<pre class="brush: html notranslate">&lt;map name="mainmenu-map"&gt;
+<pre class="brush: html">&lt;map name="mainmenu-map"&gt;
   &lt;area shape="circle" coords="25, 25, 75" href="/index.html" alt="Return to home page"&gt;
   &lt;area shape="rect" coords="25, 25, 100, 150" href="/index.html" alt="Shop"&gt;
 &lt;/map&gt;
@@ -57,7 +58,7 @@ let <em>imageMapAnchor</em> = <em>htmlImageElement</em>.useMap;
   look something like the following:</p>
 
 <pre
-  class="brush: html notranslate">&lt;img src="menubox.png" usemap="#mainmenu-map"&gt;</pre>
+  class="brush: html">&lt;img src="menubox.png" usemap="#mainmenu-map"&gt;</pre>
 
 <p>For additional examples (including interactive ones), see the articles about the
   {{HTMLElement("map")}} and {{HTMLElement("area")}} elements, as well as the <a
@@ -68,36 +69,10 @@ let <em>imageMapAnchor</em> = <em>htmlImageElement</em>.useMap;
 
 <div>{{EmbedInteractiveExample("pages/tabbed/area.html", "tabbed-taller")}}</div>
 
-<p class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples
-  </a> and send us a pull request.</p>
-
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', '#dom-img-usemap', 'HTMLImageElement.useMap')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table on this page is generated from structured
-  data. If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and
-  send us a pull request.</div>
-
-<p>{{Compat("api.HTMLImageElement.useMap")}}</p>
+<p>{{Compat}}</p>

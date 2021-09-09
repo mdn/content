@@ -4,10 +4,9 @@ slug: Web/API/TreeWalker
 tags:
   - API
   - DOM
+browser-compat: api.TreeWalker
 ---
-<div>
 <p>{{ APIRef("DOM") }}</p>
-</div>
 
 <p>The <strong><code>TreeWalker</code></strong> object represents the nodes of a document subtree and a position within them.</p>
 
@@ -74,17 +73,17 @@ tags:
    <tr>
     <td><code>NodeFilter.SHOW_ENTITY</code> {{deprecated_inline}}</td>
     <td><code>32</code></td>
-    <td>Shows {{ domxref("Entity") }} nodes. This is meaningful only when creating a {{ domxref("TreeWalker") }} with an {{ domxref("Entity") }} node as its root; in this case, it means that the {{ domxref("Entity") }} node will appear in the first position of the traversal. Since entities are not part of the document tree, they do not appear when traversing over the document tree.</td>
+    <td>Legacy, no more usable.</td>
    </tr>
    <tr>
     <td><code>NodeFilter.SHOW_ENTITY_REFERENCE</code> {{deprecated_inline}}</td>
     <td><code>16</code></td>
-    <td>Shows {{ domxref("EntityReference") }} nodes.</td>
+    <td>Legacy, no more usable.</td>
    </tr>
    <tr>
     <td><code>NodeFilter.SHOW_NOTATION</code> {{deprecated_inline}}</td>
     <td><code>2048</code></td>
-    <td>Shows {{ domxref("Notation") }} nodes. This is meaningful only when creating a {{ domxref("TreeWalker") }} with a {{ domxref("Notation") }} node as its root; in this case, it means that the {{ domxref("Notation") }} node will appear in the first position of the traversal. Since entities are not part of the document tree, they do not appear when traversing over the document tree.</td>
+    <td>Legacy, no more usable.</td>
    </tr>
    <tr>
     <td><code>NodeFilter.SHOW_PROCESSING_INSTRUCTION</code></td>
@@ -101,8 +100,8 @@ tags:
  </dd>
  <dt>{{domxref("TreeWalker.filter")}} {{readonlyInline}}</dt>
  <dd>Returns a {{domxref("NodeFilter")}} used to select the relevant nodes.</dd>
- <dt>{{domxref("TreeWalker.expandEntityReferences")}} {{readonlyInline}}{{obsolete_inline}}</dt>
- <dd>Is a {{domxref("Boolean")}} indicating, when discarding an {{domxref("EntityReference")}} its whole sub-tree must be discarded at the same time.</dd>
+ <dt>{{domxref("TreeWalker.expandEntityReferences")}} {{readonlyInline}}{{deprecated_inline}}</dt>
+ <dd>Is a boolean value indicating, when discarding an entity reference its whole sub-tree must be discarded at the same time.</dd>
  <dt>{{domxref("TreeWalker.currentNode")}}</dt>
  <dd>Is the {{domxref("Node")}} on which the <code>TreeWalker</code> is currently pointing at.</dd>
 </dl>
@@ -112,7 +111,7 @@ tags:
 <p><em>This interface doesn't inherit any method.</em></p>
 
 <div class="note">
-<p><strong>Note</strong>: in the context of a <code>TreeWalker</code>, a node is <em>visible</em> if it exists in the logical view determined by the <code>whatToShow</code> and <code>filter</code> parameter arguments. (Whether or not the node is visible on the screen is irrelevant.)</p>
+<p><strong>Note:</strong> in the context of a <code>TreeWalker</code>, a node is <em>visible</em> if it exists in the logical view determined by the <code>whatToShow</code> and <code>filter</code> parameter arguments. (Whether or not the node is visible on the screen is irrelevant.)</p>
 </div>
 
 <dl>
@@ -134,29 +133,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#interface-treewalker', 'TreeWalker')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Removed the <code>expandEntityReferences</code> property.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Traversal_Range', 'traversal.html#Traversal-TreeWalker', 'TreeWalker')}}</td>
-   <td>{{Spec2('DOM2 Traversal_Range')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.TreeWalker")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -1,10 +1,11 @@
 ---
 title: FileReaderSync.readAsText()
 slug: Web/API/FileReaderSync/readAsText
+browser-compat: api.FileReaderSync.readAsText
 ---
 <div>{{APIRef("File API")}}</div>
 
-<div><span class="seoSummary">The <code>readAsText()</code> method of the {{DOMxRef("FileReaderSync")}} interface allows to read {{DOMxRef("File")}} or {{DOMxRef("Blob")}} objects in a synchronous way into an {{DOMxRef("DOMString")}}. This interface is <a href="/en-US/docs/DOM/Worker/Functions_available_to_workers">only available</a> in <a href="/en-US/docs/DOM/Worker">workers</a> as it enables synchronous I/O that could potentially block.</span></div>
+<p>The <code>readAsText()</code> method of the {{DOMxRef("FileReaderSync")}} interface allows to read {{DOMxRef("File")}} or {{DOMxRef("Blob")}} objects in a synchronous way into an {{DOMxRef("DOMString")}}. This interface is <a href="/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">only available</a> in <a href="/en-US/docs/Web/API/Worker">workers</a> as it enables synchronous I/O that could potentially block.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -29,28 +30,32 @@ readAsText(<em>Blob</em>, <em>encoding</em>);
 
 <h2 id="Exceptions">Exceptions</h2>
 
-<p>{{page("Web/API/FileReaderSync/readAsArrayBuffer","Exceptions")}}</p>
+<p>The following exceptions can be raised by this method:</p>
+
+<dl>
+ <dt><code>NotFoundError</code></dt>
+ <dd>is raised when the resource represented by the DOM {{DOMxRef("File")}} or {{DOMxRef("Blob")}} cannot be found, e.g. because it has been erased.</dd>
+ <dt><code>SecurityError</code></dt>
+ <dd>is raised when one of the following problematic situation is detected:
+ <ul>
+  <li>the resource has been modified by a third party;</li>
+  <li>too many read are performed simultaneously;</li>
+  <li>the file pointed by the resource is unsafe for a use from the Web (like it is a system file).</li>
+ </ul>
+ </dd>
+ <dt><code>NotReadableError</code></dt>
+ <dd>is raised when the resource cannot be read due to a permission problem, like a concurrent lock.</dd>
+ <dt><code>EncodingError</code></dt>
+ <dd>is raised when the resource is a data URL and exceed the limit length defined by each browser.</dd>
+</dl>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("File API","#dfn-readAsTextSync","readAsText")}}</td>
-   <td>{{Spec2("File API")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.FileReaderSync.readAsText")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

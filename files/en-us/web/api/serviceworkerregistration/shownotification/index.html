@@ -11,6 +11,7 @@ tags:
 - ServiceWorker
 - ServiceWorkerRegistration
 - showNotification
+browser-compat: api.ServiceWorkerRegistration.showNotification
 ---
 <p>{{APIRef("Service Workers API")}}</p>
 
@@ -19,14 +20,14 @@ tags:
   service worker.</p>
 
 <div class="note">
-  <p><strong>Note</strong>: This feature is available in <a
+  <p><strong>Note:</strong> This feature is available in <a
       href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><em>serviceWorkerRegistration</em>.showNotification(<em>title</em>, [<em>options</em>]);</pre>
+  class="brush: js"><em>serviceWorkerRegistration</em>.showNotification(<em>title</em>, [<em>options</em>]);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -67,7 +68,7 @@ tags:
       <li><code>image</code>: a {{domxref("USVString")}} containing the URL of an image to
         be displayed in the notification.</li>
       <li><code>lang</code>: Specify the lang used within the notification. This string
-        must be a valid <a href="https://tools.ietf.org/html/bcp47">BCP 47 language
+        must be a valid <a href="https://datatracker.ietf.org/doc/html/bcp47">BCP 47 language
           tag</a>.</li>
       <li><code>renotify</code>: A boolean that indicates whether to suppress vibrations
         and audible alerts when reusing a <code>tag</code> value.
@@ -132,23 +133,8 @@ function showNotification() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Web
-        Notifications','#dom-serviceworkerregistration-shownotification','showNotification()')}}
-      </td>
-      <td>{{Spec2('Web Notifications')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ServiceWorkerRegistration.showNotification")}}</p>
+<p>{{Compat}}</p>

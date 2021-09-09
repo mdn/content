@@ -11,6 +11,7 @@ tags:
   - WebExtensions
   - onRemoved
   - tabs
+browser-compat: webextensions.api.tabs.onRemoved
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -70,7 +71,7 @@ browser.tabs.onRemoved.hasListener(listener)
 
 <p>Listen for close events, and log the info:</p>
 
-<pre class="notranslate brush: js">function handleRemoved(tabId, removeInfo) {
+<pre class="brush: js">function handleRemoved(tabId, removeInfo) {
   console.log("Tab: " + tabId + " is closing");
   console.log("Window ID: " + removeInfo.windowId);
   console.log("Window is closing: " + removeInfo.isWindowClosing);
@@ -82,7 +83,7 @@ browser.tabs.onRemoved.addListener(handleRemoved);</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("webextensions.api.tabs.onRemoved")}}</p>
+<p>{{Compat}}</p>
 
 <div class="note"><strong>Acknowledgements</strong>
 

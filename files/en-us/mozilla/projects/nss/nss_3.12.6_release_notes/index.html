@@ -13,20 +13,20 @@ slug: Mozilla/Projects/NSS/NSS_3.12.6_release_notes
        </div>
        <div id="section_2">
         <h1 id="Distribution_Information">Distribution Information</h1>
-        <p>The CVS tag for the NSS 3.12.6 release is <code>NSS_3_12_6_RTM</code>.  NSS 3.12.6 requires <a class="external" href="https://www.mozilla.org/projects/nspr/release-notes/" rel="external" title="http://www.mozilla.org/projects/nspr/release-notes/">NSPR 4.8.4</a>.<br>
+        <p>The CVS tag for the NSS 3.12.6 release is <code>NSS_3_12_6_RTM</code>.  NSS 3.12.6 requires <a class="external" href="https://www.mozilla.org/projects/nspr/release-notes/" rel="external">NSPR 4.8.4</a>.<br>
          <br>
          See the <a href="http://mdn.beonex.com/en/NSS_3.12.6_release_notes.html#docs">Documentation</a> section for the build instructions.</p>
         <p>NSS 3.12.6 source and binary distributions are also available on <code>ftp.mozilla.org</code> for secure HTTPS download:</p>
         <ul>
-         <li>Source tarballs: <a class="link-https" href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_12_6_RTM/src/" rel="external" title="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_12_6_RTM/src/">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_12_6_RTM/src/</a>.</li>
+         <li>Source tarballs: <a class="link-https" href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_12_6_RTM/src/" rel="external">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_12_6_RTM/src/</a>.</li>
         </ul>
-        <p>You also need to download the NSPR 4.8.4 binary distributions to get the NSPR 4.8.4 header files and shared libraries, which NSS 3.12.6 requires. NSPR 4.8.4 binary distributions are in <a class="link-https" href="https://ftp.mozilla.org/pub/mozilla.org/nspr/releases/v4.8.4/" rel="external" title="https://ftp.mozilla.org/pub/mozilla.org/nspr/releases/v4.8.4/">https://ftp.mozilla.org/pub/mozilla.org/nspr/releases/v4.8.4/</a>.<br>
+        <p>You also need to download the NSPR 4.8.4 binary distributions to get the NSPR 4.8.4 header files and shared libraries, which NSS 3.12.6 requires. NSPR 4.8.4 binary distributions are in <a class="link-https" href="https://ftp.mozilla.org/pub/mozilla.org/nspr/releases/v4.8.4/" rel="external">https://ftp.mozilla.org/pub/mozilla.org/nspr/releases/v4.8.4/</a>.<br>
          <a name="new"></a></p>
        </div>
        <div id="section_3">
         <h1 id="New_in_NSS_3.12.6">New in NSS 3.12.6</h1>
         <div id="section_4">
-         <h3 id="SSL3_TLS_Renegotiation_Indication_Extension_(RFC_5746)">SSL3 &amp; TLS Renegotiation Indication Extension (<a class="external" href="https://tools.ietf.org/html/rfc5746" rel="external" title="http://tools.ietf.org/html/rfc5746">RFC 5746</a>)</h3>
+         <h3 id="SSL3_TLS_Renegotiation_Indication_Extension_(RFC_5746)">SSL3 &amp; TLS Renegotiation Indication Extension (<a class="external" href="https://datatracker.ietf.org/doc/html/rfc5746" rel="external">RFC 5746</a>)</h3>
          <ul>
           <li>By default, NSS 3.12.6 uses the new TLS Renegotiation Indication Extension for TLS renegotiation but allows simple SSL/TLS connections (without renegotiation) with peers that don't support the TLS Renegotiation Indication Extension.
            <p>The behavior of NSS for renegotiation can be changed through API function calls, or with the following environment variables:</p>
@@ -83,7 +83,7 @@ slug: Mozilla/Projects/NSS/NSS_3.12.6_release_notes
          <h3 id="TLS_Server_Name_Indication_for_servers">TLS Server Name Indication for servers</h3>
          <ul>
           <li>TLS Server Name Indication (SNI) for servers is almost fully implemented in NSS 3.12.6.<br>
-           See <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=360421" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=360421">bug 360421</a> for details.<br>
+           See <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=360421" rel="external">bug 360421</a> for details.<br>
            <p>Note: The TLS Server Name Indication for clients is already fully implemented in NSS.</p>
            <ul>
             <li>New functions for SNI <em>(see ssl.h for more information)</em>:
@@ -183,43 +183,43 @@ slug: Mozilla/Projects/NSS/NSS_3.12.6_release_notes
         <h1 id="Bugs_Fixed">Bugs Fixed</h1>
         <p>The following bugs have been fixed in NSS 3.12.6.</p>
         <ul>
-         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=275744" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=275744">Bug 275744</a>: Support for TLS compression RFC 3749</li>
-         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=494603" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=494603">Bug 494603</a>: Update NSS's copy of sqlite3 to 3.6.22 to get numerous bug fixes</li>
-         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=496993" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=496993">Bug 496993</a>: Add accessor functions for SSL_ImplementedCiphers</li>
-         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=515279" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=515279">Bug 515279</a>: CERT_PKIXVerifyCert considers a certificate revoked if cert_ProcessOCSPResponse fails for any reason</li>
-         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=515870" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=515870">Bug 515870</a>: GCC compiler warnings in NSS 3.12.4</li>
-         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=518255" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=518255">Bug 518255</a>: The input buffer for SGN_Update should be declared const</li>
-         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=519550" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=519550">Bug 519550</a>: Allow the specification of an alternate library for SQLite</li>
-         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=524167" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=524167">Bug 524167</a>: Crash in [[@ find_objects_by_template - nssToken_FindCertificateByIssuerAndSerialNumber]</li>
-         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=526910" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=526910">Bug 526910</a>: maxResponseLength (initialized to PKIX_DEFAULT_MAX_RESPONSE_LENGTH) is too small for downloading some CRLs.</li>
-         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=527759" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=527759">Bug 527759</a>: Add multiple roots to NSS (single patch)</li>
-         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=528741" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=528741">Bug 528741</a>: pkix_hash throws a null-argument exception on empty strings</li>
-         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=530907" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=530907">Bug 530907</a>: The peerID argument to SSL_SetSockPeerID should be declared const</li>
-         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=531188" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=531188">Bug 531188</a>: Decompression failure with <a class="link-https" href="https://livechat.merlin.pl/" rel="external" title="https://livechat.merlin.pl/">https://livechat.merlin.pl/</a></li>
-         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=532417" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=532417">Bug 532417</a>: Build problem with spaces in path names</li>
-         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=534943" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=534943">Bug 534943</a>: Clean up the makefiles in lib/ckfw/builtins</li>
-         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=534945" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=534945">Bug 534945</a>: lib/dev does not need to include headers from lib/ckfw</li>
-         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=535669" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=535669">Bug 535669</a>: Move common makefile code in if and else to the outside</li>
-         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=536023" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=536023">Bug 536023</a>: DER_UTCTimeToTime and DER_GeneralizedTimeToTime ignore all bytes after an embedded null</li>
-         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=536474" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=536474">Bug 536474</a>: Add support for logging pre-master secrets</li>
-         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=537356" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=537356">Bug 537356</a>: Implement new safe SSL3 &amp; TLS renegotiation</li>
-         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=537795" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=537795">Bug 537795</a>: NSS_InitContext does not work with NSS_RegisterShutdown</li>
-         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=537829" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=537829">Bug 537829</a>: Allow NSS to build for Android</li>
-         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=540304" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=540304">Bug 540304</a>: Implement SSL_HandshakeNegotiatedExtension</li>
-         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=541228" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=541228">Bug 541228</a>: Remove an obsolete NSPR version check in lib/util/secport.c</li>
-         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=541231" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=541231">Bug 541231</a>: nssinit.c doesn't need to include ssl.h and sslproto.h.</li>
-         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=542538" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=542538">Bug 542538</a>: NSS: Add function for recording OCSP stapled replies</li>
-         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=544191" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=544191">Bug 544191</a>: Use system zlib on Mac OS X</li>
-         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=544584" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=544584">Bug 544584</a>: segmentation fault when enumerating the nss database</li>
-         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=544586" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=544586">Bug 544586</a>: Various nss-sys-init patches from Fedora</li>
-         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=545273" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=545273">Bug 545273</a>: Remove unused function SEC_Init</li>
-         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=546389" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=546389">Bug 546389</a>: nsssysinit binary built inside source tree</li>
+         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=275744" rel="external">Bug 275744</a>: Support for TLS compression RFC 3749</li>
+         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=494603" rel="external">Bug 494603</a>: Update NSS's copy of sqlite3 to 3.6.22 to get numerous bug fixes</li>
+         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=496993" rel="external">Bug 496993</a>: Add accessor functions for SSL_ImplementedCiphers</li>
+         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=515279" rel="external">Bug 515279</a>: CERT_PKIXVerifyCert considers a certificate revoked if cert_ProcessOCSPResponse fails for any reason</li>
+         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=515870" rel="external">Bug 515870</a>: GCC compiler warnings in NSS 3.12.4</li>
+         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=518255" rel="external">Bug 518255</a>: The input buffer for SGN_Update should be declared const</li>
+         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=519550" rel="external">Bug 519550</a>: Allow the specification of an alternate library for SQLite</li>
+         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=524167" rel="external">Bug 524167</a>: Crash in [[@ find_objects_by_template - nssToken_FindCertificateByIssuerAndSerialNumber]</li>
+         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=526910" rel="external">Bug 526910</a>: maxResponseLength (initialized to PKIX_DEFAULT_MAX_RESPONSE_LENGTH) is too small for downloading some CRLs.</li>
+         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=527759" rel="external">Bug 527759</a>: Add multiple roots to NSS (single patch)</li>
+         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=528741" rel="external">Bug 528741</a>: pkix_hash throws a null-argument exception on empty strings</li>
+         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=530907" rel="external">Bug 530907</a>: The peerID argument to SSL_SetSockPeerID should be declared const</li>
+         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=531188" rel="external">Bug 531188</a>: Decompression failure with <a class="link-https" href="https://livechat.merlin.pl/" rel="external">https://livechat.merlin.pl/</a></li>
+         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=532417" rel="external">Bug 532417</a>: Build problem with spaces in path names</li>
+         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=534943" rel="external">Bug 534943</a>: Clean up the makefiles in lib/ckfw/builtins</li>
+         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=534945" rel="external">Bug 534945</a>: lib/dev does not need to include headers from lib/ckfw</li>
+         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=535669" rel="external">Bug 535669</a>: Move common makefile code in if and else to the outside</li>
+         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=536023" rel="external">Bug 536023</a>: DER_UTCTimeToTime and DER_GeneralizedTimeToTime ignore all bytes after an embedded null</li>
+         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=536474" rel="external">Bug 536474</a>: Add support for logging pre-master secrets</li>
+         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=537356" rel="external">Bug 537356</a>: Implement new safe SSL3 &amp; TLS renegotiation</li>
+         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=537795" rel="external">Bug 537795</a>: NSS_InitContext does not work with NSS_RegisterShutdown</li>
+         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=537829" rel="external">Bug 537829</a>: Allow NSS to build for Android</li>
+         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=540304" rel="external">Bug 540304</a>: Implement SSL_HandshakeNegotiatedExtension</li>
+         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=541228" rel="external">Bug 541228</a>: Remove an obsolete NSPR version check in lib/util/secport.c</li>
+         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=541231" rel="external">Bug 541231</a>: nssinit.c doesn't need to include ssl.h and sslproto.h.</li>
+         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=542538" rel="external">Bug 542538</a>: NSS: Add function for recording OCSP stapled replies</li>
+         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=544191" rel="external">Bug 544191</a>: Use system zlib on Mac OS X</li>
+         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=544584" rel="external">Bug 544584</a>: segmentation fault when enumerating the nss database</li>
+         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=544586" rel="external">Bug 544586</a>: Various nss-sys-init patches from Fedora</li>
+         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=545273" rel="external">Bug 545273</a>: Remove unused function SEC_Init</li>
+         <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=546389" rel="external">Bug 546389</a>: nsssysinit binary built inside source tree</li>
         </ul>
         <p><a name="docs"></a></p>
        </div>
        <div id="section_11">
         <h1 id="Documentation">Documentation</h1>
-        <p>For a list of the primary NSS documentation pages on mozilla.org, see <a class="external" href="https://www.mozilla.org/projects/security/pki/nss/#documentation" rel="external" title="http://www.mozilla.org/projects/security/pki/nss/#documentation">NSS Documentation</a>. New and revised documents available since the release of NSS 3.11 include the following:</p>
+        <p>For a list of the primary NSS documentation pages on mozilla.org, see <a class="external" href="https://www.mozilla.org/projects/security/pki/nss/#documentation" rel="external">NSS Documentation</a>. New and revised documents available since the release of NSS 3.11 include the following:</p>
         <ul>
          <li><a href="http://mdn.beonex.com/en/NSS_reference/Building_and_installing_NSS/Build_instructions.html" rel="internal">Build Instructions</a></li>
          <li><a class="external" href="http://wiki.mozilla.org/NSS_Shared_DB" rel="external" title="http://wiki.mozilla.org/NSS_Shared_DB">NSS Shared DB</a></li>
@@ -228,10 +228,10 @@ slug: Mozilla/Projects/NSS/NSS_3.12.6_release_notes
        </div>
        <div id="section_12">
         <h1 id="Compatibility">Compatibility</h1>
-        <p>NSS 3.12.6 shared libraries are backward compatible with all older NSS 3.x shared libraries. A program linked with older NSS 3.x shared libraries will work with NSS 3.12.6 shared libraries without recompiling or relinking.  Furthermore, applications that restrict their use of NSS APIs to the functions listed in <a class="external" href="https://www.mozilla.org/projects/security/pki/nss/ref/nssfunctions.html" rel="external" title="http://www.mozilla.org/projects/security/pki/nss/ref/nssfunctions.html">NSS Public Functions</a> will remain compatible with future versions of the NSS shared libraries. <a name="feedback"></a></p>
+        <p>NSS 3.12.6 shared libraries are backward compatible with all older NSS 3.x shared libraries. A program linked with older NSS 3.x shared libraries will work with NSS 3.12.6 shared libraries without recompiling or relinking.  Furthermore, applications that restrict their use of NSS APIs to the functions listed in <a class="external" href="https://www.mozilla.org/projects/security/pki/nss/ref/nssfunctions.html" rel="external">NSS Public Functions</a> will remain compatible with future versions of the NSS shared libraries. <a name="feedback"></a></p>
        </div>
        <div id="section_13">
         <h1 id="Feedback">Feedback</h1>
-        <p>Bugs discovered should be reported by filing a bug report with <a class="link-https" href="https://bugzilla.mozilla.org/" rel="external" title="https://bugzilla.mozilla.org/">mozilla.org Bugzilla</a> (product NSS).</p>
+        <p>Bugs discovered should be reported by filing a bug report with <a class="link-https" href="https://bugzilla.mozilla.org/" rel="external">mozilla.org Bugzilla</a> (product NSS).</p>
        </div>
       </div>

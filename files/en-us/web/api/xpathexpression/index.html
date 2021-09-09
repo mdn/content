@@ -11,10 +11,13 @@ tags:
   - XML
   - XPath
   - XPathExpression
+browser-compat: api.XPathExpression
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p><span class="seoSummary">This interface is a compiled XPath expression that can be evaluated on a document or specific node to return information from its {{Glossary("DOM")}} tree.</span> This is useful when an expression will be reused in an application, because it is just compiled once and all namespace prefixes which occur within the expression are preresolved.</p>
+<p>This interface is a compiled XPath expression that can be evaluated on a document or specific node to return information from its {{Glossary("DOM")}} tree.</p>
+
+<p>This is useful when an expression will be reused in an application, because it is just compiled once and all namespace prefixes which occur within the expression are preresolved.</p>
 
 <p>Objects of this type are created by calling {{domxref("XPathEvaluator.createExpression", "XPathEvaluator.createExpression()")}}.</p>
 
@@ -50,24 +53,11 @@ document.querySelector("output").textContent = result.snapshotLength;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM3 XPath", "xpath.html#XPathExpression", "XPathExpression")}}</td>
-   <td>{{Spec2("DOM3 XPath")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.XPathExpression")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

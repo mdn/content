@@ -7,17 +7,18 @@ tags:
 - EventSource
 - Reference
 - Server-sent events
+browser-compat: api.EventSource.EventSource
 ---
 <div>{{APIRef('WebSockets API')}}</div>
 
-<p>The <code><strong>EventSource</strong></code><strong><code>()</code></strong>
+<p>The <strong><code>EventSource()</code></strong>
   constructor returns a newly-created {{domxref("EventSource")}}, which represents a
   remote resource.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">eventSource = new EventSource(<em>url</em>, <em>configuration</em>);</pre>
+  class="brush: js">eventSource = new EventSource(<em>url</em>, <em>configuration</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -47,31 +48,18 @@ evtSource.onmessage = function(e) {
 }</pre>
 
 <div class="note">
-  <p><strong>Note</strong>: You can find a full example on GitHub — see <a
+  <p><strong>Note:</strong> You can find a full example on GitHub — see <a
       href="https://github.com/mdn/dom-examples/tree/master/server-sent-events">Simple SSE
       demo using PHP.</a></p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', "comms.html#dom-eventsource", "EventSource()")}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.EventSource.EventSource")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

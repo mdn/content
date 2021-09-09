@@ -2,25 +2,26 @@
 title: Document.lastStyleSheetSet
 slug: Web/API/Document/lastStyleSheetSet
 tags:
-- API
-- CSSOM
-- DOM
-- Document
-- Property
-- Reference
-- Stylesheets
-- lastStyleSheetSet
+  - API
+  - CSSOM
+  - DOM
+  - Document
+  - Property
+  - Reference
+  - Stylesheets
+  - lastStyleSheetSet
+  - Deprecated
+browser-compat: api.Document.lastStyleSheetSet
 ---
-<div>{{APIRef("DOM")}}{{gecko_minversion_header("1.9")}}{{deprecated_header}}</div>
+<div>{{APIRef("DOM")}}{{deprecated_header}}</div>
 
-<p>The <strong><code>Document.lastStyleSheetSet</code></strong> property <span
-    class="seosummary">returns the last enabled style sheet set.</span> This property's
+<p>The <strong><code>Document.lastStyleSheetSet</code></strong> property returns the last enabled style sheet set. This property's
   value changes whenever the {{domxref("document.selectedStyleSheetSet")}} property is
   changed.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <var>lastStyleSheetSet</var> = <var>document</var>.lastStyleSheetSet
+<pre class="brush: js">var <var>lastStyleSheetSet</var> = <var>document</var>.lastStyleSheetSet
 </pre>
 
 <p>On return, <var>lastStyleSheetSet</var> indicates the style sheet set that was most
@@ -28,8 +29,8 @@ tags:
   {{domxref("document.selectedStyleSheetSet")}}, the returned value is <code>null</code>.
 </p>
 
-<div class="note"><strong>Note:</strong> This value doesn't change when
-  {{domxref("document.enableStyleSheetsForSet()")}} is called.</div>
+<div class="note"><p><strong>Note:</strong> This value doesn't change when
+  {{domxref("document.enableStyleSheetsForSet()")}} is called.</p></div>
 
 <h2 id="Example">Example</h2>
 
@@ -45,7 +46,7 @@ else {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Document.lastStyleSheetSet")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

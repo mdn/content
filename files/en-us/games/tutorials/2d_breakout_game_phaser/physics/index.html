@@ -27,24 +27,24 @@ tags:
 
 <p>First, let's initialize the Arcade Physics engine in our game. Add the <code>physics.startSystem()</code> method at the beginning of the <code>create</code> function (make it the first line inside the function), as shown below:</p>
 
-<pre class="brush: js notranslate">game.physics.startSystem(Phaser.Physics.ARCADE);
+<pre class="brush: js">game.physics.startSystem(Phaser.Physics.ARCADE);
 </pre>
 
 <p>Next, we need to enable our ball for the physics system — Phaser object physics is not enabled by default. Add the following line at the bottom of the <code>create()</code> function:</p>
 
-<pre class="brush: js notranslate">game.physics.enable(ball, Phaser.Physics.ARCADE);
+<pre class="brush: js">game.physics.enable(ball, Phaser.Physics.ARCADE);
 </pre>
 
 <p>Next, if we want to move our ball on the screen, we can set <code>velocity</code> on its <code>body</code>. Add the following line, again at the bottom of <code>create()</code>:</p>
 
-<pre class="brush: js notranslate">ball.body.velocity.set(150, 150);
+<pre class="brush: js">ball.body.velocity.set(150, 150);
 </pre>
 
 <h2 id="Removing_our_previous_update_instructions">Removing our previous update instructions</h2>
 
 <p>Remember to remove our old method of adding values to <code>x</code> and <code>y</code> from the <code>update()</code> function:</p>
 
-<pre class="brush: js notranslate">function update() {
+<pre class="brush: js">function update() {
 <s>    ball.x += 1;</s>
 <s>    ball.y += 1;</s>
 }
@@ -56,7 +56,7 @@ tags:
 
 <p>The latest code should look like this:</p>
 
-<pre class="brush: js notranslate">var ball;
+<pre class="brush: js">var ball;
 
 function preload() {
     game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
@@ -83,7 +83,7 @@ function update() {
 
 <p>You can do much more with physics, for example by adding <code>ball.body.gravity.y = 100;</code> you will set the vertical gravity of the ball. As a result it will be launched upwards, but then fall due to the effects of gravity pulling it down.</p>
 
-<p>This kind of functionality is just the tip of the iceberg — there are various functions and variables that can help you manipulate the physics objects. Check out the official <a href="http://phaser.io/docs#physics">physics documentation</a> and see the huge collection of examples using the <a href="http://phaser.io/examples/v2/category/arcade-physics">Arcade</a> and <a href="http://phaser.io/examples/v2/category/p2-physics">P2</a> physics systems.</p>
+<p>This kind of functionality is just the tip of the iceberg — there are various functions and variables that can help you manipulate the physics objects. Check out the official <a href="https://phaser.io/docs#physics">physics documentation</a> and see the huge collection of examples using the <a href="https://phaser.io/examples/v2/category/arcade-physics">Arcade</a> and <a href="https://phaser.io/examples/v2/category/p2-physics">P2</a> physics systems.</p>
 
 <h2 id="Compare_your_code">Compare your code</h2>
 

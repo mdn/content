@@ -2,36 +2,38 @@
 title: RTCRemoteOutboundRtpStreamStats.localId
 slug: Web/API/RTCRemoteOutboundRtpStreamStats/localId
 tags:
-- API
-- Media
-- Outbound
-- Property
-- RTCRemoteOutboundRtpStreamStats
-- RTP
-- Reference
-- Remote
-- Statistics
-- Stats
-- Streams
-- WebRTC
-- WebRTC API
-- WebRTC Device API
-- id
-- localId
+  - API
+  - Media
+  - Outbound
+  - Property
+  - RTCRemoteOutboundRtpStreamStats
+  - RTP
+  - Reference
+  - Remote
+  - Statistics
+  - Stats
+  - Streams
+  - WebRTC
+  - WebRTC API
+  - WebRTC Device API
+  - id
+  - localId
+browser-compat: api.RTCRemoteOutboundRtpStreamStats.localId
 ---
 <p>{{APIRef("WebRTC")}}</p>
 
-<p><span class="seoSummary">The {{domxref("RTCRemoteOutboundRtpStreamStats")}}
+<p>The {{domxref("RTCRemoteOutboundRtpStreamStats")}}
     dictionary's  <code><strong>localId</strong></code> property is a string which can be
     used to identify the {{domxref("RTCInboundRtpStreamStats")}} object whose
-    {{domxref("RTCInboundRtpStreamStats.remoteId", "remoteId")}} matches this value.
-  </span>Together, these two objects provide statistics about the inbound and outbound
+    {{domxref("RTCInboundRtpStreamStats.remoteId", "remoteId")}} matches this value.</p>
+
+<p>Together, these two objects provide statistics about the inbound and outbound
   sides of the same synchronization source (SSRC).</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">let <em>localId</em> = <em>rtcRemoteOutboundRtpStreamStats</em>.localId;</pre>
+  class="brush: js">let <em>localId</em> = <em>rtcRemoteOutboundRtpStreamStats</em>.localId;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -69,7 +71,7 @@ tags:
   {{domxref("RTCPeerConnection.getStats", "getStats()")}} to request an
   {{domxref("RTCStatsReport")}} and store it in the variable <code>startReport</code>.</p>
 
-<pre class="brush: js notranslate">let startReport;
+<pre class="brush: js">let startReport;
 
 async function networkTestStart(pc) {
   if (pc) {
@@ -103,7 +105,7 @@ async function networkTestStart(pc) {
   has the specified <code>value</code>. If no match is found (or the statistics report has
   no record corresponding to the statistics category indicated by <code>key</code>.</p>
 
-<pre class="brush: js notranslate">function findReportEntry(report, key, value) {
+<pre class="brush: js">function findReportEntry(report, key, value) {
   for (const stats of report.values()) {
     if (stats[key] === value) {
       return stats;
@@ -131,7 +133,7 @@ async function networkTestStart(pc) {
   appropriate HTML to the contents of the {{HTMLElement("div")}} element whose class is
   <code>stats-box</code>.</p>
 
-<pre class="brush: js notranslate">async function networkTestStop(pc) {
+<pre class="brush: js">async function networkTestStop(pc) {
   if (pc) {
     let statsBox = document.querySelector(".stats-box");
     let endReport = await pc.getStats();
@@ -234,8 +236,7 @@ async function networkTestStart(pc) {
 
 <p><img
     alt="A screenshot of the example showing logged statistics taken from paired remote-outbound-rtp and inbound-rtp statistics records"
-    src="https://mdn.mozillademos.org/files/17306/rtc-log-screenshot.png"
-    style="height: 410px; width: 650px;"></p>
+    src="rtc-log-screenshot.png"></p>
 
 <p>In the screenshot, we see a heading followed by the scrollable {{HTMLElement("div")}}
   we refer to as <code>statsBox</code>. The box contains a number of log entries, the last
@@ -250,39 +251,16 @@ async function networkTestStart(pc) {
     href="https://33030790-3517-4d21-9b93-511347fa1ebd@api.glitch.com/git/websocket-webrtc-chat-with-stats">access
     it directly</a> using Glitch's Git server.</p>
 
-<div class="column-container">
-  <div class="column-2"><a
-      href="https://glitch.com/edit/?utm_content=project_websocket-webrtc-chat-with-stats&amp;utm_source=remix_this&amp;utm_medium=button&amp;utm_campaign=glitchButton#!/remix/websocket-webrtc-chat-with-stats"><img
-        alt="Remix It"
-        src="https://cdn.glitch.com/2bdfb3f8-05ef-4035-a06e-2043962a3a13%2Fremix%402x.png?1513093958726"
-        style="height: 20px;"> </a></div>
+<p><a
+      href="https://glitch.com/edit/?utm_content=project_websocket-webrtc-chat-with-stats&amp;utm_source=remix_this&amp;utm_medium=button&amp;utm_campaign=glitchButton#!/remix/websocket-webrtc-chat-with-stats">Remix It</a></p>
 
-  <div class="column-2"><a
-      href="https://glitch.com/edit/?utm_content=project_websocket-webrtc-chat-with-stats&amp;utm_source=view_source&amp;utm_medium=button&amp;utm_campaign=glitchButton#!/websocket-webrtc-chat-with-stats"><img
-        alt="View Source"
-        src="https://cdn.glitch.com/2bdfb3f8-05ef-4035-a06e-2043962a3a13%2Fview-source%402x.png?1513093958802"
-        style="height: 20px;"></a></div>
-</div>
+<p><a
+      href="https://glitch.com/edit/?utm_content=project_websocket-webrtc-chat-with-stats&amp;utm_source=view_source&amp;utm_medium=button&amp;utm_campaign=glitchButton#!/websocket-webrtc-chat-with-stats">View Source</a></p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebRTC Statistics Identifiers',
-        '#dom-rtcremoteoutboundrtpstreamstats-localid',
-        'RTCRemoteOutboundRtpStreamStats.localId')}}</td>
-      <td>{{Spec2('WebRTC Statistics Identifiers')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCRemoteOutboundRtpStreamStats.localId")}}</p>
+<p>{{Compat}}</p>

@@ -8,6 +8,7 @@ tags:
 - Reference
 - Web Authentication API
 - WebAuthn
+browser-compat: api.PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable
 ---
 <p>{{APIRef("Web Authentication API")}}{{securecontext_header}}</p>
 
@@ -34,7 +35,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()</pre>
+  class="brush: js">PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -42,7 +43,7 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{jsxref("Promise")}} which resolves to a {{jsxref("Boolean")}} indicating whether or
+<p>A {{jsxref("Promise")}} which resolves to a boolean value indicating whether or
   a not a user-verifying platform authenticator is available.</p>
 
 <div class="notecard note">
@@ -57,7 +58,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()
+<pre class="brush: js">PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()
   .then(function(available){
     if(available){
       // We can proceed with the creation of a PublicKeyCredential
@@ -74,28 +75,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('WebAuthn','#dom-publickeycredential-isuserverifyingplatformauthenticatoravailable','isUserVerifyingPlatformAuthenticatorAvailable')}}
-      </td>
-      <td>{{Spec2('WebAuthn')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

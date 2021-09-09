@@ -14,20 +14,23 @@ tags:
 - cost
 - payment
 - value
+browser-compat: api.PaymentCurrencyAmount.value
 ---
 <p>{{securecontext_header}}{{APIRef("Payment Request API")}}</p>
 
-<p><span class="seoSummary">The {{domxref("PaymentCurrencyAmount")}} property
+<p>The {{domxref("PaymentCurrencyAmount")}} property
     <strong><code>value</code></strong> is a string containing the decimal numeric value
     of the payment, specified in the currency units indicated by the
-    {{domxref("PaymentCurrencyAmount.currency", "currency")}} property.</span> The
+    {{domxref("PaymentCurrencyAmount.currency", "currency")}} property.</p>
+
+<p>The
   contents of this string must be a valid decimal number; that is, some number of digits
   between 0 and 9 with up to one optional decimal point. An optional leading minus sign
   ("-") can be included to indicate a negative value, such as to represent a refund or
   discount.</p>
 
 <div class="notecard note">
-  <p><strong>Important note:</strong> The number given in this string is always specified
+  <p><strong>Note:</strong> The number given in this string is always specified
     using the period (".") as the decimal point, rather than the comma (","), even if the
     user's locale normally uses the comma. You must convert the entered text to this form
     or it will not be valid.</p>
@@ -36,7 +39,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><em>value</em> = <em>paymentCurrencyAmount</em>.value;</pre>
+  class="brush: js"><em>value</em> = <em>paymentCurrencyAmount</em>.value;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -60,7 +63,7 @@ tags:
 
 <p>This example represents the price of $42.95 in US dollars:</p>
 
-<pre class="brush: js notranslate">let itemPrice = {
+<pre class="brush: js">let itemPrice = {
   currency: "USD",
   value: "42.95"
 };
@@ -68,7 +71,7 @@ tags:
 
 <p>This example specifies a price of £7.77:</p>
 
-<pre class="brush: js notranslate">let shippingCost = {
+<pre class="brush: js">let shippingCost = {
   currency: "GBP",
   value: "7.77"
 }
@@ -76,7 +79,7 @@ tags:
 
 <p>This example specifies a price of 1000¥:</p>
 
-<pre class="brush: js notranslate">let price = {
+<pre class="brush: js">let price = {
   currency: "JPY",
   value: "1000"
 }
@@ -87,7 +90,7 @@ tags:
 <p>You can ensure that the value entered as a price is formatted correctly prior to
   submission by matching it against a simple {{Glossary("regular expression")}}:</p>
 
-<pre class="brush: js notranslate">function checkPriceFormat(price) {
+<pre class="brush: js">function checkPriceFormat(price) {
   let validRegex = /^-?[0-9]+(\.[0-9]+)?$/;
 
   return validRegex.test(price);
@@ -98,26 +101,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('Payment','#dom-paymentcurrencyamount-value','PaymentCurrencyAmount.value')}}
-      </td>
-      <td>{{Spec2('Payment')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.PaymentCurrencyAmount.value")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

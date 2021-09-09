@@ -11,6 +11,7 @@ tags:
   - WebExtensions
   - removeCSS
   - tabs
+browser-compat: webextensions.api.tabs.removeCSS
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -20,7 +21,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="notranslate brush: js">var removing = browser.tabs.removeCSS(
+<pre class="brush: js">var removing = browser.tabs.removeCSS(
   tabId,           // optional integer
   details          // object
 )
@@ -58,7 +59,7 @@ tags:
 
 <p>This example adds some CSS using {{WebExtAPIRef("tabs.insertCSS")}}, then removes it again when the user clicks a browser action:</p>
 
-<pre class="notranslate brush: js">var css = "body { border: 20px dotted pink; }";
+<pre class="brush: js">var css = "body { border: 20px dotted pink; }";
 
 function onError(error) {
   console.log(`Error: ${error}`);
@@ -76,7 +77,7 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("webextensions.api.tabs.removeCSS")}}</p>
+<p>{{Compat}}</p>
 
 <div class="note"><strong>Acknowledgements</strong>
 

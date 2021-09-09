@@ -8,10 +8,11 @@ tags:
   - Method
   - Reference
   - createProcessInstruction
+browser-compat: api.Document.createProcessingInstruction
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><span class="seoSummary"><code>createProcessingInstruction()</code> generates a new <a href="/en-US/docs/Web/API/ProcessingInstruction">processing instruction</a> node and returns it.</span></p>
+<p><code>createProcessingInstruction()</code> generates a new <a href="/en-US/docs/Web/API/ProcessingInstruction">processing instruction</a> node and returns it.</p>
 
 <p>The new node usually will be inserted into an XML document in order to accomplish anything with it, such as with {{ domxref("node.insertBefore") }}.</p>
 
@@ -34,7 +35,7 @@ tags:
  <dt><code>DOM_INVALID_CHARACTER</code></dt>
  <dd>Throws if either of the following are true:
  <ul>
-  <li>The processing instruction <code>target</code> is invalid — it should be a valid <em><a class="external" href="https://www.w3.org/TR/REC-xml/#dt-name" rel="external">XML name</a></em> that doesn't contain "xml", "XML", or any case combination of the two, other than standardized ones such as <code>&lt;?xml-stylesheet ?&gt;</code>.</li>
+  <li>The processing instruction <code>target</code> is invalid — it should be a valid <em><a href="https://www.w3.org/TR/REC-xml/#dt-name" rel="external">XML name</a></em> that doesn't contain "xml", "XML", or any case combination of the two, other than standardized ones such as <code>&lt;?xml-stylesheet ?&gt;</code>.</li>
   <li>The <em>closing processing instruction sequence</em> (<code>?&gt;</code>) is part of the <code>data</code>.</li>
  </ul>
  </dd>
@@ -53,43 +54,8 @@ console.log(new XMLSerializer().serializeToString(doc));
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-document-createprocessinginstruction', 'createProcessingInstruction()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM4', '#dom-document-createprocessinginstruction', 'createProcessingInstruction()')}}</td>
-   <td>{{Spec2('DOM4')}}</td>
-   <td>Added more explicit definition of how the <code><var>data</var></code> parameter is validated.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#ID-135944439', 'createProcessingInstruction()')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>Added note that the namespace of the target name is not checked whether it is well-formed, defined what is considered an illegal character for the target name and specified the returned {{domxref("ProcessingInstruction")}} object more precisely.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core', 'core.html#ID-135944439', 'createProcessingInstruction()')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-core.html#ID-135944439', 'createProcessingInstruction()')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Document.createProcessingInstruction")}}</p>
+<p>{{Compat}}</p>

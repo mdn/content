@@ -9,6 +9,7 @@ tags:
   - Reference
   - Web Audio API
   - createWaveShaper
+browser-compat: api.BaseAudioContext.createWaveShaper
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
@@ -18,9 +19,15 @@ tags:
     distortion. It is used to apply distortion effects to your audio.</p>
 </div>
 
+<div class="notecard note">
+  <p><strong>Note:</strong> The {{domxref("WaveShaperNode.WaveShaperNode", "WaveShaperNode()")}}
+    constructor is the recommended way to create a {{domxref("WaveShaperNode")}}; see
+    <a href="/en-US/docs/Web/API/AudioNode#creating_an_audionode">Creating an AudioNode</a>.</p>
+</div>
+
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">baseAudioCtx.createWaveShaper();</pre>
+<pre class="brush: js">baseAudioCtx.createWaveShaper();</pre>
 
 <h3 id="Description">Returns</h3>
 
@@ -36,7 +43,7 @@ tags:
     app.js</a> for relevant code).</p>
 
 <div class="note">
-  <p><strong>Note</strong>: Sigmoid functions are commonly used for distortion curves
+  <p><strong>Note:</strong> Sigmoid functions are commonly used for distortion curves
     because of their natural properties. Their S-shape, for instance, helps create a
     smoother sounding result. We found the below distortion curve code on <a
       href="http://stackoverflow.com/questions/22312841/waveshaper-node-in-webaudio-how-to-emulate-distortion">Stack
@@ -69,30 +76,11 @@ distortion.oversample = '4x';</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Web Audio API', '#dom-baseaudiocontext-createwaveshaper',
-        'createWaveShaper()')}}</td>
-      <td>{{Spec2('Web Audio API')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-  <div>
-
-    <p>{{Compat("api.BaseAudioContext.createWaveShaper")}}</p>
-  </div>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

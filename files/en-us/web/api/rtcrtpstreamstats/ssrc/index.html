@@ -14,19 +14,20 @@ tags:
 - rtc
 - source
 - ssrc
+browser-compat: api.RTCRtpStreamStats.ssrc
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">The {{domxref("RTCRtpStreamStats")}} dictionary's
+<p>The {{domxref("RTCRtpStreamStats")}} dictionary's
     <code><strong>ssrc</strong></code> property provides the Synchronization Source
     (SSRC), an integer which uniquely identifies the source of the {{Glossary("RTP")}}
     packets whose statistics are covered by the {{domxref("RTCStatsReport")}} that
-    includes this <code>RTCRtpStreamStats</code> dictionary.</span></p>
+    includes this <code>RTCRtpStreamStats</code> dictionary.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>ssrc</em> = <em>RTCRtpStreamStats</em>.ssrc;</pre>
+  class="brush: js">var <em>ssrc</em> = <em>RTCRtpStreamStats</em>.ssrc;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -50,22 +51,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebRTC Statistics Identifiers', '#dom-rtcrtpstreamstats-ssrc',
-        'RTCRtpStreamStats.ssrc')}}</td>
-      <td>{{Spec2('WebRTC Statistics Identifiers')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCRtpStreamStats.ssrc")}}</p>
+<p>{{Compat}}</p>

@@ -7,28 +7,26 @@ tags:
 - Reference
 - Web API
 - WebSocket
+browser-compat: api.WebSocket.readyState
 ---
 <p>{{APIRef("Web Sockets API")}}</p>
 
 <p>The <strong><code>WebSocket.readyState</code></strong> read-only property returns the
   current state of the {{domxref("WebSocket")}} connection.</p>
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre
-  class="brush: js notranslate">var readyState = <em>aWebSocket</em>.readyState;</pre>
-
 <h2 id="Value">Value</h2>
 
 <p>One of the following <code>unsigned short</code> values:</p>
 
 <table class="standard-table">
-  <tbody>
+  <thead>
     <tr>
-      <td class="header">Value</td>
-      <td class="header">State</td>
-      <td class="header">Description</td>
+      <th>Value</th>
+      <th>State</th>
+      <th>Description</th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <td><code>0</code></td>
       <td><code>CONNECTING</code></td>
@@ -54,24 +52,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', '#dom-websocket-readystate', 'WebSocket:
-        readyState')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.WebSocket.readyState")}}</p>
+<p>{{Compat}}</p>

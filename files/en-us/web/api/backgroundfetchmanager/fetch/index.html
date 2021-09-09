@@ -5,28 +5,29 @@ tags:
   - API
   - Method
   - Reference
-  - fetch()
+  - fetch
   - BackgroundFetchManager
   - Experimental
   - Service Workers
   - Fetch
+browser-compat: api.BackgroundFetchManager.fetch
 ---
-<div>{{draft}}{{DefaultAPISidebar("Background Fetch")}}</div>
+<div>{{DefaultAPISidebar("Background Fetch API")}}</div>
 
-<p class="summary">The <strong><code>fetch()</code></strong> method of the {{domxref("BackgroundFetchManager")}} interface returns a {{jsxref("Promise")}} that resolves with a {{domxref("BackgroundFetchRegistration")}} object for a supplied array of URLs and {{domxref("Request")}} objects. </p>
+<p>The <strong><code>fetch()</code></strong> method of the {{domxref("BackgroundFetchManager")}} interface returns a {{jsxref("Promise")}} that resolves with a {{domxref("BackgroundFetchRegistration")}} object for a supplied array of URLs and {{domxref("Request")}} objects. </p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <var>backgroundFetchRegistration</var> = BackgroundFetchManager.fetch();</pre>
+<pre class="syntaxbox">let backgroundFetchRegistration = BackgroundFetchManager.fetch(id, requests [,options]);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-<dt>id</dt>
+<dt><code>id</code></dt>
 <dd>A developer-defined identifier that can be passed to the other methods to retrieve a {{domxref("backgroundFetchRegistration")}}.</dd>
-<dt>request</dt>
+<dt><code>requests</code></dt>
 <dd>A {{domxref("RequestInfo")}} object or an array of such objects.</dd>
-<dt>options</dt>
+<dt><code>options</code> {{optional_inline}}</dt>
 <dd>A {{domxref("BackgroundFetchOptions")}} object.</dd>
 </dl>
 
@@ -52,15 +53,11 @@ tags:
    <tbody>
     <tr>
      <td><code>AbortError</code></td>
-     <td>
-      <p>Indicates the fetch was aborted.</p>
-     </td>
+     <td>Indicates the fetch was aborted.</td>
     </tr>
     <tr>
      <td><code>NotAllowedError</code></td>
-     <td>
-      <p>Indicates that user permission has not been granted to make background fetches.</p>
-     </td>
+     <td>Indicates that user permission has not been granted to make background fetches.</td>
     </tr>
    </tbody>
   </table>
@@ -90,23 +87,8 @@ method.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Background Fetch','#background-fetch-manager-fetch','fetch')}}</td>
-   <td>{{Spec2('Background Fetch')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
-
-<p>{{Compat("api.BackgroundFetchManager.fetch")}}</p>
+<p>{{Compat}}</p>

@@ -8,24 +8,23 @@ tags:
   - HTML forms
   - Reference
   - Web
+browser-compat: html.elements.select
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">The <strong>HTML <code>&lt;select&gt;</code> element</strong> represents a control that provides a menu of options</span>:</p>
+<p>The <strong><code>&lt;select&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element represents a control that provides a menu of options:</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/select.html", "tabbed-standard")}}</div>
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a> and send us a pull request.</p>
-
 <p>The above example shows typical <code>&lt;select&gt;</code> usage. It is given an <code>id</code> attribute to enable it to be associated with a {{htmlelement("label")}} for accessibility purposes, as well as a <code>name</code> attribute to represent the name of the associated data point submitted to the server. Each menu option is defined by an {{htmlelement("option")}} element nested inside the <code>&lt;select&gt;</code>.</p>
 
-<p>Each <code>&lt;option&gt;</code> element should have a {{htmlattrxref("value", "option")}} attribute containing the data value to submit to the server when that option is selected. If no <code>value</code> attribute is included, the value defaults to the text contained inside the element. You can include a {{htmlattrxref("selected")}} attribute on an <code>&lt;option&gt;</code> element to make it selected by default when the page first loads.</p>
+<p>Each <code>&lt;option&gt;</code> element should have a {{htmlattrxref("value", "option")}} attribute containing the data value to submit to the server when that option is selected. If no <code>value</code> attribute is included, the value defaults to the text contained inside the element. You can include a {{htmlattrxref("selected", "option")}} attribute on an <code>&lt;option&gt;</code> element to make it selected by default when the page first loads.</p>
 
 <p>The <code>&lt;select&gt;</code> element has some unique attributes you can use to control it, such as <code>multiple</code> to specify whether multiple options can be selected, and <code>size</code> to specify how many options should be shown at once. It also accepts most of the general form input attributes such as <code>required</code>, <code>disabled</code>, <code>autofocus</code>, etc.</p>
 
 <p>You can further nest <code>&lt;option&gt;</code> elements inside {{htmlelement("optgroup")}} elements to create separate groups of options inside the dropdown.</p>
 
-<p>For further examples, see <a href="/en-US/docs/Learn/Forms/Basic_native_form_controls#Drop-down_content">The native form widgets: Drop-down content</a>.</p>
+<p>For further examples, see <a href="/en-US/docs/Learn/Forms/Other_form_controls#drop-down_controls">The native form widgets: Drop-down content</a>.</p>
 
 <h2 id="Attributes">Attributes</h2>
 
@@ -106,7 +105,7 @@ tags:
 
 <p>The following example creates a very simple dropdown menu, the second option of which is selected by default.</p>
 
-<pre class="brush: html notranslate">&lt;!-- The second value will be selected initially --&gt;
+<pre class="brush: html">&lt;!-- The second value will be selected initially --&gt;
 &lt;select name="choice"&gt;
   &lt;option value="first"&gt;First Value&lt;/option&gt;
   &lt;option value="second" selected&gt;Second Value&lt;/option&gt;
@@ -120,7 +119,7 @@ tags:
 
 <p>The follow example is more complex, showing off more features you can use on a <code>&lt;select&gt;</code> element:</p>
 
-<pre class="brush: html notranslate">&lt;label&gt;Please choose one or more pets:
+<pre class="brush: html">&lt;label&gt;Please choose one or more pets:
   &lt;select name="pets" multiple size="4"&gt;
     &lt;optgroup label="4-legged pets"&gt;
       &lt;option value="dog"&gt;Dog&lt;/option&gt;
@@ -164,7 +163,7 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
  &lt;fieldset&gt;
     &lt;legend&gt;Standard controls&lt;/legend&gt;
     &lt;select
@@ -198,7 +197,7 @@ tags:
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
@@ -363,7 +362,7 @@ html body form fieldset#custom div.select div.header span {
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">const selects = custom.querySelectorAll('select');
+<pre class="brush: js">const selects = custom.querySelectorAll('select');
 for (const select of selects) {
     const div = document.createElement('div');
     const header = document.createElement('div');
@@ -506,7 +505,7 @@ document.forms[0].onsubmit = function(e) {
  <tbody>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Interactive_content">interactive content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Form_listed">listed</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Form_labelable">labelable</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Form_resettable">resettable</a>, and <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Form_submittable">submittable</a> <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Form-associated_">form-associated </a>element</td>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content">interactive content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_listed">listed</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_labelable">labelable</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_resettable">resettable</a>, and <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_submittable">submittable</a> <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form-associated_">form-associated </a>element</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
@@ -518,7 +517,7 @@ document.forms[0].onsubmit = function(e) {
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>
@@ -537,36 +536,11 @@ document.forms[0].onsubmit = function(e) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comments</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#the-select-element', '&lt;select&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'sec-forms.html#the-select-element', '&lt;select&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'interact/forms.html#h-17.6', '&lt;select&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("html.elements.select")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

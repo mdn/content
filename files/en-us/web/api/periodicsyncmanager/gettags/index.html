@@ -10,10 +10,11 @@ tags:
 - Service Worker
 - Web Periodic Background Synchronization API
 - periodic sync
+browser-compat: api.PeriodicSyncManager.getTags
 ---
 <div>{{draft}}{{DefaultAPISidebar("Periodic Background Sync")}}</div>
 
-<p class="summary">The <strong><code>getTags()</code></strong> method of the
+<p>The <strong><code>getTags()</code></strong> method of the
   {{domxref("PeriodicSyncManager")}} interface returns a {{jsxref('Promise')}} that
   resolves with a list of {{jsxref('String')}} objects representing the tags that are
   currently registered for periodic syncing.</p>
@@ -21,7 +22,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <var>tags</var> = PeriodicSyncManager.getTags();</pre>
+  class="brush: js">var <var>tags</var> = PeriodicSyncManager.getTags();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -41,7 +42,7 @@ tags:
 <p>The following example uses the <code>getTags()</code> method to check if a periodic
   sync task with a given tag is registered.</p>
 
-<pre class="brush: js notranslate">navigator.serviceWorker.ready.then(registration =&gt; {
+<pre class="brush: js">navigator.serviceWorker.ready.then(registration =&gt; {
   registration.periodicSync.getTags().then(tags =&gt; {
     if (tags.includes('get-latest-news'))
       skipDownloadingLatestNewsOnPageLoad();
@@ -53,25 +54,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Periodic Background
-        Sync','#dom-periodicsyncmanager-gettags','getTags')}}</td>
-      <td>{{Spec2('Periodic Background Sync')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.PeriodicSyncManager.getTags")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

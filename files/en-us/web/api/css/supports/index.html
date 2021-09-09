@@ -8,15 +8,16 @@ tags:
 - Method
 - Reference
 - supports
+browser-compat: api.CSS.supports
 ---
 <div>{{APIRef("CSSOM")}}</div>
 
-<p>The <code><strong>CSS.supports()</strong></code> method returns a {{jsxref("Boolean")}}
-  value indicating if the browser supports a given CSS feature, or not.</p>
+<p>The <code><strong>CSS.supports()</strong></code> method returns a boolean value
+  indicating if the browser supports a given CSS feature, or not.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">CSS.supports(<em>propertyName</em>, <em>value</em>);
+<pre class="brush: js">CSS.supports(<em>propertyName</em>, <em>value</em>);
 CSS.supports(<em>supportCondition</em>);
 </pre>
 
@@ -57,26 +58,11 @@ result = CSS.supports(`(transform-style: preserve) or (-moz-transform-style: pre
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('CSS3 Conditional', '#dom-css-supports', 'CSS: supports()') }}</td>
-      <td>{{ Spec2('CSS3 Conditional') }}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CSS.supports")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -13,6 +13,7 @@ tags:
 - Reference
 - drag and drop
 - getAsEntry
+browser-compat: api.DataTransferItem.webkitGetAsEntry
 ---
 <p>{{APIRef("File System API")}}{{SeeCompatTable}}{{Non-standard_header}}</p>
 
@@ -21,16 +22,14 @@ tags:
   {{domxref("FileSystemDirectoryEntry")}} representing it. If the item isn't a file,
   <code>null</code> is returned.</p>
 
-<div class="note">
-  <p>This function is implemented as <code>webkitGetAsEntry()</code> in non-WebKit
-    browsers including Firefox at this time; it may be renamed to
-    <code>getAsEntry()</code> in the future, so you should code defensively, looking for
-    both.</p>
+<div class="notecard note">
+  <p><strong>Note:</strong> This function is implemented as <code>webkitGetAsEntry()</code> in non-WebKit browsers including Firefox at this time; it may be renamed to
+    <code>getAsEntry()</code> in the future, so you should code defensively, looking for both.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>DataTransferItem</em>.webkitGetAsEntry();</pre>
+<pre class="brush: js"><em>DataTransferItem</em>.webkitGetAsEntry();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -39,8 +38,7 @@ tags:
 <h3 id="Return_value">Return value</h3>
 
 <p>A {{domxref("FileSystemEntry")}}-based object describing the dropped item. This will be
-  either {{domxref("FileSystemFileEntry")}} or {{domxref("FileSystemDirectoryEntry")}}.
-</p>
+  either {{domxref("FileSystemFileEntry")}} or {{domxref("FileSystemDirectoryEntry")}}.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -54,7 +52,7 @@ tags:
   with the ID <code>"dropzone"</code>, and an unordered list element with the ID
   <code>"listing"</code>.</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Drag files and/or directories to the box below!&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;Drag files and/or directories to the box below!&lt;/p&gt;
 
 &lt;div id="dropzone"&gt;
   &lt;div id="boxtitle"&gt;
@@ -71,7 +69,7 @@ tags:
 
 <p>The styles used by the example are shown here.</p>
 
-<pre class="brush: css notranslate">#dropzone {
+<pre class="brush: css">#dropzone {
   text-align: center;
   width: 300px;
   height: 100px;
@@ -103,12 +101,12 @@ body {
   to insert the list of contents (the <code>container</code> parameter).</p>
 
 <div class="notecard note">
-  <p>Note that to read all files in a directory, <code>readEntries</code> needs to be
+  <p><strong>Note:</strong> To read all files in a directory, <code>readEntries</code> needs to be
     called repeatedly until it returns an empty array. In Chromium-based browsers, the
     following example will only return a max of 100 entries.</p>
 </div>
 
-<pre class="brush: js notranslate">let dropzone = document.getElementById("dropzone");
+<pre class="brush: js">let dropzone = document.getElementById("dropzone");
 let listing = document.getElementById("listing");
 
 function scanFiles(item, container) {
@@ -153,7 +151,7 @@ function scanFiles(item, container) {
 <p>Then come the event handlers. First, we prevent the {{event("dragover")}} event from
   being handled by the default handler, so that our drop zone can receive the drop:</p>
 
-<pre class="brush: js notranslate">dropzone.addEventListener("dragover", function(event) {
+<pre class="brush: js">dropzone.addEventListener("dragover", function(event) {
     event.preventDefault();
 }, false);
 </pre>
@@ -161,7 +159,7 @@ function scanFiles(item, container) {
 <p>The event handler that kicks everything off, of course, is the handler for the
   {{event("drop")}} event:</p>
 
-<pre class="brush: js notranslate">dropzone.addEventListener("drop", function(event) {
+<pre class="brush: js">dropzone.addEventListener("drop", function(event) {
   let items = event.dataTransfer.items;
 
   event.preventDefault();
@@ -200,40 +198,20 @@ function scanFiles(item, container) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('File System API', '#dom-datatransferitem-webkitgetasentry',
-        'webkitGetAsEntry()') }}</td>
-      <td>{{ Spec2('File System API') }}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <p>This API has no official W3C or WHATWG specification.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.DataTransferItem.webkitGetAsEntry")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory
-      Entries API</a></li>
-  <li><a
-      href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">Introduction
-      to the File System API</a></li>
+  <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</a></li>
+  <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">Introduction to the File System API</a></li>
   <li>{{domxref("DataTransferItem")}}</li>
-  <li>{{domxref("FileSystemEntry")}}, {{domxref("FileSystemFileEntry")}}, and
-    {{domxref("FileSystemDirectoryEntry")}}</li>
+  <li>{{domxref("FileSystemEntry")}}, {{domxref("FileSystemFileEntry")}}, and {{domxref("FileSystemDirectoryEntry")}}</li>
   <li>Events: {{event("dragover")}} and {{event("drop")}}</li>
 </ul>

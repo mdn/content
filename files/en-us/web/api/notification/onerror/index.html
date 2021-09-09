@@ -9,42 +9,27 @@ tags:
 - Property
 - Reference
 - onerror
+browser-compat: api.Notification.onerror
 ---
 <p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
 
 <p>The <strong><code>onerror</code></strong> property of the {{domxref("Notification")}}
-  interface specifies an event listener to receive {{domxref("HTMLElement/error_event",
-  "error")}} events. These events occur when something goes wrong with a
-  {{domxref("Notification")}} (in many cases an error preventing the notification from
-  being displayed.)</p>
+  interface specifies an event listener to receive {{domxref("Element/error_event", "error")}} events.
+  These events occur when something goes wrong with a {{domxref("Notification")}} 
+  (in many cases an error preventing the notification from being displayed.)</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var>Notification</var>.onerror = function() { ... };</pre>
+  class="brush: js"><var>Notification</var>.onerror = function() { ... };</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Web Notifications','#dom-notification-onerror','onerror')}}</td>
-      <td>{{Spec2('Web Notifications')}}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Notification.onerror")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -11,6 +11,7 @@ tags:
   - WebExtensions
   - setZoomSettings
   - tabs
+browser-compat: webextensions.api.tabs.setZoomSettings
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -43,7 +44,7 @@ tags:
 
 <p>Disable zooming for the current tab:</p>
 
-<pre class="notranslate brush: js">function onSet() {
+<pre class="brush: js">function onSet() {
   console.log(`Set zoom factor`);
 }
 
@@ -58,7 +59,7 @@ setting.then(onSet, onError);</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("webextensions.api.tabs.setZoomSettings")}}</p>
+<p>{{Compat}}</p>
 
 <div class="note"><strong>Acknowledgements</strong>
 

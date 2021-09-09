@@ -10,6 +10,7 @@ tags:
   - Theme
   - Update
   - WebExtensions
+browser-compat: webextensions.api.theme.update
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -34,15 +35,13 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("webextensions.api.theme.update", 10)}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Examples">Examples</h2>
 
 <p>Sets the browser theme to use a sun graphic with complementary background color:</p>
 
-<pre class="notranslate brush: js" dir="ltr">const suntheme = {
+<pre class="brush: js" dir="ltr">const suntheme = {
  images: {
    theme_frame: 'sun.jpg',
  },
@@ -56,7 +55,7 @@ browser.theme.update(suntheme);</pre>
 
 <p>Set the theme for just the currently focused window:</p>
 
-<pre class="notranslate brush: js">const day = {
+<pre class="brush: js">const day = {
     images: {
       theme_frame: 'sun.jpg',
     },

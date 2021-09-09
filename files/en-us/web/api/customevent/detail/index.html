@@ -8,6 +8,7 @@ tags:
 - Property
 - Reference
 - detail
+browser-compat: api.CustomEvent.detail
 ---
 <p>{{APIRef("DOM")}}</p>
 
@@ -20,7 +21,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"> let myDetail = <em>customEventInstance.detail</em>;</pre>
+  class="brush: js"> let myDetail = <em>customEventInstance.detail</em>;</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -28,7 +29,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js notranslate">// add an appropriate event listener
+<pre class="brush: js">// add an appropriate event listener
 obj.addEventListener("cat", function(e) { process(e.detail) });
 
 // create and dispatch the event
@@ -45,26 +46,11 @@ let myDetail = <em>event.detail</em>;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table" style="height: 49px; width: 1000px;">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('DOM WHATWG','#dom-customevent-detail','detail')}}</td>
-      <td>{{Spec2('DOM WHATWG')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CustomEvent.detail")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

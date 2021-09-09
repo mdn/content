@@ -8,6 +8,7 @@ tags:
   - Permissions
   - Reference
   - WebExtensions
+browser-compat: webextensions.api.permissions
 ---
 <div>{{AddonSidebar}}</div>
 
@@ -20,7 +21,7 @@ tags:
  <li>The extension can rely on the access to the APIs it needs, because if already running, the permissions have been granted.</li>
 </ul>
 
-<p>There is not yet a simple GUI, for users to view permissions of their installed WebExtension Add-ons.  Users must use about:debugging, go to the Add-ons section, then use the "Manifest Url" link for this Add-on. This shows raw json, which includes a "permissions" block, showing the permissions used by this addon.</p>
+<p>In most major browsers, users can see if their installed extensions request advanced permissions through the browser's extensions manager. </p>
 
 <p>With the permissions API, an extension can ask for additional permissions at runtime. These permissions need to be listed in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions">optional_permissions</a></code> manifest.json key. Note that some permissions are not allowed in <code>optional_permissions</code>. The main advantages of this are:</p>
 
@@ -69,7 +70,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("webextensions.api.permissions")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

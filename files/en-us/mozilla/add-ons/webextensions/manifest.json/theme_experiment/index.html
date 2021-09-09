@@ -11,6 +11,7 @@ tags:
   - Themes
   - colors
   - theme manifest
+browser-compat: webextensions.manifest.theme_experiment
 ---
 <div>{{AddonSidebar}}</div>
 
@@ -27,7 +28,7 @@ tags:
   <tr>
    <th scope="row">Example</th>
    <td>
-    <pre class="brush: json notranslate">
+    <pre class="brush: json">
 "theme_experiment": {
   "stylesheet": "style.css",
   "colors": {
@@ -136,7 +137,7 @@ tags:
 </div>
 
 <div class="cl-preview-section">
-<pre class="notranslate"><code>#reload-button {
+<pre><code>#reload-button {
   fill: var(--reload-button-color);
 }
 </code></pre>
@@ -151,7 +152,7 @@ tags:
 </div>
 
 <div class="cl-preview-section">
-<pre class="notranslate"><code>"theme_experiment": {
+<pre><code>"theme_experiment": {
   "stylesheet": "style.css",
   "colors": {
     "reload_button": "--reload-button-color"
@@ -165,7 +166,7 @@ tags:
 </div>
 
 <div class="cl-preview-section">
-<pre class="notranslate"><code>"theme": {
+<pre><code>"theme": {
   "colors": {
     "reload_button": "orange"
   }
@@ -187,6 +188,4 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("webextensions.manifest.theme_experiment")}}</p>
+<p>{{Compat}}</p>

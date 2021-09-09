@@ -3,26 +3,25 @@ title: FileSystemDirectoryEntry.getDirectory()
 slug: Web/API/FileSystemDirectoryEntry/getDirectory
 tags:
 - API
-- File System API
 - File and Directory Entries API
 - FileSystemDirectoryEntry
 - Files
 - Method
-- Non-standard
 - Reference
 - getDirectory
+browser-compat: api.FileSystemDirectoryEntry.getDirectory
 ---
-<p>{{APIRef("File System API")}}{{SeeCompatTable}}</p>
+<p>{{APIRef("File and Directory Entries API")}}</p>
 
 <p>The {{domxref("FileSystemDirectoryEntry")}} interface's method
-  <code><strong>getDirectory</strong></code><strong><code>()</code></strong> returns a
+  <strong><code>getDirectory()</code></strong> returns a
   {{domxref("FileSystemDirectoryEntry")}} object corresponding to a directory contained
   somewhere within the directory subtree rooted at the directory on which it's called.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><em>FileSystemDirectoryEntry</em>.getDirectory([<em>path</em>][, <em>options</em>][, <em>successCallback</em>][, <em>errorCallback</em>]);</pre>
+  class="brush: js"><em>FileSystemDirectoryEntry</em>.getDirectory([<em>path</em>][, <em>options</em>][, <em>successCallback</em>][, <em>errorCallback</em>]);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -42,7 +41,7 @@ tags:
   </dd>
   <dt><code>errorCallback</code> {{optional_inline}}</dt>
   <dd>A method to be called if an error occurs. Receives as its sole input parameter a
-    {{domxref("FileError")}} object describing the error which occurred.</dd>
+    {{domxref("DomException")}} object describing the error which occurred.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -52,20 +51,16 @@ tags:
 <h3 id="Errors">Errors</h3>
 
 <p>If an error occurs and an <code>errorCallback</code> was specified, it gets called with
-  a single parameter: a {{domxref("FileError")}} object describing the error. The
-  {{domxref("FileError.code")}} specifies what type of error occurred, as follows:</p>
+  a single parameter: a {{domxref("DOMException")}} object describing the error. The
+  name of the {{domxref("DOMException")}} indicates what type of error occurred, as follows:</p>
 
 <dl>
-  <dt><code>FileError.NOT_FOUND_ERR</code></dt>
+  <dt><code>NotFoundError</code></dt>
   <dd>The <code>create</code> option was not specified (or was specified as
     <code>false</code>), and the directory doesn't exist.</dd>
-  <dt><code>FileError.PATH_EXISTS_ERR</code></dt>
-  <dd>The <code>create</code> and <code>exclusive</code> options were both
-    <code>true</code>, indicating that the directory should be created but must not
-    already exist, but the directory does in fact already exist.</dd>
-  <dt><code>FileError.SECURITY_ERR</code></dt>
+  <dt><code>SecurityError</code></dt>
   <dd>The request to access the directory was denied for security reasons.</dd>
-  <dt><code>FileError.TYPE_MISMATCH_ERR</code></dt>
+  <dt><code>TypeMismatchError</code></dt>
   <dd>The path specified is not a directory; it's probably a file, but might be an
     unsupported file descriptor such as a pipe; this depends on the user agent to some
     extent.</dd>
@@ -92,7 +87,7 @@ function loadDictionaryForLanguage(appDataDirEntry, lang) {
 
   appDataDirEntry.getDirectory("Dictionaries", {}, function(dirEntry) {
     dirEntry.getFile(lang + "-dict.json", {}, function(fileEntry) {
-      fileEntry.file(function(dictFile)) {
+      fileEntry.file(function(dictFile) {
         let reader = new FileReader();
 
         reader.addEventListener("loadend", function() {
@@ -119,27 +114,11 @@ function loadDictionaryForLanguage(appDataDirEntry, lang) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('File System API', '#dom-filesystemdirectoryentry-getdirectory',
-        'getDirectory()') }}</td>
-      <td>{{ Spec2('File System API') }}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.FileSystemDirectoryEntry.getDirectory")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -12,10 +12,13 @@ tags:
   - events
   - rtc
   - track
+browser-compat: api.RTCTrackEvent
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">The <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a> interface <code><strong>RTCTrackEvent</strong></code> represents the {{event("track")}} event, which is sent when a new {{domxref("MediaStreamTrack")}} is added to an {{domxref("RTCRtpReceiver")}} which is part of the {{domxref("RTCPeerConnection")}}.</span> The target is the <code>RTCPeerConnection</code> object to which the track is being added.</p>
+<p>The <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a> interface <code><strong>RTCTrackEvent</strong></code> represents the {{event("track")}} event, which is sent when a new {{domxref("MediaStreamTrack")}} is added to an {{domxref("RTCRtpReceiver")}} which is part of the {{domxref("RTCPeerConnection")}}.</p>
+
+<p>The target is the <code>RTCPeerConnection</code> object to which the track is being added.</p>
 
 <p>This event is sent by the WebRTC layer to the web site or application, so you will not typically need to instantiate an <code>RTCTrackEvent</code> yourself.</p>
 
@@ -61,30 +64,15 @@ tags:
 
 <p>This simple example creates an event listener for the {{domxref("RTCPeerConnection.track_event", "track")}} event which sets the {{domxref("HTMLMediaElement.srcObject", "srcObject")}} of the {{HTMLElement("video")}} element with the ID <code>videobox</code> to the first stream in the list passed in the event's {{domxref("RTCTrackEvent.streams", "streams")}} array.</p>
 
-<pre class="brush: js notranslate">peerConnection.addEventListener("track", e =&gt; {
+<pre class="brush: js">peerConnection.addEventListener("track", e =&gt; {
   let videoElement = document.getElementById("videobox");
   videoElement.srcObject = e.streams[0];
 }, false);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('WebRTC 1.0', '#dom-rtctrackevent', 'RTCTrackEvent')}}</td>
-   <td>{{Spec2('WebRTC 1.0')}}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCTrackEvent")}}</p>
+<p>{{Compat}}</p>

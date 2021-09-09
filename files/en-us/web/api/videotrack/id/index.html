@@ -14,12 +14,15 @@ tags:
 - VideoTrack
 - id
 - track
+browser-compat: api.VideoTrack.id
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p><span class="seoSummary">The <code><strong>id</strong></code> property contains a
+<p>The <code><strong>id</strong></code> property contains a
     string which uniquely identifies the track represented by the
-    <strong>{{domxref("VideoTrack")}}</strong>.</span> This ID can be used with the
+    <strong>{{domxref("VideoTrack")}}</strong>.</p>
+
+<p>This ID can be used with the
   {{domxref("VideoTrackList.getTrackById()")}} method to locate a specific track within
   the media associated with a media element.</p>
 
@@ -29,7 +32,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>trackID</em> = <em>VideoTrack</em>.id;</pre>
+  class="brush: js">var <em>trackID</em> = <em>VideoTrack</em>.id;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -41,23 +44,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', '#dom-videotrack-id', 'VideoTrack: id')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.VideoTrack.id")}}</p>
+<p>{{Compat}}</p>

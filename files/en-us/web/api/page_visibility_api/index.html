@@ -17,10 +17,10 @@ tags:
 ---
 <div>{{DefaultAPISidebar("Page Visibility API")}}</div>
 
-<p>With tabbed browsing, there is a reasonable chance that any given webpage is in the background and thus not visible to the user. <span class="seoSummary">The Page Visibility API provides events you can watch for to know when a document becomes visible or hidden, as well as features to look at the current visibility state of the page.</span></p>
+<p>The Page Visibility API provides events you can watch for to know when a document becomes visible or hidden, as well as features to look at the current visibility state of the page.</p>
 
 <div class="note">
-<p><strong>Notes:</strong> The Page Visibility API is especially useful for saving resources and improving performance by letting a page avoid performing unnecessary tasks when the document isn't visible.</p>
+<p><strong>Note:</strong> The Page Visibility API is especially useful for saving resources and improving performance by letting a page avoid performing unnecessary tasks when the document isn't visible.</p>
 </div>
 
 <p>When the user minimizes the window or switches to another tab, the API sends a {{event("visibilitychange")}} event to let listeners know the state of the page has changed. You can detect the event and perform some actions or behave differently. For example, if your web app is playing a video, it can pause the video when the user puts the tab into the background, and resume playback when the user returns to the tab. The user doesn't lose their place in the video, the video's soundtrack doesn't interfere with audio in the new foreground tab, and the user doesn't miss any of the video in the meantime.</p>
@@ -50,11 +50,11 @@ tags:
 
 <ul>
  <li>Most browsers stop sending {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} callbacks to background tabs or hidden {{ HTMLElement("iframe") }}s in order to improve performance and battery life.</li>
- <li>Timers such as {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}} are throttled in background/inactive tabs to help improve performance. See <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout#Reasons_for_delays_longer_than_specified">Reasons for delays longer than specified</a> for more details.</li>
+ <li>Timers such as {{domxref("setTimeout()")}} are throttled in background/inactive tabs to help improve performance. See <a href="/en-US/docs/Web/API/setTimeout#reasons_for_delays_longer_than_specified">Reasons for delays longer than specified</a> for more details.</li>
  <li>Budget-based background timeout throttling is now available in modern browsers (Firefox 58+, Chrome 57+), placing an additional limit on background timer CPU usage. This operates in a similar way across modern browsers, with the details being as follows:
   <ul>
    <li>In Firefox, windows in background tabs each have their own time budget in milliseconds — a max and a min value of +50 ms and -150 ms, respectively. Chrome is very similar except that the budget is specified in seconds.</li>
-   <li>Windows are subjected to throttling after 30 seconds, with the same throttling delay rules as specified for window timers (again, see <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout#Reasons_for_delays_longer_than_specified">Reasons for delays longer than specified</a>). In Chrome, this value is 10 seconds.</li>
+   <li>Windows are subjected to throttling after 30 seconds, with the same throttling delay rules as specified for window timers (again, see <a href="/en-US/docs/Web/API/setTimeout#reasons_for_delays_longer_than_specified">Reasons for delays longer than specified</a>). In Chrome, this value is 10 seconds.</li>
    <li>Timer tasks are only permitted when the budget is non-negative.</li>
    <li>Once a timer's code has finished running, the duration of time it took to execute is subtracted from its window's timeout budget.</li>
    <li>The budget regenerates at a rate of 10 ms per second, in both Firefox and Chrome.</li>
@@ -76,7 +76,7 @@ tags:
 
 <p>The example, which pauses the video when you switch to another tab and plays again when you return to its tab, was created with the following code:</p>
 
-<pre class="brush: js notranslate">// Set the name of the hidden property and the change event for visibility
+<pre class="brush: js">// Set the name of the hidden property and the change event for visibility
 var hidden, visibilityChange;
 if (typeof document.hidden !== "undefined") { // Opera 12.10 and Firefox 18 and later support
   hidden = "hidden";
@@ -138,11 +138,11 @@ if (typeof document.addEventListener === "undefined" || hidden === undefined) {
   <dd>The page's content is not visible to the user, either due to the document's tab being in the background or part of a window that is minimized, or because the device's screen is off.</dd>
   <dt><code>prerender</code></dt>
   <dd>The page's content is being prerendered and is not visible to the user. A document may start in the <code>prerender</code> state, but will never switch to this state from any other state, since a document can only prerender once.
-  <div class="note"><strong>Note:</strong> Not all browsers support prerendering.</div>
+  <div class="note"><p><strong>Note:</strong> Not all browsers support prerendering.</p></div>
   </dd>
   <dt><code>unloaded</code></dt>
   <dd>The page is in the process of being unloaded from memory.
-  <div class="note"><strong>Note:</strong> Not all browsers support the <code>unloaded</code> value.</div>
+  <div class="note"><p><strong>Note:</strong> Not all browsers support the <code>unloaded</code> value.</p></div>
   </dd>
  </dl>
  </dd>
@@ -150,9 +150,9 @@ if (typeof document.addEventListener === "undefined" || hidden === undefined) {
  <dd>An {{domxref("EventListener")}} providing the code to be called when the {{event("visibilitychange")}} event is fired.</dd>
 </dl>
 
-<pre class="brush: js notranslate">//startSimulation and pauseSimulation defined elsewhere
+<pre class="brush: js">// startSimulation and pauseSimulation defined elsewhere
 function handleVisibilityChange() {
-  if (document.hidden) {
+  if (document.visibilityState === "hidden") {
     pauseSimulation();
   } else  {
     startSimulation();
@@ -164,21 +164,13 @@ document.addEventListener("visibilitychange", handleVisibilityChange, false);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
+<table>
   <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
+   <th>Specification</th>
   </tr>
- </thead>
- <tbody>
   <tr>
-   <td>{{SpecName('Page Visibility API')}}</td>
-   <td>{{Spec2('Page Visibility API')}}</td>
-   <td>Initial definition.</td>
+   <td><a href="https://w3c.github.io/page-visibility/">Page Visibility</a></td>
   </tr>
- </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -195,6 +187,6 @@ document.addEventListener("visibilitychange", handleVisibilityChange, false);
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>Description of the <a href="http://blogs.msdn.com/b/ie/archive/2011/07/08/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-2.aspx" title="Page Visibility on IEBlog">Page Visibility API</a> on the IEBlog.</li>
- <li>Description of the <a href="http://code.google.com/chrome/whitepapers/pagevisibility.html" title="Page Visibility API by Google">Page Visibility API</a> by Google</li>
+ <li>Description of the <a href="https://blogs.msdn.com/b/ie/archive/2011/07/08/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-2.aspx" title="Page Visibility on IEBlog">Page Visibility API</a> on the IEBlog.</li>
+ <li>Description of the <a href="https://code.google.com/chrome/whitepapers/pagevisibility.html" title="Page Visibility API by Google">Page Visibility API</a> by Google</li>
 </ul>

@@ -11,6 +11,7 @@ tags:
   - WebExtensions
   - onActivated
   - tabs
+browser-compat: webextensions.api.tabs.onActivated
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -67,7 +68,7 @@ browser.tabs.onActivated.hasListener(listener)
 
 <p>Listen for and log tab activation events:</p>
 
-<pre class="notranslate brush: js">function handleActivated(activeInfo) {
+<pre class="brush: js">function handleActivated(activeInfo) {
   console.log("Tab " + activeInfo.tabId +
               " was activated");
 }
@@ -78,7 +79,7 @@ browser.tabs.onActivated.addListener(handleActivated);</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("webextensions.api.tabs.onActivated")}}</p>
+<p>{{Compat}}</p>
 
 <div class="note"><strong>Acknowledgements</strong>
 

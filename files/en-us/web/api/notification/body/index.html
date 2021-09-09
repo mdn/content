@@ -9,6 +9,7 @@ tags:
 - Notifications API
 - Property
 - Reference
+browser-compat: api.Notification.body
 ---
 <p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
 
@@ -19,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <var>body</var> = <var>Notification</var>.body;
+<pre class="brush: js">var <var>body</var> = <var>Notification</var>.body;
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -28,7 +29,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">function spawnNotification(theBody, theIcon, theTitle) {
+<pre class="brush: js">function spawnNotification(theBody, theIcon, theTitle) {
   var options = {
       body: theBody,
       icon: theIcon
@@ -40,24 +41,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Web Notifications','#dom-notification-body','body')}}</td>
-      <td>{{Spec2('Web Notifications')}}</td>
-      <td>Living standard</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Notification.body")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

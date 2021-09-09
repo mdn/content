@@ -10,19 +10,20 @@ tags:
 - XHR
 - XMLHttpRequest
 - open
+browser-compat: api.XMLHttpRequest.open
 ---
 <div>{{APIRef('XMLHttpRequest')}}</div>
 
 <p>The {{domxref("XMLHttpRequest")}} method <code><strong>open()</strong></code>
   initializes a newly-created request, or re-initializes an existing one.</p>
 
-<div class="note"><strong>Note:</strong> Calling this method for an already active request
+<div class="note"><p><strong>Note:</strong> Calling this method for an already active request
   (one for which <code>open()</code> has already been called) is the equivalent of calling
-  {{domxref("XMLHttpRequest.abort", "abort()")}}.</div>
+  {{domxref("XMLHttpRequest.abort", "abort()")}}.</p></div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>XMLHttpRequest</var>.open(<var>method</var>, <var>url</var>[, <var>async</var>[, <var>user</var>[, <var>password</var>]]])
+<pre class="brush: js"><var>XMLHttpRequest</var>.open(<var>method</var>, <var>url</var>[, <var>async</var>[, <var>user</var>[, <var>password</var>]]])
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -41,10 +42,10 @@ tags:
     <code>true</code>, notification of a completed transaction is provided using event
     listeners. This <em>must</em> be true if the <code>multipart</code> attribute is
     <code>true</code>, or an exception will be thrown.
-    <div class="note"><strong>Note:</strong> Synchronous requests on the main thread can
+    <div class="note"><p><strong>Note:</strong> Synchronous requests on the main thread can
       be easily disruptive to the user experience and should be avoided; in fact, many
       browsers have deprecated synchronous XHR support on the main thread entirely.
-      Synchronous requests are permitted in {{domxref("Worker")}}s.</div>
+      Synchronous requests are permitted in {{domxref("Worker")}}s.</p></div>
   </dd>
   <dt><code>user</code> {{optional_inline}}</dt>
   <dd>The optional user name to use for authentication purposes; by default, this is the
@@ -56,31 +57,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('XMLHttpRequest', '#the-open()-method', 'open()')}}</td>
-      <td>{{Spec2('XMLHttpRequest')}}</td>
-      <td>WHATWG living standard</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
-
-<p>{{Compat("api.XMLHttpRequest.open")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

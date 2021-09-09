@@ -6,6 +6,7 @@ tags:
   - SVG
   - SVG Attribute
   - stroke-linejoin
+browser-compat: svg.attributes.presentation.stroke-linejoin
 ---
 <div>{{SVGRef}}</div>
 
@@ -13,14 +14,26 @@ tags:
 
 <div class="notecard note"><strong>Note:</strong> As a presentation attribute <code>stroke-linejoin</code> can be used as a CSS property.</div>
 
-<p>As a presentation attribute, it can be applied to any element but it has effect only on the following nine elements: {{SVGElement('altGlyph')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, and {{SVGElement('tspan')}}</p>
+<p>You can use this attribute with the following SVG elements:</p>
+
+<ul>
+  <li>{{SVGElement('altGlyph')}}</li>
+  <li>{{SVGElement('path')}}</li>
+  <li>{{SVGElement('polygon')}}</li>
+  <li>{{SVGElement('polyline')}}</li>
+  <li>{{SVGElement('rect')}}</li>
+  <li>{{SVGElement('text')}}</li>
+  <li>{{SVGElement('textPath')}}</li>
+  <li>{{SVGElement('tref')}}</li>
+  <li>{{SVGElement('tspan')}}</li>
+</ul>
 
 <div id="topExample">
 <div class="hidden">
-<pre class="brush: css notranslate">html,body,svg { height:100% }</pre>
+<pre class="brush: css">html,body,svg { height:100% }</pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;svg viewBox="0 0 18 12" xmlns="http://www.w3.org/2000/svg"&gt;
+<pre class="brush: html">&lt;svg viewBox="0 0 18 12" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!--
   Upper left path:
   Effect of the "miter" value
@@ -100,17 +113,17 @@ tags:
 
 <h3 id="arcs">arcs</h3>
 
-<div class="notecard note"><strong>Note:</strong> the <code>arcs</code> value as been introduced in SVG2 and it isn't widely supported yet, see <a href="#browser_compatibility">Browser compatibility</a> bellow for details.</div>
+<div class="notecard note"><strong>Note:</strong> the <code>arcs</code> value as been introduced in SVG2 and it isn't widely supported yet, see <a href="#browser_compatibility">Browser compatibility</a> below for details.</div>
 
 <p>The <code>arcs</code> value indicates that an arcs corner is to be used to join path segments. The arcs shape is formed by extending the outer edges of the stroke at the join point with arcs that have the same curvature as the outer edges at the join point.</p>
 
 <h4 id="Example">Example</h4>
 
 <div class="hidden">
-<pre class="brush: css notranslate">html,body,svg { height:100% }</pre>
+<pre class="brush: css">html,body,svg { height:100% }</pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"&gt;
+<pre class="brush: html">&lt;svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!-- Effect of the "arcs" value --&gt;
   &lt;path d="M1,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3" stroke="black" fill="none"
         stroke-linejoin="arcs" /&gt;
@@ -137,10 +150,10 @@ tags:
 <h4 id="Example_2">Example</h4>
 
 <div class="hidden">
-<pre class="brush: css notranslate">html,body,svg { height:100% }</pre>
+<pre class="brush: css">html,body,svg { height:100% }</pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"&gt;
+<pre class="brush: html">&lt;svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!-- Effect of the "bevel" value --&gt;
   &lt;path d="M1,5 l2,-3 l2,3" stroke="black" fill="none"
         stroke-linejoin="bevel" /&gt;
@@ -169,10 +182,10 @@ tags:
 <h4 id="Example_3">Example</h4>
 
 <div class="hidden">
-<pre class="brush: css notranslate">html,body,svg { height:100% }</pre>
+<pre class="brush: css">html,body,svg { height:100% }</pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;svg viewBox="0 -1 10 7" xmlns="http://www.w3.org/2000/svg"&gt;
+<pre class="brush: html">&lt;svg viewBox="0 -1 10 7" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!-- Effect of the "miter" value --&gt;
   &lt;path d="M1,5 l2,-3 l2,3" stroke="black" fill="none"
         stroke-linejoin="miter" /&gt;
@@ -204,7 +217,7 @@ tags:
 
 <h3 id="miter-clip">miter-clip</h3>
 
-<div class="notecard note"><strong>Note:</strong> the <code>miter-clip</code> value as been introduced in SVG2 and it isn't widely supported yet, see <a href="#browser_compatibility">Browser compatibility</a> bellow for details.</div>
+<div class="notecard note"><strong>Note:</strong> the <code>miter-clip</code> value as been introduced in SVG2 and it isn't widely supported yet, see <a href="#browser_compatibility">Browser compatibility</a> below for details.</div>
 
 <p>The <code>miter-clip</code> value indicates that a sharp corner is to be used to join path segments. The corner is formed by extending the outer edges of the stroke at the tangents of the path segments until they intersect.</p>
 
@@ -213,10 +226,10 @@ tags:
 <h4 id="Example_4">Example</h4>
 
 <div class="hidden">
-<pre class="brush: css notranslate">html,body,svg { height:100% }</pre>
+<pre class="brush: css">html,body,svg { height:100% }</pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;svg viewBox="0 -1 10 7" xmlns="http://www.w3.org/2000/svg"&gt;
+<pre class="brush: html">&lt;svg viewBox="0 -1 10 7" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!-- Effect of the "miter-clip" value --&gt;
   &lt;path d="M1,5 l2,-3 l2,3" stroke="black" fill="none"
         stroke-linejoin="miter-clip" /&gt;
@@ -252,10 +265,10 @@ tags:
 <h4 id="Example_5">Example</h4>
 
 <div class="hidden">
-<pre class="brush: css notranslate">html,body,svg { height:100% }</pre>
+<pre class="brush: css">html,body,svg { height:100% }</pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"&gt;
+<pre class="brush: html">&lt;svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!-- Effect of the "round" value --&gt;
   &lt;path d="M1,5 l2,-3 l2,3" stroke="black" fill="none"
         stroke-linejoin="round" /&gt;
@@ -301,4 +314,4 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("svg.attributes.presentation.stroke-linejoin")}}</p>
+<p>{{Compat}}</p>

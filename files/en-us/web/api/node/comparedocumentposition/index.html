@@ -10,13 +10,14 @@ tags:
 - Position
 - Reference
 - compareDocumentPosition
+browser-compat: api.Node.compareDocumentPosition
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><span class="seoSummary">The
+<p>The
     <code><strong>Node.compareDocumentPosition()</strong></code> method reports the
     position of the given node relative to another node in any document — not just the
-    given node’s document.</span></p>
+    given node’s document.</p>
 
 <p>The return value is a <a
     href="https://en.wikipedia.org/wiki/Mask_(computing)">bitmask</a> of the following
@@ -59,7 +60,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>compareMask</em> = <em>node</em>.compareDocumentPosition(<em>otherNode</em>)
+<pre class="brush: js"><em>compareMask</em> = <em>node</em>.compareDocumentPosition(<em>otherNode</em>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -103,33 +104,11 @@ if (head.compareDocumentPosition(body) &amp; Node.DOCUMENT_POSITION_FOLLOWING) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('DOM
-        WHATWG','#dom-node-comparedocumentposition','Node.compareDocumentPosition()')}}
-      </td>
-      <td>{{Spec2('DOM WHATWG')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName('DOM3
-        Core','core.html#Node3-compareDocumentPosition','Node.compareDocumentPosition()')}}
-      </td>
-      <td>{{Spec2('DOM3 Core')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Node.compareDocumentPosition")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

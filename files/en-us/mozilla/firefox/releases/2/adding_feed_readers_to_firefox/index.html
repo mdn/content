@@ -6,17 +6,17 @@ tags:
 ---
 <div>{{FirefoxSidebar}}</div>
 
-<p>{{ Fx_minversion_header(2) }} Starting with Firefox 2, Firefox has support for selecting different RSS or Atom feed readers to use when you try to read a feed. This article provides information about how to add support for additional readers not supported by default.</p>
+<p>Starting with Firefox 2, Firefox has support for selecting different RSS or Atom feed readers to use when you try to read a feed. This article provides information about how to add support for additional readers not supported by default.</p>
 
 <h2 id="Adding_a_new_web-based_feed_reader">Adding a new web-based feed reader</h2>
 
 <h3 id="Adding_a_feed_reader_from_a_web_application">Adding a feed reader from a web application</h3>
 
-<p>Support for adding feed readers from the web was removed from the HTML5 spec, and Firefox support is scheduled for removal in Firefox 62. {{obsolete_inline("62.0")}}</p>
+<p>Support for adding feed readers from the web was removed from the HTML5 spec, and Firefox support is scheduled for removal in Firefox 62. {{Deprecated_Inline}}</p>
 
 <p>In older versions, JavaScript code on the web can add a feed reader easily, using the {{domxref("window.navigator.registerContentHandler", "navigator.registerContentHandler()")}} function, like this:</p>
 
-<pre class="notranslate brush: js">navigator.registerContentHandler("application/vnd.mozilla.maybe.feed",
+<pre class="brush: js">navigator.registerContentHandler("application/vnd.mozilla.maybe.feed",
                                  "https://www.example.com/?feed-feed=%s",
                                  "My Feed Reader");
 </pre>
@@ -25,7 +25,7 @@ tags:
 
 <h3 id="Adding_a_new_feed_reader_manually">Adding a new feed reader manually</h3>
 
-<p>Support for adding new feed readers was removed in Firefox 63. {{obsolete_inline("63.0")}}.</p>
+<p>Support for adding new feed readers was removed in Firefox 63. {{deprecated_inline}}.</p>
 
 <p>Prior to Firefox 63, to add support for a new web-based feed reader, you would need to add three new preferences:</p>
 

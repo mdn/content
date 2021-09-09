@@ -8,6 +8,7 @@ tags:
   - Reference
   - TouchEvent
   - touch
+browser-compat: api.TouchEvent
 ---
 <p>{{APIRef("Touch Events")}}</p>
 
@@ -44,7 +45,7 @@ tags:
  <dt>{{domxref("TouchEvent.touches")}} {{readonlyInline}}</dt>
  <dd>A {{domxref("TouchList")}} of all the {{domxref("Touch")}} objects representing all current points of contact with the surface, regardless of target or changed status.</dd>
  <dt>{{domxref("TouchEvent.rotation")}} {{non-standard_inline()}} {{readonlyInline}}</dt>
- <dd>Change in rotation (in degrees) since the event's beginning. Positive values indicate clockwise rotation; negative values indicate anticlockwise rotation. Initial value: <code>0.0</code></dd>
+ <dd>Change in rotation (in degrees) since the event's beginning. Positive values indicate clockwise rotation; negative values indicate counterclockwise rotation. Initial value: <code>0.0</code></dd>
  <dt>{{domxref("TouchEvent.scale")}} {{non-standard_inline()}} {{readonlyInline}}</dt>
  <dd>Distance between two digits since the event's beginning. Expressed as a floating-point multiple of the initial distance between the digits at the beginning of the event. Values below 1.0 indicate an inward pinch (zoom out). Values above 1.0 indicate an outward unpinch (zoom in). Initial value: <code>1.0</code></dd>
 </dl>
@@ -52,36 +53,69 @@ tags:
 <h2 id="Touch_event_types">Touch event types</h2>
 
 <p>There are several types of event that can be fired to indicate that touch-related changes have occurred. You can determine which of these has happened by looking at the event's {{domxref("event.type", "TouchEvent.type")}} property.</p>
+<dl>
+  <dt>{{domxref("Element/touchstart_event", "touchstart")}}</dt>
+  <dd>Sent when the user places a touch point on the touch surface.
+    The event's target will be the {{domxref("element")}} in which the touch occurred.
+  </dd>
 
-<h3 id="touchstart_event">{{domxref("Element/touchstart_event", "touchstart")}}</h3>
+  <dt>{{domxref("Element/touchend_event", "touchend")}}</dt>
+  <dd>
+    <p>
+      Sent when the user removes a touch point from the surface;
+      that is, when they lift a finger or stylus from the surface.
+      This is also sent
+      if the touch point moves off the edge of the surface;
+      for example, if the user's finger slides off the edge of the screen.
+    </p>
 
-<p>Sent when the user places a touch point on the touch surface. The event's target will be the {{domxref("element")}} in which the touch occurred.</p>
+    <p>
+      The event's target is the same {{domxref("element")}}
+      that received the <code>touchstart</code> event
+      corresponding to the touch point,
+      even if the touch point has moved outside that element.
+    </p>
 
-<h3 id="touchend_event">{{domxref("Element/touchend_event", "touchend")}}</h3>
+    <p>
+      The touch point (or points)
+      that were removed from the surface
+      can be found in the {{domxref("TouchList")}}
+      specified by the <code>changedTouches</code> attribute.
+    </p>
+  </dd>
 
-<p>Sent when the user removes a touch point from the surface (that is, when they lift a finger or stylus from the surface). This is also sent if the touch point moves off the edge of the surface; for example, if the user's finger slides off the edge of the screen.</p>
+  <dt>{{domxref("Element/touchmove_event", "touchmove")}}</dt>
+  <dd>
+    <p>
+      Sent when the user moves a touch point along the surface.
+      The event's target is the same {{domxref("element")}}
+      that received the <code>touchstart</code> event corresponding to the touch point,
+      even if the touch point has moved outside that element.
+    </p>
 
-<p>The event's target is the same {{domxref("element")}} that received the <code>touchstart</code> event corresponding to the touch point, even if the touch point has moved outside that element.</p>
+    <p>This event is also sent
+      if the values of the radius, rotation angle, or force attributes of a touch point change.
+    </p>
 
-<p>The touch point (or points) that were removed from the surface can be found in the {{domxref("TouchList")}} specified by the <code>changedTouches</code> attribute.</p>
+    <div class="note"><p><strong>Note:</strong> The rate at which <code>touchmove</code> events is sent is browser-specific, and may also vary depending on the capability of the user's hardware. You must not rely on a specific granularity of these events.
+    </p></div>
+  </dd>
 
-<h3 id="touchmove_event">{{domxref("Element/touchmove_event", "touchmove")}}</h3>
+  <dt>{{domxref("Element/touchcancel_event", "touchcancel")}}</dt>
+  <dd>
+    <p>
+      Sent when a touch point has been disrupted in some way.
+      There are several possible reasons why this might happen
+      (and the exact reasons will vary from device to device, as well as browser to browser):
+    </p>
 
-<p>Sent when the user moves a touch point along the surface. The event's target is the same {{domxref("element")}} that received the <code>touchstart</code> event corresponding to the touch point, even if the touch point has moved outside that element.</p>
-
-<p>This event is also sent if the values of the radius, rotation angle, or force attributes of a touch point change.</p>
-
-<div class="note"><strong>Note:</strong> The rate at which <code>touchmove</code> events is sent is browser-specific, and may also vary depending on the capability of the user's hardware. You must not rely on a specific granularity of these events.</div>
-
-<h3 id="touchcancel_event">{{domxref("Element/touchcancel_event", "touchcancel")}}</h3>
-
-<p>Sent when a touch point has been disrupted in some way. There are several possible reasons why this might happen (and the exact reasons will vary from device to device, as well as browser to browser):</p>
-
-<ul>
- <li>An event of some kind occurred that canceled the touch; this might happen if a modal alert pops up during the interaction.</li>
- <li>The touch point has left the document window and moved into the browser's UI area, a plug-in, or other external content.</li>
- <li>The user has placed more touch points on the screen than can be supported, in which case the earliest {{domxref("Touch")}} in the {{domxref("TouchList")}} gets canceled.</li>
-</ul>
+    <ul>
+      <li>An event of some kind occurred that canceled the touch; this might happen if a modal alert pops up during the interaction.</li>
+      <li>The touch point has left the document window and moved into the browser's UI area, a plug-in, or other external content.</li>
+      <li>The user has placed more touch points on the screen than can be supported, in which case the earliest {{domxref("Touch")}} in the {{domxref("TouchList")}} gets canceled.</li>
+    </ul>
+  </dd>
+</dl>
 
 <h3 id="Using_with_addEventListener_and_preventDefault">Using with addEventListener() and preventDefault()</h3>
 
@@ -106,35 +140,15 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>See the <a href="/en-US/docs/Web/API/Touch_events#Example">example on the main Touch events article</a>.</p>
+<p>See the <a href="/en-US/docs/Web/API/Touch_events#example">example on the main Touch events article</a>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Touch Events 2','#touchevent-interface', 'TouchEvent')}}</td>
-   <td>{{Spec2('Touch Events 2')}}</td>
-   <td>Added <code>ontouchstart</code>, <code>ontouchend</code>, <code>ontouchmove</code>, <code>ontouchend</code> global attribute handlers</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Touch Events', '#touchevent-interface', 'TouchEvent')}}</td>
-   <td>{{Spec2('Touch Events')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.TouchEvent")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

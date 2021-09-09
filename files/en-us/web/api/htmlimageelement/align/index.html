@@ -8,18 +8,21 @@ tags:
 - HTML DOM
 - HTMLImageElement
 - Image
-- Obsolete
 - Property
 - Reference
 - alignment
 - float
 - img
+- Deprecated
+browser-compat: api.HTMLImageElement.align
 ---
 <p>{{APIRef("HTML DOM")}}{{deprecated_header}}</p>
 
-<p><span class="seoSummary">The <em>obsolete</em> <code><strong>align</strong></code>
+<p>The <em>obsolete</em> <code><strong>align</strong></code>
     property of the {{domxref("HTMLImageElement")}} interface is a string which indicates
-    how to position the image relative to its container.</span> You should instead use the
+    how to position the image relative to its container.</p>
+
+<p>You should instead use the
   CSS property {{cssxref("vertical-align")}}, which does in fact also work on images
   despite its name. You can also use the {{cssxref("float")}} property to float the image
   to the left or right margin.</p>
@@ -29,7 +32,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>htmlImageElement</em>.align = <em>alignMode</em>;
+<pre class="brush: js"><em>htmlImageElement</em>.align = <em>alignMode</em>;
 <em>alignMode</em> = <em>htmlImageElement</em>.align;
 </pre>
 
@@ -78,29 +81,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', '#attr-img-align', 'HTMLImageElement.align')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("HTML4.01", "struct/objects.html#adef-align-IMG",
-        "HTMLImageElement.align")}}</td>
-      <td>{{Spec2("HTML4.01")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLImageElement.align")}}</p>
+<p>{{Compat}}</p>

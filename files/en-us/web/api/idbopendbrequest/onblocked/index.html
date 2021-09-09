@@ -2,14 +2,15 @@
 title: IDBOpenDBRequest.onblocked
 slug: Web/API/IDBOpenDBRequest/onblocked
 tags:
-- API
-- Database
-- IDBOpenDBRequest
-- IndexedDB
-- Property
-- Reference
-- Storage
-- onblocked
+  - API
+  - Database
+  - IDBOpenDBRequest
+  - IndexedDB
+  - Property
+  - Reference
+  - Storage
+  - onblocked
+browser-compat: api.IDBOpenDBRequest.onblocked
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
@@ -24,7 +25,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><em>IDBOpenDBRequest</em>.onblocked = <em>function</em>(event) { ... };</pre>
+  class="brush: js"><em>IDBOpenDBRequest</em>.onblocked = <em>function</em>(event) { ... };</pre>
 
 <h2 id="Example">Example</h2>
 
@@ -75,34 +76,11 @@ request.onblocked = function() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('IndexedDB', '#dom-idbopendbrequest-onblocked', 'onblocked')}}</td>
-      <td>{{Spec2('IndexedDB')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("IndexedDB 2", "#dom-idbopendbrequest-onblocked", "onblocked")}}</td>
-      <td>{{Spec2("IndexedDB 2")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-  <div>
-
-    <p>{{Compat("api.IDBOpenDBRequest.onblocked")}}</p>
-  </div>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -113,10 +91,8 @@ request.onblocked = function() {
   <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
   <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
   <li>Using cursors: {{domxref("IDBCursor")}}</li>
-  <li>Reference example: <a class="external"
-      href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
-      Notifications</a> (<a class="external"
-      href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-  <li><code><a href="/en-US/docs/Web/API/IDBRequest/blocked_event">blocked</a></code>
+  <li>Reference example: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
+      Notifications</a> (<a href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
+  <li><code><a href="/en-US/docs/Web/API/IDBOpenDBRequest/blocked_event">blocked</a></code>
     event</li>
 </ul>

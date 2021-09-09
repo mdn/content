@@ -11,6 +11,7 @@ tags:
   - WebExtensions
   - onReferenceFragmentUpdated
   - webNavigation
+browser-compat: webextensions.api.webNavigation.onReferenceFragmentUpdated
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -18,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="notranslate brush: js">browser.webNavigation.onReferenceFragmentUpdated.addListener(
+<pre class="brush: js">browser.webNavigation.onReferenceFragmentUpdated.addListener(
   <var>listener</var>,                   // function
   <var>filter</var>                      // optional object
 )
@@ -71,7 +72,7 @@ browser.webNavigation.onReferenceFragmentUpdated.hasListener(<var>listener</var>
  <dt><code>frameId</code></dt>
  <dd><code>integer</code>. Frame in which the navigation will occur. <code>0</code> indicates that navigation happens in the tab's top-level browsing context, not in a nested {{HTMLElement("iframe")}}. A positive value indicates that navigation happens in a nested iframe. Frame IDs are unique for a given tab and process.</dd>
  <dt><code>timeStamp</code></dt>
- <dd><code>number</code>. The time that the navigation was committed, in <a href="https://en.wikipedia.org/wiki/Unix_time">milliseconds since the epoch</a>.</dd>
+ <dd><code>number</code>. The time that the fragment identifier for the page was changed, in <a href="https://en.wikipedia.org/wiki/Unix_time">milliseconds since the epoch</a>.</dd>
  <dt><code>transitionType</code></dt>
  <dd><code>{{WebExtAPIRef("webNavigation.transitionType", "transitionType")}}</code>. The reason for the navigation: for example, <code>"link"</code> if the user clicked a link.</dd>
  <dt><code>transitionQualifiers</code></dt>
@@ -80,13 +81,13 @@ browser.webNavigation.onReferenceFragmentUpdated.hasListener(<var>listener</var>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("webextensions.api.webNavigation.onReferenceFragmentUpdated")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Examples">Examples</h2>
 
 <p>Logs the target URLs and extra transition information for <code>onReferenceFragmentUpdated</code>, if the target URL's hostname contains "example.com" or starts with "developer".</p>
 
-<pre class="notranslate brush: js">const filter = {
+<pre class="brush: js">const filter = {
   url:
   [
     {hostContains: "example.com"},

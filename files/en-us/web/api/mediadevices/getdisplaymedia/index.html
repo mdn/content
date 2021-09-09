@@ -2,27 +2,30 @@
 title: MediaDevices.getDisplayMedia()
 slug: Web/API/MediaDevices/getDisplayMedia
 tags:
-- API
-- Capture
-- Conference
-- Media
-- MediaDevices
-- Method
-- Reference
-- Screen Capture
-- Screen Capture API
-- Sharing
-- Video
-- display
-- getDisplayMedia
-- screen
+  - API
+  - Capture
+  - Conference
+  - Media
+  - MediaDevices
+  - Method
+  - Reference
+  - Screen Capture
+  - Screen Capture API
+  - Sharing
+  - Video
+  - display
+  - getDisplayMedia
+  - screen
+browser-compat: api.MediaDevices.getDisplayMedia
 ---
 <div>{{DefaultAPISidebar("Screen Capture API")}}</div>
 
-<p><span class="seoSummary">The {{domxref("MediaDevices")}} interface's
+<p>The {{domxref("MediaDevices")}} interface's
     <code><strong>getDisplayMedia()</strong></code> method prompts the user to select and
     grant permission to capture the contents of a display or portion thereof (such as a
-    window) as a {{domxref("MediaStream")}}.</span> The resulting stream can then be
+    window) as a {{domxref("MediaStream")}}.</p>
+
+<p>The resulting stream can then be
   recorded using the <a href="/en-US/docs/Web/API/MediaStream_Recording_API">MediaStream
     Recording API</a> or transmitted as part of a <a
     href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> session.</p>
@@ -32,7 +35,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>promise</em> = navigator.mediaDevices.getDisplayMedia(<em>constraints</em>);
+<pre class="brush: js">var <em>promise</em> = navigator.mediaDevices.getDisplayMedia(<em>constraints</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -54,7 +57,7 @@ tags:
 <div class="notecard note">
   <p><strong>Note:</strong> Browser support for audio tracks varies, both in terms of
     whether or not they're supported at all by the media recorder and in terms of the
-    which audio source or sourcoes are supported. Check the {{anch("Browser
+    audio sources supported. Check the {{anch("Browser
     compatibility", "compatibility table")}} for details for each browser.</p>
 </div>
 
@@ -120,7 +123,7 @@ tags:
   parameter. The options are specified in the form of a
   {{domxref("MediaStreamConstraints")}} object which specifies the preferred stream
   configuration and the <a
-    href="/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture#Visible_vs_logical_display_surfaces">display
+    href="/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture#visible_vs_logical_display_surfaces">display
     surface</a> from which video is to be captured.</p>
 
 <pre class="brush: js">async function startCapture(displayMediaOptions) {
@@ -142,25 +145,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Screen Capture', '#dom-mediadevices-getdisplaymedia',
-        'MediaDevices.getDisplayMedia()')}}</td>
-      <td>{{Spec2('Screen Capture')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MediaDevices.getDisplayMedia")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

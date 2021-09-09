@@ -11,6 +11,7 @@ tags:
   - WebExtensions
   - getCurrent
   - tabs
+browser-compat: webextensions.api.tabs.getCurrent
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -26,7 +27,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="notranslate brush: js">const gettingCurrent = browser.tabs.getCurrent()
+<pre class="brush: js">const gettingCurrent = browser.tabs.getCurrent()
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -41,7 +42,7 @@ tags:
 
 <p>Get information about the current tab:</p>
 
-<pre class="notranslate brush: js">function onGot(tabInfo) {
+<pre class="brush: js">function onGot(tabInfo) {
   console.log(tabInfo);
 }
 
@@ -56,7 +57,7 @@ gettingCurrent.then(onGot, onError);</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("webextensions.api.tabs.getCurrent")}}</p>
+<p>{{Compat}}</p>
 
 <div class="note"><strong>Acknowledgements</strong>
 

@@ -7,6 +7,7 @@ tags:
 - PerformanceObserverEntryList
 - Reference
 - Web Performance
+browser-compat: api.PerformanceObserverEntryList.getEntriesByName
 ---
 <div>{{APIRef("Performance Timeline API")}}</div>
 
@@ -20,12 +21,12 @@ tags:
   {{domxref("PerformanceObserver.observe","observe()")}} method. The list is available in
   the observer's callback function (as the first parameter in the callback).</p>
 
-<p class="note">This method is exposed to {{domxref("Window")}} and {{domxref("Worker")}}
+<p>This method is exposed to {{domxref("Window")}} and {{domxref("Worker")}}
   interfaces.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>entries</em> = <em>list</em>.getEntriesByName(<em>name</em>, <em>type</em>);
+<pre class="brush: js"><em>entries</em> = <em>list</em>.getEntriesByName(<em>name</em>, <em>type</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -96,22 +97,8 @@ observe_frame.observe({entryTypes: ['frame']});
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Performance Timeline Level 2',
-        '#dom-performanceobserverentrylist-getentriesbyname', 'getEntriesByName()')}}</td>
-      <td>{{Spec2('Performance Timeline Level 2')}}</td>
-      <td>Initial definition of <code>getEntriesByName()</code> method.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.PerformanceObserverEntryList.getEntriesByName")}}</p>
+<p>{{Compat}}</p>

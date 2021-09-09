@@ -7,6 +7,7 @@ tags:
 - Reference
 - WebGL
 - WebGLRenderingContext
+browser-compat: api.WebGLRenderingContext.clearColor
 ---
 <div>{{APIRef("WebGL")}}</div>
 
@@ -20,23 +21,23 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">void <var>gl</var>.clearColor(<var>red, green, blue, alpha</var>);
+<pre class="brush: js">void <var>gl</var>.clearColor(<var>red, green, blue, alpha</var>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
   <dt><code>red</code></dt>
-  <dd>A {{domxref("GLclampf")}} specifying the red color value used when the color buffers
+  <dd>A {{domxref("WebGL_API/Types", "GLclampf")}} specifying the red color value used when the color buffers
     are cleared. Default value: 0.</dd>
   <dt><code>green</code></dt>
-  <dd>A {{domxref("GLclampf")}} specifying the green color value used when the color
+  <dd>A {{domxref("WebGL_API/Types", "GLclampf")}} specifying the green color value used when the color
     buffers are cleared. Default value: 0.</dd>
   <dt><code>blue</code></dt>
-  <dd>A {{domxref("GLclampf")}} specifying the blue color value used when the color
+  <dd>A {{domxref("WebGL_API/Types", "GLclampf")}} specifying the blue color value used when the color
     buffers are cleared. Default value: 0.</dd>
   <dt><code>alpha</code></dt>
-  <dd>A {{domxref("GLclampf")}} specifying the alpha (transparency) value used when the
+  <dd>A {{domxref("WebGL_API/Types", "GLclampf")}} specifying the alpha (transparency) value used when the
     color buffers are cleared. Default value: 0.</dd>
 </dl>
 
@@ -58,34 +59,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebGL', "#5.14.3", "clearColor")}}</td>
-      <td>{{Spec2('WebGL')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('OpenGL ES 2.0', "glClearColor.xml", "glClearColor")}}</td>
-      <td>{{Spec2('OpenGL ES 2.0')}}</td>
-      <td>Man page of the OpenGL API.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
-
-<p>{{Compat("api.WebGLRenderingContext.clearColor")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

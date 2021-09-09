@@ -7,6 +7,7 @@ tags:
 - DOM Reference
 - Method
 - NodeFilter
+browser-compat: api.NodeFilter.acceptNode
 ---
 <div>{{APIRef("DOM")}}</div>
 
@@ -16,12 +17,14 @@ tags:
   }} iteration algorithm. This method is expected to be written by the user of a
   <code>NodeFilter</code>. Possible return values are:</p>
 
-<table class="standard-table">
-  <tbody>
+<table class="no-markdown">
+  <thead>
     <tr>
-      <td class="header">Constant</td>
-      <td class="header">Description</td>
+      <th>Constant</th>
+      <th>Description</th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <td><code>NodeFilter.FILTER_ACCEPT</code></td>
       <td>Value returned by the {{ domxref("NodeFilter.acceptNode()") }} method when a
@@ -55,7 +58,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>result<code> = </code>nodeFilter<code>.acceptNode(</code>node</em>)
+<pre class="brush: js"><em>result<code> = </code>nodeFilter<code>.acceptNode(</code>node</em>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -98,31 +101,11 @@ while ((node = iterator.nextNode())) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('DOM WHATWG', '#dom-nodefilter-acceptnode',
-        'NodeFilter.acceptNode()')}}</td>
-      <td>{{Spec2('DOM WHATWG')}}</td>
-      <td>No change from {{SpecName('DOM2 Traversal_Range')}}</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('DOM2 Traversal_Range', 'traversal.html#Traversal-NodeFilter',
-        'NodeFilter.acceptNode()')}}</td>
-      <td>{{Spec2('DOM2 Traversal_Range')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.NodeFilter.acceptNode")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

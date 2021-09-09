@@ -11,23 +11,17 @@ tags:
 ---
 <p>{{PreviousNext("Learn/WebGL/By_example/Clearing_by_clicking","Learn/WebGL/By_example/Color_masking")}}</p>
 
-<div id="simple-color-animation">
-<div class="summary">
-<p><span class="seoSummary">A very basic color animation created using {{Glossary("WebGL")}}, performed by clearing the drawing buffer with a different random color every second.</span></p>
-</div>
+<p>A very basic color animation created using {{Glossary("WebGL")}}, performed by clearing the drawing buffer with a different random color every second.</p>
 
-<p>{{EmbedLiveSample("simple-color-animation-source",660,425)}}</p>
+<h2 id="Color_animation_with_clear">Color animation with clear</h2>
 
-<div id="simple-color-animation-intro">
-<h3 id="Color_animation_with_clear">Color animation with clear</h3>
+<p>{{EmbedLiveSample("Color_animation_with_clear",660,425)}}</p>
 
 <p>This example provides a simple illustration of color animation with {{Glossary("WebGL")}}, as well as user interaction. The user can start, stop and restart the animation by clicking the button.</p>
 
 <p>This time we put the {{Glossary("WebGL")}} function calls within a timer event handler. A click event handler additionally enables the basic user interaction of starting and stopping the animation. The timer and the timer handler function establish the animation loop, a set of drawing commands that are executed at a regular period (typically, every frame; in this case, once per second).</p>
-</div>
 
-<div id="simple-color-animation-source">
-<pre class="brush: html notranslate">&lt;p&gt;A simple WebGL program that shows color animation.&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;A simple WebGL program that shows color animation.&lt;/p&gt;
 &lt;p&gt;You can click the button below to toggle the
     color animation on or off.&lt;/p&gt;
 &lt;canvas id="canvas-view"&gt;Your browser does not seem to support
@@ -39,7 +33,7 @@ tags:
 &lt;/button&gt;
 </pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   text-align : center;
 }
 canvas {
@@ -59,7 +53,7 @@ button {
 }
 </pre>
 
-<pre class="brush: js notranslate" id="livesample-js">window.addEventListener("load", function setupAnimation (evt) {
+<pre class="brush: js">window.addEventListener("load", function setupAnimation (evt) {
   "use strict"
   window.removeEventListener(evt.type, setupAnimation, false);
 
@@ -123,7 +117,5 @@ button {
 </pre>
 
 <p>The source code of this example is also available on <a href="https://github.com/idofilin/webgl-by-example/tree/master/simple-color-animation">GitHub</a>.</p>
-</div>
-</div>
 
 <p>{{PreviousNext("Learn/WebGL/By_example/Clearing_by_clicking","Learn/WebGL/By_example/Color_masking")}}</p>

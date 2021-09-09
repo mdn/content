@@ -11,17 +11,18 @@ tags:
 - Method
 - Reference
 - takePhoto
+browser-compat: api.ImageCapture.takePhoto
 ---
 <div>{{APIRef("MediaStream Image")}}</div>
 
-<p><span class="seoSummary">The <strong><code>takePhoto()</code></strong> method of the
+<p>The <strong><code>takePhoto()</code></strong> method of the
     {{domxref("ImageCapture")}} interface takes a single exposure using the video capture
     device sourcing a {{domxref("MediaStreamTrack")}} and returns a {{jsxref("Promise")}}
-    that resolves with a {{domxref("Blob")}} containing the data.</span></p>
+    that resolves with a {{domxref("Blob")}} containing the data.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">
+<pre class="brush: js">
 const <em>blobPromise</em> = <em>imageCaptureObj</em>.takePhoto()
 const <em>blobPromise</em> = <em>imageCaptureObj</em>.takePhoto(<em>photoSettings</em>)
 </pre>
@@ -76,22 +77,8 @@ function takePhoto() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('MediaStream Image','#dom-imagecapture-takephoto','takePhoto()')}}
-      </td>
-      <td>{{Spec2('MediaStream Image')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ImageCapture.takePhoto")}}</p>
+<p>{{Compat}}</p>

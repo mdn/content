@@ -11,6 +11,7 @@ tags:
   - WebExtensions
   - getZoomSettings
   - tabs
+browser-compat: webextensions.api.tabs.getZoomSettings
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -40,7 +41,7 @@ tags:
 
 <p>Get the zoom settings for the current tab:</p>
 
-<pre class="notranslate brush: js">function onGot(settings) {
+<pre class="brush: js">function onGot(settings) {
   console.log(settings);
 }
 
@@ -55,7 +56,7 @@ gettingZoomSettings.then(onGot, onError);</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("webextensions.api.tabs.getZoomSettings")}}</p>
+<p>{{Compat}}</p>
 
 <div class="note"><strong>Acknowledgements</strong>
 

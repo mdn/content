@@ -12,7 +12,7 @@ tags:
 <p>This article discusses Uniform Resource Locators (URLs), explaining what they are and how they're structured.</p>
 </div>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -59,7 +59,7 @@ https://developer.mozilla.org/en-US/search?q=URL</pre>
 
 <img alt="Scheme" src="mdn-url-protocol@x2_update.png">
 
-<p>The first part of the URL is the <em>scheme</em>, which indicates the protocol that the browser must use to request the resouce (a protocol is a set method for exchanging or transferring data around a computer network). Usually for websites the protocol is HTTPS or HTTP (its unsecured version). Addressing web pages requires one of these two, but browsers also know how to handle other schemes such as <code>mailto:</code> (to open a mail client) or <code>ftp:</code> to handle file transfer, so don't be surprised if you see such protocols.</p>
+<p>The first part of the URL is the <em>scheme</em>, which indicates the protocol that the browser must use to request the resouce (a protocol is a set method for exchanging or transferring data around a computer network). Usually for websites the protocol is HTTPS or HTTP (its unsecured version). Addressing web pages requires one of these two, but browsers also know how to handle other schemes such as <code>mailto:</code> (to open a mail client), so don't be surprised if you see other protocols.</p>
 
 <h2 id="Authority">Authority</h2>
 
@@ -75,7 +75,7 @@ https://developer.mozilla.org/en-US/search?q=URL</pre>
 <div class="notecard note">
   <h4>Note</h4>
 <p>The separator between the scheme and authority is <code>://</code>. The colon separates the scheme from the next part of the URL, while <code>//</code> indicates that the next part of the URL is the authority.</p>
-<p>One example of a URL that doesn't use an authority is the mail client (<code>mailto:foobar</code>). It contains a scheme but doesn't use an authority component. Therefore, the colon is not preceded by two slashes and only acts as a delimiter between the scheme and mail address.</p>
+<p>One example of a URL that doesn't use an authority is the mail client (<code>mailto:foobar</code>). It contains a scheme but doesn't use an authority component. Therefore, the colon is not followed by two slashes and only acts as a delimiter between the scheme and mail address.</p>
 </div>
 
  <h2 id="Path_to_resource">Path to resource</h2>

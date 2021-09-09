@@ -11,6 +11,7 @@ tags:
 - Reference
 - data
 - events
+browser-compat: api.InputEvent.data
 ---
 <p>{{APIRef("DOM Events")}}</p>
 
@@ -21,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>aString</em> = <em>inputEvent</em>.data;</pre>
+<pre class="brush: js">var <em>aString</em> = <em>inputEvent</em>.data;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -36,13 +37,13 @@ tags:
   <code><a href="/en-US/docs/Web/API/Node/textContent">Node.textContent</a></code>
   property.</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Some text to copy and paste.&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;Some text to copy and paste.&lt;/p&gt;
 
 &lt;input type="text"&gt;
 
 &lt;p class="result"&gt;&lt;/p&gt;</pre>
 
-<pre class="brush: js notranslate">var editable = document.querySelector('input');
+<pre class="brush: js">var editable = document.querySelector('input');
 var result = document.querySelector('.result');
 
 editable.addEventListener('input', (e) =&gt; {
@@ -53,21 +54,8 @@ editable.addEventListener('input', (e) =&gt; {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('InputEvents2','#dfn-data','data')}}</td>
-      <td>{{Spec2('InputEvents2')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.InputEvent.data")}}</p>
+<p>{{Compat}}</p>

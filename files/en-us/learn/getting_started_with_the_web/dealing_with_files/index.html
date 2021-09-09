@@ -34,10 +34,10 @@ tags:
 
 <ol>
  <li>Many computers, particularly web servers, are case-sensitive. So for example, if you put an image on your website at <code>test-site/MyImage.jpg</code> and then in a different file you try to invoke the image as <code>test-site/myimage.jpg</code>, it may not work.</li>
- <li>Browsers, web servers, and programming languages do not handle spaces consistently. For example, if you use spaces in your filename, some systems may treat the filename as two filenames. Some servers will replace the areas in your filenames with "%20" (the character code for spaces in URIs), resulting in all your links being broken. It's better to separate words with dashes, rather than underscores: <code>my-file.html</code> vs. <code>my_file.html</code>.</li>
+ <li>Browsers, web servers, and programming languages do not handle spaces consistently. For example, if you use spaces in your filename, some systems may treat the filename as two filenames. Some servers will replace the areas in your filenames with "%20" (the character code for spaces in URIs), resulting in all your links being broken. It's better to separate words with hyphens, rather than underscores: <code>my-file.html</code> vs. <code>my_file.html</code>.</li>
 </ol>
 
-<p>The short answer is that you should use a hyphen for your file names. The Google search engine treats a hyphen as a word separator but does not regard an underscore that way. For these reasons, it is best to get into the habit of writing your folder and file names lowercase with no spaces and with words separated by dashes, at least until you know what you're doing. That way you'll bump into fewer problems later down the road.</p>
+<p>The short answer is that you should use a hyphen for your file names. The Google search engine treats a hyphen as a word separator but does not regard an underscore that way. For these reasons, it is best to get into the habit of writing your folder and file names lowercase with no spaces and with words separated by hyphens, at least until you know what you're doing. That way you'll bump into fewer problems later down the road.</p>
 
 <h2 id="What_structure_should_your_website_have">What structure should your website have?</h2>
 
@@ -61,7 +61,7 @@ tags:
 <ol>
  <li>Copy the image you chose earlier into your <code>images</code> folder.</li>
  <li>Open up your <code>index.html</code> file, and insert the following code into the file exactly as shown. Don't worry about what it all means for now — we'll look at the structures in more detail later in the series.
-  <pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+  <pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -77,7 +77,7 @@ tags:
  <li>Save your HTML file, then load it in your web browser (double-click the file). You should see your new webpage displaying your image! </li>
 </ol>
 
-<p><img alt="A screenshot of our basic website showing just the firefox logo - a flaming fox wrapping the world" src="website-screenshot.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="A screenshot of our basic website showing just the firefox logo - a flaming fox wrapping the world" src="website-screenshot.png"></p>
 
 <p>Some general rules for file paths:</p>
 
@@ -98,7 +98,7 @@ tags:
 
 <p>That is about it for now. Your folder structure should look something like this:</p>
 
-<p><img alt="A file structure in mac os x finder, showing an images folder with an image in, empty scripts and styles folders, and an index.html file" src="file-structure.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="A file structure in mac os x finder, showing an images folder with an image in, empty scripts and styles folders, and an index.html file" src="file-structure.png"></p>
 
 <p>{{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}</p>
 

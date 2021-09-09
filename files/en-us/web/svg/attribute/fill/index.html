@@ -4,14 +4,29 @@ slug: Web/SVG/Attribute/fill
 tags:
   - SVG
   - SVG Attribute
+browser-compat: svg.attributes.presentation.fill
 ---
 <div>{{SVGRef}}</div>
 
 <p>The <strong><code>fill</code></strong> attribute has two different meanings. For shapes and text it's a presentation attribute that defines the color (<em>or any SVG paint servers like gradients or patterns</em>) used to paint the element; for animation it defines the final state of the animation.</p>
 
-<p>As a presentation attribute, it can be applied to any element but it only has an effect on the following eleven elements: {{SVGElement('altGlyph')}}, {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, and {{SVGElement('tspan')}}.</p>
+<p>You can use this attribute with the following SVG elements:</p>
 
-<p>For animation five elements are using this attribute: {{SVGElement('animate')}}, {{SVGElement('animateColor')}}, {{SVGElement('animateMotion')}}, {{SVGElement('animateTransform')}}, and {{SVGElement('set')}}.</p>
+<ul>
+  <li>{{SVGElement('altGlyph')}}</li>
+  <li>{{SVGElement('circle')}}</li>
+  <li>{{SVGElement('ellipse')}}</li>
+  <li>{{SVGElement('path')}}</li>
+  <li>{{SVGElement('polygon')}}</li>
+  <li>{{SVGElement('polyline')}}</li>
+  <li>{{SVGElement('rect')}}</li>
+  <li>{{SVGElement('text')}}</li>
+  <li>{{SVGElement('textPath')}}</li>
+  <li>{{SVGElement('tref')}}</li>
+  <li>{{SVGElement('tspan')}}</li>
+</ul>
+
+<p>For animation, these elements are using this attribute: {{SVGElement('animate')}}, {{SVGElement('animateColor')}}, {{SVGElement('animateMotion')}}, {{SVGElement('animateTransform')}}, and {{SVGElement('set')}}.</p>
 
 <div id="topExample">
 <div class="hidden">
@@ -449,6 +464,6 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("svg.attributes.presentation.fill")}}</p>
+<p>{{Compat}}</p>
 
 <p class="note"><strong>Note:</strong> For information on using the <code style="white-space: nowrap;">context-fill</code> (and <code style="white-space: nowrap;">context-stroke</code>) values from HTML documents, see the documentation for the non-standard <span style="white-space: nowrap;">{{cssxref("-moz-context-properties")}}</span> property.</p>

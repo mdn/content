@@ -9,6 +9,7 @@ tags:
   - Focus
   - FocusEvent
   - Reference
+browser-compat: api.Element.focus_event
 ---
 <div>{{APIRef}}</div>
 
@@ -51,14 +52,14 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;form id="form"&gt;
+<pre class="brush: html">&lt;form id="form"&gt;
   &lt;input type="text" placeholder="text input"&gt;
   &lt;input type="password" placeholder="password"&gt;
 &lt;/form&gt;</pre>
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">const password = document.querySelector('input[type="password"]');
+<pre class="brush: js">const password = document.querySelector('input[type="password"]');
 
 password.addEventListener('focus', (event) =&gt; {
   event.target.style.background = 'pink';
@@ -78,14 +79,14 @@ password.addEventListener('blur', (event) =&gt; {
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;form id="form"&gt;
+<pre class="brush: html">&lt;form id="form"&gt;
   &lt;input type="text" placeholder="text input"&gt;
   &lt;input type="password" placeholder="password"&gt;
 &lt;/form&gt;</pre>
 
 <h4 id="JavaScript_2">JavaScript</h4>
 
-<pre class="brush: js notranslate">const form = document.getElementById('form');
+<pre class="brush: js">const form = document.getElementById('form');
 
 form.addEventListener('focus', (event) =&gt; {
   event.target.style.background = 'pink';
@@ -101,31 +102,11 @@ form.addEventListener('blur', (event) =&gt; {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("UI Events", "#event-type-focus")}}</td>
-   <td>{{Spec2("UI Events")}}</td>
-   <td>Added info that this event is composed.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM3 Events", "#event-type-focus")}}</td>
-   <td>{{Spec2("DOM3 Events")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Element.focus_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

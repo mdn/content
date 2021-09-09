@@ -9,6 +9,7 @@ tags:
   - Reference
   - Web Audio API
   - createBufferSource
+browser-compat: api.BaseAudioContext.createBufferSource
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
@@ -22,10 +23,16 @@ tags:
     track.</p>
 </div>
 
+<div class="notecard note">
+  <p><strong>Note:</strong> The {{domxref("AudioBufferSourceNode.AudioBufferSourceNode", "AudioBufferSourceNode()")}}
+    constructor is the recommended way to create a {{domxref("AudioBufferSourceNode")}}; see
+    <a href="/en-US/docs/Web/API/AudioNode#creating_an_audionode">Creating an AudioNode</a>.</p>
+</div>
+
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <var>source</var> = <var>baseAudioContext</var>.createBufferSource();</pre>
+  class="brush: js">var <var>source</var> = <var>baseAudioContext</var>.createBufferSource();</pre>
 
 <h3 id="Returns">Returns</h3>
 
@@ -38,14 +45,14 @@ tags:
   what is going on.</p>
 
 <div class="note">
-  <p><strong>Note</strong>: You can also <a
+  <p><strong>Note:</strong> You can also <a
       href="https://mdn.github.io/webaudio-examples/audio-buffer/">run the code live</a>,
     or <a
       href="https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html">view
       the source</a>.</p>
 </div>
 
-<pre class="brush: js highlight[31] notranslate">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+<pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var button = document.querySelector('button');
 var pre = document.querySelector('pre');
 var myScript = document.querySelector('script');
@@ -87,25 +94,11 @@ button.onclick = function() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Web Audio API', '#dom-baseaudiocontext-createbuffersource',
-        'createBufferSource()')}}</td>
-      <td>{{Spec2('Web Audio API')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.BaseAudioContext.createBufferSource")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

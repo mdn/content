@@ -9,14 +9,13 @@ tags:
   - Reference
   - Web
   - textarea
+browser-compat: html.elements.textarea
 ---
 <div>{{HTMLRef}}</div>
 
-<p>The <strong>HTML <code>&lt;textarea&gt;</code> element</strong> represents a multi-line plain-text editing control, useful when you want to allow users to enter a sizeable amount of free-form text, for example a comment on a review or feedback form.</p>
+<p>The <strong><code>&lt;textarea&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element represents a multi-line plain-text editing control, useful when you want to allow users to enter a sizeable amount of free-form text, for example a comment on a review or feedback form.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/textarea.html", "tabbed-standard")}}</div>
-
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a> and send us a pull request.</p>
 
 <p>The above example demonstrates a number of features of <code>&lt;textarea&gt;</code>:</p>
 
@@ -41,8 +40,8 @@ tags:
   <li><code>sentences</code>: Automatically capitalize the first letter of sentences.</li>
   <li><code>words</code>: Automatically capitalize the first letter of words.</li>
   <li><code>characters</code>: Automatically capitalize all characters.</li>
-  <li><code>on</code>: {{deprecated_inline()}} Deprecated since iOS 5.</li>
-  <li><code>off</code>: {{deprecated_inline()}} Deprecated since iOS 5.</li>
+  <li><code>on</code>: {{deprecated_inline}} Deprecated since iOS 5.</li>
+  <li><code>off</code>: {{deprecated_inline}} Deprecated since iOS 5.</li>
  </ul>
  </dd>
  <dt>{{htmlattrdef("autocomplete")}}</dt>
@@ -54,6 +53,15 @@ tags:
 
  <p>If the <code>autocomplete</code> attribute is not specified on a <code>&lt;textarea&gt;</code> element, then the browser uses the <code>autocomplete</code> attribute value of the <code>&lt;textarea&gt;</code> element's form owner. The form owner is either the {{HTMLElement("form")}} element that this <code>&lt;textarea&gt;</code> element is a descendant of or the form element whose <code>id</code> is specified by the <code>form</code> attribute of the input element. For more information, see the {{htmlattrxref("autocomplete", "form")}} attribute in {{HTMLElement("form")}}.</p>
  </dd>
+ <dt>{{ htmlattrdef("autocorrect") }} {{non-standard_inline}}</dt>
+ <dd>A string which indicates whether or not to activate automatic spelling correction and processing of text substitutions (if any are configured) while the user is editing this <code>textarea</code>. Permitted values are:
+ <dl>
+  <dt><code>on</code></dt>
+  <dd>Enable automatic spelling correction and text substitutions.</dd>
+  <dt><code>off</code></dt>
+  <dd>Disable automatic spelling correction and text substitutions.</dd>
+ </dl>
+</dd>
  <dt>{{ htmlattrdef("autofocus") }}</dt>
  <dd>This Boolean attribute lets you specify that a form control should have input focus when the page loads. Only one form-associated element in a document can have this attribute specified.</dd>
  <dt>{{ htmlattrdef("cols") }}</dt>
@@ -100,7 +108,7 @@ tags:
 
 <h2 id="Styling_with_CSS">Styling with CSS</h2>
 
-<p><code>&lt;textarea&gt;</code> is a <a href="/en-US/docs/Web/CSS/Replaced_element">replaced element</a> — it has intrinsic dimensions, like a raster image. By default, its {{cssxref("display")}} value is block. Compared to other form elements it is relatively easy to style, with its box model, fonts, color scheme, etc. being easily manipulable using regular CSS.</p>
+<p><code>&lt;textarea&gt;</code> is a <a href="/en-US/docs/Web/CSS/Replaced_element">replaced element</a> — it has intrinsic dimensions, like a raster image. By default, its {{cssxref("display")}} value is <code>inline-block</code>. Compared to other form elements it is relatively easy to style, with its box model, fonts, color scheme, etc. being easily manipulable using regular CSS.</p>
 
 <p><a href="/en-US/docs/Learn/Forms/Styling_web_forms">Styling HTML forms</a> provides some useful tips on styling <code>&lt;textarea&gt;</code>s.</p>
 
@@ -112,7 +120,7 @@ tags:
 
 <p>In most browsers, <code>&lt;textarea&gt;</code>s are resizable — you'll notice the drag handle in the right hand corner, which can be used to alter the size of the element on the page. This is controlled by the {{ cssxref("resize") }} CSS property — resizing is enabled by default, but you can explicitly disable it using a <code>resize</code> value of <code>none</code>:</p>
 
-<pre class="brush: html notranslate">textarea {
+<pre class="brush: html">textarea {
   resize: none;
 }
 </pre>
@@ -121,7 +129,7 @@ tags:
 
 <p>Valid and invalid values of a <code>&lt;textarea&gt;</code> element (e.g. those within, and outside the bounds set by <code>minlength</code>, <code>maxlength</code>, or <code>required</code>) can be highlighted using the {{cssxref(":valid")}} and {{cssxref(":invalid")}} pseudo-classes. For example, to give your textarea a different border depending on whether it is valid or invalid:</p>
 
-<pre class="brush: css notranslate">textarea:invalid {
+<pre class="brush: css">textarea:invalid {
   border: 2px dashed red;
 }
 
@@ -135,7 +143,7 @@ textarea:valid {
 
 <p>The following example show a very simple textarea, with a set numbers of rows and columns and some default content.</p>
 
-<pre class="brush: html notranslate">&lt;textarea name="textarea"
+<pre class="brush: html">&lt;textarea name="textarea"
    rows="10" cols="50"&gt;Write something here&lt;/textarea&gt;</pre>
 
 <p>{{ EmbedLiveSample('Basic_example','600','150') }}</p>
@@ -144,7 +152,7 @@ textarea:valid {
 
 <p>This example has a minimum and maximum number of characters — of 10 and 20 respectively. Try it and see.</p>
 
-<pre class="brush: html notranslate">&lt;textarea name="textarea"
+<pre class="brush: html">&lt;textarea name="textarea"
    rows="5" cols="30"
    minlength="10" maxlength="20"&gt;Write something here&lt;/textarea&gt;</pre>
 
@@ -156,7 +164,7 @@ textarea:valid {
 
 <p>This example has a placeholder set. Notice how it disappears when you start typing into the box.</p>
 
-<pre class="brush: html notranslate">&lt;textarea name="textarea"
+<pre class="brush: html">&lt;textarea name="textarea"
    rows="5" cols="30"
    placeholder="Comment text."&gt;&lt;/textarea&gt;</pre>
 
@@ -174,7 +182,7 @@ textarea:valid {
 <p><strong>Note:</strong> In browsers other than firefox, such as chrome, the <code>disabled</code> textarea content may be selectable and copyable.</p>
 </div>
 
-<pre class="brush: html notranslate">&lt;textarea name="textarea"
+<pre class="brush: html">&lt;textarea name="textarea"
    rows="5" cols="30"
    disabled&gt;I am a disabled textarea&lt;/textarea&gt;
 &lt;textarea name="textarea"
@@ -190,7 +198,7 @@ textarea:valid {
  <tbody>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Interactive_content">Interactive content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Form_listed">listed</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Form_labelable">labelable</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_resettable">resettable</a>, and <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Form_submittable">submittable</a> <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Form-associated_">form-associated</a> element.</td>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content">Interactive content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_listed">listed</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_labelable">labelable</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_resettable">resettable</a>, and <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_submittable">submittable</a> <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form-associated_">form-associated</a> element.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
@@ -202,7 +210,7 @@ textarea:valid {
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>
@@ -221,36 +229,11 @@ textarea:valid {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#the-textarea-element', '&lt;textarea&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'sec-forms.html#the-textarea-element', '&lt;textarea&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'interact/forms.html#h-17.7', '&lt;textarea&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("html.elements.textarea")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

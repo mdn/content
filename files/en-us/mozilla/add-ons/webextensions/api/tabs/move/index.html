@@ -11,6 +11,7 @@ tags:
   - WebExtensions
   - move
   - tabs
+browser-compat: webextensions.api.tabs.move
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -55,7 +56,7 @@ tags:
 
 <p>Move the first tab in the current window to the last position in the current window:</p>
 
-<pre class="notranslate brush: js">function onMoved(tab) {
+<pre class="brush: js">function onMoved(tab) {
   console.log(`Moved: ${tab}`);
 }
 
@@ -78,7 +79,7 @@ browser.browserAction.onClicked.addListener(function() {
 
 <p>Move all tabs served over HTTP or HTTPS from *.mozilla.org to the end of their window:</p>
 
-<pre class="notranslate brush: js">function onMoved(tab) {
+<pre class="brush: js">function onMoved(tab) {
   console.log(`Moved: ${tab}`);
 }
 
@@ -99,7 +100,7 @@ browser.browserAction.onClicked.addListener(function() {
 
 <p>Move all tabs served over HTTP or HTTPS from *.mozilla.org to the window that hosts the first such tab, starting at position 0:</p>
 
-<pre class="notranslate brush: js">function onMoved(tab) {
+<pre class="brush: js">function onMoved(tab) {
   console.log(`Moved: ${tab}`);
 }
 
@@ -123,7 +124,7 @@ browser.browserAction.onClicked.addListener(function() {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("webextensions.api.tabs.move")}}</p>
+<p>{{Compat}}</p>
 
 <div class="note"><strong>Acknowledgements</strong>
 

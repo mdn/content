@@ -13,6 +13,7 @@ tags:
 - Serialization
 - Serializing
 - outerHTML
+browser-compat: api.Element.outerHTML
 ---
 <div>{{APIRef("DOM")}}</div>
 
@@ -27,7 +28,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>var content</em> = <em>element</em>.outerHTML;
+<pre class="brush: js"><em>var content</em> = <em>element</em>.outerHTML;
 
 <em>element</em>.outerHTML = <em>htmlString</em>;
 </pre>
@@ -85,11 +86,11 @@ console.log(d.outerHTML);
 <pre class="brush: js">var container = document.getElementById("container");
 var d = document.getElementById("d");
 
-console.log(container.firstChild.nodeName); // logs "DIV"
+console.log(container.firstElementChild.nodeName); // logs "DIV"
 
 d.outerHTML = "&lt;p&gt;This paragraph replaced the original div.&lt;/p&gt;";
 
-console.log(container.firstChild.nodeName); // logs "P"
+console.log(container.firstElementChild.nodeName); // logs "P"
 
 // The #d div is no longer part of the document tree,
 // the new paragraph replaced it.
@@ -124,26 +125,11 @@ console.log(anc.outerHTML); // output: "&lt;a href='https://developer.mozilla.or
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('DOM Parsing', '#dom-element-outerhtml', 'Element.outerHTML')}}</td>
-      <td>{{ Spec2('DOM Parsing') }}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Element.outerHTML")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

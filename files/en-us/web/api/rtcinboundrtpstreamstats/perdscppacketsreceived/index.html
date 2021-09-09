@@ -15,14 +15,15 @@ tags:
 - WebRTC
 - WebRTC API
 - perDcspPacketsReceived
+browser-compat: api.RTCInboundRtpStreamStats.perDscpPacketsReceived
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">The <strong><code>perDscpPacketsReceived</code></strong>
+<p>The <strong><code>perDscpPacketsReceived</code></strong>
     property of the {{domxref("RTCInboundRtpStreamStats")}} dictionary is a record
     comprised of key/value pairs in which each key is a string representation of a
     Differentiated Services Code Point and the value is the number of packets received for
-    that DCSP.</span></p>
+    that DCSP.</p>
 
 <div class="notecard note">
   <p><strong>Note:</strong> Not all operating systems make data available on a per-DSCP
@@ -32,7 +33,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>perDscpPacketsReceived</em> = <em>rtcInboundRtpStreamStats</em>.perDscpPacketsReceived;</pre>
+  class="brush: js">var <em>perDscpPacketsReceived</em> = <em>rtcInboundRtpStreamStats</em>.perDscpPacketsReceived;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -47,26 +48,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebRTC Statistics Identifiers',
-        '#dom-rtcinboundrtpstreamstats-perdscppacketsreceived',
-        'RTCInboundRtpStreamStats.perDscpPacketsReceived')}}</td>
-      <td>{{Spec2('WebRTC Statistics Identifiers')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCInboundRtpStreamStats.perDscpPacketsReceived")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

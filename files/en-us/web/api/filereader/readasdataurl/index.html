@@ -9,6 +9,7 @@ tags:
 - Files
 - Method
 - Reference
+browser-compat: api.FileReader.readAsDataURL
 ---
 <p>The <code>readAsDataURL</code> method is used to read the contents of the specified
   {{domxref("Blob")}} or {{domxref("File")}}. When the read operation is finished, the
@@ -28,7 +29,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><em>instanceOfFileReader</em>.readAsDataURL(blob);</pre>
+  class="brush: js"><em>instanceOfFileReader</em>.readAsDataURL(blob);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -105,38 +106,23 @@ tags:
 }
 </pre>
 
-<div class="note"><strong>Note:</strong> The <a
+<div class="note"><p><strong>Note:</strong> The <a
     href="/en-US/docs/Web/API/FileReader"><code>FileReader()</code></a> constructor was
   not supported by Internet Explorer for versions before 10. For a full compatibility code
-  you can see our <a class="internal"
+  you can see our <a
     href="https://mdn.mozillademos.org/files/3699/crossbrowser_image_preview.html"
     title="crossbrowser_image_preview.html">crossbrowser possible solution for image
     preview</a>. See also <a
     href="https://mdn.mozillademos.org/files/3698/image_upload_preview.html">this more
-    powerful example</a>.</div>
+    powerful example</a>.</p></div>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("File API", "#readAsDataURL", "readAsDataURL()")}}</td>
-      <td>{{Spec2("File API")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.FileReader.readAsDataURL")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

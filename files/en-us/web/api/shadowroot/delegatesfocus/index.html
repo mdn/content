@@ -3,13 +3,13 @@ title: ShadowRoot.delegatesFocus
 slug: Web/API/ShadowRoot/delegatesFocus
 tags:
 - API
-- Non-standard
 - Property
 - Reference
 - ShadowRoot
 - Web Components
 - delegatesFocus
 - shadow dom
+browser-compat: api.ShadowRoot.delegatesFocus
 ---
 <div>{{APIRef("Shadow DOM")}}</div>
 
@@ -21,7 +21,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <var>df</var> = <var>shadowRoot</var>.delegatesFocus</pre>
+  class="brush: js">var <var>df</var> = <var>shadowRoot</var>.delegatesFocus</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -30,7 +30,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">let customElem = document.querySelector('my-shadow-dom-element');
+<pre class="brush: js">let customElem = document.querySelector('my-shadow-dom-element');
 let shadow = customElem.shadowRoot;
 
   ...
@@ -40,25 +40,8 @@ let hostElem = shadow.delegatesFocus;</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML WHATWG',
-        '#shadowroot-delegates-focus', 'delegatesFocus')}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ShadowRoot.delegatesFocus")}}</p>
+<p>{{Compat}}</p>

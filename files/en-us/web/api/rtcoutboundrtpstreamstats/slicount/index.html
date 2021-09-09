@@ -18,14 +18,15 @@ tags:
 - WebRTC API
 - sliCount
 - stream
+browser-compat: api.RTCOutboundRtpStreamStats.sliCount
 ---
 <p>{{APIRef("WebRTC")}}</p>
 
-<p><span class="seoSummary">The <strong><code>sliCount</code></strong> property of the
+<p>The <strong><code>sliCount</code></strong> property of the
     {{domxref("RTCOutboundRtpStreamStats")}} dictionary indicates how many <strong>Slice
       Loss Indication</strong> (<strong>SLI</strong>) packets the
     {{domxref("RTCRtpSender")}} received from the remote {{domxref("RTCRtpReceiver")}} for
-    the RTP stream described by this object.</span></p>
+    the RTP stream described by this object.</p>
 
 <p>An SLI packet is used by a decoder to let the encoder (the sender) know that it's
   detected corruption of one or more consecutive macroblocks, in scan order, in the
@@ -36,7 +37,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>sliCount</em> = <em>RTCOutboundRtpStreamStats</em>.sliCount;</pre>
+  class="brush: js">var <em>sliCount</em> = <em>RTCOutboundRtpStreamStats</em>.sliCount;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -53,26 +54,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebRTC Statistics Identifiers',
-        '#dom-RTCOutboundRtpStreamStats-slicount', 'RTCOutboundRtpStreamStats.sliCount')}}
-      </td>
-      <td>{{Spec2('WebRTC Statistics Identifiers')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCOutboundRtpStreamStats.sliCount")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

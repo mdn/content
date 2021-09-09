@@ -2,13 +2,13 @@
 title: SubtleCrypto.exportKey()
 slug: Web/API/SubtleCrypto/exportKey
 tags:
-- API
-- Method
-- Reference
-- Référence(2)
-- SubtleCrypto
-- Web Crypto API
-- exportKey
+  - API
+  - Method
+  - Reference
+  - SubtleCrypto
+  - Web Crypto API
+  - exportKey
+browser-compat: api.SubtleCrypto.exportKey
 ---
 <p>{{APIRef("Web Crypto API")}}{{SecureContext_header}}</p>
 
@@ -20,7 +20,7 @@ tags:
   <code>true</code>.</p>
 
 <p>Keys can be exported in several formats: see <a
-    href="/en-US/docs/Web/API/SubtleCrypto/importKey#Supported_formats">Supported
+    href="/en-US/docs/Web/API/SubtleCrypto/importKey#supported_formats">Supported
     formats</a> in the
   <code><a href="/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey()</a></code>
   page for details.</p>
@@ -32,7 +32,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">const <em>result</em> = <em>crypto</em><code>.subtle.exportKey(<em>format</em>, <em>key</em>)</code>;
+<pre class="brush: js">const result = crypto.subtle.exportKey(format, key);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -43,15 +43,15 @@ tags:
 
     <ul>
       <li><code>raw</code>: <a
-          href="/en-US/docs/Web/API/SubtleCrypto/importKey#Raw">Raw</a> format.</li>
+          href="/en-US/docs/Web/API/SubtleCrypto/importKey#raw">Raw</a> format.</li>
       <li><code>pkcs8</code>: <a
-          href="/en-US/docs/Web/API/SubtleCrypto/importKey#PKCS_8">PKCS #8</a> format.
+          href="/en-US/docs/Web/API/SubtleCrypto/importKey#pkcs_8">PKCS #8</a> format.
       </li>
       <li><code>spki</code>: <a
-          href="/en-US/docs/Web/API/SubtleCrypto/importKey#SubjectPublicKeyInfo">SubjectPublicKeyInfo</a>
+          href="/en-US/docs/Web/API/SubtleCrypto/importKey#subjectpublickeyinfo">SubjectPublicKeyInfo</a>
         format.</li>
       <li><code>jwk</code>: <a
-          href="/en-US/docs/Web/API/SubtleCrypto/importKey#JSON_Web_Key">JSON Web Key</a>
+          href="/en-US/docs/Web/API/SubtleCrypto/importKey#json_web_key">JSON Web Key</a>
         format.</li>
     </ul>
   </li>
@@ -91,7 +91,7 @@ tags:
 <h2 id="Examples">Examples</h2>
 
 <div class="notecard note">
-  <p><strong>Note</strong>: You can <a
+  <p><strong>Note:</strong> You can <a
       href="https://mdn.github.io/dom-examples/web-crypto/export-key/index.html">try the
       working examples</a> out on GitHub.</p>
 </div>
@@ -104,7 +104,7 @@ tags:
     href="https://github.com/mdn/dom-examples/blob/master/web-crypto/export-key/raw.js"
     rel="noopener">See the complete code on GitHub.</a></p>
 
-<pre class="brush: js notranslate">/*
+<pre class="brush: js">/*
 Export the given key and write it into the "exported-key" space.
 */
 async function exportCryptoKey(key) {
@@ -145,7 +145,7 @@ window.crypto.subtle.generateKey(
     href="https://github.com/mdn/dom-examples/blob/master/web-crypto/export-key/pkcs8.js"
     rel="noopener">See the complete code on GitHub.</a></p>
 
-<pre class="brush: js notranslate">/*
+<pre class="brush: js">/*
 Convert  an ArrayBuffer into a string
 from https://developers.google.com/web/updates/2012/06/How-to-convert-ArrayBuffer-to-and-from-String
 */
@@ -199,7 +199,7 @@ window.crypto.subtle.generateKey(
     href="https://github.com/mdn/dom-examples/blob/master/web-crypto/export-key/spki.js"
     rel="noopener">See the complete code on GitHub.</a></p>
 
-<pre class="brush: js notranslate">/*
+<pre class="brush: js">/*
 Convert  an ArrayBuffer into a string
 from https://developers.google.com/web/updates/2012/06/How-to-convert-ArrayBuffer-to-and-from-String
 */
@@ -245,15 +245,15 @@ window.crypto.subtle.generateKey(
 });
 </pre>
 
-<h3 class="highlight-spanned" id="JSON_Web_Key_import"><span class="highlight-span">JSON
-    Web Key import</span></h3>
+<h3 class="highlight-spanned"><span class="highlight-span">JSON
+    Web Key export</span></h3>
 
 <p>This code exports an ECDSA private signing key as a JSON Web Key object. <a
     class="external external-icon"
     href="https://github.com/mdn/dom-examples/blob/master/web-crypto/export-key/jwk.js"
     rel="noopener">See the complete code on GitHub.</a></p>
 
-<pre class="brush: js notranslate">/*
+<pre class="brush: js">/*
 Export the given key and write it into the "exported-key" space.
 */
 async function exportCryptoKey(key) {
@@ -286,25 +286,11 @@ window.crypto.subtle.generateKey(
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{ SpecName('Web Crypto API', '#dfn-SubtleCrypto-method-exportKey',
-        'SubtleCrypto.exportKey()') }}</td>
-      <td>{{ Spec2('Web Crypto API') }}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SubtleCrypto.exportKey")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -315,11 +301,11 @@ window.crypto.subtle.generateKey(
   <li>
     <code><a href="/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.wrapKey()</a></code>
   </li>
-  <li><a class="external external-icon" href="https://tools.ietf.org/html/rfc5208"
+  <li><a class="external external-icon" href="https://datatracker.ietf.org/doc/html/rfc5208"
       rel="noopener">PKCS #8 format</a>.</li>
   <li><a class="external external-icon"
-      href="https://tools.ietf.org/html/rfc5280#section-4.1"
+      href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.1"
       rel="noopener">SubjectPublicKeyInfo format</a>.</li>
-  <li><a class="external external-icon" href="https://tools.ietf.org/html/rfc7517"
+  <li><a class="external external-icon" href="https://datatracker.ietf.org/doc/html/rfc7517"
       rel="noopener">JSON Web Key format</a>.</li>
 </ul>

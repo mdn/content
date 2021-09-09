@@ -61,7 +61,7 @@ tags:
 
 <p>Using the <code>devtools.panels.create()</code> API, you can create your own panel in the devtools window:</p>
 
-<pre class="notranslate brush: js">browser.devtools.panels.create(
+<pre class="brush: js">browser.devtools.panels.create(
   "My Panel",                      // title
   "icons/star.png",                // icon
   "devtools/panel/panel.html"      // content
@@ -96,7 +96,7 @@ tags:
 
 <p>A devtools document doesn't have direct access to {{WebExtAPIRef("tabs.executeScript()")}}, so if you need to inject a content script, the devtools document must send a message to the background script asking it to inject the script. The <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/tabId">devtools.inspectedWindow.tabId</a></code> provides the ID of the target tab: the devtools document can pass this to the background script, and the background script can in turn pass it into {{WebExtAPIRef("tabs.executeScript()")}}:</p>
 
-<pre class="notranslate brush: js">// devtools-panel.js
+<pre class="brush: js">// devtools-panel.js
 
 const scriptToAttach = "document.body.innerHTML = 'Hi from the devtools';";
 
@@ -107,7 +107,7 @@ window.addEventListener("click", () =&gt; {
   });
 });</pre>
 
-<pre class="notranslate brush: js">// background.js
+<pre class="brush: js">// background.js
 
 function handleMessage(request, sender, sendResponse) {
   browser.tabs.executeScript(request.tabId, {

@@ -9,6 +9,7 @@ tags:
 - NeedsBrowserCompatibility
 - Non-standard
 - Reference
+browser-compat: api.HTMLInputElement.mozGetFileNameArray
 ---
 <div>{{ APIRef("HTML DOM") }}{{Non-standard_header}}</div>
 
@@ -16,12 +17,12 @@ tags:
   an array of the names of the files that were selected by the user on an HTML
   <code>input</code> element.</p>
 
-<div class="note"><strong>Note:</strong> This method is Gecko-specific and is not
-  available in other browsers. Also, it throws an error if used in Web pages.</div>
+<div class="note"><p><strong>Note:</strong> This method is Gecko-specific and is not
+  available in other browsers. Also, it throws an error if used in Web pages.</p></div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>inputElement</em>.mozGetFileNameArray(<em>aLength, aFileNames</em>);
+<pre class="brush: js"><em>inputElement</em>.mozGetFileNameArray(<em>aLength, aFileNames</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -35,7 +36,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush:js notranslate">var numFiles = 0;
+<pre class="brush:js">var numFiles = 0;
 var fileArray = {};
 
 inputElement.mozGetFileNameArray(numFiles, fileArray);
@@ -43,7 +44,7 @@ inputElement.mozGetFileNameArray(numFiles, fileArray);
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLInputElement.mozGetFileNameArray")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -11,6 +11,7 @@ tags:
 - Reference
 - isMap
 - server-side
+browser-compat: api.HTMLImageElement.isMap
 ---
 <p>{{APIRef("HTML DOM")}}</p>
 
@@ -19,7 +20,7 @@ tags:
 	This may only be used on images located within an {{HTMLElement("a")}} element.</p>
 
 <div class="notecard note">
-	<p><strong>Note:</strong> For accessibility reasons, you should generally avoid using
+	<p><strong>Note:</strong> For accessibility reasons, you should generally avoid using
 		server-side image maps, as they require the use of a mouse. Use a <a
 			href="/en-US/docs/Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image">client-side
 			image map</a> instead.</p>
@@ -27,7 +28,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>htmlImageElement</em>.isMap = true|false;
+<pre class="brush: js"><em>htmlImageElement</em>.isMap = true|false;
 let isMap = <em>htmlImageElement</em>.isMap;
 </pre>
 
@@ -51,29 +52,8 @@ let isMap = <em>htmlImageElement</em>.isMap;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('HTML WHATWG', '#dom-img-ismap', 'HTMLImageElement.isMap')}}
-			</td>
-			<td>{{Spec2('HTML WHATWG')}}</td>
-			<td></td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>The compatibility table on this page is generated from structured data. If you'd like
-	to contribute to the data, please check out <a
-		href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and
-	send us a pull request.</p>
-
-<p>{{Compat("api.HTMLImageElement.isMap")}}</p>
+<p>{{Compat}}</p>

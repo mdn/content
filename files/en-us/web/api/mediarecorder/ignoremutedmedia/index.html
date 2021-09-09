@@ -9,24 +9,27 @@ tags:
 - Property
 - Reference
 - Video
+browser-compat: api.MediaRecorder.ignoreMutedMedia
 ---
 <p>{{deprecated_header}}{{APIRef("MediaStream Recording")}}</p>
 
-<p><span class="seoSummary">The <strong><code>ignoreMutedMedia</code></strong> property of
+<p>The <strong><code>ignoreMutedMedia</code></strong> property of
     the {{domxref("MediaRecorder")}} interface indicates whether the
     <code>MediaRecorder</code> instance will record input, when the input MediaStreamTrack
-    is muted.</span> If this attribute is <code>false</code>, MediaRecorder will record
+    is muted.</p>
+
+<p>If this attribute is <code>false</code>, MediaRecorder will record
   silence for audio and black frames for video. The default is <code>false</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var boolean = MediaRecorder.ignoreMutedMedia
+<pre class="brush: js">var boolean = MediaRecorder.ignoreMutedMedia
 MediaRecorder.ignoreMutedMedia = boolean</pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A {{jsxref("Boolean")}}.</p>
+<p>A boolean value.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MediaRecorder.ignoreMutedMedia")}}</p>
+<p>{{Compat}}</p>

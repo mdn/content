@@ -1,5 +1,5 @@
 ---
-title: MutationObserver.MutationObserver()
+title: MutationObserver()
 slug: Web/API/MutationObserver/MutationObserver
 tags:
 - API
@@ -13,20 +13,23 @@ tags:
 - MutationObserver
 - Observing
 - Reference
+browser-compat: api.MutationObserver.MutationObserver
 ---
 <div>{{APIRef("DOM WHATWG")}}</div>
 
-<p><span class="seoSummary">The DOM <code><strong>MutationObserver()</strong></code>
+<p>The DOM <code><strong>MutationObserver()</strong></code>
     constructor — part of the {{domxref("MutationObserver")}} interface — creates and
     returns a new observer which invokes a specified callback when DOM events
-    occur.</span> DOM observation does not begin immediately; the
+    occur.</p>
+
+<p>DOM observation does not begin immediately; the
   {{domxref("MutationObserver.observe", "observe()")}} method must be called first to
   establish which portion of the DOM to watch and what kinds of changes to watch for.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">const <var>observer</var> = new MutationObserver(<var>callback</var>)</pre>
+  class="brush: js">const <var>observer</var> = new MutationObserver(<var>callback</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -64,7 +67,7 @@ tags:
 
 <h3 id="The_callback_function">The callback function</h3>
 
-<pre class="brush: js notranslate">function callback(mutationList, observer) {
+<pre class="brush: js">function callback(mutationList, observer) {
   mutationList.forEach( (mutation) =&gt; {
     switch(mutation.type) {
       case 'childList':
@@ -95,7 +98,7 @@ tags:
 
 <p>This code actually sets up the observation process.</p>
 
-<pre class="brush: js notranslate">const targetNode = document.querySelector("#someElement");
+<pre class="brush: js">const targetNode = document.querySelector("#someElement");
 const observerOptions = {
   childList: true,
   attributes: true,
@@ -125,24 +128,8 @@ observer.observe(targetNode, observerOptions);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('DOM WHATWG', '#dom-mutationobserver-mutationobserver',
-        'MutationObserver()')}}</td>
-      <td>{{ Spec2('DOM WHATWG') }}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MutationObserver.MutationObserver")}}</p>
+<p>{{Compat}}</p>

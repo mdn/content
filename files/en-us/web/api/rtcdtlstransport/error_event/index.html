@@ -14,8 +14,10 @@ tags:
   - WebRTC API
   - WebRTC Device API
   - events
+  - Event
+browser-compat: api.RTCDtlsTransport.error_event
 ---
-<p>{{WebRTCSidebar}}</p>
+<p>{{APIRef("WebRTC")}}</p>
 
 <p>An {{domxref("RTCDtlsTransport")}} receives an <code>error</code> event when a transport-level error occurs on the {{domxref("RTCPeerConnection")}}.</p>
 
@@ -48,7 +50,7 @@ tags:
 
 <dl>
  <dt><code>dtls-failure</code></dt>
- <dd>The negotiation of the {{Glossary("DTLS")}} connection failed, or the connection was terminated with a fatal error. The error's {{domxref("RTCError.message", "message")}} contains details about the nature of the error. If a fatal error is <em>received</em>, the error object's {{domxref("RTCError.receivedAlert", "receivedAlert")}} property is set to the value of the DTLSL alert received. If, on the other hand, a fatal error was <em>sent</em>, the {{domxref("RTCError.sentAlert", "sentAlert")}} is set to the alert's value.</dd>
+ <dd>The negotiation of the {{Glossary("DTLS")}} connection failed, or the connection was terminated with a fatal error. The error's {{domxref("DOMException.message", "message")}} contains details about the nature of the error. If a fatal error is <em>received</em>, the error object's {{domxref("RTCError.receivedAlert", "receivedAlert")}} property is set to the value of the DTLSL alert received. If, on the other hand, a fatal error was <em>sent</em>, the {{domxref("RTCError.sentAlert", "sentAlert")}} is set to the alert's value.</dd>
  <dt><code>fingerprint-failure</code></dt>
  <dd>The remote certificate for the {{domxref("RTCDtlsTransport")}} didn't match any of the fingerprints listed in the SDP. If the remote peer can't match the local certificate against the provided fingerprints, this error doesn't occur, though this situation may result instead in a <code>dtls-failure</code> error.</dd>
 </dl>
@@ -57,38 +59,23 @@ tags:
 
 <p>In this example, the {{domxref("RTCDtlsTransport.onerror", "onerror")}} event handler property is used to set the handler for the <code>error</code> event.</p>
 
-<pre class="brush: js notranslate">transport.onerror = ev =&gt; {
+<pre class="brush: js">transport.onerror = ev =&gt; {
   const err = ev.error;
 
   /* ... */
 }</pre>
 
 <div class="notecard note">
-<p><strong>Note:</strong> Since <code>RTCError</code> is not one of the legacy errors, the value of {{domxref("DOMException.code", "RTCError.code")}} is always 0.</p>
+<p><strong>Note:</strong> Since <code>RTCError</code> is not one of the legacy errors, the value of {{domxref("DOMException.code", "code")}} is always 0.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('WebRTC 1.0', '#dfn-rtcdtlstransport-error', 'RTCDtlsTransport: error event')}}</td>
-   <td>{{Spec2('WebRTC 1.0')}}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCDtlsTransport.error_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

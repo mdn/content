@@ -19,19 +19,22 @@ tags:
 - WebRTC API
 - pliCount
 - rtc
+browser-compat: api.RTCRtpStreamStats.pliCount
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">The <strong><code>pliCount</code></strong> property of the
+<p>The <strong><code>pliCount</code></strong> property of the
     {{domxref("RTCRtpStreamStats")}} dictionary states the number of times the stream's
     receiving end sent a <strong>Picture Loss Indication</strong> (<strong>PLI</strong>)
-    packet to the sender.</span> A PLI packet indicates that some amount of encoded video
+    packet to the sender.</p>
+
+<p>A PLI packet indicates that some amount of encoded video
   data has been lost for one or more frames.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>pliCount</em> = <em>RTCRtpStreamStats</em>.pliCount;</pre>
+  class="brush: js">var <em>pliCount</em> = <em>RTCRtpStreamStats</em>.pliCount;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -56,33 +59,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebRTC Statistics Identifiers',
-        '#dom-rtcinboundrtpstreamstats-plicount', 'RTCInboundRtpStreamStats: pliCount')}}
-      </td>
-      <td>{{Spec2('WebRTC Statistics Identifiers')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebRTC Statistics Identifiers',
-        '#dom-rtcoutboundrtpstreamstats-plicount', 'RTCOutboundRtpStreamStats:
-        pliCount')}}</td>
-      <td>{{Spec2('WebRTC Statistics Identifiers')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCRtpStreamStats.pliCount")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

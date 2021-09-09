@@ -7,6 +7,7 @@ tags:
 - Node
 - Property
 - Reference
+browser-compat: api.Node.textContent
 ---
 <div>{{APIRef("DOM")}}</div>
 
@@ -21,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">let <var>text</var> = <var>someNode</var>.textContent
+<pre class="brush: js">let <var>text</var> = <var>someNode</var>.textContent
 <var>someOtherNode</var>.textContent = <var>string</var>
 </pre>
 
@@ -37,11 +38,11 @@ tags:
 	<li>If the node is a {{domxref("document")}} or a {{glossary("Doctype")}},
 		<code>textContent</code> returns {{jsxref("null")}}.
 
-		<div class="note"><strong>Note:</strong> To get <em>all</em> of the text and <a
+		<div class="note"><p><strong>Note:</strong> To get <em>all</em> of the text and <a
 				href="/en-US/docs/Web/API/CDATASection">CDATA data</a> for the whole
 			document, one could use
 			<code><a href="/en-US/docs/Web/API/document/documentElement">document.documentElement</a>.textContent</code>.
-		</div>
+		</p></div>
 	</li>
 	<li>If the node is a <a href="/en-US/docs/Web/API/CDATASection">CDATA section</a>,
 		comment, <a href="/en-US/docs/Web/API/ProcessingInstruction">processing
@@ -77,8 +78,8 @@ tags:
 			</li>
 		</ul>
 	</li>
-	<li>Unlike <code>textContent</code>, altering <code>innerText</code> in Internet
-		Explorer (version 11 and below) removes child nodes from the element and
+	<li>Both <code>textContent</code> and <code>innerText</code> remove child nodes when altered,
+    but altering <code>innerText</code> in Internet Explorer (version 11 and below) also
 		<em>permanently destroys</em> all descendant text nodes. It is impossible to
 		insert the nodes again into any other element or into the same element after doing
 		so.</li>
@@ -99,42 +100,27 @@ tags:
 <p>Given this HTML fragment:</p>
 
 <pre
-	class="brush: html notranslate">&lt;div id="divA"&gt;This is &lt;span&gt;some&lt;/span&gt; text!&lt;/div&gt;</pre>
+	class="brush: html">&lt;div id="divA"&gt;This is &lt;span&gt;some&lt;/span&gt; text!&lt;/div&gt;</pre>
 
 <p>... you can use <code>textContent</code> to get the element's text content:</p>
 
-<pre class="brush: js notranslate">let text = document.getElementById('divA').textContent;
+<pre class="brush: js">let text = document.getElementById('divA').textContent;
 // The text variable is now: 'This is some text!'</pre>
 
 <p>... or set the element's text content:</p>
 
-<pre class="brush: js notranslate">document.getElementById('divA').textContent = 'This text is different!';
+<pre class="brush: js">document.getElementById('divA').textContent = 'This text is different!';
 // The HTML for divA is now:
 // &lt;div id="divA"&gt;This text is different!&lt;/div&gt;
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('DOM WHATWG','#dom-node-textcontent','Node.textContent')}}</td>
-			<td>{{Spec2('DOM WHATWG')}}</td>
-			<td></td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Node.textContent")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -9,7 +9,7 @@ tags:
 ---
 <div>{{DefaultAPISidebar("Vibration API")}}</div>
 
-<p class="summary">Most modern mobile devices include vibration hardware, which lets software code provide physical feedback to the user by causing the device to shake. The <strong>Vibration API</strong> offers Web apps the ability to access this hardware, if it exists, and does nothing if the device doesn't support it.</p>
+<p>Most modern mobile devices include vibration hardware, which lets software code provide physical feedback to the user by causing the device to shake. The <strong>Vibration API</strong> offers Web apps the ability to access this hardware, if it exists, and does nothing if the device doesn't support it.</p>
 
 <h2 id="Describing_vibrations">Describing vibrations</h2>
 
@@ -19,7 +19,7 @@ tags:
 
 <p>You may pulse the vibration hardware one time by specifying either a single value or an array consisting of only one value:</p>
 
-<pre class="brush:js notranslate">window.navigator.vibrate(200);
+<pre class="brush:js">window.navigator.vibrate(200);
 window.navigator.vibrate([200]);
 </pre>
 
@@ -29,7 +29,7 @@ window.navigator.vibrate([200]);
 
 <p>An array of values describes alternating periods in which the device is vibrating and not vibrating. Each value in the array is converted to an integer, then interpreted alternately as the number of milliseconds the device should vibrate and the number of milliseconds it should not be vibrating. For example:</p>
 
-<pre class="brush: js notranslate">window.navigator.vibrate([200, 100, 200]);
+<pre class="brush: js">window.navigator.vibrate([200, 100, 200]);
 </pre>
 
 <p>This vibrates the device for 200 ms, then pauses for 100 ms before vibrating the device again for another 200 ms.</p>
@@ -44,7 +44,7 @@ window.navigator.vibrate([200]);
 
 <p>Some basic <code>setInterval</code> and <code>clearInterval</code> action will allow you to create persistent vibration:</p>
 
-<pre class="brush: js notranslate">var vibrateInterval;
+<pre class="brush: js">var vibrateInterval;
 
 // Starts vibration at passed in level
 function startVibrate(duration) {
@@ -70,21 +70,13 @@ function startPersistentVibrate(duration, interval) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
+<table>
   <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
+   <th>Specification</th>
   </tr>
- </thead>
- <tbody>
   <tr>
-   <td>{{SpecName("Vibration API")}}</td>
-   <td>{{Spec2("Vibration API")}}</td>
-   <td>Linked to spec is the latest editor's draft; W3C version is a REC.</td>
+   <td><a href="https://w3c.github.io/vibration/">Vibration API</a></td>
   </tr>
- </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

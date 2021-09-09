@@ -7,6 +7,7 @@ tags:
   - Change
   - Event
   - HTML API
+browser-compat: api.AudioTrackList.change_event
 ---
 <div>{{APIRef}}</div>
 
@@ -37,7 +38,7 @@ tags:
 
 <p>Using <code>addEventListener()</code>:</p>
 
-<pre class="brush: js notranslate">const videoElement = document.querySelector('video');
+<pre class="brush: js">const videoElement = document.querySelector('video');
 videoElement.audioTracks.addEventListener('change', (event) =&gt; {
     console.log(`'${event.type}' event fired`);
 });
@@ -52,7 +53,7 @@ toggleTrackButton.addEventListener('click', () =&gt; {
 
 <p>Using the <code>onchange</code> event handler property:</p>
 
-<pre class="brush: js notranslate">const videoElement = document.querySelector('video');
+<pre class="brush: js">const videoElement = document.querySelector('video');
 videoElement.audioTracks.onchange = (event) =&gt; {
     console.log(`'${event.type}' event fired`);
 };
@@ -66,24 +67,11 @@ toggleTrackButton.addEventListener('click', () =&gt; {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'media.html#event-media-change', 'change')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.AudioTrackList.change_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -19,19 +19,22 @@ tags:
 - Reference
 - load
 - rendering
+browser-compat: api.HTMLImageElement.loading
 ---
 <p>{{APIRef("HTML DOM")}}</p>
 
-<p><span class="seoSummary">The {{domxref("HTMLImageElement")}}
+<p>The {{domxref("HTMLImageElement")}}
     property <code><strong>loading</strong></code> is a string whose value provides a hint
     to the {{Glossary("user agent")}} on how to handle the loading of the image which
-    is currently outside the window's {{Glossary("visual viewport")}}.</span> This helps
+    is currently outside the window's {{Glossary("visual viewport")}}.</p>
+
+<p>This helps
   to optimize the loading of the document's contents by postponing loading the image until
   it's expected to be needed, rather than immediately during the initial page load.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">let <em>imageLoadScheduling</em> = <em>htmlImageElement</em>.loading;
+<pre class="brush: js">let <em>imageLoadScheduling</em> = <em>htmlImageElement</em>.loading;
 <em>htmlImageElement</em>.loading = <em>eagerOrLazy</em>;
 </pre>
 
@@ -96,7 +99,7 @@ tags:
   of items, using lazy-loading to avoid loading the image from the network until it's
   actually needed.</p>
 
-<pre class="brush: js notranslate">function addImageToList(url) {
+<pre class="brush: js">function addImageToList(url) {
   const list = document.querySelector("div.photo-list");
 
   let newItem = document.createElement("div");
@@ -115,27 +118,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', "#attr-img-loading", "HTMLImageElement.loading")}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLImageElement.loading")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

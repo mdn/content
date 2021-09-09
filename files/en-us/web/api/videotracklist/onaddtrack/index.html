@@ -15,14 +15,15 @@ tags:
 - addTrack
 - onaddtrack
 - track
+browser-compat: api.VideoTrackList.onaddtrack
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p><span class="seoSummary">The <strong>{{domxref("VideoTrackList")}}</strong> property
+<p>The <strong>{{domxref("VideoTrackList")}}</strong> property
     <strong><code>onaddtrack</code></strong> is an event handler which is called when the
     {{event("addtrack")}} event occurs, indicating that a new video track has been added
     to the media element whose video tracks the <code>VideoTrackList</code>
-    represents.</span></p>
+    represents.</p>
 
 <p>The event is passed into the event handler in the form of a {{domxref("TrackEvent")}}
   object, whose {{domxref("TrackEvent.track", "track")}} property identifies the
@@ -36,7 +37,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><em>VideoTrackList</em>.onaddtrack = <em>eventHandler</em>;</pre>
+  class="brush: js"><em>VideoTrackList</em>.onaddtrack = <em>eventHandler</em>;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -66,24 +67,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', '#handler-tracklist-onaddtrack', 'VideoTrackList:
-        onaddtrack')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.VideoTrackList.onaddtrack")}}</p>
+<p>{{Compat}}</p>

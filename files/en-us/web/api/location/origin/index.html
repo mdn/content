@@ -6,12 +6,15 @@ tags:
 - Location
 - Property
 - Reference
+browser-compat: api.Location.origin
 ---
 <p>{{APIRef("Location")}}</p>
 
-<p><span class="seoSummary">The <strong><code>origin</code></strong> read-only property of
+<p>The <strong><code>origin</code></strong> read-only property of
     the {{domxref("Location")}} interface is a {{domxref("USVString")}} containing the
-    Unicode serialization of the origin of the represented URL</span>; that is:</p>
+    Unicode serialization of the origin of the represented URL.</p>
+
+<p>That is:</p>
 
 <ul>
   <li>for URL using the <code>http</code> or <code>https</code>, the scheme followed by
@@ -28,7 +31,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>string</em> = <em>object</em>.origin;
+<pre class="brush: js"><em>string</em> = <em>object</em>.origin;
 </pre>
 
 <h2 id="Examples">Examples</h2>
@@ -39,21 +42,8 @@ var result = window.location.origin; // Returns:'https://developer.mozilla.org'
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', '#dom-location-origin', 'origin')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Location.origin")}}</p>
+<p>{{Compat}}</p>

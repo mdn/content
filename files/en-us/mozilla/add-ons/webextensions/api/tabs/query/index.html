@@ -11,6 +11,7 @@ tags:
   - WebExtensions
   - query
   - tabs
+browser-compat: webextensions.api.tabs.query
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -81,7 +82,7 @@ tags:
 
 <p>Get all tabs:</p>
 
-<pre class="notranslate brush: js">function logTabs(tabs) {
+<pre class="brush: js">function logTabs(tabs) {
   for (let tab of tabs) {
     // tab.url requires the `tabs` permission or a matching host permission.
     console.log(tab.url);
@@ -97,7 +98,7 @@ querying.then(logTabs, onError);</pre>
 
 <p>Get all tabs in the current window:</p>
 
-<pre class="notranslate brush: js">function logTabs(tabs) {
+<pre class="brush: js">function logTabs(tabs) {
   for (let tab of tabs) {
     // tab.url requires the `tabs` permission or a matching host permission.
     console.log(tab.url);
@@ -113,7 +114,7 @@ querying.then(logTabs, onError);</pre>
 
 <p>Get the active tab in the current window:</p>
 
-<pre class="notranslate brush: js">function logTabs(tabs) {
+<pre class="brush: js">function logTabs(tabs) {
   // tabs[0].url requires the `tabs` permission or a matching host permission.
   console.log(tabs[0].url);
 }
@@ -127,7 +128,7 @@ querying.then(logTabs, onError);</pre>
 
 <p>Get tabs for all HTTP and HTTPS URLs under <code>"mozilla.org"</code> or any of its subdomains:</p>
 
-<pre class="notranslate brush: js">function logTabs(tabs) {
+<pre class="brush: js">function logTabs(tabs) {
   for (let tab of tabs) {
     // tab.url requires the `tabs` permission or a matching host permission.
     console.log(tab.url);
@@ -145,7 +146,7 @@ querying.then(logTabs, onError);</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("webextensions.api.tabs.query")}}</p>
+<p>{{Compat}}</p>
 
 <div class="note"><strong>Acknowledgements</strong>
 

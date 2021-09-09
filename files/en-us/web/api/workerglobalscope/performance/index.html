@@ -8,8 +8,8 @@ tags:
 - Property
 - Read-only
 - Reference
-- Référence(2)
 - WorkerGlobalScope
+browser-compat: api.WorkerGlobalScope.performance
 ---
 <p>{{APIRef("Web Workers API")}}</p>
 
@@ -18,7 +18,7 @@ tags:
   to be used on the worker.</p>
 
 <div class="note">
-  <p>Not all {{domxref("Performance")}} properties and methods are available to Web
+  <p><strong>Note:</strong> Not all {{domxref("Performance")}} properties and methods are available to Web
     workers.</p>
 </div>
 
@@ -26,7 +26,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var perfObj = <em>self</em>.performance;
+<pre class="brush: js">var perfObj = <em>self</em>.performance;
 </pre>
 
 <h3 id="Return_value">Return Value</h3>
@@ -55,34 +55,18 @@ tags:
   a normal {{domxref("Performance")}} object.</p>
 
 <div class="note">
-  <p><strong>Note</strong>: Firefox has a bug with using <code>console.log</code> inside
+  <p><strong>Note:</strong> Firefox has a bug with using <code>console.log</code> inside
     shared/service workers (see {{Bug("1058644")}}), which may return strange results, but
     this should be fixed soon.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Highres Time Level 2', '#the-performance-attribute',
-        'performance')}}</td>
-      <td>{{Spec2('Highres Time Level 2')}}</td>
-      <td>Defines WorkerGlobalScope.performance.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.WorkerGlobalScope.performance")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -7,6 +7,8 @@ tags:
 - Reference
 - URL
 - URL API
+- Polyfill
+browser-compat: api.URL.URL
 ---
 <div>{{APIRef("URL API")}}</div>
 
@@ -20,15 +22,15 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">const <var>url</var> = new URL(<var>url</var> [, <var>base</var>])
+<pre class="brush: js">const <var>url</var> = new URL(<var>url</var> [, <var>base</var>])
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
 	<dt><code><var>url</var></code></dt>
-	<dd>A {{domxref("USVString")}} representing an absolute or relative URL. If
-		<code><var>url</var></code> is a relative URL, <code><var>base</var></code> is
+	<dd>A {{domxref("USVString")}} or any other object with a <a href="/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file#stringifiers">stringifier</a> — including, for example, an {{htmlelement("a")}} or {{htmlelement("area")}} element — that represents an absolute or relative URL.
+		If <code><var>url</var></code> is a relative URL, <code><var>base</var></code> is
 		required, and will be used as the base URL. If <code><var>url</var></code> is an
 		absolute URL, a given <code><var>base</var></code> will be ignored.</dd>
 	<dt><code><var>base</var></code> {{optional_inline}}</dt>
@@ -38,7 +40,7 @@ tags:
 </dl>
 
 <div class="note">
-	<p><strong>Note</strong>: The <code>url</code> and <code>base</code> arguments will
+	<p><strong>Note:</strong> The <code>url</code> and <code>base</code> arguments will
 		each be stringified from whatever value you pass, just like with other Web APIs
 		that accept {{domxref("USVString")}}. In particular, you can use an existing
 		{{domxref("URL")}} object for either argument, and it will stringify to the
@@ -66,7 +68,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">// Base urls
+<pre class="brush: js">// Base urls
 let m = 'https://developer.mozilla.org';
 let a = new URL("/", m);                                // =&gt; 'https://developer.mozilla.org/'
 let b = new URL(m);                                     // =&gt; 'https://developer.mozilla.org/'
@@ -89,29 +91,15 @@ let d = new URL('/en-US/docs', b);                     // =
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('URL', '#constructors', 'URL.URL()')}}</td>
-			<td>{{Spec2('URL')}}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.URL.URL")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
+	<li>A polyfill of <code>URL</code> is available in <a href="https://github.com/zloirock/core-js#url-and-urlsearchparams"><code>core-js</code></a></li>
 	<li>The interface it belongs to: {{domxref("URL")}}.</li>
 </ul>

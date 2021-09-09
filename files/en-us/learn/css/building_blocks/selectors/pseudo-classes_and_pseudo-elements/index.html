@@ -14,7 +14,7 @@ tags:
 
 <p>The next set of selectors we will look at are referred to as <strong>pseudo-classes</strong> and <strong>pseudo-elements</strong>. There are a large number of these, and they often serve quite specific purposes. Once you know how to use them, you can look at the list to see if there is something which works for the task you are trying to achieve. Once again the relevant MDN page for each selector is helpful in explaining browser support.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -33,7 +33,7 @@ tags:
 
 <p>Pseudo-classes are keywords that start with a colon:</p>
 
-<pre class="notranslate">:<em>pseudo-class-name</em></pre>
+<pre>:<em>pseudo-class-name</em></pre>
 
 <h3 id="Simple_pseudo-class_example">Simple pseudo-class example</h3>
 
@@ -70,9 +70,9 @@ tags:
 
 <h2 id="What_is_a_pseudo-element">What is a pseudo-element?</h2>
 
-<p>Pseudo-elements behave in a similar way, however they act as if you had added a whole new HTML element into the markup, rather than applying a class to existing elements. Pseudo-elements start with a double colon <code>::</code>.</p>
+<p>Pseudo-elements behave in a similar way. However, they act as if you had added a whole new HTML element into the markup, rather than applying a class to existing elements. Pseudo-elements start with a double colon <code>::</code>.</p>
 
-<pre class="notranslate"><em>::pseudo-element-name</em></pre>
+<pre><em>::pseudo-element-name</em></pre>
 
 <div class="notecard note">
 <p><strong>Note</strong>: Some early pseudo-elements used the single colon syntax, so you may sometimes see this in code or examples. Modern browsers support the early pseudo-elements with single- or double-colon syntax for backwards compatibility.</p>
@@ -80,7 +80,7 @@ tags:
 
 <p>For example, if you wanted to select the first line of a paragraph you could wrap it in a <code>&lt;span&gt;</code> element and use an element selector; however, that would fail if the number of words you had wrapped were longer or shorter than the parent element's width. As we tend not to know how many words will fit on a line — as that will change if the screen width or font-size changes — it is impossible to robustly do this by adding HTML.</p>
 
-<p>The <code>::first-line</code> pseudo-element selector will do this for you reliably — if the number of words increases and decreases it will still only select the first line.</p>
+<p>The <code>::first-line</code> pseudo-element selector will do this for you reliably — if the number of words increases or decreases it will still only select the first line.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/selectors/first-line.html", '100%', 800)}}</p>
 
@@ -92,7 +92,7 @@ tags:
 
 <p>If you wanted to make the first line of the first paragraph bold you could chain the <code>:first-child</code> and <code>::first-line</code> selectors together. Try editing the previous live example so it uses the following CSS. We are saying that we want to select the first line, of the first <code>&lt;p&gt;</code> element, which is inside an <code>&lt;article&gt;</code> element.</p>
 
-<pre class="brush: css notranslate">article p:first-child::first-line {
+<pre class="brush: css">article p:first-child::first-line {
   font-size: 120%;
   font-weight: bold;
 }</pre>
@@ -117,11 +117,11 @@ tags:
 
 <p>{{EmbedGHLiveSample("css-examples/learn/selectors/before-styled.html", '100%', 500)}}</p>
 
-<p>The use of the <code>::before</code> and <code>::after</code> pseudo-elements along with the <code>content</code> property is referred to as "Generated Content" in CSS, and you will often see this technique being used for various tasks. A great example is the site <a href="http://www.cssarrowplease.com/">CSS Arrow Please</a>, which helps you to generate an arrow with CSS. Look at the CSS as you create your arrow and you will see the {{cssxref("::before")}} and {{cssxref("::after")}} pseudo-elements in use. Whenever you see these selectors, look at the {{cssxref("content")}} property to see what is being added to the document.</p>
+<p>The use of the <code>::before</code> and <code>::after</code> pseudo-elements along with the <code>content</code> property is referred to as "Generated Content" in CSS, and you will often see this technique being used for various tasks. A great example is the site <a href="https://www.cssarrowplease.com/">CSS Arrow Please</a>, which helps you to generate an arrow with CSS. Look at the CSS as you create your arrow and you will see the {{cssxref("::before")}} and {{cssxref("::after")}} pseudo-elements in use. Whenever you see these selectors, look at the {{cssxref("content")}} property to see what is being added to the document.</p>
 
 <h2 id="Reference_section">Reference section</h2>
 
-<p>There are a large number of pseudo-classes and pseudo-elements, and it is useful to have a list to refer to. Below are tables listing them, with links to their reference pages on MDN. Use this as a reference to see the kind of things that are available for you to target.</p>
+<p>There are a large number of pseudo-classes and pseudo-elements, and it is useful to have a list to refer to. Below are tables listing them, with links to their reference pages on MDN. Use this as a reference to see the kinds of things that are available for you to target.</p>
 
 <h3 id="Pseudo-classes">Pseudo-classes</h3>
 
@@ -348,11 +348,11 @@ tags:
  <tbody>
   <tr>
    <td>{{ Cssxref("::after") }}</td>
-   <td>Matches a stylable element appearing after the originating element's actual content.</td>
+   <td>Inserts a stylable element appearing after the originating element's actual content, if used with the {{cssxref("content")}} property with a value other than <code>none</code>.</td>
   </tr>
   <tr>
    <td>{{ Cssxref("::before") }}</td>
-   <td>Matches a stylable element appearing before the originating element's actual content.</td>
+   <td>Inserts a stylable element appearing before the originating element's actual content, if used with the {{cssxref("content")}} property with a value other than <code>none</code>.</td>
   </tr>
   <tr>
    <td>{{ Cssxref("::first-letter") }}</td>

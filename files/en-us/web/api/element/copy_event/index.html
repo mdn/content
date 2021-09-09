@@ -8,10 +8,11 @@ tags:
   - Event
   - Reference
   - Web
+browser-compat: api.Element.copy_event
 ---
 <div>{{APIRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>copy</code></strong> event fires when the user initiates a copy action through the browser's user interface.</span></p>
+<p>The <strong><code>copy</code></strong> event fires when the user initiates a copy action through the browser's user interface.</p>
 
 <table class="properties">
  <tbody>
@@ -40,7 +41,7 @@ tags:
 
 <p>However, the handler cannot <em>read</em> the clipboard data.</p>
 
-<p>It's possible to construct and dispatch a <a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">synthetic</a> <code>copy</code> event, but this will not affect the system clipboard.</p>
+<p>It's possible to construct and dispatch a <a href="/en-US/docs/Web/Events/Creating_and_triggering_events">synthetic</a> <code>copy</code> event, but this will not affect the system clipboard.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -52,17 +53,13 @@ tags:
 &lt;div class="target" contenteditable="true"&gt;...and pasting it into this one&lt;/div&gt;
 </pre>
 
-<div class="hidden">
-<h4 id="CSS">CSS</h4>
-
-<pre class="brush: css">div.source, div.target {
+<pre class="brush: css hidden">div.source, div.target {
     border: 1px solid gray;
     margin: .5rem;
     padding: .5rem;
     height: 1rem;
     background-color: #e9eef1;
 }</pre>
-</div>
 
 <h4 id="JS">JS</h4>
 
@@ -81,24 +78,11 @@ source.addEventListener('copy', (event) =&gt; {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Clipboard API', '#clipboard-event-copy')}}</td>
-   <td>{{Spec2('Clipboard API')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Element.copy_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

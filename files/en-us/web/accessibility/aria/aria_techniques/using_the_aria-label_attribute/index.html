@@ -8,7 +8,6 @@ tags:
   - HTML
   - NeedsContent
   - Reference
-  - Référence(2)
   - agent
   - aria-label
   - user
@@ -16,7 +15,7 @@ tags:
 ---
 <div>{{draft}}</div>
 
-<p><span class="seoSummary">The <a class="external" href="https://www.w3.org/TR/wai-aria/#aria-label" rel="external"><code>aria-label</code></a> attribute is used to define a string that labels the current element. Use it in cases where a text label is <em>not</em> visible on the screen. If there is visible text labeling the element, use <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">aria-labelledby</a> instead.</span></p>
+<p><span class="seoSummary">The <a href="https://www.w3.org/TR/wai-aria/#aria-label" rel="external"><code>aria-label</code></a> attribute is used to define a string that labels the current element. Use it in cases where a text label is <em>not</em> visible on the screen. If there is visible text labeling the element, use <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">aria-labelledby</a> instead.</span></p>
 
 <p>This attribute can be used with any typical HTML element; it is not limited to elements that have an ARIA <code>role</code> assigned.</p>
 
@@ -56,6 +55,17 @@ tags:
  <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">Using the aria-labelledby attribute</a></li>
 </ul>
 
+<h3 id="support">Elements supporting aria-label</h3>
+
+<p>The <code>aria-label</code> attribute <a href="https://www.tpgi.com/short-note-on-aria-label-aria-labelledby-and-aria-describedby/">should only be used</a> on the following elements:</p>
+
+<ul>
+  <li>Interactive elements</li>
+  <li>Landmark elements</li>
+  <li>Elements that have an explicit widget role</li>
+  <li><code>iframe</code> and <code>img</code> elements</li>
+</ul>
+
 <h3 id="Compatibility">Compatibility</h3>
 
 <p class="comment">TBD: Add support information for common UA and AT product combinations</p>
@@ -63,5 +73,6 @@ tags:
 <h3 id="Additional_resources">Additional resources</h3>
 
 <ul>
- <li><a class="external" href="https://www.w3.org/TR/wai-aria/#aria-label">WAI-ARIA specification for aria-label</a></li>
+  <li><a href="https://www.w3.org/TR/wai-aria/#aria-label">WAI-ARIA specification for aria-label</a></li>
+  <li><a href="https://www.w3.org/TR/using-aria/#label-support">WAI-ARIA Notes on ARIA</a></li>
 </ul>

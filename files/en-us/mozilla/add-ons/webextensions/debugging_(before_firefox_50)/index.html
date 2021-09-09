@@ -6,7 +6,7 @@ tags:
   - Firefox
   - Guide
   - Mozilla
-  - Obsolete
+  - Deprecated
   - WebExtensions
 ---
 <div>{{AddonSidebar}}</div>
@@ -36,7 +36,7 @@ tags:
 
 <p>Here's "content-script.js":</p>
 
-<pre class="notranslate brush: js">/*
+<pre class="brush: js">/*
 If the click was on a link, send a message to the background page.
 The message contains the link's URL.
 */
@@ -60,7 +60,7 @@ window.addEventListener("click", notifyExtension);
 
 <p>Here's "background-script.js":</p>
 
-<pre class="notranslate brush: js">/*
+<pre class="brush: js">/*
 Log that we received the message.
 Then display a notification. The notification contains the URL,
 which we read from the message.
@@ -83,7 +83,7 @@ Assign `notify()` as a listener to messages from the content script.
 chrome.runtime.onMessage.addListener(notify);
 </pre>
 
-<p>If you want to follow along, clone the <a href="https://github.com/mdn/webextensions-examples">webextensions-examples</a> repository, then <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Packaging_and_installation">package and install</a> "notify-link-clicks-i18n".</p>
+<p>If you want to follow along, clone the <a href="https://github.com/mdn/webextensions-examples">webextensions-examples</a> repository, then <a href="https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox">package and install</a> "notify-link-clicks-i18n".</p>
 
 <h2 id="The_Browser_Toolbox">The Browser Toolbox</h2>
 
@@ -133,7 +133,7 @@ chrome.runtime.onMessage.addListener(notify);
  <li>content scripts.</li>
 </ul>
 
-<p>It includes messages your code logs using the <a href="/en-US/docs/Web/API/Console">Console API</a> as well as any error messages logged by the JavaScript engine as it executes your code.</p>
+<p>It includes messages your code logs using the <a href="/en-US/docs/Web/API/console">Console API</a> as well as any error messages logged by the JavaScript engine as it executes your code.</p>
 
 <p>Let's try it with the example above: select the Console tab in the Browser Toolbox, open a web page, and click a link to see messages logged from the content script and the background script:</p>
 
@@ -204,7 +204,7 @@ chrome.runtime.onMessage.addListener(notify);
 <p><img alt="" src="disable-autohide.png" style="display: block; margin-left: auto; margin-right: auto;">Now, when you open a panel in Firefox, it will stay open until you press Escape.</p>
 
 <div class="notecard note">
-<p>Note that this change applies to <a href="/en-US/docs/Tools/Browser_Toolbox#debugging_popups">built-in browser popups</a>, like the Hamburger menu (<img alt="" src="hamburger.png">), as well as extension popups.</p>
+<p>Note that this change applies to <a href="/en-US/docs/Tools/Browser_Toolbox#debugging_popups">built-in browser popups</a>, like the Hamburger menu (<img alt="" src="hamburger.png" style="display: inline-block; vertical-align: middle;">), as well as extension popups.</p>
 
 <p>Also note that the change is persistent, even across browser restarts. We're working on addressing this in <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1251658">bug 1251658</a>, but until then you may prefer to re-enable autohide by clicking the button again before you close the Browser Toolbox.</p>
 
@@ -221,7 +221,7 @@ chrome.runtime.onMessage.addListener(notify);
 
 <pre>moz-extension://&lt;some-uuid&gt;/path/to/your-popup.html</pre>
 
-<p>{{EmbedYouTube("/9jdHDCKIN-U")}}</p>
+<p>{{EmbedYouTube("9jdHDCKIN-U")}}</p>
 
 <p>Now the scope of the toolbox is the popup. In the Inspector, you can examine and modify the popup's HTML and CSS. In the Debugger, you can search for any scripts loaded into the popup, and set breakpoints in them.</p>
 

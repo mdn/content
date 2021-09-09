@@ -9,10 +9,11 @@ tags:
   - Web
   - pointer
   - pointermove
+browser-compat: api.Document.pointermove_event
 ---
 <div>{{APIRef}}</div>
 
-<p>The <code>pointermove</code> event is fired when a pointer changes coordinates, and the pointer has not been <a href="/en-US/docs/Web/Events/pointercancel">canceled</a> by a browser <a href="/en-US/docs/Web/CSS/touch-action">touch-action</a>.</p>
+<p>The <code>pointermove</code> event is fired when a pointer changes coordinates, and the pointer has not been <a href="/en-US/docs/Web/API/HTMLElement/pointercancel_event">canceled</a> by a browser <a href="/en-US/docs/Web/CSS/touch-action">touch-action</a>.</p>
 
 <table class="properties">
  <tbody>
@@ -39,40 +40,23 @@ tags:
 
 <p>Using <code>addEventListener()</code>:</p>
 
-<pre class="brush: js notranslate">document.addEventListener('pointermove', (event) =&gt; {
+<pre class="brush: js">document.addEventListener('pointermove', (event) =&gt; {
   console.log('Pointer moved');
 });</pre>
 
 <p>Using the <code>onpointermove</code> event handler property:</p>
 
-<pre class="brush: js notranslate">document.onpointermove = (event) =&gt; {
+<pre class="brush: js">document.onpointermove = (event) =&gt; {
   console.log('Pointer moved');
 };</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Pointer Events 2','#the-pointermove-event')}}</td>
-   <td>{{Spec2('Pointer Events 2')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Pointer Events', '#the-pointermove-event')}}</td>
-   <td>{{Spec2('Pointer Events')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Document.pointermove_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

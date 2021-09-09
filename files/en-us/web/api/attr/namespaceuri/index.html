@@ -2,10 +2,11 @@
 title: Attr.namespaceURI
 slug: Web/API/Attr/namespaceURI
 tags:
-- API
-- DOM
-- Property
-- Reference
+  - API
+  - DOM
+  - Property
+  - Reference
+browser-compat: api.Attr.namespaceURI
 ---
 <div>{{APIRef("DOM")}}</div>
 
@@ -13,14 +14,10 @@ tags:
   namespace URI of the attribute, or <code>null</code> if the element is not in a
   namespace.</p>
 
-<div class="note">
-  <p>Before DOM4 this API was defined within the {{domxref("Node")}} interface.</p>
-</div>
-
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var>namespace</var> = <var>attribute</var>.namespaceURI</pre>
+  class="brush: js"><var>namespace</var> = <var>attribute</var>.namespaceURI</pre>
 
 <h2 id="Example">Example</h2>
 
@@ -42,13 +39,13 @@ tags:
 
 <p>In Firefox 3.5 and earlier, the namespace URI for HTML attributes in HTML documents is
   <code>null</code>. In later versions, in compliance with HTML5, it is
-  <code><a class="external" href="https://www.w3.org/1999/xhtml">https://www.w3.org/1999/xhtml</a></code>
-  as in XHTML. {{gecko_minversion_inline("1.9.2")}}</p>
+  <code><a href="https://www.w3.org/1999/xhtml">https://www.w3.org/1999/xhtml</a></code>
+  as in XHTML.</p>
 
 <p>You can create an attribute with the specified <code>namespaceURI</code> using the DOM
   Level 2 method {{domxref("Element.setAttributeNS")}}.</p>
 
-<p>Per the <a class="external" href="https://www.w3.org/TR/xml-names11/">Namespaces in
+<p>Per the <a href="https://www.w3.org/TR/xml-names11/">Namespaces in
     XML</a> specification, an attribute does not inherit its namespace from the element it
   is attached to. If an attribute is not explicitly given a namespace, it has no
   namespace.</p>
@@ -59,26 +56,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('DOM WHATWG', '#dom-attr-namespaceuri', 'Attr: namespaceURI')}}</td>
-      <td>{{Spec2('DOM WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Attr.namespaceURI")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -86,5 +68,4 @@ tags:
   <li>{{domxref("Attr.localName")}}</li>
   <li>{{domxref("Attr.prefix")}}</li>
   <li>{{domxref("Element.namespaceURI")}}</li>
-  <li>{{domxref("Node.namespaceURI")}}</li>
 </ul>

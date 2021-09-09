@@ -8,6 +8,7 @@ tags:
 - Element
 - Method
 - getAttributeNames
+browser-compat: api.Element.getAttributeNames
 ---
 <div>{{APIRef("DOM")}}</div>
 
@@ -20,18 +21,50 @@ tags:
   {{domxref("Element.getAttribute","getAttribute()")}}, is a memory-efficient and
   performant alternative to accessing {{domxref("Element.attributes")}}.</p>
 
+<p>The names returned by <strong><code>getAttributeNames()</code></strong> are <em>qualified</em> attribute names, meaning that attributes with a namespace prefix have their names returned with that namespace prefix (<em>not</em> the actual namespace), followed by a colon, followed by the attribute name (for example, <strong><code>xlink:href</code></strong>), while any attributes which have no namespace prefix have their names returned as-is (for example, <strong><code>href</code></strong>).</p>
+
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>let attributeNames</em> = element.getAttributeNames();
+<pre class="brush: js"><em>let attributeNames</em> = element.getAttributeNames();
 </pre>
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush:js">// Iterate over element's attributes
+<p>The following example shows how:</p>
+
+<ul>
+  <li>For an attribute which has a namespace prefix, <code>getAttributeNames()</code> returns that namespace prefix along with the attribute name.</li>
+  <li>For an attribute which has no namespace prefix, <code>getAttributeNames()</code> returns just the attribute name, as-is.</li>
+</ul>
+
+<p>It’s important to understand that:
+<ol>
+  <li>An attribute can be present in the DOM with a namespace but lacking a namespace prefix.</li>
+  <li>For an attribute in the DOM that has a namespace but lacks a namespace prefix, <code>getAttributeNames()</code> will return just the attribute name, with no indication that the attribute is in a namespace.</li>
+</ol>
+
+<p>The example below includes such a “namespaced but without a namespace prefix” case.</p>
+
+<pre class="brush:js">
+const element = document.createElement('a')
+
+// set "href" attribute with no namespace and no namespace prefix
+element.setAttribute('href', 'https://example.com')
+// set "href" attribute with namespace and also "xlink" namespace prefix
+element.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', 'https://example.com')
+// set "show" attribute with namespace but no namespace prefix
+element.setAttributeNS('http://www.w3.org/1999/xlink', 'show', 'new')
+
+// Iterate over element's attributes
 for (let name of element.getAttributeNames()) {
   let value = element.getAttribute(name);
   console.log(name, value);
 }
+
+// logs:
+// href https://example.com
+// xlink:href https://example.com
+// show new
 </pre>
 
 <h2 id="Polyfill">Polyfill</h2>
@@ -50,24 +83,8 @@ for (let name of element.getAttributeNames()) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("DOM WHATWG", "#dom-element-getattributenames",
-        "Element.getAttributeNames")}}</td>
-      <td>{{Spec2("DOM WHATWG")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Element.getAttributeNames")}}</p>
+<p>{{Compat}}</p>

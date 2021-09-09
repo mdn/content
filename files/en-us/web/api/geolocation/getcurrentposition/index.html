@@ -9,17 +9,18 @@ tags:
 - Reference
 - Secure context
 - getCurrentPosition
+browser-compat: api.Geolocation.getCurrentPosition
 ---
 <p>{{securecontext_header}}{{ APIRef("Geolocation API") }}</p>
 
-<p><span class="seoSummary">The
+<p>The
     <strong><code>Geolocation.getCurrentPosition()</code></strong> method is used to get
-    the current position of the device.</span></p>
+    the current position of the device.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">navigator.geolocation.getCurrentPosition(<var>success</var>[, <var>error</var>[, [<var>options</var>]])</pre>
+  class="brush: js">navigator.geolocation.getCurrentPosition(<var>success</var>, <var>error</var>, [<var>options</var>])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -45,7 +46,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">var options = {
+<pre class="brush: js">var options = {
   enableHighAccuracy: true,
   timeout: 5000,
   maximumAge: 0
@@ -69,26 +70,11 @@ navigator.geolocation.getCurrentPosition(success, error, options);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Geolocation')}}</td>
-      <td>{{Spec2('Geolocation')}}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Geolocation.getCurrentPosition")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

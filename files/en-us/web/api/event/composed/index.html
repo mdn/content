@@ -11,26 +11,27 @@ tags:
 - composed
 - scoped
 - shadow dom
+browser-compat: api.Event.composed
 ---
 <p>{{APIRef("Shadow DOM")}}</p>
 
 <p>The read-only <strong><code>composed</code></strong> property of the
-  {{domxref("Event")}} interface returns a {{jsxref("Boolean")}} which indicates whether
+  {{domxref("Event")}} interface returns a boolean value which indicates whether
   or not the event will propagate across the shadow DOM boundary into the standard DOM.
 </p>
 
 <div class="note">
-  <p><strong>Note</strong>: This property was formerly named <code>scoped</code>.</p>
+  <p><strong>Note:</strong> This property was formerly named <code>scoped</code>.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">const isComposed = <var>Event</var>.composed;</pre>
+  class="brush: js">const isComposed = <var>Event</var>.composed;</pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A {{jsxref("Boolean")}} which is <code>true</code> if the event will cross from the
+<p>A boolean value which is <code>true</code> if the event will cross from the
   shadow DOM into the standard DOM after reaching the shadow root. (That is, the first
   node in the shadow DOM in which the event began to propagate.)</p>
 
@@ -110,23 +111,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('DOM WHATWG', '#dom-event-composed', 'composed')}}</td>
-      <td>{{Spec2('DOM WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Event.composed")}}</p>
+<p>{{Compat}}</p>

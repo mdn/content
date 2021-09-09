@@ -14,7 +14,7 @@ tags:
 ---
 <div>{{DefaultAPISidebar("Screen Capture API")}}</div>
 
-<p><span class="seoSummary">The Screen Capture API introduces additions to the existing Media Capture and Streams API to let the user select a screen or portion of a screen (such as a window) to capture as a media stream.</span> This stream can then be recorded or shared with others over the network.</p>
+<p>The Screen Capture API introduces additions to the existing Media Capture and Streams API to let the user select a screen or portion of a screen (such as a window) to capture as a media stream. This stream can then be recorded or shared with others over the network.</p>
 
 <h2 id="Screen_Capture_API_concepts_and_usage">Screen Capture API concepts and usage</h2>
 
@@ -22,7 +22,7 @@ tags:
 
 <p>To start capturing video from the screen, you call <code>getDisplayMedia()</code> on the instance of <code>Media</code> <code>navigator.mediaDevices</code>:</p>
 
-<pre class="brush: js notranslate">captureStream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);</pre>
+<pre class="brush: js">captureStream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);</pre>
 
 <p>The {{jsxref("Promise")}} returned by <code>getDisplayMedia()</code> resolves to a {{domxref("MediaStream")}} which streams the captured media.</p>
 
@@ -47,9 +47,9 @@ tags:
 
 <dl>
  <dt>{{domxref("MediaTrackConstraints.cursor")}}</dt>
- <dd>A {{domxref("ConstrainDOMString")}} indicating whether or not the cursor should be included in the captured display surface's stream, and if it should always be visible or if it should only be visible while the mouse is in motion.</dd>
+ <dd>A <a href="/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring"><code>ConstrainDOMString</code></a> indicating whether or not the cursor should be included in the captured display surface's stream, and if it should always be visible or if it should only be visible while the mouse is in motion.</dd>
  <dt>{{domxref("MediaTrackConstraints.displaySurface")}}</dt>
- <dd>A {{domxref("ConstrainDOMString")}} indicating what type of display surface is to be captured. The value is one of <code>application</code>, <code>browser</code>, <code>monitor</code>, or <code>window</code>.</dd>
+ <dd>A <a href="/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring"><code>ConstrainDOMString</code></a> indicating what type of display surface is to be captured. The value is one of <code>application</code>, <code>browser</code>, <code>monitor</code>, or <code>window</code>.</dd>
  <dt>{{domxref("MediaTrackConstraints.logicalSurface")}}</dt>
  <dd>Indicates whether or not the video in the stream represents a logical display surface (that is, one which may not be entirely visible onscreen, or may be completely offscreen). A value of <code>true</code> indicates a logical display surface is to be captured.</dd>
 </dl>
@@ -91,7 +91,7 @@ tags:
 
 <p>{{Glossary("User agent", "User agents")}} that support Feature Policy (either using HTTP's {{HTTPHeader("Feature-Policy")}} header or the {{HTMLElement("iframe")}} attribute {{htmlattrxref("allow", "iframe")}}) can specify a desire to use the Screen Capture API using the policy control directive <code>display-capture</code>:</p>
 
-<pre class="brush: html notranslate">&lt;iframe allow="display-capture" src="/some-other-document.html"&gt;</pre>
+<pre class="brush: html">&lt;iframe allow="display-capture" src="/some-other-document.html"&gt;</pre>
 
 <p>The default allow list is <code>self</code>, which lets the any content within the document use Screen Capture.</p>
 
@@ -99,19 +99,13 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
+<table>
   <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
+   <th>Specification</th>
   </tr>
   <tr>
-   <td>{{SpecName('Screen Capture')}}</td>
-   <td>{{Spec2('Screen Capture')}}</td>
-   <td>Initial definition</td>
+   <td><a href="https://w3c.github.io/mediacapture-screen-share/">Screen Capture</a></td>
   </tr>
- </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

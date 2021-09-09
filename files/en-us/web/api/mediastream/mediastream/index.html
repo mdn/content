@@ -15,21 +15,23 @@ tags:
 - Video
 - WebRTC
 - streaming
+browser-compat: api.MediaStream.MediaStream
 ---
 <div>{{APIRef("Media Capture and Streams")}}</div>
 
-<p><span class="seoSummary">The <strong><code>MediaStream()</code></strong> constructor
+<p>The <strong><code>MediaStream()</code></strong> constructor
     returns a newly-created {{domxref("MediaStream")}}, which serves as a collection of
-    media tracks, each represented by a {{domxref("MediaStreamTrack")}} object.</span> If
+    media tracks, each represented by a {{domxref("MediaStreamTrack")}} object.</p>
+
+<p>If
   any parameters are given, the specified tracks are added to the new stream. Otherwise,
   the stream has no tracks.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>newStream</var> = new MediaStream();
-<var>newStream</var> = new MediaStream(<var>stream</var>);
-<var>newStream</var> = new MediaStream(<var>tracks[]</var>);
-</pre>
+<pre class="brush: js">new MediaStream();
+new MediaStream(stream);
+new MediaStream(tracks);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -50,26 +52,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Media Capture', '#mediastream', 'MediaStream')}}</td>
-      <td>{{Spec2('Media Capture')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MediaStream.MediaStream")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

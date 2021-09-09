@@ -331,7 +331,7 @@ tags:
 
 <p>JavaScript is often used to control &lt;canvas&gt; elements and SVGs. Most JavaScript code that applies to HTML5 video also applies to audio. <strong><code>HTMLMediaElement.playbackRate</code></strong> is used to implement user controls for the playback rate for both video and audio. A value of 1.0 is default and considered normal speed; a value of 0.5 is half the speed, a value of 2.0 is twice the speed. A negative number plays the video or audio backwards. Set the playback rate property: <strong><code>HTMLMediaElement.playbackRate = playbackspeed</code></strong></p>
 
-<p><strong><a href="/en-US/docs/Web/API/DocumentOrShadowRoot/getAnimations">document.getAnimations()</a></strong> is an experimental technology, and includes <strong><a href="/en-US/docs/Web/CSS/CSS_Animations">CSS Animations</a></strong>, <strong><a href="/en-US/docs/Web/CSS/CSS_Transitions">CSS Transitions</a></strong>, and <strong><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations</a></strong>. The MDN document, <strong><a href="/en-US/docs/Web/API/DocumentOrShadowRoot/getAnimations">Document.getAnimations()</a></strong> provides the following code sample of how to slow down all animations on a page to half speed.</p>
+<p><strong><a href="/en-US/docs/Web/API/Document/getAnimations">document.getAnimations()</a></strong> is an experimental technology, and includes <strong><a href="/en-US/docs/Web/CSS/CSS_Animations">CSS Animations</a></strong>, <strong><a href="/en-US/docs/Web/CSS/CSS_Transitions">CSS Transitions</a></strong>, and <strong><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations</a></strong>. The MDN document, <strong><a href="/en-US/docs/Web/API/Document/getAnimations">Document.getAnimations()</a></strong> provides the following code sample of how to slow down all animations on a page to half speed.</p>
 
 <pre class="brush: js">document.getAnimations().forEach(
   function (animation) {
@@ -553,10 +553,6 @@ tags:
 <h6 id="prefers-contrast"><a href="https://drafts4.csswg.org/mediaqueries-5/#prefers-contrast">prefers-contrast</a></h6>
 
 <p>From W3C's Draft document, Media Queries Level 5 section on <code><strong>prefers-contrast</strong></code>: "<em>The <strong><code>prefers-contrast</code></strong> media feature is used to detect if the user has requested the system increase or decrease the amount of contrast between adjacent colors. For example, many users have difficulty reading text that has a small difference in contrast to the text background and would prefer a larger contrast.</em>" Sometimes there can be such a thing as too much contrast; a halo effect around text can occur in such situations and actually reduce legibility. Putting the amount of contrast in the user's control is a definite gift for accessibility.</p>
-
-<h6 id="prefers-reduced-transparency"><a href="https://drafts4.csswg.org/mediaqueries-5/#prefers-reduced-transparency">prefers-reduced-transparency</a></h6>
-
-<p>The prefers-reduced-transparency media feature is used to detect if the user has requested the system minimize the amount of transparent or translucent layer effects it uses.</p>
 
 <h4 id="MediaQueryList_Interface"><code>MediaQueryList</code> Interface</h4>
 

@@ -2,12 +2,13 @@
 title: XPathResult.singleNodeValue
 slug: Web/API/XPathResult/singleNodeValue
 tags:
-- API
-- DOM XPath API
-- Property
-- Reference
-- XPath
-- XPathResult
+  - API
+  - DOM XPath API
+  - Property
+  - Reference
+  - XPath
+  - XPathResult
+browser-compat: api.XPathResult.singleNodeValue
 ---
 <div>{{APIRef("DOM XPath")}}</div>
 
@@ -21,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>value</em> = <em>result</em>.singleNodeValue;
+<pre class="brush: js">var <em>value</em> = <em>result</em>.singleNodeValue;
 </pre>
 
 <h3 id="Return_Value">Return value</h3>
@@ -49,9 +50,9 @@ tags:
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js">var xpath = "//*[text()='XPath example']";
-var result = document.evaluate(xpath, document, null, XPathResult.<code>FIRST_ORDERED_NODE_TYPE</code>, null);
-document.querySelector("output").textContent = result.singleNodeValue.localName;
+<pre class="brush: js">var xpath = &quot;//*[text()='XPath example']&quot;;
+var result = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+document.querySelector(&quot;output&quot;).textContent = result.singleNodeValue.localName;
 </pre>
 
 <h3 id="Result">Result</h3>
@@ -60,22 +61,8 @@ document.querySelector("output").textContent = result.singleNodeValue.localName;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName("DOM3 XPath", "xpath.html#XPathResult-singleNodeValue",
-        "XPathResult.singleNodeValue")}}</td>
-      <td>{{Spec2("DOM3 XPath")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.XPathResult.singleNodeValue")}}</p>
+<p>{{Compat}}</p>

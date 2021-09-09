@@ -8,17 +8,18 @@ tags:
 - ExtendableMessageEvent
 - Reference
 - Service Workers
+browser-compat: api.ExtendableMessageEvent.ExtendableMessageEvent
 ---
 <p>{{APIRef("Service Workers API")}}</p>
 
 <p>The
-  <code><strong>Extendable</strong></code><strong><code>MessageEvent()</code></strong>
+  <strong><code>ExtendableMessageEvent()</code></strong>
   constructor creates a new {{domxref("ExtendableMessageEvent")}} object instance.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>extendableMessageEvent</em> = new ExtendableMessageEvent(<em>type</em>, <em>init</em>);</pre>
+  class="brush: js">var <em>extendableMessageEvent</em> = new ExtendableMessageEvent(<em>type</em>, <em>init</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -44,7 +45,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">var init = {
+<pre class="brush: js">var init = {
              data : 'hello message',
              source : MessagePortReference,
              ports : MessagePortListReference
@@ -54,26 +55,11 @@ var myEME = new ExtendableMessageEvent('message', init);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Service Workers',
-        '#dom-extendablemessageevent-extendablemessageevent',
-        'ExtendableMessageEvent()')}}</td>
-      <td>{{Spec2('Service Workers')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ExtendableMessageEvent.ExtendableMessageEvent")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

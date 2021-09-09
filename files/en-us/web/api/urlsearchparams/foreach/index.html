@@ -7,6 +7,7 @@ tags:
 - Reference
 - URLSearchParams
 - forEach
+browser-compat: api.URLSearchParams.forEach
 ---
 <div>{{APIRef("URL API")}}</div>
 
@@ -18,14 +19,25 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">searchParams.forEach(callback);</pre>
+<pre class="brush: js">searchParams.forEach(callback);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-  <dt>callback</dt>
-  <dd>A callback function that is executed against each parameter, with the param value
-    provided as its parameter.</dd>
+  <dt><code>callback</code></dt>
+    <dd>
+      <p>Function to execute on each element, which is passed the following arguments:</p>
+      <dl>
+        <dt><code>value</code></dt>
+        <dd><p>The value of the current entry being processed in the <code>URLSearchParams</code> object.</p></dd>
+        <dt><code>key</code></dt>
+        <dd><p>The key of the current entry being processed in the <code>URLSearchParams</code> object.</p></dd>
+        <dt><code>searchParams</code></dt>
+        <dd><p>The <code>URLSearchParams</code> object the <code>forEach()</code> was called upon.</p></dd>
+      </dl>
+    </dd>
+  <dt><code>thisArg</code> {{optional_inline}}</dt>
+    <dd><p>Value to use as <code>this</code> when executing <code>callback</code>.</p></dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -34,7 +46,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js;highlight:[5]">// Create a test URLSearchParams object
+<pre class="brush: js;">// Create a test URLSearchParams object
 var searchParams = new URLSearchParams("key1=value1&amp;key2=value2");
 
 // Log the values
@@ -49,27 +61,11 @@ value2 key2</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('URL', '#interface-urlsearchparams', "forEach() (see
-        \"iterable\")")}}</td>
-      <td>{{Spec2('URL')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.URLSearchParams.forEach")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

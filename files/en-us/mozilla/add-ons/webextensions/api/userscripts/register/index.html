@@ -9,6 +9,7 @@ tags:
   - WebExtensions
   - register
   - userScripts
+browser-compat: webextensions.api.userScripts.register
 ---
 <p>{{AddonSidebar}}</p>
 
@@ -20,7 +21,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="notranslate brush: js">const registeredUserScript = await browser.userScripts.register(
+<pre class="brush: js">const registeredUserScript = await browser.userScripts.register(
   userScriptOptions       // object
 );
 ….
@@ -36,7 +37,7 @@ await registeredUserScript.unregister();</pre>
 
  <dl class="reference-values">
   <dt><code>scriptMetadata</code> {{Optional_Inline}}</dt>
-  <dd>A <code>JSON</code> object containing arbitrary metadata properties associated with the registered user scripts. However, while arbitrary, the object must be serializable, so it is compatible with <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">the structured clone algorithm.</a> This metadata is used to pass details from the script to the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts">API script</a></code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts">. F</a>or example, providing details of a subset of the APIs that need to be injected by the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts">API script</a></code>. The API  does not use this metadata,</dd>
+  <dd>A <code>JSON</code> object containing arbitrary metadata properties associated with the registered user scripts. However, while arbitrary, the object must be serializable, so it is compatible with <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">the structured clone algorithm.</a> This metadata is used to pass details from the script to the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts">API script</a></code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts"></a>. For example, providing details of a subset of the APIs that need to be injected by the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts">API script</a></code>. The API  does not use this metadata,</dd>
   <dt><code>allFrames</code> {{Optional_Inline}}</dt>
   <dd>Same as <code>all_frames</code> in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> key.</dd>
   <dt><code>excludeGlobs</code> {{Optional_Inline}}</dt>
@@ -70,7 +71,7 @@ await registeredUserScript.unregister();</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("webextensions.api.userScripts.register", 10)}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

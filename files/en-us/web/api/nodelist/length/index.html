@@ -9,6 +9,7 @@ tags:
 - NodeList
 - Property
 - Reference
+browser-compat: api.NodeList.length
 ---
 <div>{{APIRef("DOM")}}</div>
 
@@ -17,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>numItems</em> = <em>nodeList</em>.length
+<pre class="brush: js"><em>numItems</em> = <em>nodeList</em>.length
 </pre>
 
 <ul>
@@ -32,12 +33,12 @@ tags:
   iterator in a <code>for</code> loop, as in this example.</p>
 
 <pre class="brush: js">// All the paragraphs in the document
-var items = document.getElementsByTagName("p");
+const items = document.getElementsByTagName("p");
 
 // For each item in the list,
 // append the entire element as a string of HTML
-var gross = "";
-for (var i = 0; i &lt; items.length; i++) {
+let gross = "";
+for (let i = 0; i &lt; items.length; i++) {
   gross += items[i].innerHTML;
 }
 
@@ -46,23 +47,8 @@ for (var i = 0; i &lt; items.length; i++) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("DOM WHATWG", "#dom-nodelist-length", "NodeList: length")}}</td>
-      <td>{{Spec2("DOM WHATWG")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.NodeList.length")}}</p>
+<p>{{Compat}}</p>

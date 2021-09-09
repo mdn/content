@@ -10,6 +10,7 @@ tags:
   - WebExtensions
   - restore
   - sessions
+browser-compat: webextensions.api.sessions.restore
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -37,15 +38,13 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("webextensions.api.sessions.restore")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Examples">Examples</h2>
 
 <p>This restores the single most recently-closed session, whether it's a window or tab:</p>
 
-<pre class="notranslate brush: js">function restoreMostRecent(sessionInfos) {
+<pre class="brush: js">function restoreMostRecent(sessionInfos) {
   if (!sessionInfos.length) {
     console.log("No sessions found")
     return;

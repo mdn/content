@@ -8,19 +8,20 @@ tags:
 - Property
 - Reference
 - Web Performance
+browser-compat: api.PerformanceEntry.entryType
 ---
 <div>{{APIRef("Performance Timeline API")}}</div>
 
-<p><span class="seoSummary">The <strong><code>entryType</code></strong> property returns
+<p>The <strong><code>entryType</code></strong> property returns
     a {{domxref("DOMString")}} representing the type of performance metric such as, for
-    example, "<code>mark</code>". This property is read only.</span></p>
+    example, "<code>mark</code>". This property is read only.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>type</em> = <em>entry</em>.entryType;</pre>
+  class="brush: js">var <em>type</em> = <em>entry</em>.entryType;</pre>
 
 <h3 id="Return_Value">Return value</h3>
 
@@ -30,7 +31,7 @@ tags:
 
 <h3 id="Performance_entry_type_names">Performance entry type names</h3>
 
-<table class="standard-table">
+<table class="no-markdown">
   <thead>
     <tr>
       <th scope="col">Value</th>
@@ -78,9 +79,7 @@ tags:
       <td><code>paint</code></td>
       <td>{{domxref('PerformancePaintTiming')}}</td>
       <td>{{domxref("DOMString")}}</td>
-      <td>
-        <p>Either <code>'first-paint'</code> or <code>'first-contentful-paint'</code>.</p>
-      </td>
+      <td>Either <code>'first-paint'</code> or <code>'first-contentful-paint'</code>.</td>
     </tr>
     <tr>
       <td><code>longtask</code></td>
@@ -118,28 +117,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Performance Timeline Level 2', '#dom-performanceentry-entrytype',
-        'entryType')}}</td>
-      <td>{{Spec2('Performance Timeline Level 2')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName('Performance Timeline', '#dom-performanceentry-entrytype',
-        'entryType')}}</td>
-      <td>{{Spec2('Performance Timeline')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.PerformanceEntry.entryType")}}</p>
+<p>{{Compat}}</p>

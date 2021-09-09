@@ -9,18 +9,19 @@ tags:
 - Media
 - Reference
 - Web Audio API
+browser-compat: api.IIRFilterNode.IIRFilterNode
 ---
 <p>{{APIRef("Web Audio API")}}</p>
 
-<p><span class="seoSummary">The <strong><code>IIRFilterNode()</code></strong> constructor
+<p>The <strong><code>IIRFilterNode()</code></strong> constructor
 		of the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> creates a new
 		{{domxref("IIRFilterNode")}} object which an {{domxref("AudioNode")}} processor
-		which implements a general infinite impulse response filter.</span></p>
+		which implements a general infinite impulse response filter.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-	class="brush: js notranslate">var iIRFilterNode = new IIRFilterNode(context, options)</pre>
+	class="brush: js">var iIRFilterNode = new IIRFilterNode(context, options)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -38,7 +39,7 @@ tags:
 	</dd>
 </dl>
 
-<p class="note">Unlike other nodes in the Web Audio API, the options passed into the IIR
+<p>Unlike other nodes in the Web Audio API, the options passed into the IIR
 	filter upon creation are not optional. The filter needs these values to work and with
 	the vast range of filters available, there is no default.</p>
 
@@ -59,25 +60,11 @@ const iirFilter = new IIRFilterNode(audioCtx, { feedforward: feedForward, feedba
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('Web Audio
-				API','#dom-iirfilternode-iirfilternode','IIRFilterNode()')}}</td>
-			<td>{{Spec2('Web Audio API')}}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
 
-	<p>{{Compat("api.IIRFilterNode.IIRFilterNode")}}</p>
+	<p>{{Compat}}</p>
 </div>

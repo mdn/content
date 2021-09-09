@@ -9,6 +9,7 @@ tags:
 - FontFaceSet
 - Method
 - Reference
+browser-compat: api.FontFaceSet.load
 ---
 <p>{{APIRef()}}{{SeeCompatTable}}</p>
 
@@ -17,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>result</var> = <var>aFontFaceSet</var>.load(<em>font</em>);
+<pre class="brush: js"><var>result</var> = <var>aFontFaceSet</var>.load(<em>font</em>);
 
 result = aFontFaceSet.load(font, text);
 </pre>
@@ -41,7 +42,7 @@ result = aFontFaceSet.load(font, text);
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">// returns a promise that will be fulfilled or rejected according the success to load MyFont
+<pre class="brush: js">// returns a promise that will be fulfilled or rejected according the success to load MyFont
 // The code in 'then' can assume the availability of that font.
 
 document.fonts.load("12px MyFont", "ß").then(…);
@@ -49,21 +50,8 @@ document.fonts.load("12px MyFont", "ß").then(…);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('CSS3 Font Loading','#font-face-set-load','load')}}</td>
-      <td>{{Spec2('CSS3 Font Loading')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.FontFaceSet.load")}}</p>
+<p>{{Compat}}</p>

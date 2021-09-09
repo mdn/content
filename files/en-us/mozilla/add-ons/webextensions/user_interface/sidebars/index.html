@@ -6,7 +6,6 @@ tags:
 ---
 <div>{{AddonSidebar}}</div>
 
-<div>
 <p><span class="seoSummary">A sidebar is a pane that is displayed at the side of the browser window, next to the web page. This page describes sidebars, specifying them, designing them, and examples of use. </span></p>
 
 <p>The browser provides a UI that enables the user to see the currently available sidebars and to select a sidebar to display. For example, Firefox has a "View &gt; Sidebar" menu. Only one sidebar can be shown at a time, and that sidebar will be displayed for all tabs and all browser windows.</p>
@@ -19,7 +18,7 @@ tags:
 
 <p>A document for a particular tab can be set using the {{WebExtAPIRef("sidebarAction.setPanel()")}} function. A sidebar can figure out which window it belongs to using the {{WebExtAPIRef("windows.getCurrent()")}} API:</p>
 
-<pre class="notranslate brush: js">// sidebar.js
+<pre class="brush: js">// sidebar.js
 browser.windows.getCurrent({populate: true}).then((windowInfo) =&gt; {
   myWindowId = windowInfo.id;
 });</pre>
@@ -53,4 +52,3 @@ browser.windows.getCurrent({populate: true}).then((windowInfo) =&gt; {
 <h2 id="Example">Example</h2>
 
 <p>The <a href="https://github.com/mdn/webextensions-examples">webextensions-examples</a> repository on GitHub includes the <a href="https://github.com/mdn/webextensions-examples/tree/master/annotate-page">annotate-page</a> example which implements a sidebar.</p>
-</div>

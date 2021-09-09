@@ -8,11 +8,12 @@ tags:
 - Property
 - Reference
 - Window
+browser-compat: api.WindowEventHandlers.onbeforeunload
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
 <p>The <code><strong>onbeforeunload</strong></code> property of the
-  {{domxref("WindowEventHandlers")}} mixin is the {{domxref("EventHandler")}} for
+  {{domxref("WindowEventHandlers")}} mixin is the <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> for
   processing {{event("beforeunload")}} events. These events fire when a window is about to
   {{event("unload")}} its resources. At this point, the document is still visible and the
   event is still cancelable.</p>
@@ -24,7 +25,7 @@ tags:
 </div>
 
 <div class="notecard note">
-  <p><strong>Note</strong>: You shouldn't use the
+  <p><strong>Note:</strong> You shouldn't use the
     <code><a href="/en-US/docs/Web/API/Window/beforeunload_event">beforeunload</a></code>
     event with <code>sendBeacon()</code>. See the
     <code><a href="/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon()</a></code>
@@ -33,7 +34,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">window.addEventListener("beforeunload", function(event) { ... });
+<pre class="brush: js">window.addEventListener("beforeunload", function(event) { ... });
 window.onbeforeunload = function(event) { ... };</pre>
 
 <p>Typically, it is better to use {{domxref("EventTarget.addEventListener",
@@ -48,7 +49,7 @@ window.onbeforeunload = function(event) { ... };</pre>
   {{domxref("Event.preventDefault()")}} method instead of using
   {{domxref("Event.returnValue")}} to prompt the user.</p>
 
-<pre class="brush:js notranslate">window.addEventListener('beforeunload', function (e) {
+<pre class="brush:js">window.addEventListener('beforeunload', function (e) {
   // Cancel the event
   e.preventDefault(); // If you prevent default behavior in Mozilla Firefox prompt will always be shown
   // Chrome requires returnValue to be set
@@ -59,7 +60,7 @@ window.onbeforeunload = function(event) { ... };</pre>
 <p>Guarantee the browser unload by removing the <em>returnValue</em> property of the event
 </p>
 
-<pre class="brush:js notranslate">window.addEventListener('beforeunload', function (e) {
+<pre class="brush:js">window.addEventListener('beforeunload', function (e) {
   // the absence of a returnValue property on the event will guarantee the browser unload happens
   delete e['returnValue'];
 });</pre>
@@ -73,40 +74,11 @@ window.onbeforeunload = function(event) { ... };</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<p>The event was originally introduced by Microsoft in Internet Explorer 4 and
-  standardized in the HTML5 specification.</p>
-
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', '#handler-window-onbeforeunload', 'onbeforeunload')}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML5.1', '#windoweventhandlers', 'GlobalEventHandlers')}}</td>
-      <td>{{Spec2('HTML5.1')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("HTML5 W3C", "#windoweventhandlers", "GlobalEventHandlers")}}</td>
-      <td>{{Spec2('HTML5 W3C')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.WindowEventHandlers.onbeforeunload")}}</p>
+<p>{{Compat}}</p>
 
 <p>The HTML specification states that authors should use the
   {{domxref("Event.preventDefault()")}} method instead of using

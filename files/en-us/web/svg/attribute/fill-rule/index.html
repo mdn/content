@@ -4,6 +4,7 @@ slug: Web/SVG/Attribute/fill-rule
 tags:
   - SVG
   - SVG Attribute
+browser-compat: svg.attributes.presentation.fill-rule
 ---
 <div>{{SVGRef}}</div>
 
@@ -11,14 +12,25 @@ tags:
 
 <p class="note"><strong>Note:</strong> As a presentation attribute, <code>fill-rule</code> can be used as a CSS property.</p>
 
-<p>As a presentation attribute, it can be applied to any element but it has effect only on the following eight elements: {{SVGElement('altGlyph')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, and {{SVGElement('tspan')}}</p>
+<p>You can use this attribute with the following SVG elements:</p>
+
+<ul>
+  <li>{{SVGElement('altGlyph')}}</li>
+  <li>{{SVGElement('path')}}</li>
+  <li>{{SVGElement('polygon')}}</li>
+  <li>{{SVGElement('polyline')}}</li>
+  <li>{{SVGElement('text')}}</li>
+  <li>{{SVGElement('textPath')}}</li>
+  <li>{{SVGElement('tref')}}</li>
+  <li>{{SVGElement('tspan')}}</li>
+</ul>
 
 <div id="topExample">
 <div class="hidden">
-<pre class="brush: css notranslate">html,body,svg { height:100% }</pre>
+<pre class="brush: css">html,body,svg { height:100% }</pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;svg viewBox="-10 -10 220 120" xmlns="http://www.w3.org/2000/svg"&gt;
+<pre class="brush: html">&lt;svg viewBox="-10 -10 220 120" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!-- Default value for fill-rule --&gt;
   &lt;polygon fill-rule="nonzero" stroke="red"
    points="50,0 21,90 98,35 2,35 79,90"/&gt;
@@ -64,10 +76,10 @@ tags:
 <h4 id="Example">Example</h4>
 
 <div class="hidden">
-<pre class="brush: css notranslate">html,body,svg { height:100% }</pre>
+<pre class="brush: css">html,body,svg { height:100% }</pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;svg viewBox="-10 -10 320 120" xmlns="http://www.w3.org/2000/svg"&gt;
+<pre class="brush: html">&lt;svg viewBox="-10 -10 320 120" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!-- Effect of nonzero fill rule on crossing path segments --&gt;
   &lt;polygon fill-rule="nonzero" stroke="red"
            points="50,0 21,90 98,35 2,35 79,90"/&gt;
@@ -100,10 +112,10 @@ tags:
 <h4 id="Example_2">Example</h4>
 
 <div class="hidden">
-<pre class="brush: css notranslate">html,body,svg { height:100% }</pre>
+<pre class="brush: css">html,body,svg { height:100% }</pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;svg viewBox="-10 -10 320 120" xmlns="http://www.w3.org/2000/svg"&gt;
+<pre class="brush: html">&lt;svg viewBox="-10 -10 320 120" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!-- Effect of evenodd fill rule on crossing path segments --&gt;
   &lt;polygon fill-rule="evenodd" stroke="red"
            points="50,0 21,90 98,35 2,35 79,90"/&gt;
@@ -131,7 +143,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("svg.attributes.presentation.fill-rule")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Specifications">Specifications</h2>
 

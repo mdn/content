@@ -8,10 +8,11 @@ tags:
   - HTMLMediaElement
   - Reference
   - Video
+browser-compat: api.HTMLMediaElement.ratechange_event
 ---
 <p>{{APIRef("HTMLMediaElement")}}</p>
 
-<p class="summary"><span class="seoSummary">The <code>ratechange</code> event is fired when the playback rate has changed.</span></p>
+<p>The <code>ratechange</code> event is fired when the playback rate has changed.</p>
 
 <table class="properties">
  <tbody>
@@ -41,7 +42,7 @@ tags:
   </tr>
   <tr>
    <th scope="row">Specification</th>
-   <td><a class="external" href="https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-playing">HTML5 media</a></td>
+   <td><a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-playing">HTML5 media</a></td>
   </tr>
  </tbody>
 </table>
@@ -52,7 +53,7 @@ tags:
 
 <p>Using <code>addEventListener()</code>:</p>
 
-<pre class="brush: js notranslate">const video = document.querySelector('video');
+<pre class="brush: js">const video = document.querySelector('video');
 
 video.addEventListener('ratechange', (event) =&gt; {
   console.log('The playback rate changed.');
@@ -60,7 +61,7 @@ video.addEventListener('ratechange', (event) =&gt; {
 
 <p>Using the <code>onratechange</code> event handler property:</p>
 
-<pre class="brush: js notranslate">const video = document.querySelector('video');
+<pre class="brush: js">const video = document.querySelector('video');
 
 video.onratechange = (event) =&gt; {
   console.log('The playback rate changed.');
@@ -68,26 +69,11 @@ video.onratechange = (event) =&gt; {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "media.html#event-media-ratechange", "ratechange media event")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#event-media-ratechange", "ratechange media event")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLMediaElement.ratechange_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Related_Events">Related Events</h2>
 

@@ -11,17 +11,18 @@ tags:
 - View
 - scrollIntoView
 - scrolling
+browser-compat: api.Element.scrollIntoView
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<div><span class="seoSummary">The {{domxref("Element")}} interface's
+<p>The {{domxref("Element")}} interface's
     <code><strong>scrollIntoView()</strong></code> method scrolls the element's parent
     container such that the element on which <code>scrollIntoView()</code> is called is
-    visible to the user</span></div>
+    visible to the user.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>element</em>.scrollIntoView();
+<pre class="brush: js"><em>element</em>.scrollIntoView();
 <em>element</em>.scrollIntoView(<var>alignToTop</var>); // Boolean parameter
 <em>element</em>.scrollIntoView(<var>scrollIntoViewOptions</var>); // Object parameter
 </pre>
@@ -30,7 +31,7 @@ tags:
 
 <dl>
   <dt><code><var>alignToTop</var></code> {{optional_inline}}</dt>
-  <dd>Is a {{jsxref("Boolean")}} value:
+  <dd>Is a boolean value:
     <ul>
       <li>If <code>true</code>, the top of the element will be aligned to the top of the
         visible area of the scrollable ancestor. Corresponds to
@@ -43,8 +44,8 @@ tags:
   </dd>
   <dt><code><var>scrollIntoViewOptions</var></code> {{optional_inline}}
     {{experimental_inline}}</dt>
-  <dd>Is an Object with the following properties:</dd>
   <dd>
+    <p>Is an Object with the following properties:</p>
     <dl>
       <dt><code>behavior</code> {{optional_inline}}</dt>
       <dd>Defines the transition animation.<br>
@@ -79,27 +80,11 @@ element.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th>Specification</th>
-      <th>Status</th>
-      <th>Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("CSSOM View", "#dom-element-scrollintoview",
-        "Element.scrollIntoView()")}}</td>
-      <td>{{Spec2("CSSOM View")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Element.scrollIntoView")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

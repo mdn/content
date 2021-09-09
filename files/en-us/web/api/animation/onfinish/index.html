@@ -12,6 +12,7 @@ tags:
 - onfinish
 - waapi
 - web animations api
+browser-compat: api.Animation.onfinish
 ---
 <p>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</p>
 
@@ -25,7 +26,7 @@ tags:
   animation to finish up.</p>
 
 <div class="note">
-  <p>The <code>"paused"</code> play state supersedes the <code>"finished"</code> play
+  <p><strong>Note:</strong> The <code>"paused"</code> play state supersedes the <code>"finished"</code> play
     state; if the animation is both paused and finished, the <code>"paused"</code> state
     is the one that will be reported. You can force the animation into the
     <code>"finished"</code> state by setting its {{domxref("Animation.startTime",
@@ -36,7 +37,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>finishHandler</em> = <em>Animation</em>.onfinish;
+<pre class="brush: js">var <em>finishHandler</em> = <em>Animation</em>.onfinish;
 
 <em>Animation</em>.onfinish = <em>finishHandler</em>;</pre>
 
@@ -72,25 +73,11 @@ bringUI.onfinish = function() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Web Animations', '#dom-animation-onfinish', 'Animation.onfinish' )}}
-      </td>
-      <td>{{Spec2('Web Animations')}}</td>
-      <td>Editor's draft.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Animation.onfinish")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

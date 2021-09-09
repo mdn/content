@@ -11,13 +11,16 @@ tags:
   - Web Audio
   - Web Audio API
   - setValueCurveAtTime
+browser-compat: api.AudioParam.setValueCurveAtTime
 ---
 <p>{{APIRef("Web Audio API")}}</p>
 
-<p class="summary"><span class="seoSummary">The
+<p>The
     <strong><code>setValueCurveAtTime()</code></strong> method of the
     {{domxref("AudioParam")}} interface schedules the parameter's value to change
-    following a curve defined by a list of values.</span> The curve is a linear
+    following a curve defined by a list of values.</p>
+
+<p>The curve is a linear
   interpolation between the sequence of values defined in an array of floating-point
   values, which are scaled to fit into the given interval starting at
   <code>startTime</code> and a specific duration.</p>
@@ -25,7 +28,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>paramRef</em> = <em>param</em>.setValueCurveAtTime(<em>values</em>, <em>startTime</em>, <em>duration</em>);</pre>
+  class="brush: js">var <em>paramRef</em> = <em>param</em>.setValueCurveAtTime(<em>values</em>, <em>startTime</em>, <em>duration</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -86,7 +89,7 @@ tags:
     live</a>.) When this button is pressed, <code>setValueCurveAtTime()</code> is used to
   change the gain value between the values contained in the waveArray array:</p>
 
-<pre class="brush: js;highlight[42]">// create audio context
+<pre class="brush: js;">// create audio context
 var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 
@@ -132,25 +135,11 @@ valueCurve.onclick = function() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Web Audio API', '#dom-audioparam-setvaluecurveattime',
-        'setValueCurveAtTime')}}</td>
-      <td>{{Spec2('Web Audio API')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.AudioParam.setValueCurveAtTime")}}</p>
+<p>{{Compat}}</p>
 
 <p>Versions before Chrome 46 use nearest neighbor instead of linear interpolation.</p>
 

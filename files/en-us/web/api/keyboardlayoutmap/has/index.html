@@ -11,19 +11,22 @@ tags:
 - Reference
 - has()
 - keyboard
+browser-compat: api.KeyboardLayoutMap.has
 ---
 <div>{{APIRef("Keyboard API")}}{{SeeCompatTable}}</div>
 
-<p><span class="seoSummary">The <strong><code>has()</code></strong> method of the
+<p>The <strong><code>has()</code></strong> method of the
     {{domxref('KeyboardLayoutMap')}} interface returns a boolean indicating whether the
-    object has an element with the specified key.</span> A list of valid keys is found in
+    object has an element with the specified key.</p>
+
+<p>A list of valid keys is found in
   the <a href="https://www.w3.org/TR/uievents-code/#key-alphanumeric-writing-system">UI
     Events KeyboardEvent code Values</a> spec.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <var>aBoolean</var> = <var>KeyboardLayoutMap</var>.has(<var>key</var>)</pre>
+  class="brush: js">var <var>aBoolean</var> = <var>KeyboardLayoutMap</var>.has(<var>key</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -36,23 +39,10 @@ tags:
 
 <p>A {{jsxref('Boolean')}} indicating whether the specified key was found.</p>
 
-<h2 id="Example">Example</h2>
+<h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Keyboard Map','#keyboardlayoutmap-interface','has()')}}</td>
-      <td>{{Spec2('Keyboard Map')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.KeyboardLayoutMap.has")}}</p>
+<p>{{Compat}}</p>

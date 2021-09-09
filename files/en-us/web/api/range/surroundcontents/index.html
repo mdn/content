@@ -2,10 +2,11 @@
 title: Range.surroundContents()
 slug: Web/API/Range/surroundContents
 tags:
-- API
-- DOM
-- Method
-- Range
+  - API
+  - DOM
+  - Method
+  - Range
+browser-compat: api.Range.surroundContents
 ---
 <div>{{ApiRef("DOM")}}</div>
 
@@ -14,7 +15,7 @@ tags:
   specified range.</p>
 
 <p>This method is nearly equivalent to
-  <code>newNode.appendChild(<a href="/en-US/docs/DOM/range.extractContents">range.extractContents()</a>); <a href="/en-US/docs/DOM/range.insertNode">range.insertNode</a>(newNode)</code>.
+  <code>newNode.appendChild(<a href="/en-US/docs/Web/API/Range/extractContents">range.extractContents()</a>); <a href="/en-US/docs/Web/API/Range/insertNode">range.insertNode</a>(newNode)</code>.
   After surrounding, the boundary points of the <code>range</code> include
   <code>newNode</code>.</p>
 
@@ -25,7 +26,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>range</em>.surroundContents(<em>newParent</em>);
+<pre class="brush: js"><em>range</em>.surroundContents(<em>newParent</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -56,35 +57,14 @@ range.surroundContents(newParent);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('DOM WHATWG', '#dom-range-surroundcontents',
-        'Range.surroundContents()')}}</td>
-      <td>{{Spec2('DOM WHATWG')}}</td>
-      <td>No change.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('DOM2 Traversal_Range',
-        'ranges.html#Level2-Range-method-surroundContents', 'Range.surroundContents()')}}
-      </td>
-      <td>{{Spec2('DOM2 Traversal_Range')}}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Range.surroundContents")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a></li>
+  <li><a href="/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</a></li>
 </ul>

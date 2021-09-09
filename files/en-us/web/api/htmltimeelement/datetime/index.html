@@ -7,18 +7,19 @@ tags:
 - HTMLTimeElement
 - Property
 - Reference
+browser-compat: api.HTMLTimeElement.dateTime
 ---
 <div>{{ APIRef("HTML DOM") }}</div>
 
 <p>The
-  <code><strong>HTMLTimeElement</strong></code><strong><code>.dateTime</code></strong>
+  <strong><code>HTMLTimeElement.dateTime</code></strong>
   property is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("datetime",
   "time") }} HTML attribute, containing a machine-readable form of the element's date and
   time value.</p>
 
 <p>The format of the string must follow one of the following HTML microsyntaxes:</p>
 
-<table class="standard-table">
+<table class="no-markdown">
   <thead>
     <tr>
       <th scope="col">Microsyntax</th>
@@ -133,7 +134,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>dateTimeString</em> = <em>timeElt</em>.dateTime;
+<pre class="brush: js"><em>dateTimeString</em> = <em>timeElt</em>.dateTime;
 <em>timeElt.dateTime = dateTimeString</em>
 </pre>
 
@@ -147,37 +148,11 @@ t.dateTime = "6w 5h 34m 5s";
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', "text-level-semantics.html#dom-time-datetime",
-        "HTMLTimeElement")}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td>No change from {{SpecName("HTML5.1")}}.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML5.1', "text-level-semantics.html#dom-time-datetime",
-        "HTMLTimeElement")}}</td>
-      <td>{{Spec2('HTML5.1')}}</td>
-      <td>No change from {{SpecName("HTML5 W3C")}}.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML5 W3C', "text-level-semantics.html#dom-time-datetime",
-        "HTMLTimeElement")}}</td>
-      <td>{{Spec2('HTML5 W3C')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLTimeElement.dateTime")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

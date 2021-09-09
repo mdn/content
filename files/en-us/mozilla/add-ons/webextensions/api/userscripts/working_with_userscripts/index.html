@@ -38,7 +38,7 @@ tags:
 
 <p>Navigate to about:debugging, click on <strong>Load Temporary Add-on...</strong> and double-click on the extension's manifest.</p>
 
-<p>The default code included with the example allows you to load a <code>userScript </code>which will "eat" the content of pages matching the Hosts entry. Make any changes you want to make before clicking the <strong>Register script</strong> button at the bottom of the panel.</p>
+<p>The default code included with the example allows you to load a <code>userScript</code> which will "eat" the content of pages matching the Hosts entry. Make any changes you want to make before clicking the <strong>Register script</strong> button at the bottom of the panel.</p>
 
 <p>In the following image, the extension will "eat" the content of pages whose domain name ends in .org. This is the default behavior for this extension.</p>
 
@@ -50,7 +50,7 @@ tags:
 
 <p>Before a userScript can be executed, it must be registered using the <code>userScripts.register()</code> method. Here is the code to register the example extension:</p>
 
-<pre class="notranslate brush: js">async function registerScript() {
+<pre class="brush: js">async function registerScript() {
   const params = {
     hosts: stringToArray(hostsInput.value),
     code: codeInput.value,

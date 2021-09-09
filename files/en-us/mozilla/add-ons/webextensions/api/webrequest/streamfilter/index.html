@@ -10,6 +10,7 @@ tags:
   - Type
   - WebExtensions
   - webRequest
+browser-compat: webextensions.api.webRequest.StreamFilter
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -30,7 +31,7 @@ tags:
 
 <p>You can listen to each event by assigning a listener function to its attribute:</p>
 
-<pre class="notranslate brush: js">filter.onstart = event =&gt; {
+<pre class="brush: js">filter.onstart = event =&gt; {
   console.log("started");
 }</pre>
 
@@ -83,15 +84,13 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("webextensions.api.webRequest.StreamFilter", 10)}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Examples">Examples</h2>
 
-<p>This code listens for <code>onstart</code>, <code>ondata</code>, and <code>onstop</code>. It logs those events, and the response data as an {{domxref("ArrayBuffer")}} itself:</p>
+<p>This code listens for <code>onstart</code>, <code>ondata</code>, and <code>onstop</code>. It logs those events, and the response data as an {{jsxref("ArrayBuffer")}} itself:</p>
 
-<pre class="notranslate brush: js">function listener(details) {
+<pre class="brush: js">function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
 
   filter.onstart = event =&gt; {

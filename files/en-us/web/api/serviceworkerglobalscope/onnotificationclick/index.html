@@ -9,6 +9,7 @@ tags:
   - Reference
   - ServiceWorkerGlobalScope
   - onnotificationclick
+browser-compat: api.ServiceWorkerGlobalScope.onnotificationclick
 ---
 <p>{{APIRef("Service Workers API")}}</p>
 
@@ -17,12 +18,12 @@ tags:
 <p>Notifications created on the main thread or in workers which aren't service workers using the {{domxref("Notification.Notification","Notification()")}} constructor will instead receive a {{Event("click")}} event on the <code>Notification</code> object itself.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Trying to create a notification inside the {{domxref("ServiceWorkerGlobalScope")}} using the {{domxref("Notification.Notification","Notification()")}} constructor will throw an error.</p>
+<p><strong>Note:</strong> Trying to create a notification inside the {{domxref("ServiceWorkerGlobalScope")}} using the {{domxref("Notification.Notification","Notification()")}} constructor will throw an error.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js" style="font-size: 14px;">ServiceWorkerGlobalScope.onnotificationclick = function(NotificationEvent) { ... };
+<pre class="brush: js">ServiceWorkerGlobalScope.onnotificationclick = function(NotificationEvent) { ... };
 </pre>
 
 <h2 id="Example">Example</h2>
@@ -49,21 +50,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Notifications','#dom-serviceworkerglobalscope-onnotificationclick','onnotificationclick')}}</td>
-   <td>{{Spec2('Web Notifications')}}</td>
-   <td>Initial definition. This property is specified on the {{domxref('Notifications_API')}} even though it's part of {{domxref('ServiceWorkerGlobalScope')}}.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ServiceWorkerGlobalScope.onnotificationclick")}}</p>
+<p>{{Compat}}</p>

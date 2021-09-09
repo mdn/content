@@ -11,6 +11,7 @@ tags:
   - WebExtensions
   - onCreated
   - tabs
+browser-compat: webextensions.api.tabs.onCreated
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -56,7 +57,7 @@ browser.tabs.onCreated.hasListener(listener)
 
 <p>Log the IDs of newly created tabs:</p>
 
-<pre class="notranslate brush: js">function handleCreated(tab) {
+<pre class="brush: js">function handleCreated(tab) {
   console.log(tab.id);
 }
 
@@ -66,7 +67,7 @@ browser.tabs.onCreated.addListener(handleCreated);</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("webextensions.api.tabs.onCreated")}}</p>
+<p>{{Compat}}</p>
 
 <div class="note"><strong>Acknowledgements</strong>
 

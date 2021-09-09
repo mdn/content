@@ -2,23 +2,24 @@
 title: DOMImplementation.createHTMLDocument()
 slug: Web/API/DOMImplementation/createHTMLDocument
 tags:
-- API
-- DOM
-- DOM Reference
-- DOMImplementation
-- Method
-- Reference
+  - API
+  - DOM
+  - DOM Reference
+  - DOMImplementation
+  - Method
+  - Reference
+browser-compat: api.DOMImplementation.createHTMLDocument
 ---
 <p>{{ApiRef("DOM")}}</p>
 
-<p><span class="seoSummary">The
+<p>The
     <strong><code>DOMImplementation.createHTMLDocument()</code></strong> method creates a
-    new HTML {{ domxref("Document") }}.</span></p>
+    new HTML {{ domxref("Document") }}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">const <var>newDoc</var> = document.implementation.createHTMLDocument(<var>title</var>)</pre>
+  class="brush: js">const <var>newDoc</var> = document.implementation.createHTMLDocument(<var>title</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -34,7 +35,7 @@ tags:
 
 <p>Here's the HTML for this example:</p>
 
-<pre class="brush: html notranslate">&lt;body&gt;
+<pre class="brush: html">&lt;body&gt;
   &lt;p&gt;Click &lt;a href="javascript:makeDocument()"&gt;here&lt;/a&gt; to create a new document and insert it below.&lt;/p&gt;
   &lt;iframe id="theFrame" src="about:blank" /&gt;
 &lt;/body&gt;
@@ -42,7 +43,7 @@ tags:
 
 <p>The JavaScript implementation of <code>makeDocument()</code> follows:</p>
 
-<pre class="brush: js notranslate">function makeDocument() {
+<pre class="brush: js">function makeDocument() {
   let frame = document.getElementById("theFrame");
 
   let doc = document.implementation.createHTMLDocument("New Document");
@@ -76,11 +77,11 @@ tags:
   contents of our new document into the new document's context. Finally, line 20 actually
   replaces the contents of the frame with the new document's contents.</p>
 
-<p><a href="/samples/domref/createHTMLDocument.html">View Live Examples</a></p>
+<p><a href="https://media.prod.mdn.mozit.cloud/samples/domref/createHTMLDocument.html">View Live Examples</a></p>
 
 <p>The returned document is pre-constructed with the following HTML:</p>
 
-<pre class="brush: html notranslate">&lt;!doctype html&gt;
+<pre class="brush: html">&lt;!doctype html&gt;
 &lt;html&gt;
 &lt;head&gt;
 &lt;title&gt;<var>title</var>&lt;/title&gt;
@@ -92,27 +93,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('DOM WHATWG', '#dom-domimplementation-createhtmldocument',
-        'DOMImplementation.createHTMLDocument')}}</td>
-      <td>{{Spec2('DOM WHATWG')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.DOMImplementation.createHTMLDocument")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

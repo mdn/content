@@ -16,7 +16,7 @@ tags:
 
 <p class="summary">The first article in our series provides you with your very first experience of creating a web form, including designing a simple form, implementing it using the right HTML form controls and other HTML elements, adding some very simple styling via CSS, and describing how data is sent to a server. We'll expand on each of these subtopics in more detail later on in the module.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -45,12 +45,12 @@ tags:
 
 <ul>
  <li>Smashing Magazine has some <a href="https://www.smashingmagazine.com/2018/08/ux-html5-mobile-form-part-1/" rel="external">good articles about forms UX</a>, including an older but still relevant <a href="https://www.smashingmagazine.com/2011/11/extensive-guide-web-form-usability/" rel="external">Extensive Guide To Web Form Usability</a> article.</li>
- <li>UXMatters is also a very thoughtful resource with good advice from <a href="http://www.uxmatters.com/mt/archives/2012/05/7-basic-best-practices-for-buttons.php" rel="external">basic best practices</a> to complex concerns such as <a href="http://www.uxmatters.com/mt/archives/2010/03/pagination-in-web-forms-evaluating-the-effectiveness-of-web-forms.php">multi-page forms</a>.</li>
+ <li>UXMatters is also a very thoughtful resource with good advice from <a href="https://www.uxmatters.com/mt/archives/2012/05/7-basic-best-practices-for-buttons.php" rel="external">basic best practices</a> to complex concerns such as <a href="https://www.uxmatters.com/mt/archives/2010/03/pagination-in-web-forms-evaluating-the-effectiveness-of-web-forms.php">multi-page forms</a>.</li>
 </ul>
 
 <p>In this article, we'll build a simple contact form. Let's make a rough sketch.</p>
 
-<p><img alt="The form to build, roughly sketch" src="form-sketch-low.jpg" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="The form to build, roughly sketch" src="form-sketch-low.jpg"></p>
 
 <p>Our form will contain three text fields and one button. We are asking the user for their name, their e-mail and the message they want to send. Hitting the button will send their data to a web server.</p>
 
@@ -60,11 +60,11 @@ tags:
 
 <p>Before you go any further, make a local copy of our <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html">simple HTML template</a> — you'll enter your form HTML into here.</p>
 
-<h3 id="The_HTMLelementform_element">The {{HTMLelement("form")}} element</h3>
+<h3 id="The_HTMLelementform_element">The <code>&lt;form&gt;</code> element</h3>
 
 <p>All forms start with a {{HTMLelement("form")}} element, like this:</p>
 
-<pre class="brush:html; notranslate">&lt;form action="/my-handling-form-page" method="post"&gt;
+<pre class="brush:html;">&lt;form action="/my-handling-form-page" method="post"&gt;
 
 &lt;/form&gt;</pre>
 
@@ -81,7 +81,7 @@ tags:
 
 <p>For now, add the above {{htmlelement("form")}} element into your HTML {{htmlelement("body")}}.</p>
 
-<h3 id="The_HTMLelementlabel_HTMLelementinput_and_HTMLelementtextarea_elements">The {{HTMLelement("label")}}, {{HTMLelement("input")}}, and {{HTMLelement("textarea")}} elements</h3>
+<h3 id="The_HTMLelementlabel_HTMLelementinput_and_HTMLelementtextarea_elements">The <code>&lt;label&gt;</code>, <code>&lt;input&gt;</code>, and <code>&lt;textarea&gt;</code> elements</h3>
 
 <p>Our contact form is not complex: the data entry portion contains three text fields, each with a corresponding {{HTMLelement("label")}}:</p>
 
@@ -93,7 +93,7 @@ tags:
 
 <p>In terms of HTML code we need something like the following to implement these form widgets:</p>
 
-<pre class="brush:html; notranslate">&lt;form action="/my-handling-form-page" method="post"&gt;
+<pre class="brush:html;">&lt;form action="/my-handling-form-page" method="post"&gt;
  &lt;ul&gt;
   &lt;li&gt;
     &lt;label for="name"&gt;Name:&lt;/label&gt;
@@ -125,19 +125,19 @@ tags:
 
 <p>Last but not least, note the syntax of <code>&lt;input&gt;</code> vs. <code>&lt;textarea&gt;&lt;/textarea&gt;</code>. This is one of the oddities of HTML. The <code>&lt;input&gt;</code> tag is an empty element, meaning that it doesn't need a closing tag. {{HTMLElement("textarea")}} is not an empty element, meaning it should be closed with the proper ending tag. This has an impact on a specific feature of forms: the way you define the default value. To define the default value of an {{HTMLElement("input")}} element you have to use the <a href="/en-US/docs/Web/HTML/Attributes/value"><code>value</code></a> attribute like this:</p>
 
-<pre class="brush:html; notranslate">&lt;input type="text" value="by default this element is filled with this text"&gt;</pre>
+<pre class="brush:html;">&lt;input type="text" value="by default this element is filled with this text"&gt;</pre>
 
 <p>On the other hand,  if you want to define a default value for a {{HTMLElement("textarea")}}, you put it between the opening and closing tags of the {{HTMLElement("textarea")}} element, like this:</p>
 
-<pre class="brush:html; notranslate">&lt;textarea&gt;
+<pre class="brush:html;">&lt;textarea&gt;
 by default this element is filled with this text
 &lt;/textarea&gt;</pre>
 
-<h3 id="The_HTMLelementbutton_element">The {{HTMLelement("button")}} element</h3>
+<h3 id="The_HTMLelementbutton_element">The <code>&lt;button&gt;</code> element</h3>
 
 <p>The markup for our form is almost complete; we just need to add a button to allow the user to send, or "submit", their data once they have filled out the form. This is done by using the {{HTMLelement("button")}} element; add the following just above the closing <code>&lt;/ul&gt;</code> tag:</p>
 
-<pre class="brush:html; notranslate">&lt;li class="button"&gt;
+<pre class="brush:html;">&lt;li class="button"&gt;
   &lt;button type="submit"&gt;Send your message&lt;/button&gt;
 &lt;/li&gt;</pre>
 
@@ -165,13 +165,13 @@ by default this element is filled with this text
 
 <p>First of all, add a {{htmlelement("style")}} element to your page, inside your HTML head. It should look like so:</p>
 
-<pre class="brush: html notranslate">&lt;style&gt;
+<pre class="brush: html">&lt;style&gt;
 
 &lt;/style&gt;</pre>
 
 <p>Inside the <code>style</code> tags, add the following CSS:</p>
 
-<pre class="brush:css; notranslate">form {
+<pre class="brush:css;">form {
   /* Center the form on the page */
   margin: 0 auto;
   width: 500px;
@@ -251,7 +251,7 @@ button {
 
 <p>To name the data in a form you need to use the <code>name</code> attribute on each form widget that will collect a specific piece of data. Let's look at some of our form code again:</p>
 
-<pre class="brush:html; notranslate">&lt;form action="/my-handling-form-page" method="post"&gt;
+<pre class="brush:html;">&lt;form action="/my-handling-form-page" method="post"&gt;
  &lt;ul&gt;
   &lt;li&gt;
     &lt;label for="name"&gt;Name:&lt;/label&gt;

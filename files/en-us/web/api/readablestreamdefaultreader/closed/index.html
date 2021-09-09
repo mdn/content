@@ -2,24 +2,26 @@
 title: ReadableStreamDefaultReader.closed
 slug: Web/API/ReadableStreamDefaultReader/closed
 tags:
-- API
-- Property
-- ReadableStreamDefaultReader
-- Reference
-- Streams
-- closed
+  - API
+  - Property
+  - ReadableStreamDefaultReader
+  - Reference
+  - Streams
+  - closed
+browser-compat: api.ReadableStreamDefaultReader.closed
 ---
 <div>{{APIRef("Streams")}}</div>
 
-<p class="summary">The <strong><code>closed</code></strong> read-only property of the
-  {{domxref("ReadableStreamDefaultReader")}} interface returns a promise that fulfills if
-  the stream becomes closed or the reader's lock is released, or rejects if the stream
-  errors.</p>
+<p>The <strong><code>closed</code></strong> read-only property of the
+  {{domxref("ReadableStreamDefaultReader")}} interface returns a
+  {{jsxref("Promise")}} that fulfills when the stream closes or the reader's lock
+  is released, or rejects if the stream throws an error. This property enables you
+  to write code that responds to an end to the streaming process.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var><code>var <em>closed</em> = </code>readableStreamDefaultReader</var>.closed;</pre>
+  class="brush: js"><var><code>var <em>closed</em> = </code>readableStreamDefaultReader</var>.closed;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -37,21 +39,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName("Streams","#default-reader-closed","closed")}}</td>
-      <td>{{Spec2('Streams')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ReadableStreamDefaultReader.closed")}}</p>
+<p>{{Compat}}</p>

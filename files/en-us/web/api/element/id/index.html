@@ -7,12 +7,13 @@ tags:
 - Element
 - Property
 - Reference
+browser-compat: api.Element.id
 ---
 <div>{{ ApiRef("DOM") }}</div>
 
 <p>The <strong><code>id</code></strong> property of the {{domxref("Element")}} interface
   represents the element's identifier, reflecting the
-  <code><strong><a href="/en-US/docs/Web/HTML/Global_attributes/id">id</a></strong></code>
+  <a href="/en-US/docs/Web/HTML/Global_attributes/id"><code><strong>id</strong></code></a>
   global attribute.</p>
 
 <p>If the <code>id</code> value is not the empty string, it must be unique in a document.
@@ -24,13 +25,13 @@ tags:
   the document with <a href="/en-US/docs/Web/CSS">CSS</a>.</p>
 
 <div class="note">
-  <p><strong>Note</strong>: Identifiers are case-sensitive, but you should avoid creating
+  <p><strong>Note:</strong> Identifiers are case-sensitive, but you should avoid creating
     IDs that differ only in the capitalization.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>idStr</em> = <em>element</em>.id; // Get the id
+<pre class="brush: js">var <em>idStr</em> = <em>element</em>.id; // Get the id
 <em>element</em>.id = <em>idStr</em>; // Set the id
 </pre>
 
@@ -40,36 +41,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('DOM WHATWG', '#dom-element-id', 'id')}}</td>
-      <td>{{Spec2('DOM WHATWG')}}</td>
-      <td>No change from {{SpecName('DOM2 HTML')}}.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('DOM2 HTML', 'html.html#ID-63534901', 'id')}}</td>
-      <td>{{Spec2('DOM2 HTML')}}</td>
-      <td>No change from {{SpecName('DOM1')}}.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('DOM1', 'level-one-html.html#ID-63534901', 'id')}}</td>
-      <td>{{Spec2('DOM1')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Element.id")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

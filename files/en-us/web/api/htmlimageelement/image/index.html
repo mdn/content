@@ -2,33 +2,33 @@
 title: Image()
 slug: Web/API/HTMLImageElement/Image
 tags:
-- API
-- Constructor
-- DOM
-- HTML
-- HTML DOM
-- HTMLImageElement
-- Image()
-- Reference
-- img
+  - API
+  - Constructor
+  - DOM
+  - HTML
+  - HTML DOM
+  - HTMLImageElement
+  - Image()
+  - Reference
+  - img
+browser-compat: api.HTMLImageElement.Image
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p class="summary"><span class="seoSummary">The <strong><code>Image()</code></strong>
+<p>The <strong><code>Image()</code></strong>
     constructor creates a new {{DOMxRef("HTMLImageElement")}} instance. It is functionally
     equivalent to {{DOMxRef("Document.createElement()",
-    "document.createElement('img')")}}.</span></p>
+    "document.createElement('img')")}}.</p>
 
 <div class="notecard note">
-  <p><strong>Disambiguation:</strong> <a
-      href="/en-US/docs/Web/CSS/imagefunction"><code>image()</code>, the CSS function
-      notation</a>.</p>
+  <p><strong>Note:</strong> This function should not be confused with the CSS <a
+      href="/en-US/docs/Web/CSS/image/image()"><code>image()</code></a> function.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <var>htmlImageElement</var> = new Image(<em>width</em>, <em>height</em>);</pre>
+  class="brush: js">var <var>htmlImageElement</var> = new Image(<em>width</em>, <em>height</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -51,7 +51,7 @@ tags:
   {{DOMxRef("HTMLImageElement.naturalHeight")}}. If no size is specified in the
   constructor both pairs of properties have the same values.</p>
 
-<h2 id="Examples"><span style="line-height: 1.572;">Examples</span></h2>
+<h2 id="Examples">Examples</h2>
 
 <pre class="brush: js">var myImage = new Image(100, 200);
 myImage.src = 'picture.jpg';
@@ -65,21 +65,8 @@ document.body.appendChild(myImage);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName("HTML WHATWG", "embedded-content.html#dom-image", "Image()")}}</td>
-      <td>{{spec2("HTML WHATWG")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLImageElement.Image")}}</p>
+<p>{{Compat}}</p>

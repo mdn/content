@@ -6,6 +6,7 @@ tags:
 - DOM
 - Method
 - Reference
+browser-compat: api.Document.createElementNS
 ---
 <div>{{APIRef("DOM")}}</div>
 
@@ -16,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>var element</var> = <var>document</var>.createElementNS(<var>namespaceURI</var>, <var>qualifiedName</var>[, <var>options</var>]);
+<pre class="brush: js"><var>var element</var> = <var>document</var>.createElementNS(<var>namespaceURI</var>, <var>qualifiedName</var>[, <var>options</var>]);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -34,7 +35,7 @@ tags:
     {{DOMxRef("element.nodeName", "nodeName")}} property of the created element is
     initialized with the value of <var>qualifiedName</var>.</dd>
   <dt><var>options</var>{{Optional_Inline}}</dt>
-  <dd>An optional <code>ElementCreationOptions</code> object containing a single property
+  <dd><p>An optional <code>ElementCreationOptions</code> object containing a single property
     named <code>is</code>, whose value is the tag name for a custom element previously
     defined using <code>customElements.define()</code>. For backwards compatibility with
     previous versions of the <a class="external external-icon"
@@ -42,10 +43,10 @@ tags:
     some browsers will allow you to pass a string here instead of an object, where the
     string's value is the custom element's tag name. See <a class="external external-icon"
       href="https://developers.google.com/web/fundamentals/primers/customelements/#extendhtml">Extending
-      native HTML elements</a> for more information on how to use this parameter.</dd>
-  <dd>The new element will be given an <code>is</code> attribute whose value is the custom
+      native HTML elements</a> for more information on how to use this parameter.</p>
+  <p>The new element will be given an <code>is</code> attribute whose value is the custom
     element's tag name. Custom elements are an experimental feature only available in some
-    browsers.</dd>
+    browsers.</p></dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -107,41 +108,25 @@ tags:
 </pre>
 
 <div class="notecard note">
-  <p>The example given above uses inline script which is not recommended in XHTML
+  <p><strong>Note:</strong> The example given above uses inline script which is not recommended in XHTML
     documents. This particular example is actually an XUL document with embedded XHTML,
     however, the recommendation still applies.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("DOM WHATWG", "#dom-document-createelementns",
-        "Document.createElementNS()")}}</td>
-      <td>{{Spec2("DOM WHATWG")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Document.createElementNS")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
   <li>{{DOMxRef("document.createElement()")}}</li>
   <li>{{DOMxRef("document.createTextNode()")}}</li>
-  <li>{{DOMxRef("Node.namespaceURI")}}</li>
+  <li>{{DOMxRef("Element.namespaceURI")}}</li>
   <li><a class="external"
       href="https://www.w3.org/TR/1999/REC-xml-names-19990114">Namespaces in XML</a></li>
 </ul>

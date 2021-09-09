@@ -7,11 +7,12 @@ tags:
 - CanvasRenderingContext2D
 - Method
 - Reference
+browser-compat: api.CanvasRenderingContext2D.setTransform
 ---
 <div>{{APIRef}}</div>
 
 <p>The
-  <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.setTransform()</code></strong>
+  <strong><code>CanvasRenderingContext2D.setTransform()</code></strong>
   method of the Canvas 2D API resets (overrides) the current transformation to the
   identity matrix, and then invokes a transformation described by the arguments of this
   method. This lets you scale, rotate, translate (move), and skew the context.</p>
@@ -24,7 +25,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>ctx</em>.setTransform(<em>a</em>, <em>b</em>, <em>c</em>, <em>d</em>, <em>e</em>, <em>f</em>);
+<pre class="brush: js"><em>ctx</em>.setTransform(<em>a</em>, <em>b</em>, <em>c</em>, <em>d</em>, <em>e</em>, <em>f</em>);
 ctx.setTransform(<em>matrix</em>);
 </pre>
 
@@ -113,7 +114,7 @@ ctx.setTransform(<em>matrix</em>);
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js; highlight:[4]">const canvas = document.getElementById('canvas');
+<pre class="brush: js;">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.setTransform(1, .2, .8, 1, 0, 0);
@@ -171,25 +172,11 @@ ctx2.fill();</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-settransform",
-        "CanvasRenderingContext2D.setTransform")}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CanvasRenderingContext2D.setTransform")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

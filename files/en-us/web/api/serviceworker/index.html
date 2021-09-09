@@ -9,6 +9,7 @@ tags:
   - Service Workers
   - ServiceWorker
   - Workers
+browser-compat: api.ServiceWorker
 ---
 <div>{{securecontext_header}}</div>
 
@@ -22,7 +23,7 @@ tags:
 
 <h2 id="Properties">Properties</h2>
 
-<p><em>The <code>ServiceWorker</code> interface inherits properties from its parent, {{domxref("Worker")}}.</em></p>
+<p><em>The <code>ServiceWorker</code> interface inherits properties from its parent, {{domxref("EventTarget")}}.</em></p>
 
 <dl>
  <dt>{{domxref("ServiceWorker.scriptURL")}} {{readonlyinline}}</dt>
@@ -40,13 +41,13 @@ tags:
 
 <h2 id="Methods">Methods</h2>
 
-<p><em>The <code>ServiceWorker</code> interface inherits methods from its parent, {{domxref("Worker")}}, with the exception of {{domxref("Worker.terminate")}} — this should not be accessible from service workers.</em></p>
+<p><em>The <code>ServiceWorker</code> interface inherits methods from its parent, {{domxref("EventTarget")}}.</em></p>
 
 <h2 id="Examples">Examples</h2>
 
 <p>This code snippet is from the <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html">service worker registration-events sample</a> (<a href="https://googlechrome.github.io/samples/service-worker/registration-events/">live demo</a>). The code listens for any change in the {{domxref("ServiceWorker.state")}} and returns its value.</p>
 
-<pre class="brush: js notranslate">if ('serviceWorker' in navigator) {
+<pre class="brush: js">if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('service-worker.js', {
         scope: './'
     }).then(function (registration) {
@@ -78,24 +79,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#serviceworker', 'ServiceWorker')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ServiceWorker")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

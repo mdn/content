@@ -7,6 +7,7 @@ tags:
 - NeedsMarkupWork
 - Property
 - Reference
+browser-compat: api.Document.plugins
 ---
 <div>{{APIRef("DOM")}}</div>
 
@@ -15,14 +16,14 @@ tags:
   containing one or more {{domxref("HTMLEmbedElement")}}s representing the
   {{HTMLElement("embed")}} elements in the current document.</p>
 
-<div class="note">For a list of installed plugins, use <a
-    href="/en-US/docs/Web/API/NavigatorPlugins/plugins">NavigatorPlugins.plugins</a>
-  instead.</div>
+<div class="note"><p><strong>Note:</strong> For a list of installed plugins, use <a
+    href="/en-US/docs/Web/API/Navigator/plugins">Navigator.plugins</a>
+  instead.</p></div>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var>embedArrayObj</var> = <var>document</var>.plugins</pre>
+  class="brush: js"><var>embedArrayObj</var> = <var>document</var>.plugins</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -31,26 +32,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', '#dom-document-plugins', 'Document.plugins')}}</td>
-      <td>{{ Spec2('HTML WHATWG') }}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Document.plugins")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

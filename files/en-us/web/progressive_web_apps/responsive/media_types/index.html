@@ -12,7 +12,7 @@ tags:
 ---
 <div>{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Responsive/")}}</div>
 
-<p class="summary">This is the 14th and last section of Part I of the <a href="/en-US/docs/Web/Guide/CSS/Getting_Started">CSS Getting Started</a> tutorial. Many pages in this tutorial focused on the CSS properties and values, as well as how you use these to specify the way that content displays.</p>
+<p class="summary">This is the 14th and last section of Part I of the <a href="/en-US/docs/Learn/CSS/First_steps">CSS Getting Started</a> tutorial. Many pages in this tutorial focused on the CSS properties and values, as well as how you use these to specify the way that content displays.</p>
 
 <h2 class="clearLeft" id="Information_Media">Information: Media</h2>
 
@@ -32,7 +32,7 @@ tags:
 
 <p>When printing the document, the navigation area has no purpose. This CSS (below) removes the navigation area when printing the document:</p>
 
-<pre class="brush:css notranslate">@media print {
+<pre class="brush:css">@media print {
   #nav-area {display: none;}
   }
 </pre>
@@ -74,7 +74,6 @@ tags:
 
 <p>For full details of media types, see <a href="https://www.w3.org/TR/CSS21/media.html">Media</a> in the CSS Specification.</p>
 
-<p>There are more examples of the {{CSSxRef("display")}} property in a later page in this tutorial: <a href="/en-US/docs/Web/Guide/CSS/Getting_Started/XML_data">XML data</a>.</p>
 </div>
 
 <h3 id="Printing">Printing</h3>
@@ -92,12 +91,12 @@ tags:
 
 <p>This rule sets the page margins to one inch on all four sides:</p>
 
-<pre class="brush:css notranslate">@page {margin: 1in;}
+<pre class="brush:css">@page {margin: 1in;}
 </pre>
 
 <p>This rule ensures that every <small>H1</small> element starts on a new page:</p>
 
-<pre class="brush:css notranslate">h1 {page-break-before: always;}
+<pre class="brush:css">h1 {page-break-before: always;}
 </pre>
 </div>
 
@@ -186,7 +185,7 @@ tags:
 
 <p>These rules specify styles for a button that changes dynamically as the user interacts with it:</p>
 
-<pre class="brush:css notranslate">.green-button {
+<pre class="brush:css">.green-button {
   background-color:#cec;
   color:#black;
   border:2px outset #cec;
@@ -203,7 +202,7 @@ tags:
   }
 </pre>
 
-<pre class="brush:html notranslate">&lt;table&gt;
+<pre class="brush:html">&lt;table&gt;
  &lt;tbody&gt;
   &lt;tr&gt;
    &lt;td&gt;&lt;button class="green-button" disabled&gt;Click me&lt;/button&gt;&lt;/td&gt;
@@ -238,13 +237,13 @@ tags:
 <h2 id="Action_Printing_a_document">Action: Printing a document</h2>
 
 <div class="note">
-<p><strong>Note:</strong> This snippet only works on Firefox since it erroneously increments the CSS counter for fix-position elements. It should not work in other browsers. See <a href="/en-US/docs/">issue on css3-page</a>.</p>
+<p><strong>Note:</strong> This snippet only works on Firefox since it erroneously increments the CSS counter for fix-position elements. It should not work in other browsers. See <a href="/en-US/docs/Web">issue on css3-page</a>.</p>
 </div>
 
 <ol>
  <li>Make a new HTML document, <code>doc4.html</code>. Copy and paste the content from here:
 
-  <pre class="brush:html notranslate">&lt;!DOCTYPE html&gt;
+  <pre class="brush:html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;title&gt;Print sample&lt;/title&gt;
@@ -266,7 +265,7 @@ tags:
 </pre>
  </li>
  <li>Make a new stylesheet, <code>style4.css</code>. Copy and paste the content from here:
-  <pre class="brush:css notranslate">/*** Print sample ***/
+  <pre class="brush:css">/*** Print sample ***/
 
 /* defaults  for screen */
 #print-head,
@@ -391,10 +390,8 @@ h1:first-child {
  </tbody>
 </table>
 
-<p><a href="/en-US/docs/Web/Guide/CSS/Getting_Started/Challenge_solutions#Media">See solutions to these challenges.</a></p>
+<p><a href="/en-US/docs/Web/Guide/CSS/Getting_started/Challenge_solutions#media">See solutions to these challenges.</a></p>
 
 <h2 id="What_next">What next?</h2>
 
-<p>If you had difficulty understanding this page, or if you have other comments about it, please contribute to its <a href="/Talk:en-US/docs/Web/Guide/CSS/Getting_Started/Media">Discussion</a> page.</p>
-
-<p>So far, all the style rules in this tutorial have been specified in files. The rules and their values are fixed. The next page describes how you can change rules dynamically by using a programming language: <strong><a href="/en-US/docs/Web/Guide/CSS/Getting_Started/JavaScript">JavaScript</a></strong>.</p>
+<p>So far, all the style rules in this tutorial have been specified in files. The rules and their values are fixed. The next page describes how you can change rules dynamically by using a programming language: <strong><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents">JavaScript</a></strong>.</p>

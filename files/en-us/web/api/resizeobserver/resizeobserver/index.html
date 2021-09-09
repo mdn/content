@@ -8,10 +8,11 @@ tags:
 - Resize Observer API
 - ResizeObserver
 - observers
+browser-compat: api.ResizeObserver.ResizeObserver
 ---
 <div>{{APIRef("Resize Observer API")}}</div>
 
-<p class="summary">The <strong><code>ResizeObserver</code></strong> constructor creates a
+<p>The <strong><code>ResizeObserver</code></strong> constructor creates a
   new {{domxref("ResizeObserver")}} object, which can be used to report changes to the
   content or border box of an {{domxref('Element')}} or the bounding box of an
   {{domxref('SVGElement')}}.</p>
@@ -19,7 +20,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <var>ResizeObserver</var> = new ResizeObserver(<var>callback</var>)</pre>
+  class="brush: js">var <var>ResizeObserver</var> = new ResizeObserver(<var>callback</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -40,7 +41,7 @@ tags:
 
     <p>The callback will generally follow a pattern along the lines of:</p>
 
-    <pre class="brush: js notranslate">function(entries, observer) {
+    <pre class="brush: js">function(entries, observer) {
   for (let entry of entries) {
     // Do something to each entry
     // and possibly something to the observer itself
@@ -57,7 +58,7 @@ tags:
     href="https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-text.html">see
     source</a>) example:</p>
 
-<pre class="brush: js notranslate">const resizeObserver = new ResizeObserver(entries =&gt; {
+<pre class="brush: js">const resizeObserver = new ResizeObserver(entries =&gt; {
   for (let entry of entries) {
     if(entry.contentBoxSize) {
       if (entry.contentBoxSize[0]) {
@@ -80,24 +81,8 @@ resizeObserver.observe(divElem);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Resize
-        Observer','#dom-resizeobserver-resizeobserver','ResizeObserver')}}</td>
-      <td>{{Spec2('Resize Observer')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ResizeObserver.ResizeObserver")}}</p>
+<p>{{Compat}}</p>

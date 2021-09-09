@@ -9,6 +9,7 @@ tags:
   - WebExtensions
   - management
   - onEnabled
+browser-compat: webextensions.api.management.onEnabled
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -52,15 +53,13 @@ browser.management.onEnabled.hasListener(listener)
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("webextensions.api.management.onEnabled")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Examples">Examples</h2>
 
 <p>Log the names of add-ons when they are enabled:</p>
 
-<pre class="notranslate brush: js">browser.management.onEnabled.addListener((info) =&gt; {
+<pre class="brush: js">browser.management.onEnabled.addListener((info) =&gt; {
   console.log(info.name + " was enabled");
 });</pre>
 

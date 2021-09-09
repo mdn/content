@@ -8,6 +8,7 @@ tags:
   - Storage
   - Web Storage
   - data
+browser-compat: api.Storage
 ---
 <div>{{APIRef("Web Storage API")}}</div>
 
@@ -41,7 +42,7 @@ tags:
 
 <p>Here we access a <code>Storage</code> object by calling <code>localStorage</code>. We first test whether the local storage contains data items using <code>!localStorage.getItem('bgcolor')</code>. If it does, we run a function called <code>setStyles()</code> that grabs the data items using {{domxref("Storage.getItem()")}} and uses those values to update page styles. If it doesn't, we run another function, <code>populateStorage()</code>, which uses {{domxref("Storage.setItem()")}} to set the item values, then runs <code>setStyles()</code>.</p>
 
-<pre class="brush: js notranslate">if(!localStorage.getItem('bgcolor')) {
+<pre class="brush: js">if(!localStorage.getItem('bgcolor')) {
   populateStorage();
 } else {
   setStyles();
@@ -70,29 +71,16 @@ function setStyles() {
 }</pre>
 
 <div class="note">
-<p><strong>Note</strong>: To see this running as a complete working example, see our <a href="https://mdn.github.io/dom-examples/web-storage/">Web Storage Demo</a>.</p>
+<p><strong>Note:</strong> To see this running as a complete working example, see our <a href="https://mdn.github.io/dom-examples/web-storage/">Web Storage Demo</a>.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#storage', 'Storage')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Storage")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

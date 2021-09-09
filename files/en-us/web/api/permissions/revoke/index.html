@@ -9,6 +9,7 @@ tags:
 - Permissions API
 - Reference
 - revoke
+browser-compat: api.Permissions.revoke
 ---
 <p>{{APIRef("Permissions API")}}{{deprecated_header}}</p>
 
@@ -21,7 +22,7 @@ tags:
 <p>This method is called on the global {{domxref("Permissions")}} object
   {{domxref("navigator.permissions")}}.</p>
 
-<pre class="brush: js notranslate">var <em>revokePromise</em> = navigator.permissions.revoke(<em>descriptor</em>);
+<pre class="brush: js">var <em>revokePromise</em> = navigator.permissions.revoke(<em>descriptor</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -46,7 +47,7 @@ tags:
 </dl>
 
 <div class="note">
-  <p><strong>Note</strong>: As of Firefox 44, the permissions for <a
+  <p><strong>Note:</strong> As of Firefox 44, the permissions for <a
       href="/en-US/docs/Web/API/Notifications_API">Notifications</a> and <a
       href="/en-US/docs/Web/API/Push_API">Push</a> have been merged. If permission is
     granted (e.g. by the user, in the relevant permissions dialog),
@@ -55,7 +56,7 @@ tags:
 </div>
 
 <div class="note">
-  <p><strong>Note</strong>: The <code>persistent-storage</code> permission allows an
+  <p><strong>Note:</strong> The <code>persistent-storage</code> permission allows an
     origin to use a persistent box (i.e <a
       href="https://storage.spec.whatwg.org/#persistence">persistent storage</a>) for its
     storage, as per the <a href="https://storage.spec.whatwg.org/">Storage API</a>.</p>
@@ -88,4 +89,4 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Permissions.revoke")}}</p>
+<p>{{Compat}}</p>

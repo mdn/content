@@ -9,6 +9,7 @@ tags:
 - Property
 - Reference
 - imageSmoothingQuality
+browser-compat: api.CanvasRenderingContext2D.imageSmoothingQuality
 ---
 <div>{{APIRef}} {{SeeCompatTable}}</div>
 
@@ -25,7 +26,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>ctx</em>.imageSmoothingQuality = "low" || "medium" || "high"
+<pre class="brush: js"><em>ctx</em>.imageSmoothingQuality = "low" || "medium" || "high"
 </pre>
 
 <h3 id="Options">Options</h3>
@@ -55,11 +56,11 @@ tags:
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js; highlight:[7]">const canvas = document.getElementById('canvas');
+<pre class="brush: js;">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 let img = new Image();
-img.src = 'https://mdn.mozillademos.org/files/222/Canvas_createpattern.png';
+img.src = 'canvas_createpattern.png';
 img.onload = function() {
   ctx.imageSmoothingQuality = 'low';
   ctx.drawImage(img, 0, 0, 300, 150);
@@ -72,25 +73,11 @@ img.onload = function() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', "#imagesmoothingquality", "imageSmoothingQuality")}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CanvasRenderingContext2D.imageSmoothingQuality")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -9,6 +9,7 @@ tags:
   - Reference
   - Web Authentication API
   - WebAuthn
+browser-compat: api.AuthenticatorResponse
 ---
 <div>{{APIRef("Web Authentication API")}}{{securecontext_header}}</div>
 
@@ -18,18 +19,16 @@ tags:
 
 <p>Below is a list of interfaces based on the AuthenticatorResponse interface.</p>
 
-<div class="index">
 <ul>
  <li>{{domxref("AuthenticatorAssertionResponse")}}</li>
  <li>{{domxref("AuthenticatorAttestationResponse")}}</li>
 </ul>
-</div>
 
 <h2 id="Properties">Properties</h2>
 
 <dl>
  <dt>{{domxref("AuthenticatorResponse.clientDataJSON")}}</dt>
- <dd>A <a href="/en-US/docs/Learn/JavaScript/Objects/JSON">JSON</a> string in an {{domxref("ArrayBuffer")}}, representing the client data that was passed to {{domxref("CredentialsContainer.create()")}} or {{domxref("CredentialsContainer.get()")}}.</dd>
+ <dd>A <a href="/en-US/docs/Learn/JavaScript/Objects/JSON">JSON</a> string in an {{jsxref("ArrayBuffer")}}, representing the client data that was passed to {{domxref("CredentialsContainer.create()")}} or {{domxref("CredentialsContainer.get()")}}.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
@@ -85,26 +84,11 @@ navigator.credentials.create({ publicKey })
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('WebAuthn','#authenticatorresponse', 'AuthenticatorResponse interface')}}</td>
-   <td>{{Spec2('WebAuthn')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.AuthenticatorResponse")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

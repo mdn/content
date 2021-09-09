@@ -7,6 +7,7 @@ tags:
   - Interface
   - Reference
   - Web Audio API
+browser-compat: api.AnalyserNode
 ---
 <p>{{APIRef("Web Audio API")}}</p>
 
@@ -77,19 +78,19 @@ tags:
 
 <dl>
  <dt>{{domxref("AnalyserNode.getFloatFrequencyData()")}}</dt>
- <dd>Copies the current frequency data into a {{domxref("Float32Array")}} array passed into it.</dd>
+ <dd>Copies the current frequency data into a {{jsxref("Float32Array")}} array passed into it.</dd>
  <dt>{{domxref("AnalyserNode.getByteFrequencyData()")}}</dt>
- <dd>Copies the current frequency data into a {{domxref("Uint8Array")}} (unsigned byte array) passed into it.</dd>
+ <dd>Copies the current frequency data into a {{jsxref("Uint8Array")}} (unsigned byte array) passed into it.</dd>
  <dt>{{domxref("AnalyserNode.getFloatTimeDomainData()")}}</dt>
- <dd>Copies the current waveform, or time-domain, data into a {{domxref("Float32Array")}} array passed into it.</dd>
+ <dd>Copies the current waveform, or time-domain, data into a {{jsxref("Float32Array")}} array passed into it.</dd>
  <dt>{{domxref("AnalyserNode.getByteTimeDomainData()")}}</dt>
- <dd>Copies the current waveform, or time-domain, data into a {{domxref("Uint8Array")}} (unsigned byte array) passed into it.</dd>
+ <dd>Copies the current waveform, or time-domain, data into a {{jsxref("Uint8Array")}} (unsigned byte array) passed into it.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
 <div class="note">
-<p><strong>Note</strong>: See the guide <a href="/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API">Visualizations with Web Audio API</a> for more information on creating audio visualizations.</p>
+<p><strong>Note:</strong> See the guide <a href="/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API">Visualizations with Web Audio API</a> for more information on creating audio visualizations.</p>
 </div>
 
 <h3 id="Basic_usage">Basic usage</h3>
@@ -97,14 +98,18 @@ tags:
 <p>The following example shows basic usage of an {{domxref("AudioContext")}} to create an <code>AnalyserNode</code>, then {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} and {{htmlelement("canvas")}} to collect time domain data repeatedly and draw an "oscilloscope style" output of the current audio input. For more complete applied examples/information, check out our <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> demo (see <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js lines 128–205</a> for relevant code).</p>
 
 <pre class="brush: js">var audioCtx = new(window.AudioContext || window.webkitAudioContext)();
-var analyser = audioCtx.createAnalyser();
 
 // ...
 
+var analyser = audioCtx.createAnalyser();
 analyser.fftSize = 2048;
+
 var bufferLength = analyser.frequencyBinCount;
 var dataArray = new Uint8Array(bufferLength);
 analyser.getByteTimeDomainData(dataArray);
+
+// Connect the source to be analysed
+source.connect(analyser);
 
 // Get a canvas defined with ID "oscilloscope"
 var canvas = document.getElementById("oscilloscope");
@@ -152,24 +157,11 @@ draw();
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#analysernode', 'AnalyserNode')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.AnalyserNode")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -8,14 +8,13 @@ tags:
   - Selection
   - Selection API
   - selectstart
+browser-compat: api.Document.selectstart_event
 ---
 <div>{{APIRef}}</div>
 
-<div>
 <p>The <code><strong>selectstart</strong></code> event of the <a href="/en-US/docs/Web/API/Selection">Selection API</a> is fired when a user starts a new selection.</p>
 
 <p>If the event is canceled, the selection is not changed.</p>
-</div>
 
 <table class="properties">
  <tbody>
@@ -40,7 +39,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">// addEventListener version
+<pre class="brush: js">// addEventListener version
 document.addEventListener('selectstart', () =&gt; {
   console.log('Selection started');
 });
@@ -53,24 +52,11 @@ document.onselectstart = () =&gt; {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Selection API', '#selectstart-event', 'selectstart')}}</td>
-   <td>{{Spec2('Selection API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Document.selectstart_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

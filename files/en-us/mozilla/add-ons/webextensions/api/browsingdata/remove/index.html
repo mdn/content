@@ -10,6 +10,7 @@ tags:
   - WebExtensions
   - browsingData
   - remove
+browser-compat: webextensions.api.browsingData.remove
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -44,15 +45,13 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("webextensions.api.browsingData.remove")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Examples">Examples</h2>
 
 <p>Remove download history and browsing history for the last week:</p>
 
-<pre class="notranslate brush: js">function onRemoved() {
+<pre class="brush: js">function onRemoved() {
   console.log("removed");
 }
 
@@ -74,7 +73,7 @@ then(onRemoved, onError);
 
 <p>Remove all download and browsing history:</p>
 
-<pre class="notranslate brush: js line-numbers  language-js">function onRemoved() {
+<pre class="brush: js line-numbers  language-js">function onRemoved() {
   console.log(&quot;removed&quot;);
 }
 

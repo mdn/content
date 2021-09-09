@@ -14,13 +14,16 @@ tags:
 - Settings
 - WebRTC
 - setCodecPreferences
+browser-compat: api.RTCRtpTransceiver.setCodecPreferences
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">The {{domxref("RTCRtpTransceiver")}} method
+<p>The {{domxref("RTCRtpTransceiver")}} method
     <strong><code>setCodecPreferences()</code></strong> configures the transceiver's
     codecs given a list of {{domxref("RTCRtpCodecCapability")}} objects specifying the new
-    preferences for each {{Glossary("codec")}}.</span> The specified set of codecs and
+    preferences for each {{Glossary("codec")}}.</p>
+
+<p>The specified set of codecs and
   configurations will be used for all future connections including this transceiver until
   this method is called again.</p>
 
@@ -37,7 +40,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><em>rtcRtpTransceiver</em>.setCodecPreferences(<em>codecs</em>)</pre>
+  class="brush: js"><em>rtcRtpTransceiver</em>.setCodecPreferences(<em>codecs</em>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -49,9 +52,9 @@ tags:
       <code>codecs</code> is empty, the codec configurations are all returned to the user
       agent's defaults.</p>
 
-    <div class="note"><strong>Note:</strong> Any codecs not included in
+    <div class="note"><p><strong>Note:</strong> Any codecs not included in
       <code>codecs</code> will not be considered during the process of negotiating a
-      connection. This lets you prevent the use of codecs you don't wish to use.</div>
+      connection. This lets you prevent the use of codecs you don't wish to use.</p></div>
   </dd>
 </dl>
 
@@ -95,25 +98,11 @@ var availReceiveCodecs = transceiver.receiver.getCapabilities("video").codecs;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName("WebRTC 1.0", "#dom-rtcrtptransceiver-setcodecpreferences",
-        "RTCRtpTransceiver.setCodecPreferences()")}}</td>
-      <td>{{Spec2("WebRTC 1.0")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCRtpTransceiver.setCodecPreferences")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

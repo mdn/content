@@ -15,19 +15,19 @@ tags:
 ---
 <div>{{apiref("Streams")}}</div>
 
-<p class="summary">As a JavaScript developer, programmatically reading and manipulating streams of data received over the network, chunk by chunk, is very useful! But how do you use the Streams API’s readable stream functionality? This article explains the basics.</p>
+<p>As a JavaScript developer, programmatically reading and manipulating streams of data received over the network, chunk by chunk, is very useful! But how do you use the Streams API’s readable stream functionality? This article explains the basics.</p>
 
 <div class="note">
-<p><strong>Note</strong>: This article assumes that you understand the use cases of readable streams, and are aware of the high-level concepts. If not, we suggest that you first read the <a href="/en-US/docs/Web/API/Streams_API#Concepts_and_usage">Streams concepts and usage overview</a> and dedicated <a href="/en-US/docs/Web/API/Streams_API/Concepts">Streams API concepts</a> article, then come back.</p>
+<p><strong>Note:</strong> This article assumes that you understand the use cases of readable streams, and are aware of the high-level concepts. If not, we suggest that you first read the <a href="/en-US/docs/Web/API/Streams_API#concepts_and_usage">Streams concepts and usage overview</a> and dedicated <a href="/en-US/docs/Web/API/Streams_API/Concepts">Streams API concepts</a> article, then come back.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: If you are looking for information on writable streams try <a href="/en-US/docs/Web/API/Streams_API/Using_writable_streams">Using writable streams</a> instead.</p>
+<p><strong>Note:</strong> If you are looking for information on writable streams try <a href="/en-US/docs/Web/API/Streams_API/Using_writable_streams">Using writable streams</a> instead.</p>
 </div>
 
 <h2 id="Browser_support">Browser support</h2>
 
-<p>You can consume Fetch {{domxref("Body")}} objects as streams and create your own custom readable streams in Firefox 65+ and Chrome 42+ (and equivalent Chromium-based browsers). <a href="/en-US/docs/Web/API/Streams_API/Concepts#Pipe_chains">Pipe chains</a> are only supported in Chrome at the moment, and that functionality is subject to change.</p>
+<p>You can consume Fetch body objects as streams and create your own custom readable streams in Firefox 65+ and Chrome 42+ (and equivalent Chromium-based browsers). <a href="/en-US/docs/Web/API/Streams_API/Concepts#pipe_chains">Pipe chains</a> are only supported in Chrome at the moment, and that functionality is subject to change.</p>
 
 <h2 id="Finding_some_examples">Finding some examples</h2>
 
@@ -37,7 +37,7 @@ tags:
 
 <p>The <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> allows you to fetch resources across the network, providing a modern alternative to <a href="/en-US/docs/Web/API/XMLHttpRequest">XHR</a>. It has a number of advantages, and what is really nice about it is that browsers have recently added the ability to consume a fetch response as a readable stream.</p>
 
-<p>The {{domxref("Body")}} mixin now includes the {{domxref("Body.body","body")}} property, which is a simple getter exposing the body contents as a readable stream. This mixin is implemented by both the {{domxref("Request")}} and {{domxref("Response")}} interfaces, so it is available on both, although consuming the stream of a response body is perhaps a bit more obvious.</p>
+<p>The {{domxref("Request.body")}} and {{domxref("Response.body")}} properties are available, which are getters exposing the body contents as a readable stream.</p>
 
 <p>As our <a href="https://github.com/mdn/dom-examples/tree/master/streams/simple-pump">Simple stream pump</a> example shows (<a href="https://mdn.github.io/dom-examples/streams/simple-pump/">see it live also</a>), exposing it is a matter of just accessing the <code>body</code> property of the response:</p>
 
@@ -57,7 +57,10 @@ fetch('./tortoise.png')
 // Retrieve its body as ReadableStream
 .then(response =&gt; response.body)
 .then(body =&gt; {
-  const reader = body.getReader();</pre>
+  const reader = body.getReader();
+  // ...
+  });
+</pre>
 
 <p>Invoking this method creates a reader and locks it to the stream — no other reader may read this stream until this reader is released, e.g. by invoking {{domxref("ReadableStreamDefaultReader.releaseLock()")}}.</p>
 
@@ -67,7 +70,10 @@ fetch('./tortoise.png')
   fetch('./tortoise.png')
   // Retrieve its body as ReadableStream
   .then(response =&gt; {
-    const reader = response.body.getReader();</pre>
+    const reader = response.body.getReader();
+    // ...
+  });
+</pre>
 
 <h3 id="Reading_the_stream">Reading the stream</h3>
 
@@ -117,7 +123,7 @@ fetch('./tortoise.png')
 }</pre>
 
 <div class="note">
-<p><strong>Note</strong>: <code>close()</code> is part of the new custom stream, not the original stream we are discussing here. We’ll explain more about the custom stream in the next section.</p>
+<p><strong>Note:</strong> <code>close()</code> is part of the new custom stream, not the original stream we are discussing here. We’ll explain more about the custom stream in the next section.</p>
 </div>
 
 <p>If <code>done</code> is not <code>true</code>, we process the new chunk we’ve read (contained in the <code>value</code> property of the results object) and then call the <code>pump()</code> function again to read the next chunk.</p>
@@ -162,7 +168,7 @@ return pump();</pre>
   size()
 });</pre>
 
-<p>The constructor takes two objects as parameters. The first object is required, and creates a model in JavaScript of the underlying source the data is being read from. The second object is optional, and allows you to specify a <a href="/en-US/docs/Web/API/Streams_API/Concepts#Internal_queues_and_queuing_strategies">custom queuing strategy</a> to use for your stream. You’ll rarely have to do this, so we’ll just concentrate on the first one for now.</p>
+<p>The constructor takes two objects as parameters. The first object is required, and creates a model in JavaScript of the underlying source the data is being read from. The second object is optional, and allows you to specify a <a href="/en-US/docs/Web/API/Streams_API/Concepts#internal_queues_and_queuing_strategies">custom queuing strategy</a> to use for your stream. You’ll rarely have to do this, so we’ll just concentrate on the first one for now.</p>
 
 <p>The first object can contain up to five members, only the first of which is required:</p>
 
@@ -219,7 +225,7 @@ return pump();</pre>
 <p><strong>Note:</strong> In order to consume a stream using {{domxref("FetchEvent.respondWith()")}}, the enqueued stream contents must be of type {{jsxref("Uint8Array")}}; for example, encoded using {{domxref("TextEncoder")}}.</p>
 </div>
 
-<p>The custom stream constructor has a <code>start()</code> method that uses a {{domxref("WindowTimers.setInterval()")}} call to generate a random string every second. {{domxref("ReadableStreamDefaultController.enqueue()")}} is then used to enqueue it into the stream. When the button is pressed, the interval is cancelled, and a function called <code>readStream()</code> is invoked to read the data back out of the stream again. We also close the stream, as we’ve stopped enqueuing chunks to it.</p>
+<p>The custom stream constructor has a <code>start()</code> method that uses a {{domxref("setInterval()")}} call to generate a random string every second. {{domxref("ReadableStreamDefaultController.enqueue()")}} is then used to enqueue it into the stream. When the button is pressed, the interval is cancelled, and a function called <code>readStream()</code> is invoked to read the data back out of the stream again. We also close the stream, as we’ve stopped enqueuing chunks to it.</p>
 
 <pre class="brush: js">const stream = new ReadableStream({
   start(controller) {
@@ -253,6 +259,7 @@ return pump();</pre>
 <pre class="brush: js">function readStream() {
   const reader = stream.getReader();
   let charsReceived = 0;
+  let result = '';
 
   // read() returns a promise that resolves
   // when a value has been received
@@ -301,11 +308,11 @@ return pump();</pre>
 
 <h2 id="Pipe_chains">Pipe chains</h2>
 
-<p>One very experimental feature of streams is the ability to pipe streams into one another (called a <a href="/en-US/docs/Web/API/Streams_API/Concepts#Pipe_chains">pipe chain</a>). This involves two methods — {{domxref("ReadableStream.pipeThrough()")}}, which pipes a readable stream through a writer/reader pair to transform one data format into another, and {{domxref("ReadableStream.pipeTo()")}}, which pipes a readable stream to a writer acting as an end point for the pipe chain.</p>
+<p>One very experimental feature of streams is the ability to pipe streams into one another (called a <a href="/en-US/docs/Web/API/Streams_API/Concepts#pipe_chains">pipe chain</a>). This involves two methods — {{domxref("ReadableStream.pipeThrough()")}}, which pipes a readable stream through a writer/reader pair to transform one data format into another, and {{domxref("ReadableStream.pipeTo()")}}, which pipes a readable stream to a writer acting as an end point for the pipe chain.</p>
 
 <p>This functionality is at a very experimental stage and is subject to change, so we have no explored it too deeply as of yet.</p>
 
-<p>We have created an example called <a href="https://github.com/mdn/dom-examples/tree/master/streams/png-transform-stream">Unpack Chunks of a PNG</a> (<a href="https://mdn.github.io/dom-examples/streams/png-transform-stream/">see it live also</a>) that fetches an image as a stream, then pipes it through to a custom PNG transform stream <span class="pl-c">that retrieves PNG chunks out of a binary data stream.</span></p>
+<p>We have created an example called <a href="https://github.com/mdn/dom-examples/tree/master/streams/png-transform-stream">Unpack Chunks of a PNG</a> (<a href="https://mdn.github.io/dom-examples/streams/png-transform-stream/">see it live also</a>) that fetches an image as a stream, then pipes it through to a custom PNG transform stream that retrieves PNG chunks out of a binary data stream.</p>
 
 <pre class="brush: js">// Fetch the original image
 fetch('png-logo.png')

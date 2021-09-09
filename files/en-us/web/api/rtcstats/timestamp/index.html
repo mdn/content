@@ -13,12 +13,15 @@ tags:
 - WebRTC API
 - rtc
 - timeStamp
+browser-compat: api.RTCStats.timestamp
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">The <code><strong>timestamp</strong></code> property of the
+<p>The <code><strong>timestamp</strong></code> property of the
     {{domxref("RTCStats")}} dictionary is a {{domxref("DOMHighResTimeStamp")}} object
-    specifying the time at which the data in the object was sampled.</span> For reports
+    specifying the time at which the data in the object was sampled.</p>
+
+<p>For reports
   related to RTCP packets, for instance, this indicates the time at which the data covered
   by the statistics was received at the corresponding endpoint.</p>
 
@@ -28,7 +31,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>timestamp</em> = <em>RTCStats</em>.timestamp;</pre>
+  class="brush: js">var <em>timestamp</em> = <em>RTCStats</em>.timestamp;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -41,21 +44,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebRTC 1.0', '#dom-rtcstats-timestamp', 'RTCStats.timestamp')}}</td>
-      <td>{{Spec2('WebRTC 1.0')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCStats.timestamp")}}</p>
+<p>{{Compat}}</p>

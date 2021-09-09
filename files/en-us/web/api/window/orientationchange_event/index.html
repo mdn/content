@@ -8,10 +8,14 @@ tags:
   - Sensors
   - Window
   - onorientationchange
+browser-compat: api.Window.orientationchange_event
 ---
-<div>{{APIRef}}</div>
+<div>{{APIRef}} {{Deprecated_Header}}</div>
 
 <p>The <code>orientationchange</code> event is fired when the orientation of the device has changed.</p>
+
+<p>This event is deprecated. Listen for the {{domxref("ScreenOrientation/change_event", "change")}} event instead.</p>
+
 
 <table class="properties">
  <tbody>
@@ -38,34 +42,21 @@ tags:
 
 <p>You can use the <code>orientationchange</code> event in an {{domxref("EventTarget/addEventListener", "addEventListener")}} method:</p>
 
-<pre class="brush:js notranslate">window.addEventListener("orientationchange", function(event) {
+<pre class="brush:js">window.addEventListener("orientationchange", function(event) {
   console.log("the orientation of the device is now " + event.target.screen.orientation.angle);
 });
 </pre>
 
 <p>Or use the {{domxref("Window/onorientationchange", "onorientationchange")}} event handler property:</p>
 
-<pre class="brush: js notranslate">window.onorientationchange = function(event) {
+<pre class="brush: js">window.onorientationchange = function(event) {
   console.log("the orientation of the device is now " + event.target.screen.orientation.angle);
 };</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Compat', '#event-orientationchange', 'orientationchange')}}</td>
-   <td>{{Spec2('Compat')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Window.orientationchange_event")}}</p>
+<p>{{Compat}}</p>

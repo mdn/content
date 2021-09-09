@@ -10,13 +10,15 @@ tags:
 - Property
 - Reference
 - srcObject
+browser-compat: api.HTMLMediaElement.srcObject
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p><span class="seoSummary">The <strong><code>srcObject</code></strong> property of the
+<p>The <strong><code>srcObject</code></strong> property of the
     {{domxref("HTMLMediaElement")}} interface sets or returns the object which serves as
-    the source of the media associated with the {{domxref("HTMLMediaElement")}}.</span>
-  The object can be a {{domxref("MediaStream")}}, a {{domxref("MediaSource")}}, a
+    the source of the media associated with the {{domxref("HTMLMediaElement")}}.</p>
+
+<p>The object can be a {{domxref("MediaStream")}}, a {{domxref("MediaSource")}}, a
   {{domxref("Blob")}}, or a {{domxref("File")}} (which inherits from <code>Blob</code>).
 </p>
 
@@ -30,7 +32,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>sourceObject</em> = <em>HTMLMediaElement</em>.srcObject;
+<pre class="brush: js">var <em>sourceObject</em> = <em>HTMLMediaElement</em>.srcObject;
 
 <em>HTMLMediaElement</em>.srcObject = <em>sourceObject</em>;
 </pre>
@@ -109,22 +111,8 @@ if ('srcObject' in video) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', 'embedded-content.html#dom-media-srcobject',
-        'srcObject')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLMediaElement.srcObject")}}</p>
+<p>{{Compat}}</p>

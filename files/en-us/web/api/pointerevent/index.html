@@ -9,6 +9,7 @@ tags:
   - PointerEvent
   - Reference
   - events
+browser-compat: api.PointerEvent
 ---
 <p>{{ APIRef("Pointer Events") }}</p>
 
@@ -65,7 +66,7 @@ tags:
 
 <p>The <code>PointerEvent</code> interface has several event types. To determine which event fired, look at the event's {{ domxref("Event.type", "type") }} property.</p>
 
-<div class="note"><strong>Note:</strong> It's important to note that in many cases, both pointer and mouse events get sent (in order to let non-pointer-specific code still interact with the user). If you use pointer events, you should call {{ domxref("event.preventDefault()") }} to keep the mouse event from being sent as well.</div>
+<div class="note"><p><strong>Note:</strong> It's important to note that in many cases, both pointer and mouse events get sent (in order to let non-pointer-specific code still interact with the user). If you use pointer events, you should call {{ domxref("event.preventDefault()") }} to keep the mouse event from being sent as well.</p></div>
 
 <dl>
  <dt>{{event('pointerover')}}</dt>
@@ -119,36 +120,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Pointer Events 3','#pointerevent-interface', 'PointerEvent')}}</td>
-   <td>{{Spec2('Pointer Events 3')}}</td>
-   <td>Added the {{DOMxRef('PointerEvent.getCoalescedEvents()', 'getCoalescedEvents()')}} and {{DOMxRef('PointerEvent.getPredictedEvents()', 'getPredictedEvents()')}} methods and {{Event('pointerrawupdate')}} event.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Pointer Events 2','#pointerevent-interface', 'PointerEvent')}}</td>
-   <td>{{Spec2('Pointer Events 2')}}</td>
-   <td>Added the {{DOMxRef('PointerEvent.twist', 'twist')}} and {{DOMxRef('PointerEvent.tangentialPressure', 'tangentialPressure')}} properties.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Pointer Events', '#pointerevent-interface', 'PointerEvent')}}</td>
-   <td>{{Spec2('Pointer Events')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.PointerEvent")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

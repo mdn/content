@@ -9,11 +9,12 @@ tags:
 - Property
 - Read-only
 - Reference
+browser-compat: api.MouseEvent.altKey
 ---
 <div>{{APIRef("DOM Events")}}</div>
 
 <p>The <strong><code>MouseEvent.altKey</code></strong> read-only property is a
-  {{jsxref("Boolean")}} that indicates whether the <kbd>alt</kbd> key was pressed or not
+  boolean value that indicates whether the <kbd>alt</kbd> key was pressed or not
   when a given mouse event occurs.</p>
 
 <p>Be aware that the browser can't always detect the <kbd>alt</kbd> key on some operating
@@ -27,12 +28,12 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>altKeyPressed</em> = <em>instanceOfMouseEvent</em>.altKey
+<pre class="brush: js">var <em>altKeyPressed</em> = <em>instanceOfMouseEvent</em>.altKey
 </pre>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{jsxref("Boolean")}}, where <code>true</code> indicates that the key is pressed, and
+<p>A boolean value, where <code>true</code> indicates that the key is pressed, and
   <code>false</code> indicates that the key is <em>not</em> pressed.</p>
 
 <h2 id="Example">Example</h2>
@@ -60,29 +61,11 @@ function logKey(e) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('DOM3 Events','#widl-MouseEvent-altKey','MouseEvent.altkey')}}</td>
-      <td>{{Spec2('DOM3 Events')}}</td>
-      <td>No change from {{SpecName('DOM2 Events')}}.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('DOM2 Events','#Events-MouseEvent','MouseEvent.altkey')}}</td>
-      <td>{{Spec2('DOM2 Events')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MouseEvent.altKey")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

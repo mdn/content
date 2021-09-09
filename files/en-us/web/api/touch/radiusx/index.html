@@ -8,6 +8,7 @@ tags:
   - Mobile
   - Property
   - touch
+browser-compat: api.Touch.radiusX
 ---
 <p>{{ APIRef("Touch Events") }}</p>
 
@@ -37,7 +38,7 @@ tags:
 
 <p>This example illustrates using the {{domxref("Touch")}} interface's {{domxref("Touch.radiusX")}}, {{domxref("Touch.radiusX")}} and {{domxref("Touch.rotationAngle")}} properties. The {{domxref("Touch.radiusX")}} property is the radius of the ellipse which most closely circumscribes the touching area (e.g. finger, stylus) along the axis <strong>indicated</strong> by the touch point's {{domxref("Touch.rotationAngle")}}. Likewise, the {{domxref("Touch.radiusY")}} property is the radius of the ellipse which most closely circumscribes the touching area (e.g. finger, stylus) along the axis <strong>perpendicular</strong> to that indicated by {{domxref("Touch.rotationAngle")}}. The {{domxref("Touch.rotationAngle")}} is the angle (in degrees) that the ellipse described by <code>radiusX</code> and <code>radiusY</code> is rotated clockwise about its center.</p>
 
-<p>The following simple code snippet, registers a single handler for the {{event("touchstart")}}, {{event("touchmove")}} and {{event("touchend")}} events. When the <code>src</code> element is touched, the element's width and height will be calculate based on the touch point's <code>radiusX</code> and <code>radiusY</code> values and the element will then be rotated using the touch point's <code>rotationAngle</code>.</p>
+<p>The following simple code snippet, registers a single handler for the {{domxref("Document/touchstart_event", "touchstart")}}, {{event("touchmove")}} and {{event("touchend")}} events. When the <code>src</code> element is touched, the element's width and height will be calculate based on the touch point's <code>radiusX</code> and <code>radiusY</code> values and the element will then be rotated using the touch point's <code>rotationAngle</code>.</p>
 
 <pre class="brush: html">&lt;div id="src"&gt; ... &lt;/div&gt;
 </pre>
@@ -63,21 +64,8 @@ function rotate (e) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Touch Events 2','#dom-touch-radiusx')}}</td>
-   <td>{{Spec2('Touch Events 2')}}</td>
-   <td>Non-stable version.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Touch.radiusX")}}</p>
+<p>{{Compat}}</p>

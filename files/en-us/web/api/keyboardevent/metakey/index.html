@@ -8,11 +8,12 @@ tags:
 - Property
 - Read-only
 - Reference
+browser-compat: api.KeyboardEvent.metaKey
 ---
 <div>{{APIRef("DOM Events")}}</div>
 
 <p>The <strong><code>KeyboardEvent.metaKey</code></strong> read-only property returning a
-  {{jsxref("Boolean")}} that indicates if the <kbd>Meta</kbd> key was pressed
+  boolean value that indicates if the <kbd>Meta</kbd> key was pressed
   (<code>true</code>) or not (<code>false</code>) when the event occurred. Some operating
   systems may intercept the key so it is never detected.</p>
 
@@ -22,53 +23,43 @@ tags:
 </div>
 
 <div class="warning">
-  <p>At least as of Firefox 48, the <kbd>⊞ Windows</kbd> key is no longer considered the
+  <p><strong>Warning:</strong> At least as of Firefox 48, the <kbd>⊞ Windows</kbd> key is no longer considered the
     "Meta" key. <code>KeyboardEvent.metaKey</code> is <code>false</code> when the <kbd>⊞
       Windows</kbd> key is pressed.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>metaKeyPressed</em> = <em>instanceOfKeyboardEvent</em>.metaKey
+<pre class="brush: js">var <em>metaKeyPressed</em> = <em>instanceOfKeyboardEvent</em>.metaKey
 </pre>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{jsxref("Boolean")}}</p>
+<p>A boolean value</p>
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js notranslate">function ismetaKey(e) {
-  alert("metaKey = " + e.metaKey);
+<pre class="brush: html">&lt;button onclick="ismetaKey(event)"&gt;Click me with the meta key&lt;/button&gt;
+
+&lt;p id="output"&gt;&lt;/p&gt;
+</pre>
+
+<pre class="brush: js">function ismetaKey(e) {
+  document.querySelector("#output").textContent = "metaKey pressed? " + e.metaKey;
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;button onclick="ismetaKey(event)"&gt;Click me with the meta key&lt;/button&gt;
-</pre>
+<h4 id="Result">Result</h4>
 
-<p>{{ EmbedLiveSample('Example', 400, 36) }}</p>
+<p>{{ EmbedLiveSample('Example', 400, 90) }}</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('DOM3
-        Events','#widl-KeyboardEvent-metaKey','KeyboardEvent.metaKey')}}</td>
-      <td>{{Spec2('DOM3 Events')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.KeyboardEvent.metaKey")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

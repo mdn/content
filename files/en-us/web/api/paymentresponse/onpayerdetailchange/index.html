@@ -15,18 +15,19 @@ tags:
 - onpayerdetailchange
 - payment
 - validate
+browser-compat: api.PaymentResponse.onpayerdetailchange
 ---
-<div>{{securecontext_header}}{{APIRef("Payment Request API")}}</div>
+<div>{{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}</div>
 
-<p><span class="seoSummary">The {{domxref("PaymentResponse")}} object's
+<p>The {{domxref("PaymentResponse")}} object's
     <code><strong>onpayerdetailchange</strong></code> property is an event handler which
     is called to handle the {{event("payerdetailchange")}} event, which is sent to the
     <code>PaymentResponse</code> when the user makes changes to their personal information
-    while filling out a payment request form.</span></p>
+    while filling out a payment request form.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>paymentResponse</em>.onpayerdetailchange = <em>eventHandlerFunction</em>;
+<pre class="brush: js"><em>paymentResponse</em>.onpayerdetailchange = <em>eventHandlerFunction</em>;
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -41,7 +42,7 @@ tags:
   the {{event("payerdetailchange")}} event in order to validate the information entered by
   the user, requesting that any mistakes be corrected</p>
 
-<pre class="brush:JS">// Options for PaymentRequest(), indicating that shipping address,
+<pre class="brush: js">// Options for PaymentRequest(), indicating that shipping address,
 // payer email address, name, and phone number all be collected.
 
 const options = {
@@ -111,24 +112,6 @@ await response.retry({
 });
 </pre>
 
-<h2 id="Specifications">Specifications</h2>
-
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Payment', '#dom-paymentresponse-onpayerdetailchange',
-        'onpayerdetailchange')}}</td>
-      <td>{{Spec2('Payment')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
-
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.PaymentResponse.onpayerdetailchange")}}</p>
+<p>{{Compat}}</p>

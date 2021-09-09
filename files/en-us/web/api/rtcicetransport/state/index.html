@@ -16,20 +16,21 @@ tags:
 - WebRTC
 - WebRTC API
 - state
+browser-compat: api.RTCIceTransport.state
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">The read-only <strong>{{domxref("RTCIceTransport")}}</strong>
+<p>The read-only <strong>{{domxref("RTCIceTransport")}}</strong>
     property <strong><code>state</code></strong> returns the current state of the ICE
     transport, so you can determine the state of ICE gathering in which the ICE agent
-    currently is operating.</span></p>
+    currently is operating.</p>
 
 <p>This differs from the {{domxref("RTCIceTransport.gatheringState", "gatheringState")}},
   which only indicates whether or not ICE gathering is currently underway.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>iceState</em> = <em>iceTransport</em>.state;
+<pre class="brush: js"><em>iceState</em> = <em>iceTransport</em>.state;
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -42,21 +43,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebRTC 1.0', '#rtcicetransportstate', 'RTCIceTransportState')}}</td>
-      <td>{{Spec2('WebRTC 1.0')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCIceTransport.state")}}</p>
+<p>{{Compat}}</p>

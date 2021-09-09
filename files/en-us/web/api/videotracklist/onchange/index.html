@@ -15,13 +15,14 @@ tags:
 - addTrack
 - onchange
 - track
+browser-compat: api.VideoTrackList.onchange
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p><span class="seoSummary">The <strong>{{domxref("VideoTrackList")}}</strong> property
+<p>The <strong>{{domxref("VideoTrackList")}}</strong> property
     <strong><code>onchange</code></strong> is an event handler which is called when the
     {{event("change")}} event occurs, indicating that a {{domxref("VideoTrack")}} in the
-    <code>VideoTrackList</code> has been made active.</span></p>
+    <code>VideoTrackList</code> has been made active.</p>
 
 <p>The event is passed into the event handler in the form of an {{domxref("Event")}}
   object; the event doesn't provide any additional information. To determine the new state
@@ -36,7 +37,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><em>VideoTrackList</em>.onchange = <em>eventHandler</em>;</pre>
+  class="brush: js"><em>VideoTrackList</em>.onchange = <em>eventHandler</em>;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -66,24 +67,8 @@ trackList.onchange = function(event) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', '#handler-tracklist-onchange', 'VideoTrackList:
-        onchange')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.VideoTrackList.onchange")}}</p>
+<p>{{Compat}}</p>

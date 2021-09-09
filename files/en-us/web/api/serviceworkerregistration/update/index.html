@@ -8,6 +8,7 @@ tags:
 - Service Workers
 - ServiceWorkerRegistration
 - Update
+browser-compat: api.ServiceWorkerRegistration.update
 ---
 <div>{{APIRef("Service Workers API")}}</div>
 
@@ -18,13 +19,13 @@ tags:
   bypasses any browser caches if the previous fetch occurred over 24 hours ago.</p>
 
 <div class="note">
-  <p><strong>Note</strong>: This feature is available in <a
+  <p><strong>Note:</strong> This feature is available in <a
       href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>serviceWorkerRegistration</em>.update();</pre>
+<pre class="brush: js"><em>serviceWorkerRegistration</em>.update();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -41,7 +42,7 @@ tags:
   handler to a button so you can explicitly update the service worker whenever desired:
 </p>
 
-<pre class="brush: js notranslate">if ('serviceWorker' in navigator) {
+<pre class="brush: js">if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/sw-test/sw.js', {scope: 'sw-test'}).then(function(registration) {
     // registration worked
     console.log('Registration succeeded.');
@@ -56,25 +57,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Service Workers', '#service-worker-registration-update',
-        'ServiceWorkerRegistration.update()')}}</td>
-      <td>{{Spec2('Service Workers')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ServiceWorkerRegistration.update")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -14,13 +14,14 @@ tags:
 - Property
 - Reference
 - validationURL
+browser-compat: api.MerchantValidationEvent.validationURL
 ---
 <p>{{deprecated_header}}{{non-standard_header}}{{securecontext_header}}</p>
 
-<p><span class="seoSummary">The {{domxref("MerchantValidationEvent")}} property
+<p>The {{domxref("MerchantValidationEvent")}} property
     <strong><code>validationURL</code></strong> is a read-only string value providing the
     URL from which to fetch the payment handler-specific data needed to validate the
-    merchant.</span></p>
+    merchant.</p>
 
 <p>This data should be passed into the {{domxref("MerchantValidationEvent.complete",
   "complete()")}} method to let the user agent complete the transaction.</p>
@@ -28,7 +29,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><em>validationURL</em> = <em>merchantValidationEvent</em>.validationURL;</pre>
+  class="brush: js"><em>validationURL</em> = <em>merchantValidationEvent</em>.validationURL;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -42,7 +43,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MerchantValidationEvent.validationURL")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

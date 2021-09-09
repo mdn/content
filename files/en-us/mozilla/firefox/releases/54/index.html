@@ -30,7 +30,7 @@ tags:
  <li>Previously, an element styled with {{cssxref("display")}}:<code> inline-block</code> with a child element of type {{domxref("HTMLInputElement")}} styled with <code>display:block</code> had a wrong baseline ({{bug(1330962)}}). This is now fixed.</li>
  <li>When Mozilla introduced dedicated content threads to Firefox (through the Electrolysis or e10s project), support for styling {{HTMLElement("option")}} elements was removed temporarily. Starting in Firefox 54, you can apply foreground and background colors to <code>&lt;option&gt;</code> elements again, using the {{cssxref("color")}} and {{cssxref("background-color")}} attributes. See {{bug(910022)}} for more information. Note that this is still disabled in Linux due to lack of contrast (see {{bug(1338283)}} for progress on this).</li>
  <li><a href="/en-US/docs/Web/CSS/CSS_Animations">CSS Animations</a> now send the {{event("animationcancel")}} event as expected when an animation aborts prematurely ({{bug(1302648)}}).</li>
- <li>Transparent colors (i.e. those with an alpha channel of 0) were being serialized to the <a href="/en-US/docs/Web/CSS/color_value#transparent_keyword"><code>transparent</code> color keyword</a> in <a href="https://www.fxsitecompat.com/en-CA/docs/2017/transparent-rgba-colour-values-are-no-longer-serialized-to-transparent-keyword/">certain situations</a>; this has been fixed so that Firefox follows the spec (as well as other browsers' implementations). See ({{bug("1339394")}} for further information.</li>
+ <li>Transparent colors (i.e. those with an alpha channel of 0) were being serialized to the <a href="/en-US/docs/Web/CSS/color_value#transparent_keyword"><code>transparent</code> color keyword</a> in certain situations; this has been fixed so that Firefox follows the spec (as well as other browsers' implementations). See ({{bug("1339394")}} for further information.</li>
  <li>The proprietary <code>:-moz-table-border-nonzero</code> pseudo-class is no longer available to web content; it is now restricted to Firefox's internal UA stylesheet ({{bug(1341925)}}).</li>
  <li>[css-grid] Intrinsic content with overflow:auto overlaps in grid ({{bug(1348857)}}).</li>
  <li>[css-grid] Transferred min-size contribution of percentage size grid item with an intrinsic ratio ({{bug(1349320)}}).</li>
@@ -59,7 +59,7 @@ tags:
 
 <ul>
  <li>{{domxref("WorkerGlobalScope.close")}} is now available on {{domxref("DedicatedWorkerGlobalScope.close", "DedicatedWorkerGlobalScope")}} and {{domxref("SharedWorkerGlobalScope.close", "SharedWorkerGlobalScope")}} instead. This change was made to stop <code>close()</code> being available on service workers, as it isn't supposed to be used there and always throws an exception when called (see {{bug(1336043)}}).</li>
- <li>The {{domxref("WindowOrWorkerGlobalScope.origin")}} property has been implemented (see {{bug(1306170)}}).</li>
+ <li>The {{domxref("origin")}} property has been implemented (see {{bug(1306170)}}).</li>
  <li>The {{domxref("Client.type")}} property has been implemented (see {{bug(1339844)}}).</li>
  <li>{{domxref("Clients.matchAll()")}} now returns {{domxref("Client")}} objects in most recently focused order (see {{bug(1266747)}}).</li>
  <li>Some changes have been made to the observed behavior when the {{domxref("Request.Request","Request()")}} constructor is passed an existing {{domxref("Request")}} object instance to make a new instance. The following new behaviors are designed to retain security while making the constructor less likely to throw exceptions:
@@ -118,12 +118,6 @@ tags:
 
 <ul>
  <li>HTTP/1 Pipelining support has been removed in Firefox 54. Maintaining it as we make the move into a new world full of HTTP/2 and other substantial, standardized improvements to networking performance is not worthwhile given pipelining's compatibility and performance issues. The <code>network.http.pipelining</code> preference (as well as the other preferences that start with "network.http.pipelining") is now ignored. See {{bug(1340655)}} for further information.</li>
-</ul>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="https://www.fxsitecompat.com/en-US/versions/54">Site Compatibility for Firefox 54</a></li>
 </ul>
 
 <h2 id="Older_versions">Older versions</h2>

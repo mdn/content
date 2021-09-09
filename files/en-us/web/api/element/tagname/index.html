@@ -12,18 +12,21 @@ tags:
 - Read-only
 - Reference
 - tagName
+browser-compat: api.Element.tagName
 ---
 <div>{{ApiRef("DOM")}}</div>
 
-<p><span class="seoSummary">The <strong><code>tagName</code></strong> read-only property
+<p>The <strong><code>tagName</code></strong> read-only property
     of the {{domxref("Element")}} interface returns the tag name of the element on which
-    it's called.</span> For example, if the element is an {{HTMLElement("img")}}, its
+    it's called.</p>
+
+<p>For example, if the element is an {{HTMLElement("img")}}, its
   <code>tagName</code> property is <code>"IMG"</code> (for HTML documents; it may be cased
   differently for XML/XHTML documents).</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>elementName</em> = <em>Element</em>.tagName;
+<pre class="brush: js"><em>elementName</em> = <em>Element</em>.tagName;
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -65,21 +68,8 @@ console.log(span.tagName);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th>Specification</th>
-      <th>Status</th>
-      <th>Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('DOM WHATWG', '#dom-element-tagname', 'Element: tagName')}}</td>
-      <td>{{Spec2('DOM WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Element.tagName")}}</p>
+<p>{{Compat}}</p>

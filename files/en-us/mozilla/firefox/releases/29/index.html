@@ -15,7 +15,7 @@ tags:
 
 <ul>
  <li>Vastly improved web console - Arrays are shown inline without clicking to bring up in the right inspector, window objects show their url, etc.</li>
- <li>Added the <a href="/en-US/docs/Web/API/Console">console API</a> to Web Workers (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=620935">bug 620935</a>). Now you can log messages to the Web Console from Web Workers.</li>
+ <li>Added the <a href="/en-US/docs/Web/API/Console_API">console API</a> to Web Workers (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=620935">bug 620935</a>). Now you can log messages to the Web Console from Web Workers.</li>
  <li>The <a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a> tool now shows performance statistics using pie charts ({{bug(846601)}}).</li>
  <li>On the <a href="/en-US/docs/Tools/Page_Inspector">Inspector</a>, preview tooltips of CSS transforms are now available ({{bug(726427)}}).</li>
  <li>DOM elements seen in the debugger and console can be removed or inspected directly, via the new buttons to the right of the variable listing.</li>
@@ -51,7 +51,7 @@ tags:
 
 <ul>
  <li>New ECMAScript 2015 String methods: {{jsxref("String.prototype.codePointAt()")}} and {{jsxref("String.prototype.fromCodePoint()")}} have been implemented ({{bug("918879")}}).</li>
- <li>The <a href="http://www.ecma-international.org/ecma-402/1.0/">ECMAScript Internationalization API (ECMA-402)</a> has been implemented and is now enabled by default in Firefox Desktop ({{bug("853301")}}):
+ <li>The <a href="https://www.ecma-international.org/ecma-402/1.0/">ECMAScript Internationalization API (ECMA-402)</a> has been implemented and is now enabled by default in Firefox Desktop ({{bug("853301")}}):
   <ul>
    <li>New objects in the new {{jsxref("Intl")}} object namespace:
     <ul>
@@ -93,7 +93,7 @@ tags:
  <li>The deprecated {{domxref("Window.pkcs11")}} property has been removed; it was returning <code>null</code> since Firefox 3.0.14. ({{bug(964964)}})</li>
  <li>The {{domxref("Node.cloneNode()")}} and {{domxref("Document.importNode()")}} methods take the Boolean <code>deep</code> argument. Until now, if omitted, these methods acted as if the value of <code>deep</code> was <code>true</code>. But this behavior has been changed as per the latest spec, and if omitted, the methods will act as if the value was <code>false</code>. ({{bug(937461)}})</li>
  <li>{{domxref("Window._content")}} is no longer available to Web content ({{bug(946564)}}).</li>
- <li>{{domxref("HTMLHyperlinkElementUtils/port", "URLUtils.port")}} behavior has been slightly changed: set to <code>''</code> will set it to the default port associated with the protocol, and <code>0</code> to <code>0.</code> ({{bug(930450)}})</li>
+ <li>{{domxref("HTMLAnchorElement/port", "URLUtils.port")}} behavior has been slightly changed: set to <code>''</code> will set it to the default port associated with the protocol, and <code>0</code> to <code>0.</code> ({{bug(930450)}})</li>
  <li>{{domxref("Document.referrer")}} is now based on the incumbent script ({{bug(887928)}}).</li>
  <li>The <a href="/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API">Gamepad API</a> is enabled by default ({{bug(878828)}}).</li>
  <li>The {{domxref("CanvasRenderingContext2D.drawSystemFocusRing()")}} method got renamed to {{domxref("CanvasRenderingContext2D.drawFocusIfNeeded()")}} ({{bug(959820)}}).</li>
@@ -121,12 +121,6 @@ tags:
 </ul>
 
 <p>Non-Australis changes TBD.</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="https://www.fxsitecompat.com/en-US/versions/29/">Site Compatibility for Firefox 29</a></li>
-</ul>
 
 <h3 id="Older_versions">Older versions</h3>
 

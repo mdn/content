@@ -11,6 +11,7 @@ tags:
   - WebExtensions
   - browserAction
   - setBadgeBackgroundColor
+browser-compat: webextensions.api.browserAction.setBadgeBackgroundColor
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -57,9 +58,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("webextensions.api.browserAction.setBadgeBackgroundColor",2)}}</p>
+<p>{{Compat}}</p>
 
 <p>The default color in Firefox is: <code>[217, 0, 0, 255]</code>.</p>
 
@@ -67,7 +66,7 @@ tags:
 
 <p>A background color that starts off as red, and turns green when the browser action is clicked:</p>
 
-<pre class="notranslate brush: js">browser.browserAction.setBadgeText({text: "1234"});
+<pre class="brush: js">browser.browserAction.setBadgeText({text: "1234"});
 browser.browserAction.setBadgeBackgroundColor({color: "red"});
 
 browser.browserAction.onClicked.addListener(()=&gt; {
@@ -76,7 +75,7 @@ browser.browserAction.onClicked.addListener(()=&gt; {
 
 <p>Set the badge background color only for the active tab:</p>
 
-<pre class="notranslate brush: js">browser.browserAction.setBadgeText({text: "1234"});
+<pre class="brush: js">browser.browserAction.setBadgeText({text: "1234"});
 browser.browserAction.setBadgeBackgroundColor({color: "red"});
 
 browser.browserAction.onClicked.addListener((tab)=&gt; {

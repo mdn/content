@@ -8,6 +8,7 @@ tags:
   - Media Queries
   - MediaQueryListEvent
   - Reference
+browser-compat: api.MediaQueryListEvent
 ---
 <p>{{APIRef("CSSOM")}}</p>
 
@@ -17,7 +18,7 @@ tags:
 
 <dl>
  <dt>{{DOMxRef("MediaQueryListEvent.MediaQueryListEvent()", "MediaQueryListEvent()")}}</dt>
- <dd> Creates a new <code>MediaQueryListEvent</code> instance.</dd>
+ <dd>Creates a new <code>MediaQueryListEvent</code> instance.</dd>
 </dl>
 
 <h2 id="Properties">Properties</h2>
@@ -26,9 +27,9 @@ tags:
 
 <dl>
  <dt>{{DOMxRef("MediaQueryListEvent.matches")}}{{ReadOnlyInline}}</dt>
- <dd> A {{DOMxRef("Boolean")}} that returns <code>true</code> if the {{DOMxRef("document")}} currently matches the media query list, or <code>false</code> if not.</dd>
+ <dd>A boolean value that is <code>true</code> if the {{DOMxRef("document")}} currently matches the media query list, or <code>false</code> if not.</dd>
  <dt>{{DOMxRef("MediaQueryListEvent.media")}}{{ReadOnlyInline}}</dt>
- <dd> A {{DOMxRef("DOMString")}} representing a serialized media query.</dd>
+ <dd>A {{DOMxRef("DOMString")}} representing a serialized media query.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
@@ -37,7 +38,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">var mql = window.matchMedia('(max-width: 600px)');
+<pre class="brush: js">var mql = window.matchMedia('(max-width: 600px)');
 
 function screenTest(e) {
   if (e.matches) {
@@ -55,30 +56,17 @@ mql.addListener(screenTest);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Specification</th>
-   <th>Status</th>
-   <th>Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSSOM View", "#mediaquerylistevent", "MediaQueryListEvent")}}</td>
-   <td>{{Spec2("CSSOM View")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MediaQueryListEvent")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/CSS/Media_queries">Media queries</a></li>
- <li><a href="/en-US/docs/CSS/Using_media_queries_from_code">Using media queries from code</a></li>
+ <li><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Media queries</a></li>
+ <li><a href="/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries">Using media queries from code</a></li>
  <li>{{DOMxRef("window.matchMedia()")}}</li>
  <li>{{DOMxRef("MediaQueryList")}}</li>
 </ul>

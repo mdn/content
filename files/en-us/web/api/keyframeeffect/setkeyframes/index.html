@@ -11,6 +11,7 @@ tags:
   - setKeyframes
   - waapi
   - web animations api
+browser-compat: api.KeyframeEffect.setKeyframes
 ---
 <p>{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}</p>
 
@@ -18,15 +19,15 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">existingKeyframeEffect.setKeyframes(<em>keyframes</em>);</pre>
+<pre class="brush: js">existingKeyframeEffect.setKeyframes(<em>keyframes</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
  <dt>keyframes</dt>
- <dd><span style="line-height: 1.5;">A keyframe object or </span><code style="font-style: normal; font-weight: normal; line-height: 1.5;">null</code><span style="line-height: 1.5;">. If set to <code>null</code>, the keyframes are replaced with a sequence of empty keyframes.</span><br>
+ <dd>A keyframe object or <code>null</code>. If set to <code>null</code>, the keyframes are replaced with a sequence of empty keyframes.<br>
  <br>
- {{Page("/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats", "Syntax")}}</dd>
+ More information about a keyframe object's <a href="/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats#syntax">format</a>.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -35,7 +36,7 @@ tags:
 
 <h3 id="Exceptions">Exceptions</h3>
 
-<table class="standard-table">
+<table class="no-markdown">
  <thead>
   <tr>
    <th scope="col">Exception</th>
@@ -51,7 +52,7 @@ tags:
 </table>
 
 <div class="note">
-<p><strong>Note</strong>: If the keyframes cannot be processed or are malformed, the <code>KeyframeEffect</code>'s keyframes are not modified.</p>
+<p><strong>Note:</strong> If the keyframes cannot be processed or are malformed, the <code>KeyframeEffect</code>'s keyframes are not modified.</p>
 </div>
 
 <h2 id="Examples">Examples</h2>
@@ -81,24 +82,11 @@ existingKeyframeEffect.setKeyframes(
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Animations', '#dom-keyframeeffect-setkeyframes', 'KeyframeEffect.setKeyframes()' )}}</td>
-   <td>{{Spec2('Web Animations')}}</td>
-   <td>Editor's draft.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.KeyframeEffect.setKeyframes")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

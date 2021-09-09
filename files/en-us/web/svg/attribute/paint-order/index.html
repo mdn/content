@@ -4,6 +4,7 @@ slug: Web/SVG/Attribute/paint-order
 tags:
   - SVG
   - SVG Attribute
+browser-compat: svg.attributes.paint-order
 ---
 <div>{{SVGRef}}</div>
 
@@ -11,7 +12,20 @@ tags:
 
 <p class="note"><strong>Note:</strong> As a presentation attribute, <code>paint-order</code> can be used as a CSS property.</p>
 
-<p>As a presentation attribute, it can be applied to any element but it has effect only on the following ten elements: {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}, {{SVGElement("text")}}, {{SVGElement("textPath")}}, and {{SVGElement("tspan")}}</p>
+<p>You can use this attribute with the following SVG elements:</p>
+
+<ul>
+  <li>{{SVGElement("circle")}}</li>
+  <li>{{SVGElement("ellipse")}}</li>
+  <li>{{SVGElement("line")}}</li>
+  <li>{{SVGElement("path")}}</li>
+  <li>{{SVGElement("polygon")}}</li>
+  <li>{{SVGElement("polyline")}}</li>
+  <li>{{SVGElement("rect")}}</li>
+  <li>{{SVGElement("text")}}</li>
+  <li>{{SVGElement("textPath")}}</li>
+  <li>{{SVGElement("tspan")}}</li>
+</ul>
 
 <h2 id="Usage_notes">Usage notes</h2>
 
@@ -41,7 +55,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: html notranslate">&lt;svg xmlns="http://www.w3.org/2000/svg" width="400" height="200"&gt;
+<pre class="brush: html">&lt;svg xmlns="http://www.w3.org/2000/svg" width="400" height="200"&gt;
   &lt;linearGradient id="g" x1="0" y1="0" x2="0" y2="1"&gt;
     &lt;stop stop-color="#888"/&gt;
     &lt;stop stop-color="#ccc" offset="1"/&gt;
@@ -56,11 +70,11 @@ tags:
 
 <p>The example would be rendered as follows:</p>
 
-<p><img alt="An image showing how the paint-order example looks in a UA that supports the paint-order property." src="/files/4567/paint-order-2.png" style="height: 200px; width: 400px;"></p>
+<p><img alt="An image showing how the paint-order example looks in a UA that supports the paint-order property." src="paint-order-2.png"></p>
 
 <p>The stroke under effect could be achieved via the following CSS property:</p>
 
-<pre class="brush: css notranslate">#stroke-under {
+<pre class="brush: css">#stroke-under {
   paint-order: stroke;
 }</pre>
 
@@ -85,4 +99,4 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("svg.attributes.paint-order")}}</p>
+<p>{{Compat}}</p>

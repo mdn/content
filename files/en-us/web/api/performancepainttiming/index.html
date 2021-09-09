@@ -9,6 +9,7 @@ tags:
   - PerformancePaintTiming
   - Reference
   - Web Performance
+browser-compat: api.PerformancePaintTiming
 ---
 <p>{{APIRef("Performance Timeline API")}}</p>
 
@@ -39,7 +40,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js notranslate">function showPaintTimings() {
+<pre class="brush: js">function showPaintTimings() {
   if (window.performance) {
     let performance = window.performance;
     let performanceEntries = performance.getEntriesByType('paint');
@@ -53,26 +54,13 @@ tags:
 
 <p>The code above produces console output something like the following:</p>
 
-<pre class="brush: bash notranslate">The time to first-paint was 2785.915 milliseconds.
+<pre class="brush: bash">The time to first-paint was 2785.915 milliseconds.
 The time to first-contentful-paint was 2787.460 milliseconds.</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Paint Timing','#sec-PerformancePaintTiming','PerformancePaintTiming')}}</td>
-   <td>{{Spec2('Paint Timing')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.PerformancePaintTiming")}}</p>
+<p>{{Compat}}</p>

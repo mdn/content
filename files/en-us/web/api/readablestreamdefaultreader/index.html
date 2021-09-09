@@ -8,10 +8,11 @@ tags:
   - ReadableStreamDefaultReader
   - Reference
   - Streams
+browser-compat: api.ReadableStreamDefaultReader
 ---
 <p>{{APIRef("Streams")}}</p>
 
-<p><span class="seoSummary">The <strong><code>ReadableStreamDefaultReader</code></strong> interface of the <a href="/en-US/docs/Web/API/Streams_API">Streams API</a> represents a default reader that can be used to read stream data supplied from a network (e.g. a fetch request). </span></p>
+<p>The <strong><code>ReadableStreamDefaultReader</code></strong> interface of the <a href="/en-US/docs/Web/API/Streams_API">Streams API</a> represents a default reader that can be used to read stream data supplied from a network (e.g. a fetch request). </p>
 
 <h2 id="Constructor">Constructor</h2>
 
@@ -24,14 +25,14 @@ tags:
 
 <dl>
  <dt>{{domxref("ReadableStreamDefaultReader.closed")}} {{readonlyInline}}</dt>
- <dd>Allows you to write code that responds to an end to the streaming process. Returns a promise that fulfills if the stream becomes closed or the reader's lock is released, or rejects if the stream errors.</dd>
+ <dd>Returns a {{jsxref("Promise")}} that fulfills when the stream closes or the reader's lock is released, or rejects if the stream throws an error. This property enables you to write code that responds to an end to the streaming process.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
 
 <dl>
  <dt>{{domxref("ReadableStreamDefaultReader.cancel()")}}</dt>
- <dd>Cancels the stream, signaling a loss of interest in the stream by a consumer. The supplied reason argument will be given to the underlying source, which may or may not use it.</dd>
+ <dd>Returns a {{jsxref("Promise")}} that resolves when the stream is canceled. Calling this method signals a loss of interest in the stream by a consumer. The supplied <code>reason</code> argument will be given to the underlying source, which may or may not use it.</dd>
  <dt>{{domxref("ReadableStreamDefaultReader.read()")}}</dt>
  <dd>Returns a promise providing access to the next chunk in the stream's internal queue.</dd>
  <dt>{{domxref("ReadableStreamDefaultReader.releaseLock()")}}</dt>
@@ -75,21 +76,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Streams','#default-reader-class','ReadableStreamDefaultReader')}}</td>
-   <td>{{Spec2('Streams')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ReadableStreamDefaultReader")}}</p>
+<p>{{Compat}}</p>

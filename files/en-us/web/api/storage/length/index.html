@@ -8,6 +8,7 @@ tags:
 - Reference
 - Storage
 - Web Storage
+browser-compat: api.Storage.length
 ---
 <div>{{APIRef("Web Storage API")}}</div>
 
@@ -17,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>length</em> = <em>storage</em>.length;</pre>
+<pre class="brush: js"><em>length</em> = <em>storage</em>.length;</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -28,7 +29,7 @@ tags:
 <p>The following function adds three data items to the local storage for the current
   domain, then returns the number of items in the storage:</p>
 
-<pre class="brush: js notranslate">function populateStorage() {
+<pre class="brush: js">function populateStorage() {
   localStorage.setItem('bgcolor', 'yellow');
   localStorage.setItem('font', 'Helvetica');
   localStorage.setItem('image', 'cats.png');
@@ -37,31 +38,17 @@ tags:
 }</pre>
 
 <div class="note">
-  <p><strong>Note</strong>: For a real world example, see our <a
+  <p><strong>Note:</strong> For a real world example, see our <a
       href="https://mdn.github.io/dom-examples/web-storage/">Web Storage Demo</a>.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', 'webstorage.html#dom-storage-length',
-        'Storage.length')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Storage.length")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

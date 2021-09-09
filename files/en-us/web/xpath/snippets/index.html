@@ -8,7 +8,7 @@ tags:
   - XPath
   - XSLT
 ---
-<p><span class="seoSummary">This article provides some XPath code snippets</span>—simple examples of how to a few simple <strong>utility functions</strong> based on standard interfaces from the <a class="external" href="https://www.w3.org/TR/DOM-Level-3-XPath/">DOM Level 3 XPath specification</a> that expose XPath functionality to JavaScript code<span class="seoSummary">. The snippets are functions you can use in the real world in your own code.</span></p>
+<p><span class="seoSummary">This article provides some XPath code snippets</span>—simple examples of how to a few simple <strong>utility functions</strong> based on standard interfaces from the <a href="https://www.w3.org/TR/DOM-Level-3-XPath/">DOM Level 3 XPath specification</a> that expose XPath functionality to JavaScript code<span class="seoSummary">. The snippets are functions you can use in the real world in your own code.</span></p>
 
 <h3 id="Node-specific_evaluator_function">Node-specific <em>evaluator</em> function</h3>
 
@@ -39,18 +39,18 @@ function evaluateXPath(aNode, aExpr) {
   var xpe = aNode.ownerDocument || aNode;
 </pre>
 
-<p>In that case the creation of the <a href="/en-US/docs/DOM/document.createNSResolver">XPathNSResolver</a> can be simplified as:</p>
+<p>In that case the creation of the <a href="/en-US/docs/Web/API/Document/createNSResolver">XPathNSResolver</a> can be simplified as:</p>
 
 <pre class="brush: js">  var nsResolver = xpe.createNSResolver(xpe.documentElement);
 </pre>
 
-<p>Note however that <code>createNSResolver</code> should only be used if you are sure the namespace prefixes in the XPath expression match those in the document you want to query (and that no default namespace is being used (though see <a href="/en-US/docs/DOM/document.createNSResolver">document.createNSResolver</a> for a workaround)). Otherwise, you have to provide your own implementation of XPathNSResolver.</p>
+<p>Note however that <code>createNSResolver</code> should only be used if you are sure the namespace prefixes in the XPath expression match those in the document you want to query (and that no default namespace is being used (though see <a href="/en-US/docs/Web/API/Document/createNSResolver">document.createNSResolver</a> for a workaround)). Otherwise, you have to provide your own implementation of XPathNSResolver.</p>
 
-<p>If you are using <a href="/en/XMLHttpRequest">XMLHttpRequest</a> to read a local or remote XML file into a DOM tree (as described in <a href="/en/Parsing_and_serializing_XML">Parsing and serializing XML</a>), the first argument to <code>evaluateXPath()</code> should be <code>req.responseXML</code>.</p>
+<p>If you are using <a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a> to read a local or remote XML file into a DOM tree (as described in <a href="/en-US/docs/Web/Guide/Parsing_and_serializing_XML">Parsing and serializing XML</a>), the first argument to <code>evaluateXPath()</code> should be <code>req.responseXML</code>.</p>
 
 <h4 id="Sample_usage">Sample usage</h4>
 
-<p>Assume we have the following XML document (see also <a href="/en/How_to_create_a_DOM_tree">How to Create a DOM tree</a> and <a href="/en/Parsing_and_serializing_XML">Parsing and serializing XML</a>):</p>
+<p>Assume we have the following XML document (see also <a href="/en-US/docs/Web/API/Document_object_model/How_to_create_a_DOM_tree">How to Create a DOM tree</a> and <a href="/en-US/docs/Web/Guide/Parsing_and_serializing_XML">Parsing and serializing XML</a>):</p>
 
 <h5 id="Example_An_XML_document_to_use_with_the_custom_evaluateXPath()_utility_function">Example: An XML document to use with the custom <code>evaluateXPath()</code> utility function </h5>
 
@@ -91,7 +91,7 @@ alert(results.length);
 
 <h3 id="docEvaluateArray">docEvaluateArray</h3>
 
-<p>The following is a simple utility function to get (ordered) XPath results into an array, regardless of whether there is a special need for namespace resolvers, etc. It avoids the more complex syntax of <code><a href="/en-US/docs/DOM/document.evaluate">document.evaluate()</a></code> for cases when it is not required as well as the need to use the special iterators on <code><a href="/en-US/docs/Web/XPathResult">XPathResult</a></code> (by returning an array instead).</p>
+<p>The following is a simple utility function to get (ordered) XPath results into an array, regardless of whether there is a special need for namespace resolvers, etc. It avoids the more complex syntax of <code><a href="/en-US/docs/Web/API/Document/evaluate">document.evaluate()</a></code> for cases when it is not required as well as the need to use the special iterators on <code><a href="/en-US/docs/Web/API/XPathResult">XPathResult</a></code> (by returning an array instead).</p>
 
 <h5 id="Example_Defining_a_simple_docEvaluateArray()_utility_function">Example: Defining a simple <code>docEvaluateArray()</code> utility function</h5>
 
@@ -146,13 +146,13 @@ function docEvaluateArray (expr, doc, context, resolver) {
 
 <ul>
  <li><a href="/en-US/docs/Web/XPath">XPath</a></li>
- <li><a class="external" href="http://forums.mozillazine.org/viewtopic.php?t=229106">Forum discussion on this topic</a></li>
+ <li><a href="http://forums.mozillazine.org/viewtopic.php?t=229106">Forum discussion on this topic</a></li>
 </ul>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en/Introduction_to_using_XPath_in_JavaScript">Introduction to using XPath in JavaScript</a></li>
+ <li><a href="/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript">Introduction to using XPath in JavaScript</a></li>
 </ul>
 
 <p>{{QuickLinksWithSubpages("/en-US/docs/Web/XPath")}}</p>

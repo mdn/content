@@ -47,7 +47,7 @@ tags:
 
 <p>A new <code>CK_C_INITIALIZE_ARGS</code> structure is defined as</p>
 
-<pre class="notranslate">typedef struct CK_C_INITIALIZE_ARGS {
+<pre>typedef struct CK_C_INITIALIZE_ARGS {
   CK_CREATEMUTEX CreateMutex;
   CK_DESTROYMUTEX DestroyMutex;
   CK_LOCKMUTEX LockMutex;
@@ -64,7 +64,7 @@ tags:
 
 <p>Here are the NSS Application specific parameters in use. This data is currently stored in <code>secmod.db</code> or pkcs11.txt. This isn't part of the generic spec (that is other applications need not parse it, nor pkcs #11 modules need supply them or use them).</p>
 
-<pre class="eval notranslate"><strong>NSS</strong>="<em>nss_params</em>"
+<pre class="eval"><strong>NSS</strong>="<em>nss_params</em>"
 </pre>
 
 <p><code><em>nss_params</em></code> are themselves name/value pairs, parsed with the same rules described above. Valid names inside <code>nss_params</code> are:</p>
@@ -161,7 +161,7 @@ tags:
 
 <p>Sample file:</p>
 
-<pre class="notranslate">library= name="Netscape Internal Crypto Module"   parameters="configdir=/u/relyea/.netscape certprefix= secmod=secmod.db" NSS="Flags=internal,pkcs11module TrustOrder=1 CipherOrder=-1 ciphers= slotParams={0x1=[slotFlags='RSA,DSA,DH,RC4,RC2,DES,MD2,MD5,SHA1,SSL,TLS,PublicCerts,Random'] 0x2=[slotFlags='RSA' askpw=only]}"
+<pre>library= name="Netscape Internal Crypto Module"   parameters="configdir=/u/relyea/.netscape certprefix= secmod=secmod.db" NSS="Flags=internal,pkcs11module TrustOrder=1 CipherOrder=-1 ciphers= slotParams={0x1=[slotFlags='RSA,DSA,DH,RC4,RC2,DES,MD2,MD5,SHA1,SSL,TLS,PublicCerts,Random'] 0x2=[slotFlags='RSA' askpw=only]}"
 library=dkck32.dll name="DataKey SignaSURE 3600" NSS="TrustOrder=50 ciphers= "
 library=swft32.dll name="Netscape Software Fortezza" parameters="keyfile=/u/relyea/keyfile" NSS="TrustOrder=50 ciphers=FORTEZZA slotParams=0x1=[slotFlags='FORTEZZA']"
 library=core32.dll name="Litronic Netsign"
@@ -229,12 +229,12 @@ library=core32.dll name="Litronic Netsign"
 
 <p>In non-FIPS mode:</p>
 
-<pre class="eval notranslate">tokens=&lt;0x01=[configDir=<em>configDir</em> tokenDescription=<em>cryptoTokenDescription</em> slotDescription=<em>cryptoSlotDescription</em> flags=noCertDB,noKeyDB,<em>optimizeSpace</em>] 0x02=[configDir=<em>configDir</em> tokenDescription=<em>dbTokenDescription</em> slotDescription=<em>dbSlotDescription</em> certPrefix=<em>certPrefix</em> keyPrefix=<em>keyPrefix</em> flags=<em>flags</em> minPWLen=<em>minPWLen</em>]&gt;
+<pre class="eval">tokens=&lt;0x01=[configDir=<em>configDir</em> tokenDescription=<em>cryptoTokenDescription</em> slotDescription=<em>cryptoSlotDescription</em> flags=noCertDB,noKeyDB,<em>optimizeSpace</em>] 0x02=[configDir=<em>configDir</em> tokenDescription=<em>dbTokenDescription</em> slotDescription=<em>dbSlotDescription</em> certPrefix=<em>certPrefix</em> keyPrefix=<em>keyPrefix</em> flags=<em>flags</em> minPWLen=<em>minPWLen</em>]&gt;
 </pre>
 
 <p>In FIPS mode:</p>
 
-<pre class="eval notranslate">tokens=&lt;0x03=[configDir=<em>configDir</em> tokenDescription=<em>FIPSTokenDescription</em> slotDescription=<em>FIPSSlotDescription</em> certPrefix=<em>certPrefix</em> keyPrefix=<em>keyPrefix</em> flags=<em>flags</em> minPWLen=<em>minPWLen</em>]&gt;
+<pre class="eval">tokens=&lt;0x03=[configDir=<em>configDir</em> tokenDescription=<em>FIPSTokenDescription</em> slotDescription=<em>FIPSSlotDescription</em> certPrefix=<em>certPrefix</em> keyPrefix=<em>keyPrefix</em> flags=<em>flags</em> minPWLen=<em>minPWLen</em>]&gt;
 </pre>
 
 <p>where <em>configDir</em>, <em>cryptoTokenDescription</em>, <em>cryptoSlotDescription</em>, <em>dbTokenDescription</em>, <em>dbSlotDescription</em>, <em>FIPSTokenDescription</em>, <em>FIPSSlotDescription</em>, <em>optimizeSpace</em>, <em>certPrefix</em>, <em>keyPrefix</em>, <em>flags</em>, and <em>minPWLen</em> are copied from the parameters above.</p>

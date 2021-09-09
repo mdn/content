@@ -9,16 +9,17 @@ tags:
 - Property
 - content indexing
 - events
+browser-compat: api.ContentIndexEvent.id
 ---
 <div>{{draft}}{{DefaultAPISidebar("Content Index API")}}</div>
 
-<p class="summary">The read-only <strong><code>id</code></strong> property of the
+<p>The read-only <strong><code>id</code></strong> property of the
   {{domxref("ContentIndexEvent")}} interface is a {{jsxref('String')}} which identifies
   the deleted content index via it's <code>id</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <var>id</var> = ContentIndexEvent.id;</pre>
+<pre class="brush: js">var <var>id</var> = ContentIndexEvent.id;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -33,7 +34,7 @@ tags:
   {{domxref('ServiceWorkerGlobalScope','global scope')}} of a
   {{domxref('ServiceWorker')}}.</p>
 
-<pre class="brush: js notranslate">self.addEventListener('contentdelete', (event) =&gt; {
+<pre class="brush: js">self.addEventListener('contentdelete', (event) =&gt; {
   console.log(event.id);
 
   // logs content index id, which can then be used to determine what content to delete from your cache
@@ -43,24 +44,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Content Index API','#content-index-event','id')}}</td>
-      <td>{{Spec2('Content Index API')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ContentIndexEvent.id")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

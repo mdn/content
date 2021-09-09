@@ -2,18 +2,21 @@
 title: Element.getElementsByTagName()
 slug: Web/API/Element/getElementsByTagName
 tags:
-- API
-- DOM
-- Element
-- Method
-- Reference
+  - API
+  - DOM
+  - Element
+  - Method
+  - Reference
+browser-compat: api.Element.getElementsByTagName
 ---
 <div>{{ APIRef("DOM") }}</div>
 
-<p><span class="seoSummary">The
+<p>The
 		<code><strong>Element.getElementsByTagName()</strong></code> method returns a live
 		{{domxref("HTMLCollection")}} of elements with the given <a
-			href="/en-US/docs/DOM/element.tagName">tag name</a>.</span> All descendants of the
+			href="/en-US/docs/Web/API/Element/tagName">tag name</a>.</p>
+
+  <p>All descendants of the
 	specified element are searched, but not the element itself. The returned list is
 	<em>live</em>, which means it updates itself with the DOM tree automatically.
 	Therefore, there is no need to call <code>Element.getElementsByTagName()</code> with
@@ -33,7 +36,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-	class="brush: js notranslate"><code><em>elements</em> = <em>element</em>.getElementsByTagName(<em>tagName</em>)</code></pre>
+	class="brush: js">elements = element.getElementsByTagName(tagName)</pre>
 
 <ul>
 	<li><code>elements</code> is a <em>live</em> {{domxref("HTMLCollection")}} of elements
@@ -62,41 +65,8 @@ for (let cell of cells) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('DOM WHATWG', '#dom-element-getelementsbytagname',
-				'Element.getElementsByTagName()')}}</td>
-			<td>{{Spec2('DOM WHATWG')}}</td>
-			<td>Changed the return value from {{domxref("NodeList")}} to
-				{{domxref("HTMLCollection")}}</td>
-		</tr>
-		<tr>
-			<td>{{SpecName('DOM3 Core', 'core.html#ID-1938918D',
-				'Element.getElementsByTagName()')}}</td>
-			<td>{{Spec2('DOM3 Core')}}</td>
-			<td>No change from {{SpecName('DOM2 Core')}}</td>
-		</tr>
-		<tr>
-			<td>{{SpecName('DOM2 Core', 'core.html#ID-1938918D',
-				'Element.getElementsByTagName()')}}</td>
-			<td>{{Spec2('DOM2 Core')}}</td>
-			<td>No change from {{SpecName('DOM1')}}</td>
-		</tr>
-		<tr>
-			<td>{{SpecName('DOM1', 'level-one-core.html#ID-1938918D',
-				'Element.getElementsByTagName()')}}</td>
-			<td>{{Spec2('DOM1')}}</td>
-			<td>Initial definition</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Element.getElementsByTagName")}}</p>
+<p>{{Compat}}</p>

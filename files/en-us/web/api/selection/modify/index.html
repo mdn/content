@@ -10,6 +10,7 @@ tags:
 - Non-standard
 - Reference
 - Selection
+browser-compat: api.Selection.modify
 ---
 <div>{{APIRef("DOM")}}{{Non-standard_Header}}</div>
 
@@ -18,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>sel</em>.modify(<em>alter</em>, <em>direction</em>, <em>granularity</em>)
+<pre class="brush: js"><em>sel</em>.modify(<em>alter</em>, <em>direction</em>, <em>granularity</em>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -40,10 +41,10 @@ tags:
     <code>"documentboundary"</code>.</dd>
 </dl>
 
-<div class="note"><strong>Note:</strong> Gecko does <strong>not</strong> implement
+<div class="note"><p><strong>Note:</strong> Gecko does <strong>not</strong> implement
   <code>"sentence"</code>, <code>"paragraph"</code>, <code>"sentenceboundary"</code>,
   <code>"paragraphboundary"</code>, or <code>"documentboundary"</code>. WebKit and Blink
-  do.</div>
+  do.</p></div>
 
 <div class="note">
   <p><strong>Note:</strong> Starting in {{Gecko("5.0")}}, the <code>"word"</code>
@@ -103,7 +104,7 @@ function modify() {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Selection.modify")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -8,10 +8,11 @@ tags:
   - events
   - shadow dom
   - slotchange
+browser-compat: api.HTMLSlotElement.slotchange_event
 ---
 <div>{{APIRef}}</div>
 
-<p><span class="seoSummary">The <code><strong>slotchange</strong></code> event is fired on an {{DOMxRef("HTMLSlotElement")}} instance ({{HTMLElement("slot")}} element) when the node(s) contained in that slot change.</span></p>
+<p>The <code><strong>slotchange</strong></code> event is fired on an {{DOMxRef("HTMLSlotElement")}} instance ({{HTMLElement("slot")}} element) when the node(s) contained in that slot change.</p>
 
 <div class="note">
 <p><strong>Note:</strong> the <code>slotchange</code> event doesn't fire if the children of a slotted node change — only if you change (e.g. add or delete) the actual nodes themselves.</p>
@@ -42,7 +43,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">element.setAttribute('slot', slotName);
+<pre class="brush: js">element.setAttribute('slot', slotName);
 // element.assignedSlot = $slot
 element.removeAttribute('slot');
 // element.assignedSlot = null
@@ -50,7 +51,7 @@ element.removeAttribute('slot');
 
 <p>The following snippet is taken from our <a href="https://github.com/mdn/web-components-examples/tree/master/slotchange">slotchange example</a> (<a href="https://mdn.github.io/web-components-examples/slotchange/">see it live also</a>).</p>
 
-<pre class="brush: js notranslate">let slots = this.shadowRoot.querySelectorAll('slot');
+<pre class="brush: js">let slots = this.shadowRoot.querySelectorAll('slot');
 slots[1].addEventListener('slotchange', function(e) {
   let nodes = slots[1].assignedNodes();
   console.log('Element in Slot "' + slots[1].name + '" changed to "' + nodes[0].outerHTML + '".');
@@ -62,26 +63,11 @@ slots[1].addEventListener('slotchange', function(e) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("DOM WHATWG", "#mutation-observers", '"Mutation observers" and slotchange event')}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLSlotElement.slotchange_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

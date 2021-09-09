@@ -11,6 +11,7 @@ tags:
   - Reference
   - WebExtensions
   - getViews
+browser-compat: webextensions.api.extension.getViews
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -42,7 +43,7 @@ tags:
   <dt><code>type</code>{{optional_inline}}</dt>
   <dd><code>string</code>. An {{WebExtAPIRef('extension.ViewType')}} indicating the type of view to get. If omitted, this function returns all views.</dd>
   <dt><code>windowId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. The window to restrict the search to. If omitted, this function returns all views.</dd>
+  <dd><code>integer</code>. The window to restrict the search to. If omitted, this function returns all views. In Firefox version 92 and earlier, sidebar details are not returned.</dd>
  </dl>
  </dd>
 </dl>
@@ -53,15 +54,13 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("webextensions.api.extension.getViews")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Examples">Examples</h2>
 
 <p>Get all windows belonging to this extension, and log their URLs:</p>
 
-<pre class="notranslate brush: js">var windows = browser.extension.getViews();
+<pre class="brush: js">var windows = browser.extension.getViews();
 
 for (var extensionWindow of windows) {
   console.log(extensionWindow.location.href);
@@ -69,11 +68,11 @@ for (var extensionWindow of windows) {
 
 <p>Get only windows in browser tabs hosting content packaged with the extension:</p>
 
-<pre class="notranslate brush: js">var windows = browser.extension.getViews({type: "tab"});</pre>
+<pre class="brush: js">var windows = browser.extension.getViews({type: "tab"});</pre>
 
 <p>Get only windows in popups:</p>
 
-<pre class="notranslate brush: js">var windows = browser.extension.getViews({type: "popup"});</pre>
+<pre class="brush: js">var windows = browser.extension.getViews({type: "popup"});</pre>
 
 <p>{{WebExtExamples}}</p>
 

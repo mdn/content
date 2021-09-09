@@ -12,6 +12,7 @@ tags:
   - length
   - size
   - width
+browser-compat: svg.attributes.textLength
 ---
 <div>{{SVGRef}}</div>
 
@@ -19,7 +20,14 @@ tags:
 
 <p>By using <code>textLength</code>, you can ensure that your SVG text displays at the same width regardless of conditions including web fonts failing to load (or not having loaded yet).</p>
 
-<p>Four elements are using this attribute: {{SVGElement("text")}}, {{SVGElement("textPath")}}, {{SVGElement("tref")}}, and {{SVGElement("tspan")}}</p>
+<p>You can use this attribute with the following SVG elements:</p>
+
+<ul>
+  <li>{{SVGElement("text")}}</li>
+  <li>{{SVGElement("textPath")}}</li>
+  <li>{{SVGElement("tref")}}</li>
+  <li>{{SVGElement("tspan")}}</li>
+</ul>
 
 <div id="topExample">
 <div class="hidden">
@@ -32,6 +40,7 @@ tags:
   &lt;text y="20" textLength="6em"&gt;Small text length&lt;/text&gt;
   &lt;text y="40" textLength="120%"&gt;Big text length&lt;/text&gt;
 &lt;/svg&gt;</pre>
+</div>
 
 <p>{{EmbedLiveSample("topExample", "200", "100")}}</p>
 
@@ -125,7 +134,7 @@ widthSlider.dispatchEvent(new Event("input"));
 
 <p>After fetching the element references, an {{domxref("EventListener")}} is established by calling {{domxref("EventTarget.addEventListener", "addEventListener()")}} on the slider control, to receive any {{event("input")}} events which occur. These events will be sent any time the slider's value changes, even if the user hasn't stopped moving it, so we can responsively adjust the text width.</p>
 
-<p>When an <code>"input"</code> event occurs, we call {{domxref("SVGLength.newValueSpecifiedUnits()")}} to set the value of <code>textLength</code> to the slider's new value, using the <code>SVGLength</code> interface's <code>SVG_LENGTHTYPE_PX</code> unit type to indicate that the value represents pixels. Note that we have to dive into <code>textLength</code> to get its <code>baseVal</code> property; <code>textLength</code> is stored as an {{domxref("SVGLength")}} object, so we can't treat it like a plain number.</p>
+<p>When an <code>"input"</code> event occurs, we call <code>newValueSpecifiedUnits()</code> to set the value of <code>textLength</code> to the slider's new value, using the <code>SVGLength</code> interface's <code>SVG_LENGTHTYPE_PX</code> unit type to indicate that the value represents pixels. Note that we have to dive into <code>textLength</code> to get its <code>baseVal</code> property; <code>textLength</code> is stored as an {{domxref("SVGLength")}} object, so we can't treat it like a plain number.</p>
 
 <p>After updating the text width, the contents of the <code>widthDisplay</code> box are updated with the new value as well, and we're finished.</p>
 
@@ -161,8 +170,7 @@ widthSlider.dispatchEvent(new Event("input"));
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("svg.attributes.textLength")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

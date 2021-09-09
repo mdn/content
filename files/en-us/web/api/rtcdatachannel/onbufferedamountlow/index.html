@@ -3,7 +3,6 @@ title: RTCDataChannel.onbufferedamountlow
 slug: Web/API/RTCDataChannel/onbufferedamountlow
 tags:
 - Event Handler
-- Experimental
 - Networking
 - Property
 - RTCDataChannel
@@ -11,12 +10,13 @@ tags:
 - WebRTC
 - buffering
 - onbufferedamountlow
+browser-compat: api.RTCDataChannel.onbufferedamountlow
 ---
-<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
+<p>{{APIRef("WebRTC")}}</p>
 
 <p>The <strong><code>RTCDataChannel.onbufferedamountlow</code></strong> property is an
-  {{domxref("EventHandler")}} which specifies a function the browser calls when the
-  {{event("bufferedamountlow")}} event is sent to the {{domxref("RTCDataChannel")}}. This
+  <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> which specifies a function the browser calls when the
+  {{DOMxRef("RTCDataChannel.bufferedamountlow_event", "bufferedamountlow")}} event is sent to the {{domxref("RTCDataChannel")}}. This
   event, which is represented by a simple {{domxref("Event")}} object, is sent when the
   amount of data buffered to be sent falls to or below the threshold specified by the
   channel's {{domxref("RTCDataChannel.bufferedAmountLowThreshold",
@@ -28,22 +28,22 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><em>RTCDataChannel</em>.onbufferedamountlow = <em>function</em>;</pre>
+  class="brush: js"><em>RTCDataChannel</em>.onbufferedamountlow = <em>function</em>;</pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A function which the browser will call to handle the {{event("bufferedamountlow")}}
+<p>A function which the browser will call to handle the {{DOMxRef("RTCDataChannel.bufferedamountlow_event", "bufferedamountlow")}}
   event. This function receives as its only input parameter a simple {{domxref("Event")}}
   object representing the event which has occurred.</p>
 
 <h2 id="Example">Example</h2>
 
-<p>This example responds to the {{event("bufferedamountlow")}} event by fetching up to
+<p>This example responds to the {{DOMxRef("RTCDataChannel.bufferedamountlow_event", "bufferedamountlow")}} event by fetching up to
   64kB of a file represented by an object <code>source</code> and calling
   {{domxref("RTCDataChannel.send()")}} to queue up the retrieved data for sending on the
   data channel.</p>
 
-<pre class="notranslate">pc = new RTCPeerConnection();
+<pre>pc = new RTCPeerConnection();
 dc = pc.createDataChannel("SendFile");
 
 /* ... */
@@ -56,24 +56,8 @@ dc.onbufferedamountlow = function() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('WebRTC 1.0', '#dom-rtcdatachannel-onbufferedamountlow',
-        'RTCDataChannel.onbufferedamountlow') }}</td>
-      <td>{{ Spec2('WebRTC 1.0') }}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCDataChannel.onbufferedamountlow")}}</p>
+<p>{{Compat}}</p>

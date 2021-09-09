@@ -1,0 +1,150 @@
+---
+title: MDN Workstream assessment and project setup process
+slug: MDN/Contribute/Processes/Workstream_assessment_project
+tags:
+  - MDN
+  - MDN Meta
+  - Meta
+  - Meta Docs
+  - Content bugs
+  - Process
+  - Workstream
+  - Assessment
+  - Project
+---
+<p>{{MDNSidebar}}</p>
+
+<p>Workstreams are larger, more involved MDN projects that are designed to be done by multiple people (across organizations) and require planning/process. They start life as content opportunities.</p>
+
+<h2>Content opportunity assessment</h2>
+
+<p>Once per month we have a content opportunity assessment meeting. During this meeting we assess new opportunities, and record the results in the <a href="https://docs.google.com/spreadsheets/d/13YYX5rRu4ATbo1Yl7rXHF9rbgXGBSLisguzo-cB8Fno/edit#gid=0">content opportunities spreadsheet</a>. Near the end of each quarter, we have a further meeting to decide which of the opportunities assessed this quarter will be added to the roadmap for the next quarter.</p>
+
+<p>The process looks like this:</p>
+
+<ol>
+  <li>Opportunities are initially submitted as issues to the <a href="https://github.com/mdn/content">mdn content</a> or <a href="https://github.com/openwebdocs/project">openwebdocs project</a> repos. These issues are given a preliminary quick assessment by a core team member to assess suitability.</li>
+  <li>If an idea is deemed suitable, the issue submitter is asked to fill in a full RFC document to be assessed. This is currently done by updating the existing issue's description to use the format seen at <a href="https://github.com/openwebdocs/project/issues/26">OWD project: Making MDN syntax boxes beginner friendly</a>.
+    <ul>
+      <li>Note that in the "Priority assessment" table, each opportunity needs to be assessed against our <a href="https://github.com/openwebdocs/project/blob/main/steering-committee/prioritization-criteria.md">prioritisation criteria</a>.</li>
+      <li>For each criterion, give the project a description as well as a rough score of none/small/medium/large.</li>
+    </ul>
+  </li>
+  <li>Each month, we hold the opportunity assessment meeting to assess new opportunities, and record the results in the <a href="https://docs.google.com/spreadsheets/d/13YYX5rRu4ATbo1Yl7rXHF9rbgXGBSLisguzo-cB8Fno/edit#gid=0">content opportunities spreadsheet</a>. To be discussed in a meeting, each assessment needs an RFC submitted, to act as the basis for our discussion.</li>
+  <li>At the end of each opportunity assessment meeting, we stack rank the ideas:
+    <ul>
+      <li>We vote on the priority order for the ideas discussed by writing a simple number order in the meeting chat. For example if three opportunities were discussed and you thought that 2 was the most important, followed by 1, followed by 3, you'd write "2,1,3".</li>
+      <li>We tally the votes and create a priority order for that meeting's opportunities.</li>
+      <li>We then decide how those opportunities fit into the overall stack rank, by discussing where we think they'd fit.</li>
+    </ul>
+  </li>
+  <li>In the middle of the last month in each quarter, we have a meeting to look at the submitted opportunities, and decide which ones should be put on the MDN content roadmap for the next quarter. We present this proposal to the <a href="https://github.com/openwebdocs">Open Web Docs (OWD)</a> editorial steering committee to get signed off. Each assessed opportunity is given a decision word — "roadmap", "park" or "decline":
+    <ul>
+      <li>Roadmap — we are going ahead with this by putting it on the roadmap.</li>
+      <li>Park — we are not going forward with this yet, but will consider it in the future.</li>
+      <li>Decline — we are not going forward with this opportunity.</li>
+    </ul>
+  </li>
+  <li>Projects that are added to the roadmap are moved onto the project setup stage. At this stage, each one needs a project lead assigned that will make sure the work happens.</li>
+</ol>
+
+<div class="note notecard">
+  <h3>Note</h3>
+  <p>If there is any disagreement about any of the given scores or decisions during the opportunity assessment meetings, the chair of the meeting will listen to opposing views for a maximum of one minute per view, then make a final decision on the matter. The chair's decision is final.</p>
+</div>
+
+<h2 id="mdn_project_setup">MDN project setup</h2>
+
+<p>Workstreams that are signed off by the OWD editorial steering committee will follow the process outlined in this section and the next one. This first section details with the setup required for each workstream, and the second one looks at the process to follow when actually working on a project.</p>
+
+<h3 id="overall_project_summary_issue">Overall project summary issue</h3>
+
+<p>Each workstream needs an overall project summary issue, created on the <a href="https://github.com/mdn/content">mdn content</a> repo, to act as a focal point and summary for the project work.</p>
+
+<p>This should include:</p>
+
+<ul>
+  <li>A link to the RFC created for the workstream during the assessment process, so people can find further background information on the project if they need it.</li>
+  <li>Links to the spec or specs for the features being documented, as appropriate.</li>
+  <li>A list of the people involved in the project. Say what they are doing on it, and include their GitHub handles so that people can contact them if needed.</li>
+  <li>What are the success criteria for this project? Obviously we want to do all the listed tasks, but what is the effect of that going to be? A certain monthly page view figure for the new docs? Reduction in bugs received about a certain topic?</li>
+  <li>Other links that are useful to this project.</li>
+  <li>A list of what content and engineering work is required to complete this project. Eventually this should be a list of links to issues that define this work, as described in the <a href="#individual_work_issues">Individual work issues</a> section.</li>
+</ul>
+
+<h3 id="add_to_shared_project_roadmap">Add to shared project roadmap</h3>
+
+<p>Each workstream should be added to the shared project roadmap (which currently lives in the <a href="https://docs.google.com/spreadsheets/d/1dMK17xXgPQxnfsMZedi-uf5EVdJcagk3BhuxJlxC6l8/edit#gid=0">High-level MDN schedule</a> spreadsheet). This is a really simple view of what work is being done and when. Each project entry should span across the months it is being done in, and link to the <a href="#overall_project_summary_issue">overall project summary issue</a> for more information if required.</p>
+
+<p>Add your workstream/project to the spreadsheet, or ask someone else to do so if you don't have editing access.</p>
+
+<h3 id="individual_work_issues">Individual work issues</h3>
+
+<p>The next step is to create individual GitHub issues for each bit of work listed in the overall project summary, and link to those issues from there. Each issue should be as self-contained as possible.</p>
+
+<p>Split the work up in a granular fashion that makes each chunk as easy as possible to pick up and work on — for example fix one error, or write one page. Inside each issue, provide instructions for doing the work, or link to them.</p>
+
+<p>For example, instructions for creating a new reference page might look like this:</p>
+
+<ul>
+  <li>This issue relates to the workstream defined at <code>https://xxxxx</code> (link to overall project summary).</li>
+  <li>Feature X is defined in this spec: <code>https://xxxxxxx</code>.</li>
+  <li>This page should be created at <code>https://developer.mozilla.org/xxxxxx</code>.</li>
+  <li>Use <code>https://xxxxxx</code> as a template for the page.</li>
+  <li>Create a new source page in the content repo and test it locally using the instructions available at <code>https://github.com/mdn/content</code>.</li>
+  <li>Once the page has been created, submit the changes as a pull request and wait for a review.</li>
+</ul>
+
+<p>Each issue should also have a reviewer assigned.</p>
+
+<p>Each issue should be given a specific label of the form "Workstream:xxxx", so that it is easy to filter for all related issues.</p>
+
+<p>Think of other contributors that might be looking for a bit of work to do, not just the existing personnel who are already invested.</p>
+
+<h3 id="create_project_board">Create project board</h3>
+
+<p>Each workstream should have its own project board, created under <a href="https://github.com/mdn/content/projects">https://github.com/mdn/content/projects</a>. All of the individual work item issues should be listed on this board, as well as the overall project summary.</p>
+
+<p>The board title should should describe the project succinctly, as well as containing the due date for completion of the project, as a reminder to those working on it, e.g. "Restructuring the mixin docs (March 15th)".</p>
+
+<p>The columns on each board should be as follows, from start to end:</p>
+
+<ul>
+  <li>Summary: Include the overall project summary card, and nothing else, in this column, so it is easy to find.</li>
+  <li>Not ready: A place to put issue cards that have been started but are not ready to work on yet.</li>
+  <li>To do: Issue cards that are ready to work on, but have not yet been started.</li>
+  <li>In progress: Issues that are in progress.</li>
+  <li>Needs review: Issues where the work is complete, and so are ready for review.</li>
+  <li>Done: Issues that are complete.</li>
+</ul>
+
+<h2 id="running_a_project">Running a project</h2>
+
+<p>Once you have done the project setup work, as listed in the above section, moving forward with running the project should be fairly straightforward.</p>
+
+<h3 id="setup_a_regular_checkin_meeting">Set up a regular checkin meeting</h3>
+
+<p>The project lead should set up a weekly checkin time, ideally a video or voice call, although a text-based chat would do. In this call, the project team should:</p>
+
+<ul>
+  <li>Report on what they've been doing since the last meeting.</li>
+  <li>Look at the actual work speed compared to the required speed for meeting the deadline, and adjust their work speed as required (only slip the deadline as a last resort).</li>
+  <li>Talk through any problems that have come up, and make any necessary changes (e.g. does new work need adding, are there any blockers that need escalating, does existing work need rescoping?).</li>
+  <li>Make sure everyone knows what they need to do next. The project lead should be responsible for agreeing and setting work items (assigning issues), and indeed in the first meeting some time should be set aside for deciding what everyone will work on first.</li>
+</ul>
+
+<h3 id="ongoing_work">Ongoing work</h3>
+
+<p>Go ahead with the project, doing the work as required, and meeting regularly to make sure everything is moving forward.</p>
+
+<p>Work organization:</p>
+
+<ul>
+  <li>When you start work on an issue, remember to put your work item in the "In progress" column on the project board.</li>
+  <li>When an item is ready to review, put it in the "Needs review" column. If there is not a reviewer assigned, bring it up with the project lead. If it hasn't been reviewed for a few days, politely remind the reviewer, and bring it up in the regular project meeting if it is delayed for longer.</li>
+  <li>Get the project lead to sign off on work items by @-mentioning them in the issue when it looks like everything has been approved, and getting them to do a final check, merge, and move the item to the "Done" column.</li>
+</ul>
+
+<h3 id="final_check">Final check</h3>
+
+<p>Once all issue cards are done, the project lead should go through all the cards and give them all a final check before signing off on the entire workstream.</p>

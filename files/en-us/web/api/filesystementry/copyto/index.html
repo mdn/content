@@ -11,12 +11,16 @@ tags:
 - Non-standard
 - Reference
 - copyTo
+- Deprecated
+browser-compat: api.FileSystemEntry.copyTo
 ---
 <p>{{APIRef("File System API")}}{{deprecated_header}}</p>
 
-<p><span class="seoSummary">The {{domxref("FileSystemEntry")}} interface's method
-    <code><strong>copyTo</strong></code><strong><code>()</code></strong> copies the file
-    specified by the entry to a new location on the file system.</span> There are some
+<p>The {{domxref("FileSystemEntry")}} interface's method
+    <strong><code>copyTo()</code></strong> copies the file
+    specified by the entry to a new location on the file system.</p>
+
+<p>There are some
   typical restrictions on what you can do:</p>
 
 <ul>
@@ -30,7 +34,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><em>FileSystemEntry</em>.copyTo(<em>newParent</em>[, <em>newName</em>][, <em>successCallback</em>][, <em>errorCallback</em>]);</pre>
+  class="brush: js"><em>FileSystemEntry</em>.copyTo(<em>newParent</em>[, <em>newName</em>][, <em>successCallback</em>][, <em>errorCallback</em>]);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -80,7 +84,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.FileSystemEntry.copyTo")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

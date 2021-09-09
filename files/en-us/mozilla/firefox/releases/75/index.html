@@ -85,7 +85,7 @@ tags:
   </ul>
  </li>
  <li>The <code><a href="/en-US/docs/Web/API/Animation/timeline">Animation.timeline</a></code> getter, <code><a href="/en-US/docs/Web/API/Document/timeline">Document.timeline</a></code>, <code><a href="/en-US/docs/Web/API/DocumentTimeline">DocumentTimeline</a></code>, and <code><a href="/en-US/docs/Web/API/AnimationTimeline">AnimationTimeline</a></code> features are now enabled by default ({{bug(1619178)}}).</li>
- <li>The <code><a href="/en-US/docs/Web/API/DocumentOrShadowRoot/getAnimations">Document.getAnimations()</a></code> and <code><a href="/en-US/docs/Web/API/Element/getAnimations">Element.getAnimations()</a></code> methods are now enabled by default ({{bug(1619821)}}).</li>
+ <li>The <code><a href="/en-US/docs/Web/API/Document/getAnimations">Document.getAnimations()</a></code> and <code><a href="/en-US/docs/Web/API/Element/getAnimations">Element.getAnimations()</a></code> methods are now enabled by default ({{bug(1619821)}}).</li>
 </ul>
 
 <h4 id="Media_Web_Audio_and_WebRTC">Media, Web Audio, and WebRTC</h4>
@@ -101,7 +101,7 @@ tags:
 <h3 id="Security">Security</h3>
 
 <ul>
- <li><a href="/en-US/docs/Web/HTTP/CSP">CSP</a> nonces from non-script sources, such as CSS selectors, and  <code>.getAttribute("nonce")</code> calls, are now hidden. Instead, check the <code><a href="/en-US/docs/Web/API/HTMLOrForeignElement/nonce">.nonce</a></code> property to access nonces from scripts ({{bug(1374612)}}).</li>
+ <li><a href="/en-US/docs/Web/HTTP/CSP">CSP</a> nonces from non-script sources, such as CSS selectors, and  <code>.getAttribute("nonce")</code> calls, are now hidden. Instead, check the <code><a href="/en-US/docs/Web/API/HTMLElement/nonce">.nonce</a></code> property to access nonces from scripts ({{bug(1374612)}}).</li>
 </ul>
 
 <h3 id="Plugins">Plugins</h3>
@@ -142,12 +142,6 @@ tags:
 
 <ul>
  <li> The "privacy" permission is now optional. ({{bug(1618399)}})</li>
-</ul>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="https://www.fxsitecompat.com/en-CA/versions/75/">Site compatibility for Firefox 75</a></li>
 </ul>
 
 <h2 id="Older_versions">Older versions</h2>

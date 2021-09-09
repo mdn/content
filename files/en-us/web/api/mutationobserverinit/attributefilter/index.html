@@ -13,13 +13,16 @@ tags:
 - Property
 - atttributeFilter
 - mutation
+browser-compat: api.MutationObserverInit.attributeFilter
 ---
 <div>{{APIRef("DOM WHATWG")}}</div>
 
-<p><span class="seoSummary">The <strong>{{domxref("MutationObserverInit")}}</strong>
+<p>The <strong>{{domxref("MutationObserverInit")}}</strong>
     dictionary's optional <strong><code>attributeFilter</code></strong> property is an
     array of strings specifying the names of the attributes whose values are to be
-    monitored for changes.</span> If this property is specified, there's no need to also
+    monitored for changes.</p>
+
+<p>If this property is specified, there's no need to also
   set {{domxref("MutationObserverInit.attributes", "attributes")}} to <code>true</code>,
   as it's implied.</p>
 
@@ -29,7 +32,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>options</em> = {
+<pre class="brush: js">var <em>options</em> = {
   <em>attributeFilter</em>: [ <em>"list"</em>, <em>"of"</em>, <em>"attribute"</em>, <em>"names"</em> ]
 }
 </pre>
@@ -102,24 +105,8 @@ observer.observe(userListElement, {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('DOM WHATWG', '#dom-mutationobserverinit-attributefilter',
-        'MutationObserverInit: attributeFilter')}}</td>
-      <td>{{ Spec2('DOM WHATWG') }}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MutationObserverInit.attributeFilter")}}</p>
+<p>{{Compat}}</p>

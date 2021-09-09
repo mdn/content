@@ -10,12 +10,13 @@ tags:
 - Reference
 - Storage
 - upperOpen
+browser-compat: api.IDBKeyRange.upperOpen
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
 <div>
-  <p>The <strong><code>upperOpen</code></strong> read-only property of the
-    {{domxref("IDBKeyRange")}} interface returns a boolean indicating whether the
+  <p>The <strong><code>upperOpen</code></strong> read-only property of the
+    {{domxref("IDBKeyRange")}} interface returns a boolean indicating whether the
     upper-bound value is included in the key range.</p>
 
   <p>{{AvailableInWorkers}}</p>
@@ -23,11 +24,11 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var upperOpen = myKeyRange.upperOpen</pre>
+<pre class="brush: js">var upperOpen = myKeyRange.upperOpen</pre>
 
 <h3 id="Value">Value</h3>
 
-<p><span style="line-height: 1.5;">A {{ domxref("boolean") }}:</span></p>
+<p>A boolean value:</p>
 
 <table class="standard-table">
   <thead>
@@ -64,14 +65,14 @@ tags:
   the range.</p>
 
 <div class="note">
-  <p><strong>Note</strong>: For a more complete example allowing you to experiment with
+  <p><strong>Note:</strong> For a more complete example allowing you to experiment with
     key range, have a look at our <a
       href="https://github.com/mdn/IDBKeyRange-example">IDBKeyRange-example</a> repo (<a
       href="https://mdn.github.io/IDBKeyRange-example/">view the example live too</a>.)
   </p>
 </div>
 
-<pre class="brush: js" style="font-size: 14px;">function displayData() {
+<pre class="brush: js">function displayData() {
   var keyRangeValue = IDBKeyRange.bound("F", "W", true, true);
   console.log(keyRangeValue.upperOpen);
 
@@ -95,29 +96,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('IndexedDB', '#dom-idbkeyrange-upperopen', 'upperOpen')}}</td>
-      <td>{{Spec2('IndexedDB')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("IndexedDB 2", "#dom-idbkeyrange-upperopen", "upperOpen")}}</td>
-      <td>{{Spec2("IndexedDB 2")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBKeyRange.upperOpen")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

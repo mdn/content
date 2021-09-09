@@ -10,6 +10,7 @@ tags:
 - Method
 - Reference
 - readAsArrayBuffer
+browser-compat: api.FileReader.readAsArrayBuffer
 ---
 <p>{{APIRef("File API")}}</p>
 
@@ -19,18 +20,17 @@ tags:
   operation is finished, the {{domxref("FileReader.readyState","readyState")}} becomes
   <code>DONE</code>, and the {{domxref("FileReader/loadend_event", "loadend")}} is
   triggered. At that time, the {{domxref("FileReader.result","result")}} attribute
-  contains an {{domxref("ArrayBuffer")}} representing the file's data.</p>
+  contains an {{jsxref("ArrayBuffer")}} representing the file's data.</p>
 
 <div class="notecard note">
-  <p><strong>Newer API available</strong><br>
-    The {{domxref("Blob.arrayBuffer()")}} method is a newer promise-based API to read a
+  <p><strong>Note:</strong> The {{domxref("Blob.arrayBuffer()")}} method is a newer promise-based API to read a
     file as an array buffer.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var>instanceOfFileReader</var>.readAsArrayBuffer(<var>blob</var>);</pre>
+  class="brush: js"><var>instanceOfFileReader</var>.readAsArrayBuffer(<var>blob</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -41,27 +41,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("File API", "#readAsArrayBuffer", "FileReader.readAsArrayBuffer")}}
-      </td>
-      <td>{{Spec2("File API")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.FileReader.readAsArrayBuffer")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

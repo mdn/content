@@ -13,7 +13,14 @@ tags:
 
 <h3 id="Developer_tools">Developer tools</h3>
 
-<p>{{page('/en-US/docs/Tools/Release_notes', 'Firefox_44')}}</p>
+<p>Highlights:</p>
+<ul>
+  <li><a href="/en-US/docs/Tools/Memory">Memory tool</a></li>
+  <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Work_with_animations">Animation inspector improvements</a></li>
+  <li><a href="/en-US/docs/Tools/Performance/Waterfall#markers">New Waterfall markers: DomContentLoaded, load, worker messages</a></li>
+</ul>
+
+<a href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&classification=Client%20Software&chfieldto=2015-11-03&query_format=advanced&chfield=resolution&chfieldfrom=2015-09-19&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Performance%20Tools%20%28Profiler%2FTimeline%29&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&product=Firefox&list_id=12582678">All devtools bugs fixed between Firefox 43 and Firefox 44.</a>
 
 <h3 id="HTML">HTML</h3>
 
@@ -152,7 +159,7 @@ tags:
  <li>{{domxref("Headers")}} objects now support a pair iterator, meaning that the methods {{domxref("Headers.entries()")}}, {{domxref("Headers.keys()")}}, and {{domxref("Headers.values()")}} are now available; {{jsxref("Symbol.iterator")}} now also returns the default iterator for them ({{bug(1108181)}}).</li>
  <li>The {{domxref('XMLHttpRequest')}} API has been disabled on Service Workers ({{bug(931243)}}).</li>
  <li>The interface {{domxref("FetchEvent")}} now extends {{domxref("ExtendableEvent")}}, giving it access to the {{domxref("ExtendableEvent.waitUntil()")}} method. ({{bug(1214772)}}).</li>
- <li>Following a recent change in the specification, {{domxref("FetchEvent.client")}} has been removed ({{bug(1218135)}}).</li>
+ <li>Following a recent change in the specification, <code>FetchEvent.client</code> has been removed ({{bug(1218135)}}).</li>
  <li>To match the latest specification, the {{domxref("ServiceWorkerContainer.onreloadpage")}} has been removed ({{bug(1218139)}}).</li>
  <li>The event handlers {{domxref("ServiceWorkerGlobalScope.onbeforeevicted")}} and {{domxref("ServiceWorkerGlobalScope.onevicted")}} have been removed as they weren't following the spec. They will be reintroduced in the future, but their removal will allow feature detection to work as expected ({{bug(1218142)}}).</li>
  <li>In the {{domxref("FetchEvent.FetchEvent", "FetchEvent()")}} constructor, if the <code>isReload</code> member is not present in the options dictionary, it now defaults to <code>false</code> ({{bug(1216401)}}).</li>
@@ -176,7 +183,7 @@ tags:
  <li>The attribute {{domxref("RTCPeerConnection.canTrickleIceCandidates")}} has been added, the non-standard method {{domxref("RTCPeerConnection.updateIce()")}} removed ({{bug(1209744)}}).</li>
  <li>The {{domxref("MediaStream")}} interface now supports the {{domxref("MediaStream.addTrack()")}} and {{domxref("MediaStream.removeTrack()")}} methods ({{bug(1103188)}}).</li>
  <li>The constructor {{domxref("MediaStream.MediaStream", "MediaStream()")}} has been implemented ({{bug(1070216)}}).</li>
- <li>Support for the non-standard constraint style option list for {{domxref("RTCOfferOptions")}} has been removed; see <a href="https://www.fxsitecompat.com/en-USdocs/2015/constraint-like-rtcofferoptions-are-no-longer-supported/">this post on the site compatibility blog</a> for details.</li>
+ <li>Support for the non-standard constraint style option list for {{domxref("RTCOfferOptions")}} has been removed.</li>
 </ul>
 
 <h4 id="New_APIs_2">New APIs</h4>
@@ -253,12 +260,6 @@ tags:
 
 <ul>
  <li>Due to breaking changes in Firefox 44 (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1202902">bug 1202902</a>), add-ons packed with <a href="/en-US/docs/Mozilla/Add-ons/SDK/Tools/cfx">cfx</a> will not work any longer. To make your add-on compatible again, please use <a href="/en-US/docs/Mozilla/Add-ons/SDK/Tools/jpm">jpm</a>. You can find steps to migrate from <em>cfx</em> to <em>jpm</em> <a href="/en-US/docs/Mozilla/Add-ons/SDK/Tools/cfx_to_jpm">here</a>.</li>
-</ul>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="https://www.fxsitecompat.com/en-US/versions/44/">Site compatibility for Firefox 44</a></li>
 </ul>
 
 <h2 id="Older_versions">Older versions</h2>

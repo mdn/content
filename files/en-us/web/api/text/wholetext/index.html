@@ -6,10 +6,11 @@ tags:
   - DOM
   - Property
   - Text
+browser-compat: api.Text.wholeText
 ---
 <p>{{ apiref("DOM") }}</p>
 
-<p><span class="seoSummary">The <strong><code>Text.wholeText</code></strong> read-only property returns the full text of all {{domxref("Text")}} nodes logically adjacent to the node.</span> The text is concatenated in document order.  This allows to specify any text node and obtain all adjacent text as a single string.</p>
+<p>The <strong><code>Text.wholeText</code></strong> read-only property returns the full text of all {{domxref("Text")}} nodes logically adjacent to the node. The text is concatenated in document order. This allows specifying any text node and obtaining all adjacent text as a single string.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -48,49 +49,13 @@ tags:
 
 <p><code>wholeText</code> is just a property of text nodes that returns the string of data making up all the adjacent (i.e. not separated by an element boundary) text nodes combined.</p>
 
-<p>Now let’s return to our original problem. What we want is to be able to <em>replace</em> the whole text with new text. That’s where {{domxref("Text.replaceWholeText", "replaceWholeText()")}} comes in:</p>
-
-<pre class="brush: js">para.firstChild.replaceWholeText("Thru-hiking is great, but ");
-</pre>
-
-<p>We’re removing every adjacent text node (all the ones that constituted the whole text) but the one on which <code>replaceWholeText()</code> is called, and we’re changing the remaining one to the new text. What we have now is this:</p>
-
-<pre class="brush: html">&lt;p&gt;Thru-hiking is great, but &lt;a
-  href="https://en.wikipedia.org/wiki/Absentee_ballot"&gt;casting a
-  ballot&lt;/a&gt; is tricky.&lt;/p&gt;
-</pre>
-
-<p>Some uses of the whole-text functionality may be better served by using <code>Node.textContent</code>, or the longstanding {{domxref("Element.innerHTML")}}; that’s fine and probably clearer in most circumstances. If you have to work with mixed content within an element, as seen here, <code>wholeText</code> and <span class="internal"><code>replaceWholeText()</code></span> may be useful.</p>
-
-<div class="notecard warning">
-<p><span class="internal"><code>replaceWholeText()</code></span> <a href="/en-US/docs/Web/API/Text/replaceWholeText">is obsolete</a>.</p>
-</div>
-
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-text-wholetext', 'Text.wholeText')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>No significant change.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#Text3-wholeText', 'Text.wholeText')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Text.wholeText")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

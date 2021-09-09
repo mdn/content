@@ -7,9 +7,9 @@ tags:
 - Method
 - PushManager
 - Reference
-- Référence(2)
 - WebAPI
 - subscribe
+browser-compat: api.PushManager.subscribe
 ---
 <p>{{SeeCompatTable}}{{ApiRef("Push API")}}</p>
 
@@ -23,7 +23,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">PushManager.subscribe(<em>options</em>).then(function(<em>pushSubscription</em>) { ... } );</pre>
+  class="brush: js">PushManager.subscribe(<em>options</em>).then(function(<em>pushSubscription</em>) { ... } );</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -36,11 +36,11 @@ tags:
         subscription will only be used for messages whose effect is made visible to the
         user.</li>
       <li><code>applicationServerKey</code>: A Base64-encoded {{domxref("DOMString")}} or
-        {{domxref("ArrayBuffer")}} containing an <a
+        {{jsxref("ArrayBuffer")}} containing an <a
           href="https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm">ECDSA</a>
         P-256 public key that the push server will use to authenticate your application
         server. If specified, all messages from your application server must use the <a
-          href="https://tools.ietf.org/html/rfc8292">VAPID</a> authentication scheme, and
+          href="https://datatracker.ietf.org/doc/html/rfc8292">VAPID</a> authentication scheme, and
         include a JWT signed with the corresponding private key. This key <em><strong>IS
             NOT</strong></em> the same ECDH key that you use to encrypt the data. For more
         information, see "<a
@@ -49,8 +49,8 @@ tags:
     </ul>
 
     <div class="note">
-      <p><em><strong>Note:</strong> This parameter is required in some browsers like
-          Chrome and Edge.</em></p>
+      <p><strong>Note:</strong> This parameter is required in some browsers like
+          Chrome and Edge.</p>
     </div>
   </dd>
 </dl>
@@ -111,26 +111,8 @@ navigator.serviceWorker.ready.then(
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Push API', '#dom-pushmanager-subscribe', 'subscribe()')}}</td>
-      <td>{{Spec2('Push API')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-  <div>
-
-    <p>{{Compat("api.PushManager.subscribe")}}</p>
-  </div>
-</div>
+<p>{{Compat}}</p>

@@ -2,20 +2,21 @@
 title: PannerNode.orientationX
 slug: Web/API/PannerNode/orientationX
 tags:
-- PannerNode
-- Property
-- Reference
-- Web Audio API
-- orientationX
+  - PannerNode
+  - Property
+  - Reference
+  - Web Audio API
+  - orientationX
+browser-compat: api.PannerNode.orientationX
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
-<div>
-  <p>The <strong><code>orientationX</code></strong> property of the {{
+
+<p>The <strong><code>orientationX</code></strong> property of the {{
     domxref("PannerNode") }} interface indicates the X (horizontal) component of the
     direction in which the audio source is facing, in a 3D Cartesian coordinate space.</p>
 
-  <p>The complete vector is defined by the position of the audio source, given as
+<p>The complete vector is defined by the position of the audio source, given as
     ({{domxref("PannerNode.positionX", "positionX")}}, {{domxref("PannerNode.positionY",
     "positionY")}}, {{domxref("PannerNode.positionZ", "positionZ")}}), and the orientation
     of the audio source (that is, the direction in which it's facing), given as
@@ -23,7 +24,7 @@ tags:
     {{domxref("PannerNode.orientationY", "orientationY")}},
     {{domxref("PannerNode.orientationZ", "orientationZ")}}).</p>
 
-  <p>Depending on the directionality of the sound (as specified using the attributes
+<p>Depending on the directionality of the sound (as specified using the attributes
     {{domxref("PannerNode.coneInnerAngle", "coneInnerAngle")}},
     {{domxref("PannerNode.coneOuterAngle", "coneOuterAngle")}}, and
     {{domxref("PannerNode.coneOuterGain", "coneOuterGain")}}), the orientation of the
@@ -31,14 +32,14 @@ tags:
     is pointing toward the listener, it will be louder than if the sound is pointed away
     from the listener.</p>
 
-  <p>The {{domxref("AudioParam")}} contained by this property is read only; however, you
+<p>The {{domxref("AudioParam")}} contained by this property is read only; however, you
     can still change the value of the parameter by assigning a new value to its
     {{domxref("AudioParam.value")}} property.</p>
-</div>
+
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>orientationX</em> = <em>PannerNode</em>.orientationX;
+<pre class="brush: js">var <em>orientationX</em> = <em>PannerNode</em>.orientationX;
 
 <em>PannerNode</em>.orientationX.value = <em>newOrientationX</em>;
 </pre>
@@ -59,17 +60,14 @@ tags:
 
 <p><img
     alt="This chart visualises how the PannerNode orientation vectors affect the direction of the sound cone."
-    src="https://mdn.mozillademos.org/files/16238/pannernode-orientation.png"
-    style="height: 381px; width: 935px;"></p>
+    src="pannernode-orientation.png"></p>
 
-<p>First, let's start by writing a utility function to figure out our <em>orientation
-    vector.</em> The X and Z components are always at a 90° to each other, so we can
+<p>First, let's start by writing a utility function to figure out our <em>orientation vector.</em>
+  The X and Z components are always at a 90° to each other, so we can
   use the sine and cosine functions, which are offset by the same amount in radians.
   However, normally this would mean the {{ domxref("PannerNode") }} points to
-  the <strong>left</strong> of the listener at 0° rotation – since `x = cos(0) = 1` and `z
-  = sin(0) = 0`. It's more useful to offset the angle by -90°, which means the {{
-  domxref("PannerNode") }} will point <strong>directly at the listener</strong> at 0°
-  rotation.</p>
+  the <strong>left</strong> of the listener at 0° rotation – since <code>x = cos(0) = 1</code> and <code>z = sin(0) = 0</code>.
+  It's more useful to offset the angle by -90°, which means the {{domxref("PannerNode")}} will point <strong>directly at the listener</strong> at 0° rotation.</p>
 
 <pre class="brush: js">// this utility converts amount of rotation around the Y axis
 // (i.e. rotation in the 'horizontal plane') to an orientation vector
@@ -146,30 +144,16 @@ osc.start(0);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Web Audio API', '#dom-pannernode-orientationx', 'orientationX')}}
-      </td>
-      <td>{{Spec2('Web Audio API')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.PannerNode.orientationX")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
+  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
   </li>
   <li><a href="/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics">Web
       Audio spatialisation basics</a></li>

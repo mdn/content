@@ -15,10 +15,13 @@ tags:
   - events
   - gatheringSstate
   - gatheringstatechange
+browser-compat: api.RTCIceTransport.gatheringstatechange_event
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">A <strong><code>gatheringstatechange</code></strong> event is sent to an {{domxref("RTCIceTransport")}} when its {{Glossary("ICE")}} candidate gathering state changes.</span> The gathering state, whose actual status can be found in the transport object's {{domxref("RTCIceTransport.gatheringState", "gatheringState")}} property, indicates whether or not the ICE agent has begun gathering candidates, and if so, if it has finished doing so.</p>
+<p>A <strong><code>gatheringstatechange</code></strong> event is sent to an {{domxref("RTCIceTransport")}} when its {{Glossary("ICE")}} candidate gathering state changes.</p>
+
+<p>The gathering state, whose actual status can be found in the transport object's {{domxref("RTCIceTransport.gatheringState", "gatheringState")}} property, indicates whether or not the ICE agent has begun gathering candidates, and if so, if it has finished doing so.</p>
 
 <table class="properties">
  <tbody>
@@ -72,24 +75,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{ SpecName('WebRTC 1.0', '#event-icetransport-gatheringstatechange', 'gatheringstatechange') }}</td>
-   <td>{{Spec2('WebRTC 1.0')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCIceTransport.gatheringstatechange_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -115,4 +105,3 @@ tags:
  <li>{{event("icegatheringstatechange")}}</li>
  <li>{{event("connectionstatechange")}}</li>
 </ul>
-

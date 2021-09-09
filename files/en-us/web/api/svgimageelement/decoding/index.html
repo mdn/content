@@ -10,16 +10,17 @@ tags:
 - SVG DOM
 - SVGImageElement
 - decoding
+browser-compat: api.SVGImageElement.decoding
 ---
 <div>{{APIRef}}</div>
 
-<p class="summary">The <strong><code>decoding</code></strong> property of the
+<p>The <strong><code>decoding</code></strong> property of the
   {{domxref("SVGImageElement")}} interface represents a hint given to the browser on how
   it should decode the image.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var refStr = SVGImageElement.decoding
+<pre class="brush: js">var refStr = SVGImageElement.decoding
 SVGImageElement.decoding = refStr;</pre>
 
 <h3 id="Values">Values</h3>
@@ -37,31 +38,18 @@ SVGImageElement.decoding = refStr;</pre>
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js;highlight:[3]">var img = new Image();
+<pre class="brush: js;">var img = new Image();
 img.decoding = 'sync';
 img.src = 'img/logo.svg';
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG','#image-decoding-hint','decoding')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SVGImageElement.decoding")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

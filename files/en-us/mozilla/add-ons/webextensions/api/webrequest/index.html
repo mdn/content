@@ -10,6 +10,7 @@ tags:
   - Reference
   - WebExtensions
   - webRequest
+browser-compat: webextensions.api.webRequest
 ---
 <p>{{AddonSidebar}}</p>
 
@@ -73,10 +74,6 @@ tags:
 <p>To do this, you need to pass an option with the value <code>"blocking"</code> in the <code>extraInfoSpec</code> argument to the event's <code>addListener()</code>. This makes the listener synchronous.</p>
 
 <p>In the listener, you can then return a {{WebExtAPIRef("webRequest.BlockingResponse", "BlockingResponse")}} object, which indicates the modification you need to make: for example, the modified request header you want to send.</p>
-
-<div class="notecard warning">
-<p><strong>Warning</strong>: Non-HTTP(S) protocols do not currently support <code>"blocking"</code> functionality, so modifying these requests is not available at this time. See {{bug(1475832)}} for more details.</p>
-</div>
 
 <h2 id="Accessing_security_information">Accessing security information</h2>
 
@@ -156,7 +153,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("webextensions.api.webRequest")}}</p>
+<p>{{Compat}}</p>
 
 <p><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#webrequest_incompatibilities">Extra notes on Chrome incompatibilities</a>.</p>
 

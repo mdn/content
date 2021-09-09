@@ -9,10 +9,13 @@ tags:
   - Interface
   - Reference
   - Web Audio API
+browser-compat: api.AudioWorkletNode
 ---
 <p>{{APIRef("Web Audio API")}}</p>
 
-<div class="blockIndicator secureContexts">Although the interface is available outside <a href="/en-US/docs/Web/Security/Secure_Contexts">secure contexts</a>, the {{domxref("BaseAudioContext.audioWorklet")}} property is not, thus custom {{domxref("AudioWorkletProcessor")}}s cannot be defined outside them.</div>
+<div class="notecard note">
+<p><strong>Note:</strong> Although the interface is available outside <a href="/en-US/docs/Web/Security/Secure_Contexts">secure contexts</a>, the {{domxref("BaseAudioContext.audioWorklet")}} property is not, thus custom {{domxref("AudioWorkletProcessor")}}s cannot be defined outside them.</p>
+</div>
 
 <p>The <strong><code>AudioWorkletNode</code></strong> interface of the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> represents a base class for a user-defined {{domxref("AudioNode")}}, which can be connected to an audio routing graph along with other nodes. It has an associated {{domxref("AudioWorkletProcessor")}}, which does the actual audio processing in a Web Audio rendering thread.</p>
 
@@ -79,24 +82,11 @@ whiteNoiseNode.connect(audioContext.destination)
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#audioworkletnode', 'AudioWorkletNode')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.AudioWorkletNode")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

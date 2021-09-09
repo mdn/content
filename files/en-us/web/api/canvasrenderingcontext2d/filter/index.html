@@ -7,17 +7,18 @@ tags:
   - CanvasRenderingContext2D
   - Experimental
   - Property
+browser-compat: api.CanvasRenderingContext2D.filter
 ---
 <div>{{APIRef}} {{SeeCompatTable}}</div>
 
 <p>The
-  <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.filter</code></strong>
+  <strong><code>CanvasRenderingContext2D.filter</code></strong>
   property of the Canvas 2D API provides filter effects such as blurring and grayscaling.
   It is similar to the CSS {{cssxref("filter")}} property and accepts the same values.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>ctx</em>.filter = "<em>&lt;filter-function1&gt;</em> [<em>&lt;filter-function2&gt;</em>] [<em>&lt;filter-functionN&gt;</em>]";
+<pre class="brush: js"><em>ctx</em>.filter = "<em>&lt;filter-function1&gt;</em> [<em>&lt;filter-function2&gt;</em>] [<em>&lt;filter-functionN&gt;</em>]";
 <em>ctx</em>.filter = "none";
 </pre>
 
@@ -99,12 +100,12 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
+<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
 </pre>
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js highlight[4] notranslate">const canvas = document.getElementById('canvas');
+<pre class="brush: js">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.filter = 'blur(4px)';
@@ -124,15 +125,15 @@ ctx.fillText('Hello world', 50, 100);
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;canvas id="canvas" width="400" height="150"&gt;&lt;/canvas&gt;
+<pre class="brush: html">&lt;canvas id="canvas" width="400" height="150"&gt;&lt;/canvas&gt;
 &lt;div style="display:none;"&gt;
   &lt;img id="source"
-       src="https://mdn.mozillademos.org/files/5397/rhino.jpg"&gt;
+       src="rhino.jpg"&gt;
 &lt;/div&gt;</pre>
 
 <h4 id="JavaScript_2">JavaScript</h4>
 
-<pre class="brush: js notranslate">const canvas = document.getElementById('canvas');
+<pre class="brush: js">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const image = document.getElementById('source');
 
@@ -151,25 +152,11 @@ image.addEventListener('load', e =&gt; {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', "scripting.html#filters",
-        "CanvasRenderingContext2D.filter")}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CanvasRenderingContext2D.filter")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

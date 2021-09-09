@@ -8,6 +8,7 @@ tags:
 - Textures
 - WebGL
 - WebGLRenderingContext
+browser-compat: api.WebGLRenderingContext.getTexParameter
 ---
 <div>{{APIRef("WebGL")}}</div>
 
@@ -17,14 +18,14 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">any <var>gl</var>.getTexParameter(<var>target</var>, <var>pname</var>);
+<pre class="brush: js">any <var>gl</var>.getTexParameter(<var>target</var>, <var>pname</var>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
   <dt>target</dt>
-  <dd>A {{domxref("GLenum")}} specifying the binding point (target). Possible values:
+  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
     <ul>
       <li><code>gl.TEXTURE_2D</code>: A two-dimensional texture.</li>
       <li><code>gl.TEXTURE_CUBE_MAP</code>: A cube-mapped texture.</li>
@@ -38,7 +39,7 @@ tags:
     </ul>
   </dd>
   <dt>pname</dt>
-  <dd>A {{domxref("Glenum")}} specifying the information to query. Possible values:
+  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the information to query. Possible values:
     <table class="standard-table">
       <thead>
         <tr>
@@ -54,13 +55,13 @@ tags:
         </tr>
         <tr>
           <td><code>gl.TEXTURE_MAG_FILTER</code></td>
-          <td>{{domxref("GLenum")}}</td>
+          <td>{{domxref("WebGL_API/Types", "GLenum")}}</td>
           <td>Texture magnification filter</td>
           <td><code>gl.LINEAR</code> (default value), <code>gl.NEAREST</code>.</td>
         </tr>
         <tr>
           <td><code>gl.TEXTURE_MIN_FILTER</code></td>
-          <td>{{domxref("GLenum")}}</td>
+          <td>{{domxref("WebGL_API/Types", "GLenum")}}</td>
           <td>Texture minification filter</td>
           <td><code>gl.LINEAR</code>, <code>gl.NEAREST</code>,
             <code>gl.NEAREST_MIPMAP_NEAREST</code>, <code>gl.LINEAR_MIPMAP_NEAREST</code>,
@@ -69,14 +70,14 @@ tags:
         </tr>
         <tr>
           <td><code>gl.TEXTURE_WRAP_S</code></td>
-          <td>{{domxref("GLenum")}}</td>
+          <td>{{domxref("WebGL_API/Types", "GLenum")}}</td>
           <td>Wrapping function for texture coordinate <code>s</code></td>
           <td><code>gl.REPEAT</code> (default value), <code>gl.CLAMP_TO_EDGE</code>,
             <code>gl.MIRRORED_REPEAT</code>.</td>
         </tr>
         <tr>
           <td><code>gl.TEXTURE_WRAP_T</code></td>
-          <td>{{domxref("GLenum")}}</td>
+          <td>{{domxref("WebGL_API/Types", "GLenum")}}</td>
           <td>Wrapping function for texture coordinate <code>t</code></td>
           <td><code>gl.REPEAT</code> (default value), <code>gl.CLAMP_TO_EDGE</code>,
             <code>gl.MIRRORED_REPEAT</code>.</td>
@@ -87,7 +88,7 @@ tags:
         </tr>
         <tr>
           <td><code>ext.TEXTURE_MAX_ANISOTROPY_EXT</code></td>
-          <td>{{domxref("GLfloat")}}</td>
+          <td>{{domxref("WebGL_API/Types", "GLfloat")}}</td>
           <td>Maximum anisotropy for a texture</td>
           <td>Any float values.</td>
         </tr>
@@ -96,13 +97,13 @@ tags:
         </tr>
         <tr>
           <td><code>gl.TEXTURE_BASE_LEVEL</code></td>
-          <td>{{domxref("GLint")}}</td>
+          <td>{{domxref("WebGL_API/Types", "GLint")}}</td>
           <td>Texture mipmap level</td>
           <td>Any int values.</td>
         </tr>
         <tr>
           <td><code>gl.TEXTURE_COMPARE_FUNC</code></td>
-          <td>{{domxref("GLenum")}}</td>
+          <td>{{domxref("WebGL_API/Types", "GLenum")}}</td>
           <td>Comparison function</td>
           <td><code>gl.LEQUAL</code> (default value), <code>gl.GEQUAL</code>,
             <code>gl.LESS</code>, <code>gl.GREATER</code>, <code>gl.EQUAL</code>,
@@ -110,44 +111,44 @@ tags:
         </tr>
         <tr>
           <td><code>gl.TEXTURE_COMPARE_MODE</code></td>
-          <td>{{domxref("GLenum")}}</td>
+          <td>{{domxref("WebGL_API/Types", "GLenum")}}</td>
           <td>Texture comparison mode</td>
           <td><code>gl.NONE</code> (default value),
             <code>gl.COMPARE_REF_TO_TEXTURE</code>.</td>
         </tr>
         <tr>
           <td><code>gl.TEXTURE_IMMUTABLE_FORMAT</code></td>
-          <td>{{domxref("GLboolean")}}</td>
+          <td>{{domxref("WebGL_API/Types", "GLboolean")}}</td>
           <td>Immutability of the texture format and size</td>
           <td>true or false.</td>
         </tr>
         <tr>
           <td><code>gl.TEXTURE_IMMUTABLE_LEVELS</code></td>
-          <td>{{domxref("GLuint")}}</td>
+          <td>{{domxref("WebGL_API/Types", "GLuint")}}</td>
           <td>?</td>
           <td>Any uint values.</td>
         </tr>
         <tr>
           <td><code>gl.TEXTURE_MAX_LEVEL</code></td>
-          <td>{{domxref("GLint")}}</td>
+          <td>{{domxref("WebGL_API/Types", "GLint")}}</td>
           <td>Maximum texture mipmap array level</td>
           <td>Any int values.</td>
         </tr>
         <tr>
           <td><code>gl.TEXTURE_MAX_LOD</code></td>
-          <td>{{domxref("GLfloat")}}</td>
+          <td>{{domxref("WebGL_API/Types", "GLfloat")}}</td>
           <td>Texture maximum level-of-detail value</td>
           <td>Any float values.</td>
         </tr>
         <tr>
           <td><code>gl.TEXTURE_MIN_LOD</code></td>
-          <td>{{domxref("GLfloat")}}</td>
+          <td>{{domxref("WebGL_API/Types", "GLfloat")}}</td>
           <td>Texture minimum level-of-detail value</td>
           <td>Any float values.</td>
         </tr>
         <tr>
           <td><code>gl.TEXTURE_WRAP_R</code></td>
-          <td>{{domxref("GLenum")}}</td>
+          <td>{{domxref("WebGL_API/Types", "GLenum")}}</td>
           <td>Wrapping function for texture coordinate <code>r</code></td>
           <td><code>gl.REPEAT</code> (default value), <code>gl.CLAMP_TO_EDGE</code>,
             <code>gl.MIRRORED_REPEAT</code>.</td>
@@ -169,45 +170,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebGL', "#5.14.8", "getTexParameter")}}</td>
-      <td>{{Spec2('WebGL')}}</td>
-      <td>Initial definition for WebGL.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('OpenGL ES 2.0', "glGetTexParameter.xml", "glGetTexParameter")}}</td>
-      <td>{{Spec2('OpenGL ES 2.0')}}</td>
-      <td>Man page of the (similar) OpenGL ES 2.0 API.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebGL2', "#3.7.6", "getTexParameter")}}</td>
-      <td>{{Spec2('WebGL2')}}</td>
-      <td>Updated definition for WebGL.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('OpenGL ES 3.0', "glGetTexParameter.xhtml", "glGetTexParameter")}}
-      </td>
-      <td>{{Spec2('OpenGL ES 3.0')}}</td>
-      <td>Man page of the (similar) OpenGL ES 3.0 API.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
-
-<p>{{Compat("api.WebGLRenderingContext.getTexParameter")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

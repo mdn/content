@@ -11,20 +11,23 @@ tags:
 - Reference
 - Secure context
 - complete
+browser-compat: api.PaymentResponse.complete
 ---
 <p>{{securecontext_header}}{{APIRef("Payment Request API")}}</p>
 
-<p><span class="seoSummary">The {{domxref("PaymentRequest")}} method
+<p>The {{domxref("PaymentRequest")}} method
     <code><strong>complete()</strong></code> of the <a
       href="/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a> notifies the
     {{Glossary("user agent")}} that the user interaction is over, and causes any remaining
-    user interface to be closed.</span> This method must be called after the user accepts
+    user interface to be closed.</p>
+
+<p>This method must be called after the user accepts
   the payment request and the {{jsxref("Promise")}} returned by the
   {{domxref('PaymentRequest.show()')}} method is resolved.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>completePromise</em> = <em>paymentRequest</em>.complete(<em>result</em>);
+<pre class="brush: js"><em>completePromise</em> = <em>paymentRequest</em>.complete(<em>result</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -108,22 +111,8 @@ payment.show().then(function(paymentResponse) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Payment','#dom-paymentresponse-complete','PaymentResponse:
-        complete')}}</td>
-      <td>{{Spec2('Payment')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.PaymentResponse.complete")}}</p>
+<p>{{Compat}}</p>

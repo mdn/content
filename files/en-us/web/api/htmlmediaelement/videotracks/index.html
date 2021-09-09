@@ -13,13 +13,14 @@ tags:
 - Video Tracks
 - Web
 - videoTracks
+browser-compat: api.HTMLMediaElement.videoTracks
 ---
-<div>{{APIRef("HTML DOM")}}{{draft}}</div>
+<div>{{APIRef("HTML DOM")}}</div>
 
-<p><span class="seoSummary">The read-only <strong><code>videoTracks</code></strong>
+<p>The read-only <strong><code>videoTracks</code></strong>
     property on {{DOMxRef("HTMLMediaElement")}} objects returns a
     {{DOMxRef("VideoTrackList")}} object listing all of the {{DOMxRef("VideoTrack")}}
-    objects representing the media element's video tracks.</span></p>
+    objects representing the media element's video tracks.</p>
 
 <p>The returned list is <em>live</em>; that is, as tracks are added to and removed from
   the media element, the list's contents change dynamically. Once you have a reference to
@@ -31,7 +32,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>videoTracks</em> = <em>mediaElement</em>.videoTracks;</pre>
+  class="brush: js">var <em>videoTracks</em> = <em>mediaElement</em>.videoTracks;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -44,25 +45,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName("HTML WHATWG", "#dom-media-videotracks",
-        "HTMLMediaElement.videoTracks")}}</td>
-      <td>{{Spec2("HTML WHATWG")}}</td>
-      <td>No change from {{SpecName("HTML5 W3C")}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLMediaElement.videoTracks")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -11,6 +11,7 @@ tags:
   - WebExtensions
   - connect
   - runtime
+browser-compat: webextensions.api.runtime.connect
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -57,9 +58,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("webextensions.api.runtime.connect")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -71,7 +70,7 @@ tags:
  <li>sends messages to the background script, using <code>myPort</code>, when the user clicks the document.</li>
 </ul>
 
-<pre class="notranslate brush: js line-numbers language-js">// content-script.js
+<pre class="brush: js line-numbers language-js">// content-script.js
 
 var myPort = browser.runtime.connect({name:"port-from-cs"});
 myPort.postMessage({greeting: "hello from content script"});
@@ -99,7 +98,7 @@ document.body.addEventListener("click", function() {
  <li>sends messages to the content script, using <code>portFromCS</code>, when the user clicks the extension's browser action.</li>
 </ul>
 
-<pre class="notranslate brush: js line-numbers language-js">// background-script.js
+<pre class="brush: js line-numbers language-js">// background-script.js
 
 var portFromCS;
 

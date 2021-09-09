@@ -71,7 +71,7 @@ tags:
 
 <p>Log the value and level of control for the <code>networkPredictionEnabled</code> property of the {{WebExtAPIRef("privacy.network")}} object, for private browsing windows. Note that this requires the "privacy" browser permission.</p>
 
-<pre class="notranslate brush: js">var getting = browser.privacy.network.networkPredictionEnabled.get({});
+<pre class="brush: js">var getting = browser.privacy.network.networkPredictionEnabled.get({});
 
 getting.then((got) =&gt; {
   console.log(`Value: ${got.value}`);

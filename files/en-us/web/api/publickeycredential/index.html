@@ -9,6 +9,7 @@ tags:
   - Reference
   - Web Authentication API
   - WebAuthn
+browser-compat: api.PublicKeyCredential
 ---
 <div>{{APIRef("Web Authentication API")}}{{securecontext_header}}</div>
 
@@ -24,9 +25,9 @@ tags:
  <dt><code>PublicKeyCredential.type</code> {{ReadOnlyInline()}}{{securecontext_inline}}</dt>
  <dd>Inherited from {{domxref("Credential")}}. Always set to <code>public-key</code> for <code>PublicKeyCredential</code> instances.</dd>
  <dt>{{domxref("PublicKeyCredential.id")}} {{ReadOnlyInline()}}{{securecontext_inline}}</dt>
- <dd>Inherited from {{domxref("Credential")}} and overridden to be the <a href="/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding">base64url encoding</a> of {{domxref("PublicKeyCredential.rawId")}}.</dd>
+ <dd>Inherited from {{domxref("Credential")}} and overridden to be the <a href="/en-US/docs/Glossary/Base64">base64url encoding</a> of {{domxref("PublicKeyCredential.rawId")}}.</dd>
  <dt>{{domxref("PublicKeyCredential.rawId")}} {{ReadOnlyInline()}}{{securecontext_inline}}</dt>
- <dd>An {{domxref("ArrayBuffer")}} that holds the globally unique identifier for this <code>PublicKeyCredential</code>. This identifier can be used to look up credentials for future calls to {{domxref("CredentialsContainer.get")}}.</dd>
+ <dd>An {{jsxref("ArrayBuffer")}} that holds the globally unique identifier for this <code>PublicKeyCredential</code>. This identifier can be used to look up credentials for future calls to {{domxref("CredentialsContainer.get")}}.</dd>
  <dt>{{domxref("PublicKeyCredential.response")}} {{ReadOnlyInline()}} {{securecontext_inline}}</dt>
  <dd>An instance of an {{domxref("AuthenticatorResponse")}} object. It is either of type {{domxref("AuthenticatorAttestationResponse")}} if the <code>PublicKeyCredential</code> was the results of a {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} call, or of type {{domxref("AuthenticatorAssertionResponse")}} if the <code>PublicKeyCredential</code> was the result of a {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}} call.</dd>
 </dl>
@@ -93,26 +94,11 @@ navigator.credentials.get({ "publicKey": options })
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('WebAuthn','#iface-pkcredential','PublicKeyCredential interface')}}</td>
-   <td>{{Spec2('WebAuthn')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.PublicKeyCredential")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

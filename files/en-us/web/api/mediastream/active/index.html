@@ -1,5 +1,5 @@
 ---
-title: active
+title: MediaStream.active
 slug: Web/API/MediaStream/active
 tags:
 - API
@@ -9,6 +9,7 @@ tags:
 - Property
 - Reference
 - active
+browser-compat: api.MediaStream.active
 ---
 <p>{{APIRef("Media Capture and Streams")}}</p>
 
@@ -23,7 +24,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">const <em>isActive</em> = <em>MediaStream</em>.active;</pre>
+  class="brush: js">const <em>isActive</em> = <em>MediaStream</em>.active;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -38,7 +39,7 @@ tags:
   a button on the page is updated based on whether or not the stream is currently active.
 </p>
 
-<pre class="brush: js notranslate">const promise = navigator.mediaDevices.getUserMedia({
+<pre class="brush: js">const promise = navigator.mediaDevices.getUserMedia({
   audio: true,
   video: true
 });
@@ -50,21 +51,8 @@ promise.then((stream) =&gt; {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Media Capture', '#dom-mediastream-active', 'active')}}</td>
-      <td>{{Spec2('Media Capture')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MediaStream.active")}}</p>
+<p>{{Compat}}</p>

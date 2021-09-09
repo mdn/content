@@ -15,13 +15,14 @@ tags:
 - copy
 - getImageData
 - img
+browser-compat: api.CanvasRenderingContext2D.getImageData
 ---
 <div>{{APIRef("Canvas API")}}</div>
 
-<p><span class="seoSummary">The {{domxref("CanvasRenderingContext2D")}} method
+<p>The {{domxref("CanvasRenderingContext2D")}} method
     <code><strong>getImageData()</strong></code> of the Canvas 2D API returns an
     {{domxref("ImageData")}} object representing the underlying pixel data for a specified
-    portion of the canvas.</span></p>
+    portion of the canvas.</p>
 
 <p>This method is not affected by the canvas's transformation matrix. If the specified
   rectangle extends outside the bounds of the canvas, the pixels outside the canvas are
@@ -39,7 +40,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>ctx</em>.getImageData(<em>sx</em>, <em>sy</em>, <em>sw</em>, <em>sh</em>);
+<pre class="brush: js"><em>ctx</em>.getImageData(<em>sx</em>, <em>sy</em>, <em>sw</em>, <em>sh</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -99,7 +100,7 @@ tags:
   from off the canvas; only 5,000 of them are opaque black (the color of the drawn
   rectangle).</p>
 
-<pre class="brush: js; highlight:[6]">const canvas = document.getElementById('canvas');
+<pre class="brush: js;">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 ctx.rect(10, 10, 100, 100);
 ctx.fill();
@@ -114,25 +115,11 @@ ctx.putImageData(imageData, 150, 10);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-getimagedata",
-        "CanvasRenderingContext2D.getImageData")}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CanvasRenderingContext2D.getImageData")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

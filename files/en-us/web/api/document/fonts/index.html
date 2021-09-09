@@ -9,17 +9,18 @@ tags:
 - FontFaceSet
 - Fonts
 - font
+browser-compat: api.Document.fonts
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p><span class="seoSummary">The <strong><code>fonts</code></strong> property of the
+<p>The <strong><code>fonts</code></strong> property of the
     {{domxref("Document")}} interface returns the {{domxref("FontFaceSet")}} interface of
-    the document.</span></p>
+    the document.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">let <var>fontFaceSet</var> = <var>document</var>.fonts;</pre>
+  class="brush: js">let <var>fontFaceSet</var> = <var>document</var>.fonts;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -32,7 +33,7 @@ tags:
 <h3 id="Doing_operation_after_all_fonts_are_loaded">Doing operation after all fonts are
   loaded</h3>
 
-<pre class="brush: js notranslate">document.fonts.ready.then(function() {
+<pre class="brush: js">document.fonts.ready.then(function() {
   // Any operation that needs to be done only after all the fonts
   // have finished loading can go here.
 });
@@ -40,26 +41,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('CSS3 Font Loading','#FontFaceSet-interface','FontFaceSet')}}</td>
-      <td>{{Spec2('CSS3 Font Loading')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("api.Document.fonts")}}</div>
+<div>{{Compat}}</div>
 
 <h2 id="See_also">See also</h2>
 

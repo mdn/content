@@ -11,6 +11,7 @@ tags:
   - WebExtensions
   - devtools.panels
   - setObject
+browser-compat: webextensions.api.devtools.panels.ExtensionSidebarPane.setObject
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -43,15 +44,13 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("webextensions.api.devtools.panels.ExtensionSidebarPane.setObject", 10)}}</p>
-
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+<p>{{Compat}}</p>
 
 <h2 id="Examples">Examples</h2>
 
 <p>Create a new pane, and populate it with a JSON object. You could run this code in a script loaded by your extension's <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page">devtools page</a>.</p>
 
-<pre class="notranslate brush: js line-numbers  language-js">function onCreated(sidebarPane) {
+<pre class="brush: js line-numbers  language-js">function onCreated(sidebarPane) {
   sidebarPane.setObject({
     someBool: true,
     someString: &quot;hello there&quot;,

@@ -10,16 +10,17 @@ tags:
   - Service Workers
   - ServiceWorker
   - claim
+browser-compat: api.Clients.claim
 ---
 <p>{{APIRef("Service Worker Clients")}}</p>
 
-<p><span class="seoSummary">The <strong><code>claim()</code></strong> method of the
+<p>The <strong><code>claim()</code></strong> method of the
     {{domxref("Clients")}} interface allows an active service worker to set itself as the
     {{domxref("ServiceWorkerContainer.controller", "controller")}} for all clients within
     its {{domxref("ServiceWorkerRegistration.scope", "scope")}}. This triggers a
     "<code>controllerchange</code>" event
     on {{domxref("ServiceWorkerContainer","navigator.serviceWorker")}} in any clients that
-    become controlled by this service worker.</span></p>
+    become controlled by this service worker.</p>
 
 <p>When a service worker is initially registered, pages won't use it until they next
   load. The <code>claim()</code> method causes those pages to be controlled immediately.
@@ -28,7 +29,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">await clients.claim();
+<pre class="brush: js">await clients.claim();
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -51,24 +52,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Service Workers', '#clients-claim', 'claim()')}}</td>
-      <td>{{Spec2('Service Workers')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Clients.claim")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

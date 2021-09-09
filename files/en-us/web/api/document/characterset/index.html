@@ -8,17 +8,17 @@ tags:
 - Property
 - Read-only
 - Reference
+browser-compat: api.Document.characterSet
 ---
 <div>{{ ApiRef("DOM") }}</div>
 
-<p><span class="seoSummary">The <code><strong>Document.characterSet</strong></code>
+<p>The <code><strong>Document.characterSet</strong></code>
     read-only property returns the <a
       href="/en-US/docs/Glossary/character_encoding">character encoding</a> of the
-    document that it's currently rendered with.</span> (A character encoding is a set of
-  characters <em>and</em> how to interpret bytes into those characters.)</p>
+    document that it's currently rendered with.</p>
 
 <div class="note">
-  <p>A “character set” and a “character encoding” are related, but different. Despite the
+  <p><strong>Note:</strong> A “character set” and a “character encoding” are related, but different. Despite the
     name of this property, it returns the <em>encoding</em>.</p>
 </div>
 
@@ -30,7 +30,7 @@ tags:
     text</a>.</p>
 
 <div class="note">
-  <p>The properties <code>document.charset</code> and <code>document.inputEncoding</code>
+  <p><strong>Note:</strong> The properties <code>document.charset</code> and <code>document.inputEncoding</code>
     are legacy aliases for <code>document.characterSet</code>. Do not use them any more.
   </p>
 </div>
@@ -38,7 +38,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>string</em> = document.characterSet;</pre>
+  class="brush: js">var <em>string</em> = document.characterSet;</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -50,21 +50,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th>Specification</th>
-      <th>Status</th>
-      <th>Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('DOM WHATWG', '#dom-document-characterset', 'characterSet')}}</td>
-      <td>{{Spec2('DOM WHATWG')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Document.characterSet")}}</p>
+<p>{{Compat}}</p>

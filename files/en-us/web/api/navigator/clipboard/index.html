@@ -13,12 +13,15 @@ tags:
 - Reference
 - copy
 - paste
+browser-compat: api.Navigator.clipboard
 ---
-<p><span class="seoSummary">The <a href="/en-US/docs/Web/API/Clipboard_API">Clipboard
+<p>The <a href="/en-US/docs/Web/API/Clipboard_API">Clipboard
       API</a> adds to the <strong>{{domxref("Navigator")}}</strong> interface the
     read-only <strong><code>clipboard</code></strong> property, which returns the
     {{domxref("Clipboard")}} object used to read and write the clipboard's
-    contents.</span> The Clipboard API can be used to implement cut, copy, and paste
+    contents.</p>
+
+<p>The Clipboard API can be used to implement cut, copy, and paste
   features within a web application.</p>
 
 <p>Use of the asynchronous clipboard read and write methods requires that the user grant
@@ -28,7 +31,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>theClipboard</em> = navigator.clipboard;
+<pre class="brush: js"><em>theClipboard</em> = navigator.clipboard;
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -55,25 +58,10 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Clipboard API','#navigator-clipboard','navigator.clipboard')}}</td>
-      <td>{{Spec2('Clipboard API')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Navigator.clipboard")}}</p>
+<p>{{Compat}}</p>
 
 <div>{{APIRef("Clipboard API")}}</div>

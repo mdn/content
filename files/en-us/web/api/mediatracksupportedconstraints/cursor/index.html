@@ -18,13 +18,14 @@ tags:
 - Video
 - display
 - screen
+browser-compat: api.MediaTrackSupportedConstraints.cursor
 ---
 <p>{{APIRef("Media Capture and Streams")}}</p>
 
-<p><span class="seoSummary">The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
+<p>The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
     <code><strong>cursor</strong></code> property indicates whether or not the
     {{domxref("MediaTrackConstraints.cursor", "cursor")}} constraint is supported by the
-    user agent and the device on which the content is being used. </span></p>
+    user agent and the device on which the content is being used. </p>
 
 <p>The supported constraints list is obtained by calling
   {{domxref("MediaDevices.getSupportedConstraints",
@@ -33,7 +34,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><em>isCursorSupported</em> = <em>supportedConstraints</em>.cursor;</pre>
+  class="brush: js"><em>isCursorSupported</em> = <em>supportedConstraints</em>.cursor;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -73,25 +74,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Screen Capture', '#dom-mediatracksupportedconstraints-cursor',
-        'MediaTrackSupportedConstraints.cursor')}}</td>
-      <td>{{Spec2('Screen Capture API')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MediaTrackSupportedConstraints.cursor")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

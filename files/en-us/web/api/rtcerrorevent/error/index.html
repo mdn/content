@@ -2,19 +2,20 @@
 title: RTCErrorEvent.error
 slug: Web/API/RTCErrorEvent/error
 tags:
-- API
-- Audio
-- Error
-- Error Handling
-- Media
-- Property
-- RTCError
-- RTCErrorEvent
-- Reference
-- Video
-- WebRTC
-- WebRTC API
-- WebRTC Device API
+  - API
+  - Audio
+  - Error
+  - Error Handling
+  - Media
+  - Property
+  - RTCError
+  - RTCErrorEvent
+  - Reference
+  - Video
+  - WebRTC
+  - WebRTC API
+  - WebRTC Device API
+browser-compat: api.RTCErrorEvent.error
 ---
 <p>{{DefaultAPISidebar("WebRTC")}}</p>
 
@@ -25,23 +26,19 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">let <em>errorInfo</em> = <em>rtcErrorEvent</em>.error;</pre>
+  class="brush: js">let <em>errorInfo</em> = <em>rtcErrorEvent</em>.error;</pre>
 
 <h3 id="Value">Value</h3>
 
 <p>An {{domxref("RTCError")}} object whose properties provide details about the error
-  which has occurred in the context of a {{Glossary("WebRTC")}} operation. Since
-  <code>RTCError</code> is based upon {{domxref("DOMException")}}, it includes those
-  properties. Additional properties defined by <code>RTCError</code> are:</p>
-
-<p>{{page("/en-US/docs/Web/API/RTCError", "property-list")}}</p>
+  which has occurred in the context of a {{Glossary("WebRTC")}} operation. 
 
 <h2 id="Examples">Examples</h2>
 
 <p>In this example, a handler is established for an {{domxref("RTCDataChannel")}}'s
   {{domxref("RTCDataChannel.error_event", "error")}} event.</p>
 
-<pre class="brush: js notranslate">dataChannel.addEventListener("error", (event) =&gt; {
+<pre class="brush: js">dataChannel.addEventListener("error", (event) =&gt; {
   let error = event.error;
 
   if (error.errorDetail === "sdp-syntax-error") {
@@ -71,7 +68,7 @@ tags:
   use the <code>RTCDataChannel</code> object's {{domxref("RTCDataChannel.onerror",
   "onerror")}} event handler property, like this:</p>
 
-<pre class="brush: js notranslate">dataChannel.onerror = (event) =&gt; {
+<pre class="brush: js">dataChannel.onerror = (event) =&gt; {
   let error = event.error;
 
   /* and so forth */
@@ -80,24 +77,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('WebRTC 1.0', '#dom-rtcerrorevent-error', 'RTCErrorEvent.error')}}
-      </td>
-      <td>{{Spec2('WebRTC 1.0')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCErrorEvent.error")}}</p>
+<p>{{Compat}}</p>

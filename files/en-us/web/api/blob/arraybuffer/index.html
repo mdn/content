@@ -10,16 +10,17 @@ tags:
 - Reference
 - binary
 - read
+browser-compat: api.Blob.arrayBuffer
 ---
 <p>{{APIRef("File API")}}</p>
 
 <p>The <code><strong>arrayBuffer()</strong></code> method in the {{domxref("Blob")}}
   interface returns a {{jsxref("Promise")}} that resolves with the contents of the blob as
-  binary data contained in an {{domxref("ArrayBuffer")}}.</p>
+  binary data contained in an {{jsxref("ArrayBuffer")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>bufferPromise</em> = <em>blob</em>.arrayBuffer();
+<pre class="brush: js">var <em>bufferPromise</em> = <em>blob</em>.arrayBuffer();
 
 <em>blob</em>.arrayBuffer().then(<em>buffer</em> =&gt; /* process the ArrayBuffer */);
 
@@ -31,7 +32,7 @@ var <em>buffer</em> = await <em>blob</em>.arrayBuffer();</pre>
 
 <h3 id="Returns">Returns</h3>
 
-<p>A promise that resolves with an {{domxref("ArrayBuffer")}} that contains the blob's
+<p>A promise that resolves with an {{jsxref("ArrayBuffer")}} that contains the blob's
   data in binary form.</p>
 
 <h3 id="Exceptions">Exceptions</h3>
@@ -48,29 +49,16 @@ var <em>buffer</em> = await <em>blob</em>.arrayBuffer();</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName("File API", "#dom-blob-arraybuffer", "Blob.arrayBuffer()")}}</td>
-      <td>{{Spec2("File API")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Blob.arrayBuffer")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li>{{domxref("Body.arrayBuffer()")}}</li>
+  <li>{{domxref("Response.arrayBuffer()")}}</li>
   <li><a href="/en-US/docs/Web/API/Streams_API">Streams API</a></li>
   <li>{{domxref("FileReader.readAsArrayBuffer()")}}</li>
 </ul>

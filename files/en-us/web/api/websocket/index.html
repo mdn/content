@@ -7,6 +7,7 @@ tags:
   - NeedsContent
   - WebSocket
   - WebSockets
+browser-compat: api.WebSocket
 ---
 <div>{{APIRef("Web Sockets API")}}</div>
 
@@ -26,11 +27,13 @@ tags:
 <h2 id="Constants">Constants</h2>
 
 <table class="standard-table">
+  <thead>
+    <tr>
+      <th>Constant</th>
+      <th>Value</th>
+    </tr>
+  </thead>
  <tbody>
-  <tr>
-   <td class="header">Constant</td>
-   <td class="header">Value</td>
-  </tr>
   <tr>
    <td><code>WebSocket.CONNECTING</code></td>
    <td><code>0</code></td>
@@ -105,7 +108,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">// Create WebSocket connection.
+<pre class="brush: js">// Create WebSocket connection.
 const socket = new WebSocket('ws://localhost:8080');
 
 // Connection opened
@@ -120,24 +123,11 @@ socket.addEventListener('message', function (event) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>Specification</th>
-   <th>Status</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "#network", "WebSocket")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.WebSocket")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -9,14 +9,17 @@ tags:
 - Property
 - Reference
 - actions
+browser-compat: api.Notification.actions
 ---
 <p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
 
-<p><span class="seoSummary">The <strong><code>actions</code></strong> read-only property
+<p>The <strong><code>actions</code></strong> read-only property
     of the {{domxref("Notification")}} interface returns the list of
     {{domxref("NotificationAction")}} objects set using the <code>actions</code> option
     when creating the notification using the
-    {{domxref("Notification.Notification","Notification()")}} constructor.</span> This is
+    {{domxref("Notification.Notification","Notification()")}} constructor.</p>
+
+<p>This is
   a list of the application-defined actions the user can choose to take immediately within
   the context of a notification.</p>
 
@@ -29,7 +32,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <var>actions</var>[] = <var>Notification</var>.actions;</pre>
+  class="brush: js">var <var>actions</var>[] = <var>Notification</var>.actions;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -38,24 +41,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Web Notifications','#dom-notification-actions','actions')}}</td>
-      <td>{{Spec2('Web Notifications')}}</td>
-      <td>Living standard</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Notification.actions")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

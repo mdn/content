@@ -11,10 +11,13 @@ tags:
   - Reference
   - Video
   - mute
+browser-compat: api.MediaStreamTrack.mute_event
 ---
 <div>{{APIRef("Media Capture and Streams")}}</div>
 
-<p><span class="seoSummary">The <code><strong>mute</strong></code> event is sent to a {{domxref("MediaStreamTrack")}} when the track's source is temporarily unable to provide media data.</span> When the track is once again able to produce media output, an {{domxref("MediaStreamTrack/unmute_event", "unmute")}} event is sent.</p>
+<p>The <code><strong>mute</strong></code> event is sent to a {{domxref("MediaStreamTrack")}} when the track's source is temporarily unable to provide media data.</p>
+
+<p>When the track is once again able to produce media output, an {{domxref("MediaStreamTrack/unmute_event", "unmute")}} event is sent.</p>
 
 <p>During the time between the <code>mute</code> event and the <code>unmute</code> event, the value of the track's {{domxref("MediaStreamTrack.muted", "muted")}} property is <code>true</code>.</p>
 
@@ -64,33 +67,18 @@ musicTrack.addEventListener("unmute", event =&gt; {
   document.getElementById("timeline-widget").style.backgroundColor = "#aaa";
 }
 
-musicTrack.mute = event = &gt; {
+musicTrack.onunmute = event = &gt; {
   document.getElementById("timeline-widget").style.backgroundColor = "#fff";
 }
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Media Capture', '#event-mediastreamtrack-mute', 'mute')}}</td>
-   <td>{{Spec2('Media Capture')}}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MediaStreamTrack.mute_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

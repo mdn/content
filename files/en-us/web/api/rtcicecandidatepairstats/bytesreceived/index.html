@@ -16,13 +16,14 @@ tags:
 - WebRTC API
 - bytesReceived
 - data
+browser-compat: api.RTCIceCandidatePairStats.bytesReceived
 ---
 <p>{{APIRef("WebRTC")}}</p>
 
-<p><span class="seoSummary">The {{domxref("RTCIceCandidatePairStats")}} property
+<p>The {{domxref("RTCIceCandidatePairStats")}} property
     <strong><code>bytesReceived</code></strong> indicates the total number of payload
     bytes—that is, bytes which aren't overhead such as headers or padding—that hve been
-    received to date on the connection described by the candidate pair.</span></p>
+    received to date on the connection described by the candidate pair.</p>
 
 <p>The {{domxref("RTCIceCandidatePairStats.bytesSent", "bytesSent")}} property reports the
   number of bytes sent so far on the described connection.</p>
@@ -30,7 +31,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><em>received</em> = <em>rtcIceCandidatePairStats</em>.bytesReceived;</pre>
+  class="brush: js"><em>received</em> = <em>rtcIceCandidatePairStats</em>.bytesReceived;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -40,25 +41,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('WebRTC Statistics Identifiers',
-        '#dom-rtcicecandidatepairstats-bytesreceived',
-        'RTCIceCandidatePairStats.bytesReceived') }}</td>
-      <td>{{ Spec2('WebRTC Statistics Identifiers') }}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCIceCandidatePairStats.bytesReceived")}}</p>
+<p>{{Compat}}</p>

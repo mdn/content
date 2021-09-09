@@ -50,7 +50,6 @@ tags:
  <li>ECMAScript 2015 semantics for the {{jsxref("Function.name")}} properties have been implemented. This includes inferred names on anonymous functions (<code>var foo = function() {}</code>) ({{bug(883377)}}).</li>
  <li>ECMAScript 2015 semantics for closing iterators have been implemented. This affects the <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a></code> loop, for example ({{bug(1147371)}}).</li>
  <li>The <a href="https://tc39.github.io/proposal-template-literal-revision/">Template Literal Revision proposal</a> that <a href="/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_template_literals_and_escape_sequences">lifts escape sequence restrictions on tagged template literals</a> has been implemented ({{bug(1317375)}}).</li>
- <li>The non-standard <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_generic_methods">String generics</a> now present a deprecation warning in the console. Do not use them anymore, they will be removed in the future! ({{bug(1319926)}}).</li>
  <li>The static <code>length</code> property of {{jsxref("TypedArray")}} objects was changed from 3 to 0 as per ES2016 ({{bug(1317306)}}).</li>
  <li>{{jsxref("SharedArrayBuffer")}} can now be used in {{jsxref("DataView")}} objects ({{bug(1246597)}}).</li>
  <li>In earlier versions of the specification, {{jsxref("SharedArrayBuffer")}} objects needed to be explicitly transferred during <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured cloning</a>. In the new specification they aren't <a href="/en-US/docs/Web/API/Transferable">transferable objects</a> anymore and thus must not be in the transfer list. The new behavior used to present a console warning only, but will now throw an error ({{bug(1302037)}}).</li>
@@ -71,7 +70,7 @@ tags:
 <h3 id="DOM">DOM</h3>
 
 <ul>
- <li>The {{domxref("HTMLHyperLinkElementUtils.pathname", "pathname")}} and {{domxref("HTMLHyperLinkElementUtils.search", "search")}} {{domxref("HTMLHyperLinkElementUtils")}} properties previously returned the wrong parts of the URL. For example, for a URL of <code>http://z.com/x?a=true&amp;b=false</code>, <code>pathname</code> would return "<code>/x?a=true&amp;b=false"</code> and <code>search</code> would return "", rather than "<code>/x</code>" and "<code>?a=true&amp;b=false"</code> respectively. This has now been fixed ({{bug(1310483)}}).</li>
+ <li>The {{domxref("HTMLAnchorElement/pathname", "pathname")}} and {{domxref("HTMLAnchorElement/search", "search")}} {{domxref("HTMLHyperLinkElementUtils")}} properties previously returned the wrong parts of the URL. For example, for a URL of <code>http://z.com/x?a=true&amp;b=false</code>, <code>pathname</code> would return "<code>/x?a=true&amp;b=false"</code> and <code>search</code> would return "", rather than "<code>/x</code>" and "<code>?a=true&amp;b=false"</code> respectively. This has now been fixed ({{bug(1310483)}}).</li>
  <li>The {{domxref("URLSearchParams.URLSearchParams", "URLSearchParams()")}} constructor now accepts a {{domxref("USVString")}} or sequence of {{domxref("USVString")}}s as an init object ({{bug("1330678")}}).</li>
  <li>The {{domxref("Selection.setBaseAndExtent()")}} method of the <a href="/en-US/docs/Web/API/Selection">Selection API</a> is now implemented (see {{bug(1321623)}}).</li>
  <li>The <a href="https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly">"fakepath"</a> addition to <code>file</code> type {{htmlelement("input")}} <code>values</code> has been implemented in Gecko, giving it parity with other browsers (see {{bug(1274596)}}).</li>
@@ -121,9 +120,9 @@ tags:
 <h4 id="WebRTC">WebRTC</h4>
 
 <ul>
- <li>The {{domxref("RTCPeerConnection")}} methods {{domxref("RTCPeerConnection.createOffer", "createOffer()")}} and {{domxref("RTCPeerConnection.createAnswer", "createAnswer()")}} now return a {{jsxref("Promise")}} that returns an object conforming to the dictionary {{domxref("RTCSessionDescriptionInit")}} instead of returning an {{domxref("RTCSessionDescription")}} directly. Existing code will continue to work, but <a href="/en-US/docs/Web/API/RTCPeerConnection/setLocalDescription#about_the_session_description_parameter">new code can be written more</a>.</li>
+ <li>The {{domxref("RTCPeerConnection")}} methods {{domxref("RTCPeerConnection.createOffer", "createOffer()")}} and {{domxref("RTCPeerConnection.createAnswer", "createAnswer()")}} now return a {{jsxref("Promise")}} that returns an object conforming to the dictionary {{domxref("RTCSessionDescriptionInit")}} instead of returning an {{domxref("RTCSessionDescription")}} directly. Existing code will continue to work, but new code can be written more simply.</li>
  <li>Similarly, the {{domxref("RTCPeerConnection")}} methods {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}} and {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}} now accept as input an object conforming to the dictionary {{domxref("RTCSessionDescriptionInit")}}. Existing code continues to work, but <a href="/en-US/docs/Web/API/RTCPeerConnection/setLocalDescription#about_the_session_description_parameter">can be simplified</a>.</li>
- <li>{{domxref("RTCPeerConnection.addIceCandidate()")}} now accepts as input an object conforming to the {{domxref("RTCIceCandidateInit")}} dictionary. This is compatible with existing code but allows new code to be written slightly more when used in tandem with the changes listed above ({{bug(1263312)}}).</li>
+ <li>{{domxref("RTCPeerConnection.addIceCandidate()")}} now accepts as input an initialisation object. This is compatible with existing code but allows new code to be written slightly more simply when used in tandem with the changes listed above ({{bug(1263312)}}).</li>
  <li>{{Glossary("DTMF")}} support is now enabled by default using {{domxref("RTCDTMFSender")}}. See <a href="/en-US/docs/Web/API/WebRTC_API/Using_DTMF">Using DTMF with WebRTC</a> for more information on how this works.</li>
 </ul>
 
@@ -211,12 +210,6 @@ tags:
 
 <ul>
  <li>The asynchronous <a href="../../../Add-ons/Add-on_Manager/AddonManager">AddonManager APIs</a> now support {{jsxref("Promise", "Promises")}} as well as callbacks ({{bug(987512)}}.</li>
-</ul>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="https://www.fxsitecompat.com/en-US/versions/53">Site Compatibility for Firefox 53</a></li>
 </ul>
 
 <h2 id="Older_versions">Older versions</h2>

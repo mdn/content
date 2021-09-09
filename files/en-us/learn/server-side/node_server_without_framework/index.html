@@ -28,7 +28,7 @@ tags:
 
 <p>A simple static file server built with Node.js:</p>
 
-<pre class="brush: js line-numbers language-js notranslate">var http = require('http');
+<pre class="brush: js line-numbers language-js">var http = require('http');
 var fs = require('fs');
 var path = require('path');
 
@@ -87,21 +87,21 @@ console.log('Server running at http://127.0.0.1:8125/');</pre>
 
 <p>Lines 1 through 3 load modules provided by Node.js, roughly similar to imports.</p>
 
-<pre class="brush: js language-js notranslate">var http = require('http');
+<pre class="brush: js language-js">var http = require('http');
 var fs = require('fs');
 var path = require('path');
 </pre>
 
 <p>Afterward is the function for creating the server. <code>https.createServer</code> returns a <code>Server</code> object, which we can start up by listening on port 8125.</p>
 
-<pre class="brush: js language-js notranslate">http.createServer(function (request, response) {
+<pre class="brush: js language-js">http.createServer(function (request, response) {
     ...
 }).listen(8125);
 </pre>
 
 <p>The following lines deal with fixing the request URL if it does not specify a file.</p>
 
-<pre class="brush: js notranslate">var filePath = '.' + request.url;
+<pre class="brush: js">var filePath = '.' + request.url;
 if (filePath == './') {
     filePath = './index.html';
 }
@@ -111,7 +111,7 @@ if (filePath == './') {
 
 <p>Next, we look for the extension of the file being requested and see if it matches with one of our <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME types</a>. If no matches are found, we use the <code>application/octet-stream</code> as the default type.</p>
 
-<pre class="brush: js notranslate">var mimeTypes = {
+<pre class="brush: js">var mimeTypes = {
     '.html': 'text/html',
     '.js': 'text/javascript',
     '.css': 'text/css',
@@ -134,14 +134,14 @@ var contentType = mimeTypes[extname] || 'application/octet-stream';
 
 <p>Lastly, we respond to the client with the file information. This function reads the file using our previously prepared <code>filePath</code> variable.</p>
 
-<pre class="brush: js notranslate">fs.readFile(filePath, function(error, content) {
+<pre class="brush: js">fs.readFile(filePath, function(error, content) {
     ...
 });
 </pre>
 
 <p>The first thing we do is to compensate for any possible errors. Most often, the error will be <code>ENOENT</code>, in which case we reply with a 404 error.</p>
 
-<pre class="brush: js notranslate">if(error.code == 'ENOENT') {
+<pre class="brush: js">if(error.code == 'ENOENT') {
     fs.readFile('./404.html', function(error, content) {
         response.writeHead(404, { 'Content-Type': 'text/html' });
         response.end(content, 'utf-8');
@@ -154,7 +154,7 @@ else {
 
 <p>Finally, if there are no errors, we send over the requested file.</p>
 
-<pre class="brush: js notranslate">response.writeHead(200, { 'Content-Type': contentType });
+<pre class="brush: js">response.writeHead(200, { 'Content-Type': contentType });
 response.end(content, 'utf-8');</pre>
 
 <h2 id="To_do">To do</h2>

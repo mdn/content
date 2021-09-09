@@ -9,10 +9,10 @@ tags:
   - PerformanceEventTiming
   - Reference
   - Web Performance
+browser-compat: api.PerformanceEventTiming
 ---
 <p>The <code>PerformanceEventTiming</code> interface of the Event Timing API provides timing information for the event types listed below.</p>
 
-<div class="index">
 <ul>
  <li>{{event("auxclick")}}</li>
  <li>{{event("beforeinput")}}</li>
@@ -51,7 +51,6 @@ tags:
  <li>{{event("touchend")}}</li>
  <li>{{event("touchcancel")}}</li>
 </ul>
-</div>
 
 <h2 id="Properties">Properties</h2>
 
@@ -77,7 +76,7 @@ tags:
 
 <p>The following example shows how to use the API for all events:</p>
 
-<pre class="brush: js notranslate">const observer = new PerformanceObserver(function(list) {
+<pre class="brush: js">const observer = new PerformanceObserver(function(list) {
     const perfEntries = list.getEntries().forEach(entry =&gt; {
         // Full duration
         const inputDuration = entry.duration;
@@ -93,7 +92,7 @@ observer.observe({entryTypes: ["event"]});
 
 <p>We can also directly query the <a href="https://web.dev/fid">first input delay</a>. The first input delay or FID, measures the time from when a user first interacts with a page (i.e. when they click a link or tap on a button) to the time when the browser is actually able to begin processing event handlers in response to that interaction.</p>
 
-<pre class="brush: js notranslate">// Keep track of whether (and when) the page was first hidden, see:
+<pre class="brush: js">// Keep track of whether (and when) the page was first hidden, see:
 // https://github.com/w3c/page-visibility/issues/29
 // NOTE: ideally this check would be performed in the document &lt;head&gt;
 // to avoid cases where the visibility state changes before this code runs.
@@ -145,21 +144,8 @@ try {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Event Timing API','#sec-performance-event-timing','PerformanceEventTiming')}}</td>
-   <td>{{Spec2('Event Timing API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.PerformanceEventTiming")}}</p>
+<p>{{Compat}}</p>

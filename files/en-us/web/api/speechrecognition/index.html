@@ -10,13 +10,14 @@ tags:
   - Web Speech API
   - recognition
   - speech
+browser-compat: api.SpeechRecognition
 ---
 <p>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</p>
 
 <p>The <strong><code>SpeechRecognition</code></strong> interface of the <a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a> is the controller interface for the recognition service; this also handles the {{domxref("SpeechRecognitionEvent")}} sent from the recognition service.</p>
 
 <div class="note">
-<p><strong>Note</strong>: On some browsers, like Chrome, using Speech Recognition on a web page involves a server-based recognition engine. Your audio is sent to a web service for recognition processing, so it won't work offline.</p>
+<p><strong>Note:</strong> On some browsers, like Chrome, using Speech Recognition on a web page involves a server-based recognition engine. Your audio is sent to a web service for recognition processing, so it won't work offline.</p>
 </div>
 
 <h2 id="Constructor">Constructor</h2>
@@ -41,7 +42,7 @@ tags:
  <dd>Controls whether interim results should be returned (<code>true</code>) or not (<code>false</code>.) Interim results are results that are not yet final (e.g. the {{domxref("SpeechRecognitionResult.isFinal")}} property is <code>false</code>.)</dd>
  <dt>{{domxref("SpeechRecognition.maxAlternatives")}}</dt>
  <dd>Sets the maximum number of {{domxref("SpeechRecognitionAlternative")}}s provided per result. The default value is 1.</dd>
- <dt>{{domxref("SpeechRecognition.serviceURI")}}</dt>
+ <dt>{{domxref("SpeechRecognition.serviceURI")}} {{deprecated_inline}}</dt>
  <dd>Specifies the location of the speech recognition service used by the current <code>SpeechRecognition</code> to handle the actual recognition. The default is the user agent's default speech service.</dd>
 </dl>
 
@@ -130,24 +131,11 @@ recognition.onresult = function(event) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Speech API', '#speechreco-section', 'SpeechRecognition')}}</td>
-   <td>{{Spec2('Web Speech API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SpeechRecognition")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

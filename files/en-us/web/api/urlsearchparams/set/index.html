@@ -7,6 +7,7 @@ tags:
 - URL API
 - URLSearchParams
 - set
+browser-compat: api.URLSearchParams.set
 ---
 <p>{{ApiRef("URL API")}}</p>
 
@@ -20,7 +21,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-	class="brush: js notranslate">URLSearchParams.set(<var>name</var>, <var>value</var>)</pre>
+	class="brush: js">URLSearchParams.set(<var>name</var>, <var>value</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -39,12 +40,12 @@ tags:
 
 <p>Let's start with a simple example:</p>
 
-<pre class="brush: js notranslate">let url = new URL('https://example.com?foo=1&amp;bar=2');
+<pre class="brush: js">let url = new URL('https://example.com?foo=1&amp;bar=2');
 let params = new URLSearchParams(url.search);
 
 //Add a third parameter.
 params.set('baz', 3);
-params.toString(); // <span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-string">"foo=1&amp;bar=2&amp;baz=3"</span></span></span></span>
+params.toString(); // "foo=1&amp;bar=2&amp;baz=3"
 
 </pre>
 
@@ -64,7 +65,7 @@ params.toString(); // <span class="message-body-wrapper"><span class="message-fl
 		(when uncommented).</li>
 </ul>
 
-<pre class="brush: js highlight:[41,43,44] notranslate" id="genurl">'use strict'
+<pre class="brush: js">'use strict'
 
 function genURL(rExp, aText, bDebug=false){
 	let theURL
@@ -112,26 +113,11 @@ console.info( url, url.toString() )
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('URL', '#dom-urlsearchparams-set', "set()")}}</td>
-			<td>{{Spec2('URL')}}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
 
-	<p>{{Compat("api.URLSearchParams.set")}}</p>
+	<p>{{Compat}}</p>
 </div>

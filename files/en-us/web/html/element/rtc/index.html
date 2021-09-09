@@ -2,19 +2,20 @@
 title: '<rtc>: The Ruby Text Container element'
 slug: Web/HTML/Element/rtc
 tags:
+  - Deprecated
   - Element
   - HTML
-  - HTML text-level semantics
   - NeedsContent
   - Reference
   - Ruby Text
   - Text
   - Web
   - rtc
+browser-compat: html.elements.rtc
 ---
-<div>{{HTMLRef}}</div>
+<div>{{HTMLRef}}{{deprecated_header}}</div>
 
-<p>The <strong>HTML Ruby Text Container (<code>&lt;rtc&gt;</code>) element</strong> embraces semantic annotations of characters presented in a ruby of {{HTMLElement("rb")}} elements used inside of {{ HTMLElement("ruby") }} element. {{HTMLElement("rb")}} elements can have both pronunciation ({{HTMLElement("rt")}}) and semantic ({{HTMLElement("rtc")}}) annotations.</p>
+<p>The <strong><code>&lt;rtc&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element embraces semantic annotations of characters presented in a ruby of {{HTMLElement("rb")}} elements used inside of {{ HTMLElement("ruby") }} element. {{HTMLElement("rb")}} elements can have both pronunciation ({{HTMLElement("rt")}}) and semantic ({{HTMLElement("rtc")}}) annotations.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/rtc.html", "tabbed-standard")}}</div>
 
@@ -26,7 +27,7 @@ tags:
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">Phrasing content</a> or {{HTMLElement("rt")}} elements.</td>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">Phrasing content</a> or {{HTMLElement("rt")}} elements.</td>
   </tr>
   <tr>
    <th scope="row">Tag omission</th>
@@ -53,7 +54,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: html highlight[8] notranslate">&lt;div class="info"&gt;
+<pre class="brush: html highlight[8]">&lt;div class="info"&gt;
   &lt;ruby&gt;
     &lt;rbc&gt;
       &lt;rb&gt;旧&lt;/rb&gt;&lt;rt&gt;jiù&lt;/rt&gt;
@@ -66,7 +67,7 @@ tags:
 </pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">.info {
+<pre class="brush: css">.info {
   padding-top: 10px;
   font-size: 36px;
 }
@@ -77,36 +78,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML5.2', 'textlevel-semantics.html#the-rtc-element', '&lt;rtc&gt;')}}</td>
-   <td>{{Spec2('HTML5.2')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'textlevel-semantics.html#the-rtc-element', '&lt;rtc&gt;')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'text-level-semantics.html#the-rtc-element', '&lt;rtc&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("html.elements.rtc")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

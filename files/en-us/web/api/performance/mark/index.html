@@ -6,6 +6,7 @@ tags:
 - Method
 - Reference
 - Web Performance
+browser-compat: api.Performance.mark
 ---
 <div>{{APIRef("User Timing API")}}</div>
 
@@ -13,7 +14,7 @@ tags:
   {{domxref("DOMHighResTimeStamp","timestamp")}} in the browser's <em>performance entry
     buffer</em> with the given name.</p>
 
-<p>The application defined timestamp can be retrieved by one of the
+<p>The application defined timestamp can also be retrieved by one of the
   {{domxref("Performance")}} interface's <code>getEntries*()</code> methods
   ({{domxref("Performance.getEntries","getEntries()")}},
   {{domxref("Performance.getEntriesByName","getEntriesByName()")}} or
@@ -26,7 +27,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>performance</em>.mark(name);
+<pre class="brush: js"><em>performance</em>.mark(name);
 </pre>
 
 <h3 id="Arguments">Arguments</h3>
@@ -42,8 +43,8 @@ tags:
 <h3 id="Return_value">Return value</h3>
 
 <dl>
-  <dt>void</dt>
-  <dd></dd>
+  <dt>entry</dt>
+  <dd>The {{domxref("PerformanceMark")}} entry that was created.</dd>
 </dl>
 
 <h2 id="Example">Example</h2>
@@ -51,7 +52,7 @@ tags:
 <p>The following example shows how to use <code>mark()</code> to create and retrieve
   {{domxref("PerformanceMark")}} entries.</p>
 
-<pre class="brush:js notranslate">// Create a bunch of marks.
+<pre class="brush:js">// Create a bunch of marks.
 performance.mark("squirrel");
 performance.mark("squirrel");
 performance.mark("monkey");
@@ -75,26 +76,8 @@ performance.clearMarks();
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('User Timing Level 2', '#dom-performance-mark', 'mark()')}}</td>
-      <td>{{Spec2('User Timing Level 2')}}</td>
-      <td>Clarifies <code>mark()</code> processing model.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('User Timing', '#dom-performance-mark', 'mark()')}}</td>
-      <td>{{Spec2('User Timing')}}</td>
-      <td>Basic definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Performance.mark")}}</p>
+<p>{{Compat}}</p>

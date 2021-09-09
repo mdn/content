@@ -32,7 +32,7 @@ tags:
 
 <p>Here's a simple example which creates a {{HTMLElement("div")}} element whose contents the user can edit.</p>
 
-<pre class="brush: html notranslate">&lt;div contenteditable="true"&gt;
+<pre class="brush: html">&lt;div contenteditable="true"&gt;
   This text can be edited by the user.
 &lt;/div&gt;</pre>
 
@@ -58,24 +58,24 @@ tags:
 
 <p>If you want to use a different paragraph separator, the above browsers all support {{domxref("document.execCommand")}}, which provides a <code>defaultParagraphSeparator</code> command to allow you to change it. For example, to use {{htmlelement("p")}} elements:</p>
 
-<pre class="notranslate"><code class="language-js">document<span class="punctuation token">.</span><span class="function token">execCommand</span><span class="punctuation token">(</span><span class="string token">"defaultParagraphSeparator"</span><span class="punctuation token">,</span> <span class="keyword token">false</span><span class="punctuation token">,</span> <span class="string token">"p"</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre><code class="language-js">document<span class="punctuation token">.</span><span class="function token">execCommand</span><span class="punctuation token">(</span><span class="string token">"defaultParagraphSeparator"</span><span class="punctuation token">,</span> <span class="keyword token">false</span><span class="punctuation token">,</span> <span class="string token">"p"</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
 
 <p>Additionally, Firefox supports the <em>non-standard</em> argument, <code>br</code>, for <code>defaultParagraphSeparator</code> since Firefox 55. This is useful if your web application expects the older Firefox behavior, and you don't want to or don't have the time to update it to use the new behavior. You can use the older Firefox behavior with this line:</p>
 
-<pre class="notranslate"><code class="language-js">document<span class="punctuation token">.</span><span class="function token">execCommand</span><span class="punctuation token">(</span><span class="string token">"defaultParagraphSeparator"</span><span class="punctuation token">,</span> <span class="keyword token">false</span><span class="punctuation token">,</span> <span class="string token">"br"</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre><code class="language-js">document<span class="punctuation token">.</span><span class="function token">execCommand</span><span class="punctuation token">(</span><span class="string token">"defaultParagraphSeparator"</span><span class="punctuation token">,</span> <span class="keyword token">false</span><span class="punctuation token">,</span> <span class="string token">"br"</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
 
 <h2 id="Security">Security</h2>
 
 <p>For security reasons, Firefox doesn't let JavaScript code use clipboard related features (copy, paste, etc.) by default. You can enable them by setting the preferences shown below using <code>about:config</code>:</p>
 
-<pre class="code notranslate">user_pref("capability.policy.policynames", "allowclipboard");
+<pre class="code">user_pref("capability.policy.policynames", "allowclipboard");
 user_pref("capability.policy.allowclipboard.sites", "https://www.mozilla.org");
 user_pref("capability.policy.allowclipboard.Clipboard.cutcopy", "allAccess");
 user_pref("capability.policy.allowclipboard.Clipboard.paste", "allAccess");</pre>
 
 <h2 id="Example_A_simple_but_complete_rich_text_editor">Example: A simple but complete rich text editor</h2>
 
-<pre class="brush: html notranslate" style="height: 500px; width: auto; overflow: auto;">&lt;!doctype html&gt;
+<pre class="brush: html" style="height: 500px; width: auto; overflow: auto;">&lt;!doctype html&gt;
 &lt;html&gt;
 &lt;head&gt;
 &lt;title&gt;Rich Text Editor&lt;/title&gt;
