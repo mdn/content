@@ -15,7 +15,7 @@ tags:
 
 <p>Everything in CSS has a box around it, and understanding these boxes is key to being able to create layouts with CSS, or to align items with other items. In this lesson, we will take a proper look at the CSS <em>Box Model</em> so that you can build more complex layout tasks with an understanding of how it works and the terminology that relates to it.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -206,7 +206,7 @@ tags:
 
 <h4 id="Margin_collapsing">Margin collapsing</h4>
 
-<p>A key thing to understand about margins is the concept of margin collapsing. If you have two elements whose margins touch, and both margins are positive, those margins will combine to become one margin, which is the size of the largest individual margin. If one margin is negative, the amount of negative value will subtract from the total. Where both are negative, the margins will collapse and the largest value will be used.</p>
+<p>A key thing to understand about margins is the concept of <strong>margin collapsing</strong>. If you have two elements whose margins touch, and both margins are positive, those margins will combine to become one margin, and its size will be equal to the largest individual margin. If one margin is negative, its value will be <em>subtracted</em> from the total. Where both are negative, the margins will collapse and the largest value will be used.</p>
 
 <p>In the example below, we have two paragraphs. The top paragraph has a <code>margin-bottom</code> of 50 pixels. The second paragraph has a <code>margin-top</code> of 30 pixels. The margins have collapsed together so the actual margin between the boxes is 50 pixels and not the total of the two margins.</p>
 

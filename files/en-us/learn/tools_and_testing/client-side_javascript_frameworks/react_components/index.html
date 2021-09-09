@@ -18,7 +18,7 @@ tags:
 
 <p class="summary">At this point, our app is a monolith. Before we can make it do things, we need to break it apart into manageable, descriptive components. React doesn’t have any hard rules for what is and isn’t a component – that’s up to you! In this article we will show you a sensible way to break our app up into components.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -108,7 +108,7 @@ touch src/components/Todo.js</pre>
 
 <p>When you look back at your browser, you'll notice something unfortunate: your list now repeats the first task three times!</p>
 
-<p><img alt="Our todo list app, with todo components repeating because the label is hardcoded into the component" src="todo-list-repeating-todos.png" style="border-style: solid; border-width: 1px;"></p>
+<p><img alt="Our todo list app, with todo components repeating because the label is hardcoded into the component" src="todo-list-repeating-todos.png"></p>
 
 <p>We don't only want to eat; we have other things to — well — to do. Next we'll look at how we can make different component calls render unique content.</p>
 
@@ -157,7 +157,7 @@ touch src/components/Todo.js</pre>
 
 <p><em>Now</em> your browser should show three unique tasks. Another problem remains though: they're all still checked by default.</p>
 
-<p><img alt="Our todo list, with different todo labels now they are passed into the components as props" src="todo-list-unique-todos.png" style="border-style: solid; border-width: 1px;"></p>
+<p><img alt="Our todo list, with different todo labels now they are passed into the components as props" src="todo-list-unique-todos.png"></p>
 
 <h3 id="Is_it_completed">Is it <code>completed</code>?</h3>
 
@@ -173,7 +173,7 @@ touch src/components/Todo.js</pre>
 
 <p>And your browser should update to show only <code>Eat</code> being checked:</p>
 
-<p><img alt="Our todo list app, now with differing checked states - some checkboxes are checked, others not" src="todo-list-differing-checked-states.png" style="border-style: solid; border-width: 1px;"></p>
+<p><img alt="Our todo list app, now with differing checked states - some checkboxes are checked, others not" src="todo-list-differing-checked-states.png"></p>
 
 <p>If you change each <code>&lt;Todo /&gt;</code> component’s <code>completed</code> prop, your browser will check or uncheck the equivalent rendered checkboxes accordingly.</p>
 
@@ -244,7 +244,7 @@ touch src/components/Todo.js</pre>
 
 <p>This gets us some of the way towards showing all the components again, but we’ve got more work to do: the browser currently renders each task's name as unstructured text. We’re missing our HTML structure — the <code>&lt;li&gt;</code> and its checkboxes and buttons!</p>
 
-<p><img alt="Our todo list app with the todo item labels just shown bunched up on one line" src="todo-list-unstructured-names.png" style="border-style: solid; border-width: 1px;"></p>
+<p><img alt="Our todo list app with the todo item labels just shown bunched up on one line" src="todo-list-unstructured-names.png"></p>
 
 <p>To fix this, we need to return a <code>&lt;Todo /&gt;</code> component from our <code>map()</code> function — remember that JSX allows us to mix up JavaScript and markup structures! Let's try the following instead of what we have already:</p>
 

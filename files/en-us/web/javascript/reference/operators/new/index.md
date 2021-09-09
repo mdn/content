@@ -93,7 +93,7 @@ property. This defines a property that is shared by all objects created with tha
 function, rather than by just one instance of the object type. The following code adds a
 color property with value `"original color"` to all objects of type
 `Car`, and then overwrites that value with the string "`black`"
-only in the instance object `car1`. For more information, see [prototype](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function).
+only in the instance object `car1`. For more information, see [prototype](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes).
 
 ```js
 function Car() {}

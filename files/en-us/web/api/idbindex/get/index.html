@@ -63,9 +63,7 @@ browser-compat: api.IDBIndex.get
     </tr>
     <tr>
       <td><code>DataError</code></td>
-      <td>
-        <p>The key or key range provided contains an invalid key.</p>
-      </td>
+      <td>The key or key range provided contains an invalid key.</td>
     </tr>
     <tr>
       <td><code>InvalidStateError</code></td>
@@ -93,7 +91,7 @@ browser-compat: api.IDBIndex.get
     demo repo</a> (<a href="https://mdn.github.io/indexeddb-examples/idbindex">View the
     example live</a>.)</p>
 
-<pre class="brush: js;highlight[7]">function displayDataByIndex() {
+<pre class="brush: js;">function displayDataByIndex() {
   tableEntry.innerHTML = '';
   var transaction = db.transaction(['contactsList'], 'readonly');
   var objectStore = transaction.objectStore('contactsList');

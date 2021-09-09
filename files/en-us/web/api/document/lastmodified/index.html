@@ -74,10 +74,10 @@ if (isNaN(nLastVisit) || nLastModif &gt; nLastVisit) {
   }
 }</pre>
 
-<div class="note"><strong>Note:</strong> WebKit returns the time string in UTC; Gecko and
+<div class="note"><p><strong>Note:</strong> WebKit returns the time string in UTC; Gecko and
   Internet Explorer return a time in the local timezone. (See: <a
     href="https://bugs.webkit.org/show_bug.cgi?id=4363">Bug 4363 – document.lastModified
-    returns date in UTC time, but should return it in local time</a>)</div>
+    returns date in UTC time, but should return it in local time</a>)</p></div>
 
 <p>If you want to know <strong>whether <em>an external page</em> has changed</strong>,
   please read <a

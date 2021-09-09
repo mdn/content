@@ -19,10 +19,10 @@ browser-compat: api.CanvasRenderingContext2D.getImageData
 ---
 <div>{{APIRef("Canvas API")}}</div>
 
-<p><span class="seoSummary">The {{domxref("CanvasRenderingContext2D")}} method
+<p>The {{domxref("CanvasRenderingContext2D")}} method
     <code><strong>getImageData()</strong></code> of the Canvas 2D API returns an
     {{domxref("ImageData")}} object representing the underlying pixel data for a specified
-    portion of the canvas.</span></p>
+    portion of the canvas.</p>
 
 <p>This method is not affected by the canvas's transformation matrix. If the specified
   rectangle extends outside the bounds of the canvas, the pixels outside the canvas are
@@ -100,7 +100,7 @@ browser-compat: api.CanvasRenderingContext2D.getImageData
   from off the canvas; only 5,000 of them are opaque black (the color of the drawn
   rectangle).</p>
 
-<pre class="brush: js; highlight:[6]">const canvas = document.getElementById('canvas');
+<pre class="brush: js;">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 ctx.rect(10, 10, 100, 100);
 ctx.fill();

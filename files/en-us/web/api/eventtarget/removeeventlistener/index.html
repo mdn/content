@@ -15,13 +15,13 @@ browser-compat: api.EventTarget.removeEventListener
 ---
 <div>{{APIRef("DOM Events")}}</div>
 
-<p><span class="seoSummary">The
+<p>The
     <strong><code>EventTarget.removeEventListener()</code></strong> method removes from
     the {{domxref("EventTarget")}} an event listener previously registered with
     {{domxref("EventTarget.addEventListener()")}}. The event listener to be removed is
     identified using a combination of the event type, the event listener function itself,
     and various optional options that may affect the matching process; see
-    {{anch("Matching event listeners for removal")}}</span></p>
+    {{anch("Matching event listeners for removal")}}</p>
 
 <p>Note that event listeners can also be removed by passing an {{domxref("AbortSignal")}} to an {{domxref("EventTarget/addEventListener()", "addEventListener()")}} and then later calling {{domxref("AbortController/abort()", "abort()")}} on the controller owning the signal.</p>
 
@@ -57,12 +57,12 @@ browser-compat: api.EventTarget.removeEventListener
     </ul>
   </dd>
   <dt><code>useCapture</code> {{optional_inline}}</dt>
-  <dd>Specifies whether the {{domxref("EventListener")}} to be removed is registered as a
+  <dd><p>Specifies whether the {{domxref("EventListener")}} to be removed is registered as a
     capturing listener or not. If this parameter is absent, a default value of
-    <code>false</code> is assumed.</dd>
-  <dd>If a listener is registered twice, one with capture and one without, you must remove
+    <code>false</code> is assumed.</p>
+  <p>If a listener is registered twice, one with capture and one without, you must remove
     each one separately. Removal of a capturing listener does not affect a non-capturing
-    version of the same listener, and vice versa.</dd>
+    version of the same listener, and vice versa.</p></dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>

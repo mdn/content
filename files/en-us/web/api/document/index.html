@@ -11,7 +11,9 @@ browser-compat: api.Document
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><span class="seoSummary">The <strong><code>Document</code></strong> interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the <a href="/en-US/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core">DOM tree</a>.</span> The DOM tree includes elements such as {{HTMLElement("body")}} and {{HTMLElement("table")}}, among <a href="/en-US/docs/Web/HTML/Element">many others</a>. It provides functionality globally to the document, like how to obtain the page's URL and create new elements in the document.</p>
+<p>The <strong><code>Document</code></strong> interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the <a href="/en-US/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core">DOM tree</a>.</p>
+
+<p>The DOM tree includes elements such as {{HTMLElement("body")}} and {{HTMLElement("table")}}, among <a href="/en-US/docs/Web/HTML/Element">many others</a>. It provides functionality globally to the document, like how to obtain the page's URL and create new elements in the document.</p>
 
 <p>{{InheritanceDiagram}}</p>
 
@@ -126,6 +128,9 @@ browser-compat: api.Document
 
 <h3 id="Event_handlers">Event handlers</h3>
 
+<p><em>The <code>Document</code> interface is extended with additional event handlers defined in <a href="/en-US/docs/Web/API/GlobalEventHandlers#event_handlers">GlobalEventHandlers</a>.</em></p>
+
+
 <dl>
  <dt>{{DOMxRef("Document.onafterscriptexecute")}} {{Non-standard_Inline}}</dt>
  <dd>Represents the event handling code for the {{event("afterscriptexecute")}} event.</dd>
@@ -149,10 +154,6 @@ browser-compat: api.Document
  <dd>Is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> representing the code to be called when the {{event("visibilitychange")}} event is raised.</dd>
 </dl>
 
-<p>The <code>Document</code> interface is extended with the {{DOMxRef("GlobalEventHandlers")}} interface:</p>
-
-<p>{{Page("/en-US/docs/Web/API/GlobalEventHandlers", "Properties")}}</p>
-
 <h3 id="Deprecated_properties">Deprecated properties</h3>
 
 <dl>
@@ -166,7 +167,7 @@ browser-compat: api.Document
  <dd>Returns an ordered list of the applets within a document.</dd>
  <dt>{{DOMxRef("Document.bgColor")}} {{Deprecated_Inline}}</dt>
  <dd>Gets/sets the background color of the current document.</dd>
- <dt>{{DOMxRef("Document.charset")}} {{Deprecated_Inline}}{{ReadOnlyInline}}</dt>
+ <dt>{{DOMxRef("Document.characterSet","Document.charset")}} {{Deprecated_Inline}}{{ReadOnlyInline}}</dt>
  <dd>Alias of {{DOMxRef("Document.characterSet")}}. Use this property instead.</dd>
  <dt>{{DOMxRef("Document.fgColor")}} {{Deprecated_Inline}}</dt>
  <dd>Gets/sets the foreground color, or text color, of the current document.</dd>
@@ -174,7 +175,7 @@ browser-compat: api.Document
  <dd><code>true</code> when the document is in {{DOMxRef("Using_full-screen_mode","full-screen mode")}}.</dd>
  <dt>{{DOMxRef("Document.height")}} {{Non-standard_Inline}} {{deprecated_inline}}</dt>
  <dd>Gets/sets the height of the current document.</dd>
- <dt>{{DOMxRef("Document.inputEncoding")}} {{Deprecated_Inline}}{{ReadOnlyInline}}</dt>
+ <dt>{{DOMxRef("Document.characterSet", "Document.inputEncoding")}} {{Deprecated_Inline}}{{ReadOnlyInline}}</dt>
  <dd>Alias of {{DOMxRef("Document.characterSet")}}. Use this property instead.</dd>
  <dt>{{DOMxRef("Document.lastStyleSheetSet")}} {{deprecated_inline}}{{ReadOnlyInline}}</dt>
  <dd>Returns the name of the style sheet set that was last enabled. Has the value <code>null</code> until the style sheet is changed by setting the value of {{DOMxRef("Document.selectedStyleSheetSet","selectedStyleSheetSet")}}.</dd>

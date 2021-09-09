@@ -110,7 +110,7 @@ tags:
 <ul>
  <li>Top-level navigation to <code>data:</code> URIs has been blocked {{bug(1401895)}}. See <a href="https://blog.mozilla.org/security/2017/11/27/blocking-top-level-navigations-data-urls-firefox-59/">Blocking Top-Level Navigations to data URLs for Firefox 59</a> for more details.</li>
  <li>The <code>SAMEORIGIN</code> directive of the {{httpheader("X-Frame-Options")}} header has been changed so that it checks not only the top-level IFrame is in the same origin, but all its ancestors as well ({{bug(725490)}}).</li>
- <li>Image resources loaded from different origins to the current document are no longer able to trigger HTTP authentication dialogs ({{bug(1423146)}}). See <a href="https://www.fxsitecompat.com/en-CA/docs/2017/http-auth-dialog-can-no-longer-be-triggered-by-cross-origin-images/">HTTP auth dialog can no longer be triggered by cross-origin images</a> for more details.</li>
+ <li>Image resources loaded from different origins to the current document are no longer able to trigger HTTP authentication dialogs ({{bug(1423146)}}).</li>
  <li>HTTP authentication now uses <code>utf-8</code> encoding for usernames and passwords (rather than <code>ISO-8859-1</code>) for parity with other browsers, and to avoid potential problems as described in {{bug(1419658)}}.</li>
  <li>Everyday the <a href="https://searchfox.org/mozilla-central/source/security/manager/ssl/nsSTSPreloadList.inc">HSTS preload list</a> is updated from Google. Normally this doesn't warrant a note, but in this release new TLDs were included, notably <code>.app</code> and <code>.dev</code>. While they are new TLDs developers might have used them for local development and be surprised by this change. Note that <a href="https://datatracker.ietf.org/doc/html/rfc2606">reserved TLDs</a> should be used for local development instead.</li>
 </ul>
@@ -206,10 +206,6 @@ tags:
  <li>Support in <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies">cookies</a></code> API for <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation">first-party isolation</a>.</li>
  <li>New option <code>upgradeToSecure</code> in <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest">webRequest</a></code>.</li>
 </ul>
-
-<h2 id="See_also">See also</h2>
-
-<p><a href="https://www.fxsitecompat.com/en-CA/versions/59/">Site compatibility for Firefox 59</a></p>
 
 <h2 id="Older_versions">Older versions</h2>
 

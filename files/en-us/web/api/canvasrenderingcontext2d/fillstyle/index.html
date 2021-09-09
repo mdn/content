@@ -12,13 +12,13 @@ browser-compat: api.CanvasRenderingContext2D.fillStyle
 <div>{{APIRef}}</div>
 
 <p>The
-  <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.fillStyle</code></strong>
+  <strong><code>CanvasRenderingContext2D.fillStyle</code></strong>
   property of the <a href="/en-US/docs/Web/API/Canvas_API">Canvas 2D API</a> specifies the
   color, gradient, or pattern to use inside shapes. The default style is <code>#000</code>
   (black).</p>
 
 <div class="note">
-  <p>For more examples of fill and stroke styles, see <a
+  <p><strong>Note:</strong> For more examples of fill and stroke styles, see <a
       href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying
       styles and color</a> in the <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas
       tutorial</a>.</p>
@@ -56,7 +56,7 @@ browser-compat: api.CanvasRenderingContext2D.fillStyle
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js; highlight:[4]">const canvas = document.getElementById('canvas');
+<pre class="brush: js;">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.fillStyle = 'blue';
@@ -76,10 +76,7 @@ ctx.fillRect(10, 10, 100, 100);
   red and green values. (The blue channel has a fixed value.) By modifying the channels,
   you can generate all kinds of palettes.</p>
 
-<div class="hidden">
-  <pre
-    class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
-</div>
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
 
 <pre class="brush: js">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');

@@ -38,7 +38,7 @@ browser-compat: api.Headers.get
 
 <h3 id="Returns">Returns</h3>
 
-<p>A {{domxref("ByteString")}} sequence representing the values of the retrieved header or
+<p>A {{jsxref("String")}} sequence representing the values of the retrieved header or
   <code>null</code> if this header is not set.</p>
 
 <h2 id="Example">Example</h2>
@@ -64,13 +64,6 @@ myHeaders.append('Accept-Encoding', 'gzip');
 myHeaders.get('Accept-Encoding'); // Returns "deflate,gzip"
 myHeaders.get('Accept-Encoding').split(',').map(v => v.trimStart()); // Returns [ "deflate", "gzip" ]
 </pre>
-
-<div class="note">
-  <p><strong>Note</strong>: {{domxref("Headers.getAll")}} used to have this functionality,
-    with {{domxref("Headers.get")}} returning only the first value added to the
-    <code>Headers</code> object. The latest spec has removed <code>getAll()</code>, and
-    updated <code>get()</code> to return all values.</p>
-</div>
 
 <h2 id="Specifications">Specifications</h2>
 

@@ -55,7 +55,7 @@ tags:
  <li>The third, optional, <code>transfer</code> argument of {{domxref("Window.postMessage")}} is now supported. It allows to transfer a sequence of {{domxref("Transferable")}} objects to the destination ({{bug("822094")}}).</li>
  <li>The non-standard {{domxref("Window.sizeToContent()")}} method now clamps the minimal size: the window cannot be forced anymore to small sizes preventing the user to interact with ({{bug(764240)}}).</li>
  <li>Blend modes, such as <code>overlay</code>, <code>color-burn</code>, <code>hue</code>, etc. have been added to the Canvas {{domxref("CanvasRenderingContext2D.globalCompositeOperation")}} property ({{bug(748433)}}).</li>
- <li>The prefixed version of <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB">window.indexedDB</a></code> — <code>window.mozIndexedDB</code> — was reintroduced to Gecko, so that bad cross-browser prefixing code (such as <code>var indexedDB = window.indexedDB || window.webkitIndexedDB ...</code>) doesn't break in Firefox. A better approach is <code>window.indexedDB = window.indexedDB || window.webkitIndexedDB ...</code> (see {{bug("770844")}}.)</li>
+ <li>The prefixed version of <code><a href="/en-US/docs/Web/API/indexedDB">window.indexedDB</a></code> — <code>window.mozIndexedDB</code> — was reintroduced to Gecko, so that bad cross-browser prefixing code (such as <code>var indexedDB = window.indexedDB || window.webkitIndexedDB ...</code>) doesn't break in Firefox. A better approach is <code>window.indexedDB = window.indexedDB || window.webkitIndexedDB ...</code> (see {{bug("770844")}}.)</li>
 </ul>
 
 <h3 id="SVG">SVG</h3>
@@ -86,7 +86,6 @@ tags:
 
 <ul>
  <li><a href="https://www.mozilla.org/en-US/firefox/20.0/releasenotes/">Firefox 20 Release Notes</a></li>
- <li><a href="https://www.fxsitecompat.com/en-US/versions/20/">Site Compatibility for Firefox 20</a></li>
  <li><a href="https://blog.mozilla.org/addons/2013/03/20/compatibility-for-firefox-20/">Add-on Compatibility for Firefox 20</a></li>
 </ul>
 

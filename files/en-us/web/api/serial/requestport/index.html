@@ -11,7 +11,7 @@ browser-compat: api.Serial.requestPort
 ---
 <div>{{securecontext_header}}{{DefaultAPISidebar("Serial API")}}</div>
 
-<p class="summary">The <strong><code>Serial.requestPort()</code></strong> method of the {{domxref("Serial")}} interface returns a {{jsxref("Promise")}} that resolves with an instance of {{domxref("SerialPort")}} representing the device chosen by the user or rejects if no device was selected.</p>
+<p>The <strong><code>Serial.requestPort()</code></strong> method of the {{domxref("Serial")}} interface returns a {{jsxref("Promise")}} that resolves with an instance of {{domxref("SerialPort")}} representing the device chosen by the user or rejects if no device was selected.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -22,6 +22,7 @@ browser-compat: api.Serial.requestPort
 <dl>
   <dt>options</dt>
   <dd>
+    <p>An object with the following properties:</p>
     <dl>
       <dt><code>filters</code></dt>
       <dd>A list of objects containing vendor and product IDs used to search for attached devices. The <a href="https://www.usb.org/">USB Implementors Forum</a> assigns IDs to specific companies. Each company assigns IDS to it's products. Filters contain the following values:

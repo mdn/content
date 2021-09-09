@@ -235,7 +235,7 @@ parseInt('900719925474099267n')
 ```
 
 `parseInt` doesn't work with [numeric
-separators](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Numeric_separators):
+separators](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_separators):
 
 ```js
 parseInt('123_456')

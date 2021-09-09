@@ -15,7 +15,7 @@ tags:
 
 <p class="summary">In the last article we completed the development of our app, finished organizing it into components, and discussed some advanced techniques for dealing with reactivity, working with DOM nodes, and exposing component functionality. In this article we will show another way to handle state management in Svelte — <a href="https://svelte.dev/tutorial/writable-stores">Stores</a>. Stores are global data repositories that hold values. Components can subscribe to stores and receive notifications when their values change.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -199,7 +199,7 @@ div svg {
  <li>
   <p>Load your test app now, and you should now see the <code>Alert</code> message on screen. You may click on it to dismiss it.</p>
 
-  <p><img alt="A simple notification in the top right hand corner of an app saying welcome to todo list app" src="01-alert-message.png" style="border-style: solid; border-width: 1px;"></p>
+  <p><img alt="A simple notification in the top right hand corner of an app saying welcome to todo list app" src="01-alert-message.png"></p>
  </li>
 </ol>
 
@@ -424,7 +424,7 @@ const removeCompletedTodos = () =&gt; {
 </ol>
 
 <p>Now we have to find a way to persist these todos. We could implement some code in our <code>App.svelte</code> component to read and save our todos to <a href="/en-US/docs/Web/API/Web_Storage_API">web storage</a> or to a web service.<br>
- But wouldn't be better if we could develop some generic store that allows us to persist its content? This would allow us to use it just like any other store, and abstract away the persistence mechanism. We could create a store that syncs its content to web storage, and later develop another one that syncs against a web service. Switching between them would be trivial and we wouldn't have to touch <code>App.svelte</code> at all.</p>
+ But wouldn't it be better if we could develop some generic store that allows us to persist its content? This would allow us to use it just like any other store, and abstract away the persistence mechanism. We could create a store that syncs its content to web storage, and later develop another one that syncs against a web service. Switching between them would be trivial and we wouldn't have to touch <code>App.svelte</code> at all.</p>
 
 <h3 id="Saving_our_todos">Saving our todos</h3>
 
@@ -480,7 +480,7 @@ console.log('todos store content - $todos:', $todos)</pre>
 
 <p>When you run the app now, you'll see something like this in your web console:</p>
 
-<p><img alt="web console showing the functions and contents of the todos store" src="02-svelte-store-in-action.png" style="border-style: solid; border-width: 1px;"></p>
+<p><img alt="web console showing the functions and contents of the todos store" src="02-svelte-store-in-action.png"></p>
 
 <p>As you can see, our store is just an object containing <code>subscribe()</code>, <code>set()</code>, and <code>update()</code> methods, and <code>$todos</code> is our array of todos.</p>
 
@@ -630,7 +630,7 @@ export const todos = localStore('mdn-svelte-todo', initialTodos)</pre>
  <li>
   <p>You can also inspect it in the DevTools console. In the web console, enter the command <code>localStorage.getItem('mdn-svelte-todo')</code>. Make some changes to your app, like pressing the <em>Uncheck All</em> button, and check the web storage content once more. You will get something like this:</p>
 
-  <p><img alt="todo app with web console view alongside it, showing that when a todo is changed in the app, the corresponding entry is changed in web storage" src="03-persisting-todos-to-local-storage.png" style="border-style: solid; border-width: 1px;"></p>
+  <p><img alt="todo app with web console view alongside it, showing that when a todo is changed in the app, the corresponding entry is changed in web storage" src="03-persisting-todos-to-local-storage.png"></p>
  </li>
 </ol>
 

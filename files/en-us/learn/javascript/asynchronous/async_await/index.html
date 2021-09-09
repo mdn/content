@@ -18,7 +18,7 @@ tags:
 
 <p class="summary">More recent additions to the JavaScript language are <a href="/en-US/docs/Web/JavaScript/Reference/Statements/async_function">async functions</a> and the <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/await">await</a></code> keyword, added in ECMAScript 2017. These features basically act as syntactic sugar on top of promises, making asynchronous code easier to write and to read afterwards. They make async code look more like old-school synchronous code, so they're well worth learning. This article gives you what you need to know.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -58,9 +58,9 @@ hello();</pre>
 <pre class="brush: js">let hello = async function() { return "Hello" };
 hello();</pre>
 
-<p>And you can use arrow functions:</p>
+<p>And you can use <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow functions</a>:</p>
 
-<pre class="brush: js">let hello = async () =&gt; { return "Hello" };</pre>
+<pre class="brush: js">let hello = async () =&gt; "Hello";</pre>
 
 <p>These all do basically the same thing.</p>
 
@@ -320,7 +320,7 @@ async function getResult() {
 
 <p>As a result, your code could be slowed down by a significant number of awaited promises happening straight after one another. Each <code>await</code> will wait for the previous one to finish, whereas actually what you might want is for the promises to begin processing simultaneously, like they would do if we weren't using async/await.</p>
 
-<p>Let's look at two examples — <a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/slow-async-await.html">slow-async-await.html</a> (see <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/slow-async-await.html">source code</a>) and <a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/fast-async-await.html">fast-async-await.html</a> (see <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/fast-async-await.html">source code</a>). Both of them start off with a custom promise function that fakes an async process with a <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout()</a></code> call:</p>
+<p>Let's look at two examples — <a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/slow-async-await.html">slow-async-await.html</a> (see <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/slow-async-await.html">source code</a>) and <a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/fast-async-await.html">fast-async-await.html</a> (see <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/fast-async-await.html">source code</a>). Both of them start off with a custom promise function that fakes an async process with a <code><a href="/en-US/docs/Web/API/setTimeout">setTimeout()</a></code> call:</p>
 
 <pre class="brush: js">function timeoutPromise(interval) {
   return new Promise((resolve, reject) =&gt; {
@@ -451,7 +451,7 @@ timeTest().then(() => {
 
 <p>In this example, we have an unhandled error in the console (after 2 seconds), and the alert appears after approximately 5 seconds.</p>
 
-<p>To start the promises in parallel and catch the error properly, we could use <code>Promise.all()</code>, as discussed earlier:</p> 
+<p>To start the promises in parallel and catch the error properly, we could use <code>Promise.all()</code>, as discussed earlier:</p>
 
 <pre class="brush: js">function timeoutPromiseResolve(interval) {
   return new Promise((resolve, reject) => {
@@ -489,7 +489,7 @@ timeTest().then(() => {
 
 <p>In this example, the error is handled properly after around 2 seconds and we also see the alert after around 2 seconds.</p>
 
-<p>The <code>Promise.all()</code> rejects when any of the input promises are rejected. If you want all the promises to settle and then use some of their fulfilled values, even when some of 
+<p>The <code>Promise.all()</code> rejects when any of the input promises are rejected. If you want all the promises to settle and then use some of their fulfilled values, even when some of
 them are rejected, you could use <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled"><code>Promise.allSettled()</code></a> instead.</p>
 
 <h2 id="Asyncawait_class_methods">Async/await class methods</h2>

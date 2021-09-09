@@ -11,9 +11,7 @@ tags:
 ---
 <div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}</div>
 
-<div class="summary">
 <p>In the chapter about <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes">drawing shapes</a>, we used only the default line and fill styles. Here we will explore the canvas options we have at our disposal to make our drawings a little more attractive. You will learn how to add different colors, line styles, gradients, patterns and shadows to your drawings.</p>
-</div>
 
 <h2 id="Colors">Colors</h2>
 
@@ -46,7 +44,7 @@ ctx.fillStyle = 'rgba(255, 165, 0, 1)';
 
 <p>In this example, we once again use two <code>for</code> loops to draw a grid of rectangles, each in a different color. The resulting image should look something like the screenshot. There is nothing too spectacular happening here. We use the two variables <code>i</code> and <code>j</code> to generate a unique RGB color for each square, and only modify the red and green values. The blue channel has a fixed value. By modifying the channels, you can generate all kinds of palettes. By increasing the steps, you can achieve something that looks like the color palettes Photoshop uses.</p>
 
-<pre class="brush: js highlight[5,6]">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   for (var i = 0; i &lt; 6; i++) {
     for (var j = 0; j &lt; 6; j++) {
@@ -57,11 +55,9 @@ ctx.fillStyle = 'rgba(255, 165, 0, 1)';
   }
 }</pre>
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
 
-<pre class="brush: js">draw();</pre>
-</div>
+<pre class="brush: js hidden">draw();</pre>
 
 <p>The result looks like this:</p>
 
@@ -71,7 +67,7 @@ ctx.fillStyle = 'rgba(255, 165, 0, 1)';
 
 <p>This example is similar to the one above, but uses the <code>strokeStyle</code> property to change the colors of the shapes' outlines. We use the <code>arc()</code> method to draw circles instead of squares.</p>
 
-<pre class="brush: js highlight[5,6]">  function draw() {
+<pre class="brush: js">  function draw() {
     var ctx = document.getElementById('canvas').getContext('2d');
     for (var i = 0; i &lt; 6; i++) {
       for (var j = 0; j &lt; 6; j++) {
@@ -85,11 +81,9 @@ ctx.fillStyle = 'rgba(255, 165, 0, 1)';
   }
 </pre>
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
 
-<pre class="brush: js">draw();</pre>
-</div>
+<pre class="brush: js hidden">draw();</pre>
 
 <p>The result looks like this:</p>
 
@@ -120,7 +114,7 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 
 <p>In this example, we'll draw a background of four different colored squares. On top of these, we'll draw a set of semi-transparent circles. The <code>globalAlpha</code> property is set at <code>0.2</code> which will be used for all shapes from that point on. Every step in the <code>for</code> loop draws a set of circles with an increasing radius. The final result is a radial gradient. By overlaying ever more circles on top of each other, we effectively reduce the transparency of the circles that have already been drawn. By increasing the step count and in effect drawing more circles, the background would completely disappear from the center of the image.</p>
 
-<pre class="brush: js highlight[15]">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   // draw background
   ctx.fillStyle = '#FD0';
@@ -144,11 +138,9 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
   }
 }</pre>
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
 
-<pre class="brush: js">draw();</pre>
-</div>
+<pre class="brush: js hidden">draw();</pre>
 
 <p>{{EmbedLiveSample("A_globalAlpha_example", "180", "180", "canvas_globalalpha.png")}}</p>
 
@@ -156,7 +148,7 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 
 <p>In this second example, we do something similar to the one above, but instead of drawing circles on top of each other, I've drawn small rectangles with increasing opacity. Using <code>rgba()</code> gives you a little more control and flexibility because we can set the fill and stroke style individually.</p>
 
-<pre class="brush: js highlight[16]">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   // Draw background
@@ -178,13 +170,11 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
   }
 }</pre>
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
 
-<pre class="brush: js">draw();</pre>
-</div>
+<pre class="brush: js hidden">draw();</pre>
 
-<p>{{EmbedLiveSample("An_example_using_rgba()", "180", "180", "canvas_rgba.png")}}</p>
+<p>{{EmbedLiveSample("An_example_using_rgba", "180", "180", "canvas_rgba.png")}}</p>
 
 <h2 id="Line_styles">Line styles</h2>
 
@@ -217,7 +207,7 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 
 <p>In the example below, 10 straight lines are drawn with increasing line widths. The line on the far left is 1.0 units wide. However, the leftmost and all other odd-integer-width thickness lines do not appear crisp, because of the path's positioning.</p>
 
-<pre class="brush: js highlight[4]">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   for (var i = 0; i &lt; 10; i++) {
     ctx.lineWidth = 1 + i;
@@ -229,17 +219,15 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
 
-<pre class="brush: js">draw();</pre>
-</div>
+<pre class="brush: js hidden">draw();</pre>
 
 <p>{{EmbedLiveSample("A_lineWidth_example", "180", "180", "canvas_linewidth.png")}}</p>
 
 <p>Obtaining crisp lines requires understanding how paths are stroked. In the images below, the grid represents the canvas coordinate grid. The squares between gridlines are actual on-screen pixels. In the first grid image below, a rectangle from (2,1) to (5,5) is filled. The entire area between them (light red) falls on pixel boundaries, so the resulting filled rectangle will have crisp edges.</p>
 
-<p><img alt="" class="internal" src="canvas-grid.png"></p>
+<p><img alt="" src="canvas-grid.png"></p>
 
 <p>If you consider a path from (3,1) to (3,5) with a line thickness of <code>1.0</code>, you end up with the situation in the second image. The actual area to be filled (dark blue) only extends halfway into the pixels on either side of the path. An approximation of this has to be rendered, which means that those pixels being only partially shaded, and results in the entire area (the light blue and dark blue) being filled in with a color only half as dark as the actual stroke color. This is what happens with the <code>1.0</code> width line in the previous example code.</p>
 
@@ -272,7 +260,7 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 
 <p>The line on the left uses the default <code>butt</code> option. You'll notice that it's drawn completely flush with the guides. The second is set to use the <code>round</code> option. This adds a semicircle to the end that has a radius half the width of the line. The line on the right uses the <code>square</code> option. This adds a box with an equal width and half the height of the line thickness.</p>
 
-<pre class="brush: js highlight[18]">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   var lineCap = ['butt', 'round', 'square'];
 
@@ -298,11 +286,9 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
 
-<pre class="brush: js">draw();</pre>
-</div>
+<pre class="brush: js hidden">draw();</pre>
 
 <p>{{EmbedLiveSample("A_lineCap_example", "180", "180", "Canvas_linecap.png")}}</p>
 
@@ -323,7 +309,7 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 
 <p>The example below draws three different paths, demonstrating each of these three <code>lineJoin</code> property settings; the output is shown above.</p>
 
-<pre class="brush: js highlight[6]">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   var lineJoin = ['round', 'bevel', 'miter'];
   ctx.lineWidth = 10;
@@ -340,11 +326,9 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
 
-<pre class="brush: js">draw();</pre>
-</div>
+<pre class="brush: js hidden">draw();</pre>
 
 <p>{{EmbedLiveSample("A_lineJoin_example", "180", "180", "Canvas_linejoin.png")}}</p>
 
@@ -368,7 +352,7 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 
 <p>If you specify a <code>miterLimit</code> value below 4.2 in this demo, none of the visible corners will join with a miter extension, but only with a small bevel near the blue lines; with a <code>miterLimit</code> above 10, most corners in this demo should join with a miter far away from the blue lines, and whose height is decreasing between corners from left to right because they connect with growing angles; with intermediate values, the corners on the left side will only join with a bevel near the blue lines, and the corners on the right side with a miter extension (also with a decreasing height).</p>
 
-<pre class="brush: js highlight[18]">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   // Clear canvas
@@ -402,8 +386,7 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: html">&lt;table&gt;
+<pre class="brush: html hidden">&lt;table&gt;
   &lt;tr&gt;
     &lt;td&gt;&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;&lt;/td&gt;
     &lt;td&gt;Change the &lt;code&gt;miterLimit&lt;/code&gt; by entering a new value below and clicking the redraw button.&lt;br&gt;&lt;br&gt;
@@ -416,9 +399,8 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
   &lt;/tr&gt;
 &lt;/table&gt;</pre>
 
-<pre class="brush: js">document.getElementById('miterLimit').value = document.getElementById('canvas').getContext('2d').miterLimit;
+<pre class="brush: js hidden">document.getElementById('miterLimit').value = document.getElementById('canvas').getContext('2d').miterLimit;
 draw();</pre>
-</div>
 
 <p>{{EmbedLiveSample("A_demo_of_the_miterLimit_property", "400", "180", "canvas_miterlimit.png")}}</p>
 
@@ -428,11 +410,9 @@ draw();</pre>
 
 <p>In this example we are creating a marching ants effect. It is an animation technique often found in selection tools of computer graphics programs. It helps the user to distinguish the selection border from the image background by animating the border. In a later part of this tutorial, you can learn how to do this and other <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations">basic animations</a>.</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="110" height="110"&gt;&lt;/canvas&gt;</pre>
-</div>
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="110" height="110"&gt;&lt;/canvas&gt;</pre>
 
-<pre class="brush: js highlight[6]">var ctx = document.getElementById('canvas').getContext('2d');
+<pre class="brush: js">var ctx = document.getElementById('canvas').getContext('2d');
 var offset = 0;
 
 function draw() {
@@ -492,7 +472,7 @@ lineargradient.addColorStop(1, 'black');
 
 <p>In this example, we'll create two different gradients. As you can see here, both the <code>strokeStyle</code> and <code>fillStyle</code> properties can accept a <code>canvasGradient</code> object as valid input.</p>
 
-<pre class="brush: js highlight[5,11]">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   // Create gradients
@@ -517,11 +497,9 @@ lineargradient.addColorStop(1, 'black');
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
 
-<pre class="brush: js">draw();</pre>
-</div>
+<pre class="brush: js hidden">draw();</pre>
 
 <p>The first is a background gradient. As you can see, we assigned two colors at the same position. You do this to make very sharp color transitions—in this case from white to green. Normally, it doesn't matter in what order you define the color stops, but in this special case, it does significantly. If you keep the assignments in the order you want them to appear, this won't be a problem.</p>
 
@@ -533,7 +511,7 @@ lineargradient.addColorStop(1, 'black');
 
 <p>In this example, we'll define four different radial gradients. Because we have control over the start and closing points of the gradient, we can achieve more complex effects than we would normally have in the "classic" radial gradients we see in, for instance, Photoshop (that is, a gradient with a single center point where the gradient expands outward in a circular shape).</p>
 
-<pre class="brush: js highlight[5,10,15,20]">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   // Create gradients
@@ -569,11 +547,9 @@ lineargradient.addColorStop(1, 'black');
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
 
-<pre class="brush: js">draw();</pre>
-</div>
+<pre class="brush: js hidden">draw();</pre>
 
 <p>In this case, we've offset the starting point slightly from the end point to achieve a spherical 3D effect. It's best to try to avoid letting the inside and outside circles overlap because this results in strange effects which are hard to predict.</p>
 
@@ -615,11 +591,9 @@ lineargradient.addColorStop(1, 'black');
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="250" height="150"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="250" height="150"&gt;&lt;/canvas&gt;</pre>
 
-<pre class="brush: js">draw();</pre>
-</div>
+<pre class="brush: js hidden">draw();</pre>
 
 <p>The first gradient is positioned in the center of the first rectangle and moves a green color stop at the start, to a white one at the end. The angle starts at 2 radians, which is noticeable because of the beginning/end line pointing south east.</p>
 
@@ -665,7 +639,7 @@ var ptrn = ctx.createPattern(img, 'repeat');
 
 <p>In this last example, we'll create a pattern to assign to the <code>fillStyle</code> property. The only thing worth noting is the use of the image's <code>onload</code> handler. This is to make sure the image is loaded before it is assigned to the pattern.</p>
 
-<pre class="brush: js highlight[10]">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   // create new image object to use as pattern
@@ -682,13 +656,9 @@ var ptrn = ctx.createPattern(img, 'repeat');
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
 
-<pre class="brush: js">draw();</pre>
-
-<p>The result looks like this:</p>
-</div>
+<pre class="brush: js hidden">draw();</pre>
 
 <p>{{EmbedLiveSample("A_createPattern_example", "180", "180", "canvas_createpattern.png")}}</p>
 
@@ -721,7 +691,7 @@ var ptrn = ctx.createPattern(img, 'repeat');
 
 <p>This example draws a text string with a shadowing effect.</p>
 
-<pre class="brush: js highlight[4,5,6,7]">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   ctx.shadowOffsetX = 2;
@@ -735,11 +705,9 @@ var ptrn = ctx.createPattern(img, 'repeat');
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="80"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="150" height="80"&gt;&lt;/canvas&gt;</pre>
 
-<pre class="brush: js">draw();</pre>
-</div>
+<pre class="brush: js hidden">draw();</pre>
 
 <p>{{EmbedLiveSample("A_shadowed_text_example", "180", "100", "shadowed-string.png")}}</p>
 
@@ -758,7 +726,7 @@ var ptrn = ctx.createPattern(img, 'repeat');
 
 <p>In this example we are using the <code>evenodd</code> rule.</p>
 
-<pre class="brush: js highlight[6]">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   ctx.beginPath();
   ctx.arc(50, 50, 30, 0, Math.PI * 2, true);
@@ -766,11 +734,9 @@ var ptrn = ctx.createPattern(img, 'repeat');
   ctx.fill('evenodd');
 }</pre>
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="100" height="100"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="100" height="100"&gt;&lt;/canvas&gt;</pre>
 
-<pre class="brush: js">draw();</pre>
-</div>
+<pre class="brush: js hidden">draw();</pre>
 
 <p>{{EmbedLiveSample("Canvas_fill_rules", "110", "110", "fill-rule.png")}}</p>
 

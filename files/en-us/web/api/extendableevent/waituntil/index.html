@@ -11,11 +11,11 @@ browser-compat: api.ExtendableEvent.waitUntil
 ---
 <div>{{APIRef("Service Workers API")}}</div>
 
-<p><span class="seoSummary">The <code><strong>ExtendableEvent.waitUntil()</strong></code>
+<p>The <code><strong>ExtendableEvent.waitUntil()</strong></code>
     method tells the event dispatcher that work is ongoing. It can also be used to detect
     whether that work was successful. In service workers, <code>waitUntil()</code> tells
     the browser that work is ongoing until the promise settles, and it shouldn't terminate
-    the service worker if it wants that work to complete.</span></p>
+    the service worker if it wants that work to complete.</p>
 
 <p>The {{domxref("ServiceWorkerGlobalScope/install_event", "install")}} events in <a
     href="/en-US/docs/Web/API/ServiceWorkerGlobalScope">service workers</a> use
@@ -39,7 +39,7 @@ browser-compat: api.ExtendableEvent.waitUntil
   settle.</p>
 
 <div class="note">
-  <p><strong>Note</strong>: The behavior described in the above paragraph was fixed in
+  <p><strong>Note:</strong> The behavior described in the above paragraph was fixed in
     Firefox 43 (see {{bug(1180274)}}).</p>
 </div>
 
@@ -57,7 +57,7 @@ browser-compat: api.ExtendableEvent.waitUntil
 <p>Using <code>waitUntil()</code> within a service worker's <code>install</code> event:
 </p>
 
-<pre class="brush: js;highlight:[10]">addEventListener('install', event =&gt; {
+<pre class="brush: js;">addEventListener('install', event =&gt; {
   const preCache = async () =&gt; {
     const cache = await caches.open('static-v1');
     return cache.addAll([

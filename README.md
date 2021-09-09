@@ -152,6 +152,13 @@ with us first!
 You can [chat with us](https://chat.mozilla.org/#/room/#mdn:mozilla.org) or
 [file an issue](https://github.com/mdn/content/issues).
 
+You may be asked to further edit files in your pull request.
+To open a file for editing, select the *Files changed* tab on the PR,
+scroll down to the section for the file you want to edit, and then select
+the "three dots" icon (at the top right of the section).
+Choose **Edit file** from the popup menu to start editing the file.
+After editing, your changes will result in a new commit.
+
 ### More substantial changes
 
 If you need to do some work that requires changes to more than one file, like
@@ -217,7 +224,7 @@ and use it to make a pull request.
 
 1. Next, you'll want to start the local preview service, so you can see
 the changes you'll make as they would look in production. Once started,
-this local preview service is available at `http://localhost:5000`
+this local preview service is available at `http://localhost:5000/`
 within your browser.
 
     ```sh
@@ -227,40 +234,22 @@ within your browser.
     yarn start
     ```
 
-    When you preview a page you can press a button to open its associated
-    document's `index.html` or `index.md` file in your preferred editor.
-    For this to work, you need to set an environment variable called `EDITOR`
-    before starting the preview server. For example, if you prefer VS Code as
-    your editor, you'll want to do something like this:
+1. When browsing a page locally, you can press the **Open in your editor**
+   button to edit the associated `index.html` or `index.md` file.
 
-    ```sh
-    export EDITOR=code
-    yarn start
-    ```
+   To specify VS Code as your preferred editor, create a file named `.env` in
+   the root of your local `content` directory that contains the following line:
 
-    Note, this is how you do it on terminals with `bash` (macOS and Linux). You
-    have to do it differently on Windows.
+   ```sh
+   EDITOR=code
+   ```
 
-    Now, when you're previewing a page and press the `Edit in your editor`
-    button, it will open the same as running:
+   You can create the file from a terminal using `bash` or PowerShell with the
+   command `echo 'EDITOR=code' >> .env`.
 
-    ```sh
-    code files/en-us/.../index.html
-    ```
-
-    Instead of having to type `export EDITOR=code` every time prior to
-    `yarn start`, you can instead store this setting in your personal `.env` file
-    (this goes inside the root of your local `content` directory). If the `.env`
-    file doesn't already exist, you can create one and include the above setting
-    in it. Alternatively, running the following line will add the setting to the
-    `.env` file automatically, creating the file if it doesn't already exist:
-
-    ```sh
-    echo 'EDITOR=code' >> .env
-    ```
-
-    Now, it should be set like that even after you've closed and started a new
-    terminal window.
+   `EDITOR` is an environment variable. You can set it to any editor you like
+   using the normal mechanism for your operating system/shell (i.e. you don't
+   have to use the `.env` file or VS Code).
 
 1. Make your desired changes to one or more `index.html` or `index.md` files
 using your preferred code editor. **When thinking about your desired changes,
@@ -335,9 +324,10 @@ resolving them. You can do this by merging the `main` branch into your
 branch (`git pull mdn main`), and then pushing the updated branch to
 your fork (`git push`).
 
-1. Once you've created your pull request, never use `git rebase` on your
-branch if you need to make changes. Any changes should be made as
-additional commits.
+1. An alternative strategy is `git rebase` of `main` on your branch.
+This will rewrite the git history and might confuse reviewers as notifications
+from GitHub lead to nowhere. Your changes are replayed on top of the current
+main branch at that point in time.
 
 1. Each pull request should contain a single logical change, or related set
 of changes that make sense to submit together. If a pull request becomes
@@ -352,15 +342,20 @@ for each logical set of changes that belong together.
 improvement, or formatting/structural change), please describe why you're
 making the change and anything else we need to know about it.
    - If the pull request is simple (it is really clear what has been
-     changed and why, and the change is obviously a good thing), you can do
-     this in your pull request's description.
+   changed and why, and the change is obviously a good thing), you can do
+   this in your pull request's description.
    - If the pull request is complex (the changes and the reasoning behind
-     them need a bit more explanation), then the requestor should file an
-     issue describing the intended change first, and seek discussion/approval
-     as needed. When the time is right to submit the PR, they should
-     reference the issue (or an existing issue that describes the motivation
-     for the change) in the PR. You can reference an existing issue
-     using `#` followed by the issue's ID, for example `#1234`.
+   them need a bit more explanation), then the requestor should file an
+   issue describing the intended change first, and seek discussion/approval
+   as needed. When the time is right to submit the PR, they should
+   reference the issue (or an existing issue that describes the motivation
+   for the change) in the PR. You can reference an existing issue
+   using `#` followed by the issue's ID, for example `#1234`.
+   - Pull requests should not contain large amounts of grammar updates.
+   Seemingly insignificant changes can change the meaning of technical
+   content, so these need a careful review. Keep in mind that MDN contains
+   technical documentation; you should not report merely basic improvements
+   in the grammar but only cases where the grammar is incorrect.
 
 1. Do not re-open a pull request that a reviewer has closed.
 

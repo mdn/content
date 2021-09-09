@@ -11,7 +11,7 @@ browser-compat: api.PerformanceElementTiming.naturalWidth
 ---
 <div>{{DefaultAPISidebar("Element Timing")}}</div>
 
-<p class="summary">The <strong><code>naturalWidth</code></strong> read-only property of the {{domxref("PerformanceElementTiming")}} interface returns the intrinsic width of the image element.</p>
+<p>The <strong><code>naturalWidth</code></strong> read-only property of the {{domxref("PerformanceElementTiming")}} interface returns the intrinsic width of the image element.</p>
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox">var <var>width</var> = <var>PerformanceElementTiming</var>.naturalWidth;</pre>
@@ -34,7 +34,7 @@ browser-compat: api.PerformanceElementTiming.naturalWidth
 });
 observer.observe({ entryTypes: ["element"] });</pre>
 
-<p class="notecard note">This example uses the {{domxref("PerformanceObserver")}} interface to create a list of performance measurement events. In our case we observe the {{domxref("PerformanceEntry.entrytype")}} <code>element</code> in order to use the <code>PerformanceElementTiming</code> interface.</p>
+<div class="notecard note"><p><strong>Note:</strong> This example uses the {{domxref("PerformanceObserver")}} interface to create a list of performance measurement events. In our case we observe the {{domxref("PerformanceEntry.entrytype")}} <code>element</code> in order to use the <code>PerformanceElementTiming</code> interface.</p></div>
 
 <h2 id="Specifications">Specifications</h2>
 

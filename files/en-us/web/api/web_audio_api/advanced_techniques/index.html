@@ -12,7 +12,7 @@ tags:
 ---
 <div>{{DefaultAPISidebar("Web Audio API")}}</div>
 
-<p class="summary">In this tutorial, we're going to cover sound creation and modification, as well as timing and scheduling. We're going to introduce sample loading, envelopes, filters, wavetables, and frequency modulation. If you're familiar with these terms and you're looking for an introduction to their application within with the Web Audio API, you've come to the right place.</p>
+<p>In this tutorial, we're going to cover sound creation and modification, as well as timing and scheduling. We're going to introduce sample loading, envelopes, filters, wavetables, and frequency modulation. If you're familiar with these terms and you're looking for an introduction to their application within with the Web Audio API, you've come to the right place.</p>
 
 <h2 id="Demo">Demo</h2>
 
@@ -24,7 +24,7 @@ tags:
 <p>In practice this is easier to do with a library — the Web Audio API was built to be built upon. If you are about to embark on building something more complex, <a href="https://tonejs.github.io/">tone.js</a> would be a good place to start. However, we want to demonstrate how to build such a demo from first principles, as a learning exercise.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can find the source code on GitHub as <a href="https://github.com/mdn/webaudio-examples/tree/master/step-sequencer">step-sequencer</a>; see the <a href="https://mdn.github.io/webaudio-examples/step-sequencer/">step-sequencer running live</a> also.</p>
+<p><strong>Note:</strong> You can find the source code on GitHub as <a href="https://github.com/mdn/webaudio-examples/tree/master/step-sequencer">step-sequencer</a>; see the <a href="https://mdn.github.io/webaudio-examples/step-sequencer/">step-sequencer running live</a> also.</p>
 </div>
 
 <p>The interface consists of master controls, which allow us to play/stop the sequencer, and adjust the BPM (beats per minute) to speed up or slow down the "music".</p>
@@ -33,7 +33,7 @@ tags:
 
 <p>Each voice also has local controls, which allow you to manipulate the effects or parameters particular to each technique we are using to create those voices. The techniques we are using are:</p>
 
-<table class="standard-table">
+<table class="no-markdown">
  <thead>
   <tr>
    <th scope="col">Name of voice</th>
@@ -66,7 +66,7 @@ tags:
 </table>
 
 <div class="note">
-<p><strong>Note</strong>: This instrument was not created to sound good, it was created to provide demonstration code and represents a <em>very</em> simplified version of such an instrument. The sounds are based on a dial-up modem. If you are unaware of how one sounds you can <a href="https://soundcloud.com/john-pemberton/modem-dialup">listen to one here</a>.</p>
+<p><strong>Note:</strong> This instrument was not created to sound good, it was created to provide demonstration code and represents a <em>very</em> simplified version of such an instrument. The sounds are based on a dial-up modem. If you are unaware of how one sounds you can <a href="https://soundcloud.com/john-pemberton/modem-dialup">listen to one here</a>.</p>
 </div>
 
 <h2 id="Creating_an_audio_context">Creating an audio context</h2>
@@ -91,7 +91,7 @@ const audioCtx = new AudioContext();</pre>
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: In our example the wavetable is held in a separate JavaScript file (<code>wavetable.js</code>), because there are <em>so</em> many values. It is taken from a <a href="https://github.com/GoogleChromeLabs/web-audio-samples/tree/main/archive/demos/wave-tables">repository of wavetables</a>, which can be found in the <a href="https://github.com/GoogleChromeLabs/web-audio-samples/">Web Audio API examples from Google Chrome Labs</a>.</p>
+<p><strong>Note:</strong> In our example the wavetable is held in a separate JavaScript file (<code>wavetable.js</code>), because there are <em>so</em> many values. It is taken from a <a href="https://github.com/GoogleChromeLabs/web-audio-samples/tree/main/archive/demos/wave-tables">repository of wavetables</a>, which can be found in the <a href="https://github.com/GoogleChromeLabs/web-audio-samples/">Web Audio API examples from Google Chrome Labs</a>.</p>
 </div>
 
 <h3 id="The_Oscillator">The Oscillator</h3>
@@ -198,7 +198,7 @@ osc.start(time);
 osc.stop(time + pulseTime);</pre>
 
 <div class="note">
-<p><strong>Note</strong>: We also don't have to use the default wave types for either of these oscillators we're creating — we could use a wavetable and the periodic wave method as we did before. There is a multitude of possibilities with just a minimum of nodes.</p>
+<p><strong>Note:</strong> We also don't have to use the default wave types for either of these oscillators we're creating — we could use a wavetable and the periodic wave method as we did before. There is a multitude of possibilities with just a minimum of nodes.</p>
 </div>
 
 <h3 id="Pulse_user_controls">Pulse user controls</h3>
@@ -271,7 +271,7 @@ for (let i = 0; i &lt; bufferSize; i++) {
 }</pre>
 
 <div class="note">
-<p><strong>Note</strong>: Why -1 to 1? When outputting sound to a file or speakers we need to have a number to represent 0db full scale — the numerical limit of the fixed point media or DAC. In floating point audio, 1 is a convenient number to map to "full scale" for mathematical operations on signals, so oscillators, noise generators and other sound sources typically output bipolar signals in the range -1 to 1. A browser will clamp values outside this range.</p>
+<p><strong>Note:</strong> Why -1 to 1? When outputting sound to a file or speakers we need to have a number to represent 0db full scale — the numerical limit of the fixed point media or DAC. In floating point audio, 1 is a convenient number to map to "full scale" for mathematical operations on signals, so oscillators, noise generators and other sound sources typically output bipolar signals in the range -1 to 1. A browser will clamp values outside this range.</p>
 </div>
 
 <h3 id="Creating_a_buffer_source">Creating a buffer source</h3>
@@ -293,7 +293,7 @@ noise.start();</pre>
 <p>We want something in the range of pink or brown noise. We want to cut off those high frequencies and possibly some of the lower ones. Let's pick a bandpass biquad filter for the job.</p>
 
 <div class="note">
-<p><strong>Note</strong>: The Web Audio API comes with two types of filter nodes: {{domxref("BiquadFilterNode")}} and {{domxref("IIRFilterNode")}}. For the most part a biquad filter will be good enough — it comes with different types such as lowpass, highpass, and bandpass. If you're looking to do something more bespoke, however, the IIR filter might be a good option — see <a href="/en-US/docs/Web/API/Web_Audio_API/Using_IIR_filters">Using IIR filters</a> for more information.</p>
+<p><strong>Note:</strong> The Web Audio API comes with two types of filter nodes: {{domxref("BiquadFilterNode")}} and {{domxref("IIRFilterNode")}}. For the most part a biquad filter will be good enough — it comes with different types such as lowpass, highpass, and bandpass. If you're looking to do something more bespoke, however, the IIR filter might be a good option — see <a href="/en-US/docs/Web/API/Web_Audio_API/Using_IIR_filters">Using IIR filters</a> for more information.</p>
 </div>
 
 <p>Wiring this up is the same as we've seen before. We create the {{domxref("BiquadFilterNode")}}, configure the properties we want for it and connect it through our graph. Different types of biquad filters have different properties — for instance setting the frequency on a bandpass type adjusts the middle frequency, however on a lowpass it would set the top frequency.</p>
@@ -381,7 +381,7 @@ bandControl.addEventListener('input', function() {
 }</pre>
 
 <div class="note">
-<p><strong>Note</strong>: You can easily modify the above function to take an array of files and loop over them to load more than one sample. This would be very handy for more complex instruments, or gaming.</p>
+<p><strong>Note:</strong> You can easily modify the above function to take an array of files and loop over them to load more than one sample. This would be very handy for more complex instruments, or gaming.</p>
 </div>
 
 <p>We can now use <code>setupSample()</code> like so:</p>
@@ -407,7 +407,7 @@ bandControl.addEventListener('input', function() {
 }</pre>
 
 <div class="note">
-<p><strong>Note</strong>: We can call <code>stop()</code> on an {{domxref("AudioBufferSourceNode")}}, however, this will happen automatically when the sample has finished playing.</p>
+<p><strong>Note:</strong> We can call <code>stop()</code> on an {{domxref("AudioBufferSourceNode")}}, however, this will happen automatically when the sample has finished playing.</p>
 </div>
 
 <h3 id="Dial-up_user_controls">Dial-up user controls</h3>
@@ -437,7 +437,7 @@ rateControl.addEventListener('input', function() {
 }</pre>
 
 <div class="note">
-<p><strong>Note</strong>: The sound file was <a href="http://soundbible.com/1573-DTMF-Tones.html">sourced from soundbible.com</a>.</p>
+<p><strong>Note:</strong> The sound file was <a href="http://soundbible.com/1573-DTMF-Tones.html">sourced from soundbible.com</a>.</p>
 </div>
 
 <h2 id="Playing_the_audio_in_time">Playing the audio in time</h2>
@@ -447,7 +447,7 @@ rateControl.addEventListener('input', function() {
 <p>We could schedule our voices to play within a <code>for</code> loop, however the biggest problem with this is updating whilst it is playing, and we've already implemented UI controls to do so. Also, it would be really nice to consider an instrument-wide BPM control. The best way to get our voices to play on the beat is to create a scheduling system, whereby we look ahead at when the notes are going to play and push them into a queue. We can start them at a precise time with the currentTime property and also take into account any changes.</p>
 
 <div class="note">
-<p><strong>Note</strong>: This is a much stripped down version of <a href="https://www.html5rocks.com/en/tutorials/audio/scheduling/">Chris Wilson's A Tale Of Two Clocks</a> article, which goes into this method in much more detail. There's no point repeating it all here, but it's highly recommended to read this article and use this method. Much of the code here is taken from his <a href="https://github.com/cwilso/metronome/blob/master/js/metronome.js">metronome example</a>, which he references in the article.</p>
+<p><strong>Note:</strong> This is a much stripped down version of <a href="https://www.html5rocks.com/en/tutorials/audio/scheduling/">Chris Wilson's A Tale Of Two Clocks</a> article, which goes into this method in much more detail. There's no point repeating it all here, but it's highly recommended to read this article and use this method. Much of the code here is taken from his <a href="https://github.com/cwilso/metronome/blob/master/js/metronome.js">metronome example</a>, which he references in the article.</p>
 </div>
 
 <p>Let's start by setting up our default BPM (beats per minute), which will also be user-controllable via — you guessed it — another range input.</p>

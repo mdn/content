@@ -18,26 +18,17 @@ browser-compat: api.RTCIceCandidate.usernameFragment
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">The read-only <strong><code>usernameFragment</code></strong>
-    property on the {{domxref("RTCIceCandidate")}} interface is a string indicating the
-    username fragment ("ufrag") that uniquely identifies a single ICE interaction
-    session.</span></p>
+<p>The read-only <strong><code>usernameFragment</code></strong> property on the {{domxref("RTCIceCandidate")}} interface is a string indicating the
+    username fragment ("ufrag") that uniquely identifies a single ICE interaction session.</p>
 
-<p>This value is specified when creating the {{domxref("RTCIceCandidate")}} by setting the
-  corresponding {{domxref("RTCIceCandidateInit.usernameFragment", "usernameFragment")}}
-  value in the {{domxref("RTCIceCandidateInit")}} object when creating a new candidate
-  with {{domxref("RTCIceCandidate.RTCIceCandidate", "new RTCIceCandidate()")}}. Note that
-  24 bits of the username fragment are required to be randomized by the browser. See
-  {{anch("Randomization")}} below for details.</p>
+<p>This value is specified using the <code>usernameFragment</code> property in the <code>candidateInfo</code> options object that is passed to the {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate()")}} constructor.
+  If you call the constructor with an m-line string instead of the options object, the value of <code>usernameFragment</code> is extracted from the specified candidate m-line string.</p>
 
-<p>If you instead call <code>RTCIceCandidate()</code> with a string parameter containing
-  the <code>candidate</code> m-line text, the value of <code>usernameFragment</code> is
-  extracted from the m-line.</p>
+<p>Note that 24 bits of the username fragment are required to be randomized by the browser. See <a href="#randomization">Randomization</a> below for details.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js">var <em>ufrag</em> = <em>RTCIceCandidate</em>.usernameFragment;</pre>
+<pre class="brush: js">var <em>ufrag</em> = <em>RTCIceCandidate</em>.usernameFragment;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -65,13 +56,10 @@ browser-compat: api.RTCIceCandidate.usernameFragment
   to inject themselves into an ICE exchange.</p>
 
 <div class="note">
-  <p><strong>Note:</strong> There is no API to obtain the ICE password, for what should be
-    fairly obvious security reasons.</p>
+  <p><strong>Note:</strong> There is no API to obtain the ICE password, for what should be fairly obvious security reasons.</p>
 </div>
 
-<p>The <code>usernameFragment</code> and password both change every time an <a
-    href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart">ICE restart</a>
-  occurs.</p>
+<p>The <code>usernameFragment</code> and password both change every time an <a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart">ICE restart</a> occurs.</p>
 
 <h2 id="Example">Example</h2>
 

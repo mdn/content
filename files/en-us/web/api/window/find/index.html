@@ -20,7 +20,7 @@ browser-compat: api.Window.find
     versions of Gecko. See {{Bug("672395")}}.</p>
 </div>
 
-<p>The <code><strong>Window.find()</strong></code> method finds a string in a window.</p>
+<p>The <code><strong>Window.find()</strong></code> method finds a string in a window sequentially.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -51,16 +51,18 @@ browser-compat: api.Window.find
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js">findString = function findText(text) {
-  alert("String \x22" + text + "\x22 found? " + window.find(text));
+<pre class="brush: js">function findString(text) {
+  document.querySelector("#output").textContent="String found? " + window.find(text);
 }</pre>
 
 <h3 id="HTML">HTML</h3>
 
 <pre class="brush: html">&lt;p&gt;Apples, Bananas, and Oranges.&lt;/p&gt;
 &lt;button type="button" onClick='findString("Apples")'&gt;Search for Apples&lt;/button&gt;
-&lt;button type="button" onClick='findString("Banana")'&gt;Search for Banana&lt;/button&gt;
+&lt;button type="button" onClick='findString("Bananas")'&gt;Search for Bananas&lt;/button&gt;
 &lt;button type="button" onClick='findString("Orange")'&gt;Search for Orange&lt;/button&gt;
+
+&lt;p id="output"&gt;&lt;/p&gt;
 </pre>
 
 <h3 id="Result">Result</h3>

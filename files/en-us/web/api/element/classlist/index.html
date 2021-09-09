@@ -31,9 +31,7 @@ browser-compat: api.Element.classList
     it returns an empty <code>DOMTokenList</code>, i.e. a <code>DOMTokenList</code> with
     the <code>length</code> property equal to <code>0</code>.</p>
 
-<p>The <code>DOMTokenList</code> itself is read-only, although you can modify it using the
-    {{domxref("DOMTokenList/add", "add()")}} and {{domxref("DOMTokenList/remove",
-    "remove()")}} methods.</p>
+<p>Although the <code>classList</code> property itself is read-only, you can modify its associated <code>DOMTokenList</code> using the {{domxref("DOMTokenList/add", "add()")}}, {{domxref("DOMTokenList/remove", "remove()")}}, {{domxref("DOMTokenList/replace", "replace()")}}, and {{domxref("DOMTokenList/toggle", "toggle()")}} methods.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -71,7 +69,7 @@ div.classList.remove(...cls);
 div.classList.replace("foo", "bar");</pre>
 
 <div class="note">
-    <p>Versions of Firefox before 26 do not implement the use of several arguments in the
+    <p><strong>Note:</strong> Versions of Firefox before 26 do not implement the use of several arguments in the
         add/remove/toggle methods. See <a
             href="https://bugzilla.mozilla.org/show_bug.cgi?id=814014">https://bugzilla.mozilla.org/show_bug.cgi?id=814014</a>
     </p>

@@ -108,7 +108,7 @@ tags:
 
 <ul>
  <li>Workers and shared workers can now be created with an identifying <code>name</code> property. See the {{domxref("Worker.Worker", "Worker()")}} and {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} constructors, and the {{domxref("DedicatedWorkerGlobalScope")}} and {{domxref("SharedWorkerGlobalScope")}} interfaces. ({{bug(1364297)}}).</li>
- <li>{{domxref("WindowOrWorkerGlobalScope.setTimeout","setTimeout()")}} and {{domxref("WindowOrWorkerGlobalScope.setInterval","setInterval()")}} are now subject to minimum interval throttling for tracking scripts in background tabs — see <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout#throttling_of_tracking_timeout_scripts">Throttling of tracking timeout scripts</a> ({{bug(1355311)}}).</li>
+ <li>{{domxref("setTimeout()")}} and {{domxref("setInterval()")}} are now subject to minimum interval throttling for tracking scripts in background tabs — see <a href="/en-US/docs/Web/API/setTimeout#throttling_of_tracking_timeout_scripts">Throttling of tracking timeout scripts</a> ({{bug(1355311)}}).</li>
 </ul>
 
 <h4 id="Service_WorkersPush">Service Workers/Push</h4>
@@ -179,13 +179,13 @@ tags:
 <ul>
  <li>The <code>xml:base</code> attribute can no longer be used to set the base URL for paths appearing in the {{htmlattrxref("style")}} attribute, for example —
 
-  <p><code>&lt;div xml:base="https://example.com/" style="background:url(picture.jpg)"&gt;&lt;/div&gt;</code> ({{bug(1350521)}}). See also <a href="https://www.fxsitecompat.com/en-CA/docs/2017/xml-base-for-style-attribute-has-been-disabled/">xml:base for style attribute has been disabled</a>.</p>
+  <p><code>&lt;div xml:base="https://example.com/" style="background:url(picture.jpg)"&gt;&lt;/div&gt;</code> ({{bug(1350521)}}).</p>
  </li>
  <li>
   <p>The {{htmlelement("style")}} element's {{htmlattrxref("scoped","style")}} attribute has been hidden behind a pref (<code>layout.css.scoped-style.enabled</code>) in content documents in Firefox 55+, as no other browsers support it.</p>
  </li>
  <li>
-  <p>Support for the obscure <code>MSThemeCompatible</code> value of the {{htmlelement("meta")}} element's {{htmlattrxref("http-equiv","meta")}} attribute has been removed from Gecko. No other modern browsers support it, and it was <a href="https://www.fxsitecompat.com/en-CA/docs/2017/checkboxes-and-radio-buttons-are-not-displayed-when-msthemecompatible-is-no/">causing compatibility problems</a> ({{bug("966240")}}).</p>
+  <p>Support for the obscure <code>MSThemeCompatible</code> value of the {{htmlelement("meta")}} element's {{htmlattrxref("http-equiv","meta")}} attribute has been removed from Gecko. No other modern browsers support it, and it was causing compatibility problems ({{bug("966240")}}).</p>
  </li>
 </ul>
 
@@ -199,7 +199,7 @@ tags:
 <h3 id="APIs_2">APIs</h3>
 
 <ul>
- <li>The {{domxref("UIEvent.isChar")}} property has never been supported by any browser but Firefox, and it has never been fully-implemented except on macOS. For that reason, it was removed in Firefox 55 to align with other browsers.</li>
+ <li>The <code>UIEvent.isChar</code> property has never been supported by any browser but Firefox, and it has never been fully-implemented except on macOS. For that reason, it was removed in Firefox 55 to align with other browsers.</li>
  <li>The proprietary Firefox OS Device Storage API has been removed from the platform ({{bug(1299500)}}).</li>
  <li>The <code>aShowDialog</code> parameter of the non-standard {{domxref("Window.find()")}} method (which could be specified to open up a "Find" dialog in the browser) has been removed ({{bug(1348409)}}).</li>
  <li>The <code>HTMLFormElement.requestAutoComplete()</code> method has been removed (see {{domxref("HTMLFormElement")}}) ({{bug(1270740)}}).</li>
@@ -223,12 +223,6 @@ tags:
  <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides">chrome_settings_overrides key enables you to override the browser's homepage.</a></li>
  <li>browser_style property enables you to have browser-like styling for <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser action popups</a>, <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action">sidebars</a>, and <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui">options pages</a>.</li>
  <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions">permissions API</a></li>
-</ul>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="https://www.fxsitecompat.com/en-US/versions/55">Site Compatibility for Firefox 55</a></li>
 </ul>
 
 <h2 id="Older_versions">Older versions</h2>

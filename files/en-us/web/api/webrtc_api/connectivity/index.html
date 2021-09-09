@@ -13,7 +13,7 @@ tags:
 ---
 <div>{{WebRTCSidebar}}{{draft}}</div>
 
-<p><span class="seoSummary">This article describes how the various WebRTC-related protocols interact with one another in order to create a connection and transfer data and/or media among peers.</span></p>
+<p>This article describes how the various WebRTC-related protocols interact with one another in order to create a connection and transfer data and/or media among peers.</p>
 
 <div class="note">
 <p><strong>Note:</strong> This page needs heavy rewriting for structural integrity and content completeness. Lots of info here is good but the organization is a mess since this is sort of a dumping ground right now.</p>
@@ -66,7 +66,7 @@ tags:
 <p>When changing the description by calling <code>setLocalDescription()</code> or <code>setRemoteDescription()</code>, the specified description is set as the pending description, and the WebRTC layer begins to evaluate whether or not it's acceptable. Once the proposed description has been agreed upon, the value of <code>currentLocalDescription</code> or <code>currentRemoteDescription</code> is changed to the pending description, and the pending description is set to null again, indicating that there isn't a pending description.</p>
 
 <div class="note">
-<p>The <code>pendingLocalDescription</code> contains not just the offer or answer under consideration, but any local ICE candidates which have already been gathered since the offer or answer was created. Similarly, <code>pendingRemoteDescription</code> includes any remote ICE candidates which have been provided by calls to {{domxref("RTCPeerConnection.addIceCandidate()")}}.</p>
+<p><strong>Note:</strong> The <code>pendingLocalDescription</code> contains not just the offer or answer under consideration, but any local ICE candidates which have already been gathered since the offer or answer was created. Similarly, <code>pendingRemoteDescription</code> includes any remote ICE candidates which have been provided by calls to {{domxref("RTCPeerConnection.addIceCandidate()")}}.</p>
 </div>
 
 <p>See the individual articles on these properties and methods for more specifics, and <a href="/en-US/docs/Web/Media/Formats/WebRTC_codecs">Codecs used by WebRTC</a> for information about codecs supported by WebRTC and which are compatible with which browsers. The codecs guide also offers guidance to help you choose the best codecs for your needs.</p>
@@ -76,7 +76,7 @@ tags:
 <p>As well as exchanging information about the media (discussed above in Offer/Answer and SDP), peers must exchange information about the network connection. This is known as an <strong>ICE candidate</strong> and details the available methods the peer is able to communicate (directly or through a TURN server). Typically, each peer will propose its best candidates first, making their way down the line toward their worse candidates. Ideally, candidates are UDP (since it's faster, and media streams are able to recover from interruptions relatively easily), but the ICE standard does allow TCP candidates as well.</p>
 
 <div class="note">
-<p>Generally, ICE candidates using TCP are only going to be used when UDP is not available or is restricted in ways that make it not suitable for media streaming. Not all browsers support ICE over TCP, however.</p>
+<p><strong>Note:</strong> Generally, ICE candidates using TCP are only going to be used when UDP is not available or is restricted in ways that make it not suitable for media streaming. Not all browsers support ICE over TCP, however.</p>
 </div>
 
 <p>ICE allows candidates to represent connections over either {{Glossary("TCP")}} or {{Glossary("UDP")}}, with UDP generally being preferred (and being more widely supported). Each protocol supports a few types of candidate, with the candidate types defining how the data makes its way from peer to peer.</p>
@@ -143,4 +143,4 @@ tags:
 
 <h2 id="The_entire_exchange_in_a_complicated_diagram">The entire exchange in a complicated diagram</h2>
 
-<p><a href="https://hacks.mozilla.org/wp-content/uploads/2013/07/webrtc-complete-diagram.png"><img alt="A complete architectural diagram showing the whole WebRTC process." src="webrtc-complete-diagram.png"></a></p>
+<p><a href="https://hacks.mozilla.org/2013/07/webrtc-and-the-ocean-of-acronyms/"><img alt="A complete architectural diagram showing the whole WebRTC process." src="webrtc-complete-diagram.png"></a></p>

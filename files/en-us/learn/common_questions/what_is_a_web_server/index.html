@@ -10,7 +10,7 @@ tags:
 <p><span class="seoSummary">In this article, we explain what web servers are, how web servers work, and why they are important.</span></p>
 </div>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -43,10 +43,6 @@ tags:
 <p>A <strong>dynamic web server</strong> consists of a static web server plus extra software, most commonly an <em>application server</em> and a <em>database</em>. We call it "dynamic" because the application server updates the hosted files before sending content to your browser via the HTTP server.</p>
 
 <p>For example, to produce the final webpages you see in the browser, the application server might fill an HTML template with content from a database. Sites like MDN or Wikipedia have thousands of webpages. Typically, these kinds of sites are composed of only a few HTML templates and a giant database, rather than thousands of static HTML documents. This setup makes it easier to maintain and deliver the content.</p>
-
-<h2 id="Active_learning">Active learning</h2>
-
-<p><em>There is no active learning available yet. <a href="/en-US/docs/MDN/Contribute/Getting_started">Please, consider contributing</a>.</em></p>
 
 <h2 id="Deeper_dive">Deeper dive</h2>
 
@@ -85,17 +81,20 @@ tags:
 <p>HTTP provides clear rules for how a client and server communicate. We'll cover HTTP itself in a <a href="/en-US/docs/Web/HTTP">technical article</a> later. For now, just be aware of these things:</p>
 
 <ul>
- <li>Only <em>clients</em> can make HTTP requests, and then only to <em>servers</em>. Servers can only <em>respond</em> to a <em>client</em>'s HTTP request.</li>
+ <li>Usually only <em>clients</em> make HTTP requests, and only to <em>servers</em>. Servers <em>respond</em> to a <em>client</em>'s HTTP request. A server can also populate data into a client cache, in advance of it being requested, through a mechanism called a server push.</li>
  <li>When requesting a file via HTTP, clients must provide the file's {{Glossary("URL")}}.</li>
  <li>The web server <em>must answer</em> every HTTP request, at least with an error message.</li>
 </ul>
 
-<p><a href="/en-US/docs/Web/HTTP/Status/404"><img alt="The MDN 404 page as an example of such error page" src="mdn-404.jpg" style="float: right;"></a>On a web server, the HTTP server is responsible for processing and answering incoming requests.</p>
+<p></a>On a web server, the HTTP server is responsible for processing and answering incoming requests.</p>
 
 <ol>
  <li>Upon receiving a request, an HTTP server first checks if the requested URL matches an existing file.</li>
  <li>If so, the web server sends the file content back to the browser. If not, an application server builds the necessary file.</li>
- <li>If neither process is possible, the web server returns an error message to the browser, most commonly {{HTTPStatus("404", "404 Not Found")}}. The 404 error is so common that some web designers devote considerable time and effort to designing 404 error pages.</li>
+ <li>If neither process is possible, the web server returns an error message to the browser, most commonly {{HTTPStatus("404", "404 Not Found")}}.
+   The 404 error is so common that some web designers devote considerable time and effort to designing 404 error pages.
+   <a href="/en-US/docs/Web/HTTP/Status/404"><img alt="The MDN 404 page as an example of such error page" src="mdn-404.jpg"></a>
+  </li>
 </ol>
 
 <h3 id="Static_vs._dynamic_content">Static vs. dynamic content</h3>

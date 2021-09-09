@@ -60,44 +60,43 @@ browser-compat: api.RTCPeerConnection.createOffer
     keep the same credentials and therefore not restart ICE. <strong>The default is
       <code>false</code></strong>.</dd>
   <dt><code>offerToReceiveAudio</code> {{optional_inline}} (Legacy)</dt>
-  <dd>A legacy Boolean option which used to control whether or not to offer to the remote
+  <dd>
+    <p>A legacy Boolean option which used to control whether or not to offer to the remote
     peer the opportunity to try to send audio. If this value is <code>false</code>, the
     remote peer will not be offered to send audio data, even if the local side will be
     sending audio data. If this value is <code>true</code>, the remote peer will be
     offered to send audio data, even if the local side will <em>not</em> be sending audio
     data. The default behavior is to offer to receive audio only if the local side is
-    sending audio, not otherwise.</dd>
-  <dd>To emulate this behavior in modern implementations, the presence of this member with
+    sending audio, not otherwise.</p>
+    <p>To emulate this behavior in modern implementations, the presence of this member with
     a value <code>false</code>, will set the direction of all existing audio transceivers
     to exclude reception (i.e. set to either <code>"sendonly"</code> or
-    <code>"inactive"</code>).</dd>
-  <dd>In modern implementations, the presence of this member with a value
+    <code>"inactive"</code>).</p>
+    <p>In modern implementations, the presence of this member with a value
     <code>true</code>, will ensure there is at least one transceiver set to receive audio
-    that has not been stopped, and if there isn't one, one will be created.</dd>
-  <dd>
-    <div class="note"><strong>Note:</strong> You shouldn't use this legacy property.
+    that has not been stopped, and if there isn't one, one will be created.</p>
+    <div class="note"><p><strong>Note:</strong> You shouldn't use this legacy property.
       Instead, use {{domxref("RTCRtpTransceiver")}} to control whether or not to accept
-      incoming audio.</div>
+      incoming audio.</p></div>
   </dd>
   <dt><code>offerToReceiveVideo</code> {{optional_inline}} (Legacy)</dt>
-  <dd>A legacy Boolean option which used to control whether or not to offer to the remote
+  <dd><p>A legacy Boolean option which used to control whether or not to offer to the remote
     peer the opportunity to try to send video. If this value is <code>false</code>, the
     remote peer will not be offered to send video data, even if the local side will be
     sending video data. If this value is <code>true</code>, the remote peer will be
     offered to send video data, even if the local side will <em>not</em> be sending video
     data. The default behavior is to offer to receive video only if the local side is
-    sending video, not otherwise.</dd>
-  <dd>To emulate this behavior in modern implementations, the presence of this member with
+    sending video, not otherwise.</p>
+    <p>To emulate this behavior in modern implementations, the presence of this member with
     a value <code>false</code>, will set the direction of all existing video transceivers
     to exclude reception (i.e. set to either <code>"sendonly"</code> or
-    <code>"inactive"</code>).</dd>
-  <dd>In modern implementations, the presence of this member with a value
+    <code>"inactive"</code>).</p>
+    <p>In modern implementations, the presence of this member with a value
     <code>true</code>, will ensure there is at least one transceiver set to receive video
-    that has not been stopped, and if there isn't one, one will be created.</dd>
-  <dd>
-    <div class="note"><strong>Note:</strong> You shouldn't use this legacy property.
+    that has not been stopped, and if there isn't one, one will be created.</p>
+    <div class="note"><p><strong>Note:</strong> You shouldn't use this legacy property.
       Instead, use {{domxref("RTCRtpTransceiver")}} to control whether or not to accept
-      incoming video.</div>
+      incoming video.</p></div>
   </dd>
   <dt><code>voiceActivityDetection</code> {{optional_inline}}</dt>
   <dd>Some codecs and hardware are able to detect when audio begins and ends by watching

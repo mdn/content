@@ -16,9 +16,9 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}</div>
 
-<p class="summary">This second article in our <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Django Tutorial</a> shows how you can create a "skeleton" website project as a basis, which you can then populate with site-specific settings, paths, models, views, and templates.</p>
+<p>This second article in our <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Django Tutorial</a> shows how you can create a "skeleton" website project as a basis, which you can then populate with site-specific settings, paths, models, views, and templates.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -38,32 +38,33 @@ tags:
 <p>To get started:</p>
 
 <ol>
- <li><span style="line-height: 1.5;">Use the </span><code style="font-style: normal; font-weight: normal; line-height: 1.5;">django-admin</code><span style="line-height: 1.5;"> tool to generate a project folder, the basic file templates, and <strong>manage.py, </strong>which serves as your project management script.</span></li>
- <li><span style="line-height: 1.5;">Use </span><strong style="line-height: 1.5;">manage.py</strong><span style="line-height: 1.5;"> to create one or more </span><em>applications</em><span style="line-height: 1.5;">.</span>
+ <li>Use the <code>django-admin</code> tool to generate a project folder, the basic file templates, and <strong>manage.py</strong>, which serves as your project management script.</li>
+ <li>Use <strong>manage.py</strong> to create one or more <em>applications</em>.
     <div class="notecard note">
-        <h4>Note</h4>
-        <p>A website may consist of one or more sections. For example, main site, blog, wiki, downloads area, etc. Django encourages you to develop these components as separate <em>applications</em>, which could then be re-used in different projects if desired.</p>
+        <p><strong>Note:</strong> A website may consist of one or more sections. For example, main site, blog, wiki, downloads area, etc. Django encourages you to develop these components as separate <em>applications</em>, which could then be re-used in different projects if desired.</p>
     </div>
  </li>
- <li><span style="line-height: 1.5;">Register the new applications to include them in the project. </span></li>
- <li><span style="line-height: 1.5;">Hook up the <strong>url/path</strong> mapper for each application.</span></li>
+ <li>Register the new applications to include them in the project.</li>
+ <li>Hook up the <strong>url/path</strong> mapper for each application.</li>
 </ol>
 
-<p>For the <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Local Library website</a>, the website and project folders are named <em>locallibrary</em>, and includes one application named <em>catalog</em>. The top-level folder structure will therefore be as follows:</p>
+<p>For the <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Local Library website</a>, the website and project folders are named <em>locallibrary</em>, and includes one application named <em>catalog</em>.
+The top-level folder structure will therefore be as follows:</p>
 
-<pre class="brush: bash"><em>locallibrary/         # Website folder</em>
-    <strong>manage.py         </strong><em># Script to run Django tools for this project</em> (created using django-admin)
-    <em>locallibrary/     # Website/project folder </em>(created using django-admin)
-    <em>catalog/          # Application folder </em>(created using manage.py)
+<pre class="brush: bash">locallibrary/         # Website folder
+    manage.py         # Script to run Django tools for this project (created using django-admin)
+    locallibrary/     # Website/project folder (created using django-admin)
+    catalog/          # Application folder (created using manage.py)
 </pre>
 
-<p><span style="line-height: 1.5;">The following sections discuss the process steps in detail, and show how you can test your changes. At the end of this article, we discuss other site-wide configuration you might also do at this stage.</span></p>
+<p>The following sections discuss the process steps in detail, and show how you can test your changes.
+At the end of this article, we discuss other site-wide configuration you might also do at this stage.</p>
 
 <h2 id="Creating_the_project">Creating the project</h2>
 
 <ol>
- <li>Open a command shell (or a terminal window), and make sure you are in your <a href="/en-US/docs/Learn/Server-side/Django/development_environment#using_a_virtual_environment">virtual environment</a>. </li>
- <li>Navigate <span style="line-height: 1.5;">to where you want to store your Django apps (make it somewhere easy to find like inside your <em>Documents</em> folder), and create a folder for your new website (in this case: </span><em>django_projects</em>). Then change into your newly-created directory:
+ <li>Open a command shell (or a terminal window), and make sure you are in your <a href="/en-US/docs/Learn/Server-side/Django/development_environment#using_a_virtual_environment">virtual environment</a>.</li>
+ <li>Navigate to where you want to store your Django apps (make it somewhere easy to find like inside your <em>Documents</em> folder), and create a folder for your new website (in this case: <em>django_projects</em>). Then change into your newly-created directory:
  <pre class="brush: bash">mkdir django_projects
 cd django_projects</pre>
  </li>
@@ -75,9 +76,9 @@ cd locallibrary</pre>
 
 <p>The <code>django-admin</code> tool creates a folder/file structure as follows:</p>
 
-<pre class="brush: bash"><em>locallibrary/</em>
+<pre class="brush: bash">locallibrary/
     manage.py
-    <em>locallibrary/</em>
+    locallibrary/
         __init__.py
         settings.py
         urls.py
@@ -93,8 +94,8 @@ cd locallibrary</pre>
 <ul>
  <li><strong>__init__.py</strong> is an empty file that instructs Python to treat this directory as a Python package.</li>
  <li><strong>settings.py</strong> contains all the website settings, including registering any applications we create, the location of our static files, database configuration details, etc.  </li>
- <li><strong>urls.py</strong> defines the site URL-to-view mappings. While this could <span style="line-height: 1.5;">contain <em>all</em> the URL mapping code, it is more common to delegate some of the mappings to particular applications, as you'll see later. </span></li>
- <li><strong style="line-height: 1.5;">wsgi.py</strong><span style="line-height: 1.5;"> is used to help your Django application communicate with the webserver. You can treat this as boilerplate.</span></li>
+ <li><strong>urls.py</strong> defines the site URL-to-view mappings. While this could contain <em>all</em> the URL mapping code, it is more common to delegate some of the mappings to particular applications, as you'll see later.</li>
+ <li><strong>wsgi.py</strong> is used to help your Django application communicate with the webserver. You can treat this as boilerplate.</li>
  <li><strong>asgi.py</strong> is a standard for Python asynchronous web apps and servers to communicate with each other. ASGI is the asynchronous successor to WSGI and provides a standard for both asynchronous and synchronous Python apps (whereas WSGI provided a standard for synchronous apps only). It is backward-compatible with WSGI and supports multiple servers and application frameworks.</li>
 </ul>
 
@@ -107,31 +108,31 @@ cd locallibrary</pre>
 <pre class="brush: bash">python3 manage.py startapp catalog</pre>
 
 <div class="notecard note">
-    <h4>Note</h4>
-    <p>The example command is for Linux/macOS X. On Windows, the command should be: </p>
-    
-    <p><code>py -3 manage.py startapp catalog</code></p>
-    
-    <p>If you're working on Windows, replace <code>python3</code> with <code>py -3</code> throughout this module.</p>
-    
-    <p>If you are using Python 3.7.0 or later, you should only use  <code>py manage.py startapp catalog</code></p>
+  <p><strong>Note:</strong> The example command is for Linux/macOS X. On Windows, the command should be: </p>
+
+  <p><code>py -3 manage.py startapp catalog</code></p>
+
+  <p>If you're working on Windows, replace <code>python3</code> with <code>py -3</code> throughout this module.</p>
+
+  <p>If you are using Python 3.7.0 or later, you should only use  <code>py manage.py startapp catalog</code></p>
 </div>
 
-<p>The tool creates a new folder and populates it with files for the different parts of the application (shown in bold in the following example). Most of the files are named after their purpose (e.g. views should be stored in <strong>views.py</strong>, models in <strong>models.py</strong>, tests in <strong>tests.py</strong>, administration site configuration in <strong>admin.py</strong>, application registration in <strong>apps.py</strong>) and contain some minimal boilerplate code for working with the associated objects.</p>
+<p>The tool creates a new folder and populates it with files for the different parts of the application (shown in the following example).
+Most of the files are named after their purpose (e.g. views should be stored in <strong>views.py</strong>, models in <strong>models.py</strong>, tests in <strong>tests.py</strong>, administration site configuration in <strong>admin.py</strong>, application registration in <strong>apps.py</strong>) and contain some minimal boilerplate code for working with the associated objects.</p>
 
 <p>The updated project directory should now look like this:</p>
 
-<pre class="brush: bash"><em>locallibrary/</em>
+<pre class="brush: bash">locallibrary/
     manage.py
-    <em>locallibrary/
-</em><strong>    <em>catalog/</em>
+    locallibrary/
+    catalog/
         admin.py
         apps.py
         models.py
         tests.py
         views.py
         __init__.py
-        <em>migrations/</em></strong>
+        migrations/
 </pre>
 
 <p>In addition we now have:</p>
@@ -142,8 +143,7 @@ cd locallibrary</pre>
 </ul>
 
 <div class="notecard note">
-    <h4>Note</h4>
-    <p>Have you noticed what is missing from the files list above? While there is a place for your views and models, there is nowhere for you to put your url mappings, templates, and static files. We'll show you how to create them further along (these aren't needed in every website but they are needed in this example).</p>
+  <p><strong>Note:</strong> Have you noticed what is missing from the files list above? While there is a place for your views and models, there is nowhere for you to put your url mappings, templates, and static files. We'll show you how to create them further along (these aren't needed in every website but they are needed in this example).</p>
 </div>
 
 <h2 id="Registering_the_catalog_application">Registering the catalog application</h2>
@@ -166,8 +166,7 @@ cd locallibrary</pre>
 <p>The new line specifies the application configuration object (<code>CatalogConfig</code>) that was generated for you in <strong>/locallibrary/catalog/apps.py</strong> when you created the application.</p>
 
 <div class="notecard note">
-    <h4>Note</h4>
-    <p>You'll notice that there are already a lot of other <code>INSTALLED_APPS</code> (and <code>MIDDLEWARE</code>, further down in the settings file). These enable support for the <a href="/en-US/docs/Learn/Server-side/Django/Admin_site">Django administration site</a> and the functionality it uses (including sessions, authentication, etc).</p>
+  <p><strong>Note:</strong> You'll notice that there are already a lot of other <code>INSTALLED_APPS</code> (and <code>MIDDLEWARE</code>, further down in the settings file). These enable support for the <a href="/en-US/docs/Learn/Server-side/Django/Admin_site">Django administration site</a> and the functionality it uses (including sessions, authentication, etc).</p>
 </div>
 
 <h2 id="Specifying_the_database">Specifying the database</h2>
@@ -231,8 +230,7 @@ urlpatterns = [
 <p>The URL mappings are managed through the <code>urlpatterns</code> variable, which is a Python <em>list</em> of <code>path()</code> functions. Each <code>path()</code> function either associates a URL pattern to a <em>specific view</em>, which will be displayed when the pattern is matched, or with another list of URL pattern testing code (in this second case, the pattern becomes the "base URL" for patterns defined in the target module). The <code>urlpatterns</code> list initially defines a single function that maps all URLs with the pattern <em>admin/</em> to the module <code>admin.site.urls</code> , which contains the Administration application's own URL mapping definitions.</p>
 
 <div class="notecard note">
-    <h4>Note</h4>
-    <p>The route in <code>path()</code> is a string defining a URL pattern to match. This string might include a named variable (in angle brackets), e.g. <code>'catalog/&lt;id&gt;/'</code>. This pattern will match a URL like <strong>/catalog/</strong><em>any_chars</em><strong>/</strong> and pass <em>any_chars</em> to the view as a string with parameter name <code>id</code>. We discuss path methods and route patterns further in later topics.</p>
+  <p><strong>Note:</strong> The route in <code>path()</code> is a string defining a URL pattern to match. This string might include a named variable (in angle brackets), e.g. <code>'catalog/&lt;id&gt;/'</code>. This pattern will match a URL like <strong>/catalog/</strong><em>any_chars</em><strong>/</strong> and pass <em>any_chars</em> to the view as a string with parameter name <code>id</code>. We discuss path methods and route patterns further in later topics.</p>
 </div>
 
 <p>To add a new list item to the <code>urlpatterns</code> list, add the following lines to the bottom of the file. This new item includes a <code>path()</code> that forwards requests with the pattern <code>catalog/</code> to the module <code>catalog.urls</code> (the file with the relative URL <strong>catalog/urls.py</strong>).</p>
@@ -247,8 +245,7 @@ urlpatterns += [
 </pre>
 
 <div class="notecard note">
-    <h4>Note</h4>
-    <p>Note that we included the import line (<code>from django.urls import include</code>) with the code that uses it (so it is easy to see what we've added), but it is common to include all your import lines at the top of a Python file.</p>
+  <p><strong>Note:</strong> Note that we included the import line (<code>from django.urls import include</code>) with the code that uses it (so it is easy to see what we've added), but it is common to include all your import lines at the top of a Python file.</p>
 </div>
 
 <p>Now let's redirect the root URL of our site (i.e. <code>127.0.0.1:8000</code>) to the URL <code>127.0.0.1:8000/catalog/.</code> This is the only app we'll be using in this project. To do this, we'll use a special view function, <code>RedirectView</code>, which takes the new relative URL to redirect to (<code>/catalog/</code>) as its first argument when the URL pattern specified in the <code>path()</code> function is matched (the root URL, in this case).</p>
@@ -276,7 +273,7 @@ If this pattern is targeted in an include(), ensure the include() pattern has a 
 
 <p>Add the following final block to the bottom of the file now:</p>
 
-<pre># Use static() to add url mapping to serve static files during development (only)
+<pre class="brush: python"># Use static() to add url mapping to serve static files during development (only)
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -284,8 +281,7 @@ urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 </pre>
 
 <div class="notecard note">
-    <h4>Note</h4>
-    <p>There are a number of ways to extend the <code>urlpatterns</code> list (previously, we just appended a new list item using the <code>+=</code> operator to clearly separate the old and new code). We could have instead just included this new pattern-map in the original list definition:</p>
+  <p><strong>Note:</strong> There are a number of ways to extend the <code>urlpatterns</code> list (previously, we just appended a new list item using the <code>+=</code> operator to clearly separate the old and new code). We could have instead just included this new pattern-map in the original list definition:</p>
 
 <pre class="brush: python">urlpatterns = [
     path('admin/', admin.site.urls),
@@ -321,8 +317,8 @@ urlpatterns = [
 python3 manage.py migrate
 </pre>
 
-<div class="warning">
-<p><strong>Important</strong>: You'll need to run these commands every time your models change in a way that will affect the structure of the data that needs to be stored (including both addition and removal of whole models and individual fields).</p>
+<div class="notecard warning">
+<p><strong>Warning:</strong> You'll need to run these commands every time your models change in a way that will affect the structure of the data that needs to be stored (including both addition and removal of whole models and individual fields).</p>
 </div>
 
 <p>The <code>makemigrations</code> command <em>creates</em> (but does not apply) the migrations for all applications installed in your project. You can specify the application name as well to just run a migration for a single project. This gives you a chance to check out the code for these migrations before they are applied. If you're a Django expert, you may choose to tweak them slightly!</p>
@@ -330,8 +326,7 @@ python3 manage.py migrate
 <p>The <code>migrate</code> command is what applies the migrations to your database. Django tracks which ones have been added to the current database.</p>
 
 <div class="notecard note">
-    <h4>Note</h4>
-    <p>See <a href="https://docs.djangoproject.com/en/3.1/topics/migrations/">Migrations</a> (Django docs) for additional information about the lesser-used migration commands.</p>
+  <p><strong>Note:</strong> See <a href="https://docs.djangoproject.com/en/3.1/topics/migrations/">Migrations</a> (Django docs) for additional information about the lesser-used migration commands.</p>
 </div>
 
 <h3 id="Running_the_website">Running the website</h3>
@@ -339,8 +334,7 @@ python3 manage.py migrate
 <p>During development, you can serve the website first using the <em>development web server</em>, and then viewing it on your local web browser.</p>
 
 <div class="notecard note">
-    <h4>Note</h4>
-    <p>The development web server is not robust or performant enough for production use, but it is a very easy way to get your Django website up and running during development to give it a convenient quick test. By default it will serve the site to your local computer (<code>http://127.0.0.1:8000/)</code>, but you can also specify other computers on your network to serve to. For more information see <a href="https://docs.djangoproject.com/en/3.1/ref/django-admin/#runserver">django-admin and manage.py: runserver</a> (Django docs).</p>
+  <p><strong>Note:</strong> The development web server is not robust or performant enough for production use, but it is a very easy way to get your Django website up and running during development to give it a convenient quick test. By default it will serve the site to your local computer (<code>http://127.0.0.1:8000/)</code>, but you can also specify other computers on your network to serve to. For more information see <a href="https://docs.djangoproject.com/en/3.1/ref/django-admin/#runserver">django-admin and manage.py: runserver</a> (Django docs).</p>
 </div>
 
 <p>Run the <em>development web server</em> by calling the <code>runserver</code> command (in the same directory as <strong>manage.py</strong>):</p>
@@ -363,15 +357,13 @@ python3 manage.py migrate
 <p>Don't worry! This error page is expected because we don't have any pages/urls defined in the <code>catalog.urls</code> module (which we're redirected to when we get a URL to the root of the site).</p>
 
 <div class="notecard note">
-    <h4>Note</h4>
-    <p>The example page demonstrates a great Django feature — automated debug logging. Whenever a page cannot be found, Django displays an error screen with useful information or any error raised by the code. In this case, we can see that the URL we've supplied doesn't match any of our URL patterns (as listed). Logging is turned off in production (which is when we put the site live on the Web), in which case a less informative but more user-friendly page will be served.</p>
+  <p><strong>Note:</strong> The example page demonstrates a great Django feature — automated debug logging. Whenever a page cannot be found, Django displays an error screen with useful information or any error raised by the code. In this case, we can see that the URL we've supplied doesn't match any of our URL patterns (as listed). Logging is turned off in production (which is when we put the site live on the Web), in which case a less informative but more user-friendly page will be served.</p>
 </div>
 
 <p>At this point, we know that Django is working! </p>
 
 <div class="notecard note">
-    <h4>Note</h4>
-    <p>You should re-run migrations and re-test the site whenever you make significant changes. It doesn't take very long!</p>
+  <p><strong>Note:</strong> You should re-run migrations and re-test the site whenever you make significant changes. It doesn't take very long!</p>
 </div>
 
 <h2 id="Challenge_yourself">Challenge yourself</h2>

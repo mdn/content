@@ -47,7 +47,7 @@ browser-compat: api.IDBOpenDBRequest
 
 <p>In the following example you can see the onupgradeneeded handler being used to update the database structure if a database with a higher version number is loaded. For a full working example, see our <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> app (<a href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
 
-<pre class="brush: js; highlight:[16,28,29,31,32,33,34,35,36]">var db;
+<pre class="brush: js;">var db;
 
 // Let us open our database
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);

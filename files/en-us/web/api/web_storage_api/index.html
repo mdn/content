@@ -30,7 +30,7 @@ tags:
  <li><code>localStorage</code> does the same thing, but persists even when the browser is closed and reopened.
   <ul>
    <li>Stores data with no expiration date, and gets cleared only through JavaScript, or clearing the Browser cache / Locally Stored Data.</li>
-   <li>Storage limit is the maximum amongst the three.</li>
+   <li>Storage limit is the maximum amongst the two.</li>
   </ul>
  </li>
 </ul>
@@ -38,15 +38,15 @@ tags:
 <p>These mechanisms are available via the {{domxref("Window.sessionStorage")}} and {{domxref("Window.localStorage")}} properties (to be more precise, in supporting browsers the <code>Window</code> object implements the <code>WindowLocalStorage</code> and <code>WindowSessionStorage</code> objects, which the <code>localStorage</code> and <code>sessionStorage</code> properties hang off) — invoking one of these will create an instance of the {{domxref("Storage")}} object, through which data items can be set, retrieved and removed. A different Storage object is used for the <code>sessionStorage</code> and <code>localStorage</code> for each origin — they function and are controlled separately.</p>
 
 <div class="note">
-<p><strong>Note</strong>: From Firefox 45 onwards, when the browser crashes/restarts, the amount of data saved per origin is limited to 10MB. This has been done to avoid memory issues caused by excessive usage of web storage.</p>
+<p><strong>Note:</strong> From Firefox 45 onwards, when the browser crashes/restarts, the amount of data saved per origin is limited to 10MB. This has been done to avoid memory issues caused by excessive usage of web storage.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: Access to Web Storage from third-party IFrames is denied if the user has <a href="https://support.mozilla.org/en-US/kb/disable-third-party-cookies">disabled third-party cookies</a> (Firefox implements this behavior from <a href="/en-US/docs/Mozilla/Firefox/Releases/43">version 43</a> onwards.)</p>
+<p><strong>Note:</strong> Access to Web Storage from third-party IFrames is denied if the user has <a href="https://support.mozilla.org/en-US/kb/disable-third-party-cookies">disabled third-party cookies</a> (Firefox implements this behavior from <a href="/en-US/docs/Mozilla/Firefox/Releases/43">version 43</a> onwards.)</p>
 </div>
 
 <div class="note">
-<p><strong>Note:</strong> Web Storage is not the same as <a href="/en-US/docs/Storage">mozStorage</a> (Mozilla's XPCOM interfaces to SQLite) or the <a href="/en-US/docs/Session_store_API">Session store API</a> (an <a href="/en-US/docs/XPCOM">XPCOM</a> storage utility for use by extensions).</p>
+<p><strong>Note:</strong> Web Storage is not the same as <code>mozStorage</code> (Mozilla's XPCOM interfaces to SQLite) or the <code>Session store API</code> (an XPCOM storage utility for use by extensions).</p>
 </div>
 
 <h2 id="Web_Storage_interfaces">Web Storage interfaces</h2>
@@ -55,9 +55,9 @@ tags:
  <dt>{{domxref("Storage")}}</dt>
  <dd>Allows you to set, retrieve and remove data for a specific domain and storage type (session or local.)</dd>
  <dt>{{domxref("Window")}}</dt>
- <dd>The Web Storage API extends the {{domxref("Window")}} object with two new properties — {{domxref("Window.sessionStorage")}} and {{domxref("Window.localStorage")}} — which provide access to the current domain's session and local {{domxref("Storage")}} objects respectively, and a {{domxref("Window.onstorage")}} event handler that fires when a storage area changes (e.g. a new item is stored.)</dd>
+ <dd>The Web Storage API extends the {{domxref("Window")}} object with two new properties — {{domxref("Window.sessionStorage")}} and {{domxref("Window.localStorage")}} — which provide access to the current domain's session and local {{domxref("Storage")}} objects respectively, and a {{domxref("WindowEventHandlers.onstorage")}} event handler that fires when a storage area changes (e.g. a new item is stored.)</dd>
  <dt>{{domxref("StorageEvent")}}</dt>
- <dd>The <code title="event-storage">storage</code> event is fired on a document's <code>Window</code> object when a storage area changes.</dd>
+ <dd>The <code>storage</code> event is fired on a document's <code>Window</code> object when a storage area changes.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -68,17 +68,16 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
+<table>
  <tbody>
   <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
+   <th>Specification</th>
   </tr>
   <tr>
-   <td>{{SpecName('HTML WHATWG', 'webstorage.html#webstorage')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
+   <td>
+    <a href="https://html.spec.whatwg.org/multipage/webstorage.html#webstorage">HTML Living Standard<br/>
+    # webstorage</a>
+   </td>
   </tr>
  </tbody>
 </table>

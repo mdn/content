@@ -13,9 +13,7 @@ tags:
 ---
 <div>{{CanvasSidebar}}</div>
 
-<div class="summary">
-<p>By combining the capabilities of the <a class="internal" href="/en-US/docs/Web/HTML/Element/video"><code>video</code></a> element with a <a class="internal" href="/en-US/docs/Web/HTML/Element/canvas"><code>canvas</code></a>, you can manipulate video data in real time to incorporate a variety of visual effects to the video being displayed. This tutorial demonstrates how to perform chroma-keying (also known as the "green screen effect") using JavaScript code.</p>
-</div>
+<p>By combining the capabilities of the <a href="/en-US/docs/Web/HTML/Element/video"><code>video</code></a> element with a <a href="/en-US/docs/Web/HTML/Element/canvas"><code>canvas</code></a>, you can manipulate video data in real time to incorporate a variety of visual effects to the video being displayed. This tutorial demonstrates how to perform chroma-keying (also known as the "green screen effect") using JavaScript code.</p>
 
 <p>{{EmbedGHLiveSample('dom-examples/canvas/chroma-keying/index.html', 700, 400) }}</p>
 
@@ -61,7 +59,7 @@ tags:
 <p>The key bits to take away from this are:</p>
 
 <ol>
- <li>This document establishes two <a class="internal" href="/en-US/docs/Web/HTML/Element/canvas"><code>canvas</code></a> elements, with the IDs <code>c1</code> and <code>c2</code>.  Canvas <code>c1</code> is used to display the current frame of the original video, while <code>c2</code> is used to display the video after performing the chroma-keying effect; <code>c2</code> is preloaded with the still image that will be used to replace the green background in the video.</li>
+ <li>This document establishes two <a href="/en-US/docs/Web/HTML/Element/canvas"><code>canvas</code></a> elements, with the IDs <code>c1</code> and <code>c2</code>.  Canvas <code>c1</code> is used to display the current frame of the original video, while <code>c2</code> is used to display the video after performing the chroma-keying effect; <code>c2</code> is preloaded with the still image that will be used to replace the green background in the video.</li>
  <li>The JavaScript code is imported from a script named <code>processor.js</code>.</li>
 </ol>
 
@@ -141,11 +139,11 @@ tags:
 
 <p>When this routine is called, the video element is displaying the most recent frame of video data, which looks like this:</p>
 
-<p><img class="default internal" src="video.png"></p>
+<p><img src="video.png"></p>
 
 <p>In line 2, that frame of video is copied into the graphics context <code>ctx1</code> of the first canvas, specifying as the height and width the values we previously saved to draw the frame at half size.  Note that you can pass the video element into the context's <code>drawImage()</code> method to draw the current video frame into the context.  The result is:</p>
 
-<p><img class="default internal" src="sourcectx.png"></p>
+<p><img src="sourcectx.png"></p>
 
 <p>Line 3 fetches a copy of the raw graphics data for the current frame of video by calling the <code>getImageData()</code> method on the first context.  This provides raw 32-bit pixel image data we can then manipulate.  Line 4 computes the number of pixels in the image by dividing the total size of the frame's image data by four.</p>
 
@@ -155,7 +153,7 @@ tags:
 
 <p>The resulting image looks like this:</p>
 
-<p><img class="default internal" src="output.png"></p>
+<p><img src="output.png"></p>
 
 <p>This is done repeatedly as the video plays, so that frame after frame is processed and displayed with the chroma-key effect.</p>
 

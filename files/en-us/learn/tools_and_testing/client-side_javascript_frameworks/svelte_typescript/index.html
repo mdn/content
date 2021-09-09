@@ -17,7 +17,7 @@ tags:
 
 <p class="summary">We will now learn how to use TypeScript in Svelte applications. First we'll learn what TypeScript is and what benefits it can bring us. Then we'll see how to configure our project to work with TypeScript files. Finally we will go over our app and see what modifications we have to make to fully take advantage of TypeScript features.</p>
 
-<table class="learn-box standard-table">
+<table>
 	<tbody>
 		<tr>
 			<th scope="row">Prerequisites:</th>
@@ -173,7 +173,7 @@ npm run dev                                       # start the app in development
 
 <p>Anyway, assuming you are inside the VS Code application, from the root of your project's folder, type <code>code .</code> (the trailing dot tells VS code to open the current folder) to open the code editor. VS Code will tell you that there are recommended extensions to install.</p>
 
-<p><img alt="dialog box saying this workspace has extension recommendations, with options to install or show a list" src="01-vscode-extension-recommendations.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="dialog box saying this workspace has extension recommendations, with options to install or show a list" src="01-vscode-extension-recommendations.png"></p>
 
 <p>Clicking <em>Install all</em> will install Svelte for VS Code.</p>
 
@@ -181,7 +181,7 @@ npm run dev                                       # start the app in development
 
 <p>We can also see that the <code>setupTypeScript.js</code> file made a couple of changes to our project. The <code>main.js</code> file has been renamed to <code>main.ts</code>, which means that VS Code can provide hover-information on our svelte components:</p>
 
-<p><img alt='vs code screenshot showing that when you add type="ts" to a component, it gives you three dot alert hints' src="03-vscode-hints-in-main-ts.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt='vs code screenshot showing that when you add type="ts" to a component, it gives you three dot alert hints' src="03-vscode-hints-in-main-ts.png"></p>
 
 <p>We also get type-checking for free. If we pass an unknown property in the options parameter of the <code>App</code> constructor (for example a typo like <code>traget</code> instead of <code>target</code>) TypeScript will complain:</p>
 

@@ -96,7 +96,7 @@ tags:
  <li>Leading <code>'?'</code> characters are now ignored in the parameter of the {{domxref("URLSearchParams.URLSearchParams", "URLSearchParams()")}} constructor ({{bug(1268361)}}).</li>
  <li>The value returned by {{domxref("URL.origin")}}, {{domxref("HTMLAnchorElement/origin", "HTMLAnchorElement.orgin")}}, and {{domxref("HTMLAnchorElement/origin", "HTMLAreaElement.origin")}} for URL using the <code>blob:</code> scheme is no longer incorrectly <code>null</code> but is instead the origin of the URL formed by removing the leading <code>blob:</code> ({{bug(1270451)}}).</li>
  <li>In prerendering mode, the {{domxref('Document.visibilityState')}} property now returns <code>'prerender'</code> ({{bug(1069772)}}).</li>
- <li>The {{domxref("Window.isSecureContext")}} property has been implemented ({{bug(1162772)}}).</li>
+ <li>The {{domxref("isSecureContext")}} property has been implemented ({{bug(1162772)}}).</li>
  <li>The DOM4 {{domxref("ChildNode.before()")}}, {{domxref("ChildNode.after()")}}, {{domxref("ChildNode.replaceWith()")}}, {{domxref("Element.append")}} and {{domxref("Element.prepend")}} methods have been implemented ({{bug(911477)}}).</li>
  <li>The <code>TouchList.identifiedTouch()</code> method has been removed ({{bug(1188539)}}).</li>
  <li>By default, the <code>scrollbars</code> {{domxref("Window")}} feature is enabled when calling {{domxref("Window.open()")}}. In the past, while it was strongly recommended to enable it, it wasn't the default ({{bug(1257887)}}).</li>
@@ -222,7 +222,7 @@ tags:
 <h2 id="Security">Security</h2>
 
 <ul>
- <li>The {{domxref("Window.isSecureContext")}} property, indicating whether a context is capable of using features that require <a href="/en-US/docs/Web/Security/Secure_Contexts">secure contexts</a>, has been implemented ({{bug(1162772)}}).</li>
+ <li>The {{domxref("isSecureContext")}} property, indicating whether a context is capable of using features that require <a href="/en-US/docs/Web/Security/Secure_Contexts">secure contexts</a>, has been implemented ({{bug(1162772)}}).</li>
 </ul>
 
 <h2 id="Compatibility">Compatibility</h2>
@@ -339,12 +339,6 @@ tags:
 <h3 id="Other">Other</h3>
 
 <p><em>No change.</em></p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="https://www.fxsitecompat.com/en-US/versions/49">Site Compatibility for Firefox 49</a></li>
-</ul>
 
 <h2 id="Older_versions">Older versions</h2>
 

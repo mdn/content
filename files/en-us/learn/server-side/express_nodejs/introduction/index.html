@@ -14,9 +14,9 @@ tags:
 
 <div>{{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}</div>
 
-<p class="summary">In this first Express article we answer the questions "What is Node?" and "What is Express?", and give you an overview of what makes the Express web framework special. We'll outline the main features, and show you some of the main building blocks of an Express application (although at this point you won't yet have a development environment in which to test it).</p>
+<p>In this first Express article we answer the questions "What is Node?" and "What is Express?", and give you an overview of what makes the Express web framework special. We'll outline the main features, and show you some of the main building blocks of an Express application (although at this point you won't yet have a development environment in which to test it).</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -53,7 +53,7 @@ tags:
 <ol>
  <li>Open Terminal (on Windows, open the command line utility)</li>
  <li>Create the folder where you want to save the program, for example, <code>test-node</code> and then enter it by entering the following command into your terminal:
-  <pre>cd test-node</pre>
+  <pre class="brush: bash">cd test-node</pre>
  </li>
  <li>Using your favorite text editor, create a file called <code>hello.js</code> and paste the following code into it:<br>
 
@@ -104,7 +104,7 @@ server.listen(port, hostname, () =&gt; {
 
 <p>While <em>Express</em> itself is fairly minimalist, developers have created compatible middleware packages to address almost any web development problem. There are libraries to work with cookies, sessions, user logins, URL parameters, <code>POST</code> data, security headers, and <em>many</em> more. You can find a list of middleware packages maintained by the Express team at <a href="https://expressjs.com/en/resources/middleware.html">Express Middleware</a> (along with a list of some popular 3rd party packages).</p>
 
-<div class="note">
+<div class="notecard note">
 <p><strong>Note:</strong> This flexibility is a double edged sword. There are middleware packages to address almost any problem or requirement, but working out the right packages to use can sometimes be a challenge. There is also no "right way" to structure an application, and many examples you might find on the Internet are not optimal, or only show a small part of what you need to do in order to develop a web application.</p>
 </div>
 
@@ -144,8 +144,8 @@ server.listen(port, hostname, () =&gt; {
 
 <p>First lets consider the standard Express <a href="https://expressjs.com/en/starter/hello-world.html">Hello World</a> example (we discuss each part of this below, and in the following sections).</p>
 
-<div class="note">
-<p><strong>Tip:</strong> If you have Node and Express already installed (or if you install them as shown in the <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment">next article</a>), you can save this code in a text file called <strong>app.js</strong> and run it in a bash command prompt by calling:   </p>
+<div class="notecard note">
+<p><strong>Note:</strong> If you have Node and Express already installed (or if you install them as shown in the <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment">next article</a>), you can save this code in a text file called <strong>app.js</strong> and run it in a bash command prompt by calling:</p>
 
 <p><strong><code>node ./app.js</code></strong></p>
 </div>
@@ -154,9 +154,9 @@ server.listen(port, hostname, () =&gt; {
 const app = express();
 const port = 3000;
 
-<strong>app.get('/', (req, res) =&gt; {
+app.get('/', (req, res) =&gt; {
   res.send('Hello World!')
-});</strong>
+});
 
 app.listen(port, () =&gt; {
   console.log(`Example app listening on port ${port}!`)
@@ -173,7 +173,7 @@ app.listen(port, () =&gt; {
 
 <p>A module is a JavaScript library/file that you can import into other code using Node's <code>require()</code> function. <em>Express</em> itself is a module, as are the middleware and database libraries that we use in our <em>Express</em> applications.</p>
 
-<p>The code below shows how we import a module by name, using the <em>Express</em> framework as an example. First we invoke the <code style="font-style: normal; font-weight: normal;">require()</code> function, specifying the name of the module as a string (<code>'express'</code>), and calling the returned object to create an <a href="https://expressjs.com/en/4x/api.html#app">Express application</a>. We can then access the properties and functions of the application object.</p>
+<p>The code below shows how we import a module by name, using the <em>Express</em> framework as an example. First we invoke the <code>require()</code> function, specifying the name of the module as a string (<code>'express'</code>), and calling the returned object to create an <a href="https://expressjs.com/en/4x/api.html#app">Express application</a>. We can then access the properties and functions of the application object.</p>
 
 <pre class="brush: js">const express = require('express');
 const app = express();
@@ -181,8 +181,8 @@ const app = express();
 
 <p>You can also create your own modules that can be imported in the same way.</p>
 
-<div class="note">
-<p><strong>Tip:</strong> You will <em>want</em> to create your own modules, because this allows you to organize your code into manageable parts — a monolithic single-file application is hard to understand and maintain. Using modules also helps you manage your namespace, because only the variables you explicitly export are imported when you use a module.</p>
+<div class="notecard note">
+<p><strong>Note:</strong> You will <em>want</em> to create your own modules, because this allows you to organize your code into manageable parts — a monolithic single-file application is hard to understand and maintain. Using modules also helps you manage your namespace, because only the variables you explicitly export are imported when you use a module.</p>
 </div>
 
 <p>To make objects available outside of a module you just need to expose them as additional properties on the <code>exports</code> object. For example, the <strong>square.js</strong> module below is a file that exports <code>area()</code> and <code>perimeter()</code> methods:</p>
@@ -196,7 +196,7 @@ exports.perimeter = function(width) { return 4 * width; };
 <pre class="brush: js">const square = require('./square'); // Here we require() the name of the file without the (optional) .js file extension
 console.log('The area of a square with a width of 4 is ' + square.area(4));</pre>
 
-<div class="note">
+<div class="notecard note">
 <p><strong>Note:</strong> You can also specify an absolute path to the module (or a name, as we did initially).</p>
 </div>
 
@@ -213,7 +213,7 @@ console.log('The area of a square with a width of 4 is ' + square.area(4));</pre
 };
 </pre>
 
-<div class="note">
+<div class="notecard note">
 <p><strong>Note:</strong> You can think of <code>exports</code> as a <a href="https://nodejs.org/api/modules.html#modules_exports_shortcut">shortcut</a> to <code>module.exports</code> within a given module. In fact, <code>exports</code> is just a variable that gets initialized to the value of <code>module.exports</code> before the module is evaluated. That value is a reference to an object (empty object in this case). This means that <code>exports</code> holds a reference to the same object referenced by <code>module.exports</code>. It also means that by assigning another value to <code>exports</code> it's no longer bound to <code>module.exports</code>.</p>
 </div>
 
@@ -239,11 +239,11 @@ console.log('Second');
 
 <p>There are a number of ways for an asynchronous API to notify your application that it has completed. The most common way is to register a callback function when you invoke the asynchronous API, that will be called back when the operation completes. This is the approach used above.</p>
 
-<div class="note">
-<p><strong>Tip:</strong> Using callbacks can be quite "messy" if you have a sequence of dependent asynchronous operations that must be performed in order because this results in multiple levels of nested callbacks. This problem is commonly known as "callback hell". This problem can be reduced by good coding practices (see <a href="http://callbackhell.com/">http://callbackhell.com/</a>), using a module like <a href="https://www.npmjs.com/package/async">async</a>, or even moving to ES6 features like <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a>.</p>
+<div class="notecard note">
+<p><strong>Note:</strong> Using callbacks can be quite "messy" if you have a sequence of dependent asynchronous operations that must be performed in order because this results in multiple levels of nested callbacks. This problem is commonly known as "callback hell". This problem can be reduced by good coding practices (see <a href="http://callbackhell.com/">http://callbackhell.com/</a>), using a module like <a href="https://www.npmjs.com/package/async">async</a>, or even moving to ES6 features like <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a>.</p>
 </div>
 
-<div class="note">
+<div class="notecard note">
 <p><strong>Note:</strong> A common convention for Node and Express is to use error-first callbacks. In this convention, the first value in your <em>callback functions</em> is an error value, while subsequent arguments contain success data. There is a good explanation of why this approach is useful in this blog: <a href="https://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js">The Node.js Way - Understanding Error-First Callbacks</a> (fredkschott.com).</p>
 </div>
 
@@ -258,8 +258,8 @@ console.log('Second');
 
 <p>The callback function takes a request and a response object as arguments. In this case, the method calls <code><a href="https://expressjs.com/en/4x/api.html#res.send">send()</a></code> on the response to return the string "Hello World!" There are a <a href="https://expressjs.com/en/guide/routing.html#response-methods">number of other response methods</a> for ending the request/response cycle, for example, you could call <code><a href="https://expressjs.com/en/4x/api.html#res.json">res.json()</a></code> to send a JSON response or <code><a href="https://expressjs.com/en/4x/api.html#res.sendFile">res.sendFile()</a></code> to send a file.</p>
 
-<div class="note">
-<p><strong>JavaScript tip:</strong> You can use any argument names you like in the callback functions; when the callback is invoked the first argument will always be the request and the second will always be the response. It makes sense to name them such that you can identify the object you're working with in the body of the callback.</p>
+<div class="notecard note">
+<p><strong>Note:</strong> You can use any argument names you like in the callback functions; when the callback is invoked the first argument will always be the request and the second will always be the response. It makes sense to name them such that you can identify the object you're working with in the body of the callback.</p>
 </div>
 
 <p>The <em>Express application</em> object also provides methods to define route handlers for all the other HTTP verbs, which are mostly used in exactly the same way:</p>
@@ -295,11 +295,11 @@ router.get('/about', function(req, res) {
 module.exports = router;
 </pre>
 
-<div class="note">
+<div class="notecard note">
 <p><strong>Note:</strong> Adding routes to the <code>Router</code> object is just like adding routes to the <code>app</code> object (as shown previously).</p>
 </div>
 
-<p>To use the router in our main app file we would then <code>require()</code> the route module (<strong>wiki.js</strong>), then call <code>use()</code> on the <em>Express</em> application to add the Router to the middleware handling path. The two routes will then be accessible from <code style="font-style: normal; font-weight: normal;">/wiki/</code> and <code style="font-style: normal; font-weight: normal;">/wiki/about/</code>.</p>
+<p>To use the router in our main app file we would then <code>require()</code> the route module (<strong>wiki.js</strong>), then call <code>use()</code> on the <em>Express</em> application to add the Router to the middleware handling path. The two routes will then be accessible from <code>/wiki/</code> and <code>/wiki/about/</code>.</p>
 
 <pre class="brush: js">const wiki = require('./wiki.js');
 // ...
@@ -311,13 +311,14 @@ app.use('/wiki', wiki);</pre>
 
 <p>Middleware is used extensively in Express apps, for tasks from serving static files to error handling, to compressing HTTP responses. Whereas route functions end the HTTP request-response cycle by returning some response to the HTTP client, middleware functions <em>typically</em> perform some operation on the request or response and then call the next function in the "stack", which might be more middleware or a route handler. The order in which middleware is called is up to the app developer.</p>
 
-<div class="note">
+<div class="notecard note">
 <p><strong>Note:</strong> The middleware can perform any operation, execute any code, make changes to the request and response object, and it can <em>also end the request-response cycle</em>. If it does not end the cycle then it must call <code>next()</code> to pass control to the next middleware function (or the request will be left hanging).</p>
 </div>
 
 <p>Most apps will use <em>third-party</em> middleware in order to simplify common web development tasks like working with cookies, sessions, user authentication, accessing request <code>POST</code> and JSON data, logging, etc. You can find a <a href="https://expressjs.com/en/resources/middleware.html">list of middleware packages maintained by the Express team</a> (which also includes other popular 3rd party packages). Other Express packages are available on the NPM package manager.</p>
 
-<p>To use third party middleware you first need to install it into your app using NPM. For example, to install the <a href="https://expressjs.com/en/resources/middleware/morgan.html">morgan</a> HTTP request logger middleware, you'd do this:</p>
+<p>To use third party middleware you first need to install it into your app using NPM.
+For example, to install the <a href="https://expressjs.com/en/resources/middleware/morgan.html">morgan</a> HTTP request logger middleware, you'd do this:</p>
 
 <pre class="brush: bash">$ npm install morgan
 </pre>
@@ -325,13 +326,13 @@ app.use('/wiki', wiki);</pre>
 <p>You could then call <code>use()</code> on the <em>Express application object</em> to add the middleware to the stack:</p>
 
 <pre class="brush: js">const express = require('express');
-const <strong>logger = require('morgan');</strong>
+const logger = require('morgan');
 const app = express();
-<strong>app.use(logger('dev'));</strong>
+app.use(logger('dev'));
 ...</pre>
 
-<div class="note">
-<p><strong>Note:</strong> Middleware and routing functions are called in the order that they are declared. For some middleware the order is important (for example if session middleware depends on cookie middleware, then the cookie handler must be added first). It is almost always the case that middleware is called before setting routes, or your route handlers will not have access to functionality added by your middleware.</p>
+<div class="notecard note">
+  <p><strong>Note:</strong> Middleware and routing functions are called in the order that they are declared. For some middleware the order is important (for example if session middleware depends on cookie middleware, then the cookie handler must be added first). It is almost always the case that middleware is called before setting routes, or your route handlers will not have access to functionality added by your middleware.</p>
 </div>
 
 <p>You can write your own middleware functions, and you are likely to have to do so (if only to create error handling code). The <strong>only</strong> difference between a middleware function and a route handler callback is that middleware functions have a third argument <code>next</code>, which middleware functions are expected to call if they are not that which completes the request cycle (when the middleware function is called, this contains the <em>next</em> function that must be called).</p>
@@ -360,8 +361,8 @@ app.get('/', a_middleware_function);
 
 app.listen(3000);</pre>
 
-<div class="note">
-<p><strong>JavaScript Tip:</strong> Above we declare the middleware function separately and then set it as the callback. In our previous route handler function we declared the callback function when it was used. In JavaScript, either approach is valid.</p>
+<div class="notecard note">
+<p><strong>Note:</strong> Above we declare the middleware function separately and then set it as the callback. In our previous route handler function we declared the callback function when it was used. In JavaScript, either approach is valid.</p>
 </div>
 
 <p>The Express documentation has a lot more excellent documentation about <a href="https://expressjs.com/en/guide/using-middleware.html">using</a> and <a href="https://expressjs.com/en/guide/writing-middleware.html">writing</a> Express middleware.</p>
@@ -375,11 +376,11 @@ app.listen(3000);</pre>
 
 <p>Any files in the public directory are served by adding their filename (<em>relative</em> to the base "public" directory) to the base URL. So for example:</p>
 
-<pre><code>http://localhost:3000/images/dog.jpg
+<pre class="brush: plain">http://localhost:3000/images/dog.jpg
 http://localhost:3000/css/style.css
 http://localhost:3000/js/app.js
 http://localhost:3000/about.html
-</code></pre>
+</pre>
 
 <p>You can call <code>static()</code> multiple times to serve multiple directories. If a file cannot be found by one middleware function then it will be passed on to the subsequent middleware (the order that middleware is called is based on your declaration order).</p>
 
@@ -394,13 +395,13 @@ app.use(express.static('media'));
 
 <p>Now, you can load the files that are in the <code>public</code> directory from the <code>/media</code> path prefix.</p>
 
-<pre><code>http://localhost:3000/media/images/dog.jpg
+<pre class="brush: plain">http://localhost:3000/media/images/dog.jpg
 http://localhost:3000/media/video/cat.mp4
-http://localhost:3000/media/cry.mp3</code>
+http://localhost:3000/media/cry.mp3
 </pre>
 
 <div class="notecard note">
-<p><strong>Note</strong>: See also <a href="https://expressjs.com/en/starter/static-files.html">Serving static files in Express</a>.</p>
+<p><strong>Note:</strong> See also <a href="https://expressjs.com/en/starter/static-files.html">Serving static files in Express</a>.</p>
 </div>
 
 <h3 id="Handling_errors">Handling errors</h3>
@@ -417,11 +418,11 @@ http://localhost:3000/media/cry.mp3</code>
 
 <p>Express comes with a built-in error handler, which takes care of any remaining errors that might be encountered in the app. This default error-handling middleware function is added at the end of the middleware function stack. If you pass an error to <code>next()</code> and you do not handle it in an error handler, it will be handled by the built-in error handler; the error will be written to the client with the stack trace.</p>
 
-<div class="note">
+<div class="notecard note">
 <p><strong>Note:</strong> The stack trace is not included in the production environment. To run it in production mode you need to set the environment variable <code>NODE_ENV</code> to '<code>production'</code>.</p>
 </div>
 
-<div class="note">
+<div class="notecard note">
 <p><strong>Note:</strong> HTTP404 and other "error" status codes are not treated as errors. If you want to handle these, you can add a middleware function to do so. For more information see the <a href="https://expressjs.com/en/starter/faq.html#how-do-i-handle-404-responses">FAQ</a>.</p>
 </div>
 

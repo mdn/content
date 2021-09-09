@@ -6,10 +6,9 @@ tags:
   - Glossary
   - JavaScript
 ---
+<p>JavaScript <strong>Hoisting</strong> refers to the process whereby the interpreter allocates memory for variable and function declarations prior to execution of the code. Declarations that are made using <code>var</code> are initialized with a default value of <code>undefined</code>. Declarations made using <code>let</code> and <code>const</code> are not initialized as part of hoisting.</p>
 
-<p>JavaScript <strong>Hoisting</strong> refers to the process whereby the compiler allocates memory for variable and function declarations prior to execution of the code. Declarations that are made using <code>var</code> are initialized with a default value of <code>undefined</code>. Declarations made using <code>let</code> and <code>const</code> are not initialized as part of hoisting.</p>
-
-<p>Conceptually hoisting is often presented as the compiler "splitting variable declaration and initialization, and moving (just) the declarations to the top of the code".
+<p>Conceptually hoisting is often presented as the interpreter "splitting variable declaration and initialization, and moving (just) the declarations to the top of the code".
   This allows variables to appear in code before they are defined.
   Note however, that any variable initialization in the original code will not happen until the line of code is executed.</p>
 
@@ -82,7 +81,7 @@ b = 'berry'; // Initialize b
 
 console.log(a + "" + b); // 'Cranberry'</pre>
 
-<h3 id="Only_declarations_are_hoisted">Let and const hoisting</h3>
+<h3>Let and const hoisting</h3>
 
 <p>Variables declared with <code>let</code> and <code>const</code> are also hoisted, but unlike for <code>var</code> the variables are not initialized with a default value of <code>undefined</code>.
   Until the line in which they are initialized is executed, any code that accesses these variables will throw an exception.</p>

@@ -38,7 +38,7 @@ browser-compat: api.RTCDTMFToneChangeEvent
 
 <p>This snippet is derived loosely from the full, working example you'll find in {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Using_DTMF", "When a tone finishes playing")}}. It appends each tone to a display box as it's played, and, once all tones have been sent, re-enabled a previously-disabled "Send" button, allowing the next DMTF string to be entered.</p>
 
-<pre class="brush: js line-numbers  language-js">dtmfSender.addEventListener(&quot;change&quot;, function(event) {
+<pre class="brush: js ">dtmfSender.addEventListener(&quot;change&quot;, function(event) {
   if (event.tone !== &quot;&quot;) {
     dialStringBox.innerText += event.tone;
   } else {

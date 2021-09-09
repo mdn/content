@@ -42,7 +42,7 @@ browser-compat: api.AuthenticatorAssertionResponse.authenticatorData
    <li><dfn><strong>credentialPublicKey</strong> (variable length) - </dfn>A <a href="https://datatracker.ietf.org/doc/html/rfc8152">COSE</a> encoded public key. This public key will be stored on the server associated with a user's account and be used for future authentications.</li>
   </ul>
  </li>
- <li><strong>extensions</strong> (variable length) - An optional <a href="/en-US/docs/">CBOR</a> map of extensions.</li>
+ <li><strong>extensions</strong> (variable length) - An optional <a href="https://datatracker.ietf.org/doc/html/rfc7049">CBOR</a> map of extensions.</li>
 </ul>
 
 <h2 id="Examples">Examples</h2>
@@ -52,7 +52,7 @@ browser-compat: api.AuthenticatorAssertionResponse.authenticatorData
   timeout: 60000
 };
 
-navigator.credentials.get({  publickey: options })
+navigator.credentials.get({  publicKey: options })
   .then(function (assertionPKCred) {
     var authenticatorData = assertionPKCred.response.authenticatorData;
     // Maybe try to convert the authenticatorData to see what's inside

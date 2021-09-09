@@ -18,34 +18,59 @@ browser-compat: api.KeyframeEffect.KeyframeEffect
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">var keyframes = new KeyframeEffect(<em>element</em>, <em>keyframeSet</em>, <em>keyframeOptions</em>);
-var keyframes = new KeyframeEffect(<em>sourceKeyFrames</em>);
+<pre class="brush: js">new KeyframeEffect(target, keyframes);
+new KeyframeEffect(target, keyframes, options)
+new KeyframeEffect(source)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
-<p>The first type of constructor (see above) creates a completely new {{domxref("KeyframeEffect")}} object instance. Its parameters are:</p>
+<p>The multi-argument constructor (see above) creates a completely new {{domxref("KeyframeEffect")}} object instance. Its parameters are:</p>
 
 <dl>
- <dt>element</dt>
+ <dt>target</dt>
  <dd>The DOM element to be animated, or <code>null</code>.</dd>
- <dt>keyframeSet</dt>
- <dd>An <a href="/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats">keyframe object</a> or <code>null</code>.</dd>
- <dt>keyframeOptions {{optional_inline}}</dt>
+ <dt>keyframes</dt>
+ <dd>A <a href="/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats">keyframes object</a> or <code>null</code>.</dd>
+ <dt>options {{optional_inline}}</dt>
  <dd>
- <p>Either an integer representing the animation's duration (in milliseconds), or an {{domxref("EffectTiming", "Object")}} containing one or more of the following:<br>
-  {{Page("/en-US/docs/Web/API/EffectTiming", "Properties")}}</p>
+ <p>Either an integer representing the animation's duration (in milliseconds), or an object containing one or more of the following:</p>
 
+  <dl>
+    <dt><code>delay</code> {{optional_inline}}</dt>
+    <dd>The number of milliseconds to delay the start of the animation. Defaults to 0.</dd>
+
+    <dt><code>direction</code> {{optional_inline}}</dt>
+    <dd>Whether the animation runs forwards (<code>normal</code>), backwards (<code>reverse</code>), switches direction after each iteration (<code>alternate</code>), or runs backwards and switches direction after each iteration (<code>alternate-reverse</code>). Defaults to <code>"normal"</code>.</dd>
+
+    <dt><code>duration</code> {{optional_inline}}</dt>
+    <dd>The number of milliseconds each iteration of the animation takes to complete. Defaults to 0. Although this is technically optional, keep in mind that your animation will not run if this value is 0.</dd>
+
+    <dt><code>easing</code> {{optional_inline}}</dt>
+    <dd>The rate of the animation's change over time. Accepts the pre-defined values <code>"linear"</code>, <code>"ease"</code>, <code>"ease-in"</code>, <code>"ease-out"</code>, and <code>"ease-in-out"</code>, or a custom <code>"cubic-bezier"</code> value like <code>"cubic-bezier(0.42, 0, 0.58, 1)"</code>. Defaults to <code>"linear"</code>.</dd>
+
+    <dt><code>endDelay</code> {{optional_inline}}</dt>
+    <dd>The number of milliseconds to delay after the end of an animation. This is primarily of use when sequencing animations based on the end time of another animation. Defaults to 0. </dd>
+
+    <dt><code>fill</code> {{optional_inline}}</dt>
+    <dd>Dictates whether the animation's effects should be reflected by the element(s) prior to playing (<code>"backwards"</code>), retained after the animation has completed playing (<code>"forwards"</code>), or <code>both</code>. Defaults to <code>"none"</code>.</dd>
+
+    <dt>{{domxref("EffectTiming.iterationStart", "iterationStart")}} {{optional_inline}}</dt>
+    <dd>Describes at what point in the iteration the animation should start. 0.5 would indicate starting halfway through the first iteration for example, and with this value set, an animation with 2 iterations would end halfway through a third iteration. Defaults to 0.0.</dd>
+
+    <dt>{{domxref("EffectTiming.iterations", "iterations")}} {{optional_inline}}</dt>
+    <dd>The number of times the animation should repeat. Defaults to <code>1</code>, and can also take a value of {{jsxref("Infinity")}} to make it repeat for as long as the element exists.</dd>
+
+    <dt>{{domxref("KeyframeEffect/composite", "composite")}}</dt>
+    <dd>Determines how values are combined between this animation and the element's underlying values.</dd>
+
+    <dt>{{domxref("KeyframeEffect/iterationComposite", "iterationComposite")}}</dt>
+    <dd>Determines how values build from iteration to iteration in the current animation.</dd>
  <dl>
-  <dt>{{domxref("KeyframeEffect/composite", "composite")}}</dt>
-  <dd>Determines how values are combined between this animation and the element's underlying values.</dd>
-  <dt>{{domxref("KeyframeEffect/iterationComposite", "iterationComposite")}}</dt>
-  <dd>Determines how values build from iteration to iteration in the current animation.</dd>
- </dl>
  </dd>
 </dl>
 
-<p>The second type of constructor (see above) creates a clone of an existing  {{domxref("KeyframeEffect")}} object instance. Its parameter is as follows:</p>
+<p>The single argument constructor (see above) creates a clone of an existing  {{domxref("KeyframeEffect")}} object instance. Its parameter is as follows:</p>
 
 <dl>
  <dt>sourceKeyFrames</dt>
@@ -54,9 +79,9 @@ var keyframes = new KeyframeEffect(<em>sourceKeyFrames</em>);
 
 <h2 id="Examples">Examples</h2>
 
-<p>In the <a href="http://codepen.io/rachelnabors/pen/eJyWzm/?editors=0010">Follow the White Rabbit example</a>, the <code>KeyframeEffect</code> constructor is used to create a set of keyframes that dictate how the White Rabbit should animate down the hole:</p>
+<p>In the <a href="https://codepen.io/rachelnabors/pen/eJyWzm/?editors=0010">Follow the White Rabbit example</a>, the <code>KeyframeEffect</code> constructor is used to create a set of keyframes that dictate how the White Rabbit should animate down the hole:</p>
 
-<pre class="brush: js"> var rabbitDownKeyframes = new KeyframeEffect(
+<pre class="brush: js">var rabbitDownKeyframes = new KeyframeEffect(
     whiteRabbit, // element to animate
     [
       { transform: 'translateY(0%)' }, // keyframe

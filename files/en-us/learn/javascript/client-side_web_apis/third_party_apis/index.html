@@ -16,7 +16,7 @@ tags:
 
 <p class="summary">The APIs we've covered so far are built into the browser, but not all APIs are. Many large websites and services such as Google Maps, Twitter, Facebook, PayPal, etc. provide APIs allowing developers to make use of their data (e.g. displaying your twitter stream on your blog) or services (e.g. using Facebook login to log in your users). This article looks at the difference between browser APIs and 3rd party APIs and shows some typical uses of the latter.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -194,7 +194,7 @@ const audioSource = audioCtx.createMediaElementSource(audioElement);
 
 <p>The app will end up allowing you to type in a search term and optional start and end dates, which it will then use to query the Article Search API and display the search results.</p>
 
-<p><img alt="" src="nytimes-example.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="nytimes-example.png"></p>
 
 <h3 id="Connect_the_API_to_your_app">Connect the API to your app</h3>
 
@@ -278,7 +278,7 @@ fetch(url).then(function(result) {
   displayResults(json);
 });</pre>
 
-<p>Here we run the request by passing our <code>url</code> variable to <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a></code>, convert the response body to JSON using the <code><a href="/en-US/docs/Web/API/Response/json">json()</a></code> function, then pass the resulting JSON to the <code>displayResults()</code> function so the data can be displayed in our UI.</p>
+<p>Here we run the request by passing our <code>url</code> variable to <code><a href="/en-US/docs/Web/API/fetch">fetch()</a></code>, convert the response body to JSON using the <code><a href="/en-US/docs/Web/API/Response/json">json()</a></code> function, then pass the resulting JSON to the <code>displayResults()</code> function so the data can be displayed in our UI.</p>
 
 <h3 id="Displaying_the_data">Displaying the data</h3>
 
@@ -409,7 +409,7 @@ function previousPage(e) {
 
 <p>This example is interesting because it shows two related third-party APIs being used together to build an app. The first one is a RESTful API, while the second one works more like Mapquest (with API-specific methods, etc.). It is worth noting however that both of the APIs require a JavaScript library to be applied to the page. The RESTful API has functions available to handle making the HTTP requests and returning the results.</p>
 
-<p><img alt="" src="youtube-example.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="youtube-example.png"></p>
 
 <p>We are not going to say too much more about this example in the article — <a href="https://github.com/mdn/learning-area/tree/master/javascript/apis/third-party-apis/youtube">the source code</a> has detailed comments inserted inside it to explain how it works.</p>
 

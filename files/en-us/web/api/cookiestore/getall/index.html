@@ -11,7 +11,7 @@ browser-compat: api.CookieStore.getAll
 ---
 <div>{{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}</div>
 
-<p class="summary">The <strong><code>getAll()</code></strong> method of the {{domxref("CookieStore")}} interface returns a list of cookies that match the name or options passed to it. Passing no parameters will return all cookies for the current context.</p>
+<p>The <strong><code>getAll()</code></strong> method of the {{domxref("CookieStore")}} interface returns a list of cookies that match the name or options passed to it. Passing no parameters will return all cookies for the current context.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -35,7 +35,7 @@ var <var>list</var> = cookieStore.getAll(<var>options</var>);</pre>
 </dl>
 
 <div class="notecard note">
-  <p><strong>Note:</strong>The <code>url</code> option enables the modification of a cookie scoped under a particular URL. Service workers can obtain cookies that would be sent to any URL under their scope. From a document you may only obtain the cookies at the current URL, so the only valid URL in a document context is the document's URL.</p>
+  <p><strong>Note:</strong> The <code>url</code> option enables the modification of a cookie scoped under a particular URL. Service workers can obtain cookies that would be sent to any URL under their scope. From a document you may only obtain the cookies at the current URL, so the only valid URL in a document context is the document's URL.</p>
 </div>
 
 <h3 id="Returns">Return value</h3>

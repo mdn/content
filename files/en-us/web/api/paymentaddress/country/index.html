@@ -40,8 +40,7 @@ browser-compat: api.PaymentAddress.country
 <p>If the payment handler validates the address and determines that the value of
   <code>country</code> is invalid, a call to
   {{domxref("PaymentRequestUpdateEvent.updateWith()")}} will be made with a
-  <code>details</code> object containing a
-  {{domxref("PaymentDetailsUpdate.shippingAddressErrors", "shippingAddressErrors")}}
+  <code>details</code> object containing a <code>shippingAddressErrors</code>
   field. That field contains an {{domxref("AddressErrors")}}-compliant object whose
   {{domxref("AddressErrors.country", "country")}} property is a string indicating the
   validation error that occurred and, if possible, suggests how to fix it.</p>
@@ -58,7 +57,7 @@ browser-compat: api.PaymentAddress.country
     <li><a
         href="/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API">Using
         the Payment Request API</a></li>
-    <li>{{domxref("PaymentDetailsUpdate.shippingAddressErrors")}}</li>
+    <li>{{domxref("PaymentRequestUpdateEvent.updateWith")}}</li>
     <li>{{domxref("AddressErrors.country")}}</li>
   </ul>
 </div>

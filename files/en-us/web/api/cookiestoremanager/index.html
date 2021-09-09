@@ -10,7 +10,7 @@ browser-compat: api.CookieStoreManager
 ---
 <div>{{securecontext_header}}{{DefaultAPISidebar("Cookie Store")}}</div>
 
-<p class="summary">The <strong><code>CookieStoreManager</code></strong> interface of the {{domxref('Cookie Store')}} API allows service workers to subscribe to events for cookie changes. By using the {{domxref("CookieStoreManager.subscribe()","subscribe()")}} method a particular service worker registration can indicate that it is interested in change events.</p>
+<p>The <strong><code>CookieStoreManager</code></strong> interface of the {{domxref('Cookie Store')}} API allows service workers to subscribe to events for cookie changes. By using the {{domxref("CookieStoreManager.subscribe()","subscribe()")}} method a particular service worker registration can indicate that it is interested in change events.</p>
 
 <p>A <code>CookieStoreManager</code> has an associated {{domxref("ServiceWorkerRegistration")}}. Each service worker registration has a cookie change subscription list, which is a list of cookie change subscriptions each containing a name and url. The methods in this interface allow the service worker to add and remove subscriptions from this list, and to get a list of all subscriptions.</p>
 

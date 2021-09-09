@@ -76,53 +76,6 @@ The range of elements processed by `filter()` is set before the first invocation
 
 **Warning:** Concurrent modification of the kind described in the previous paragraph frequently leads to hard-to-understand code and is generally to be avoided (except in special cases).
 
-## Polyfill
-
-`filter()` was added to the ECMA-262 standard in the 5th edition. Therefore, it may not be present in all implementations of the standard.
-
-You can work around this by inserting the following code at the beginning of your scripts, allowing use of `filter()` in ECMA-262 implementations which do not natively support it. This algorithm is exactly equivalent to the one specified in ECMA-262, 5th edition, assuming that `fn.call` evaluates to the original value of {{jsxref("Function.prototype.bind()")}}, and that {{jsxref("Array.prototype.push()")}} has its original value.
-
-```js
-if (!Array.prototype.filter){
-  Array.prototype.filter = function(func, thisArg) {
-    'use strict';
-    if ( ! ((typeof func === 'Function' || typeof func === 'function') && this) )
-        throw new TypeError();
-
-    var len = this.length >>> 0,
-        res = new Array(len), // preallocate array
-        t = this, c = 0, i = -1;
-
-    var kValue;
-    if (thisArg === undefined){
-      while (++i !== len){
-        // checks to see if the key was set
-        if (i in this){
-          kValue = t[i]; // in case t is changed in callback
-          if (func(t[i], i, t)){
-            res[c++] = kValue;
-          }
-        }
-      }
-    }
-    else{
-      while (++i !== len){
-        // checks to see if the key was set
-        if (i in this){
-          kValue = t[i];
-          if (func.call(thisArg, t[i], i, t)){
-            res[c++] = kValue;
-          }
-        }
-      }
-    }
-
-    res.length = c; // shrink down array to proper size
-    return res;
-  };
-}
-```
-
 ## Examples
 
 ### Filtering out all small values
@@ -206,7 +159,7 @@ let fruits = ['apple', 'banana', 'grapes', 'mango', 'orange']
  */
 function filterItems(arr, query) {
   return arr.filter(function(el) {
-      return el.toLowerCase().indexOf(query.toLowerCase()) !== -1
+    return el.toLowerCase().indexOf(query.toLowerCase()) !== -1
   })
 }
 
@@ -236,7 +189,7 @@ The following examples tests the behavior of the `filter` method when the array 
 
 ```js
 // Modifying each words
-let words = ['spray', 'limit', 'exuberant', 'destruction','elite', 'present']
+let words = ['spray', 'limit', 'exuberant', 'destruction', 'elite', 'present']
 
 const modifiedWords = words.filter( (word, index, arr) => {
   arr[index+1] +=' extra'
@@ -248,7 +201,7 @@ console.log(modifiedWords)
 // ["spray"]
 
 // Appending new words
-words = ['spray', 'limit', 'exuberant', 'destruction','elite', 'present']
+words = ['spray', 'limit', 'exuberant', 'destruction', 'elite', 'present']
 const appendedWords = words.filter( (word, index, arr) => {
   arr.push('new')
   return word.length < 6

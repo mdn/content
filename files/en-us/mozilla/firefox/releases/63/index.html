@@ -103,7 +103,7 @@ tags:
  <li>The historical, previously non-standard, {{DOMxRef("Event.returnValue")}} property is now supported for compatibility purposes ({{bug(1452569)}}).</li>
  <li>We implemented the {{DOMxRef("Window.event")}} property to improve web compatibility, now that it's become standard ({{bug(218415)}}). However, due to some web compat issues (e.g. {{bug(1479964)}}), this was quickly disabled in non-Nightly channels, hidden behind the <code>dom.window.event.enabled</code> pref ({{bug(1493869)}}).</li>
  <li>To bring Firefox into alignment with Edge and Chrome, the {{DOMxRef("Navigator/platform", "navigator.platform")}} property now returns <code>"Win32"</code> even when running on 64-bit Windows ({{bug(1472618)}}).</li>
- <li>Prior to Firefox 63, links that open new windows that had <code>rel="noopener"</code>, as well as calls to {{DOMxRef("Window.open()")}} with the <code><a href="/en-US/docs/Web/API/Window/open#noopener">noopener</a></code> window feature enabled would default to having all window features disabled so that you had to explicitly re-enable any standard features you wanted. Now, these windows have the same set of features enabled like any other window, and you need to explicitly turn off any you don't want ({{bug(1419960)}}).</li>
+ <li>Prior to Firefox 63, links that open new windows that had <code>rel="noopener"</code>, as well as calls to {{DOMxRef("Window.open()")}} with the <code><a href="/en-US/docs/Web/API/Window/open">noopener</a></code> window feature enabled would default to having all window features disabled so that you had to explicitly re-enable any standard features you wanted. Now, these windows have the same set of features enabled like any other window, and you need to explicitly turn off any you don't want ({{bug(1419960)}}).</li>
 </ul>
 
 <h4 id="DOM_events">DOM events</h4>
@@ -263,12 +263,6 @@ tags:
  <li>{{WebExtAPIRef("webRequest.SecurityInfo")}} adds two new properties, <code>keaGroupName</code>, and <code>signatureSchemeName</code>. This change was uplifted to Firefox 62 ({{bug(1471959)}}).</li>
  <li>{{WebExtAPIRef("cookies.Cookie")}} now includes a property indicating the SameSite state of the cookie. The {{WebExtAPIRef("cookies.SameSiteStatus")}} enumeration defines SameSite state values ({{bug(1351663)}}).</li>
  <li>Match patterns for URLs now explicitly match the "data" URL scheme ({{bug(1280370)}}).</li>
-</ul>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="https://www.fxsitecompat.com/en-CA/versions/63/">Site compatibility for Firefox 63</a></li>
 </ul>
 
 <h2 id="Older_versions">Older versions</h2>

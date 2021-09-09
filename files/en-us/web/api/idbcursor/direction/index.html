@@ -35,7 +35,7 @@ browser-compat: api.IDBCursor.direction
     enum</a>) indicating the direction in which the cursor is traversing the data.
   Possible values are:</p>
 
-<table class="standard-table">
+<table class="no-markdown">
   <thead>
     <tr>
       <th scope="col">Value</th>
@@ -45,24 +45,20 @@ browser-compat: api.IDBCursor.direction
   <tbody>
     <tr>
       <td><code>next</code></td>
-      <td>This direction causes the cursor to be opened at the start of the <span
-          class="internalDFN">source</span>.</td>
+      <td>This direction causes the cursor to be opened at the start of the source.</td>
     </tr>
     <tr>
       <td><code>nextunique</code></td>
-      <td>This direction causes the cursor to be opened at the start of the <span
-          class="internalDFN">source</span>. For every key with duplicate values, only the
+      <td>This direction causes the cursor to be opened at the start of the source. For every key with duplicate values, only the
         first record is yielded.</td>
     </tr>
     <tr>
       <td><code>prev</code></td>
-      <td>This direction causes the cursor to be opened at the end of the <span
-          class="internalDFN">source</span>.</td>
+      <td>This direction causes the cursor to be opened at the end of the source.</td>
     </tr>
     <tr>
       <td><code>prevunique</code></td>
-      <td>This direction causes the cursor to be opened at the end of the <span
-          class="internalDFN">source</span>. For every key with duplicate values, only the
+      <td>This direction causes the cursor to be opened at the end of the source. For every key with duplicate values, only the
         first record is yielded.<br>
          </td>
     </tr>
@@ -81,7 +77,7 @@ browser-compat: api.IDBCursor.direction
 
 
 <div class="note">
-  <p><strong>Note</strong>: we can't change the direction of travel of the cursor using
+  <p><strong>Note:</strong> we can't change the direction of travel of the cursor using
     the <code>direction</code> property, as it is read-only. We specify the direction of
     travel using the 2nd argument of {{domxref("IDBObjectStore.openCursor")}}.</p>
 </div>

@@ -15,12 +15,12 @@ browser-compat: api.HTMLInputElement.webkitEntries
 ---
 <p>{{APIRef("File System API")}}{{SeeCompatTable}}{{Non-standard_header}}</p>
 
-<p><span class="seoSummary">The read-only <strong><code>webkitEntries</code></strong>
+<p>The read-only <strong><code>webkitEntries</code></strong>
     property of the {{domxref("HTMLInputElement")}} interface contains an array of file
     system entries (as objects based on {{domxref("FileSystemEntry")}}) representing files
     and/or directories selected by the user using an {{HTMLElement("input")}} element of
     type <code>file</code>, but only if that selection was made using drag-and-drop:
-    selecting a file in the dialog will leave the property empty (bug </span>1326031).</p>
+    selecting a file in the dialog will leave the property empty.</p>
 
 <p>The array can only contain directories if the
   {{domxref("HTMLInputElement.webkitdirectory", "webkitdirectory")}} property is
@@ -28,7 +28,7 @@ browser-compat: api.HTMLInputElement.webkitEntries
   let the user choose directories.</p>
 
 <div class="note">
-  <p>This property is called <code>webkitEntries</code> in the specification due to its
+  <p><strong>Note:</strong> This property is called <code>webkitEntries</code> in the specification due to its
     origins as a Google Chrome-specific API. It's likely to be renamed someday.</p>
 </div>
 

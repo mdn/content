@@ -13,19 +13,17 @@ tags:
 ---
 <div>{{DefaultAPISidebar("DOM")}}</div>
 
-<p><span class="seoSummary">The <strong>Document Object Model</strong> (<strong>DOM</strong>) connects web pages to scripts or programming languages by representing the structure of a document—such as the HTML representing a web page—in memory.</span> Usually it refers to JavaScript, even though modeling HTML, SVG, or XML documents as objects are not part of the core JavaScript language.</p>
+<p>The <strong>Document Object Model</strong> (<strong>DOM</strong>) connects web pages to scripts or programming languages by representing the structure of a document—such as the HTML representing a web page—in memory. Usually it refers to JavaScript, even though modeling HTML, SVG, or XML documents as objects are not part of the core JavaScript language.</p>
 
 <p>The DOM represents a document with a logical tree. Each branch of the tree ends in a node, and each node contains objects. DOM methods allow programmatic access to the tree. With them, you can change the document's structure, style, or content.</p>
 
 <p>Nodes can also have event handlers attached to them. Once an event is triggered, the event handlers get executed.</p>
 
-<div class="notecard note">
-<p><strong>To learn more</strong> about what the DOM is and how it represents documents, see our article <a href="/en-US/docs/Web/API/Document_Object_Model/Introduction">Introduction to the DOM</a>.</p>
-</div>
+<p>To learn more about what the DOM is and how it represents documents, see our article <a href="/en-US/docs/Web/API/Document_Object_Model/Introduction">Introduction to the DOM</a>.</p>
+
 
 <h2 id="DOM_interfaces">DOM interfaces</h2>
 
-<div class="index">
 <ul>
  <li>{{DOMxRef("Attr")}}</li>
  <li>{{DOMxRef("CDATASection")}}</li>
@@ -66,32 +64,29 @@ tags:
  <li>{{DOMxRef("Worker")}}</li>
  <li>{{DOMxRef("XMLDocument")}} {{Experimental_Inline}}</li>
 </ul>
-</div>
 
 <h3 id="Obsolete_DOM_interfaces">Obsolete DOM interfaces</h3>
 
 <p>The Document Object Model has been highly simplified. To achieve this, the following interfaces present in the different DOM level 3 or earlier specifications have been removed. It is uncertain whether some may be reintroduced in the future or not, but for the time being they should be considered obsolete and should be avoided:</p>
 
-<div class="index">
 <ul>
- <li><strong><code>DOMConfiguration</code></strong></li>
- <li><strong><code>DOMErrorHandler</code></strong></li>
- <li><strong><code>DOMImplementationList</code></strong></li>
- <li><strong><code>DOMImplementationRegistry</code></strong></li>
- <li><strong><code>DOMImplementationSource</code></strong></li>
- <li><strong><code>DOMLocator</code></strong></li>
- <li>{{DOMxRef("DOMObject")}}</li>
- <li>{{DOMxRef("DOMSettableTokenList")}}</li>
- <li><strong><code>DOMUserData</code></strong></li>
- <li>{{DOMxRef("ElementTraversal")}}</li>
- <li><strong><code>Entity</code></strong></li>
- <li><strong><code>EntityReference</code></strong></li>
- <li><strong><code>NameList</code></strong></li>
- <li><strong><code>Notation</code></strong></li>
- <li><strong><code>TypeInfo</code></strong></li>
- <li><strong><code>UserDataHandler</code></strong></li>
+ <li><code>DOMConfiguration</code></li>
+ <li><code>DOMErrorHandler</code></li>
+ <li><code>DOMImplementationList</code></li>
+ <li><code>DOMImplementationRegistry</code></li>
+ <li><code>DOMImplementationSource</code></li>
+ <li><code>DOMLocator</code></li>
+ <li><code>DOMObject</code></li>
+ <li><code>DOMSettableTokenList</code></li>
+ <li><code>DOMUserData</code></li>
+ <li><code>ElementTraversal</code></li>
+ <li><code>Entity</code></li>
+ <li><code>EntityReference</code></li>
+ <li><code>NameList</code></li>
+ <li><code>Notation</code></li>
+ <li><code>TypeInfo</code></li>
+ <li><code>UserDataHandler</code></li>
 </ul>
-</div>
 
 <h2 id="HTML_DOM">HTML DOM</h2>
 
@@ -103,7 +98,6 @@ tags:
 
 <h3 id="SVG_element_interfaces">SVG element interfaces</h3>
 
-<div class="index">
 <ul>
  <li>{{DOMxRef("SVGAElement")}}</li>
  <li>{{DOMxRef("SVGAltGlyphElement")}} {{Deprecated_Inline}}</li>
@@ -201,7 +195,6 @@ tags:
  <li>{{DOMxRef("SVGViewElement")}}</li>
  <li>{{DOMxRef("SVGVKernElement")}} {{Deprecated_Inline}}</li>
 </ul>
-</div>
 
 <h3 id="SVG_data_type_interfaces">SVG data type interfaces</h3>
 
@@ -209,7 +202,6 @@ tags:
 
 <h4 id="Static_type">Static type</h4>
 
-<div class="index">
 <ul>
  <li>{{DOMxRef("SVGAngle")}}</li>
  <li>{{DOMxRef("SVGColor")}} {{Deprecated_Inline}}</li>
@@ -252,11 +244,9 @@ tags:
  <li>{{DOMxRef("SVGTransform")}}</li>
  <li>{{DOMxRef("SVGTransformList")}}</li>
 </ul>
-</div>
 
 <h4 id="Animated_type">Animated type</h4>
 
-<div class="index">
 <ul>
  <li>{{DOMxRef("SVGAnimatedAngle")}}</li>
  <li>{{DOMxRef("SVGAnimatedBoolean")}}</li>
@@ -273,20 +263,16 @@ tags:
  <li>{{DOMxRef("SVGAnimatedString")}}</li>
  <li>{{DOMxRef("SVGAnimatedTransformList")}}</li>
 </ul>
-</div>
 
 <h3 id="SMIL-related_interfaces">SMIL-related interfaces</h3>
 
-<div class="index">
 <ul>
  <li>{{DOMxRef("ElementTimeControl")}}</li>
  <li>{{DOMxRef("TimeEvent")}}</li>
 </ul>
-</div>
 
 <h3 id="Other_SVG_interfaces">Other SVG interfaces</h3>
 
-<div class="index">
 <ul>
  <li>{{DOMxRef("GetSVGDocument")}}</li>
  <li>{{DOMxRef("ShadowAnimation")}}</li>
@@ -303,25 +289,16 @@ tags:
  <li>{{DOMxRef("SVGZoomAndPan")}}</li>
  <li>{{DOMxRef("SVGZoomEvent")}} {{Deprecated_Inline}}</li>
 </ul>
-</div>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
+<table>
   <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
+    <th>Specification</th>
   </tr>
- </thead>
- <tbody>
   <tr>
-   <td>{{SpecName("DOM WHATWG")}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td></td>
+    <td><a href="https://dom.spec.whatwg.org/">DOM Living Standard</a></td>
   </tr>
- </tbody>
 </table>
 
 <h2 id="See_also">See also</h2>

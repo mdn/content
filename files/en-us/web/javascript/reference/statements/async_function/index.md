@@ -310,7 +310,7 @@ async function getProcessedData(url) {
 }
 ```
 
-In the above example, notice there is no `await` statement after the
+In the second example, notice there is no `await` statement after the
 `return` keyword, although that would be valid too: The return value of an
 `async function` is implicitly wrapped in {{jsxref("Promise.resolve")}} - if
 it's not already a promise itself (as in this example).

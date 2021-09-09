@@ -210,8 +210,8 @@ function parseProtocol(url) {
     return false;
   }
   console.log(parsedURL);
-  // ["https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-      "https", "developer.mozilla.org", "en-US/docs/Web/JavaScript"]
+  // ["https://developer.mozilla.org/en-US/docs/Web/JavaScript", 
+  // "https", "developer.mozilla.org", "en-US/docs/Web/JavaScript"]
 
   const [, protocol, fullhost, fullpath] = parsedURL;
   return protocol;
@@ -228,13 +228,13 @@ console.log(parseProtocol('https://developer.mozilla.org/en-US/docs/Web/JavaScri
 ```js
 const user = {
     id: 42,
-    is_verified: true
+    isVerified: true
 };
 
-const {id, is_verified} = user;
+const {id, isVerified} = user;
 
 console.log(id); // 42
-console.log(is_verified); // true
+console.log(isVerified); // true
 ```
 
 #### Assignment without declaration
@@ -400,7 +400,7 @@ for (const {name: n, family: {father: f}} of people) {
 
 #### Computed object property names and destructuring
 
-Computed property names, like on [object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names), can be used with destructuring.
+Computed property names, like on [object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names), can be used with destructuring.
 
 ```js
 let key = 'z';
@@ -469,5 +469,5 @@ const {self, prot} = obj;
 
 ## See also
 
-- [Assignment operators](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators)
+- [Assignment operators](/en-US/docs/Web/JavaScript/Reference/Operators#assignment_operators)
 - ["ES6 in Depth: Destructuring" on hacks.mozilla.org](https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/)

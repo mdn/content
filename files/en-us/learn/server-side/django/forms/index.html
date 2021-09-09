@@ -16,9 +16,9 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}</div>
 
-<p class="summary">In this tutorial, we'll show you how to work with HTML Forms in Django, and, in particular, the easiest way to write forms to create, update, and delete model instances. As part of this demonstration, we'll extend the <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> website so that librarians can renew books, and create, update, and delete authors using our own forms (rather than using the admin application).</p>
+<p>In this tutorial, we'll show you how to work with HTML Forms in Django, and, in particular, the easiest way to write forms to create, update, and delete model instances. As part of this demonstration, we'll extend the <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> website so that librarians can renew books, and create, update, and delete authors using our own forms (rather than using the admin application).</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -37,7 +37,7 @@ tags:
 
 <p>While we haven't created any forms in this tutorial so far, we've already encountered them in the Django Admin site — for example, the screenshot below shows a form for editing one of our <a href="/en-US/docs/Learn/Server-side/Django/Models">Book</a> models, comprised of a number of selection lists and text editors.</p>
 
-<p><img alt="Admin Site - Book Add" src="admin_book_add.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="Admin Site - Book Add" src="admin_book_add.png"></p>
 
 <p>Working with forms can be complicated! Developers need to write HTML for the form, validate and properly sanitize entered data on the server (and possibly also in the browser), repost the form with error messages to inform users of any invalid fields, handle the data when it has successfully been submitted, and finally respond to the user in some way to indicate success. <em>Django Forms</em> take a lot of the work out of all these steps, by providing a framework that lets you define forms and their fields programmatically, and then use these objects to both generate the form HTML code and handle much of the validation and user interaction.</p>
 
@@ -47,7 +47,7 @@ tags:
 
 <p>First a brief overview of <a href="/en-US/docs/Learn/Forms">HTML Forms</a>. Consider a simple HTML form, with a single text field for entering the name of some "team", and its associated label:</p>
 
-<p><img alt="Simple name field example in HTML form" src="form_example_name_field.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="Simple name field example in HTML form" src="form_example_name_field.png"></p>
 
 <p>The form is defined in HTML as a collection of elements inside <code>&lt;form&gt;...&lt;/form&gt;</code> tags, containing at least one <code>input</code> element of <code>type="submit"</code>.</p>
 
@@ -57,7 +57,7 @@ tags:
     &lt;input type="submit" value="OK"&gt;
 &lt;/form&gt;</pre>
 
-<p>While here we just have one text field for entering the team name, a form <em>may</em> have any number of other input elements and their associated labels. The field's <code>type</code> attribute defines what sort of widget will be displayed. The <code>name</code> and <code>id</code> of the field are used to identify the field in JavaScript/CSS/HTML, while <code>value</code> defines the initial value for the field when it is first displayed. The matching team label is specified using the <code style="font-style: normal; font-weight: normal;">label</code> tag (see "Enter name" above), with a <code style="font-style: normal; font-weight: normal;">for</code> field containing the <code style="font-style: normal; font-weight: normal;">id</code> value of the associated <code style="font-style: normal; font-weight: normal;">input</code>.</p>
+<p>While here we just have one text field for entering the team name, a form <em>may</em> have any number of other input elements and their associated labels. The field's <code>type</code> attribute defines what sort of widget will be displayed. The <code>name</code> and <code>id</code> of the field are used to identify the field in JavaScript/CSS/HTML, while <code>value</code> defines the initial value for the field when it is first displayed. The matching team label is specified using the <code>label</code> tag (see "Enter name" above), with a <code>for</code> field containing the <code>id</code> value of the associated <code>input</code>.</p>
 
 <p>The <code>submit</code> input will be displayed as a button (by default) that can be pressed by the user to upload the data in all the other input elements in the form to the server (in this case, just the <code>team_name</code>). The form attributes define the HTTP <code>method</code> used to send the data and the destination of the data on the server (<code>action</code>):</p>
 
@@ -81,7 +81,7 @@ tags:
 
 <p>A process flowchart of how Django handles form requests is shown below, starting with a request for a page containing a form (shown in green).</p>
 
-<p><img alt="Updated form handling process doc." src="form_handling_-_standard.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="Updated form handling process doc." src="form_handling_-_standard.png"></p>
 
 <p>Based on the diagram above, the main things that Django's form handling does are:</p>
 
@@ -111,8 +111,7 @@ tags:
 <p>Django provides a number of tools and approaches to help you with the tasks detailed above. The most fundamental is the <code>Form</code> class, which simplifies both generation of form HTML and data cleaning/validation. In the next section, we describe how forms work using the practical example of a page to allow librarians to renew books.</p>
 
 <div class="notecard note">
-    <h4>Note</h4>
-    <p>Understanding how <code>Form</code> is used will help you when we discuss Django's more "high level" form framework classes.</p>
+  <p><strong>Note:</strong> Understanding how <code>Form</code> is used will help you when we discuss Django's more "high level" form framework classes.</p>
 </div>
 
 <h2 id="Renew-book_form_using_a_Form_and_function_view">Renew-book form using a Form and function view</h2>
@@ -164,16 +163,17 @@ class RenewBookForm(forms.Form):
 
 <p>Update your forms.py file so it looks like this:</p>
 
-<pre class="brush: python"><strong>import datetime</strong>
+<pre class="brush: python">import datetime
 
 from django import forms
-<strong>from django.core.exceptions import ValidationError
+
+from django.core.exceptions import ValidationError
 from django.utils.translation import ugettext_lazy as _
-</strong>
+
 class RenewBookForm(forms.Form):
     renewal_date = forms.DateField(help_text="Enter a date between now and 4 weeks (default 3).")
 
-<strong>    def clean_renewal_date(self):
+    def clean_renewal_date(self):
         data = self.cleaned_data['renewal_date']
 
         # Check if a date is not in the past.
@@ -185,15 +185,15 @@ class RenewBookForm(forms.Form):
             raise ValidationError(_('Invalid date - renewal more than 4 weeks ahead'))
 
         # Remember to always return the cleaned data.
-        return data</strong></pre>
+        return data</pre>
 
-<p>There are two important things to note. The first is that we get our data using <code>self.cleaned_data['renewal_date']</code> and that we return this data whether or not we change it at the end of the function. This step gets us the data "cleaned" and sanitized of potentially unsafe input using the default validators, and converted into the correct standard type for the data (in this case a Python <code>datetime.datetime</code> object).</p>
+<p>There are two important things to note. The first is that we get our data using <code>self.cleaned_data['renewal_date']</code> and that we return this data whether or not we change it at the end of the function.
+This step gets us the data "cleaned" and sanitized of potentially unsafe input using the default validators, and converted into the correct standard type for the data (in this case a Python <code>datetime.datetime</code> object).</p>
 
 <p>The second point is that if a value falls outside our range we raise a <code>ValidationError</code>, specifying the error text that we want to display in the form if an invalid value is entered. The example above also wraps this text in one of <a href="https://docs.djangoproject.com/en/3.1/topics/i18n/translation/">Django's translation functions</a> <code>ugettext_lazy()</code> (imported as <code>_()</code>), which is good practice if you want to translate your site later.</p>
 
 <div class="notecard note">
-    <h4>Note</h4>
-    <p>There are numerous other methods and examples for validating forms in <a href="https://docs.djangoproject.com/en/3.1/ref/forms/validation/">Form and field validation</a> (Django docs). For example, in cases where you have multiple fields that depend on each other, you can override the <a href="https://docs.djangoproject.com/en/3.1/ref/forms/api/#django.forms.Form.clean">Form.clean()</a> function and again raise a <code>ValidationError</code>.</p>
+  <p><strong>Note:</strong> There are numerous other methods and examples for validating forms in <a href="https://docs.djangoproject.com/en/3.1/ref/forms/validation/">Form and field validation</a> (Django docs). For example, in cases where you have multiple fields that depend on each other, you can override the <a href="https://docs.djangoproject.com/en/3.1/ref/forms/api/#django.forms.Form.clean">Form.clean()</a> function and again raise a <code>ValidationError</code>.</p>
 </div>
 
 <p>That's all we need for the form in this example!</p>
@@ -209,8 +209,7 @@ class RenewBookForm(forms.Form):
 <p>The URL configuration will redirect URLs with the format <strong>/catalog/book/<em>&lt;bookinstance_id&gt;</em>/renew/</strong> to the function named <code>renew_book_librarian()</code> in <strong>views.py</strong>, and send the <code>BookInstance</code> id as the parameter named <code>pk</code>. The pattern only matches if <code>pk</code> is a correctly formatted <code>uuid</code>.</p>
 
 <div class="notecard note">
-    <h4>Note</h4>
-    <p>We can name our captured URL data "<code>pk</code>" anything we like, because we have complete control over the view function (we're not using a generic detail view class that expects parameters with a certain name). However, <code>pk</code> short for "primary key", is a reasonable convention to use!</p>
+  <p><strong>Note:</strong> We can name our captured URL data "<code>pk</code>" anything we like, because we have complete control over the view function (we're not using a generic detail view class that expects parameters with a certain name). However, <code>pk</code> short for "primary key", is a reasonable convention to use!</p>
 </div>
 
 <h3 id="View">View</h3>
@@ -219,7 +218,8 @@ class RenewBookForm(forms.Form):
 
 <p>For forms that use a <code>POST</code> request to submit information to the server, the most common pattern is for the view to test against the <code>POST</code> request type (<code>if request.method == 'POST':</code>) to identify form validation requests and <code>GET</code> (using an <code>else</code> condition) to identify the initial form creation request. If you want to submit your data using a <code>GET</code> request, then a typical approach for identifying whether this is the first or subsequent view invocation is to read the form data (e.g. to read a hidden value in the form).</p>
 
-<p>The book renewal process will be writing to our database, so, by convention, we use the <code>POST</code> request approach. The code fragment below shows the (very standard) pattern for this sort of function view. </p>
+<p>The book renewal process will be writing to our database, so, by convention, we use the <code>POST</code> request approach.
+The code fragment below shows the (very standard) pattern for this sort of function view.</p>
 
 <pre class="brush: python">import datetime
 
@@ -233,13 +233,13 @@ def renew_book_librarian(request, pk):
     book_instance = get_object_or_404(BookInstance, pk=pk)
 
     # If this is a POST request then process the Form data
-<strong>    if request.method == 'POST':</strong>
+    if request.method == 'POST':
 
         # Create a form instance and populate it with data from the request (binding):
         form = RenewBookForm(request.POST)
 
         # Check if the form is valid:
-        <strong>if form.is_valid():</strong>
+        if form.is_valid():
             # process the data in form.cleaned_data as required (here we just write it to the model due_back field)
             book_instance.due_back = form.cleaned_data['renewal_date']
             book_instance.save()
@@ -248,7 +248,7 @@ def renew_book_librarian(request, pk):
             return HttpResponseRedirect(reverse('all-borrowed') )
 
     # If this is a GET (or any other method) create the default form.
-<strong>    else:</strong>
+    else:
         proposed_renewal_date = datetime.date.today() + datetime.timedelta(weeks=3)
         form = RenewBookForm(initial={'renewal_date': proposed_renewal_date})
 
@@ -268,14 +268,15 @@ def renew_book_librarian(request, pk):
  <li><code><a href="https://docs.python.org/3/library/datetime.html">datetime</a></code>: A Python library for manipulating dates and times.</li>
 </ul>
 
-<p>In the view, we first use the <code>pk</code> argument in <code>get_object_or_404()</code> to get the current <code>BookInstance</code> (if this does not exist, the view will immediately exit and the page will display a "not found" error). If this is <em>not</em> a <code>POST</code> request (handled by the <code>else</code> clause) then we create the default form passing in an <code>initial</code> value for the <code>renewal_date</code> field (as shown in bold below, this is 3 weeks from the current date). </p>
+<p>In the view, we first use the <code>pk</code> argument in <code>get_object_or_404()</code> to get the current <code>BookInstance</code> (if this does not exist, the view will immediately exit and the page will display a "not found" error).
+If this is <em>not</em> a <code>POST</code> request (handled by the <code>else</code> clause) then we create the default form passing in an <code>initial</code> value for the <code>renewal_date</code> field, 3 weeks from the current date. </p>
 
 <pre class="brush: python">    book_instance = get_object_or_404(BookInstance, pk=pk)
 
     # If this is a GET (or any other method) create the default form
     else:
-        proposed_renewal_date = datetime.date.today() + datetime.timedelta(<strong>weeks=3</strong>)
-        <strong>form = RenewBookForm(initial={'renewal_date': proposed_renewal_date})</strong>
+        proposed_renewal_date = datetime.date.today() + datetime.timedelta(weeks=3)
+        form = RenewBookForm(initial={'renewal_date': proposed_renewal_date})
 
     context = {
         'form': form,
@@ -286,7 +287,8 @@ def renew_book_librarian(request, pk):
 
 <p>After creating the form, we call <code>render()</code> to create the HTML page, specifying the template and a context that contains our form. In this case, the context also contains our <code>BookInstance</code>, which we'll use in the template to provide information about the book we're renewing.</p>
 
-<p>However, if this is a <code>POST</code> request, then we create our <code>form</code> object and populate it with data from the request. This process is called "binding" and allows us to validate the form. We then check if the form is valid, which runs all the validation code on all of the fields — including both the generic code to check that our date field is actually a valid date and our specific form's <code>clean_renewal_date()</code> function to check the date is in the right range. </p>
+<p>However, if this is a <code>POST</code> request, then we create our <code>form</code> object and populate it with data from the request. This process is called "binding" and allows us to validate the form.
+We then check if the form is valid, which runs all the validation code on all of the fields — including both the generic code to check that our date field is actually a valid date and our specific form's <code>clean_renewal_date()</code> function to check the date is in the right range. </p>
 
 <pre class="brush: python">    book_instance = get_object_or_404(BookInstance, pk=pk)
 
@@ -294,7 +296,7 @@ def renew_book_librarian(request, pk):
     if request.method == 'POST':
 
         # Create a form instance and populate it with data from the request (binding):
-<strong>        form = RenewBookForm(request.POST)</strong>
+        form = RenewBookForm(request.POST)
 
         # Check if the form is valid:
         if form.is_valid():
@@ -317,8 +319,7 @@ def renew_book_librarian(request, pk):
 <p>If the form is valid, then we can start to use the data, accessing it through the <code>form.cleaned_data</code> attribute (e.g. <code>data = form.cleaned_data['renewal_date']</code>). Here we just save the data into the <code>due_back</code> value of the associated <code>BookInstance</code> object.</p>
 
 <div class="notecard warning">
-    <h4>Warning</h4>
-    <p>While you can also access the form data directly through the request (for example, <code>request.POST['renewal_date']</code> or <code>request.GET['renewal_date']</code> if using a GET request), this is NOT recommended. The cleaned data is sanitized, validated, and converted into Python-friendly types.</p>
+    <p><strong>Warning:</strong> While you can also access the form data directly through the request (for example, <code>request.POST['renewal_date']</code> or <code>request.GET['renewal_date']</code> if using a GET request), this is NOT recommended. The cleaned data is sanitized, validated, and converted into Python-friendly types.</p>
 </div>
 
 <p>The final step in the form-handling part of the view is to redirect to another page, usually a "success" page. In this case, we use <code>HttpResponseRedirect</code> and <code>reverse()</code> to redirect to the view named <code>'all-borrowed'</code> (this was created as the "challenge" in <a href="/en-US/docs/Learn/Server-side/Django/Authentication#challenge_yourself">Django Tutorial Part 8: User authentication and permissions</a>). If you didn't create that page consider redirecting to the home page at URL '/').</p>
@@ -327,17 +328,17 @@ def renew_book_librarian(request, pk):
 
 <p>The final view is therefore as shown below. Please copy this into the bottom of <strong>locallibrary/catalog/views.py</strong>.</p>
 
-<pre class="brush: python"><strong>import datetime
+<pre class="brush: python">import datetime
 
-from django.contrib.auth.decorators import login_required, permission_required</strong>
+from django.contrib.auth.decorators import login_required, permission_required
 from django.shortcuts import get_object_or_404
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 
 from catalog.forms import RenewBookForm
 
-<strong>@login_required
-@permission_required('catalog.can_mark_returned', raise_exception=True)</strong>
+@login_required
+@permission_required('catalog.can_mark_returned', raise_exception=True)
 def renew_book_librarian(request, pk):
     """View function for renewing a specific BookInstance by librarian."""
     book_instance = get_object_or_404(BookInstance, pk=pk)
@@ -381,22 +382,22 @@ def renew_book_librarian(request, pk):
   &lt;p&gt;Borrower: \{{ book_instance.borrower }}&lt;/p&gt;
   &lt;p{% if book_instance.is_overdue %} class="text-danger"{% endif %}&gt;Due date: \{{ book_instance.due_back }}&lt;/p&gt;
 
-<strong>  &lt;form action="" method="post"&gt;
+  &lt;form action="" method="post"&gt;
     {% csrf_token %}
     &lt;table&gt;
     \{{ form.as_table }}
     &lt;/table&gt;
     &lt;input type="submit" value="Submit"&gt;
-  &lt;/form&gt;</strong>
+  &lt;/form&gt;
 {% endblock %}</pre>
 
-<p>Most of this will be completely familiar from previous tutorials. We extend the base template and then redefine the content block. We are able to reference <code>\{{ book_instance }}</code> (and its variables) because it was passed into the context object in the <code>render()</code> function, and we use these to list the book title, borrower, and the original due date.</p>
+<p>Most of this will be completely familiar from previous tutorials.
+We extend the base template and then redefine the content block. We are able to reference <code>\{{ book_instance }}</code> (and its variables) because it was passed into the context object in the <code>render()</code> function, and we use these to list the book title, borrower, and the original due date.</p>
 
 <p>The form code is relatively simple. First, we declare the <code>form</code> tags, specifying where the form is to be submitted (<code>action</code>) and the <code>method</code> for submitting the data (in this case an "HTTP POST") — if you recall the <a href="#html_forms">HTML Forms</a> overview at the top of the page, an empty <code>action</code> as shown, means that the form data will be posted back to the current URL of the page (which is what we want!). Inside the tags, we define the <code>submit</code> input, which a user can press to submit the data. The <code>{% csrf_token %}</code> added just inside the form tags is part of Django's cross-site forgery protection.</p>
 
 <div class="notecard note">
-    <h4>Note</h4>
-    <p>Add the <code>{% csrf_token %}</code> to every Django template you create that uses <code>POST</code> to submit data. This will reduce the chance of forms being hijacked by malicious users.</p>
+  <p><strong>Note:</strong> Add the <code>{% csrf_token %}</code> to every Django template you create that uses <code>POST</code> to submit data. This will reduce the chance of forms being hijacked by malicious users.</p>
 </div>
 
 <p>All that's left is the <code>\{{ form }}</code> template variable, which we passed to the template in the context dictionary. Perhaps unsurprisingly, when used as shown this provides the default rendering of all the form fields, including their labels, widgets, and help text — the rendering is as shown below:</p>
@@ -412,18 +413,17 @@ def renew_book_librarian(request, pk):
 </pre>
 
 <div class="notecard note">
-    <h4>Note</h4>
-    <p>It is perhaps not obvious because we only have one field, but, by default, every field is defined in its own table row. This same rendering is provided if you reference the template variable <code>\{{ form.as_table }}</code>.</p>
+  <p><strong>Note:</strong> It is perhaps not obvious because we only have one field, but, by default, every field is defined in its own table row. This same rendering is provided if you reference the template variable <code>\{{ form.as_table }}</code>.</p>
 </div>
 
-<p>If you were to enter an invalid date, you'd additionally get a list of the errors rendered on the page (shown in bold below).</p>
+<p>If you were to enter an invalid date, you'd additionally get a list of the errors rendered on the page (see <code>errorlist</code> below).</p>
 
 <pre class="brush: html">&lt;tr&gt;
   &lt;th&gt;&lt;label for="id_renewal_date"&gt;Renewal date:&lt;/label&gt;&lt;/th&gt;
     &lt;td&gt;
-<strong>      &lt;ul class="errorlist"&gt;
+      &lt;ul class="errorlist"&gt;
         &lt;li&gt;Invalid date - renewal in past&lt;/li&gt;
-      &lt;/ul&gt;</strong>
+      &lt;/ul&gt;
       &lt;input id="id_renewal_date" name="renewal_date" type="text" value="2015-11-08" required&gt;
       &lt;br&gt;
       &lt;span class="helptext"&gt;Enter date between now and 4 weeks (default 3 weeks).&lt;/span&gt;
@@ -452,8 +452,7 @@ def renew_book_librarian(request, pk):
 <pre class="brush: html">{% if perms.catalog.can_mark_returned %}- &lt;a href="{% url 'renew-book-librarian' bookinst.id %}"&gt;Renew&lt;/a&gt;  {% endif %}</pre>
 
 <div class="notecard note">
-    <h4>Note</h4>
-    <p>Remember that your test login will need to have the permission "<code>catalog.can_mark_returned</code>" in order to access the renew book page (perhaps use your superuser account).</p>
+<p><strong>Note:</strong> Remember that your test login will need to have the permission "<code>catalog.can_mark_returned</code>" in order to access the renew book page (perhaps use your superuser account).</p>
 </div>
 
 <p>You can alternatively manually construct a test URL like this — <code>http://127.0.0.1:8000/catalog/book/<em>&lt;bookinstance_id&gt;</em>/renew/</code> (a valid <code>bookinstance_id</code> can be obtained by navigating to a book detail page in your library, and copying the <code>id</code> field).</p>
@@ -462,15 +461,15 @@ def renew_book_librarian(request, pk):
 
 <p>If you are successful, the default form will look like this:</p>
 
-<p><img alt="" src="forms_example_renew_default.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="forms_example_renew_default.png"></p>
 
 <p>The form with an invalid value entered will look like this:</p>
 
-<p><img alt="" src="forms_example_renew_invalid.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="forms_example_renew_invalid.png"></p>
 
 <p>The list of all books with renew links will look like this:</p>
 
-<p><img alt="" src="forms_example_renew_allbooks.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="forms_example_renew_allbooks.png"></p>
 
 <h2 id="ModelForms">ModelForms</h2>
 
@@ -485,40 +484,41 @@ def renew_book_librarian(request, pk):
 from catalog.models import BookInstance
 
 class RenewBookModelForm(ModelForm):
-<strong>    class Meta:
+    class Meta:
         model = BookInstance
-        fields = ['due_back']</strong>
+        fields = ['due_back']
 </pre>
 
 <div class="notecard note">
-    <h4>Note</h4>
-    <p>You can also include all fields in the form using <code>fields = '__all__'</code>, or you can use <code>exclude</code> (instead of <code>fields</code>) to specify the fields <em>not</em> to include from the model).</p>
+  <p><strong>Note:</strong> You can also include all fields in the form using <code>fields = '__all__'</code>, or you can use <code>exclude</code> (instead of <code>fields</code>) to specify the fields <em>not</em> to include from the model).</p>
 
 <p>Neither approach is recommended because new fields added to the model are then automatically included in the form (without the developer necessarily considering possible security implications).</p>
 </div>
 
 <div class="notecard note">
-    <h4>Note</h4>
-    <p>This might not look like all that much simpler than just using a <code>Form</code> (and it isn't in this case, because we just have one field). However, if you have a lot of fields, it can reduce the amount of code quite significantly!</p>
+  <p><strong>Note:</strong> This might not look like all that much simpler than just using a <code>Form</code> (and it isn't in this case, because we just have one field). However, if you have a lot of fields, it can reduce the amount of code quite significantly!</p>
 </div>
 
-<p>The rest of the information comes from the model field definitions (e.g. labels, widgets, help text, error messages). If these aren't quite right, then we can override them in our <code>class Meta</code>, specifying a dictionary containing the field to change and its new value. For example, in this form, we might want a label for our field of "<em>Renewal date</em>" (rather than the default based on the field name: <em>Due Back</em>), and we also want our help text to be specific to this use case. The <code>Meta</code> below shows you how to override these fields, and you can similarly set <code>widgets</code> and <code>error_messages</code> if the defaults aren't sufficient.</p>
+<p>The rest of the information comes from the model field definitions (e.g. labels, widgets, help text, error messages). If these aren't quite right, then we can override them in our <code>class Meta</code>, specifying a dictionary containing the field to change and its new value. For example, in this form, we might want a label for our field of "<em>Renewal date</em>" (rather than the default based on the field name: <em>Due Back</em>), and we also want our help text to be specific to this use case.
+The <code>Meta</code> below shows you how to override these fields, and you can similarly set <code>widgets</code> and <code>error_messages</code> if the defaults aren't sufficient.</p>
 
 <pre class="brush: python">class Meta:
     model = BookInstance
     fields = ['due_back']
-<strong>    labels = {'due_back': _('New renewal date')}
-    help_texts = {'due_back': _('Enter a date between now and 4 weeks (default 3).')} </strong>
+    labels = {'due_back': _('New renewal date')}
+    help_texts = {'due_back': _('Enter a date between now and 4 weeks (default 3).')} 
 </pre>
 
-<p>To add validation you can use the same approach as for a normal <code>Form</code> — you define a function named <code>clean_<em>field_name</em>()</code> and raise <code>ValidationError</code> exceptions for invalid values. The only difference with respect to our original form is that the model field is named <code>due_back</code> and not "<code>renewal_date</code>". This change is necessary since the corresponding field in <code>BookInstance</code> is called <code>due_back</code>. </p>
+<p>To add validation you can use the same approach as for a normal <code>Form</code> — you define a function named <code>clean_<em>field_name</em>()</code> and raise <code>ValidationError</code> exceptions for invalid values.
+The only difference with respect to our original form is that the model field is named <code>due_back</code> and not "<code>renewal_date</code>".
+This change is necessary since the corresponding field in <code>BookInstance</code> is called <code>due_back</code>. </p>
 
 <pre class="brush: python">from django.forms import ModelForm
 
 from catalog.models import BookInstance
 
 class RenewBookModelForm(ModelForm):
-<strong>    def clean_due_back(self):
+    def clean_due_back(self):
        data = self.cleaned_data['due_back']
 
        # Check if a date is not in the past.
@@ -531,7 +531,7 @@ class RenewBookModelForm(ModelForm):
 
        # Remember to always return the cleaned data.
        return data
-</strong>
+
     class Meta:
         model = BookInstance
         fields = ['due_back']
@@ -546,8 +546,7 @@ class RenewBookModelForm(ModelForm):
 <p>The form handling algorithm we used in our function view example above represents an extremely common pattern in form editing views. Django abstracts much of this "boilerplate" for you, by creating <a href="https://docs.djangoproject.com/en/3.1/ref/class-based-views/generic-editing/">generic editing views</a> for creating, editing, and deleting views based on models. Not only do these handle the "view" behavior, but they automatically create the form class (a <code>ModelForm</code>) for you from the model.</p>
 
 <div class="notecard note">
-    <h4>Note</h4>
-    <p>In addition to the editing views described here, there is also a <a href="https://docs.djangoproject.com/en/3.1/ref/class-based-views/generic-editing/#formview">FormView</a> class, which lies somewhere between our function view and the other generic views in terms of "flexibility" vs "coding effort". Using <code>FormView</code>, you still need to create your <code>Form</code>, but you don't have to implement all of the standard form-handling patterns. Instead, you just have to provide an implementation of the function that will be called once the submission is known to be valid.</p>
+  <p><strong>Note:</strong> In addition to the editing views described here, there is also a <a href="https://docs.djangoproject.com/en/3.1/ref/class-based-views/generic-editing/#formview">FormView</a> class, which lies somewhere between our function view and the other generic views in terms of "flexibility" vs "coding effort". Using <code>FormView</code>, you still need to create your <code>Form</code>, but you don't have to implement all of the standard form-handling patterns. Instead, you just have to provide an implementation of the function that will be called once the submission is known to be valid.</p>
 </div>
 
 <p>In this section, we're going to use generic editing views to create pages to add functionality to create, edit, and delete <code>Author</code> records from our library — effectively providing a basic reimplementation of parts of the Admin site (this could be useful if you need to offer admin functionality in a more flexible way than can be provided by the admin site).</p>
@@ -633,8 +632,7 @@ class AuthorDelete(DeleteView):
 <p>The author create, update, and delete pages are now ready to test (we won't bother hooking them into the site sidebar in this case, although you can do so if you wish).</p>
 
 <div class="notecard note">
-    <h4>Note</h4>
-    <p>Observant users will have noticed that we didn't do anything to prevent unauthorized users from accessing the pages! We leave that as an exercise for you (hint: you could use the <code>PermissionRequiredMixin</code> and either create a new permission or reuse our <code>can_mark_returned</code> permission).</p>
+    <p><strong>Note:</strong> Observant users will have noticed that we didn't do anything to prevent unauthorized users from accessing the pages! We leave that as an exercise for you (hint: you could use the <code>PermissionRequiredMixin</code> and either create a new permission or reuse our <code>can_mark_returned</code> permission).</p>
 </div>
 
 <h3 id="Testing_the_page_2">Testing the page</h3>
@@ -643,7 +641,7 @@ class AuthorDelete(DeleteView):
 
 <p>Then navigate to the author create page: <a href="http://127.0.0.1:8000/catalog/author/create/">http://127.0.0.1:8000/catalog/author/create/</a>, which should look like the screenshot below.</p>
 
-<p><img alt="Form Example: Create Author" src="forms_example_create_author.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="Form Example: Create Author" src="forms_example_create_author.png"></p>
 
 <p>Enter values for the fields and then press <strong>Submit</strong> to save the author record. You should now be taken to a detail view for your new author, with a URL of something like <em>http://127.0.0.1:8000/catalog/author/10</em>.</p>
 
@@ -651,13 +649,13 @@ class AuthorDelete(DeleteView):
 
 <p>Finally, we can delete the page by appending delete to the end of the author detail-view URL (e.g. <em>http://127.0.0.1:8000/catalog/author/10/delete/</em>). Django should display the delete page shown below. Press "<strong>Yes, delete.</strong>" to remove the record and be taken to the list of all authors.</p>
 
-<p><img alt="" src="forms_example_delete_author.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="forms_example_delete_author.png"></p>
 
 <h2 id="Challenge_yourself">Challenge yourself</h2>
 
 <p>Create some forms to create, edit, and delete <code>Book</code> records. You can use exactly the same structure as for <code>Authors</code>. If your <strong>book_form.html</strong> template is just a copy-renamed version of the <strong>author_form.html</strong> template, then the new "create book" page will look like the screenshot below:</p>
 
-<p><img alt="" src="forms_example_create_book.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="forms_example_create_book.png"></p>
 
 <h2 id="Summary">Summary</h2>
 

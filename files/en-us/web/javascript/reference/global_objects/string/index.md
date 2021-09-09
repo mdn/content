@@ -393,14 +393,16 @@ Both of the above methods result in identical strings.
 
 It's possible to use `String` as a more reliable
 {{jsxref("String.prototype.toString()", "toString()")}} alternative, as it works when
-used on {{jsxref("null")}}, {{jsxref("undefined")}}, and on {{jsxref("Symbol",
-  "symbols")}}. For example:
+used on {{jsxref("null")}} and {{jsxref("undefined")}}. For example:
 
 ```js
-let outputStrings = []
-for (let i = 0, n = inputValues.length; i < n; ++i) {
-  outputStrings.push(String(inputValues[i]));
-}
+var nullVar = null;
+nullVar.toString();       // TypeError: nullVar is null
+String(nullVar);          // "null"
+
+var undefinedVar;
+undefinedVar.toString();  // TypeError: undefinedVar is undefined
+String(undefinedVar);     // "undefined" 
 ```
 
 ## Specifications

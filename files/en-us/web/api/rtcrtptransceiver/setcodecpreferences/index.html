@@ -18,10 +18,12 @@ browser-compat: api.RTCRtpTransceiver.setCodecPreferences
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">The {{domxref("RTCRtpTransceiver")}} method
+<p>The {{domxref("RTCRtpTransceiver")}} method
     <strong><code>setCodecPreferences()</code></strong> configures the transceiver's
     codecs given a list of {{domxref("RTCRtpCodecCapability")}} objects specifying the new
-    preferences for each {{Glossary("codec")}}.</span> The specified set of codecs and
+    preferences for each {{Glossary("codec")}}.</p>
+
+<p>The specified set of codecs and
   configurations will be used for all future connections including this transceiver until
   this method is called again.</p>
 
@@ -50,9 +52,9 @@ browser-compat: api.RTCRtpTransceiver.setCodecPreferences
       <code>codecs</code> is empty, the codec configurations are all returned to the user
       agent's defaults.</p>
 
-    <div class="note"><strong>Note:</strong> Any codecs not included in
+    <div class="note"><p><strong>Note:</strong> Any codecs not included in
       <code>codecs</code> will not be considered during the process of negotiating a
-      connection. This lets you prevent the use of codecs you don't wish to use.</div>
+      connection. This lets you prevent the use of codecs you don't wish to use.</p></div>
   </dd>
 </dl>
 

@@ -93,7 +93,7 @@ browser-compat: api.Element.attachShadow
 
 <h3 id="Exceptions">Exceptions</h3>
 
-<table class="standard-table">
+<table class="no-markdown">
   <thead>
     <tr>
       <th scope="col">Exception</th>
@@ -108,7 +108,8 @@ browser-compat: api.Element.attachShadow
     <tr>
       <td><code>NotSupportedError</code></td>
       <td>You are trying to attach a shadow root to an element outside the HTML namespace,
-        or the element cannot have a shadow attached to it (see above).</td>
+        the element cannot have a shadow attached to it,
+        or the static property <code>disabledFeatures</code> has been given a value of <code>"shadow"</code> in the element definition.</td>
     </tr>
   </tbody>
 </table>

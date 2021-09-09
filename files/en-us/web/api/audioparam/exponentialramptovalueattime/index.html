@@ -22,7 +22,7 @@ browser-compat: api.AudioParam.exponentialRampToValueAtTime
 </div>
 
 <div class="note">
-  <p><strong>Note</strong>: Exponential ramps are considered more useful when changing
+  <p><strong>Note:</strong> Exponential ramps are considered more useful when changing
     frequencies or playback rates than linear ramps because of the way the human ear
     works.</p>
 </div>
@@ -58,7 +58,7 @@ browser-compat: api.AudioParam.exponentialRampToValueAtTime
   is used to fade the gain value up to 1.0, and down to 0, respectively. This is pretty
   useful for fade in/fade out effects:</p>
 
-<pre class="brush: js;highlight[32,37]">// create audio context
+<pre class="brush: js;">// create audio context
 var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 
@@ -96,7 +96,7 @@ expRampMinus.onclick = function() {
 </pre>
 
 <div class="note">
-  <p><strong>Note</strong>: A value of 0.01 was used for the value to ramp down to in the
+  <p><strong>Note:</strong> A value of 0.01 was used for the value to ramp down to in the
     last function rather than 0, as an <em>invalid or illegal string</em> error is thrown
     if 0 is used — the value needs to be positive.</p>
 </div>

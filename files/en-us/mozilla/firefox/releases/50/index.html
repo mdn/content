@@ -143,7 +143,7 @@ tags:
 <ul>
  <li>The {{domxref("PannerNode")}} interface now supports the 3D Cartesian space properties for the position ({{domxref("PannerNode.positionX")}}, {{domxref("PannerNode.positionY")}}, and {{domxref("PannerNode.positionZ")}}) and directionality ({{domxref("PannerNode.orientationX")}}, {{domxref("PannerNode.orientationY")}}, {{domxref("PannerNode.orientationZ")}}) of an audio source.</li>
  <li>The interface {{domxref("IIRFilterNode")}}, which implements a general {{interwiki("wikipedia", "infinite impulse response")}} (IIR) filter, has been implemented.</li>
- <li>Throttling in background tabs of timers created by {{domxref("WindowOrWorkerGlobalScope/setInterval", "Window.setInterval()")}} and {{domxref("WindowOrWorkerGlobalScope/setTimeout", "Window.setTimeout()")}} no longer occurs if a <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> {{domxref("AudioContext")}} is actively playing sound. This should help prevent issues with timing-sensitive audio playback (such as music players generating individual notes using timers) in the background ({{bug(1181073)}}).</li>
+ <li>Throttling in background tabs of timers created by {{domxref("setInterval()")}} and {{domxref("setTimeout()")}} no longer occurs if a <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> {{domxref("AudioContext")}} is actively playing sound. This should help prevent issues with timing-sensitive audio playback (such as music players generating individual notes using timers) in the background ({{bug(1181073)}}).</li>
 </ul>
 
 <h3 id="AudioVideo">Audio/Video</h3>
@@ -185,12 +185,6 @@ tags:
  </li>
  <li>We've implemented {{domxref("DataTransferItem.webkitGetAsEntry()")}} as part of the <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</a>; this lets you obtain a {{domxref("FileSystemEntry")}} representing a dropped file ({{bug(1289255)}}). This is enabled by default.</li>
  <li>The <code>HTMLInputElement.directory</code> property, part of the <a href="https://wicg.github.io/directory-upload/proposal.html">Directory Upload API</a> proposal, has been renamed to <code>allowdirs</code> ({{bug(1288681)}}). This property is hidden behind a preference.</li>
-</ul>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="https://www.fxsitecompat.com/en-US/versions/50">Site Compatibility for Firefox 50</a></li>
 </ul>
 
 <h2 id="Older_versions">Older versions</h2>

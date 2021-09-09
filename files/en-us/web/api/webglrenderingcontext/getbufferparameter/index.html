@@ -24,7 +24,7 @@ browser-compat: api.WebGLRenderingContext.getBufferParameter
 
 <dl>
   <dt>target</dt>
-  <dd>A {{domxref("Glenum")}} specifying the target buffer object. Possible values:
+  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target buffer object. Possible values:
     <ul>
       <li><code>gl.ARRAY_BUFFER</code>: Buffer containing vertex attributes, such as
         vertex coordinates, texture coordinate data, or vertex color data.</li>
@@ -48,11 +48,11 @@ browser-compat: api.WebGLRenderingContext.getBufferParameter
     </ul>
   </dd>
   <dt>pname</dt>
-  <dd>A {{domxref("Glenum")}} specifying information to query. Possible values:
+  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying information to query. Possible values:
     <ul>
-      <li><code>gl.BUFFER_SIZE</code>: Returns a {{domxref("GLint")}} indicating the size
+      <li><code>gl.BUFFER_SIZE</code>: Returns a {{domxref("WebGL_API/Types", "GLint")}} indicating the size
         of the buffer in bytes.</li>
-      <li><code>gl.BUFFER_USAGE</code>: Returns a {{domxref("GLenum")}} indicating the
+      <li><code>gl.BUFFER_USAGE</code>: Returns a {{domxref("WebGL_API/Types", "GLenum")}} indicating the
         usage pattern of the buffer. This is either:
         <ul>
           <li><code>gl.STATIC_DRAW</code>,</li>
@@ -78,7 +78,7 @@ browser-compat: api.WebGLRenderingContext.getBufferParameter
 <h3 id="Return_value">Return value</h3>
 
 <p>Depends on the requested information (as specified with <code>pname</code>). Either a
-  {{domxref("GLint")}} or a {{domxref("GLenum")}}.</p>
+  {{domxref("WebGL_API/Types", "GLint")}} or a {{domxref("WebGL_API/Types", "GLenum")}}.</p>
 
 <h2 id="Examples">Examples</h2>
 

@@ -70,7 +70,7 @@ myPromise
 .catch(handleRejectedAny);
 ```
 
-Using `{{JSxRef("Functions/Arrow_functions", "Arrow Function Expressions")}}` for the callback functions, an implementation of a promise chain might look something like this:
+Using {{JSxRef("Functions/Arrow_functions", "Arrow Function Expressions", "", 1)}} for the callback functions, an implementation of a promise chain might look something like this:
 
 ```js
 promise1
@@ -343,7 +343,7 @@ function promiseGetWord(parityInfo) {
 
 ### Advanced Example
 
-This small example shows the mechanism of a `Promise`. The `testPromise()` method is called each time the {{HTMLElement("button")}} is clicked. It creates a promise that will be fulfilled, using {{domxref("WindowOrWorkerGlobalScope.setTimeout")}}, to the promise count (number starting from 1) every 1-3 seconds, at random. The `Promise()` constructor is used to create the promise.
+This small example shows the mechanism of a `Promise`. The `testPromise()` method is called each time the {{HTMLElement("button")}} is clicked. It creates a promise that will be fulfilled, using {{domxref("setTimeout()")}}, to the promise count (number starting from 1) every 1-3 seconds, at random. The `Promise()` constructor is used to create the promise.
 
 The fulfillment of the promise is logged, via a fulfill callback set using {{JSxRef("Promise.prototype.then()","p1.then()")}}. A few logs show how the synchronous part of the method is decoupled from the asynchronous completion of the promise.
 
@@ -420,13 +420,13 @@ Another simple example using `Promise` and {{domxref("XMLHttpRequest")}} to load
 
 - A polyfill of `Promise` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
 - [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises)
-- [Promises/A+ specification](http://promisesaplus.com/)
+- [Promises/A+ specification](https://promisesaplus.com/)
 - [Venkatraman.R - JS Promise (Part 1, Basics)](https://medium.com/@ramsunvtech/promises-of-promise-part-1-53f769245a53)
 - [Venkatraman.R - JS Promise (Part 2 - Using Q.js, When.js and RSVP.js)](https://medium.com/@ramsunvtech/js-promise-part-2-q-js-when-js-and-rsvp-js-af596232525c#.dzlqh6ski)
 - [Venkatraman.R - Tools for Promises Unit Testing](https://tech.io/playgrounds/11107/tools-for-promises-unittesting/introduction)
-- [Jake Archibald: JavaScript Promises: There and Back Again](http://www.html5rocks.com/en/tutorials/es6/promises/)
-- [Domenic Denicola: Callbacks, Promises, and Coroutines – Asynchronous Programming Patterns in JavaScript](http://de.slideshare.net/domenicdenicola/callbacks-promises-and-coroutines-oh-my-the-evolution-of-asynchronicity-in-javascript)
-- [Matt Greer: JavaScript Promises ... In Wicked Detail](http://www.mattgreer.org/articles/promises-in-wicked-detail/)
+- [Jake Archibald: JavaScript Promises: There and Back Again](https://www.html5rocks.com/en/tutorials/es6/promises/)
+- [Domenic Denicola: Callbacks, Promises, and Coroutines – Asynchronous Programming Patterns in JavaScript](https://de.slideshare.net/domenicdenicola/callbacks-promises-and-coroutines-oh-my-the-evolution-of-asynchronicity-in-javascript)
+- [Matt Greer: JavaScript Promises ... In Wicked Detail](https://www.mattgreer.org/articles/promises-in-wicked-detail/)
 - [Forbes Lindesay: promisejs.org](https://www.promisejs.org/)
 - [Speed-polyfill to polyfill both promise availability and promise performance.](https://github.com/anonyco/SPromiseMeSpeedJS/blob/master/README.md)
 - [Promise polyfill](https://github.com/jakearchibald/es6-promise/)

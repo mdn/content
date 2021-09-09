@@ -146,7 +146,7 @@ tags:
 <ul>
  <li>Added FLAC support (<a href="https://xiph.org/flac/index.html">FLAC codec</a>) in both FLAC and Ogg containers ({{bug(1195723)}}). Supported FLAC MIME types are: <code>audio/flac</code> and <code>audio/x-flac</code>. For FLAC in Ogg, supported MIME types are: <code>audio/ogg; codecs=flac</code>, and <code>video/ogg; codecs=flac</code>.</li>
  <li>Added support for FLAC in MP4 (both with and without MSE) ({{bug(1303888)}}).</li>
- <li>Throttling in background tabs of timers created by {{domxref("WindowOrWorkerGlobalScope/setInterval", "Window.setInterval()")}} and {{domxref("WindowOrWorkerGlobalScope/setTimeout", "Window.setTimeout()")}} was changed in Firefox 50 to no longer occur if a <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> {{domxref("AudioContext")}} is actively playing sound. However, this didn't resolve all scenarios in which timing-sensitive audio playback (such as music players generating individual notes using timers) could fail to work properly. For that reason, Firefox 51 no longer throttles background tabs which have an {{domxref("AudioContext")}}, even if it's not currently playing sound.</li>
+ <li>Throttling in background tabs of timers created by {{domxref("setInterval()")}} and {{domxref("setTimeout()")}} was changed in Firefox 50 to no longer occur if a <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> {{domxref("AudioContext")}} is actively playing sound. However, this didn't resolve all scenarios in which timing-sensitive audio playback (such as music players generating individual notes using timers) could fail to work properly. For that reason, Firefox 51 no longer throttles background tabs which have an {{domxref("AudioContext")}}, even if it's not currently playing sound.</li>
 </ul>
 
 <h3 id="DOM">DOM</h3>
@@ -221,12 +221,6 @@ tags:
  </li>
  <li>If an add-on uses<code> mimeTypes.rdf</code> to provide a file extension to MIME type mapping, it must now register an entry in the <code>"ext-to-type-mapping"</code> category ({{bug(306471)}}).</li>
  <li>The <a href="/en-US/docs/Mozilla/Gecko/Chrome/API/Browser_API">Browser API</a> now includes a <code>detail</code> object on the event object of the <code><a href="/en-US/docs/Web/Events/mozbrowserlocationchange">mozbrowserlocationchange</a></code> event that contains <code>canGoForward</code>/<code>canGoBack</code> properties, allowing retrieval of the mozBrowser's back/forward status synchronously ({{bug(1279635)}}).</li>
-</ul>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="https://www.fxsitecompat.com/en-US/versions/51">Site Compatibility for Firefox 51</a></li>
 </ul>
 
 <h2 id="Older_versions">Older versions</h2>

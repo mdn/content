@@ -20,7 +20,7 @@ tags:
 
 <p class="summary">Following on from the previous article, sometimes making complex UI controls that involve unsemantic HTML and dynamic JavaScript-updated content can be difficult. WAI-ARIA is a technology that can help with such problems by adding in further semantics that browsers and assistive technologies can recognize and use to let users know what is going on. Here we'll show how to use it at a basic level to improve accessibility.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -63,7 +63,7 @@ tags:
 <p><a href="https://www.w3.org/TR/wai-aria-1.1/">WAI-ARIA</a> (Web Accessibility Initiative - Accessible Rich Internet Applications) is a specification written by the W3C, defining a set of additional HTML attributes that can be applied to elements to provide additional semantics and improve accessibility wherever it is lacking. There are three main features defined in the spec:</p>
 
 <ul>
- <li><strong>Roles</strong> — These define what an element is or does. Many of these are so-called landmark roles, which largely duplicate the semantic value of HTML5 structural elements e.g. <code>role="navigation"</code> ({{htmlelement("nav")}}) or <code>role="complementary"</code> ({{htmlelement("aside")}}), but there are also others that describe different pages structures, such as <code>role="banner"</code>, <code>role="search"</code>, <code>role="tabgroup"</code>, <code>role="tab"</code>, etc., which are commonly found in UIs.</li>
+ <li><strong><a href="/en-US/docs/Web/accessibility/ARIA/roles">Roles</a></strong> — These define what an element is or does. Many of these are so-called landmark roles, which largely duplicate the semantic value of HTML5 structural elements e.g. <code>role="navigation"</code> ({{htmlelement("nav")}}) or <code>role="complementary"</code> ({{htmlelement("aside")}}), but there are also others that describe different pages structures, such as <code>role="banner"</code>, <code>role="search"</code>, <code>role="tabgroup"</code>, <code>role="tab"</code>, etc., which are commonly found in UIs.</li>
  <li><strong>Properties</strong> — These define properties of elements, which can be used to give them extra meaning or semantics. As an example, <code>aria-required="true"</code> specifies that a form input needs to be filled in order to be valid, whereas <code>aria-labelledby="label"</code> allows you to put an ID on an element, then reference it as being the label for anything else on the page, including multiple elements, which is not possible using <code>&lt;label for="input"&gt;</code>. As an example, you could use <code>aria-labelledby</code> to specify that a key description contained in a {{htmlelement("div")}} is the label for multiple table cells, or you could use it as an alternative to image alt text — specify existing information on the page as an image's alt text, rather than having to repeat it inside the <code>alt</code> attribute. You can see an example of this at <a href="/en-US/docs/Learn/Accessibility/HTML?document_saved=true#Text_alternatives">Text alternatives</a>.</li>
  <li><strong>States</strong> — Special properties that define the current conditions of elements, such as <code>aria-disabled="true"</code>, which specifies to a screenreader that a form input is currently disabled. States differ from properties in that properties don't change throughout the lifecycle of an app, whereas states can change, generally programmatically via JavaScript.</li>
 </ul>
@@ -71,7 +71,7 @@ tags:
 <p>An important point about WAI-ARIA attributes is that they don't affect anything about the web page, except for the information exposed by the browser's accessibility APIs (where screenreaders get their information from). WAI-ARIA doesn't affect webpage structure, the DOM, etc., although the attributes can be useful for selecting elements by CSS.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can find a useful list of all the ARIA roles and their uses, with links to futher information, in the WAI-ARIA spec — see <a href="https://www.w3.org/TR/wai-aria-1.1/#role_definitions">Definition of Roles</a>.</p>
+<p><strong>Note</strong>: You can find a useful list of all the ARIA roles and their uses, with links to futher information, in the WAI-ARIA spec — see <a href="https://www.w3.org/TR/wai-aria-1.1/#role_definitions">Definition of Roles</a> — on on this site — see <a href="/en-US/docs/Web/accessibility/ARIA/roles">ARIA roles</a>.</p>
 
 <p>The spec also contains a list of all the properties and states, with links to further information — see <a href="https://www.w3.org/TR/wai-aria-1.1/#state_prop_def">Definitions of States and Properties (all aria-* attributes)</a>.</p>
 </div>
@@ -105,7 +105,7 @@ tags:
 <p>We talked about some of the problems that prompted WAI-ARIA to be created earlier on, but essentially, there are four main areas that WAI-ARIA is useful in:</p>
 
 <ol>
- <li><strong>Signposts/Landmarks</strong>: ARIA's <code>role</code> attribute values can act as landmarks that either replicate the semantics of HTML5 elements (e.g. {{htmlelement("nav")}}), or go beyond HTML5 semantics to provide signposts to different functional areas, e.g <code>search</code>, <code>tabgroup</code>, <code>tab</code>, <code>listbox</code>, etc.</li>
+ <li><strong>Signposts/Landmarks</strong>: ARIA's <code><a href="/en-US/docs/Web/accessibility/ARIA/roles">role</a></code>  attribute values can act as landmarks that either replicate the semantics of HTML5 elements (e.g. {{htmlelement("nav")}}), or go beyond HTML5 semantics to provide signposts to different functional areas, e.g <code>search</code>, <code>tabgroup</code>, <code>tab</code>, <code>listbox</code>, etc.</li>
  <li><strong>Dynamic content updates</strong>: Screenreaders tend to have difficulty with reporting constantly changing content; with ARIA we can use <code>aria-live</code> to inform screenreader users when an area of content is updated, e.g. via <a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a>, or <a href="/en-US/docs/Web/API/Document_Object_Model">DOM APIs</a>.</li>
  <li><strong>Enhancing keyboard accessibility</strong>: There are built-in HTML elements that have native keyboard accessibility; when other elements are used along with JavaScript to simulate similar interactions, keyboard accessibility and screenreader reporting suffers as a result. Where this is unavoidable, WAI-ARIA provides a means to allow other elements to receive focus (using <code>tabindex</code>).</li>
  <li><strong>Accessibility of non-semantic controls</strong>: When a series of nested <code>&lt;div&gt;</code>s along with CSS/JavaScript is used to create a complex UI-feature, or a native control is greatly enhanced/changed via JavaScript, accessibility can suffer — screenreader users will find it difficult to work out what the feature does if there are no semantics or other clues. In these situations, ARIA can help to provide what's missing with a combination of roles like <code>button</code>, <code>listbox</code>, or <code>tabgroup</code>, and properties like <code>aria-required</code> or <code>aria-posinset</code> to provide further clues as to functionality.</li>
@@ -159,11 +159,11 @@ tags:
 
 <p>If you go to VoiceOver's landmarks menu (accessed using VoiceOver key + U and then using the cursor keys to cycle through the menu choices), you'll see that most of the elements are nicely listed so they can be accessed quickly.</p>
 
-<p><img alt="" src="landmarks-list.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="landmarks-list.png"></p>
 
 <p>However, we could do better here. the search form is a really important landmark that people will want to find, but it is not listed in the landmarks menu or treated like a notable landmark, beyond the actual input being called out as a search input (<code>&lt;input type="search"&gt;</code>). In addition, some older browsers (most notably IE8) don't recognize the semantics of the HTML5 elements.</p>
 
-<p>Let's improve it by the use of some ARIA features. First, we'll add some role attributes to our HTML structure. You can try taking a copy of our original files (see <a href="https://github.com/mdn/learning-area/blob/master/accessibility/aria/website-no-roles/index.html">index.html</a> and <a href="https://github.com/mdn/learning-area/blob/master/accessibility/aria/website-no-roles/style.css">style.css</a>), or navigating to our <a href="https://github.com/mdn/learning-area/tree/master/accessibility/aria/website-aria-roles">website-aria-roles</a> example (<a href="https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/">see it live</a>), which has a structure like this:</p>
+<p>Let's improve it by the use of some ARIA features. First, we'll add some <code><a href="/en-US/docs/Web/accessibility/ARIA/roles">role</a></code>  attributes to our HTML structure. You can try taking a copy of our original files (see <a href="https://github.com/mdn/learning-area/blob/master/accessibility/aria/website-no-roles/index.html">index.html</a> and <a href="https://github.com/mdn/learning-area/blob/master/accessibility/aria/website-no-roles/style.css">style.css</a>), or navigating to our <a href="https://github.com/mdn/learning-area/tree/master/accessibility/aria/website-aria-roles">website-aria-roles</a> example (<a href="https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/">see it live</a>), which has a structure like this:</p>
 
 <pre class="brush: html">&lt;header&gt;
   &lt;h1&gt;...&lt;/h1&gt;
@@ -212,7 +212,7 @@ tags:
   &lt;/blockquote&gt;
 &lt;/section&gt;</pre>
 
-<p>Our JavaScript loads a JSON file via <code><a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> containing a series of random quotes and their authors. Once that is done, we start up a <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">setInterval()</a></code> loop that loads a new random quote into the quote box every 10 seconds:</p>
+<p>Our JavaScript loads a JSON file via <code><a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> containing a series of random quotes and their authors. Once that is done, we start up a <code><a href="/en-US/docs/Web/API/setInterval">setInterval()</a></code> loop that loads a new random quote into the quote box every 10 seconds:</p>
 
 <pre class="brush: js">let intervalID = window.setInterval(showQuote, 10000);</pre>
 
@@ -279,7 +279,7 @@ tags:
 &lt;/div&gt;</pre>
 
 <ul>
- <li><code><a href="https://www.w3.org/TR/wai-aria-1.1/#alert">role="alert"</a></code> automatically turns the element it is applied to into a live region, so changes to it are read out; it also semantically identifies it as an alert message (important time/context sensitive information), and represents a better, more accessible way of delivering an alert to a user (modal dialogs like <code><a href="/en-US/docs/Web/API/Window/alert">alert()</a></code> calls have a number of accessibility problems; see <a href="https://webaim.org/techniques/javascript/other#popups">Popup Windows</a> by WebAIM).</li>
+ <li><code><a href="/en-US/docs/Web/accessibility/ARIA/roles/alert_role">role="alert"</a></code> automatically turns the element it is applied to into a live region, so changes to it are read out; it also semantically identifies it as an alert message (important time/context sensitive information), and represents a better, more accessible way of delivering an alert to a user (modal dialogs like <code><a href="/en-US/docs/Web/API/Window/alert">alert()</a></code> calls have a number of accessibility problems; see <a href="https://webaim.org/techniques/javascript/other#popups">Popup Windows</a> by WebAIM).</li>
  <li>An <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-relevant">aria-relevant</a></code> value of <code>all</code> instructs the screenreader to read out the contents of the error list when any changes are made to it — i.e. when errors are added or removed. This is useful because the user will want to know what errors are left, not just what has been added or removed from the list.</li>
 </ul>
 
@@ -338,7 +338,7 @@ tags:
 
 <p>But what about screenreaders? They still won't see the elements as buttons. If we test our <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html">fake-div-buttons.html</a> example in a screenreader, our fake buttons will be reported using phrases like "Click me!, group", which is obviously confusing.</p>
 
-<p>We can fix this using a WAI-ARIA role. Make a local copy of <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html">fake-div-buttons.html</a>, and add <code><a href="https://www.w3.org/TR/wai-aria-1.1/#button">role="button"</a></code> to each button <code>&lt;div&gt;</code>, for example:</p>
+<p>We can fix this using a WAI-ARIA role. Make a local copy of <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html">fake-div-buttons.html</a>, and add <code><a href="/en-US/docs/Web/accessibility/ARIA/roles/button_role">role="button"</a></code> to each button <code>&lt;div&gt;</code>, for example:</p>
 
 <pre>&lt;div data-message="This is from the first button" tabindex="0" role="button"&gt;Click me!&lt;/div&gt;</pre>
 

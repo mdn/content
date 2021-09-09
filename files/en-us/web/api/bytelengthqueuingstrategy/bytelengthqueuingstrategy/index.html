@@ -12,7 +12,7 @@ browser-compat: api.ByteLengthQueuingStrategy.ByteLengthQueuingStrategy
 ---
 <div>{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}</div>
 
-<p class="summary">The <strong><code>ByteLengthQueuingStrategy()</code></strong>
+<p>The <strong><code>ByteLengthQueuingStrategy()</code></strong>
   constructor creates and returns a <code>ByteLengthQueuingStrategy</code> object
   instance.</p>
 
@@ -41,7 +41,7 @@ browser-compat: api.ByteLengthQueuingStrategy.ByteLengthQueuingStrategy
 <h2 id="Examples">Examples</h2>
 
 <pre
-  class="brush: js line-numbers  language-js">const queuingStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1 });
+  class="brush: js ">const queuingStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1 });
 
 const readableStream = new ReadableStream({
   start(controller) {

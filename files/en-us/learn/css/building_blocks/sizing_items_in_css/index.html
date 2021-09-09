@@ -16,7 +16,7 @@ tags:
 
 <p>In the various lessons so far, you have come across a number of ways to size items on a web page using CSS. Understanding how big the different features in your design will be is important. So, in this lesson we will summarize the various ways elements get a size via CSS and define a few terms about sizing that will help you in the future.</p>
 
-<table class="learn-box standard-table">
+<table>
 	<tbody>
 		<tr>
 			<th scope="row">Prerequisites:</th>
@@ -83,7 +83,7 @@ tags:
 
 <p>As an example, if you were to set <code>width: 100%</code> on an image, and its intrinsic width was smaller than its container, the image would be forced to stretch and become larger, causing it to look pixelated.</p>
 
-<p>If you instead use <code>max-width: 100%</code>, and its intrinsic width was greater than its container, the image is able to become smaller than its container size, and will stop at 100% of its container size.</p>
+<p>If you instead use <code>max-width: 100%</code>, and its intrinsic width is smaller than its container, the image will not be forced to stretch and become larger, thus preventing pixelation.</p>
 
 <p>In the example below, we have used the same image three times. The first image has been given <code>width: 100%</code> and is in a container which is larger than it, therefore it stretches to the container width. The second image has <code>max-width: 100%</code> set on it and therefore does not stretch to fill the container. The third box contains the same image again, also with <code>max-width: 100%</code> set; in this case you can see how it has scaled down to fit into the box.</p>
 
@@ -92,7 +92,7 @@ tags:
 <p>This technique is used to make images <em>responsive</em>, so that when viewed on a smaller device they scale down appropriately. You should, however, not use this technique to load really large images and then scale them down in the browser. Images should be appropriately sized to be no larger than they need to be for the largest size they are displayed in the design. Downloading overly large images will cause your site to become slow, and it can cost users more money if they are on a metered connection.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: Find out more about <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">responsive image techniques</a>.</p>
+  <p><strong>Note:</strong> Find out more about <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">responsive image techniques</a>.</p>
 </div>
 
 <h2 id="Viewport_units">Viewport units</h2>
@@ -134,7 +134,7 @@ tags:
 	<li><a href="/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">Handling different text directions</a></li>
 	<li><a href="/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content">Overflowing content</a></li>
 	<li><a href="/en-US/docs/Learn/CSS/Building_blocks/Values_and_units">Values and units</a></li>
-	<li><a href="/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">Sizing items in CSS</a></li>
+	<li><strong>Sizing items in CSS</strong></li>
 	<li><a href="/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements">Images, media, and form elements</a></li>
 	<li><a href="/en-US/docs/Learn/CSS/Building_blocks/Styling_tables">Styling tables</a></li>
 	<li><a href="/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS">Debugging CSS</a></li>

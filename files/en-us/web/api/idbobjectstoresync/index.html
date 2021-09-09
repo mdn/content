@@ -11,14 +11,14 @@ tags:
 <p>{{ APIRef("IndexedDB") }}</p>
 
 <div class="warning">
-<p><strong>Important</strong>: The synchronous version of the IndexedDB API was originally intended for use only with <a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Web Workers</a>, and was eventually removed from the spec because its need was questionable. It may however be reintroduced in the future if there is enough demand from web developers.</p>
+<p><strong>Warning:</strong> The synchronous version of the IndexedDB API was originally intended for use only with <a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Web Workers</a>, and was eventually removed from the spec because its need was questionable. It may however be reintroduced in the future if there is enough demand from web developers.</p>
 </div>
 
-<p>The <code>IDBObjectStoreSync</code> interface of the <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a> provides synchronous access to an <a href="/en-US/docs/Web/API/IndexedDB_API#gloss_object_store">object store</a> of a database.</p>
+<p>The <code>IDBObjectStoreSync</code> interface of the <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a> provides synchronous access to an <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#object_store">object store</a> of a database.</p>
 
 <h2 id="Method_overview">Method overview</h2>
 
-<table class="standard-table">
+<table class="no-markdown">
  <tbody>
   <tr>
    <td><code>any <a href="#add">add</a> (in any value, in optional any key) raises (<a href="/en-US/docs/Web/API/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
@@ -49,7 +49,7 @@ tags:
 
 <h2 id="Attributes">Attributes</h2>
 
-<table class="standard-table">
+<table class="no-markdown">
  <thead>
   <tr>
    <th scope="col">Attribute</th>
@@ -59,22 +59,22 @@ tags:
  </thead>
  <tbody>
   <tr>
-   <td><code><a name="attr_indexNames">indexNames</a></code></td>
+   <td><code>indexNames</code></td>
    <td><code>readonly DOMStringList</code></td>
-   <td>A list of the names of the <a href="/en-US/docs/Web/API/IndexedDB_API#gloss_index">indexes</a> on this object store.</td>
+   <td>A list of the names of the <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#index">indexes</a> on this object store.</td>
   </tr>
   <tr>
-   <td><code><a name="attr_keyPath">keyPath</a></code></td>
+   <td><code>keyPath</code></td>
    <td><code>readonly DOMString</code></td>
-   <td>The <a href="/en-US/docs/Web/API/IndexedDB_API#gloss_key_path">key path</a> of this object store. If this attribute is set to null, then the application must provide a key for each modification operation.</td>
+   <td>The <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path">key path</a> of this object store. If this attribute is set to null, then the application must provide a key for each modification operation.</td>
   </tr>
   <tr>
-   <td><code><a name="attr_mode">mode</a></code></td>
+   <td><code>mode</code></td>
    <td><code>readonly unsigned short</code></td>
    <td>The mode for isolating access to the data in this object store. For possible values, see <a href="/en-US/docs/Web/API/IDBObjectStoreSync#constants">Constants</a>.</td>
   </tr>
   <tr>
-   <td><code><a name="attr_name">name</a></code></td>
+   <td><code>name</code></td>
    <td><code>readonly DOMString</code></td>
    <td>The name of this object store.</td>
   </tr>
@@ -85,7 +85,7 @@ tags:
 
 <h3 id="Mode_constants">Mode constants</h3>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">Constant</th>
@@ -95,17 +95,17 @@ tags:
  </thead>
  <tbody>
   <tr>
-   <td><code><a name="const_read_only">READ_ONLY</a></code></td>
+   <td><code>READ_ONLY</code></td>
    <td>1</td>
    <td>Modification operations are not allowed on this object store.</td>
   </tr>
   <tr>
-   <td><code><a name="const_read_write">READ_WRITE</a></code></td>
+   <td><code>READ_WRITE</code></td>
    <td>0</td>
    <td>Modification operations are allowed on this object store.</td>
   </tr>
   <tr>
-   <td><code><a name="const_snapshot_read">SNAPSHOT_READ</a></code></td>
+   <td><code>SNAPSHOT_READ</code></td>
    <td>2</td>
    <td>Any read operations must access a snapshot view of the data, which cannot change once it is created.</td>
   </tr>
@@ -142,7 +142,7 @@ tags:
  <dt><code><a href="/en-US/docs/Web/API/IDBDatabaseException#constraint_err">CONSTRAINT_ERR</a></code></dt>
  <dd>If a record exists in this index with a key corresponding to the <em>key</em> parameter or the index is auto-populated, or if no record exists with a key corresponding to the <em>value</em> parameter in the index's referenced object store.</dd>
  <dt><code><a href="/en-US/docs/Web/API/IDBDatabaseException#data_err">DATA_ERR</a></code></dt>
- <dd>If this object store uses <a href="/en-US/docs/Web/API/IndexedDB_API#gloss_out-of-line_key">out-of-line keys</a>, and the <em>key</em> parameter was not passed.</dd>
+ <dd>If this object store uses <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#out-of-line_key">out-of-line keys</a>, and the <em>key</em> parameter was not passed.</dd>
  <dt><code><a href="/en-US/docs/Web/API/IDBDatabaseException#serial_err">SERIAL_ERR</a></code></dt>
  <dd>If the data being stored could not be serialized by the internal structured cloning algorithm.</dd>
 </dl>
@@ -212,7 +212,7 @@ tags:
 
 <h3 id="openCursor()">openCursor()</h3>
 
-<p>Creates a <a href="/en-US/docs/Web/API/IndexedDB_API#gloss_cursor">cursor</a> over the records of this object store. The range of the new cursor matches the specified <a href="/en-US/docs/Web/API/IndexedDB_API#gloss_key_range">key range</a>; if the key range is not specified or is null, then the range includes all the records.</p>
+<p>Creates a <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#cursor">cursor</a> over the records of this object store. The range of the new cursor matches the specified <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_range">key range</a>; if the key range is not specified or is null, then the range includes all the records.</p>
 
 <pre>CursorSync openCursor (
   in optional KeyRange range,
@@ -311,7 +311,7 @@ tags:
  <dt><code><a href="/en-US/docs/Web/API/IDBDatabaseException#constraint_err">CONSTRAINT_ERR</a></code></dt>
  <dd>If noOverwrite was true, and a record exists in this index for the given key or this index is auto-populated; or if no record exists with the given key in the index's referenced object store.</dd>
  <dt><code><a href="/en-US/docs/Web/API/IDBDatabaseException#data_err">DATA_ERR</a></code></dt>
- <dd>If this object store uses <a href="/en-US/docs/Web/API/IndexedDB_API#gloss_out-of-line_key">out-of-line</a> keys and no <a href="/en-US/docs/Web/API/IndexedDB_API#gloss_key_generator">key generator</a>, but no key was given.</dd>
+ <dd>If this object store uses <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#out-of-line_key">out-of-line</a> keys and no <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_generator">key generator</a>, but no key was given.</dd>
  <dt><code><a href="/en-US/docs/Web/API/IDBDatabaseException#serial_err">SERIAL_ERR</a></code></dt>
  <dd>If the data being stored could not be serialized by the internal structured cloning algorithm.</dd>
 </dl>

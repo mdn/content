@@ -21,7 +21,7 @@ browser-compat: api.CSSImportRule
 <dl>
   <dt>{{domxref("CSSImportRule.href")}}{{readonlyinline}}</dt>
   <dd>Returns the url specified by the {{cssxref("@import")}} rule.</dd>
-  <dt>{{domxref("CSSImportRule.media")}}{{readonlyinline}}</dt>
+  <dt>{{domxref("CSSImportRule.media")}}</dt>
   <dd>Returns the value of the <code>media</code> attribute of the associated stylesheet.</dd>
   <dt>{{domxref("CSSImportRule.stylesheet")}}{{readonlyinline}}</dt>
   <dd>Returns the associated stylesheet.</dd>
@@ -37,7 +37,7 @@ browser-compat: api.CSSImportRule
 
 <pre class="brush:css">@import url("style.css") screen;</pre>
 
-<pre class="brush:javascript">let myRules = document.styleSheets[0].cssRules;
+<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
 console.log(myRules[0]); //a CSSImportRule</pre>
 
 <h2 id="Specifications">Specifications</h2>

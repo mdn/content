@@ -48,7 +48,7 @@ browser-compat: api.Request.Request
         <code>POST</code>. The default is <code>GET</code>.</li>
       <li><code>headers</code>: Any headers you want to add to your request, contained
         within a {{domxref("Headers")}} object or an object literal with
-        {{domxref("ByteString")}} values.</li>
+        {{jsxref("String")}} values.</li>
       <li><code>body</code>: Any body that you want to add to your request: this can be a
         {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}},
         {{domxref("URLSearchParams")}}, {{domxref("USVString")}}, or
@@ -78,7 +78,7 @@ browser-compat: api.Request.Request
 
 <h2 id="Errors">Errors</h2>
 
-<table class="standard-table">
+<table class="no-markdown">
   <thead>
     <tr>
       <th scope="col">Type</th>
@@ -101,7 +101,7 @@ browser-compat: api.Request.Request
     Request example</a> (see <a
     href="https://mdn.github.io/fetch-examples/fetch-request/">Fetch Request live</a>) we
   create a new <code>Request</code> object using the constructor, then fetch it using a
-  {{domxref("WindowOrWorkerGlobalScope.fetch")}} call. Since we are fetching an image, we run
+  {{domxref("fetch()")}} call. Since we are fetching an image, we run
   {{domxref("Response.blob")}} on the response to give it the proper MIME type so it will be
   handled properly, then create an Object URL of it and display it in an
   {{htmlelement("img")}} element.</p>
@@ -166,7 +166,7 @@ var myRequest = new Request('flowers.jpg', myInit);
 <pre class="brush: js">var copy = new Request(myRequest);</pre>
 
 <div class="note">
-  <p><strong>Note</strong>: This last usage is probably only useful in <a
+  <p><strong>Note:</strong> This last usage is probably only useful in <a
       href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorkers</a>.</p>
 </div>
 

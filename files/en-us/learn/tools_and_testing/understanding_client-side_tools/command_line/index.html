@@ -17,7 +17,7 @@ tags:
 
 <p class="summary">In your development process you'll undoubtedly be required to run some command in the terminal (or on the "command line" — these are effectively the same thing). This article provides an introduction to the terminal, the essential commands you'll need to enter into it, how to chain commands together, and how to add your own command line interface (CLI) tools.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -56,11 +56,11 @@ tags:
 
 <p>The next images show the command prompts available in Windows — there’s a good range of options from the "cmd" program to "powershell" — which can be run from the start menu by typing the program name.</p>
 
-<p><img alt="A vanilla windows cmd line window, and a windows powershell window" src="win-terminals.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="A vanilla windows cmd line window, and a windows powershell window" src="win-terminals.png"></p>
 
 <p>And below, you can see the macOS terminal application.</p>
 
-<p><img alt="A basic vanilla mac terminal" src="mac-terminal.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="A basic vanilla mac terminal" src="mac-terminal.png"></p>
 
 <h3 id="How_do_you_access_the_terminal">How do you access the terminal?</h3>
 
@@ -88,7 +88,7 @@ tags:
 
 <p>This can be installed directly from the Windows store for free. You can find all the documentation you need in the <a href="https://docs.microsoft.com/en-us/windows/wsl">Windows Subsystem for Linux Documentation</a>.</p>
 
-<p><img alt="a screenshot of the windows subsystem for linux documentation" src="wsl.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="a screenshot of the windows subsystem for linux documentation" src="wsl.png"></p>
 
 <p>In terms of what option to choose on Windows, we’d strongly recommend trying to install the WSL. You could stick with the default command prompt (<code>cmd</code>), and many tools will work OK, but you’ll find everything easier if you have better parity with Unix tools.</p>
 
@@ -135,7 +135,7 @@ tags:
 
 <p>To change directory, you type <code>cd</code> into your terminal, followed by the directory you want to move to. Assuming the directory is inside your home directory, you can use <code>cd Desktop</code> (see the screenshots below).</p>
 
-<p><img alt="results of the cd Desktop command being run in a variety of windows terminals - the terminal location moves into the desktop" src="win-terminals-cd.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="results of the cd Desktop command being run in a variety of windows terminals - the terminal location moves into the desktop" src="win-terminals-cd.png"></p>
 
 <p>Try typing this into your system's terminal:</p>
 
@@ -189,7 +189,7 @@ cd src</pre>
 
 <p>Below is a screenshot with a “vanilla” macOS terminal at the top, and a customised terminal with some extra icons and colors to keep it looking lively — both showing the results of running <code>ls -l</code>:</p>
 
-<p><img alt="A vanilla mac terminal and a more colorful custom mac terminal, showing a file listing - the result of running the ls -l command" src="mac-terminals-ls.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="A vanilla mac terminal and a more colorful custom mac terminal, showing a file listing - the result of running the ls -l command" src="mac-terminals-ls.png"></p>
 
 <div class="notecard note">
 <p><strong>Note</strong>: To find out exactly what options each command has available, you can look at its <a href="https://en.wikipedia.org/wiki/Man_page">man page</a>. This is done by typing the <code>man</code> command, followed by the name of the command you want to look up, for example <code>man ls</code>. This will open up the man page in the terminal’s default text file viewer (for example, <code><a href="https://en.wikipedia.org/wiki/Less_(Unix)">less</a></code> in my terminal), and you should then be able to scroll through the page using the arrow keys, or some similar mechanism. The man page lists all the options in great detail, which may be a bit intimidating to begin with, but at least you know it’s there if you need it. Once you are finished looking through the man page, you need to quit out of it using your text viewer’s quit command ("q" in <code>less</code>; you may have to search on the web to find it if it isn’t obvious).</p>
@@ -261,9 +261,9 @@ cd src</pre>
 
 <h2 id="A_slightly_more_complex_example">A slightly more complex example</h2>
 
-<p>Let’s go through something a bit more complicated. We will first try to fetch the contents of MDN's "fetch" page using the <code>curl</code> command (which can be used to request content from URLs), from <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">https://developer.mozilla.org/en-US/docs/Web/API/fetch</a>.</p>
+<p>Let’s go through something a bit more complicated. We will first try to fetch the contents of MDN's "fetch" page using the <code>curl</code> command (which can be used to request content from URLs), from <a href="/en-US/docs/Web/API/fetch">https://developer.mozilla.org/en-US/docs/Web/API/fetch</a>.</p>
 
-<p>However, this URL is the old location of the page. If you enter it in a new browser tab, you’ll (eventually) get redirected to <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch</a>.</p>
+<p>However, this URL is the old location of the page. If you enter it in a new browser tab, you’ll (eventually) get redirected to <a href="/en-US/docs/Web/API/fetch">https://developer.mozilla.org/en-US/docs/Web/API/fetch</a>.</p>
 
 <p>Therefore, if you use curl to request https://developer.mozilla.org/docs/Web/API/fetch, you won’t get an output. Try it now:</p>
 
@@ -282,7 +282,7 @@ cd src</pre>
 <pre class="brush: bash">location: /en-US/docs/Web/API/fetch
 location: /en-US/docs/Web/API/GlobalFetch/GlobalFetch.fetch()
 location: /en-US/docs/Web/API/GlobalFetch/fetch
-location: /en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch</pre>
+location: /en-US/docs/Web/API/fetch</pre>
 
 <p>Although contrived, we could take this result a little further and transform the <code>location:</code> line contents, adding the base origin to the start of each one so that we get complete URLs printed out. For that, we'll add <code>awk</code> to the mix (which is a programming language akin to JavaScript or Ruby or Python, just a lot older!).</p>
 
@@ -295,7 +295,7 @@ location: /en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch</pre>
 <pre class="brush: bash">https://developer.mozilla.org/en-US/docs/Web/API/fetch
 https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/GlobalFetch.fetch()
 https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch
-https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch</pre>
+https://developer.mozilla.org/en-US/docs/Web/API/fetch</pre>
 
 <p>By combining these commands we've customised the output to show the full URLs that the Mozilla server is redirecting through when we request the <code>/docs/Web/API/fetch</code> URL.<br>
  Getting to know your system will prove useful in years to come — learn how these single serving tools work and how they can become part of your arsenal to solve niche problems.</p>
@@ -310,7 +310,7 @@ https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch
 
 <p>Install npm on your system now, by going to the URL above and downloading and running a Node.js installer appropriate to your operating system. If prompted, make sure to include npm as part of the installation.</p>
 
-<p><img alt="the node.js installer on windows, showing the option to include npm" src="npm-install-option.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="the node.js installer on windows, showing the option to include npm" src="npm-install-option.png"></p>
 
 <p>Although we'll look at a number of different tools in the next article onwards, we'll cut our teeth on <a href="https://prettier.io/">Prettier</a>. Prettier is an opinionated code formatter that has "few options". Fewer options tends to mean simpler. Given how tooling can sometimes get out of hand in terms of complexity, "few options" can be very appealing.</p>
 

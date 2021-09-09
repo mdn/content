@@ -12,7 +12,7 @@ browser-compat: api.CanvasRenderingContext2D.arcTo
 <div>{{APIRef}}</div>
 
 <p>The
-  <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.arcTo()</code></strong>
+  <strong><code>CanvasRenderingContext2D.arcTo()</code></strong>
   method of the Canvas 2D API adds a circular arc to the current sub-path, using the given
   control points and radius. The arc is automatically connected to the path's latest point
   with a straight line, if necessary for the specified parameters.</p>
@@ -61,7 +61,7 @@ browser-compat: api.CanvasRenderingContext2D.arcTo
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js; highlight:[17]">const canvas = document.getElementById('canvas');
+<pre class="brush: js;">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Tangential lines
@@ -119,7 +119,7 @@ ctx.fill();
   that the arc's second control point and the point specified by <code>lineTo()</code> are
   the same, which produces a totally smooth corner.</p>
 
-<pre class="brush: js; highlight:[14]">const canvas = document.getElementById('canvas');
+<pre class="brush: js;">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const p0 = { x: 230, y: 20  }
 const p1 = { x: 90,  y: 130 }
@@ -160,7 +160,7 @@ ctx.stroke();
 
 <h4 id="JavaScript_3">JavaScript</h4>
 
-<pre class="brush: js; highlight:[6]">const canvas = document.getElementById('canvas');
+<pre class="brush: js;">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.beginPath();

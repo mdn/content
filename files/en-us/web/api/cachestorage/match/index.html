@@ -15,22 +15,22 @@ browser-compat: api.CacheStorage.match
 ---
 <p>{{APIRef("Service Workers API")}}</p>
 
-<p><span class="seoSummary">The <strong><code>match()</code></strong> method of the
+<p>The <strong><code>match()</code></strong> method of the
     {{domxref("CacheStorage")}} interface checks if a given {{domxref("Request")}} or url
     string is a key for a stored {{domxref("Response")}}. This method returns a
     {{jsxref("Promise")}} for a {{domxref("Response")}}, or a {{jsxref("Promise")}} which
-    resolves to <code>undefined</code> if no match is found.</span></p>
+    resolves to <code>undefined</code> if no match is found.</p>
 
 <p>You can access <code>CacheStorage</code> through the global
-  {{domxref("WindowOrWorkerGlobalScope.caches", "caches")}} property.</p>
+  {{domxref("caches")}} property.</p>
 
 <p><code>Cache</code> objects are searched in creation order.</p>
 
-<div class="note"><strong>Note</strong>: {{domxref("CacheStorage.match()",
+<div class="note"><p><strong>Note:</strong> {{domxref("CacheStorage.match()",
   "caches.match()")}} is a convenience method. Equivalent functionality is to call
   {{domxref("cache.match()")}} on each cache (in the order returned by
   {{domxref("CacheStorage.keys()", "caches.keys()")}}) until a {{domxref("Response")}} is
-  returned.</div>
+  returned.</p></div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -132,5 +132,5 @@ browser-compat: api.CacheStorage.match
   <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service
       Workers</a></li>
   <li>{{domxref("Cache")}}</li>
-  <li>{{domxref("WindowOrWorkerGlobalScope.caches")}}</li>
+  <li>{{domxref("caches")}}</li>
 </ul>

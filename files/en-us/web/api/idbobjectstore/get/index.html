@@ -25,8 +25,7 @@ browser-compat: api.IDBObjectStore.get
   request object.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>This method produces the same result for: a) a record that doesn't exist in the database and b) a record that has an undefined value.
+  <p><strong>Note:</strong> This method produces the same result for: a) a record that doesn't exist in the database and b) a record that has an undefined value.
     To tell these situations apart, call the <code>openCursor()</code> method with the same key. That method provides a cursor if the record exists, and no cursor if it does not.</p>
 </div>
 
@@ -67,9 +66,7 @@ browser-compat: api.IDBObjectStore.get
     </tr>
     <tr>
       <td><code>DataError</code></td>
-      <td>
-        <p>The key or key range provided contains an invalid key.</p>
-      </td>
+      <td>The key or key range provided contains an invalid key.</td>
     </tr>
     <tr>
       <td><code>InvalidStateError</code></td>

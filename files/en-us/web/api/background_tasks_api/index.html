@@ -38,7 +38,7 @@ tags:
 
 <h3 id="Falling_back_to_setTimeout">Falling back to setTimeout</h3>
 
-<p>Because the Background Tasks API is fairly new, your code may need to be able to work on browsers that don't yet support it. You can do so with a simple shim that uses {{domxref("WindowOrWorkerGlobalScope/setTimeout", "setTimeout()")}} as a fallback option. This isn't a {{Glossary("polyfill")}}, since it's not functionally identical; <code>setTimeout()</code> doesn't let you make use of idle periods, but instead runs your code when possible, leaving us to do the best we can to avoid causing the user to experience performance lag.</p>
+<p>Because the Background Tasks API is fairly new, your code may need to be able to work on browsers that don't yet support it. You can do so with a simple shim that uses {{domxref("setTimeout()")}} as a fallback option. This isn't a {{Glossary("polyfill")}}, since it's not functionally identical; <code>setTimeout()</code> doesn't let you make use of idle periods, but instead runs your code when possible, leaving us to do the best we can to avoid causing the user to experience performance lag.</p>
 
 <pre class="brush: js">window.requestIdleCallback = window.requestIdleCallback || function(handler) {
   let startTime = Date.now();
@@ -55,7 +55,7 @@ tags:
 
 <p>If {{domxref("Window.requestIdleCallback", "window.requestIdleCallback")}} is undefined, we create it here. The function begins by recording the time at which our implementation was called. We'll be using that to compute the value returned by our shim for {{domxref("IdleDeadline.timeRemaining()", "timeRemaining()")}}.</p>
 
-<p>Then we call {{domxref("WindowOrWorkerGlobalScope/setTimeout", "setTimeout()")}}, passing into it a function which runs the callback passed into our implementation of <code>requestIdleCallback()</code>. The callback is passed an object which conforms to {{domxref("IdleDeadline")}}, with {{domxref("IdleDeadline.didTimeout", "didTimeout")}} set to <code>false</code> and a {{domxref("IdleDeadline.timeRemaining", "timeRemaining()")}} method which is implemented to give the callback 50 milliseconds of time to begin with. Each time <code>timeRemaining()</code> is called, it subtracts the elapsed time from the original 50 milliseconds to determine the amount of time left.</p>
+<p>Then we call {{domxref("setTimeout()")}}, passing into it a function which runs the callback passed into our implementation of <code>requestIdleCallback()</code>. The callback is passed an object which conforms to {{domxref("IdleDeadline")}}, with {{domxref("IdleDeadline.didTimeout", "didTimeout")}} set to <code>false</code> and a {{domxref("IdleDeadline.timeRemaining", "timeRemaining()")}} method which is implemented to give the callback 50 milliseconds of time to begin with. Each time <code>timeRemaining()</code> is called, it subtracts the elapsed time from the original 50 milliseconds to determine the amount of time left.</p>
 
 <p>As a result, while our shim doesn't constrain itself to the amount of idle time left in the current event loop pass like the true <code>requestIdleCallback()</code>, it does at least limit the callback to no more than 50 milliseconds of run time per pass.</p>
 
@@ -65,7 +65,7 @@ tags:
   clearTimeout(id);
 }</pre>
 
-<p>If <code>cancelIdleCallback()</code> isn't defined, this creates one which passes the specified callback ID through to {{domxref("WindowOrWorkerGlobalScope/clearTimeout", "clearTimeout()")}}.</p>
+<p>If <code>cancelIdleCallback()</code> isn't defined, this creates one which passes the specified callback ID through to {{domxref("clearTimeout()")}}.</p>
 
 <p>Now your code will work even on browsers that don't support the Background Tasks API, albeit not as efficiently.</p>
 
@@ -117,10 +117,7 @@ tags:
 
 <p>The progress box uses a {{HTMLElement("progress")}} element to show the progress, along with a label with sections that are changed to present numeric information about the progress. In addition, there's a "Start" button (creatively given the ID "startButton"), which the user will use to start the data processing.</p>
 
-<div class="hidden">
-<h3 id="CSS_content">CSS content</h3>
-
-<pre class="brush: css">body {
+<pre class="brush: css hidden">body {
   font-family: "Open Sans", "Lucida Grande", "Arial", sans-serif;
   font-size: 16px;
 }
@@ -190,7 +187,6 @@ tags:
   width: 100%;
   padding-top: 6px;
 }</pre>
-</div>
 
 <h3 id="JavaScript_content">JavaScript content</h3>
 
@@ -241,10 +237,7 @@ let statusRefreshScheduled = false;
  <li><code>statusRefreshScheduled</code> is used to track whether or not we've already scheduled an update of the status display box for the upcoming frame, so that we only do it once per frame</li>
 </ul>
 
-<div class="hidden">
-<p>The shim to function even if idle callbacks aren't supported. Already discussed above, so it's hidden here to save space in the article.</p>
-
-<pre class="brush: js">window.requestIdleCallback = window.requestIdleCallback || function(handler) {
+<pre class="brush: js hidden">window.requestIdleCallback = window.requestIdleCallback || function(handler) {
   let startTime = Date.now();
 
   return setTimeout(function() {
@@ -261,7 +254,6 @@ window.cancelIdleCallback = window.cancelIdleCallback || function(id) {
   clearTimeout(id);
 };
 </pre>
-</div>
 
 <h4 id="Managing_the_task_queue">Managing the task queue</h4>
 
@@ -434,16 +426,12 @@ window.cancelIdleCallback = window.cancelIdleCallback || function(id) {
 
 <p>Everything is triggered when the user clicks the Start button, which causes the <code>decodeTechnoStuff()</code> function to be called.</p>
 
-<div class="hidden">
-<p>The <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random?document_saved=true#Getting_a_random_integer_between_two_values_inclusive">getRandomIntInclusive()</a></code> method comes from the examples for {{jsxref("Math.random()")}}; we'll just link to it below but it needs to be included here for the example to work.</p>
-
-<pre class="brush: js">function getRandomIntInclusive(min, max) {
+<pre class="brush: js hidden">function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 </pre>
-</div>
 
 <pre class="brush: js">function decodeTechnoStuff() {
   totalTaskCount = 0;

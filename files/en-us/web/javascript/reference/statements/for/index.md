@@ -39,9 +39,9 @@ for ([initialization]; [condition]; [final-expression])
 
 - `condition`
   - : An expression to be evaluated before each loop iteration. If this expression
-    evaluates to true, `statement` is executed. This conditional
+    [evaluates to true](/en-US/docs/Glossary/Truthy), `statement` is executed. This conditional
     test is optional. If omitted, the condition always evaluates to true. If the
-    expression evaluates to false, execution skips to the first expression following the
+    expression [evaluates to false](/en-US/docs/Glossary/Falsy), execution skips to the first expression following the
     `for` construct.
 - `final-expression`
   - : An expression to be evaluated at the end of each loop iteration. This occurs before

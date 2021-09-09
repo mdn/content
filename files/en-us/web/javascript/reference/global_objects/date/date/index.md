@@ -96,8 +96,7 @@ There are four basic forms for the `Date()` constructor:
     - `day` {{optional_inline}}
       - : Integer value representing the day of the month. The default is `1`.
     - `hours` {{optional_inline}}
-      - : Integer value representing the hour of the day. The default is `0`
-        (midnight).
+      - : Integer value between `0` and `23` representing the hour of the day. Defaults to `0`.
     - `minutes` {{optional_inline}}
       - : Integer value representing the minute segment of a time. The default is
         `0` minutes past the hour.
@@ -126,10 +125,10 @@ The following examples show several ways to create JavaScript dates:
 
 ```js
 let today = new Date()
-let birthday = new Date('December 17, 1995 03:24:00')
-let birthday = new Date('1995-12-17T03:24:00')
+let birthday = new Date('December 17, 1995 13:24:00')
+let birthday = new Date('1995-12-17T13:24:00')
 let birthday = new Date(1995, 11, 17)            // the month is 0-indexed
-let birthday = new Date(1995, 11, 17, 3, 24, 0)
+let birthday = new Date(1995, 11, 17, 13, 24, 0)
 ```
 
 ## Specifications

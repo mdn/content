@@ -12,7 +12,7 @@ browser-compat: api.CanvasRenderingContext2D.closePath
 <div>{{APIRef}}</div>
 
 <p>The
-  <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.closePath()</code></strong>
+  <strong><code>CanvasRenderingContext2D.closePath()</code></strong>
   method of the Canvas 2D API attempts to add a straight line from the current point to
   the start of the current sub-path. If the shape has already been closed or has only one
   point, this function does nothing.</p>
@@ -44,7 +44,7 @@ browser-compat: api.CanvasRenderingContext2D.closePath
 
 <p>The triangle's corners are at (20, 140), (120, 10), and (220, 140).</p>
 
-<pre class="brush: js highlight:[8]">const canvas = document.getElementById('canvas');
+<pre class="brush: js">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.beginPath();
@@ -64,7 +64,7 @@ ctx.stroke();
 <p>This example draws a smiley face consisting of three disconnected sub-paths.</p>
 
 <div class="notecard note">
-  <p>Note: Although <code>closePath()</code> is called after all the arcs have been
+  <p><strong>Note:</strong> Although <code>closePath()</code> is called after all the arcs have been
     created, only the last arc (sub-path) gets closed.</p>
 </div>
 
@@ -77,7 +77,7 @@ ctx.stroke();
 
 <p>The first two arcs create the face's eyes. The last arc creates the mouth.</p>
 
-<pre class="brush: js highlight:[10]">const canvas = document.getElementById('canvas');
+<pre class="brush: js">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.beginPath();

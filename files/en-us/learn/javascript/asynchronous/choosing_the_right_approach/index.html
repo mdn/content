@@ -22,7 +22,7 @@ tags:
 
 <p>To finish this module off, we'll provide a brief discussion of the different coding techniques and features we've discussed throughout, looking at which one you should use when, with recommendations and reminders of common pitfalls where appropriate. We'll probably add to this resource as time goes on.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -107,7 +107,7 @@ loadAsset('coffee.jpg', 'blob', displayImage);</pre>
 
 <h2 id="setTimeout">setTimeout()</h2>
 
-<p><code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout()</a></code> is a method that allows you to run a function after an arbitrary amount of time has passed.</p>
+<p><code><a href="/en-US/docs/Web/API/setTimeout">setTimeout()</a></code> is a method that allows you to run a function after an arbitrary amount of time has passed.</p>
 
 <table class="standard-table">
  <caption>Useful for...</caption>
@@ -158,18 +158,18 @@ setTimeout(function run() {
 
 <h3 id="Browser_compatibility_2">Browser compatibility</h3>
 
-<p>{{Compat("api.WindowOrWorkerGlobalScope.setTimeout")}}</p>
+<p>{{Compat("api.setTimeout")}}</p>
 
 <h3 id="Further_information_2">Further information</h3>
 
 <ul>
  <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals">Cooperative asynchronous JavaScript: Timeouts and intervals</a>, in particular <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals#settimeout()">setTimeout()</a></li>
- <li><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout() reference</a></li>
+ <li><a href="/en-US/docs/Web/API/setTimeout">setTimeout() reference</a></li>
 </ul>
 
 <h2 id="setInterval">setInterval()</h2>
 
-<p><code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">setInterval()</a></code> is a method that allows you to run a function repeatedly with a set interval of time between each execution. Not as efficient as <code><a href="/en-US/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame()</a></code>, but allows you to choose a running rate/frame rate.</p>
+<p><code><a href="/en-US/docs/Web/API/setInterval">setInterval()</a></code> is a method that allows you to run a function repeatedly with a set interval of time between each execution. Not as efficient as <code><a href="/en-US/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame()</a></code>, but allows you to choose a running rate/frame rate.</p>
 
 <table class="standard-table">
  <caption>Useful for...</caption>
@@ -209,13 +209,13 @@ const createClock = setInterval(displayTime, 1000);</pre>
 
 <h3 id="Browser_compatibility_3">Browser compatibility</h3>
 
-<p>{{Compat("api.WindowOrWorkerGlobalScope.setInterval")}}</p>
+<p>{{Compat("api.setInterval")}}</p>
 
 <h3 id="Further_information_3">Further information</h3>
 
 <ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals">Cooperative asynchronous JavaScript: Timeouts and intervals</a>, in particular <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">setInterval()</a></li>
- <li><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">setInterval() reference</a></li>
+ <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals">Cooperative asynchronous JavaScript: Timeouts and intervals</a>, in particular <a href="/en-US/docs/Web/API/setInterval">setInterval()</a></li>
+ <li><a href="/en-US/docs/Web/API/setInterval">setInterval() reference</a></li>
 </ul>
 
 <h2 id="requestAnimationFrame">requestAnimationFrame()</h2>

@@ -19,7 +19,7 @@ tags:
 
 <p class="summary">At this point we'll start adding some interactivity to our app, providing the ability to add and display new todo items. Along the way, we'll look at using events in Ember, creating component classes to contain JavaScript code to control interactive features, and setting up a service to keep track of the data state of our app.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -191,7 +191,7 @@ export default class TodoDataService extends Service {
 
 <p>If we try this out in the todo app in our browser (<code>npm start</code>, go to <code>localhost:4200</code>), it will look like nothing happens after hitting the <kbd>Enter</kbd> key (although the fact that the app builds without any errors is a good sign). Using the <a href="https://guides.emberjs.com/release/ember-inspector/installation/">Ember Inspector</a> however, we can see that our todo was added:</p>
 
-<p><img alt="The app being shown in the ember inspector, to prove that added todos are being stored by the service, even if they are not being displayed in the UI yet" src="todos-in-ember-inspector.gif" style="border-style: solid; border-width: 1px;"></p>
+<p><img alt="The app being shown in the ember inspector, to prove that added todos are being stored by the service, even if they are not being displayed in the UI yet" src="todos-in-ember-inspector.gif"></p>
 
 <h2 id="Displaying_our_todos">Displaying our todos</h2>
 
@@ -251,7 +251,7 @@ export default class TodoListComponent extends Component {
 
 <p>OK, try it again. You should find that now the text submitted in the <code>&lt;input&gt;</code> is properly reflected in the UI:</p>
 
-<p><img alt="The app being shown in its final state of this article, with entered todo items being shown in the UI" src="todos-being-appended-with-correct-text.gif" style="border-style: solid; border-width: 1px;"></p>
+<p><img alt="The app being shown in its final state of this article, with entered todo items being shown in the UI" src="todos-being-appended-with-correct-text.gif"></p>
 
 <h2 id="Summary">Summary</h2>
 

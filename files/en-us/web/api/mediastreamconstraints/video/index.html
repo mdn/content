@@ -58,19 +58,14 @@ browser-compat: api.MediaStreamConstraints.video
   <code>video</code> property. This tells <code>getUserMedia()</code> that we require a
   video track, but we don't care about any specifics beyond that.</p>
 
-<div class="hidden">
-  <h4 id="HTML_content">HTML content</h4>
-
-  <pre class="brush: html">&lt;p&gt;Click the start button below to begin the demonstration.&lt;/p&gt;
+<pre class="brush: html hidden">&lt;p&gt;Click the start button below to begin the demonstration.&lt;/p&gt;
 &lt;div id="startButton" class="button"&gt;
   Start
 &lt;/div&gt;
 &lt;video id="video" width="160" height="120" autoplay&gt;&lt;/video&gt;&lt;br&gt;
 &lt;div id="log"&gt;&lt;/div&gt;</pre>
 
-  <h4 id="CSS_content">CSS content</h4>
-
-  <pre class="brush: css">body {
+<pre class="brush: css hidden">body {
   font: 14px "Open Sans", "Arial", sans-serif;
 }
 
@@ -91,16 +86,13 @@ video {
   background-color: darkgreen;
 }</pre>
 
-  <h4 id="JavaScript_content">JavaScript content</h4>
-
-  <pre class="brush: js">let videoElement = document.getElementById("video");
+<pre class="brush: js hidden">let videoElement = document.getElementById("video");
 let logElement = document.getElementById("log");
 
 function log(msg) {
  logElement.innerHTML += msg + "&lt;br&gt;";
 }
 </pre>
-</div>
 
 <pre class="brush: js">document.getElementById("startButton").addEventListener("click", function() {
   navigator.mediaDevices.getUserMedia({
@@ -123,19 +115,14 @@ function log(msg) {
 <p>Now let's look at a similar example that uses a set of constraints based on the
   {{domxref("MediaTrackConstraints")}} dictionary:</p>
 
-<div class="hidden">
-  <h4 id="HTML_content_2">HTML content</h4>
-
-  <pre class="brush: html">&lt;p&gt;Click the start button below to begin the demonstration.&lt;/p&gt;
+<pre class="brush: html hidden">&lt;p&gt;Click the start button below to begin the demonstration.&lt;/p&gt;
 &lt;div id="startButton" class="button"&gt;
   Start
 &lt;/div&gt;
 &lt;video id="video" width="160" height="120" autoplay&gt;&lt;/video&gt;&lt;br&gt;
 &lt;div id="log"&gt;&lt;/div&gt;</pre>
 
-  <h4 id="CSS_content_2">CSS content</h4>
-
-  <pre class="brush: css">body {
+<pre class="brush: css hidden">body {
   font: 14px "Open Sans", "Arial", sans-serif;
 }
 
@@ -156,16 +143,13 @@ video {
   background-color: darkgreen;
 }</pre>
 
-  <h4 id="JavaScript_content_2">JavaScript content</h4>
-
-  <pre class="brush: js">let videoElement = document.getElementById("video");
+<pre class="brush: js hidden">let videoElement = document.getElementById("video");
 let logElement = document.getElementById("log");
 
 function log(msg) {
  logElement.innerHTML += msg + "&lt;br&gt;";
 }
 </pre>
-</div>
 
 <pre class="brush: js">document.getElementById("startButton").addEventListener("click", function() {
   navigator.mediaDevices.getUserMedia({

@@ -65,7 +65,7 @@ browser-compat: html.elements.canvas
 
 <h3 id="Alternative_content">Alternative content</h3>
 
-<p>You may (and should) provide alternate content inside the <code>&lt;canvas&gt;</code> block. That content will be rendered both on older browsers that don't support canvas and in browsers with JavaScript disabled. Providing a useful fallback text or sub DOM helps to <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility">make the canvas more accessible</a>.</p>
+<p>You should provide alternate content inside the <code>&lt;canvas&gt;</code> block. That content will be rendered both on older browsers that don't support canvas and in browsers with JavaScript disabled.</p>
 
 <h3 id="Required_&lt;canvas&gt;_tag">Required &lt;/canvas&gt; tag</h3>
 
@@ -153,7 +153,6 @@ ctx.fillRect(10, 10, 100, 100);</pre>
 <p>The <code>&lt;canvas&gt;</code> element on its own is just a bitmap and does not provide information about any drawn objects. Canvas content is not exposed to accessibility tools as semantic HTML is. In general, you should avoid using canvas in an accessible website or app. The following guides can help to make it more accessible.</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility">MDN Hit regions and accessibility</a></li>
  <li><a href="https://www.w3.org/WAI/PF/HTML/wiki/Canvas_Accessibility_Use_Cases">Canvas accessibility use cases</a></li>
  <li><a href="https://www.w3.org/html/wg/wiki/AddedElementCanvas">Canvas element accessibility issues</a></li>
  <li><a href="https://developer.paciellogroup.com/blog/2012/06/html5-canvas-accessibility-in-firefox-13/">HTML5 Canvas Accessibility in Firefox 13 – by Steve Faulkner</a></li>
@@ -174,6 +173,6 @@ ctx.fillRect(10, 10, 100, 100);</pre>
  <li><a href="/en-US/docs/Web/API/Canvas_API">MDN canvas portal</a></li>
  <li><a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas tutorial</a></li>
  <li><a href="https://simon.html5.org/dump/html5-canvas-cheat-sheet.html">Canvas cheat sheet</a></li>
- <li><a href="/en-US/docs/Web/Demos_of_open_web_technologies">Canvas-related demos</a></li>
+ <li><a href="/en-US/docs/Web/Demos#canvas">Canvas-related demos</a></li>
  <li><a href="https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/HTML-canvas-guide/Introduction/Introduction.html">Canvas introduction by Apple</a></li>
 </ul>

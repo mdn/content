@@ -108,7 +108,7 @@ tags:
 
 <ul>
  <li>{{CSSxRef("scroll-snap-coordinate")}}, {{CSSxRef("scroll-snap-destination")}}, {{CSSxRef("scroll-snap-type-x")}} and {{CSSxRef("scroll-snap-type-y")}} have been removed.</li>
- <li>The {{CSSxRef("scroll-snap-type")}} property has become a longhand, so the old shorthand syntax like <code>scroll-snap-type:mandatory</code> will stop working. See the <a href="https://www.fxsitecompat.com/en-CA/docs/2019/legacy-css-scroll-snap-syntax-support-has-been-dropped/">Firefox Site Compatibility</a> note.</li>
+ <li>The {{CSSxRef("scroll-snap-type")}} property has become a longhand, so the old shorthand syntax like <code>scroll-snap-type:mandatory</code> will stop working.</li>
 </ul>
 
 <h3 id="SVG">SVG</h3>
@@ -134,7 +134,7 @@ tags:
 
 <ul>
  <li>The <a href="/en-US/docs/Web/API/Visual_Viewport_API">Visual Viewport API</a> has now been enabled by default on Android ({{bug(1512813)}}). Adding this API to desktop versions of Firefox is being tracked in {{bug(1551302)}}.</li>
- <li>The {{domxref("Window")}} feature <code><a href="/en-US/docs/Web/API/Window/open#noreferrer">noreferrer</a></code> is now supported; if specified, the new window's content is loaded without sharing the hostname, IP address, URL, or other identifying information about the host device ({{bug(1527287)}}).</li>
+ <li>The {{domxref("Window")}} feature <code><a href="/en-US/docs/Web/API/Window/open">noreferrer</a></code> is now supported; if specified, the new window's content is loaded without sharing the hostname, IP address, URL, or other identifying information about the host device ({{bug(1527287)}}).</li>
  <li>The {{domxref("HTMLImageElement.decode", "decode()")}} method on <code>HTMLImageElement</code> is now implemented. This can be used to trigger loading and decoding of an image prior to adding it to the DOM ({{bug(1501794)}}).</li>
  <li>{{domxref("XMLHttpRequest")}} has been updated to no longer accept the non-standard <code>moz-chunked-arraybuffer</code> value for {{domxref("XMLHttpRequest.responseType", "responseType")}}. Code still using it should be updated to <a href="/en-US/docs/Web/API/Streams_API/Using_readable_streams#consuming_a_fetch_as_a_stream">use the Fetch API as a stream</a> ({{bug(1120171)}}).</li>
  <li><code>XMLHttpRequest</code> now outputs a warning to console if you perform a synchronous request while handling an {{domxref("Window.unload_event", "unload")}}, {{domxref("Window.beforeunload_event", "beforeunload")}}, or {{domxref("Window.pagehide_event", "pagehide")}} event ({{bug(980902)}}).</li>
@@ -236,7 +236,6 @@ tags:
 
 <ul>
  <li>Hacks release post: <a href="https://hacks.mozilla.org/2019/07/firefox-68-bigints-contrast-checks-and-the-quantumbar/">Firefox 68: BigInts, Contrast Checks, and the QuantumBar</a></li>
- <li><a href="https://www.fxsitecompat.com/en-CA/versions/68/">Site compatibility for Firefox 68</a></li>
 </ul>
 
 <h2 id="Older_versions">Older versions</h2>

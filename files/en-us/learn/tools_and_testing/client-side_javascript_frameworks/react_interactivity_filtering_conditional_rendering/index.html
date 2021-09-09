@@ -18,7 +18,7 @@ tags:
 
 <p class="summary">As we near the end of our React journey (for now at least), we'll add the finishing touches to the main areas of functionality in our Todo list app. This includes allowing you to edit existing tasks, and filtering the list of tasks between all, completed, and incomplete tasks. We'll look at conditional UI rendering along the way.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -171,9 +171,9 @@ const viewTemplate = (
 
 <p>With this code in place, you should be able to press the "Edit" and "Cancel" buttons in your todo items to toggle between templates.</p>
 
-<p><img alt="The eat todo item showing the view template, with edit and delete buttons available" src="view.png" style="border-style: solid; border-width: 1px; display: block; margin: 0 auto;"></p>
+<p><img alt="The eat todo item showing the view template, with edit and delete buttons available" src="view.png"></p>
 
-<p><img alt="The eat todo item showing the edit template, with an input field to enter a new name, and cancel and save buttons available" src="edit.png" style="border-style: solid; border-width: 1px; display: block; margin: 0 auto;"></p>
+<p><img alt="The eat todo item showing the edit template, with an input field to enter a new name, and cancel and save buttons available" src="edit.png"></p>
 
 <p>The next step is to actually make the editing functionality work.</p>
 
@@ -337,7 +337,7 @@ const viewTemplate = (
 
 <p>Visit your browser again. You should see that the different buttons have been given their respective names. When you press a filter button, you should see its text take on a new outline — this tells you it has been selected. And if you look at your DevTool’s Page Inspector while clicking the buttons, you'll see the <code>aria-pressed</code> attribute values change accordingly.</p>
 
-<p><img alt="The three filter buttons of the app - all, active, and completed - with a focus highlight around completed" src="filter-buttons.png" style="border-style: solid; border-width: 1px; display: block; margin: 0 auto;"></p>
+<p><img alt="The three filter buttons of the app - all, active, and completed - with a focus highlight around completed" src="filter-buttons.png"></p>
 
 <p>However, our buttons still don't actually filter the todos in the UI! Let's finish this off.</p>
 

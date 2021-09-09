@@ -19,7 +19,7 @@ tags:
 
 <p class="summary">With the scene set, we'll now look specifically at the common cross-browser problems you will come across in HTML and CSS code, and what tools can be used to prevent problems from happening, or fix problems that occur. This includes linting code, handling CSS prefixes, using browser dev tools to track down problems, using polyfills to add support into browsers, tackling responsive design problems, and more.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -54,7 +54,7 @@ tags:
 
 <p>For HTML, validation involves making sure all your tags are properly closed and nested, you are using a DOCTYPE, and you are using tags for their correct purpose. A good strategy is to validate your code regularly. One service that can do this is the W3C <a class="external external-icon" href="https://validator.w3.org/">Markup Validation Service</a>, which allows you to point to your code, and returns a list of errors:</p>
 
-<p><img alt="The HTML validator homepage" src="validator.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="The HTML validator homepage" src="validator.png"></p>
 
 <p>CSS has a similar story — you need to check that your property names are spelled correctly, property values are spelled correctly and are valid for the properties they are used on, you are not missing any curly braces, and so on. The W3C has a <a class="external external-icon" href="https://jigsaw.w3.org/css-validator/">CSS Validator</a> available too, for this purpose.</p>
 
@@ -64,7 +64,7 @@ tags:
 
 <p>There are many online linter applications, the best of which are probably <a href="https://www.10bestdesign.com/dirtymarkup/">Dirty Markup</a> (HTML, CSS, JavaScript), and <a href="http://csslint.net/">CSS Lint</a> (CSS only). These allows you to paste your code into a window, and it will flag up any errors with crosses, which can then be hovered to get an error message informing you what the problem is. Dirty Markup also allows you to make fixes to your markup using the <em>Clean</em> button.</p>
 
-<p><img alt="" src="dirty-markup.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="dirty-markup.png"></p>
 
 <p>However, it is not very convenient to have to copy and paste your code over to a web page to check its validity several times. What you really want is a linter that will fit into your standard workflow with the minimum of hassle.</p>
 
@@ -78,7 +78,7 @@ tags:
  <li>After the packages have finished installing, try loading up an HTML file and a CSS file: you'll see any issues highlighted with green (for warnings) and red (for errors) circles next to the line numbers, and a separate panel at the bottom provides line numbers, error messages, and sometimes suggested values or other fixes.</li>
 </ol>
 
-<p><img alt="" src="atom-htmltidy.png" style="display: block; margin: 0 auto;"><img alt="" src="atom-csslint.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="atom-htmltidy.png"><img alt="" src="atom-csslint.png"></p>
 
 <p>Other popular editors have similar linting packages available. For example, see:</p>
 
@@ -98,7 +98,7 @@ tags:
 
 <p>As an example, in Firefox the CSS inspector will show CSS declarations that aren't applied crossed out, with a warning triangle. Hovering the warning triangle will provide a descriptive error message:</p>
 
-<p><img alt="" src="css-message-devtools.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="css-message-devtools.png"></p>
 
 <p>Other browser devtools have similar features.</p>
 
@@ -211,7 +211,7 @@ tags:
 
 <p>Let's look at an example — a simple box styled with CSS, which has some styling provided by various CSS3 features:</p>
 
-<p><img alt="" src="blingy-button.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="blingy-button.png"></p>
 
 <div class="note">
 <p><strong>Note</strong>: You can also see this example running live on GitHub as <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html">button-with-fallback.html</a> (also see the <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html">source code</a>).</p>
@@ -239,7 +239,7 @@ button:active {
 
 <p>Here we are providing an <a href="/en-US/docs/Web/CSS/color_value#rgba()">RGBA</a> {{cssxref("background-color")}} that changes opacity on hover to give the user a hint that the button is interactive, and some semi-transparent inset {{cssxref("box-shadow")}} shades to give the button a bit of texture and depth. The trouble is that RGBA colors and box shadows don't work in IE versions older than 9 — in older versions the background just wouldn't show up at all so the text would be unreadable, no good at all!</p>
 
-<p><img alt="" src="unreadable-button.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="unreadable-button.png"></p>
 
 <p>To sort this out, we have added a second <code>background-color</code> declaration, which just specifies a hex color — this is supported way back in really old browsers, and acts as a fallback if the modern shiny features don't work. What happens is a browser visiting this page first applies the first <code>background-color</code> value; when it gets to the second <code>background-color</code> declaration, it will override the initial value with this value if it supports RGBA colors. If not, it will just ignore the entire declaration and move on.</p>
 
@@ -281,7 +281,7 @@ button:active {
 
 <p>For example, in the Firefox dev tools, you get this kind of output at the bottom of the DOM inspector:</p>
 
-<p><img alt="" src="dom-breadcrumb-trail.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="dom-breadcrumb-trail.png"></p>
 
 <p>If for example you were trying to use this selector, you'd be able to see that it wouldn't select the input element as desired:</p>
 
@@ -304,7 +304,7 @@ button:active {
 
 <p>If you try running this in an old version of IE, it should work fine.</p>
 
-<p><img alt="" src="new-selector-ie7.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="new-selector-ie7.png"></p>
 
 <h4 id="Handling_CSS_prefixes">Handling CSS prefixes</h4>
 

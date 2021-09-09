@@ -13,12 +13,14 @@ tags:
 - overrideMimeType
 browser-compat: api.XMLHttpRequest.overrideMimeType
 ---
-<div>{{draft}}{{APIRef('XMLHttpRequest')}}</div>
+<div>{{APIRef('XMLHttpRequest')}}</div>
 
-<p><span class="seoSummary">The {{domxref("XMLHttpRequest")}} method
+<p>The {{domxref("XMLHttpRequest")}} method
     <code><strong>overrideMimeType()</strong></code> specifies a MIME type other than the
     one provided by the server to be used instead when interpreting the data being
-    transferred in a request.</span> This may be used, for example, to force a stream to
+    transferred in a request.</p>
+
+<p>This may be used, for example, to force a stream to
   be treated and parsed as <code>"text/xml"</code>, even if the server does not report it
   as such. This method must be called before calling {{domxref("XMLHttpRequest.send",
   "send()")}}.</p>

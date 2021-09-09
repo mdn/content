@@ -73,7 +73,7 @@ browser-compat: api.Request
 </dl>
 
 <div class="note">
-<p><strong>Note</strong>: The request body functions can be run only once; subsequent calls will resolve with empty strings/ArrayBuffers.</p>
+<p><strong>Note:</strong> The request body functions can be run only once; subsequent calls will resolve with empty strings/ArrayBuffers.</p>
 </div>
 
 <h2 id="Examples">Examples</h2>
@@ -87,7 +87,7 @@ const method = request.method;
 const credentials = request.credentials;
 </pre>
 
-<p>You could then fetch this request by passing the <code>Request</code> object in as a parameter to a {{domxref("WindowOrWorkerGlobalScope.fetch()")}} call, for example:</p>
+<p>You could then fetch this request by passing the <code>Request</code> object in as a parameter to a {{domxref("fetch()")}} call, for example:</p>
 
 <pre class="brush: js">fetch(request)
   .then(response =&gt; response.blob())
@@ -109,7 +109,7 @@ const bodyUsed = request.bodyUsed;
 <p><strong>Note:</strong> The body type can only be a {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}} or {{domxref("ReadableStream")}} type, so for adding a JSON object to the payload you need to stringify that object.</p>
 </div>
 
-<p>You could then fetch this api request by passing the <code>Request</code> object in as a parameter to a {{domxref("WindowOrWorkerGlobalScope.fetch()")}} call, for example and get the response:</p>
+<p>You could then fetch this api request by passing the <code>Request</code> object in as a parameter to a {{domxref("fetch()")}} call, for example and get the response:</p>
 
 <pre class="brush: js">fetch(request)
   .then(response =&gt; {
