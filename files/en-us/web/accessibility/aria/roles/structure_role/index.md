@@ -23,7 +23,7 @@ The `structure` role is for document structural elements.
 [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role), and [`sectionhead`](/en-US/docs/Web/Accessibility/ARIA/Roles/sectionhead_role), that support the accessibility of dynamic web content by helping assistive technologies determine active content versus static document content. Some subclass roles, like 
 [`section` role](/en-US/docs/Web/Accessibility/ARIA/Roles/section_role), are in turn superclasses of other roles.
 
-The `structure` role is the superclass for all document structure roles, which are used to provide a structural description for a section of content. Most structure roles should no longer be used as browsers now support semantic HTML element with the same meaning. The structure roles without HTML equivalents, such as the [`presentation` role](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role), provide information on the document structure to assistive technologies such as screen readers as equivalent native HTML tags are not available. 
+The `structure` role is the superclass for all document structure roles, which are used to provide a structural description for a section of content. Most structure roles should no longer be used as browsers now support semantic HTML element with the same meaning. The structure roles without HTML equivalents, such as the [`presentation` role](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) which means content is presentational only, provide information on the document structure to assistive technologies such as screen readers as equivalent native HTML tags are not available. 
 
 ## Best Practices
 
