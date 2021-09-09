@@ -85,8 +85,8 @@ var <var>timeoutID</var> = setTimeout(<var>code</var>[, <var>delay</var>]);
   // this is the first message
 </pre>
 
-<p>Notice that the first function does not create a 5 second "pause" before calling the second function. Instead, the first function is called, but waits 5 seconds to
-  execute. While the first function is waiting to execute, the second function is called, and a 3 second wait is applied to the second function before it executes. Since neither
+<p>Notice that the first function does not create a 5-second "pause" before calling the second function. Instead, the first function is called, but waits 5 seconds to
+  execute. While the first function is waiting to execute, the second function is called, and a 3-second wait is applied to the second function before it executes. Since neither
   the first nor the second function's timers have completed, the third function is called and completes its execution first. Then the second follows. Then finally the first function 
   is executed after its timer finally completes.
 
