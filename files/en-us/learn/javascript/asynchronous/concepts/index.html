@@ -129,7 +129,7 @@ Worker thread: Expensive task B</pre>
 
 <pre>Main thread: Task A --&gt; Task B</pre>
 
-<p>In this case, let's say Task A is doing something like fetching an image from the server and Task B then does something to the image like applying a filter to it. If you start Task A running and then immediately try to run Task B, you'll get an error, because the image won't be available yet.</p>
+<p>In this case, let's say Task A is doing something like fetching an image from the server and Task B then does something to the image like applying a filter to it. If you start running Task A and then immediately try to run Task B, you'll get an error, because the image won't be available yet.</p>
 
 <pre>  Main thread: Task A --&gt; Task B --&gt; |Task D|
 Worker thread: Task C -----------&gt; |      |</pre>
