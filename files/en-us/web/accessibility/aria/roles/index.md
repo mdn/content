@@ -10,7 +10,7 @@ tags:
 ---
 This page lists reference pages covering all the WAI-ARIA roles discussed on MDN. For a full list of roles, see [Using ARIA: Roles, States, and Properties](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques)
 
-ARIA roles provide semantic meaning to content allowing screen readers and other tools to present and support interaction with object in a way that is consistent with user expectations of that type of object. ARIA roles can be used to describe elements that don't natively exist in HTML or exist but don't yet have full browser support. By default, semantic elements have a role; `<p>` has the "paragraph" role, `<section>` has "section". Non-semantic elements do not have a role; `<div>` and `<span>` without added semantics return *null*. The `role` attribute can provide semantics.
+ARIA roles provide semantic meaning to content allowing screen readers and other tools to present and support interaction with object in a way that is consistent with user expectations of that type of object. ARIA roles can be used to describe elements that don't natively exist in HTML or exist but don't yet have full browser support. By default, semantic elements have a role; `<p>` has the "paragraph" role, `<input type="radio">` has the "radio" role. Non-semantic elements do not have a role; `<div>` and `<span>` without added semantics return *null*. The `role` attribute can provide semantics.
 
 ARIA roles are HTML attributes. They are added to elements using role="*role type*", where *role type* is the name of a role in the ARIA specification.  Some roles require the inclusion of assocatiated ARIA states or properties; others are only valid in association with other roles.
 
