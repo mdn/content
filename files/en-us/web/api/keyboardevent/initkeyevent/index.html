@@ -19,14 +19,14 @@ tags:
   <code>initKeyEvent()</code> must be called to set the event before it is <a
     href="/en-US/docs/Web/API/EventTarget/dispatchEvent">dispatched</a>.</p>
 
-<div class="note">
-  <p><strong>Do not use this method anymore, use the
+<div class="warning">
+  <p><strong>Warning:</strong> Do not use this method. Use the
       {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} constructor
-      instead.</strong><br>
+      instead.<br>
     <br>
     This method is based on the key events spec in the <a class="external"
     href="https://www.w3.org/TR/1999/WD-DOM-Level-2-19990923/events.html">early versions
-    of DOM 2 Events</a>, later removed from that spec.Favor the modern constructor structure as
+    of DOM 2 Events</a>, later removed from that spec. Prefer the modern constructor structure as
     the only cross-browser way of building events.
   </p>
 </div>

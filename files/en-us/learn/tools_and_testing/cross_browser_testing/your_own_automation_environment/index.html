@@ -20,7 +20,7 @@ tags:
 
 <p class="summary">In this article, we will teach you how to install your own automation environment and run your own tests using Selenium/WebDriver and a testing library such as selenium-webdriver for Node. We will also look at how to integrate your local testing environment with commercial tools like the ones discussed in the previous article.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -65,16 +65,19 @@ tags:
 <ol>
  <li>Download the latest <a href="https://github.com/mozilla/geckodriver/releases/">GeckoDriver</a> (for Firefox) and <a href="https://chromedriver.storage.googleapis.com/index.html">ChromeDriver</a> drivers.</li>
  <li>Unpack them into somewhere fairly easy to navigate to, like the root of your home user directory.</li>
- <li>Add the <code>chromedriver</code> and <code>geckodriver</code> driver's location to your system <code>PATH</code> variable. This should be an absolute path from the root of your hard disk, to the directory containing the drivers. For example, if we were using a Mac OS X machine, our user name was bob, and we put our drivers in the root of our home folder, the path would be <code>/Users/bob</code>.</li>
+ <li>Add the <code>chromedriver</code> and <code>geckodriver</code> driver's location to your system <code>PATH</code> variable. This should be an absolute path from the root of your hard disk, to the directory containing the drivers. For example, if we were using a macOS machine, our user name was bob, and we put our drivers in the root of our home folder, the path would be <code>/Users/bob</code>.</li>
 </ol>
 
 <div class="note">
 <p><strong>Note</strong>: Just to reiterate, the path you add to <code>PATH</code> needs to be the path to the directory containing the drivers, not the paths to the drivers themselves! This is a common mistake.</p>
 </div>
 
-<p>To set your <code>PATH</code> variable on Mac OS X/most Linux systems:</p>
+<p>To set your <code>PATH</code> variable on a macOS system and on most Linux systems:</p>
 
 <ol>
+ <li>If you’re not already using the <code>bash</code> shell (for example, on macOS systems, the default is the <code>zsh</code> shell, not <code>bash</code>), switch to the <code>bash</code> shell:
+  <pre class="brush: bash">exec bash</pre>
+ </li>
  <li>Open your <code>.bash_profile</code> (or <code>.bashrc</code>) file (if you can't see hidden files, you'll need to display them, see <a href="https://ianlunn.co.uk/articles/quickly-showhide-hidden-files-mac-os-x-mavericks/">Show/Hide hidden files in Mac OS X</a> or <a href="https://askubuntu.com/questions/470837/how-to-show-hidden-folders-in-ubuntu-14-04">Show hidden folders in Ubuntu</a>).</li>
  <li>Paste the following into the bottom of your file (updating the path as it actually is on your machine):
   <pre class="brush: bash">#Add WebDriver browser drivers to PATH
@@ -369,7 +372,7 @@ input.</span>sendKeys('Filling in my form');</pre>
   <pre class="brush: bash">npm install --save-dev mocha</pre>
  </li>
  <li>you can now run the test (and any others you put inside your <code>test</code> directory) using the following command:
-  <pre class="brush: bash">mocha --no-timeouts</pre>
+  <pre class="brush: bash">npx mocha --no-timeouts</pre>
  </li>
  <li>You should include the <code>--no-timeouts</code> flag to make sure your tests don't end up failing because of Mocha's arbitrary timeout (which is 3 seconds).</li>
 </ol>
@@ -451,7 +454,7 @@ searchTextOnGoogle();
   The test will be sent to LambdaTest, and the output of your test will be reflected on your LambdaTest console.<br>
   If you wish to extract these results for reporting purpose from LambdaTest platform then you can do so by using <a href="https://www.lambdatest.com/blog/lambdatest-launches-api-for-selenium-automation/">LambdaTest restful API</a>.</li>
  <li>Now if you go to your <a href="https://www.lambdatest.com/selenium-automation">LambdaTest Automation dashboard</a>, you'll see your test listed; from here you'll be able to see videos, screenshots, and other such data.<br>
-  <a href="https://www.lambdatest.com/blog/wp-content/uploads/2019/02/Automation-logs-1.jpg"><img alt="LambdaTest Automation Dashboard" src="automation-logs-1.jpg" style="border-style: solid; border-width: 2px;"></a>You can retrieve network, command, exception, and Selenium logs for every test within your test build. You will also find a video recording of your Selenium script execution.</li>
+  <a href="https://www.lambdatest.com/blog/wp-content/uploads/2019/02/Automation-logs-1.jpg"><img alt="LambdaTest Automation Dashboard" src="automation-logs-1.jpg"></a>You can retrieve network, command, exception, and Selenium logs for every test within your test build. You will also find a video recording of your Selenium script execution.</li>
 </ol>
 
 <div class="note">
@@ -535,7 +538,7 @@ driver.quit();</pre>
   <pre class="brush: bash">node bstack_google_test</pre>
   The test will be sent to BrowserStack, and the test result will be returned to your console. This shows the importance of including some kind of result reporting mechanism!</li>
  <li>Now if you go back to the <a href="https://www.browserstack.com/automate">BrowserStack automation dashboard</a> page, you'll see your test listed:<br>
-  <img alt="" src="bstack_automated_results.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></li>
+  <img alt="" src="bstack_automated_results.png"></li>
 </ol>
 
 <p>If you click on the link for your test, you'll get to a new screen where you will be able to see a video recording of the test, and multiple detailed logs of information pertaining to it.</p>
@@ -587,7 +590,7 @@ driver.session_.then(function(sessionData) {
 
 <p>If you now go back to your <a href="https://www.browserstack.com/automate">BrowserStack automation dashboard</a> page, you should see your test session available, as before, but with the updated data attached to it:</p>
 
-<p><img alt="" src="bstack_custom_results.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="bstack_custom_results.png"></p>
 
 <h3 id="Sauce_Labs">Sauce Labs</h3>
 
@@ -643,7 +646,7 @@ driver.quit();</pre>
   <pre class="brush: bash">node sauce_google_test</pre>
   The test will be sent to Sauce Labs, and the test result will be returned to your console. This shows the importance of including some kind of result reporting mechanism!</li>
  <li>Now if you go to your <a href="https://saucelabs.com/beta/dashboard/tests">Sauce Labs Automated Test dashboard</a> page, you'll see your test listed; from here you'll be able to see videos, screenshots, and other such data.<br>
-  <img alt="" src="sauce_labs_automated_test.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></li>
+  <img alt="" src="sauce_labs_automated_test.png"></li>
 </ol>
 
 <div class="note">
@@ -702,7 +705,7 @@ driver.quit();</pre>
 
 <p>If you now go back to your <a href="https://saucelabs.com/beta/dashboard/tests">Sauce Labs Automated Test dashboard</a> page, you should see your new job now has the updated data attached to it:</p>
 
-<p><img alt="" src="sauce_labs_updated_job_info.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="sauce_labs_updated_job_info.png"></p>
 
 <h3 id="Your_own_remote_server">Your own remote server</h3>
 

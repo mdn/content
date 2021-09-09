@@ -24,7 +24,7 @@ tags:
 
 <p class="summary">Another very common task in modern websites and applications is retrieving individual data items from the server to update sections of a webpage without having to load an entire new page. This seemingly small detail has had a huge impact on the performance and behavior of sites, so in this article, we'll explain the concept and look at technologies that make it possible, such as XMLHttpRequest and the Fetch API.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -41,7 +41,7 @@ tags:
 
 <p>Originally page loading on the web was simple — you'd send a request for a website to a server, and as long as nothing went wrong, the assets that made the web page would be downloaded and displayed on your computer.</p>
 
-<p><img alt="A basic representation of a web site architecture" src="web-site-architechture@2x.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="A basic representation of a web site architecture" src="web-site-architechture@2x.png"></p>
 
 <p>The trouble with this model is that whenever you want to update any part of the page, for example, to display a new set of products or load a new page, you've got to load the entire page again. This is extremely wasteful and results in a poor user experience, especially as pages get larger and more complex.</p>
 
@@ -55,7 +55,7 @@ tags:
 <p><strong>Note</strong>: In the early days, this general technique was known as <a href="/en-US/docs/Glossary/Asynchronous">Asynchronous</a> JavaScript and XML (<a href="/en-US/docs/Glossary/AJAX">Ajax</a>), because it tended to use {{domxref("XMLHttpRequest")}} to request XML data. This is normally not the case these days (you'd be more likely to use <code>XMLHttpRequest</code> or Fetch to request JSON), but the result is still the same, and the term "Ajax" is still often used to describe the technique.</p>
 </div>
 
-<p><img alt="A simple modern architecture for web sites" src="moderne-web-site-architechture@2x.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="A simple modern architecture for web sites" src="moderne-web-site-architechture@2x.png"></p>
 
 <p>The Ajax model involves using a web API as a proxy to more intelligently request data rather than just having the browser reload the entire page. Let's think about the significance of this:</p>
 
@@ -73,7 +73,7 @@ tags:
 
 <p>To speed things up even further, some sites also store assets and data on the user's computer when they are first requested, meaning that on subsequent visits they use the local versions instead of downloading fresh copies everytime the page is first loaded. The content is only reloaded from the server when it has been updated.</p>
 
-<p><img alt="A basic web app data flow architecture" src="web-app-architecture@2x.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="A basic web app data flow architecture" src="web-app-architecture@2x.png"></p>
 
 <h2 id="A_basic_Ajax_request">A basic Ajax request</h2>
 
@@ -198,7 +198,7 @@ request.send();</pre>
 
 <h4 id="So_what_is_going_on_in_the_Fetch_code">So what is going on in the Fetch code?</h4>
 
-<p>First of all, we invoke the {{domxref("WorkerOrWindowGlobalScope.fetch()","fetch()")}} method, passing it the URL of the resource we want to fetch. This is the modern equivalent of {{domxref("XMLHttpRequest.open","request.open()")}} in XHR, plus you don't need any equivalent to <code>.send()</code>.</p>
+<p>First of all, we invoke the {{domxref("fetch()")}} method, passing it the URL of the resource we want to fetch. This is the modern equivalent of {{domxref("XMLHttpRequest.open","request.open()")}} in XHR, plus you don't need any equivalent to <code>.send()</code>.</p>
 
 <p>After that, you can see the {{jsxref("Promise.then",".then()")}} method chained onto the end of <code>fetch()</code> — this method is a part of {{jsxref("Promise","Promises")}}, a modern JavaScript feature for performing asynchronous operations. <code>fetch()</code> returns a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promise</a>, which resolves to the response sent back from the server — we use <code>.then()</code> to run some follow-up code after the promise resolves, which is the function we've defined inside it. This is the equivalent of the <code>onload</code> event handler in the XHR version.</p>
 
@@ -276,7 +276,7 @@ myFetch.then(function(response) {
 
 <p>To round off the article, we'll look at a slightly more complex example that shows some more interesting uses of Fetch. We have created a sample site called The Can Store — it's a fictional supermarket that only sells canned goods. You can find this <a href="https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/">example live on GitHub</a>, and <a href="https://github.com/mdn/learning-area/tree/master/javascript/apis/fetching-data/can-store">see the source code</a>.</p>
 
-<p><img alt="A fake ecommerce site showing search options in the left hand column, and product search results in the right hand column." src="can-store.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="A fake ecommerce site showing search options in the left hand column, and product search results in the right hand column." src="can-store.png"></p>
 
 <p>By default, the site displays all the products, but you can use the form controls in the left hand column to filter them by category, or search term, or both.</p>
 

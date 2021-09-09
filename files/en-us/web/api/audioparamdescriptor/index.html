@@ -14,7 +14,9 @@ browser-compat: api.AudioParamDescriptor
 ---
 <div>{{APIRef("Web Audio API")}}</div>
 
-<p><span class="seoSummary">The <code><strong>AudioParamDescriptor</strong></code> dictionary of the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> specifies properties for {{domxref("AudioParam")}} objects.</span> It is used to create custom <code>AudioParam</code>s on an {{domxref("AudioWorkletNode")}}. If the underlying {{domxref("AudioWorkletProcessor")}} has a {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} static getter, then the returned array of objects based on this dictionary is used internally by <code>AudioWorkletNode</code> constructor to populate its {{domxref("AudioWorkletNode.parameters", "parameters")}} property accordingly.
+<p>The <code><strong>AudioParamDescriptor</strong></code> dictionary of the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> specifies properties for {{domxref("AudioParam")}} objects.</p>
+
+<p>It is used to create custom <code>AudioParam</code>s on an {{domxref("AudioWorkletNode")}}. If the underlying {{domxref("AudioWorkletProcessor")}} has a {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} static getter, then the returned array of objects based on this dictionary is used internally by <code>AudioWorkletNode</code> constructor to populate its {{domxref("AudioWorkletNode.parameters", "parameters")}} property accordingly.
 
 </p><h2 id="Properties">Properties</h2>
 

@@ -14,9 +14,9 @@ browser-compat: api.DOMParser
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p><span class="seoSummary">The <strong><code>DOMParser</code></strong> interface provides
+<p>The <strong><code>DOMParser</code></strong> interface provides
     the ability to parse {{Glossary("XML")}} or {{Glossary("HTML")}} source code from a
-    string into a DOM {{domxref("Document")}}.</span></p>
+    string into a DOM {{domxref("Document")}}.</p>
 
 <p>You can perform the opposite operation—converting a DOM tree into XML or HTML
   source—using the {{domxref("XMLSerializer")}} interface.</p>
@@ -31,9 +31,8 @@ browser-compat: api.DOMParser
   {{domxref("XMLHttpRequest.response", "response")}} property.</p>
 
 <div class="note notecard">
-  <p>
-    <strong>Note:</strong> Be aware that <a href="/en-US/docs/Web/HTML/Block-level_elements">block-level elements</a>
-    like <code>&lt;p&gt;</code> will be automatically closed if another 
+  <p><strong>Note:</strong> Be aware that <a href="/en-US/docs/Web/HTML/Block-level_elements">block-level elements</a>
+    like <code>&lt;p&gt;</code> will be automatically closed if another
     block-level element is nested inside and therefore parsed before the closing <code>&lt;/p&gt;</code> tag.</p>
 </div>
 

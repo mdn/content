@@ -12,7 +12,7 @@ browser-compat: api.CanvasRenderingContext2D.clip
 <div>{{APIRef}}</div>
 
 <p>The
-  <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.clip()</code></strong>
+  <strong><code>CanvasRenderingContext2D.clip()</code></strong>
   method of the Canvas 2D API turns the current or given path into the current clipping
   region. The previous clipping region, if any, is intersected with the current or given
   path to create the new clipping region.</p>
@@ -21,11 +21,11 @@ browser-compat: api.CanvasRenderingContext2D.clip
   Only those parts of the checkerboard pattern that are within the clipping region get
   drawn.</p>
 
-<p><img alt="" class="internal"
+<p><img alt=""
     src="canvas_clipping_path.png"></p>
 
 <div class="note">
-  <p><strong>Note</strong>: Be aware that the clipping region is only constructed from
+  <p><strong>Note:</strong> Be aware that the clipping region is only constructed from
     shapes added to the path. It doesn't work with shape primitives drawn directly to the
     canvas, such as {{domxref("CanvasRenderingContext2D.fillRect()","fillRect()")}}.
     Instead, you'd have to use {{domxref("CanvasRenderingContext2D.rect()","rect()")}} to
@@ -75,7 +75,7 @@ void <em>ctx</em>.clip(<em>path</em> [, <em>fillRule</em>]);
 <p>The clipping region is a full circle, with its center at (100, 75), and a radius of 50.
 </p>
 
-<pre class="brush: js highlight:[7]">const canvas = document.getElementById('canvas');
+<pre class="brush: js">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Create circular clipping region
@@ -108,7 +108,7 @@ ctx.fillRect(0, 0, 100, 100);
 
 <h4 id="JavaScript_2">JavaScript</h4>
 
-<pre class="brush: js highlight:[8]">const canvas = document.getElementById('canvas');
+<pre class="brush: js">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Create clipping path

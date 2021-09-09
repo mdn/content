@@ -16,11 +16,11 @@ tags:
 ---
 <p>{{APIRef("Web Audio API")}}</p>
 
-<p>When the Web Audio API was first introduced to browsers, it included the ability to use JavaScript code to create custom audio processors that would be invoked to perform real-time audio manipulations. The drawback to <code>ScriptProcessorNode</code> was simple: it ran on the main thread, thus blocking everything else going on until it completed execution. This was far less than ideal, especially for something that can be as computationally expensive as audio processing.</p>
+<p>This article explains how to create an audio worklet processor and use it in a Web Audio application.</p>
+
+<p>When the Web Audio API was first introduced to browsers, it included the ability to use JavaScript code to create custom audio processors that would be invoked to perform real-time audio manipulations. The drawback to <code>ScriptProcessorNode</code> was that it ran on the main thread, thus blocking everything else going on until it completed execution. This was far less than ideal, especially for something that can be as computationally expensive as audio processing.</p>
 
 <p>Enter {{domxref("AudioWorklet")}}. An audio context's audio worklet is a {{domxref("Worklet")}} which runs off the main thread, executing audio processing code added to it by calling the context's {{domxref("Worklet.addModule", "audioWorklet.addModule()")}} method. Calling <code>addModule()</code> loads the specified JavaScript file, which should contain the implementation of the audio processor. With the processor registered, you can create a new {{domxref("AudioWorkletNode")}} which passes the audio through the processor's code when the node is linked into the chain of audio nodes along with any other audio nodes.</p>
-
-<p><span class="seoSummary">The process of creating an audio processor using JavaScript, establishing it as an audio worklet processor, and then using that processor within a Web Audio application is the topic of this article.</span></p>
 
 <p>It's worth noting that because audio processing can often involve substantial computation, your processor may benefit greatly from being built using <a href="/en-US/docs/WebAssembly">WebAssembly</a>, which brings near-native or fully native performance to web apps. Implementing your audio processing algorithm using WebAssembly can make it perform markedly better.</p>
 
@@ -188,7 +188,7 @@ const firstByteOfFirstChannel = firstInputFirstChannel[0]; // (or inputList[0][0
 <p>Returning <code>false</code> from the <code>process()</code> method tells the API that it should follow its normal logic and shut down your processor node if it deems it appropriate to do so. If the API determines that your node is no longer needed, <code>process()</code> will not be called again.</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> At this time, unfortunately, Chrome does not implement this algorithm in a manner that matches the current standard. Instead, it keeps the node alive if you return <code>true</code> and shuts it down if you return <code>false</code>. Thus for compatibility reasons you must always return <code>true</code> from <code>process()</code>, at least on Chrome. However, once <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=921354">this Chrome issue</a> is fixed, you will want to change this behavior if possible as it may have a slight negative impact on performance.</p>
+<p><strong>Note:</strong> At this time, unfortunately, Chrome does not implement this algorithm in a manner that matches the current standard. Instead, it keeps the node alive if you return <code>true</code> and shuts it down if you return <code>false</code>. Thus for compatibility reasons you must always return <code>true</code> from <code>process()</code>, at least on Chrome. However, once <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=921354">this Chrome issue</a> is fixed, you will want to change this behavior if possible as it may have a slight negative impact on performance.</p>
 </div>
 
 <h2 id="Creating_an_audio_processor_worklet_node">Creating an audio processor worklet node</h2>

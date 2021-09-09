@@ -11,9 +11,9 @@ browser-compat: api.Document.elementsFromPoint
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><span class="seoSummary">The <strong><code>elementsFromPoint()</code></strong> method
+<p>The <strong><code>elementsFromPoint()</code></strong> method
     of the {{domxref("Document")}} interface returns an array of all elements
-    at the specified coordinates (relative to the viewport).</span></p>
+    at the specified coordinates (relative to the viewport).</p>
 
 <p>It operates in a similar way to the {{domxref("Document.elementFromPoint",
   "elementFromPoint()")}} method.</p>
@@ -49,7 +49,7 @@ browser-compat: api.Document.elementsFromPoint
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js;highlight[1]">let output = document.getElementById("output");
+<pre class="brush: js;">let output = document.getElementById("output");
 if (document.elementsFromPoint) {
   let elements = document.elementsFromPoint(30, 20);
   for (var i = 0; i &lt; elements.length; i++) {

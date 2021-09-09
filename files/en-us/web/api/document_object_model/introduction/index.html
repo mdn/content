@@ -212,17 +212,19 @@ table.summary = "note: increased border";
  <li><code>{{domxref("window.scrollTo", "", "", "1")}}()</code></li>
 </ul>
 
-<h2 id="Testing_the_DOM_API">Testing the DOM API</h2>
+<h2 id="Example">Example</h2>
 
-<p>This document provides samples for every interface that you can use in your own web development. In some cases, the samples are complete HTML pages, with the DOM access in a <code>&lt;script&gt;</code> element, the interface (e.g, buttons) necessary to fire up the script in a form, and the HTML elements upon which the DOM operates listed as well. When this is the case, you can cut and paste the example into a new HTML document, save it, and run the example from the browser.</p>
+<p>The following simple example illustrates using the DOM {{domxref("Document")}} API — specifically, it illustrates using the {{domxref("Document.body", "body")}} property of the {{domxref("Document")}} API to change:</p>
 
-<p>There are some cases, however, when the examples are more concise. To run examples that only demonstrate the basic relationship of the interface to the HTML elements, you may want to set up a test page in which interfaces can be easily accessed from scripts. The following very simple web page provides a <code>&lt;script&gt;</code> element in the header in which you can place functions that test the interface, a few HTML elements with attributes that you can retrieve, set, or otherwise manipulate, and the web user interface necessary to call those functions from the browser.</p>
-
-<p>You can use this test page or create a similar one to test the DOM interfaces you are interested in and see how they work on the browser platform. You can update the contents of the <code>test()</code> function as needed, create more buttons, or add elements as necessary.</p>
+<ul>
+  <li>the document's text color</li>
+  <li>the document’s background color</li>
+  <li>the documents’s link color (that is, the color of any hypertext links anywhere in the document)</li>
+</ul>
 
 <pre class="brush: html">&lt;html&gt;
 &lt;head&gt;
-  &lt;title&gt;DOM Tests&lt;/title&gt;
+  &lt;title&gt;Simple Document API example&lt;/title&gt;
   &lt;script&gt;
     function setBodyAttr(attr, value) {
       if (document.body) document.body[attr] = value;
@@ -231,7 +233,7 @@ table.summary = "note: increased border";
   &lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-  &lt;div style="margin: .5in; height: 400px;"&gt;
+  &lt;div&gt;
     &lt;form&gt;
       &lt;p&gt;&lt;b&gt;&lt;code&gt;text&lt;/code&gt;&lt;/b&gt;&lt;/p&gt;
       &lt;select onChange="setBodyAttr('text',
@@ -255,19 +257,16 @@ table.summary = "note: increased border";
         &lt;a href="http://some.website.tld/page.html" id="sample"&gt;
           (sample link)
         &lt;/a&gt;
-      &lt;/small&gt;&lt;br /&gt;
-      &lt;input type="button" value="version" onclick="ver()" /&gt;
+      &lt;/small&gt;
     &lt;/form&gt;
   &lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
 
-<p>To test a lot of interfaces in a single page—for example, a "suite" of properties that affect the colors of a web page—you can create a similar test page with a whole console of buttons, textfields, and other HTML elements. The following screenshot gives you some idea of how interfaces can be grouped together for testing.</p>
+<h3 id="result">Result</h3>
 
-<img src="dom_ref_introduction_to_the_dom.gif">
-
-<p>In this example, the drop-down menus dynamically update such DOM—accessible aspects of the web page as its background color (<code>bgColor</code>), the color of the hyperlinks (<code>aLink</code>), and color of the text (<code>text</code>). However you design your test pages, testing the interfaces as you read about them is an important part of learning how to use the DOM effectively.</p>
+{{EmbedLiveSample("Example", "85ch", "263px")}}
 
 <h2>Specifications</h2>
 <table>

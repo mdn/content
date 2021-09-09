@@ -18,14 +18,11 @@ browser-compat: api.RTCIceCandidate.protocol
 
 <p>The <strong>{{domxref("RTCIceCandidate")}}</strong> interface's read-only <strong><code>protocol</code></strong> property is a string
     which indicates whether the candidate uses {{Glossary("UDP")}} or {{Glossary("TCP")}} as its transport protocol.</p>
-    
-<p><code>protocol</code> is <code>null</code> by default if not specified properly in the SDP, but this is an error condition and will
-  result in a thrown exception when you call {{domxref("RTCPeerConnection.addIceCandidate()")}}.</p>
 
-<p>The <code>protocol</code> property's value is set when the
-  {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate()")}} constructor is used.
-  The value is automatically extracted from the {{domxref("RTCIceCandidateInit.candidate",
-  "candidate")}} a-line, if it's formatted properly.</p>
+<p>The <code>protocol</code> field's value is set from the <code>candidateInfo</code> options object passed to the {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate()")}} constructor.
+  You can't specify the value of <code>protocol</code> directly in the options object, but its value is automatically extracted from the object's <code>candidate</code> a-line, if it's formatted properly.</p>
+    
+<p><code>protocol</code> is <code>null</code> by default if not specified properly in the SDP, but this is an error condition and will result in a thrown exception when you call {{domxref("RTCPeerConnection.addIceCandidate()")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -33,8 +30,7 @@ browser-compat: api.RTCIceCandidate.protocol
 
 <h3 id="Value">Value</h3>
 
-<p>A {{domxref("DOMString")}} which indicates what network protocol the candidate uses,
-  UDP or TCP. These values are defined by the enumerated type {{domxref("RTCIceProtocol")}}:</p>
+<p>A {{domxref("DOMString")}} that indicates what network protocol the candidate uses:</p>
 
   <dl>
     <dt><code>tcp</code></dt>
@@ -43,11 +39,9 @@ browser-compat: api.RTCIceCandidate.protocol
     <dd>The candidate will use the {{Glossary("UDP")}} transport protocol for its data. This is the preferred protocol for media interactions because of its better performance profile.</dd>
    </dl>
 
-<div class="note">
-  <p><strong>Note:</strong> If <code>protocol</code> is <code>null</code> — and
-    <code>protocol</code> is supported by the {{Glossary("user agent")}} — passing the
-    candidate to {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}
-    will fail, throwing an <code>OperationError</code> exception.</p>
+<div class="notecard note">
+  <p><strong>Note:</strong> If <code>protocol</code> is <code>null</code> — and <code>protocol</code> is supported by the {{Glossary("user agent")}} — passing the
+    candidate to {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} will fail, throwing an <code>OperationError</code> exception.</p>
 </div>
 
 <h2 id="Usage_notes">Usage notes</h2>

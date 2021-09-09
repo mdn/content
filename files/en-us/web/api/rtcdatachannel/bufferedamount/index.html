@@ -24,7 +24,7 @@ browser-compat: api.RTCDataChannel.bufferedAmount
   messages are actually sent, this value is reduced accordingly.</p>
 
 <div class="note">
-  <p>Closing the data channel doesn't reset this count, even though the user agent purges
+  <p><strong>Note:</strong> Closing the data channel doesn't reset this count, even though the user agent purges
     the queued messages. However, even after closing the channel, attempts to send
     messages continue to add to the <code>bufferedAmount</code> value, even though the
     messages are neither sent nor buffered.</p>

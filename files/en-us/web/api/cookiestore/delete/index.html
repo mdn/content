@@ -11,7 +11,7 @@ browser-compat: api.CookieStore.delete
 ---
 <div>{{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}</div>
 
-<p class="summary">The <strong><code>delete()</code></strong> method of the {{domxref("CookieStore")}} interface deletes a cookie with the given name or options object. (See below.) The <code>delete()</code> method expires the cookie by changing the date to one in the past.</p>
+<p>The <strong><code>delete()</code></strong> method of the {{domxref("CookieStore")}} interface deletes a cookie with the given name or options object. (See below.) The <code>delete()</code> method expires the cookie by changing the date to one in the past.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -39,7 +39,7 @@ var <var>promise</var> = cookieStore.delete(<var>options</var>);</pre>
 </dl>
 
 <div class="notecard note">
-  <p><strong>Note:</strong>The <code>url</code> option enables the modification of a cookie scoped under a particular URL. Service workers can obtain cookies that would be sent to any URL under their scope. From a document you may only obtain the cookies at the current URL, so the only valid URL in a document context is the document's URL.</p>
+  <p><strong>Note:</strong> The <code>url</code> option enables the modification of a cookie scoped under a particular URL. Service workers can obtain cookies that would be sent to any URL under their scope. From a document you may only obtain the cookies at the current URL, so the only valid URL in a document context is the document's URL.</p>
 </div>
 
 <h3 id="Returns">Return value</h3>

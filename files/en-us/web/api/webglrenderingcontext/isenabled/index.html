@@ -27,9 +27,7 @@ browser-compat: api.WebGLRenderingContext.isEnabled
 
 <dl>
   <dt><code>cap</code></dt>
-  <dd>A {{domxref("GLenum")}} specifying which WebGL capability to test. Possible values:
-  </dd>
-  <dd>
+  <dd><p>A {{domxref("WebGL_API/Types", "GLenum")}} specifying which WebGL capability to test. Possible values:</p>
     <table class="standard-table">
       <thead>
         <tr>
@@ -85,8 +83,8 @@ browser-compat: api.WebGLRenderingContext.isEnabled
         </tr>
       </tbody>
     </table>
-    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the
-    following values are available additionally:
+    <p>When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the
+    following values are available additionally:</p>
 
     <table class="standard-table">
       <thead>
@@ -109,7 +107,7 @@ browser-compat: api.WebGLRenderingContext.isEnabled
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{domxref("GLboolean")}} indicating if the capability <em>cap</em> is enabled
+<p>A {{domxref("WebGL_API/Types", "GLboolean")}} indicating if the capability <em>cap</em> is enabled
   (<code>true</code>), or not (<code>false</code>).</p>
 
 <h2 id="Examples">Examples</h2>
@@ -119,7 +117,7 @@ browser-compat: api.WebGLRenderingContext.isEnabled
 </pre>
 
 <p>To activate or deactivate a specific capability, use the
-  {{domxref("WebGLRenderingContext.enable()")}} and 
+  {{domxref("WebGLRenderingContext.enable()")}} and
   {{domxref("WebGLRenderingContext.disable()")}} methods:</p>
 
 <pre class="brush: js">gl.enable(gl.STENCIL_TEST);

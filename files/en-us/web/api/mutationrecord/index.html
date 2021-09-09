@@ -17,12 +17,14 @@ browser-compat: api.MutationRecord
 <h2 id="Properties">Properties</h2>
 
 <table class="standard-table">
+ <thead>
+   <tr>
+     <th>Property</th>
+     <th>Type</th>
+     <th>Description</th>
+   </tr>
+ </thead>
  <tbody>
-  <tr>
-   <td class="header">Property</td>
-   <td class="header">Type</td>
-   <td class="header">Description</td>
-  </tr>
   <tr>
    <td>{{domxref("MutationRecord.type")}}</td>
    <td><code>String</code></td>
@@ -78,7 +80,7 @@ browser-compat: api.MutationRecord
      For <code>childList</code>, it is <code>null</code>.</p>
 
     <div class="note">
-    <p>Note that for this to work as expected, <code>attributeOldValue</code> or <code>characterDataOldValue</code> must be set to <code>true</code> in the corresponding <a href="/en-US/docs/Web/API/MutationObserverInit">MutationObserverInit</a> parameter of the <code>MutationObserver</code> <a href="/en-US/docs/Web/API/MutationObserver/observe">observe</a> method</p>
+    <p><strong>Note:</strong> For this to work as expected, <code>attributeOldValue</code> or <code>characterDataOldValue</code> must be set to <code>true</code> in the corresponding <a href="/en-US/docs/Web/API/MutationObserverInit">MutationObserverInit</a> parameter of the <code>MutationObserver</code> <a href="/en-US/docs/Web/API/MutationObserver/observe">observe</a> method</p>
     </div>
    </td>
   </tr>

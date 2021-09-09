@@ -12,14 +12,14 @@ tags:
 <p>{{APIRef("IndexedDB")}} {{ draft() }}</p>
 
 <div class="warning">
-<p><strong>Important</strong>: The synchronous version of the IndexedDB API was originally intended for use only with <a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Web Workers</a>, and was eventually removed from the spec because its need was questionable. It may however be reintroduced in the future if there is enough demand from web developers.</p>
+<p><strong>Warning:</strong> The synchronous version of the IndexedDB API was originally intended for use only with <a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Web Workers</a>, and was eventually removed from the spec because its need was questionable. It may however be reintroduced in the future if there is enough demand from web developers.</p>
 </div>
 
-<p>The <code>IDBIndexSync</code> interface of the <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a> provides synchronous access to an <a href="/en-US/docs/Web/API/IndexedDB_API#gloss_index">index</a> in a database.</p>
+<p>The <code>IDBIndexSync</code> interface of the <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a> provides synchronous access to an <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#index">index</a> in a database.</p>
 
 <h2 id="Method_overview">Method overview</h2>
 
-<table class="standard-table">
+<table class="no-markdown">
  <tbody>
   <tr>
    <td><code>any <a href="#add">add</a> (in any value, in optional any key) raises (<a href="/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
@@ -47,7 +47,7 @@ tags:
 
 <h2 id="Attributes">Attributes</h2>
 
-<table class="standard-table">
+<table class="no-markdown">
  <thead>
   <tr>
    <th scope="col">Attribute</th>
@@ -57,22 +57,22 @@ tags:
  </thead>
  <tbody>
   <tr>
-   <td><code><a name="attr_keyPath">keyPath</a></code></td>
+   <td><code>keyPath</code></td>
    <td><code>readonly DOMString</code></td>
-   <td>The <a href="/en-US/docs/Web/API/IndexedDB_API#gloss_key_path">key path</a> of this index. If this attribute is null, this index is not <a href="/en-US/docs/Web/API/IndexedDB_API#gloss_auto-populated">auto-populated</a>.</td>
+   <td>The <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path">key path</a> of this index. If this attribute is null, this index is not auto-populated.</td>
   </tr>
   <tr>
-   <td><code><a name="attr_name">name</a></code></td>
+   <td><code>name</code></td>
    <td><code>readonly DOMString</code></td>
    <td>The name of this index.</td>
   </tr>
   <tr>
-   <td><code><a name="attr_storeName">storeName</a></code></td>
+   <td><code>storeName</code></td>
    <td><code>readonly DOMString</code></td>
-   <td>This index's <a href="/en-US/docs/Web/API/IndexedDB_API#gloss_referenced_object_store">referenced object store</a>.</td>
+   <td>This index's referenced <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#object_store">object store</a>.</td>
   </tr>
   <tr>
-   <td><code><a name="attr_unique">unique</a></code></td>
+   <td><code>unique</code></td>
    <td><code>readonly boolean</code></td>
    <td>If true, a key can have only one value within the index; if false, a key can have duplicate values.</td>
   </tr>
@@ -176,7 +176,7 @@ tags:
 
 <h3 id="openCursor">openCursor()</h3>
 
-<p>Creates a <a href="/en-US/docs/Web/API/IndexedDB_API#gloss_cursor">cursor</a> over the records of this index. The range of the new cursor matches the specified <a href="/en-US/docs/Web/API/IndexedDB_API#gloss_key_range">key range</a>; if the key range is not specified or is null, then the range includes all the records.</p>
+<p>Creates a <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#cursor">cursor</a> over the records of this index. The range of the new cursor matches the specified <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_range">key range</a>; if the key range is not specified or is null, then the range includes all the records.</p>
 
 <pre>void openCursor (
   in optional IDBKeyRange range,

@@ -15,11 +15,13 @@ browser-compat: api.PaymentResponse.complete
 ---
 <p>{{securecontext_header}}{{APIRef("Payment Request API")}}</p>
 
-<p><span class="seoSummary">The {{domxref("PaymentRequest")}} method
+<p>The {{domxref("PaymentRequest")}} method
     <code><strong>complete()</strong></code> of the <a
       href="/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a> notifies the
     {{Glossary("user agent")}} that the user interaction is over, and causes any remaining
-    user interface to be closed.</span> This method must be called after the user accepts
+    user interface to be closed.</p>
+
+<p>This method must be called after the user accepts
   the payment request and the {{jsxref("Promise")}} returned by the
   {{domxref('PaymentRequest.show()')}} method is resolved.</p>
 

@@ -15,11 +15,11 @@ browser-compat: api.Cache.match
 ---
 <p>{{APIRef("Service Workers API")}}</p>
 
-<p><span class="seoSummary">The <strong><code>match()</code></strong> method of the
+<p>The <strong><code>match()</code></strong> method of the
     {{domxref("Cache")}} interface returns a {{jsxref("Promise")}} that resolves to the
     {{domxref("Response")}} associated with the first matching request in the
     {{domxref("Cache")}} object. If no match is found, the {{jsxref("Promise")}} resolves
-    to {{jsxref("undefined")}}.</span></p>
+    to {{jsxref("undefined")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -62,7 +62,7 @@ browser-compat: api.Cache.match
   the request or to {{jsxref("undefined")}} if no match is found.</p>
 
 <div class="note">
-  <p><strong>Note</strong>: <code>Cache.match()</code> is basically identical to
+  <p><strong>Note:</strong> <code>Cache.match()</code> is basically identical to
     {{domxref("Cache.matchAll()")}}, except that rather than resolving with an array of
     all matching responses, it resolves with the first matching response only (that is,
     <code><var>response</var>[0]</code>).</p>
@@ -118,5 +118,5 @@ browser-compat: api.Cache.match
   <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service
       Workers</a></li>
   <li>{{domxref("Cache")}}</li>
-  <li>{{domxref("WindowOrWorkerGlobalScope/caches", "WorkerGlobalScope.caches")}}</li>
+  <li>{{domxref("caches")}}</li>
 </ul>

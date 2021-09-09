@@ -17,9 +17,11 @@ browser-compat: api.XMLHttpRequest.responseType
 ---
 <div>{{APIRef('XMLHttpRequest')}}</div>
 
-<p><span class="seoSummary">The {{domxref("XMLHttpRequest")}} property
+<p>The {{domxref("XMLHttpRequest")}} property
     <strong><code>responseType</code></strong> is an enumerated string value specifying
-    the type of data contained in the response.</span> It also lets the author change the
+    the type of data contained in the response.</p>
+
+<p>It also lets the author change the
   response type. If an empty string is set as the value of <code>responseType</code>, the
   default value of <code>text</code> is used.</p>
 
@@ -53,7 +55,7 @@ It can take the following values:
 </p>
 
 <div class="note">
-  <p>When setting <code>responseType</code> to a particular value, the author should make
+  <p><strong>Note:</strong> When setting <code>responseType</code> to a particular value, the author should make
     sure that the server is actually sending a response compatible with that format. If
     the server returns data that is not compatible with the <code>responseType</code> that
     was set, the value of {{domxref("XMLHttpRequest.response", "response")}} will be

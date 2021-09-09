@@ -42,7 +42,7 @@ browser-compat: api.Document.execCommand
   disabled.</p>
 
 <div class="note">
-  <p><strong>Note</strong>: <code><var>document</var>.execCommand()</code> only returns
+  <p><strong>Note:</strong> <code><var>document</var>.execCommand()</code> only returns
     <code>true</code> if it is invoked as part of a user interaction. You can't use it to
     verify browser support before calling a command. From Firefox 82, nested
     <code>document.execCommand()</code> calls will always return <code>false</code>.</p>
@@ -214,14 +214,16 @@ browser-compat: api.Document.execCommand
   <dd>Removes the <a href="/en-US/docs/Web/HTML/Element/a">anchor element</a> from a
     selected hyperlink.</dd>
   <dt><code>useCSS</code> {{Deprecated_inline}}</dt>
-  <dd>Toggles the use of HTML tags or CSS for the generated markup. Requires a boolean
-    true/false as a value argument.</dd>
-  <dd>NOTE: This argument is logically backwards (i.e. use <code>false</code> to use CSS,
+  <dd><p>Toggles the use of HTML tags or CSS for the generated markup. Requires a boolean
+    true/false as a value argument.</p>
+  <div class="notecard note"><p><strong>Note:</strong> This argument is logically backwards (i.e. use <code>false</code> to use CSS,
     <code>true</code> to use HTML) and unsupported by Internet Explorer. This has been
-    deprecated in favor of <code>styleWithCSS</code>.</dd>
+    deprecated in favor of <code>styleWithCSS</code>.</p></div></dd>
   <dt><code>styleWithCSS</code></dt>
   <dd>Replaces the <code>useCSS</code> command. <code>true</code> modifies/generates
     <code>style</code> attributes in markup, false generates presentational elements.<br></dd>
+  <dt><code>AutoUrlDetect</code></dt>
+  <dd>Changes the browser auto-link behavior (Internet Explorer only)</dd>
 </dl>
 
 <h2 id="Example">Example</h2>

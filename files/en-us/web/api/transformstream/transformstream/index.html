@@ -10,7 +10,7 @@ browser-compat: api.TransformStream.TransformStream
 ---
 <p>{{APIRef("Streams")}}</p>
 
-<p class="summary">The <strong><code>TransformStream()</code></strong> constructor creates a new {{domxref("TransformStream")}} object which represents a pair of streams: a {{domxref("WritableStream")}} representing the writable side, and a {{domxref("ReadableStream")}} representing the readable side.</p>
+<p>The <strong><code>TransformStream()</code></strong> constructor creates a new {{domxref("TransformStream")}} object which represents a pair of streams: a {{domxref("WritableStream")}} representing the writable side, and a {{domxref("ReadableStream")}} representing the readable side.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -65,8 +65,7 @@ new TransformStream(transformer, writableStrategy, readableStrategy);</pre>
 </dl>
 
 <div class="notecard note">
-  <h4>Note:</h4>
-  <p>You could define your own custom
+  <p><strong>Note:</strong> You could define your own custom
     <code>readableStrategy</code> or <code>writableStrategy</code>, or use an instance of
     {{domxref("ByteLengthQueuingStrategy")}} or {{domxref("CountQueuingStrategy")}}
     for the object values.</p>

@@ -12,7 +12,7 @@ browser-compat: api.CanvasRenderingContext2D.lineJoin
 <div>{{APIRef}}</div>
 
 <p>The
-  <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.lineJoin</code></strong>
+  <strong><code>CanvasRenderingContext2D.lineJoin</code></strong>
   property of the Canvas 2D API determines the shape used to join two line segments where
   they meet.</p>
 
@@ -68,7 +68,7 @@ browser-compat: api.CanvasRenderingContext2D.lineJoin
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js; highlight[5]">const canvas = document.getElementById('canvas');
+<pre class="brush: js;">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.lineWidth = 20;
@@ -90,10 +90,7 @@ ctx.stroke();
 <p>The example below draws three different paths, demonstrating each of the three
   <code>lineJoin</code> options.</p>
 
-<div class="hidden">
-  <pre
-    class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
-</div>
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
 
 <pre class="brush: js">var ctx = document.getElementById('canvas').getContext('2d');
 var lineJoin = ['round', 'bevel', 'miter'];

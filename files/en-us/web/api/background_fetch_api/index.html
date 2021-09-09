@@ -9,7 +9,7 @@ tags:
 ---
 <div>{{DefaultAPISidebar("Background Fetch API")}}</div>
 
-<p class="summary">The <strong>Background Fetch API</strong> provides a method for managing downloads that may take a significant amount of time such as movies, audio files, and software.</p>
+<p>The <strong>Background Fetch API</strong> provides a method for managing downloads that may take a significant amount of time such as movies, audio files, and software.</p>
 
 <h2>Concepts and Usage</h2>
 
@@ -44,7 +44,7 @@ tags:
   // Provide fallback downloading.
 }</pre>
 
-<p>Using Background Fetch requires a registered a service worker. Then call <code>backgroundFetch.fetch()</code> to perform a fetch. This
+<p>Using Background Fetch requires a registered service worker. Then call <code>backgroundFetch.fetch()</code> to perform a fetch. This
 returns a promise that resolves with a {{domxref("BackgroundFetchRegistration")}}.</p>
 
 <p>A background fetch may fetch a number of files. In our example the fetch requests an MP3 and a JPEG. This enables a package of files that the user sees as one item (for example a podcast and artwork) to be downloaded at once.</p>
@@ -65,7 +65,18 @@ returns a promise that resolves with a {{domxref("BackgroundFetchRegistration")}
 
 <h2 id="Specifications">Specifications</h2>
 
-{{Specifications("api.BackgroundFetchManager")}}
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://wicg.github.io/background-fetch/">Background Fetch</a></td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="See_also">See also</h2>
 

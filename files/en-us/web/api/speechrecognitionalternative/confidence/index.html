@@ -20,7 +20,7 @@ browser-compat: api.SpeechRecognitionAlternative.confidence
   confident the speech recognition system is that the recognition is correct.</p>
 
 <div class="note">
-  <p><strong>Note</strong>: Mozilla's implementation of <code>confidence</code> is still
+  <p><strong>Note:</strong> Mozilla's implementation of <code>confidence</code> is still
     being worked on — at the moment, it always seems to return 1.</p>
 </div>
 
@@ -61,34 +61,6 @@ browser-compat: api.SpeechRecognitionAlternative.confidence
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <p>{{Compat}}</p>
-
-<ul>
-  <li>[1] Speech recognition interfaces are currently prefixed on Chrome, so you'll need
-    to prefix interface names appropriately, e.g. <code>webkitSpeechRecognition</code>;
-    You'll also need to serve your code through a web server for recognition to work.</li>
-  <li>[2] Can be enabled via the <code>media.webspeech.recognition.enable</code> flag in
-    <a>about:config</a>, although note that currently speech recognition won't work on
-    Desktop Firefox — it will be properly exposed soon, once the required internal
-    permissions are sorted out.</li>
-</ul>
-
-<h3 id="Firefox_OS_permissions">Firefox OS permissions</h3>
-
-<p>To use speech recognition in an app, you need to specify the following permissions in
-  your <a href="/en-US/docs/Web/Apps/Build/Manifest">manifest</a>:</p>
-
-<pre class="brush: json">"permissions": {
-  "audio-capture" : {
-    "description" : "Audio capture"
-  },
-  "speech-recognition" : {
-    "description" : "Speech recognition"
-  }
-}</pre>
-
-<p>You also need a privileged app, so you need to include this as well:</p>
-
-<pre class="brush: json">  "type": "privileged"</pre>
 
 <h2 id="See_also">See also</h2>
 

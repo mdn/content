@@ -43,7 +43,7 @@ var fs = requestFileSystemSync(TEMPORARY, 1024*1024 /*1MB*/);</pre>
 
 <h2 id="Method_overview">Method overview</h2>
 
-<table class="standard-table">
+<table class="no-markdown">
  <tbody>
   <tr>
    <td><code>FileSystemSync <a href="#requestfilesystemsync">requestFileSystemSync</a> (in unsigned short <em>type</em>, in long long <em>size</em>) raises <a href="/en-US/docs/Web/API/FileException">FileException</a>; </code></td>
@@ -56,7 +56,7 @@ var fs = requestFileSystemSync(TEMPORARY, 1024*1024 /*1MB*/);</pre>
 
 <h2 id="Constants">Constants</h2>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">Constant</th>
@@ -66,14 +66,14 @@ var fs = requestFileSystemSync(TEMPORARY, 1024*1024 /*1MB*/);</pre>
  </thead>
  <tbody>
   <tr>
-   <td><a name="const_temporary"><code>TEMPORARY</code></a></td>
+   <td><code>TEMPORARY</code></td>
    <td><code>0</code></td>
    <td>
     <p>Transient storage that can be removed by the browser at its discretion.</p>
    </td>
   </tr>
   <tr>
-   <td><a name="const_persistent"><code>PERSISTENT</code></a></td>
+   <td><code>PERSISTENT</code></td>
    <td><code>1</code></td>
    <td>Storage that stays in the browser unless the user or the app expunges it.</td>
   </tr>
@@ -95,7 +95,7 @@ var fs = requestFileSystemSync(TEMPORARY, 1024*1024 /*1MB*/);</pre>
 
 <dl>
  <dt>type</dt>
- <dd>The storage type of the file system. The values can be either <code><a href="#const_temporary">TEMPORARY</a></code> or <code><a href="#const_persistent">PERSISTENT</a></code>.</dd>
+ <dd>The storage type of the file system. The values can be either <a href="#Constants"><code>TEMPORARY</code> or <code>PERSISTENT</code></a>.</dd>
  <dt>size</dt>
  <dd>The storage space—in bytes—that you need for your app.</dd>
 </dl>
@@ -111,7 +111,7 @@ var fs = requestFileSystemSync(TEMPORARY, 1024*1024 /*1MB*/);</pre>
 
 <p>This method can raise an <a href="/en-US/docs/Web/API/FileException">FileException</a> with the following code:</p>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">Exception</th>
@@ -150,7 +150,7 @@ var fs = requestFileSystemSync(TEMPORARY, 1024*1024 /*1MB*/);</pre>
 
 <p>This method can raise a <a href="/en-US/docs/Web/API/FileException">FileException</a> with the following codes:</p>
 
-<table class="standard-table">
+<table class="no-markdown">
  <thead>
   <tr>
    <th scope="col">Exception</th>

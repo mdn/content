@@ -12,10 +12,10 @@ browser-compat: api.AudioParam.defaultValue
 ---
 <p>{{APIRef("Web Audio API")}}</p>
 
-<p class="summary"><span class="seoSummary">The <strong><code>defaultValue</code></strong>
+<p>The <strong><code>defaultValue</code></strong>
     read-only property of the {{ domxref("AudioParam") }} interface represents the initial
     value of the attributes as defined by the specific {{domxref("AudioNode")}} creating
-    the <code>AudioParam</code>.</span></p>
+    the <code>AudioParam</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -28,7 +28,7 @@ browser-compat: api.AudioParam.defaultValue
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js;highlight[3]">const audioCtx = new AudioContext();
+<pre class="brush: js;">const audioCtx = new AudioContext();
 const gainNode = audioCtx.createGain();
 const defaultVal = gainNode.gain.defaultValue;
 console.log(defaultVal); // 1

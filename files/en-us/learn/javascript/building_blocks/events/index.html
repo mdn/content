@@ -35,7 +35,7 @@ tags:
 
 <p>As mentioned above, <strong>events</strong> are actions or occurrences that happen in the system you are programming — the system produces (or "fires") a signal of some kind when an event occurs, and provides a mechanism by which an action can be automatically taken (that is, some code running) when the event occurs. For example, in an airport, when the runway is clear for take off, a signal is communicated to the pilot. As a result, the plane can safely takeoff.</p>
 
-<p><img alt="Image displaying signal for plane to take-off" src="mdn-mozilla-events-runway.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="Image displaying signal for plane to take-off" src="mdn-mozilla-events-runway.png"></p>
 
 <p>In the case of the Web, events are fired inside the browser window, and tend to be attached to a specific item that resides in it — this might be a single element, set of elements, the HTML document loaded in the current tab, or the entire browser window. There are many different types of events that can occur. For example:</p>
 
@@ -240,25 +240,27 @@ myElement.addEventListener('click', functionB);</pre>
 
 <h3 id="What_mechanism_should_I_use">What mechanism should I use?</h3>
 
-<p>Of the three mechanisms, you shouldn't use the HTML event handler attributes — these are outdated, and bad practice, as mentioned above.</p>
-
-<p>The other two are relatively interchangeable, at least for simple uses:</p>
+<p>There are only two methods you should consider for handling events:</p>
 
 <ul>
- <li>Event handler properties have less power and options, but better cross-browser compatibility (being supported as far back as Internet Explorer 8). You should probably start with these as you begin learning.</li>
- <li>DOM Level 2 Events (<code>addEventListener()</code>, etc.) are more powerful, but can also become complex and are less well supported (supported as far back as Internet Explorer 9). You should also experiment with these, and try to use them where possible.</li>
+ <li><a href="/en-US/docs/Web/Events/Event_handlers#using_onevent_properties">Event handler properties</a> have less power and options, but are easier to use. So as you begin learning, you might want to start with these.</li>
+ <li><a href="/en-US/docs/Web/Events/Event_handlers#eventtarget.addeventlistener"><code>addEventListener()</code></a> is more complex, but also more powerful. So after you’ve begun learning, you should try to use it where possible.</li>
 </ul>
 
-<p>The main advantages of the third mechanism are that you can remove event handler code if needed, using <code>removeEventListener()</code>, and you can add multiple listeners of the same type to elements if required. For example, you can call <code>addEventListener('click', function() { ... })</code> on an element multiple times, with different functions specified in the second argument. This is impossible with event handler properties because any subsequent attempts to set a property will overwrite earlier ones, e.g.:</p>
+<p>The main advantages of <code>addEventListener()</code> are that:</p>
+
+<ul>
+ <li>You can remove event-handler code if needed, using <code>removeEventListener()</code>.</li>
+ <li>You can add multiple listeners of the same type to elements, if required.</li>
+</ul>
+
+<p>For example, you can call <code>addEventListener('click', function() { ... })</code> on an element multiple times, with different functions specified in the second argument. This is impossible with event handler properties because any subsequent attempts to set a property will overwrite earlier ones, e.g.:</p>
 
 <pre class="brush: js">element.onclick = function1;
 element.onclick = function2;
 etc.</pre>
 
-<div class="notecard note">
-  <h4>Note</h4>
-  <p>If you are called on to support browsers older than Internet Explorer 8, you may run into difficulties, as such ancient browsers use different event models from newer browsers. But never fear, most JavaScript libraries (for example <code>jQuery</code>) have built-in functions that abstract away cross-browser differences. Don't worry about this too much at this stage in your learning journey.</p>
-</div>
+<p>You should never use the HTML event handler attributes — those are outdated, and using them is bad practice.</p>
 
 <h2 id="Other_event_concepts">Other event concepts</h2>
 

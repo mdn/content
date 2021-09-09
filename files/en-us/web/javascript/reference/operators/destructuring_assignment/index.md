@@ -228,13 +228,13 @@ console.log(parseProtocol('https://developer.mozilla.org/en-US/docs/Web/JavaScri
 ```js
 const user = {
     id: 42,
-    is_verified: true
+    isVerified: true
 };
 
-const {id, is_verified} = user;
+const {id, isVerified} = user;
 
 console.log(id); // 42
-console.log(is_verified); // true
+console.log(isVerified); // true
 ```
 
 #### Assignment without declaration

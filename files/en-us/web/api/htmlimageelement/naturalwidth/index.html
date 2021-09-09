@@ -17,10 +17,12 @@ browser-compat: api.HTMLImageElement.naturalWidth
 ---
 <p>{{APIRef("HTML DOM")}}</p>
 
-<p><span class="seoSummary">The {{domxref("HTMLImageElement")}} interface's read-only
+<p>The {{domxref("HTMLImageElement")}} interface's read-only
     <code><strong>naturalWidth</strong></code> property returns the intrinsic (natural),
     density-corrected width of the image in {{Glossary("CSS pixel", "CSS
-    pixels")}}.</span> This is the width the image is if drawn with nothing constraining
+    pixels")}}.</p>
+
+<p>This is the width the image is if drawn with nothing constraining
   its width; if you neither specify a width for the image nor place the image inside a
   container that limits or expressly specifies the image width, this is the number of CSS
   pixels wide the image will be.</p>
@@ -28,12 +30,12 @@ browser-compat: api.HTMLImageElement.naturalWidth
 <p>The corresponding {{domxref("HTMLImageElement.naturalHeight", "naturalHeight")}} method
   returns the natural height of the image.</p>
 
-  <p class="notecard note"><strong>Note:</strong> Most of the time the natural width is the actual width of the image sent by the server.
-    Nevertheless, browsers can modify an image before pushing it to the renderer. For example, Chrome
-    <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1187043#c7">degrades the resolution of
-    images on low-end devices</a>. In such cases, <code>naturalWidth</code> will consider the width of the image modified
-    by such browser interventions as the natural width, and returns this value.
-  </p>
+<div class="notecard note"><p><strong>Note:</strong> Most of the time the natural width is the actual width of the image sent by the server.
+  Nevertheless, browsers can modify an image before pushing it to the renderer. For example, Chrome
+  <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1187043#c7">degrades the resolution of
+  images on low-end devices</a>. In such cases, <code>naturalWidth</code> will consider the width of the image modified
+  by such browser interventions as the natural width, and returns this value.</p>
+</div>
 
 <h2 id="Syntax">Syntax</h2>
 

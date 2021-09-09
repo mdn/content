@@ -18,7 +18,7 @@ browser-compat: api.MediaStreamTrack.muted
   indicating whether or not the track is currently unable to provide media output.</p>
 
 <div class="note">
-  <p>To implement a way for users to mute and unmute a track, use the
+  <p><strong>Note:</strong> To implement a way for users to mute and unmute a track, use the
     {{domxref("MediaStreamTrack.enabled", "enabled")}} property. When a track is disabled
     by setting <code>enabled</code> to <code>false</code>, it generates only empty frames
     (audio frames in which every sample is 0, or video frames in which every pixel is
@@ -36,7 +36,7 @@ browser-compat: api.MediaStreamTrack.muted
   <code>false</code> if the track is currently unmuted.</p>
 
 <div class="note">
-  <p>When possible, avoid polling <code>muted</code> to monitor the track's muting status.
+  <p><strong>Note:</strong> When possible, avoid polling <code>muted</code> to monitor the track's muting status.
     Instead, add event listeners for the {{event("mute")}} and {{event("unmute")}} events.
   </p>
 </div>

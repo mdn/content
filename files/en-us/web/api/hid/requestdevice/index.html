@@ -11,7 +11,7 @@ browser-compat: api.HID.requestDevice
 ---
 <div>{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}</div>
 
-<p class="summary">The <strong><code>requestDevice()</code></strong> method of the {{domxref("HID")}} interface requests access to a HID device.</p>
+<p>The <strong><code>requestDevice()</code></strong> method of the {{domxref("HID")}} interface requests access to a HID device.</p>
 
 <p>The user agent will present a permission dialog including a list of connected devices, and ask the user to select and grant permission to one of these devices.</p>
 
@@ -40,8 +40,7 @@ browser-compat: api.HID.requestDevice
 </dl>
 
 <div class="notecard note">
-  <h4>Note:</h4>
-  <p>The device filters are used to narrow the list of devices presented to the user. If no filters are present, all connected devices are shown. When one or more filters are included, a device is included if any filter matches. To match a filter, all of the rules included in that filter must match.</p>
+  <p><strong>Note:</strong> The device filters are used to narrow the list of devices presented to the user. If no filters are present, all connected devices are shown. When one or more filters are included, a device is included if any filter matches. To match a filter, all of the rules included in that filter must match.</p>
 </div>
 
 <h3 id="Returns">Return value</h3>

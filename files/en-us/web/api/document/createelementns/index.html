@@ -35,7 +35,7 @@ browser-compat: api.Document.createElementNS
     {{DOMxRef("element.nodeName", "nodeName")}} property of the created element is
     initialized with the value of <var>qualifiedName</var>.</dd>
   <dt><var>options</var>{{Optional_Inline}}</dt>
-  <dd>An optional <code>ElementCreationOptions</code> object containing a single property
+  <dd><p>An optional <code>ElementCreationOptions</code> object containing a single property
     named <code>is</code>, whose value is the tag name for a custom element previously
     defined using <code>customElements.define()</code>. For backwards compatibility with
     previous versions of the <a class="external external-icon"
@@ -43,10 +43,10 @@ browser-compat: api.Document.createElementNS
     some browsers will allow you to pass a string here instead of an object, where the
     string's value is the custom element's tag name. See <a class="external external-icon"
       href="https://developers.google.com/web/fundamentals/primers/customelements/#extendhtml">Extending
-      native HTML elements</a> for more information on how to use this parameter.</dd>
-  <dd>The new element will be given an <code>is</code> attribute whose value is the custom
+      native HTML elements</a> for more information on how to use this parameter.</p>
+  <p>The new element will be given an <code>is</code> attribute whose value is the custom
     element's tag name. Custom elements are an experimental feature only available in some
-    browsers.</dd>
+    browsers.</p></dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -108,7 +108,7 @@ browser-compat: api.Document.createElementNS
 </pre>
 
 <div class="notecard note">
-  <p>The example given above uses inline script which is not recommended in XHTML
+  <p><strong>Note:</strong> The example given above uses inline script which is not recommended in XHTML
     documents. This particular example is actually an XUL document with embedded XHTML,
     however, the recommendation still applies.</p>
 </div>

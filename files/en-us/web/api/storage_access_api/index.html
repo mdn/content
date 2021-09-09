@@ -7,10 +7,11 @@ tags:
   - Storage
   - Storage Access API
 ---
-
 <div>{{DefaultAPISidebar("Storage Access API")}}{{SeeCompatTable}}</div>
 
-<p><span class="seoSummary">The Storage Access API provides a way for embedded, cross-origin content to gain unrestricted access to storage that it would normally only have access to in a first-party context (we refer to this as an origin’s <em>first-party</em> storage).</span> The API provides methods that allow embedded resources to check whether they currently have access to their first-party storage, and to request access to their first-party storage from the user agent.</p>
+<p>The Storage Access API provides a way for embedded, cross-origin content to gain unrestricted access to storage that it would normally only have access to in a first-party context (we refer to this as an origin’s <em>first-party</em> storage).</p>
+
+<p>The API provides methods that allow embedded resources to check whether they currently have access to their first-party storage, and to request access to their first-party storage from the user agent.</p>
 
 <h2 id="Concepts_and_usage">Concepts and usage</h2>
 
@@ -55,7 +56,7 @@ tags:
  <li>In Firefox, the storage access grants are phased out after 30 calendar days passing, whereas in Safari the storage access grants are phased out after 30 days of browser usage passed without user interaction. This is currently a limitation of the Firefox implementation, which we may address in a future version.  In Safari, successful use of the storage access API resets this counter.</li>
 </ul>
 
-<p>Documentation for Firefox's new storage access policy for blocking tracking cookies includes <a href="/en-US/docs/Web/Privacy/Storage_Access_Policy#Storage_access_grants">a detailed description</a> of the scope of storage access grants.</p>
+<p>Documentation for Firefox's new storage access policy for blocking tracking cookies includes <a href="/en-US/docs/Web/Privacy/Storage_Access_Policy#storage_access_grants">a detailed description</a> of the scope of storage access grants.</p>
 
 <h2 id="Storage_Access_API_methods">Storage Access API methods</h2>
 
@@ -69,7 +70,7 @@ tags:
 </dl>
 
 <div class="note">
-<p><strong>Note</strong>: User interaction propagates to the Promise returned by both of these methods, allowing the callers to take actions that require user interaction without requiring a second click from the user. For example, a caller could open a pop-up window from the resolved Promise without triggering Firefox’s pop-up blocker.</p>
+<p><strong>Note:</strong> User interaction propagates to the Promise returned by both of these methods, allowing the callers to take actions that require user interaction without requiring a second click from the user. For example, a caller could open a pop-up window from the resolved Promise without triggering Firefox’s pop-up blocker.</p>
 </div>
 
 <h2 id="Extensions_to_&lt;iframe&gt;_sandbox">Extensions to &lt;iframe&gt; sandbox</h2>

@@ -107,11 +107,11 @@ value will be the value at the time `callbackFn` visits them.
 Elements that are deleted after the call to `map` begins and before being
 visited are not visited.
 
+**Warning:** Concurrent modification of the kind described in the previous paragraph frequently leads to hard-to-understand code and is generally to be avoided (except in special cases).
+
 Due to the algorithm defined in the specification, if the array which `map`
 was called upon is sparse, resulting array will also be sparse keeping same indices
 blank.
-
-**Warning:** Concurrent modification of the kind described in the previous paragraph frequently leads to hard-to-understand code and is generally to be avoided (except in special cases).
 
 ## Polyfill
 

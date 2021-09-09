@@ -12,7 +12,7 @@ browser-compat: api.HTMLTrackElement
 ---
 <div>{{ APIRef("HTML DOM") }}</div>
 
-<p><span class="seoSummary">The <strong><code>HTMLTrackElement</code></strong> interface represents an {{Glossary("HTML")}} {{HTMLElement("track")}} element within the {{Glossary("DOM")}}. This element can be used as a child of either {{HTMLElement("audio")}} or {{HTMLElement("video")}} to specify a text track containing information such as closed captions or subtitles.</span></p>
+<p>The <strong><code>HTMLTrackElement</code></strong> interface represents an {{Glossary("HTML")}} {{HTMLElement("track")}} element within the {{Glossary("DOM")}}. This element can be used as a child of either {{HTMLElement("audio")}} or {{HTMLElement("video")}} to specify a text track containing information such as closed captions or subtitles.</p>
 
 <p>{{InheritanceDiagram(600, 120)}}</p>
 
@@ -34,12 +34,14 @@ browser-compat: api.HTMLTrackElement
  <dt>{{domxref("HTMLTrackElement.readyState")}} {{ReadOnlyInline}}</dt>
  <dd>Returns  an <code>unsigned short</code> that show the readiness state of the track:
  <table class="standard-table">
+  <thead>
+    <tr>
+      <th>Constant</th>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
   <tbody>
-   <tr>
-    <td class="header">Constant</td>
-    <td class="header">Value</td>
-    <td class="header">Description</td>
-   </tr>
    <tr>
     <td><code>NONE</code></td>
     <td>0</td>

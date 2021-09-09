@@ -11,7 +11,10 @@ tags:
 
 The JavaScript exception "Invalid array length" occurs when specifying an array length that is either negative or exceeds the maximum supported by the platform (i.e. when creating an {{jsxref("Array")}} or {{jsxref("ArrayBuffer")}}, or when setting the {{jsxref("Array.length")}} property).
 
-The maximum allowed array length depends on the platform, browser and browser version. For {{jsxref("Array")}} the maximum length is 2GB-1 (2^32-1). For {{jsxref("ArrayBuffer")}} the maximum is 2GB-1 on 32-bit systems (2^32-1). From Firefox version 89 the maximum value of {{jsxref("ArrayBuffer")}} is 8GB on 64-bit systems (2^33).
+The maximum allowed array length depends on the platform, browser and browser version.
+For {{jsxref("Array")}} the maximum length is 4GB-1 (2^32-1).
+For {{jsxref("ArrayBuffer")}} the maximum is 2GB-1 on 32-bit systems (2^31-1).
+From Firefox version 89 the maximum value of {{jsxref("ArrayBuffer")}} is 8GB on 64-bit systems (2^33).
 
 > **Note:** `Array` and `ArrayBuffer` are independent data structures (the implementation of one does not affect the other).
 

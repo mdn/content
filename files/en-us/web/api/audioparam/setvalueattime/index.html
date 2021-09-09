@@ -12,7 +12,7 @@ browser-compat: api.AudioParam.setValueAtTime
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
-<p class="summary">The <code>setValueAtTime()</code> method of the
+<p>The <code>setValueAtTime()</code> method of the
   {{domxref("AudioParam")}} interface schedules an instant change to the
   <code>AudioParam</code> value at a precise time, as measured against
   {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}. The new value is given in the value parameter.
@@ -51,7 +51,7 @@ browser-compat: api.AudioParam.setValueAtTime
   to set the gain value equal to <code>currGain</code>, one second from now
   (<code>audioCtx.currentTime + 1</code>.)</p>
 
-<pre class="brush: js;highlight[32,37]">// create audio context
+<pre class="brush: js;">// create audio context
 var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 

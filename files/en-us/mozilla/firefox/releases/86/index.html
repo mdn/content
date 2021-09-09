@@ -96,6 +96,9 @@ currencyNames.of('EUR'); // "Euro"</pre>
 <ul>
   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">Host permissions</a> now grant access to privileged parts of the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs">tabs API</a> ({{bug(1679688)}}).</li>
   <li><code>focused: false</code> is now ignored when set as an option in a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/create"><code>windows.create()</code></a> call ({{bug(1253129)}}).</li>
+  <li>{{WebExtAPIRef("identity.getRedirectURL")}} now supports a loopback address, see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/identity#getting_the_redirect_url">Getting the redirect URL</a> for details ({{bug(1614919)}}).
+ </li>
+
 </ul>
 
 <h2 id="Older_versions">Older versions</h2>

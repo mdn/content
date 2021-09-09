@@ -34,21 +34,21 @@
     lodash.isundefined "^3.0.1"
     lodash.uniq "^4.5.0"
 
-"@mdn/browser-compat-data@3.3.14":
-  version "3.3.14"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-3.3.14.tgz#b72a37c654e598f9ae6f8335faaee182bebc6b28"
-  integrity sha512-n2RC9d6XatVbWFdHLimzzUJxJ1KY8LdjqrW6YvGPiRmsHkhOUx74/Ct10x5Yo7bC/Jvqx7cDEW8IMPv/+vwEzA==
+"@mdn/browser-compat-data@4.0.2":
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-4.0.2.tgz#54431f690853e11b61f93b29ded25978f78c38e0"
+  integrity sha512-XGLqWi1uOil0L4TJs9KOTMRl9FdEtRQLvBDaB7++AFnFf9G0QYihiUNRJ4eXZa53KI9VORsEi3Fj8p3N+m/Gdw==
 
-"@mdn/yari@0.4.682":
-  version "0.4.682"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.682.tgz#d6e43fbc5fe032e3008e8ed1db450e287f2dd3ce"
-  integrity sha512-A2dbCAEpDroeFjeeLU3NFX4r7w/rAyT4Y3bjJBZQF/xXDVB90dyzyYuOvP/c2y6OfIfI/LB16M6ldTlEdBwafA==
+"@mdn/yari@0.4.763":
+  version "0.4.763"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.763.tgz#69b6fbf9bfa6359edabab248dba3c2e9c6657076"
+  integrity sha512-owDZPBFee2Lbvty3Q0WoTw3GszOVqXCcJrYf2mI2cOJ41Fdlj0hbFs5d6A6gxdjWpoAnnf6/Pl9b8pdREjVPRA==
   dependencies:
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
-    "@mdn/browser-compat-data" "3.3.14"
+    "@mdn/browser-compat-data" "4.0.2"
     accept-language-parser "1.5.0"
-    browser-specs "^2.6.1"
+    browser-specs "^2.10.0"
     chalk "4.1.2"
     cheerio "1.0.0-rc.6"
     cli-progress "^3.9.0"
@@ -86,7 +86,8 @@
     md5-file "5.0.0"
     mdast-util-from-markdown "^0.8.5"
     mdast-util-phrasing "^2.0.0"
-    mdn-data "2.0.20"
+    mdn-data "2.0.21"
+    node-gettext "^3.0.0"
     open "^8.2.1"
     open-editor "3.0.0"
     prismjs "1.24.1"
@@ -547,10 +548,10 @@ braces@^3.0.1:
   dependencies:
     fill-range "^7.0.1"
 
-browser-specs@^2.6.1:
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-2.6.1.tgz#c2a0066a84b474154e876906edeae3149e389d4d"
-  integrity sha512-w4VtihqOBQmBL0CL6ZLYno12W8B8tUH+eK8Fv6MUxbOEF0YBLg/KnpMhou6Y3dGO2DMx8QSy97KXmJg4ceuozA==
+browser-specs@^2.10.0:
+  version "2.10.0"
+  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-2.10.0.tgz#d4f229eaf1f0a82f3fe2e524bdc3f7915ffe1bbb"
+  integrity sha512-kmPBiZ1yCz8PtnbV56dBm7M4muwAASpZ8D09MJGvdnhdz6I+J2gHX1BrdleUhIwcDPwwhuOq9Odo0eIMtknSxg==
 
 buffer-alloc-unsafe@^1.1.0:
   version "1.1.0"
@@ -2720,6 +2721,11 @@ lodash.escaperegexp@^4.1.2:
   resolved "https://registry.yarnpkg.com/lodash.escaperegexp/-/lodash.escaperegexp-4.1.2.tgz#64762c48618082518ac3df4ccf5d5886dae20347"
   integrity sha1-ZHYsSGGAglGKw99Mz11YhtriA0c=
 
+lodash.get@^4.4.2:
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
+  integrity sha1-LRd/ZS+jHpObRDjVNBSZ36OCXpk=
+
 lodash.groupby@^4.6.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/lodash.groupby/-/lodash.groupby-4.6.0.tgz#0b08a1dcf68397c397855c3239783832df7403d1"
@@ -3005,10 +3011,10 @@ mdn-data@2.0.14:
   resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.14.tgz#7113fc4281917d63ce29b43446f701e68c25ba50"
   integrity sha512-dn6wd0uw5GsdswPFfsgMp5NSB0/aDe6fK94YJV/AJDYXL6HVLWBsxeq7js7Ad+mU2K9LAlwpk6kN2D5mwCPVow==
 
-mdn-data@2.0.20:
-  version "2.0.20"
-  resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.20.tgz#3bb10361eb9beaf4efad0959179734b8205314a9"
-  integrity sha512-bGgNVI2DIdIEZ/ZIAo1+YwOSRtKvUNvpKEZJ0qT+UClkQLQfqpv5NMv0PeFxhOOw380bBTRSPdfaH1nFhMsoVQ==
+mdn-data@2.0.21:
+  version "2.0.21"
+  resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.21.tgz#47cf3863e068c7d205ec4ff7ff306c83a9feb07d"
+  integrity sha512-kGkDjVRptGvjcZA2NTEHNu6szZ719ixyCbs4q2IFBhTBbfW+p89RV6SBnkGWBIdOXhF+B/Uv0bLFxjAg/EJRHw==
 
 mdurl@^1.0.0:
   version "1.0.1"
@@ -3221,6 +3227,13 @@ nice-try@^1.0.4:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
   integrity sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==
+
+node-gettext@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/node-gettext/-/node-gettext-3.0.0.tgz#6b3a253309aa1e53164646c6c644fcddd0d45c58"
+  integrity sha512-/VRYibXmVoN6tnSAY2JWhNRhWYJ8Cd844jrZU/DwLVoI4vBI6ceYbd8i42sYZ9uOgDH3S7vslIKOWV/ZrT2YBA==
+  dependencies:
+    lodash.get "^4.4.2"
 
 normalize-package-data@^2.3.2, normalize-package-data@^2.3.4:
   version "2.5.0"

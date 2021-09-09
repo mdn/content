@@ -30,19 +30,21 @@ browser-compat: api.History.pushState
 
 <dl>
   <dt><code>state</code></dt>
-  <dd>The <code>state</code> object is a JavaScript object which is associated with the
+  <dd>
+    <p>The <code>state</code> object is a JavaScript object which is associated with the
     new history entry created by <code>pushState()</code>. Whenever the user navigates to
     the new <code>state</code>, a {{event("popstate")}} event is fired, and
     the <code>state</code> property of the event contains a copy of the history entry's
-    <code>state</code> object.</dd>
-  <dd>The <code>state</code> object can be anything that can be serialized. Because
+    <code>state</code> object.</p>
+    <p>The <code>state</code> object can be anything that can be serialized. Because
     Firefox saves <code>state</code> objects to the user's disk so they can be restored
     after the user restarts the browser, we impose a size limit of 2 MiB on the
     serialized representation of a <code>state</code> object. If you pass a
     <code>state</code> object whose serialized representation is larger than this
     to <code>pushState()</code>, the method will throw an exception. If you need more
     space than this, you're encouraged to use {{domxref("Window.sessionStorage",
-    "sessionStorage")}} and/or {{domxref("Window.localStorage", "localStorage")}}.</dd>
+    "sessionStorage")}} and/or {{domxref("Window.localStorage", "localStorage")}}.</p>
+  </dd>
   <dt><code>title</code></dt>
   <dd><a href="https://github.com/whatwg/html/issues/2174">Most browsers currently ignore
       this parameter</a>, although they may use it in the future. Passing the empty string

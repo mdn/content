@@ -22,7 +22,7 @@ tags:
 
 <p class="summary">In the beginning, the Web was just text, and it was really quite boring. Fortunately, it wasn't too long before the ability to embed images (and other more interesting types of content) inside web pages was added. There are other types of multimedia to consider, but it is logical to start with the humble {{htmlelement("img")}} element, used to embed a simple image in a webpage. In this article we'll look at how to use it in depth, including the basics, annotating it with captions using {{htmlelement("figure")}}, and detailing how it relates to {{glossary("CSS")}} background images.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -78,7 +78,7 @@ tags:
 
 <p>Our above code would give us the following result:</p>
 
-<p><img alt='A basic image of a dinosaur, embedded in a browser, with "Images in HTML" written above it' src="basic-image.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt='A basic image of a dinosaur, embedded in a browser, with "Images in HTML" written above it' src="basic-image.png"></p>
 
 <div class="note">
 <p><strong>Note</strong>: Elements like {{htmlelement("img")}} and {{htmlelement("video")}} are sometimes referred to as <strong>replaced elements</strong>. This is because the element's content and size are defined by an external resource (like an image or video file), not by the contents of the element itself. You can read more about them at <a href="/en-US/docs/Web/CSS/Replaced_element">Replaced elements</a>.</p>
@@ -98,7 +98,7 @@ tags:
 
 <p>The easiest way to test your <code>alt</code> text is to purposely misspell your filename. If for example our image name was spelled <code>dinosooooor.jpg</code>, the browser wouldn't display the image, and would display the alt text instead:</p>
 
-<p><img alt="The Images in HTML title, but this time the dinosaur image is not displayed, and alt text is in its place." src="alt-text.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="The Images in HTML title, but this time the dinosaur image is not displayed, and alt text is in its place." src="alt-text.png"></p>
 
 <p>So, why would you ever see or need alt text? It can come in handy for a number of reasons:</p>
 
@@ -137,7 +137,7 @@ tags:
 
 <p>This doesn't result in much difference to the display, under normal circumstances. But if the image isn't being displayed, for example, the user has just navigated to the page, and the image hasn't yet loaded, you'll notice the browser is leaving a space for the image to appear in:</p>
 
-<p><img alt="The Images in HTML title, with dinosaur alt text, displayed inside a large box that results from width and height settings" src="alt-text-with-width-height.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="The Images in HTML title, with dinosaur alt text, displayed inside a large box that results from width and height settings" src="alt-text-with-width-height.png"></p>
 
 <p>This is a good thing to do, resulting in the page loading quicker and more smoothly.</p>
 
@@ -160,7 +160,7 @@ tags:
 
 <p>This gives us a tooltip on mouse hover, just like link titles:</p>
 
-<p><img alt="The dinosaur image, with a tooltip title on top of it that reads A T-Rex on display at the Manchester University Museum " src="image-with-title.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="The dinosaur image, with a tooltip title on top of it that reads A T-Rex on display at the Manchester University Museum " src="image-with-title.png"></p>
 
 <p>However, this is not recommended — <code>title</code> has a number of accessibility problems, mainly based around the fact that screen reader support is very unpredictable and most browsers won't show it unless you are hovering with a mouse (so e.g. no access to keyboard users). If you are interested in more information about this, read <a href="https://www.24a11y.com/2017/the-trials-and-tribulations-of-the-title-attribute/">The Trials and Tribulations of the Title Attribute</a> by Scott O'Hara.</p>
 

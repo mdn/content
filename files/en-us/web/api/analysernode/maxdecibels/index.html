@@ -12,7 +12,7 @@ browser-compat: api.AnalyserNode.maxDecibels
 ---
 <div>{{APIRef("Web Audio API")}}</div>
 
-<p class="summary">The <strong><code>maxDecibels</code></strong> property of the {{domxref("AnalyserNode")}} interface is a double value representing the maximum power value in the scaling range for the FFT analysis data, for conversion to unsigned byte values — basically, this specifies the maximum value for the range of results when using <code>getByteFrequencyData()</code>.</p>
+<p>The <strong><code>maxDecibels</code></strong> property of the {{domxref("AnalyserNode")}} interface is a double value representing the maximum power value in the scaling range for the FFT analysis data, for conversion to unsigned byte values — basically, this specifies the maximum value for the range of results when using <code>getByteFrequencyData()</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -26,7 +26,7 @@ browser-compat: api.AnalyserNode.maxDecibels
 
 <p>When getting data from <code>getByteFrequencyData()</code>, any frequencies with an amplitude of <code>maxDecibels</code> or higher will be returned as <code>255</code>.</p>
 
-<p class="note"><strong>Note</strong>: If a value less than or equal to <code>AnalyserNode.minDecibels</code> is set, an <code>IndexSizeError</code> exception is thrown.</p>
+<p><strong>Note</strong>: If a value less than or equal to <code>AnalyserNode.minDecibels</code> is set, an <code>IndexSizeError</code> exception is thrown.</p>
 
 <h2 id="Example">Example</h2>
 

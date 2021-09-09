@@ -19,11 +19,16 @@ browser-compat: api.Request.destination
 ---
 <div>{{APIRef("Fetch")}}</div>
 
-<p><span class="seoSummary">The <strong><code>destination</code></strong> read-only
+<p>The <strong><code>destination</code></strong> read-only
     property of the <strong>{{domxref("Request")}}</strong> interface returns a string
-    describing the type of content being requested.</span> The string must be one of those
-  found in the {{domxref("RequestDestination")}} enumerated type or the empty string,
-  which is the default value.</p>
+    describing the type of content being requested.</p>
+
+<p>The string must be one of the <code>audio</code>, <code>audioworklet</code>, 
+  <code>document</code>, <code>embed</code>, <code>font</code>, <code>frame</code>, 
+  <code>iframe</code>, <code>image</code>, <code>manifest</code>, <code>object</code>, 
+  <code>paintworklet</code>, <code>report</code>, <code>script</code>, <code>sharedworker</code>, 
+  <code>style</code>, <code>track</code>, <code>video</code>, <code>worker</code>
+  or <code>xslt</code> strings, or the empty string, which is the default value.</p>
 
 <p>The <code>destination</code> is used by the {{Glossary("user agent")}} to, for example,
   help determine which set of rules to follow for CORS purposes, or how to navigate any
@@ -51,7 +56,7 @@ browser-compat: api.Request.destination
 
 <dl>
  <dt><code>""</code></dt>
- <dd>The default value of <code>destination</code> is used for destinations that do not have their own value. <a href="/en-US/docs/Web/API/Navigator/sendBeacon">navigator.sendBeacon()</a>, <a href="/en-US/docs/Web/API/EventSource">EventSource</a>, <a href="/en-US/docs/Web/HTML/Element/a#attr-ping">&lt;a ping&gt;</a>, <a href="/en-US/docs/Web/HTML/Element/area#attr-ping">&lt;area ping&gt;</a>, <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a>, <a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a>, <a href="/en-US/docs/Web/API/WebSocket">WebSocket</a>, <a href="/en-US/docs/Web/API/Cache">Cache </a>and more.</dd>
+ <dd>The default value of <code>destination</code> is used for destinations that do not have their own value. <a href="/en-US/docs/Web/API/Navigator/sendBeacon">navigator.sendBeacon()</a>, <a href="/en-US/docs/Web/API/EventSource">EventSource</a>, <a href="/en-US/docs/Web/HTML/Element/a#attr-ping">&lt;a ping&gt;</a>, <a href="/en-US/docs/Web/HTML/Element/area#attr-ping">&lt;area ping&gt;</a>, <a href="/en-US/docs/Web/API/fetch">fetch()</a>, <a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a>, <a href="/en-US/docs/Web/API/WebSocket">WebSocket</a>, <a href="/en-US/docs/Web/API/Cache">Cache </a>and more.</dd>
  <dt><code>"audio"</code></dt>
  <dd>The target is audio data.</dd>
  <dt><code>"audioworklet"</code></dt>

@@ -12,11 +12,11 @@ browser-compat: api.ServiceWorkerContainer.startMessages
 ---
 <div>{{APIRef("Service Workers API")}}</div>
 
-<p><span class="seoSummary">The <strong><code>startMessages()</code></strong> method of
+<p>The <strong><code>startMessages()</code></strong> method of
     the {{domxref("ServiceWorkerContainer")}} interface explicitly starts the flow of
     messages being dispatched from a service worker to pages under its control (e.g. sent
     via {{domxref("Client.postMessage()")}}). This can be used to react to sent messages
-    earlier, even before that page's content has finished loading.</span></p>
+    earlier, even before that page's content has finished loading.</p>
 
 <h2 id="Explanation">Explanation</h2>
 
@@ -30,7 +30,7 @@ browser-compat: api.ServiceWorkerContainer.startMessages
   want to start processing the messages right away.</p>
 
 <div class="notecard note">
-  <p><strong>Note</strong>: The messages start being sent automatically when setting the
+  <p><strong>Note:</strong> The messages start being sent automatically when setting the
     handler directly using {{domxref("ServiceWorkerContainer.onmessage")}}. In this you
     don't need <code>startMessages()</code>.</p>
 </div>

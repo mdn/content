@@ -40,12 +40,14 @@ browser-compat: api.WheelEvent.WheelEvent
         <code>unsigned long</code> representing the unit of the delta values scroll
         amount. Permitted values are:
         <table class="standard-table">
-          <tbody>
+          <thead>
             <tr>
-              <td class="header">Constant</td>
-              <td class="header">Value</td>
-              <td class="header">Description</td>
+              <th>Constant</th>
+              <th>Value</th>
+              <th>Description</th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td><code>DOM_DELTA_PIXEL</code></td>
               <td><code>0x00</code></td>
@@ -67,7 +69,7 @@ browser-compat: api.WheelEvent.WheelEvent
     </ul>
 
     <div class="note">
-      <p>The <code>WheelEventInit</code> dictionary also accepts fields from the
+      <p><strong>Note:</strong> The <code>WheelEventInit</code> dictionary also accepts fields from the
         {{domxref("MouseEvent.MouseEvent", "MouseEventInit")}},
         {{domxref("UIEvent.UIEvent", "UIEventInit")}} and {{domxref("Event.Event",
         "EventInit")}} dictionaries.</p>

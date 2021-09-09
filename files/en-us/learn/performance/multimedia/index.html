@@ -14,7 +14,7 @@ tags:
 
 <p>Media, namely images and video, account for over 70% of the bytes downloaded for the average website. In terms of download performance, eliminating media, and reducing file size is the low-hanging fruit. <span class="seoSummary">This article looks at optimizing image and video to improve web performance.</span></p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -87,7 +87,7 @@ tags:
     <p><strong>Note:</strong> Despite having <a href="https://developer.apple.com/videos/play/wwdc2020/10663/?time=1174">announced support</a> for WebP in Safari 14, as of version 14.0 .webp images do not display natively on a macOS desktop, whereas Safari on iOS 14 does display .webp images properly.</p>
   </div>
   </li>
- <li><a href="/en-US/docs/Web/Media/Formats/Image_types#avif">AVIF</a> — Good choice for both images and animated images due to high performance and royalty free image format (even more efficient that WebP, but not as widely supported). It is now supported on Chrome, Opera and Firefox (behind a <a href="/en-US/docs/Mozilla/Firefox/Experimental_features#avif_av1_image_file_format_support">preference</a>). See also <a href="https://avif-converter.online">an online tool to convert previous image formats to AVIF</a>.</li>
+ <li><a href="/en-US/docs/Web/Media/Formats/Image_types#avif">AVIF</a> — Good choice for both images and animated images due to high performance and royalty free image format (even more efficient that WebP, but not as widely supported). It is now supported on Chrome, Opera and Firefox. See also <a href="https://avif-converter.online">an online tool to convert previous image formats to AVIF</a>.</li>
  <li><strong>JPEG-XR</strong> — created by Microsoft and only available in Internet Explorer and EdgeHTML based Edge. Doesn't support progressive display and the image decoding is not hardware accelerated and therefore resource-intensive on the browser's main thread. Progressive JPEG above-the-fold is that they render progressively (hence the name), meaning the user sees a low-resolution version that gains clarity as the image downloads, rather than the image loading at full resolution top-to-bottom or even only rendering once completely downloaded.</li>
  <li><strong>JPEG2000</strong> — once to be successor to JPEG but only supported in Safari. Doesn't support progressive display either.</li>
 </ul>
@@ -101,7 +101,7 @@ tags:
 <pre class="html">&lt;picture&gt;
    &lt;source type="video/mp4" src="giphy.mp4"&gt;
    &lt;source type="image/webp" src="giphy.webp"&gt;
-   &lt;img src="giphy.gif"&gt;
+   &lt;img src="giphy.gif" alt="" /&gt;
 &lt;/picture&gt;</pre>
 
 <h4 id="Serving_the_optimal_size">Serving the optimal size</h4>
@@ -119,7 +119,7 @@ tags:
 
 <p>Getting the most important images in front of visitors sooner than the less important can deliver improved perceived performance.</p>
 
-<p>The first thing to check is that your content images use  <code>&lt;img&gt;</code> elements and your background images are defined in CSS with <code>background-image</code> — images referenced in <code>&lt;img&gt;</code> elements are assigned a higher loading priority than background images.</p>
+<p>The first thing to check is that your content images use <code>&lt;img&gt;</code> or <code>&lt;picture&gt;</code> elements and your background images are defined in CSS with <code>background-image</code> — images referenced in <code>&lt;img&gt;</code> elements are assigned a higher loading priority than background images.</p>
 
 <p>Secondly, with the adoption of Priority Hints, you can control the priority further by adding an <code>importance</code> attribute to your image tags. An example use case for priority hints on images are carousels where the first image is a higher priority than the subsequent images.</p>
 

@@ -12,10 +12,10 @@ tags:
 <p>{{APIRef("IndexedDB")}} {{ draft() }}</p>
 
 <div class="warning">
-<p><strong>Important</strong>: The synchronous version of the IndexedDB API was originally intended for use only with <a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Web Workers</a>, and was eventually removed from the spec because its need was questionable. It may however be reintroduced in the future if there is enough demand from web developers.</p>
+<p><strong>Warning:</strong> The synchronous version of the IndexedDB API was originally intended for use only with <a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Web Workers</a>, and was eventually removed from the spec because its need was questionable. It may however be reintroduced in the future if there is enough demand from web developers.</p>
 </div>
 
-<p>The <code>DatabaseSync</code> interface in the <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a> represents a synchronous <a href="/en-US/docs/Web/API/IndexedDB_API#gloss_database_connection">connection to a database</a>.</p>
+<p>The <code>DatabaseSync</code> interface in the <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a> represents a synchronous <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#database_connection">connection to a database</a>.</p>
 
 <h2 id="Method_overview">Method overview</h2>
 
@@ -51,22 +51,22 @@ tags:
  </thead>
  <tbody>
   <tr>
-   <td><code><a name="attr_description">description</a></code></td>
+   <td><code>description</code></td>
    <td><code>readonly DOMString </code></td>
    <td>The human-readable description of the connected database.</td>
   </tr>
   <tr>
-   <td><a name="attr_name"></a><code><a>name</a> </code></td>
+   <td><code>name </code></td>
    <td><code>readonly DOMString </code></td>
    <td>The name of the connected database.</td>
   </tr>
   <tr>
-   <td><a name="attr_objectStores"></a><code><a>objectStores</a> </code></td>
+   <td><code>objectStores </code></td>
    <td><code>readonly DOMStringList </code></td>
    <td>The names of the object stores that exist in the connected database.</td>
   </tr>
   <tr>
-   <td><a name="attr_version"></a><code><a>version</a> </code></td>
+   <td><code>version </code></td>
    <td><code>readonly DOMString</code></td>
    <td>The version of the connected database. Has the null value when the database is first created.</td>
   </tr>
@@ -92,9 +92,9 @@ tags:
  <dt>name</dt>
  <dd>The name of a new object store.</dd>
  <dt>keypath</dt>
- <dd>The <a href="/en-US/docs/Web/API/IndexedDB_API#gloss_key_path">key path</a> used by the new object store. If a null path is specified, then the object store does not have a key path, and uses out-of-line keys.</dd>
+ <dd>The <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path">key path</a> used by the new object store. If a null path is specified, then the object store does not have a key path, and uses out-of-line keys.</dd>
  <dt>autoIncrement</dt>
- <dd>If true, the object store uses a <a href="/en-US/docs/Web/API/IndexedDB_API#gloss_key_generator">key generator</a>; if false, it does not use one.</dd>
+ <dd>If true, the object store uses a <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_generator">key generator</a>; if false, it does not use one.</dd>
 </dl>
 
 <h5 id="Returns">Returns</h5>

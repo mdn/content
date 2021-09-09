@@ -32,12 +32,14 @@ browser-compat: api.Document.createTreeWalker
     It is a convenient way of filtering for certain types of node. It defaults to
     <code>0xFFFFFFFF</code> representing the <code>SHOW_ALL</code> constant.
     <table class="standard-table">
-      <tbody>
+      <thead>
         <tr>
-          <td class="header">Constant</td>
-          <td class="header">Numerical value</td>
-          <td class="header">Description</td>
+          <th>Constant</th>
+          <th>Numerical value</th>
+          <th>Description</th>
         </tr>
+      </thead>
+      <tbody>
         <tr>
           <td><code>NodeFilter.SHOW_ALL</code></td>
           <td><code>-1</code> (that is the max value of <code>unsigned long</code>)</td>
@@ -127,9 +129,10 @@ browser-compat: api.Document.createTreeWalker
 
 <h2 id="Example">Example</h2>
 
-<p>The following example goes through all nodes in the body, reduces the set of nodes to
-  elements, passes through as acceptable each node (it could reduce the set in the
-  <code>acceptNode()</code> method instead), and then makes use of tree walker iterator
+<p>The following example goes through all nodes in the body,
+  filters out any non nodes that aren't elements (with the `NodeFilter.SHOW_ELEMENT` value),
+  marks each remaining node as acceptable (The <code>acceptNode()</code> method could make
+  a different decision.), and then makes use of tree walker iterator
   that is created to advance through the nodes (now all elements) and push them into an
   array.</p>
 

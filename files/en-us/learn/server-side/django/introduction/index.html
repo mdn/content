@@ -14,9 +14,11 @@ tags:
 
 <div>{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}</div>
 
-<p class="summary"><span class="seoSummary">In this first Django article, we answer the question "What is Django?" and give you an overview of what makes this web framework special.</span> We'll outline the main features, including some of the advanced functionality that we won't have time to cover in detail in this module. We'll also show you some of the main building blocks of a Django application (although at this point you won't yet have a development environment in which to test it).</p>
+<p>In this first Django article, we answer the question "What is Django?" and give you an overview of what makes this web framework special.</p>
 
-<table class="learn-box standard-table">
+<p>We'll outline the main features, including some of the advanced functionality that we won't have time to cover in detail in this module. We'll also show you some of the main building blocks of a Django application (although at this point you won't yet have a development environment in which to test it).</p>
+
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -63,8 +65,7 @@ tags:
 <p>Django has continued to grow and improve, from its first milestone release (1.0) in September 2008 through to the recently-released version 3.1 (2020). Each release has added new functionality and bug fixes, ranging from support for new types of databases, template engines, and caching, through to the addition of "generic" view functions and classes (which reduce the amount of code that developers have to write for a number of programming tasks). </p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>Check out the <a href="https://docs.djangoproject.com/en/stable/releases/">release notes</a> on the Django website to see what has changed in recent versions, and how much work is going into making Django better.</p>
+  <p><strong>Note:</strong> Check out the <a href="https://docs.djangoproject.com/en/stable/releases/">release notes</a> on the Django website to see what has changed in recent versions, and how much work is going into making Django better.</p>
 </div>
 
 <p>Django is now a thriving, collaborative open source project, with many thousands of users and contributors. While it does still have some features that reflect its origin, Django has evolved into a versatile framework that is capable of developing any type of website.</p>
@@ -93,7 +94,7 @@ tags:
 
 <p>Django web applications typically group the code that handles each of these steps into separate files:</p>
 
-<p><img alt="" src="basic-django.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="Django - files for views, model, urls, template" src="basic-django.png"></p>
 
 <ul>
  <li><strong>URLs: </strong>While it is possible to process requests from every single URL via a single function, it is much more maintainable to write a separate view function to handle each resource. A URL mapper is used to redirect HTTP requests to the appropriate view based on the request URL. The URL mapper can also match particular patterns of strings or digits that appear in a URL and pass these to a view function as data.</li>
@@ -103,18 +104,19 @@ tags:
 </ul>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>Django refers to this organization as the "Model View Template (MVT)" architecture. It has many similarities to the more familiar <a href="/en-US/docs/Glossary/MVC">Model View Controller</a> architecture. </p>
+  <p><strong>Note:</strong> Django refers to this organization as the "Model View Template (MVT)" architecture. It has many similarities to the more familiar <a href="/en-US/docs/Glossary/MVC">Model View Controller</a> architecture. </p>
 </div>
 
 <p>The sections below will give you an idea of what these main parts of a Django app look like (we'll go into more detail later on in the course, once we've set up a development environment).</p>
 
 <h3 id="Sending_the_request_to_the_right_view_urls.py">Sending the request to the right view (urls.py)</h3>
 
-<p>A URL mapper is typically stored in a file named <strong>urls.py</strong>. In the example below, the mapper (<code>urlpatterns</code>) defines a list of mappings between <em>routes</em> (specific URL <em>patterns)</em> and corresponding view functions. If an HTTP Request is received that has a URL matching a specified pattern, then the associated view function will be called and passed the request.</p>
+<p>A URL mapper is typically stored in a file named <strong>urls.py</strong>.
+In the example below, the mapper (<code>urlpatterns</code>) defines a list of mappings between <em>routes</em> (specific URL <em>patterns)</em> and corresponding view functions.
+If an HTTP Request is received that has a URL matching a specified pattern, then the associated view function will be called and passed the request.</p>
 
 <pre class="brush: python">urlpatterns = [
-    <strong>path('admin/', admin.site.urls),</strong>
+    path('admin/', admin.site.urls),
     path('book/&lt;int:id&gt;/', views.book_detail, name='book_detail'),
     path('catalog/', include('catalog.urls')),
     re_path(r'^([0-9]+)/$', views.best),
@@ -145,8 +147,7 @@ def index(request):
 </pre>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>A little bit of Python:</p>
+  <p><strong>Note:</strong> A little bit of Python:</p>
 
   <ul>
     <li><a href="https://docs.python.org/3/tutorial/modules.html">Python modules</a> are "libraries" of functions, stored in separate files, that we might want to use in our code. Here we import just the <code>HttpResponse</code> object from the <code>django.http</code> module so that we can use it in our view: <code>from django.http import HttpResponse</code> . There are other ways of importing some or all objects from a module.</li>
@@ -179,8 +180,7 @@ class Team(models.Model):
 </pre>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>A little bit of Python:</p>
+  <p><strong>Note:</strong> A little bit of Python:</p>
 
   <ul>
    <li>Python supports "object-oriented programming", a style of programming where we organize our code into objects, which include related data and functions for operating on that data. Objects can also inherit/extend/derive from other objects, allowing common behavior between related objects to be shared. In Python we use the keyword <code>class</code> to define the "blueprint" for an object. We can create multiple specific <em>instances</em> of the type of object based on the model in the class.<br>
@@ -193,7 +193,7 @@ class Team(models.Model):
 
 <p>The Django model provides a simple query API for searching the associated database. This can match against a number of fields at a time using different criteria (e.g. exact, case-insensitive, greater than, etc.), and can support complex statements (for example, you can specify a search on U11 teams that have a team name that starts with "Fr" or ends with "al"). </p>
 
-<p>The code snippet shows a view function (resource handler) for displaying all of our U09 teams. The line in bold shows how we can use the model query API to filter for all records where the <code>team_level</code> field has exactly the text 'U09' (note how this criteria is passed to the <code>filter()</code> function as an argument, with the field name and match type separated by a double underscore: <strong>team_level__exact</strong>).</p>
+<p>The code snippet shows a view function (resource handler) for displaying all of our U09 teams. The <code>list_teams = Team.objects.filter(team_level__exact="U09")</code> line shows how we can use the model query API to filter for all records where the <code>team_level</code> field has exactly the text '<code>U09</code>' (note how this criteria is passed to the <code>filter()</code> function as an argument, with the field name and match type separated by a double underscore: <strong><code>team_level__exact</code></strong>).</p>
 
 <pre class="brush: python">## filename: views.py
 
@@ -201,7 +201,7 @@ from django.shortcuts import render
 from .models import Team
 
 def index(request):
-    <strong>list_teams = Team.objects.filter(team_level__exact="U09")</strong>
+    list_teams = Team.objects.filter(team_level__exact="U09")
     context = {'youngest_teams': list_teams}
     return render(request, '/best/index.html', context)
 </pre>

@@ -17,15 +17,15 @@ browser-compat: api.MediaRecorderErrorEvent.MediaRecorderErrorEvent
 ---
 <p>{{APIRef("MediaStream Recording")}}</p>
 
-<p><span class="seoSummary">The
-    <code><strong>MediaRecorderErrorEvent</strong></code><strong><code>()</code></strong>
+<p>The
+    <strong><code>MediaRecorderErrorEvent()</code></strong>
     constructor creates a new {{domxref("MediaRecorderErrorEvent")}} object that
     represents an error that occurred during the recording of media by the <a
       href="/en-US/docs/Web/API/MediaStream_Recording_API">MediaStream Recording
-      API</a>.</span></p>
+      API</a>.</p>
 
 <div class="note">
-  <p>In general, you won't create these yourself; they are delivered to your
+  <p><strong>Note:</strong> In general, you won't create these yourself; they are delivered to your
     implementation of {{domxref("MediaRecorder.onerror")}} when errors occur while
     recording media.</p>
 </div>
@@ -51,7 +51,7 @@ browser-compat: api.MediaRecorderErrorEvent.MediaRecorderErrorEvent
 </dl>
 
 <div class="note">
-  <p>Some {{Glossary("user agent", "user agents")}} add to the <code>error</code> object
+  <p><strong>Note:</strong> Some {{Glossary("user agent", "user agents")}} add to the <code>error</code> object
     other properties that provide information such as stack dumps, the name of the
     JavaScript file and the line number where the error occurred, and other debugging
     aids, but you should not rely on this information in a production environment.</p>

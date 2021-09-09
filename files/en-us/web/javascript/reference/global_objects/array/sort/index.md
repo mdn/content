@@ -75,7 +75,8 @@ elements are sorted according to the return value of the compare function (all
 being compared, then:
 
 - If `compareFunction(a, b)` returns a value > than 0, sort `b` before `a`.
-- If `compareFunction(a, b)` returns a value ≤ 0, leave `a` and `b` in the same order.
+- If `compareFunction(a, b)` returns a value < than 0, sort `a` before `b`.
+- If `compareFunction(a, b)` returns 0, `a` and `b` are considered equal.
 
   > **Note:** The [ECMAScript Standard, 10th edition](https://www.ecma-international.org/ecma-262/10.0/index.html#sec-intro) (2019)
   > algorithm mandates stable sorting, which means elements that compare equal must remain in their original order with respect to each other.

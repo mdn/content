@@ -22,12 +22,13 @@ tags:
   - Photos
   - SVG
   - WebP
+  - AVIF
   - gif
   - icon
 ---
 <div>{{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}</div>
 
-<p><span class="seoSummary">In this guide, we'll cover the image file types generally supported by web browsers, and provide insights that will help you select the most appropriate formats to use for your site's imagery.</span></p>
+<p>In this guide, we'll cover the image file types generally supported by web browsers, and provide insights that will help you select the most appropriate formats to use for your site's imagery.</p>
 
 <h2 id="Common_image_file_types">Common image file types</h2>
 
@@ -46,7 +47,7 @@ tags:
  </thead>
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Media/Formats/Image_types#apng">APNG</a></th>
+   <th scope="row"><a href="#apng">APNG</a></th>
    <th scope="row">Animated Portable Network Graphics</th>
    <td><code>image/apng</code></td>
    <td><code>.apng</code></td>
@@ -54,17 +55,17 @@ tags:
     <strong>Supported</strong>: Chrome, Edge, Firefox, Opera, Safari.</td>
   </tr>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Media/Formats/Image_types#avif">AVIF</a></th>
+   <th scope="row"><a href="#avif">AVIF</a></th>
    <th scope="row">AV1 Image File Format</th>
    <td><code>image/avif</code></td>
    <td><code>.avif</code></td>
    <td>
     <p>Good choice for both images and animated images due to high performance and royalty free image format. It offers much better compression than PNG or JPEG with support for higher color depths, animated frames, transparency etc. Note that when using AVIF, you should include fallbacks to formats with better browser support (i.e. using the <code><a href="/en-US/docs/Web/HTML/Element/picture">&lt;picture&gt;</a></code> element). <br>
-     <strong>Supported:</strong> Chrome, Opera, Firefox (behind a <a href="/en-US/docs/Mozilla/Firefox/Experimental_features#avif_av1_image_file_format_support">preference</a>. Basic support only; advanced features like animated images and colorspace support yet to the implemented).</p>
+     <strong>Supported:</strong> Chrome, Opera, Firefox (still images only: animated images not implemented).</p>
    </td>
   </tr>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Media/Formats/Image_types#gif">GIF</a></th>
+   <th scope="row"><a href="#gif">GIF</a></th>
    <th scope="row">Graphics Interchange Format</th>
    <td><code>image/gif</code></td>
    <td><code>.gif</code></td>
@@ -72,7 +73,7 @@ tags:
     <strong>Supported:</strong> Chrome, Edge, Firefox, IE, Opera, Safari.</td>
   </tr>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Media/Formats/Image_types#jpeg">JPEG</a></th>
+   <th scope="row"><a href="#jpeg">JPEG</a></th>
    <th scope="row">Joint Photographic Expert Group image</th>
    <td><code>image/jpeg</code></td>
    <td><code>.jpg</code>, <code>.jpeg</code>, <code>.jfif</code>, <code>.pjpeg</code>, <code>.pjp</code></td>
@@ -82,7 +83,7 @@ tags:
    </td>
   </tr>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Media/Formats/Image_types#png">PNG</a></th>
+   <th scope="row"><a href="#png">PNG</a></th>
    <th scope="row">Portable Network Graphics</th>
    <td><code>image/png</code></td>
    <td><code>.png</code></td>
@@ -92,7 +93,7 @@ tags:
    </td>
   </tr>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Media/Formats/Image_types#svg">SVG</a></th>
+   <th scope="row"><a href="#svg">SVG</a></th>
    <th scope="row">Scalable Vector Graphics</th>
    <td><code>image/svg+xml</code></td>
    <td><code>.svg</code></td>
@@ -100,7 +101,7 @@ tags:
     <strong>Support:</strong> Chrome, Edge, Firefox, IE, Opera, Safari.</td>
   </tr>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Media/Formats/Image_types#webp">WebP</a></th>
+   <th scope="row"><a href="#webp">WebP</a></th>
    <th scope="row">Web Picture format</th>
    <td><code>image/webp</code></td>
    <td><code>.webp</code></td>
@@ -112,8 +113,7 @@ tags:
 </div>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>The older formats like PNG, JPEG, GIF have poor performance compared to newer formats like WebP and AVIF, but enjoy broader "historical" browser support. The newer image formats are seeing increasing popularity as browsers without support become increasingly irrelevant (i.e. have virtually zero market share).</p>
+  <p><strong>Note:</strong> The older formats like PNG, JPEG, GIF have poor performance compared to newer formats like WebP and AVIF, but enjoy broader "historical" browser support. The newer image formats are seeing increasing popularity as browsers without support become increasingly irrelevant (i.e. have virtually zero market share).</p>
 </div>
 
 <p>The following list includes image formats that appear on the web, but which should be avoided for web content (generally this is because either they do not have wide browser support, or because there are better alternatives).</p>
@@ -131,21 +131,21 @@ tags:
  </thead>
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Media/Formats/Image_types#bmp">BMP</a></th>
+   <th scope="row"><a href="#bmp">BMP</a></th>
    <th scope="row">Bitmap file</th>
    <td><code>image/bmp</code></td>
    <td><code>.bmp</code></td>
    <td>Chrome, Edge, Firefox, IE, Opera, Safari</td>
   </tr>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Media/Formats/Image_types#ico">ICO</a></th>
+   <th scope="row"><a href="#ico">ICO</a></th>
    <th scope="row">Microsoft Icon</th>
    <td><code>image/x-icon</code></td>
    <td><code>.ico</code>, <code>.cur</code></td>
    <td>Chrome, Edge, Firefox, IE, Opera, Safari</td>
   </tr>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Media/Formats/Image_types#tiff">TIFF</a></th>
+   <th scope="row"><a href="#tiff">TIFF</a></th>
    <th scope="row">Tagged Image File Format</th>
    <td><code>image/tiff</code></td>
    <td><code>.tif</code>, <code>.tiff</code></td>
@@ -156,8 +156,11 @@ tags:
 </div>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>The abbreviation for each image format links to a longer description of the format, its capabilities, and detailed browser compatibility information (including which versions introduced support and specific special features that may have been introduced later).</p>
+  <p><strong>Note:</strong> The abbreviation for each image format links to a longer description of the format, its capabilities, and detailed browser compatibility information (including which versions introduced support and specific special features that may have been introduced later).</p>
+</div>
+
+<div class="notecard note">
+	<p><strong>Tip:</strong> Safari 11.1 added the ability to use a video format, as an animated gif replacement. No other browser supports this. See the <a href="https://crbug.com/791658">Chromium bug</a>, and <a href="https://bugzil.la/895131">Firefox bug</a> for more information.</p>
 </div>
 
 <h2 id="Image_file_type_details">Image file type details</h2>
@@ -242,7 +245,7 @@ tags:
   </tr>
   <tr>
    <th scope="row">Licensing</th>
-   <td>Free and open under the <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike license</a> (<a href="http://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>) version 3.0 or later.</td>
+   <td>Free and open under the <a href="https://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike license</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>) version 3.0 or later.</td>
   </tr>
  </tbody>
 </table>
@@ -250,11 +253,11 @@ tags:
 <a id="avif"></a>
 <h3 id="AVIF_image">AVIF image</h3>
 
-<p>AV1 Image File Format (AVIF) is a powerful new, open source, royalty-free file format that encodes <dfn>AV1 bitstreams in the High Efficiency Image File Format (HEIF) container. </dfn></p>
+<p>AV1 Image File Format (AVIF) is a powerful, open source, royalty-free file format that encodes <dfn>AV1 bitstreams in the High Efficiency Image File Format (HEIF) container.</dfn></p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>AVIF has potential to become the "next big thing" for sharing images in web content. It offers state-of-the-art features and performance, without the encumbrance of complicated licensing and patent royalties that have hampered comparable alternatives.</p>
+  <p><strong>Note:</strong> AVIF has potential to become the "next big thing" for sharing images in web content.
+    It offers state-of-the-art features and performance, without the encumbrance of complicated licensing and patent royalties that have hampered comparable alternatives.</p>
 </div>
 
 <p><dfn>AV1 is a coding format that was originally designed for video transmission over the Internet. The format benefits from the signficant advances in video encoding in recent years, and may potentially benefit from the associated support for hardware rendering. However it also has disadvantages for some cases, as video and image encoding have some different requirements.</dfn></p>
@@ -271,10 +274,12 @@ tags:
  <li>Wide Color Gamut: Support for images that can contain a larger range of colors.</li>
 </ul>
 
-<p>AVIF does not support progressive rendering, so files must be fully downloaded before they can be displayed. This often has little impact on real-world user experience because AVIF files are much smaller than the equivalent JPEG or PNG files, and hence can be downloaded and displayed much faster. For larger file size the impact can become significant, and you should consider using a format that supports progressive rendering.</p>
+<p>AVIF does not support progressive rendering, so files must be fully downloaded before they can be displayed.
+  This often has little impact on real-world user experience because AVIF files are much smaller than the equivalent JPEG or PNG files, and hence can be downloaded and displayed much faster.
+  For larger file size the impact can become significant, and you should consider using a format that supports progressive rendering.</p>
 
-<p>AVIF is supported on desktop in Chrome, Opera and Firefox (behind a <a href="/en-US/docs/Mozilla/Firefox/Experimental_features#avif_av1_image_file_format_support">preference</a>).
-  As support is not yet comprehensive (and has no historical depth) you should provide a fallback in either {{anch("JPEG")}} or {{anch("PNG")}} format using <a href="/en-US/docs/Web/HTML/Element/picture">the <code>&lt;picture&gt;</code> element</a> (or some other approach).</p>
+<p>AVIF is supported on desktop in Chrome, Opera and Firefox (Firefox supports still images but not animations).
+  As support is not yet comprehensive (and has little historical depth) you should provide a fallback in  {{anch("WebP")}}, {{anch("JPEG")}} or {{anch("PNG")}} format using <a href="/en-US/docs/Web/HTML/Element/picture">the <code>&lt;picture&gt;</code> element</a> (or some other approach).</p>
 
 <table class="standard-table">
  <tbody>
@@ -294,9 +299,11 @@ tags:
   </tr>
   <tr>
    <th scope="row">Browser compatibility</th>
-   <td>Chrome 85, Opera 71, and Firefox (behind a <a href="/en-US/docs/Mozilla/Firefox/Experimental_features#avif_av1_image_file_format_support">preference</a>).
+   <td>Chrome 85, Opera 71, and Firefox 93.
     <ul>
-      <li>Firefox 77 and later require the preference <code>image.avif.enable</code> set <code>true</code>. Firefox provides <em>basic</em> support for AVIF images. More advanced features are still in development — including animated images and colorspace support ({{bug(1682995)}}).</li>
+      <li>Firefox 93 supports still images, with colorspace support for both full and limited range colors, image transforms for mirroring and rotation. The preference <a href="/en-US/docs/Mozilla/Firefox/Experimental_features#avif_compliance_strictness">image.avif.compliance_strictness</a> can be used to adjust the compliance strictness with the specification.
+        Animated images are not supported.</li>
+      <li>Firefox 77 to 92 require the preference <code>image.avif.enable</code> set <code>true</code>. Earlier versions provide only basic support.</li>
     </ul>
    </td>
   </tr>
@@ -856,7 +863,7 @@ tags:
   </tr>
   <tr>
    <th scope="row">Licensing</th>
-   <td>©2003 <a href="https://www.w3.org/">W3C</a><sup>®</sup> (<a href="http://www.lcs.mit.edu/">MIT</a>, <a href="http://www.ercim.org/">ERCIM</a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>, <a href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a> and <a href="https://www.w3.org/Consortium/Legal/copyright-software">software licensing</a> rules apply. No known royalty-bearing patents.</td>
+   <td>©2003 <a href="https://www.w3.org/">W3C</a><sup>®</sup> (<a href="http://www.lcs.mit.edu/">MIT</a>, <a href="http://www.ercim.org/">ERCIM</a>, <a href="https://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>, <a href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a> and <a href="https://www.w3.org/Consortium/Legal/copyright-software">software licensing</a> rules apply. No known royalty-bearing patents.</td>
   </tr>
  </tbody>
 </table>
@@ -949,7 +956,7 @@ tags:
   </tr>
   <tr>
    <th scope="row">Licensing</th>
-   <td>©2018 <a href="https://www.w3.org/">W3C</a><sup>®</sup> (<a href="http://www.lcs.mit.edu/">MIT</a>, <a href="http://www.ercim.org/">ERCIM</a>, <a href="http://www.keio.ac.jp/">Keio</a>, <a href="http://ev.buaa.edu.cn/">Beihang</a>), All Rights Reserved. W3C <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>, <a href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a> and <a href="https://www.w3.org/Consortium/Legal/copyright-software">software licensing</a> rules apply. No known royalty-bearing patents.</td>
+   <td>©2018 <a href="https://www.w3.org/">W3C</a><sup>®</sup> (<a href="http://www.lcs.mit.edu/">MIT</a>, <a href="http://www.ercim.org/">ERCIM</a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn/">Beihang</a>), All Rights Reserved. W3C <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>, <a href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a> and <a href="https://www.w3.org/Consortium/Legal/copyright-software">software licensing</a> rules apply. No known royalty-bearing patents.</td>
   </tr>
  </tbody>
 </table>
@@ -1187,8 +1194,7 @@ tags:
 </table>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>Despite having <a href="https://developer.apple.com/videos/play/wwdc2020/10663/?time=1174">announced support</a> for WebP in Safari 14, as of version 14.0 .webp images do not display natively on a macOS desktop, whereas Safari on iOS 14 does display .webp images properly.</p>
+  <p><strong>Note:</strong> Despite having <a href="https://developer.apple.com/videos/play/wwdc2020/10663/?time=1174">announced support</a> for WebP in Safari 14, as of version 14.0 .webp images do not display natively on a macOS desktop, whereas Safari on iOS 14 does display .webp images properly.</p>
 </div>
 
 <a id="xbm"></a>

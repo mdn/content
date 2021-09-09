@@ -12,7 +12,7 @@ browser-compat: api.AudioNode.context
 ---
 <div>{{APIRef("Web Audio API")}}</div>
 
-<p class="summary">The read-only <code>context</code> property of the
+<p>The read-only <code>context</code> property of the
   {{domxref("AudioNode")}} interface returns the associated
   {{domxref("BaseAudioContext")}}, that is the object representing the processing graph
   the node is participating in.</p>
@@ -29,7 +29,7 @@ browser-compat: api.AudioNode.context
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js;highlight[8,9]">const AudioContext = window.AudioContext || window.webkitAudioContext;
+<pre class="brush: js;">const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContext();
 
 const oscillator = audioCtx.createOscillator();

@@ -15,9 +15,9 @@ browser-compat: api.FetchEvent.respondWith
 ---
 <p>{{APIRef("Service Workers API")}}</p>
 
-<p><span class="seoSummary">The <strong><code>respondWith()</code></strong> method of
+<p>The <strong><code>respondWith()</code></strong> method of
 		{{domxref("FetchEvent")}} prevents the browser's default fetch handling, and
-		allows you to provide a promise for a {{domxref("Response")}} yourself.</span></p>
+		allows you to provide a promise for a {{domxref("Response")}} yourself.</p>
 
 <p>In most cases you can provide any response that the receiver understands. For example,
 	if an {{HTMLElement('img')}} initiates the request, the response body needs to be
@@ -59,7 +59,7 @@ browser-compat: api.FetchEvent.respondWith
 	the final URL.  There are a few, though, where it does matter:</p>
 
 <ul>
-	<li>If a {{domxref("WindowOrWorkerGlobalScope.fetch()", "fetch()")}} is intercepted,
+	<li>If a {{domxref("fetch()")}} is intercepted,
 		then you can observe the final URL on the result's {{domxref("Response.url")}}.
 	</li>
 	<li>If a <a href="/en-US/docs/Web/API/Web_Workers_API">worker</a> script is
@@ -122,7 +122,7 @@ browser-compat: api.FetchEvent.respondWith
 });</pre>
 
 <div class="notecard note">
-	<p><strong>Note</strong>: {{domxref("CacheStorage.match()", "caches.match()")}} is a
+	<p><strong>Note:</strong> {{domxref("CacheStorage.match()", "caches.match()")}} is a
 		convenience method. Equivalent functionality is to call
 		{{domxref("cache.match()")}} on each cache (in the order returned by
 		{{domxref("CacheStorage.keys()", "caches.keys()")}}) until a

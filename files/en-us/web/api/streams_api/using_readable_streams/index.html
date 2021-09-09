@@ -15,14 +15,14 @@ tags:
 ---
 <div>{{apiref("Streams")}}</div>
 
-<p class="summary">As a JavaScript developer, programmatically reading and manipulating streams of data received over the network, chunk by chunk, is very useful! But how do you use the Streams API’s readable stream functionality? This article explains the basics.</p>
+<p>As a JavaScript developer, programmatically reading and manipulating streams of data received over the network, chunk by chunk, is very useful! But how do you use the Streams API’s readable stream functionality? This article explains the basics.</p>
 
 <div class="note">
-<p><strong>Note</strong>: This article assumes that you understand the use cases of readable streams, and are aware of the high-level concepts. If not, we suggest that you first read the <a href="/en-US/docs/Web/API/Streams_API#concepts_and_usage">Streams concepts and usage overview</a> and dedicated <a href="/en-US/docs/Web/API/Streams_API/Concepts">Streams API concepts</a> article, then come back.</p>
+<p><strong>Note:</strong> This article assumes that you understand the use cases of readable streams, and are aware of the high-level concepts. If not, we suggest that you first read the <a href="/en-US/docs/Web/API/Streams_API#concepts_and_usage">Streams concepts and usage overview</a> and dedicated <a href="/en-US/docs/Web/API/Streams_API/Concepts">Streams API concepts</a> article, then come back.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: If you are looking for information on writable streams try <a href="/en-US/docs/Web/API/Streams_API/Using_writable_streams">Using writable streams</a> instead.</p>
+<p><strong>Note:</strong> If you are looking for information on writable streams try <a href="/en-US/docs/Web/API/Streams_API/Using_writable_streams">Using writable streams</a> instead.</p>
 </div>
 
 <h2 id="Browser_support">Browser support</h2>
@@ -123,7 +123,7 @@ fetch('./tortoise.png')
 }</pre>
 
 <div class="note">
-<p><strong>Note</strong>: <code>close()</code> is part of the new custom stream, not the original stream we are discussing here. We’ll explain more about the custom stream in the next section.</p>
+<p><strong>Note:</strong> <code>close()</code> is part of the new custom stream, not the original stream we are discussing here. We’ll explain more about the custom stream in the next section.</p>
 </div>
 
 <p>If <code>done</code> is not <code>true</code>, we process the new chunk we’ve read (contained in the <code>value</code> property of the results object) and then call the <code>pump()</code> function again to read the next chunk.</p>
@@ -225,7 +225,7 @@ return pump();</pre>
 <p><strong>Note:</strong> In order to consume a stream using {{domxref("FetchEvent.respondWith()")}}, the enqueued stream contents must be of type {{jsxref("Uint8Array")}}; for example, encoded using {{domxref("TextEncoder")}}.</p>
 </div>
 
-<p>The custom stream constructor has a <code>start()</code> method that uses a {{domxref("WindowOrWorkerGlobalScope/setInterval", "setInterval()")}} call to generate a random string every second. {{domxref("ReadableStreamDefaultController.enqueue()")}} is then used to enqueue it into the stream. When the button is pressed, the interval is cancelled, and a function called <code>readStream()</code> is invoked to read the data back out of the stream again. We also close the stream, as we’ve stopped enqueuing chunks to it.</p>
+<p>The custom stream constructor has a <code>start()</code> method that uses a {{domxref("setInterval()")}} call to generate a random string every second. {{domxref("ReadableStreamDefaultController.enqueue()")}} is then used to enqueue it into the stream. When the button is pressed, the interval is cancelled, and a function called <code>readStream()</code> is invoked to read the data back out of the stream again. We also close the stream, as we’ve stopped enqueuing chunks to it.</p>
 
 <pre class="brush: js">const stream = new ReadableStream({
   start(controller) {
@@ -312,7 +312,7 @@ return pump();</pre>
 
 <p>This functionality is at a very experimental stage and is subject to change, so we have no explored it too deeply as of yet.</p>
 
-<p>We have created an example called <a href="https://github.com/mdn/dom-examples/tree/master/streams/png-transform-stream">Unpack Chunks of a PNG</a> (<a href="https://mdn.github.io/dom-examples/streams/png-transform-stream/">see it live also</a>) that fetches an image as a stream, then pipes it through to a custom PNG transform stream <span class="pl-c">that retrieves PNG chunks out of a binary data stream.</span></p>
+<p>We have created an example called <a href="https://github.com/mdn/dom-examples/tree/master/streams/png-transform-stream">Unpack Chunks of a PNG</a> (<a href="https://mdn.github.io/dom-examples/streams/png-transform-stream/">see it live also</a>) that fetches an image as a stream, then pipes it through to a custom PNG transform stream that retrieves PNG chunks out of a binary data stream.</p>
 
 <pre class="brush: js">// Fetch the original image
 fetch('png-logo.png')

@@ -16,7 +16,8 @@ browser-compat: api.RTCIceTransport
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">The <code><strong>RTCIceTransport</strong></code> interface provides access to information about the {{Glossary("ICE")}} transport layer over which the data is being sent and received.</span> This is particularly useful if you need to access state information about the connection.</p>
+<p>The <code><strong>RTCIceTransport</strong></code> interface provides access to information about the {{Glossary("ICE")}} transport layer over which the data is being sent and received.
+	This is particularly useful if you need to access state information about the connection.</p>
 
 <h2 id="Properties">Properties</h2>
 
@@ -26,7 +27,7 @@ browser-compat: api.RTCIceTransport
 	<dt>{{domxref("RTCIceTransport.component", "component")}} {{ReadOnlyInline}}</dt>
 	<dd>The ICE component being used by the transport. The value is one of the strings from the {{domxref("RTCIceTransport")}} enumerated type: <code>{{Glossary("RTP", '"RTP"')}}</code> or <code>"RTSP"</code>.</dd>
 	<dt>{{domxref("RTCIceTransport.gatheringState", "gatheringState")}} {{ReadOnlyInline}}</dt>
-	<dd>A {{domxref("DOMString")}} indicating which gathering state the ICE agent is currently in. The value is one of those included in the {{domxref("RTCIceGathererState")}} enumerated type: <code>"new"</code>, <code>"gathering"</code>, or <code>"complete"</code>.</dd>
+	<dd>A {{domxref("DOMString")}} indicating which current gathering state of the ICE agent: <code>"new"</code>, <code>"gathering"</code>, or <code>"complete"</code>.</dd>
 	<dt>{{domxref("RTCIceTransport.role", "role")}} {{ReadOnlyInline}}</dt>
 	<dd>Returns a {{domxref("DOMString")}} whose value is one of the members of the {{domxref("RTCIceRole")}} enumerated type: <code>"controlling"</code> or <code>"controlled"</code>; this indicates whether the ICE agent is the one that makes the final decision as to the candidate pair to use or not.</dd>
 	<dt>{{domxref("RTCIceTransport.state", "state")}} {{ReadOnlyInline}}</dt>

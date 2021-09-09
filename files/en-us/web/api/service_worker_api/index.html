@@ -12,7 +12,7 @@ tags:
 ---
 <div>{{ServiceWorkerSidebar}}</div>
 
-<p class="summary">Service workers essentially act as proxy servers that sit between web applications, the browser, and the network (when available). They are intended, among other things, to enable the creation of effective offline experiences, intercept network requests and take appropriate action based on whether the network is available, and update assets residing on the server. They will also allow access to push notifications and background sync APIs.</p>
+<p>Service workers essentially act as proxy servers that sit between web applications, the browser, and the network (when available). They are intended, among other things, to enable the creation of effective offline experiences, intercept network requests and take appropriate action based on whether the network is available, and update assets residing on the server. They will also allow access to push notifications and background sync APIs.</p>
 
 <h2 id="Service_worker_concepts_and_usage">Service worker concepts and usage</h2>
 
@@ -24,18 +24,15 @@ tags:
 
 
 <div class="notecard note">
-  <h4>Tip</h4>
-  <p>On Firefox, for testing you can run service workers over HTTP (insecurely); simply check the <strong>Enable Service Workers over HTTP (when toolbox is open)</strong> option in the Firefox Devtools options/gear menu.</p>
+  <p><strong>Note:</strong> On Firefox, for testing you can run service workers over HTTP (insecurely); simply check the <strong>Enable Service Workers over HTTP (when toolbox is open)</strong> option in the Firefox Devtools options/gear menu.</p>
 </div>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>Unlike previous attempts in this area such as <a href="https://alistapart.com/article/application-cache-is-a-douchebag">AppCache</a>, service workers don't make assumptions about what you are trying to do, but then break when those assumptions are not exactly right. Instead, service workers give you much more granular control.</p>
+  <p><strong>Note:</strong> Unlike previous attempts in this area such as <a href="https://alistapart.com/article/application-cache-is-a-douchebag">AppCache</a>, service workers don't make assumptions about what you are trying to do, but then break when those assumptions are not exactly right. Instead, service workers give you much more granular control.</p>
 </div>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>Service workers make heavy use of <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promises</a>, as generally they will wait for responses to come through, after which they will respond with a success or failure action. The promises architecture is ideal for this.</p>
+  <p><strong>Note:</strong> Service workers make heavy use of <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promises</a>, as generally they will wait for responses to come through, after which they will respond with a success or failure action. The promises architecture is ideal for this.</p>
 </div>
 
 <h3 id="Registration">Registration</h3>
@@ -74,8 +71,7 @@ tags:
 <p>Your service worker can respond to requests using the {{DOMxRef("FetchEvent")}} event. You can modify the response to these requests in any way you want, using the {{DOMxRef("FetchEvent.respondWith()")}} method.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>Because <code>install</code>/<code>activate</code> events could take a while to complete, the service worker spec provides a {{domxref("ExtendableEvent.waitUntil", "waitUntil()")}} method. Once it is called on <code>install</code> or <code>activate</code> events with a promise, functional events such as <code>fetch</code> and <code>push</code> will wait until the promise is successfully resolved.</p>
+  <p><strong>Note:</strong> Because <code>install</code>/<code>activate</code> events could take a while to complete, the service worker spec provides a {{domxref("ExtendableEvent.waitUntil", "waitUntil()")}} method. Once it is called on <code>install</code> or <code>activate</code> events with a promise, functional events such as <code>fetch</code> and <code>push</code> will wait until the promise is successfully resolved.</p>
 </div>
 
 <p>For a complete tutorial to show how to build up your first basic example, read <a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</a>.</p>
@@ -150,21 +146,13 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
+<table>
   <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
+   <th>Specification</th>
   </tr>
- </thead>
- <tbody>
   <tr>
-   <td>{{SpecName("Service Workers")}}</td>
-   <td>{{Spec2("Service Workers")}}</td>
-   <td>Initial definition.</td>
+   <td><a href="https://w3c.github.io/ServiceWorker/">Service Workers</a></td>
   </tr>
- </tbody>
 </table>
 
 <h2 id="See_also">See also</h2>

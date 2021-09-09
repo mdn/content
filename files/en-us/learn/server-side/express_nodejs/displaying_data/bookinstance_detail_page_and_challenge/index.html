@@ -15,12 +15,13 @@ tags:
 
 <h3 id="Controller">Controller</h3>
 
-<p>Open <strong>/controllers/bookinstanceController.js</strong>. Find the exported <code>bookinstance_detail()</code> controller method and replace it with the following code.</p>
+<p>Open <strong>/controllers/bookinstanceController.js</strong>.
+Find the exported <code>bookinstance_detail()</code> controller method and replace it with the following code.</p>
 
 <pre class="brush: js">// Display detail page for a specific BookInstance.
-exports.bookinstance_detail = function(req, res, <strong>next</strong>) {
+exports.bookinstance_detail = function(req, res, next) {
 
-<strong>    BookInstance.findById(req.params.id)
+    BookInstance.findById(req.params.id)
     .populate('book')
     .exec(function (err, bookinstance) {
       if (err) { return next(err); }
@@ -31,12 +32,13 @@ exports.bookinstance_detail = function(req, res, <strong>next</strong>) {
         }
       // Successful, so render.
       res.render('bookinstance_detail', { title: 'Copy: '+bookinstance.book.title, bookinstance:  bookinstance});
-    })</strong>
+    })
 
 };
 </pre>
 
-<p>The method calls <code>BookInstance.findById()</code> with the ID of a specific book instance extracted from the URL (using the route), and accessed within the controller via the request parameters: <code style="font-style: normal; font-weight: normal;">req.params.id</code>). It then calls <code>populate()</code> to get the details of the associated <code>Book</code>.</p>
+<p>The method calls <code>BookInstance.findById()</code> with the ID of a specific book instance extracted from the URL (using the route), and accessed within the controller via the request parameters: <code>req.params.id</code>).
+It then calls <code>populate()</code> to get the details of the associated <code>Book</code>.</p>
 
 <h3 id="View">View</h3>
 
@@ -46,7 +48,7 @@ exports.bookinstance_detail = function(req, res, <strong>next</strong>) {
 
 block content
 
-<strong>  h1 ID: #{bookinstance._id}</strong>
+  h1 ID: #{bookinstance._id}
 
   p #[strong Title:]
     a(href=bookinstance.book.url) #{bookinstance.book.title}
@@ -70,15 +72,14 @@ block content
 
 <p>Run the application and open your browser to <a href="http://localhost:3000/">http://localhost:3000/</a>. Select the <em>All book-instances</em> link, then select one of the items. If everything is set up correctly, your site should look something like the following screenshot.</p>
 
-<p><img alt="BookInstance Detail Page - Express Local Library site" src="locallibary_express_bookinstance_detail.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="BookInstance Detail Page - Express Local Library site" src="locallibary_express_bookinstance_detail.png"></p>
 
 <h2 id="Challenge">Challenge</h2>
 
 <p>Currently most <em>dates</em> displayed on the site use the default JavaScript format (e.g. <em>Tue Oct 06 2020 15:49:58 GMT+1100 (AUS Eastern Daylight Time))</em>. The challenge for this article is to improve the appearance of the date display for <code>Author</code> lifespan information (date of death/birth) and for <em>BookInstance detail</em> pages to use the format: Oct 6th, 2016.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>You can use the <a href="#">same approach</a> as we used for the <em>Book Instance List</em> (adding the virtual property for the lifespan to the <code>Author</code> model and use <a href="https://www.npmjs.com/package/luxon">luxon</a> to format the date strings).</p>
+  <p><strong>Note:</strong> You can use the <a href="#">same approach</a> as we used for the <em>Book Instance List</em> (adding the virtual property for the lifespan to the <code>Author</code> model and use <a href="https://www.npmjs.com/package/luxon">luxon</a> to format the date strings).</p>
 </div>
 
 <p>To complete this challenge, you must:</p>

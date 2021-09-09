@@ -21,8 +21,8 @@ foo();
 
 <p>We assigned an <strong>Anonymous Function</strong> in a {{glossary("Variable")}}, then we used that variable to invoke the function by adding parentheses <code>()</code> at the end.</p>
 
-<div class="note">
-<p><strong>Even if your function was named,</strong> you can use the variable name to invoke it. Naming it will be helpful when debugging your code. <em>But it won't affect the way we invoke it.</em></p>
+<div class="notecard note">
+<p><strong>Note:</strong> <strong>Even if your function was named,</strong> you can use the variable name to invoke it. Naming it will be helpful when debugging your code. <em>But it won't affect the way we invoke it.</em></p>
 </div>
 
 <h2 id="Example_Pass_a_function_as_an_Argument">Example | Pass a function as an Argument</h2>
@@ -41,8 +41,8 @@ greeting(sayHello, "JavaScript!");
 
 <p>We are passing our <code>sayHello()</code> function as an argument to the <code>greeting()</code> function, this explains how we are treating the function as a <strong>value</strong>.</p>
 
-<div class="note">
-<p>The function that we pass as an argument to another function, is called a <strong>{{glossary("Callback function")}}</strong>. <em><code>sayHello</code> is a Callback function.</em></p>
+<div class="notecard note">
+<p><strong>Note:</strong> The function that we pass as an argument to another function, is called a <strong>{{glossary("Callback function")}}</strong>. <em><code>sayHello</code> is a Callback function.</em></p>
 </div>
 
 <h2 id="Example_Return_a_function">Example | Return a function</h2>
@@ -58,8 +58,8 @@ greeting(sayHello, "JavaScript!");
 
 <p>In this example; We need to return a function from another function - <em>We can return a function because we treated function in JavaScript as a <strong>value</strong>.</em></p>
 
-<div class="note">
-<p>A function that returns a function is called a <strong>Higher-Order Function</strong>.</p>
+<div class="notecard note">
+<p><strong>Note:</strong> A function that returns a function is called a <strong>Higher-Order Function</strong>.</p>
 </div>
 
 <p>Back to our example; Now, we need to invoke <code>sayHello</code> function and its returned <code>Anonymous Function</code>. To do so, we have two ways:</p>
@@ -77,8 +77,8 @@ myFunc();
 
 <p>This way, it returns the <code>Hello!</code> message.</p>
 
-<div class="note">
-<p>You have to use another variable. If you invoked <code>sayHello</code> directly, it would return the function itself <strong>without invoking its returned function</strong>.</p>
+<div class="notecard note">
+<p><strong>Note:</strong> You have to use another variable. If you invoked <code>sayHello</code> directly, it would return the function itself <strong>without invoking its returned function</strong>.</p>
 </div>
 
 <h3 id="2-_Using_double_parentheses">2- Using double parentheses</h3>
