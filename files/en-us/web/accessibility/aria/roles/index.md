@@ -131,7 +131,7 @@ The following are the reference pages covering the WAI-ARIA roles discussed on <
 
 {{SubpagesWithSummaries}}
 
-<div class="hidden"><p>Please claim the role you want to work on by adding your name after the role's name: (old pages are linked from <a href="/en-US/docs/Web">https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques</a>). Ones for which the first draft is completed have been removed from the below list.</p>
+<div class="hidden"><!--<p>Please claim the role you want to work on by adding your name after the role's name: (old pages are linked from <a href="/en-US/docs/Web">https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques</a>). Ones for which the first draft is completed have been removed from the below list.</p>
 <ul>
 <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Banner_role">banner</a> </li>
 <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Combobox_Role">Combobox</a></li>
@@ -181,7 +181,7 @@ The following are the reference pages covering the WAI-ARIA roles discussed on <
 <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Treegrid_Role">treegrid</a></li>
 <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Treeitem_Role">Treeitem</a></li>
 <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Widget_Role">widget</a></li>
-<li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Window_Role">window</a></li></ul></div>
+<li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Window_Role">window</a></li></ul>--></div>
 
 ## See also
 
