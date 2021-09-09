@@ -8,13 +8,19 @@ tags:
   - roles
   - Reference
   - ARIA roles
-  - NeedsContent
+  - sectionhead
+  - sectionhead role
 ---
 
+The **`sectionhead` role**, an abstract role, is superclass role for labels or summaries of the topic of its related section.
 
-Note:  sectionhead role is an bstract role. It is included here for completeness of documentation. It should not be used by web authors.
+Note:  The `sectionhead` role is an [abstract role](/en-US/docs/Web/Accessibility/ARIA/Roles/#Abstract_roles). It is included here for completeness of documentation. It should not be used by web authors.
 
 ## Description
+
+
+
+The structural `sectionhead` role is an abstract role for the subclass roles that identify the labels or summaries of the sections they label. The role must not be used. The four subclasses -- [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role), [`heading`](/en-US/docs/Web/Accessibility/ARIA/Roles/heading_role), [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role), and [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role). There are HTML element equivalents, like, {{HTMLElement('th', '<code>&lt;th scope="col"></code>')}} for `columnheader`, {{HTMLElement('th', '<code>&lt;th scope="row"></code>')}} for rowheader, and any of the HTML headings, {{HTMLElement('h1')}} thru  {{HTMLElement('h6')}} for `heading`. The `tab` role does not currently have an HTML equivalent.
 
 ## Best Practices
 
@@ -25,10 +31,16 @@ Do not use.
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#sectionhead","ARIA: sectionhead role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#aria_lh_sectionhead_role","sectionhead role")}} | {{Spec2('ARIA Authoring Practices')}} |
+
 
 
 ## See Also
+
+- [ARIA: `structure` role](/en-US/docs/Web/Accessibility/ARIA/Roles/structure_role)
+- [ARIA: `columnheader` role](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
+- [ARIA: `heading` role](/en-US/docs/Web/Accessibility/ARIA/Roles/heading_role)
+- [ARIA: `rowheader` role](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
+- [ARIA: `tab` role](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role)
 
 
 <section id="Quick_links"><ol><li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li></ol></section>

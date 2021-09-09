@@ -8,7 +8,6 @@ tags:
   - roles
   - Reference
   - ARIA roles
-  - NeedsContent
 ---
 
 The **`section` role**, an abstract role, is superclass role for renderable structural containment components.
