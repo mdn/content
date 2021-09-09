@@ -26,7 +26,7 @@ An `AudioData` object contains a reference to an attached **media resource**. Th
 
 To return the sample format of an `AudioData` use the {{domxref("AudioData.format")}} property. The format may be described as **interleaved** or **planar**. In a interleaved format, the audio samples are laid out in a single buffer, therefore the `AudioData` has a single **plane**. This plane contains a number of elements equal to {{domxref("AudioData.numberOfFrames")}} * {{domxref("AudioData.numberOfChannels")}}.
 
-In a planar format, the audio samples from the different channels are laid out in different buffers. The `AudioData` has a number of planes equal to {{domxref("AudioData.numberOfChannels")}}, each plane contains a number of elements equal to {{domxref("AudioData.numberOfFrames")}}.
+In planar format, the number of planes is equal to {{domxref("AudioData.numberOfChannels")}}, and each plane contains a number of elements equal to {{domxref("AudioData.numberOfFrames")}}.
 
 ## Constructor
 
