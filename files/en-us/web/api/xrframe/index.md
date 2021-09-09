@@ -38,9 +38,11 @@ In addition to providing a reference to the {{domxref("XRSession")}} for which t
 - {{domxref("XRFrame.getDepthInformation()", "getDepthInformation()")}}
   - : Returns an {{domxref("XRCPUDepthInformation")}} object containing CPU depth information for the frame.
 - {{domxref("XRFrame.getHitTestResults()", "getHitTestResults()")}}
-  - : Returns an array of {{domxref("XRHitResult")}} objects containing hit test results for a given {{domxref("XRHitTestSource")}}.
+  - : Returns an array of {{domxref("XRHitTestResult")}} objects containing hit test results for a given {{domxref("XRHitTestSource")}}.
 - {{domxref("XRFrame.getHitTestResultsForTransientInput()", "getHitTestResultsForTransientInput()")}}
   - : Returns an array of {{domxref("XRTransientInputHitTestResult")}} objects containing hit test results for a given {{domxref("XRTransientInputHitTestSource")}}.
+- {{domxref("XRFrame.getJointPose()", "getJointPose()")}}
+  - : Returns an {{domxref("XRJointPose")}} object providing the pose of a hand joint (see {{domxref("XRHand")}}) relative to a given base space.
 - {{domxref("XRFrame.getLightEstimate()", "getLightEstimate()")}}
   - : Returns an {{domxref("XRLightEstimate")}} object containing estimated lighting values for an {{domxref("XRLightProbe")}}.
 - {{DOMxRef("XRFrame.getPose", "getPose()")}}
