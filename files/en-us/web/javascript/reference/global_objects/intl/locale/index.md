@@ -35,6 +35,8 @@ Traditionally, the Intl API used strings to represent locales, just as Unicode d
   - : Returns basic, core information about the `Locale` in the form of a substring of the complete data string.
 - {{jsxref("Intl/Locale/calendar", "Intl.Locale.prototype.calendar")}}
   - : Returns the part of the `Locale` that indicates the Locale's calendar era.
+- {{jsxref("Intl/Locale/calendars", "Intl.Locale.prototype.calendars")}}
+  - : Returns an {{jsxref("Array")}} of available calendar identifiers, according to the locale's rules.
 - {{jsxref("Intl/Locale/caseFirst", "Intl.Locale.prototype.caseFirst")}}
   - : Returns whether case is taken into account for the locale's collation rules.
 - {{jsxref("Intl/Locale/collation", "Intl.Locale.prototype.collation")}}
