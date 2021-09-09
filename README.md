@@ -224,7 +224,7 @@ and use it to make a pull request.
 
 1. Next, you'll want to start the local preview service, so you can see
 the changes you'll make as they would look in production. Once started,
-this local preview service is available at `http://localhost:5000`
+this local preview service is available at `http://localhost:5000/`
 within your browser.
 
     ```sh
