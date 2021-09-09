@@ -70,10 +70,9 @@ var <var>timeoutID</var> = setTimeout(<var>code</var>[, <var>delay</var>]);
 <h3 id="asynchronous">Working with asynchronous functions</h3>
 
 <p><code>setTimeout()</code> is an asynchronous function, meaning that the timer function will not pause execution of other functions in the functions stack.  
-  In other words, you cannot use <code>setTimeout()</code> to create a "pause" before the next function in the function stack fires.  
-  
-  See the following example: 
-  
+  In other words, you cannot use <code>setTimeout()</code> to create a "pause" before the next function in the function stack fires.</p>
+
+<p>See the following example:</p>
   <pre class="brush: js">
   setTimeout(() => {console.log("this is the first message")}, 5000);
   setTimeout(() => {console.log("this is the second message")}, 3000);
@@ -86,13 +85,12 @@ var <var>timeoutID</var> = setTimeout(<var>code</var>[, <var>delay</var>]);
   // this is the first message
 </pre>
 
-<p>Notice that the first function does not create a 5 second "pause" before calling the second function.  Instead, the first function is called, but waits 5 seconds to
-  execute.  While the first function is waiting to execute, the second function is called, and a 3 second wait is applied to the second function before it executes.  Since neither
-  the first nor the second function's timers have completed, the third function is called and completes it's execution first.  Then the second follows.  Then finally the first function 
-  is executed after it's timer finally completes.  
+<p>Notice that the first function does not create a 5 second "pause" before calling the second function. Instead, the first function is called, but waits 5 seconds to
+  execute. While the first function is waiting to execute, the second function is called, and a 3 second wait is applied to the second function before it executes. Since neither
+  the first nor the second function's timers have completed, the third function is called and completes its execution first. Then the second follows. Then finally the first function 
+  is executed after its timer finally completes.
 
-  <p>To create a progression in which one function only fires after the completion of another function, see <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise
-    reference</a>.
+  <p>To create a progression in which one function only fires after the completion of another function, see the documentation on <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a>.
 
 <h3 id="The_this_problem">The "this" problem</h3>
 
