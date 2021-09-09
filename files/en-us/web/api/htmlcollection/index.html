@@ -16,7 +16,7 @@ browser-compat: api.HTMLCollection
 
 <div class="note"><p><strong>Note:</strong> This interface is called <code>HTMLCollection</code> for historical reasons (before the modern DOM, collections implementing this interface could only have HTML elements as their items).</p></div>
 
-<p>An <code>HTMLCollection</code> in the HTML DOM is live; it is automatically updated when the underlying document is changed.</p>
+<p>An <code>HTMLCollection</code> in the HTML DOM is live; it is automatically updated when the underlying document is changed. For this reason it is a good idea to make a copy (eg. using {{jsxref("Array/from", "Array.from")}}) to iterate over if adding, moving, or removing nodes.</p>
 
 <h2 id="Properties">Properties</h2>
 

@@ -48,6 +48,11 @@ The modified array, filled with `value`.
 - `fill` is a mutator method: it will change the array itself and return it, not a copy of it.
 - If the first parameter is an object, each slot in the array will reference that object.
 
+<div class="note notecard">
+<b>Note</b>: Using Array.prototype.fill() on an empty array would not modify it as the array has nothing to be modified. To use Array.prototype.fill() when declaring an array, make sure to assign slots to the array.
+<a href="#using_fill_to_populate_an_empty_array">See Example</a>
+</div>
+
 ## Polyfill
 
 ```js
@@ -133,6 +138,15 @@ arr[0][0] = 10;
 console.log(arr[0][0]); // 10
 console.log(arr[1][0]); // 1
 console.log(arr[2][0]); // 1
+```
+
+### Using fill() to populate an Empty Array
+
+This example shows how to populate an array with random values. The end value 
+does not have to be specified.
+
+```js
+let tempGirls = Array(5).fill("girl",0);
 ```
 
 ## Specifications
