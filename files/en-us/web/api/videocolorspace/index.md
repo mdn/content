@@ -8,9 +8,9 @@ tags:
   - VideoColorSpace
 browser-compat: api.VideoColorSpace
 ---
-{{DefaultAPISidebar("Web Codecs API")}}
+{{DefaultAPISidebar("WebCodecs API")}}
 
-The **`VideoColorSpace`** interface of the {{domxref('Web Codecs API','','',' ')}} represents the color space of a video.
+The **`VideoColorSpace`** interface of the {{domxref('WebCodecs API','','',' ')}} represents the color space of a video.
 
 ## Constructor
 

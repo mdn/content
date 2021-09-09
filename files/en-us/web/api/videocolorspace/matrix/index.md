@@ -9,7 +9,7 @@ tags:
   - VideoColorSpace
 browser-compat: api.VideoColorSpace.matrix
 ---
-{{DefaultAPISidebar("Web Codecs API")}}
+{{DefaultAPISidebar("WebCodecs API")}}
 
 The **`matrix`** read-only property of the {{domxref("VideoColorSpace")}} interface returns the matrix coefficient of the video. Matrix coefficients describe the relationship between sample component values and color coordinates.
 

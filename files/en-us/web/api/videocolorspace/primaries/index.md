@@ -9,7 +9,7 @@ tags:
   - VideoColorSpace
 browser-compat: api.VideoColorSpace.primaries
 ---
-{{DefaultAPISidebar("Web Codecs API")}}
+{{DefaultAPISidebar("WebCodecs API")}}
 
 The **`primaries`** read-only property of the {{domxref("VideoColorSpace")}} interface returns the color gamut of the video.
 
