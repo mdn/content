@@ -8,7 +8,6 @@ tags:
   - roles
   - Reference
   - ARIA roles
-  - NeedsContent
 ---
 
 The **alertdialog** role is to be used on modal alert dialogs that interrupt a user's workflow to communicate an important message and require a response. 

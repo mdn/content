@@ -4,7 +4,9 @@ slug: Web/Accessibility/ARIA/Roles/dialog_role
 tags:
   - ARIA
   - Accessibility
-  - NeedsContent
+  - ARIA role
+  - ARIA dialog
+  - Reference
   - Web Development
 ---
 The [`dialog`](https://www.w3.org/TR/2009/WD-wai-aria-20091215/roles#dialog) role is used to mark up an HTML based application dialog or window that separates content or UI from the rest of the web application or page. Dialogs are generally placed on top of the rest of the page content using an overlay. Dialogs can be either non-modal (it's still possible to interact with content outside of the dialog) or modal (only the content in the dialog can be interacted with).
@@ -116,7 +118,9 @@ When the dialog is correctly labeled and focus is moved to an element (often an 
 
 | Specification                                    | Status                   |
 | ------------------------------------------------ | ------------------------ |
-| {{SpecName("ARIA","#alert","alert")}} | {{Spec2('ARIA')}} |
+| {{SpecName("ARIA","#dialog","dialog")}} | {{Spec2('ARIA')}} |
+| {{SpecName("ARIA Authoring Practices 1.1","#dialog_modal","Dialog")}} | {{Spec2('ARIA Authoring Practices')}} |
+
 
 ## Screen reader support
 
@@ -126,5 +130,6 @@ Coming soon
 
 - [ARIA: alertdialog role](/en-US/docs/web/Accessibility/ARIA/roles/alertdialog_role)
 - [Using the alertdialog role](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role)
+- {{HTMLElement('dialog', 'The HTML <code>&lt;dialog></code> element')}}
 
 <section id="Quick_links"><ol><li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li></ol></section>
