@@ -2024,7 +2024,7 @@
 /en-US/docs/DOM/event.timeStamp	/en-US/docs/Web/API/Event/timeStamp
 /en-US/docs/DOM/event.type	/en-US/docs/Web/API/Event/type
 /en-US/docs/DOM/event.view	/en-US/docs/Web/API/UIEvent/view
-/en-US/docs/DOM/event.which	/en-US/docs/Web/API/KeyboardEvent/which
+/en-US/docs/DOM/event.which	/en-US/docs/Web/API/UIEvent/which
 /en-US/docs/DOM/event/AnimationEvent	/en-US/docs/Web/API/AnimationEvent
 /en-US/docs/DOM/event/Comparison_of_Event_Targets	/en-US/docs/Web/API/Event/Comparison_of_Event_Targets
 /en-US/docs/DOM/form.acceptCharset	/en-US/docs/Web/API/HTMLFormElement/acceptCharset
@@ -2514,7 +2514,7 @@
 /en-US/docs/DOM:event.timeStamp	/en-US/docs/Web/API/Event/timeStamp
 /en-US/docs/DOM:event.type	/en-US/docs/Web/API/Event/type
 /en-US/docs/DOM:event.view	/en-US/docs/Web/API/UIEvent/view
-/en-US/docs/DOM:event.which	/en-US/docs/Web/API/KeyboardEvent/which
+/en-US/docs/DOM:event.which	/en-US/docs/Web/API/UIEvent/which
 /en-US/docs/DOM:event:Comparison_of_Event_Targets	/en-US/docs/Web/API/Event/Comparison_of_Event_Targets
 /en-US/docs/DOM:form.acceptCharset	/en-US/docs/Web/API/HTMLFormElement/acceptCharset
 /en-US/docs/DOM:form.action	/en-US/docs/Web/API/HTMLFormElement/action
@@ -6996,6 +6996,7 @@
 /en-US/docs/Web/API/ByteLengthQueueingStrategy/ByteLengthQueueingStrategy	/en-US/docs/Web/API/ByteLengthQueuingStrategy/ByteLengthQueuingStrategy
 /en-US/docs/Web/API/ByteLengthQueueingStrategy/size	/en-US/docs/Web/API/ByteLengthQueuingStrategy/size
 /en-US/docs/Web/API/ByteLengthQueuingStrategy/ByteLengthQueueingStrategy	/en-US/docs/Web/API/ByteLengthQueuingStrategy/ByteLengthQueuingStrategy
+/en-US/docs/Web/API/ByteString	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
 /en-US/docs/Web/API/CSS.escape	/en-US/docs/Web/API/CSS/escape
 /en-US/docs/Web/API/CSS.supports	/en-US/docs/Web/API/CSS/supports
 /en-US/docs/Web/API/CSSFontLoading_API	/en-US/docs/Web/API/CSS_Font_Loading_API
@@ -7890,7 +7891,8 @@
 /en-US/docs/Web/API/KeyboardEvent.location	/en-US/docs/Web/API/KeyboardEvent/location
 /en-US/docs/Web/API/KeyboardEvent.metaKey	/en-US/docs/Web/API/KeyboardEvent/metaKey
 /en-US/docs/Web/API/KeyboardEvent.shiftKey	/en-US/docs/Web/API/KeyboardEvent/shiftKey
-/en-US/docs/Web/API/KeyboardEvent.which	/en-US/docs/Web/API/KeyboardEvent/which
+/en-US/docs/Web/API/KeyboardEvent.which	/en-US/docs/Web/API/UIEvent/which
+/en-US/docs/Web/API/KeyboardEvent/which	/en-US/docs/Web/API/UIEvent/which
 /en-US/docs/Web/API/KeyframeEffect/KeyframeEffect.getKeyframes()	/en-US/docs/Web/API/KeyframeEffect/getKeyframes
 /en-US/docs/Web/API/KeyframeEffect/getFrames	/en-US/docs/Web/API/KeyframeEffect/getKeyframes
 /en-US/docs/Web/API/KeyframeEffect/setFrames	/en-US/docs/Web/API/KeyframeEffect/setKeyframes
@@ -8000,9 +8002,10 @@
 /en-US/docs/Web/API/MouseEvent.screenX	/en-US/docs/Web/API/MouseEvent/screenX
 /en-US/docs/Web/API/MouseEvent.screenY	/en-US/docs/Web/API/MouseEvent/screenY
 /en-US/docs/Web/API/MouseEvent.shiftKey	/en-US/docs/Web/API/MouseEvent/shiftKey
-/en-US/docs/Web/API/MouseEvent.which	/en-US/docs/Web/API/MouseEvent/which
+/en-US/docs/Web/API/MouseEvent.which	/en-US/docs/Web/API/UIEvent/which
 /en-US/docs/Web/API/MouseEvent/MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN	/en-US/docs/Web/API/MouseEvent/WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN
 /en-US/docs/Web/API/MouseEvent/MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN	/en-US/docs/Web/API/MouseEvent/WEBKIT_FORCE_AT_MOUSE_DOWN
+/en-US/docs/Web/API/MouseEvent/which	/en-US/docs/Web/API/UIEvent/which
 /en-US/docs/Web/API/MsAudioCategory	/en-US/docs/Web/API/HTMLAudioElement/msAudioCategory
 /en-US/docs/Web/API/MsAudioDeviceType	/en-US/docs/Web/API/HTMLAudioElement/msAudioDeviceType
 /en-US/docs/Web/API/MsClearEffects	/en-US/docs/Web/API/HTMLMediaElement/msClearEffects
@@ -8342,6 +8345,11 @@
 /en-US/docs/Web/API/RTCDataChannelEvent.channel	/en-US/docs/Web/API/RTCDataChannelEvent/channel
 /en-US/docs/Web/API/RTCIceCandidate/RTCIceCandidate.address	/en-US/docs/Web/API/RTCIceCandidate/address
 /en-US/docs/Web/API/RTCIceCandidate/ip	/en-US/docs/Web/API/RTCIceCandidate/address
+/en-US/docs/Web/API/RTCIceCandidateInit	/en-US/docs/Web/API/RTCIceCandidate/RTCIceCandidate
+/en-US/docs/Web/API/RTCIceCandidateInit/candidate	/en-US/docs/Web/API/RTCIceCandidate/candidate
+/en-US/docs/Web/API/RTCIceCandidateInit/sdpMLineIndex	/en-US/docs/Web/API/RTCIceCandidate/sdpMLineIndex
+/en-US/docs/Web/API/RTCIceCandidateInit/sdpMid	/en-US/docs/Web/API/RTCIceCandidate/sdpMid
+/en-US/docs/Web/API/RTCIceCandidateInit/usernameFragment	/en-US/docs/Web/API/RTCIceCandidate/usernameFragment
 /en-US/docs/Web/API/RTCIceCandidatePairStats/bytesReceieved	/en-US/docs/Web/API/RTCIceCandidatePairStats/bytesReceived
 /en-US/docs/Web/API/RTCIceCandidatePairStats/circuitBreakerTriggerCoun	/en-US/docs/Web/API/RTCIceCandidatePairStats/circuitBreakerTriggerCount
 /en-US/docs/Web/API/RTCIceCandidatePairStats/contentRequestsSent	/en-US/docs/Web/API/RTCIceCandidatePairStats/consentRequestsSent
@@ -8641,7 +8649,7 @@
 /en-US/docs/Web/API/UIEvent.pageX	/en-US/docs/Web/API/MouseEvent/pageX
 /en-US/docs/Web/API/UIEvent.pageY	/en-US/docs/Web/API/MouseEvent/pageY
 /en-US/docs/Web/API/UIEvent.view	/en-US/docs/Web/API/UIEvent/view
-/en-US/docs/Web/API/UIEvent.which	/en-US/docs/Web/API/KeyboardEvent/which
+/en-US/docs/Web/API/UIEvent.which	/en-US/docs/Web/API/UIEvent/which
 /en-US/docs/Web/API/UIEvent/UIEvent.detail	/en-US/docs/Web/API/UIEvent/detail
 /en-US/docs/Web/API/UIEvent/cancelBubble	/en-US/docs/Web/API/Event/cancelBubble
 /en-US/docs/Web/API/UIEvent/pageX	/en-US/docs/Web/API/MouseEvent/pageX
@@ -9252,7 +9260,7 @@
 /en-US/docs/Web/API/event.timeStamp	/en-US/docs/Web/API/Event/timeStamp
 /en-US/docs/Web/API/event.type	/en-US/docs/Web/API/Event/type
 /en-US/docs/Web/API/event.view	/en-US/docs/Web/API/UIEvent/view
-/en-US/docs/Web/API/event.which	/en-US/docs/Web/API/KeyboardEvent/which
+/en-US/docs/Web/API/event.which	/en-US/docs/Web/API/UIEvent/which
 /en-US/docs/Web/API/form.acceptCharset	/en-US/docs/Web/API/HTMLFormElement/acceptCharset
 /en-US/docs/Web/API/form.action	/en-US/docs/Web/API/HTMLFormElement/action
 /en-US/docs/Web/API/form.elements	/en-US/docs/Web/API/HTMLFormElement/elements

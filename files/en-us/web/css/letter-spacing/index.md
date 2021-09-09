@@ -51,7 +51,7 @@ Legible letter-spacing must be determined on a case-by-case basis, as different 
 
 ## Internationalization concerns
 
-Some written languages should not have any letter spacing applied. For instance, languages that use the Arabic script expect connected letters to remain visually connected, as in the following example. Appyling letter spacing will lead the text to look broken.
+Some written languages should not have any letter spacing applied. For instance, languages that use the Arabic script expect connected letters to remain visually connected, as in the following example. Applying letter spacing will lead the text to look broken.
 
 > <p lang="ar" dir="rtl">شسيبتنمك</p>
 

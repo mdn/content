@@ -1222,6 +1222,7 @@
       "events": []
     },
     "Screen Orientation API": {
+      "overview": ["Screen Orientation API"],
       "guides": ["/docs/Web/API/CSS_Object_Model/Managing_screen_orientation"],
       "interfaces": ["ScreenOrientation"],
       "methods": [],

@@ -62,6 +62,7 @@ The equipment may also include an accelerometer, barometer, or other sensors whi
 - {{DOMxRef("XRReferenceSpace")}}
 - {{DOMxRef("XRBoundedReferenceSpace")}}
 - {{domxref("XRReferenceSpaceEvent")}}
+- {{domxref("XRJointSpace")}}
 
 ### Views
 
@@ -75,10 +76,11 @@ The equipment may also include an accelerometer, barometer, or other sensors whi
 ### Pose
 
 - {{DOMxRef("XRPose")}}
+- {{DOMxRef("XRJointPose")}}
 - {{DOMxRef("XRViewerPose")}}
 
 ### Input
-
+- {{DOMxRef("XRHand")}}
 - {{DOMxRef("XRInputSource")}}
 - {{DOMxRef("XRInputSourceArray")}}
 - {{domxref("XRInputSourceEvent")}}
