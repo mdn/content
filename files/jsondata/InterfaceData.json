@@ -2080,8 +2080,7 @@
       "inh": "EventTarget",
       "impl": [
         "GlobalEventHandlers",
-        "WindowEventHandlers",
-        "WindowOrWorkerGlobalScope"
+        "WindowEventHandlers"
       ]
     },
     "WindowClient": {
@@ -2098,7 +2097,7 @@
     },
     "WorkerGlobalScope": {
       "inh": "EventTarget",
-      "impl": ["GlobalCrypto", "WindowOrWorkerGlobalScope"]
+      "impl": ["GlobalCrypto"]
     },
     "WorkerLocation": {
       "inh": "",
