@@ -8,12 +8,12 @@ tags:
   - roles
   - Reference
   - ARIA roles
-  - NeedsContent
+  - log
+  - log role
+  - ARIA log
 ---
 
 The `log` role is used to identify an element that creates a [live region](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) where new information is added in a meaningful order and old information may disappear. 
-
-> **Note:** The log role was included in the first [WAI-ARIA specification](https://www.w3.org/TR/wai-aria-1.0/roles#log), but has since been removed. 
 
 ## Description
 
