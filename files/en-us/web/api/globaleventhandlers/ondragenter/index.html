@@ -121,7 +121,7 @@ target.ondrop = drop_handler;
 target.ondragover = dragover_handler;
 
 // Set click event listener on button to reload the example
-const button = document.querySelector("#reload");
+const button = document.getElementById("reload");
 button.addEventListener("click", () => {
     document.location.reload();
 });
