@@ -51,12 +51,10 @@ tags:
 
 <h4 id="DOM">DOM</h4>
 
-<ul>
-  <li>The {{domxref("GlobalEventHandlers.onsecuritypolicyviolation", "onsecuritypolicyviolation")}} global event handler property is now supported.
-    This can be used to assign a handler for processing <a href="/en-US/docs/Web/API/Element/securitypolicyviolation_event"><code>securitypolicyviolation</code></a> events fired when there is a <a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy</a> violation ({{bug(1727302)}}).</li>
-  <li>The {{domxref("GlobalEventHandlers.onslotchange", "onslotchange")}} global event handler property is now supported.
-    This can be used to assign a handler for processing {{event("slotchange")} events, which are fired on {{HTMLElement("slot")}} elements when the node(s) contained in the slot change ({{bug(1501983)}}).</li>
-</ul>
+<li>The {{domxref("GlobalEventHandlers.onsecuritypolicyviolation","onsecuritypolicyviolation")}} global event handler property is now supported.
+  This can be used to assign a handler for processing <a href="/en-US/docs/Web/API/Element/securitypolicyviolation_event"><code>securitypolicyviolation</code></a> events fired when there is a <a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy</a> violation ({{bug(1727302)}}).</li>
+<li>The <code>onslotchange</code> event handler property is now supported on {{domxref("GlobalEventHandlers.onslotchange","GlobalEventHandlers")}} and {{domxref("ShadowRoot.onslotchange","ShadowRoot")}} is now supported.
+  This can be used to assign a handler for processing <a href="/en-US/docs/Web/API/HTMLSlotElement/slotchange_event"><code>slotchange</code></a> events, which are fired on {{HTMLElement("slot")}} elements when the node(s) contained in the slot change ({{bug(1501983)}}).</li>
 
 <h4 id="Media_WebRTC_and_Web_Audio">Media, WebRTC, and Web Audio</h4>
 
