@@ -839,6 +839,16 @@
       "properties": [],
       "events": []
     },
+    "Layout Instability API": {
+      "overview": ["Layout Instability API"],
+      "interfaces: ": [
+        "LayoutShift",
+        "LayoutShiftAttribution"
+      ],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "Long Tasks API": {
       "overview": ["Long Tasks API"],
       "interfaces": ["PerformanceLongTaskTiming", "TaskAttributionTiming"],
