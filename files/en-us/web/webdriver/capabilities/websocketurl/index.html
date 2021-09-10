@@ -1,0 +1,32 @@
+---
+title: webSocketUrl
+slug: Web/WebDriver/Capabilities/webSocketUrl
+tags:
+  - Reference
+  - WebDriver
+  - capabilities
+  - webSocketUrl
+---
+<p>With the <strong><code>webSocketUrl</code> capability</strong> set to <code>true</code> a WebSocket server will be started in the browser, supporting bidirectional communication by using the <a href="https://w3c.github.io/webdriver-bidi/">WebDriver BiDi protocol</a>. This capability defaults to <code>false</code>, and has effect for the lifetime of the session.</p>
+
+When the capability is set to <code>true</code> the returned capabilities from the <a href="/en-US/docs/Web/WebDriver/Commands/NewSession">New Session</a> command will then have the same capability but with its value replaced by the WebSocket URL of the current WebDriver session.
+
+<h2 id="Example">Example</h2>
+<p>Requesting the WebSocket URL by setting the <code>webSocketUrl</code> capability to <code>true</code>:</p>
+
+Request:
+<pre class="brush: json">POST /session HTTP/1.1
+{"capabilities": {"alwaysMatch": {"webSocketUrl": true}}}
+</pre>
+
+Response:
+<pre>
+{"value":{"sessionId":"571f206f-c3fe-794c-9218-77fa89595eb9","capabilities":{[..], "webSocketUrl":"ws://localhost:9222/session/571f206f-c3fe-794c-9218-77fa89595eb9"}}}
+</pre>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/WebDriver/Capabilities">List of WebDriver capabilities</a></li>
+ <li><a href="/en-US/docs/Web/WebDriver/Commands/NewSession">New Session</a> command</li>
+</ul>
