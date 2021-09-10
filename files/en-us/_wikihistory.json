@@ -91547,20 +91547,6 @@
       "alecananian"
     ]
   },
-  "Web/API/WindowOrWorkerGlobalScope": {
-    "modified": "2020-10-15T21:51:33.987Z",
-    "contributors": [
-      "mfuji09",
-      "unarist",
-      "chrisdavidmills",
-      "Sheppy",
-      "zbjornson",
-      "sideshowbarker",
-      "fscholz",
-      "kenrick95",
-      "Bzbarsky"
-    ]
-  },
   "Web/API/Worker": {
     "modified": "2020-10-15T21:10:11.615Z",
     "contributors": [
