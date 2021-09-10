@@ -35184,13 +35184,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/DOMPointInit": {
-    "modified": "2020-10-15T22:06:36.281Z",
-    "contributors": [
-      "Zearin_Galaurum",
-      "Sheppy"
-    ]
-  },
   "Web/API/DOMPointReadOnly": {
     "modified": "2020-10-15T21:36:25.809Z",
     "contributors": [
