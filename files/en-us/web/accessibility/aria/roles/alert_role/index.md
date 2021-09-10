@@ -9,9 +9,12 @@ tags:
   - ARIA widget
   - Reference
 ---
-The **[`alert`](href="https://www.w3.org/TR/wai-aria-1.1/#alert)** role can be used to tell the user an element has been dynamically updated. Screen readers will instantly start reading out the updated content when the role is added. If the user is expected to close the alert, then the [`alertdialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/Alertdialog_Role) role should be used instead.</span></p>
+
+The `alert` role is for important, and usually time-sensitive, information. The `alert` is a type of [`status`](/en-US/docs/Web/Accessibility/ARIA/Roles/status_role) processed as an atomic [live region](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions).
 
 ## Description
+
+The **[`alert`](href="https://www.w3.org/TR/wai-aria-1.1/#alert)** role can be used to tell the user an element has been dynamically updated. Screen readers will instantly start reading out the updated content when the role is added. If the user is expected to close the alert, then the [`alertdialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/Alertdialog_Role) role should be used instead.
 
 One of the five live region roles, the [`alert`](https://www.w3.org/TR/wai-aria-1.1/#alert) role is used to provide the user with important, and usually time-sensitive, information, and often to tell the user an element has been dynamically updated.
 
@@ -46,7 +49,7 @@ function triggerAlert() {
 
 ## Accessibility concerns
 
-The alert role should read out content that has changed, or bring the user's attention to it immediately, so it should not be used for static content or used regularly. Alerts, by definition, are disruptive. Lots of alerts at once or unnecessary alerts will create a bad user experience.
+The `alert` role should read out content that has changed, or bring the user's attention to it immediately, so it should not be used for static content or used regularly. Alerts, by definition, are disruptive. Several alerts at once and unnecessary alerts create bad user experiences.
 
 ## Specifications
 
@@ -57,7 +60,7 @@ The alert role should read out content that has changed, or bring the user's att
 
 ## See also
 
-- [ARIA: Alertdialog Role](/en-US/docs/Web/Accessibility/ARIA/Roles/Alertdialog_Role)
+- [ARIA: `alertdialog` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_Role)
 - [ARIA alert support - The Paciello Group](https://developer.paciellogroup.com/blog/2017/04/aria-alert-support/)
 - ARIA Live Regions
 
