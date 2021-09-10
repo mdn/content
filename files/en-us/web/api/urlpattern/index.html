@@ -254,33 +254,34 @@ console.log(pattern.test('https://example.com/books/123/456')); // true
 console.log(pattern.test('https://example.com/books/123/456/789')); // true
 </pre>
 
-<h3>Sub patterns</h3>
+<h3>Group delimiters</h3>
 
 <p>
-  Patterns can also have sub-patterns. These are pieces of a pattern that are
-  surrounded by curly braces (<code>{}</code>). These sub-patterns are not
-  captured in the match result like capturing groups, but can still have
-  modifiers applied to them, just like groups. If a sub-pattern does not have a
-  modifier, it is treated as if the items in it were just part of the parent
-  pattern. Sub-patterns may not contain other sub-patterns, but may contain any
-  other pattern items (capturing groups, regex, wildcard, fixed text).
+  Patterns can also contain group delimiters. These are pieces of a pattern that
+  are surrounded by curly braces (<code>{}</code>). These group delimiters are
+  not captured in the match result like capturing groups, but can still have
+  modifiers applied to them, just like groups. If a group delimiters does not
+  have a modifier, it is treated as if the items in it were just part of the
+  parent pattern. Group delimiters may not contain other group delimiters, but
+  may contain any other pattern items (capturing groups, regex, wildcard, or
+  fixed text).
 </p>
 
 
 <pre class="brush: js">
-// A sub-patterns group with a ? (optional) modifier
+// A group delimiter with a ? (optional) modifier
 const pattern = new URLPattern('/book{s}?', 'https://example.com');
 console.log(pattern.test('https://example.com/books')); // true
 console.log(pattern.test('https://example.com/book')); // true
 console.log(pattern.exec('https://example.com/books').pathname.groups); // {}
 
-// A sub-patterns group without a modifier
+// A group delimiter without a modifier
 const pattern = new URLPattern('/book{s}', 'https://example.com');
 console.log(pattern.pathname); // /books
 console.log(pattern.test('https://example.com/books')); // true
 console.log(pattern.test('https://example.com/book')); // false
 
-// A sub-pattern containing a capturing group
+// A group delimiter containing a capturing group
 const pattern = new URLPattern({ pathname: '/blog/:id(\\d+){-:title}?' });
 console.log(pattern.test('https://example.com/blog/123-my-blog')); // true
 console.log(pattern.test('https://example.com/blog/123')); // true
@@ -298,8 +299,8 @@ console.log(pattern.test('https://example.com/blog/my-blog')); // false
 
 <p>
   If you do not want this automatic prefixing, you can disable it by surrounding
-  the group with a sub-pattern (<code>{}</code>). Sub-groups do not have
-  automatic prefixing behavior.
+  the group with a group delimiters (<code>{}</code>). Group delimiters do not
+  have automatic prefixing behavior.
 </p>
 
 <pre class="brush: js">
@@ -322,7 +323,7 @@ console.log(pattern.test('https://example.com#/books/123')); // true
 console.log(pattern.test('https://example.com#/books')); // false
 console.log(pattern.test('https://example.com#/books/')); // true
 
-// Disabling segment prefixing for a group using a sub-pattern
+// Disabling segment prefixing for a group using a group delimiter
 const pattern = new URLPattern({ pathname: '/books/{:id}?' });
 console.log(pattern.test('https://example.com/books/123')); // true
 console.log(pattern.test('https://example.com/books')); // false
