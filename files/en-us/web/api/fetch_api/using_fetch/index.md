@@ -168,7 +168,7 @@ const photos = document.querySelector('input[type="file"][multiple]');
 
 formData.append('title', 'My Vegas Vacation');
 for (let i = 0; i < photos.files.length; i++) {
-  formData.append('photos', photos.files[i]);
+  formData.append(`photos_${i}`, photos.files[i]);
 }
 
 fetch('https://example.com/posts', {
