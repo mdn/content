@@ -56,12 +56,19 @@ The `alert` role should read out content that has changed, or bring the user's a
 | Specification                                                                    | Status                                           |
 | -------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#alert","Alert")}}                                 | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.1","#alert","Alert")}} | {{Spec2('ARIA Authoring Practices')}} |
+| {{SpecName("ARIA Authoring Practices 1.0","#log","Log")}} | {{Spec2('ARIA Authoring Practices')}} |
 
 ## See also
 
+
+- [ARIA: `alert` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role)
+- [ARIA: `log` role](/en-US/docs/Web/Accessibility/ARIA/Roles/log_role)
+- [ARIA: `marquee` role](/en-US/docs/Web/Accessibility/ARIA/Roles/marquee_role)
+- [ARIA: `status` role](/en-US/docs/Web/Accessibility/ARIA/Roles/status_role)
+- [ARIA: `timer` role](/en-US/docs/Web/Accessibility/ARIA/Roles/timer_role)
 - [ARIA: `alertdialog` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_Role)
+- [ARIA: live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions).
 - [ARIA alert support - The Paciello Group](https://developer.paciellogroup.com/blog/2017/04/aria-alert-support/)
-- ARIA Live Regions
+
 
 <section id="Quick_links"><ol><li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li></ol></section>

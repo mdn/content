@@ -7,7 +7,6 @@ tags:
   - ARIA widget
   - Reference
   - Role Timer
-  - Needs content
 ---
 
 The **`timer`** role indicates to assistive technologies that an element is a numerical counter listing the amount of elapsed time from a starting point or the remaining time until an end point. 
@@ -35,6 +34,7 @@ Along with alert, log, and marquee, the `timer` role is a live region and can be
 
 - aria-describedby
   - : Used to indicate the idref of an element that contains additional instructions for navigating or operating this element.
+
 - aria-roledescription
   - : Used to give the timer a more descriptive role text for screen readers to speak. This should be localized.
 
@@ -94,6 +94,11 @@ One way around this would be to first clear the contents of the live region, and
 
 ## See also
 
-  - [`timer` example on Codepen](https://codepen.io/heydon/pres/NGgNjZ) by Heydon Pickering
+- [ARIA: `alert` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role)
+- [ARIA: `log` role](/en-US/docs/Web/Accessibility/ARIA/Roles/log_role)
+- [ARIA: `marquee` role](/en-US/docs/Web/Accessibility/ARIA/Roles/marquee_role)
+- [ARIA: `status` role](/en-US/docs/Web/Accessibility/ARIA/Roles/status_role)
+- [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
+- [`timer` example on Codepen](https://codepen.io/heydon/pres/NGgNjZ) by Heydon Pickering
 
 <section id="Quick_links"><ol><li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li></ol></section>
