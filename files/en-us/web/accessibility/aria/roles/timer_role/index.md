@@ -7,6 +7,7 @@ tags:
   - ARIA widget
   - Reference
   - Role Timer
+  - timer
 ---
 
 The **`timer`** role indicates to assistive technologies that an element is a numerical counter listing the amount of elapsed time from a starting point or the remaining time until an end point. 
@@ -97,7 +98,7 @@ One way around this would be to first clear the contents of the live region, and
 - [ARIA: `alert` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role)
 - [ARIA: `log` role](/en-US/docs/Web/Accessibility/ARIA/Roles/log_role)
 - [ARIA: `marquee` role](/en-US/docs/Web/Accessibility/ARIA/Roles/marquee_role)
-- [ARIA: `status` role](/en-US/docs/Web/Accessibility/ARIA/Roles/status_role)
+- [ARIA: `status` role](/en-US/docs/Web/Accessibility/ARIA/Roles/status_role)t
 - [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
 - [`timer` example on Codepen](https://codepen.io/heydon/pres/NGgNjZ) by Heydon Pickering
 
