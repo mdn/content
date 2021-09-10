@@ -68,32 +68,34 @@ for (let p of searchParams) {
   console.log(p);
 }
 
-searchParams.has('topic') === true; // true
-searchParams.get('topic') === "api"; // true
-searchParams.getAll('topic'); // ["api"]
-searchParams.get('foo') === null; // true
+searchParams.has('topic') === true;      // true
+searchParams.get('topic') === "api";     // true
+searchParams.getAll('topic');            // ["api"]
+searchParams.get('foo') === null;        // true
 searchParams.append('topic', 'webdev');
-searchParams.toString(); // "q=URLUtils.searchParams&amp;topic=api&amp;topic=webdev"
+searchParams.toString();                 // "q=URLUtils.searchParams&amp;topic=api&amp;topic=webdev"
 searchParams.set('topic', 'More webdev');
-searchParams.toString(); // "q=URLUtils.searchParams&amp;topic=More+webdev"
+searchParams.toString();                 // "q=URLUtils.searchParams&amp;topic=More+webdev"
 searchParams.delete('topic');
-searchParams.toString(); // "q=URLUtils.searchParams"
+searchParams.toString();                 // "q=URLUtils.searchParams"
+</pre>
 
-// Search parameters can also be an object
+<pre class="brush: js">// Search parameters can also be an object
 let paramsObj = {foo: 'bar', baz: 'bar'};
 let searchParams = new URLSearchParams(paramsObj);
 
-searchParams.toString(); // "foo=bar&baz=bar"
-searchParams.has('foo'); // true
-searchParams.get('foo'); // bar
+searchParams.toString();                 // "foo=bar&baz=bar"
+searchParams.has('foo');                 // true
+searchParams.get('foo');                 // bar
+</pre>
 
+<pre class="brush: js">
 // Having duplicate parameters only returns the first value
 let paramStr = 'foo=bar&foo=baz';
 let searchParams = new URLSearchParams(paramStr);
 
-searchParams.toString(); // "foo=bar&foo=baz"
-searchParams.has('foo'); // bar
-
+searchParams.toString();                 // "foo=bar&foo=baz"
+searchParams.has('foo');                 // true
 </pre>
 
 <h3 id="Gotchas">Gotchas</h3>
