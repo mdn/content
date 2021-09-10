@@ -40,7 +40,8 @@ browser-compat: api.GlobalEventHandlers.ondragenter
 &lt;/div&gt;
 &lt;div id="target"&gt;Drop Zone&lt;/div&gt;
 
-&lt;textarea readonly id="event-log"&gt;&lt;/textarea&gt;</pre>
+&lt;textarea readonly id="event-log"&gt;&lt;/textarea&gt;
+&lt;button id="reload"&gt;Reload&lt;/button&gt;</pre>
 
 <h3 id="CSS">CSS</h3>
 
@@ -57,6 +58,7 @@ browser-compat: api.GlobalEventHandlers.ondragenter
 #event-log {
     width: 25rem;
     height: 4rem;
+    margin-bottom: 0;
     padding: .2rem;
 }
 </pre>
@@ -117,6 +119,12 @@ source.ondragend = dragend_handler;
 // Set handlers for the target's drop and dragover events
 target.ondrop = drop_handler;
 target.ondragover = dragover_handler;
+
+// Set click event listener on button to reload the example
+const button = document.querySelector("#reload");
+button.addEventListener("click", () => {
+    document.location.reload();
+});
 </pre>
 
 <h3 id="Result">Result</h3>
