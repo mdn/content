@@ -38,13 +38,8 @@ browser-compat: api.Document.queryCommandState
 </pre>
 
 <pre class="brush: css hidden">
-hr {
+hr, button {
   margin: 1rem 0;
-}
-
-#output:before {
-  content: "Output:";
-  padding-right: .5rem;
 }
 </pre>
 
@@ -64,13 +59,13 @@ hr {
       message = "The state of the 'bold' command is indeterminable.";
       break;
   }
-  document.querySelector("#output").textContent = message;
+  document.querySelector("#output").textContent = `Output: ${message}`;
   document.execCommand('bold');
 }</pre>
 
 <h3 id="Result">Result</h3>
 
-<p>{{EmbedLiveSample('Example', '100', '150')}}</p>
+<p>{{EmbedLiveSample('Example', '100', '180')}}</p>
 
 <h2 id="Specifications">Specifications</h2>
 
