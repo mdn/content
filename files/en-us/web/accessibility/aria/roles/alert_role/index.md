@@ -60,8 +60,6 @@ The `alert` role should read out content that has changed, or bring the user's a
 
 ## See also
 
-
-- [ARIA: `alert` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role)
 - [ARIA: `log` role](/en-US/docs/Web/Accessibility/ARIA/Roles/log_role)
 - [ARIA: `marquee` role](/en-US/docs/Web/Accessibility/ARIA/Roles/marquee_role)
 - [ARIA: `status` role](/en-US/docs/Web/Accessibility/ARIA/Roles/status_role)
