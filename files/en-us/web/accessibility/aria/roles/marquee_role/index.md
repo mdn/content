@@ -8,26 +8,18 @@ tags:
   - roles
   - Reference
   - ARIA roles
-  - NeedsContent
+  - marquee
+  - ARIA marquee
+  - marquee role
 ---
 
-
+A `marquee` is a type of [live region](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) containing non-essential information which changes frequently. 
 
 ## Description
 
-### Associated WAI-ARIA roles, states, and properties
+The `marquee` role defines an area as a type of live region that presents non-essential information that changes frequently. Examples of marquees include stock tickers and ad banners; information that is not necessarily sought out by the user that may be presented in any order. The main difference between a `marquee` and a [`log`](/en-US/docs/Web/Accessibility/ARIA/Roles/log_role) is that log information is presented in a meaningful order such as a by date.
 
-### Keyboard interactions
-
-### Required JavaScript features
-
-## Examples
-
-## Accessibility Concerns
-
-## Best Practices
-
-### Prefer HTML
+Elements with the role marquee have an implicit [aria-live](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) value of `off`.
 
 ## Specifications
 
