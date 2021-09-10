@@ -365,7 +365,7 @@ cell 4    | cell 5    | cell 6
 
 <h3>When to use HTML tables</h3>
 
-<p>There are two main circumstances in which authors should use HTML tables rather than GFM syntax: when the table uses features that are not supported in GFM, and when the table would be less readable in GFM.</p>
+<p>There are three main circumstances in which authors should use HTML tables rather than GFM syntax: when the table uses features that are not supported in GFM, when the GFM table would be too wide to be readable, and when the writer wants a special type of table called a "properties table".</p>
 
 <h4>Table features that are not supported in GFM</h4>
 
@@ -422,7 +422,7 @@ cell 4    | cell 5    | cell 6
 
 <h4>Properties tables</h4>
 
-<p>Properties tables are a specific type of table used for displaying structured content across a set of pages of a particular type. For example, all event pages have a properties table listing common information about the event: whether it bubbles, whether it is cancellable, and so on.</p>
+<p>Properties tables are a specific type of table used for displaying structured property-value content across a set of pages of a particular type. For example, all event pages have a properties table listing common information about the event: whether it bubbles, whether it is cancellable, and so on.</p>
 
 <p>These tables have two columns: the first column is the header column and lists the properties, and the second column lists their values for this particular item. For example, here's the properties table for the {{domxref("XMLHttpRequest/progress_event", "progress")}} event of the {{domxref("XMLHttpRequest")}} interface:</p>
 
@@ -447,7 +447,7 @@ cell 4    | cell 5    | cell 6
  </tbody>
 </table>
 
-<p>These pages can't be represented in GFM anyway, because they have a header column. To get the special styling, writers should apply the `"properties"` class to the table:</p>
+<p>These pages can't be represented in GFM anyway, because they have a header column. Writers should therefore use HTML. To get the special styling, writers should apply the <code>"properties"</code> class to the table:</p>
 
 <pre class="brush: html">&lt;table class="properties"&gt;
 </pre>
