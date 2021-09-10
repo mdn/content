@@ -7,9 +7,9 @@ tags:
   - capabilities
   - webSocketUrl
 ---
-<p>With the <code>webSocketUrl</code> capability set to <code>true</code> a WebSocket server will be started in the browser, supporting bidirectional communication by using the <a href="https://w3c.github.io/webdriver-bidi/">WebDriver BiDi protocol</a>. This capability defaults to <code>false</code>, and has effect for the lifetime of the session.</p>
+<p>With the <code>webSocketUrl</code> capability set to <code>true</code> a WebSocket server will be started in the browser, supporting bidirectional communication by using the <a href="https://w3c.github.io/webdriver-bidi/">WebDriver BiDi protocol</a>.
 
-When the capability is set to <code>true</code> the returned capabilities from the <a href="/en-US/docs/Web/WebDriver/Commands/NewSession">New Session</a> command will then have the same capability but with its value replaced by the WebSocket URL of the current WebDriver session.
+When the <a href="/en-US/docs/Web/WebDriver/Commands/NewSession">New Session</a> request has the <code>webSocketUrl</code> capability set to <code>true</code>, and the session starts successfully, the value of the capabilities field in the response will have a <code>webSocketUrl</code> property set to the URL of the WebSocket server.
 
 <h2 id="Example">Example</h2>
 <p>Requesting the WebSocket URL by setting the <code>webSocketUrl</code> capability to <code>true</code>:</p>
