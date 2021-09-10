@@ -19,7 +19,7 @@ The **`Intl.Locale.prototype.calendars`** property is an accessor property which
 
 ## Description
 
-The `calendar` property returns a list of all supported calendars for the  `Locale`  all list items indicates the `Locale`'s calendar era. The following table shows all the valid Unicode calendar key strings, along with a description of the calendar era they represent.
+The `calendar` property returns a list of all supported calendars for the `Locale` all list items indicates the `Locale` object's calendar era. The following table shows all the valid Unicode calendar key strings, along with a description of the calendar era they represent.
 
 ### Unicode calendar keys
 
