@@ -21,10 +21,6 @@ browser-compat: api.DOMPointReadOnly.fromPoint
     method <code>fromPoint()</code> creates and returns a new
     <code>DOMPointReadOnly</code> object given a source point.</p>
 
-<p>The source point is
-  specified as a {{domxref("DOMPointInit")}}-compatible object, which includes both
-  {{domxref("DOMPoint")}} and {{domxref("DOMPointReadOnly")}}.</p>
-
 <p>You can also create a new <code>DOMPointReadOnly</code> object using the
   {{domxref("DOMPointReadOnly.DOMPointReadOnly", "new DOMPointReadOnly()")}} constructor.
 </p>
@@ -37,10 +33,20 @@ browser-compat: api.DOMPointReadOnly.fromPoint
 <h3 id="Properties">Properties</h3>
 
 <dl>
-  <dt><code><var>sourcePoint</var></code></dt>
-  <dd>A {{domxref("DOMPointInit")}}-compliant object, which includes both
-    {{domxref("DOMPoint")}} and {{domxref("DOMPointReadOnly")}}, from which to take the
-    values of the new point's properties.</dd>
+  <dt><code>sourcePoint</code></dt>
+  <dd>A {{domxref("DOMPoint")}} or {{domxref("DOMPointReadOnly")}} instance, or an object containing the following properties, from which to take the
+    values of the new point's properties:
+    <dl>
+      <dt><code>x</code></dt>
+      <dd>An unrestricted floating-point value indicating the <code>x</code>-coordinate of the point in space. This is generally the horizontal coordinate, with positive values being to the right and negative values to the left. The default value is <code>0</code>.</dd>
+      <dt><code>y</code></dt>
+      <dd>An unrestricted floating-point number providing the point's <code>y</code>-coordinate. This is the vertical coordinate, and barring any transforms applied to the coordinate system, positive values are downward and negative values upward toward the top of the screen. The default is <code>0</code>.</dd>
+      <dt><code>z</code></dt>
+      <dd>An unrestricted floating-point value which gives the point's <code>z</code>-coordinate, which is (assuming no transformations that alter the situation) the depth coordinate; positive values are closer to the user and negative values retreat back into the screen. The default value is <code>0</code>.</dd>
+      <dt><code>w</code></dt>
+      <dd>The point's <code>w</code> perspective value, given as an unrestricted floating-point number. The default is <code>1</code>.</dd>
+    </dl>
+  </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
