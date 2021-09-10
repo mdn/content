@@ -270,12 +270,11 @@ tags:
       &lt;input type="tel" id="number" name="cardnumber"&gt;
     &lt;/p&gt;
     &lt;p&gt;
-      &lt;label for="date"&gt;
+      &lt;label for="expiration"&gt;
         &lt;span&gt;Expiration date:&lt;/span&gt;
         &lt;strong&gt;&lt;abbr title="required"&gt;*&lt;/abbr&gt;&lt;/strong&gt;
-        &lt;em&gt;formatted as mm/dd/yyyy&lt;/em&gt;
       &lt;/label&gt;
-      &lt;input type="date" id="date" name="expiration"&gt;
+      &lt;input type="date" id="date" name="expiration" required="true" placeholder="MM/YY" pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$"&gt;
     &lt;/p&gt;
 &lt;/section&gt;</pre>
  </li>
