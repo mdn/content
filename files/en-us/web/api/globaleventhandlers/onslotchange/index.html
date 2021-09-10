@@ -44,7 +44,8 @@ slots[1].onslotchange = function(e) {
 };</pre>
 
 <p>We might alternatively handle the event at a higher level. 
-  The snippet below shows the equivalent code if the handler is assigned to <code>onslotchange</code> on the <code>shadowRoot</code>:</p>
+  The snippet below shows the equivalent code if the handler is assigned to <code>onslotchange</code> on the <code>shadowRoot</code>.
+  Every time the element in any slot changes, we log a report to the console saying which slot has changed, and what the new node inside the slot is.</p>
 
 <pre class="brush: js">this.shadowRoot.onslotchange = function(e) {
   const nodes = e.originalTarget.assignedNodes();
