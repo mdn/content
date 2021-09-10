@@ -7184,6 +7184,10 @@
 /en-US/docs/Web/API/DOMMatrix/DOMMatrixReadOnly	/en-US/docs/Web/API/DOMMatrixReadOnly/DOMMatrixReadOnly
 /en-US/docs/Web/API/DOMPoint/DOMPoint.fromPoint()	/en-US/docs/Web/API/DOMPoint/fromPoint
 /en-US/docs/Web/API/DOMPoint/toJSON	/en-US/docs/Web/API/DOMPointReadOnly/toJSON
+/en-US/docs/Web/API/DOMPointInit/w	/en-US/docs/web/api/DOMPoint/w
+/en-US/docs/Web/API/DOMPointInit/x	/en-US/docs/web/api/DOMPoint/x
+/en-US/docs/Web/API/DOMPointInit/y	/en-US/docs/web/api/DOMPoint/y
+/en-US/docs/Web/API/DOMPointInit/z	/en-US/docs/web/api/DOMPoint/z
 /en-US/docs/Web/API/DOMPointReadOnly/DOMPoint.x	/en-US/docs/Web/API/DOMPointReadOnly/x
 /en-US/docs/Web/API/DOMReadOnlyMatrix	/en-US/docs/Web/API/DOMMatrixReadOnly
 /en-US/docs/Web/API/DOMTokenList/DOMTokenList.add()	/en-US/docs/Web/API/DOMTokenList/add

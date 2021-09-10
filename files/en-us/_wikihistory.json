@@ -35191,34 +35191,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/DOMPointInit/w": {
-    "modified": "2020-10-15T22:06:40.738Z",
-    "contributors": [
-      "sideshowbarker",
-      "Sheppy"
-    ]
-  },
-  "Web/API/DOMPointInit/x": {
-    "modified": "2020-10-15T22:06:39.901Z",
-    "contributors": [
-      "sideshowbarker",
-      "Sheppy"
-    ]
-  },
-  "Web/API/DOMPointInit/y": {
-    "modified": "2020-10-15T22:06:40.145Z",
-    "contributors": [
-      "sideshowbarker",
-      "Sheppy"
-    ]
-  },
-  "Web/API/DOMPointInit/z": {
-    "modified": "2020-10-15T22:06:40.656Z",
-    "contributors": [
-      "sideshowbarker",
-      "Sheppy"
-    ]
-  },
   "Web/API/DOMPointReadOnly": {
     "modified": "2020-10-15T21:36:25.809Z",
     "contributors": [
