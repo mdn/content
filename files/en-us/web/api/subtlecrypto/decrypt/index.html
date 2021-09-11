@@ -44,7 +44,7 @@ browser-compat: api.SubtleCrypto.decrypt
   </li>
   <li><code><em>key</em></code> is a {{domxref("CryptoKey")}} containing the key to be
     used for decryption. If using RSA-OAEP, this is the <code>privateKey</code> property
-    of the {{domxref("CryptoKeyPair")}} object.</li>
+    of an object containing a <code>privateKey</code> and <code>publicKey</code>.</li>
   <li><em><code>data</code></em> is a {{domxref("BufferSource")}} containing the data to
     be decrypted (also known as {{glossary("ciphertext")}}).</li>
 </ul>

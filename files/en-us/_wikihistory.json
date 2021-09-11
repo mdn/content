@@ -34660,14 +34660,6 @@
       "teoli"
     ]
   },
-  "Web/API/CryptoKeyPair": {
-    "modified": "2020-10-31T11:29:39.481Z",
-    "contributors": [
-      "tom93",
-      "wbamberg",
-      "chrisdavidmills"
-    ]
-  },
   "Web/API/CustomElementRegistry": {
     "modified": "2020-10-15T21:50:21.663Z",
     "contributors": [

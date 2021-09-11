@@ -46,7 +46,7 @@ browser-compat: api.SubtleCrypto
  <dt>{{domxref("SubtleCrypto.digest()")}}</dt>
  <dd>Returns a {{jsxref("Promise")}} that fulfills with a digest generated from the algorithm and text given as parameters.</dd>
  <dt>{{domxref("SubtleCrypto.generateKey()")}}</dt>
- <dd>Returns a {{jsxref("Promise")}} that fulfills with a newly-generated {{domxref("CryptoKey")}}, for symmetrical algorithms, or a {{domxref("CryptoKeyPair")}}, containing two newly generated keys, for asymmetrical algorithms. These will match the algorithm, usages, and extractability given as parameters.</dd>
+ <dd>Returns a {{jsxref("Promise")}} that fulfills with a newly-generated {{domxref("CryptoKey")}}, for symmetrical algorithms, or an object containing newly generated private and public keys, for asymmetrical algorithms. These will match the algorithm, usages, and extractability given as parameters.</dd>
  <dt>{{domxref("SubtleCrypto.deriveKey()")}}</dt>
  <dd>Returns a {{jsxref("Promise")}} that fulfills with a newly generated {{domxref("CryptoKey")}} derived from the master key and specific algorithm given as parameters.</dd>
  <dt>{{domxref("SubtleCrypto.deriveBits()")}}</dt>

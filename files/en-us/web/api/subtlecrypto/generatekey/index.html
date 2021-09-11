@@ -79,8 +79,9 @@ browser-compat: api.SubtleCrypto.generateKey
 
 <ul>
   <li><code><em>result</em></code> is a {{jsxref("Promise")}} that fulfills with a
-    {{domxref("CryptoKey")}} (for symmetric algorithms) or a {{domxref("CryptoKeyPair")}}
-    (for public-key algorithms).</li>
+    {{domxref("CryptoKey")}} (for symmetric algorithms) or an object containing
+    <code>publicKey</code> and <code>privateKey</code> properties (for public-key
+    algorithms).</li>
 </ul>
 
 <h3 id="Exceptions">Exceptions</h3>
@@ -92,7 +93,7 @@ browser-compat: api.SubtleCrypto.generateKey
   <dd>Raised when the result is a {{domxref("CryptoKey")}} of type <code>secret</code> or
     <code>private</code> but <em><code>keyUsages</code></em> is empty.</dd>
   <dt>{{exception("SyntaxError")}}</dt>
-  <dd>Raised when the result is a {{domxref("CryptoKeyPair")}} and its
+  <dd>Raised when the result is an object and its
     <code>privateKey.usages</code> attribute is empty.</dd>
 </dl>
 
