@@ -269,6 +269,7 @@ following `switch`. If `break` were omitted, the statement for
 `case 'Cherries'` would also be executed.
 
 ```js
+var fruittype = 'Apples';
 switch (fruittype) {
   case 'Oranges':
     console.log('Oranges are $0.59 a pound.');
