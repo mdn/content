@@ -7171,7 +7171,6 @@
 /en-US/docs/Web/API/CryptoKey/extractable	/en-US/docs/Web/API/CryptoKey
 /en-US/docs/Web/API/CryptoKey/type	/en-US/docs/Web/API/CryptoKey
 /en-US/docs/Web/API/CryptoKey/usages	/en-US/docs/Web/API/CryptoKey
-/en-US/docs/Web/API/CryptoKeyPair	/en-US/docs/web/api/SubtleCrypto/generateKey
 /en-US/docs/Web/API/Cursor	/en-US/docs/Web/API/IDBCursor
 /en-US/docs/Web/API/CustomElementRegistry/CustomElementRegistry.get()	/en-US/docs/Web/API/CustomElementRegistry/get
 /en-US/docs/Web/API/CustomEvent.CustomEvent	/en-US/docs/Web/API/CustomEvent/CustomEvent
