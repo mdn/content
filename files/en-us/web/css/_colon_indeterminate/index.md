@@ -79,7 +79,7 @@ for (var i = 0; i < inputs.length; i++) {
 #### HTML
 
 ```html
-<progress>
+<progress></progress>
 ```
 
 #### CSS
