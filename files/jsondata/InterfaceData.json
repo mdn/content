@@ -156,10 +156,6 @@
       "inh": "EventTarget",
       "impl": []
     },
-    "BrowserElement": {
-      "inh": "",
-      "impl": ["BrowserElementCommon", "BrowserElementPrivileged"]
-    },
     "CDATASection": {
       "inh": "Text",
       "impl": []
@@ -372,10 +368,6 @@
       "inh": "EventTarget",
       "impl": []
     },
-    "DOMCursor": {
-      "inh": "EventTarget",
-      "impl": ["DOMRequestShared"]
-    },
     "DOMDownload": {
       "inh": "EventTarget",
       "impl": []
@@ -386,7 +378,7 @@
     },
     "DOMException": {
       "inh": "",
-      "impl": ["ExceptionMembers"]
+      "impl": []
     },
     "DOMImplementation": {
       "inh": "",
@@ -411,10 +403,6 @@
     "DOMRect": {
       "inh": "DOMRectReadOnly",
       "impl": []
-    },
-    "DOMRequest": {
-      "inh": "EventTarget",
-      "impl": ["DOMRequestShared"]
     },
     "DOMSettableTokenList": {
       "inh": "DOMTokenList",
@@ -482,7 +470,7 @@
     },
     "Document": {
       "inh": "Node",
-      "impl": ["XPathEvaluator", "GlobalEventHandlers"]
+      "impl": []
     },
     "DocumentFragment": {
       "inh": "Node",
@@ -523,10 +511,6 @@
     "EventSource": {
       "inh": "EventTarget",
       "impl": []
-    },
-    "Exception": {
-      "inh": "",
-      "impl": ["ExceptionMembers"]
     },
     "ExtendableEvent": {
       "inh": "Event",
@@ -614,7 +598,7 @@
     },
     "HTMLBodyElement": {
       "inh": "HTMLElement",
-      "impl": ["WindowEventHandlers"]
+      "impl": []
     },
     "HTMLButtonElement": {
       "inh": "HTMLElement",
@@ -658,7 +642,7 @@
     },
     "HTMLElement": {
       "inh": "Element",
-      "impl": ["GlobalEventHandlers"]
+      "impl": []
     },
     "HTMLEmbedElement": {
       "inh": "HTMLElement",
@@ -686,7 +670,7 @@
     },
     "HTMLFrameSetElement": {
       "inh": "HTMLElement",
-      "impl": ["WindowEventHandlers"]
+      "impl": []
     },
     "HTMLHRElement": {
       "inh": "HTMLElement",
@@ -706,7 +690,7 @@
     },
     "HTMLIFrameElement": {
       "inh": "HTMLElement",
-      "impl": ["BrowserElement"]
+      "impl": []
     },
     "HTMLImageElement": {
       "inh": "HTMLElement",
@@ -974,7 +958,7 @@
     },
     "KeyboardEvent": {
       "inh": "UIEvent",
-      "impl": ["KeyEvent"]
+      "impl": []
     },
     "LinearAccelerationSensor": {
       "inh": "Accelerometer",
@@ -1062,7 +1046,7 @@
     },
     "MessagePort": {
       "inh": "EventTarget",
-      "impl": ["Transferable"]
+      "impl": []
     },
     "MimeTypeArray": {
       "inh": "",
@@ -1270,7 +1254,7 @@
     },
     "PseudoElement": {
       "inh": "",
-      "impl": ["GeometryUtils"]
+      "impl": []
     },
     "RelativeOrientationSensor": {
       "inh": "OrientationSensor",
@@ -1354,11 +1338,11 @@
     },
     "SVGAElement": {
       "inh": "SVGGraphicsElement",
-      "impl": ["SVGURIReference"]
+      "impl": []
     },
     "SVGAltGlyphElement": {
       "inh": "SVGTextPositioningElement",
-      "impl": ["SVGURIReference"]
+      "impl": []
     },
     "SVGAnimateElement": {
       "inh": "SVGAnimationElement",
@@ -1398,7 +1382,7 @@
     },
     "SVGAnimationElement": {
       "inh": "SVGElement",
-      "impl": ["SVGTests"]
+      "impl": []
     },
     "SVGCircleElement": {
       "inh": "SVGGeometryElement",
@@ -1406,7 +1390,7 @@
     },
     "SVGClipPathElement": {
       "inh": "SVGElement",
-      "impl": ["SVGUnitTypes"]
+      "impl": []
     },
     "SVGComponentTransferFunctionElement": {
       "inh": "SVGElement",
@@ -1414,7 +1398,7 @@
     },
     "SVGCursorElement": {
       "inh": "SVGElement",
-      "impl": ["SVGURIReference"]
+      "impl": []
     },
     "SVGDefsElement": {
       "inh": "SVGGraphicsElement",
@@ -1430,7 +1414,7 @@
     },
     "SVGElement": {
       "inh": "Element",
-      "impl": ["GlobalEventHandlers"]
+      "impl": []
     },
     "SVGEllipseElement": {
       "inh": "SVGGeometryElement",
@@ -1438,31 +1422,31 @@
     },
     "SVGFEBlendElement": {
       "inh": "SVGElement",
-      "impl": ["SVGFilterPrimitiveStandardAttributes"]
+      "impl": []
     },
     "SVGFEColorMatrixElement": {
       "inh": "SVGElement",
-      "impl": ["SVGFilterPrimitiveStandardAttributes"]
+      "impl": []
     },
     "SVGFEComponentTransferElement": {
       "inh": "SVGElement",
-      "impl": ["SVGFilterPrimitiveStandardAttributes"]
+      "impl": []
     },
     "SVGFECompositeElement": {
       "inh": "SVGElement",
-      "impl": ["SVGFilterPrimitiveStandardAttributes"]
+      "impl": []
     },
     "SVGFEConvolveMatrixElement": {
       "inh": "SVGElement",
-      "impl": ["SVGFilterPrimitiveStandardAttributes"]
+      "impl": []
     },
     "SVGFEDiffuseLightingElement": {
       "inh": "SVGElement",
-      "impl": ["SVGFilterPrimitiveStandardAttributes"]
+      "impl": []
     },
     "SVGFEDisplacementMapElement": {
       "inh": "SVGElement",
-      "impl": ["SVGFilterPrimitiveStandardAttributes"]
+      "impl": []
     },
     "SVGFEDistantLightElement": {
       "inh": "SVGElement",
@@ -1470,11 +1454,11 @@
     },
     "SVGFEDropShadowElement": {
       "inh": "SVGElement",
-      "impl": ["SVGFilterPrimitiveStandardAttributes"]
+      "impl": []
     },
     "SVGFEFloodElement": {
       "inh": "SVGElement",
-      "impl": ["SVGFilterPrimitiveStandardAttributes"]
+      "impl": []
     },
     "SVGFEFuncAElement": {
       "inh": "SVGComponentTransferFunctionElement",
@@ -1494,15 +1478,15 @@
     },
     "SVGFEGaussianBlurElement": {
       "inh": "SVGElement",
-      "impl": ["SVGFilterPrimitiveStandardAttributes"]
+      "impl": []
     },
     "SVGFEImageElement": {
       "inh": "SVGElement",
-      "impl": ["SVGFilterPrimitiveStandardAttributes", "SVGURIReference"]
+      "impl": []
     },
     "SVGFEMergeElement": {
       "inh": "SVGElement",
-      "impl": ["SVGFilterPrimitiveStandardAttributes"]
+      "impl": []
     },
     "SVGFEMergeNodeElement": {
       "inh": "SVGElement",
@@ -1510,11 +1494,11 @@
     },
     "SVGFEMorphologyElement": {
       "inh": "SVGElement",
-      "impl": ["SVGFilterPrimitiveStandardAttributes"]
+      "impl": []
     },
     "SVGFEOffsetElement": {
       "inh": "SVGElement",
-      "impl": ["SVGFilterPrimitiveStandardAttributes"]
+      "impl": []
     },
     "SVGFEPointLightElement": {
       "inh": "SVGElement",
@@ -1522,7 +1506,7 @@
     },
     "SVGFESpecularLightingElement": {
       "inh": "SVGElement",
-      "impl": ["SVGFilterPrimitiveStandardAttributes"]
+      "impl": []
     },
     "SVGFESpotLightElement": {
       "inh": "SVGElement",
@@ -1530,15 +1514,15 @@
     },
     "SVGFETileElement": {
       "inh": "SVGElement",
-      "impl": ["SVGFilterPrimitiveStandardAttributes"]
+      "impl": []
     },
     "SVGFETurbulenceElement": {
       "inh": "SVGElement",
-      "impl": ["SVGFilterPrimitiveStandardAttributes"]
+      "impl": []
     },
     "SVGFilterElement": {
       "inh": "SVGElement",
-      "impl": ["SVGURIReference", "SVGUnitTypes"]
+      "impl": []
     },
     "SVGForeignObjectElement": {
       "inh": "SVGGraphicsElement",
@@ -1554,15 +1538,15 @@
     },
     "SVGGradientElement": {
       "inh": "SVGElement",
-      "impl": ["SVGURIReference", "SVGUnitTypes"]
+      "impl": []
     },
     "SVGGraphicsElement": {
       "inh": "SVGElement",
-      "impl": ["SVGTests"]
+      "impl": []
     },
     "SVGImageElement": {
       "inh": "SVGGraphicsElement",
-      "impl": ["SVGURIReference"]
+      "impl": []
     },
     "SVGLengthList": {
       "inh": "",
@@ -1578,15 +1562,15 @@
     },
     "SVGMPathElement": {
       "inh": "SVGElement",
-      "impl": ["SVGURIReference"]
+      "impl": []
     },
     "SVGMarkerElement": {
       "inh": "SVGElement",
-      "impl": ["SVGFitToViewBox"]
+      "impl": []
     },
     "SVGMaskElement": {
       "inh": "SVGElement",
-      "impl": ["SVGUnitTypes"]
+      "impl": []
     },
     "SVGMetadataElement": {
       "inh": "SVGElement",
@@ -1598,7 +1582,7 @@
     },
     "SVGPathElement": {
       "inh": "SVGGeometryElement",
-      "impl": ["SVGAnimatedPathData"]
+      "impl": []
     },
     "SVGPathSegArcAbs": {
       "inh": "SVGPathSeg",
@@ -1682,7 +1666,7 @@
     },
     "SVGPatternElement": {
       "inh": "SVGElement",
-      "impl": ["SVGFitToViewBox", "SVGURIReference", "SVGUnitTypes"]
+      "impl": []
     },
     "SVGPoint": {
       "inh": "",
@@ -1694,11 +1678,11 @@
     },
     "SVGPolygonElement": {
       "inh": "SVGGeometryElement",
-      "impl": ["SVGAnimatedPoints"]
+      "impl": []
     },
     "SVGPolylineElement": {
       "inh": "SVGGeometryElement",
-      "impl": ["SVGAnimatedPoints"]
+      "impl": []
     },
     "SVGPreserveAspectRatio": {
       "inh": "",
@@ -1718,11 +1702,11 @@
     },
     "SVGSVGElement": {
       "inh": "SVGGraphicsElement",
-      "impl": ["SVGFitToViewBox", "SVGZoomAndPan"]
+      "impl": []
     },
     "SVGScriptElement": {
       "inh": "SVGElement",
-      "impl": ["SVGURIReference"]
+      "impl": []
     },
     "SVGSetElement": {
       "inh": "SVGAnimationElement",
@@ -1746,7 +1730,7 @@
     },
     "SVGSymbolElement": {
       "inh": "SVGElement",
-      "impl": ["SVGFitToViewBox", "SVGTests"]
+      "impl": []
     },
     "SVGTSpanElement": {
       "inh": "SVGTextPositioningElement",
@@ -1762,7 +1746,7 @@
     },
     "SVGTextPathElement": {
       "inh": "SVGTextContentElement",
-      "impl": ["SVGURIReference"]
+      "impl": []
     },
     "SVGTextPositioningElement": {
       "inh": "SVGTextContentElement",
@@ -1778,11 +1762,11 @@
     },
     "SVGUseElement": {
       "inh": "SVGGraphicsElement",
-      "impl": ["SVGURIReference"]
+      "impl": []
     },
     "SVGViewElement": {
       "inh": "SVGElement",
-      "impl": ["SVGFitToViewBox", "SVGZoomAndPan"]
+      "impl": []
     },
     "SVGZoomEvent": {
       "inh": "UIEvent",
@@ -1826,7 +1810,7 @@
     },
     "ServiceWorkerGlobalScope": {
       "inh": "WorkerGlobalScope",
-      "impl": ["GlobalFetch"]
+      "impl": []
     },
     "ServiceWorkerRegistration": {
       "inh": "EventTarget",
@@ -2078,10 +2062,7 @@
     },
     "Window": {
       "inh": "EventTarget",
-      "impl": [
-        "GlobalEventHandlers",
-        "WindowEventHandlers"
-      ]
+      "impl": []
     },
     "WindowClient": {
       "inh": "Client",
@@ -2097,7 +2078,7 @@
     },
     "WorkerGlobalScope": {
       "inh": "EventTarget",
-      "impl": ["GlobalCrypto"]
+      "impl": []
     },
     "WorkerLocation": {
       "inh": "",
@@ -2229,7 +2210,7 @@
     },
     "XULElement": {
       "inh": "Element",
-      "impl": ["GlobalEventHandlers"]
+      "impl": []
     }
   }
 ]
