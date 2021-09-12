@@ -106,7 +106,7 @@ const obj = {
 console.log(obj.foo); // "bar"
 ```
 
-### Defining static constants using getters
+### Defining static getters
 
 ```js
 class MyConstants {
