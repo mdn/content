@@ -72,16 +72,20 @@ Proxy-Authorization: <type> <credentials>
 
 ### Authentication schemes
 
-The general HTTP authentication framework is used by several authentication schemes. Schemes can differ in security strength and in their availability in client or server software.
+The general HTTP authentication framework is used by several authentication schemes.
+Schemes can differ in security strength and in their availability in client or server software.
 
-The most common authentication scheme is the "Basic" authentication scheme, which is introduced in more detail below. IANA maintains a [list of authentication schemes](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml), but there are other schemes offered by host services, such as Amazon AWS. Common authentication schemes include:
+The most common authentication scheme is the "Basic" authentication scheme, which is introduced in more detail below.
+IANA maintains a [list of authentication schemes](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml), but there are other schemes offered by host services, such as Amazon AWS.
+
+Common authentication schemes include:
 
 - **Basic**
   - : See {{rfc(7617)}}, base64-encoded credentials. More information below.
 - **Bearer**
   - : See {{rfc(6750)}}, bearer tokens to access OAuth 2.0-protected resources
 - **Digest**
-  - : See {{rfc(7616)}}, only md5 hashing is supported in Firefox, see {{bug(472823)}} for SHA encryption support
+  - : See {{rfc(7616)}}. Firefox 93 and later support SHA-256 encryption. Previous versions only support MD5 hashing (not recommended).
 - **HOBA**
   - : See {{rfc(7486)}}, Section 3, **H**TTP **O**rigin-**B**ound **A**uthentication, digital-signature-based
 - **Mutual**
