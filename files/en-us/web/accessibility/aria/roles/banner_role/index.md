@@ -6,7 +6,6 @@ tags:
   - ARIA role
   - Accessibility
   - Reference
-  - NeedsContent
 ---
 
 The `banner` role is for defining a global site header, which usually includes a logo, company name, search icon, and possibly a slogan, generally at the top of the page.

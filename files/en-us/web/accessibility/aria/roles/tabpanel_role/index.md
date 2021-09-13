@@ -64,7 +64,4 @@ Any additional benefits this feature has for non-typical screen reader users, li
 What are the related properties, and in what order will this attribute or property be read (which property will take precedence over this one, and which property will be overwritten.
 
 
-
-TBD
-
 <section id="Quick_links"><ol><li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li></ol></section>

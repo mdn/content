@@ -83,8 +83,6 @@ or use an ordered list if the order of the list items matters:
 
 
 
-TBD
-
 ## See also
 
 - [Accessibility Object Model](https://wicg.github.io/aom/spec/)

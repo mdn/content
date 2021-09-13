@@ -106,8 +106,6 @@ Certain technologies such as browser extensions can generate lists of all landma
 
 
 
-TBD
-
 ## See also
 
 - [\<section>: The Generic Section element](/en-US/docs/Web/HTML/Element/section)

@@ -95,8 +95,6 @@ Certain technologies such as browser extensions can generate lists of all landma
 
 
 
-TBD
-
 ## See also
 
 - [\<form>: The Form element](/en-US/docs/Web/HTML/Element/form)

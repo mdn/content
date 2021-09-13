@@ -85,8 +85,6 @@ As an aside, note that if you are using the semantic HTML elements of ol or ul a
 
 
 
-TBD
-
 ## See also
 
 - [Accessibility Object Model](https://wicg.github.io/aom/spec/)

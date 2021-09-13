@@ -120,8 +120,6 @@ Certain technologies such as browser extensions can generate lists of all landma
 
 
 
-TBD
-
 ## See also
 
 - [\<nav>: The Navigation section element](/en-US/docs/Web/HTML/Element/nav)

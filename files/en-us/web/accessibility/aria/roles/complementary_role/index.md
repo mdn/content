@@ -5,7 +5,8 @@ tags:
   - ARIA
   - ARIA Role
   - Reference
-  - role-complementary
+  - complementary role
+  - Accessibility
 ---
 The `complementary` [landmark role](/en-US/docs/Web/Accessibility/ARIA/Roles#Landmark_roles) is used to designate a supporting section that relates to the main content, yet can stand alone when separated. These sections are frequently presented as sidebars or call-out boxes. If possible, use the [HTML \<aside> element](/en-US/docs/Web/HTML/Element/aside) instead.
 
@@ -85,8 +86,6 @@ Certain technologies such as browser extensions can generate lists of all landma
 | {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_complementary","Complementary landmark role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
 
-
-TBD
 
 ## See also
 

@@ -93,8 +93,6 @@ The heading role overrides the native semantic meaning of the element it is bein
 
 
 
-TBD
-
 ## See also
 
 - [\<h1> thru \<h6>: The HTML Section Heading elements](/en-US/docs/Web/HTML/Element/Heading_Elements)

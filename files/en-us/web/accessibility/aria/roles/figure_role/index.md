@@ -128,8 +128,6 @@ If at all possible, you<span class="ILfuVd yZ8quc"> should use the appropriate s
 
 
 
-TBD
-
 ## See also
 
 - [Accessibility Object Model](https://wicg.github.io/aom/spec/)

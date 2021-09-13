@@ -102,8 +102,6 @@ Certain technologies such as browser extensions can generate lists of all landma
 
 
 
-TBD
-
 ## See also
 
 - [\<main>: The Main element](/en-US/docs/Web/HTML/Element/main)

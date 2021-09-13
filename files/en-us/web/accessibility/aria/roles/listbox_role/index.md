@@ -190,8 +190,6 @@ This could have more easily been handled with the native HTML {{HTMLElement('sel
 
 
 
-TBD
-
 ## See also
 
 - HTML {{HTMLElement('select')}} element

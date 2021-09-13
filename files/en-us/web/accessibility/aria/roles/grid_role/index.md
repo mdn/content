@@ -588,8 +588,6 @@ Even if the keyboard use is properly implemented, some users might not be aware 
 
 
 
-TBD
-
 ## See also
 
 - [ARIA composite role](/en-US/docs/Web/Accessibility/ARIA/Roles/composite_role)
