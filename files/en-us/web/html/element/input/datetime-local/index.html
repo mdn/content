@@ -18,27 +18,19 @@ browser-compat: html.elements.input.input-datetime-local
 ---
 <div>{{HTMLRef("Input_types")}}</div>
 
-<p><span class="seoSummary">{{htmlelement("input")}} elements of type <strong><code>datetime-local</code></strong> create input controls that let the user easily enter both a date and a time, including the year, month, and day as well as the time in hours and minutes.</span></p>
+<p>{{htmlelement("input")}} elements of type <strong><code>datetime-local</code></strong> create input controls that let the user easily enter both a date and a time, including the year, month, and day as well as the time in hours and minutes.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-datetime-local.html", "tabbed-shorter")}}</div>
 
-<p>The control's UI varies in general from browser to browser; at the moment support is patchy, with Chrome/Opera/Edge and Safari 14.1 on desktop and most modern versions of mobile browsers having usable implementations. In other browsers, these degrade gracefully to simple <code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code> controls.</p>
+<p>The control's UI varies in general from browser to browser. In browsers with no support, these degrade gracefully to simple <code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code> controls. The following image shows the UI in Chrome 93.</p>
 
-<p>The control is intended to represent <em>a local date and time</em>, not necessarily <em>the user's local date and time</em>. In other words, an implementation should allow any valid combination of year, month, day, hour, and minute - even if such a combination is invalid in the user's local time zone (such as times within a daylight saving time spring-forward transition gap). Some mobile browsers (particularly on iOS) do not currently implement this correctly.</p>
+<p><img alt="Date and time picker UI in Chrome." src="datetime-local-chrome.png" style="display: block; margin: 0px auto;"></p>
+
+<p>The control is intended to represent <em>a local date and time</em>, not necessarily <em>the user's local date and time</em>. In other words, an implementation should allow any valid combination of year, month, day, hour, and minute—even if such a combination is invalid in the user's local time zone (such as times within a daylight saving time spring-forward transition gap). Some mobile browsers (particularly on iOS) do not currently implement this correctly.</p>
 
 <p>Because of the limited browser support for <code>datetime-local</code>, and the variations in how the inputs work, it may currently still be best to use a framework or library to present these, or to use a custom input of your own. Another option is to use separate <code>date</code> and <code>time</code> inputs, each of which is more widely supported than <code>datetime-local</code>.</p>
 
 <p>Some browsers may resort to a text-only input element that validates that the results are legitimate date/time values before letting them be delivered to the server, as well, but you shouldn't rely on this behavior since you can't easily predict it.</p>
-
-<p>For those of you not using a supporting browser, the Chrome/Opera <code>datetime-local</code> control looks like the below screenshot. Clicking the down arrow on the right hand side brings up a date picker to allow you to choose a date; you have to enter the time manually.</p>
-
-<p><img alt="" src="datetime-local-chrome.png" style="display: block; margin: 0px auto;"></p>
-
-<p>The Edge <code>datetime-local</code> control looks like the below; clicking the date and the time parts of the value bring up two separate pickers for you, so you can easily set both the date and the time. This is somewhat like having <code>date</code> and <code>time</code> widgets both created for you and merged into one.</p>
-
-<p><img alt="" src="datetime-local-picker-edge1.png" style="display: block; margin: 0px auto;"></p>
-
-<p><img alt="" src="datetime-local-picker-edge2.png" style="display: block; margin: 0px auto;"></p>
 
 <table class="properties">
  <tbody>
@@ -255,11 +247,7 @@ input:valid+span:after {
 
 <h2 id="Handling_browser_support">Handling browser support</h2>
 
-<p>As mentioned above, the major problem with using datetime-local inputs at the time of writing is browser support — Chrome/Opera/Edge and Safari support it on desktop, and most modern browsers on mobile. As an example, the <code>datetime-local</code> picker on Firefox for Android looks like this:</p>
-
-<p><img alt="" src="datetime-local-fxa.png" style="display: block; margin: 0px auto;"></p>
-
-<p>Non-supporting browsers gracefully degrade to a text input, but this creates problems both in terms of consistency of user interface (the presented control will be different), and data handling.</p>
+<p>As mentioned above, non-supporting browsers gracefully degrade to a text input, but this creates problems both in terms of consistency of user interface (the presented control will be different), and data handling.</p>
 
 <p>The second problem is the most serious; as we mentioned earlier, with a <code>datetime-local</code> input, the actual value is always normalized to the format <code>YYYY-MM-DDThh:mm</code>. With a text input on the other hand, by default the browser has no recognition of what format the date should be in, and there are lots of different ways in which people write dates and times, for example:</p>
 
