@@ -27,13 +27,20 @@ A number between 0 and 1.
 
 It's up to the user agent how to interpret the numbers in this range. When changing the foveation level, the effect will visible in the next {{domxref("XRFrame")}}.
 
-If the user agent or device does not support this attribute, it is {{jsxref("null")}} on getting and a no-op on setting.
+Note that some user agents might implement certain levels of foveation, so you might need to adjust the foveation level in large increments to see an effect. Example levels:
+
+- `0`: no foveation
+- `1/3`: low foveation
+- `2/3`: medium foveation
+- `1.0`: maximum foveation
+
+If the user agent or device does not support the `fixedFoveation` property at all, it is {{jsxref("null")}} on getting and a no-op on setting.
 
 ## Examples
 
 ### Dynamically setting the level of fixed foveation rendering
 
-Set the maximum foveation for a given {{domxref("XRWebGLLayer")}}.
+The `fixedFoveation` property allows you to set the level of foveation at runtime and for each frame. To set the maximum foveation for a given {{domxref("XRWebGLLayer")}}, use a value of `1`.
 
 ```js
 let glLayer = xrSession.renderState.baseLayer;
